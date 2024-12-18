@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEdgeMachinesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("edge_machines")
-    private java.util.List < EdgeMachines> edgeMachines;
+    private java.util.List<EdgeMachines> edgeMachines;
 
     @com.aliyun.core.annotation.NameInMap("page_info")
     private PageInfo pageInfo;
@@ -34,7 +39,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
     /**
      * @return edgeMachines
      */
-    public java.util.List < EdgeMachines> getEdgeMachines() {
+    public java.util.List<EdgeMachines> getEdgeMachines() {
         return this.edgeMachines;
     }
 
@@ -46,13 +51,13 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EdgeMachines> edgeMachines; 
+        private java.util.List<EdgeMachines> edgeMachines; 
         private PageInfo pageInfo; 
 
         /**
          * <p>The list of cloud-native boxes.</p>
          */
-        public Builder edgeMachines(java.util.List < EdgeMachines> edgeMachines) {
+        public Builder edgeMachines(java.util.List<EdgeMachines> edgeMachines) {
             this.edgeMachines = edgeMachines;
             return this;
         }

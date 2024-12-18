@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("check_items")
-    private java.util.List < CheckItems> checkItems;
+    private java.util.List<CheckItems> checkItems;
 
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
@@ -42,7 +47,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
     /**
      * @return checkItems
      */
-    public java.util.List < CheckItems> getCheckItems() {
+    public java.util.List<CheckItems> getCheckItems() {
         return this.checkItems;
     }
 
@@ -68,7 +73,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CheckItems> checkItems; 
+        private java.util.List<CheckItems> checkItems; 
         private String code; 
         private Boolean isSuccess; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         /**
          * <p>The check item.</p>
          */
-        public Builder checkItems(java.util.List < CheckItems> checkItems) {
+        public Builder checkItems(java.util.List<CheckItems> checkItems) {
             this.checkItems = checkItems;
             return this;
         }

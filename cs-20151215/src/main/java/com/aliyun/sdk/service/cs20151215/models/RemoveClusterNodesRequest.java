@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class RemoveClusterNodesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("nodes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > nodes;
+    private java.util.List<String> nodes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("release_node")
@@ -68,7 +73,7 @@ public class RemoveClusterNodesRequest extends Request {
     /**
      * @return nodes
      */
-    public java.util.List < String > getNodes() {
+    public java.util.List<String> getNodes() {
         return this.nodes;
     }
 
@@ -82,7 +87,7 @@ public class RemoveClusterNodesRequest extends Request {
     public static final class Builder extends Request.Builder<RemoveClusterNodesRequest, Builder> {
         private String clusterId; 
         private Boolean drainNode; 
-        private java.util.List < String > nodes; 
+        private java.util.List<String> nodes; 
         private Boolean releaseNode; 
 
         private Builder() {
@@ -123,7 +128,7 @@ public class RemoveClusterNodesRequest extends Request {
          * <p>The list of nodes to be removed.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder nodes(java.util.List < String > nodes) {
+        public Builder nodes(java.util.List<String> nodes) {
             this.putBodyParameter("nodes", nodes);
             this.nodes = nodes;
             return this;

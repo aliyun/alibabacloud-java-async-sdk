@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -17,7 +22,7 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("components")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > components;
+    private java.util.List<String> components;
 
     @com.aliyun.core.annotation.NameInMap("log_project")
     private String logProject;
@@ -50,7 +55,7 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
     /**
      * @return components
      */
-    public java.util.List < String > getComponents() {
+    public java.util.List<String> getComponents() {
         return this.components;
     }
 
@@ -70,7 +75,7 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
 
     public static final class Builder {
         private String aliuid; 
-        private java.util.List < String > components; 
+        private java.util.List<String> components; 
         private String logProject; 
         private String logTtl; 
 
@@ -89,7 +94,7 @@ public class CheckControlPlaneLogEnableResponseBody extends TeaModel {
          * <p>The control plane components for which log collection is enabled.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder components(java.util.List < String > components) {
+        public Builder components(java.util.List<String> components) {
             this.components = components;
             return this;
         }

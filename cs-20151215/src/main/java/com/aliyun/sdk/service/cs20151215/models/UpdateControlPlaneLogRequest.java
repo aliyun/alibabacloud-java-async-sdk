@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class UpdateControlPlaneLogRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("components")
-    private java.util.List < String > components;
+    private java.util.List<String> components;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("log_project")
@@ -72,7 +77,7 @@ public class UpdateControlPlaneLogRequest extends Request {
     /**
      * @return components
      */
-    public java.util.List < String > getComponents() {
+    public java.util.List<String> getComponents() {
         return this.components;
     }
 
@@ -93,7 +98,7 @@ public class UpdateControlPlaneLogRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateControlPlaneLogRequest, Builder> {
         private String clusterId; 
         private String aliuid; 
-        private java.util.List < String > components; 
+        private java.util.List<String> components; 
         private String logProject; 
         private String logTtl; 
 
@@ -138,7 +143,7 @@ public class UpdateControlPlaneLogRequest extends Request {
         /**
          * <p>The control plane components for which you want to enable log collection.</p>
          */
-        public Builder components(java.util.List < String > components) {
+        public Builder components(java.util.List<String> components) {
             this.putBodyParameter("components", components);
             this.components = components;
             return this;

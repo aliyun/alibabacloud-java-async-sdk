@@ -475,9 +475,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li>****Only Alibaba Cloud accounts can call this API operation.</li>
-     * </ul>
+     * <p>You can call this operation only by using an Alibaba Cloud account.</p>
      * 
      * @param request the request parameters of DescribeSubaccountK8sClusterUserConfig  DescribeSubaccountK8sClusterUserConfigRequest
      * @return DescribeSubaccountK8sClusterUserConfigResponse

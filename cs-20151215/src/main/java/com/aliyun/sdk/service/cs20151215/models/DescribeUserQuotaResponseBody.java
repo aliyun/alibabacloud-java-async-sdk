@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     private Long nodeQuota;
 
     @com.aliyun.core.annotation.NameInMap("quotas")
-    private java.util.Map < String, QuotasValue > quotas;
+    private java.util.Map<String, QuotasValue> quotas;
 
     private DescribeUserQuotaResponseBody(Builder builder) {
         this.amkClusterQuota = builder.amkClusterQuota;
@@ -96,7 +101,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     /**
      * @return quotas
      */
-    public java.util.Map < String, QuotasValue > getQuotas() {
+    public java.util.Map<String, QuotasValue> getQuotas() {
         return this.quotas;
     }
 
@@ -107,7 +112,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         private Long clusterQuota; 
         private EdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota; 
         private Long nodeQuota; 
-        private java.util.Map < String, QuotasValue > quotas; 
+        private java.util.Map<String, QuotasValue> quotas; 
 
         /**
          * <p>The quota of Container Service for Kubernetes (ACK) managed clusters. Default value: 20. If the default quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
@@ -176,7 +181,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         /**
          * <p>Information about the new quota.</p>
          */
-        public Builder quotas(java.util.Map < String, QuotasValue > quotas) {
+        public Builder quotas(java.util.Map<String, QuotasValue> quotas) {
             this.quotas = quotas;
             return this;
         }

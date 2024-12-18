@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -792,7 +797,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private String cpuPolicy;
 
         @com.aliyun.core.annotation.NameInMap("labels")
-        private java.util.List < Tag > labels;
+        private java.util.List<Tag> labels;
 
         @com.aliyun.core.annotation.NameInMap("node_name_mode")
         private String nodeNameMode;
@@ -807,7 +812,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private String runtimeVersion;
 
         @com.aliyun.core.annotation.NameInMap("taints")
-        private java.util.List < Taint > taints;
+        private java.util.List<Taint> taints;
 
         @com.aliyun.core.annotation.NameInMap("unschedulable")
         private Boolean unschedulable;
@@ -853,7 +858,7 @@ public class CreateClusterNodePoolRequest extends Request {
         /**
          * @return labels
          */
-        public java.util.List < Tag > getLabels() {
+        public java.util.List<Tag> getLabels() {
             return this.labels;
         }
 
@@ -888,7 +893,7 @@ public class CreateClusterNodePoolRequest extends Request {
         /**
          * @return taints
          */
-        public java.util.List < Taint > getTaints() {
+        public java.util.List<Taint> getTaints() {
             return this.taints;
         }
 
@@ -909,12 +914,12 @@ public class CreateClusterNodePoolRequest extends Request {
         public static final class Builder {
             private Boolean cmsEnabled; 
             private String cpuPolicy; 
-            private java.util.List < Tag > labels; 
+            private java.util.List<Tag> labels; 
             private String nodeNameMode; 
             private String preUserData; 
             private String runtime; 
             private String runtimeVersion; 
-            private java.util.List < Taint > taints; 
+            private java.util.List<Taint> taints; 
             private Boolean unschedulable; 
             private String userData; 
 
@@ -953,7 +958,7 @@ public class CreateClusterNodePoolRequest extends Request {
             /**
              * <p>The labels that you want to add to the nodes in the cluster.</p>
              */
-            public Builder labels(java.util.List < Tag > labels) {
+            public Builder labels(java.util.List<Tag> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -1016,7 +1021,7 @@ public class CreateClusterNodePoolRequest extends Request {
             /**
              * <p>The configuration of the taint.</p>
              */
-            public Builder taints(java.util.List < Taint > taints) {
+            public Builder taints(java.util.List<Taint> taints) {
                 this.taints = taints;
                 return this;
             }
@@ -1272,9 +1277,9 @@ public class CreateClusterNodePoolRequest extends Request {
             /**
              * <p>The severity levels of CVEs that can be automatically patched. Separate multiple levels with commas (,). Example: <code>asap,later</code>. Valid values:</p>
              * <ul>
-             * <li><code>asap</code>: high severity.</li>
-             * <li><code>later</code>: medium severity.</li>
-             * <li><code>nntf</code>: low severity.</li>
+             * <li><code>asap</code>: high</li>
+             * <li><code>later</code>: medium</li>
+             * <li><code>nntf</code>: low</li>
              * </ul>
              * <p>If <code>auto_vul_fix</code> is set to true, the default value of this parameter is <code>asap</code>.</p>
              * 
@@ -2035,7 +2040,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private Boolean compensateWithOnDemand;
 
         @com.aliyun.core.annotation.NameInMap("data_disks")
-        private java.util.List < DataDisk > dataDisks;
+        private java.util.List<DataDisk> dataDisks;
 
         @com.aliyun.core.annotation.NameInMap("deploymentset_id")
         private String deploymentsetId;
@@ -2054,11 +2059,11 @@ public class CreateClusterNodePoolRequest extends Request {
         private String instanceChargeType;
 
         @com.aliyun.core.annotation.NameInMap("instance_patterns")
-        private java.util.List < InstancePatterns > instancePatterns;
+        private java.util.List<InstancePatterns> instancePatterns;
 
         @com.aliyun.core.annotation.NameInMap("instance_types")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > instanceTypes;
+        private java.util.List<String> instanceTypes;
 
         @com.aliyun.core.annotation.NameInMap("internet_charge_type")
         private String internetChargeType;
@@ -2101,7 +2106,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private String ramRoleName;
 
         @com.aliyun.core.annotation.NameInMap("rds_instances")
-        private java.util.List < String > rdsInstances;
+        private java.util.List<String> rdsInstances;
 
         @com.aliyun.core.annotation.NameInMap("scaling_policy")
         private String scalingPolicy;
@@ -2111,7 +2116,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private String securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("security_group_ids")
-        private java.util.List < String > securityGroupIds;
+        private java.util.List<String> securityGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("security_hardening_os")
         private Boolean securityHardeningOs;
@@ -2126,7 +2131,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private Boolean spotInstanceRemedy;
 
         @com.aliyun.core.annotation.NameInMap("spot_price_limit")
-        private java.util.List < SpotPriceLimit> spotPriceLimit;
+        private java.util.List<SpotPriceLimit> spotPriceLimit;
 
         @com.aliyun.core.annotation.NameInMap("spot_strategy")
         private String spotStrategy;
@@ -2135,7 +2140,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private Boolean systemDiskBurstingEnabled;
 
         @com.aliyun.core.annotation.NameInMap("system_disk_categories")
-        private java.util.List < String > systemDiskCategories;
+        private java.util.List<String> systemDiskCategories;
 
         @com.aliyun.core.annotation.NameInMap("system_disk_category")
         private String systemDiskCategory;
@@ -2159,11 +2164,11 @@ public class CreateClusterNodePoolRequest extends Request {
         private Long systemDiskSize;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("vswitch_ids")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > vswitchIds;
+        private java.util.List<String> vswitchIds;
 
         private ScalingGroup(Builder builder) {
             this.autoRenew = builder.autoRenew;
@@ -2253,7 +2258,7 @@ public class CreateClusterNodePoolRequest extends Request {
         /**
          * @return dataDisks
          */
-        public java.util.List < DataDisk > getDataDisks() {
+        public java.util.List<DataDisk> getDataDisks() {
             return this.dataDisks;
         }
 
@@ -2295,14 +2300,14 @@ public class CreateClusterNodePoolRequest extends Request {
         /**
          * @return instancePatterns
          */
-        public java.util.List < InstancePatterns > getInstancePatterns() {
+        public java.util.List<InstancePatterns> getInstancePatterns() {
             return this.instancePatterns;
         }
 
         /**
          * @return instanceTypes
          */
-        public java.util.List < String > getInstanceTypes() {
+        public java.util.List<String> getInstanceTypes() {
             return this.instanceTypes;
         }
 
@@ -2400,7 +2405,7 @@ public class CreateClusterNodePoolRequest extends Request {
         /**
          * @return rdsInstances
          */
-        public java.util.List < String > getRdsInstances() {
+        public java.util.List<String> getRdsInstances() {
             return this.rdsInstances;
         }
 
@@ -2421,7 +2426,7 @@ public class CreateClusterNodePoolRequest extends Request {
         /**
          * @return securityGroupIds
          */
-        public java.util.List < String > getSecurityGroupIds() {
+        public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
@@ -2456,7 +2461,7 @@ public class CreateClusterNodePoolRequest extends Request {
         /**
          * @return spotPriceLimit
          */
-        public java.util.List < SpotPriceLimit> getSpotPriceLimit() {
+        public java.util.List<SpotPriceLimit> getSpotPriceLimit() {
             return this.spotPriceLimit;
         }
 
@@ -2477,7 +2482,7 @@ public class CreateClusterNodePoolRequest extends Request {
         /**
          * @return systemDiskCategories
          */
-        public java.util.List < String > getSystemDiskCategories() {
+        public java.util.List<String> getSystemDiskCategories() {
             return this.systemDiskCategories;
         }
 
@@ -2533,14 +2538,14 @@ public class CreateClusterNodePoolRequest extends Request {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         /**
          * @return vswitchIds
          */
-        public java.util.List < String > getVswitchIds() {
+        public java.util.List<String> getVswitchIds() {
             return this.vswitchIds;
         }
 
@@ -2549,14 +2554,14 @@ public class CreateClusterNodePoolRequest extends Request {
             private Long autoRenewPeriod; 
             private Boolean cisEnabled; 
             private Boolean compensateWithOnDemand; 
-            private java.util.List < DataDisk > dataDisks; 
+            private java.util.List<DataDisk> dataDisks; 
             private String deploymentsetId; 
             private Long desiredSize; 
             private String imageId; 
             private String imageType; 
             private String instanceChargeType; 
-            private java.util.List < InstancePatterns > instancePatterns; 
-            private java.util.List < String > instanceTypes; 
+            private java.util.List<InstancePatterns> instancePatterns; 
+            private java.util.List<String> instanceTypes; 
             private String internetChargeType; 
             private Long internetMaxBandwidthOut; 
             private String keyPair; 
@@ -2570,18 +2575,18 @@ public class CreateClusterNodePoolRequest extends Request {
             private String platform; 
             private PrivatePoolOptions privatePoolOptions; 
             private String ramRoleName; 
-            private java.util.List < String > rdsInstances; 
+            private java.util.List<String> rdsInstances; 
             private String scalingPolicy; 
             private String securityGroupId; 
-            private java.util.List < String > securityGroupIds; 
+            private java.util.List<String> securityGroupIds; 
             private Boolean securityHardeningOs; 
             private Boolean socEnabled; 
             private Long spotInstancePools; 
             private Boolean spotInstanceRemedy; 
-            private java.util.List < SpotPriceLimit> spotPriceLimit; 
+            private java.util.List<SpotPriceLimit> spotPriceLimit; 
             private String spotStrategy; 
             private Boolean systemDiskBurstingEnabled; 
-            private java.util.List < String > systemDiskCategories; 
+            private java.util.List<String> systemDiskCategories; 
             private String systemDiskCategory; 
             private String systemDiskEncryptAlgorithm; 
             private Boolean systemDiskEncrypted; 
@@ -2589,8 +2594,8 @@ public class CreateClusterNodePoolRequest extends Request {
             private String systemDiskPerformanceLevel; 
             private Long systemDiskProvisionedIops; 
             private Long systemDiskSize; 
-            private java.util.List < Tags> tags; 
-            private java.util.List < String > vswitchIds; 
+            private java.util.List<Tags> tags; 
+            private java.util.List<String> vswitchIds; 
 
             /**
              * <p>Specifies whether to enable auto-renewal for nodes in the node pool. This parameter takes effect only when you set <code>instance_charge_type</code> to <code>PrePaid</code>. Valid values:</p>
@@ -2653,7 +2658,7 @@ public class CreateClusterNodePoolRequest extends Request {
             /**
              * <p>The configurations of the data disks that are attached to nodes in the node pool.</p>
              */
-            public Builder dataDisks(java.util.List < DataDisk > dataDisks) {
+            public Builder dataDisks(java.util.List<DataDisk> dataDisks) {
                 this.dataDisks = dataDisks;
                 return this;
             }
@@ -2733,7 +2738,7 @@ public class CreateClusterNodePoolRequest extends Request {
             /**
              * <p>The instance properties.</p>
              */
-            public Builder instancePatterns(java.util.List < InstancePatterns > instancePatterns) {
+            public Builder instancePatterns(java.util.List<InstancePatterns> instancePatterns) {
                 this.instancePatterns = instancePatterns;
                 return this;
             }
@@ -2745,7 +2750,7 @@ public class CreateClusterNodePoolRequest extends Request {
              * </blockquote>
              * <p>This parameter is required.</p>
              */
-            public Builder instanceTypes(java.util.List < String > instanceTypes) {
+            public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
                 return this;
             }
@@ -2935,7 +2940,7 @@ public class CreateClusterNodePoolRequest extends Request {
             /**
              * <p>A list of ApsaraDB RDS instances.</p>
              */
-            public Builder rdsInstances(java.util.List < String > rdsInstances) {
+            public Builder rdsInstances(java.util.List<String> rdsInstances) {
                 this.rdsInstances = rdsInstances;
                 return this;
             }
@@ -2970,7 +2975,7 @@ public class CreateClusterNodePoolRequest extends Request {
             /**
              * <p>The IDs of security groups. You must specify this parameter or <code>security_group_id</code>. We recommend that you specify <code>security_group_ids</code>. If you specify both <code>security_group_id</code> and <code>security_group_ids</code>, <code>security_group_ids</code> is used.</p>
              */
-            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
                 return this;
             }
@@ -3028,7 +3033,7 @@ public class CreateClusterNodePoolRequest extends Request {
             /**
              * <p>The instance type of preemptible instances and the price cap for the instance type.</p>
              */
-            public Builder spotPriceLimit(java.util.List < SpotPriceLimit> spotPriceLimit) {
+            public Builder spotPriceLimit(java.util.List<SpotPriceLimit> spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
                 return this;
             }
@@ -3077,7 +3082,7 @@ public class CreateClusterNodePoolRequest extends Request {
              * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
              * </ul>
              */
-            public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
+            public Builder systemDiskCategories(java.util.List<String> systemDiskCategories) {
                 this.systemDiskCategories = systemDiskCategories;
                 return this;
             }
@@ -3088,7 +3093,7 @@ public class CreateClusterNodePoolRequest extends Request {
              * <li><code>cloud</code>: basic disk.</li>
              * <li><code>cloud_efficiency</code>: ultra disk.</li>
              * <li><code>cloud_ssd</code>: standard SSD.</li>
-             * <li><code>cloud_essd</code>: Enterprise SSD (ESSD).</li>
+             * <li><code>cloud_essd</code>: ESSD.</li>
              * <li><code>cloud_auto</code>: ESSD AutoPL disk.</li>
              * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
              * </ul>
@@ -3183,7 +3188,7 @@ public class CreateClusterNodePoolRequest extends Request {
              * <p>The labels that you want to add only to ECS instances.</p>
              * <p>The label key must be unique and cannot exceed 128 characters in length. The label key and value cannot start with aliyun or acs: or contain https:// or http://.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -3195,7 +3200,7 @@ public class CreateClusterNodePoolRequest extends Request {
              * </blockquote>
              * <p>This parameter is required.</p>
              */
-            public Builder vswitchIds(java.util.List < String > vswitchIds) {
+            public Builder vswitchIds(java.util.List<String> vswitchIds) {
                 this.vswitchIds = vswitchIds;
                 return this;
             }

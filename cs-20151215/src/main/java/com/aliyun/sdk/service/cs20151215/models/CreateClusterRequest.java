@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("access_control_list")
-    private java.util.List < String > accessControlList;
+    private java.util.List<String> accessControlList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("addons")
-    private java.util.List < Addon > addons;
+    private java.util.List<Addon> addons;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("api_audiences")
@@ -72,7 +77,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("controlplane_log_components")
-    private java.util.List < String > controlplaneLogComponents;
+    private java.util.List<String> controlplaneLogComponents;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("controlplane_log_project")
@@ -130,7 +135,7 @@ public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("instances")
     @Deprecated
-    private java.util.List < String > instances;
+    private java.util.List<String> instances;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ip_stack")
@@ -199,7 +204,7 @@ public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("master_instance_types")
     @Deprecated
-    private java.util.List < String > masterInstanceTypes;
+    private java.util.List<String> masterInstanceTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("master_period")
@@ -234,7 +239,7 @@ public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("master_vswitch_ids")
     @Deprecated
-    private java.util.List < String > masterVswitchIds;
+    private java.util.List<String> masterVswitchIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("name")
@@ -260,7 +265,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("nodepools")
-    private java.util.List < Nodepool > nodepools;
+    private java.util.List<Nodepool> nodepools;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("num_of_nodes")
@@ -293,7 +298,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pod_vswitch_ids")
-    private java.util.List < String > podVswitchIds;
+    private java.util.List<String> podVswitchIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("profile")
@@ -306,7 +311,7 @@ public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("rds_instances")
     @Deprecated
-    private java.util.List < String > rdsInstances;
+    private java.util.List<String> rdsInstances;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("region_id")
@@ -341,7 +346,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("service_discovery_types")
-    private java.util.List < String > serviceDiscoveryTypes;
+    private java.util.List<String> serviceDiscoveryTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("snat_entry")
@@ -358,12 +363,12 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tag > tags;
+    private java.util.List<Tag> tags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("taints")
     @Deprecated
-    private java.util.List < Taint > taints;
+    private java.util.List<Taint> taints;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("timeout_mins")
@@ -388,7 +393,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("vswitch_ids")
-    private java.util.List < String > vswitchIds;
+    private java.util.List<String> vswitchIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_auto_renew")
@@ -403,7 +408,7 @@ public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_data_disks")
     @Deprecated
-    private java.util.List < WorkerDataDisks> workerDataDisks;
+    private java.util.List<WorkerDataDisks> workerDataDisks;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_instance_charge_type")
@@ -413,7 +418,7 @@ public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_instance_types")
     @Deprecated
-    private java.util.List < String > workerInstanceTypes;
+    private java.util.List<String> workerInstanceTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_period")
@@ -448,7 +453,7 @@ public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_vswitch_ids")
     @Deprecated
-    private java.util.List < String > workerVswitchIds;
+    private java.util.List<String> workerVswitchIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("zone_id")
@@ -457,7 +462,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("zone_ids")
-    private java.util.List < String > zoneIds;
+    private java.util.List<String> zoneIds;
 
     private CreateClusterRequest(Builder builder) {
         super(builder);
@@ -577,14 +582,14 @@ public class CreateClusterRequest extends Request {
     /**
      * @return accessControlList
      */
-    public java.util.List < String > getAccessControlList() {
+    public java.util.List<String> getAccessControlList() {
         return this.accessControlList;
     }
 
     /**
      * @return addons
      */
-    public java.util.List < Addon > getAddons() {
+    public java.util.List<Addon> getAddons() {
         return this.addons;
     }
 
@@ -668,7 +673,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return controlplaneLogComponents
      */
-    public java.util.List < String > getControlplaneLogComponents() {
+    public java.util.List<String> getControlplaneLogComponents() {
         return this.controlplaneLogComponents;
     }
 
@@ -759,7 +764,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return instances
      */
-    public java.util.List < String > getInstances() {
+    public java.util.List<String> getInstances() {
         return this.instances;
     }
 
@@ -864,7 +869,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return masterInstanceTypes
      */
-    public java.util.List < String > getMasterInstanceTypes() {
+    public java.util.List<String> getMasterInstanceTypes() {
         return this.masterInstanceTypes;
     }
 
@@ -913,7 +918,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return masterVswitchIds
      */
-    public java.util.List < String > getMasterVswitchIds() {
+    public java.util.List<String> getMasterVswitchIds() {
         return this.masterVswitchIds;
     }
 
@@ -955,7 +960,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return nodepools
      */
-    public java.util.List < Nodepool > getNodepools() {
+    public java.util.List<Nodepool> getNodepools() {
         return this.nodepools;
     }
 
@@ -1004,7 +1009,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return podVswitchIds
      */
-    public java.util.List < String > getPodVswitchIds() {
+    public java.util.List<String> getPodVswitchIds() {
         return this.podVswitchIds;
     }
 
@@ -1025,7 +1030,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return rdsInstances
      */
-    public java.util.List < String > getRdsInstances() {
+    public java.util.List<String> getRdsInstances() {
         return this.rdsInstances;
     }
 
@@ -1081,7 +1086,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return serviceDiscoveryTypes
      */
-    public java.util.List < String > getServiceDiscoveryTypes() {
+    public java.util.List<String> getServiceDiscoveryTypes() {
         return this.serviceDiscoveryTypes;
     }
 
@@ -1109,14 +1114,14 @@ public class CreateClusterRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
     /**
      * @return taints
      */
-    public java.util.List < Taint > getTaints() {
+    public java.util.List<Taint> getTaints() {
         return this.taints;
     }
 
@@ -1158,7 +1163,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return vswitchIds
      */
-    public java.util.List < String > getVswitchIds() {
+    public java.util.List<String> getVswitchIds() {
         return this.vswitchIds;
     }
 
@@ -1179,7 +1184,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return workerDataDisks
      */
-    public java.util.List < WorkerDataDisks> getWorkerDataDisks() {
+    public java.util.List<WorkerDataDisks> getWorkerDataDisks() {
         return this.workerDataDisks;
     }
 
@@ -1193,7 +1198,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return workerInstanceTypes
      */
-    public java.util.List < String > getWorkerInstanceTypes() {
+    public java.util.List<String> getWorkerInstanceTypes() {
         return this.workerInstanceTypes;
     }
 
@@ -1242,7 +1247,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return workerVswitchIds
      */
-    public java.util.List < String > getWorkerVswitchIds() {
+    public java.util.List<String> getWorkerVswitchIds() {
         return this.workerVswitchIds;
     }
 
@@ -1256,13 +1261,13 @@ public class CreateClusterRequest extends Request {
     /**
      * @return zoneIds
      */
-    public java.util.List < String > getZoneIds() {
+    public java.util.List<String> getZoneIds() {
         return this.zoneIds;
     }
 
     public static final class Builder extends Request.Builder<CreateClusterRequest, Builder> {
-        private java.util.List < String > accessControlList; 
-        private java.util.List < Addon > addons; 
+        private java.util.List<String> accessControlList; 
+        private java.util.List<Addon> addons; 
         private String apiAudiences; 
         private Boolean autoRenew; 
         private Long autoRenewPeriod; 
@@ -1274,7 +1279,7 @@ public class CreateClusterRequest extends Request {
         private String clusterType; 
         private String containerCidr; 
         private ControlPlaneConfig controlPlaneConfig; 
-        private java.util.List < String > controlplaneLogComponents; 
+        private java.util.List<String> controlplaneLogComponents; 
         private String controlplaneLogProject; 
         private String controlplaneLogTtl; 
         private String cpuPolicy; 
@@ -1287,7 +1292,7 @@ public class CreateClusterRequest extends Request {
         private Boolean formatDisk; 
         private String imageId; 
         private String imageType; 
-        private java.util.List < String > instances; 
+        private java.util.List<String> instances; 
         private String ipStack; 
         private Boolean isEnterpriseSecurityGroup; 
         private Boolean keepInstanceName; 
@@ -1302,30 +1307,30 @@ public class CreateClusterRequest extends Request {
         private Long masterAutoRenewPeriod; 
         private Long masterCount; 
         private String masterInstanceChargeType; 
-        private java.util.List < String > masterInstanceTypes; 
+        private java.util.List<String> masterInstanceTypes; 
         private Long masterPeriod; 
         private String masterPeriodUnit; 
         private String masterSystemDiskCategory; 
         private String masterSystemDiskPerformanceLevel; 
         private Long masterSystemDiskSize; 
         private String masterSystemDiskSnapshotPolicyId; 
-        private java.util.List < String > masterVswitchIds; 
+        private java.util.List<String> masterVswitchIds; 
         private String name; 
         private Boolean natGateway; 
         private String nodeCidrMask; 
         private String nodeNameMode; 
         private String nodePortRange; 
-        private java.util.List < Nodepool > nodepools; 
+        private java.util.List<Nodepool> nodepools; 
         private Long numOfNodes; 
         private OperationPolicy operationPolicy; 
         private String osType; 
         private Long period; 
         private String periodUnit; 
         private String platform; 
-        private java.util.List < String > podVswitchIds; 
+        private java.util.List<String> podVswitchIds; 
         private String profile; 
         private String proxyMode; 
-        private java.util.List < String > rdsInstances; 
+        private java.util.List<String> rdsInstances; 
         private String regionId; 
         private String resourceGroupId; 
         private Runtime runtime; 
@@ -1333,32 +1338,32 @@ public class CreateClusterRequest extends Request {
         private Boolean securityHardeningOs; 
         private String serviceAccountIssuer; 
         private String serviceCidr; 
-        private java.util.List < String > serviceDiscoveryTypes; 
+        private java.util.List<String> serviceDiscoveryTypes; 
         private Boolean snatEntry; 
         private Boolean socEnabled; 
         private Boolean sshFlags; 
-        private java.util.List < Tag > tags; 
-        private java.util.List < Taint > taints; 
+        private java.util.List<Tag> tags; 
+        private java.util.List<Taint> taints; 
         private Long timeoutMins; 
         private String timezone; 
         private String userCa; 
         private String userData; 
         private String vpcid; 
-        private java.util.List < String > vswitchIds; 
+        private java.util.List<String> vswitchIds; 
         private Boolean workerAutoRenew; 
         private Long workerAutoRenewPeriod; 
-        private java.util.List < WorkerDataDisks> workerDataDisks; 
+        private java.util.List<WorkerDataDisks> workerDataDisks; 
         private String workerInstanceChargeType; 
-        private java.util.List < String > workerInstanceTypes; 
+        private java.util.List<String> workerInstanceTypes; 
         private Long workerPeriod; 
         private String workerPeriodUnit; 
         private String workerSystemDiskCategory; 
         private String workerSystemDiskPerformanceLevel; 
         private Long workerSystemDiskSize; 
         private String workerSystemDiskSnapshotPolicyId; 
-        private java.util.List < String > workerVswitchIds; 
+        private java.util.List<String> workerVswitchIds; 
         private String zoneId; 
-        private java.util.List < String > zoneIds; 
+        private java.util.List<String> zoneIds; 
 
         private Builder() {
             super();
@@ -1469,7 +1474,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The ACL rule of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
          */
-        public Builder accessControlList(java.util.List < String > accessControlList) {
+        public Builder accessControlList(java.util.List<String> accessControlList) {
             this.putBodyParameter("access_control_list", accessControlList);
             this.accessControlList = accessControlList;
             return this;
@@ -1498,7 +1503,7 @@ public class CreateClusterRequest extends Request {
          * <p>You can use ACK event centers to store and query events and configure alerts. You can use the Logstores that are associated with ACK event centers free of charge within 90 days. For more information, see <a href="https://help.aliyun.com/document_detail/150476.html">Create and use an event center</a>.</p>
          * <p>Enable the ack-node-problem-detector component in the following format: [{&quot;name&quot;:&quot;ack-node-problem-detector&quot;,&quot;config&quot;:&quot;{&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</p>
          */
-        public Builder addons(java.util.List < Addon > addons) {
+        public Builder addons(java.util.List<Addon> addons) {
             this.putBodyParameter("addons", addons);
             this.addons = addons;
             return this;
@@ -1671,7 +1676,7 @@ public class CreateClusterRequest extends Request {
          * <p>The control plane component for which you want to enable log collection.</p>
          * <p>By default, the log of kube-apiserver, kube-controller-manager, and kube-scheduler is collected.</p>
          */
-        public Builder controlplaneLogComponents(java.util.List < String > controlplaneLogComponents) {
+        public Builder controlplaneLogComponents(java.util.List<String> controlplaneLogComponents) {
             this.putBodyParameter("controlplane_log_components", controlplaneLogComponents);
             this.controlplaneLogComponents = controlplaneLogComponents;
             return this;
@@ -1872,7 +1877,7 @@ public class CreateClusterRequest extends Request {
          * <p> This parameter is required if you create worker nodes on existing ECS instances.</p>
          * </blockquote>
          */
-        public Builder instances(java.util.List < String > instances) {
+        public Builder instances(java.util.List<String> instances) {
             this.putBodyParameter("instances", instances);
             this.instances = instances;
             return this;
@@ -2083,7 +2088,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</p>
          */
-        public Builder masterInstanceTypes(java.util.List < String > masterInstanceTypes) {
+        public Builder masterInstanceTypes(java.util.List<String> masterInstanceTypes) {
             this.putBodyParameter("master_instance_types", masterInstanceTypes);
             this.masterInstanceTypes = masterInstanceTypes;
             return this;
@@ -2175,7 +2180,7 @@ public class CreateClusterRequest extends Request {
          * <p>The IDs of the vSwitches that are specified for master nodes. You can specify up to three vSwitches. We recommend that you specify three vSwitches in different zones to ensure high availability.</p>
          * <p>The number of vSwitches must be the same as that specified in <code>master_count</code> and the same as those specified in <code>master_vswitch_ids</code>.</p>
          */
-        public Builder masterVswitchIds(java.util.List < String > masterVswitchIds) {
+        public Builder masterVswitchIds(java.util.List<String> masterVswitchIds) {
             this.putBodyParameter("master_vswitch_ids", masterVswitchIds);
             this.masterVswitchIds = masterVswitchIds;
             return this;
@@ -2254,7 +2259,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The list of node pools.</p>
          */
-        public Builder nodepools(java.util.List < Nodepool > nodepools) {
+        public Builder nodepools(java.util.List<Nodepool> nodepools) {
             this.putBodyParameter("nodepools", nodepools);
             this.nodepools = nodepools;
             return this;
@@ -2354,7 +2359,7 @@ public class CreateClusterRequest extends Request {
          * <p> We recommend that you select pod vSwitches whose subnet mask lengths are no longer than 19 bits. The maximum subnet mask length of a pod vSwitch is 25 bits. If you select a pod vSwitch whose subnet mask length is longer than 25 bits, the IP addresses that can be allocated to pods may be insufficient.</p>
          * </blockquote>
          */
-        public Builder podVswitchIds(java.util.List < String > podVswitchIds) {
+        public Builder podVswitchIds(java.util.List<String> podVswitchIds) {
             this.putBodyParameter("pod_vswitch_ids", podVswitchIds);
             this.podVswitchIds = podVswitchIds;
             return this;
@@ -2382,7 +2387,7 @@ public class CreateClusterRequest extends Request {
          * <p>The kube-proxy mode. Valid values:</p>
          * <ul>
          * <li><code>iptables</code>: a mature and stable kube-proxy mode that uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</li>
-         * <li><code>ipvs</code>: provides high performance and uses IP Virtual Server (IPVS). This allows you to configure service discovery and load balancing. This mode is suitable for clusters that are required to run a large number of services. We recommend that you use this mode in scenarios that require high load balancing performance.</li>
+         * <li><code>ipvs</code>: a mode that provides high performance and uses IP Virtual Server (IPVS) to conduct service discovery and load balancing. This mode is suitable for clusters that run a large number of Services. We recommend that you use this mode in scenarios that require high-performance load balancing.</li>
          * </ul>
          * <p>Default value: <code>ipvs</code>.</p>
          * 
@@ -2398,7 +2403,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The ApsaraDB RDS instances. Select the ApsaraDB RDS instances that you want to add to the whitelist. We recommend that you add the pod CIDR block and node CIDR block to the ApsaraDB RDS instances in the ApsaraDB RDS console. When you configure the ApsaraDB RDS instances, you cannot scale out the number of nodes because the instances are not in the Running state.</p>
          */
-        public Builder rdsInstances(java.util.List < String > rdsInstances) {
+        public Builder rdsInstances(java.util.List<String> rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
             this.rdsInstances = rdsInstances;
             return this;
@@ -2503,7 +2508,7 @@ public class CreateClusterRequest extends Request {
          * </ul>
          * <p>By default, this parameter is not specified.</p>
          */
-        public Builder serviceDiscoveryTypes(java.util.List < String > serviceDiscoveryTypes) {
+        public Builder serviceDiscoveryTypes(java.util.List<String> serviceDiscoveryTypes) {
             this.putBodyParameter("service_discovery_types", serviceDiscoveryTypes);
             this.serviceDiscoveryTypes = serviceDiscoveryTypes;
             return this;
@@ -2571,7 +2576,7 @@ public class CreateClusterRequest extends Request {
          * <li>When you add a tag, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
          * </ul>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
             return this;
@@ -2580,7 +2585,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
          */
-        public Builder taints(java.util.List < Taint > taints) {
+        public Builder taints(java.util.List<Taint> taints) {
             this.putBodyParameter("taints", taints);
             this.taints = taints;
             return this;
@@ -2650,7 +2655,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The vSwitches that are specified for nodes in the cluster. This parameter is required if you create an ACK managed cluster that does not contain nodes.</p>
          */
-        public Builder vswitchIds(java.util.List < String > vswitchIds) {
+        public Builder vswitchIds(java.util.List<String> vswitchIds) {
             this.putBodyParameter("vswitch_ids", vswitchIds);
             this.vswitchIds = vswitchIds;
             return this;
@@ -2689,7 +2694,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The configurations of the data disks that you want to mount to worker nodes. The configurations include the disk type and disk size.</p>
          */
-        public Builder workerDataDisks(java.util.List < WorkerDataDisks> workerDataDisks) {
+        public Builder workerDataDisks(java.util.List<WorkerDataDisks> workerDataDisks) {
             this.putBodyParameter("worker_data_disks", workerDataDisks);
             this.workerDataDisks = workerDataDisks;
             return this;
@@ -2715,7 +2720,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The instance configurations of worker nodes.</p>
          */
-        public Builder workerInstanceTypes(java.util.List < String > workerInstanceTypes) {
+        public Builder workerInstanceTypes(java.util.List<String> workerInstanceTypes) {
             this.putBodyParameter("worker_instance_types", workerInstanceTypes);
             this.workerInstanceTypes = workerInstanceTypes;
             return this;
@@ -2816,7 +2821,7 @@ public class CreateClusterRequest extends Request {
          * <p>The vSwitches that are specified for worker nodes. Each worker node is allocated a vSwitch.</p>
          * <p><code>worker_vswitch_ids</code> is optional but <code>vswitch_ids</code> is required if you create an ACK managed cluster that does not contain nodes.</p>
          */
-        public Builder workerVswitchIds(java.util.List < String > workerVswitchIds) {
+        public Builder workerVswitchIds(java.util.List<String> workerVswitchIds) {
             this.putBodyParameter("worker_vswitch_ids", workerVswitchIds);
             this.workerVswitchIds = workerVswitchIds;
             return this;
@@ -2840,7 +2845,7 @@ public class CreateClusterRequest extends Request {
          * <p>The IDs of the zone in which the cluster is deployed. This parameter is specific to ACK managed clusters.</p>
          * <p>When you create an ACK managed cluster, you must set the <code>zone_id</code> parameter if <code>vpc_id</code> and <code>vswitch_ids</code> are not specified. This way, the system automatically creates a VPC in the specified zone. This parameter is invalid if you specify the <code>vpc_id</code> and <code>vswitch_ids</code> parameters.</p>
          */
-        public Builder zoneIds(java.util.List < String > zoneIds) {
+        public Builder zoneIds(java.util.List<String> zoneIds) {
             this.putBodyParameter("zone_ids", zoneIds);
             this.zoneIds = zoneIds;
             return this;
@@ -2885,7 +2890,7 @@ public class CreateClusterRequest extends Request {
         private String imageType;
 
         @com.aliyun.core.annotation.NameInMap("instance_types")
-        private java.util.List < String > instanceTypes;
+        private java.util.List<String> instanceTypes;
 
         @com.aliyun.core.annotation.NameInMap("key_pair")
         private String keyPair;
@@ -3026,7 +3031,7 @@ public class CreateClusterRequest extends Request {
         /**
          * @return instanceTypes
          */
-        public java.util.List < String > getInstanceTypes() {
+        public java.util.List<String> getInstanceTypes() {
             return this.instanceTypes;
         }
 
@@ -3144,7 +3149,7 @@ public class CreateClusterRequest extends Request {
             private String deploymentsetId; 
             private String imageId; 
             private String imageType; 
-            private java.util.List < String > instanceTypes; 
+            private java.util.List<String> instanceTypes; 
             private String keyPair; 
             private String loginPassword; 
             private String nodePortRange; 
@@ -3285,7 +3290,7 @@ public class CreateClusterRequest extends Request {
             /**
              * instance_types.
              */
-            public Builder instanceTypes(java.util.List < String > instanceTypes) {
+            public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
                 return this;
             }

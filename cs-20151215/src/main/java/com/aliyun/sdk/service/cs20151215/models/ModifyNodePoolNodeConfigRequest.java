@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -179,7 +184,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
      */
     public static class OsConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sysctl")
-        private java.util.Map < String, ? > sysctl;
+        private java.util.Map<String, ?> sysctl;
 
         private OsConfig(Builder builder) {
             this.sysctl = builder.sysctl;
@@ -196,17 +201,17 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         /**
          * @return sysctl
          */
-        public java.util.Map < String, ? > getSysctl() {
+        public java.util.Map<String, ?> getSysctl() {
             return this.sysctl;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > sysctl; 
+            private java.util.Map<String, ?> sysctl; 
 
             /**
              * <p>The sysctl configuration.</p>
              */
-            public Builder sysctl(java.util.Map < String, ? > sysctl) {
+            public Builder sysctl(java.util.Map<String, ?> sysctl) {
                 this.sysctl = sysctl;
                 return this;
             }

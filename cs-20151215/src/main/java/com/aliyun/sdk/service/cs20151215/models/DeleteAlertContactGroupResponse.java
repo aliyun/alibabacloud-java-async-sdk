@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteAlertContactGroupResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < DeleteAlertContactGroupResponseBody> body;
+    private java.util.List<DeleteAlertContactGroupResponseBody> body;
 
     private DeleteAlertContactGroupResponse(BuilderImpl builder) {
         super(builder);
@@ -40,7 +45,7 @@ public class DeleteAlertContactGroupResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,17 +59,17 @@ public class DeleteAlertContactGroupResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < DeleteAlertContactGroupResponseBody> getBody() {
+    public java.util.List<DeleteAlertContactGroupResponseBody> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<DeleteAlertContactGroupResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < DeleteAlertContactGroupResponseBody> body);
+        Builder body(java.util.List<DeleteAlertContactGroupResponseBody> body);
 
         @Override
         DeleteAlertContactGroupResponse build();
@@ -74,9 +79,9 @@ public class DeleteAlertContactGroupResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<DeleteAlertContactGroupResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < DeleteAlertContactGroupResponseBody> body; 
+        private java.util.List<DeleteAlertContactGroupResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -93,7 +98,7 @@ public class DeleteAlertContactGroupResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,7 +116,7 @@ public class DeleteAlertContactGroupResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < DeleteAlertContactGroupResponseBody> body) {
+        public Builder body(java.util.List<DeleteAlertContactGroupResponseBody> body) {
             this.body = body;
             return this;
         }

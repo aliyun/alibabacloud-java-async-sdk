@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class DescribeClusterAddonsUpgradeStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("componentIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > componentIds;
+    private java.util.List<String> componentIds;
 
     private DescribeClusterAddonsUpgradeStatusRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class DescribeClusterAddonsUpgradeStatusRequest extends Request {
     /**
      * @return componentIds
      */
-    public java.util.List < String > getComponentIds() {
+    public java.util.List<String> getComponentIds() {
         return this.componentIds;
     }
 
     public static final class Builder extends Request.Builder<DescribeClusterAddonsUpgradeStatusRequest, Builder> {
         private String clusterId; 
-        private java.util.List < String > componentIds; 
+        private java.util.List<String> componentIds; 
 
         private Builder() {
             super();
@@ -86,7 +91,7 @@ public class DescribeClusterAddonsUpgradeStatusRequest extends Request {
          * <p>The list of component names.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder componentIds(java.util.List < String > componentIds) {
+        public Builder componentIds(java.util.List<String> componentIds) {
             String componentIdsShrink = shrink(componentIds, "componentIds", "json");
             this.putQueryParameter("componentIds", componentIdsShrink);
             this.componentIds = componentIds;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class InstancePatterns extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("architectures")
-    private java.util.List < String > architectures;
+    private java.util.List<String> architectures;
 
     @com.aliyun.core.annotation.NameInMap("burst_performance_option")
     private String burstPerformanceOption;
@@ -22,7 +27,7 @@ public class InstancePatterns extends TeaModel {
     private Long core;
 
     @com.aliyun.core.annotation.NameInMap("excluded_instance_types")
-    private java.util.List < String > excludedInstanceTypes;
+    private java.util.List<String> excludedInstanceTypes;
 
     @com.aliyun.core.annotation.NameInMap("instance_family_level")
     private String instanceFamilyLevel;
@@ -54,7 +59,7 @@ public class InstancePatterns extends TeaModel {
     /**
      * @return architectures
      */
-    public java.util.List < String > getArchitectures() {
+    public java.util.List<String> getArchitectures() {
         return this.architectures;
     }
 
@@ -75,7 +80,7 @@ public class InstancePatterns extends TeaModel {
     /**
      * @return excludedInstanceTypes
      */
-    public java.util.List < String > getExcludedInstanceTypes() {
+    public java.util.List<String> getExcludedInstanceTypes() {
         return this.excludedInstanceTypes;
     }
 
@@ -101,10 +106,10 @@ public class InstancePatterns extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > architectures; 
+        private java.util.List<String> architectures; 
         private String burstPerformanceOption; 
         private Long core; 
-        private java.util.List < String > excludedInstanceTypes; 
+        private java.util.List<String> excludedInstanceTypes; 
         private String instanceFamilyLevel; 
         private Float maxPrice; 
         private Float memory; 
@@ -112,7 +117,7 @@ public class InstancePatterns extends TeaModel {
         /**
          * architectures.
          */
-        public Builder architectures(java.util.List < String > architectures) {
+        public Builder architectures(java.util.List<String> architectures) {
             this.architectures = architectures;
             return this;
         }
@@ -136,7 +141,7 @@ public class InstancePatterns extends TeaModel {
         /**
          * excluded_instance_types.
          */
-        public Builder excludedInstanceTypes(java.util.List < String > excludedInstanceTypes) {
+        public Builder excludedInstanceTypes(java.util.List<String> excludedInstanceTypes) {
             this.excludedInstanceTypes = excludedInstanceTypes;
             return this;
         }

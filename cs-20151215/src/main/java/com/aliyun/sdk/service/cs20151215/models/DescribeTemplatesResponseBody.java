@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     private PageInfo pageInfo;
 
     @com.aliyun.core.annotation.NameInMap("templates")
-    private java.util.List < Templates> templates;
+    private java.util.List<Templates> templates;
 
     private DescribeTemplatesResponseBody(Builder builder) {
         this.pageInfo = builder.pageInfo;
@@ -41,13 +46,13 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     /**
      * @return templates
      */
-    public java.util.List < Templates> getTemplates() {
+    public java.util.List<Templates> getTemplates() {
         return this.templates;
     }
 
     public static final class Builder {
         private PageInfo pageInfo; 
-        private java.util.List < Templates> templates; 
+        private java.util.List<Templates> templates; 
 
         /**
          * <p>The pagination information.</p>
@@ -60,7 +65,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         /**
          * <p>The list of returned templates.</p>
          */
-        public Builder templates(java.util.List < Templates> templates) {
+        public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
             return this;
         }

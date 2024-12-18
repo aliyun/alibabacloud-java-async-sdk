@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("node_names")
-    private java.util.List < String > nodeNames;
+    private java.util.List<String> nodeNames;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("rolling_policy")
@@ -107,7 +112,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
     /**
      * @return nodeNames
      */
-    public java.util.List < String > getNodeNames() {
+    public java.util.List<String> getNodeNames() {
         return this.nodeNames;
     }
 
@@ -144,7 +149,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         private String nodepoolId; 
         private String imageId; 
         private String kubernetesVersion; 
-        private java.util.List < String > nodeNames; 
+        private java.util.List<String> nodeNames; 
         private RollingPolicy rollingPolicy; 
         private String runtimeType; 
         private String runtimeVersion; 
@@ -220,7 +225,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         /**
          * <p>The nodes that you want to update. If you do not specify this parameter, all nodes in the node pool are updated by default.</p>
          */
-        public Builder nodeNames(java.util.List < String > nodeNames) {
+        public Builder nodeNames(java.util.List<String> nodeNames) {
             this.putBodyParameter("node_names", nodeNames);
             this.nodeNames = nodeNames;
             return this;

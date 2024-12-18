@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class RunClusterCheckRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("options")
-    private java.util.Map < String, String > options;
+    private java.util.Map<String, String> options;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("target")
@@ -60,7 +65,7 @@ public class RunClusterCheckRequest extends Request {
     /**
      * @return options
      */
-    public java.util.Map < String, String > getOptions() {
+    public java.util.Map<String, String> getOptions() {
         return this.options;
     }
 
@@ -80,7 +85,7 @@ public class RunClusterCheckRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunClusterCheckRequest, Builder> {
         private String clusterId; 
-        private java.util.Map < String, String > options; 
+        private java.util.Map<String, String> options; 
         private String target; 
         private String type; 
 
@@ -111,7 +116,7 @@ public class RunClusterCheckRequest extends Request {
         /**
          * <p>The cluster check items.</p>
          */
-        public Builder options(java.util.Map < String, String > options) {
+        public Builder options(java.util.Map<String, String> options) {
             this.putBodyParameter("options", options);
             this.options = options;
             return this;

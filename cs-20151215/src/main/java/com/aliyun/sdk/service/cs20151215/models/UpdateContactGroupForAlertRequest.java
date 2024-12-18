@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class UpdateContactGroupForAlertRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("contact_group_ids")
-    private java.util.List < Long > contactGroupIds;
+    private java.util.List<Long> contactGroupIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("cr_name")
@@ -71,7 +76,7 @@ public class UpdateContactGroupForAlertRequest extends Request {
     /**
      * @return contactGroupIds
      */
-    public java.util.List < Long > getContactGroupIds() {
+    public java.util.List<Long> getContactGroupIds() {
         return this.contactGroupIds;
     }
 
@@ -92,7 +97,7 @@ public class UpdateContactGroupForAlertRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateContactGroupForAlertRequest, Builder> {
         private String clusterId; 
         private String alertRuleGroupName; 
-        private java.util.List < Long > contactGroupIds; 
+        private java.util.List<Long> contactGroupIds; 
         private String crName; 
         private String namespace; 
 
@@ -133,7 +138,7 @@ public class UpdateContactGroupForAlertRequest extends Request {
         /**
          * contact_group_ids.
          */
-        public Builder contactGroupIds(java.util.List < Long > contactGroupIds) {
+        public Builder contactGroupIds(java.util.List<Long> contactGroupIds) {
             this.putBodyParameter("contact_group_ids", contactGroupIds);
             this.contactGroupIds = contactGroupIds;
             return this;

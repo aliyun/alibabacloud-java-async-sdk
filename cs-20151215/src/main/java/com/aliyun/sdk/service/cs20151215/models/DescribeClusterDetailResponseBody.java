@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -76,7 +81,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     private OperationPolicy operationPolicy;
 
     @com.aliyun.core.annotation.NameInMap("parameters")
-    private java.util.Map < String, String > parameters;
+    private java.util.Map<String, String> parameters;
 
     @com.aliyun.core.annotation.NameInMap("private_zone")
     private Boolean privateZone;
@@ -111,7 +116,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     private String subnetCidr;
 
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tag > tags;
+    private java.util.List<Tag> tags;
 
     @com.aliyun.core.annotation.NameInMap("timezone")
     private String timezone;
@@ -127,7 +132,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     private String vswitchId;
 
     @com.aliyun.core.annotation.NameInMap("vswitch_ids")
-    private java.util.List < String > vswitchIds;
+    private java.util.List<String> vswitchIds;
 
     @com.aliyun.core.annotation.NameInMap("worker_ram_role_name")
     private String workerRamRoleName;
@@ -336,7 +341,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.Map < String, String > getParameters() {
+    public java.util.Map<String, String> getParameters() {
         return this.parameters;
     }
 
@@ -413,7 +418,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
@@ -448,7 +453,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     /**
      * @return vswitchIds
      */
-    public java.util.List < String > getVswitchIds() {
+    public java.util.List<String> getVswitchIds() {
         return this.vswitchIds;
     }
 
@@ -488,7 +493,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         private String nextVersion; 
         private String nodeCidrMask; 
         private OperationPolicy operationPolicy; 
-        private java.util.Map < String, String > parameters; 
+        private java.util.Map<String, String> parameters; 
         private Boolean privateZone; 
         private String profile; 
         private String proxyMode; 
@@ -499,12 +504,12 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         private Long size; 
         private String state; 
         private String subnetCidr; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
         private String timezone; 
         private String updated; 
         private String vpcId; 
         private String vswitchId; 
-        private java.util.List < String > vswitchIds; 
+        private java.util.List<String> vswitchIds; 
         private String workerRamRoleName; 
         private String zoneId; 
 
@@ -750,7 +755,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         /**
          * <p>The Resource Orchestration Service (ROS) parameters of the cluster.</p>
          */
-        public Builder parameters(java.util.Map < String, String > parameters) {
+        public Builder parameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -903,9 +908,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource tags of the cluster.</p>
+         * <p>The resource labels of the cluster.</p>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.tags = tags;
             return this;
         }
@@ -957,7 +962,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         /**
          * <p>The vSwitch for the control plane of the cluster.</p>
          */
-        public Builder vswitchIds(java.util.List < String > vswitchIds) {
+        public Builder vswitchIds(java.util.List<String> vswitchIds) {
             this.vswitchIds = vswitchIds;
             return this;
         }
@@ -1022,7 +1027,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         private String imageType;
 
         @com.aliyun.core.annotation.NameInMap("instance_types")
-        private java.util.List < String > instanceTypes;
+        private java.util.List<String> instanceTypes;
 
         @com.aliyun.core.annotation.NameInMap("key_pair")
         private String keyPair;
@@ -1159,7 +1164,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         /**
          * @return instanceTypes
          */
-        public java.util.List < String > getInstanceTypes() {
+        public java.util.List<String> getInstanceTypes() {
             return this.instanceTypes;
         }
 
@@ -1270,7 +1275,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             private String deploymentsetId; 
             private String imageId; 
             private String imageType; 
-            private java.util.List < String > instanceTypes; 
+            private java.util.List<String> instanceTypes; 
             private String keyPair; 
             private String nodePortRange; 
             private Long period; 
@@ -1287,7 +1292,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             private String systemDiskSnapshotPolicyId; 
 
             /**
-             * <p>Indicates whether auto-renewal is enabled for the node.</p>
+             * <p>Indicates whether auto-renewal is enabled for the nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1298,7 +1303,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The auto-renewal duration for the node.</p>
+             * <p>The auto-renewal duration for the nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1375,9 +1380,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type of the node.</p>
+             * <p>The instance types of the nodes.</p>
              */
-            public Builder instanceTypes(java.util.List < String > instanceTypes) {
+            public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
                 return this;
             }

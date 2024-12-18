@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListClusterAddonInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("addons")
-    private java.util.List < Addons> addons;
+    private java.util.List<Addons> addons;
 
     private ListClusterAddonInstancesResponseBody(Builder builder) {
         this.addons = builder.addons;
@@ -30,17 +35,17 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
     /**
      * @return addons
      */
-    public java.util.List < Addons> getAddons() {
+    public java.util.List<Addons> getAddons() {
         return this.addons;
     }
 
     public static final class Builder {
-        private java.util.List < Addons> addons; 
+        private java.util.List<Addons> addons; 
 
         /**
          * <p>A list of components that are installed in the cluster.</p>
          */
-        public Builder addons(java.util.List < Addons> addons) {
+        public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
             return this;
         }

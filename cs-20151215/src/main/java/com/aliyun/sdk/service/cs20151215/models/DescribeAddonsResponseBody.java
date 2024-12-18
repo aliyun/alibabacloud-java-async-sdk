@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAddonsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ComponentGroups")
-    private java.util.List < ComponentGroups> componentGroups;
+    private java.util.List<ComponentGroups> componentGroups;
 
     @com.aliyun.core.annotation.NameInMap("StandardComponents")
-    private java.util.Map < String, StandardComponentsValue > standardComponents;
+    private java.util.Map<String, StandardComponentsValue> standardComponents;
 
     private DescribeAddonsResponseBody(Builder builder) {
         this.componentGroups = builder.componentGroups;
@@ -34,25 +39,25 @@ public class DescribeAddonsResponseBody extends TeaModel {
     /**
      * @return componentGroups
      */
-    public java.util.List < ComponentGroups> getComponentGroups() {
+    public java.util.List<ComponentGroups> getComponentGroups() {
         return this.componentGroups;
     }
 
     /**
      * @return standardComponents
      */
-    public java.util.Map < String, StandardComponentsValue > getStandardComponents() {
+    public java.util.Map<String, StandardComponentsValue> getStandardComponents() {
         return this.standardComponents;
     }
 
     public static final class Builder {
-        private java.util.List < ComponentGroups> componentGroups; 
-        private java.util.Map < String, StandardComponentsValue > standardComponents; 
+        private java.util.List<ComponentGroups> componentGroups; 
+        private java.util.Map<String, StandardComponentsValue> standardComponents; 
 
         /**
          * <p>The list of the returned components.</p>
          */
-        public Builder componentGroups(java.util.List < ComponentGroups> componentGroups) {
+        public Builder componentGroups(java.util.List<ComponentGroups> componentGroups) {
             this.componentGroups = componentGroups;
             return this;
         }
@@ -60,7 +65,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
         /**
          * <p>Standard components.</p>
          */
-        public Builder standardComponents(java.util.Map < String, StandardComponentsValue > standardComponents) {
+        public Builder standardComponents(java.util.Map<String, StandardComponentsValue> standardComponents) {
             this.standardComponents = standardComponents;
             return this;
         }
@@ -132,7 +137,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
         private String groupName;
 
         @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         private ComponentGroups(Builder builder) {
             this.groupName = builder.groupName;
@@ -157,13 +162,13 @@ public class DescribeAddonsResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
         public static final class Builder {
             private String groupName; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
 
             /**
              * <p>The name of the component group.</p>
@@ -179,7 +184,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
             /**
              * <p>The names of the components in the component group.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

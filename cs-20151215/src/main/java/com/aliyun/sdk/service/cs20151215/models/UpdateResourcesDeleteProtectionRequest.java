@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resources")
-    private java.util.List < String > resources;
+    private java.util.List<String> resources;
 
     private UpdateResourcesDeleteProtectionRequest(Builder builder) {
         super(builder);
@@ -86,7 +91,7 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
     /**
      * @return resources
      */
-    public java.util.List < String > getResources() {
+    public java.util.List<String> getResources() {
         return this.resources;
     }
 
@@ -95,7 +100,7 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         private Boolean enable; 
         private String namespace; 
         private String resourceType; 
-        private java.util.List < String > resources; 
+        private java.util.List<String> resources; 
 
         private Builder() {
             super();
@@ -162,7 +167,7 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         /**
          * <p>The resources list.</p>
          */
-        public Builder resources(java.util.List < String > resources) {
+        public Builder resources(java.util.List<String> resources) {
             this.putBodyParameter("resources", resources);
             this.resources = resources;
             return this;

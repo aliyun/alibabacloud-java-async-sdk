@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
     private Page page;
 
     @com.aliyun.core.annotation.NameInMap("states")
-    private java.util.List < States> states;
+    private java.util.List<States> states;
 
     private ListUserKubeConfigStatesResponseBody(Builder builder) {
         this.page = builder.page;
@@ -41,13 +46,13 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
     /**
      * @return states
      */
-    public java.util.List < States> getStates() {
+    public java.util.List<States> getStates() {
         return this.states;
     }
 
     public static final class Builder {
         private Page page; 
-        private java.util.List < States> states; 
+        private java.util.List<States> states; 
 
         /**
          * <p>The pagination information.</p>
@@ -60,7 +65,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
         /**
          * <p>The status of the kubeconfig files.</p>
          */
-        public Builder states(java.util.List < States> states) {
+        public Builder states(java.util.List<States> states) {
             this.states = states;
             return this;
         }

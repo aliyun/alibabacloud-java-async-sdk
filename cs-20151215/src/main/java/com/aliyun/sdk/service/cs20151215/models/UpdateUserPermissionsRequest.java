@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class UpdateUserPermissionsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < UpdateUserPermissionsRequestBody> body;
+    private java.util.List<UpdateUserPermissionsRequestBody> body;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("mode")
@@ -54,7 +59,7 @@ public class UpdateUserPermissionsRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < UpdateUserPermissionsRequestBody> getBody() {
+    public java.util.List<UpdateUserPermissionsRequestBody> getBody() {
         return this.body;
     }
 
@@ -67,7 +72,7 @@ public class UpdateUserPermissionsRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateUserPermissionsRequest, Builder> {
         private String uid; 
-        private java.util.List < UpdateUserPermissionsRequestBody> body; 
+        private java.util.List<UpdateUserPermissionsRequestBody> body; 
         private String mode; 
 
         private Builder() {
@@ -96,7 +101,7 @@ public class UpdateUserPermissionsRequest extends Request {
         /**
          * <p>The request body.</p>
          */
-        public Builder body(java.util.List < UpdateUserPermissionsRequestBody> body) {
+        public Builder body(java.util.List<UpdateUserPermissionsRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

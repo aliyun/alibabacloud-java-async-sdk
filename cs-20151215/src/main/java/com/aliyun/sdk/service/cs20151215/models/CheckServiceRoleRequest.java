@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CheckServiceRoleRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("roles")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Roles> roles;
+    private java.util.List<Roles> roles;
 
     private CheckServiceRoleRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class CheckServiceRoleRequest extends Request {
     /**
      * @return roles
      */
-    public java.util.List < Roles> getRoles() {
+    public java.util.List<Roles> getRoles() {
         return this.roles;
     }
 
     public static final class Builder extends Request.Builder<CheckServiceRoleRequest, Builder> {
-        private java.util.List < Roles> roles; 
+        private java.util.List<Roles> roles; 
 
         private Builder() {
             super();
@@ -58,7 +63,7 @@ public class CheckServiceRoleRequest extends Request {
          * <p>The service roles that you want to check.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder roles(java.util.List < Roles> roles) {
+        public Builder roles(java.util.List<Roles> roles) {
             this.putBodyParameter("roles", roles);
             this.roles = roles;
             return this;

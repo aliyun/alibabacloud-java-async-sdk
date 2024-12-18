@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ModifyClusterTagsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < Tag > body;
+    private java.util.List<Tag> body;
 
     private ModifyClusterTagsRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class ModifyClusterTagsRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < Tag > getBody() {
+    public java.util.List<Tag> getBody() {
         return this.body;
     }
 
     public static final class Builder extends Request.Builder<ModifyClusterTagsRequest, Builder> {
         private String clusterId; 
-        private java.util.List < Tag > body; 
+        private java.util.List<Tag> body; 
 
         private Builder() {
             super();
@@ -84,7 +89,7 @@ public class ModifyClusterTagsRequest extends Request {
         /**
          * <p>The data of the labels that you want to modify.</p>
          */
-        public Builder body(java.util.List < Tag > body) {
+        public Builder body(java.util.List<Tag> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

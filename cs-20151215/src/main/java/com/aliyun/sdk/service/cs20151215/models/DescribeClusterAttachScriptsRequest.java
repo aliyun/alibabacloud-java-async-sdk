@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("rds_instances")
-    private java.util.List < String > rdsInstances;
+    private java.util.List<String> rdsInstances;
 
     private DescribeClusterAttachScriptsRequest(Builder builder) {
         super(builder);
@@ -110,7 +115,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
     /**
      * @return rdsInstances
      */
-    public java.util.List < String > getRdsInstances() {
+    public java.util.List<String> getRdsInstances() {
         return this.rdsInstances;
     }
 
@@ -121,7 +126,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         private Boolean keepInstanceName; 
         private String nodepoolId; 
         private String options; 
-        private java.util.List < String > rdsInstances; 
+        private java.util.List<String> rdsInstances; 
 
         private Builder() {
             super();
@@ -239,7 +244,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         /**
          * <p>The ApsaraDB RDS instances. If you specify a list of ApsaraDB RDS instances, ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.</p>
          */
-        public Builder rdsInstances(java.util.List < String > rdsInstances) {
+        public Builder rdsInstances(java.util.List<String> rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
             this.rdsInstances = rdsInstances;
             return this;

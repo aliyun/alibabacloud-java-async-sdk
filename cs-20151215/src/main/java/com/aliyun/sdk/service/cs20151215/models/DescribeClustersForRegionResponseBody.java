@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeClustersForRegionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("clusters")
-    private java.util.List < Clusters> clusters;
+    private java.util.List<Clusters> clusters;
 
     @com.aliyun.core.annotation.NameInMap("page_info")
     private PageInfo pageInfo;
@@ -34,7 +39,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
     /**
      * @return clusters
      */
-    public java.util.List < Clusters> getClusters() {
+    public java.util.List<Clusters> getClusters() {
         return this.clusters;
     }
 
@@ -46,13 +51,13 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Clusters> clusters; 
+        private java.util.List<Clusters> clusters; 
         private PageInfo pageInfo; 
 
         /**
          * <p>The details of the clusters.</p>
          */
-        public Builder clusters(java.util.List < Clusters> clusters) {
+        public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;
             return this;
         }
@@ -140,7 +145,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         private String state;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tag > tags;
+        private java.util.List<Tag> tags;
 
         @com.aliyun.core.annotation.NameInMap("timezone")
         private String timezone;
@@ -152,7 +157,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         private String vpcId;
 
         @com.aliyun.core.annotation.NameInMap("vswitch_ids")
-        private java.util.List < String > vswitchIds;
+        private java.util.List<String> vswitchIds;
 
         private Clusters(Builder builder) {
             this.clusterDomain = builder.clusterDomain;
@@ -333,7 +338,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tag > getTags() {
+        public java.util.List<Tag> getTags() {
             return this.tags;
         }
 
@@ -361,7 +366,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         /**
          * @return vswitchIds
          */
-        public java.util.List < String > getVswitchIds() {
+        public java.util.List<String> getVswitchIds() {
             return this.vswitchIds;
         }
 
@@ -386,11 +391,11 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             private String serviceCidr; 
             private Long size; 
             private String state; 
-            private java.util.List < Tag > tags; 
+            private java.util.List<Tag> tags; 
             private String timezone; 
             private String updated; 
             private String vpcId; 
-            private java.util.List < String > vswitchIds; 
+            private java.util.List<String> vswitchIds; 
 
             /**
              * <p>The domain name of the cluster.</p>
@@ -654,7 +659,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             /**
              * <p>The list of tags.</p>
              */
-            public Builder tags(java.util.List < Tag > tags) {
+            public Builder tags(java.util.List<Tag> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -695,7 +700,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
             /**
              * <p>The vSwitches for the control plane of the cluster.</p>
              */
-            public Builder vswitchIds(java.util.List < String > vswitchIds) {
+            public Builder vswitchIds(java.util.List<String> vswitchIds) {
                 this.vswitchIds = vswitchIds;
                 return this;
             }

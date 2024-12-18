@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -62,7 +67,10 @@ public class CreateAutoscalingConfigResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * cluster_id.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc212d04dfe184547bffaa596********</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -70,7 +78,10 @@ public class CreateAutoscalingConfigResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF8BE105-C32B-1269-9774-5510********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +89,10 @@ public class CreateAutoscalingConfigResponseBody extends TeaModel {
         }
 
         /**
-         * task_id.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-5fd211e924e1d007********</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListOperationPlansResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("plans")
-    private java.util.List < Plans> plans;
+    private java.util.List<Plans> plans;
 
     private ListOperationPlansResponseBody(Builder builder) {
         this.plans = builder.plans;
@@ -30,17 +35,17 @@ public class ListOperationPlansResponseBody extends TeaModel {
     /**
      * @return plans
      */
-    public java.util.List < Plans> getPlans() {
+    public java.util.List<Plans> getPlans() {
         return this.plans;
     }
 
     public static final class Builder {
-        private java.util.List < Plans> plans; 
+        private java.util.List<Plans> plans; 
 
         /**
          * <p>The operation plans.</p>
          */
-        public Builder plans(java.util.List < Plans> plans) {
+        public Builder plans(java.util.List<Plans> plans) {
             this.plans = plans;
             return this;
         }

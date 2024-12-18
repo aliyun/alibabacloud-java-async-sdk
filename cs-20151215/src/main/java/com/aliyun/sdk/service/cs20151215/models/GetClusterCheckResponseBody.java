@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
     private String checkId;
 
     @com.aliyun.core.annotation.NameInMap("check_items")
-    private java.util.Map < String, java.util.List<java.util.Map<String, ?>>> checkItems;
+    private java.util.Map<String, java.util.List<java.util.Map<String, ?>>> checkItems;
 
     @com.aliyun.core.annotation.NameInMap("created_at")
     private String createdAt;
@@ -61,7 +66,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
     /**
      * @return checkItems
      */
-    public java.util.Map < String, java.util.List<java.util.Map<String, ?>>> getCheckItems() {
+    public java.util.Map<String, java.util.List<java.util.Map<String, ?>>> getCheckItems() {
         return this.checkItems;
     }
 
@@ -102,7 +107,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
 
     public static final class Builder {
         private String checkId; 
-        private java.util.Map < String, java.util.List<java.util.Map<String, ?>>> checkItems; 
+        private java.util.Map<String, java.util.List<java.util.Map<String, ?>>> checkItems; 
         private String createdAt; 
         private String finishedAt; 
         private String message; 
@@ -123,7 +128,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         /**
          * <p>The list of check items.</p>
          */
-        public Builder checkItems(java.util.Map < String, java.util.List<java.util.Map<String, ?>>> checkItems) {
+        public Builder checkItems(java.util.Map<String, java.util.List<java.util.Map<String, ?>>> checkItems) {
             this.checkItems = checkItems;
             return this;
         }

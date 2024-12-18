@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class InstallClusterAddonsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < InstallClusterAddonsRequestBody> body;
+    private java.util.List<InstallClusterAddonsRequestBody> body;
 
     private InstallClusterAddonsRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class InstallClusterAddonsRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < InstallClusterAddonsRequestBody> getBody() {
+    public java.util.List<InstallClusterAddonsRequestBody> getBody() {
         return this.body;
     }
 
     public static final class Builder extends Request.Builder<InstallClusterAddonsRequest, Builder> {
         private String clusterId; 
-        private java.util.List < InstallClusterAddonsRequestBody> body; 
+        private java.util.List<InstallClusterAddonsRequestBody> body; 
 
         private Builder() {
             super();
@@ -87,7 +92,7 @@ public class InstallClusterAddonsRequest extends Request {
          * <strong>example:</strong>
          * <p>ags-metrics-collector</p>
          */
-        public Builder body(java.util.List < InstallClusterAddonsRequestBody> body) {
+        public Builder body(java.util.List<InstallClusterAddonsRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

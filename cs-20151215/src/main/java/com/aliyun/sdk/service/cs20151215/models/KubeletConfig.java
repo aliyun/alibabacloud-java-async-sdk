@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class KubeletConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("allowedUnsafeSysctls")
-    private java.util.List < String > allowedUnsafeSysctls;
+    private java.util.List<String> allowedUnsafeSysctls;
 
     @com.aliyun.core.annotation.NameInMap("clusterDNS")
-    private java.util.List < String > clusterDNS;
+    private java.util.List<String> clusterDNS;
 
     @com.aliyun.core.annotation.NameInMap("containerLogMaxFiles")
     private Long containerLogMaxFiles;
@@ -40,16 +45,16 @@ public class KubeletConfig extends TeaModel {
     private Long eventRecordQPS;
 
     @com.aliyun.core.annotation.NameInMap("evictionHard")
-    private java.util.Map < String, ? > evictionHard;
+    private java.util.Map<String, ?> evictionHard;
 
     @com.aliyun.core.annotation.NameInMap("evictionSoft")
-    private java.util.Map < String, ? > evictionSoft;
+    private java.util.Map<String, ?> evictionSoft;
 
     @com.aliyun.core.annotation.NameInMap("evictionSoftGracePeriod")
-    private java.util.Map < String, ? > evictionSoftGracePeriod;
+    private java.util.Map<String, ?> evictionSoftGracePeriod;
 
     @com.aliyun.core.annotation.NameInMap("featureGates")
-    private java.util.Map < String, ? > featureGates;
+    private java.util.Map<String, ?> featureGates;
 
     @com.aliyun.core.annotation.NameInMap("imageGCHighThresholdPercent")
     private Integer imageGCHighThresholdPercent;
@@ -64,7 +69,7 @@ public class KubeletConfig extends TeaModel {
     private Long kubeAPIQPS;
 
     @com.aliyun.core.annotation.NameInMap("kubeReserved")
-    private java.util.Map < String, ? > kubeReserved;
+    private java.util.Map<String, ?> kubeReserved;
 
     @com.aliyun.core.annotation.NameInMap("maxPods")
     private Long maxPods;
@@ -85,13 +90,13 @@ public class KubeletConfig extends TeaModel {
     private Long registryPullQPS;
 
     @com.aliyun.core.annotation.NameInMap("reservedMemory")
-    private java.util.List < ReservedMemory> reservedMemory;
+    private java.util.List<ReservedMemory> reservedMemory;
 
     @com.aliyun.core.annotation.NameInMap("serializeImagePulls")
     private Boolean serializeImagePulls;
 
     @com.aliyun.core.annotation.NameInMap("systemReserved")
-    private java.util.Map < String, ? > systemReserved;
+    private java.util.Map<String, ?> systemReserved;
 
     @com.aliyun.core.annotation.NameInMap("topologyManagerPolicy")
     private String topologyManagerPolicy;
@@ -142,14 +147,14 @@ public class KubeletConfig extends TeaModel {
     /**
      * @return allowedUnsafeSysctls
      */
-    public java.util.List < String > getAllowedUnsafeSysctls() {
+    public java.util.List<String> getAllowedUnsafeSysctls() {
         return this.allowedUnsafeSysctls;
     }
 
     /**
      * @return clusterDNS
      */
-    public java.util.List < String > getClusterDNS() {
+    public java.util.List<String> getClusterDNS() {
         return this.clusterDNS;
     }
 
@@ -205,28 +210,28 @@ public class KubeletConfig extends TeaModel {
     /**
      * @return evictionHard
      */
-    public java.util.Map < String, ? > getEvictionHard() {
+    public java.util.Map<String, ?> getEvictionHard() {
         return this.evictionHard;
     }
 
     /**
      * @return evictionSoft
      */
-    public java.util.Map < String, ? > getEvictionSoft() {
+    public java.util.Map<String, ?> getEvictionSoft() {
         return this.evictionSoft;
     }
 
     /**
      * @return evictionSoftGracePeriod
      */
-    public java.util.Map < String, ? > getEvictionSoftGracePeriod() {
+    public java.util.Map<String, ?> getEvictionSoftGracePeriod() {
         return this.evictionSoftGracePeriod;
     }
 
     /**
      * @return featureGates
      */
-    public java.util.Map < String, ? > getFeatureGates() {
+    public java.util.Map<String, ?> getFeatureGates() {
         return this.featureGates;
     }
 
@@ -261,7 +266,7 @@ public class KubeletConfig extends TeaModel {
     /**
      * @return kubeReserved
      */
-    public java.util.Map < String, ? > getKubeReserved() {
+    public java.util.Map<String, ?> getKubeReserved() {
         return this.kubeReserved;
     }
 
@@ -310,7 +315,7 @@ public class KubeletConfig extends TeaModel {
     /**
      * @return reservedMemory
      */
-    public java.util.List < ReservedMemory> getReservedMemory() {
+    public java.util.List<ReservedMemory> getReservedMemory() {
         return this.reservedMemory;
     }
 
@@ -324,7 +329,7 @@ public class KubeletConfig extends TeaModel {
     /**
      * @return systemReserved
      */
-    public java.util.Map < String, ? > getSystemReserved() {
+    public java.util.Map<String, ?> getSystemReserved() {
         return this.systemReserved;
     }
 
@@ -343,8 +348,8 @@ public class KubeletConfig extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > allowedUnsafeSysctls; 
-        private java.util.List < String > clusterDNS; 
+        private java.util.List<String> allowedUnsafeSysctls; 
+        private java.util.List<String> clusterDNS; 
         private Long containerLogMaxFiles; 
         private String containerLogMaxSize; 
         private Boolean cpuCFSQuota; 
@@ -352,31 +357,31 @@ public class KubeletConfig extends TeaModel {
         private String cpuManagerPolicy; 
         private Long eventBurst; 
         private Long eventRecordQPS; 
-        private java.util.Map < String, ? > evictionHard; 
-        private java.util.Map < String, ? > evictionSoft; 
-        private java.util.Map < String, ? > evictionSoftGracePeriod; 
-        private java.util.Map < String, ? > featureGates; 
+        private java.util.Map<String, ?> evictionHard; 
+        private java.util.Map<String, ?> evictionSoft; 
+        private java.util.Map<String, ?> evictionSoftGracePeriod; 
+        private java.util.Map<String, ?> featureGates; 
         private Integer imageGCHighThresholdPercent; 
         private Integer imageGCLowThresholdPercent; 
         private Long kubeAPIBurst; 
         private Long kubeAPIQPS; 
-        private java.util.Map < String, ? > kubeReserved; 
+        private java.util.Map<String, ?> kubeReserved; 
         private Long maxPods; 
         private String memoryManagerPolicy; 
         private Long podPidsLimit; 
         private Long readOnlyPort; 
         private Long registryBurst; 
         private Long registryPullQPS; 
-        private java.util.List < ReservedMemory> reservedMemory; 
+        private java.util.List<ReservedMemory> reservedMemory; 
         private Boolean serializeImagePulls; 
-        private java.util.Map < String, ? > systemReserved; 
+        private java.util.Map<String, ?> systemReserved; 
         private String topologyManagerPolicy; 
         private Tracing tracing; 
 
         /**
          * allowedUnsafeSysctls.
          */
-        public Builder allowedUnsafeSysctls(java.util.List < String > allowedUnsafeSysctls) {
+        public Builder allowedUnsafeSysctls(java.util.List<String> allowedUnsafeSysctls) {
             this.allowedUnsafeSysctls = allowedUnsafeSysctls;
             return this;
         }
@@ -384,7 +389,7 @@ public class KubeletConfig extends TeaModel {
         /**
          * clusterDNS.
          */
-        public Builder clusterDNS(java.util.List < String > clusterDNS) {
+        public Builder clusterDNS(java.util.List<String> clusterDNS) {
             this.clusterDNS = clusterDNS;
             return this;
         }
@@ -448,7 +453,7 @@ public class KubeletConfig extends TeaModel {
         /**
          * evictionHard.
          */
-        public Builder evictionHard(java.util.Map < String, ? > evictionHard) {
+        public Builder evictionHard(java.util.Map<String, ?> evictionHard) {
             this.evictionHard = evictionHard;
             return this;
         }
@@ -456,7 +461,7 @@ public class KubeletConfig extends TeaModel {
         /**
          * evictionSoft.
          */
-        public Builder evictionSoft(java.util.Map < String, ? > evictionSoft) {
+        public Builder evictionSoft(java.util.Map<String, ?> evictionSoft) {
             this.evictionSoft = evictionSoft;
             return this;
         }
@@ -464,7 +469,7 @@ public class KubeletConfig extends TeaModel {
         /**
          * evictionSoftGracePeriod.
          */
-        public Builder evictionSoftGracePeriod(java.util.Map < String, ? > evictionSoftGracePeriod) {
+        public Builder evictionSoftGracePeriod(java.util.Map<String, ?> evictionSoftGracePeriod) {
             this.evictionSoftGracePeriod = evictionSoftGracePeriod;
             return this;
         }
@@ -472,7 +477,7 @@ public class KubeletConfig extends TeaModel {
         /**
          * featureGates.
          */
-        public Builder featureGates(java.util.Map < String, ? > featureGates) {
+        public Builder featureGates(java.util.Map<String, ?> featureGates) {
             this.featureGates = featureGates;
             return this;
         }
@@ -512,7 +517,7 @@ public class KubeletConfig extends TeaModel {
         /**
          * kubeReserved.
          */
-        public Builder kubeReserved(java.util.Map < String, ? > kubeReserved) {
+        public Builder kubeReserved(java.util.Map<String, ?> kubeReserved) {
             this.kubeReserved = kubeReserved;
             return this;
         }
@@ -568,7 +573,7 @@ public class KubeletConfig extends TeaModel {
         /**
          * reservedMemory.
          */
-        public Builder reservedMemory(java.util.List < ReservedMemory> reservedMemory) {
+        public Builder reservedMemory(java.util.List<ReservedMemory> reservedMemory) {
             this.reservedMemory = reservedMemory;
             return this;
         }
@@ -584,7 +589,7 @@ public class KubeletConfig extends TeaModel {
         /**
          * systemReserved.
          */
-        public Builder systemReserved(java.util.Map < String, ? > systemReserved) {
+        public Builder systemReserved(java.util.Map<String, ?> systemReserved) {
             this.systemReserved = systemReserved;
             return this;
         }
@@ -619,7 +624,7 @@ public class KubeletConfig extends TeaModel {
      */
     public static class ReservedMemory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("limits")
-        private java.util.Map < String, ? > limits;
+        private java.util.Map<String, ?> limits;
 
         @com.aliyun.core.annotation.NameInMap("numaNode")
         private Integer numaNode;
@@ -640,7 +645,7 @@ public class KubeletConfig extends TeaModel {
         /**
          * @return limits
          */
-        public java.util.Map < String, ? > getLimits() {
+        public java.util.Map<String, ?> getLimits() {
             return this.limits;
         }
 
@@ -652,13 +657,13 @@ public class KubeletConfig extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > limits; 
+            private java.util.Map<String, ?> limits; 
             private Integer numaNode; 
 
             /**
              * limits.
              */
-            public Builder limits(java.util.Map < String, ? > limits) {
+            public Builder limits(java.util.Map<String, ?> limits) {
                 this.limits = limits;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeKubernetesVersionMetadataResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < DescribeKubernetesVersionMetadataResponseBody> body;
+    private java.util.List<DescribeKubernetesVersionMetadataResponseBody> body;
 
     private DescribeKubernetesVersionMetadataResponse(BuilderImpl builder) {
         super(builder);
@@ -40,7 +45,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,17 +59,17 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < DescribeKubernetesVersionMetadataResponseBody> getBody() {
+    public java.util.List<DescribeKubernetesVersionMetadataResponseBody> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<DescribeKubernetesVersionMetadataResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < DescribeKubernetesVersionMetadataResponseBody> body);
+        Builder body(java.util.List<DescribeKubernetesVersionMetadataResponseBody> body);
 
         @Override
         DescribeKubernetesVersionMetadataResponse build();
@@ -74,9 +79,9 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<DescribeKubernetesVersionMetadataResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < DescribeKubernetesVersionMetadataResponseBody> body; 
+        private java.util.List<DescribeKubernetesVersionMetadataResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -93,7 +98,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,7 +116,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < DescribeKubernetesVersionMetadataResponseBody> body) {
+        public Builder body(java.util.List<DescribeKubernetesVersionMetadataResponseBody> body) {
             this.body = body;
             return this;
         }
@@ -369,16 +374,16 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
      */
     public static class DescribeKubernetesVersionMetadataResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("capabilities")
-        private java.util.Map < String, ? > capabilities;
+        private java.util.Map<String, ?> capabilities;
 
         @com.aliyun.core.annotation.NameInMap("images")
-        private java.util.List < Images> images;
+        private java.util.List<Images> images;
 
         @com.aliyun.core.annotation.NameInMap("meta_data")
-        private java.util.Map < String, ? > metaData;
+        private java.util.Map<String, ?> metaData;
 
         @com.aliyun.core.annotation.NameInMap("runtimes")
-        private java.util.List < Runtime > runtimes;
+        private java.util.List<Runtime> runtimes;
 
         @com.aliyun.core.annotation.NameInMap("version")
         private String version;
@@ -393,7 +398,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         private Boolean creatable;
 
         @com.aliyun.core.annotation.NameInMap("upgradable_versions")
-        private java.util.List < String > upgradableVersions;
+        private java.util.List<String> upgradableVersions;
 
         private DescribeKubernetesVersionMetadataResponseBody(Builder builder) {
             this.capabilities = builder.capabilities;
@@ -418,28 +423,28 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         /**
          * @return capabilities
          */
-        public java.util.Map < String, ? > getCapabilities() {
+        public java.util.Map<String, ?> getCapabilities() {
             return this.capabilities;
         }
 
         /**
          * @return images
          */
-        public java.util.List < Images> getImages() {
+        public java.util.List<Images> getImages() {
             return this.images;
         }
 
         /**
          * @return metaData
          */
-        public java.util.Map < String, ? > getMetaData() {
+        public java.util.Map<String, ?> getMetaData() {
             return this.metaData;
         }
 
         /**
          * @return runtimes
          */
-        public java.util.List < Runtime > getRuntimes() {
+        public java.util.List<Runtime> getRuntimes() {
             return this.runtimes;
         }
 
@@ -474,25 +479,25 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         /**
          * @return upgradableVersions
          */
-        public java.util.List < String > getUpgradableVersions() {
+        public java.util.List<String> getUpgradableVersions() {
             return this.upgradableVersions;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > capabilities; 
-            private java.util.List < Images> images; 
-            private java.util.Map < String, ? > metaData; 
-            private java.util.List < Runtime > runtimes; 
+            private java.util.Map<String, ?> capabilities; 
+            private java.util.List<Images> images; 
+            private java.util.Map<String, ?> metaData; 
+            private java.util.List<Runtime> runtimes; 
             private String version; 
             private String releaseDate; 
             private String expirationDate; 
             private Boolean creatable; 
-            private java.util.List < String > upgradableVersions; 
+            private java.util.List<String> upgradableVersions; 
 
             /**
              * <p>Features of the queried Kubernetes version.</p>
              */
-            public Builder capabilities(java.util.Map < String, ? > capabilities) {
+            public Builder capabilities(java.util.Map<String, ?> capabilities) {
                 this.capabilities = capabilities;
                 return this;
             }
@@ -500,7 +505,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             /**
              * <p>The OS images that are returned.</p>
              */
-            public Builder images(java.util.List < Images> images) {
+            public Builder images(java.util.List<Images> images) {
                 this.images = images;
                 return this;
             }
@@ -508,7 +513,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             /**
              * <p>The metadata of the Kubernetes version.</p>
              */
-            public Builder metaData(java.util.Map < String, ? > metaData) {
+            public Builder metaData(java.util.Map<String, ?> metaData) {
                 this.metaData = metaData;
                 return this;
             }
@@ -516,7 +521,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             /**
              * <p>Details of the supported container runtimes.</p>
              */
-            public Builder runtimes(java.util.List < Runtime > runtimes) {
+            public Builder runtimes(java.util.List<Runtime> runtimes) {
                 this.runtimes = runtimes;
                 return this;
             }
@@ -568,7 +573,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             /**
              * <p>The list of available versions for updates.</p>
              */
-            public Builder upgradableVersions(java.util.List < String > upgradableVersions) {
+            public Builder upgradableVersions(java.util.List<String> upgradableVersions) {
                 this.upgradableVersions = upgradableVersions;
                 return this;
             }

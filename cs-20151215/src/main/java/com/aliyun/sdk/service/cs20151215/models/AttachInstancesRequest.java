@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class AttachInstancesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("instances")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instances;
+    private java.util.List<String> instances;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("is_edge_worker")
@@ -56,7 +61,7 @@ public class AttachInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("rds_instances")
-    private java.util.List < String > rdsInstances;
+    private java.util.List<String> rdsInstances;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("runtime")
@@ -64,7 +69,7 @@ public class AttachInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tag > tags;
+    private java.util.List<Tag> tags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user_data")
@@ -132,7 +137,7 @@ public class AttachInstancesRequest extends Request {
     /**
      * @return instances
      */
-    public java.util.List < String > getInstances() {
+    public java.util.List<String> getInstances() {
         return this.instances;
     }
 
@@ -174,7 +179,7 @@ public class AttachInstancesRequest extends Request {
     /**
      * @return rdsInstances
      */
-    public java.util.List < String > getRdsInstances() {
+    public java.util.List<String> getRdsInstances() {
         return this.rdsInstances;
     }
 
@@ -188,7 +193,7 @@ public class AttachInstancesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
@@ -204,15 +209,15 @@ public class AttachInstancesRequest extends Request {
         private String cpuPolicy; 
         private Boolean formatDisk; 
         private String imageId; 
-        private java.util.List < String > instances; 
+        private java.util.List<String> instances; 
         private Boolean isEdgeWorker; 
         private Boolean keepInstanceName; 
         private String keyPair; 
         private String nodepoolId; 
         private String password; 
-        private java.util.List < String > rdsInstances; 
+        private java.util.List<String> rdsInstances; 
         private Runtime runtime; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
         private String userData; 
 
         private Builder() {
@@ -319,7 +324,7 @@ public class AttachInstancesRequest extends Request {
          * <p>The ECS instances that you want to add.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder instances(java.util.List < String > instances) {
+        public Builder instances(java.util.List<String> instances) {
             this.putBodyParameter("instances", instances);
             this.instances = instances;
             return this;
@@ -405,7 +410,7 @@ public class AttachInstancesRequest extends Request {
         /**
          * <p>A list of ApsaraDB RDS instances.</p>
          */
-        public Builder rdsInstances(java.util.List < String > rdsInstances) {
+        public Builder rdsInstances(java.util.List<String> rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
             this.rdsInstances = rdsInstances;
             return this;
@@ -433,7 +438,7 @@ public class AttachInstancesRequest extends Request {
          * <p> This parameter is not supported if you specify <code>nodepool_id</code>.</p>
          * </blockquote>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
             return this;

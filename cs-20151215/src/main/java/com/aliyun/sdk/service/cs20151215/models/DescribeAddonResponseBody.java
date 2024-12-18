@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAddonResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("architecture")
-    private java.util.List < String > architecture;
+    private java.util.List<String> architecture;
 
     @com.aliyun.core.annotation.NameInMap("category")
     private String category;
@@ -31,10 +36,10 @@ public class DescribeAddonResponseBody extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("newer_versions")
-    private java.util.List < NewerVersions> newerVersions;
+    private java.util.List<NewerVersions> newerVersions;
 
     @com.aliyun.core.annotation.NameInMap("supported_actions")
-    private java.util.List < String > supportedActions;
+    private java.util.List<String> supportedActions;
 
     @com.aliyun.core.annotation.NameInMap("version")
     private String version;
@@ -62,7 +67,7 @@ public class DescribeAddonResponseBody extends TeaModel {
     /**
      * @return architecture
      */
-    public java.util.List < String > getArchitecture() {
+    public java.util.List<String> getArchitecture() {
         return this.architecture;
     }
 
@@ -104,14 +109,14 @@ public class DescribeAddonResponseBody extends TeaModel {
     /**
      * @return newerVersions
      */
-    public java.util.List < NewerVersions> getNewerVersions() {
+    public java.util.List<NewerVersions> getNewerVersions() {
         return this.newerVersions;
     }
 
     /**
      * @return supportedActions
      */
-    public java.util.List < String > getSupportedActions() {
+    public java.util.List<String> getSupportedActions() {
         return this.supportedActions;
     }
 
@@ -123,14 +128,14 @@ public class DescribeAddonResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > architecture; 
+        private java.util.List<String> architecture; 
         private String category; 
         private String configSchema; 
         private Boolean installByDefault; 
         private Boolean managed; 
         private String name; 
-        private java.util.List < NewerVersions> newerVersions; 
-        private java.util.List < String > supportedActions; 
+        private java.util.List<NewerVersions> newerVersions; 
+        private java.util.List<String> supportedActions; 
         private String version; 
 
         /**
@@ -140,7 +145,7 @@ public class DescribeAddonResponseBody extends TeaModel {
          * <li>arm64</li>
          * </ul>
          */
-        public Builder architecture(java.util.List < String > architecture) {
+        public Builder architecture(java.util.List<String> architecture) {
             this.architecture = architecture;
             return this;
         }
@@ -203,7 +208,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         /**
          * <p>The latest version of the component.</p>
          */
-        public Builder newerVersions(java.util.List < NewerVersions> newerVersions) {
+        public Builder newerVersions(java.util.List<NewerVersions> newerVersions) {
             this.newerVersions = newerVersions;
             return this;
         }
@@ -217,7 +222,7 @@ public class DescribeAddonResponseBody extends TeaModel {
          * <li>Uninstall</li>
          * </ul>
          */
-        public Builder supportedActions(java.util.List < String > supportedActions) {
+        public Builder supportedActions(java.util.List<String> supportedActions) {
             this.supportedActions = supportedActions;
             return this;
         }

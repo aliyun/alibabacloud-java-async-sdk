@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("instances_severity_count")
-    private java.util.Map < String, ? > instancesSeverityCount;
+    private java.util.Map<String, ?> instancesSeverityCount;
 
     @com.aliyun.core.annotation.NameInMap("policy_instances")
-    private java.util.List < PolicyInstances> policyInstances;
+    private java.util.List<PolicyInstances> policyInstances;
 
     private DescribePolicyInstancesStatusResponseBody(Builder builder) {
         this.instancesSeverityCount = builder.instancesSeverityCount;
@@ -34,20 +39,20 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     /**
      * @return instancesSeverityCount
      */
-    public java.util.Map < String, ? > getInstancesSeverityCount() {
+    public java.util.Map<String, ?> getInstancesSeverityCount() {
         return this.instancesSeverityCount;
     }
 
     /**
      * @return policyInstances
      */
-    public java.util.List < PolicyInstances> getPolicyInstances() {
+    public java.util.List<PolicyInstances> getPolicyInstances() {
         return this.policyInstances;
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > instancesSeverityCount; 
-        private java.util.List < PolicyInstances> policyInstances; 
+        private java.util.Map<String, ?> instancesSeverityCount; 
+        private java.util.List<PolicyInstances> policyInstances; 
 
         /**
          * <p>The number of policy instances that are deployed in the cluster at different severity levels.</p>
@@ -55,7 +60,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{ &quot;high&quot;: 11,     &quot;medium&quot;: 1  }</p>
          */
-        public Builder instancesSeverityCount(java.util.Map < String, ? > instancesSeverityCount) {
+        public Builder instancesSeverityCount(java.util.Map<String, ?> instancesSeverityCount) {
             this.instancesSeverityCount = instancesSeverityCount;
             return this;
         }
@@ -63,7 +68,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         /**
          * <p>The number of policy instances of each policy type.</p>
          */
-        public Builder policyInstances(java.util.List < PolicyInstances> policyInstances) {
+        public Builder policyInstances(java.util.List<PolicyInstances> policyInstances) {
             this.policyInstances = policyInstances;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class ScaleOutClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("rds_instances")
-    private java.util.List < String > rdsInstances;
+    private java.util.List<String> rdsInstances;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("runtime")
@@ -54,11 +59,11 @@ public class ScaleOutClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tag > tags;
+    private java.util.List<Tag> tags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("taints")
-    private java.util.List < Taint > taints;
+    private java.util.List<Taint> taints;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user_data")
@@ -67,7 +72,7 @@ public class ScaleOutClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("vswitch_ids")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > vswitchIds;
+    private java.util.List<String> vswitchIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_auto_renew")
@@ -79,7 +84,7 @@ public class ScaleOutClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_data_disks")
-    private java.util.List < WorkerDataDisks> workerDataDisks;
+    private java.util.List<WorkerDataDisks> workerDataDisks;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_instance_charge_type")
@@ -88,7 +93,7 @@ public class ScaleOutClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_instance_types")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > workerInstanceTypes;
+    private java.util.List<String> workerInstanceTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_period")
@@ -199,7 +204,7 @@ public class ScaleOutClusterRequest extends Request {
     /**
      * @return rdsInstances
      */
-    public java.util.List < String > getRdsInstances() {
+    public java.util.List<String> getRdsInstances() {
         return this.rdsInstances;
     }
 
@@ -213,14 +218,14 @@ public class ScaleOutClusterRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
     /**
      * @return taints
      */
-    public java.util.List < Taint > getTaints() {
+    public java.util.List<Taint> getTaints() {
         return this.taints;
     }
 
@@ -234,7 +239,7 @@ public class ScaleOutClusterRequest extends Request {
     /**
      * @return vswitchIds
      */
-    public java.util.List < String > getVswitchIds() {
+    public java.util.List<String> getVswitchIds() {
         return this.vswitchIds;
     }
 
@@ -255,7 +260,7 @@ public class ScaleOutClusterRequest extends Request {
     /**
      * @return workerDataDisks
      */
-    public java.util.List < WorkerDataDisks> getWorkerDataDisks() {
+    public java.util.List<WorkerDataDisks> getWorkerDataDisks() {
         return this.workerDataDisks;
     }
 
@@ -269,7 +274,7 @@ public class ScaleOutClusterRequest extends Request {
     /**
      * @return workerInstanceTypes
      */
-    public java.util.List < String > getWorkerInstanceTypes() {
+    public java.util.List<String> getWorkerInstanceTypes() {
         return this.workerInstanceTypes;
     }
 
@@ -309,17 +314,17 @@ public class ScaleOutClusterRequest extends Request {
         private String imageId; 
         private String keyPair; 
         private String loginPassword; 
-        private java.util.List < String > rdsInstances; 
+        private java.util.List<String> rdsInstances; 
         private Runtime runtime; 
-        private java.util.List < Tag > tags; 
-        private java.util.List < Taint > taints; 
+        private java.util.List<Tag> tags; 
+        private java.util.List<Taint> taints; 
         private String userData; 
-        private java.util.List < String > vswitchIds; 
+        private java.util.List<String> vswitchIds; 
         private Boolean workerAutoRenew; 
         private Long workerAutoRenewPeriod; 
-        private java.util.List < WorkerDataDisks> workerDataDisks; 
+        private java.util.List<WorkerDataDisks> workerDataDisks; 
         private String workerInstanceChargeType; 
-        private java.util.List < String > workerInstanceTypes; 
+        private java.util.List<String> workerInstanceTypes; 
         private Long workerPeriod; 
         private String workerPeriodUnit; 
         private String workerSystemDiskCategory; 
@@ -456,7 +461,7 @@ public class ScaleOutClusterRequest extends Request {
         /**
          * <p>The ApsaraDB RDS instances. If you specify a list of ApsaraDB RDS instances, ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.</p>
          */
-        public Builder rdsInstances(java.util.List < String > rdsInstances) {
+        public Builder rdsInstances(java.util.List<String> rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
             this.rdsInstances = rdsInstances;
             return this;
@@ -478,7 +483,7 @@ public class ScaleOutClusterRequest extends Request {
          * <li>When you add a tag, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
          * </ul>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
             return this;
@@ -487,7 +492,7 @@ public class ScaleOutClusterRequest extends Request {
         /**
          * <p>The taints that you want to add to nodes. Taints can be used together with tolerations to prevent pods from being scheduled to specific nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
          */
-        public Builder taints(java.util.List < Taint > taints) {
+        public Builder taints(java.util.List<Taint> taints) {
             this.putBodyParameter("taints", taints);
             this.taints = taints;
             return this;
@@ -509,7 +514,7 @@ public class ScaleOutClusterRequest extends Request {
          * <p>The vSwitch IDs. You can select one to three vSwitches when you create a cluster. To ensure the high availability of the cluster, we recommend that you select vSwitches in different zones.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder vswitchIds(java.util.List < String > vswitchIds) {
+        public Builder vswitchIds(java.util.List<String> vswitchIds) {
             this.putBodyParameter("vswitch_ids", vswitchIds);
             this.vswitchIds = vswitchIds;
             return this;
@@ -549,7 +554,7 @@ public class ScaleOutClusterRequest extends Request {
         /**
          * <p>The configurations of the data disks that you want to mount to worker nodes. The configurations include the disk type and disk size.</p>
          */
-        public Builder workerDataDisks(java.util.List < WorkerDataDisks> workerDataDisks) {
+        public Builder workerDataDisks(java.util.List<WorkerDataDisks> workerDataDisks) {
             this.putBodyParameter("worker_data_disks", workerDataDisks);
             this.workerDataDisks = workerDataDisks;
             return this;
@@ -576,7 +581,7 @@ public class ScaleOutClusterRequest extends Request {
          * <p>The instance configurations of worker nodes.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder workerInstanceTypes(java.util.List < String > workerInstanceTypes) {
+        public Builder workerInstanceTypes(java.util.List<String> workerInstanceTypes) {
             this.putBodyParameter("worker_instance_types", workerInstanceTypes);
             this.workerInstanceTypes = workerInstanceTypes;
             return this;

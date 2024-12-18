@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,11 +37,11 @@ public class ModifyPolicyInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("namespaces")
-    private java.util.List < String > namespaces;
+    private java.util.List<String> namespaces;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     private ModifyPolicyInstanceRequest(Builder builder) {
         super(builder);
@@ -92,14 +97,14 @@ public class ModifyPolicyInstanceRequest extends Request {
     /**
      * @return namespaces
      */
-    public java.util.List < String > getNamespaces() {
+    public java.util.List<String> getNamespaces() {
         return this.namespaces;
     }
 
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -108,8 +113,8 @@ public class ModifyPolicyInstanceRequest extends Request {
         private String policyName; 
         private String action; 
         private String instanceName; 
-        private java.util.List < String > namespaces; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.List<String> namespaces; 
+        private java.util.Map<String, ?> parameters; 
 
         private Builder() {
             super();
@@ -182,7 +187,7 @@ public class ModifyPolicyInstanceRequest extends Request {
         /**
          * <p>The namespaces to which the policy is applied. The policy is applied to all namespaces if this parameter is left empty.</p>
          */
-        public Builder namespaces(java.util.List < String > namespaces) {
+        public Builder namespaces(java.util.List<String> namespaces) {
             this.putBodyParameter("namespaces", namespaces);
             this.namespaces = namespaces;
             return this;
@@ -194,7 +199,7 @@ public class ModifyPolicyInstanceRequest extends Request {
          * <strong>example:</strong>
          * <p>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             this.putBodyParameter("parameters", parameters);
             this.parameters = parameters;
             return this;

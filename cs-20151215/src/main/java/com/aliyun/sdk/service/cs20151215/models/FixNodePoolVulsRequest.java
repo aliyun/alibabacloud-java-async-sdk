@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class FixNodePoolVulsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("nodes")
-    private java.util.List < String > nodes;
+    private java.util.List<String> nodes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("rollout_policy")
@@ -36,7 +41,7 @@ public class FixNodePoolVulsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("vuls")
-    private java.util.List < String > vuls;
+    private java.util.List<String> vuls;
 
     private FixNodePoolVulsRequest(Builder builder) {
         super(builder);
@@ -85,7 +90,7 @@ public class FixNodePoolVulsRequest extends Request {
     /**
      * @return nodes
      */
-    public java.util.List < String > getNodes() {
+    public java.util.List<String> getNodes() {
         return this.nodes;
     }
 
@@ -99,7 +104,7 @@ public class FixNodePoolVulsRequest extends Request {
     /**
      * @return vuls
      */
-    public java.util.List < String > getVuls() {
+    public java.util.List<String> getVuls() {
         return this.vuls;
     }
 
@@ -107,9 +112,9 @@ public class FixNodePoolVulsRequest extends Request {
         private String clusterId; 
         private String nodepoolId; 
         private Boolean autoRestart; 
-        private java.util.List < String > nodes; 
+        private java.util.List<String> nodes; 
         private RolloutPolicy rolloutPolicy; 
-        private java.util.List < String > vuls; 
+        private java.util.List<String> vuls; 
 
         private Builder() {
             super();
@@ -166,7 +171,7 @@ public class FixNodePoolVulsRequest extends Request {
         /**
          * <p>The names of the nodes to be patched.</p>
          */
-        public Builder nodes(java.util.List < String > nodes) {
+        public Builder nodes(java.util.List<String> nodes) {
             this.putBodyParameter("nodes", nodes);
             this.nodes = nodes;
             return this;
@@ -184,7 +189,7 @@ public class FixNodePoolVulsRequest extends Request {
         /**
          * <p>The list of vulnerabilities.</p>
          */
-        public Builder vuls(java.util.List < String > vuls) {
+        public Builder vuls(java.util.List<String> vuls) {
             this.putBodyParameter("vuls", vuls);
             this.vuls = vuls;
             return this;

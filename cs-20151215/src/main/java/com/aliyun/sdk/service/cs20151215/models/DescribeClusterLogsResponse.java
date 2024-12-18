@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeClusterLogsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < DescribeClusterLogsResponseBody> body;
+    private java.util.List<DescribeClusterLogsResponseBody> body;
 
     private DescribeClusterLogsResponse(BuilderImpl builder) {
         super(builder);
@@ -40,7 +45,7 @@ public class DescribeClusterLogsResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,17 +59,17 @@ public class DescribeClusterLogsResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < DescribeClusterLogsResponseBody> getBody() {
+    public java.util.List<DescribeClusterLogsResponseBody> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<DescribeClusterLogsResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < DescribeClusterLogsResponseBody> body);
+        Builder body(java.util.List<DescribeClusterLogsResponseBody> body);
 
         @Override
         DescribeClusterLogsResponse build();
@@ -74,9 +79,9 @@ public class DescribeClusterLogsResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<DescribeClusterLogsResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < DescribeClusterLogsResponseBody> body; 
+        private java.util.List<DescribeClusterLogsResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -93,7 +98,7 @@ public class DescribeClusterLogsResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,7 +116,7 @@ public class DescribeClusterLogsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < DescribeClusterLogsResponseBody> body) {
+        public Builder body(java.util.List<DescribeClusterLogsResponseBody> body) {
             this.body = body;
             return this;
         }

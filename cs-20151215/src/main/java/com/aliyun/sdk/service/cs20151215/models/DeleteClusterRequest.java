@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DeleteClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("delete_options")
-    private java.util.List < DeleteOptions> deleteOptions;
+    private java.util.List<DeleteOptions> deleteOptions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("keep_slb")
@@ -32,7 +37,7 @@ public class DeleteClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("retain_resources")
-    private java.util.List < String > retainResources;
+    private java.util.List<String> retainResources;
 
     private DeleteClusterRequest(Builder builder) {
         super(builder);
@@ -66,7 +71,7 @@ public class DeleteClusterRequest extends Request {
     /**
      * @return deleteOptions
      */
-    public java.util.List < DeleteOptions> getDeleteOptions() {
+    public java.util.List<DeleteOptions> getDeleteOptions() {
         return this.deleteOptions;
     }
 
@@ -87,16 +92,16 @@ public class DeleteClusterRequest extends Request {
     /**
      * @return retainResources
      */
-    public java.util.List < String > getRetainResources() {
+    public java.util.List<String> getRetainResources() {
         return this.retainResources;
     }
 
     public static final class Builder extends Request.Builder<DeleteClusterRequest, Builder> {
         private String clusterId; 
-        private java.util.List < DeleteOptions> deleteOptions; 
+        private java.util.List<DeleteOptions> deleteOptions; 
         private Boolean keepSlb; 
         private Boolean retainAllResources; 
-        private java.util.List < String > retainResources; 
+        private java.util.List<String> retainResources; 
 
         private Builder() {
             super();
@@ -127,7 +132,7 @@ public class DeleteClusterRequest extends Request {
         /**
          * <p>The type of cluster resource that you want to delete or retain.</p>
          */
-        public Builder deleteOptions(java.util.List < DeleteOptions> deleteOptions) {
+        public Builder deleteOptions(java.util.List<DeleteOptions> deleteOptions) {
             String deleteOptionsShrink = shrink(deleteOptions, "delete_options", "json");
             this.putQueryParameter("delete_options", deleteOptionsShrink);
             this.deleteOptions = deleteOptions;
@@ -171,7 +176,7 @@ public class DeleteClusterRequest extends Request {
         /**
          * <p>The list of resources. To retain resources when you delete a cluster, you need to specify the IDs of the resources to be retained.</p>
          */
-        public Builder retainResources(java.util.List < String > retainResources) {
+        public Builder retainResources(java.util.List<String> retainResources) {
             String retainResourcesShrink = shrink(retainResources, "retain_resources", "json");
             this.putQueryParameter("retain_resources", retainResourcesShrink);
             this.retainResources = retainResources;

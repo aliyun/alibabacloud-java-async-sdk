@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CheckServiceRoleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("roles")
-    private java.util.List < Roles> roles;
+    private java.util.List<Roles> roles;
 
     private CheckServiceRoleResponseBody(Builder builder) {
         this.roles = builder.roles;
@@ -30,17 +35,17 @@ public class CheckServiceRoleResponseBody extends TeaModel {
     /**
      * @return roles
      */
-    public java.util.List < Roles> getRoles() {
+    public java.util.List<Roles> getRoles() {
         return this.roles;
     }
 
     public static final class Builder {
-        private java.util.List < Roles> roles; 
+        private java.util.List<Roles> roles; 
 
         /**
          * <p>The check results.</p>
          */
-        public Builder roles(java.util.List < Roles> roles) {
+        public Builder roles(java.util.List<Roles> roles) {
             this.roles = roles;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("models")
-    private java.util.List < Models> models;
+    private java.util.List<Models> models;
 
     private DescribeEdgeMachineModelsResponseBody(Builder builder) {
         this.models = builder.models;
@@ -30,17 +35,17 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
     /**
      * @return models
      */
-    public java.util.List < Models> getModels() {
+    public java.util.List<Models> getModels() {
         return this.models;
     }
 
     public static final class Builder {
-        private java.util.List < Models> models; 
+        private java.util.List<Models> models; 
 
         /**
          * <p>The cloud-native box models.</p>
          */
-        public Builder models(java.util.List < Models> models) {
+        public Builder models(java.util.List<Models> models) {
             this.models = models;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeClusterNodesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("nodes")
-    private java.util.List < Nodes> nodes;
+    private java.util.List<Nodes> nodes;
 
     @com.aliyun.core.annotation.NameInMap("page")
     private Page page;
@@ -34,7 +39,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
     /**
      * @return nodes
      */
-    public java.util.List < Nodes> getNodes() {
+    public java.util.List<Nodes> getNodes() {
         return this.nodes;
     }
 
@@ -46,13 +51,13 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Nodes> nodes; 
+        private java.util.List<Nodes> nodes; 
         private Page page; 
 
         /**
          * <p>The details of the nodes in the cluster.</p>
          */
-        public Builder nodes(java.util.List < Nodes> nodes) {
+        public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
             return this;
         }
@@ -115,7 +120,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         private String instanceTypeFamily;
 
         @com.aliyun.core.annotation.NameInMap("ip_address")
-        private java.util.List < String > ipAddress;
+        private java.util.List<String> ipAddress;
 
         @com.aliyun.core.annotation.NameInMap("is_aliyun_node")
         private Boolean isAliyunNode;
@@ -256,7 +261,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < String > getIpAddress() {
+        public java.util.List<String> getIpAddress() {
             return this.ipAddress;
         }
 
@@ -322,7 +327,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             private String instanceStatus; 
             private String instanceType; 
             private String instanceTypeFamily; 
-            private java.util.List < String > ipAddress; 
+            private java.util.List<String> ipAddress; 
             private Boolean isAliyunNode; 
             private String nodeName; 
             private String nodeStatus; 
@@ -474,7 +479,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             /**
              * <p>The IP address of the node.</p>
              */
-            public Builder ipAddress(java.util.List < String > ipAddress) {
+            public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }

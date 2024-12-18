@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GrantPermissionsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < GrantPermissionsRequestBody> body;
+    private java.util.List<GrantPermissionsRequestBody> body;
 
     private GrantPermissionsRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class GrantPermissionsRequest extends Request {
     /**
      * @return body
      */
-    public java.util.List < GrantPermissionsRequestBody> getBody() {
+    public java.util.List<GrantPermissionsRequestBody> getBody() {
         return this.body;
     }
 
     public static final class Builder extends Request.Builder<GrantPermissionsRequest, Builder> {
         private String uid; 
-        private java.util.List < GrantPermissionsRequestBody> body; 
+        private java.util.List<GrantPermissionsRequestBody> body; 
 
         private Builder() {
             super();
@@ -84,7 +89,7 @@ public class GrantPermissionsRequest extends Request {
         /**
          * <p>The request parameters.</p>
          */
-        public Builder body(java.util.List < GrantPermissionsRequestBody> body) {
+        public Builder body(java.util.List<GrantPermissionsRequestBody> body) {
             this.putBodyParameter("body", body);
             this.body = body;
             return this;

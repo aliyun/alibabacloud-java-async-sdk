@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
     private String resourceType;
 
     @com.aliyun.core.annotation.NameInMap("resources")
-    private java.util.List < String > resources;
+    private java.util.List<String> resources;
 
     private UpdateResourcesDeleteProtectionResponseBody(Builder builder) {
         this.namespace = builder.namespace;
@@ -74,7 +79,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
     /**
      * @return resources
      */
-    public java.util.List < String > getResources() {
+    public java.util.List<String> getResources() {
         return this.resources;
     }
 
@@ -83,7 +88,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         private String protection; 
         private String requestId; 
         private String resourceType; 
-        private java.util.List < String > resources; 
+        private java.util.List<String> resources; 
 
         /**
          * <p>The namespace to which the resource belongs.</p>
@@ -132,7 +137,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         /**
          * <p>The list of resources whose deletion protection status is updated.</p>
          */
-        public Builder resources(java.util.List < String > resources) {
+        public Builder resources(java.util.List<String> resources) {
             this.resources = resources;
             return this;
         }

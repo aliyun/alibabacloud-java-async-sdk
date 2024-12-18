@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteAlertContactResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
@@ -40,7 +45,7 @@ public class DeleteAlertContactResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -60,7 +65,7 @@ public class DeleteAlertContactResponse extends Response {
 
     public interface Builder extends Response.Builder<DeleteAlertContactResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
@@ -74,7 +79,7 @@ public class DeleteAlertContactResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<DeleteAlertContactResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
         private DeleteAlertContactResponseBody body; 
 
@@ -93,7 +98,7 @@ public class DeleteAlertContactResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -218,7 +223,7 @@ public class DeleteAlertContactResponse extends Response {
      */
     public static class DeleteAlertContactResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         private DeleteAlertContactResponseBody(Builder builder) {
             this.result = builder.result;
@@ -235,17 +240,17 @@ public class DeleteAlertContactResponse extends Response {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
         public static final class Builder {
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
 
             /**
              * result.
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

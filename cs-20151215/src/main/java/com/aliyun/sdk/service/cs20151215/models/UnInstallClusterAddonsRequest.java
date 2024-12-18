@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class UnInstallClusterAddonsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("addons")
-    private java.util.List < Addons> addons;
+    private java.util.List<Addons> addons;
 
     private UnInstallClusterAddonsRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class UnInstallClusterAddonsRequest extends Request {
     /**
      * @return addons
      */
-    public java.util.List < Addons> getAddons() {
+    public java.util.List<Addons> getAddons() {
         return this.addons;
     }
 
     public static final class Builder extends Request.Builder<UnInstallClusterAddonsRequest, Builder> {
         private String clusterId; 
-        private java.util.List < Addons> addons; 
+        private java.util.List<Addons> addons; 
 
         private Builder() {
             super();
@@ -84,7 +89,7 @@ public class UnInstallClusterAddonsRequest extends Request {
         /**
          * <p>The components that you want to uninstall. The list is an array.</p>
          */
-        public Builder addons(java.util.List < Addons> addons) {
+        public Builder addons(java.util.List<Addons> addons) {
             this.putBodyParameter("addons", addons);
             this.addons = addons;
             return this;

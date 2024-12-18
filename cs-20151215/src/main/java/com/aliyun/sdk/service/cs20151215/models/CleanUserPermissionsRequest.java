@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CleanUserPermissionsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterIds")
-    private java.util.List < String > clusterIds;
+    private java.util.List<String> clusterIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Force")
@@ -55,7 +60,7 @@ public class CleanUserPermissionsRequest extends Request {
     /**
      * @return clusterIds
      */
-    public java.util.List < String > getClusterIds() {
+    public java.util.List<String> getClusterIds() {
         return this.clusterIds;
     }
 
@@ -68,7 +73,7 @@ public class CleanUserPermissionsRequest extends Request {
 
     public static final class Builder extends Request.Builder<CleanUserPermissionsRequest, Builder> {
         private String uid; 
-        private java.util.List < String > clusterIds; 
+        private java.util.List<String> clusterIds; 
         private Boolean force; 
 
         private Builder() {
@@ -98,7 +103,7 @@ public class CleanUserPermissionsRequest extends Request {
         /**
          * <p>The cluster IDs. If you specify a list of cluster IDs, only the kubeconfig files and RBAC permissions of the clusters that belong to the current user in the list are revoked.</p>
          */
-        public Builder clusterIds(java.util.List < String > clusterIds) {
+        public Builder clusterIds(java.util.List<String> clusterIds) {
             String clusterIdsShrink = shrink(clusterIds, "ClusterIds", "simple");
             this.putQueryParameter("ClusterIds", clusterIdsShrink);
             this.clusterIds = clusterIds;

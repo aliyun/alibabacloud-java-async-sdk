@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class UntagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("resource_ids")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resourceIds;
+    private java.util.List<String> resourceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("resource_type")
@@ -34,7 +39,7 @@ public class UntagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tag_keys")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > tagKeys;
+    private java.util.List<String> tagKeys;
 
     private UntagResourcesRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -89,16 +94,16 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return tagKeys
      */
-    public java.util.List < String > getTagKeys() {
+    public java.util.List<String> getTagKeys() {
         return this.tagKeys;
     }
 
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
         private Boolean all; 
         private String regionId; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> resourceIds; 
         private String resourceType; 
-        private java.util.List < String > tagKeys; 
+        private java.util.List<String> tagKeys; 
 
         private Builder() {
             super();
@@ -146,7 +151,7 @@ public class UntagResourcesRequest extends Request {
          * <p>The list of resource IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "resource_ids", "json");
             this.putQueryParameter("resource_ids", resourceIdsShrink);
             this.resourceIds = resourceIds;
@@ -170,7 +175,7 @@ public class UntagResourcesRequest extends Request {
          * <p>The list of keys of the labels that you want to remove.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder tagKeys(java.util.List < String > tagKeys) {
+        public Builder tagKeys(java.util.List<String> tagKeys) {
             String tagKeysShrink = shrink(tagKeys, "tag_keys", "json");
             this.putQueryParameter("tag_keys", tagKeysShrink);
             this.tagKeys = tagKeys;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,11 +33,11 @@ public class RepairClusterNodePoolRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("nodes")
-    private java.util.List < String > nodes;
+    private java.util.List<String> nodes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("operations")
-    private java.util.List < Operations> operations;
+    private java.util.List<Operations> operations;
 
     private RepairClusterNodePoolRequest(Builder builder) {
         super(builder);
@@ -80,14 +85,14 @@ public class RepairClusterNodePoolRequest extends Request {
     /**
      * @return nodes
      */
-    public java.util.List < String > getNodes() {
+    public java.util.List<String> getNodes() {
         return this.nodes;
     }
 
     /**
      * @return operations
      */
-    public java.util.List < Operations> getOperations() {
+    public java.util.List<Operations> getOperations() {
         return this.operations;
     }
 
@@ -95,8 +100,8 @@ public class RepairClusterNodePoolRequest extends Request {
         private String clusterId; 
         private String nodepoolId; 
         private Boolean autoRestart; 
-        private java.util.List < String > nodes; 
-        private java.util.List < Operations> operations; 
+        private java.util.List<String> nodes; 
+        private java.util.List<Operations> operations; 
 
         private Builder() {
             super();
@@ -152,7 +157,7 @@ public class RepairClusterNodePoolRequest extends Request {
         /**
          * <p>The list of nodes. If you do not specify nodes, all nodes in the node pool are selected.</p>
          */
-        public Builder nodes(java.util.List < String > nodes) {
+        public Builder nodes(java.util.List<String> nodes) {
             this.putBodyParameter("nodes", nodes);
             this.nodes = nodes;
             return this;
@@ -161,7 +166,7 @@ public class RepairClusterNodePoolRequest extends Request {
         /**
          * operations.
          */
-        public Builder operations(java.util.List < Operations> operations) {
+        public Builder operations(java.util.List<Operations> operations) {
             this.putBodyParameter("operations", operations);
             this.operations = operations;
             return this;
@@ -182,7 +187,7 @@ public class RepairClusterNodePoolRequest extends Request {
      */
     public static class Operations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("args")
-        private java.util.List < String > args;
+        private java.util.List<String> args;
 
         @com.aliyun.core.annotation.NameInMap("operation_id")
         private String operationId;
@@ -203,7 +208,7 @@ public class RepairClusterNodePoolRequest extends Request {
         /**
          * @return args
          */
-        public java.util.List < String > getArgs() {
+        public java.util.List<String> getArgs() {
             return this.args;
         }
 
@@ -215,13 +220,13 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > args; 
+            private java.util.List<String> args; 
             private String operationId; 
 
             /**
              * args.
              */
-            public Builder args(java.util.List < String > args) {
+            public Builder args(java.util.List<String> args) {
                 this.args = args;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeClustersResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < DescribeClustersResponseBody> body;
+    private java.util.List<DescribeClustersResponseBody> body;
 
     private DescribeClustersResponse(BuilderImpl builder) {
         super(builder);
@@ -40,7 +45,7 @@ public class DescribeClustersResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,17 +59,17 @@ public class DescribeClustersResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < DescribeClustersResponseBody> getBody() {
+    public java.util.List<DescribeClustersResponseBody> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<DescribeClustersResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < DescribeClustersResponseBody> body);
+        Builder body(java.util.List<DescribeClustersResponseBody> body);
 
         @Override
         DescribeClustersResponse build();
@@ -74,9 +79,9 @@ public class DescribeClustersResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<DescribeClustersResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < DescribeClustersResponseBody> body; 
+        private java.util.List<DescribeClustersResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -93,7 +98,7 @@ public class DescribeClustersResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,7 +116,7 @@ public class DescribeClustersResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < DescribeClustersResponseBody> body) {
+        public Builder body(java.util.List<DescribeClustersResponseBody> body) {
             this.body = body;
             return this;
         }
@@ -264,7 +269,7 @@ public class DescribeClustersResponse extends Response {
         private String subnetCidr;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("updated")
         private String updated;
@@ -481,7 +486,7 @@ public class DescribeClustersResponse extends Response {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -550,7 +555,7 @@ public class DescribeClustersResponse extends Response {
             private Long size; 
             private String state; 
             private String subnetCidr; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String updated; 
             private String vpcId; 
             private String vswitchCidr; 
@@ -737,7 +742,7 @@ public class DescribeClustersResponse extends Response {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

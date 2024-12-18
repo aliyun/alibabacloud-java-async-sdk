@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("instances")
-    private java.util.List < String > instances;
+    private java.util.List<String> instances;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("keep_instance_name")
@@ -85,7 +90,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
     /**
      * @return instances
      */
-    public java.util.List < String > getInstances() {
+    public java.util.List<String> getInstances() {
         return this.instances;
     }
 
@@ -107,7 +112,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
         private String clusterId; 
         private String nodepoolId; 
         private Boolean formatDisk; 
-        private java.util.List < String > instances; 
+        private java.util.List<String> instances; 
         private Boolean keepInstanceName; 
         private String password; 
 
@@ -179,7 +184,7 @@ public class AttachInstancesToNodePoolRequest extends Request {
         /**
          * <p>The IDs of the instances to be added.</p>
          */
-        public Builder instances(java.util.List < String > instances) {
+        public Builder instances(java.util.List<String> instances) {
             this.putBodyParameter("instances", instances);
             this.instances = instances;
             return this;

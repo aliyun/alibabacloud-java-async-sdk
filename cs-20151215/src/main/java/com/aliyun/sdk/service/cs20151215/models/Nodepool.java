@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -581,7 +586,7 @@ public class Nodepool extends TeaModel {
         private String cpuPolicy;
 
         @com.aliyun.core.annotation.NameInMap("labels")
-        private java.util.List < Tag > labels;
+        private java.util.List<Tag> labels;
 
         @com.aliyun.core.annotation.NameInMap("node_name_mode")
         private String nodeNameMode;
@@ -595,7 +600,7 @@ public class Nodepool extends TeaModel {
         private String runtimeVersion;
 
         @com.aliyun.core.annotation.NameInMap("taints")
-        private java.util.List < Taint > taints;
+        private java.util.List<Taint> taints;
 
         @com.aliyun.core.annotation.NameInMap("user_data")
         private String userData;
@@ -636,7 +641,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Tag > getLabels() {
+        public java.util.List<Tag> getLabels() {
             return this.labels;
         }
 
@@ -664,7 +669,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return taints
          */
-        public java.util.List < Taint > getTaints() {
+        public java.util.List<Taint> getTaints() {
             return this.taints;
         }
 
@@ -678,11 +683,11 @@ public class Nodepool extends TeaModel {
         public static final class Builder {
             private Boolean cmsEnabled; 
             private String cpuPolicy; 
-            private java.util.List < Tag > labels; 
+            private java.util.List<Tag> labels; 
             private String nodeNameMode; 
             private String runtime; 
             private String runtimeVersion; 
-            private java.util.List < Taint > taints; 
+            private java.util.List<Taint> taints; 
             private String userData; 
 
             /**
@@ -704,7 +709,7 @@ public class Nodepool extends TeaModel {
             /**
              * labels.
              */
-            public Builder labels(java.util.List < Tag > labels) {
+            public Builder labels(java.util.List<Tag> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -742,7 +747,7 @@ public class Nodepool extends TeaModel {
             /**
              * taints.
              */
-            public Builder taints(java.util.List < Taint > taints) {
+            public Builder taints(java.util.List<Taint> taints) {
                 this.taints = taints;
                 return this;
             }
@@ -1577,7 +1582,7 @@ public class Nodepool extends TeaModel {
         private Boolean compensateWithOnDemand;
 
         @com.aliyun.core.annotation.NameInMap("data_disks")
-        private java.util.List < DataDisk > dataDisks;
+        private java.util.List<DataDisk> dataDisks;
 
         @com.aliyun.core.annotation.NameInMap("deploymentset_id")
         private String deploymentsetId;
@@ -1597,7 +1602,7 @@ public class Nodepool extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("instance_types")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > instanceTypes;
+        private java.util.List<String> instanceTypes;
 
         @com.aliyun.core.annotation.NameInMap("internet_charge_type")
         private String internetChargeType;
@@ -1640,7 +1645,7 @@ public class Nodepool extends TeaModel {
         private String ramRoleName;
 
         @com.aliyun.core.annotation.NameInMap("rds_instances")
-        private java.util.List < String > rdsInstances;
+        private java.util.List<String> rdsInstances;
 
         @com.aliyun.core.annotation.NameInMap("scaling_policy")
         private String scalingPolicy;
@@ -1649,7 +1654,7 @@ public class Nodepool extends TeaModel {
         private String securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("security_group_ids")
-        private java.util.List < String > securityGroupIds;
+        private java.util.List<String> securityGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("spot_instance_pools")
         private Long spotInstancePools;
@@ -1658,7 +1663,7 @@ public class Nodepool extends TeaModel {
         private Boolean spotInstanceRemedy;
 
         @com.aliyun.core.annotation.NameInMap("spot_price_limit")
-        private java.util.List < SpotPriceLimit> spotPriceLimit;
+        private java.util.List<SpotPriceLimit> spotPriceLimit;
 
         @com.aliyun.core.annotation.NameInMap("spot_strategy")
         private String spotStrategy;
@@ -1667,7 +1672,7 @@ public class Nodepool extends TeaModel {
         private Boolean systemDiskBurstingEnabled;
 
         @com.aliyun.core.annotation.NameInMap("system_disk_categories")
-        private java.util.List < String > systemDiskCategories;
+        private java.util.List<String> systemDiskCategories;
 
         @com.aliyun.core.annotation.NameInMap("system_disk_category")
         private String systemDiskCategory;
@@ -1691,11 +1696,11 @@ public class Nodepool extends TeaModel {
         private Long systemDiskSize;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("vswitch_ids")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > vswitchIds;
+        private java.util.List<String> vswitchIds;
 
         private ScalingGroup(Builder builder) {
             this.autoRenew = builder.autoRenew;
@@ -1774,7 +1779,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return dataDisks
          */
-        public java.util.List < DataDisk > getDataDisks() {
+        public java.util.List<DataDisk> getDataDisks() {
             return this.dataDisks;
         }
 
@@ -1816,7 +1821,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return instanceTypes
          */
-        public java.util.List < String > getInstanceTypes() {
+        public java.util.List<String> getInstanceTypes() {
             return this.instanceTypes;
         }
 
@@ -1914,7 +1919,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return rdsInstances
          */
-        public java.util.List < String > getRdsInstances() {
+        public java.util.List<String> getRdsInstances() {
             return this.rdsInstances;
         }
 
@@ -1935,7 +1940,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return securityGroupIds
          */
-        public java.util.List < String > getSecurityGroupIds() {
+        public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
@@ -1956,7 +1961,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return spotPriceLimit
          */
-        public java.util.List < SpotPriceLimit> getSpotPriceLimit() {
+        public java.util.List<SpotPriceLimit> getSpotPriceLimit() {
             return this.spotPriceLimit;
         }
 
@@ -1977,7 +1982,7 @@ public class Nodepool extends TeaModel {
         /**
          * @return systemDiskCategories
          */
-        public java.util.List < String > getSystemDiskCategories() {
+        public java.util.List<String> getSystemDiskCategories() {
             return this.systemDiskCategories;
         }
 
@@ -2033,14 +2038,14 @@ public class Nodepool extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         /**
          * @return vswitchIds
          */
-        public java.util.List < String > getVswitchIds() {
+        public java.util.List<String> getVswitchIds() {
             return this.vswitchIds;
         }
 
@@ -2048,13 +2053,13 @@ public class Nodepool extends TeaModel {
             private Boolean autoRenew; 
             private Long autoRenewPeriod; 
             private Boolean compensateWithOnDemand; 
-            private java.util.List < DataDisk > dataDisks; 
+            private java.util.List<DataDisk> dataDisks; 
             private String deploymentsetId; 
             private Long desiredSize; 
             private String imageId; 
             private String imageType; 
             private String instanceChargeType; 
-            private java.util.List < String > instanceTypes; 
+            private java.util.List<String> instanceTypes; 
             private String internetChargeType; 
             private Long internetMaxBandwidthOut; 
             private String keyPair; 
@@ -2068,16 +2073,16 @@ public class Nodepool extends TeaModel {
             private String platform; 
             private PrivatePoolOptions privatePoolOptions; 
             private String ramRoleName; 
-            private java.util.List < String > rdsInstances; 
+            private java.util.List<String> rdsInstances; 
             private String scalingPolicy; 
             private String securityGroupId; 
-            private java.util.List < String > securityGroupIds; 
+            private java.util.List<String> securityGroupIds; 
             private Long spotInstancePools; 
             private Boolean spotInstanceRemedy; 
-            private java.util.List < SpotPriceLimit> spotPriceLimit; 
+            private java.util.List<SpotPriceLimit> spotPriceLimit; 
             private String spotStrategy; 
             private Boolean systemDiskBurstingEnabled; 
-            private java.util.List < String > systemDiskCategories; 
+            private java.util.List<String> systemDiskCategories; 
             private String systemDiskCategory; 
             private String systemDiskEncryptAlgorithm; 
             private Boolean systemDiskEncrypted; 
@@ -2085,8 +2090,8 @@ public class Nodepool extends TeaModel {
             private String systemDiskPerformanceLevel; 
             private Long systemDiskProvisionedIops; 
             private Long systemDiskSize; 
-            private java.util.List < Tags> tags; 
-            private java.util.List < String > vswitchIds; 
+            private java.util.List<Tags> tags; 
+            private java.util.List<String> vswitchIds; 
 
             /**
              * auto_renew.
@@ -2115,7 +2120,7 @@ public class Nodepool extends TeaModel {
             /**
              * data_disks.
              */
-            public Builder dataDisks(java.util.List < DataDisk > dataDisks) {
+            public Builder dataDisks(java.util.List<DataDisk> dataDisks) {
                 this.dataDisks = dataDisks;
                 return this;
             }
@@ -2166,7 +2171,7 @@ public class Nodepool extends TeaModel {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder instanceTypes(java.util.List < String > instanceTypes) {
+            public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
                 return this;
             }
@@ -2278,7 +2283,7 @@ public class Nodepool extends TeaModel {
             /**
              * rds_instances.
              */
-            public Builder rdsInstances(java.util.List < String > rdsInstances) {
+            public Builder rdsInstances(java.util.List<String> rdsInstances) {
                 this.rdsInstances = rdsInstances;
                 return this;
             }
@@ -2302,7 +2307,7 @@ public class Nodepool extends TeaModel {
             /**
              * security_group_ids.
              */
-            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
                 return this;
             }
@@ -2326,7 +2331,7 @@ public class Nodepool extends TeaModel {
             /**
              * spot_price_limit.
              */
-            public Builder spotPriceLimit(java.util.List < SpotPriceLimit> spotPriceLimit) {
+            public Builder spotPriceLimit(java.util.List<SpotPriceLimit> spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
                 return this;
             }
@@ -2350,7 +2355,7 @@ public class Nodepool extends TeaModel {
             /**
              * system_disk_categories.
              */
-            public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
+            public Builder systemDiskCategories(java.util.List<String> systemDiskCategories) {
                 this.systemDiskCategories = systemDiskCategories;
                 return this;
             }
@@ -2414,7 +2419,7 @@ public class Nodepool extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -2422,7 +2427,7 @@ public class Nodepool extends TeaModel {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder vswitchIds(java.util.List < String > vswitchIds) {
+            public Builder vswitchIds(java.util.List<String> vswitchIds) {
                 this.vswitchIds = vswitchIds;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeClusterVulsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("vul_records")
-    private java.util.List < VulRecords> vulRecords;
+    private java.util.List<VulRecords> vulRecords;
 
     private DescribeClusterVulsResponseBody(Builder builder) {
         this.vulRecords = builder.vulRecords;
@@ -30,17 +35,17 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
     /**
      * @return vulRecords
      */
-    public java.util.List < VulRecords> getVulRecords() {
+    public java.util.List<VulRecords> getVulRecords() {
         return this.vulRecords;
     }
 
     public static final class Builder {
-        private java.util.List < VulRecords> vulRecords; 
+        private java.util.List<VulRecords> vulRecords; 
 
         /**
          * <p>An array of vulnerabilities.</p>
          */
-        public Builder vulRecords(java.util.List < VulRecords> vulRecords) {
+        public Builder vulRecords(java.util.List<VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
             return this;
         }
@@ -59,7 +64,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
      */
     public static class VulRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cve_list")
-        private java.util.List < String > cveList;
+        private java.util.List<String> cveList;
 
         @com.aliyun.core.annotation.NameInMap("necessity")
         private String necessity;
@@ -104,7 +109,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
         /**
          * @return cveList
          */
-        public java.util.List < String > getCveList() {
+        public java.util.List<String> getCveList() {
             return this.cveList;
         }
 
@@ -158,7 +163,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > cveList; 
+            private java.util.List<String> cveList; 
             private String necessity; 
             private Integer nodeCount; 
             private String nodepoolId; 
@@ -170,7 +175,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
             /**
              * <p>The CVE list.</p>
              */
-            public Builder cveList(java.util.List < String > cveList) {
+            public Builder cveList(java.util.List<String> cveList) {
                 this.cveList = cveList;
                 return this;
             }

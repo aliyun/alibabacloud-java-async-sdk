@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ModifyClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("access_control_list")
-    private java.util.List < String > accessControlList;
+    private java.util.List<String> accessControlList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("api_server_custom_cert_sans")
@@ -79,7 +84,7 @@ public class ModifyClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("vswitch_ids")
-    private java.util.List < String > vswitchIds;
+    private java.util.List<String> vswitchIds;
 
     private ModifyClusterRequest(Builder builder) {
         super(builder);
@@ -125,7 +130,7 @@ public class ModifyClusterRequest extends Request {
     /**
      * @return accessControlList
      */
-    public java.util.List < String > getAccessControlList() {
+    public java.util.List<String> getAccessControlList() {
         return this.accessControlList;
     }
 
@@ -230,13 +235,13 @@ public class ModifyClusterRequest extends Request {
     /**
      * @return vswitchIds
      */
-    public java.util.List < String > getVswitchIds() {
+    public java.util.List<String> getVswitchIds() {
         return this.vswitchIds;
     }
 
     public static final class Builder extends Request.Builder<ModifyClusterRequest, Builder> {
         private String clusterId; 
-        private java.util.List < String > accessControlList; 
+        private java.util.List<String> accessControlList; 
         private ApiServerCustomCertSans apiServerCustomCertSans; 
         private Boolean apiServerEip; 
         private String apiServerEipId; 
@@ -251,7 +256,7 @@ public class ModifyClusterRequest extends Request {
         private OperationPolicy operationPolicy; 
         private String resourceGroupId; 
         private SystemEventsLogging systemEventsLogging; 
-        private java.util.List < String > vswitchIds; 
+        private java.util.List<String> vswitchIds; 
 
         private Builder() {
             super();
@@ -294,7 +299,7 @@ public class ModifyClusterRequest extends Request {
         /**
          * <p>The network access control lists (ACLs) of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
          */
-        public Builder accessControlList(java.util.List < String > accessControlList) {
+        public Builder accessControlList(java.util.List<String> accessControlList) {
             this.putBodyParameter("access_control_list", accessControlList);
             this.accessControlList = accessControlList;
             return this;
@@ -486,7 +491,7 @@ public class ModifyClusterRequest extends Request {
          * <li>If the new vSwitches of the control planes are configured with an access control list (ACL), ensure that the ACL allows communication between the new vSwitches and the CIDR blocks of cluster nodes and container networks.</li>
          * </ul>
          */
-        public Builder vswitchIds(java.util.List < String > vswitchIds) {
+        public Builder vswitchIds(java.util.List<String> vswitchIds) {
             this.putBodyParameter("vswitch_ids", vswitchIds);
             this.vswitchIds = vswitchIds;
             return this;
@@ -510,7 +515,7 @@ public class ModifyClusterRequest extends Request {
         private String action;
 
         @com.aliyun.core.annotation.NameInMap("subject_alternative_names")
-        private java.util.List < String > subjectAlternativeNames;
+        private java.util.List<String> subjectAlternativeNames;
 
         private ApiServerCustomCertSans(Builder builder) {
             this.action = builder.action;
@@ -535,13 +540,13 @@ public class ModifyClusterRequest extends Request {
         /**
          * @return subjectAlternativeNames
          */
-        public java.util.List < String > getSubjectAlternativeNames() {
+        public java.util.List<String> getSubjectAlternativeNames() {
             return this.subjectAlternativeNames;
         }
 
         public static final class Builder {
             private String action; 
-            private java.util.List < String > subjectAlternativeNames; 
+            private java.util.List<String> subjectAlternativeNames; 
 
             /**
              * <p>Specifies whether to overwrite or add SANs. Valid values:</p>
@@ -561,7 +566,7 @@ public class ModifyClusterRequest extends Request {
             /**
              * <p>The SANs.</p>
              */
-            public Builder subjectAlternativeNames(java.util.List < String > subjectAlternativeNames) {
+            public Builder subjectAlternativeNames(java.util.List<String> subjectAlternativeNames) {
                 this.subjectAlternativeNames = subjectAlternativeNames;
                 return this;
             }
@@ -605,7 +610,7 @@ public class ModifyClusterRequest extends Request {
         private String imageType;
 
         @com.aliyun.core.annotation.NameInMap("instance_types")
-        private java.util.List < String > instanceTypes;
+        private java.util.List<String> instanceTypes;
 
         @com.aliyun.core.annotation.NameInMap("key_pair")
         private String keyPair;
@@ -746,7 +751,7 @@ public class ModifyClusterRequest extends Request {
         /**
          * @return instanceTypes
          */
-        public java.util.List < String > getInstanceTypes() {
+        public java.util.List<String> getInstanceTypes() {
             return this.instanceTypes;
         }
 
@@ -864,7 +869,7 @@ public class ModifyClusterRequest extends Request {
             private String deploymentsetId; 
             private String imageId; 
             private String imageType; 
-            private java.util.List < String > instanceTypes; 
+            private java.util.List<String> instanceTypes; 
             private String keyPair; 
             private String loginPassword; 
             private String nodePortRange; 
@@ -948,7 +953,7 @@ public class ModifyClusterRequest extends Request {
             /**
              * instance_types.
              */
-            public Builder instanceTypes(java.util.List < String > instanceTypes) {
+            public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
                 return this;
             }

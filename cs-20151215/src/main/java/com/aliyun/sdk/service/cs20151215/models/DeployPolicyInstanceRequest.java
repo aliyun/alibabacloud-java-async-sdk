@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,11 +33,11 @@ public class DeployPolicyInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("namespaces")
-    private java.util.List < String > namespaces;
+    private java.util.List<String> namespaces;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     private DeployPolicyInstanceRequest(Builder builder) {
         super(builder);
@@ -80,14 +85,14 @@ public class DeployPolicyInstanceRequest extends Request {
     /**
      * @return namespaces
      */
-    public java.util.List < String > getNamespaces() {
+    public java.util.List<String> getNamespaces() {
         return this.namespaces;
     }
 
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -95,8 +100,8 @@ public class DeployPolicyInstanceRequest extends Request {
         private String clusterId; 
         private String policyName; 
         private String action; 
-        private java.util.List < String > namespaces; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.List<String> namespaces; 
+        private java.util.Map<String, ?> parameters; 
 
         private Builder() {
             super();
@@ -156,7 +161,7 @@ public class DeployPolicyInstanceRequest extends Request {
         /**
          * <p>The namespaces to which the policy applies. If you leave this parameter empty, the policy is applicable to all namespaces of the cluster.</p>
          */
-        public Builder namespaces(java.util.List < String > namespaces) {
+        public Builder namespaces(java.util.List<String> namespaces) {
             this.putBodyParameter("namespaces", namespaces);
             this.namespaces = namespaces;
             return this;
@@ -168,7 +173,7 @@ public class DeployPolicyInstanceRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]}</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             this.putBodyParameter("parameters", parameters);
             this.parameters = parameters;
             return this;

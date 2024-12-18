@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     private AdmitLog admitLog;
 
     @com.aliyun.core.annotation.NameInMap("on_state")
-    private java.util.List < OnState> onState;
+    private java.util.List<OnState> onState;
 
     @com.aliyun.core.annotation.NameInMap("totalViolations")
     private TotalViolations totalViolations;
@@ -49,7 +54,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     /**
      * @return onState
      */
-    public java.util.List < OnState> getOnState() {
+    public java.util.List<OnState> getOnState() {
         return this.onState;
     }
 
@@ -69,7 +74,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static final class Builder {
         private AdmitLog admitLog; 
-        private java.util.List < OnState> onState; 
+        private java.util.List<OnState> onState; 
         private TotalViolations totalViolations; 
         private Violations violations; 
 
@@ -84,7 +89,7 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         /**
          * <p>Details about the policies of different severity levels that are enabled for the cluster.</p>
          */
-        public Builder onState(java.util.List < OnState> onState) {
+        public Builder onState(java.util.List<OnState> onState) {
             this.onState = onState;
             return this;
         }

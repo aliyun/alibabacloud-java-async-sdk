@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ModifyClusterConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("customize_config")
-    private java.util.List < CustomizeConfig> customizeConfig;
+    private java.util.List<CustomizeConfig> customizeConfig;
 
     private ModifyClusterConfigurationRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class ModifyClusterConfigurationRequest extends Request {
     /**
      * @return customizeConfig
      */
-    public java.util.List < CustomizeConfig> getCustomizeConfig() {
+    public java.util.List<CustomizeConfig> getCustomizeConfig() {
         return this.customizeConfig;
     }
 
     public static final class Builder extends Request.Builder<ModifyClusterConfigurationRequest, Builder> {
         private String clusterId; 
-        private java.util.List < CustomizeConfig> customizeConfig; 
+        private java.util.List<CustomizeConfig> customizeConfig; 
 
         private Builder() {
             super();
@@ -84,7 +89,7 @@ public class ModifyClusterConfigurationRequest extends Request {
         /**
          * <p>The custom configurations.</p>
          */
-        public Builder customizeConfig(java.util.List < CustomizeConfig> customizeConfig) {
+        public Builder customizeConfig(java.util.List<CustomizeConfig> customizeConfig) {
             this.putBodyParameter("customize_config", customizeConfig);
             this.customizeConfig = customizeConfig;
             return this;
@@ -178,7 +183,7 @@ public class ModifyClusterConfigurationRequest extends Request {
      */
     public static class CustomizeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configs")
-        private java.util.List < Configs> configs;
+        private java.util.List<Configs> configs;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -199,7 +204,7 @@ public class ModifyClusterConfigurationRequest extends Request {
         /**
          * @return configs
          */
-        public java.util.List < Configs> getConfigs() {
+        public java.util.List<Configs> getConfigs() {
             return this.configs;
         }
 
@@ -211,13 +216,13 @@ public class ModifyClusterConfigurationRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Configs> configs; 
+            private java.util.List<Configs> configs; 
             private String name; 
 
             /**
              * <p>The custom configurations.</p>
              */
-            public Builder configs(java.util.List < Configs> configs) {
+            public Builder configs(java.util.List<Configs> configs) {
                 this.configs = configs;
                 return this;
             }

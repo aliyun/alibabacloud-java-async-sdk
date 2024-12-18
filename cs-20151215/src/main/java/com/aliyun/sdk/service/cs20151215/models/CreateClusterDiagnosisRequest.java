@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class CreateClusterDiagnosisRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("target")
-    private java.util.Map < String, ? > target;
+    private java.util.Map<String, ?> target;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("type")
@@ -54,7 +59,7 @@ public class CreateClusterDiagnosisRequest extends Request {
     /**
      * @return target
      */
-    public java.util.Map < String, ? > getTarget() {
+    public java.util.Map<String, ?> getTarget() {
         return this.target;
     }
 
@@ -67,7 +72,7 @@ public class CreateClusterDiagnosisRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateClusterDiagnosisRequest, Builder> {
         private String clusterId; 
-        private java.util.Map < String, ? > target; 
+        private java.util.Map<String, ?> target; 
         private String type; 
 
         private Builder() {
@@ -117,7 +122,7 @@ public class CreateClusterDiagnosisRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;namespace&quot;: &quot;kube-system&quot;, &quot;name&quot;: &quot;csi-plugin-2cg9f&quot;}</p>
          */
-        public Builder target(java.util.Map < String, ? > target) {
+        public Builder target(java.util.Map<String, ?> target) {
             this.putBodyParameter("target", target);
             this.target = target;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeClusterResourcesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private java.util.List < DescribeClusterResourcesResponseBody> body;
+    private java.util.List<DescribeClusterResourcesResponseBody> body;
 
     private DescribeClusterResourcesResponse(BuilderImpl builder) {
         super(builder);
@@ -40,7 +45,7 @@ public class DescribeClusterResourcesResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,17 +59,17 @@ public class DescribeClusterResourcesResponse extends Response {
     /**
      * @return body
      */
-    public java.util.List < DescribeClusterResourcesResponseBody> getBody() {
+    public java.util.List<DescribeClusterResourcesResponseBody> getBody() {
         return this.body;
     }
 
     public interface Builder extends Response.Builder<DescribeClusterResourcesResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(java.util.List < DescribeClusterResourcesResponseBody> body);
+        Builder body(java.util.List<DescribeClusterResourcesResponseBody> body);
 
         @Override
         DescribeClusterResourcesResponse build();
@@ -74,9 +79,9 @@ public class DescribeClusterResourcesResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<DescribeClusterResourcesResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private java.util.List < DescribeClusterResourcesResponseBody> body; 
+        private java.util.List<DescribeClusterResourcesResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -93,7 +98,7 @@ public class DescribeClusterResourcesResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,7 +116,7 @@ public class DescribeClusterResourcesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(java.util.List < DescribeClusterResourcesResponseBody> body) {
+        public Builder body(java.util.List<DescribeClusterResourcesResponseBody> body) {
             this.body = body;
             return this;
         }
@@ -408,7 +413,7 @@ public class DescribeClusterResourcesResponse extends Response {
         private Long autoCreate;
 
         @com.aliyun.core.annotation.NameInMap("dependencies")
-        private java.util.List < Dependencies> dependencies;
+        private java.util.List<Dependencies> dependencies;
 
         @com.aliyun.core.annotation.NameInMap("associated_object")
         private AssociatedObject associatedObject;
@@ -420,7 +425,7 @@ public class DescribeClusterResourcesResponse extends Response {
         private String creatorType;
 
         @com.aliyun.core.annotation.NameInMap("extra_info")
-        private java.util.Map < String, ? > extraInfo;
+        private java.util.Map<String, ?> extraInfo;
 
         private DescribeClusterResourcesResponseBody(Builder builder) {
             this.clusterId = builder.clusterId;
@@ -497,7 +502,7 @@ public class DescribeClusterResourcesResponse extends Response {
         /**
          * @return dependencies
          */
-        public java.util.List < Dependencies> getDependencies() {
+        public java.util.List<Dependencies> getDependencies() {
             return this.dependencies;
         }
 
@@ -525,7 +530,7 @@ public class DescribeClusterResourcesResponse extends Response {
         /**
          * @return extraInfo
          */
-        public java.util.Map < String, ? > getExtraInfo() {
+        public java.util.Map<String, ?> getExtraInfo() {
             return this.extraInfo;
         }
 
@@ -537,11 +542,11 @@ public class DescribeClusterResourcesResponse extends Response {
             private String resourceType; 
             private String state; 
             private Long autoCreate; 
-            private java.util.List < Dependencies> dependencies; 
+            private java.util.List<Dependencies> dependencies; 
             private AssociatedObject associatedObject; 
             private DeleteBehavior deleteBehavior; 
             private String creatorType; 
-            private java.util.Map < String, ? > extraInfo; 
+            private java.util.Map<String, ?> extraInfo; 
 
             /**
              * <p>The cluster ID.</p>
@@ -637,7 +642,7 @@ public class DescribeClusterResourcesResponse extends Response {
             /**
              * <p>The dependent resources.</p>
              */
-            public Builder dependencies(java.util.List < Dependencies> dependencies) {
+            public Builder dependencies(java.util.List<Dependencies> dependencies) {
                 this.dependencies = dependencies;
                 return this;
             }
@@ -680,7 +685,7 @@ public class DescribeClusterResourcesResponse extends Response {
              * <strong>example:</strong>
              * <p>{&quot;IP&quot;: &quot;xx.xx.xx.xx&quot;}</p>
              */
-            public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
                 this.extraInfo = extraInfo;
                 return this;
             }

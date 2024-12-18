@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,15 +48,15 @@ public class ScaleClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("taints")
-    private java.util.List < Taints> taints;
+    private java.util.List<Taints> taints;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("vswitch_ids")
-    private java.util.List < String > vswitchIds;
+    private java.util.List<String> vswitchIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_auto_renew")
@@ -67,7 +72,7 @@ public class ScaleClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_data_disks")
-    private java.util.List < WorkerDataDisks> workerDataDisks;
+    private java.util.List<WorkerDataDisks> workerDataDisks;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_instance_charge_type")
@@ -75,7 +80,7 @@ public class ScaleClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_instance_types")
-    private java.util.List < String > workerInstanceTypes;
+    private java.util.List<String> workerInstanceTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("worker_period")
@@ -182,21 +187,21 @@ public class ScaleClusterRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     /**
      * @return taints
      */
-    public java.util.List < Taints> getTaints() {
+    public java.util.List<Taints> getTaints() {
         return this.taints;
     }
 
     /**
      * @return vswitchIds
      */
-    public java.util.List < String > getVswitchIds() {
+    public java.util.List<String> getVswitchIds() {
         return this.vswitchIds;
     }
 
@@ -224,7 +229,7 @@ public class ScaleClusterRequest extends Request {
     /**
      * @return workerDataDisks
      */
-    public java.util.List < WorkerDataDisks> getWorkerDataDisks() {
+    public java.util.List<WorkerDataDisks> getWorkerDataDisks() {
         return this.workerDataDisks;
     }
 
@@ -238,7 +243,7 @@ public class ScaleClusterRequest extends Request {
     /**
      * @return workerInstanceTypes
      */
-    public java.util.List < String > getWorkerInstanceTypes() {
+    public java.util.List<String> getWorkerInstanceTypes() {
         return this.workerInstanceTypes;
     }
 
@@ -278,15 +283,15 @@ public class ScaleClusterRequest extends Request {
         private Boolean disableRollback; 
         private String keyPair; 
         private String loginPassword; 
-        private java.util.List < Tags> tags; 
-        private java.util.List < Taints> taints; 
-        private java.util.List < String > vswitchIds; 
+        private java.util.List<Tags> tags; 
+        private java.util.List<Taints> taints; 
+        private java.util.List<String> vswitchIds; 
         private Boolean workerAutoRenew; 
         private Long workerAutoRenewPeriod; 
         private Boolean workerDataDisk; 
-        private java.util.List < WorkerDataDisks> workerDataDisks; 
+        private java.util.List<WorkerDataDisks> workerDataDisks; 
         private String workerInstanceChargeType; 
-        private java.util.List < String > workerInstanceTypes; 
+        private java.util.List<String> workerInstanceTypes; 
         private Long workerPeriod; 
         private String workerPeriodUnit; 
         private String workerSystemDiskCategory; 
@@ -386,7 +391,7 @@ public class ScaleClusterRequest extends Request {
         /**
          * tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
             return this;
@@ -395,7 +400,7 @@ public class ScaleClusterRequest extends Request {
         /**
          * taints.
          */
-        public Builder taints(java.util.List < Taints> taints) {
+        public Builder taints(java.util.List<Taints> taints) {
             this.putBodyParameter("taints", taints);
             this.taints = taints;
             return this;
@@ -404,7 +409,7 @@ public class ScaleClusterRequest extends Request {
         /**
          * vswitch_ids.
          */
-        public Builder vswitchIds(java.util.List < String > vswitchIds) {
+        public Builder vswitchIds(java.util.List<String> vswitchIds) {
             this.putBodyParameter("vswitch_ids", vswitchIds);
             this.vswitchIds = vswitchIds;
             return this;
@@ -440,7 +445,7 @@ public class ScaleClusterRequest extends Request {
         /**
          * worker_data_disks.
          */
-        public Builder workerDataDisks(java.util.List < WorkerDataDisks> workerDataDisks) {
+        public Builder workerDataDisks(java.util.List<WorkerDataDisks> workerDataDisks) {
             this.putBodyParameter("worker_data_disks", workerDataDisks);
             this.workerDataDisks = workerDataDisks;
             return this;
@@ -458,7 +463,7 @@ public class ScaleClusterRequest extends Request {
         /**
          * worker_instance_types.
          */
-        public Builder workerInstanceTypes(java.util.List < String > workerInstanceTypes) {
+        public Builder workerInstanceTypes(java.util.List<String> workerInstanceTypes) {
             this.putBodyParameter("worker_instance_types", workerInstanceTypes);
             this.workerInstanceTypes = workerInstanceTypes;
             return this;
