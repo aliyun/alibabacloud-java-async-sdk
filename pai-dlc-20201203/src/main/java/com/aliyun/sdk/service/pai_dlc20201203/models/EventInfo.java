@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EventInfo} extends {@link TeaModel}
  *
  * <p>EventInfo</p>
  */
 public class EventInfo extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("PodId")
+    @com.aliyun.core.annotation.NameInMap("PodId")
     private String podId;
 
-    @NameInMap("PodUid")
+    @com.aliyun.core.annotation.NameInMap("PodUid")
     private String podUid;
 
-    @NameInMap("Time")
+    @com.aliyun.core.annotation.NameInMap("Time")
     private String time;
 
     private EventInfo(Builder builder) {

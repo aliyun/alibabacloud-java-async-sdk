@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImageConfig} extends {@link TeaModel}
  *
  * <p>ImageConfig</p>
  */
 public class ImageConfig extends TeaModel {
-    @NameInMap("Auth")
+    @com.aliyun.core.annotation.NameInMap("Auth")
     private String auth;
 
-    @NameInMap("DockerRegistry")
+    @com.aliyun.core.annotation.NameInMap("DockerRegistry")
     private String dockerRegistry;
 
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @NameInMap("Username")
+    @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
     private ImageConfig(Builder builder) {

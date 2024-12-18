@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JobDebuggerConfig} extends {@link TeaModel}
  *
  * <p>JobDebuggerConfig</p>
  */
 public class JobDebuggerConfig extends TeaModel {
-    @NameInMap("DebuggerConfigContent")
+    @com.aliyun.core.annotation.NameInMap("DebuggerConfigContent")
     private String debuggerConfigContent;
 
-    @NameInMap("DebuggerConfigId")
+    @com.aliyun.core.annotation.NameInMap("DebuggerConfigId")
     private String debuggerConfigId;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
     private JobDebuggerConfig(Builder builder) {

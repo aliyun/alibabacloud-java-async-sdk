@@ -1,74 +1,143 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Tensorboard} extends {@link TeaModel}
  *
  * <p>Tensorboard</p>
  */
 public class Tensorboard extends TeaModel {
-    @NameInMap("DataSourceId")
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.NameInMap("Cpu")
+    private Long cpu;
+
+    @com.aliyun.core.annotation.NameInMap("DataSourceId")
     private String dataSourceId;
 
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.NameInMap("DataSourceType")
+    private String dataSourceType;
+
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private String duration;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifyTime")
+    @com.aliyun.core.annotation.NameInMap("GmtFinishTime")
+    private String gmtFinishTime;
+
+    @com.aliyun.core.annotation.NameInMap("GmtModifyTime")
     private String gmtModifyTime;
 
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("ReasonCode")
+    @com.aliyun.core.annotation.NameInMap("MaxRunningTimeMinutes")
+    private Long maxRunningTimeMinutes;
+
+    @com.aliyun.core.annotation.NameInMap("Memory")
+    private Long memory;
+
+    @com.aliyun.core.annotation.NameInMap("Options")
+    private String options;
+
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    private String priority;
+
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
+    private String quotaId;
+
+    @com.aliyun.core.annotation.NameInMap("QuotaName")
+    private String quotaName;
+
+    @com.aliyun.core.annotation.NameInMap("ReasonCode")
     private String reasonCode;
 
-    @NameInMap("ReasonMessage")
+    @com.aliyun.core.annotation.NameInMap("ReasonMessage")
     private String reasonMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SummaryPath")
+    @com.aliyun.core.annotation.NameInMap("SummaryPath")
     private String summaryPath;
 
-    @NameInMap("TensorboardId")
+    @com.aliyun.core.annotation.NameInMap("SummaryRelativePath")
+    private String summaryRelativePath;
+
+    @com.aliyun.core.annotation.NameInMap("TensorboardDataSources")
+    private java.util.List<TensorboardDataSourceSpec> tensorboardDataSources;
+
+    @com.aliyun.core.annotation.NameInMap("TensorboardId")
     private String tensorboardId;
 
-    @NameInMap("TensorboardUrl")
+    @com.aliyun.core.annotation.NameInMap("TensorboardSpec")
+    private TensorboardSpec tensorboardSpec;
+
+    @com.aliyun.core.annotation.NameInMap("TensorboardUrl")
     private String tensorboardUrl;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("Token")
+    private String token;
+
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
+    @com.aliyun.core.annotation.NameInMap("Username")
+    private String username;
+
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private Tensorboard(Builder builder) {
+        this.accessibility = builder.accessibility;
+        this.cpu = builder.cpu;
         this.dataSourceId = builder.dataSourceId;
+        this.dataSourceType = builder.dataSourceType;
         this.displayName = builder.displayName;
         this.duration = builder.duration;
         this.gmtCreateTime = builder.gmtCreateTime;
+        this.gmtFinishTime = builder.gmtFinishTime;
         this.gmtModifyTime = builder.gmtModifyTime;
         this.jobId = builder.jobId;
+        this.maxRunningTimeMinutes = builder.maxRunningTimeMinutes;
+        this.memory = builder.memory;
+        this.options = builder.options;
+        this.priority = builder.priority;
+        this.quotaId = builder.quotaId;
+        this.quotaName = builder.quotaName;
         this.reasonCode = builder.reasonCode;
         this.reasonMessage = builder.reasonMessage;
         this.requestId = builder.requestId;
         this.status = builder.status;
         this.summaryPath = builder.summaryPath;
+        this.summaryRelativePath = builder.summaryRelativePath;
+        this.tensorboardDataSources = builder.tensorboardDataSources;
         this.tensorboardId = builder.tensorboardId;
+        this.tensorboardSpec = builder.tensorboardSpec;
         this.tensorboardUrl = builder.tensorboardUrl;
+        this.token = builder.token;
         this.userId = builder.userId;
+        this.username = builder.username;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -80,10 +149,31 @@ public class Tensorboard extends TeaModel {
     }
 
     /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
+    }
+
+    /**
+     * @return cpu
+     */
+    public Long getCpu() {
+        return this.cpu;
+    }
+
+    /**
      * @return dataSourceId
      */
     public String getDataSourceId() {
         return this.dataSourceId;
+    }
+
+    /**
+     * @return dataSourceType
+     */
+    public String getDataSourceType() {
+        return this.dataSourceType;
     }
 
     /**
@@ -108,6 +198,13 @@ public class Tensorboard extends TeaModel {
     }
 
     /**
+     * @return gmtFinishTime
+     */
+    public String getGmtFinishTime() {
+        return this.gmtFinishTime;
+    }
+
+    /**
      * @return gmtModifyTime
      */
     public String getGmtModifyTime() {
@@ -119,6 +216,48 @@ public class Tensorboard extends TeaModel {
      */
     public String getJobId() {
         return this.jobId;
+    }
+
+    /**
+     * @return maxRunningTimeMinutes
+     */
+    public Long getMaxRunningTimeMinutes() {
+        return this.maxRunningTimeMinutes;
+    }
+
+    /**
+     * @return memory
+     */
+    public Long getMemory() {
+        return this.memory;
+    }
+
+    /**
+     * @return options
+     */
+    public String getOptions() {
+        return this.options;
+    }
+
+    /**
+     * @return priority
+     */
+    public String getPriority() {
+        return this.priority;
+    }
+
+    /**
+     * @return quotaId
+     */
+    public String getQuotaId() {
+        return this.quotaId;
+    }
+
+    /**
+     * @return quotaName
+     */
+    public String getQuotaName() {
+        return this.quotaName;
     }
 
     /**
@@ -157,10 +296,31 @@ public class Tensorboard extends TeaModel {
     }
 
     /**
+     * @return summaryRelativePath
+     */
+    public String getSummaryRelativePath() {
+        return this.summaryRelativePath;
+    }
+
+    /**
+     * @return tensorboardDataSources
+     */
+    public java.util.List<TensorboardDataSourceSpec> getTensorboardDataSources() {
+        return this.tensorboardDataSources;
+    }
+
+    /**
      * @return tensorboardId
      */
     public String getTensorboardId() {
         return this.tensorboardId;
+    }
+
+    /**
+     * @return tensorboardSpec
+     */
+    public TensorboardSpec getTensorboardSpec() {
+        return this.tensorboardSpec;
     }
 
     /**
@@ -171,33 +331,94 @@ public class Tensorboard extends TeaModel {
     }
 
     /**
+     * @return token
+     */
+    public String getToken() {
+        return this.token;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
         return this.userId;
     }
 
+    /**
+     * @return username
+     */
+    public String getUsername() {
+        return this.username;
+    }
+
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder {
+        private String accessibility; 
+        private Long cpu; 
         private String dataSourceId; 
+        private String dataSourceType; 
         private String displayName; 
         private String duration; 
         private String gmtCreateTime; 
+        private String gmtFinishTime; 
         private String gmtModifyTime; 
         private String jobId; 
+        private Long maxRunningTimeMinutes; 
+        private Long memory; 
+        private String options; 
+        private String priority; 
+        private String quotaId; 
+        private String quotaName; 
         private String reasonCode; 
         private String reasonMessage; 
         private String requestId; 
         private String status; 
         private String summaryPath; 
+        private String summaryRelativePath; 
+        private java.util.List<TensorboardDataSourceSpec> tensorboardDataSources; 
         private String tensorboardId; 
+        private TensorboardSpec tensorboardSpec; 
         private String tensorboardUrl; 
+        private String token; 
         private String userId; 
+        private String username; 
+        private String workspaceId; 
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * Cpu.
+         */
+        public Builder cpu(Long cpu) {
+            this.cpu = cpu;
+            return this;
+        }
 
         /**
          * DataSourceId.
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
+            return this;
+        }
+
+        /**
+         * DataSourceType.
+         */
+        public Builder dataSourceType(String dataSourceType) {
+            this.dataSourceType = dataSourceType;
             return this;
         }
 
@@ -226,6 +447,14 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
+         * GmtFinishTime.
+         */
+        public Builder gmtFinishTime(String gmtFinishTime) {
+            this.gmtFinishTime = gmtFinishTime;
+            return this;
+        }
+
+        /**
          * GmtModifyTime.
          */
         public Builder gmtModifyTime(String gmtModifyTime) {
@@ -238,6 +467,54 @@ public class Tensorboard extends TeaModel {
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
+            return this;
+        }
+
+        /**
+         * MaxRunningTimeMinutes.
+         */
+        public Builder maxRunningTimeMinutes(Long maxRunningTimeMinutes) {
+            this.maxRunningTimeMinutes = maxRunningTimeMinutes;
+            return this;
+        }
+
+        /**
+         * Memory.
+         */
+        public Builder memory(Long memory) {
+            this.memory = memory;
+            return this;
+        }
+
+        /**
+         * Options.
+         */
+        public Builder options(String options) {
+            this.options = options;
+            return this;
+        }
+
+        /**
+         * Priority.
+         */
+        public Builder priority(String priority) {
+            this.priority = priority;
+            return this;
+        }
+
+        /**
+         * QuotaId.
+         */
+        public Builder quotaId(String quotaId) {
+            this.quotaId = quotaId;
+            return this;
+        }
+
+        /**
+         * QuotaName.
+         */
+        public Builder quotaName(String quotaName) {
+            this.quotaName = quotaName;
             return this;
         }
 
@@ -282,10 +559,34 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
+         * SummaryRelativePath.
+         */
+        public Builder summaryRelativePath(String summaryRelativePath) {
+            this.summaryRelativePath = summaryRelativePath;
+            return this;
+        }
+
+        /**
+         * TensorboardDataSources.
+         */
+        public Builder tensorboardDataSources(java.util.List<TensorboardDataSourceSpec> tensorboardDataSources) {
+            this.tensorboardDataSources = tensorboardDataSources;
+            return this;
+        }
+
+        /**
          * TensorboardId.
          */
         public Builder tensorboardId(String tensorboardId) {
             this.tensorboardId = tensorboardId;
+            return this;
+        }
+
+        /**
+         * TensorboardSpec.
+         */
+        public Builder tensorboardSpec(TensorboardSpec tensorboardSpec) {
+            this.tensorboardSpec = tensorboardSpec;
             return this;
         }
 
@@ -298,10 +599,34 @@ public class Tensorboard extends TeaModel {
         }
 
         /**
+         * Token.
+         */
+        public Builder token(String token) {
+            this.token = token;
+            return this;
+        }
+
+        /**
          * UserId.
          */
         public Builder userId(String userId) {
             this.userId = userId;
+            return this;
+        }
+
+        /**
+         * Username.
+         */
+        public Builder username(String username) {
+            this.username = username;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
             return this;
         }
 

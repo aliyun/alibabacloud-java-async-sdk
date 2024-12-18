@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ContainerSpec} extends {@link TeaModel}
  *
  * <p>ContainerSpec</p>
  */
 public class ContainerSpec extends TeaModel {
-    @NameInMap("Args")
-    private java.util.List < String > args;
+    @com.aliyun.core.annotation.NameInMap("Args")
+    private java.util.List<String> args;
 
-    @NameInMap("Command")
-    private java.util.List < String > command;
+    @com.aliyun.core.annotation.NameInMap("Command")
+    private java.util.List<String> command;
 
-    @NameInMap("Env")
-    private java.util.List < EnvVar > env;
+    @com.aliyun.core.annotation.NameInMap("Env")
+    private java.util.List<EnvVar> env;
 
-    @NameInMap("Image")
+    @com.aliyun.core.annotation.NameInMap("Image")
     private String image;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private ResourceRequirements resources;
 
-    @NameInMap("WorkingDir")
+    @com.aliyun.core.annotation.NameInMap("WorkingDir")
     private String workingDir;
 
     private ContainerSpec(Builder builder) {
@@ -54,21 +59,21 @@ public class ContainerSpec extends TeaModel {
     /**
      * @return args
      */
-    public java.util.List < String > getArgs() {
+    public java.util.List<String> getArgs() {
         return this.args;
     }
 
     /**
      * @return command
      */
-    public java.util.List < String > getCommand() {
+    public java.util.List<String> getCommand() {
         return this.command;
     }
 
     /**
      * @return env
      */
-    public java.util.List < EnvVar > getEnv() {
+    public java.util.List<EnvVar> getEnv() {
         return this.env;
     }
 
@@ -101,9 +106,9 @@ public class ContainerSpec extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > args; 
-        private java.util.List < String > command; 
-        private java.util.List < EnvVar > env; 
+        private java.util.List<String> args; 
+        private java.util.List<String> command; 
+        private java.util.List<EnvVar> env; 
         private String image; 
         private String name; 
         private ResourceRequirements resources; 
@@ -112,7 +117,7 @@ public class ContainerSpec extends TeaModel {
         /**
          * Args.
          */
-        public Builder args(java.util.List < String > args) {
+        public Builder args(java.util.List<String> args) {
             this.args = args;
             return this;
         }
@@ -120,7 +125,7 @@ public class ContainerSpec extends TeaModel {
         /**
          * Command.
          */
-        public Builder command(java.util.List < String > command) {
+        public Builder command(java.util.List<String> command) {
             this.command = command;
             return this;
         }
@@ -128,7 +133,7 @@ public class ContainerSpec extends TeaModel {
         /**
          * Env.
          */
-        public Builder env(java.util.List < EnvVar > env) {
+        public Builder env(java.util.List<EnvVar> env) {
             this.env = env;
             return this;
         }

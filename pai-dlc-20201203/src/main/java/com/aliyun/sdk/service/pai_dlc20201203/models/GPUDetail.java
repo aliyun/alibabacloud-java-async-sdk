@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GPUDetail} extends {@link TeaModel}
  *
  * <p>GPUDetail</p>
  */
 public class GPUDetail extends TeaModel {
-    @NameInMap("GPU")
+    @com.aliyun.core.annotation.NameInMap("GPU")
     private String GPU;
 
-    @NameInMap("GPUType")
+    @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
 
-    @NameInMap("GPUTypeFullName")
+    @com.aliyun.core.annotation.NameInMap("GPUTypeFullName")
     private String GPUTypeFullName;
 
     private GPUDetail(Builder builder) {

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StatusTransitionItem} extends {@link TeaModel}
  *
  * <p>StatusTransitionItem</p>
  */
 public class StatusTransitionItem extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("ReasonCode")
+    @com.aliyun.core.annotation.NameInMap("ReasonCode")
     private String reasonCode;
 
-    @NameInMap("ReasonMessage")
+    @com.aliyun.core.annotation.NameInMap("ReasonMessage")
     private String reasonMessage;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private StatusTransitionItem(Builder builder) {

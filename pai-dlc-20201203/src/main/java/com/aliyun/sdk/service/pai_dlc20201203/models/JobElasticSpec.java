@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JobElasticSpec} extends {@link TeaModel}
  *
  * <p>JobElasticSpec</p>
  */
 public class JobElasticSpec extends TeaModel {
-    @NameInMap("AIMasterDockerImage")
+    @com.aliyun.core.annotation.NameInMap("AIMasterDockerImage")
     private String AIMasterDockerImage;
 
-    @NameInMap("AIMasterType")
+    @com.aliyun.core.annotation.NameInMap("AIMasterType")
     private String AIMasterType;
 
-    @NameInMap("EDPMaxParallelism")
+    @com.aliyun.core.annotation.NameInMap("EDPMaxParallelism")
     private Integer EDPMaxParallelism;
 
-    @NameInMap("EDPMinParallelism")
+    @com.aliyun.core.annotation.NameInMap("EDPMinParallelism")
     private Integer EDPMinParallelism;
 
-    @NameInMap("ElasticStrategy")
+    @com.aliyun.core.annotation.NameInMap("ElasticStrategy")
     private String elasticStrategy;
 
-    @NameInMap("EnableAIMaster")
+    @com.aliyun.core.annotation.NameInMap("EnableAIMaster")
     private Boolean enableAIMaster;
 
-    @NameInMap("EnableEDP")
+    @com.aliyun.core.annotation.NameInMap("EnableEDP")
     private Boolean enableEDP;
 
-    @NameInMap("EnableElasticTraining")
+    @com.aliyun.core.annotation.NameInMap("EnableElasticTraining")
     private Boolean enableElasticTraining;
 
-    @NameInMap("EnablePsJobElasticPS")
+    @com.aliyun.core.annotation.NameInMap("EnablePsJobElasticPS")
     private Boolean enablePsJobElasticPS;
 
-    @NameInMap("EnablePsJobElasticWorker")
+    @com.aliyun.core.annotation.NameInMap("EnablePsJobElasticWorker")
     private Boolean enablePsJobElasticWorker;
 
-    @NameInMap("EnablePsResourceEstimate")
+    @com.aliyun.core.annotation.NameInMap("EnablePsResourceEstimate")
     private Boolean enablePsResourceEstimate;
 
-    @NameInMap("MaxParallelism")
+    @com.aliyun.core.annotation.NameInMap("MaxParallelism")
     private Integer maxParallelism;
 
-    @NameInMap("MinParallelism")
+    @com.aliyun.core.annotation.NameInMap("MinParallelism")
     private Integer minParallelism;
 
-    @NameInMap("PSMaxParallelism")
+    @com.aliyun.core.annotation.NameInMap("PSMaxParallelism")
     private Integer PSMaxParallelism;
 
-    @NameInMap("PSMinParallelism")
+    @com.aliyun.core.annotation.NameInMap("PSMinParallelism")
     private Integer PSMinParallelism;
 
     private JobElasticSpec(Builder builder) {

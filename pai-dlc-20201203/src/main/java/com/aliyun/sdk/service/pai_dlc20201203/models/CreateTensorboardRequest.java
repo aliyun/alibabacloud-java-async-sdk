@@ -1,79 +1,105 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTensorboardRequest} extends {@link RequestModel}
  *
  * <p>CreateTensorboardRequest</p>
  */
 public class CreateTensorboardRequest extends Request {
-    @Body
-    @NameInMap("Cpu")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Cpu")
     private Long cpu;
 
-    @Body
-    @NameInMap("DataSourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceId")
     private String dataSourceId;
 
-    @Body
-    @NameInMap("DataSourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceType")
     private String dataSourceType;
 
-    @Body
-    @NameInMap("DataSources")
-    private java.util.List < DataSourceItem > dataSources;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSources")
+    private java.util.List<DataSourceItem> dataSources;
 
-    @Body
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @Body
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @Body
-    @NameInMap("MaxRunningTimeMinutes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxRunningTimeMinutes")
     private Long maxRunningTimeMinutes;
 
-    @Body
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private Long memory;
 
-    @Body
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @Body
-    @NameInMap("SourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    private String priority;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
+    private String quotaId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
-    @Body
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Body
-    @NameInMap("SummaryPath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SummaryPath")
     private String summaryPath;
 
-    @Body
-    @NameInMap("SummaryRelativePath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SummaryRelativePath")
     private String summaryRelativePath;
 
-    @Body
-    @NameInMap("Uri")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TensorboardDataSources")
+    private java.util.List<TensorboardDataSourceSpec> tensorboardDataSources;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TensorboardSpec")
+    private TensorboardSpec tensorboardSpec;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Uri")
     private String uri;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private CreateTensorboardRequest(Builder builder) {
         super(builder);
+        this.accessibility = builder.accessibility;
         this.cpu = builder.cpu;
         this.dataSourceId = builder.dataSourceId;
         this.dataSourceType = builder.dataSourceType;
@@ -83,10 +109,14 @@ public class CreateTensorboardRequest extends Request {
         this.maxRunningTimeMinutes = builder.maxRunningTimeMinutes;
         this.memory = builder.memory;
         this.options = builder.options;
+        this.priority = builder.priority;
+        this.quotaId = builder.quotaId;
         this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
         this.summaryPath = builder.summaryPath;
         this.summaryRelativePath = builder.summaryRelativePath;
+        this.tensorboardDataSources = builder.tensorboardDataSources;
+        this.tensorboardSpec = builder.tensorboardSpec;
         this.uri = builder.uri;
         this.workspaceId = builder.workspaceId;
     }
@@ -102,6 +132,13 @@ public class CreateTensorboardRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     /**
@@ -128,7 +165,7 @@ public class CreateTensorboardRequest extends Request {
     /**
      * @return dataSources
      */
-    public java.util.List < DataSourceItem > getDataSources() {
+    public java.util.List<DataSourceItem> getDataSources() {
         return this.dataSources;
     }
 
@@ -168,6 +205,20 @@ public class CreateTensorboardRequest extends Request {
     }
 
     /**
+     * @return priority
+     */
+    public String getPriority() {
+        return this.priority;
+    }
+
+    /**
+     * @return quotaId
+     */
+    public String getQuotaId() {
+        return this.quotaId;
+    }
+
+    /**
      * @return sourceId
      */
     public String getSourceId() {
@@ -196,6 +247,20 @@ public class CreateTensorboardRequest extends Request {
     }
 
     /**
+     * @return tensorboardDataSources
+     */
+    public java.util.List<TensorboardDataSourceSpec> getTensorboardDataSources() {
+        return this.tensorboardDataSources;
+    }
+
+    /**
+     * @return tensorboardSpec
+     */
+    public TensorboardSpec getTensorboardSpec() {
+        return this.tensorboardSpec;
+    }
+
+    /**
      * @return uri
      */
     public String getUri() {
@@ -210,19 +275,24 @@ public class CreateTensorboardRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateTensorboardRequest, Builder> {
+        private String accessibility; 
         private Long cpu; 
         private String dataSourceId; 
         private String dataSourceType; 
-        private java.util.List < DataSourceItem > dataSources; 
+        private java.util.List<DataSourceItem> dataSources; 
         private String displayName; 
         private String jobId; 
         private Long maxRunningTimeMinutes; 
         private Long memory; 
         private String options; 
+        private String priority; 
+        private String quotaId; 
         private String sourceId; 
         private String sourceType; 
         private String summaryPath; 
         private String summaryRelativePath; 
+        private java.util.List<TensorboardDataSourceSpec> tensorboardDataSources; 
+        private TensorboardSpec tensorboardSpec; 
         private String uri; 
         private String workspaceId; 
 
@@ -232,6 +302,7 @@ public class CreateTensorboardRequest extends Request {
 
         private Builder(CreateTensorboardRequest request) {
             super(request);
+            this.accessibility = request.accessibility;
             this.cpu = request.cpu;
             this.dataSourceId = request.dataSourceId;
             this.dataSourceType = request.dataSourceType;
@@ -241,13 +312,26 @@ public class CreateTensorboardRequest extends Request {
             this.maxRunningTimeMinutes = request.maxRunningTimeMinutes;
             this.memory = request.memory;
             this.options = request.options;
+            this.priority = request.priority;
+            this.quotaId = request.quotaId;
             this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
             this.summaryPath = request.summaryPath;
             this.summaryRelativePath = request.summaryRelativePath;
+            this.tensorboardDataSources = request.tensorboardDataSources;
+            this.tensorboardSpec = request.tensorboardSpec;
             this.uri = request.uri;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putBodyParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
+            return this;
+        }
 
         /**
          * Cpu.
@@ -279,7 +363,7 @@ public class CreateTensorboardRequest extends Request {
         /**
          * DataSources.
          */
-        public Builder dataSources(java.util.List < DataSourceItem > dataSources) {
+        public Builder dataSources(java.util.List<DataSourceItem> dataSources) {
             this.putBodyParameter("DataSources", dataSources);
             this.dataSources = dataSources;
             return this;
@@ -331,6 +415,24 @@ public class CreateTensorboardRequest extends Request {
         }
 
         /**
+         * Priority.
+         */
+        public Builder priority(String priority) {
+            this.putBodyParameter("Priority", priority);
+            this.priority = priority;
+            return this;
+        }
+
+        /**
+         * QuotaId.
+         */
+        public Builder quotaId(String quotaId) {
+            this.putBodyParameter("QuotaId", quotaId);
+            this.quotaId = quotaId;
+            return this;
+        }
+
+        /**
          * SourceId.
          */
         public Builder sourceId(String sourceId) {
@@ -363,6 +465,24 @@ public class CreateTensorboardRequest extends Request {
         public Builder summaryRelativePath(String summaryRelativePath) {
             this.putBodyParameter("SummaryRelativePath", summaryRelativePath);
             this.summaryRelativePath = summaryRelativePath;
+            return this;
+        }
+
+        /**
+         * TensorboardDataSources.
+         */
+        public Builder tensorboardDataSources(java.util.List<TensorboardDataSourceSpec> tensorboardDataSources) {
+            this.putBodyParameter("TensorboardDataSources", tensorboardDataSources);
+            this.tensorboardDataSources = tensorboardDataSources;
+            return this;
+        }
+
+        /**
+         * TensorboardSpec.
+         */
+        public Builder tensorboardSpec(TensorboardSpec tensorboardSpec) {
+            this.putBodyParameter("TensorboardSpec", tensorboardSpec);
+            this.tensorboardSpec = tensorboardSpec;
             return this;
         }
 

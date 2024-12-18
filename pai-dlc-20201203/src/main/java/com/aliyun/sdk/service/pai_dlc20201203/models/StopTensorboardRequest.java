@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopTensorboardRequest} extends {@link RequestModel}
  *
  * <p>StopTensorboardRequest</p>
  */
 public class StopTensorboardRequest extends Request {
-    @Path
-    @NameInMap("TensorboardId")
-    @Validation(required = true, maxLength = 256, minLength = 1)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TensorboardId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256, minLength = 1)
     private String tensorboardId;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private StopTensorboardRequest(Builder builder) {
@@ -69,7 +74,10 @@ public class StopTensorboardRequest extends Request {
         } 
 
         /**
-         * TensorboardId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tensorboard-20210114104214-vf9lowjt3pso</p>
          */
         public Builder tensorboardId(String tensorboardId) {
             this.putPathParameter("TensorboardId", tensorboardId);

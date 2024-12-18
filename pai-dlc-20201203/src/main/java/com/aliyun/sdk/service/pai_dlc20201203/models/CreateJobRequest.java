@@ -1,100 +1,115 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJobRequest} extends {@link RequestModel}
  *
  * <p>CreateJobRequest</p>
  */
 public class CreateJobRequest extends Request {
-    @Body
-    @NameInMap("CodeSource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CodeSource")
     private CodeSource codeSource;
 
-    @Body
-    @NameInMap("DataSources")
-    private java.util.List < DataSources> dataSources;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CredentialConfig")
+    private CredentialConfig credentialConfig;
 
-    @Body
-    @NameInMap("DebuggerConfigContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSources")
+    private java.util.List<DataSources> dataSources;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DebuggerConfigContent")
     private String debuggerConfigContent;
 
-    @Body
-    @NameInMap("DisplayName")
-    @Validation(required = true, maxLength = 1024, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
     private String displayName;
 
-    @Body
-    @NameInMap("ElasticSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ElasticSpec")
     private JobElasticSpec elasticSpec;
 
-    @Body
-    @NameInMap("Envs")
-    private java.util.Map < String, String > envs;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Envs")
+    private java.util.Map<String, String> envs;
 
-    @Body
-    @NameInMap("JobMaxRunningTimeMinutes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobMaxRunningTimeMinutes")
     private Long jobMaxRunningTimeMinutes;
 
-    @Body
-    @NameInMap("JobSpecs")
-    @Validation(required = true)
-    private java.util.List < JobSpec > jobSpecs;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobSpecs")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<JobSpec> jobSpecs;
 
-    @Body
-    @NameInMap("JobType")
-    @Validation(required = true, maxLength = 32, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobType")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 32, minLength = 1)
     private String jobType;
 
-    @Body
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @Body
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @Body
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Body
-    @NameInMap("Settings")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Settings")
     private JobSettings settings;
 
-    @Body
-    @NameInMap("SuccessPolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SuccessPolicy")
     private String successPolicy;
 
-    @Body
-    @NameInMap("ThirdpartyLibDir")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThirdpartyLibDir")
     private String thirdpartyLibDir;
 
-    @Body
-    @NameInMap("ThirdpartyLibs")
-    private java.util.List < String > thirdpartyLibs;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThirdpartyLibs")
+    private java.util.List<String> thirdpartyLibs;
 
-    @Body
-    @NameInMap("UserCommand")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserCommand")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userCommand;
 
-    @Body
-    @NameInMap("UserVpc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private CreateJobRequest(Builder builder) {
         super(builder);
+        this.accessibility = builder.accessibility;
         this.codeSource = builder.codeSource;
+        this.credentialConfig = builder.credentialConfig;
         this.dataSources = builder.dataSources;
         this.debuggerConfigContent = builder.debuggerConfigContent;
         this.displayName = builder.displayName;
@@ -129,6 +144,13 @@ public class CreateJobRequest extends Request {
     }
 
     /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
+    }
+
+    /**
      * @return codeSource
      */
     public CodeSource getCodeSource() {
@@ -136,9 +158,16 @@ public class CreateJobRequest extends Request {
     }
 
     /**
+     * @return credentialConfig
+     */
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
+    }
+
+    /**
      * @return dataSources
      */
-    public java.util.List < DataSources> getDataSources() {
+    public java.util.List<DataSources> getDataSources() {
         return this.dataSources;
     }
 
@@ -166,7 +195,7 @@ public class CreateJobRequest extends Request {
     /**
      * @return envs
      */
-    public java.util.Map < String, String > getEnvs() {
+    public java.util.Map<String, String> getEnvs() {
         return this.envs;
     }
 
@@ -180,7 +209,7 @@ public class CreateJobRequest extends Request {
     /**
      * @return jobSpecs
      */
-    public java.util.List < JobSpec > getJobSpecs() {
+    public java.util.List<JobSpec> getJobSpecs() {
         return this.jobSpecs;
     }
 
@@ -236,7 +265,7 @@ public class CreateJobRequest extends Request {
     /**
      * @return thirdpartyLibs
      */
-    public java.util.List < String > getThirdpartyLibs() {
+    public java.util.List<String> getThirdpartyLibs() {
         return this.thirdpartyLibs;
     }
 
@@ -262,14 +291,16 @@ public class CreateJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateJobRequest, Builder> {
+        private String accessibility; 
         private CodeSource codeSource; 
-        private java.util.List < DataSources> dataSources; 
+        private CredentialConfig credentialConfig; 
+        private java.util.List<DataSources> dataSources; 
         private String debuggerConfigContent; 
         private String displayName; 
         private JobElasticSpec elasticSpec; 
-        private java.util.Map < String, String > envs; 
+        private java.util.Map<String, String> envs; 
         private Long jobMaxRunningTimeMinutes; 
-        private java.util.List < JobSpec > jobSpecs; 
+        private java.util.List<JobSpec> jobSpecs; 
         private String jobType; 
         private String options; 
         private Integer priority; 
@@ -277,7 +308,7 @@ public class CreateJobRequest extends Request {
         private JobSettings settings; 
         private String successPolicy; 
         private String thirdpartyLibDir; 
-        private java.util.List < String > thirdpartyLibs; 
+        private java.util.List<String> thirdpartyLibs; 
         private String userCommand; 
         private UserVpc userVpc; 
         private String workspaceId; 
@@ -288,7 +319,9 @@ public class CreateJobRequest extends Request {
 
         private Builder(CreateJobRequest request) {
             super(request);
+            this.accessibility = request.accessibility;
             this.codeSource = request.codeSource;
+            this.credentialConfig = request.credentialConfig;
             this.dataSources = request.dataSources;
             this.debuggerConfigContent = request.debuggerConfigContent;
             this.displayName = request.displayName;
@@ -310,6 +343,15 @@ public class CreateJobRequest extends Request {
         } 
 
         /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putBodyParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
          * CodeSource.
          */
         public Builder codeSource(CodeSource codeSource) {
@@ -319,9 +361,18 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * CredentialConfig.
+         */
+        public Builder credentialConfig(CredentialConfig credentialConfig) {
+            this.putBodyParameter("CredentialConfig", credentialConfig);
+            this.credentialConfig = credentialConfig;
+            return this;
+        }
+
+        /**
          * DataSources.
          */
-        public Builder dataSources(java.util.List < DataSources> dataSources) {
+        public Builder dataSources(java.util.List<DataSources> dataSources) {
             this.putBodyParameter("DataSources", dataSources);
             this.dataSources = dataSources;
             return this;
@@ -337,7 +388,10 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf-mnist-test</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -357,7 +411,7 @@ public class CreateJobRequest extends Request {
         /**
          * Envs.
          */
-        public Builder envs(java.util.Map < String, String > envs) {
+        public Builder envs(java.util.Map<String, String> envs) {
             this.putBodyParameter("Envs", envs);
             this.envs = envs;
             return this;
@@ -373,16 +427,19 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * JobSpecs.
+         * <p>This parameter is required.</p>
          */
-        public Builder jobSpecs(java.util.List < JobSpec > jobSpecs) {
+        public Builder jobSpecs(java.util.List<JobSpec> jobSpecs) {
             this.putBodyParameter("JobSpecs", jobSpecs);
             this.jobSpecs = jobSpecs;
             return this;
         }
 
         /**
-         * JobType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TFJob</p>
          */
         public Builder jobType(String jobType) {
             this.putBodyParameter("JobType", jobType);
@@ -447,14 +504,17 @@ public class CreateJobRequest extends Request {
         /**
          * ThirdpartyLibs.
          */
-        public Builder thirdpartyLibs(java.util.List < String > thirdpartyLibs) {
+        public Builder thirdpartyLibs(java.util.List<String> thirdpartyLibs) {
             this.putBodyParameter("ThirdpartyLibs", thirdpartyLibs);
             this.thirdpartyLibs = thirdpartyLibs;
             return this;
         }
 
         /**
-         * UserCommand.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python /root/code/mnist.py</p>
          */
         public Builder userCommand(String userCommand) {
             this.putBodyParameter("UserCommand", userCommand);
@@ -487,17 +547,23 @@ public class CreateJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class CodeSource extends TeaModel {
-        @NameInMap("Branch")
+        @com.aliyun.core.annotation.NameInMap("Branch")
         private String branch;
 
-        @NameInMap("CodeSourceId")
+        @com.aliyun.core.annotation.NameInMap("CodeSourceId")
         private String codeSourceId;
 
-        @NameInMap("Commit")
+        @com.aliyun.core.annotation.NameInMap("Commit")
         private String commit;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
         private CodeSource(Builder builder) {
@@ -588,19 +654,29 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class DataSources extends TeaModel {
-        @NameInMap("DataSourceId")
+        @com.aliyun.core.annotation.NameInMap("DataSourceId")
         private String dataSourceId;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Options")
+        private String options;
+
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private DataSources(Builder builder) {
             this.dataSourceId = builder.dataSourceId;
             this.mountPath = builder.mountPath;
+            this.options = builder.options;
             this.uri = builder.uri;
         }
 
@@ -627,6 +703,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return options
+         */
+        public String getOptions() {
+            return this.options;
+        }
+
+        /**
          * @return uri
          */
         public String getUri() {
@@ -636,6 +719,7 @@ public class CreateJobRequest extends Request {
         public static final class Builder {
             private String dataSourceId; 
             private String mountPath; 
+            private String options; 
             private String uri; 
 
             /**
@@ -655,6 +739,14 @@ public class CreateJobRequest extends Request {
             }
 
             /**
+             * Options.
+             */
+            public Builder options(String options) {
+                this.options = options;
+                return this;
+            }
+
+            /**
              * Uri.
              */
             public Builder uri(String uri) {
@@ -669,20 +761,26 @@ public class CreateJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateJobRequest</p>
+     */
     public static class UserVpc extends TeaModel {
-        @NameInMap("DefaultRoute")
+        @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;
 
-        @NameInMap("ExtendedCIDRs")
-        private java.util.List < String > extendedCIDRs;
+        @com.aliyun.core.annotation.NameInMap("ExtendedCIDRs")
+        private java.util.List<String> extendedCIDRs;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SwitchId")
+        @com.aliyun.core.annotation.NameInMap("SwitchId")
         private String switchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private UserVpc(Builder builder) {
@@ -711,7 +809,7 @@ public class CreateJobRequest extends Request {
         /**
          * @return extendedCIDRs
          */
-        public java.util.List < String > getExtendedCIDRs() {
+        public java.util.List<String> getExtendedCIDRs() {
             return this.extendedCIDRs;
         }
 
@@ -738,7 +836,7 @@ public class CreateJobRequest extends Request {
 
         public static final class Builder {
             private String defaultRoute; 
-            private java.util.List < String > extendedCIDRs; 
+            private java.util.List<String> extendedCIDRs; 
             private String securityGroupId; 
             private String switchId; 
             private String vpcId; 
@@ -754,7 +852,7 @@ public class CreateJobRequest extends Request {
             /**
              * ExtendedCIDRs.
              */
-            public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
+            public Builder extendedCIDRs(java.util.List<String> extendedCIDRs) {
                 this.extendedCIDRs = extendedCIDRs;
                 return this;
             }

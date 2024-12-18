@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AIMasterMessage} extends {@link TeaModel}
  *
  * <p>AIMasterMessage</p>
  */
 public class AIMasterMessage extends TeaModel {
-    @NameInMap("Extended")
+    @com.aliyun.core.annotation.NameInMap("Extended")
     private String extended;
 
-    @NameInMap("JobRestartCount")
+    @com.aliyun.core.annotation.NameInMap("JobRestartCount")
     private Integer jobRestartCount;
 
-    @NameInMap("MessageContent")
+    @com.aliyun.core.annotation.NameInMap("MessageContent")
     private String messageContent;
 
-    @NameInMap("MessageEvent")
+    @com.aliyun.core.annotation.NameInMap("MessageEvent")
     private String messageEvent;
 
-    @NameInMap("MessageVersion")
+    @com.aliyun.core.annotation.NameInMap("MessageVersion")
     private Integer messageVersion;
 
-    @NameInMap("RestartType")
+    @com.aliyun.core.annotation.NameInMap("RestartType")
     private String restartType;
 
     private AIMasterMessage(Builder builder) {

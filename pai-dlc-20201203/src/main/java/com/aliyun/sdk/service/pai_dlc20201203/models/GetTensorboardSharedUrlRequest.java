@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTensorboardSharedUrlRequest} extends {@link RequestModel}
  *
  * <p>GetTensorboardSharedUrlRequest</p>
  */
 public class GetTensorboardSharedUrlRequest extends Request {
-    @Path
-    @NameInMap("TensorboardId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TensorboardId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tensorboardId;
 
-    @Query
-    @NameInMap("ExpireTimeSeconds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpireTimeSeconds")
     private String expireTimeSeconds;
 
     private GetTensorboardSharedUrlRequest(Builder builder) {
@@ -69,7 +74,10 @@ public class GetTensorboardSharedUrlRequest extends Request {
         } 
 
         /**
-         * TensorboardId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tbxxxxxx</p>
          */
         public Builder tensorboardId(String tensorboardId) {
             this.putPathParameter("TensorboardId", tensorboardId);

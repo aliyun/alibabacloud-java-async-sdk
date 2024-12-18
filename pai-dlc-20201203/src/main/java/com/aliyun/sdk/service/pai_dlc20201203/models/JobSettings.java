@@ -1,69 +1,78 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JobSettings} extends {@link TeaModel}
  *
  * <p>JobSettings</p>
  */
 public class JobSettings extends TeaModel {
-    @NameInMap("AdvancedSettings")
-    private java.util.Map < String, ? > advancedSettings;
+    @com.aliyun.core.annotation.NameInMap("AdvancedSettings")
+    private java.util.Map<String, ?> advancedSettings;
 
-    @NameInMap("BusinessUserId")
+    @com.aliyun.core.annotation.NameInMap("BusinessUserId")
     private String businessUserId;
 
-    @NameInMap("Caller")
+    @com.aliyun.core.annotation.NameInMap("Caller")
     private String caller;
 
-    @NameInMap("Driver")
+    @com.aliyun.core.annotation.NameInMap("DisableEcsStockCheck")
+    private Boolean disableEcsStockCheck;
+
+    @com.aliyun.core.annotation.NameInMap("Driver")
     private String driver;
 
-    @NameInMap("EnableErrorMonitoringInAIMaster")
+    @com.aliyun.core.annotation.NameInMap("EnableErrorMonitoringInAIMaster")
     private Boolean enableErrorMonitoringInAIMaster;
 
-    @NameInMap("EnableOssAppend")
+    @com.aliyun.core.annotation.NameInMap("EnableOssAppend")
     private Boolean enableOssAppend;
 
-    @NameInMap("EnableRDMA")
+    @com.aliyun.core.annotation.NameInMap("EnableRDMA")
     private Boolean enableRDMA;
 
-    @NameInMap("EnableSanityCheck")
+    @com.aliyun.core.annotation.NameInMap("EnableSanityCheck")
     private Boolean enableSanityCheck;
 
-    @NameInMap("EnableTideResource")
+    @com.aliyun.core.annotation.NameInMap("EnableTideResource")
     private Boolean enableTideResource;
 
-    @NameInMap("ErrorMonitoringArgs")
+    @com.aliyun.core.annotation.NameInMap("ErrorMonitoringArgs")
     private String errorMonitoringArgs;
 
-    @NameInMap("JobReservedMinutes")
+    @com.aliyun.core.annotation.NameInMap("JobReservedMinutes")
     private Integer jobReservedMinutes;
 
-    @NameInMap("JobReservedPolicy")
+    @com.aliyun.core.annotation.NameInMap("JobReservedPolicy")
     private String jobReservedPolicy;
 
-    @NameInMap("OversoldType")
+    @com.aliyun.core.annotation.NameInMap("OversoldType")
     private String oversoldType;
 
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @NameInMap("SanityCheckArgs")
+    @com.aliyun.core.annotation.NameInMap("SanityCheckArgs")
     private String sanityCheckArgs;
 
-    @NameInMap("Tags")
-    private java.util.Map < String, String > tags;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.Map<String, String> tags;
 
     private JobSettings(Builder builder) {
         this.advancedSettings = builder.advancedSettings;
         this.businessUserId = builder.businessUserId;
         this.caller = builder.caller;
+        this.disableEcsStockCheck = builder.disableEcsStockCheck;
         this.driver = builder.driver;
         this.enableErrorMonitoringInAIMaster = builder.enableErrorMonitoringInAIMaster;
         this.enableOssAppend = builder.enableOssAppend;
@@ -90,7 +99,7 @@ public class JobSettings extends TeaModel {
     /**
      * @return advancedSettings
      */
-    public java.util.Map < String, ? > getAdvancedSettings() {
+    public java.util.Map<String, ?> getAdvancedSettings() {
         return this.advancedSettings;
     }
 
@@ -106,6 +115,13 @@ public class JobSettings extends TeaModel {
      */
     public String getCaller() {
         return this.caller;
+    }
+
+    /**
+     * @return disableEcsStockCheck
+     */
+    public Boolean getDisableEcsStockCheck() {
+        return this.disableEcsStockCheck;
     }
 
     /**
@@ -195,14 +211,15 @@ public class JobSettings extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.Map < String, String > getTags() {
+    public java.util.Map<String, String> getTags() {
         return this.tags;
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > advancedSettings; 
+        private java.util.Map<String, ?> advancedSettings; 
         private String businessUserId; 
         private String caller; 
+        private Boolean disableEcsStockCheck; 
         private String driver; 
         private Boolean enableErrorMonitoringInAIMaster; 
         private Boolean enableOssAppend; 
@@ -215,12 +232,12 @@ public class JobSettings extends TeaModel {
         private String oversoldType; 
         private String pipelineId; 
         private String sanityCheckArgs; 
-        private java.util.Map < String, String > tags; 
+        private java.util.Map<String, String> tags; 
 
         /**
          * AdvancedSettings.
          */
-        public Builder advancedSettings(java.util.Map < String, ? > advancedSettings) {
+        public Builder advancedSettings(java.util.Map<String, ?> advancedSettings) {
             this.advancedSettings = advancedSettings;
             return this;
         }
@@ -238,6 +255,14 @@ public class JobSettings extends TeaModel {
          */
         public Builder caller(String caller) {
             this.caller = caller;
+            return this;
+        }
+
+        /**
+         * DisableEcsStockCheck.
+         */
+        public Builder disableEcsStockCheck(Boolean disableEcsStockCheck) {
+            this.disableEcsStockCheck = disableEcsStockCheck;
             return this;
         }
 
@@ -340,7 +365,7 @@ public class JobSettings extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.Map < String, String > tags) {
+        public Builder tags(java.util.Map<String, String> tags) {
             this.tags = tags;
             return this;
         }

@@ -1,48 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JobSpec} extends {@link TeaModel}
  *
  * <p>JobSpec</p>
  */
 public class JobSpec extends TeaModel {
-    @NameInMap("EcsSpec")
+    @com.aliyun.core.annotation.NameInMap("AssignNodeSpec")
+    private AssignNodeSpec assignNodeSpec;
+
+    @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
-    @NameInMap("ExtraPodSpec")
+    @com.aliyun.core.annotation.NameInMap("ExtraPodSpec")
     private ExtraPodSpec extraPodSpec;
 
-    @NameInMap("Image")
+    @com.aliyun.core.annotation.NameInMap("Image")
     private String image;
 
-    @NameInMap("ImageConfig")
+    @com.aliyun.core.annotation.NameInMap("ImageConfig")
     private ImageConfig imageConfig;
 
-    @NameInMap("PodCount")
+    @com.aliyun.core.annotation.NameInMap("PodCount")
     private Long podCount;
 
-    @NameInMap("ResourceConfig")
+    @com.aliyun.core.annotation.NameInMap("ResourceConfig")
     private ResourceConfig resourceConfig;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("SpotSpec")
+    private SpotSpec spotSpec;
+
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UseSpotInstance")
+    @com.aliyun.core.annotation.NameInMap("UseSpotInstance")
+    @Deprecated
     private Boolean useSpotInstance;
 
     private JobSpec(Builder builder) {
+        this.assignNodeSpec = builder.assignNodeSpec;
         this.ecsSpec = builder.ecsSpec;
         this.extraPodSpec = builder.extraPodSpec;
         this.image = builder.image;
         this.imageConfig = builder.imageConfig;
         this.podCount = builder.podCount;
         this.resourceConfig = builder.resourceConfig;
+        this.spotSpec = builder.spotSpec;
         this.type = builder.type;
         this.useSpotInstance = builder.useSpotInstance;
     }
@@ -53,6 +67,13 @@ public class JobSpec extends TeaModel {
 
     public static JobSpec create() {
         return builder().build();
+    }
+
+    /**
+     * @return assignNodeSpec
+     */
+    public AssignNodeSpec getAssignNodeSpec() {
+        return this.assignNodeSpec;
     }
 
     /**
@@ -98,6 +119,13 @@ public class JobSpec extends TeaModel {
     }
 
     /**
+     * @return spotSpec
+     */
+    public SpotSpec getSpotSpec() {
+        return this.spotSpec;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -112,14 +140,24 @@ public class JobSpec extends TeaModel {
     }
 
     public static final class Builder {
+        private AssignNodeSpec assignNodeSpec; 
         private String ecsSpec; 
         private ExtraPodSpec extraPodSpec; 
         private String image; 
         private ImageConfig imageConfig; 
         private Long podCount; 
         private ResourceConfig resourceConfig; 
+        private SpotSpec spotSpec; 
         private String type; 
         private Boolean useSpotInstance; 
+
+        /**
+         * AssignNodeSpec.
+         */
+        public Builder assignNodeSpec(AssignNodeSpec assignNodeSpec) {
+            this.assignNodeSpec = assignNodeSpec;
+            return this;
+        }
 
         /**
          * EcsSpec.
@@ -166,6 +204,14 @@ public class JobSpec extends TeaModel {
          */
         public Builder resourceConfig(ResourceConfig resourceConfig) {
             this.resourceConfig = resourceConfig;
+            return this;
+        }
+
+        /**
+         * SpotSpec.
+         */
+        public Builder spotSpec(SpotSpec spotSpec) {
+            this.spotSpec = spotSpec;
             return this;
         }
 

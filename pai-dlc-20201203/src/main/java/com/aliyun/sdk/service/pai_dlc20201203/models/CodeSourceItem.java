@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CodeSourceItem} extends {@link TeaModel}
  *
  * <p>CodeSourceItem</p>
  */
 public class CodeSourceItem extends TeaModel {
-    @NameInMap("CodeBranch")
+    @com.aliyun.core.annotation.NameInMap("CodeBranch")
     private String codeBranch;
 
-    @NameInMap("CodeCommit")
+    @com.aliyun.core.annotation.NameInMap("CodeCommit")
     private String codeCommit;
 
-    @NameInMap("CodeRepo")
+    @com.aliyun.core.annotation.NameInMap("CodeRepo")
     private String codeRepo;
 
-    @NameInMap("CodeRepoAccessToken")
+    @com.aliyun.core.annotation.NameInMap("CodeRepoAccessToken")
     private String codeRepoAccessToken;
 
-    @NameInMap("CodeRepoUserName")
+    @com.aliyun.core.annotation.NameInMap("CodeRepoUserName")
     private String codeRepoUserName;
 
-    @NameInMap("CodeSourceId")
+    @com.aliyun.core.annotation.NameInMap("CodeSourceId")
     private String codeSourceId;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifyTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifyTime")
     private String gmtModifyTime;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private CodeSourceItem(Builder builder) {

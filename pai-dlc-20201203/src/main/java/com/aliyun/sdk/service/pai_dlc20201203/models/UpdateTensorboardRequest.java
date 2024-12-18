@@ -1,34 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTensorboardRequest} extends {@link RequestModel}
  *
  * <p>UpdateTensorboardRequest</p>
  */
 public class UpdateTensorboardRequest extends Request {
-    @Path
-    @NameInMap("TensorboardId")
-    @Validation(required = true, maxLength = 256, minLength = 1)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TensorboardId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256, minLength = 1)
     private String tensorboardId;
 
-    @Query
-    @NameInMap("MaxRunningTimeMinutes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
+    private String accessibility;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxRunningTimeMinutes")
     private Long maxRunningTimeMinutes;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    private String priority;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private UpdateTensorboardRequest(Builder builder) {
         super(builder);
         this.tensorboardId = builder.tensorboardId;
+        this.accessibility = builder.accessibility;
         this.maxRunningTimeMinutes = builder.maxRunningTimeMinutes;
+        this.priority = builder.priority;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -53,10 +68,24 @@ public class UpdateTensorboardRequest extends Request {
     }
 
     /**
+     * @return accessibility
+     */
+    public String getAccessibility() {
+        return this.accessibility;
+    }
+
+    /**
      * @return maxRunningTimeMinutes
      */
     public Long getMaxRunningTimeMinutes() {
         return this.maxRunningTimeMinutes;
+    }
+
+    /**
+     * @return priority
+     */
+    public String getPriority() {
+        return this.priority;
     }
 
     /**
@@ -68,7 +97,9 @@ public class UpdateTensorboardRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateTensorboardRequest, Builder> {
         private String tensorboardId; 
+        private String accessibility; 
         private Long maxRunningTimeMinutes; 
+        private String priority; 
         private String workspaceId; 
 
         private Builder() {
@@ -78,16 +109,30 @@ public class UpdateTensorboardRequest extends Request {
         private Builder(UpdateTensorboardRequest request) {
             super(request);
             this.tensorboardId = request.tensorboardId;
+            this.accessibility = request.accessibility;
             this.maxRunningTimeMinutes = request.maxRunningTimeMinutes;
+            this.priority = request.priority;
             this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * TensorboardId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tensorboard-20210114104214-vf9lowjt3pso</p>
          */
         public Builder tensorboardId(String tensorboardId) {
             this.putPathParameter("TensorboardId", tensorboardId);
             this.tensorboardId = tensorboardId;
+            return this;
+        }
+
+        /**
+         * Accessibility.
+         */
+        public Builder accessibility(String accessibility) {
+            this.putQueryParameter("Accessibility", accessibility);
+            this.accessibility = accessibility;
             return this;
         }
 
@@ -97,6 +142,15 @@ public class UpdateTensorboardRequest extends Request {
         public Builder maxRunningTimeMinutes(Long maxRunningTimeMinutes) {
             this.putQueryParameter("MaxRunningTimeMinutes", maxRunningTimeMinutes);
             this.maxRunningTimeMinutes = maxRunningTimeMinutes;
+            return this;
+        }
+
+        /**
+         * Priority.
+         */
+        public Builder priority(String priority) {
+            this.putQueryParameter("Priority", priority);
+            this.priority = priority;
             return this;
         }
 

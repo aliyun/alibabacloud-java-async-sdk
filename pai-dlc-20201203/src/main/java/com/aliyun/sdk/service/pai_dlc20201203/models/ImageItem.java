@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImageItem} extends {@link TeaModel}
  *
  * <p>ImageItem</p>
  */
 public class ImageItem extends TeaModel {
-    @NameInMap("AcceleratorType")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorType")
     private String acceleratorType;
 
-    @NameInMap("AuthorId")
+    @com.aliyun.core.annotation.NameInMap("AuthorId")
     private String authorId;
 
-    @NameInMap("Framework")
+    @com.aliyun.core.annotation.NameInMap("Framework")
     private String framework;
 
-    @NameInMap("ImageProviderType")
+    @com.aliyun.core.annotation.NameInMap("ImageProviderType")
     private String imageProviderType;
 
-    @NameInMap("ImageTag")
+    @com.aliyun.core.annotation.NameInMap("ImageTag")
     private String imageTag;
 
-    @NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @NameInMap("ImageUrlVpc")
+    @com.aliyun.core.annotation.NameInMap("ImageUrlVpc")
     private String imageUrlVpc;
 
     private ImageItem(Builder builder) {

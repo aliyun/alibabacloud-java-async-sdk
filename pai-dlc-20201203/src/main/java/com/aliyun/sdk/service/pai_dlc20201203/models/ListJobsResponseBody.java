@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListJobsResponseBody</p>
  */
 public class ListJobsResponseBody extends TeaModel {
-    @NameInMap("Jobs")
-    private java.util.List < JobItem > jobs;
+    @com.aliyun.core.annotation.NameInMap("Jobs")
+    private java.util.List<JobItem> jobs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListJobsResponseBody(Builder builder) {
@@ -38,7 +43,7 @@ public class ListJobsResponseBody extends TeaModel {
     /**
      * @return jobs
      */
-    public java.util.List < JobItem > getJobs() {
+    public java.util.List<JobItem> getJobs() {
         return this.jobs;
     }
 
@@ -57,14 +62,14 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < JobItem > jobs; 
+        private java.util.List<JobItem> jobs; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * Jobs.
          */
-        public Builder jobs(java.util.List < JobItem > jobs) {
+        public Builder jobs(java.util.List<JobItem> jobs) {
             this.jobs = jobs;
             return this;
         }

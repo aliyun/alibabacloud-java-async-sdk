@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWebTerminalRequest} extends {@link RequestModel}
  *
  * <p>GetWebTerminalRequest</p>
  */
 public class GetWebTerminalRequest extends Request {
-    @Path
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @Path
-    @NameInMap("PodId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("PodId")
     private String podId;
 
-    @Query
-    @NameInMap("IsShared")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsShared")
     private Boolean isShared;
 
-    @Query
-    @NameInMap("PodUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PodUid")
     private String podUid;
 
     private GetWebTerminalRequest(Builder builder) {
@@ -123,7 +128,10 @@ public class GetWebTerminalRequest extends Request {
         }
 
         /**
-         * Pod UID。
+         * <p>Pod UID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94a7cc7c-0033-48b5-85bd-71c63592c268</p>
          */
         public Builder podUid(String podUid) {
             this.putQueryParameter("PodUid", podUid);

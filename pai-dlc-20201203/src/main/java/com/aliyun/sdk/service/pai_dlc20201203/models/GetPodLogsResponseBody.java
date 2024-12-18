@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPodLogsResponseBody} extends {@link TeaModel}
  *
  * <p>GetPodLogsResponseBody</p>
  */
 public class GetPodLogsResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("Logs")
-    private java.util.List < String > logs;
+    @com.aliyun.core.annotation.NameInMap("Logs")
+    private java.util.List<String> logs;
 
-    @NameInMap("PodId")
+    @com.aliyun.core.annotation.NameInMap("PodId")
     private String podId;
 
-    @NameInMap("PodUid")
+    @com.aliyun.core.annotation.NameInMap("PodUid")
     private String podUid;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPodLogsResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class GetPodLogsResponseBody extends TeaModel {
     /**
      * @return logs
      */
-    public java.util.List < String > getLogs() {
+    public java.util.List<String> getLogs() {
         return this.logs;
     }
 
@@ -80,7 +85,7 @@ public class GetPodLogsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String jobId; 
-        private java.util.List < String > logs; 
+        private java.util.List<String> logs; 
         private String podId; 
         private String podUid; 
         private String requestId; 
@@ -96,7 +101,7 @@ public class GetPodLogsResponseBody extends TeaModel {
         /**
          * Logs.
          */
-        public Builder logs(java.util.List < String > logs) {
+        public Builder logs(java.util.List<String> logs) {
             this.logs = logs;
             return this;
         }

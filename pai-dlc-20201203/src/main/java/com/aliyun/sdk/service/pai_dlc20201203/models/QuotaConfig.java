@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dlc20201203.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuotaConfig} extends {@link TeaModel}
  *
  * <p>QuotaConfig</p>
  */
 public class QuotaConfig extends TeaModel {
-    @NameInMap("AllowedMaxPriority")
+    @com.aliyun.core.annotation.NameInMap("AllowedMaxPriority")
     private Integer allowedMaxPriority;
 
-    @NameInMap("EnableDLC")
+    @com.aliyun.core.annotation.NameInMap("EnableDLC")
     private Boolean enableDLC;
 
-    @NameInMap("EnableDSW")
+    @com.aliyun.core.annotation.NameInMap("EnableDSW")
     private Boolean enableDSW;
 
-    @NameInMap("EnableTideResource")
+    @com.aliyun.core.annotation.NameInMap("EnableTideResource")
     private Boolean enableTideResource;
 
-    @NameInMap("ResourceLevel")
+    @com.aliyun.core.annotation.NameInMap("ResourceLevel")
     private String resourceLevel;
 
     private QuotaConfig(Builder builder) {
