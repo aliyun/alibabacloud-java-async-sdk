@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -153,16 +158,7 @@ public class ModifyBEClusterAttributeRequest extends Request {
         }
 
         /**
-         * <p>The cluster parameter to be modified.</p>
-         * <ul>
-         * <li>Valid values:****</li>
-         * </ul>
-         * <!---->
-         * 
-         * <ul>
-         * <li>MaintainTime</li>
-         * <li>DBInstanceDescription</li>
-         * </ul>
+         * <p>The attribute type of the instance. Set this parameter to DBInstanceDescription.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +192,7 @@ public class ModifyBEClusterAttributeRequest extends Request {
         }
 
         /**
-         * <p>The modfied cluster name.</p>
+         * <p>The new name of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

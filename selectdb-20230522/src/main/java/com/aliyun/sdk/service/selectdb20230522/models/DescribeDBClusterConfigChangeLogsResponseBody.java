@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -330,7 +335,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         private String dbInstanceName;
 
         @com.aliyun.core.annotation.NameInMap("ParamChangeLogs")
-        private java.util.List < ParamChangeLogs> paramChangeLogs;
+        private java.util.List<ParamChangeLogs> paramChangeLogs;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private Integer taskId;
@@ -375,7 +380,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         /**
          * @return paramChangeLogs
          */
-        public java.util.List < ParamChangeLogs> getParamChangeLogs() {
+        public java.util.List<ParamChangeLogs> getParamChangeLogs() {
             return this.paramChangeLogs;
         }
 
@@ -390,7 +395,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             private String dbClusterId; 
             private String dbInstanceId; 
             private String dbInstanceName; 
-            private java.util.List < ParamChangeLogs> paramChangeLogs; 
+            private java.util.List<ParamChangeLogs> paramChangeLogs; 
             private Integer taskId; 
 
             /**
@@ -420,7 +425,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
             /**
              * <p>The parameter change logs.</p>
              */
-            public Builder paramChangeLogs(java.util.List < ParamChangeLogs> paramChangeLogs) {
+            public Builder paramChangeLogs(java.util.List<ParamChangeLogs> paramChangeLogs) {
                 this.paramChangeLogs = paramChangeLogs;
                 return this;
             }

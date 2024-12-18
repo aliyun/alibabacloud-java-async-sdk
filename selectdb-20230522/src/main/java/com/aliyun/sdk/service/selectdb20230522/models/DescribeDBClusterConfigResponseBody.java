@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -365,7 +370,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         private String dbInstanceName;
 
         @com.aliyun.core.annotation.NameInMap("Params")
-        private java.util.List < Params> params;
+        private java.util.List<Params> params;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private Integer taskId;
@@ -410,7 +415,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         /**
          * @return params
          */
-        public java.util.List < Params> getParams() {
+        public java.util.List<Params> getParams() {
             return this.params;
         }
 
@@ -425,7 +430,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             private String dbClusterId; 
             private String dbInstanceId; 
             private String dbInstanceName; 
-            private java.util.List < Params> params; 
+            private java.util.List<Params> params; 
             private Integer taskId; 
 
             /**
@@ -464,7 +469,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
             /**
              * <p>The details about each parameter returned.</p>
              */
-            public Builder params(java.util.List < Params> params) {
+            public Builder params(java.util.List<Params> params) {
                 this.params = params;
                 return this;
             }

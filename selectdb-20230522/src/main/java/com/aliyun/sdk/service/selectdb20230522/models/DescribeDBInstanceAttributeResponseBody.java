@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CanUpgradeVersions")
-    private java.util.List < String > canUpgradeVersions;
+    private java.util.List<String> canUpgradeVersions;
 
     @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
@@ -22,7 +27,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     private String createTime;
 
     @com.aliyun.core.annotation.NameInMap("DBClusterList")
-    private java.util.List < DBClusterList> DBClusterList;
+    private java.util.List<DBClusterList> DBClusterList;
 
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
@@ -82,7 +87,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     private String subDomain;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
@@ -130,7 +135,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     /**
      * @return canUpgradeVersions
      */
-    public java.util.List < String > getCanUpgradeVersions() {
+    public java.util.List<String> getCanUpgradeVersions() {
         return this.canUpgradeVersions;
     }
 
@@ -151,7 +156,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     /**
      * @return DBClusterList
      */
-    public java.util.List < DBClusterList> getDBClusterList() {
+    public java.util.List<DBClusterList> getDBClusterList() {
         return this.DBClusterList;
     }
 
@@ -291,7 +296,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -310,10 +315,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > canUpgradeVersions; 
+        private java.util.List<String> canUpgradeVersions; 
         private String chargeType; 
         private String createTime; 
-        private java.util.List < DBClusterList> DBClusterList; 
+        private java.util.List<DBClusterList> DBClusterList; 
         private String DBInstanceId; 
         private String description; 
         private String engine; 
@@ -333,14 +338,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String status; 
         private Long storageSize; 
         private String subDomain; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String vpcId; 
         private String zoneId; 
 
         /**
          * <p>The information returned.</p>
          */
-        public Builder canUpgradeVersions(java.util.List < String > canUpgradeVersions) {
+        public Builder canUpgradeVersions(java.util.List<String> canUpgradeVersions) {
             this.canUpgradeVersions = canUpgradeVersions;
             return this;
         }
@@ -374,7 +379,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The information about each cluster returned.</p>
          */
-        public Builder DBClusterList(java.util.List < DBClusterList> DBClusterList) {
+        public Builder DBClusterList(java.util.List<DBClusterList> DBClusterList) {
             this.DBClusterList = DBClusterList;
             return this;
         }
@@ -599,7 +604,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The tags that are added to the instances. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. Format: <code>{&quot;key1&quot;:&quot;value1&quot;}</code>.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }

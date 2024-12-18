@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
     private String DBInstanceName;
 
     @com.aliyun.core.annotation.NameInMap("GroupItems")
-    private java.util.List < GroupItems> groupItems;
+    private java.util.List<GroupItems> groupItems;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
     /**
      * @return groupItems
      */
-    public java.util.List < GroupItems> getGroupItems() {
+    public java.util.List<GroupItems> getGroupItems() {
         return this.groupItems;
     }
 
@@ -58,7 +63,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBInstanceName; 
-        private java.util.List < GroupItems> groupItems; 
+        private java.util.List<GroupItems> groupItems; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         /**
          * <p>The details about each IP address whitelist returned.</p>
          */
-        public Builder groupItems(java.util.List < GroupItems> groupItems) {
+        public Builder groupItems(java.util.List<GroupItems> groupItems) {
             this.groupItems = groupItems;
             return this;
         }

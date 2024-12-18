@@ -38,6 +38,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckServiceLinkedRoleResponse> checkServiceLinkedRole(CheckServiceLinkedRoleRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>: For an instance that uses the pay-as-you-go billing method, you can create only pay-as-you-go clusters. For an instance that uses the subscription billing method, you can create pay-as-you-go or subscription clusters.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateDBCluster  CreateDBClusterRequest
      * @return CreateDBClusterResponse
      */
@@ -48,6 +53,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDBInstanceResponse
      */
     CompletableFuture<CreateDBInstanceResponse> createDBInstance(CreateDBInstanceRequest request);
+
+    /**
+     * @param request the request parameters of CreateElasticRule  CreateElasticRuleRequest
+     * @return CreateElasticRuleResponse
+     */
+    CompletableFuture<CreateElasticRuleResponse> createElasticRule(CreateElasticRuleRequest request);
 
     /**
      * @param request the request parameters of CreateServiceLinkedRoleForSelectDB  CreateServiceLinkedRoleForSelectDBRequest
@@ -66,6 +77,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDBInstanceResponse
      */
     CompletableFuture<DeleteDBInstanceResponse> deleteDBInstance(DeleteDBInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteElasticRule  DeleteElasticRuleRequest
+     * @return DeleteElasticRuleResponse
+     */
+    CompletableFuture<DeleteElasticRuleResponse> deleteElasticRule(DeleteElasticRuleRequest request);
 
     /**
      * @param request the request parameters of DescribeAllDBInstanceClass  DescribeAllDBInstanceClassRequest
@@ -104,10 +121,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBInstancesResponse> describeDBInstances(DescribeDBInstancesRequest request);
 
     /**
+     * @param request the request parameters of DescribeElasticRules  DescribeElasticRulesRequest
+     * @return DescribeElasticRulesResponse
+     */
+    CompletableFuture<DescribeElasticRulesResponse> describeElasticRules(DescribeElasticRulesRequest request);
+
+    /**
      * @param request the request parameters of DescribeSecurityIPList  DescribeSecurityIPListRequest
      * @return DescribeSecurityIPListResponse
      */
     CompletableFuture<DescribeSecurityIPListResponse> describeSecurityIPList(DescribeSecurityIPListRequest request);
+
+    /**
+     * @param request the request parameters of EnDisableScalingRules  EnDisableScalingRulesRequest
+     * @return EnDisableScalingRulesResponse
+     */
+    CompletableFuture<EnDisableScalingRulesResponse> enDisableScalingRules(EnDisableScalingRulesRequest request);
 
     /**
      * @param request the request parameters of GetCreateBEClusterInquiry  GetCreateBEClusterInquiryRequest
@@ -144,6 +173,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDBInstanceAttributeResponse
      */
     CompletableFuture<ModifyDBInstanceAttributeResponse> modifyDBInstanceAttribute(ModifyDBInstanceAttributeRequest request);
+
+    /**
+     * @param request the request parameters of ModifyElasticRule  ModifyElasticRuleRequest
+     * @return ModifyElasticRuleResponse
+     */
+    CompletableFuture<ModifyElasticRuleResponse> modifyElasticRule(ModifyElasticRuleRequest request);
 
     /**
      * @param request the request parameters of ModifySecurityIPList  ModifySecurityIPListRequest

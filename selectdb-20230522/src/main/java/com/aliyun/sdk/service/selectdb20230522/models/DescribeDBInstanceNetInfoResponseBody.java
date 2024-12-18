@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBClustersNetInfos")
-    private java.util.List < DBClustersNetInfos> DBClustersNetInfos;
+    private java.util.List<DBClustersNetInfos> DBClustersNetInfos;
 
     @com.aliyun.core.annotation.NameInMap("DBInstanceNetInfos")
-    private java.util.List < DBInstanceNetInfos> DBInstanceNetInfos;
+    private java.util.List<DBInstanceNetInfos> DBInstanceNetInfos;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,14 +43,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     /**
      * @return DBClustersNetInfos
      */
-    public java.util.List < DBClustersNetInfos> getDBClustersNetInfos() {
+    public java.util.List<DBClustersNetInfos> getDBClustersNetInfos() {
         return this.DBClustersNetInfos;
     }
 
     /**
      * @return DBInstanceNetInfos
      */
-    public java.util.List < DBInstanceNetInfos> getDBInstanceNetInfos() {
+    public java.util.List<DBInstanceNetInfos> getDBInstanceNetInfos() {
         return this.DBInstanceNetInfos;
     }
 
@@ -57,14 +62,14 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DBClustersNetInfos> DBClustersNetInfos; 
-        private java.util.List < DBInstanceNetInfos> DBInstanceNetInfos; 
+        private java.util.List<DBClustersNetInfos> DBClustersNetInfos; 
+        private java.util.List<DBInstanceNetInfos> DBInstanceNetInfos; 
         private String requestId; 
 
         /**
          * <p>The network information about the backend (BE) clusters.</p>
          */
-        public Builder DBClustersNetInfos(java.util.List < DBClustersNetInfos> DBClustersNetInfos) {
+        public Builder DBClustersNetInfos(java.util.List<DBClustersNetInfos> DBClustersNetInfos) {
             this.DBClustersNetInfos = DBClustersNetInfos;
             return this;
         }
@@ -72,7 +77,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * <p>The network information about the instance.</p>
          */
-        public Builder DBInstanceNetInfos(java.util.List < DBInstanceNetInfos> DBInstanceNetInfos) {
+        public Builder DBInstanceNetInfos(java.util.List<DBInstanceNetInfos> DBInstanceNetInfos) {
             this.DBInstanceNetInfos = DBInstanceNetInfos;
             return this;
         }
@@ -187,7 +192,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         private String netType;
 
         @com.aliyun.core.annotation.NameInMap("PortList")
-        private java.util.List < PortList> portList;
+        private java.util.List<PortList> portList;
 
         @com.aliyun.core.annotation.NameInMap("UserVisible")
         private Boolean userVisible;
@@ -252,7 +257,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * @return portList
          */
-        public java.util.List < PortList> getPortList() {
+        public java.util.List<PortList> getPortList() {
             return this.portList;
         }
 
@@ -289,7 +294,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String connectionString; 
             private String ip; 
             private String netType; 
-            private java.util.List < PortList> portList; 
+            private java.util.List<PortList> portList; 
             private Boolean userVisible; 
             private String vpcId; 
             private String vpcInstanceId; 
@@ -342,7 +347,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             /**
              * PortList.
              */
-            public Builder portList(java.util.List < PortList> portList) {
+            public Builder portList(java.util.List<PortList> portList) {
                 this.portList = portList;
                 return this;
             }
@@ -495,7 +500,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         private String netType;
 
         @com.aliyun.core.annotation.NameInMap("PortList")
-        private java.util.List < DBInstanceNetInfosPortList> portList;
+        private java.util.List<DBInstanceNetInfosPortList> portList;
 
         @com.aliyun.core.annotation.NameInMap("UserVisible")
         private Boolean userVisible;
@@ -560,7 +565,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * @return portList
          */
-        public java.util.List < DBInstanceNetInfosPortList> getPortList() {
+        public java.util.List<DBInstanceNetInfosPortList> getPortList() {
             return this.portList;
         }
 
@@ -597,7 +602,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String connectionString; 
             private String ip; 
             private String netType; 
-            private java.util.List < DBInstanceNetInfosPortList> portList; 
+            private java.util.List<DBInstanceNetInfosPortList> portList; 
             private Boolean userVisible; 
             private String vpcId; 
             private String vpcInstanceId; 
@@ -654,7 +659,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             /**
              * <p>The ports.</p>
              */
-            public Builder portList(java.util.List < DBInstanceNetInfosPortList> portList) {
+            public Builder portList(java.util.List<DBInstanceNetInfosPortList> portList) {
                 this.portList = portList;
                 return this;
             }

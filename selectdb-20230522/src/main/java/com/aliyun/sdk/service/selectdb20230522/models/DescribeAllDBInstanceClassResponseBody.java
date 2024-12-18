@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ClassCodeList")
-    private java.util.List < ClassCodeList> classCodeList;
+    private java.util.List<ClassCodeList> classCodeList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
     /**
      * @return classCodeList
      */
-    public java.util.List < ClassCodeList> getClassCodeList() {
+    public java.util.List<ClassCodeList> getClassCodeList() {
         return this.classCodeList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ClassCodeList> classCodeList; 
+        private java.util.List<ClassCodeList> classCodeList; 
         private String requestId; 
 
         /**
          * <p>The instance specifications.</p>
          */
-        public Builder classCodeList(java.util.List < ClassCodeList> classCodeList) {
+        public Builder classCodeList(java.util.List<ClassCodeList> classCodeList) {
             this.classCodeList = classCodeList;
             return this;
         }
