@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRemediationRequest} extends {@link RequestModel}
  *
  * <p>DescribeRemediationRequest</p>
@@ -67,7 +73,10 @@ public class DescribeRemediationRequest extends Request {
         } 
 
         /**
-         * The rule ID.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-3184626622af003****</p>
          */
         public Builder configRuleId(String configRuleId) {
             this.putQueryParameter("ConfigRuleId", configRuleId);
@@ -76,7 +85,10 @@ public class DescribeRemediationRequest extends Request {
         }
 
         /**
-         * The ID of the remediation configuration.
+         * <p>The ID of the remediation configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-f381cf0c1c2f004e****</p>
          */
         public Builder remediationId(String remediationId) {
             this.putQueryParameter("RemediationId", remediationId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAggregateCompliancePacksResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAggregateCompliancePacksResponseBody</p>
@@ -49,7 +55,7 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The results of the delete operations.
+         * <p>The results of the delete operations.</p>
          */
         public Builder operateCompliancePacksResult(OperateCompliancePacksResult operateCompliancePacksResult) {
             this.operateCompliancePacksResult = operateCompliancePacksResult;
@@ -57,7 +63,10 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteAggregateCompliancePacksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteAggregateCompliancePacksResponseBody</p>
+     */
     public static class OperateCompliancePacks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
@@ -121,7 +136,10 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The ID of the compliance package.
+             * <p>The ID of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-541e626622af0087****</p>
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -129,11 +147,14 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned.
-             * <p>
+             * <p>The error code returned.</p>
+             * <ul>
+             * <li>If the compliance package is deleted, no error code is returned.</li>
+             * <li>If the compliance package fails to be deleted, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
+             * </ul>
              * 
-             * *   If the compliance package is deleted, no error code is returned.
-             * *   If the compliance package fails to be deleted, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).
+             * <strong>example:</strong>
+             * <p>CompliancePackAlreadyPending</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -141,11 +162,14 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li>true: The request was successful.</li>
+             * <li>false: The request failed.</li>
+             * </ul>
              * 
-             * *   true: The request was successful.
-             * *   false: The request failed.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -159,9 +183,15 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteAggregateCompliancePacksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteAggregateCompliancePacksResponseBody</p>
+     */
     public static class OperateCompliancePacksResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperateCompliancePacks")
-        private java.util.List < OperateCompliancePacks> operateCompliancePacks;
+        private java.util.List<OperateCompliancePacks> operateCompliancePacks;
 
         private OperateCompliancePacksResult(Builder builder) {
             this.operateCompliancePacks = builder.operateCompliancePacks;
@@ -178,17 +208,17 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
         /**
          * @return operateCompliancePacks
          */
-        public java.util.List < OperateCompliancePacks> getOperateCompliancePacks() {
+        public java.util.List<OperateCompliancePacks> getOperateCompliancePacks() {
             return this.operateCompliancePacks;
         }
 
         public static final class Builder {
-            private java.util.List < OperateCompliancePacks> operateCompliancePacks; 
+            private java.util.List<OperateCompliancePacks> operateCompliancePacks; 
 
             /**
-             * An array that contains the deleted compliance packages.
+             * <p>An array that contains the deleted compliance packages.</p>
              */
-            public Builder operateCompliancePacks(java.util.List < OperateCompliancePacks> operateCompliancePacks) {
+            public Builder operateCompliancePacks(java.util.List<OperateCompliancePacks> operateCompliancePacks) {
                 this.operateCompliancePacks = operateCompliancePacks;
                 return this;
             }

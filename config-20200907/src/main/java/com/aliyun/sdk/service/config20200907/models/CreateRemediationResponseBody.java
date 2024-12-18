@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRemediationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRemediationResponseBody</p>
@@ -49,7 +55,10 @@ public class CreateRemediationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the remediation template.
+         * <p>The ID of the remediation template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-909ba2d4716700eb****</p>
          */
         public Builder remediationId(String remediationId) {
             this.remediationId = remediationId;
@@ -57,7 +66,10 @@ public class CreateRemediationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7817373-78CB-4F9A-8AFA-E7A88E9D64A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

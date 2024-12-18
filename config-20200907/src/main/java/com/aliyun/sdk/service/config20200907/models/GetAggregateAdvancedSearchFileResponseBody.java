@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateAdvancedSearchFileResponseBody} extends {@link TeaModel}
  *
  * <p>GetAggregateAdvancedSearchFileResponseBody</p>
@@ -49,7 +55,10 @@ public class GetAggregateAdvancedSearchFileResponseBody extends TeaModel {
         private ResourceSearch resourceSearch; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6DB86284-DB7F-5936-B210-3B53D6D41B03</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class GetAggregateAdvancedSearchFileResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the resource file.
+         * <p>The information about the resource file.</p>
          */
         public Builder resourceSearch(ResourceSearch resourceSearch) {
             this.resourceSearch = resourceSearch;
@@ -70,6 +79,12 @@ public class GetAggregateAdvancedSearchFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAggregateAdvancedSearchFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateAdvancedSearchFileResponseBody</p>
+     */
     public static class ResourceSearch extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
@@ -121,7 +136,7 @@ public class GetAggregateAdvancedSearchFileResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The download URL of the resource file.
+             * <p>The download URL of the resource file.</p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -129,10 +144,11 @@ public class GetAggregateAdvancedSearchFileResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource file was generated. The value is a timestamp.
-             * <p>
+             * <p>The time when the resource file was generated. The value is a timestamp.</p>
+             * <p>Unit: milliseconds.</p>
              * 
-             * Unit: milliseconds.
+             * <strong>example:</strong>
+             * <p>1691375618130</p>
              */
             public Builder resourceInventoryGenerateTime(Long resourceInventoryGenerateTime) {
                 this.resourceInventoryGenerateTime = resourceInventoryGenerateTime;
@@ -140,11 +156,14 @@ public class GetAggregateAdvancedSearchFileResponseBody extends TeaModel {
             }
 
             /**
-             * The generation status of the resource file. Valid values:
-             * <p>
+             * <p>The generation status of the resource file. Valid values:</p>
+             * <ul>
+             * <li>CREATING: The resource file is being generated.</li>
+             * <li>COMPLETE: The resource file is generated.</li>
+             * </ul>
              * 
-             * *   CREATING: The resource file is being generated.
-             * *   COMPLETE: The resource file is generated.
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
              */
             public Builder status(String status) {
                 this.status = status;

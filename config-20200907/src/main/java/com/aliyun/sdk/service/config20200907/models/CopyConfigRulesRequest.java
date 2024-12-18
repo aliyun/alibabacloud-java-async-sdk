@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyConfigRulesRequest} extends {@link RequestModel}
  *
  * <p>CopyConfigRulesRequest</p>
@@ -82,10 +88,13 @@ public class CopyConfigRulesRequest extends Request {
         } 
 
         /**
-         * The IDs of the destination account groups into which the rules are replicated. Separate multiple account group IDs with commas (,).
-         * <p>
+         * <p>The IDs of the destination account groups into which the rules are replicated. Separate multiple account group IDs with commas (,).</p>
+         * <blockquote>
+         * <p>If you leave this parameter empty, the compliance packages are replicated into the same account group.</p>
+         * </blockquote>
          * 
-         * > If you leave this parameter empty, the compliance packages are replicated into the same account group.
+         * <strong>example:</strong>
+         * <p>ca-4b4e626622af005d****</p>
          */
         public Builder desAggregatorIds(String desAggregatorIds) {
             this.putQueryParameter("DesAggregatorIds", desAggregatorIds);
@@ -94,10 +103,11 @@ public class CopyConfigRulesRequest extends Request {
         }
 
         /**
-         * The ID of the account group to which the rules belong.
-         * <p>
+         * <p>The ID of the account group to which the rules belong.</p>
+         * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
          * 
-         * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-24db626622af0060****</p>
          */
         public Builder srcAggregatorId(String srcAggregatorId) {
             this.putQueryParameter("SrcAggregatorId", srcAggregatorId);
@@ -106,7 +116,11 @@ public class CopyConfigRulesRequest extends Request {
         }
 
         /**
-         * The rule IDs. Separate multiple rule IDs with commas (,).
+         * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-4b57626622af0065****,cr-47c1626622af0050****</p>
          */
         public Builder srcConfigRuleIds(String srcConfigRuleIds) {
             this.putQueryParameter("SrcConfigRuleIds", srcConfigRuleIds);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConfigRuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetConfigRuleResponseBody</p>
@@ -49,7 +55,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the rule.
+         * <p>The details of the rule.</p>
          */
         public Builder configRule(ConfigRule configRule) {
             this.configRule = configRule;
@@ -57,7 +63,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>811234F4-C3AB-4D15-B90B-F55016D1B5AA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConfigRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConfigRuleResponseBody</p>
+     */
     public static class Compliance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
@@ -109,13 +124,16 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * The statistics on the compliance evaluation results by compliance type. Valid values:
-             * <p>
+             * <p>The statistics on the compliance evaluation results by compliance type. Valid values:</p>
+             * <ul>
+             * <li>COMPLIANT: The resource was evaluated as compliant.</li>
+             * <li>NON_COMPLIANT: The resource was evaluated as incompliant.</li>
+             * <li>NOT_APPLICABLE: The rule did not apply to your resource.</li>
+             * <li>INSUFFICIENT_DATA: No resource data was available.</li>
+             * </ul>
              * 
-             * *   COMPLIANT: The resource was evaluated as compliant.
-             * *   NON_COMPLIANT: The resource was evaluated as incompliant.
-             * *   NOT_APPLICABLE: The rule did not apply to your resource.
-             * *   INSUFFICIENT_DATA: No resource data was available.
+             * <strong>example:</strong>
+             * <p>NON_COMPLIANT</p>
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -123,7 +141,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of evaluated resources.
+             * <p>The number of evaluated resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -137,6 +158,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConfigRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConfigRuleResponseBody</p>
+     */
     public static class ConfigRuleEvaluationStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FirstActivatedTimestamp")
         private Long firstActivatedTimestamp;
@@ -248,7 +275,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private Long lastSuccessfulInvocationTimestamp; 
 
             /**
-             * The timestamp generated when the rule was first triggered. Unit: millisecond.
+             * <p>The timestamp generated when the rule was first triggered. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624932221993</p>
              */
             public Builder firstActivatedTimestamp(Long firstActivatedTimestamp) {
                 this.firstActivatedTimestamp = firstActivatedTimestamp;
@@ -256,11 +286,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether resource configurations were evaluated based on the rule. Valid values:
-             * <p>
+             * <p>Indicates whether resource configurations were evaluated based on the rule. Valid values:</p>
+             * <ul>
+             * <li>true: Resource configurations were evaluated based on the rule.</li>
+             * <li>false: Resource configurations were not evaluated based on the rule.</li>
+             * </ul>
              * 
-             * *   true: Resource configurations were evaluated based on the rule.
-             * *   false: Resource configurations were not evaluated based on the rule.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder firstEvaluationStarted(Boolean firstEvaluationStarted) {
                 this.firstEvaluationStarted = firstEvaluationStarted;
@@ -268,7 +301,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned for the previous failed compliance evaluation.
+             * <p>The error code returned for the previous failed compliance evaluation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TimeOut</p>
              */
             public Builder lastErrorCode(String lastErrorCode) {
                 this.lastErrorCode = lastErrorCode;
@@ -276,7 +312,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned for the previous failed compliance evaluation.
+             * <p>The error message returned for the previous failed compliance evaluation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Time out</p>
              */
             public Builder lastErrorMessage(String lastErrorMessage) {
                 this.lastErrorMessage = lastErrorMessage;
@@ -284,7 +323,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the previous failed compliance evaluation of the rule ended. Unit: millisecond.
+             * <p>The timestamp generated when the previous failed compliance evaluation of the rule ended. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614687022000</p>
              */
             public Builder lastFailedEvaluationTimestamp(Long lastFailedEvaluationTimestamp) {
                 this.lastFailedEvaluationTimestamp = lastFailedEvaluationTimestamp;
@@ -292,7 +334,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the previous failed compliance evaluation of the rule started. Unit: millisecond.
+             * <p>The timestamp generated when the previous failed compliance evaluation of the rule started. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614687022000</p>
              */
             public Builder lastFailedInvocationTimestamp(Long lastFailedInvocationTimestamp) {
                 this.lastFailedInvocationTimestamp = lastFailedInvocationTimestamp;
@@ -300,7 +345,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the previous successful compliance evaluation of the rule ended. Unit: millisecond.
+             * <p>The timestamp generated when the previous successful compliance evaluation of the rule ended. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624932227486</p>
              */
             public Builder lastSuccessfulEvaluationTimestamp(Long lastSuccessfulEvaluationTimestamp) {
                 this.lastSuccessfulEvaluationTimestamp = lastSuccessfulEvaluationTimestamp;
@@ -308,7 +356,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the previous successful compliance evaluation of the rule started. Unit: millisecond.
+             * <p>The timestamp generated when the previous successful compliance evaluation of the rule started. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624932227476</p>
              */
             public Builder lastSuccessfulInvocationTimestamp(Long lastSuccessfulInvocationTimestamp) {
                 this.lastSuccessfulInvocationTimestamp = lastSuccessfulInvocationTimestamp;
@@ -322,6 +373,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConfigRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConfigRuleResponseBody</p>
+     */
     public static class CreateBy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
@@ -385,7 +442,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String creatorName; 
 
             /**
-             * The compliance package ID.
+             * <p>The compliance package ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-541e626622af008****</p>
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -393,7 +453,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compliance package.
+             * <p>The name of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-name</p>
              */
             public Builder compliancePackName(String compliancePackName) {
                 this.compliancePackName = compliancePackName;
@@ -401,7 +464,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account that was used to create the rule.
+             * <p>The ID of the account that was used to create the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -409,7 +475,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account that was used to create the rule.
+             * <p>The name of the account that was used to create the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -423,6 +492,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConfigRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConfigRuleResponseBody</p>
+     */
     public static class ExcludeTagsScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -462,7 +537,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -470,7 +548,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -484,6 +565,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConfigRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConfigRuleResponseBody</p>
+     */
     public static class SourceDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventSource")
         private String eventSource;
@@ -535,10 +622,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String messageType; 
 
             /**
-             * The event source.
-             * <p>
+             * <p>The event source.</p>
+             * <blockquote>
+             * <p> Only aliyun.config is returned, which indicates that only events related to Cloud Config are supported.</p>
+             * </blockquote>
              * 
-             * >  Only aliyun.config is returned, which indicates that only events related to Cloud Config are supported.
+             * <strong>example:</strong>
+             * <p>aliyun.config</p>
              */
             public Builder eventSource(String eventSource) {
                 this.eventSource = eventSource;
@@ -546,16 +636,20 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the rule is triggered. Valid values:
-             * <p>
+             * <p>The interval at which the rule is triggered. Valid values:</p>
+             * <ul>
+             * <li>One_Hour</li>
+             * <li>Three_Hours</li>
+             * <li>Six_Hours</li>
+             * <li>Twelve_Hours</li>
+             * <li>TwentyFour_Hours</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned if the rule is periodically triggered.</p>
+             * </blockquote>
              * 
-             * *   One_Hour
-             * *   Three_Hours
-             * *   Six_Hours
-             * *   Twelve_Hours
-             * *   TwentyFour_Hours
-             * 
-             * >  This parameter is returned if the rule is periodically triggered.
+             * <strong>example:</strong>
+             * <p>One_Hour</p>
              */
             public Builder maximumExecutionFrequency(String maximumExecutionFrequency) {
                 this.maximumExecutionFrequency = maximumExecutionFrequency;
@@ -563,11 +657,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger type of the rule. Valid values:
-             * <p>
+             * <p>The trigger type of the rule. Valid values:</p>
+             * <ul>
+             * <li>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</li>
+             * <li>ScheduledNotification: The rule is periodically triggered.</li>
+             * </ul>
              * 
-             * *   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.
-             * *   ScheduledNotification: The rule is periodically triggered.
+             * <strong>example:</strong>
+             * <p>ConfigurationItemChangeNotification</p>
              */
             public Builder messageType(String messageType) {
                 this.messageType = messageType;
@@ -581,9 +678,15 @@ public class GetConfigRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConfigRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConfigRuleResponseBody</p>
+     */
     public static class ManagedRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompulsoryInputParameterDetails")
-        private java.util.Map < String, ? > compulsoryInputParameterDetails;
+        private java.util.Map<String, ?> compulsoryInputParameterDetails;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -592,16 +695,16 @@ public class GetConfigRuleResponseBody extends TeaModel {
         private String identifier;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < String > labels;
+        private java.util.List<String> labels;
 
         @com.aliyun.core.annotation.NameInMap("ManagedRuleName")
         private String managedRuleName;
 
         @com.aliyun.core.annotation.NameInMap("OptionalInputParameterDetails")
-        private java.util.Map < String, ? > optionalInputParameterDetails;
+        private java.util.Map<String, ?> optionalInputParameterDetails;
 
         @com.aliyun.core.annotation.NameInMap("SourceDetails")
-        private java.util.List < SourceDetails> sourceDetails;
+        private java.util.List<SourceDetails> sourceDetails;
 
         private ManagedRule(Builder builder) {
             this.compulsoryInputParameterDetails = builder.compulsoryInputParameterDetails;
@@ -624,7 +727,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
         /**
          * @return compulsoryInputParameterDetails
          */
-        public java.util.Map < String, ? > getCompulsoryInputParameterDetails() {
+        public java.util.Map<String, ?> getCompulsoryInputParameterDetails() {
             return this.compulsoryInputParameterDetails;
         }
 
@@ -645,7 +748,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < String > getLabels() {
+        public java.util.List<String> getLabels() {
             return this.labels;
         }
 
@@ -659,36 +762,42 @@ public class GetConfigRuleResponseBody extends TeaModel {
         /**
          * @return optionalInputParameterDetails
          */
-        public java.util.Map < String, ? > getOptionalInputParameterDetails() {
+        public java.util.Map<String, ?> getOptionalInputParameterDetails() {
             return this.optionalInputParameterDetails;
         }
 
         /**
          * @return sourceDetails
          */
-        public java.util.List < SourceDetails> getSourceDetails() {
+        public java.util.List<SourceDetails> getSourceDetails() {
             return this.sourceDetails;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > compulsoryInputParameterDetails; 
+            private java.util.Map<String, ?> compulsoryInputParameterDetails; 
             private String description; 
             private String identifier; 
-            private java.util.List < String > labels; 
+            private java.util.List<String> labels; 
             private String managedRuleName; 
-            private java.util.Map < String, ? > optionalInputParameterDetails; 
-            private java.util.List < SourceDetails> sourceDetails; 
+            private java.util.Map<String, ?> optionalInputParameterDetails; 
+            private java.util.List<SourceDetails> sourceDetails; 
 
             /**
-             * The settings of the required input parameters for the managed rule.
+             * <p>The settings of the required input parameters for the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
-            public Builder compulsoryInputParameterDetails(java.util.Map < String, ? > compulsoryInputParameterDetails) {
+            public Builder compulsoryInputParameterDetails(java.util.Map<String, ?> compulsoryInputParameterDetails) {
                 this.compulsoryInputParameterDetails = compulsoryInputParameterDetails;
                 return this;
             }
 
             /**
-             * The description of the managed rule.
+             * <p>The description of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -696,7 +805,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the managed rule.
+             * <p>The identifier of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ram-user-mfa-check</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -704,15 +816,18 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The rule tags.
+             * <p>The rule tags.</p>
              */
-            public Builder labels(java.util.List < String > labels) {
+            public Builder labels(java.util.List<String> labels) {
                 this.labels = labels;
                 return this;
             }
 
             /**
-             * The name of the managed rule.
+             * <p>The name of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-name</p>
              */
             public Builder managedRuleName(String managedRuleName) {
                 this.managedRuleName = managedRuleName;
@@ -720,17 +835,20 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The settings of the optional input parameters for the managed rule.
+             * <p>The settings of the optional input parameters for the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
-            public Builder optionalInputParameterDetails(java.util.Map < String, ? > optionalInputParameterDetails) {
+            public Builder optionalInputParameterDetails(java.util.Map<String, ?> optionalInputParameterDetails) {
                 this.optionalInputParameterDetails = optionalInputParameterDetails;
                 return this;
             }
 
             /**
-             * The details of the source of the managed rule.
+             * <p>The details of the source of the managed rule.</p>
              */
-            public Builder sourceDetails(java.util.List < SourceDetails> sourceDetails) {
+            public Builder sourceDetails(java.util.List<SourceDetails> sourceDetails) {
                 this.sourceDetails = sourceDetails;
                 return this;
             }
@@ -742,9 +860,15 @@ public class GetConfigRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConfigRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConfigRuleResponseBody</p>
+     */
     public static class Scope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComplianceResourceTypes")
-        private java.util.List < String > complianceResourceTypes;
+        private java.util.List<String> complianceResourceTypes;
 
         private Scope(Builder builder) {
             this.complianceResourceTypes = builder.complianceResourceTypes;
@@ -761,17 +885,17 @@ public class GetConfigRuleResponseBody extends TeaModel {
         /**
          * @return complianceResourceTypes
          */
-        public java.util.List < String > getComplianceResourceTypes() {
+        public java.util.List<String> getComplianceResourceTypes() {
             return this.complianceResourceTypes;
         }
 
         public static final class Builder {
-            private java.util.List < String > complianceResourceTypes; 
+            private java.util.List<String> complianceResourceTypes; 
 
             /**
-             * The types of the resources to be evaluated against the rule. You can also view the resource types by using the ResourceTypesScope parameter.
+             * <p>The types of the resources to be evaluated against the rule. You can also view the resource types by using the ResourceTypesScope parameter.</p>
              */
-            public Builder complianceResourceTypes(java.util.List < String > complianceResourceTypes) {
+            public Builder complianceResourceTypes(java.util.List<String> complianceResourceTypes) {
                 this.complianceResourceTypes = complianceResourceTypes;
                 return this;
             }
@@ -783,6 +907,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConfigRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConfigRuleResponseBody</p>
+     */
     public static class SourceSourceDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventSource")
         private String eventSource;
@@ -834,10 +964,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String messageType; 
 
             /**
-             * The event source.
-             * <p>
+             * <p>The event source.</p>
+             * <blockquote>
+             * <p> Only aliyun.config is returned, which indicates that only events related to Cloud Config are supported.</p>
+             * </blockquote>
              * 
-             * >  Only aliyun.config is returned, which indicates that only events related to Cloud Config are supported.
+             * <strong>example:</strong>
+             * <p>aliyun.config</p>
              */
             public Builder eventSource(String eventSource) {
                 this.eventSource = eventSource;
@@ -845,16 +978,20 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the rule is triggered. Valid values:
-             * <p>
+             * <p>The interval at which the rule is triggered. Valid values:</p>
+             * <ul>
+             * <li>One_Hour</li>
+             * <li>Three_Hours</li>
+             * <li>Six_Hours</li>
+             * <li>Twelve_Hours</li>
+             * <li>TwentyFour_Hours</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned if the rule is periodically triggered.</p>
+             * </blockquote>
              * 
-             * *   One_Hour
-             * *   Three_Hours
-             * *   Six_Hours
-             * *   Twelve_Hours
-             * *   TwentyFour_Hours
-             * 
-             * >  This parameter is returned if the rule is periodically triggered.
+             * <strong>example:</strong>
+             * <p>One_Hour</p>
              */
             public Builder maximumExecutionFrequency(String maximumExecutionFrequency) {
                 this.maximumExecutionFrequency = maximumExecutionFrequency;
@@ -862,11 +999,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger type of the rule. Valid values:
-             * <p>
+             * <p>The trigger type of the rule. Valid values:</p>
+             * <ul>
+             * <li>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</li>
+             * <li>ScheduledNotification: The rule is periodically triggered.</li>
+             * </ul>
              * 
-             * *   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.
-             * *   ScheduledNotification: The rule is periodically triggered.
+             * <strong>example:</strong>
+             * <p>ConfigurationItemChangeNotification</p>
              */
             public Builder messageType(String messageType) {
                 this.messageType = messageType;
@@ -880,6 +1020,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConfigRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConfigRuleResponseBody</p>
+     */
     public static class Source extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
@@ -888,7 +1034,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
         private String owner;
 
         @com.aliyun.core.annotation.NameInMap("SourceDetails")
-        private java.util.List < SourceSourceDetails> sourceDetails;
+        private java.util.List<SourceSourceDetails> sourceDetails;
 
         private Source(Builder builder) {
             this.identifier = builder.identifier;
@@ -921,21 +1067,24 @@ public class GetConfigRuleResponseBody extends TeaModel {
         /**
          * @return sourceDetails
          */
-        public java.util.List < SourceSourceDetails> getSourceDetails() {
+        public java.util.List<SourceSourceDetails> getSourceDetails() {
             return this.sourceDetails;
         }
 
         public static final class Builder {
             private String identifier; 
             private String owner; 
-            private java.util.List < SourceSourceDetails> sourceDetails; 
+            private java.util.List<SourceSourceDetails> sourceDetails; 
 
             /**
-             * The identifier of the rule.
-             * <p>
+             * <p>The identifier of the rule.</p>
+             * <ul>
+             * <li>If the rule is a managed rule, the value of this parameter is the identifier of the managed rule.</li>
+             * <li>If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of a function.</li>
+             * </ul>
              * 
-             * *   If the rule is a managed rule, the value of this parameter is the identifier of the managed rule.
-             * *   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of a function.
+             * <strong>example:</strong>
+             * <p>acs:fc:cn-hangzhou:100931896542****:services/ConfigService.LATEST/functions/specific-config</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -943,11 +1092,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li>CUSTOM_FC: a custom rule.</li>
+             * <li>ALIYUN: a managed rule.</li>
+             * </ul>
              * 
-             * *   CUSTOM_FC: a custom rule.
-             * *   ALIYUN: a managed rule.
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -955,9 +1107,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the source of the rule.
+             * <p>The details of the source of the rule.</p>
              */
-            public Builder sourceDetails(java.util.List < SourceSourceDetails> sourceDetails) {
+            public Builder sourceDetails(java.util.List<SourceSourceDetails> sourceDetails) {
                 this.sourceDetails = sourceDetails;
                 return this;
             }
@@ -969,6 +1121,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConfigRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConfigRuleResponseBody</p>
+     */
     public static class TagsScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -1008,7 +1166,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>TagKey</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1016,7 +1177,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>TagValue</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1030,6 +1194,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConfigRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConfigRuleResponseBody</p>
+     */
     public static class ConfigRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -1074,10 +1244,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
         private String excludeResourceIdsScope;
 
         @com.aliyun.core.annotation.NameInMap("ExcludeTagsScope")
-        private java.util.List < ExcludeTagsScope> excludeTagsScope;
+        private java.util.List<ExcludeTagsScope> excludeTagsScope;
+
+        @com.aliyun.core.annotation.NameInMap("ExtendContent")
+        private String extendContent;
 
         @com.aliyun.core.annotation.NameInMap("InputParameters")
-        private java.util.Map < String, ? > inputParameters;
+        private java.util.Map<String, ?> inputParameters;
 
         @com.aliyun.core.annotation.NameInMap("ManagedRule")
         private ManagedRule managedRule;
@@ -1119,7 +1292,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
         private String tagValueScope;
 
         @com.aliyun.core.annotation.NameInMap("TagsScope")
-        private java.util.List < TagsScope> tagsScope;
+        private java.util.List<TagsScope> tagsScope;
 
         private ConfigRule(Builder builder) {
             this.accountId = builder.accountId;
@@ -1137,6 +1310,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             this.excludeResourceGroupIdsScope = builder.excludeResourceGroupIdsScope;
             this.excludeResourceIdsScope = builder.excludeResourceIdsScope;
             this.excludeTagsScope = builder.excludeTagsScope;
+            this.extendContent = builder.extendContent;
             this.inputParameters = builder.inputParameters;
             this.managedRule = builder.managedRule;
             this.maximumExecutionFrequency = builder.maximumExecutionFrequency;
@@ -1263,14 +1437,21 @@ public class GetConfigRuleResponseBody extends TeaModel {
         /**
          * @return excludeTagsScope
          */
-        public java.util.List < ExcludeTagsScope> getExcludeTagsScope() {
+        public java.util.List<ExcludeTagsScope> getExcludeTagsScope() {
             return this.excludeTagsScope;
+        }
+
+        /**
+         * @return extendContent
+         */
+        public String getExtendContent() {
+            return this.extendContent;
         }
 
         /**
          * @return inputParameters
          */
-        public java.util.Map < String, ? > getInputParameters() {
+        public java.util.Map<String, ?> getInputParameters() {
             return this.inputParameters;
         }
 
@@ -1368,7 +1549,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
         /**
          * @return tagsScope
          */
-        public java.util.List < TagsScope> getTagsScope() {
+        public java.util.List<TagsScope> getTagsScope() {
             return this.tagsScope;
         }
 
@@ -1387,8 +1568,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String excludeRegionIdsScope; 
             private String excludeResourceGroupIdsScope; 
             private String excludeResourceIdsScope; 
-            private java.util.List < ExcludeTagsScope> excludeTagsScope; 
-            private java.util.Map < String, ? > inputParameters; 
+            private java.util.List<ExcludeTagsScope> excludeTagsScope; 
+            private String extendContent; 
+            private java.util.Map<String, ?> inputParameters; 
             private ManagedRule managedRule; 
             private String maximumExecutionFrequency; 
             private Long modifiedTimestamp; 
@@ -1402,10 +1584,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String tagKeyLogicScope; 
             private String tagKeyScope; 
             private String tagValueScope; 
-            private java.util.List < TagsScope> tagsScope; 
+            private java.util.List<TagsScope> tagsScope; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the rule belongs.
+             * <p>The ID of the Alibaba Cloud account to which the rule belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120886317861****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -1413,7 +1598,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The details of compliance evaluation results.
+             * <p>The details of compliance evaluation results.</p>
              */
             public Builder compliance(Compliance compliance) {
                 this.compliance = compliance;
@@ -1421,7 +1606,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the managed rule.
+             * <p>The ARN of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:config::100931896542****:rule/cr-7f7d626622af0041****</p>
              */
             public Builder configRuleArn(String configRuleArn) {
                 this.configRuleArn = configRuleArn;
@@ -1429,7 +1617,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The information about compliance evaluations performed by the rule.
+             * <p>The information about compliance evaluations performed by the rule.</p>
              */
             public Builder configRuleEvaluationStatus(ConfigRuleEvaluationStatus configRuleEvaluationStatus) {
                 this.configRuleEvaluationStatus = configRuleEvaluationStatus;
@@ -1437,7 +1625,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cr-7f7d626622af0041****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -1445,7 +1636,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs-disk-auto-snapshot-policy</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -1453,13 +1647,16 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the rule. Valid values:
-             * <p>
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li>ACTIVE: The rule is enabled.</li>
+             * <li>DELETING: The rule is being deleted.</li>
+             * <li>EVALUATING: The rule is being used to evaluate resource configurations.</li>
+             * <li>INACTIVE: The rule is disabled.</li>
+             * </ul>
              * 
-             * *   ACTIVE: The rule is enabled.
-             * *   DELETING: The rule is being deleted.
-             * *   EVALUATING: The rule is being used to evaluate resource configurations.
-             * *   INACTIVE: The rule is disabled.
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder configRuleState(String configRuleState) {
                 this.configRuleState = configRuleState;
@@ -1467,11 +1664,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger type of the rule. Valid values:
-             * <p>
+             * <p>The trigger type of the rule. Valid values:</p>
+             * <ul>
+             * <li>ConfigurationItemChangeNotification: The rule was triggered by configuration changes.</li>
+             * <li>ScheduledNotification: The rule was periodically triggered.</li>
+             * </ul>
              * 
-             * *   ConfigurationItemChangeNotification: The rule was triggered by configuration changes.
-             * *   ScheduledNotification: The rule was periodically triggered.
+             * <strong>example:</strong>
+             * <p>ConfigurationItemChangeNotification</p>
              */
             public Builder configRuleTriggerTypes(String configRuleTriggerTypes) {
                 this.configRuleTriggerTypes = configRuleTriggerTypes;
@@ -1479,7 +1679,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the creation of the rule.
+             * <p>The information about the creation of the rule.</p>
              */
             public Builder createBy(CreateBy createBy) {
                 this.createBy = createBy;
@@ -1487,7 +1687,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the rule was created. Unit: millisecond.
+             * <p>The timestamp generated when the rule was created. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1604684022000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -1495,7 +1698,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the managed rule.
+             * <p>The description of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1503,7 +1709,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeRegionIdsScope.
+             * <p>ExcludeRegionIdsScope</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder excludeRegionIdsScope(String excludeRegionIdsScope) {
                 this.excludeRegionIdsScope = excludeRegionIdsScope;
@@ -1511,7 +1720,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeResourceGroupIdsScope.
+             * <p>ExcludeResourceGroupIdsScope</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzdibsjjc****</p>
              */
             public Builder excludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
                 this.excludeResourceGroupIdsScope = excludeResourceGroupIdsScope;
@@ -1519,7 +1731,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource excluded from the compliance evaluations performed by the rule.
+             * <p>The ID of the resource excluded from the compliance evaluations performed by the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23642660635687****</p>
              */
             public Builder excludeResourceIdsScope(String excludeResourceIdsScope) {
                 this.excludeResourceIdsScope = excludeResourceIdsScope;
@@ -1527,23 +1742,37 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeTagsScope.
+             * <p>ExcludeTagsScope</p>
              */
-            public Builder excludeTagsScope(java.util.List < ExcludeTagsScope> excludeTagsScope) {
+            public Builder excludeTagsScope(java.util.List<ExcludeTagsScope> excludeTagsScope) {
                 this.excludeTagsScope = excludeTagsScope;
                 return this;
             }
 
             /**
-             * The input parameters of the rule.
+             * <p>Optional field, only used in conjunction with the 24-hour cycle execution to set the trigger time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;fixedHour&quot;:&quot;12&quot;}</p>
              */
-            public Builder inputParameters(java.util.Map < String, ? > inputParameters) {
+            public Builder extendContent(String extendContent) {
+                this.extendContent = extendContent;
+                return this;
+            }
+
+            /**
+             * <p>The input parameters of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
+             */
+            public Builder inputParameters(java.util.Map<String, ?> inputParameters) {
                 this.inputParameters = inputParameters;
                 return this;
             }
 
             /**
-             * The details of the managed rule.
+             * <p>The details of the managed rule.</p>
              */
             public Builder managedRule(ManagedRule managedRule) {
                 this.managedRule = managedRule;
@@ -1551,16 +1780,20 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the rule is triggered. Valid values:
-             * <p>
+             * <p>The interval at which the rule is triggered. Valid values:</p>
+             * <ul>
+             * <li>One_Hour</li>
+             * <li>Three_Hours</li>
+             * <li>Six_Hours</li>
+             * <li>Twelve_Hours</li>
+             * <li>TwentyFour_Hours</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned if the rule is periodically triggered.</p>
+             * </blockquote>
              * 
-             * *   One_Hour
-             * *   Three_Hours
-             * *   Six_Hours
-             * *   Twelve_Hours
-             * *   TwentyFour_Hours
-             * 
-             * >  This parameter is returned if the rule is periodically triggered.
+             * <strong>example:</strong>
+             * <p>One_Hour</p>
              */
             public Builder maximumExecutionFrequency(String maximumExecutionFrequency) {
                 this.maximumExecutionFrequency = maximumExecutionFrequency;
@@ -1568,7 +1801,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the rule was last updated. Unit: millisecond.
+             * <p>The timestamp generated when the rule was last updated. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614687022000</p>
              */
             public Builder modifiedTimestamp(Long modifiedTimestamp) {
                 this.modifiedTimestamp = modifiedTimestamp;
@@ -1576,7 +1812,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the rule applies.
+             * <p>The ID of the region to which the rule applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder regionIdsScope(String regionIdsScope) {
                 this.regionIdsScope = regionIdsScope;
@@ -1584,7 +1823,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the rule applies.
+             * <p>The ID of the resource group to which the rule applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzdibsjjc****</p>
              */
             public Builder resourceGroupIdsScope(String resourceGroupIdsScope) {
                 this.resourceGroupIdsScope = resourceGroupIdsScope;
@@ -1592,7 +1834,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceIdsScope.
+             * <p>ResourceIdsScope</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-8vbf3x310fn56ijfd****</p>
              */
             public Builder resourceIdsScope(String resourceIdsScope) {
                 this.resourceIdsScope = resourceIdsScope;
@@ -1600,7 +1845,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource to be evaluated by the rule.
+             * <p>The type of the resource to be evaluated by the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::RAM::User</p>
              */
             public Builder resourceTypesScope(String resourceTypesScope) {
                 this.resourceTypesScope = resourceTypesScope;
@@ -1608,12 +1856,15 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that do not comply with the rule. Valid values:
-             * <p>
+             * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+             * <ul>
+             * <li>1: high.</li>
+             * <li>2: medium.</li>
+             * <li>3: low.</li>
+             * </ul>
              * 
-             * *   1: high.
-             * *   2: medium.
-             * *   3: low.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -1621,7 +1872,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The effective scope of the rule.
+             * <p>The effective scope of the rule.</p>
              */
             public Builder scope(Scope scope) {
                 this.scope = scope;
@@ -1629,7 +1880,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The information about how the rule was created.
+             * <p>The information about how the rule was created.</p>
              */
             public Builder source(Source source) {
                 this.source = source;
@@ -1637,10 +1888,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule.
-             * <p>
+             * <p>The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule.</p>
+             * <blockquote>
+             * <p>This parameter applies only to a managed rule.</p>
+             * </blockquote>
              * 
-             * > This parameter applies only to a managed rule.
+             * <strong>example:</strong>
+             * <p>120886317861****</p>
              */
             public Builder tagKeyLogicScope(String tagKeyLogicScope) {
                 this.tagKeyLogicScope = tagKeyLogicScope;
@@ -1648,10 +1902,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key used to filter resources. The rule applies only to the resources with the specified tag key.
-             * <p>
+             * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</p>
+             * <blockquote>
+             * <p>The <code>TagKeyScope</code> and <code>TagValueScope</code> parameters are returned at the same time.</p>
+             * </blockquote>
              * 
-             * > The `TagKeyScope` and `TagValueScope` parameters are returned at the same time.
+             * <strong>example:</strong>
+             * <p>RAM</p>
              */
             public Builder tagKeyScope(String tagKeyScope) {
                 this.tagKeyScope = tagKeyScope;
@@ -1659,10 +1916,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value used to filter resources. The rule applies only to the resources with the specified tag value.
-             * <p>
+             * <p>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</p>
+             * <blockquote>
+             * <p>The <code>TagKeyScope</code> and <code>TagValueScope</code> parameters are returned at the same time.</p>
+             * </blockquote>
              * 
-             * > The `TagKeyScope` and `TagValueScope` parameters are returned at the same time.
+             * <strong>example:</strong>
+             * <p>MFA</p>
              */
             public Builder tagValueScope(String tagValueScope) {
                 this.tagValueScope = tagValueScope;
@@ -1670,9 +1930,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TagsScope.
+             * <p>TagsScope</p>
              */
-            public Builder tagsScope(java.util.List < TagsScope> tagsScope) {
+            public Builder tagsScope(java.util.List<TagsScope> tagsScope) {
                 this.tagsScope = tagsScope;
                 return this;
             }

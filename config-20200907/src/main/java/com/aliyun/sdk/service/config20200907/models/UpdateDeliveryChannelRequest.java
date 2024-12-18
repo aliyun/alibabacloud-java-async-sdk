@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDeliveryChannelRequest} extends {@link RequestModel}
  *
  * <p>UpdateDeliveryChannelRequest</p>
@@ -208,10 +214,11 @@ public class UpdateDeliveryChannelRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a></p>
          * 
-         * The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25693~~)
+         * <strong>example:</strong>
+         * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -220,13 +227,17 @@ public class UpdateDeliveryChannelRequest extends Request {
         }
 
         /**
-         * Specifies whether to deliver resource change logs. If the value of this parameter is true, Cloud Config delivers the resource change logs to OSS, Log Service, or MNS when the configurations of the resources change. Valid values:
-         * <p>
+         * <p>Specifies whether to deliver resource change logs. If the value of this parameter is true, Cloud Config delivers the resource change logs to OSS, Log Service, or MNS when the configurations of the resources change. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available for delivery channels of the OSS, Log Service, and MNS types.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false (default)
-         * 
-         * > This parameter is available for delivery channels of the OSS, Log Service, and MNS types.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder configurationItemChangeNotification(Boolean configurationItemChangeNotification) {
             this.putBodyParameter("ConfigurationItemChangeNotification", configurationItemChangeNotification);
@@ -235,13 +246,17 @@ public class UpdateDeliveryChannelRequest extends Request {
         }
 
         /**
-         * Specifies whether to deliver scheduled resource snapshots to the OSS bucket. If the value of this parameter is true, the scheduled resource snapshots are delivered to the specified OSS bucket at 00:00:00 and 12:00:00 on a daily basis. Valid values:
-         * <p>
+         * <p>Specifies whether to deliver scheduled resource snapshots to the OSS bucket. If the value of this parameter is true, the scheduled resource snapshots are delivered to the specified OSS bucket at 00:00:00 and 12:00:00 on a daily basis. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is applicable only to delivery channels of the OSS type.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false (default)
-         * 
-         * > This parameter is applicable only to delivery channels of the OSS type.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder configurationSnapshot(Boolean configurationSnapshot) {
             this.putBodyParameter("ConfigurationSnapshot", configurationSnapshot);
@@ -250,7 +265,10 @@ public class UpdateDeliveryChannelRequest extends Request {
         }
 
         /**
-         * The ARN of the role that you want to assign to the delivery channel. Specify the ARN in the following format: `acs:ram::{accountId}:role/aliyunserviceroleforconfig`.
+         * <p>The ARN of the role that you want to assign to the delivery channel. Specify the ARN in the following format: <code>acs:ram::{accountId}:role/aliyunserviceroleforconfig</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::100931896542****:role/aliyunserviceroleforconfig</p>
          */
         public Builder deliveryChannelAssumeRoleArn(String deliveryChannelAssumeRoleArn) {
             this.putBodyParameter("DeliveryChannelAssumeRoleArn", deliveryChannelAssumeRoleArn);
@@ -259,20 +277,20 @@ public class UpdateDeliveryChannelRequest extends Request {
         }
 
         /**
-         * The rule that is attached to the delivery channel. This parameter is available only for delivery channels of the MNS type.
-         * <p>
+         * <p>The rule that is attached to the delivery channel. This parameter is available only for delivery channels of the MNS type.</p>
+         * <p>This parameter specifies the lowest risk level and the resource types for the events to which you want to subscribe.</p>
+         * <ul>
+         * <li><p>The setting of the lowest risk level for the events to which you want to subscribe is in the following format: <code>{&quot;filterType&quot;:&quot;RuleRiskLevel&quot;,&quot;value&quot;:&quot;1&quot;,&quot;multiple&quot;:false}</code>.</p>
+         * <p>The <code>value</code> field specifies the lowest risk level of the events to which you want to subscribe. Valid values: 1, 2, and 3. The value 1 indicates the high risk level. The value 2 indicates the medium risk level. The value 3 indicates the low risk level.</p>
+         * </li>
+         * <li><p>The setting of the resource types of the events to which you want to subscribe is in the following format: <code>{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ACK::Cluster&quot;,&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;],&quot;multiple&quot;:true}</code>.</p>
+         * <p>The <code>values</code> field specifies the resource types of the events to which you want to subscribe. The value of the field is a JSON array. Examples:</p>
+         * </li>
+         * </ul>
+         * <p><code>[{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;,&quot;ACS::CDN::Domain&quot;,&quot;ACS::CEN::CenBandwidthPackage&quot;,&quot;ACS::CEN::CenInstance&quot;,&quot;ACS::CEN::Flowlog&quot;,&quot;ACS::DdosCoo::Instance&quot;],&quot;multiple&quot;:true}]</code></p>
          * 
-         * This parameter specifies the lowest risk level and the resource types for the events to which you want to subscribe.
-         * 
-         * *   The setting of the lowest risk level for the events to which you want to subscribe is in the following format: `{"filterType":"RuleRiskLevel","value":"1","multiple":false}`.
-         * 
-         *     The `value` field specifies the lowest risk level of the events to which you want to subscribe. Valid values: 1, 2, and 3. The value 1 indicates the high risk level. The value 2 indicates the medium risk level. The value 3 indicates the low risk level.
-         * 
-         * *   The setting of the resource types of the events to which you want to subscribe is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`.
-         * 
-         *     The `values` field specifies the resource types of the events to which you want to subscribe. The value of the field is a JSON array. Examples:
-         * 
-         * `[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`
+         * <strong>example:</strong>
+         * <p>[{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;,&quot;ACS::CDN::Domain&quot;,&quot;ACS::CEN::CenBandwidthPackage&quot;,&quot;ACS::CEN::CenInstance&quot;,&quot;ACS::CEN::Flowlog&quot;,&quot;ACS::DdosCoo::Instance&quot;],&quot;multiple&quot;:true}]</p>
          */
         public Builder deliveryChannelCondition(String deliveryChannelCondition) {
             this.putBodyParameter("DeliveryChannelCondition", deliveryChannelCondition);
@@ -281,10 +299,12 @@ public class UpdateDeliveryChannelRequest extends Request {
         }
 
         /**
-         * The ID of the delivery channel.
-         * <p>
+         * <p>The ID of the delivery channel.</p>
+         * <p>For more information about how to obtain the ID of the delivery channel, see <a href="https://help.aliyun.com/document_detail/174466.html">DescribeDeliveryChannels</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of the delivery channel, see [DescribeDeliveryChannels](~~174466~~).
+         * <strong>example:</strong>
+         * <p>cdc-8e45ff4e06a3a8****</p>
          */
         public Builder deliveryChannelId(String deliveryChannelId) {
             this.putBodyParameter("DeliveryChannelId", deliveryChannelId);
@@ -293,10 +313,13 @@ public class UpdateDeliveryChannelRequest extends Request {
         }
 
         /**
-         * The name of the delivery channel.
-         * <p>
+         * <p>The name of the delivery channel.</p>
+         * <blockquote>
+         * <p>If you do not configure this parameter, this parameter is left empty.</p>
+         * </blockquote>
          * 
-         * > If you do not configure this parameter, this parameter is left empty.
+         * <strong>example:</strong>
+         * <p>testoss</p>
          */
         public Builder deliveryChannelName(String deliveryChannelName) {
             this.putBodyParameter("DeliveryChannelName", deliveryChannelName);
@@ -305,12 +328,15 @@ public class UpdateDeliveryChannelRequest extends Request {
         }
 
         /**
-         * The ARN of the delivery destination. Valid values:
-         * <p>
+         * <p>The ARN of the delivery destination. Valid values:</p>
+         * <ul>
+         * <li><code>acs:oss:{RegionId}:{accountId}:{bucketName}</code> if your delivery destination is an OSS bucket. Example: <code>acs:oss:cn-shanghai:100931896542****:new-bucket</code>.</li>
+         * <li><code>acs:mns:{RegionId}:{accountId}:/topics/{topicName}</code> if your delivery destination is an MNS topic. Example: <code>acs:mns:cn-shanghai:100931896542****:/topics/topic1</code>.</li>
+         * <li><code>acs:log:{RegionId}:{accountId}:project/{projectName}/logstore/{logstoreName}</code> if your delivery destination is a Log Service Logstore. Example: <code>acs:log:cn-shanghai:100931896542****:project/project1/logstore/logstore1</code>.</li>
+         * </ul>
          * 
-         * *   `acs:oss:{RegionId}:{accountId}:{bucketName}` if your delivery destination is an OSS bucket. Example: `acs:oss:cn-shanghai:100931896542****:new-bucket`.
-         * *   `acs:mns:{RegionId}:{accountId}:/topics/{topicName}` if your delivery destination is an MNS topic. Example: `acs:mns:cn-shanghai:100931896542****:/topics/topic1`.
-         * *   `acs:log:{RegionId}:{accountId}:project/{projectName}/logstore/{logstoreName}` if your delivery destination is a Log Service Logstore. Example: `acs:log:cn-shanghai:100931896542****:project/project1/logstore/logstore1`.
+         * <strong>example:</strong>
+         * <p>acs:oss:cn-shanghai:100931896542****:new-bucket</p>
          */
         public Builder deliveryChannelTargetArn(String deliveryChannelTargetArn) {
             this.putBodyParameter("DeliveryChannelTargetArn", deliveryChannelTargetArn);
@@ -319,7 +345,10 @@ public class UpdateDeliveryChannelRequest extends Request {
         }
 
         /**
-         * The description of the delivery channel.
+         * <p>The description of the delivery channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My OSS delivery.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -328,13 +357,17 @@ public class UpdateDeliveryChannelRequest extends Request {
         }
 
         /**
-         * Specifies whether to deliver resource non-compliance events. If the value of this parameter is true, Cloud Config delivers resource non-compliance events to Log Service or MNS when resources are evaluated as non-compliant. Valid values:
-         * <p>
+         * <p>Specifies whether to deliver resource non-compliance events. If the value of this parameter is true, Cloud Config delivers resource non-compliance events to Log Service or MNS when resources are evaluated as non-compliant. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available only for delivery channels of the Log Service or MNS type.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false (default)
-         * 
-         * > This parameter is available only for delivery channels of the Log Service or MNS type.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder nonCompliantNotification(Boolean nonCompliantNotification) {
             this.putBodyParameter("NonCompliantNotification", nonCompliantNotification);
@@ -343,12 +376,14 @@ public class UpdateDeliveryChannelRequest extends Request {
         }
 
         /**
-         * The ARN of the OSS bucket to which you want to transfer the delivery data when the size of the data exceeds the specified upper limit of the delivery channel. Format: `acs:oss:{RegionId}:{accountId}:{bucketName}`.
-         * <p>
+         * <p>The ARN of the OSS bucket to which you want to transfer the delivery data when the size of the data exceeds the specified upper limit of the delivery channel. Format: <code>acs:oss:{RegionId}:{accountId}:{bucketName}</code>.</p>
+         * <p>If you do not configure this parameter, Cloud Config delivers only summary data.</p>
+         * <blockquote>
+         * <p>This parameter is available only for delivery channels of the Log Service or MNS type. The maximum storage size of delivery channels of the Log Service type is 1 MB, and the maximum storage size of delivery channels of the MNS type is 64 KB.</p>
+         * </blockquote>
          * 
-         * If you do not configure this parameter, Cloud Config delivers only summary data.
-         * 
-         * > This parameter is available only for delivery channels of the Log Service or MNS type. The maximum storage size of delivery channels of the Log Service type is 1 MB, and the maximum storage size of delivery channels of the MNS type is 64 KB.
+         * <strong>example:</strong>
+         * <p>acs:oss:cn-shanghai:100931896542****:new-bucket</p>
          */
         public Builder oversizedDataOSSTargetArn(String oversizedDataOSSTargetArn) {
             this.putBodyParameter("OversizedDataOSSTargetArn", oversizedDataOSSTargetArn);
@@ -357,11 +392,14 @@ public class UpdateDeliveryChannelRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the delivery channel. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the delivery channel. Valid values:</p>
+         * <ul>
+         * <li>0: The delivery channel is disabled for Cloud Config. Cloud Config retains the most recent delivery configuration and stops resource data delivery.</li>
+         * <li>1 (default): The delivery channel is enabled for Cloud Config.</li>
+         * </ul>
          * 
-         * *   0: The delivery channel is disabled for Cloud Config. Cloud Config retains the most recent delivery configuration and stops resource data delivery.
-         * *   1 (default): The delivery channel is enabled for Cloud Config.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Long status) {
             this.putBodyParameter("Status", status);

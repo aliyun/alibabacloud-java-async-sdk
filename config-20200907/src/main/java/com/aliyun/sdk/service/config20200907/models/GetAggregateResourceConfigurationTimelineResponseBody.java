@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateResourceConfigurationTimelineResponseBody} extends {@link TeaModel}
  *
  * <p>GetAggregateResourceConfigurationTimelineResponseBody</p>
@@ -49,7 +55,10 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         private ResourceConfigurationTimeline resourceConfigurationTimeline; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ED9CD1B3-286C-4E05-A765-5E1E0B9BC2AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         }
 
         /**
-         * The configuration timeline of the resource.
+         * <p>The configuration timeline of the resource.</p>
          */
         public Builder resourceConfigurationTimeline(ResourceConfigurationTimeline resourceConfigurationTimeline) {
             this.resourceConfigurationTimeline = resourceConfigurationTimeline;
@@ -70,6 +79,12 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
 
     } 
 
+    /**
+     * 
+     * {@link GetAggregateResourceConfigurationTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateResourceConfigurationTimelineResponseBody</p>
+     */
     public static class ConfigurationList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -217,7 +232,10 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
             private String tags; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -225,7 +243,10 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
             }
 
             /**
-             * The ID of the zone in which the resource resides.
+             * <p>The ID of the zone in which the resource resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder availabilityZone(String availabilityZone) {
                 this.availabilityZone = availabilityZone;
@@ -233,7 +254,10 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
             }
 
             /**
-             * The timestamp when the resource change snapshot was recorded. Unit: milliseconds.
+             * <p>The timestamp when the resource change snapshot was recorded. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624961156000</p>
              */
             public Builder captureTime(String captureTime) {
                 this.captureTime = captureTime;
@@ -241,7 +265,10 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
             }
 
             /**
-             * The details of the resource change that triggered the compliance evaluation.
+             * <p>The details of the resource change that triggered the compliance evaluation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;AccessControlList&quot;:[null,{&quot;Grant&quot;:&quot;private&quot;}],&quot;ServerSideEncryptionRule&quot;:[null,{&quot;SSEAlgorithm&quot;:&quot;None&quot;}],&quot;CreationDate&quot;:[null,&quot;2021-06-29T10:05:12.000Z&quot;],&quot;Owner&quot;:[null,{&quot;DisplayName&quot;:&quot;100931896542****&quot;,&quot;ID&quot;:&quot;100931896542****&quot;}],&quot;BucketPolicy&quot;:[null,{&quot;LogPrefix&quot;:&quot;&quot;,&quot;LogBucket&quot;:&quot;&quot;}],&quot;StorageClass&quot;:[null,&quot;Standard&quot;],&quot;ExtranetEndpoint&quot;:[null,&quot;oss-cn-hangzhou.aliyuncs.com&quot;],&quot;DataRedundancyType&quot;:[null,&quot;LRS&quot;],&quot;AllowEmptyReferer&quot;:[null,&quot;true&quot;],&quot;IntranetEndpoint&quot;:[null,&quot;oss-cn-hangzhou-internal.aliyuncs.com&quot;],&quot;Name&quot;:[null,&quot;new-bucket&quot;],&quot;Location&quot;:[null,&quot;oss-cn-hangzhou&quot;]}</p>
              */
             public Builder configurationDiff(String configurationDiff) {
                 this.configurationDiff = configurationDiff;
@@ -249,7 +276,10 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
             }
 
             /**
-             * The ID of the region in which the resource resides.
+             * <p>The ID of the region in which the resource resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -257,7 +287,10 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
             }
 
             /**
-             * The timestamp when the resource was created. Unit: milliseconds.
+             * <p>The timestamp when the resource was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624961112000</p>
              */
             public Builder resourceCreateTime(String resourceCreateTime) {
                 this.resourceCreateTime = resourceCreateTime;
@@ -265,18 +298,23 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
             }
 
             /**
-             * The type of the resource change event involved. Valid values:
-             * <p>
+             * <p>The type of the resource change event involved. Valid values:</p>
+             * <ul>
+             * <li>DISCOVERED: A resource is created.</li>
+             * <li>DISCOVERED_REVISED: A resource is created by periodic remediation tasks.</li>
+             * <li>MODIFY: A resource is modified.</li>
+             * <li>MODIFY_REVISED: A resource is modified by periodic remediation tasks.</li>
+             * <li>REMOVE: A resource is deleted.</li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li>To ensure the integrity of resources, periodic remediation tasks are run to check data and generate events that indicate the creation of new resources. Such events are infrequent.</li>
+             * <li>The time when a resource change event is generated by a periodic remediation task is considered as the detection time of Cloud Config. The detection time is later than the time when the resource is modified.</li>
+             * </ul>
              * 
-             * *   DISCOVERED: A resource is created.
-             * *   DISCOVERED_REVISED: A resource is created by periodic remediation tasks.
-             * *   MODIFY: A resource is modified.
-             * *   MODIFY_REVISED: A resource is modified by periodic remediation tasks.
-             * *   REMOVE: A resource is deleted.
-             * 
-             * > 
-             * *   To ensure the integrity of resources, periodic remediation tasks are run to check data and generate events that indicate the creation of new resources. Such events are infrequent.
-             * *   The time when a resource change event is generated by a periodic remediation task is considered as the detection time of Cloud Config. The detection time is later than the time when the resource is modified.
+             * <strong>example:</strong>
+             * <p>DISCOVERED</p>
              */
             public Builder resourceEventType(String resourceEventType) {
                 this.resourceEventType = resourceEventType;
@@ -284,7 +322,10 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
             }
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new-bucket</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -292,7 +333,10 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
             }
 
             /**
-             * The name of the resource.
+             * <p>The name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new-bucket</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -300,7 +344,10 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::OSS::Bucket</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -308,7 +355,10 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
             }
 
             /**
-             * The tags of the resource.
+             * <p>The tags of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;&quot;hc&quot;&quot;:[&quot;&quot;value2&quot;&quot;]}</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -322,9 +372,15 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link GetAggregateResourceConfigurationTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateResourceConfigurationTimelineResponseBody</p>
+     */
     public static class ResourceConfigurationTimeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigurationList")
-        private java.util.List < ConfigurationList> configurationList;
+        private java.util.List<ConfigurationList> configurationList;
 
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -349,7 +405,7 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         /**
          * @return configurationList
          */
-        public java.util.List < ConfigurationList> getConfigurationList() {
+        public java.util.List<ConfigurationList> getConfigurationList() {
             return this.configurationList;
         }
 
@@ -368,20 +424,23 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
         }
 
         public static final class Builder {
-            private java.util.List < ConfigurationList> configurationList; 
+            private java.util.List<ConfigurationList> configurationList; 
             private Integer maxResults; 
             private String nextToken; 
 
             /**
-             * The resource name.
+             * <p>The resource name.</p>
              */
-            public Builder configurationList(java.util.List < ConfigurationList> configurationList) {
+            public Builder configurationList(java.util.List<ConfigurationList> configurationList) {
                 this.configurationList = configurationList;
                 return this;
             }
 
             /**
-             * The maximum number of entries returned for a single request.
+             * <p>The maximum number of entries returned for a single request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -389,7 +448,10 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
             }
 
             /**
-             * The token that is used to initiate the next request.
+             * <p>The token that is used to initiate the next request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IWBjqMYSy0is7zSMGu16****</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

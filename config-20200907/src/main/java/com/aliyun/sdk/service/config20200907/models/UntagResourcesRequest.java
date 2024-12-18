@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -23,7 +29,7 @@ public class UntagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resourceId;
+    private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -32,7 +38,7 @@ public class UntagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagKey")
-    private java.util.List < String > tagKey;
+    private java.util.List<String> tagKey;
 
     private UntagResourcesRequest(Builder builder) {
         super(builder);
@@ -73,7 +79,7 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -87,16 +93,16 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return tagKey
      */
-    public java.util.List < String > getTagKey() {
+    public java.util.List<String> getTagKey() {
         return this.tagKey;
     }
 
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
         private Boolean all; 
         private String regionId; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceType; 
-        private java.util.List < String > tagKey; 
+        private java.util.List<String> tagKey; 
 
         private Builder() {
             super();
@@ -112,11 +118,14 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the resource. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags from the resource. Valid values:</p>
+         * <ul>
+         * <li>true: All tags are removed from the resource.</li>
+         * <li>false (default): The specified tags are removed from the resource.</li>
+         * </ul>
          * 
-         * *   true: All tags are removed from the resource.
-         * *   false (default): The specified tags are removed from the resource.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putBodyParameter("All", all);
@@ -125,7 +134,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the tag.
+         * <p>The region ID of the tag.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -134,26 +147,29 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource ID.
-         * <p>
-         * 
-         * You can remove tags from up to 50 resources at a time.
+         * <p>The resource ID.</p>
+         * <p>You can remove tags from up to 50 resources at a time.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><code>ACS::Config::Rule</code></li>
+         * <li><code>ACS::Config::AggregateConfigRule</code></li>
+         * <li><code>ACS::Config::Aggregator</code></li>
+         * <li><code>ACS::Config::CompliancePack</code></li>
+         * <li><code>ACS::Config::AggregateCompliancePack</code></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   `ACS::Config::Rule`
-         * *   `ACS::Config::AggregateConfigRule`
-         * *   `ACS::Config::Aggregator`
-         * *   `ACS::Config::CompliancePack`
-         * *   `ACS::Config::AggregateCompliancePack`
+         * <strong>example:</strong>
+         * <p>ACS::Config::Rule</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -162,9 +178,9 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tags of the resource.
+         * <p>The tags of the resource.</p>
          */
-        public Builder tagKey(java.util.List < String > tagKey) {
+        public Builder tagKey(java.util.List<String> tagKey) {
             this.putBodyParameter("TagKey", tagKey);
             this.tagKey = tagKey;
             return this;

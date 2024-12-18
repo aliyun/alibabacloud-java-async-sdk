@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateDiscoveredResourceResponseBody} extends {@link TeaModel}
  *
  * <p>GetAggregateDiscoveredResourceResponseBody</p>
@@ -49,7 +55,7 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the resource.
+         * <p>The details of the resource.</p>
          */
         public Builder discoveredResourceDetail(DiscoveredResourceDetail discoveredResourceDetail) {
             this.discoveredResourceDetail = discoveredResourceDetail;
@@ -57,7 +63,10 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E4D71ACE-6B0A-46E0-8352-56952378CC7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAggregateDiscoveredResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateDiscoveredResourceResponseBody</p>
+     */
     public static class DiscoveredResourceDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -229,7 +244,10 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             private String tags; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -237,7 +255,10 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the resource resides.
+             * <p>The ID of the zone in which the resource resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder availabilityZone(String availabilityZone) {
                 this.availabilityZone = availabilityZone;
@@ -245,7 +266,17 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ComplianceType.
+             * <p>The compliance evaluation result of the resource. Valid values:</p>
+             * <ul>
+             * <li>COMPLIANT: The resource is evaluated as compliant.</li>
+             * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
+             * <li>NOT_APPLICABLE: The rule does not apply to the resource.</li>
+             * <li>INSUFFICIENT_DATA: No data is available.</li>
+             * <li>IGNORED: The resource is ignored during compliance evaluation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLIANT</p>
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -253,7 +284,10 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the resource.
+             * <p>The configuration of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;AccessControlList&quot;:{&quot;Grant&quot;:&quot;private&quot;},&quot;ServerSideEncryptionRule&quot;:{&quot;SSEAlgorithm&quot;:&quot;None&quot;},&quot;Comment&quot;:&quot;&quot;,&quot;CreationDate&quot;:&quot;2021-06-29T10:05:12.000Z&quot;,&quot;Owner&quot;:{&quot;DisplayName&quot;:&quot;100931896542****&quot;,&quot;ID&quot;:&quot;100931896542****&quot;},&quot;StorageClass&quot;:&quot;Standard&quot;,&quot;DataRedundancyType&quot;:&quot;LRS&quot;,&quot;AllowEmptyReferer&quot;:&quot;true&quot;,&quot;Name&quot;:&quot;new-bucket&quot;,&quot;BucketPolicy&quot;:{&quot;LogPrefix&quot;:&quot;&quot;,&quot;LogBucket&quot;:&quot;&quot;},&quot;ExtranetEndpoint&quot;:&quot;oss-cn-hangzhou.aliyuncs.com&quot;,&quot;IntranetEndpoint&quot;:&quot;oss-cn-hangzhou-internal.aliyuncs.com&quot;,&quot;Location&quot;:&quot;oss-cn-hangzhou&quot;}</p>
              */
             public Builder configuration(String configuration) {
                 this.configuration = configuration;
@@ -261,7 +295,10 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -269,7 +306,10 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the resource was created.
+             * <p>The timestamp when the resource was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624961112000</p>
              */
             public Builder resourceCreationTime(Long resourceCreationTime) {
                 this.resourceCreationTime = resourceCreationTime;
@@ -277,11 +317,14 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the resource was deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the resource was deleted. Valid values:</p>
+             * <ul>
+             * <li>1: The resource was not deleted.</li>
+             * <li>0: The resource was deleted.</li>
+             * </ul>
              * 
-             * *   1: The resource was not deleted.
-             * *   0: The resource was deleted.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceDeleted(Integer resourceDeleted) {
                 this.resourceDeleted = resourceDeleted;
@@ -289,7 +332,10 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new-bucket</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -297,7 +343,10 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * <p>The name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new-bucket</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -305,11 +354,14 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource. The value of this parameter varies based on the resource type and may be empty.
-             * <p>
+             * <p>The status of the resource. The value of this parameter varies based on the resource type and may be empty.</p>
+             * <ul>
+             * <li>If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an ECS instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</li>
+             * <li>If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</li>
+             * </ul>
              * 
-             * *   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an ECS instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.
-             * *   If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.
+             * <strong>example:</strong>
+             * <p>offline</p>
              */
             public Builder resourceStatus(String resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -317,7 +369,10 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::OSS::BucketACS::CDN::Domain</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -325,7 +380,10 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the resource.
+             * <p>The tags of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;&quot;hc&quot;&quot;:[&quot;&quot;value2&quot;&quot;]}</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;

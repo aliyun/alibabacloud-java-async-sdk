@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateAccountComplianceByPackResponseBody} extends {@link TeaModel}
  *
  * <p>GetAggregateAccountComplianceByPackResponseBody</p>
@@ -49,7 +55,7 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The compliance evaluation results of member accounts for which the compliance package takes effect in an account group.
+         * <p>The compliance evaluation results of member accounts for which the compliance package takes effect in an account group.</p>
          */
         public Builder accountComplianceResult(AccountComplianceResult accountComplianceResult) {
             this.accountComplianceResult = accountComplianceResult;
@@ -57,7 +63,10 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAggregateAccountComplianceByPackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateAccountComplianceByPackResponseBody</p>
+     */
     public static class AccountCompliances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -121,7 +136,10 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
             private String complianceType; 
 
             /**
-             * The ID of the member account in the account group.
+             * <p>The ID of the member account in the account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -129,7 +147,10 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the member account in the account group.
+             * <p>The name of the member account in the account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -137,13 +158,16 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
             }
 
             /**
-             * The compliance evaluation result. Valid values:
-             * <p>
+             * <p>The compliance evaluation result. Valid values:</p>
+             * <ul>
+             * <li>COMPLIANT: The resource was evaluated as compliant.</li>
+             * <li>NON_COMPLIANT: The resource was evaluated as incompliant.</li>
+             * <li>NOT_APPLICABLE: The rule did not apply to your resource.</li>
+             * <li>INSUFFICIENT_DATA: No resource data was available.</li>
+             * </ul>
              * 
-             * *   COMPLIANT: The resource was evaluated as compliant.
-             * *   NON_COMPLIANT: The resource was evaluated as incompliant.
-             * *   NOT_APPLICABLE: The rule did not apply to your resource.
-             * *   INSUFFICIENT_DATA: No resource data was available.
+             * <strong>example:</strong>
+             * <p>COMPLIANT</p>
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -157,9 +181,15 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAggregateAccountComplianceByPackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateAccountComplianceByPackResponseBody</p>
+     */
     public static class AccountComplianceResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountCompliances")
-        private java.util.List < AccountCompliances> accountCompliances;
+        private java.util.List<AccountCompliances> accountCompliances;
 
         @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
@@ -188,7 +218,7 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
         /**
          * @return accountCompliances
          */
-        public java.util.List < AccountCompliances> getAccountCompliances() {
+        public java.util.List<AccountCompliances> getAccountCompliances() {
             return this.accountCompliances;
         }
 
@@ -214,21 +244,24 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AccountCompliances> accountCompliances; 
+            private java.util.List<AccountCompliances> accountCompliances; 
             private String compliancePackId; 
             private Integer nonCompliantCount; 
             private Integer totalCount; 
 
             /**
-             * The compliance evaluation result of member accounts.
+             * <p>The compliance evaluation result of member accounts.</p>
              */
-            public Builder accountCompliances(java.util.List < AccountCompliances> accountCompliances) {
+            public Builder accountCompliances(java.util.List<AccountCompliances> accountCompliances) {
                 this.accountCompliances = accountCompliances;
                 return this;
             }
 
             /**
-             * The ID of the compliance package.
+             * <p>The ID of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-541e626622af0087****</p>
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -236,7 +269,10 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
             }
 
             /**
-             * The number of non-compliant member accounts.
+             * <p>The number of non-compliant member accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nonCompliantCount(Integer nonCompliantCount) {
                 this.nonCompliantCount = nonCompliantCount;
@@ -244,7 +280,10 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of member accounts.
+             * <p>The total number of member accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateResourceComplianceByConfigRuleRequest} extends {@link RequestModel}
  *
  * <p>GetAggregateResourceComplianceByConfigRuleRequest</p>
@@ -112,10 +118,12 @@ public class GetAggregateResourceComplianceByConfigRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-a4e5626622af0079****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -124,13 +132,16 @@ public class GetAggregateResourceComplianceByConfigRuleRequest extends Request {
         }
 
         /**
-         * The compliance evaluation result of the resources. Valid values:
-         * <p>
+         * <p>The compliance evaluation result of the resources. Valid values:</p>
+         * <ul>
+         * <li>COMPLIANT: The resource is evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resource is evaluated as incompliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to your resources.</li>
+         * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+         * </ul>
          * 
-         * *   COMPLIANT: The resource is evaluated as compliant.
-         * *   NON_COMPLIANT: The resource is evaluated as incompliant.
-         * *   NOT_APPLICABLE: The rule does not apply to your resources.
-         * *   INSUFFICIENT_DATA: No resource data is available.
+         * <strong>example:</strong>
+         * <p>COMPLIANT</p>
          */
         public Builder complianceType(String complianceType) {
             this.putQueryParameter("ComplianceType", complianceType);
@@ -139,10 +150,12 @@ public class GetAggregateResourceComplianceByConfigRuleRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
-         * <p>
+         * <p>The ID of the rule.</p>
+         * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+         * <strong>example:</strong>
+         * <p>cr-d369626622af008e****</p>
          */
         public Builder configRuleId(String configRuleId) {
             this.putQueryParameter("ConfigRuleId", configRuleId);
@@ -151,10 +164,13 @@ public class GetAggregateResourceComplianceByConfigRuleRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the resources in the account group belong.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account to which the resources in the account group belong.</p>
+         * <blockquote>
+         * <p>You can use either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you use the ResourceAccountId parameter.</p>
+         * </blockquote>
          * 
-         * > You can use either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you use the ResourceAccountId parameter.
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
          */
         public Builder resourceAccountId(Long resourceAccountId) {
             this.putQueryParameter("ResourceAccountId", resourceAccountId);

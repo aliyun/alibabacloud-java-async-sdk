@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateDiscoveredResourceRequest} extends {@link RequestModel}
  *
  * <p>GetAggregateDiscoveredResourceRequest</p>
@@ -142,10 +148,12 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-5885626622af0008****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -154,11 +162,14 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the compliance results of the resource. Valid values:
-         * <p>
+         * <p>Specifies whether to query the compliance results of the resource. Valid values:</p>
+         * <ul>
+         * <li>0 (default): does not query the compliance results of the resource.</li>
+         * <li>1: queries the compliance results of the resource.</li>
+         * </ul>
          * 
-         * *   0 (default): does not query the compliance results of the resource.
-         * *   1: queries the compliance results of the resource.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder complianceOption(Integer complianceOption) {
             this.putQueryParameter("ComplianceOption", complianceOption);
@@ -167,10 +178,12 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the resource resides.
-         * <p>
+         * <p>The ID of the region in which the resource resides.</p>
+         * <p>For more information about how to query the ID of a region in which the resource resides, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to query the ID of a region in which the resource resides, see [ListAggregateDiscoveredResources](~~411691~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -179,7 +192,10 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.
+         * <p>The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
          */
         public Builder resourceAccountId(Long resourceAccountId) {
             this.putQueryParameter("ResourceAccountId", resourceAccountId);
@@ -188,10 +204,12 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * The resource ID.
-         * <p>
+         * <p>The resource ID.</p>
+         * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~411691~~).
+         * <strong>example:</strong>
+         * <p>new-bucket</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -209,10 +227,12 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~411691~~).
+         * <strong>example:</strong>
+         * <p>ACS::OSS::Bucket</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteConfigRulesRequest} extends {@link RequestModel}
  *
  * <p>DeleteConfigRulesRequest</p>
@@ -54,10 +60,12 @@ public class DeleteConfigRulesRequest extends Request {
         } 
 
         /**
-         * The rule IDs. Separate multiple rule IDs with commas (,).
-         * <p>
+         * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
+         * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/609222.html">ListConfigRules</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListConfigRules](~~609222~~).
+         * <strong>example:</strong>
+         * <p>cr-9908626622af0035****</p>
          */
         public Builder configRuleIds(String configRuleIds) {
             this.putQueryParameter("ConfigRuleIds", configRuleIds);

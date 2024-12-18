@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAggregateConfigRuleEvaluationStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAggregateConfigRuleEvaluationStatisticsResponseBody</p>
  */
 public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EvaluationResults")
-    private java.util.List < EvaluationResults> evaluationResults;
+    private java.util.List<EvaluationResults> evaluationResults;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends Tea
     /**
      * @return evaluationResults
      */
-    public java.util.List < EvaluationResults> getEvaluationResults() {
+    public java.util.List<EvaluationResults> getEvaluationResults() {
         return this.evaluationResults;
     }
 
@@ -45,19 +51,22 @@ public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends Tea
     }
 
     public static final class Builder {
-        private java.util.List < EvaluationResults> evaluationResults; 
+        private java.util.List<EvaluationResults> evaluationResults; 
         private String requestId; 
 
         /**
-         * The statistics of compliance evaluation results.
+         * <p>The statistics of compliance evaluation results.</p>
          */
-        public Builder evaluationResults(java.util.List < EvaluationResults> evaluationResults) {
+        public Builder evaluationResults(java.util.List<EvaluationResults> evaluationResults) {
             this.evaluationResults = evaluationResults;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9EFA436B-FC6F-513B-9DB8-C96E6CEBE5E0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends Tea
 
     } 
 
+    /**
+     * 
+     * {@link ListAggregateConfigRuleEvaluationStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateConfigRuleEvaluationStatisticsResponseBody</p>
+     */
     public static class EvaluationResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
@@ -157,7 +172,10 @@ public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends Tea
             private Integer totalRuleCnt; 
 
             /**
-             * The ID of the account group.
+             * <p>The ID of the account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-edd3626622af00b3****</p>
              */
             public Builder aggregatorId(String aggregatorId) {
                 this.aggregatorId = aggregatorId;
@@ -165,7 +183,10 @@ public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends Tea
             }
 
             /**
-             * The number of resources that are evaluated as non-compliant.
+             * <p>The number of resources that are evaluated as non-compliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder nonCompliantResourceCnt(Integer nonCompliantResourceCnt) {
                 this.nonCompliantResourceCnt = nonCompliantResourceCnt;
@@ -173,7 +194,10 @@ public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends Tea
             }
 
             /**
-             * The number of rules based on which resources are evaluated as non-compliant.
+             * <p>The number of rules based on which resources are evaluated as non-compliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder nonCompliantRuleCnt(Integer nonCompliantRuleCnt) {
                 this.nonCompliantRuleCnt = nonCompliantRuleCnt;
@@ -181,7 +205,10 @@ public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends Tea
             }
 
             /**
-             * The date on which the statistics are obtained.
+             * <p>The date on which the statistics are obtained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-27</p>
              */
             public Builder statisticDate(String statisticDate) {
                 this.statisticDate = statisticDate;
@@ -189,7 +216,10 @@ public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends Tea
             }
 
             /**
-             * The total number of resources.
+             * <p>The total number of resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>153</p>
              */
             public Builder totalResourceCnt(Integer totalResourceCnt) {
                 this.totalResourceCnt = totalResourceCnt;
@@ -197,7 +227,10 @@ public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends Tea
             }
 
             /**
-             * The total number of rules.
+             * <p>The total number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalRuleCnt(Integer totalRuleCnt) {
                 this.totalRuleCnt = totalRuleCnt;

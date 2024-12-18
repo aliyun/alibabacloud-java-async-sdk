@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetManagedRuleRequest} extends {@link RequestModel}
  *
  * <p>GetManagedRuleRequest</p>
@@ -54,10 +60,12 @@ public class GetManagedRuleRequest extends Request {
         } 
 
         /**
-         * The identifier of the managed rule.
-         * <p>
+         * <p>The identifier of the managed rule.</p>
+         * <p>For more information about how to obtain the identifier of a managed rule, see <a href="https://help.aliyun.com/document_detail/421144.html">ListManagedRules</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the identifier of a managed rule, see [ListManagedRules](~~421144~~).
+         * <strong>example:</strong>
+         * <p>cdn-domain-https-enabled</p>
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);

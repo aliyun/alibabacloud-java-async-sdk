@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDiscoveredResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDiscoveredResourcesResponseBody</p>
@@ -49,7 +55,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the resources.
+         * <p>The information about the resources.</p>
          */
         public Builder discoveredResourceProfiles(DiscoveredResourceProfiles discoveredResourceProfiles) {
             this.discoveredResourceProfiles = discoveredResourceProfiles;
@@ -57,7 +63,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7817373-78CB-4F9A-8AFA-E7A88E9D64A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDiscoveredResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDiscoveredResourcesResponseBody</p>
+     */
     public static class DiscoveredResourceProfileList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -229,7 +244,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             private Long version; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>161259599160****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -237,7 +255,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder availabilityZone(String availabilityZone) {
                 this.availabilityZone = availabilityZone;
@@ -245,7 +266,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -253,7 +277,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the resource was created. Unit: milliseconds.
+             * <p>The timestamp when the resource was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1618675206000</p>
              */
             public Builder resourceCreationTime(Long resourceCreationTime) {
                 this.resourceCreationTime = resourceCreationTime;
@@ -261,11 +288,14 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource. Valid values:
-             * <p>
+             * <p>The status of the resource. Valid values:</p>
+             * <ul>
+             * <li>0: The resource is deleted.</li>
+             * <li>1: The resource is retained.</li>
+             * </ul>
              * 
-             * *   0: The resource is deleted.
-             * *   1: The resource is retained.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceDeleted(Integer resourceDeleted) {
                 this.resourceDeleted = resourceDeleted;
@@ -273,7 +303,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-hp31cqoba96jagtz****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -281,7 +314,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource name.
+             * <p>The resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud Firewall</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -289,11 +325,14 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:
-             * <p>
+             * <p>The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:</p>
+             * <ul>
+             * <li>If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</li>
+             * <li>If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</li>
+             * </ul>
              * 
-             * *   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.
-             * *   If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.
+             * <strong>example:</strong>
+             * <p>InUse</p>
              */
             public Builder resourceStatus(String resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -301,7 +340,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ECS::NetworkInterface</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -309,7 +351,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the resource.
+             * <p>The tags of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;key1&quot;:[&quot;value2&quot;]}</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -325,7 +370,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the resource change.
+             * <p>The version of the resource change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Long version) {
                 this.version = version;
@@ -339,9 +387,15 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDiscoveredResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDiscoveredResourcesResponseBody</p>
+     */
     public static class DiscoveredResourceProfiles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiscoveredResourceProfileList")
-        private java.util.List < DiscoveredResourceProfileList> discoveredResourceProfileList;
+        private java.util.List<DiscoveredResourceProfileList> discoveredResourceProfileList;
 
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -370,7 +424,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         /**
          * @return discoveredResourceProfileList
          */
-        public java.util.List < DiscoveredResourceProfileList> getDiscoveredResourceProfileList() {
+        public java.util.List<DiscoveredResourceProfileList> getDiscoveredResourceProfileList() {
             return this.discoveredResourceProfileList;
         }
 
@@ -396,21 +450,24 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DiscoveredResourceProfileList> discoveredResourceProfileList; 
+            private java.util.List<DiscoveredResourceProfileList> discoveredResourceProfileList; 
             private Integer maxResults; 
             private String nextToken; 
             private Integer totalCount; 
 
             /**
-             * The details of the resources.
+             * <p>The details of the resources.</p>
              */
-            public Builder discoveredResourceProfileList(java.util.List < DiscoveredResourceProfileList> discoveredResourceProfileList) {
+            public Builder discoveredResourceProfileList(java.util.List<DiscoveredResourceProfileList> discoveredResourceProfileList) {
                 this.discoveredResourceProfileList = discoveredResourceProfileList;
                 return this;
             }
 
             /**
-             * The maximum number of entries returned on each page.
+             * <p>The maximum number of entries returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -418,7 +475,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * A pagination token. It can be used in the next request to retrieve a new page of results.
+             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>161259599160****</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -426,7 +486,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of resources.
+             * <p>The total number of resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

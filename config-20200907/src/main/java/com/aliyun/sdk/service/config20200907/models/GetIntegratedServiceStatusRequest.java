@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIntegratedServiceStatusRequest} extends {@link RequestModel}
  *
  * <p>GetIntegratedServiceStatusRequest</p>
@@ -54,12 +60,16 @@ public class GetIntegratedServiceStatusRequest extends Request {
         } 
 
         /**
-         * The identity of the cloud service that is integrated with Cloud Config. Valid values:
-         * <p>
+         * <p>The identity of the cloud service that is integrated with Cloud Config. Valid values:</p>
+         * <ul>
+         * <li>eventbridge: EventBridge</li>
+         * <li>cms: CloudMonitor</li>
+         * <li>bpstudio: Cloud Architect Design Tools</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   eventbridge: EventBridge
-         * *   cms: CloudMonitor
-         * *   bpstudio: Cloud Architect Design Tools
+         * <strong>example:</strong>
+         * <p>cadt</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putBodyParameter("ServiceCode", serviceCode);

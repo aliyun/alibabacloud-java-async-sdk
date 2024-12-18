@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateResourceConfigurationTimelineRequest} extends {@link RequestModel}
  *
  * <p>GetAggregateResourceConfigurationTimelineRequest</p>
@@ -185,10 +191,12 @@ public class GetAggregateResourceConfigurationTimelineRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-5885626622af0008****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -197,7 +205,10 @@ public class GetAggregateResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The default value indicates the time when the GetAggregateResourceConfigurationTimeline operation is called. Unit: milliseconds.
+         * <p>The end of the time range to query. The default value indicates the time when the GetAggregateResourceConfigurationTimeline operation is called. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625821156000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -206,7 +217,10 @@ public class GetAggregateResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return for a single request. Valid values: 1 to 100.
+         * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -215,7 +229,10 @@ public class GetAggregateResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * The `token` that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.
+         * <p>The <code>token</code> that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IWBjqMYSy0is7zSMGu16****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -224,10 +241,12 @@ public class GetAggregateResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the resource resides.
-         * <p>
+         * <p>The ID of the region in which the resource resides.</p>
+         * <p>For more information about how to obtain the ID of a region, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](~~265983~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -236,7 +255,10 @@ public class GetAggregateResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the resource in the account group belongs.
+         * <p>The ID of the Alibaba Cloud account to which the resource in the account group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
          */
         public Builder resourceAccountId(Long resourceAccountId) {
             this.putQueryParameter("ResourceAccountId", resourceAccountId);
@@ -245,10 +267,12 @@ public class GetAggregateResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * The resource ID.
-         * <p>
+         * <p>The resource ID.</p>
+         * <p>For more information about how to query the ID of a resource, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
+         * <strong>example:</strong>
+         * <p>new-bucket</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -266,10 +290,12 @@ public class GetAggregateResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/265983.html">ListAggregateDiscoveredResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
+         * <strong>example:</strong>
+         * <p>ACS::OSS::Bucket</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -278,7 +304,10 @@ public class GetAggregateResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.
+         * <p>The beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1623211156000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

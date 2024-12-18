@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCompliancePackTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCompliancePackTemplatesResponseBody</p>
@@ -49,7 +55,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the compliance package templates returned.
+         * <p>The information about the compliance package templates returned.</p>
          */
         public Builder compliancePackTemplatesResult(CompliancePackTemplatesResult compliancePackTemplatesResult) {
             this.compliancePackTemplatesResult = compliancePackTemplatesResult;
@@ -57,7 +63,10 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D67FC82F-25AE-4268-A94C-3348340748F9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCompliancePackTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCompliancePackTemplatesResponseBody</p>
+     */
     public static class ConfigRuleParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
@@ -121,7 +136,10 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             private Boolean required; 
 
             /**
-             * The name of the input parameter of the managed rule.
+             * <p>The name of the input parameter of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>days</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -129,7 +147,10 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the input parameter of the managed rule.
+             * <p>The value of the input parameter of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -137,11 +158,14 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter is required in the managed rule. Valid values:
-             * <p>
+             * <p>Indicates whether the parameter is required in the managed rule. Valid values:</p>
+             * <ul>
+             * <li>true: required</li>
+             * <li>false: optional</li>
+             * </ul>
              * 
-             * *   true: required
-             * *   false: optional
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -155,9 +179,15 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCompliancePackTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCompliancePackTemplatesResponseBody</p>
+     */
     public static class ConfigRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigRuleParameters")
-        private java.util.List < ConfigRuleParameters> configRuleParameters;
+        private java.util.List<ConfigRuleParameters> configRuleParameters;
 
         @com.aliyun.core.annotation.NameInMap("ControlDescription")
         private String controlDescription;
@@ -206,7 +236,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         /**
          * @return configRuleParameters
          */
-        public java.util.List < ConfigRuleParameters> getConfigRuleParameters() {
+        public java.util.List<ConfigRuleParameters> getConfigRuleParameters() {
             return this.configRuleParameters;
         }
 
@@ -267,7 +297,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ConfigRuleParameters> configRuleParameters; 
+            private java.util.List<ConfigRuleParameters> configRuleParameters; 
             private String controlDescription; 
             private String controlId; 
             private Boolean defaultEnable; 
@@ -278,15 +308,18 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             private Integer riskLevel; 
 
             /**
-             * The input parameter of the managed rule.
+             * <p>The input parameter of the managed rule.</p>
              */
-            public Builder configRuleParameters(java.util.List < ConfigRuleParameters> configRuleParameters) {
+            public Builder configRuleParameters(java.util.List<ConfigRuleParameters> configRuleParameters) {
                 this.configRuleParameters = configRuleParameters;
                 return this;
             }
 
             /**
-             * The description of the regulation. This parameter is available only for regulation compliance packages.
+             * <p>The description of the regulation. This parameter is available only for regulation compliance packages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No classic networks exist.</p>
              */
             public Builder controlDescription(String controlDescription) {
                 this.controlDescription = controlDescription;
@@ -294,10 +327,13 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The regulation ID.
-             * <p>
+             * <p>The regulation ID.</p>
+             * <blockquote>
+             * <p> This parameter is available only for regulation compliance packages.</p>
+             * </blockquote>
              * 
-             * >  This parameter is available only for regulation compliance packages.
+             * <strong>example:</strong>
+             * <p>3.1</p>
              */
             public Builder controlId(String controlId) {
                 this.controlId = controlId;
@@ -305,11 +341,14 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rules are enabled together with the compliance package. Valid values:
-             * <p>
+             * <p>Indicates whether the rules are enabled together with the compliance package. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder defaultEnable(Boolean defaultEnable) {
                 this.defaultEnable = defaultEnable;
@@ -317,7 +356,10 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>If the expiration time of the SLB certificate is later than the specified number of days after the check time, the configuration is considered compliant. Default value: 90 days.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -325,7 +367,10 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the managed rule.
+             * <p>The identifier of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slb-servercertificate-expired-check</p>
              */
             public Builder managedRuleIdentifier(String managedRuleIdentifier) {
                 this.managedRuleIdentifier = managedRuleIdentifier;
@@ -333,7 +378,10 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the managed rule.
+             * <p>The name of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slb-servercertificate-expired-check</p>
              */
             public Builder managedRuleName(String managedRuleName) {
                 this.managedRuleName = managedRuleName;
@@ -341,7 +389,10 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The types of the resources evaluated based on the rule.
+             * <p>The types of the resources evaluated based on the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::SLB::ServerCertificate</p>
              */
             public Builder resourceTypesScope(String resourceTypesScope) {
                 this.resourceTypesScope = resourceTypesScope;
@@ -349,12 +400,15 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the managed rule. Valid values:
-             * <p>
+             * <p>The risk level of the managed rule. Valid values:</p>
+             * <ul>
+             * <li>1: high</li>
+             * <li>2: medium</li>
+             * <li>3: low</li>
+             * </ul>
              * 
-             * *   1: high
-             * *   2: medium
-             * *   3: low
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -368,6 +422,12 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCompliancePackTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCompliancePackTemplatesResponseBody</p>
+     */
     public static class CompliancePackTemplates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompliancePackTemplateId")
         private String compliancePackTemplateId;
@@ -376,7 +436,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         private String compliancePackTemplateName;
 
         @com.aliyun.core.annotation.NameInMap("ConfigRules")
-        private java.util.List < ConfigRules> configRules;
+        private java.util.List<ConfigRules> configRules;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -425,7 +485,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         /**
          * @return configRules
          */
-        public java.util.List < ConfigRules> getConfigRules() {
+        public java.util.List<ConfigRules> getConfigRules() {
             return this.configRules;
         }
 
@@ -460,14 +520,17 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         public static final class Builder {
             private String compliancePackTemplateId; 
             private String compliancePackTemplateName; 
-            private java.util.List < ConfigRules> configRules; 
+            private java.util.List<ConfigRules> configRules; 
             private String description; 
             private String labels; 
             private Integer lastUpdate; 
             private Integer riskLevel; 
 
             /**
-             * The ID of the compliance package template.
+             * <p>The ID of the compliance package template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ct-d254ff4e06a300cf****</p>
              */
             public Builder compliancePackTemplateId(String compliancePackTemplateId) {
                 this.compliancePackTemplateId = compliancePackTemplateId;
@@ -475,7 +538,10 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compliance package template.
+             * <p>The name of the compliance package template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BestPracticesForResourceStability</p>
              */
             public Builder compliancePackTemplateName(String compliancePackTemplateName) {
                 this.compliancePackTemplateName = compliancePackTemplateName;
@@ -483,15 +549,18 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The default rules in the compliance package.
+             * <p>The default rules in the compliance package.</p>
              */
-            public Builder configRules(java.util.List < ConfigRules> configRules) {
+            public Builder configRules(java.util.List<ConfigRules> configRules) {
                 this.configRules = configRules;
                 return this;
             }
 
             /**
-             * The description of the compliance package.
+             * <p>The description of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -499,7 +568,10 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the compliance package.
+             * <p>The tag of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tagKey-1</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -507,7 +579,10 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the compliance package was last updated.
+             * <p>The time when the compliance package was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1663408308</p>
              */
             public Builder lastUpdate(Integer lastUpdate) {
                 this.lastUpdate = lastUpdate;
@@ -515,12 +590,15 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the managed rule in the compliance package. Valid values:
-             * <p>
+             * <p>The risk level of the managed rule in the compliance package. Valid values:</p>
+             * <ul>
+             * <li>1: high</li>
+             * <li>2: medium</li>
+             * <li>3: low</li>
+             * </ul>
              * 
-             * *   1: high
-             * *   2: medium
-             * *   3: low
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -534,9 +612,15 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCompliancePackTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCompliancePackTemplatesResponseBody</p>
+     */
     public static class CompliancePackTemplatesResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompliancePackTemplates")
-        private java.util.List < CompliancePackTemplates> compliancePackTemplates;
+        private java.util.List<CompliancePackTemplates> compliancePackTemplates;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -565,7 +649,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         /**
          * @return compliancePackTemplates
          */
-        public java.util.List < CompliancePackTemplates> getCompliancePackTemplates() {
+        public java.util.List<CompliancePackTemplates> getCompliancePackTemplates() {
             return this.compliancePackTemplates;
         }
 
@@ -591,21 +675,24 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CompliancePackTemplates> compliancePackTemplates; 
+            private java.util.List<CompliancePackTemplates> compliancePackTemplates; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Long totalCount; 
 
             /**
-             * The compliance package templates.
+             * <p>The compliance package templates.</p>
              */
-            public Builder compliancePackTemplates(java.util.List < CompliancePackTemplates> compliancePackTemplates) {
+            public Builder compliancePackTemplates(java.util.List<CompliancePackTemplates> compliancePackTemplates) {
                 this.compliancePackTemplates = compliancePackTemplates;
                 return this;
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -613,7 +700,10 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -621,7 +711,10 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of the compliance package templates returned.
+             * <p>The total number of the compliance package templates returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

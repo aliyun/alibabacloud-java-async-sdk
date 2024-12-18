@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAggregatorsResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAggregatorsResponseBody</p>
@@ -49,7 +55,7 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder operateAggregatorsResult(OperateAggregatorsResult operateAggregatorsResult) {
             this.operateAggregatorsResult = operateAggregatorsResult;
@@ -57,7 +63,10 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8195B664-9565-4685-89AC-8B5F04B44B92</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteAggregatorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteAggregatorsResponseBody</p>
+     */
     public static class OperateAggregators extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
@@ -121,7 +136,10 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The ID of the account group.
+             * <p>The ID of the account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-dacf86d8314e00eb****</p>
              */
             public Builder aggregatorId(String aggregatorId) {
                 this.aggregatorId = aggregatorId;
@@ -129,10 +147,13 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned.
-             * <p>
+             * <p>The error code returned.</p>
+             * <blockquote>
+             * <p>No error code is returned for the account group if the account group is deleted.</p>
+             * </blockquote>
              * 
-             * > No error code is returned for the account group if the account group is deleted.
+             * <strong>example:</strong>
+             * <p>AccountNotExisted</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -140,11 +161,14 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li>true: The request was successful.</li>
+             * <li>false: The request failed.</li>
+             * </ul>
              * 
-             * *   true: The request was successful.
-             * *   false: The request failed.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -158,9 +182,15 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteAggregatorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteAggregatorsResponseBody</p>
+     */
     public static class OperateAggregatorsResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperateAggregators")
-        private java.util.List < OperateAggregators> operateAggregators;
+        private java.util.List<OperateAggregators> operateAggregators;
 
         private OperateAggregatorsResult(Builder builder) {
             this.operateAggregators = builder.operateAggregators;
@@ -177,17 +207,17 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
         /**
          * @return operateAggregators
          */
-        public java.util.List < OperateAggregators> getOperateAggregators() {
+        public java.util.List<OperateAggregators> getOperateAggregators() {
             return this.operateAggregators;
         }
 
         public static final class Builder {
-            private java.util.List < OperateAggregators> operateAggregators; 
+            private java.util.List<OperateAggregators> operateAggregators; 
 
             /**
-             * The details of the account group.
+             * <p>The details of the account group.</p>
              */
-            public Builder operateAggregators(java.util.List < OperateAggregators> operateAggregators) {
+            public Builder operateAggregators(java.util.List<OperateAggregators> operateAggregators) {
                 this.operateAggregators = operateAggregators;
                 return this;
             }

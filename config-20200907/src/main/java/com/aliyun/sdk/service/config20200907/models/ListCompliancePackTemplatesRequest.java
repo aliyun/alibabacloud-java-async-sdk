@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCompliancePackTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListCompliancePackTemplatesRequest</p>
@@ -96,7 +102,10 @@ public class ListCompliancePackTemplatesRequest extends Request {
         } 
 
         /**
-         * The ID of the compliance package template.
+         * <p>The ID of the compliance package template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ct-d254ff4e06a300cf****</p>
          */
         public Builder compliancePackTemplateId(String compliancePackTemplateId) {
             this.putQueryParameter("CompliancePackTemplateId", compliancePackTemplateId);
@@ -105,10 +114,11 @@ public class ListCompliancePackTemplatesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1</p>
          * 
-         * Pages start from page 1. Default value: 1
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -117,10 +127,11 @@ public class ListCompliancePackTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -129,7 +140,10 @@ public class ListCompliancePackTemplatesRequest extends Request {
         }
 
         /**
-         * The types of the resources evaluated based on the rule. If you configure this parameter, only the rules that include the resource types in the compliance package template are returned.
+         * <p>The types of the resources evaluated based on the rule. If you configure this parameter, only the rules that include the resource types in the compliance package template are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         public Builder resourceTypes(String resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);

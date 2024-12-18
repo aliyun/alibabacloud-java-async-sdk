@@ -1,16 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConfigRulesRequest} extends {@link RequestModel}
  *
  * <p>ListConfigRulesRequest</p>
  */
 public class ListConfigRulesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompliancePackId")
+    private String compliancePackId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ComplianceType")
     private String complianceType;
@@ -47,6 +57,7 @@ public class ListConfigRulesRequest extends Request {
 
     private ListConfigRulesRequest(Builder builder) {
         super(builder);
+        this.compliancePackId = builder.compliancePackId;
         this.complianceType = builder.complianceType;
         this.configRuleName = builder.configRuleName;
         this.configRuleState = builder.configRuleState;
@@ -68,6 +79,13 @@ public class ListConfigRulesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return compliancePackId
+     */
+    public String getCompliancePackId() {
+        return this.compliancePackId;
     }
 
     /**
@@ -127,6 +145,7 @@ public class ListConfigRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListConfigRulesRequest, Builder> {
+        private String compliancePackId; 
         private String complianceType; 
         private String configRuleName; 
         private String configRuleState; 
@@ -142,6 +161,7 @@ public class ListConfigRulesRequest extends Request {
 
         private Builder(ListConfigRulesRequest request) {
             super(request);
+            this.compliancePackId = request.compliancePackId;
             this.complianceType = request.complianceType;
             this.configRuleName = request.configRuleName;
             this.configRuleState = request.configRuleState;
@@ -153,13 +173,25 @@ public class ListConfigRulesRequest extends Request {
         } 
 
         /**
-         * The compliance evaluation result of the rule. Valid values:
-         * <p>
+         * CompliancePackId.
+         */
+        public Builder compliancePackId(String compliancePackId) {
+            this.putQueryParameter("CompliancePackId", compliancePackId);
+            this.compliancePackId = compliancePackId;
+            return this;
+        }
+
+        /**
+         * <p>The compliance evaluation result of the rule. Valid values:</p>
+         * <ul>
+         * <li>COMPLIANT: The resources are evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resources are evaluated as non-compliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
+         * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+         * </ul>
          * 
-         * *   COMPLIANT: The resources are evaluated as compliant.
-         * *   NON_COMPLIANT: The resources are evaluated as non-compliant.
-         * *   NOT_APPLICABLE: The rule does not apply to the resources.
-         * *   INSUFFICIENT_DATA: No resource data is available.
+         * <strong>example:</strong>
+         * <p>COMPLIANT</p>
          */
         public Builder complianceType(String complianceType) {
             this.putQueryParameter("ComplianceType", complianceType);
@@ -168,7 +200,10 @@ public class ListConfigRulesRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-name</p>
          */
         public Builder configRuleName(String configRuleName) {
             this.putQueryParameter("ConfigRuleName", configRuleName);
@@ -177,13 +212,16 @@ public class ListConfigRulesRequest extends Request {
         }
 
         /**
-         * The status of the rule. Valid values:
-         * <p>
+         * <p>The status of the rule. Valid values:</p>
+         * <ul>
+         * <li>ACTIVE: The rule is enabled.</li>
+         * <li>DELETING: The rule is being deleted.</li>
+         * <li>EVALUATING: The rule is being used to evaluate resource configurations.</li>
+         * <li>INACTIVE: The rule is disabled.</li>
+         * </ul>
          * 
-         * *   ACTIVE: The rule is enabled.
-         * *   DELETING: The rule is being deleted.
-         * *   EVALUATING: The rule is being used to evaluate resource configurations.
-         * *   INACTIVE: The rule is disabled.
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder configRuleState(String configRuleState) {
             this.putQueryParameter("ConfigRuleState", configRuleState);
@@ -192,10 +230,11 @@ public class ListConfigRulesRequest extends Request {
         }
 
         /**
-         * The query keyword.
-         * <p>
+         * <p>The query keyword.</p>
+         * <p>You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.</p>
          * 
-         * You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -204,10 +243,11 @@ public class ListConfigRulesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Page numbers start from 1. Default value: 1.</p>
          * 
-         * Page numbers start from 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,10 +256,11 @@ public class ListConfigRulesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100. A minimum of 1 entry can be returned per page. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. A minimum of 1 entry can be returned per page. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -228,7 +269,10 @@ public class ListConfigRulesRequest extends Request {
         }
 
         /**
-         * The type of the resources to be evaluated based on the rule.
+         * <p>The type of the resources to be evaluated based on the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         public Builder resourceTypes(String resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
@@ -237,12 +281,15 @@ public class ListConfigRulesRequest extends Request {
         }
 
         /**
-         * The risk level of the resources that are not compliant with the rule. Valid values:
-         * <p>
+         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <ul>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
+         * </ul>
          * 
-         * *   1: high
-         * *   2: medium
-         * *   3: low
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskLevel(Integer riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);

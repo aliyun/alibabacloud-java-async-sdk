@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceConfigurationTimelineResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceConfigurationTimelineResponseBody</p>
@@ -49,7 +55,10 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         private ResourceConfigurationTimeline resourceConfigurationTimeline; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ED9CD1B3-286C-4E05-A765-5E1E0B9BC2AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration timeline of the resource.
+         * <p>The configuration timeline of the resource.</p>
          */
         public Builder resourceConfigurationTimeline(ResourceConfigurationTimeline resourceConfigurationTimeline) {
             this.resourceConfigurationTimeline = resourceConfigurationTimeline;
@@ -70,6 +79,12 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceConfigurationTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceConfigurationTimelineResponseBody</p>
+     */
     public static class ConfigurationList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -241,7 +256,10 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             private String tags; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -249,7 +267,10 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder availabilityZone(String availabilityZone) {
                 this.availabilityZone = availabilityZone;
@@ -257,7 +278,10 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource change snapshot was recorded. Unit: milliseconds.
+             * <p>The time when the resource change snapshot was recorded. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624961156000</p>
              */
             public Builder captureTime(String captureTime) {
                 this.captureTime = captureTime;
@@ -265,7 +289,10 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the resource changes that trigger the compliance evaluation.
+             * <p>The details of the resource changes that trigger the compliance evaluation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;AccessControlList&quot;:[null,{&quot;Grant&quot;:&quot;private&quot;}],&quot;ServerSideEncryptionRule&quot;:[null,{&quot;SSEAlgorithm&quot;:&quot;None&quot;}],&quot;CreationDate&quot;:[null,&quot;2021-06-29T10:05:12.000Z&quot;],&quot;Owner&quot;:[null,{&quot;DisplayName&quot;:&quot;100931896542****&quot;,&quot;ID&quot;:&quot;100931896542****&quot;}],&quot;BucketPolicy&quot;:[null,{&quot;LogPrefix&quot;:&quot;&quot;,&quot;LogBucket&quot;:&quot;&quot;}],&quot;StorageClass&quot;:[null,&quot;Standard&quot;],&quot;ExtranetEndpoint&quot;:[null,&quot;oss-cn-hangzhou.aliyuncs.com&quot;],&quot;DataRedundancyType&quot;:[null,&quot;LRS&quot;],&quot;AllowEmptyReferer&quot;:[null,&quot;true&quot;],&quot;IntranetEndpoint&quot;:[null,&quot;oss-cn-hangzhou-internal.aliyuncs.com&quot;],&quot;Name&quot;:[null,&quot;new-bucket&quot;],&quot;Location&quot;:[null,&quot;oss-cn-hangzhou&quot;]}</p>
              */
             public Builder configurationDiff(String configurationDiff) {
                 this.configurationDiff = configurationDiff;
@@ -273,7 +300,10 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -281,7 +311,10 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The details of each resource that is associated with the current resource, including the region ID, resource relationship, resource ID, and resource type.
+             * <p>The details of each resource that is associated with the current resource, including the region ID, resource relationship, resource ID, and resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder relationship(String relationship) {
                 this.relationship = relationship;
@@ -289,7 +322,10 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The change records of the resource relationship.
+             * <p>The change records of the resource relationship.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder relationshipDiff(String relationshipDiff) {
                 this.relationshipDiff = relationshipDiff;
@@ -297,7 +333,10 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource was created. Unit: milliseconds.
+             * <p>The time when the resource was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624961112000</p>
              */
             public Builder resourceCreateTime(String resourceCreateTime) {
                 this.resourceCreateTime = resourceCreateTime;
@@ -305,20 +344,25 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource change event. Valid values:
-             * <p>
+             * <p>The type of the resource change event. Valid values:</p>
+             * <ul>
+             * <li>DISCOVERED: A resource is created.</li>
+             * <li>DISCOVERED_REVISED: A resource is created by periodic remediation tasks.</li>
+             * <li>MODIFY: A resource is modified.</li>
+             * <li>MODIFY_REVISED: A resource is modified by periodic remediation tasks.</li>
+             * <li>REMOVE: A resource is deleted.</li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>To ensure the integrity of resources, periodic remediation tasks are run to check data and generate events that indicate the creation of new resources. Such events are infrequent.</p>
+             * </li>
+             * <li><p>The time when a resource change event is generated by a periodic remediation task is considered as the detection time of Cloud Config. The detection time is later than the time when the resource is modified.</p>
+             * </li>
+             * </ul>
              * 
-             * *   DISCOVERED: A resource is created.
-             * *   DISCOVERED_REVISED: A resource is created by periodic remediation tasks.
-             * *   MODIFY: A resource is modified.
-             * *   MODIFY_REVISED: A resource is modified by periodic remediation tasks.
-             * *   REMOVE: A resource is deleted.
-             * 
-             * > 
-             * 
-             * *   To ensure the integrity of resources, periodic remediation tasks are run to check data and generate events that indicate the creation of new resources. Such events are infrequent.
-             * 
-             * *   The time when a resource change event is generated by a periodic remediation task is considered as the detection time of Cloud Config. The detection time is later than the time when the resource is modified.
+             * <strong>example:</strong>
+             * <p>DISCOVERED</p>
              */
             public Builder resourceEventType(String resourceEventType) {
                 this.resourceEventType = resourceEventType;
@@ -326,7 +370,10 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new-bucket</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -334,7 +381,10 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The resource name.
+             * <p>The resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new-bucket</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -342,7 +392,10 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::OSS::Bucket</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -350,7 +403,10 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the resource.
+             * <p>The tags of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;&quot;hc&quot;&quot;:[&quot;&quot;value2&quot;&quot;]}</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -364,9 +420,15 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceConfigurationTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceConfigurationTimelineResponseBody</p>
+     */
     public static class ResourceConfigurationTimeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigurationList")
-        private java.util.List < ConfigurationList> configurationList;
+        private java.util.List<ConfigurationList> configurationList;
 
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -391,7 +453,7 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         /**
          * @return configurationList
          */
-        public java.util.List < ConfigurationList> getConfigurationList() {
+        public java.util.List<ConfigurationList> getConfigurationList() {
             return this.configurationList;
         }
 
@@ -410,20 +472,23 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ConfigurationList> configurationList; 
+            private java.util.List<ConfigurationList> configurationList; 
             private Integer maxResults; 
             private String nextToken; 
 
             /**
-             * The configuration changes on the configuration timeline.
+             * <p>The configuration changes on the configuration timeline.</p>
              */
-            public Builder configurationList(java.util.List < ConfigurationList> configurationList) {
+            public Builder configurationList(java.util.List<ConfigurationList> configurationList) {
                 this.configurationList = configurationList;
                 return this;
             }
 
             /**
-             * The maximum number of entries returned for a single request.
+             * <p>The maximum number of entries returned for a single request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -431,7 +496,10 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * A pagination token. It can be used in the next request to retrieve a new page of results.
+             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IWBjqMYSy0is7zSMGu16****</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

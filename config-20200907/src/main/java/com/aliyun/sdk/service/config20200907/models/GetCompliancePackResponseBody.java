@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCompliancePackResponseBody} extends {@link TeaModel}
  *
  * <p>GetCompliancePackResponseBody</p>
@@ -49,7 +55,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the compliance package.
+         * <p>The details of the compliance package.</p>
          */
         public Builder compliancePack(CompliancePack compliancePack) {
             this.compliancePack = compliancePack;
@@ -57,7 +63,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompliancePackResponseBody</p>
+     */
     public static class ConfigRuleParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
@@ -121,7 +136,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             private Boolean required; 
 
             /**
-             * The name of the input parameter.
+             * <p>The name of the input parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bandwidth</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -129,7 +147,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the input parameter.
+             * <p>The value of the input parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -137,11 +158,14 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the input parameters are required. Valid values:
-             * <p>
+             * <p>Indicates whether the input parameters are required. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -155,6 +179,12 @@ public class GetCompliancePackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompliancePackResponseBody</p>
+     */
     public static class ConfigRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
@@ -163,7 +193,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         private String configRuleName;
 
         @com.aliyun.core.annotation.NameInMap("ConfigRuleParameters")
-        private java.util.List < ConfigRuleParameters> configRuleParameters;
+        private java.util.List<ConfigRuleParameters> configRuleParameters;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -212,7 +242,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         /**
          * @return configRuleParameters
          */
-        public java.util.List < ConfigRuleParameters> getConfigRuleParameters() {
+        public java.util.List<ConfigRuleParameters> getConfigRuleParameters() {
             return this.configRuleParameters;
         }
 
@@ -247,14 +277,17 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public static final class Builder {
             private String configRuleId; 
             private String configRuleName; 
-            private java.util.List < ConfigRuleParameters> configRuleParameters; 
+            private java.util.List<ConfigRuleParameters> configRuleParameters; 
             private String description; 
             private String managedRuleIdentifier; 
             private String resourceTypesScope; 
             private Integer riskLevel; 
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cr-a260626622af0005****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -262,7 +295,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The rule name.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-bandwidth-limit</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -270,15 +306,18 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The input parameters of the rule.
+             * <p>The input parameters of the rule.</p>
              */
-            public Builder configRuleParameters(java.util.List < ConfigRuleParameters> configRuleParameters) {
+            public Builder configRuleParameters(java.util.List<ConfigRuleParameters> configRuleParameters) {
                 this.configRuleParameters = configRuleParameters;
                 return this;
             }
 
             /**
-             * The rule description.
+             * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -286,7 +325,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the managed rule.
+             * <p>The identifier of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-bandwidth-limit</p>
              */
             public Builder managedRuleIdentifier(String managedRuleIdentifier) {
                 this.managedRuleIdentifier = managedRuleIdentifier;
@@ -294,7 +336,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource evaluated based on the rule. Separate multiple resource types with commas (,).
+             * <p>The type of the resource evaluated based on the rule. Separate multiple resource types with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::EIP::EipAddress</p>
              */
             public Builder resourceTypesScope(String resourceTypesScope) {
                 this.resourceTypesScope = resourceTypesScope;
@@ -302,12 +347,15 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that do not comply with the rule. Valid values:
-             * <p>
+             * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+             * <ul>
+             * <li>1: high</li>
+             * <li>2: medium</li>
+             * <li>3: low</li>
+             * </ul>
              * 
-             * *   1: high
-             * *   2: medium
-             * *   3: low
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -321,6 +369,12 @@ public class GetCompliancePackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompliancePackResponseBody</p>
+     */
     public static class ExcludeTagsScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -360,7 +414,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-2</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -368,7 +425,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-2</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -382,6 +442,12 @@ public class GetCompliancePackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompliancePackResponseBody</p>
+     */
     public static class TagsScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -421,7 +487,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -429,7 +498,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -443,6 +515,12 @@ public class GetCompliancePackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompliancePackResponseBody</p>
+     */
     public static class Scope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExcludeRegionIdsScope")
         private String excludeRegionIdsScope;
@@ -455,7 +533,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ExcludeTagsScope")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < ExcludeTagsScope> excludeTagsScope;
+        private java.util.List<ExcludeTagsScope> excludeTagsScope;
 
         @com.aliyun.core.annotation.NameInMap("RegionIdsScope")
         private String regionIdsScope;
@@ -474,7 +552,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("TagsScope")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < TagsScope> tagsScope;
+        private java.util.List<TagsScope> tagsScope;
 
         private Scope(Builder builder) {
             this.excludeRegionIdsScope = builder.excludeRegionIdsScope;
@@ -521,7 +599,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         /**
          * @return excludeTagsScope
          */
-        public java.util.List < ExcludeTagsScope> getExcludeTagsScope() {
+        public java.util.List<ExcludeTagsScope> getExcludeTagsScope() {
             return this.excludeTagsScope;
         }
 
@@ -563,7 +641,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         /**
          * @return tagsScope
          */
-        public java.util.List < TagsScope> getTagsScope() {
+        public java.util.List<TagsScope> getTagsScope() {
             return this.tagsScope;
         }
 
@@ -571,16 +649,19 @@ public class GetCompliancePackResponseBody extends TeaModel {
             private String excludeRegionIdsScope; 
             private String excludeResourceGroupIdsScope; 
             private String excludeResourceIdsScope; 
-            private java.util.List < ExcludeTagsScope> excludeTagsScope; 
+            private java.util.List<ExcludeTagsScope> excludeTagsScope; 
             private String regionIdsScope; 
             private String resourceGroupIdsScope; 
             private String resourceIdsScope; 
             private String tagKeyScope; 
             private String tagValueScope; 
-            private java.util.List < TagsScope> tagsScope; 
+            private java.util.List<TagsScope> tagsScope; 
 
             /**
-             * ExcludeRegionIdsScope.
+             * <p>Excluded region scope, multiple regions should be separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder excludeRegionIdsScope(String excludeRegionIdsScope) {
                 this.excludeRegionIdsScope = excludeRegionIdsScope;
@@ -588,7 +669,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeResourceGroupIdsScope.
+             * <p>Excluded resourceGroup scope, multiple resourceGroup should be separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzc7r7rhx****</p>
              */
             public Builder excludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
                 this.excludeResourceGroupIdsScope = excludeResourceGroupIdsScope;
@@ -596,7 +680,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource that you do not want to evaluate by using the compliance package.
+             * <p>The ID of the resource that you do not want to evaluate by using the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-8vbf3x310fn56ijfd****</p>
              */
             public Builder excludeResourceIdsScope(String excludeResourceIdsScope) {
                 this.excludeResourceIdsScope = excludeResourceIdsScope;
@@ -604,15 +691,19 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeTagsScope.
+             * <p>Exclude tag scope.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder excludeTagsScope(java.util.List < ExcludeTagsScope> excludeTagsScope) {
+            public Builder excludeTagsScope(java.util.List<ExcludeTagsScope> excludeTagsScope) {
                 this.excludeTagsScope = excludeTagsScope;
                 return this;
             }
 
             /**
-             * The ID of the region whose resources you want to evaluate by using the compliance package.
+             * <p>The ID of the region whose resources you want to evaluate by using the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionIdsScope(String regionIdsScope) {
                 this.regionIdsScope = regionIdsScope;
@@ -620,7 +711,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group whose resources you want to evaluate by using the compliance package.
+             * <p>The ID of the resource group whose resources you want to evaluate by using the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzc7r7rhx****</p>
              */
             public Builder resourceGroupIdsScope(String resourceGroupIdsScope) {
                 this.resourceGroupIdsScope = resourceGroupIdsScope;
@@ -628,7 +722,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceIdsScope.
+             * <p>Include ResourceId scope, multiple resourceIds should be separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-8vbf3x310fn56ijfd****</p>
              */
             public Builder resourceIdsScope(String resourceIdsScope) {
                 this.resourceIdsScope = resourceIdsScope;
@@ -636,7 +733,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key of the resource that you want to evaluate by using the compliance package.
+             * <p>The tag key of the resource that you want to evaluate by using the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder tagKeyScope(String tagKeyScope) {
                 this.tagKeyScope = tagKeyScope;
@@ -644,7 +744,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the resource that you want to evaluate by using the compliance package.
+             * <p>The tag value of the resource that you want to evaluate by using the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagValueScope(String tagValueScope) {
                 this.tagValueScope = tagValueScope;
@@ -652,9 +755,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * TagsScope.
+             * <p>Include tag scope.</p>
+             * <p>This parameter is required.</p>
              */
-            public Builder tagsScope(java.util.List < TagsScope> tagsScope) {
+            public Builder tagsScope(java.util.List<TagsScope> tagsScope) {
                 this.tagsScope = tagsScope;
                 return this;
             }
@@ -666,6 +770,12 @@ public class GetCompliancePackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCompliancePackResponseBody</p>
+     */
     public static class CompliancePack extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -680,7 +790,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         private String compliancePackTemplateId;
 
         @com.aliyun.core.annotation.NameInMap("ConfigRules")
-        private java.util.List < ConfigRules> configRules;
+        private java.util.List<ConfigRules> configRules;
 
         @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
@@ -753,7 +863,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         /**
          * @return configRules
          */
-        public java.util.List < ConfigRules> getConfigRules() {
+        public java.util.List<ConfigRules> getConfigRules() {
             return this.configRules;
         }
 
@@ -804,7 +914,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
             private String compliancePackId; 
             private String compliancePackName; 
             private String compliancePackTemplateId; 
-            private java.util.List < ConfigRules> configRules; 
+            private java.util.List<ConfigRules> configRules; 
             private Long createTimestamp; 
             private String description; 
             private Integer riskLevel; 
@@ -813,7 +923,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             private String templateContent; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the compliance package belongs.
+             * <p>The ID of the Alibaba Cloud account to which the compliance package belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -821,7 +934,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the compliance package.
+             * <p>The ID of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-a8a8626622af0082****</p>
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -829,7 +945,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compliance package.
+             * <p>The name of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-pack-name</p>
              */
             public Builder compliancePackName(String compliancePackName) {
                 this.compliancePackName = compliancePackName;
@@ -837,7 +956,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the compliance package template.
+             * <p>The ID of the compliance package template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ct-5f26ff4e06a300c4****</p>
              */
             public Builder compliancePackTemplateId(String compliancePackTemplateId) {
                 this.compliancePackTemplateId = compliancePackTemplateId;
@@ -845,15 +967,18 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The rules in the compliance package.
+             * <p>The rules in the compliance package.</p>
              */
-            public Builder configRules(java.util.List < ConfigRules> configRules) {
+            public Builder configRules(java.util.List<ConfigRules> configRules) {
                 this.configRules = configRules;
                 return this;
             }
 
             /**
-             * The timestamp when the compliance package was created. Unit: milliseconds.
+             * <p>The timestamp when the compliance package was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624245766000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -861,7 +986,10 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the compliance package.
+             * <p>The description of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-name</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -869,12 +997,15 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:
-             * <p>
+             * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
+             * <ul>
+             * <li>1: high</li>
+             * <li>2: medium</li>
+             * <li>3: low</li>
+             * </ul>
              * 
-             * *   1: high
-             * *   2: medium
-             * *   3: low
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -882,7 +1013,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group for which the compliance package took effect.
+             * <p>The resource group for which the compliance package took effect.</p>
              */
             public Builder scope(Scope scope) {
                 this.scope = scope;
@@ -890,11 +1021,14 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the compliance package. Valid values:
-             * <p>
+             * <p>The status of the compliance package. Valid values:</p>
+             * <ul>
+             * <li>ACTIVE: The compliance package is normal.</li>
+             * <li>CREATING: The compliance package is being created.</li>
+             * </ul>
              * 
-             * *   ACTIVE: The compliance package is normal.
-             * *   CREATING: The compliance package is being created.
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -902,7 +1036,39 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.
+             * <p>The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;configRuleTemplates&quot;: [
+             *         {
+             *           &quot;configRuleName&quot;: &quot;弹性IP实例带宽满足最低要求&quot;,
+             *           &quot;scope&quot;: {
+             *             &quot;complianceResourceTypes&quot;: [
+             *               &quot;ACS::EIP::EipAddress&quot;
+             *             ]
+             *           },
+             *           &quot;description&quot;: &quot;弹性IP实例可用带宽大于等于指定参数值，视为“合规”。默认值：10MB&quot;,
+             *           &quot;source&quot;: {
+             *             &quot;owner&quot;: &quot;ALIYUN&quot;,
+             *             &quot;identifier&quot;: &quot;eip-bandwidth-limit&quot;,
+             *             &quot;sourceDetails&quot;: [
+             *               {
+             *                 &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
+             *               }
+             *             ]
+             *           },
+             *           &quot;inputParameters&quot;: {
+             *             &quot;bandwidth&quot;: &quot;10&quot;
+             *           }
+             *         }
+             *       ],
+             *       &quot;compliancePackTemplate&quot;: {
+             *         &quot;riskLevel&quot;: 2,
+             *         &quot;compliancePackName&quot;: &quot;gy-test&quot;,
+             *         &quot;description&quot;: &quot;&quot;
+             *       }
+             *     }</p>
              */
             public Builder templateContent(String templateContent) {
                 this.templateContent = templateContent;

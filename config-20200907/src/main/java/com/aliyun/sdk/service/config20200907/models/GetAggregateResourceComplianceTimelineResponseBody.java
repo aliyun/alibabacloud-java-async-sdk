@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateResourceComplianceTimelineResponseBody} extends {@link TeaModel}
  *
  * <p>GetAggregateResourceComplianceTimelineResponseBody</p>
@@ -49,7 +55,10 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
         private ResourceComplianceTimeline resourceComplianceTimeline; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D53A78F-1EB8-4264-A554-72F07E34FAE6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
         }
 
         /**
-         * The information about the compliance timeline.
+         * <p>The information about the compliance timeline.</p>
          */
         public Builder resourceComplianceTimeline(ResourceComplianceTimeline resourceComplianceTimeline) {
             this.resourceComplianceTimeline = resourceComplianceTimeline;
@@ -70,6 +79,12 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link GetAggregateResourceComplianceTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateResourceComplianceTimelineResponseBody</p>
+     */
     public static class ComplianceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -229,7 +244,10 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
             private String tags; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -237,7 +255,10 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the zone in which the resource resides.
+             * <p>The ID of the zone in which the resource resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-f</p>
              */
             public Builder availabilityZone(String availabilityZone) {
                 this.availabilityZone = availabilityZone;
@@ -245,7 +266,10 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
             }
 
             /**
-             * The timestamp when the compliance evaluation was recorded. Unit: milliseconds.
+             * <p>The timestamp when the compliance evaluation was recorded. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1625200295276</p>
              */
             public Builder captureTime(Long captureTime) {
                 this.captureTime = captureTime;
@@ -253,7 +277,34 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
             }
 
             /**
-             * The information about the rules that evaluated the resource and the compliance evaluation result.
+             * <p>The information about the rules that evaluated the resource and the compliance evaluation result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;AccessControlList&quot;: {
+             *         &quot;Grant&quot;: &quot;private&quot;
+             *     },
+             *     &quot;ServerSideEncryptionRule&quot;: {
+             *         &quot;SSEAlgorithm&quot;: &quot;None&quot;
+             *     },
+             *     &quot;Comment&quot;: &quot;&quot;,
+             *     &quot;Owner&quot;: {
+             *         &quot;DisplayName&quot;: &quot;126672004088****&quot;,
+             *         &quot;ID&quot;: &quot;126672004088****&quot;
+             *     },
+             *     &quot;ResourceGroupId&quot;: &quot;rg-acfmy4dfoau****&quot;,
+             *     &quot;StorageClass&quot;: &quot;Standard&quot;,
+             *     &quot;DataRedundancyType&quot;: &quot;LRS&quot;,
+             *     &quot;AllowEmptyReferer&quot;: &quot;true&quot;,
+             *     &quot;Name&quot;: &quot;test-private-oss****&quot;,
+             *     &quot;BucketPolicy&quot;: {
+             *         &quot;LogPrefix&quot;: &quot;&quot;,
+             *         &quot;LogBucket&quot;: &quot;&quot;
+             *     },
+             *     &quot;ExtranetEndpoint&quot;: &quot;oss-cn-hangzhou.aliyuncs.com&quot;,
+             *     &quot;IntranetEndpoint&quot;: &quot;oss-cn-hangzhou-internal.aliyuncs.com&quot;,
+             *     &quot;Location&quot;: &quot;oss-cn-hangzhou&quot;
+             * }</p>
              */
             public Builder configuration(String configuration) {
                 this.configuration = configuration;
@@ -261,7 +312,15 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
             }
 
             /**
-             * The details of the resource change that triggered the compliance evaluation.
+             * <p>The details of the resource change that triggered the compliance evaluation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;ResourceGroupId&quot;: [
+             *         &quot;rg-acfmy4dfoau****&quot;,
+             *         &quot;rg-a3dmy4lksta****&quot;
+             *     ]
+             * }</p>
              */
             public Builder configurationDiff(String configurationDiff) {
                 this.configurationDiff = configurationDiff;
@@ -269,7 +328,10 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the region in which the resource resides.
+             * <p>The ID of the region in which the resource resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -277,7 +339,10 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
             }
 
             /**
-             * The timestamp when the resource was created. Unit: milliseconds.
+             * <p>The timestamp when the resource was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624961112000</p>
              */
             public Builder resourceCreateTime(Long resourceCreateTime) {
                 this.resourceCreateTime = resourceCreateTime;
@@ -285,7 +350,10 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-private-oss****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -293,7 +361,10 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
             }
 
             /**
-             * The name of the resource.
+             * <p>The name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-private-oss****</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -301,11 +372,14 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
             }
 
             /**
-             * The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:
-             * <p>
+             * <p>The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:</p>
+             * <ul>
+             * <li>If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</li>
+             * <li>If the ResourceType parameter is set to ACS::OSS::Bucket, the resource is an OSS bucket that does not have a specific state. In this case, this parameter is left empty.</li>
+             * </ul>
              * 
-             * *   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.
-             * *   If the ResourceType parameter is set to ACS::OSS::Bucket, the resource is an OSS bucket that does not have a specific state. In this case, this parameter is left empty.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder resourceStatus(String resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -313,7 +387,10 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::OSS::Bucket</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -321,7 +398,10 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
             }
 
             /**
-             * The tags of the resource.
+             * <p>The tags of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;&quot;hc&quot;&quot;:[&quot;&quot;value2&quot;&quot;]}</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -335,9 +415,15 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link GetAggregateResourceComplianceTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateResourceComplianceTimelineResponseBody</p>
+     */
     public static class ResourceComplianceTimeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComplianceList")
-        private java.util.List < ComplianceList> complianceList;
+        private java.util.List<ComplianceList> complianceList;
 
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -362,7 +448,7 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
         /**
          * @return complianceList
          */
-        public java.util.List < ComplianceList> getComplianceList() {
+        public java.util.List<ComplianceList> getComplianceList() {
             return this.complianceList;
         }
 
@@ -381,24 +467,27 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
         }
 
         public static final class Builder {
-            private java.util.List < ComplianceList> complianceList; 
+            private java.util.List<ComplianceList> complianceList; 
             private Integer maxResults; 
             private String nextToken; 
 
             /**
-             * The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:
-             * <p>
-             * 
-             * *   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.
-             * *   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.
+             * <p>The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:</p>
+             * <ul>
+             * <li>If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</li>
+             * <li>If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.</li>
+             * </ul>
              */
-            public Builder complianceList(java.util.List < ComplianceList> complianceList) {
+            public Builder complianceList(java.util.List<ComplianceList> complianceList) {
                 this.complianceList = complianceList;
                 return this;
             }
 
             /**
-             * The maximum number of entries returned for a single request.
+             * <p>The maximum number of entries returned for a single request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -406,7 +495,10 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
             }
 
             /**
-             * A pagination token. It can be used in the next request to retrieve a new page of results.
+             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5OVS5J4I1/UKTkHV5oNs****</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

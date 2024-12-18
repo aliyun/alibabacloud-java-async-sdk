@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAggregateResourceRelationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAggregateResourceRelationsResponseBody</p>
@@ -49,7 +55,10 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
         private ResourceRelations resourceRelations; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A25F9DE-4C8B-5AD3-A241-FFF5A259E5A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the relationship.
+         * <p>The result of the relationship.</p>
          */
         public Builder resourceRelations(ResourceRelations resourceRelations) {
             this.resourceRelations = resourceRelations;
@@ -70,6 +79,12 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAggregateResourceRelationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateResourceRelationsResponseBody</p>
+     */
     public static class ResourceRelationList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -169,7 +184,10 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             private String targetResourceType; 
 
             /**
-             * The Alibaba Cloud account ID of the resource owner.
+             * <p>The Alibaba Cloud account ID of the resource owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -177,15 +195,17 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the relationship between the resource and the object.
-             * <p>
+             * <p>The type of the relationship between the resource and the object.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>IsContained: The object is included as part of the resource.</li>
+             * <li>IsAttachedTo: The object is added to the resource.</li>
+             * <li>IsAssociatedIn: The object is associated with the resource.</li>
+             * <li>Contains: The object contains the resource.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   IsContained: The object is included as part of the resource.
-             * *   IsAttachedTo: The object is added to the resource.
-             * *   IsAssociatedIn: The object is associated with the resource.
-             * *   Contains: The object contains the resource.
+             * <strong>example:</strong>
+             * <p>IsAttachedTo</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -193,7 +213,10 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID of the current resource.
+             * <p>The resource ID of the current resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-j6cajg9yrfoh4sas****</p>
              */
             public Builder sourceResourceId(String sourceResourceId) {
                 this.sourceResourceId = sourceResourceId;
@@ -201,7 +224,10 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the current resource.
+             * <p>The region ID of the current resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder sourceResourceRegionId(String sourceResourceRegionId) {
                 this.sourceResourceRegionId = sourceResourceRegionId;
@@ -209,7 +235,10 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ECS::Instance</p>
              */
             public Builder sourceResourceType(String sourceResourceType) {
                 this.sourceResourceType = sourceResourceType;
@@ -217,7 +246,10 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID of the resource that is associated with the object.
+             * <p>The resource ID of the resource that is associated with the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-j6c8k731qbrc7fxi****</p>
              */
             public Builder targetResourceId(String targetResourceId) {
                 this.targetResourceId = targetResourceId;
@@ -225,7 +257,10 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource that is associated with the object.
+             * <p>The type of the resource that is associated with the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ECS::Disk</p>
              */
             public Builder targetResourceType(String targetResourceType) {
                 this.targetResourceType = targetResourceType;
@@ -239,6 +274,12 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAggregateResourceRelationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateResourceRelationsResponseBody</p>
+     */
     public static class ResourceRelations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -247,7 +288,7 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
         private String nextToken;
 
         @com.aliyun.core.annotation.NameInMap("ResourceRelationList")
-        private java.util.List < ResourceRelationList> resourceRelationList;
+        private java.util.List<ResourceRelationList> resourceRelationList;
 
         private ResourceRelations(Builder builder) {
             this.maxResults = builder.maxResults;
@@ -280,17 +321,20 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
         /**
          * @return resourceRelationList
          */
-        public java.util.List < ResourceRelationList> getResourceRelationList() {
+        public java.util.List<ResourceRelationList> getResourceRelationList() {
             return this.resourceRelationList;
         }
 
         public static final class Builder {
             private Integer maxResults; 
             private String nextToken; 
-            private java.util.List < ResourceRelationList> resourceRelationList; 
+            private java.util.List<ResourceRelationList> resourceRelationList; 
 
             /**
-             * The maximum number of entries returned on each page.
+             * <p>The maximum number of entries returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -298,7 +342,10 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The token that was used to initiate the next request.
+             * <p>The token that was used to initiate the next request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AcBjqMYSy0is7zSMGu16****</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -306,9 +353,9 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * An array that contains the relationships.
+             * <p>An array that contains the relationships.</p>
              */
-            public Builder resourceRelationList(java.util.List < ResourceRelationList> resourceRelationList) {
+            public Builder resourceRelationList(java.util.List<ResourceRelationList> resourceRelationList) {
                 this.resourceRelationList = resourceRelationList;
                 return this;
             }

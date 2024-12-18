@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateAggregateCompliancePackReportRequest} extends {@link RequestModel}
  *
  * <p>GenerateAggregateCompliancePackReportRequest</p>
@@ -83,10 +89,12 @@ public class GenerateAggregateCompliancePackReportRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-f632626622af0079****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putBodyParameter("AggregatorId", aggregatorId);
@@ -95,7 +103,10 @@ public class GenerateAggregateCompliancePackReportRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -104,10 +115,12 @@ public class GenerateAggregateCompliancePackReportRequest extends Request {
         }
 
         /**
-         * The ID of the compliance package.
-         * <p>
+         * <p>The ID of the compliance package.</p>
+         * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).
+         * <strong>example:</strong>
+         * <p>cp-fdc8626622af00f9****</p>
          */
         public Builder compliancePackId(String compliancePackId) {
             this.putBodyParameter("CompliancePackId", compliancePackId);

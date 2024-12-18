@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAggregatorResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateAggregatorResponseBody</p>
@@ -49,7 +55,10 @@ public class UpdateAggregatorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the account group.
+         * <p>The ID of the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-dacf86d8314e00eb****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.aggregatorId = aggregatorId;
@@ -57,7 +66,10 @@ public class UpdateAggregatorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8195B664-9565-4685-89AC-8B5F04B44B92</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

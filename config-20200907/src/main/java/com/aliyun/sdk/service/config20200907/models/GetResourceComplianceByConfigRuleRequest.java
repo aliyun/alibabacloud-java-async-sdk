@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceComplianceByConfigRuleRequest} extends {@link RequestModel}
  *
  * <p>GetResourceComplianceByConfigRuleRequest</p>
@@ -68,13 +74,16 @@ public class GetResourceComplianceByConfigRuleRequest extends Request {
         } 
 
         /**
-         * The compliance evaluation result of the resource. Valid values:
-         * <p>
+         * <p>The compliance evaluation result of the resource. Valid values:</p>
+         * <ul>
+         * <li>COMPLIANT: The resource is evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
+         * <li>INSUFFICIENT_DATA: No data is available.</li>
+         * </ul>
          * 
-         * *   COMPLIANT: The resource is evaluated as compliant.
-         * *   NON_COMPLIANT: The resource is evaluated as non-compliant.
-         * *   NOT_APPLICABLE: The rule does not apply to the resources.
-         * *   INSUFFICIENT_DATA: No data is available.
+         * <strong>example:</strong>
+         * <p>COMPLIANT</p>
          */
         public Builder complianceType(String complianceType) {
             this.putQueryParameter("ComplianceType", complianceType);
@@ -83,10 +92,12 @@ public class GetResourceComplianceByConfigRuleRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
-         * <p>
+         * <p>The ID of the rule.</p>
+         * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).
+         * <strong>example:</strong>
+         * <p>cr-d369626622af008e****</p>
          */
         public Builder configRuleId(String configRuleId) {
             this.putQueryParameter("ConfigRuleId", configRuleId);

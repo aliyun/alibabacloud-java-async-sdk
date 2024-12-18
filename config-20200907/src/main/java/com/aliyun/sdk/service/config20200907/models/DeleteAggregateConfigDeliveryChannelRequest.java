@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAggregateConfigDeliveryChannelRequest} extends {@link RequestModel}
  *
  * <p>DeleteAggregateConfigDeliveryChannelRequest</p>
@@ -69,7 +75,11 @@ public class DeleteAggregateConfigDeliveryChannelRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
+         * <p>The ID of the account group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-23c6626622af0041****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -78,10 +88,12 @@ public class DeleteAggregateConfigDeliveryChannelRequest extends Request {
         }
 
         /**
-         * The ID of the delivery channel.
-         * <p>
+         * <p>The ID of the delivery channel.</p>
+         * <p>For more information about how to obtain the ID of a delivery channel, see <a href="https://help.aliyun.com/document_detail/429842.html">ListAggregateConfigDeliveryChannels</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a delivery channel, see [ListAggregateConfigDeliveryChannels](~~429842~~).
+         * <strong>example:</strong>
+         * <p>cdc-38c3013b46c9002c****</p>
          */
         public Builder deliveryChannelId(String deliveryChannelId) {
             this.putQueryParameter("DeliveryChannelId", deliveryChannelId);

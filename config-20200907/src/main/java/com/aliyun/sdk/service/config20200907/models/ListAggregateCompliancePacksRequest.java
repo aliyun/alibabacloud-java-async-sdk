@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAggregateCompliancePacksRequest} extends {@link RequestModel}
  *
  * <p>ListAggregateCompliancePacksRequest</p>
@@ -97,10 +103,12 @@ public class ListAggregateCompliancePacksRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-f632626622af0079****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -109,10 +117,11 @@ public class ListAggregateCompliancePacksRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -121,10 +130,11 @@ public class ListAggregateCompliancePacksRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -133,11 +143,14 @@ public class ListAggregateCompliancePacksRequest extends Request {
         }
 
         /**
-         * The status of the one or more compliance packages to be queried. Valid values:
-         * <p>
+         * <p>The status of the one or more compliance packages to be queried. Valid values:</p>
+         * <ul>
+         * <li>ACTIVE: compliance packages that are available for use.</li>
+         * <li>CREATING: compliance packages that are being created.</li>
+         * </ul>
          * 
-         * *   ACTIVE: compliance packages that are available for use.
-         * *   CREATING: compliance packages that are being created.
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

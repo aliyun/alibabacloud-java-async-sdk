@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateResourceComplianceByPackRequest} extends {@link RequestModel}
  *
  * <p>GetAggregateResourceComplianceByPackRequest</p>
@@ -69,10 +75,12 @@ public class GetAggregateResourceComplianceByPackRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-f632626622af0079****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -81,10 +89,12 @@ public class GetAggregateResourceComplianceByPackRequest extends Request {
         }
 
         /**
-         * The ID of the compliance package.
-         * <p>
+         * <p>The ID of the compliance package.</p>
+         * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).
+         * <strong>example:</strong>
+         * <p>cp-fdc8626622af00f9****</p>
          */
         public Builder compliancePackId(String compliancePackId) {
             this.putQueryParameter("CompliancePackId", compliancePackId);

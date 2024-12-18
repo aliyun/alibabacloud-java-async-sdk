@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateConfigRuleSummaryByRiskLevelResponseBody} extends {@link TeaModel}
  *
  * <p>GetAggregateConfigRuleSummaryByRiskLevelResponseBody</p>
  */
 public class GetAggregateConfigRuleSummaryByRiskLevelResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConfigRuleSummaries")
-    private java.util.List < ConfigRuleSummaries> configRuleSummaries;
+    private java.util.List<ConfigRuleSummaries> configRuleSummaries;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class GetAggregateConfigRuleSummaryByRiskLevelResponseBody extends TeaMod
     /**
      * @return configRuleSummaries
      */
-    public java.util.List < ConfigRuleSummaries> getConfigRuleSummaries() {
+    public java.util.List<ConfigRuleSummaries> getConfigRuleSummaries() {
         return this.configRuleSummaries;
     }
 
@@ -45,19 +51,22 @@ public class GetAggregateConfigRuleSummaryByRiskLevelResponseBody extends TeaMod
     }
 
     public static final class Builder {
-        private java.util.List < ConfigRuleSummaries> configRuleSummaries; 
+        private java.util.List<ConfigRuleSummaries> configRuleSummaries; 
         private String requestId; 
 
         /**
-         * The summary of compliance evaluation results by rule risk level.
+         * <p>The summary of compliance evaluation results by rule risk level.</p>
          */
-        public Builder configRuleSummaries(java.util.List < ConfigRuleSummaries> configRuleSummaries) {
+        public Builder configRuleSummaries(java.util.List<ConfigRuleSummaries> configRuleSummaries) {
             this.configRuleSummaries = configRuleSummaries;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3CDD98C-DE65-46AC-B2D2-04A4A9AB5B73</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class GetAggregateConfigRuleSummaryByRiskLevelResponseBody extends TeaMod
 
     } 
 
+    /**
+     * 
+     * {@link GetAggregateConfigRuleSummaryByRiskLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateConfigRuleSummaryByRiskLevelResponseBody</p>
+     */
     public static class ConfigRuleSummaries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompliantCount")
         private Integer compliantCount;
@@ -121,7 +136,10 @@ public class GetAggregateConfigRuleSummaryByRiskLevelResponseBody extends TeaMod
             private Integer riskLevel; 
 
             /**
-             * The number of rules against which specific resources are evaluated as compliant.
+             * <p>The number of rules against which specific resources are evaluated as compliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder compliantCount(Integer compliantCount) {
                 this.compliantCount = compliantCount;
@@ -129,7 +147,10 @@ public class GetAggregateConfigRuleSummaryByRiskLevelResponseBody extends TeaMod
             }
 
             /**
-             * The number of rules against which specific resources are evaluated as non-compliant.
+             * <p>The number of rules against which specific resources are evaluated as non-compliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nonCompliantCount(Integer nonCompliantCount) {
                 this.nonCompliantCount = nonCompliantCount;
@@ -137,12 +158,15 @@ public class GetAggregateConfigRuleSummaryByRiskLevelResponseBody extends TeaMod
             }
 
             /**
-             * The risk level of the resources that do not comply with the rule. Valid values:
-             * <p>
+             * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+             * <ul>
+             * <li>1: high</li>
+             * <li>2: medium</li>
+             * <li>3: low</li>
+             * </ul>
              * 
-             * *   1: high
-             * *   2: medium
-             * *   3: low
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;

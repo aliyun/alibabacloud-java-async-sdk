@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConfigRuleEvaluationResultsRequest} extends {@link RequestModel}
  *
  * <p>ListConfigRuleEvaluationResultsRequest</p>
@@ -152,10 +158,11 @@ public class ListConfigRuleEvaluationResultsRequest extends Request {
         } 
 
         /**
-         * The ID of the compliance package.
-         * <p>
+         * <p>The ID of the compliance package.</p>
+         * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
          * 
-         * For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~263332~~).
+         * <strong>example:</strong>
+         * <p>cp-f1e3326622af00cb****</p>
          */
         public Builder compliancePackId(String compliancePackId) {
             this.putQueryParameter("CompliancePackId", compliancePackId);
@@ -164,14 +171,17 @@ public class ListConfigRuleEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The compliance evaluation result of the resource. Valid values:
-         * <p>
+         * <p>The compliance evaluation result of the resource. Valid values:</p>
+         * <ul>
+         * <li>COMPLIANT: The resource is evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
+         * <li>INSUFFICIENT_DATA: No data is available.</li>
+         * <li>IGNORED: The resource is ignored during compliance evaluation.</li>
+         * </ul>
          * 
-         * *   COMPLIANT: The resource is evaluated as compliant.
-         * *   NON_COMPLIANT: The resource is evaluated as non-compliant.
-         * *   NOT_APPLICABLE: The rule does not apply to the resources.
-         * *   INSUFFICIENT_DATA: No data is available.
-         * *   IGNORED: The resource is ignored during compliance evaluation.
+         * <strong>example:</strong>
+         * <p>NON_COMPLIANT</p>
          */
         public Builder complianceType(String complianceType) {
             this.putQueryParameter("ComplianceType", complianceType);
@@ -180,10 +190,11 @@ public class ListConfigRuleEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The rule ID.
-         * <p>
+         * <p>The rule ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a> operation to obtain the rule ID.</p>
          * 
-         * You can call the [ListConfigRules](~~169607~~) operation to obtain the rule ID.
+         * <strong>example:</strong>
+         * <p>cr-cac56457e0d900d3****</p>
          */
         public Builder configRuleId(String configRuleId) {
             this.putQueryParameter("ConfigRuleId", configRuleId);
@@ -192,7 +203,10 @@ public class ListConfigRuleEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return for a single request. Valid values: 1 to 100.
+         * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -201,7 +215,10 @@ public class ListConfigRuleEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IWBjqMYSy0is7zSMGu16****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -210,7 +227,10 @@ public class ListConfigRuleEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the resources that you want to evaluate reside. Separate multiple region IDs with commas (,).
+         * <p>The ID of the region where the resources that you want to evaluate reside. Separate multiple region IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regions(String regions) {
             this.putQueryParameter("Regions", regions);
@@ -219,7 +239,10 @@ public class ListConfigRuleEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the resources that you want to evaluate belong. Separate multiple resource group IDs with commas (,).
+         * <p>The ID of the resource group to which the resources that you want to evaluate belong. Separate multiple resource group IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2indxn3g****</p>
          */
         public Builder resourceGroupIds(String resourceGroupIds) {
             this.putQueryParameter("ResourceGroupIds", resourceGroupIds);
@@ -228,7 +251,10 @@ public class ListConfigRuleEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The type of the resources that you want to evaluate. Separate multiple resource types with commas (,).
+         * <p>The type of the resources that you want to evaluate. Separate multiple resource types with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instane</p>
          */
         public Builder resourceTypes(String resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);

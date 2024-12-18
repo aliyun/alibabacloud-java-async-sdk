@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachAggregateConfigRuleToCompliancePackResponseBody} extends {@link TeaModel}
  *
  * <p>AttachAggregateConfigRuleToCompliancePackResponseBody</p>
@@ -49,7 +55,7 @@ public class AttachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
         private String requestId; 
 
         /**
-         * The results of the operations to add one or more rules.
+         * <p>The results of the operations to add one or more rules.</p>
          */
         public Builder operateRuleResult(OperateRuleResult operateRuleResult) {
             this.operateRuleResult = operateRuleResult;
@@ -57,7 +63,10 @@ public class AttachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE72B7B5-D0EA-15E6-A359-EDECBB9BDFA3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class AttachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
 
     } 
 
+    /**
+     * 
+     * {@link AttachAggregateConfigRuleToCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>AttachAggregateConfigRuleToCompliancePackResponseBody</p>
+     */
     public static class OperateRuleItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
@@ -121,7 +136,10 @@ public class AttachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
             private Boolean success; 
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cr-a124626622af00e7****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -129,11 +147,14 @@ public class AttachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
             }
 
             /**
-             * The error code.
-             * <p>
+             * <p>The error code.</p>
+             * <ul>
+             * <li>This parameter is empty if the rule is added to the compliance package.</li>
+             * <li>An error code is returned if the rule fails to be added to the compliance package. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
+             * </ul>
              * 
-             * *   This parameter is empty if the rule is added to the compliance package.
-             * *   An error code is returned if the rule fails to be added to the compliance package. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).
+             * <strong>example:</strong>
+             * <p>ConfigRuleNotExists</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -141,11 +162,14 @@ public class AttachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
             }
 
             /**
-             * Indicates whether the request was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -159,9 +183,15 @@ public class AttachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link AttachAggregateConfigRuleToCompliancePackResponseBody} extends {@link TeaModel}
+     *
+     * <p>AttachAggregateConfigRuleToCompliancePackResponseBody</p>
+     */
     public static class OperateRuleResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperateRuleItemList")
-        private java.util.List < OperateRuleItemList> operateRuleItemList;
+        private java.util.List<OperateRuleItemList> operateRuleItemList;
 
         private OperateRuleResult(Builder builder) {
             this.operateRuleItemList = builder.operateRuleItemList;
@@ -178,17 +208,17 @@ public class AttachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
         /**
          * @return operateRuleItemList
          */
-        public java.util.List < OperateRuleItemList> getOperateRuleItemList() {
+        public java.util.List<OperateRuleItemList> getOperateRuleItemList() {
             return this.operateRuleItemList;
         }
 
         public static final class Builder {
-            private java.util.List < OperateRuleItemList> operateRuleItemList; 
+            private java.util.List<OperateRuleItemList> operateRuleItemList; 
 
             /**
-             * The result of the operation to add the rule.
+             * <p>The result of the operation to add the rule.</p>
              */
-            public Builder operateRuleItemList(java.util.List < OperateRuleItemList> operateRuleItemList) {
+            public Builder operateRuleItemList(java.util.List<OperateRuleItemList> operateRuleItemList) {
                 this.operateRuleItemList = operateRuleItemList;
                 return this;
             }

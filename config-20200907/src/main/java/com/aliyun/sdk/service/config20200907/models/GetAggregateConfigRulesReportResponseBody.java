@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateConfigRulesReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetAggregateConfigRulesReportResponseBody</p>
@@ -49,7 +55,7 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the compliance evaluation report.
+         * <p>The information about the compliance evaluation report.</p>
          */
         public Builder configRulesReport(ConfigRulesReport configRulesReport) {
             this.configRulesReport = configRulesReport;
@@ -57,7 +63,10 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0BCC7B2-D0E4-49B0-95D2-6689CFB08D31</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAggregateConfigRulesReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateConfigRulesReportResponseBody</p>
+     */
     public static class ConfigRulesReport extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -157,7 +172,10 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
             private String reportUrl; 
 
             /**
-             * The ID of the management account to which the rules belong.
+             * <p>The ID of the management account to which the rules belong.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -165,7 +183,10 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account group.
+             * <p>The ID of the account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-f632626622af0079****</p>
              */
             public Builder aggregatorId(String aggregatorId) {
                 this.aggregatorId = aggregatorId;
@@ -173,7 +194,10 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the compliance evaluation report was generated. Unit: milliseconds.
+             * <p>The timestamp when the compliance evaluation report was generated. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624332329593</p>
              */
             public Builder reportCreateTimestamp(Long reportCreateTimestamp) {
                 this.reportCreateTimestamp = reportCreateTimestamp;
@@ -181,7 +205,10 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the compliance evaluation report.
+             * <p>The ID of the compliance evaluation report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crp-88176457e0d900c9****</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -189,12 +216,15 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the compliance evaluation report. Valid values:
-             * <p>
+             * <p>The status of the compliance evaluation report. Valid values:</p>
+             * <ul>
+             * <li>NONE: The compliance evaluation report was not generated.</li>
+             * <li>CREATING: The compliance evaluation report was being generated.</li>
+             * <li>COMPLETE: The compliance evaluation report was generated.</li>
+             * </ul>
              * 
-             * *   NONE: The compliance evaluation report was not generated.
-             * *   CREATING: The compliance evaluation report was being generated.
-             * *   COMPLETE: The compliance evaluation report was generated.
+             * <strong>example:</strong>
+             * <p>CREATING</p>
              */
             public Builder reportStatus(String reportStatus) {
                 this.reportStatus = reportStatus;
@@ -202,7 +232,7 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download the compliance evaluation report.
+             * <p>The URL that is used to download the compliance evaluation report.</p>
              */
             public Builder reportUrl(String reportUrl) {
                 this.reportUrl = reportUrl;

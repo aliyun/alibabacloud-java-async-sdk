@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateConfigRuleComplianceByPackResponseBody} extends {@link TeaModel}
  *
  * <p>GetAggregateConfigRuleComplianceByPackResponseBody</p>
@@ -49,7 +55,7 @@ public class GetAggregateConfigRuleComplianceByPackResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * The compliance evaluation results that are returned by rules in the compliance package.
+         * <p>The compliance evaluation results that are returned by rules in the compliance package.</p>
          */
         public Builder configRuleComplianceResult(ConfigRuleComplianceResult configRuleComplianceResult) {
             this.configRuleComplianceResult = configRuleComplianceResult;
@@ -57,7 +63,10 @@ public class GetAggregateConfigRuleComplianceByPackResponseBody extends TeaModel
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C6B0C0A8-3245-48F1-AEAB-BC1A446E99D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class GetAggregateConfigRuleComplianceByPackResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link GetAggregateConfigRuleComplianceByPackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateConfigRuleComplianceByPackResponseBody</p>
+     */
     public static class ConfigRuleCompliances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
@@ -121,13 +136,16 @@ public class GetAggregateConfigRuleComplianceByPackResponseBody extends TeaModel
             private String configRuleName; 
 
             /**
-             * The compliance evaluation result returned by the rule. Valid values:
-             * <p>
+             * <p>The compliance evaluation result returned by the rule. Valid values:</p>
+             * <ul>
+             * <li>COMPLIANT: The relevant resources are evaluated as compliant.</li>
+             * <li>NON_COMPLIANT: The relevant resources are evaluated as non-compliant.</li>
+             * <li>NOT_APPLICABLE: The rule does not apply to your resources.</li>
+             * <li>INSUFFICIENT_DATA: No resource data is available.</li>
+             * </ul>
              * 
-             * *   COMPLIANT: The relevant resources are evaluated as compliant.
-             * *   NON_COMPLIANT: The relevant resources are evaluated as non-compliant.
-             * *   NOT_APPLICABLE: The rule does not apply to your resources.
-             * *   INSUFFICIENT_DATA: No resource data is available.
+             * <strong>example:</strong>
+             * <p>COMPLIANT</p>
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -135,7 +153,10 @@ public class GetAggregateConfigRuleComplianceByPackResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cr-fdc8626622af00f9****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -143,7 +164,10 @@ public class GetAggregateConfigRuleComplianceByPackResponseBody extends TeaModel
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-rule-name</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -157,12 +181,18 @@ public class GetAggregateConfigRuleComplianceByPackResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link GetAggregateConfigRuleComplianceByPackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAggregateConfigRuleComplianceByPackResponseBody</p>
+     */
     public static class ConfigRuleComplianceResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
         @com.aliyun.core.annotation.NameInMap("ConfigRuleCompliances")
-        private java.util.List < ConfigRuleCompliances> configRuleCompliances;
+        private java.util.List<ConfigRuleCompliances> configRuleCompliances;
 
         @com.aliyun.core.annotation.NameInMap("NonCompliantCount")
         private Integer nonCompliantCount;
@@ -195,7 +225,7 @@ public class GetAggregateConfigRuleComplianceByPackResponseBody extends TeaModel
         /**
          * @return configRuleCompliances
          */
-        public java.util.List < ConfigRuleCompliances> getConfigRuleCompliances() {
+        public java.util.List<ConfigRuleCompliances> getConfigRuleCompliances() {
             return this.configRuleCompliances;
         }
 
@@ -215,12 +245,15 @@ public class GetAggregateConfigRuleComplianceByPackResponseBody extends TeaModel
 
         public static final class Builder {
             private String compliancePackId; 
-            private java.util.List < ConfigRuleCompliances> configRuleCompliances; 
+            private java.util.List<ConfigRuleCompliances> configRuleCompliances; 
             private Integer nonCompliantCount; 
             private Integer totalCount; 
 
             /**
-             * The ID of the compliance package.
+             * <p>The ID of the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-541e626622af0087****</p>
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -228,15 +261,18 @@ public class GetAggregateConfigRuleComplianceByPackResponseBody extends TeaModel
             }
 
             /**
-             * The information about rules in the compliance package.
+             * <p>The information about rules in the compliance package.</p>
              */
-            public Builder configRuleCompliances(java.util.List < ConfigRuleCompliances> configRuleCompliances) {
+            public Builder configRuleCompliances(java.util.List<ConfigRuleCompliances> configRuleCompliances) {
                 this.configRuleCompliances = configRuleCompliances;
                 return this;
             }
 
             /**
-             * The number of rules against which specific resources are evaluated as non-compliant.
+             * <p>The number of rules against which specific resources are evaluated as non-compliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nonCompliantCount(Integer nonCompliantCount) {
                 this.nonCompliantCount = nonCompliantCount;
@@ -244,7 +280,10 @@ public class GetAggregateConfigRuleComplianceByPackResponseBody extends TeaModel
             }
 
             /**
-             * The total number of rules in the compliance package.
+             * <p>The total number of rules in the compliance package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

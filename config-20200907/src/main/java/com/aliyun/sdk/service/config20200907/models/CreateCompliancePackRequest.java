@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCompliancePackRequest} extends {@link RequestModel}
  *
  * <p>CreateCompliancePackRequest</p>
@@ -26,7 +32,7 @@ public class CreateCompliancePackRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ConfigRules")
-    private java.util.List < ConfigRules> configRules;
+    private java.util.List<ConfigRules> configRules;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DefaultEnable")
@@ -51,7 +57,7 @@ public class CreateCompliancePackRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExcludeTagsScope")
-    private java.util.List < ExcludeTagsScope> excludeTagsScope;
+    private java.util.List<ExcludeTagsScope> excludeTagsScope;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionIdsScope")
@@ -80,7 +86,7 @@ public class CreateCompliancePackRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagsScope")
-    private java.util.List < TagsScope> tagsScope;
+    private java.util.List<TagsScope> tagsScope;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplateContent")
@@ -146,7 +152,7 @@ public class CreateCompliancePackRequest extends Request {
     /**
      * @return configRules
      */
-    public java.util.List < ConfigRules> getConfigRules() {
+    public java.util.List<ConfigRules> getConfigRules() {
         return this.configRules;
     }
 
@@ -188,7 +194,7 @@ public class CreateCompliancePackRequest extends Request {
     /**
      * @return excludeTagsScope
      */
-    public java.util.List < ExcludeTagsScope> getExcludeTagsScope() {
+    public java.util.List<ExcludeTagsScope> getExcludeTagsScope() {
         return this.excludeTagsScope;
     }
 
@@ -237,7 +243,7 @@ public class CreateCompliancePackRequest extends Request {
     /**
      * @return tagsScope
      */
-    public java.util.List < TagsScope> getTagsScope() {
+    public java.util.List<TagsScope> getTagsScope() {
         return this.tagsScope;
     }
 
@@ -252,20 +258,20 @@ public class CreateCompliancePackRequest extends Request {
         private String clientToken; 
         private String compliancePackName; 
         private String compliancePackTemplateId; 
-        private java.util.List < ConfigRules> configRules; 
+        private java.util.List<ConfigRules> configRules; 
         private Boolean defaultEnable; 
         private String description; 
         private String excludeRegionIdsScope; 
         private String excludeResourceGroupIdsScope; 
         private String excludeResourceIdsScope; 
-        private java.util.List < ExcludeTagsScope> excludeTagsScope; 
+        private java.util.List<ExcludeTagsScope> excludeTagsScope; 
         private String regionIdsScope; 
         private String resourceGroupIdsScope; 
         private String resourceIdsScope; 
         private Integer riskLevel; 
         private String tagKeyScope; 
         private String tagValueScope; 
-        private java.util.List < TagsScope> tagsScope; 
+        private java.util.List<TagsScope> tagsScope; 
         private String templateContent; 
 
         private Builder() {
@@ -295,7 +301,10 @@ public class CreateCompliancePackRequest extends Request {
         } 
 
         /**
-         * The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.``
+         * <p>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.``</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -304,7 +313,11 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * The name of the compliance package.
+         * <p>The name of the compliance package.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-pack-name</p>
          */
         public Builder compliancePackName(String compliancePackName) {
             this.putBodyParameter("CompliancePackName", compliancePackName);
@@ -313,10 +326,11 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * The ID of the compliance package template.
-         * <p>
+         * <p>The ID of the compliance package template.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a> operation to obtain the ID of the compliance package.</p>
          * 
-         * You can call the [ListCompliancePackTemplates](~~261176~~) operation to obtain the ID of the compliance package.
+         * <strong>example:</strong>
+         * <p>ct-5f26ff4e06a300c4****</p>
          */
         public Builder compliancePackTemplateId(String compliancePackTemplateId) {
             this.putBodyParameter("CompliancePackTemplateId", compliancePackTemplateId);
@@ -325,9 +339,9 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * The rules in the compliance package. You must specify either this parameter or TemplateContent.
+         * <p>The rules in the compliance package. You must specify either this parameter or TemplateContent.</p>
          */
-        public Builder configRules(java.util.List < ConfigRules> configRules) {
+        public Builder configRules(java.util.List<ConfigRules> configRules) {
             String configRulesShrink = shrink(configRules, "ConfigRules", "json");
             this.putBodyParameter("ConfigRules", configRulesShrink);
             this.configRules = configRules;
@@ -335,11 +349,14 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the rule together with the compliance package. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the rule together with the compliance package. Valid values:</p>
+         * <ul>
+         * <li>true: The system enables the rule together with the compliance package.</li>
+         * <li>false: The system does not enable the rule together with the compliance package.</li>
+         * </ul>
          * 
-         * *   true: The system enables the rule together with the compliance package.
-         * *   false: The system does not enable the rule together with the compliance package.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder defaultEnable(Boolean defaultEnable) {
             this.putBodyParameter("DefaultEnable", defaultEnable);
@@ -348,7 +365,10 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * The description of the compliance package.
+         * <p>The description of the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test pack description.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -357,7 +377,10 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * ExcludeRegionIdsScope.
+         * <p>ExcludeRegionIdsScope</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder excludeRegionIdsScope(String excludeRegionIdsScope) {
             this.putBodyParameter("ExcludeRegionIdsScope", excludeRegionIdsScope);
@@ -366,7 +389,10 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * ExcludeResourceGroupIdsScope.
+         * <p>ExcludeResourceGroupIdsScope. Separate multiple resource group IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bnczc6r7rml****</p>
          */
         public Builder excludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
             this.putBodyParameter("ExcludeResourceGroupIdsScope", excludeResourceGroupIdsScope);
@@ -375,7 +401,10 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * The ID of the resource that you do not want to evaluate by using the compliance package. Separate multiple resource IDs with commas (,).
+         * <p>The ID of the resource that you do not want to evaluate by using the compliance package. Separate multiple resource IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-8vbf3x310fn56ijfd****</p>
          */
         public Builder excludeResourceIdsScope(String excludeResourceIdsScope) {
             this.putBodyParameter("ExcludeResourceIdsScope", excludeResourceIdsScope);
@@ -384,16 +413,19 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * ExcludeTagsScope.
+         * <p>ExcludeTagsScope</p>
          */
-        public Builder excludeTagsScope(java.util.List < ExcludeTagsScope> excludeTagsScope) {
+        public Builder excludeTagsScope(java.util.List<ExcludeTagsScope> excludeTagsScope) {
             this.putBodyParameter("ExcludeTagsScope", excludeTagsScope);
             this.excludeTagsScope = excludeTagsScope;
             return this;
         }
 
         /**
-         * The ID of the region whose resources you want to evaluate by using the compliance package. Separate multiple region IDs with commas (,).
+         * <p>The ID of the region whose resources you want to evaluate by using the compliance package. Separate multiple region IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionIdsScope(String regionIdsScope) {
             this.putBodyParameter("RegionIdsScope", regionIdsScope);
@@ -402,7 +434,10 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * The ID of the resource group whose resources you want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).
+         * <p>The ID of the resource group whose resources you want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzdibsjjc****</p>
          */
         public Builder resourceGroupIdsScope(String resourceGroupIdsScope) {
             this.putBodyParameter("ResourceGroupIdsScope", resourceGroupIdsScope);
@@ -411,7 +446,10 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * ResourceIdsScope.
+         * <p>ResourceIdsScope</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-8vbf3x310fn56ijfd****</p>
          */
         public Builder resourceIdsScope(String resourceIdsScope) {
             this.putBodyParameter("ResourceIdsScope", resourceIdsScope);
@@ -420,12 +458,15 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * The risk level of the resources that are not compliant with the rules in the compliance package. Default value: 2. Valid values:
-         * <p>
+         * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Default value: 2. Valid values:</p>
+         * <ul>
+         * <li>1: high.</li>
+         * <li>2: medium.</li>
+         * <li>3: low.</li>
+         * </ul>
          * 
-         * *   1: high.
-         * *   2: medium.
-         * *   3: low.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskLevel(Integer riskLevel) {
             this.putBodyParameter("RiskLevel", riskLevel);
@@ -434,7 +475,10 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * The tag key of the resource that you want to evaluate by using the compliance package.
+         * <p>The tag key of the resource that you want to evaluate by using the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder tagKeyScope(String tagKeyScope) {
             this.putBodyParameter("TagKeyScope", tagKeyScope);
@@ -443,10 +487,13 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * The tag value of the resource that you want to evaluate by using the compliance package.
-         * <p>
+         * <p>The tag value of the resource that you want to evaluate by using the compliance package.</p>
+         * <blockquote>
+         * <p> You must configure the TagValueScope parameter together with the TagKeyScope parameter.</p>
+         * </blockquote>
          * 
-         * >  You must configure the TagValueScope parameter together with the TagKeyScope parameter.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tagValueScope(String tagValueScope) {
             this.putBodyParameter("TagValueScope", tagValueScope);
@@ -455,16 +502,19 @@ public class CreateCompliancePackRequest extends Request {
         }
 
         /**
-         * TagsScope.
+         * <p>TagsScope</p>
          */
-        public Builder tagsScope(java.util.List < TagsScope> tagsScope) {
+        public Builder tagsScope(java.util.List<TagsScope> tagsScope) {
             this.putBodyParameter("TagsScope", tagsScope);
             this.tagsScope = tagsScope;
             return this;
         }
 
         /**
-         * The information about the template that is used to generate the compliance package. You can call an API operation to view the details of an existing compliance package or write a compliance package template. For more information, see [Write a compliance package template in a configuration file](~~2659733~~). You must specify one of ConfigRules and TemplateContent.
+         * <p>The information about the template that is used to generate the compliance package. You can call an API operation to view the details of an existing compliance package or write a compliance package template. For more information, see <a href="https://help.aliyun.com/document_detail/2659733.html">Write a compliance package template in a configuration file</a>. You must specify one of ConfigRules and TemplateContent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;configRuleTemplates&quot;: [ { &quot;configRuleName&quot;: &quot;condition-rule-example&quot;, &quot;scope&quot;: { &quot;complianceResourceTypes&quot;: [ &quot;ACS::ECS::Instance&quot; ] }, &quot;description&quot;: &quot;&quot;, &quot;source&quot;: { &quot;owner&quot;: &quot;CUSTOM_CONFIGURATION&quot;, &quot;identifier&quot;: &quot;acs-config-configuration&quot;, &quot;sourceDetails&quot;: [ { &quot;messageType&quot;: &quot;ScheduledNotification&quot;, &quot;maximumExecutionFrequency&quot;: &quot;Twelve_Hours&quot; }, { &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot; } ], &quot;conditions&quot;: &quot;{\&quot;ComplianceConditions\&quot;:\&quot;{\\&quot;operator\\&quot;:\\&quot;and\\&quot;,\\&quot;children\\&quot;:[{\\&quot;operator\\&quot;:\\&quot;GreaterOrEquals\\&quot;,\\&quot;featurePath\\&quot;:\\&quot;$.Cpu\\&quot;,\\&quot;featureSource\\&quot;:\\&quot;CONFIGURATION\\&quot;,\\&quot;desired\\&quot;:\\&quot;2\\&quot;}]}\&quot;}&quot; }, &quot;inputParameters&quot;: {} }, { &quot;configRuleName&quot;: &quot;oss-bucket-referer-limit&quot;, &quot;scope&quot;: { &quot;complianceResourceTypes&quot;: [ &quot;ACS::OSS::Bucket&quot; ] }, &quot;description&quot;: &quot;If the hotlink protection feature is enabled for the Object Storage Service (OSS) bucket and the Referer is added to a specific whitelist, the evaluation result is compliant.&quot;, &quot;source&quot;: { &quot;owner&quot;: &quot;ALIYUN&quot;, &quot;identifier&quot;: &quot;oss-bucket-referer-limit&quot;, &quot;sourceDetails&quot;: [ { &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot; } ] }, &quot;inputParameters&quot;: { &quot;allowEmptyReferer&quot;: &quot;true&quot;, &quot;allowReferers&quot;: &quot;<a href="http://www.aliyun.com">http://www.aliyun.com</a>&quot; } } ] }</p>
          */
         public Builder templateContent(String templateContent) {
             this.putBodyParameter("TemplateContent", templateContent);
@@ -479,6 +529,12 @@ public class CreateCompliancePackRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCompliancePackRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCompliancePackRequest</p>
+     */
     public static class ConfigRuleParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
@@ -518,10 +574,11 @@ public class CreateCompliancePackRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The name of the input parameter.
-             * <p>
+             * <p>The name of the input parameter.</p>
+             * <p>You must specify both <code>ParameterName</code> and <code>ParameterValue</code> or neither of them. If the managed rule has an input parameter but no default value is specified, you must specify this parameter. You can call the <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a> operation to obtain the names of input parameters of the managed rule.</p>
              * 
-             * You must specify both `ParameterName` and `ParameterValue` or neither of them. If the managed rule has an input parameter but no default value is specified, you must specify this parameter. You can call the [ListCompliancePackTemplates](~~261176~~) operation to obtain the names of input parameters of the managed rule.
+             * <strong>example:</strong>
+             * <p>bandwidth</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -529,10 +586,11 @@ public class CreateCompliancePackRequest extends Request {
             }
 
             /**
-             * The value of the input parameter.
-             * <p>
+             * <p>The value of the input parameter.</p>
+             * <p>You must specify both <code>ParameterName</code> and <code>ParameterValue</code> or neither of them. If the managed rule has an input parameter but no default value is specified, you must specify this parameter. You can call the <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a> operation to obtain the values of input parameters of the managed rule.</p>
              * 
-             * You must specify both `ParameterName` and `ParameterValue` or neither of them. If the managed rule has an input parameter but no default value is specified, you must specify this parameter. You can call the [ListCompliancePackTemplates](~~261176~~) operation to obtain the values of input parameters of the managed rule.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -546,6 +604,12 @@ public class CreateCompliancePackRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCompliancePackRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCompliancePackRequest</p>
+     */
     public static class ConfigRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
@@ -554,7 +618,7 @@ public class CreateCompliancePackRequest extends Request {
         private String configRuleName;
 
         @com.aliyun.core.annotation.NameInMap("ConfigRuleParameters")
-        private java.util.List < ConfigRuleParameters> configRuleParameters;
+        private java.util.List<ConfigRuleParameters> configRuleParameters;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -599,7 +663,7 @@ public class CreateCompliancePackRequest extends Request {
         /**
          * @return configRuleParameters
          */
-        public java.util.List < ConfigRuleParameters> getConfigRuleParameters() {
+        public java.util.List<ConfigRuleParameters> getConfigRuleParameters() {
             return this.configRuleParameters;
         }
 
@@ -627,16 +691,17 @@ public class CreateCompliancePackRequest extends Request {
         public static final class Builder {
             private String configRuleId; 
             private String configRuleName; 
-            private java.util.List < ConfigRuleParameters> configRuleParameters; 
+            private java.util.List<ConfigRuleParameters> configRuleParameters; 
             private String description; 
             private String managedRuleIdentifier; 
             private Integer riskLevel; 
 
             /**
-             * The rule ID. If you specify this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.
-             * <p>
+             * <p>The rule ID. If you specify this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.</p>
+             * <p>You need to only specify <code>ManagedRuleIdentifier</code> or <code>ConfigRuleId</code>. If you specify both parameters, Cloud Config adds a rule based on the value of <code>ConfigRuleId</code>. You can call the <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a> operation to obtain the rule ID.</p>
              * 
-             * You need to only specify `ManagedRuleIdentifier` or `ConfigRuleId`. If you specify both parameters, Cloud Config adds a rule based on the value of `ConfigRuleId`. You can call the [ListConfigRules](~~169607~~) operation to obtain the rule ID.
+             * <strong>example:</strong>
+             * <p>cr-e918626622af000f****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -644,7 +709,10 @@ public class CreateCompliancePackRequest extends Request {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-bandwidth-limit</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -652,15 +720,18 @@ public class CreateCompliancePackRequest extends Request {
             }
 
             /**
-             * The input parameters of the rule.
+             * <p>The input parameters of the rule.</p>
              */
-            public Builder configRuleParameters(java.util.List < ConfigRuleParameters> configRuleParameters) {
+            public Builder configRuleParameters(java.util.List<ConfigRuleParameters> configRuleParameters) {
                 this.configRuleParameters = configRuleParameters;
                 return this;
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the test rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -668,10 +739,11 @@ public class CreateCompliancePackRequest extends Request {
             }
 
             /**
-             * The identifier of the managed rule. Cloud Config automatically creates a managed rule based on the specified identifier and adds the rule to the compliance package.
-             * <p>
+             * <p>The identifier of the managed rule. Cloud Config automatically creates a managed rule based on the specified identifier and adds the rule to the compliance package.</p>
+             * <p>You need to only specify <code>ManagedRuleIdentifier</code> or <code>ConfigRuleId</code>. If you specify both parameters, Cloud Config adds a rule based on the value of <code>ConfigRuleId</code>. You can call the <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a> operation to obtain the identifier of the managed rule.</p>
              * 
-             * You need to only specify `ManagedRuleIdentifier` or `ConfigRuleId`. If you specify both parameters, Cloud Config adds a rule based on the value of `ConfigRuleId`. You can call the [ListCompliancePackTemplates](~~261176~~) operation to obtain the identifier of the managed rule.
+             * <strong>example:</strong>
+             * <p>eip-bandwidth-limit</p>
              */
             public Builder managedRuleIdentifier(String managedRuleIdentifier) {
                 this.managedRuleIdentifier = managedRuleIdentifier;
@@ -679,12 +751,15 @@ public class CreateCompliancePackRequest extends Request {
             }
 
             /**
-             * The risk level of the resources that do not comply with the rule. Valid values:
-             * <p>
+             * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+             * <ul>
+             * <li>1: high.</li>
+             * <li>2: medium.</li>
+             * <li>3: low.</li>
+             * </ul>
              * 
-             * *   1: high.
-             * *   2: medium.
-             * *   3: low.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -698,6 +773,12 @@ public class CreateCompliancePackRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCompliancePackRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCompliancePackRequest</p>
+     */
     public static class ExcludeTagsScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -737,7 +818,10 @@ public class CreateCompliancePackRequest extends Request {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>TagKey</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-2</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -745,7 +829,10 @@ public class CreateCompliancePackRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>TagValue</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-2</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -759,6 +846,12 @@ public class CreateCompliancePackRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCompliancePackRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCompliancePackRequest</p>
+     */
     public static class TagsScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -798,7 +891,10 @@ public class CreateCompliancePackRequest extends Request {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>Tagkey</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -806,7 +902,10 @@ public class CreateCompliancePackRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>TagValue</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

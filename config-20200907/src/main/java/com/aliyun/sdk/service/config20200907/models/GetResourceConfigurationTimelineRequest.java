@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceConfigurationTimelineRequest} extends {@link RequestModel}
  *
  * <p>GetResourceConfigurationTimelineRequest</p>
@@ -141,7 +147,10 @@ public class GetResourceConfigurationTimelineRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The default value indicates the time when the GetResourceConfigurationTimeline operation is called. Unit: milliseconds.
+         * <p>The end of the time range to query. The default value indicates the time when the GetResourceConfigurationTimeline operation is called. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625821156000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -150,7 +159,10 @@ public class GetResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return for a single request. Valid values: 1 to 100.
+         * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -159,7 +171,10 @@ public class GetResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IWBjqMYSy0is7zSMGu16****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -168,7 +183,11 @@ public class GetResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -177,10 +196,12 @@ public class GetResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * The resource IDs.
-         * <p>
+         * <p>The resource IDs.</p>
+         * <p>For more information about how to query the ID of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to query the ID of a resource, see [ListDiscoveredResources](~~169620~~).
+         * <strong>example:</strong>
+         * <p>new-bucket</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -189,10 +210,12 @@ public class GetResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * The resource type.
-         * <p>
+         * <p>The resource type.</p>
+         * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~169620~~).
+         * <strong>example:</strong>
+         * <p>ACS::OSS::Bucket</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -201,7 +224,10 @@ public class GetResourceConfigurationTimelineRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.
+         * <p>The beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1623211156000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

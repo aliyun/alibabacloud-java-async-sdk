@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPreManagedRulesRequest} extends {@link RequestModel}
  *
  * <p>ListPreManagedRulesRequest</p>
@@ -21,7 +27,7 @@ public class ListPreManagedRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceTypes")
-    private java.util.List < String > resourceTypes;
+    private java.util.List<String> resourceTypes;
 
     private ListPreManagedRulesRequest(Builder builder) {
         super(builder);
@@ -60,14 +66,14 @@ public class ListPreManagedRulesRequest extends Request {
     /**
      * @return resourceTypes
      */
-    public java.util.List < String > getResourceTypes() {
+    public java.util.List<String> getResourceTypes() {
         return this.resourceTypes;
     }
 
     public static final class Builder extends Request.Builder<ListPreManagedRulesRequest, Builder> {
         private Long pageNumber; 
         private Long pageSize; 
-        private java.util.List < String > resourceTypes; 
+        private java.util.List<String> resourceTypes; 
 
         private Builder() {
             super();
@@ -81,10 +87,11 @@ public class ListPreManagedRulesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1. Default value: 1.</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -93,10 +100,11 @@ public class ListPreManagedRulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -105,9 +113,9 @@ public class ListPreManagedRulesRequest extends Request {
         }
 
         /**
-         * The type of the resource.
+         * <p>The type of the resource.</p>
          */
-        public Builder resourceTypes(java.util.List < String > resourceTypes) {
+        public Builder resourceTypes(java.util.List<String> resourceTypes) {
             String resourceTypesShrink = shrink(resourceTypes, "ResourceTypes", "json");
             this.putBodyParameter("ResourceTypes", resourceTypesShrink);
             this.resourceTypes = resourceTypes;

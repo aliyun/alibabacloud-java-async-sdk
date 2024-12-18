@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRemediationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRemediationsResponseBody</p>
@@ -20,7 +26,7 @@ public class ListRemediationsResponseBody extends TeaModel {
     private Long pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Remediations")
-    private java.util.List < Remediations> remediations;
+    private java.util.List<Remediations> remediations;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -62,7 +68,7 @@ public class ListRemediationsResponseBody extends TeaModel {
     /**
      * @return remediations
      */
-    public java.util.List < Remediations> getRemediations() {
+    public java.util.List<Remediations> getRemediations() {
         return this.remediations;
     }
 
@@ -83,12 +89,16 @@ public class ListRemediationsResponseBody extends TeaModel {
     public static final class Builder {
         private Long pageNumber; 
         private Long pageSize; 
-        private java.util.List < Remediations> remediations; 
+        private java.util.List<Remediations> remediations; 
         private String requestId; 
         private String totalCount; 
 
         /**
-         * The page number. Pages start from page 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -96,7 +106,11 @@ public class ListRemediationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 50.
+         * <p>The number of entries per page. Valid values: 1 to 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -104,15 +118,18 @@ public class ListRemediationsResponseBody extends TeaModel {
         }
 
         /**
-         * The converted configuration of the remediation template. This parameter is returned only for an OOS remediation template.
+         * <p>The converted configuration of the remediation template. This parameter is returned only for an OOS remediation template.</p>
          */
-        public Builder remediations(java.util.List < Remediations> remediations) {
+        public Builder remediations(java.util.List<Remediations> remediations) {
             this.remediations = remediations;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0146963A-20C0-4E75-B93A-7D622B5FD7C8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,7 +137,11 @@ public class ListRemediationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of remediation settings.
+         * <p>The total number of remediation settings.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -133,6 +154,12 @@ public class ListRemediationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRemediationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRemediationsResponseBody</p>
+     */
     public static class Remediations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -280,7 +307,10 @@ public class ListRemediationsResponseBody extends TeaModel {
             private String remediationType; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -288,7 +318,10 @@ public class ListRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cr-6b7c626622af00b4****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -296,13 +329,16 @@ public class ListRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution mode of the remediation template. Valid values:
-             * <p>
+             * <p>The execution mode of the remediation template. Valid values:</p>
+             * <ul>
+             * <li>NON_EXECUTION: The remediation template was not executed.</li>
+             * <li>AUTO_EXECUTION: The remediation template was automatically executed.</li>
+             * <li>MANUAL_EXECUTION: The remediation template was manually executed.</li>
+             * <li>NOT_CONFIG: The execution mode was not specified.</li>
+             * </ul>
              * 
-             * *   NON_EXECUTION: The remediation template was not executed.
-             * *   AUTO_EXECUTION: The remediation template was automatically executed.
-             * *   MANUAL_EXECUTION: The remediation template was manually executed.
-             * *   NOT_CONFIG: The execution mode was not specified.
+             * <strong>example:</strong>
+             * <p>AUTO_EXECUTION</p>
              */
             public Builder invokeType(String invokeType) {
                 this.invokeType = invokeType;
@@ -310,7 +346,10 @@ public class ListRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the last successful execution of the remediation template.
+             * <p>The ID of the last successful execution of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bd7629fb-cac8-42fe-bcb1-e362c5a6****</p>
              */
             public Builder lastSuccessfulInvocationId(String lastSuccessfulInvocationId) {
                 this.lastSuccessfulInvocationId = lastSuccessfulInvocationId;
@@ -318,7 +357,10 @@ public class ListRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last successful execution of the remediation template Unit: milliseconds.
+             * <p>The timestamp of the last successful execution of the remediation template Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1625451393589</p>
              */
             public Builder lastSuccessfulInvocationTime(Long lastSuccessfulInvocationTime) {
                 this.lastSuccessfulInvocationTime = lastSuccessfulInvocationTime;
@@ -326,13 +368,16 @@ public class ListRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the last successful execution of the remediation template. Valid values:
-             * <p>
+             * <p>The mode of the last successful execution of the remediation template. Valid values:</p>
+             * <ul>
+             * <li>NON_EXECUTION: The remediation template was not executed.</li>
+             * <li>AUTO_EXECUTION: The remediation template was automatically executed.</li>
+             * <li>MANUAL_EXECUTION: The remediation template was manually executed.</li>
+             * <li>NOT_CONFIG: The execution mode was not specified.</li>
+             * </ul>
              * 
-             * *   NON_EXECUTION: The remediation template was not executed.
-             * *   AUTO_EXECUTION: The remediation template was automatically executed.
-             * *   MANUAL_EXECUTION: The remediation template was manually executed.
-             * *   NOT_CONFIG: The execution mode was not specified.
+             * <strong>example:</strong>
+             * <p>AUTO_EXECUTION</p>
              */
             public Builder lastSuccessfulInvocationType(String lastSuccessfulInvocationType) {
                 this.lastSuccessfulInvocationType = lastSuccessfulInvocationType;
@@ -340,7 +385,10 @@ public class ListRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the remediation template.
+             * <p>The ID of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-6b7c626622af0026****</p>
              */
             public Builder remediationId(String remediationId) {
                 this.remediationId = remediationId;
@@ -348,7 +396,10 @@ public class ListRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The converted configuration of the remediation template. This parameter is available only for an OOS remediation template.
+             * <p>The converted configuration of the remediation template. This parameter is available only for an OOS remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;bucketName&quot;: &quot;{resourceId}&quot;, &quot;regionId&quot;: &quot;{regionId}&quot;, &quot;permissionName&quot;: &quot;private&quot;}</p>
              */
             public Builder remediationOriginParams(String remediationOriginParams) {
                 this.remediationOriginParams = remediationOriginParams;
@@ -356,12 +407,15 @@ public class ListRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of remediation. Valid values:
-             * <p>
+             * <p>The source of remediation. Valid values:</p>
+             * <ul>
+             * <li>ALIYUN: official template.</li>
+             * <li>CUSTOM: custom template.</li>
+             * <li>NONE: none.</li>
+             * </ul>
              * 
-             * *   ALIYUN: official template.
-             * *   CUSTOM: custom template.
-             * *   NONE: none.
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder remediationSourceType(String remediationSourceType) {
                 this.remediationSourceType = remediationSourceType;
@@ -369,7 +423,10 @@ public class ListRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the remediation template.
+             * <p>The ID of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-OSS-PutBucketAcl</p>
              */
             public Builder remediationTemplateId(String remediationTemplateId) {
                 this.remediationTemplateId = remediationTemplateId;
@@ -377,11 +434,14 @@ public class ListRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the remediation template. Valid values:
-             * <p>
+             * <p>The type of the remediation template. Valid values:</p>
+             * <ul>
+             * <li>OOS: Operation Orchestration Service (official remediation)</li>
+             * <li>FC: Function Compute (custom remediation)</li>
+             * </ul>
              * 
-             * *   OOS: Operation Orchestration Service (official remediation)
-             * *   FC: Function Compute (custom remediation)
+             * <strong>example:</strong>
+             * <p>OOS</p>
              */
             public Builder remediationType(String remediationType) {
                 this.remediationType = remediationType;

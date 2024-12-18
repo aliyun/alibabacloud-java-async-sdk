@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceEvaluationResultsRequest} extends {@link RequestModel}
  *
  * <p>ListResourceEvaluationResultsRequest</p>
@@ -124,14 +130,17 @@ public class ListResourceEvaluationResultsRequest extends Request {
         } 
 
         /**
-         * The compliance evaluation result of the resource. Valid values:
-         * <p>
+         * <p>The compliance evaluation result of the resource. Valid values:</p>
+         * <ul>
+         * <li>COMPLIANT: The resource is evaluated as compliant.</li>
+         * <li>NON_COMPLIANT: The resource is evaluated as non-compliant.</li>
+         * <li>NOT_APPLICABLE: The rule does not apply to the resources.</li>
+         * <li>INSUFFICIENT_DATA: No data is available.</li>
+         * <li>IGNORED: The resource is ignored during compliance evaluation.</li>
+         * </ul>
          * 
-         * *   COMPLIANT: The resource is evaluated as compliant.
-         * *   NON_COMPLIANT: The resource is evaluated as non-compliant.
-         * *   NOT_APPLICABLE: The rule does not apply to the resources.
-         * *   INSUFFICIENT_DATA: No data is available.
-         * *   IGNORED: The resource is ignored during compliance evaluation.
+         * <strong>example:</strong>
+         * <p>NON_COMPLIANT</p>
          */
         public Builder complianceType(String complianceType) {
             this.putQueryParameter("ComplianceType", complianceType);
@@ -140,7 +149,10 @@ public class ListResourceEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return in a request. Valid values: 1 to 100.
+         * <p>The maximum number of entries to return in a request. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -149,7 +161,10 @@ public class ListResourceEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The token that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.``
+         * <p>The token that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.``</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IWBjqMYSy0is7zSMGu16****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -158,10 +173,11 @@ public class ListResourceEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the region where one or more resources you want to query reside. For example, the value `global` indicates global regions and the value `cn-hangzhou` indicates the China (Hangzhou) region.
-         * <p>
+         * <p>The ID of the region where one or more resources you want to query reside. For example, the value <code>global</code> indicates global regions and the value <code>cn-hangzhou</code> indicates the China (Hangzhou) region.</p>
+         * <p>For more information about how to obtain the ID of the region where a resource resides, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
          * 
-         * For more information about how to obtain the ID of the region where a resource resides, see [ListDiscoveredResources](~~169620~~).
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -170,10 +186,11 @@ public class ListResourceEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
-         * <p>
+         * <p>The ID of the resource.</p>
+         * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
          * 
-         * For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~169620~~).
+         * <strong>example:</strong>
+         * <p>23642660635396****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -182,10 +199,11 @@ public class ListResourceEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>For more information about how to query the type of a resource, see <a href="https://help.aliyun.com/document_detail/169620.html">ListDiscoveredResources</a>.</p>
          * 
-         * For more information about how to query the type of a resource, see [ListDiscoveredResources](~~169620~~).
+         * <strong>example:</strong>
+         * <p>ACS::RAM::User</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

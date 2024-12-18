@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRemediationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRemediationResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeRemediationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the remediation configuration.
+         * <p>The details of the remediation configuration.</p>
          */
         public Builder remediation(Remediation remediation) {
             this.remediation = remediation;
@@ -57,7 +63,10 @@ public class DescribeRemediationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79BE07A7-46A5-5D3C-B378-0ACDA979****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeRemediationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRemediationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRemediationResponseBody</p>
+     */
     public static class Remediation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -218,7 +233,10 @@ public class DescribeRemediationResponseBody extends TeaModel {
             private String remediationType; 
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -226,7 +244,10 @@ public class DescribeRemediationResponseBody extends TeaModel {
             }
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cr-3184626622af003****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -234,13 +255,16 @@ public class DescribeRemediationResponseBody extends TeaModel {
             }
 
             /**
-             * The execution mode of the remediation template. Valid values:
-             * <p>
+             * <p>The execution mode of the remediation template. Valid values:</p>
+             * <ul>
+             * <li>NON_EXECUTION: The remediation template was not executed.</li>
+             * <li>AUTO_EXECUTION: The remediation template was automatically executed.</li>
+             * <li>MANUAL_EXECUTION: The remediation template was manually executed.</li>
+             * <li>NOT_CONFIG: The execution mode was not specified.</li>
+             * </ul>
              * 
-             * *   NON_EXECUTION: The remediation template was not executed.
-             * *   AUTO_EXECUTION: The remediation template was automatically executed.
-             * *   MANUAL_EXECUTION: The remediation template was manually executed.
-             * *   NOT_CONFIG: The execution mode was not specified.
+             * <strong>example:</strong>
+             * <p>AUTO_EXECUTION</p>
              */
             public Builder invokeType(String invokeType) {
                 this.invokeType = invokeType;
@@ -248,7 +272,10 @@ public class DescribeRemediationResponseBody extends TeaModel {
             }
 
             /**
-             * The record ID of the last successful execution of the remediation template.
+             * <p>The record ID of the last successful execution of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bd7629fb-cac8-42fe-bcb1-e362c5a6****</p>
              */
             public Builder lastSuccessfulInvocationId(String lastSuccessfulInvocationId) {
                 this.lastSuccessfulInvocationId = lastSuccessfulInvocationId;
@@ -256,7 +283,10 @@ public class DescribeRemediationResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last successful execution of the remediation template. Unit: milliseconds.
+             * <p>The timestamp of the last successful execution of the remediation template. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1625451393589</p>
              */
             public Builder lastSuccessfulInvocationTime(Long lastSuccessfulInvocationTime) {
                 this.lastSuccessfulInvocationTime = lastSuccessfulInvocationTime;
@@ -264,13 +294,16 @@ public class DescribeRemediationResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the last successful execution of the remediation template. Valid values:
-             * <p>
+             * <p>The mode of the last successful execution of the remediation template. Valid values:</p>
+             * <ul>
+             * <li>NON_EXECUTION: The remediation template was not executed.</li>
+             * <li>AUTO_EXECUTION: The remediation template was automatically executed.</li>
+             * <li>MANUAL_EXECUTION: The remediation template was manually executed.</li>
+             * <li>NOT_CONFIG: The execution mode was not specified.</li>
+             * </ul>
              * 
-             * *   NON_EXECUTION: The remediation template was not executed.
-             * *   AUTO_EXECUTION: The remediation template was automatically executed.
-             * *   MANUAL_EXECUTION: The remediation template was manually executed.
-             * *   NOT_CONFIG: The execution mode was not specified.
+             * <strong>example:</strong>
+             * <p>AUTO_EXECUTION</p>
              */
             public Builder lastSuccessfulInvocationType(String lastSuccessfulInvocationType) {
                 this.lastSuccessfulInvocationType = lastSuccessfulInvocationType;
@@ -278,7 +311,10 @@ public class DescribeRemediationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the remediation configuration.
+             * <p>The ID of the remediation configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-f381cf0c1c2f004e****</p>
              */
             public Builder remediationId(String remediationId) {
                 this.remediationId = remediationId;
@@ -286,7 +322,11 @@ public class DescribeRemediationResponseBody extends TeaModel {
             }
 
             /**
-             * The converted configuration of the remediation template. This parameter is returned only for an OOS remediation template.
+             * <p>The converted configuration of the remediation template. This parameter is returned only for an OOS remediation template.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;bucketName&quot;: &quot;{resourceId}&quot;, &quot;regionId&quot;: &quot;{regionId}&quot;, &quot;permissionName&quot;: &quot;private&quot;}</p>
              */
             public Builder remediationOriginParams(String remediationOriginParams) {
                 this.remediationOriginParams = remediationOriginParams;
@@ -294,12 +334,15 @@ public class DescribeRemediationResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the remediation template. Valid values:
-             * <p>
+             * <p>The source of the remediation template. Valid values:</p>
+             * <ul>
+             * <li>ALIYUN: official template</li>
+             * <li>CUSTOM: custom template</li>
+             * <li>NONE: none</li>
+             * </ul>
              * 
-             * *   ALIYUN: official template
-             * *   CUSTOM: custom template
-             * *   NONE: none
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder remediationSourceType(String remediationSourceType) {
                 this.remediationSourceType = remediationSourceType;
@@ -307,7 +350,10 @@ public class DescribeRemediationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the remediation template.
+             * <p>The ID of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-OSS-PutBucketAcl</p>
              */
             public Builder remediationTemplateId(String remediationTemplateId) {
                 this.remediationTemplateId = remediationTemplateId;
@@ -315,11 +361,14 @@ public class DescribeRemediationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the remediation template. Valid values:
-             * <p>
+             * <p>The type of the remediation template. Valid values:</p>
+             * <ul>
+             * <li>OOS: Operation Orchestration Service (official remediation)</li>
+             * <li>FC: Function Compute (custom remediation)</li>
+             * </ul>
              * 
-             * *   OOS: Operation Orchestration Service (official remediation)
-             * *   FC: Function Compute (custom remediation)
+             * <strong>example:</strong>
+             * <p>OOS</p>
              */
             public Builder remediationType(String remediationType) {
                 this.remediationType = remediationType;

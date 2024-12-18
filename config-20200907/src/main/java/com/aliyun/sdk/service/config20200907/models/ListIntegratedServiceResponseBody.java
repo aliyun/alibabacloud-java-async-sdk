@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIntegratedServiceResponseBody} extends {@link TeaModel}
  *
  * <p>ListIntegratedServiceResponseBody</p>
  */
 public class ListIntegratedServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,19 +51,22 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
         /**
-         * The information about the cloud service that can be integrated.
+         * <p>The information about the cloud service that can be integrated.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86DB52A5-0C25-505A-96D5-9BAE1EFA00B9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +79,16 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIntegratedServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIntegratedServiceResponseBody</p>
+     */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AggregatorDeliveryDataType")
+        private String aggregatorDeliveryDataType;
+
         @com.aliyun.core.annotation.NameInMap("IntegratedTypes")
         private String integratedTypes;
 
@@ -84,6 +102,7 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
         private Boolean status;
 
         private Data(Builder builder) {
+            this.aggregatorDeliveryDataType = builder.aggregatorDeliveryDataType;
             this.integratedTypes = builder.integratedTypes;
             this.serviceCode = builder.serviceCode;
             this.serviceName = builder.serviceName;
@@ -96,6 +115,13 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return aggregatorDeliveryDataType
+         */
+        public String getAggregatorDeliveryDataType() {
+            return this.aggregatorDeliveryDataType;
         }
 
         /**
@@ -127,17 +153,29 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String aggregatorDeliveryDataType; 
             private String integratedTypes; 
             private String serviceCode; 
             private String serviceName; 
             private Boolean status; 
 
             /**
-             * The types of the integrated events. Separate multiple event types with commas (,). Valid values:
-             * <p>
+             * AggregatorDeliveryDataType.
+             */
+            public Builder aggregatorDeliveryDataType(String aggregatorDeliveryDataType) {
+                this.aggregatorDeliveryDataType = aggregatorDeliveryDataType;
+                return this;
+            }
+
+            /**
+             * <p>The types of the integrated events. Separate multiple event types with commas (,). Valid values:</p>
+             * <ul>
+             * <li>ConfigurationItemChangeNotification: resource change event</li>
+             * <li>NonCompliantNotification: non-compliance event</li>
+             * </ul>
              * 
-             * *   ConfigurationItemChangeNotification: resource change event
-             * *   NonCompliantNotification: non-compliance event
+             * <strong>example:</strong>
+             * <p>NonCompliantNotification</p>
              */
             public Builder integratedTypes(String integratedTypes) {
                 this.integratedTypes = integratedTypes;
@@ -145,12 +183,15 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the cloud service. Valid values:
-             * <p>
+             * <p>The identifier of the cloud service. Valid values:</p>
+             * <ul>
+             * <li>eventbridge: EventBridge</li>
+             * <li>cms: CloudMonitor</li>
+             * <li>bpstudio: Cloud Architect Design Tools</li>
+             * </ul>
              * 
-             * *   eventbridge: EventBridge
-             * *   cms: CloudMonitor
-             * *   bpstudio: Cloud Architect Design Tools
+             * <strong>example:</strong>
+             * <p>cms</p>
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -158,7 +199,10 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud service.
+             * <p>The name of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cms</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -166,11 +210,14 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The integration status of the cloud service. Valid values:
-             * <p>
+             * <p>The integration status of the cloud service. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;

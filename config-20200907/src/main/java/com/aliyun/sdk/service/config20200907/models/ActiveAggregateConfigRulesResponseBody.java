@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ActiveAggregateConfigRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ActiveAggregateConfigRulesResponseBody</p>
@@ -49,7 +55,7 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder operateRuleResult(OperateRuleResult operateRuleResult) {
             this.operateRuleResult = operateRuleResult;
@@ -57,7 +63,10 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EC7AED1-172F-42AE-9C12-295BC2ADB751</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ActiveAggregateConfigRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ActiveAggregateConfigRulesResponseBody</p>
+     */
     public static class OperateRuleItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
@@ -121,7 +136,10 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cr-5772ba41209e007b****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -129,11 +147,14 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned.
-             * <p>
+             * <p>The error code returned.</p>
+             * <ul>
+             * <li>If the rule is enabled, no error code is returned.</li>
+             * <li>If the rule fails to be enabled, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</li>
+             * </ul>
              * 
-             * *   If the rule is enabled, no error code is returned.
-             * *   If the rule fails to be enabled, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).
+             * <strong>example:</strong>
+             * <p>ConfigRuleNotExists</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -141,11 +162,14 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the request was successful. Valid values:</p>
+             * <ul>
+             * <li>true: The request was successful.</li>
+             * <li>false: The request failed.</li>
+             * </ul>
              * 
-             * *   true: The request was successful.
-             * *   false: The request failed.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -159,9 +183,15 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ActiveAggregateConfigRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ActiveAggregateConfigRulesResponseBody</p>
+     */
     public static class OperateRuleResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperateRuleItemList")
-        private java.util.List < OperateRuleItemList> operateRuleItemList;
+        private java.util.List<OperateRuleItemList> operateRuleItemList;
 
         private OperateRuleResult(Builder builder) {
             this.operateRuleItemList = builder.operateRuleItemList;
@@ -178,17 +208,17 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
         /**
          * @return operateRuleItemList
          */
-        public java.util.List < OperateRuleItemList> getOperateRuleItemList() {
+        public java.util.List<OperateRuleItemList> getOperateRuleItemList() {
             return this.operateRuleItemList;
         }
 
         public static final class Builder {
-            private java.util.List < OperateRuleItemList> operateRuleItemList; 
+            private java.util.List<OperateRuleItemList> operateRuleItemList; 
 
             /**
-             * The returned result.
+             * <p>The returned result.</p>
              */
-            public Builder operateRuleItemList(java.util.List < OperateRuleItemList> operateRuleItemList) {
+            public Builder operateRuleItemList(java.util.List<OperateRuleItemList> operateRuleItemList) {
                 this.operateRuleItemList = operateRuleItemList;
                 return this;
             }

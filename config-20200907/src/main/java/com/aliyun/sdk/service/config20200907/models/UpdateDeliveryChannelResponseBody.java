@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDeliveryChannelResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateDeliveryChannelResponseBody</p>
@@ -49,7 +55,10 @@ public class UpdateDeliveryChannelResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the delivery channel.
+         * <p>The ID of the delivery channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdc-8e45ff4e06a3a8****</p>
          */
         public Builder deliveryChannelId(String deliveryChannelId) {
             this.deliveryChannelId = deliveryChannelId;
@@ -57,7 +66,10 @@ public class UpdateDeliveryChannelResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7A0FFF8-0B44-40C6-8BBF-3A185EFDERTHG</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

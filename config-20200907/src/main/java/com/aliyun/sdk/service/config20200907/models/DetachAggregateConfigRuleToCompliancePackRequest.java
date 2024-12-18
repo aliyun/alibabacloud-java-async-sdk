@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachAggregateConfigRuleToCompliancePackRequest} extends {@link RequestModel}
  *
  * <p>DetachAggregateConfigRuleToCompliancePackRequest</p>
@@ -84,10 +90,12 @@ public class DetachAggregateConfigRuleToCompliancePackRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-75b4626622af00c3****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -96,10 +104,12 @@ public class DetachAggregateConfigRuleToCompliancePackRequest extends Request {
         }
 
         /**
-         * The ID of the compliance package.
-         * <p>
+         * <p>The ID of the compliance package.</p>
+         * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).
+         * <strong>example:</strong>
+         * <p>cp-5bb1626622af00bd****</p>
          */
         public Builder compliancePackId(String compliancePackId) {
             this.putQueryParameter("CompliancePackId", compliancePackId);
@@ -108,10 +118,12 @@ public class DetachAggregateConfigRuleToCompliancePackRequest extends Request {
         }
 
         /**
-         * The rule IDs. Separate multiple rule IDs with commas (,).
-         * <p>
+         * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
+         * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+         * <strong>example:</strong>
+         * <p>cr-a124626622af00e7****</p>
          */
         public Builder configRuleIds(String configRuleIds) {
             this.putQueryParameter("ConfigRuleIds", configRuleIds);

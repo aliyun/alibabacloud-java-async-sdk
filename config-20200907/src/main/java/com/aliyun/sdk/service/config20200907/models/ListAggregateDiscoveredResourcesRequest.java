@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAggregateDiscoveredResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListAggregateDiscoveredResourcesRequest</p>
@@ -211,10 +217,12 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-c560626622af0005****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -241,7 +249,11 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return for a single request. Valid values: 1 to 100.
+         * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -250,7 +262,10 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         }
 
         /**
-         * The `token` that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.
+         * <p>The <code>token</code> that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IWBjqMYSy0is7zSMGu16****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -259,7 +274,10 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the resource resides. Separate multiple region IDs with commas (,).
+         * <p>The ID of the region in which the resource resides. Separate multiple region IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regions(String regions) {
             this.putQueryParameter("Regions", regions);
@@ -268,7 +286,10 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.
+         * <p>The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
          */
         public Builder resourceAccountId(Long resourceAccountId) {
             this.putQueryParameter("ResourceAccountId", resourceAccountId);
@@ -277,11 +298,14 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         }
 
         /**
-         * The status of the resource. Valid values:
-         * <p>
+         * <p>The status of the resource. Valid values:</p>
+         * <ul>
+         * <li>0: The resource is deleted. If a resource is deleted from the desired cloud service, <strong>Deleted</strong> is displayed in the resource list in the Cloud Config console.</li>
+         * <li>1 (default): The resource is retained. If a resource is managed as expected, <strong>Active</strong> is displayed in the resource list in the Cloud Config console.</li>
+         * </ul>
          * 
-         * *   0: The resource is deleted. If a resource is deleted from the desired cloud service, **Deleted** is displayed in the resource list in the Cloud Config console.
-         * *   1 (default): The resource is retained. If a resource is managed as expected, **Active** is displayed in the resource list in the Cloud Config console.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder resourceDeleted(Integer resourceDeleted) {
             this.putQueryParameter("ResourceDeleted", resourceDeleted);
@@ -290,7 +314,10 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         }
 
         /**
-         * The resource ID.
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-hp31cqoba96jagtz****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -308,7 +335,10 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Separate multiple resource types with commas (,).
+         * <p>The type of the resource. Separate multiple resource types with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::NetworkInterface</p>
          */
         public Builder resourceTypes(String resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);

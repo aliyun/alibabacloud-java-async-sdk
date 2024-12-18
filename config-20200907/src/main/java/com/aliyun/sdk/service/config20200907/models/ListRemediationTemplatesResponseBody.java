@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRemediationTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRemediationTemplatesResponseBody</p>
@@ -18,7 +24,7 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
     private Long pageSize;
 
     @com.aliyun.core.annotation.NameInMap("RemediationTemplates")
-    private java.util.List < RemediationTemplates> remediationTemplates;
+    private java.util.List<RemediationTemplates> remediationTemplates;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -59,7 +65,7 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
     /**
      * @return remediationTemplates
      */
-    public java.util.List < RemediationTemplates> getRemediationTemplates() {
+    public java.util.List<RemediationTemplates> getRemediationTemplates() {
         return this.remediationTemplates;
     }
 
@@ -80,12 +86,15 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
     public static final class Builder {
         private Long pageNumber; 
         private Long pageSize; 
-        private java.util.List < RemediationTemplates> remediationTemplates; 
+        private java.util.List<RemediationTemplates> remediationTemplates; 
         private String requestId; 
         private String totalCount; 
 
         /**
-         * The page number. Pages start from page 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +102,10 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100.
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -101,15 +113,18 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The queried remediation templates.
+         * <p>The queried remediation templates.</p>
          */
-        public Builder remediationTemplates(java.util.List < RemediationTemplates> remediationTemplates) {
+        public Builder remediationTemplates(java.util.List<RemediationTemplates> remediationTemplates) {
             this.remediationTemplates = remediationTemplates;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC2C4750-7024-499C-A69F-763543D1CBE3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,10 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of remediation templates.
+         * <p>The total number of remediation templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +148,12 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRemediationTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRemediationTemplatesResponseBody</p>
+     */
     public static class RemediationTemplates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RemediationType")
         private String remediationType;
@@ -205,7 +229,10 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * The type of the remediation template. Valid value: OOS, which indicates Operation Orchestration Service.
+             * <p>The type of the remediation template. Valid value: OOS, which indicates Operation Orchestration Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OOS</p>
              */
             public Builder remediationType(String remediationType) {
                 this.remediationType = remediationType;
@@ -213,7 +240,39 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The definition of the remediation template.
+             * <p>The definition of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;Parameters&quot;: {
+             *         &quot;bucketName&quot;: {
+             *             &quot;Default&quot;: &quot;{resourceId}&quot;,
+             *             &quot;Description&quot;: {
+             *                 &quot;zh-cn&quot;: &quot;[Required]OSS Bucket Name.&quot;,
+             *                 &quot;en&quot;: &quot;[Required]OSS Bucket Name.&quot;
+             *             },
+             *             &quot;Type&quot;: &quot;String&quot;
+             *         },
+             *         &quot;regionId&quot;: {
+             *             &quot;AssociationProperty&quot;: &quot;RegionId&quot;,
+             *             &quot;Default&quot;: &quot;{regionId}&quot;,
+             *             &quot;Description&quot;: {
+             *                 &quot;zh-cn&quot;: &quot;[Required]The id of target region.&quot;,
+             *                 &quot;en&quot;: &quot;[Required]The id of target region.&quot;
+             *             },
+             *             &quot;Type&quot;: &quot;String&quot;
+             *         },
+             *         &quot;permissionName&quot;: {
+             *             &quot;AllowValues&quot;: &quot;[&quot;public-read-write&quot;,&quot;public-read&quot;,&quot;private&quot;]&quot;,
+             *             &quot;Default&quot;: &quot;private&quot;,
+             *             &quot;Description&quot;: {
+             *                 &quot;zh-cn&quot;: &quot;[Required]ACL Permission Name.&quot;,
+             *                 &quot;en&quot;: &quot;[Required]ACL Permission Name.&quot;
+             *             },
+             *             &quot;Type&quot;: &quot;String&quot;
+             *         }
+             *     }
+             * }</p>
              */
             public Builder templateDefinition(String templateDefinition) {
                 this.templateDefinition = templateDefinition;
@@ -221,7 +280,10 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the remediation template.
+             * <p>The description of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Configure encryption rules for OSSBucket through the PutBucketEncryption interface. Be aware of the risks and exercise caution.</p>
              */
             public Builder templateDescription(String templateDescription) {
                 this.templateDescription = templateDescription;
@@ -229,7 +291,10 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the remediation template.
+             * <p>The ID of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-OSS-PutBucketAcl</p>
              */
             public Builder templateIdentifier(String templateIdentifier) {
                 this.templateIdentifier = templateIdentifier;
@@ -237,7 +302,10 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the remediation template.
+             * <p>The name of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Set the ACL of an OSS bucket to private</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListManagedRulesRequest} extends {@link RequestModel}
  *
  * <p>ListManagedRulesRequest</p>
@@ -111,7 +117,10 @@ public class ListManagedRulesRequest extends Request {
         } 
 
         /**
-         * The keyword of the managed rule.
+         * <p>The keyword of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDN</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -120,10 +129,11 @@ public class ListManagedRulesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Page start from page 1. Default value: 1.</p>
          * 
-         * Page start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -132,10 +142,11 @@ public class ListManagedRulesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -144,7 +155,10 @@ public class ListManagedRulesRequest extends Request {
         }
 
         /**
-         * The type of the resources to be evaluated based on the rule.
+         * <p>The type of the resources to be evaluated based on the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         public Builder resourceTypes(String resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
@@ -153,12 +167,15 @@ public class ListManagedRulesRequest extends Request {
         }
 
         /**
-         * The risk level of the managed rule. Valid values:
-         * <p>
+         * <p>The risk level of the managed rule. Valid values:</p>
+         * <ul>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
+         * </ul>
          * 
-         * *   1: high
-         * *   2: medium
-         * *   3: low
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskLevel(Integer riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartAggregateRemediationResponseBody} extends {@link TeaModel}
  *
  * <p>StartAggregateRemediationResponseBody</p>
@@ -49,11 +55,14 @@ public class StartAggregateRemediationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -61,7 +70,10 @@ public class StartAggregateRemediationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7817373-78CB-4F9A-8AFA-E7A88E9D64A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

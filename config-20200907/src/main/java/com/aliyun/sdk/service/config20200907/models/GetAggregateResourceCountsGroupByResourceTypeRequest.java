@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAggregateResourceCountsGroupByResourceTypeRequest} extends {@link RequestModel}
  *
  * <p>GetAggregateResourceCountsGroupByResourceTypeRequest</p>
@@ -111,10 +117,12 @@ public class GetAggregateResourceCountsGroupByResourceTypeRequest extends Reques
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-a260626622af0005****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -123,10 +131,11 @@ public class GetAggregateResourceCountsGroupByResourceTypeRequest extends Reques
         }
 
         /**
-         * The ID of the folder in the resource directory.
-         * <p>
+         * <p>The ID of the folder in the resource directory.</p>
+         * <p>For more information about how to obtain the ID of a folder, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information of a folder</a>.</p>
          * 
-         * For more information about how to obtain the ID of a folder, see [View the basic information of a folder](~~111223~~).
+         * <strong>example:</strong>
+         * <p>r-BU****</p>
          */
         public Builder folderId(String folderId) {
             this.putQueryParameter("FolderId", folderId);
@@ -135,7 +144,10 @@ public class GetAggregateResourceCountsGroupByResourceTypeRequest extends Reques
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -144,10 +156,13 @@ public class GetAggregateResourceCountsGroupByResourceTypeRequest extends Reques
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the resources in the account group belong.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account to which the resources in the account group belong.</p>
+         * <blockquote>
+         * <p>You can specify either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you specify the ResourceAccountId parameter.</p>
+         * </blockquote>
          * 
-         * > You can specify either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you specify the ResourceAccountId parameter.
+         * <strong>example:</strong>
+         * <p>100931896542****</p>
          */
         public Builder resourceAccountId(Long resourceAccountId) {
             this.putQueryParameter("ResourceAccountId", resourceAccountId);

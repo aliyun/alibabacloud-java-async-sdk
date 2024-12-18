@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAggregateRemediationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAggregateRemediationsResponseBody</p>
  */
 public class ListAggregateRemediationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Remediations")
-    private java.util.List < Remediations> remediations;
+    private java.util.List<Remediations> remediations;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
     /**
      * @return remediations
      */
-    public java.util.List < Remediations> getRemediations() {
+    public java.util.List<Remediations> getRemediations() {
         return this.remediations;
     }
 
@@ -45,19 +51,22 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Remediations> remediations; 
+        private java.util.List<Remediations> remediations; 
         private String requestId; 
 
         /**
-         * An array that contains remediation templates.
+         * <p>An array that contains remediation templates.</p>
          */
-        public Builder remediations(java.util.List < Remediations> remediations) {
+        public Builder remediations(java.util.List<Remediations> remediations) {
             this.remediations = remediations;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0146963A-20C0-4E75-B93A-7D622B5FD7C8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAggregateRemediationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAggregateRemediationsResponseBody</p>
+     */
     public static class Remediations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -229,7 +244,10 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
             private String remediationType; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -237,7 +255,10 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account group.
+             * <p>The ID of the account group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca-6b4a626622af0012****</p>
              */
             public Builder aggregatorId(String aggregatorId) {
                 this.aggregatorId = aggregatorId;
@@ -245,7 +266,10 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cr-6b7c626622af00b4****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -253,13 +277,16 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution mode of the remediation template. Valid values:
-             * <p>
+             * <p>The execution mode of the remediation template. Valid values:</p>
+             * <ul>
+             * <li>NON_EXECUTION: The remediation template is not executed.</li>
+             * <li>AUTO_EXECUTION: The remediation template is automatically executed.</li>
+             * <li>MANUAL_EXECUTION: The remediation template is manually executed.</li>
+             * <li>NOT_CONFIG: The execution mode is not specified.</li>
+             * </ul>
              * 
-             * *   NON_EXECUTION: The remediation template is not executed.
-             * *   AUTO_EXECUTION: The remediation template is automatically executed.
-             * *   MANUAL_EXECUTION: The remediation template is manually executed.
-             * *   NOT_CONFIG: The execution mode is not specified.
+             * <strong>example:</strong>
+             * <p>AUTO_EXECUTION</p>
              */
             public Builder invokeType(String invokeType) {
                 this.invokeType = invokeType;
@@ -267,7 +294,10 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the last successful execution of the remediation template.
+             * <p>The ID of the last successful execution of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bd7629fb-cac8-42fe-bcb1-e362c5a6****</p>
              */
             public Builder lastSuccessfulInvocationId(String lastSuccessfulInvocationId) {
                 this.lastSuccessfulInvocationId = lastSuccessfulInvocationId;
@@ -275,7 +305,10 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last successful execution of the remediation template. Unit: milliseconds.
+             * <p>The timestamp of the last successful execution of the remediation template. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1625451393589</p>
              */
             public Builder lastSuccessfulInvocationTime(Long lastSuccessfulInvocationTime) {
                 this.lastSuccessfulInvocationTime = lastSuccessfulInvocationTime;
@@ -283,13 +316,16 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the last successful execution of the remediation template. Valid values:
-             * <p>
+             * <p>The mode of the last successful execution of the remediation template. Valid values:</p>
+             * <ul>
+             * <li>NON_EXECUTION: The remediation template is not executed.</li>
+             * <li>AUTO_EXECUTION: The remediation template is automatically executed.</li>
+             * <li>MANUAL_EXECUTION: The remediation template is manually executed.</li>
+             * <li>NOT_CONFIG: The execution mode is not specified.</li>
+             * </ul>
              * 
-             * *   NON_EXECUTION: The remediation template is not executed.
-             * *   AUTO_EXECUTION: The remediation template is automatically executed.
-             * *   MANUAL_EXECUTION: The remediation template is manually executed.
-             * *   NOT_CONFIG: The execution mode is not specified.
+             * <strong>example:</strong>
+             * <p>AUTO_EXECUTION</p>
              */
             public Builder lastSuccessfulInvocationType(String lastSuccessfulInvocationType) {
                 this.lastSuccessfulInvocationType = lastSuccessfulInvocationType;
@@ -297,7 +333,10 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The converted configuration of the remediation template. This parameter is returned only for an OOS remediation template.
+             * <p>The converted configuration of the remediation template. This parameter is returned only for an OOS remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;bucketName&quot;: &quot;{resourceId}&quot;, &quot;regionId&quot;: &quot;{regionId}&quot;, &quot;permissionName&quot;: &quot;private&quot;}</p>
              */
             public Builder remediaitonOriginParams(String remediaitonOriginParams) {
                 this.remediaitonOriginParams = remediaitonOriginParams;
@@ -305,7 +344,10 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the remediation template.
+             * <p>The ID of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-6b7c626622af0026****</p>
              */
             public Builder remediationId(String remediationId) {
                 this.remediationId = remediationId;
@@ -313,12 +355,15 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of remediation template. Valid values:
-             * <p>
+             * <p>The source of remediation template. Valid values:</p>
+             * <ul>
+             * <li>ALIYUN: official template.</li>
+             * <li>CUSTOM: custom template.</li>
+             * <li>NONE: none.</li>
+             * </ul>
              * 
-             * *   ALIYUN: official template.
-             * *   CUSTOM: custom template.
-             * *   NONE: none.
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder remediationSourceType(String remediationSourceType) {
                 this.remediationSourceType = remediationSourceType;
@@ -326,7 +371,10 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the remediation template.
+             * <p>The ID of the remediation template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-OSS-PutBucketAcl</p>
              */
             public Builder remediationTemplateId(String remediationTemplateId) {
                 this.remediationTemplateId = remediationTemplateId;
@@ -334,11 +382,14 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the remediation template. Valid values:
-             * <p>
+             * <p>The type of the remediation template. Valid values:</p>
+             * <ul>
+             * <li>OOS: Operation Orchestration Service (official remediation).</li>
+             * <li>FC: Function Compute (custom remediation).</li>
+             * </ul>
              * 
-             * *   OOS: Operation Orchestration Service (official remediation).
-             * *   FC: Function Compute (custom remediation).
+             * <strong>example:</strong>
+             * <p>OOS</p>
              */
             public Builder remediationType(String remediationType) {
                 this.remediationType = remediationType;

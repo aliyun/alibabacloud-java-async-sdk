@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAggregateResourcesByAdvancedSearchRequest} extends {@link RequestModel}
  *
  * <p>ListAggregateResourcesByAdvancedSearchRequest</p>
@@ -69,7 +75,11 @@ public class ListAggregateResourcesByAdvancedSearchRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
+         * <p>The ID of the account group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca-4b05626622af000c****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -78,7 +88,11 @@ public class ListAggregateResourcesByAdvancedSearchRequest extends Request {
         }
 
         /**
-         * The SQL query statement.
+         * <p>The SQL query statement.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT ResourceId, ResourceName WHERE Tags.Kvpair=&quot;business:online&quot;</p>
          */
         public Builder sql(String sql) {
             this.putQueryParameter("Sql", sql);

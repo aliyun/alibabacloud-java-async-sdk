@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateConfigRulesReportRequest} extends {@link RequestModel}
  *
  * <p>GenerateConfigRulesReportRequest</p>
@@ -67,7 +73,10 @@ public class GenerateConfigRulesReportRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -76,10 +85,11 @@ public class GenerateConfigRulesReportRequest extends Request {
         }
 
         /**
-         * The ID of the rule. Separate multiple rule IDs with commas (,).
-         * <p>
+         * <p>The ID of the rule. Separate multiple rule IDs with commas (,).</p>
+         * <p>For more information about how to query the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</p>
          * 
-         * For more information about how to query the ID of a rule, see [ListConfigRules](~~169607~~).
+         * <strong>example:</strong>
+         * <p>cr-25d86457e0d900b5****</p>
          */
         public Builder configRuleIds(String configRuleIds) {
             this.putBodyParameter("ConfigRuleIds", configRuleIds);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRemediationExecutionsRequest} extends {@link RequestModel}
  *
  * <p>ListRemediationExecutionsRequest</p>
@@ -97,7 +103,11 @@ public class ListRemediationExecutionsRequest extends Request {
         } 
 
         /**
-         * The rule ID.
+         * <p>The rule ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-5392626622af0000****</p>
          */
         public Builder configRuleId(String configRuleId) {
             this.putQueryParameter("ConfigRuleId", configRuleId);
@@ -106,11 +116,14 @@ public class ListRemediationExecutionsRequest extends Request {
         }
 
         /**
-         * The status of the remediation. Valid values:
-         * <p>
+         * <p>The status of the remediation. Valid values:</p>
+         * <ul>
+         * <li>Success</li>
+         * <li>Failed</li>
+         * </ul>
          * 
-         * *   Success
-         * *   Failed
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder executionStatus(String executionStatus) {
             this.putQueryParameter("ExecutionStatus", executionStatus);
@@ -119,7 +132,10 @@ public class ListRemediationExecutionsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return for a single request. Valid values: 10 to 100.
+         * <p>The maximum number of entries to return for a single request. Valid values: 10 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -128,7 +144,10 @@ public class ListRemediationExecutionsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aVCjqNaSy0Ps7zSMGu25****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

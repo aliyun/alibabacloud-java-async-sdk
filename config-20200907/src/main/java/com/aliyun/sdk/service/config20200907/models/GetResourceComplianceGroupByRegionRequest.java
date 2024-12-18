@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceComplianceGroupByRegionRequest} extends {@link RequestModel}
  *
  * <p>GetResourceComplianceGroupByRegionRequest</p>
@@ -53,7 +59,10 @@ public class GetResourceComplianceGroupByRegionRequest extends Request {
         } 
 
         /**
-         * The rule IDs. Separate multiple rule IDs with commas (,).
+         * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr-2541626622af0000****</p>
          */
         public Builder configRuleIds(String configRuleIds) {
             this.putQueryParameter("ConfigRuleIds", configRuleIds);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAggregatorRequest} extends {@link RequestModel}
  *
  * <p>CreateAggregatorRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateAggregatorRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AggregatorAccounts")
-    private java.util.List < AggregatorAccounts> aggregatorAccounts;
+    private java.util.List<AggregatorAccounts> aggregatorAccounts;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AggregatorName")
@@ -63,7 +69,7 @@ public class CreateAggregatorRequest extends Request {
     /**
      * @return aggregatorAccounts
      */
-    public java.util.List < AggregatorAccounts> getAggregatorAccounts() {
+    public java.util.List<AggregatorAccounts> getAggregatorAccounts() {
         return this.aggregatorAccounts;
     }
 
@@ -103,7 +109,7 @@ public class CreateAggregatorRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAggregatorRequest, Builder> {
-        private java.util.List < AggregatorAccounts> aggregatorAccounts; 
+        private java.util.List<AggregatorAccounts> aggregatorAccounts; 
         private String aggregatorName; 
         private String aggregatorType; 
         private String clientToken; 
@@ -125,22 +131,22 @@ public class CreateAggregatorRequest extends Request {
         } 
 
         /**
-         * The information about the member accounts in the account group. Example:
-         * <p>
-         * 
-         *     [{
-         *     	"accountId": 171322098523****,
-         *     	"accountType":"ResourceDirectory",
-         *                     "accountName":"Alice"
-         *     }, {
-         *     	"accountId": 100532098349****,
-         *     	"accountType":"ResourceDirectory",
-         *                     "accountName":"Tom"
-         *     }]
-         * 
-         * >  If `AggregatorType` is set to `RD` or `FOLDER`, this parameter can be left empty, which indicates that all accounts in the resource directory are added to the global account group.
+         * <p>The information about the member accounts in the account group. Example:</p>
+         * <pre><code>[{
+         *     &quot;accountId&quot;: 171322098523****,
+         *     &quot;accountType&quot;:&quot;ResourceDirectory&quot;,
+         *                 &quot;accountName&quot;:&quot;Alice&quot;
+         * }, {
+         *     &quot;accountId&quot;: 100532098349****,
+         *     &quot;accountType&quot;:&quot;ResourceDirectory&quot;,
+         *                 &quot;accountName&quot;:&quot;Tom&quot;
+         * }]
+         * </code></pre>
+         * <blockquote>
+         * <p> If <code>AggregatorType</code> is set to <code>RD</code> or <code>FOLDER</code>, this parameter can be left empty, which indicates that all accounts in the resource directory are added to the global account group.</p>
+         * </blockquote>
          */
-        public Builder aggregatorAccounts(java.util.List < AggregatorAccounts> aggregatorAccounts) {
+        public Builder aggregatorAccounts(java.util.List<AggregatorAccounts> aggregatorAccounts) {
             String aggregatorAccountsShrink = shrink(aggregatorAccounts, "AggregatorAccounts", "json");
             this.putBodyParameter("AggregatorAccounts", aggregatorAccountsShrink);
             this.aggregatorAccounts = aggregatorAccounts;
@@ -148,7 +154,11 @@ public class CreateAggregatorRequest extends Request {
         }
 
         /**
-         * The name of the account group.
+         * <p>The name of the account group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test_Group</p>
          */
         public Builder aggregatorName(String aggregatorName) {
             this.putBodyParameter("AggregatorName", aggregatorName);
@@ -157,12 +167,15 @@ public class CreateAggregatorRequest extends Request {
         }
 
         /**
-         * The type of the account group. Valid values:
-         * <p>
+         * <p>The type of the account group. Valid values:</p>
+         * <ul>
+         * <li>RD: global account group.</li>
+         * <li>FOLDER: account group of the folder.</li>
+         * <li>CUSTOM (default): custom account group.</li>
+         * </ul>
          * 
-         * *   RD: global account group.
-         * *   FOLDER: account group of the folder.
-         * *   CUSTOM (default): custom account group.
+         * <strong>example:</strong>
+         * <p>CUSTOM</p>
          */
         public Builder aggregatorType(String aggregatorType) {
             this.putBodyParameter("AggregatorType", aggregatorType);
@@ -171,7 +184,10 @@ public class CreateAggregatorRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -180,7 +196,11 @@ public class CreateAggregatorRequest extends Request {
         }
 
         /**
-         * The description of the account group.
+         * <p>The description of the account group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aggregator description.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -189,7 +209,10 @@ public class CreateAggregatorRequest extends Request {
         }
 
         /**
-         * The ID of the folder to which the account group is attached. You must specify this parameter if `AggregatorType` is set to `FOLDER`.
+         * <p>The ID of the folder to which the account group is attached. You must specify this parameter if <code>AggregatorType</code> is set to <code>FOLDER</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-brHdgv****</p>
          */
         public Builder folderId(String folderId) {
             this.putBodyParameter("FolderId", folderId);
@@ -204,6 +227,12 @@ public class CreateAggregatorRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAggregatorRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAggregatorRequest</p>
+     */
     public static class AggregatorAccounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -255,7 +284,10 @@ public class CreateAggregatorRequest extends Request {
             private String accountType; 
 
             /**
-             * The member account ID. For more information about how to obtain the ID of a member account, see [ListAccounts](~~160016~~).
+             * <p>The member account ID. For more information about how to obtain the ID of a member account, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>171322098523****</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -263,7 +295,10 @@ public class CreateAggregatorRequest extends Request {
             }
 
             /**
-             * The name of the member account. For more information about how to obtain the name of a member account, see [ListAccounts](~~160016~~).
+             * <p>The name of the member account. For more information about how to obtain the name of a member account, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -271,7 +306,10 @@ public class CreateAggregatorRequest extends Request {
             }
 
             /**
-             * The type of the member account. Set this parameter to ResourceDirectory.
+             * <p>The type of the member account. Set this parameter to ResourceDirectory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ResourceDirectory</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;

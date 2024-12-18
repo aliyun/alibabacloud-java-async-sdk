@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceComplianceTimelineResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceComplianceTimelineResponseBody</p>
@@ -49,7 +55,10 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         private ResourceComplianceTimeline resourceComplianceTimeline; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D53A78F-1EB8-4264-A554-72F07E34FAE6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the compliance timeline.
+         * <p>The information about the compliance timeline.</p>
          */
         public Builder resourceComplianceTimeline(ResourceComplianceTimeline resourceComplianceTimeline) {
             this.resourceComplianceTimeline = resourceComplianceTimeline;
@@ -70,6 +79,12 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceComplianceTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceComplianceTimelineResponseBody</p>
+     */
     public static class ComplianceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -229,7 +244,10 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             private String tags; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100931896542****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -237,7 +255,10 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the resource resides.
+             * <p>The ID of the zone in which the resource resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-f</p>
              */
             public Builder availabilityZone(String availabilityZone) {
                 this.availabilityZone = availabilityZone;
@@ -245,7 +266,10 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the compliance evaluation was recorded. Unit: milliseconds.
+             * <p>The timestamp when the compliance evaluation was recorded. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1625200295276</p>
              */
             public Builder captureTime(Long captureTime) {
                 this.captureTime = captureTime;
@@ -253,7 +277,10 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The rules associated with the resource and the compliance details of the rules.
+             * <p>The rules associated with the resource and the compliance details of the rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Compliance&quot;:{&quot;complianceType&quot;:&quot;COMPLIANT&quot;,&quot;count&quot;:1},&quot;ConfigRuleList&quot;:[{&quot;accountId&quot;:100931896542****,&quot;configRuleId&quot;:&quot;cr-9524626622af003d****&quot;,&quot;configRuleArn&quot;:&quot;acs:config::100931896542****:rule/cr-9524626622af003d****&quot;,&quot;configRuleName&quot;:&quot;test-rule-name&quot;,&quot;complianceType&quot;:&quot;COMPLIANT&quot;,&quot;riskLevel&quot;:1,&quot;annotation&quot;:&quot;&quot;,&quot;invokingEventMessageType&quot;:&quot;ScheduledNotification&quot;}]}</p>
              */
             public Builder configuration(String configuration) {
                 this.configuration = configuration;
@@ -261,7 +288,10 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the resource changes that trigger the compliance evaluation.
+             * <p>The details of the resource changes that trigger the compliance evaluation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;test-rule-name&quot;:[{&quot;accountId&quot;:100931896542****,&quot;configRuleId&quot;:&quot;cr-965f626622af003d****&quot;,&quot;configRuleArn&quot;:&quot;acs:config::100931896542****:rule/cr-965f626622af003d****&quot;,&quot;configRuleName&quot;:&quot;test-rule-name&quot;,&quot;complianceType&quot;:&quot;COMPLIANT&quot;,&quot;riskLevel&quot;:1,&quot;annotation&quot;:&quot;&quot;,&quot;invokingEventMessageType&quot;:&quot;ScheduledNotification&quot;},{}]}</p>
              */
             public Builder configurationDiff(String configurationDiff) {
                 this.configurationDiff = configurationDiff;
@@ -269,7 +299,10 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -277,7 +310,10 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource was created. Unit: milliseconds.
+             * <p>The time when the resource was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1624961112000</p>
              */
             public Builder resourceCreateTime(Long resourceCreateTime) {
                 this.resourceCreateTime = resourceCreateTime;
@@ -285,7 +321,10 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new-bucket</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -293,7 +332,10 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The resource name.
+             * <p>The resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new-bucket</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -301,11 +343,14 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:
-             * <p>
+             * <p>The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:</p>
+             * <ul>
+             * <li>If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</li>
+             * <li>If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</li>
+             * </ul>
              * 
-             * *   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.
-             * *   If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder resourceStatus(String resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -313,7 +358,10 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::OSS::Bucket</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -321,7 +369,10 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the resource.
+             * <p>The tags of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;&quot;hc&quot;&quot;:[&quot;&quot;value2&quot;&quot;]}</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -335,9 +386,15 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceComplianceTimelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceComplianceTimelineResponseBody</p>
+     */
     public static class ResourceComplianceTimeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComplianceList")
-        private java.util.List < ComplianceList> complianceList;
+        private java.util.List<ComplianceList> complianceList;
 
         @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
@@ -362,7 +419,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         /**
          * @return complianceList
          */
-        public java.util.List < ComplianceList> getComplianceList() {
+        public java.util.List<ComplianceList> getComplianceList() {
             return this.complianceList;
         }
 
@@ -381,20 +438,23 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ComplianceList> complianceList; 
+            private java.util.List<ComplianceList> complianceList; 
             private Integer maxResults; 
             private String nextToken; 
 
             /**
-             * The compliance evaluation records on the compliance timeline.
+             * <p>The compliance evaluation records on the compliance timeline.</p>
              */
-            public Builder complianceList(java.util.List < ComplianceList> complianceList) {
+            public Builder complianceList(java.util.List<ComplianceList> complianceList) {
                 this.complianceList = complianceList;
                 return this;
             }
 
             /**
-             * The maximum number of entries that can be returned for a single request.
+             * <p>The maximum number of entries that can be returned for a single request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -402,7 +462,10 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The token that is used to initiate the next request.
+             * <p>The token that is used to initiate the next request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5OVS5J4I1/UKTkHV5oNs****</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

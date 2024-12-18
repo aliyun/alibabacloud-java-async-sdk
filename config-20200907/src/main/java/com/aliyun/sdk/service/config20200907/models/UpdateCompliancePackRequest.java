@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCompliancePackRequest} extends {@link RequestModel}
  *
  * <p>UpdateCompliancePackRequest</p>
@@ -26,7 +32,7 @@ public class UpdateCompliancePackRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ConfigRules")
-    private java.util.List < ConfigRules> configRules;
+    private java.util.List<ConfigRules> configRules;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -47,7 +53,7 @@ public class UpdateCompliancePackRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExcludeTagsScope")
-    private java.util.List < ExcludeTagsScope> excludeTagsScope;
+    private java.util.List<ExcludeTagsScope> excludeTagsScope;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionIdsScope")
@@ -76,7 +82,7 @@ public class UpdateCompliancePackRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagsScope")
-    private java.util.List < TagsScope> tagsScope;
+    private java.util.List<TagsScope> tagsScope;
 
     private UpdateCompliancePackRequest(Builder builder) {
         super(builder);
@@ -135,7 +141,7 @@ public class UpdateCompliancePackRequest extends Request {
     /**
      * @return configRules
      */
-    public java.util.List < ConfigRules> getConfigRules() {
+    public java.util.List<ConfigRules> getConfigRules() {
         return this.configRules;
     }
 
@@ -170,7 +176,7 @@ public class UpdateCompliancePackRequest extends Request {
     /**
      * @return excludeTagsScope
      */
-    public java.util.List < ExcludeTagsScope> getExcludeTagsScope() {
+    public java.util.List<ExcludeTagsScope> getExcludeTagsScope() {
         return this.excludeTagsScope;
     }
 
@@ -219,7 +225,7 @@ public class UpdateCompliancePackRequest extends Request {
     /**
      * @return tagsScope
      */
-    public java.util.List < TagsScope> getTagsScope() {
+    public java.util.List<TagsScope> getTagsScope() {
         return this.tagsScope;
     }
 
@@ -227,19 +233,19 @@ public class UpdateCompliancePackRequest extends Request {
         private String clientToken; 
         private String compliancePackId; 
         private String compliancePackName; 
-        private java.util.List < ConfigRules> configRules; 
+        private java.util.List<ConfigRules> configRules; 
         private String description; 
         private String excludeRegionIdsScope; 
         private String excludeResourceGroupIdsScope; 
         private String excludeResourceIdsScope; 
-        private java.util.List < ExcludeTagsScope> excludeTagsScope; 
+        private java.util.List<ExcludeTagsScope> excludeTagsScope; 
         private String regionIdsScope; 
         private String resourceGroupIdsScope; 
         private String resourceIdsScope; 
         private Integer riskLevel; 
         private String tagKeyScope; 
         private String tagValueScope; 
-        private java.util.List < TagsScope> tagsScope; 
+        private java.util.List<TagsScope> tagsScope; 
 
         private Builder() {
             super();
@@ -266,7 +272,10 @@ public class UpdateCompliancePackRequest extends Request {
         } 
 
         /**
-         * The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.``
+         * <p>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.``</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -275,10 +284,12 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
-         * The ID of the compliance package.
-         * <p>
+         * <p>The ID of the compliance package.</p>
+         * <p>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~263332~~).
+         * <strong>example:</strong>
+         * <p>cp-a8a8626622af0082****</p>
          */
         public Builder compliancePackId(String compliancePackId) {
             this.putBodyParameter("CompliancePackId", compliancePackId);
@@ -287,10 +298,8 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
-         * The name of the compliance package.
-         * <p>
-         * 
-         * For more information about how to obtain the name of a compliance package, see [ListCompliancePacks](~~263332~~).
+         * <p>The name of the compliance package.</p>
+         * <p>For more information about how to obtain the name of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</p>
          */
         public Builder compliancePackName(String compliancePackName) {
             this.putBodyParameter("CompliancePackName", compliancePackName);
@@ -299,12 +308,10 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
-         * The rules in the compliance package.
-         * <p>
-         * 
-         * If you leave this parameter empty, the rules in the compliance package remain unchanged. If you configure this parameter, Cloud Config replaces the existing rules in the compliance package with the specified rules.
+         * <p>The rules in the compliance package.</p>
+         * <p>If you leave this parameter empty, the rules in the compliance package remain unchanged. If you configure this parameter, Cloud Config replaces the existing rules in the compliance package with the specified rules.</p>
          */
-        public Builder configRules(java.util.List < ConfigRules> configRules) {
+        public Builder configRules(java.util.List<ConfigRules> configRules) {
             String configRulesShrink = shrink(configRules, "ConfigRules", "json");
             this.putBodyParameter("ConfigRules", configRulesShrink);
             this.configRules = configRules;
@@ -312,7 +319,7 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
-         * The description of the compliance package.
+         * <p>The description of the compliance package.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -339,7 +346,10 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
-         * The ID of the resource that you do not want to evaluate by using the compliance package. Separate multiple resource IDs with commas (,).
+         * <p>The ID of the resource that you do not want to evaluate by using the compliance package. Separate multiple resource IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23642660635687****</p>
          */
         public Builder excludeResourceIdsScope(String excludeResourceIdsScope) {
             this.putBodyParameter("ExcludeResourceIdsScope", excludeResourceIdsScope);
@@ -350,14 +360,17 @@ public class UpdateCompliancePackRequest extends Request {
         /**
          * ExcludeTagsScope.
          */
-        public Builder excludeTagsScope(java.util.List < ExcludeTagsScope> excludeTagsScope) {
+        public Builder excludeTagsScope(java.util.List<ExcludeTagsScope> excludeTagsScope) {
             this.putBodyParameter("ExcludeTagsScope", excludeTagsScope);
             this.excludeTagsScope = excludeTagsScope;
             return this;
         }
 
         /**
-         * The ID of the region whose resources you want to evaluate by using the compliance package. Separate multiple region IDs with commas (,).
+         * <p>The ID of the region whose resources you want to evaluate by using the compliance package. Separate multiple region IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionIdsScope(String regionIdsScope) {
             this.putBodyParameter("RegionIdsScope", regionIdsScope);
@@ -366,7 +379,10 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
-         * The ID of the resource group whose resources you want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).
+         * <p>The ID of the resource group whose resources you want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzdibsjjc****</p>
          */
         public Builder resourceGroupIdsScope(String resourceGroupIdsScope) {
             this.putBodyParameter("ResourceGroupIdsScope", resourceGroupIdsScope);
@@ -384,12 +400,15 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
-         * The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:
-         * <p>
+         * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
+         * <ul>
+         * <li>1: high</li>
+         * <li>2: medium</li>
+         * <li>3: low</li>
+         * </ul>
          * 
-         * *   1: high
-         * *   2: medium
-         * *   3: low
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskLevel(Integer riskLevel) {
             this.putBodyParameter("RiskLevel", riskLevel);
@@ -398,7 +417,10 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
-         * The tag key of the resource that you want to evaluate by using the compliance package.
+         * <p>The tag key of the resource that you want to evaluate by using the compliance package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder tagKeyScope(String tagKeyScope) {
             this.putBodyParameter("TagKeyScope", tagKeyScope);
@@ -407,10 +429,13 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
-         * The tag value of the resource that you want to evaluate by using the compliance package.
-         * <p>
+         * <p>The tag value of the resource that you want to evaluate by using the compliance package.</p>
+         * <blockquote>
+         * <p> You must configure the TagValueScope parameter together with the TagValueScope parameter.</p>
+         * </blockquote>
          * 
-         * >  You must configure the TagValueScope parameter together with the TagValueScope parameter.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tagValueScope(String tagValueScope) {
             this.putBodyParameter("TagValueScope", tagValueScope);
@@ -421,7 +446,7 @@ public class UpdateCompliancePackRequest extends Request {
         /**
          * TagsScope.
          */
-        public Builder tagsScope(java.util.List < TagsScope> tagsScope) {
+        public Builder tagsScope(java.util.List<TagsScope> tagsScope) {
             this.putBodyParameter("TagsScope", tagsScope);
             this.tagsScope = tagsScope;
             return this;
@@ -434,6 +459,12 @@ public class UpdateCompliancePackRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateCompliancePackRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCompliancePackRequest</p>
+     */
     public static class ConfigRuleParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
@@ -473,10 +504,11 @@ public class UpdateCompliancePackRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The name of the input parameter.
-             * <p>
+             * <p>The name of the input parameter.</p>
+             * <p>You must configure the <code>ParameterName</code> and <code>ParameterValue</code> parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
              * 
-             * You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).
+             * <strong>example:</strong>
+             * <p>bandwidth</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -484,10 +516,11 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * The value of the input parameter.
-             * <p>
+             * <p>The value of the input parameter.</p>
+             * <p>You must configure the <code>ParameterName</code> and <code>ParameterValue</code> parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
              * 
-             * You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -501,6 +534,12 @@ public class UpdateCompliancePackRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateCompliancePackRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCompliancePackRequest</p>
+     */
     public static class ConfigRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
@@ -509,7 +548,7 @@ public class UpdateCompliancePackRequest extends Request {
         private String configRuleName;
 
         @com.aliyun.core.annotation.NameInMap("ConfigRuleParameters")
-        private java.util.List < ConfigRuleParameters> configRuleParameters;
+        private java.util.List<ConfigRuleParameters> configRuleParameters;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -554,7 +593,7 @@ public class UpdateCompliancePackRequest extends Request {
         /**
          * @return configRuleParameters
          */
-        public java.util.List < ConfigRuleParameters> getConfigRuleParameters() {
+        public java.util.List<ConfigRuleParameters> getConfigRuleParameters() {
             return this.configRuleParameters;
         }
 
@@ -582,16 +621,17 @@ public class UpdateCompliancePackRequest extends Request {
         public static final class Builder {
             private String configRuleId; 
             private String configRuleName; 
-            private java.util.List < ConfigRuleParameters> configRuleParameters; 
+            private java.util.List<ConfigRuleParameters> configRuleParameters; 
             private String description; 
             private String managedRuleIdentifier; 
             private Integer riskLevel; 
 
             /**
-             * The rule ID. If you configure this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.
-             * <p>
+             * <p>The rule ID. If you configure this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.</p>
+             * <p>You need to only configure the <code>ManagedRuleIdentifier</code> or <code>ConfigRuleId</code> parameter. If you configure both parameters, the value of the <code>ConfigRuleId</code> parameter takes precedence. You can call the <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a> operation to obtain the rule ID.</p>
              * 
-             * You need to only configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. You can call the [ListConfigRules](~~169607~~) operation to obtain the rule ID.
+             * <strong>example:</strong>
+             * <p>cr-e918626622af000f****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -599,7 +639,7 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * The rule name.
+             * <p>The rule name.</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -607,15 +647,15 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * The input parameters of the rule.
+             * <p>The input parameters of the rule.</p>
              */
-            public Builder configRuleParameters(java.util.List < ConfigRuleParameters> configRuleParameters) {
+            public Builder configRuleParameters(java.util.List<ConfigRuleParameters> configRuleParameters) {
                 this.configRuleParameters = configRuleParameters;
                 return this;
             }
 
             /**
-             * The description of the event rule.
+             * <p>The description of the event rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -623,10 +663,11 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * The identifier of the managed rule. Cloud Config automatically creates a rule based on the identifier of the managed rule and adds the rule to the current compliance package.
-             * <p>
+             * <p>The identifier of the managed rule. Cloud Config automatically creates a rule based on the identifier of the managed rule and adds the rule to the current compliance package.</p>
+             * <p>You need to only configure the <code>ManagedRuleIdentifier</code> or <code>ConfigRuleId</code> parameter. If you configure both parameters, the value of the <code>ConfigRuleId</code> parameter takes precedence. For more information about how to obtain the identifier of a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</p>
              * 
-             * You need to only configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the identifier of a managed rule, see [ListCompliancePackTemplates](~~261176~~).
+             * <strong>example:</strong>
+             * <p>eip-bandwidth-limit</p>
              */
             public Builder managedRuleIdentifier(String managedRuleIdentifier) {
                 this.managedRuleIdentifier = managedRuleIdentifier;
@@ -634,12 +675,15 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * The risk level of the resources that do not comply with the rule. Valid values:
-             * <p>
+             * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+             * <ul>
+             * <li>1: high</li>
+             * <li>2: medium</li>
+             * <li>3: low</li>
+             * </ul>
              * 
-             * *   1: high
-             * *   2: medium
-             * *   3: low
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -653,6 +697,12 @@ public class UpdateCompliancePackRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateCompliancePackRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCompliancePackRequest</p>
+     */
     public static class ExcludeTagsScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -714,6 +764,12 @@ public class UpdateCompliancePackRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateCompliancePackRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCompliancePackRequest</p>
+     */
     public static class TagsScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;

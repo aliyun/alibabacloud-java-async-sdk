@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAggregateConfigRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateAggregateConfigRuleRequest</p>
@@ -60,7 +66,11 @@ public class CreateAggregateConfigRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExcludeTagsScope")
-    private java.util.List < ExcludeTagsScope> excludeTagsScope;
+    private java.util.List<ExcludeTagsScope> excludeTagsScope;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtendContent")
+    private String extendContent;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FolderIdsScope")
@@ -68,7 +78,7 @@ public class CreateAggregateConfigRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InputParameters")
-    private java.util.Map < String, ? > inputParameters;
+    private java.util.Map<String, ?> inputParameters;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaximumExecutionFrequency")
@@ -89,7 +99,7 @@ public class CreateAggregateConfigRuleRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resourceTypesScope;
+    private java.util.List<String> resourceTypesScope;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RiskLevel")
@@ -120,7 +130,7 @@ public class CreateAggregateConfigRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagsScope")
-    private java.util.List < TagsScope> tagsScope;
+    private java.util.List<TagsScope> tagsScope;
 
     private CreateAggregateConfigRuleRequest(Builder builder) {
         super(builder);
@@ -136,6 +146,7 @@ public class CreateAggregateConfigRuleRequest extends Request {
         this.excludeResourceGroupIdsScope = builder.excludeResourceGroupIdsScope;
         this.excludeResourceIdsScope = builder.excludeResourceIdsScope;
         this.excludeTagsScope = builder.excludeTagsScope;
+        this.extendContent = builder.extendContent;
         this.folderIdsScope = builder.folderIdsScope;
         this.inputParameters = builder.inputParameters;
         this.maximumExecutionFrequency = builder.maximumExecutionFrequency;
@@ -245,8 +256,15 @@ public class CreateAggregateConfigRuleRequest extends Request {
     /**
      * @return excludeTagsScope
      */
-    public java.util.List < ExcludeTagsScope> getExcludeTagsScope() {
+    public java.util.List<ExcludeTagsScope> getExcludeTagsScope() {
         return this.excludeTagsScope;
+    }
+
+    /**
+     * @return extendContent
+     */
+    public String getExtendContent() {
+        return this.extendContent;
     }
 
     /**
@@ -259,7 +277,7 @@ public class CreateAggregateConfigRuleRequest extends Request {
     /**
      * @return inputParameters
      */
-    public java.util.Map < String, ? > getInputParameters() {
+    public java.util.Map<String, ?> getInputParameters() {
         return this.inputParameters;
     }
 
@@ -294,7 +312,7 @@ public class CreateAggregateConfigRuleRequest extends Request {
     /**
      * @return resourceTypesScope
      */
-    public java.util.List < String > getResourceTypesScope() {
+    public java.util.List<String> getResourceTypesScope() {
         return this.resourceTypesScope;
     }
 
@@ -343,7 +361,7 @@ public class CreateAggregateConfigRuleRequest extends Request {
     /**
      * @return tagsScope
      */
-    public java.util.List < TagsScope> getTagsScope() {
+    public java.util.List<TagsScope> getTagsScope() {
         return this.tagsScope;
     }
 
@@ -359,21 +377,22 @@ public class CreateAggregateConfigRuleRequest extends Request {
         private String excludeRegionIdsScope; 
         private String excludeResourceGroupIdsScope; 
         private String excludeResourceIdsScope; 
-        private java.util.List < ExcludeTagsScope> excludeTagsScope; 
+        private java.util.List<ExcludeTagsScope> excludeTagsScope; 
+        private String extendContent; 
         private String folderIdsScope; 
-        private java.util.Map < String, ? > inputParameters; 
+        private java.util.Map<String, ?> inputParameters; 
         private String maximumExecutionFrequency; 
         private String regionIdsScope; 
         private String resourceGroupIdsScope; 
         private String resourceIdsScope; 
-        private java.util.List < String > resourceTypesScope; 
+        private java.util.List<String> resourceTypesScope; 
         private Integer riskLevel; 
         private String sourceIdentifier; 
         private String sourceOwner; 
         private String tagKeyLogicScope; 
         private String tagKeyScope; 
         private String tagValueScope; 
-        private java.util.List < TagsScope> tagsScope; 
+        private java.util.List<TagsScope> tagsScope; 
 
         private Builder() {
             super();
@@ -393,6 +412,7 @@ public class CreateAggregateConfigRuleRequest extends Request {
             this.excludeResourceGroupIdsScope = request.excludeResourceGroupIdsScope;
             this.excludeResourceIdsScope = request.excludeResourceIdsScope;
             this.excludeTagsScope = request.excludeTagsScope;
+            this.extendContent = request.extendContent;
             this.folderIdsScope = request.folderIdsScope;
             this.inputParameters = request.inputParameters;
             this.maximumExecutionFrequency = request.maximumExecutionFrequency;
@@ -419,10 +439,12 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-a4e5626622af0079****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putBodyParameter("AggregatorId", aggregatorId);
@@ -431,7 +453,10 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1594295238-f9361358-5843-4294-8d30-b5183fac****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -440,7 +465,8 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The rule name.
+         * <p>The rule name.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder configRuleName(String configRuleName) {
             this.putBodyParameter("ConfigRuleName", configRuleName);
@@ -449,11 +475,15 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The trigger type of the rule. Valid values:
-         * <p>
+         * <p>The trigger type of the rule. Valid values:</p>
+         * <ul>
+         * <li>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</li>
+         * <li>ScheduledNotification: The rule is periodically triggered.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.
-         * *   ScheduledNotification: The rule is periodically triggered.
+         * <strong>example:</strong>
+         * <p>ConfigurationItemChangeNotification</p>
          */
         public Builder configRuleTriggerTypes(String configRuleTriggerTypes) {
             this.putBodyParameter("ConfigRuleTriggerTypes", configRuleTriggerTypes);
@@ -462,7 +492,7 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The description of the rule.
+         * <p>The description of the rule.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -471,10 +501,13 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule. Separate multiple member account IDs with commas (,).
-         * <p>
+         * <p>The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule. Separate multiple member account IDs with commas (,).</p>
+         * <blockquote>
+         * <p>This parameter applies only to a managed rule.</p>
+         * </blockquote>
          * 
-         * > This parameter applies only to a managed rule.
+         * <strong>example:</strong>
+         * <p>120886317861****</p>
          */
         public Builder excludeAccountIdsScope(String excludeAccountIdsScope) {
             this.putBodyParameter("ExcludeAccountIdsScope", excludeAccountIdsScope);
@@ -483,14 +516,18 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The ID of the resource directory to which the rule does not apply, which means that the resources within member accounts in the resource directory are not evaluated based on the rule. Separate multiple resource directory IDs with commas (,).
-         * <p>
+         * <p>The ID of the resource directory to which the rule does not apply, which means that the resources within member accounts in the resource directory are not evaluated based on the rule. Separate multiple resource directory IDs with commas (,).</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter applies only to a rule of a global account group.</p>
+         * </li>
+         * <li><p>This parameter applies only to a managed rule.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   This parameter applies only to a rule of a global account group.
-         * 
-         * *   This parameter applies only to a managed rule.
+         * <strong>example:</strong>
+         * <p>fd-pWmkqZ****</p>
          */
         public Builder excludeFolderIdsScope(String excludeFolderIdsScope) {
             this.putBodyParameter("ExcludeFolderIdsScope", excludeFolderIdsScope);
@@ -517,10 +554,13 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).
-         * <p>
+         * <p>The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</p>
+         * <blockquote>
+         * <p>This parameter applies only to a managed rule.</p>
+         * </blockquote>
          * 
-         * > This parameter applies only to a managed rule.
+         * <strong>example:</strong>
+         * <p>lb-t4nbowvtbkss7t326****</p>
          */
         public Builder excludeResourceIdsScope(String excludeResourceIdsScope) {
             this.putBodyParameter("ExcludeResourceIdsScope", excludeResourceIdsScope);
@@ -531,21 +571,34 @@ public class CreateAggregateConfigRuleRequest extends Request {
         /**
          * ExcludeTagsScope.
          */
-        public Builder excludeTagsScope(java.util.List < ExcludeTagsScope> excludeTagsScope) {
+        public Builder excludeTagsScope(java.util.List<ExcludeTagsScope> excludeTagsScope) {
             this.putBodyParameter("ExcludeTagsScope", excludeTagsScope);
             this.excludeTagsScope = excludeTagsScope;
             return this;
         }
 
         /**
-         * The ID of the resource directory to which the rule applies, which means that the resources within member accounts in the resource directory are evaluated based on the rule.
-         * <p>
+         * ExtendContent.
+         */
+        public Builder extendContent(String extendContent) {
+            this.putBodyParameter("ExtendContent", extendContent);
+            this.extendContent = extendContent;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the resource directory to which the rule applies, which means that the resources within member accounts in the resource directory are evaluated based on the rule.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter applies only to a rule of a global account group.</p>
+         * </li>
+         * <li><p>This parameter applies only to a managed rule.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   This parameter applies only to a rule of a global account group.
-         * 
-         * *   This parameter applies only to a managed rule.
+         * <strong>example:</strong>
+         * <p>fd-ZtHsRH****</p>
          */
         public Builder folderIdsScope(String folderIdsScope) {
             this.putBodyParameter("FolderIdsScope", folderIdsScope);
@@ -554,9 +607,12 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The input parameter of the rule.
+         * <p>The input parameter of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;tag1Key&quot;:&quot;ECS&quot;,&quot;tag1Value&quot;:&quot;test&quot;}</p>
          */
-        public Builder inputParameters(java.util.Map < String, ? > inputParameters) {
+        public Builder inputParameters(java.util.Map<String, ?> inputParameters) {
             String inputParametersShrink = shrink(inputParameters, "InputParameters", "json");
             this.putBodyParameter("InputParameters", inputParametersShrink);
             this.inputParameters = inputParameters;
@@ -564,16 +620,20 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The interval at which the rule is triggered. Valid values:
-         * <p>
+         * <p>The interval at which the rule is triggered. Valid values:</p>
+         * <ul>
+         * <li>One_Hour: 1 hour.</li>
+         * <li>Three_Hours: 3 hours.</li>
+         * <li>Six_Hours: 6 hours.</li>
+         * <li>Twelve_Hours: 12 hours.</li>
+         * <li>TwentyFour_Hours (default): 24 hours.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is required if the <code>ConfigRuleTriggerTypes</code> parameter is set to <code>ScheduledNotification</code>.</p>
+         * </blockquote>
          * 
-         * *   One_Hour: 1 hour.
-         * *   Three_Hours: 3 hours.
-         * *   Six_Hours: 6 hours.
-         * *   Twelve_Hours: 12 hours.
-         * *   TwentyFour_Hours (default): 24 hours.
-         * 
-         * > This parameter is required if the `ConfigRuleTriggerTypes` parameter is set to `ScheduledNotification`.
+         * <strong>example:</strong>
+         * <p>One_Hour</p>
          */
         public Builder maximumExecutionFrequency(String maximumExecutionFrequency) {
             this.putBodyParameter("MaximumExecutionFrequency", maximumExecutionFrequency);
@@ -582,10 +642,13 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the rule applies. Separate multiple region IDs with commas (,).
-         * <p>
+         * <p>The ID of the region to which the rule applies. Separate multiple region IDs with commas (,).</p>
+         * <blockquote>
+         * <p>This parameter applies only to a managed rule.</p>
+         * </blockquote>
          * 
-         * > This parameter applies only to a managed rule.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionIdsScope(String regionIdsScope) {
             this.putBodyParameter("RegionIdsScope", regionIdsScope);
@@ -594,10 +657,13 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the rule applies. Separate multiple resource group IDs with commas (,).
-         * <p>
+         * <p>The ID of the resource group to which the rule applies. Separate multiple resource group IDs with commas (,).</p>
+         * <blockquote>
+         * <p>This parameter applies only to a managed rule.</p>
+         * </blockquote>
          * 
-         * > This parameter applies only to a managed rule.
+         * <strong>example:</strong>
+         * <p>rg-aekzc7r7rhx****</p>
          */
         public Builder resourceGroupIdsScope(String resourceGroupIdsScope) {
             this.putBodyParameter("ResourceGroupIdsScope", resourceGroupIdsScope);
@@ -615,9 +681,13 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The type of the resource evaluated by the rule. Separate multiple resource types with commas (,).
+         * <p>The type of the resource evaluated by the rule. Separate multiple resource types with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
-        public Builder resourceTypesScope(java.util.List < String > resourceTypesScope) {
+        public Builder resourceTypesScope(java.util.List<String> resourceTypesScope) {
             String resourceTypesScopeShrink = shrink(resourceTypesScope, "ResourceTypesScope", "simple");
             this.putBodyParameter("ResourceTypesScope", resourceTypesScopeShrink);
             this.resourceTypesScope = resourceTypesScope;
@@ -625,12 +695,16 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The risk level of the resources that are not compliant with the rule. Valid values:
-         * <p>
+         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <ul>
+         * <li>1: high risk level</li>
+         * <li>2: medium risk level</li>
+         * <li>3: low risk level</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   1: high risk level
-         * *   2: medium risk level
-         * *   3: low risk level
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskLevel(Integer riskLevel) {
             this.putBodyParameter("RiskLevel", riskLevel);
@@ -639,13 +713,16 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The identifier of the rule.
-         * <p>
+         * <p>The identifier of the rule.</p>
+         * <ul>
+         * <li>If you set the SourceOwner parameter to ALIYUN, set this parameter to the name of the managed rule.</li>
+         * <li>If you set the SourceOwner parameter to CUSTOM_FC, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.</li>
+         * </ul>
+         * <p>For more information about how to query the name of a managed rule, see <a href="https://help.aliyun.com/document_detail/127404.html">Managed rules</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you set the SourceOwner parameter to ALIYUN, set this parameter to the name of the managed rule.
-         * *   If you set the SourceOwner parameter to CUSTOM_FC, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.
-         * 
-         * For more information about how to query the name of a managed rule, see [Managed rules](~~127404~~).
+         * <strong>example:</strong>
+         * <p>required-tags</p>
          */
         public Builder sourceIdentifier(String sourceIdentifier) {
             this.putBodyParameter("SourceIdentifier", sourceIdentifier);
@@ -654,11 +731,15 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The type of the rule. Valid values:
-         * <p>
+         * <p>The type of the rule. Valid values:</p>
+         * <ul>
+         * <li>ALIYUN: managed rule</li>
+         * <li>CUSTOM_FC: custom rule</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ALIYUN: managed rule
-         * *   CUSTOM_FC: custom rule
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
          */
         public Builder sourceOwner(String sourceOwner) {
             this.putBodyParameter("SourceOwner", sourceOwner);
@@ -667,11 +748,14 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The logical relationship among the tag keys if you specify multiple tag keys for the `TagKeyScope` parameter. For example, if you set the `TagKeyScope` parameter to `ECS,OSS` and the TagKeyLogicScope parameter to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:
-         * <p>
+         * <p>The logical relationship among the tag keys if you specify multiple tag keys for the <code>TagKeyScope</code> parameter. For example, if you set the <code>TagKeyScope</code> parameter to <code>ECS,OSS</code> and the TagKeyLogicScope parameter to <code>AND</code>, the rule applies to resources with both the <code>ECS</code> and <code>OSS</code> tag keys. Valid values:</p>
+         * <ul>
+         * <li>AND</li>
+         * <li>OR</li>
+         * </ul>
          * 
-         * *   AND
-         * *   OR
+         * <strong>example:</strong>
+         * <p>AND</p>
          */
         public Builder tagKeyLogicScope(String tagKeyLogicScope) {
             this.putBodyParameter("TagKeyLogicScope", tagKeyLogicScope);
@@ -680,10 +764,13 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The tag key used to filter resources. The rule applies only to the resources with the specified tag key. Separate multiple parameter values with commas (,).
-         * <p>
+         * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key. Separate multiple parameter values with commas (,).</p>
+         * <blockquote>
+         * <p>This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
+         * </blockquote>
          * 
-         * > This parameter applies only to a managed rule. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder tagKeyScope(String tagKeyScope) {
             this.putBodyParameter("TagKeyScope", tagKeyScope);
@@ -692,10 +779,13 @@ public class CreateAggregateConfigRuleRequest extends Request {
         }
 
         /**
-         * The tag value used to filter resources. The rule applies only to the resources with the specified tag value.
-         * <p>
+         * <p>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</p>
+         * <blockquote>
+         * <p>This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
+         * </blockquote>
          * 
-         * > This parameter applies only to a managed rule. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tagValueScope(String tagValueScope) {
             this.putBodyParameter("TagValueScope", tagValueScope);
@@ -706,7 +796,7 @@ public class CreateAggregateConfigRuleRequest extends Request {
         /**
          * TagsScope.
          */
-        public Builder tagsScope(java.util.List < TagsScope> tagsScope) {
+        public Builder tagsScope(java.util.List<TagsScope> tagsScope) {
             this.putBodyParameter("TagsScope", tagsScope);
             this.tagsScope = tagsScope;
             return this;
@@ -719,6 +809,12 @@ public class CreateAggregateConfigRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAggregateConfigRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAggregateConfigRuleRequest</p>
+     */
     public static class ExcludeTagsScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -780,6 +876,12 @@ public class CreateAggregateConfigRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAggregateConfigRuleRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAggregateConfigRuleRequest</p>
+     */
     public static class TagsScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;

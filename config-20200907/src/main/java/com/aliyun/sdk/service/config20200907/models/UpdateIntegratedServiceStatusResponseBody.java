@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateIntegratedServiceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateIntegratedServiceStatusResponseBody</p>
@@ -37,7 +43,10 @@ public class UpdateIntegratedServiceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02EB7638-B029-5ABB-93F5-A2ABEEAC282D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

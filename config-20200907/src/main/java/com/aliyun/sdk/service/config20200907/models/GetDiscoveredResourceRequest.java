@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDiscoveredResourceRequest} extends {@link RequestModel}
  *
  * <p>GetDiscoveredResourceRequest</p>
@@ -97,11 +103,14 @@ public class GetDiscoveredResourceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to query the compliance results of the resource. Valid values:
-         * <p>
+         * <p>Specifies whether to query the compliance results of the resource. Valid values:</p>
+         * <ul>
+         * <li>0 (default): does not query the compliance results of the resource.</li>
+         * <li>1: queries the compliance results of the resource.</li>
+         * </ul>
          * 
-         * *   0 (default): does not query the compliance results of the resource.
-         * *   1: queries the compliance results of the resource.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder complianceOption(Integer complianceOption) {
             this.putQueryParameter("ComplianceOption", complianceOption);
@@ -110,10 +119,11 @@ public class GetDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the resource resides.
-         * <p>
+         * <p>The ID of the region in which the resource resides.</p>
+         * <p>For more information about how to query the region ID of a resource, see <a href="https://help.aliyun.com/document_detail/411702.html">ListDiscoveredResources</a>.</p>
          * 
-         * For more information about how to query the region ID of a resource, see [ListDiscoveredResources](~~411702~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -122,10 +132,12 @@ public class GetDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * The resource ID.
-         * <p>
+         * <p>The resource ID.</p>
+         * <p>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/411702.html">ListDiscoveredResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~411702~~).
+         * <strong>example:</strong>
+         * <p>new-bucket</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -134,10 +146,12 @@ public class GetDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/411702.html">ListDiscoveredResources</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~411702~~).
+         * <strong>example:</strong>
+         * <p>ACS::OSS::Bucket</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

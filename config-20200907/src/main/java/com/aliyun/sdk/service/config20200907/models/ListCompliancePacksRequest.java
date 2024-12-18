@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCompliancePacksRequest} extends {@link RequestModel}
  *
  * <p>ListCompliancePacksRequest</p>
@@ -82,10 +88,11 @@ public class ListCompliancePacksRequest extends Request {
         } 
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1. Default value: 1</p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -94,10 +101,11 @@ public class ListCompliancePacksRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
          * 
-         * Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -106,11 +114,14 @@ public class ListCompliancePacksRequest extends Request {
         }
 
         /**
-         * The status of the compliance package to be queried. Valid values:
-         * <p>
+         * <p>The status of the compliance package to be queried. Valid values:</p>
+         * <ul>
+         * <li>ACTIVE: The compliance package is active.</li>
+         * <li>CREATING: The compliance package is being created.</li>
+         * </ul>
          * 
-         * *   ACTIVE: The compliance package is active.
-         * *   CREATING: The compliance package is being created.
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

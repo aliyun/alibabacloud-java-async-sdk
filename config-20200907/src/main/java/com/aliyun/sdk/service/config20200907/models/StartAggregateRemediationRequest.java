@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartAggregateRemediationRequest} extends {@link RequestModel}
  *
  * <p>StartAggregateRemediationRequest</p>
@@ -83,10 +89,12 @@ public class StartAggregateRemediationRequest extends Request {
         } 
 
         /**
-         * The ID of the account group.
-         * <p>
+         * <p>The ID of the account group.</p>
+         * <p>For information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).
+         * <strong>example:</strong>
+         * <p>ca-6b4a626622af0012****</p>
          */
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
@@ -95,10 +103,12 @@ public class StartAggregateRemediationRequest extends Request {
         }
 
         /**
-         * The rule ID.
-         * <p>
+         * <p>The rule ID.</p>
+         * <p>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+         * <strong>example:</strong>
+         * <p>cr-6b7c626622af00b4****</p>
          */
         public Builder configRuleId(String configRuleId) {
             this.putQueryParameter("ConfigRuleId", configRuleId);
@@ -107,10 +117,13 @@ public class StartAggregateRemediationRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the resources to be remediated belong. If this parameter is left empty, non-compliant resources of all accounts in the account group are remediated.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account to which the resources to be remediated belong. If this parameter is left empty, non-compliant resources of all accounts in the account group are remediated.</p>
+         * <blockquote>
+         * <p>You must specify the ID of the current management account or a member account in the account group of the management account.</p>
+         * </blockquote>
          * 
-         * > You must specify the ID of the current management account or a member account in the account group of the management account.
+         * <strong>example:</strong>
+         * <p>100271897542****</p>
          */
         public Builder resourceAccountId(Long resourceAccountId) {
             this.putQueryParameter("ResourceAccountId", resourceAccountId);

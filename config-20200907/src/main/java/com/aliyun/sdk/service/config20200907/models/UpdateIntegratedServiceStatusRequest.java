@@ -1,16 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateIntegratedServiceStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateIntegratedServiceStatusRequest</p>
  */
 public class UpdateIntegratedServiceStatusRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AggregatorDeliveryDataType")
+    private String aggregatorDeliveryDataType;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IntegratedTypes")
     private String integratedTypes;
@@ -27,6 +37,7 @@ public class UpdateIntegratedServiceStatusRequest extends Request {
 
     private UpdateIntegratedServiceStatusRequest(Builder builder) {
         super(builder);
+        this.aggregatorDeliveryDataType = builder.aggregatorDeliveryDataType;
         this.integratedTypes = builder.integratedTypes;
         this.serviceCode = builder.serviceCode;
         this.status = builder.status;
@@ -43,6 +54,13 @@ public class UpdateIntegratedServiceStatusRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aggregatorDeliveryDataType
+     */
+    public String getAggregatorDeliveryDataType() {
+        return this.aggregatorDeliveryDataType;
     }
 
     /**
@@ -67,6 +85,7 @@ public class UpdateIntegratedServiceStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateIntegratedServiceStatusRequest, Builder> {
+        private String aggregatorDeliveryDataType; 
         private String integratedTypes; 
         private String serviceCode; 
         private Boolean status; 
@@ -77,17 +96,30 @@ public class UpdateIntegratedServiceStatusRequest extends Request {
 
         private Builder(UpdateIntegratedServiceStatusRequest request) {
             super(request);
+            this.aggregatorDeliveryDataType = request.aggregatorDeliveryDataType;
             this.integratedTypes = request.integratedTypes;
             this.serviceCode = request.serviceCode;
             this.status = request.status;
         } 
 
         /**
-         * The types of the integrated events. Separate multiple event types with commas (,). Valid values:
-         * <p>
+         * AggregatorDeliveryDataType.
+         */
+        public Builder aggregatorDeliveryDataType(String aggregatorDeliveryDataType) {
+            this.putBodyParameter("AggregatorDeliveryDataType", aggregatorDeliveryDataType);
+            this.aggregatorDeliveryDataType = aggregatorDeliveryDataType;
+            return this;
+        }
+
+        /**
+         * <p>The types of the integrated events. Separate multiple event types with commas (,). Valid values:</p>
+         * <ul>
+         * <li>ConfigurationItemChangeNotification: resource change event</li>
+         * <li>NonCompliantNotification: non-compliance event</li>
+         * </ul>
          * 
-         * *   ConfigurationItemChangeNotification: resource change event
-         * *   NonCompliantNotification: non-compliance event
+         * <strong>example:</strong>
+         * <p>NonCompliantNotification</p>
          */
         public Builder integratedTypes(String integratedTypes) {
             this.putBodyParameter("IntegratedTypes", integratedTypes);
@@ -96,12 +128,16 @@ public class UpdateIntegratedServiceStatusRequest extends Request {
         }
 
         /**
-         * The identity of the cloud service that is integrated with Cloud Config. Valid values:
-         * <p>
+         * <p>The identity of the cloud service that is integrated with Cloud Config. Valid values:</p>
+         * <ul>
+         * <li>eventbridge: EventBridge</li>
+         * <li>cms: CloudMonitor</li>
+         * <li>bpstudio: Cloud Architect Design Tools</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   eventbridge: EventBridge
-         * *   cms: CloudMonitor
-         * *   bpstudio: Cloud Architect Design Tools
+         * <strong>example:</strong>
+         * <p>cadt</p>
          */
         public Builder serviceCode(String serviceCode) {
             this.putBodyParameter("ServiceCode", serviceCode);
@@ -110,11 +146,15 @@ public class UpdateIntegratedServiceStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether you want the product to be integrated. Valid values:
-         * <p>
+         * <p>Specifies whether you want the product to be integrated. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.putBodyParameter("Status", status);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceInventoryResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceInventoryResponseBody</p>
@@ -49,7 +55,10 @@ public class GetResourceInventoryResponseBody extends TeaModel {
         private ResourceInventory resourceInventory; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89E2F38F-4EE4-545A-BD56-92E007ECFEE9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class GetResourceInventoryResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the resource inventory.
+         * <p>The information about the resource inventory.</p>
          */
         public Builder resourceInventory(ResourceInventory resourceInventory) {
             this.resourceInventory = resourceInventory;
@@ -70,6 +79,12 @@ public class GetResourceInventoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceInventoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceInventoryResponseBody</p>
+     */
     public static class ResourceInventory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
@@ -121,7 +136,7 @@ public class GetResourceInventoryResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The download URL of the resource inventory.
+             * <p>The download URL of the resource inventory.</p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -129,7 +144,10 @@ public class GetResourceInventoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource inventory was generated. The value is a timestamp.
+             * <p>The time when the resource inventory was generated. The value is a timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687674634220</p>
              */
             public Builder resourceInventoryGenerateTime(Long resourceInventoryGenerateTime) {
                 this.resourceInventoryGenerateTime = resourceInventoryGenerateTime;
@@ -137,11 +155,14 @@ public class GetResourceInventoryResponseBody extends TeaModel {
             }
 
             /**
-             * The generation status of the resource inventory. Valid values:
-             * <p>
+             * <p>The generation status of the resource inventory. Valid values:</p>
+             * <ul>
+             * <li>CREATING: The resource inventory is being generated.</li>
+             * <li>COMPLETE: The resource inventory is generated.</li>
+             * </ul>
              * 
-             * *   CREATING: The resource inventory is being generated.
-             * *   COMPLETE: The resource inventory is generated.
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
              */
             public Builder status(String status) {
                 this.status = status;
