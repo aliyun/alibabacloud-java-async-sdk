@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DynamicRoutes")
-    private java.util.List < DynamicRoutes> dynamicRoutes;
+    private java.util.List<DynamicRoutes> dynamicRoutes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
     /**
      * @return dynamicRoutes
      */
-    public java.util.List < DynamicRoutes> getDynamicRoutes() {
+    public java.util.List<DynamicRoutes> getDynamicRoutes() {
         return this.dynamicRoutes;
     }
 
@@ -46,13 +51,13 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
     }
 
     public static final class Builder {
-        private java.util.List < DynamicRoutes> dynamicRoutes; 
+        private java.util.List<DynamicRoutes> dynamicRoutes; 
         private String requestId; 
 
         /**
          * DynamicRoutes.
          */
-        public Builder dynamicRoutes(java.util.List < DynamicRoutes> dynamicRoutes) {
+        public Builder dynamicRoutes(java.util.List<DynamicRoutes> dynamicRoutes) {
             this.dynamicRoutes = dynamicRoutes;
             return this;
         }
@@ -146,7 +151,7 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
      */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addresses")
-        private java.util.List < String > addresses;
+        private java.util.List<String> addresses;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
@@ -161,7 +166,7 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("PortRanges")
-        private java.util.List < PortRanges> portRanges;
+        private java.util.List<PortRanges> portRanges;
 
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
@@ -191,7 +196,7 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
         /**
          * @return addresses
          */
-        public java.util.List < String > getAddresses() {
+        public java.util.List<String> getAddresses() {
             return this.addresses;
         }
 
@@ -226,7 +231,7 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
         /**
          * @return portRanges
          */
-        public java.util.List < PortRanges> getPortRanges() {
+        public java.util.List<PortRanges> getPortRanges() {
             return this.portRanges;
         }
 
@@ -245,19 +250,19 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
         }
 
         public static final class Builder {
-            private java.util.List < String > addresses; 
+            private java.util.List<String> addresses; 
             private String applicationId; 
             private String createTime; 
             private String description; 
             private String name; 
-            private java.util.List < PortRanges> portRanges; 
+            private java.util.List<PortRanges> portRanges; 
             private String protocol; 
             private String status; 
 
             /**
              * Addresses.
              */
-            public Builder addresses(java.util.List < String > addresses) {
+            public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
                 return this;
             }
@@ -297,7 +302,7 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
             /**
              * PortRanges.
              */
-            public Builder portRanges(java.util.List < PortRanges> portRanges) {
+            public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
                 return this;
             }
@@ -333,7 +338,7 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
      */
     public static class DynamicRoutes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Applications")
-        private java.util.List < Applications> applications;
+        private java.util.List<Applications> applications;
 
         @com.aliyun.core.annotation.NameInMap("DynamicRouteId")
         private String dynamicRouteId;
@@ -354,7 +359,7 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
         /**
          * @return applications
          */
-        public java.util.List < Applications> getApplications() {
+        public java.util.List<Applications> getApplications() {
             return this.applications;
         }
 
@@ -366,13 +371,13 @@ public class ListPrivateAccessApplicationsForDynamicRouteResponseBody extends Te
         }
 
         public static final class Builder {
-            private java.util.List < Applications> applications; 
+            private java.util.List<Applications> applications; 
             private String dynamicRouteId; 
 
             /**
              * Applications.
              */
-            public Builder applications(java.util.List < Applications> applications) {
+            public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
                 return this;
             }

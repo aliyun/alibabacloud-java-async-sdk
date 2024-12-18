@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Policies")
-    private java.util.List < Policies> policies;
+    private java.util.List<Policies> policies;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
     /**
      * @return policies
      */
-    public java.util.List < Policies> getPolicies() {
+    public java.util.List<Policies> getPolicies() {
         return this.policies;
     }
 
@@ -46,13 +51,13 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Policies> policies; 
+        private java.util.List<Policies> policies; 
         private String requestId; 
 
         /**
          * Policies.
          */
-        public Builder policies(java.util.List < Policies> policies) {
+        public Builder policies(java.util.List<Policies> policies) {
             this.policies = policies;
             return this;
         }
@@ -186,7 +191,7 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
      */
     public static class UserGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
-        private java.util.List < Attributes> attributes;
+        private java.util.List<Attributes> attributes;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -219,7 +224,7 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.List < Attributes> getAttributes() {
+        public java.util.List<Attributes> getAttributes() {
             return this.attributes;
         }
 
@@ -252,7 +257,7 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Attributes> attributes; 
+            private java.util.List<Attributes> attributes; 
             private String createTime; 
             private String description; 
             private String name; 
@@ -261,7 +266,7 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
             /**
              * Attributes.
              */
-            public Builder attributes(java.util.List < Attributes> attributes) {
+            public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
                 return this;
             }
@@ -316,7 +321,7 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
         private String policyId;
 
         @com.aliyun.core.annotation.NameInMap("UserGroups")
-        private java.util.List < UserGroups> userGroups;
+        private java.util.List<UserGroups> userGroups;
 
         private Policies(Builder builder) {
             this.policyId = builder.policyId;
@@ -341,13 +346,13 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
         /**
          * @return userGroups
          */
-        public java.util.List < UserGroups> getUserGroups() {
+        public java.util.List<UserGroups> getUserGroups() {
             return this.userGroups;
         }
 
         public static final class Builder {
             private String policyId; 
-            private java.util.List < UserGroups> userGroups; 
+            private java.util.List<UserGroups> userGroups; 
 
             /**
              * PolicyId.
@@ -360,7 +365,7 @@ public class ListUserGroupsForRegistrationPolicyResponseBody extends TeaModel {
             /**
              * UserGroups.
              */
-            public Builder userGroups(java.util.List < UserGroups> userGroups) {
+            public Builder userGroups(java.util.List<UserGroups> userGroups) {
                 this.userGroups = userGroups;
                 return this;
             }

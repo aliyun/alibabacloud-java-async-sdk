@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdatePrivateAccessApplicationRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Addresses")
-    private java.util.List < String > addresses;
+    private java.util.List<String> addresses;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ApplicationId")
@@ -43,7 +48,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PortRanges")
-    private java.util.List < PortRanges> portRanges;
+    private java.util.List<PortRanges> portRanges;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Protocol")
@@ -55,7 +60,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagIds")
-    private java.util.List < String > tagIds;
+    private java.util.List<String> tagIds;
 
     private UpdatePrivateAccessApplicationRequest(Builder builder) {
         super(builder);
@@ -88,7 +93,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
     /**
      * @return addresses
      */
-    public java.util.List < String > getAddresses() {
+    public java.util.List<String> getAddresses() {
         return this.addresses;
     }
 
@@ -137,7 +142,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
     /**
      * @return portRanges
      */
-    public java.util.List < PortRanges> getPortRanges() {
+    public java.util.List<PortRanges> getPortRanges() {
         return this.portRanges;
     }
 
@@ -158,22 +163,22 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
     /**
      * @return tagIds
      */
-    public java.util.List < String > getTagIds() {
+    public java.util.List<String> getTagIds() {
         return this.tagIds;
     }
 
     public static final class Builder extends Request.Builder<UpdatePrivateAccessApplicationRequest, Builder> {
-        private java.util.List < String > addresses; 
+        private java.util.List<String> addresses; 
         private String applicationId; 
         private String description; 
         private String l7ProxyDomainAutomaticPrefix; 
         private String l7ProxyDomainCustom; 
         private String l7ProxyDomainPrivate; 
         private String modifyType; 
-        private java.util.List < PortRanges> portRanges; 
+        private java.util.List<PortRanges> portRanges; 
         private String protocol; 
         private String status; 
-        private java.util.List < String > tagIds; 
+        private java.util.List<String> tagIds; 
 
         private Builder() {
             super();
@@ -197,7 +202,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         /**
          * Addresses.
          */
-        public Builder addresses(java.util.List < String > addresses) {
+        public Builder addresses(java.util.List<String> addresses) {
             this.putBodyParameter("Addresses", addresses);
             this.addresses = addresses;
             return this;
@@ -263,7 +268,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         /**
          * PortRanges.
          */
-        public Builder portRanges(java.util.List < PortRanges> portRanges) {
+        public Builder portRanges(java.util.List<PortRanges> portRanges) {
             this.putBodyParameter("PortRanges", portRanges);
             this.portRanges = portRanges;
             return this;
@@ -290,7 +295,7 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
         /**
          * TagIds.
          */
-        public Builder tagIds(java.util.List < String > tagIds) {
+        public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
             this.tagIds = tagIds;
             return this;

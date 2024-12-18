@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -79,7 +84,7 @@ public class GetDynamicRouteResponseBody extends TeaModel {
      */
     public static class DynamicRoute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationIds")
-        private java.util.List < String > applicationIds;
+        private java.util.List<String> applicationIds;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationType")
         private String applicationType;
@@ -106,13 +111,13 @@ public class GetDynamicRouteResponseBody extends TeaModel {
         private Integer priority;
 
         @com.aliyun.core.annotation.NameInMap("RegionIds")
-        private java.util.List < String > regionIds;
+        private java.util.List<String> regionIds;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("TagIds")
-        private java.util.List < String > tagIds;
+        private java.util.List<String> tagIds;
 
         private DynamicRoute(Builder builder) {
             this.applicationIds = builder.applicationIds;
@@ -140,7 +145,7 @@ public class GetDynamicRouteResponseBody extends TeaModel {
         /**
          * @return applicationIds
          */
-        public java.util.List < String > getApplicationIds() {
+        public java.util.List<String> getApplicationIds() {
             return this.applicationIds;
         }
 
@@ -203,7 +208,7 @@ public class GetDynamicRouteResponseBody extends TeaModel {
         /**
          * @return regionIds
          */
-        public java.util.List < String > getRegionIds() {
+        public java.util.List<String> getRegionIds() {
             return this.regionIds;
         }
 
@@ -217,12 +222,12 @@ public class GetDynamicRouteResponseBody extends TeaModel {
         /**
          * @return tagIds
          */
-        public java.util.List < String > getTagIds() {
+        public java.util.List<String> getTagIds() {
             return this.tagIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > applicationIds; 
+            private java.util.List<String> applicationIds; 
             private String applicationType; 
             private String createTime; 
             private String description; 
@@ -231,14 +236,14 @@ public class GetDynamicRouteResponseBody extends TeaModel {
             private String name; 
             private String nextHop; 
             private Integer priority; 
-            private java.util.List < String > regionIds; 
+            private java.util.List<String> regionIds; 
             private String status; 
-            private java.util.List < String > tagIds; 
+            private java.util.List<String> tagIds; 
 
             /**
              * ApplicationIds.
              */
-            public Builder applicationIds(java.util.List < String > applicationIds) {
+            public Builder applicationIds(java.util.List<String> applicationIds) {
                 this.applicationIds = applicationIds;
                 return this;
             }
@@ -310,7 +315,7 @@ public class GetDynamicRouteResponseBody extends TeaModel {
             /**
              * RegionIds.
              */
-            public Builder regionIds(java.util.List < String > regionIds) {
+            public Builder regionIds(java.util.List<String> regionIds) {
                 this.regionIds = regionIds;
                 return this;
             }
@@ -326,7 +331,7 @@ public class GetDynamicRouteResponseBody extends TeaModel {
             /**
              * TagIds.
              */
-            public Builder tagIds(java.util.List < String > tagIds) {
+            public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;
                 return this;
             }

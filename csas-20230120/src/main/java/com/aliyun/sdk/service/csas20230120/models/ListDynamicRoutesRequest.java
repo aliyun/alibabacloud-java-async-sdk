@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ListDynamicRoutesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DynamicRouteIds")
-    private java.util.List < String > dynamicRouteIds;
+    private java.util.List<String> dynamicRouteIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -40,7 +45,7 @@ public class ListDynamicRoutesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionIds")
-    private java.util.List < String > regionIds;
+    private java.util.List<String> regionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -93,7 +98,7 @@ public class ListDynamicRoutesRequest extends Request {
     /**
      * @return dynamicRouteIds
      */
-    public java.util.List < String > getDynamicRouteIds() {
+    public java.util.List<String> getDynamicRouteIds() {
         return this.dynamicRouteIds;
     }
 
@@ -121,7 +126,7 @@ public class ListDynamicRoutesRequest extends Request {
     /**
      * @return regionIds
      */
-    public java.util.List < String > getRegionIds() {
+    public java.util.List<String> getRegionIds() {
         return this.regionIds;
     }
 
@@ -142,11 +147,11 @@ public class ListDynamicRoutesRequest extends Request {
     public static final class Builder extends Request.Builder<ListDynamicRoutesRequest, Builder> {
         private String applicationId; 
         private Integer currentPage; 
-        private java.util.List < String > dynamicRouteIds; 
+        private java.util.List<String> dynamicRouteIds; 
         private String name; 
         private String nextHop; 
         private Integer pageSize; 
-        private java.util.List < String > regionIds; 
+        private java.util.List<String> regionIds; 
         private String status; 
         private String tagId; 
 
@@ -191,7 +196,7 @@ public class ListDynamicRoutesRequest extends Request {
         /**
          * DynamicRouteIds.
          */
-        public Builder dynamicRouteIds(java.util.List < String > dynamicRouteIds) {
+        public Builder dynamicRouteIds(java.util.List<String> dynamicRouteIds) {
             this.putQueryParameter("DynamicRouteIds", dynamicRouteIds);
             this.dynamicRouteIds = dynamicRouteIds;
             return this;
@@ -230,7 +235,7 @@ public class ListDynamicRoutesRequest extends Request {
         /**
          * RegionIds.
          */
-        public Builder regionIds(java.util.List < String > regionIds) {
+        public Builder regionIds(java.util.List<String> regionIds) {
             this.putQueryParameter("RegionIds", regionIds);
             this.regionIds = regionIds;
             return this;

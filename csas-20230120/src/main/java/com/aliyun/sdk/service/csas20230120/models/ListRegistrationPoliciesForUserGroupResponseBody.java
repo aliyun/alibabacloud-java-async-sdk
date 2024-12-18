@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UserGroups")
-    private java.util.List < UserGroups> userGroups;
+    private java.util.List<UserGroups> userGroups;
 
     private ListRegistrationPoliciesForUserGroupResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
     /**
      * @return userGroups
      */
-    public java.util.List < UserGroups> getUserGroups() {
+    public java.util.List<UserGroups> getUserGroups() {
         return this.userGroups;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < UserGroups> userGroups; 
+        private java.util.List<UserGroups> userGroups; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         /**
          * UserGroups.
          */
-        public Builder userGroups(java.util.List < UserGroups> userGroups) {
+        public Builder userGroups(java.util.List<UserGroups> userGroups) {
             this.userGroups = userGroups;
             return this;
         }
@@ -259,7 +264,7 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("LimitDetail")
-        private java.util.List < LimitDetail> limitDetail;
+        private java.util.List<LimitDetail> limitDetail;
 
         @com.aliyun.core.annotation.NameInMap("MatchMode")
         private String matchMode;
@@ -277,7 +282,7 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Whitelist")
-        private java.util.List < String > whitelist;
+        private java.util.List<String> whitelist;
 
         private Policies(Builder builder) {
             this.createTime = builder.createTime;
@@ -316,7 +321,7 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         /**
          * @return limitDetail
          */
-        public java.util.List < LimitDetail> getLimitDetail() {
+        public java.util.List<LimitDetail> getLimitDetail() {
             return this.limitDetail;
         }
 
@@ -358,20 +363,20 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         /**
          * @return whitelist
          */
-        public java.util.List < String > getWhitelist() {
+        public java.util.List<String> getWhitelist() {
             return this.whitelist;
         }
 
         public static final class Builder {
             private String createTime; 
             private String description; 
-            private java.util.List < LimitDetail> limitDetail; 
+            private java.util.List<LimitDetail> limitDetail; 
             private String matchMode; 
             private String name; 
             private String policyId; 
             private Long priority; 
             private String status; 
-            private java.util.List < String > whitelist; 
+            private java.util.List<String> whitelist; 
 
             /**
              * CreateTime.
@@ -392,7 +397,7 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
             /**
              * LimitDetail.
              */
-            public Builder limitDetail(java.util.List < LimitDetail> limitDetail) {
+            public Builder limitDetail(java.util.List<LimitDetail> limitDetail) {
                 this.limitDetail = limitDetail;
                 return this;
             }
@@ -440,7 +445,7 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
             /**
              * Whitelist.
              */
-            public Builder whitelist(java.util.List < String > whitelist) {
+            public Builder whitelist(java.util.List<String> whitelist) {
                 this.whitelist = whitelist;
                 return this;
             }
@@ -460,7 +465,7 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
      */
     public static class UserGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Policies")
-        private java.util.List < Policies> policies;
+        private java.util.List<Policies> policies;
 
         @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
@@ -481,7 +486,7 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         /**
          * @return policies
          */
-        public java.util.List < Policies> getPolicies() {
+        public java.util.List<Policies> getPolicies() {
             return this.policies;
         }
 
@@ -493,13 +498,13 @@ public class ListRegistrationPoliciesForUserGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Policies> policies; 
+            private java.util.List<Policies> policies; 
             private String userGroupId; 
 
             /**
              * Policies.
              */
-            public Builder policies(java.util.List < Policies> policies) {
+            public Builder policies(java.util.List<Policies> policies) {
                 this.policies = policies;
                 return this;
             }

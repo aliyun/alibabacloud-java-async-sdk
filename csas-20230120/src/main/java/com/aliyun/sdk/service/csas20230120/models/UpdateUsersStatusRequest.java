@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class UpdateUsersStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaseUserIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > saseUserIds;
+    private java.util.List<String> saseUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -44,7 +49,7 @@ public class UpdateUsersStatusRequest extends Request {
     /**
      * @return saseUserIds
      */
-    public java.util.List < String > getSaseUserIds() {
+    public java.util.List<String> getSaseUserIds() {
         return this.saseUserIds;
     }
 
@@ -56,7 +61,7 @@ public class UpdateUsersStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateUsersStatusRequest, Builder> {
-        private java.util.List < String > saseUserIds; 
+        private java.util.List<String> saseUserIds; 
         private String status; 
 
         private Builder() {
@@ -72,7 +77,7 @@ public class UpdateUsersStatusRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder saseUserIds(java.util.List < String > saseUserIds) {
+        public Builder saseUserIds(java.util.List<String> saseUserIds) {
             this.putQueryParameter("SaseUserIds", saseUserIds);
             this.saseUserIds = saseUserIds;
             return this;

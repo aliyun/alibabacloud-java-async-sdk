@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListConnectorsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Connectors")
-    private java.util.List < Connectors> connectors;
+    private java.util.List<Connectors> connectors;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListConnectorsResponseBody extends TeaModel {
     /**
      * @return connectors
      */
-    public java.util.List < Connectors> getConnectors() {
+    public java.util.List<Connectors> getConnectors() {
         return this.connectors;
     }
 
@@ -57,14 +62,14 @@ public class ListConnectorsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Connectors> connectors; 
+        private java.util.List<Connectors> connectors; 
         private String requestId; 
         private Integer totalNum; 
 
         /**
          * Connectors.
          */
-        public Builder connectors(java.util.List < Connectors> connectors) {
+        public Builder connectors(java.util.List<Connectors> connectors) {
             this.connectors = connectors;
             return this;
         }
@@ -340,10 +345,10 @@ public class ListConnectorsResponseBody extends TeaModel {
      */
     public static class Connectors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Applications")
-        private java.util.List < Applications> applications;
+        private java.util.List<Applications> applications;
 
         @com.aliyun.core.annotation.NameInMap("ConnectorClients")
-        private java.util.List < ConnectorClients> connectorClients;
+        private java.util.List<ConnectorClients> connectorClients;
 
         @com.aliyun.core.annotation.NameInMap("ConnectorId")
         private String connectorId;
@@ -389,14 +394,14 @@ public class ListConnectorsResponseBody extends TeaModel {
         /**
          * @return applications
          */
-        public java.util.List < Applications> getApplications() {
+        public java.util.List<Applications> getApplications() {
             return this.applications;
         }
 
         /**
          * @return connectorClients
          */
-        public java.util.List < ConnectorClients> getConnectorClients() {
+        public java.util.List<ConnectorClients> getConnectorClients() {
             return this.connectorClients;
         }
 
@@ -450,8 +455,8 @@ public class ListConnectorsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Applications> applications; 
-            private java.util.List < ConnectorClients> connectorClients; 
+            private java.util.List<Applications> applications; 
+            private java.util.List<ConnectorClients> connectorClients; 
             private String connectorId; 
             private String createTime; 
             private String name; 
@@ -463,7 +468,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             /**
              * Applications.
              */
-            public Builder applications(java.util.List < Applications> applications) {
+            public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
                 return this;
             }
@@ -471,7 +476,7 @@ public class ListConnectorsResponseBody extends TeaModel {
             /**
              * ConnectorClients.
              */
-            public Builder connectorClients(java.util.List < ConnectorClients> connectorClients) {
+            public Builder connectorClients(java.util.List<ConnectorClients> connectorClients) {
                 this.connectorClients = connectorClients;
                 return this;
             }

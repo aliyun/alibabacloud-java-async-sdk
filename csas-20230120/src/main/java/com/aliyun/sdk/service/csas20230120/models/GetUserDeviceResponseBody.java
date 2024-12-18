@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -144,6 +149,73 @@ public class GetUserDeviceResponseBody extends TeaModel {
      *
      * <p>GetUserDeviceResponseBody</p>
      */
+    public static class NetInterfaceInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Mac")
+        private String mac;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private NetInterfaceInfo(Builder builder) {
+            this.mac = builder.mac;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetInterfaceInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mac
+         */
+        public String getMac() {
+            return this.mac;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String mac; 
+            private String name; 
+
+            /**
+             * Mac.
+             */
+            public Builder mac(String mac) {
+                this.mac = mac;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public NetInterfaceInfo build() {
+                return new NetInterfaceInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetUserDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserDeviceResponseBody</p>
+     */
     public static class Device extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppStatus")
         private String appStatus;
@@ -185,7 +257,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         private String dlpStatus;
 
         @com.aliyun.core.annotation.NameInMap("HistoryUsers")
-        private java.util.List < HistoryUsers> historyUsers;
+        private java.util.List<HistoryUsers> historyUsers;
 
         @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
@@ -204,6 +276,9 @@ public class GetUserDeviceResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("NacStatus")
         private String nacStatus;
+
+        @com.aliyun.core.annotation.NameInMap("NetInterfaceInfo")
+        private java.util.List<NetInterfaceInfo> netInterfaceInfo;
 
         @com.aliyun.core.annotation.NameInMap("PaStatus")
         private String paStatus;
@@ -244,6 +319,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             this.mac = builder.mac;
             this.memory = builder.memory;
             this.nacStatus = builder.nacStatus;
+            this.netInterfaceInfo = builder.netInterfaceInfo;
             this.paStatus = builder.paStatus;
             this.saseUserId = builder.saseUserId;
             this.sharingStatus = builder.sharingStatus;
@@ -354,7 +430,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
         /**
          * @return historyUsers
          */
-        public java.util.List < HistoryUsers> getHistoryUsers() {
+        public java.util.List<HistoryUsers> getHistoryUsers() {
             return this.historyUsers;
         }
 
@@ -398,6 +474,13 @@ public class GetUserDeviceResponseBody extends TeaModel {
          */
         public String getNacStatus() {
             return this.nacStatus;
+        }
+
+        /**
+         * @return netInterfaceInfo
+         */
+        public java.util.List<NetInterfaceInfo> getNetInterfaceInfo() {
+            return this.netInterfaceInfo;
         }
 
         /**
@@ -456,13 +539,14 @@ public class GetUserDeviceResponseBody extends TeaModel {
             private String deviceVersion; 
             private String disk; 
             private String dlpStatus; 
-            private java.util.List < HistoryUsers> historyUsers; 
+            private java.util.List<HistoryUsers> historyUsers; 
             private String hostname; 
             private String iaStatus; 
             private String innerIP; 
             private String mac; 
             private String memory; 
             private String nacStatus; 
+            private java.util.List<NetInterfaceInfo> netInterfaceInfo; 
             private String paStatus; 
             private String saseUserId; 
             private Boolean sharingStatus; 
@@ -577,7 +661,7 @@ public class GetUserDeviceResponseBody extends TeaModel {
             /**
              * HistoryUsers.
              */
-            public Builder historyUsers(java.util.List < HistoryUsers> historyUsers) {
+            public Builder historyUsers(java.util.List<HistoryUsers> historyUsers) {
                 this.historyUsers = historyUsers;
                 return this;
             }
@@ -627,6 +711,14 @@ public class GetUserDeviceResponseBody extends TeaModel {
              */
             public Builder nacStatus(String nacStatus) {
                 this.nacStatus = nacStatus;
+                return this;
+            }
+
+            /**
+             * NetInterfaceInfo.
+             */
+            public Builder netInterfaceInfo(java.util.List<NetInterfaceInfo> netInterfaceInfo) {
+                this.netInterfaceInfo = netInterfaceInfo;
                 return this;
             }
 

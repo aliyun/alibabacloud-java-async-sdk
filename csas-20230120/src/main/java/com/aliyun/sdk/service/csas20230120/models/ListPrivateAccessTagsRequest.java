@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class ListPrivateAccessTagsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagIds")
-    private java.util.List < String > tagIds;
+    private java.util.List<String> tagIds;
 
     private ListPrivateAccessTagsRequest(Builder builder) {
         super(builder);
@@ -111,7 +116,7 @@ public class ListPrivateAccessTagsRequest extends Request {
     /**
      * @return tagIds
      */
-    public java.util.List < String > getTagIds() {
+    public java.util.List<String> getTagIds() {
         return this.tagIds;
     }
 
@@ -122,7 +127,7 @@ public class ListPrivateAccessTagsRequest extends Request {
         private Integer pageSize; 
         private String policyId; 
         private Boolean simpleMode; 
-        private java.util.List < String > tagIds; 
+        private java.util.List<String> tagIds; 
 
         private Builder() {
             super();
@@ -224,7 +229,7 @@ public class ListPrivateAccessTagsRequest extends Request {
         /**
          * <p>The IDs of internal access tags. You can specify up to 100 tag IDs.</p>
          */
-        public Builder tagIds(java.util.List < String > tagIds) {
+        public Builder tagIds(java.util.List<String> tagIds) {
             this.putQueryParameter("TagIds", tagIds);
             this.tagIds = tagIds;
             return this;

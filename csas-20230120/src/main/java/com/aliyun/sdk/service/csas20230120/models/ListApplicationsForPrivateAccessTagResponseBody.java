@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private ListApplicationsForPrivateAccessTagResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -146,7 +151,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
      */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addresses")
-        private java.util.List < String > addresses;
+        private java.util.List<String> addresses;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
@@ -161,7 +166,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("PortRanges")
-        private java.util.List < PortRanges> portRanges;
+        private java.util.List<PortRanges> portRanges;
 
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
@@ -191,7 +196,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         /**
          * @return addresses
          */
-        public java.util.List < String > getAddresses() {
+        public java.util.List<String> getAddresses() {
             return this.addresses;
         }
 
@@ -226,7 +231,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         /**
          * @return portRanges
          */
-        public java.util.List < PortRanges> getPortRanges() {
+        public java.util.List<PortRanges> getPortRanges() {
             return this.portRanges;
         }
 
@@ -245,19 +250,19 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > addresses; 
+            private java.util.List<String> addresses; 
             private String applicationId; 
             private String createTime; 
             private String description; 
             private String name; 
-            private java.util.List < PortRanges> portRanges; 
+            private java.util.List<PortRanges> portRanges; 
             private String protocol; 
             private String status; 
 
             /**
              * Addresses.
              */
-            public Builder addresses(java.util.List < String > addresses) {
+            public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
                 return this;
             }
@@ -300,7 +305,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
             /**
              * PortRanges.
              */
-            public Builder portRanges(java.util.List < PortRanges> portRanges) {
+            public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
                 return this;
             }
@@ -336,7 +341,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Applications")
-        private java.util.List < Applications> applications;
+        private java.util.List<Applications> applications;
 
         @com.aliyun.core.annotation.NameInMap("TagId")
         private String tagId;
@@ -357,7 +362,7 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         /**
          * @return applications
          */
-        public java.util.List < Applications> getApplications() {
+        public java.util.List<Applications> getApplications() {
             return this.applications;
         }
 
@@ -369,13 +374,13 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Applications> applications; 
+            private java.util.List<Applications> applications; 
             private String tagId; 
 
             /**
              * Applications.
              */
-            public Builder applications(java.util.List < Applications> applications) {
+            public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
                 return this;
             }

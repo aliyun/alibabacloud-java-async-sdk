@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UserGroups")
-    private java.util.List < UserGroups> userGroups;
+    private java.util.List<UserGroups> userGroups;
 
     private ListPolicesForUserGroupResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
     /**
      * @return userGroups
      */
-    public java.util.List < UserGroups> getUserGroups() {
+    public java.util.List<UserGroups> getUserGroups() {
         return this.userGroups;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < UserGroups> userGroups; 
+        private java.util.List<UserGroups> userGroups; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
         /**
          * UserGroups.
          */
-        public Builder userGroups(java.util.List < UserGroups> userGroups) {
+        public Builder userGroups(java.util.List<UserGroups> userGroups) {
             this.userGroups = userGroups;
             return this;
         }
@@ -166,7 +171,7 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
      */
     public static class UserGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Polices")
-        private java.util.List < Polices> polices;
+        private java.util.List<Polices> polices;
 
         @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
@@ -187,7 +192,7 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
         /**
          * @return polices
          */
-        public java.util.List < Polices> getPolices() {
+        public java.util.List<Polices> getPolices() {
             return this.polices;
         }
 
@@ -199,13 +204,13 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Polices> polices; 
+            private java.util.List<Polices> polices; 
             private String userGroupId; 
 
             /**
              * Polices.
              */
-            public Builder polices(java.util.List < Polices> polices) {
+            public Builder polices(java.util.List<Polices> polices) {
                 this.polices = polices;
                 return this;
             }

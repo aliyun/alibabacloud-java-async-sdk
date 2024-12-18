@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationIds")
-    private java.util.List < String > applicationIds;
+    private java.util.List<String> applicationIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConnectorId")
@@ -98,7 +103,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
     /**
      * @return applicationIds
      */
-    public java.util.List < String > getApplicationIds() {
+    public java.util.List<String> getApplicationIds() {
         return this.applicationIds;
     }
 
@@ -154,7 +159,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
     public static final class Builder extends Request.Builder<ListPrivateAccessApplicationsRequest, Builder> {
         private String accessModes; 
         private String address; 
-        private java.util.List < String > applicationIds; 
+        private java.util.List<String> applicationIds; 
         private String connectorId; 
         private Integer currentPage; 
         private String name; 
@@ -202,7 +207,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         /**
          * ApplicationIds.
          */
-        public Builder applicationIds(java.util.List < String > applicationIds) {
+        public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
             return this;

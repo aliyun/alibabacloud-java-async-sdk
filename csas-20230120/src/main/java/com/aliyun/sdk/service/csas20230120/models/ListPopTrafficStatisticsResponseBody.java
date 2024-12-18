@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TrafficData")
-    private java.util.List < TrafficData> trafficData;
+    private java.util.List<TrafficData> trafficData;
 
     private ListPopTrafficStatisticsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
     /**
      * @return trafficData
      */
-    public java.util.List < TrafficData> getTrafficData() {
+    public java.util.List<TrafficData> getTrafficData() {
         return this.trafficData;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TrafficData> trafficData; 
+        private java.util.List<TrafficData> trafficData; 
 
         /**
          * <p>Id of the request</p>
@@ -63,7 +68,7 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
         /**
          * TrafficData.
          */
-        public Builder trafficData(java.util.List < TrafficData> trafficData) {
+        public Builder trafficData(java.util.List<TrafficData> trafficData) {
             this.trafficData = trafficData;
             return this;
         }
@@ -149,7 +154,7 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
      */
     public static class TrafficData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Datapoints")
-        private java.util.List < Datapoints> datapoints;
+        private java.util.List<Datapoints> datapoints;
 
         @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
@@ -170,7 +175,7 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
         /**
          * @return datapoints
          */
-        public java.util.List < Datapoints> getDatapoints() {
+        public java.util.List<Datapoints> getDatapoints() {
             return this.datapoints;
         }
 
@@ -182,13 +187,13 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Datapoints> datapoints; 
+            private java.util.List<Datapoints> datapoints; 
             private String metricName; 
 
             /**
              * Datapoints.
              */
-            public Builder datapoints(java.util.List < Datapoints> datapoints) {
+            public Builder datapoints(java.util.List<Datapoints> datapoints) {
                 this.datapoints = datapoints;
                 return this;
             }

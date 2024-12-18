@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListUserApplicationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Applications")
-    private java.util.List < Applications> applications;
+    private java.util.List<Applications> applications;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListUserApplicationsResponseBody extends TeaModel {
     /**
      * @return applications
      */
-    public java.util.List < Applications> getApplications() {
+    public java.util.List<Applications> getApplications() {
         return this.applications;
     }
 
@@ -57,14 +62,14 @@ public class ListUserApplicationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Applications> applications; 
+        private java.util.List<Applications> applications; 
         private String requestId; 
         private Integer totalNum; 
 
         /**
          * Applications.
          */
-        public Builder applications(java.util.List < Applications> applications) {
+        public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
             return this;
         }
@@ -172,7 +177,7 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         private String action;
 
         @com.aliyun.core.annotation.NameInMap("Addresses")
-        private java.util.List < String > addresses;
+        private java.util.List<String> addresses;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
@@ -181,7 +186,7 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("PortRanges")
-        private java.util.List < PortRanges> portRanges;
+        private java.util.List<PortRanges> portRanges;
 
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
@@ -213,7 +218,7 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         /**
          * @return addresses
          */
-        public java.util.List < String > getAddresses() {
+        public java.util.List<String> getAddresses() {
             return this.addresses;
         }
 
@@ -234,7 +239,7 @@ public class ListUserApplicationsResponseBody extends TeaModel {
         /**
          * @return portRanges
          */
-        public java.util.List < PortRanges> getPortRanges() {
+        public java.util.List<PortRanges> getPortRanges() {
             return this.portRanges;
         }
 
@@ -247,10 +252,10 @@ public class ListUserApplicationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String action; 
-            private java.util.List < String > addresses; 
+            private java.util.List<String> addresses; 
             private String applicationId; 
             private String name; 
-            private java.util.List < PortRanges> portRanges; 
+            private java.util.List<PortRanges> portRanges; 
             private String protocol; 
 
             /**
@@ -264,7 +269,7 @@ public class ListUserApplicationsResponseBody extends TeaModel {
             /**
              * Addresses.
              */
-            public Builder addresses(java.util.List < String > addresses) {
+            public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
                 return this;
             }
@@ -288,7 +293,7 @@ public class ListUserApplicationsResponseBody extends TeaModel {
             /**
              * PortRanges.
              */
-            public Builder portRanges(java.util.List < PortRanges> portRanges) {
+            public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
                 return this;
             }

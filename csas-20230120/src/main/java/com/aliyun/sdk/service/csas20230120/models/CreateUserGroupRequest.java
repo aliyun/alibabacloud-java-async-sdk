@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CreateUserGroupRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Attributes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Attributes> attributes;
+    private java.util.List<Attributes> attributes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -49,7 +54,7 @@ public class CreateUserGroupRequest extends Request {
     /**
      * @return attributes
      */
-    public java.util.List < Attributes> getAttributes() {
+    public java.util.List<Attributes> getAttributes() {
         return this.attributes;
     }
 
@@ -68,7 +73,7 @@ public class CreateUserGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateUserGroupRequest, Builder> {
-        private java.util.List < Attributes> attributes; 
+        private java.util.List<Attributes> attributes; 
         private String description; 
         private String name; 
 
@@ -86,7 +91,7 @@ public class CreateUserGroupRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder attributes(java.util.List < Attributes> attributes) {
+        public Builder attributes(java.util.List<Attributes> attributes) {
             this.putBodyParameter("Attributes", attributes);
             this.attributes = attributes;
             return this;

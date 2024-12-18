@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DynamicRoutes")
-    private java.util.List < DynamicRoutes> dynamicRoutes;
+    private java.util.List<DynamicRoutes> dynamicRoutes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
     /**
      * @return dynamicRoutes
      */
-    public java.util.List < DynamicRoutes> getDynamicRoutes() {
+    public java.util.List<DynamicRoutes> getDynamicRoutes() {
         return this.dynamicRoutes;
     }
 
@@ -46,13 +51,13 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DynamicRoutes> dynamicRoutes; 
+        private java.util.List<DynamicRoutes> dynamicRoutes; 
         private String requestId; 
 
         /**
          * DynamicRoutes.
          */
-        public Builder dynamicRoutes(java.util.List < DynamicRoutes> dynamicRoutes) {
+        public Builder dynamicRoutes(java.util.List<DynamicRoutes> dynamicRoutes) {
             this.dynamicRoutes = dynamicRoutes;
             return this;
         }
@@ -209,7 +214,7 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
         private String dynamicRouteId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private DynamicRoutes(Builder builder) {
             this.dynamicRouteId = builder.dynamicRouteId;
@@ -234,13 +239,13 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
             private String dynamicRouteId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * DynamicRouteId.
@@ -253,7 +258,7 @@ public class ListPrivateAccessTagsForDynamicRouteResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

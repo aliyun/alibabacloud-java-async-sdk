@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationIds")
-    private java.util.List < String > applicationIds;
+    private java.util.List<String> applicationIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
@@ -48,7 +53,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Statuses")
-    private java.util.List < String > statuses;
+    private java.util.List<String> statuses;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Username")
@@ -84,7 +89,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
     /**
      * @return applicationIds
      */
-    public java.util.List < String > getApplicationIds() {
+    public java.util.List<String> getApplicationIds() {
         return this.applicationIds;
     }
 
@@ -140,7 +145,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
     /**
      * @return statuses
      */
-    public java.util.List < String > getStatuses() {
+    public java.util.List<String> getStatuses() {
         return this.statuses;
     }
 
@@ -152,7 +157,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
     }
 
     public static final class Builder extends Request.Builder<ListExcessiveDeviceRegistrationApplicationsRequest, Builder> {
-        private java.util.List < String > applicationIds; 
+        private java.util.List<String> applicationIds; 
         private Long currentPage; 
         private String department; 
         private String deviceTag; 
@@ -160,7 +165,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         private String mac; 
         private Long pageSize; 
         private String saseUserId; 
-        private java.util.List < String > statuses; 
+        private java.util.List<String> statuses; 
         private String username; 
 
         private Builder() {
@@ -184,7 +189,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         /**
          * ApplicationIds.
          */
-        public Builder applicationIds(java.util.List < String > applicationIds) {
+        public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
             return this;
@@ -262,7 +267,7 @@ public class ListExcessiveDeviceRegistrationApplicationsRequest extends Request 
         /**
          * Statuses.
          */
-        public Builder statuses(java.util.List < String > statuses) {
+        public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);
             this.statuses = statuses;
             return this;

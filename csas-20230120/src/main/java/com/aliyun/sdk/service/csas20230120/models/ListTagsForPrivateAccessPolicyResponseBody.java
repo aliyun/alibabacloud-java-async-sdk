@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Polices")
-    private java.util.List < Polices> polices;
+    private java.util.List<Polices> polices;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
     /**
      * @return polices
      */
-    public java.util.List < Polices> getPolices() {
+    public java.util.List<Polices> getPolices() {
         return this.polices;
     }
 
@@ -46,13 +51,13 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Polices> polices; 
+        private java.util.List<Polices> polices; 
         private String requestId; 
 
         /**
          * Polices.
          */
-        public Builder polices(java.util.List < Polices> polices) {
+        public Builder polices(java.util.List<Polices> polices) {
             this.polices = polices;
             return this;
         }
@@ -212,7 +217,7 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
         private String policyId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Polices(Builder builder) {
             this.policyId = builder.policyId;
@@ -237,13 +242,13 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
             private String policyId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * PolicyId.
@@ -256,7 +261,7 @@ public class ListTagsForPrivateAccessPolicyResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

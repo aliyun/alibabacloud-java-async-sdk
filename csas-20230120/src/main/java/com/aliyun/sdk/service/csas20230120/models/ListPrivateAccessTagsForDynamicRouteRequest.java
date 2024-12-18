@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class ListPrivateAccessTagsForDynamicRouteRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DynamicRouteIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > dynamicRouteIds;
+    private java.util.List<String> dynamicRouteIds;
 
     private ListPrivateAccessTagsForDynamicRouteRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class ListPrivateAccessTagsForDynamicRouteRequest extends Request {
     /**
      * @return dynamicRouteIds
      */
-    public java.util.List < String > getDynamicRouteIds() {
+    public java.util.List<String> getDynamicRouteIds() {
         return this.dynamicRouteIds;
     }
 
     public static final class Builder extends Request.Builder<ListPrivateAccessTagsForDynamicRouteRequest, Builder> {
-        private java.util.List < String > dynamicRouteIds; 
+        private java.util.List<String> dynamicRouteIds; 
 
         private Builder() {
             super();
@@ -57,7 +62,7 @@ public class ListPrivateAccessTagsForDynamicRouteRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder dynamicRouteIds(java.util.List < String > dynamicRouteIds) {
+        public Builder dynamicRouteIds(java.util.List<String> dynamicRouteIds) {
             this.putQueryParameter("DynamicRouteIds", dynamicRouteIds);
             this.dynamicRouteIds = dynamicRouteIds;
             return this;

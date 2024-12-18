@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class ListRegistrationPoliciesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyIds")
-    private java.util.List < String > policyIds;
+    private java.util.List<String> policyIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -121,7 +126,7 @@ public class ListRegistrationPoliciesRequest extends Request {
     /**
      * @return policyIds
      */
-    public java.util.List < String > getPolicyIds() {
+    public java.util.List<String> getPolicyIds() {
         return this.policyIds;
     }
 
@@ -146,7 +151,7 @@ public class ListRegistrationPoliciesRequest extends Request {
         private String name; 
         private Long pageSize; 
         private String personalLimitType; 
-        private java.util.List < String > policyIds; 
+        private java.util.List<String> policyIds; 
         private String status; 
         private String userGroupId; 
 
@@ -230,7 +235,7 @@ public class ListRegistrationPoliciesRequest extends Request {
         /**
          * PolicyIds.
          */
-        public Builder policyIds(java.util.List < String > policyIds) {
+        public Builder policyIds(java.util.List<String> policyIds) {
             this.putQueryParameter("PolicyIds", policyIds);
             this.policyIds = policyIds;
             return this;

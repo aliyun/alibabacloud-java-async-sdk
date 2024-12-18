@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,7 +41,7 @@ public class ListUsersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaseUserIds")
-    private java.util.List < String > saseUserIds;
+    private java.util.List<String> saseUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -104,7 +109,7 @@ public class ListUsersRequest extends Request {
     /**
      * @return saseUserIds
      */
-    public java.util.List < String > getSaseUserIds() {
+    public java.util.List<String> getSaseUserIds() {
         return this.saseUserIds;
     }
 
@@ -121,7 +126,7 @@ public class ListUsersRequest extends Request {
         private String fuzzyUsername; 
         private Long pageSize; 
         private String preciseUsername; 
-        private java.util.List < String > saseUserIds; 
+        private java.util.List<String> saseUserIds; 
         private String status; 
 
         private Builder() {
@@ -193,7 +198,7 @@ public class ListUsersRequest extends Request {
         /**
          * SaseUserIds.
          */
-        public Builder saseUserIds(java.util.List < String > saseUserIds) {
+        public Builder saseUserIds(java.util.List<String> saseUserIds) {
             this.putQueryParameter("SaseUserIds", saseUserIds);
             this.saseUserIds = saseUserIds;
             return this;

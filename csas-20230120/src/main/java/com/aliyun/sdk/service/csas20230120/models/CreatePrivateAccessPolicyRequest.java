@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreatePrivateAccessPolicyRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ApplicationIds")
-    private java.util.List < String > applicationIds;
+    private java.util.List<String> applicationIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ApplicationType")
@@ -23,7 +28,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustomUserAttributes")
-    private java.util.List < CustomUserAttributes> customUserAttributes;
+    private java.util.List<CustomUserAttributes> customUserAttributes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -59,11 +64,11 @@ public class CreatePrivateAccessPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagIds")
-    private java.util.List < String > tagIds;
+    private java.util.List<String> tagIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserGroupIds")
-    private java.util.List < String > userGroupIds;
+    private java.util.List<String> userGroupIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserGroupMode")
@@ -103,7 +108,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
     /**
      * @return applicationIds
      */
-    public java.util.List < String > getApplicationIds() {
+    public java.util.List<String> getApplicationIds() {
         return this.applicationIds;
     }
 
@@ -117,7 +122,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
     /**
      * @return customUserAttributes
      */
-    public java.util.List < CustomUserAttributes> getCustomUserAttributes() {
+    public java.util.List<CustomUserAttributes> getCustomUserAttributes() {
         return this.customUserAttributes;
     }
 
@@ -173,14 +178,14 @@ public class CreatePrivateAccessPolicyRequest extends Request {
     /**
      * @return tagIds
      */
-    public java.util.List < String > getTagIds() {
+    public java.util.List<String> getTagIds() {
         return this.tagIds;
     }
 
     /**
      * @return userGroupIds
      */
-    public java.util.List < String > getUserGroupIds() {
+    public java.util.List<String> getUserGroupIds() {
         return this.userGroupIds;
     }
 
@@ -192,9 +197,9 @@ public class CreatePrivateAccessPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePrivateAccessPolicyRequest, Builder> {
-        private java.util.List < String > applicationIds; 
+        private java.util.List<String> applicationIds; 
         private String applicationType; 
-        private java.util.List < CustomUserAttributes> customUserAttributes; 
+        private java.util.List<CustomUserAttributes> customUserAttributes; 
         private String description; 
         private String deviceAttributeAction; 
         private String deviceAttributeId; 
@@ -202,8 +207,8 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         private String policyAction; 
         private Integer priority; 
         private String status; 
-        private java.util.List < String > tagIds; 
-        private java.util.List < String > userGroupIds; 
+        private java.util.List<String> tagIds; 
+        private java.util.List<String> userGroupIds; 
         private String userGroupMode; 
 
         private Builder() {
@@ -230,7 +235,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         /**
          * ApplicationIds.
          */
-        public Builder applicationIds(java.util.List < String > applicationIds) {
+        public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putBodyParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
             return this;
@@ -251,7 +256,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         /**
          * CustomUserAttributes.
          */
-        public Builder customUserAttributes(java.util.List < CustomUserAttributes> customUserAttributes) {
+        public Builder customUserAttributes(java.util.List<CustomUserAttributes> customUserAttributes) {
             this.putBodyParameter("CustomUserAttributes", customUserAttributes);
             this.customUserAttributes = customUserAttributes;
             return this;
@@ -335,7 +340,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         /**
          * <p>内网访问标签ID集合。最多可输入100个内网访问标签ID。当<strong>ApplicationType</strong>为<strong>Tag时</strong>，必填。和<strong>ApplicationIds</strong>互斥。</p>
          */
-        public Builder tagIds(java.util.List < String > tagIds) {
+        public Builder tagIds(java.util.List<String> tagIds) {
             this.putBodyParameter("TagIds", tagIds);
             this.tagIds = tagIds;
             return this;
@@ -344,7 +349,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         /**
          * UserGroupIds.
          */
-        public Builder userGroupIds(java.util.List < String > userGroupIds) {
+        public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
             this.userGroupIds = userGroupIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -55,11 +60,11 @@ public class CreateRegistrationPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserGroupIds")
-    private java.util.List < String > userGroupIds;
+    private java.util.List<String> userGroupIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Whitelist")
-    private java.util.List < String > whitelist;
+    private java.util.List<String> whitelist;
 
     private CreateRegistrationPolicyRequest(Builder builder) {
         super(builder);
@@ -155,14 +160,14 @@ public class CreateRegistrationPolicyRequest extends Request {
     /**
      * @return userGroupIds
      */
-    public java.util.List < String > getUserGroupIds() {
+    public java.util.List<String> getUserGroupIds() {
         return this.userGroupIds;
     }
 
     /**
      * @return whitelist
      */
-    public java.util.List < String > getWhitelist() {
+    public java.util.List<String> getWhitelist() {
         return this.whitelist;
     }
 
@@ -176,8 +181,8 @@ public class CreateRegistrationPolicyRequest extends Request {
         private String personalLimitType; 
         private Long priority; 
         private String status; 
-        private java.util.List < String > userGroupIds; 
-        private java.util.List < String > whitelist; 
+        private java.util.List<String> userGroupIds; 
+        private java.util.List<String> whitelist; 
 
         private Builder() {
             super();
@@ -299,7 +304,7 @@ public class CreateRegistrationPolicyRequest extends Request {
         /**
          * UserGroupIds.
          */
-        public Builder userGroupIds(java.util.List < String > userGroupIds) {
+        public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
             this.userGroupIds = userGroupIds;
             return this;
@@ -308,7 +313,7 @@ public class CreateRegistrationPolicyRequest extends Request {
         /**
          * Whitelist.
          */
-        public Builder whitelist(java.util.List < String > whitelist) {
+        public Builder whitelist(java.util.List<String> whitelist) {
             this.putBodyParameter("Whitelist", whitelist);
             this.whitelist = whitelist;
             return this;

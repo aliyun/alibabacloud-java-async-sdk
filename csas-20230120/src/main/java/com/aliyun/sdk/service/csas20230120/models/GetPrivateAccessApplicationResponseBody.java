@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -146,7 +151,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
      */
     public static class Application extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addresses")
-        private java.util.List < String > addresses;
+        private java.util.List<String> addresses;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
@@ -155,7 +160,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         private String browserAccessStatus;
 
         @com.aliyun.core.annotation.NameInMap("ConnectorIds")
-        private java.util.List < String > connectorIds;
+        private java.util.List<String> connectorIds;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -173,10 +178,10 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("PolicyIds")
-        private java.util.List < String > policyIds;
+        private java.util.List<String> policyIds;
 
         @com.aliyun.core.annotation.NameInMap("PortRanges")
-        private java.util.List < PortRanges> portRanges;
+        private java.util.List<PortRanges> portRanges;
 
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
@@ -185,7 +190,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("TagIds")
-        private java.util.List < String > tagIds;
+        private java.util.List<String> tagIds;
 
         private Application(Builder builder) {
             this.addresses = builder.addresses;
@@ -215,7 +220,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         /**
          * @return addresses
          */
-        public java.util.List < String > getAddresses() {
+        public java.util.List<String> getAddresses() {
             return this.addresses;
         }
 
@@ -236,7 +241,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         /**
          * @return connectorIds
          */
-        public java.util.List < String > getConnectorIds() {
+        public java.util.List<String> getConnectorIds() {
             return this.connectorIds;
         }
 
@@ -278,14 +283,14 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         /**
          * @return policyIds
          */
-        public java.util.List < String > getPolicyIds() {
+        public java.util.List<String> getPolicyIds() {
             return this.policyIds;
         }
 
         /**
          * @return portRanges
          */
-        public java.util.List < PortRanges> getPortRanges() {
+        public java.util.List<PortRanges> getPortRanges() {
             return this.portRanges;
         }
 
@@ -306,30 +311,30 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         /**
          * @return tagIds
          */
-        public java.util.List < String > getTagIds() {
+        public java.util.List<String> getTagIds() {
             return this.tagIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > addresses; 
+            private java.util.List<String> addresses; 
             private String applicationId; 
             private String browserAccessStatus; 
-            private java.util.List < String > connectorIds; 
+            private java.util.List<String> connectorIds; 
             private String createTime; 
             private String description; 
             private String l7ProxyDomainAutomatic; 
             private String l7ProxyDomainCustom; 
             private String name; 
-            private java.util.List < String > policyIds; 
-            private java.util.List < PortRanges> portRanges; 
+            private java.util.List<String> policyIds; 
+            private java.util.List<PortRanges> portRanges; 
             private String protocol; 
             private String status; 
-            private java.util.List < String > tagIds; 
+            private java.util.List<String> tagIds; 
 
             /**
              * Addresses.
              */
-            public Builder addresses(java.util.List < String > addresses) {
+            public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
                 return this;
             }
@@ -353,7 +358,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             /**
              * ConnectorIds.
              */
-            public Builder connectorIds(java.util.List < String > connectorIds) {
+            public Builder connectorIds(java.util.List<String> connectorIds) {
                 this.connectorIds = connectorIds;
                 return this;
             }
@@ -401,7 +406,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             /**
              * PolicyIds.
              */
-            public Builder policyIds(java.util.List < String > policyIds) {
+            public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
                 return this;
             }
@@ -409,7 +414,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             /**
              * PortRanges.
              */
-            public Builder portRanges(java.util.List < PortRanges> portRanges) {
+            public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
                 return this;
             }
@@ -433,7 +438,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             /**
              * TagIds.
              */
-            public Builder tagIds(java.util.List < String > tagIds) {
+            public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;
                 return this;
             }

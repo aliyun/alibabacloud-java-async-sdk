@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Polices")
-    private java.util.List < Polices> polices;
+    private java.util.List<Polices> polices;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
     /**
      * @return polices
      */
-    public java.util.List < Polices> getPolices() {
+    public java.util.List<Polices> getPolices() {
         return this.polices;
     }
 
@@ -57,14 +62,14 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Polices> polices; 
+        private java.util.List<Polices> polices; 
         private String requestId; 
         private Integer totalNum; 
 
         /**
          * Polices.
          */
-        public Builder polices(java.util.List < Polices> polices) {
+        public Builder polices(java.util.List<Polices> polices) {
             this.polices = polices;
             return this;
         }
@@ -209,7 +214,7 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
      */
     public static class Polices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomUserAttributes")
-        private java.util.List < CustomUserAttributes> customUserAttributes;
+        private java.util.List<CustomUserAttributes> customUserAttributes;
 
         @com.aliyun.core.annotation.NameInMap("DeviceAttributeName")
         private String deviceAttributeName;
@@ -254,7 +259,7 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         /**
          * @return customUserAttributes
          */
-        public java.util.List < CustomUserAttributes> getCustomUserAttributes() {
+        public java.util.List<CustomUserAttributes> getCustomUserAttributes() {
             return this.customUserAttributes;
         }
 
@@ -308,7 +313,7 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CustomUserAttributes> customUserAttributes; 
+            private java.util.List<CustomUserAttributes> customUserAttributes; 
             private String deviceAttributeName; 
             private String matchedUserGroup; 
             private String name; 
@@ -320,7 +325,7 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             /**
              * CustomUserAttributes.
              */
-            public Builder customUserAttributes(java.util.List < CustomUserAttributes> customUserAttributes) {
+            public Builder customUserAttributes(java.util.List<CustomUserAttributes> customUserAttributes) {
                 this.customUserAttributes = customUserAttributes;
                 return this;
             }

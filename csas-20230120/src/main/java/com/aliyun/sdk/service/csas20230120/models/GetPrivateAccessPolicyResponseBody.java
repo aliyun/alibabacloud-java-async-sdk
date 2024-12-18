@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -186,7 +191,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
      */
     public static class Policy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationIds")
-        private java.util.List < String > applicationIds;
+        private java.util.List<String> applicationIds;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationType")
         private String applicationType;
@@ -195,7 +200,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("CustomUserAttributes")
-        private java.util.List < CustomUserAttributes> customUserAttributes;
+        private java.util.List<CustomUserAttributes> customUserAttributes;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -222,10 +227,10 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("TagIds")
-        private java.util.List < String > tagIds;
+        private java.util.List<String> tagIds;
 
         @com.aliyun.core.annotation.NameInMap("UserGroupIds")
-        private java.util.List < String > userGroupIds;
+        private java.util.List<String> userGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("UserGroupMode")
         private String userGroupMode;
@@ -259,7 +264,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
         /**
          * @return applicationIds
          */
-        public java.util.List < String > getApplicationIds() {
+        public java.util.List<String> getApplicationIds() {
             return this.applicationIds;
         }
 
@@ -280,7 +285,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
         /**
          * @return customUserAttributes
          */
-        public java.util.List < CustomUserAttributes> getCustomUserAttributes() {
+        public java.util.List<CustomUserAttributes> getCustomUserAttributes() {
             return this.customUserAttributes;
         }
 
@@ -343,14 +348,14 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
         /**
          * @return tagIds
          */
-        public java.util.List < String > getTagIds() {
+        public java.util.List<String> getTagIds() {
             return this.tagIds;
         }
 
         /**
          * @return userGroupIds
          */
-        public java.util.List < String > getUserGroupIds() {
+        public java.util.List<String> getUserGroupIds() {
             return this.userGroupIds;
         }
 
@@ -362,10 +367,10 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > applicationIds; 
+            private java.util.List<String> applicationIds; 
             private String applicationType; 
             private String createTime; 
-            private java.util.List < CustomUserAttributes> customUserAttributes; 
+            private java.util.List<CustomUserAttributes> customUserAttributes; 
             private String description; 
             private String deviceAttributeAction; 
             private String deviceAttributeId; 
@@ -374,14 +379,14 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             private String policyId; 
             private Integer priority; 
             private String status; 
-            private java.util.List < String > tagIds; 
-            private java.util.List < String > userGroupIds; 
+            private java.util.List<String> tagIds; 
+            private java.util.List<String> userGroupIds; 
             private String userGroupMode; 
 
             /**
              * ApplicationIds.
              */
-            public Builder applicationIds(java.util.List < String > applicationIds) {
+            public Builder applicationIds(java.util.List<String> applicationIds) {
                 this.applicationIds = applicationIds;
                 return this;
             }
@@ -405,7 +410,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             /**
              * CustomUserAttributes.
              */
-            public Builder customUserAttributes(java.util.List < CustomUserAttributes> customUserAttributes) {
+            public Builder customUserAttributes(java.util.List<CustomUserAttributes> customUserAttributes) {
                 this.customUserAttributes = customUserAttributes;
                 return this;
             }
@@ -477,7 +482,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             /**
              * TagIds.
              */
-            public Builder tagIds(java.util.List < String > tagIds) {
+            public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;
                 return this;
             }
@@ -485,7 +490,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             /**
              * UserGroupIds.
              */
-            public Builder userGroupIds(java.util.List < String > userGroupIds) {
+            public Builder userGroupIds(java.util.List<String> userGroupIds) {
                 this.userGroupIds = userGroupIds;
                 return this;
             }

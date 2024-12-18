@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusRequest extends 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ApplicationIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > applicationIds;
+    private java.util.List<String> applicationIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -44,7 +49,7 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusRequest extends 
     /**
      * @return applicationIds
      */
-    public java.util.List < String > getApplicationIds() {
+    public java.util.List<String> getApplicationIds() {
         return this.applicationIds;
     }
 
@@ -56,7 +61,7 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusRequest extends 
     }
 
     public static final class Builder extends Request.Builder<UpdateExcessiveDeviceRegistrationApplicationsStatusRequest, Builder> {
-        private java.util.List < String > applicationIds; 
+        private java.util.List<String> applicationIds; 
         private String status; 
 
         private Builder() {
@@ -72,7 +77,7 @@ public class UpdateExcessiveDeviceRegistrationApplicationsStatusRequest extends 
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder applicationIds(java.util.List < String > applicationIds) {
+        public Builder applicationIds(java.util.List<String> applicationIds) {
             this.putBodyParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
             return this;

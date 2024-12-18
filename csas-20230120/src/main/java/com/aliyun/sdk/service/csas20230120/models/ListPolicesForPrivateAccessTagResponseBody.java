@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private ListPolicesForPrivateAccessTagResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -220,7 +225,7 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("CustomUserAttributes")
-        private java.util.List < CustomUserAttributes> customUserAttributes;
+        private java.util.List<CustomUserAttributes> customUserAttributes;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -281,7 +286,7 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         /**
          * @return customUserAttributes
          */
-        public java.util.List < CustomUserAttributes> getCustomUserAttributes() {
+        public java.util.List<CustomUserAttributes> getCustomUserAttributes() {
             return this.customUserAttributes;
         }
 
@@ -337,7 +342,7 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         public static final class Builder {
             private String applicationType; 
             private String createTime; 
-            private java.util.List < CustomUserAttributes> customUserAttributes; 
+            private java.util.List<CustomUserAttributes> customUserAttributes; 
             private String description; 
             private String name; 
             private String policyAction; 
@@ -368,7 +373,7 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
             /**
              * <p>自定义用户组属性集合。多个自定义用户组属性之间是或的关系，按照合集生效。</p>
              */
-            public Builder customUserAttributes(java.util.List < CustomUserAttributes> customUserAttributes) {
+            public Builder customUserAttributes(java.util.List<CustomUserAttributes> customUserAttributes) {
                 this.customUserAttributes = customUserAttributes;
                 return this;
             }
@@ -453,7 +458,7 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Polices")
-        private java.util.List < Polices> polices;
+        private java.util.List<Polices> polices;
 
         @com.aliyun.core.annotation.NameInMap("TagId")
         private String tagId;
@@ -474,7 +479,7 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         /**
          * @return polices
          */
-        public java.util.List < Polices> getPolices() {
+        public java.util.List<Polices> getPolices() {
             return this.polices;
         }
 
@@ -486,13 +491,13 @@ public class ListPolicesForPrivateAccessTagResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Polices> polices; 
+            private java.util.List<Polices> polices; 
             private String tagId; 
 
             /**
              * Polices.
              */
-            public Builder polices(java.util.List < Polices> polices) {
+            public Builder polices(java.util.List<Polices> polices) {
                 this.polices = polices;
                 return this;
             }

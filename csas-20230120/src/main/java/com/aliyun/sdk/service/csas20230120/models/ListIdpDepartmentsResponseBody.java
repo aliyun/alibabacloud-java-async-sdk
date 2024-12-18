@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -166,7 +171,7 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataList")
-        private java.util.List < DataList> dataList;
+        private java.util.List<DataList> dataList;
 
         @com.aliyun.core.annotation.NameInMap("TotalNum")
         private Long totalNum;
@@ -187,7 +192,7 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
         /**
          * @return dataList
          */
-        public java.util.List < DataList> getDataList() {
+        public java.util.List<DataList> getDataList() {
             return this.dataList;
         }
 
@@ -199,13 +204,13 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataList> dataList; 
+            private java.util.List<DataList> dataList; 
             private Long totalNum; 
 
             /**
              * DataList.
              */
-            public Builder dataList(java.util.List < DataList> dataList) {
+            public Builder dataList(java.util.List<DataList> dataList) {
                 this.dataList = dataList;
                 return this;
             }

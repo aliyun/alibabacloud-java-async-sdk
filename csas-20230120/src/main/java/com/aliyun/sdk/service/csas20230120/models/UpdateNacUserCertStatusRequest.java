@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateNacUserCertStatusRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IdList")
-    private java.util.List < IdList> idList;
+    private java.util.List<IdList> idList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -42,7 +47,7 @@ public class UpdateNacUserCertStatusRequest extends Request {
     /**
      * @return idList
      */
-    public java.util.List < IdList> getIdList() {
+    public java.util.List<IdList> getIdList() {
         return this.idList;
     }
 
@@ -54,7 +59,7 @@ public class UpdateNacUserCertStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateNacUserCertStatusRequest, Builder> {
-        private java.util.List < IdList> idList; 
+        private java.util.List<IdList> idList; 
         private String status; 
 
         private Builder() {
@@ -70,7 +75,7 @@ public class UpdateNacUserCertStatusRequest extends Request {
         /**
          * IdList.
          */
-        public Builder idList(java.util.List < IdList> idList) {
+        public Builder idList(java.util.List<IdList> idList) {
             this.putBodyParameter("IdList", idList);
             this.idList = idList;
             return this;

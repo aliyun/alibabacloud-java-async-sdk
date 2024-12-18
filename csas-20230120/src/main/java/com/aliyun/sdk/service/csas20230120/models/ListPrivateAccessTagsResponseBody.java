@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
@@ -45,7 +50,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -58,7 +63,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private Integer totalNum; 
 
         /**
@@ -75,7 +80,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
         /**
          * <p>The internal access tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -105,7 +110,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationIds")
-        private java.util.List < String > applicationIds;
+        private java.util.List<String> applicationIds;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -117,7 +122,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("PolicyIds")
-        private java.util.List < String > policyIds;
+        private java.util.List<String> policyIds;
 
         @com.aliyun.core.annotation.NameInMap("TagId")
         private String tagId;
@@ -146,7 +151,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
         /**
          * @return applicationIds
          */
-        public java.util.List < String > getApplicationIds() {
+        public java.util.List<String> getApplicationIds() {
             return this.applicationIds;
         }
 
@@ -174,7 +179,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
         /**
          * @return policyIds
          */
-        public java.util.List < String > getPolicyIds() {
+        public java.util.List<String> getPolicyIds() {
             return this.policyIds;
         }
 
@@ -193,18 +198,18 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > applicationIds; 
+            private java.util.List<String> applicationIds; 
             private String createTime; 
             private String description; 
             private String name; 
-            private java.util.List < String > policyIds; 
+            private java.util.List<String> policyIds; 
             private String tagId; 
             private String tagType; 
 
             /**
              * <p>The IDs of the internal access applications.</p>
              */
-            public Builder applicationIds(java.util.List < String > applicationIds) {
+            public Builder applicationIds(java.util.List<String> applicationIds) {
                 this.applicationIds = applicationIds;
                 return this;
             }
@@ -242,7 +247,7 @@ public class ListPrivateAccessTagsResponseBody extends TeaModel {
             /**
              * <p>The IDs of the internal access policies.</p>
              */
-            public Builder policyIds(java.util.List < String > policyIds) {
+            public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
                 return this;
             }

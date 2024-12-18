@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class UpdateUserDevicesStatusRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DeviceTags")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > deviceTags;
+    private java.util.List<String> deviceTags;
 
     private UpdateUserDevicesStatusRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class UpdateUserDevicesStatusRequest extends Request {
     /**
      * @return deviceTags
      */
-    public java.util.List < String > getDeviceTags() {
+    public java.util.List<String> getDeviceTags() {
         return this.deviceTags;
     }
 
     public static final class Builder extends Request.Builder<UpdateUserDevicesStatusRequest, Builder> {
         private String deviceAction; 
-        private java.util.List < String > deviceTags; 
+        private java.util.List<String> deviceTags; 
 
         private Builder() {
             super();
@@ -84,7 +89,7 @@ public class UpdateUserDevicesStatusRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder deviceTags(java.util.List < String > deviceTags) {
+        public Builder deviceTags(java.util.List<String> deviceTags) {
             this.putBodyParameter("DeviceTags", deviceTags);
             this.deviceTags = deviceTags;
             return this;

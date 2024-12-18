@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListConnectorsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConnectorIds")
-    private java.util.List < String > connectorIds;
+    private java.util.List<String> connectorIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
@@ -64,7 +69,7 @@ public class ListConnectorsRequest extends Request {
     /**
      * @return connectorIds
      */
-    public java.util.List < String > getConnectorIds() {
+    public java.util.List<String> getConnectorIds() {
         return this.connectorIds;
     }
 
@@ -104,7 +109,7 @@ public class ListConnectorsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListConnectorsRequest, Builder> {
-        private java.util.List < String > connectorIds; 
+        private java.util.List<String> connectorIds; 
         private Integer currentPage; 
         private String name; 
         private Integer pageSize; 
@@ -128,7 +133,7 @@ public class ListConnectorsRequest extends Request {
         /**
          * ConnectorIds.
          */
-        public Builder connectorIds(java.util.List < String > connectorIds) {
+        public Builder connectorIds(java.util.List<String> connectorIds) {
             this.putQueryParameter("ConnectorIds", connectorIds);
             this.connectorIds = connectorIds;
             return this;

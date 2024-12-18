@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Polices")
-    private java.util.List < Polices> polices;
+    private java.util.List<Polices> polices;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
     /**
      * @return polices
      */
-    public java.util.List < Polices> getPolices() {
+    public java.util.List<Polices> getPolices() {
         return this.polices;
     }
 
@@ -46,13 +51,13 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Polices> polices; 
+        private java.util.List<Polices> polices; 
         private String requestId; 
 
         /**
          * Polices.
          */
-        public Builder polices(java.util.List < Polices> polices) {
+        public Builder polices(java.util.List<Polices> polices) {
             this.polices = polices;
             return this;
         }
@@ -186,7 +191,7 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
      */
     public static class UserGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
-        private java.util.List < Attributes> attributes;
+        private java.util.List<Attributes> attributes;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -219,7 +224,7 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.List < Attributes> getAttributes() {
+        public java.util.List<Attributes> getAttributes() {
             return this.attributes;
         }
 
@@ -252,7 +257,7 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Attributes> attributes; 
+            private java.util.List<Attributes> attributes; 
             private String createTime; 
             private String description; 
             private String name; 
@@ -261,7 +266,7 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             /**
              * Attributes.
              */
-            public Builder attributes(java.util.List < Attributes> attributes) {
+            public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
                 return this;
             }
@@ -319,7 +324,7 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
         private String policyId;
 
         @com.aliyun.core.annotation.NameInMap("UserGroups")
-        private java.util.List < UserGroups> userGroups;
+        private java.util.List<UserGroups> userGroups;
 
         private Polices(Builder builder) {
             this.policyId = builder.policyId;
@@ -344,13 +349,13 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
         /**
          * @return userGroups
          */
-        public java.util.List < UserGroups> getUserGroups() {
+        public java.util.List<UserGroups> getUserGroups() {
             return this.userGroups;
         }
 
         public static final class Builder {
             private String policyId; 
-            private java.util.List < UserGroups> userGroups; 
+            private java.util.List<UserGroups> userGroups; 
 
             /**
              * PolicyId.
@@ -363,7 +368,7 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
             /**
              * UserGroups.
              */
-            public Builder userGroups(java.util.List < UserGroups> userGroups) {
+            public Builder userGroups(java.util.List<UserGroups> userGroups) {
                 this.userGroups = userGroups;
                 return this;
             }

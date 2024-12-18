@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-csas20230120</artifactId>
-  <version>1.0.19</version>
+  <version>1.0.20</version>
   <packaging>jar</packaging>
   <name>alibabacloud-csas20230120</name>
   <description>Alibaba Cloud csas (20230120) Async SDK for Java

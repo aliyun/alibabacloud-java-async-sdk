@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Applications")
-    private java.util.List < Applications> applications;
+    private java.util.List<Applications> applications;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
     /**
      * @return applications
      */
-    public java.util.List < Applications> getApplications() {
+    public java.util.List<Applications> getApplications() {
         return this.applications;
     }
 
@@ -46,13 +51,13 @@ public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Applications> applications; 
+        private java.util.List<Applications> applications; 
         private String requestId; 
 
         /**
          * Applications.
          */
-        public Builder applications(java.util.List < Applications> applications) {
+        public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
             return this;
         }
@@ -209,7 +214,7 @@ public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
         private String applicationId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Applications(Builder builder) {
             this.applicationId = builder.applicationId;
@@ -234,13 +239,13 @@ public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
             private String applicationId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * ApplicationId.
@@ -253,7 +258,7 @@ public class ListTagsForPrivateAccessApplicationResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

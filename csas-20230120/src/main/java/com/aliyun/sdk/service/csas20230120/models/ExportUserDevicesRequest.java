@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ExportUserDevicesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppStatuses")
-    private java.util.List < String > appStatuses;
+    private java.util.List<String> appStatuses;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Department")
@@ -26,19 +31,19 @@ public class ExportUserDevicesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DeviceStatuses")
-    private java.util.List < String > deviceStatuses;
+    private java.util.List<String> deviceStatuses;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DeviceTags")
-    private java.util.List < String > deviceTags;
+    private java.util.List<String> deviceTags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DeviceTypes")
-    private java.util.List < String > deviceTypes;
+    private java.util.List<String> deviceTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DlpStatuses")
-    private java.util.List < String > dlpStatuses;
+    private java.util.List<String> dlpStatuses;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Hostname")
@@ -46,7 +51,7 @@ public class ExportUserDevicesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IaStatuses")
-    private java.util.List < String > iaStatuses;
+    private java.util.List<String> iaStatuses;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Mac")
@@ -54,11 +59,11 @@ public class ExportUserDevicesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NacStatuses")
-    private java.util.List < String > nacStatuses;
+    private java.util.List<String> nacStatuses;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PaStatuses")
-    private java.util.List < String > paStatuses;
+    private java.util.List<String> paStatuses;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SaseUserId")
@@ -107,7 +112,7 @@ public class ExportUserDevicesRequest extends Request {
     /**
      * @return appStatuses
      */
-    public java.util.List < String > getAppStatuses() {
+    public java.util.List<String> getAppStatuses() {
         return this.appStatuses;
     }
 
@@ -128,28 +133,28 @@ public class ExportUserDevicesRequest extends Request {
     /**
      * @return deviceStatuses
      */
-    public java.util.List < String > getDeviceStatuses() {
+    public java.util.List<String> getDeviceStatuses() {
         return this.deviceStatuses;
     }
 
     /**
      * @return deviceTags
      */
-    public java.util.List < String > getDeviceTags() {
+    public java.util.List<String> getDeviceTags() {
         return this.deviceTags;
     }
 
     /**
      * @return deviceTypes
      */
-    public java.util.List < String > getDeviceTypes() {
+    public java.util.List<String> getDeviceTypes() {
         return this.deviceTypes;
     }
 
     /**
      * @return dlpStatuses
      */
-    public java.util.List < String > getDlpStatuses() {
+    public java.util.List<String> getDlpStatuses() {
         return this.dlpStatuses;
     }
 
@@ -163,7 +168,7 @@ public class ExportUserDevicesRequest extends Request {
     /**
      * @return iaStatuses
      */
-    public java.util.List < String > getIaStatuses() {
+    public java.util.List<String> getIaStatuses() {
         return this.iaStatuses;
     }
 
@@ -177,14 +182,14 @@ public class ExportUserDevicesRequest extends Request {
     /**
      * @return nacStatuses
      */
-    public java.util.List < String > getNacStatuses() {
+    public java.util.List<String> getNacStatuses() {
         return this.nacStatuses;
     }
 
     /**
      * @return paStatuses
      */
-    public java.util.List < String > getPaStatuses() {
+    public java.util.List<String> getPaStatuses() {
         return this.paStatuses;
     }
 
@@ -210,18 +215,18 @@ public class ExportUserDevicesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ExportUserDevicesRequest, Builder> {
-        private java.util.List < String > appStatuses; 
+        private java.util.List<String> appStatuses; 
         private String department; 
         private String deviceBelong; 
-        private java.util.List < String > deviceStatuses; 
-        private java.util.List < String > deviceTags; 
-        private java.util.List < String > deviceTypes; 
-        private java.util.List < String > dlpStatuses; 
+        private java.util.List<String> deviceStatuses; 
+        private java.util.List<String> deviceTags; 
+        private java.util.List<String> deviceTypes; 
+        private java.util.List<String> dlpStatuses; 
         private String hostname; 
-        private java.util.List < String > iaStatuses; 
+        private java.util.List<String> iaStatuses; 
         private String mac; 
-        private java.util.List < String > nacStatuses; 
-        private java.util.List < String > paStatuses; 
+        private java.util.List<String> nacStatuses; 
+        private java.util.List<String> paStatuses; 
         private String saseUserId; 
         private Boolean sharingStatus; 
         private String username; 
@@ -252,7 +257,7 @@ public class ExportUserDevicesRequest extends Request {
         /**
          * AppStatuses.
          */
-        public Builder appStatuses(java.util.List < String > appStatuses) {
+        public Builder appStatuses(java.util.List<String> appStatuses) {
             this.putBodyParameter("AppStatuses", appStatuses);
             this.appStatuses = appStatuses;
             return this;
@@ -279,7 +284,7 @@ public class ExportUserDevicesRequest extends Request {
         /**
          * DeviceStatuses.
          */
-        public Builder deviceStatuses(java.util.List < String > deviceStatuses) {
+        public Builder deviceStatuses(java.util.List<String> deviceStatuses) {
             this.putBodyParameter("DeviceStatuses", deviceStatuses);
             this.deviceStatuses = deviceStatuses;
             return this;
@@ -288,7 +293,7 @@ public class ExportUserDevicesRequest extends Request {
         /**
          * DeviceTags.
          */
-        public Builder deviceTags(java.util.List < String > deviceTags) {
+        public Builder deviceTags(java.util.List<String> deviceTags) {
             this.putBodyParameter("DeviceTags", deviceTags);
             this.deviceTags = deviceTags;
             return this;
@@ -297,7 +302,7 @@ public class ExportUserDevicesRequest extends Request {
         /**
          * DeviceTypes.
          */
-        public Builder deviceTypes(java.util.List < String > deviceTypes) {
+        public Builder deviceTypes(java.util.List<String> deviceTypes) {
             this.putBodyParameter("DeviceTypes", deviceTypes);
             this.deviceTypes = deviceTypes;
             return this;
@@ -306,7 +311,7 @@ public class ExportUserDevicesRequest extends Request {
         /**
          * DlpStatuses.
          */
-        public Builder dlpStatuses(java.util.List < String > dlpStatuses) {
+        public Builder dlpStatuses(java.util.List<String> dlpStatuses) {
             this.putBodyParameter("DlpStatuses", dlpStatuses);
             this.dlpStatuses = dlpStatuses;
             return this;
@@ -324,7 +329,7 @@ public class ExportUserDevicesRequest extends Request {
         /**
          * IaStatuses.
          */
-        public Builder iaStatuses(java.util.List < String > iaStatuses) {
+        public Builder iaStatuses(java.util.List<String> iaStatuses) {
             this.putBodyParameter("IaStatuses", iaStatuses);
             this.iaStatuses = iaStatuses;
             return this;
@@ -342,7 +347,7 @@ public class ExportUserDevicesRequest extends Request {
         /**
          * NacStatuses.
          */
-        public Builder nacStatuses(java.util.List < String > nacStatuses) {
+        public Builder nacStatuses(java.util.List<String> nacStatuses) {
             this.putBodyParameter("NacStatuses", nacStatuses);
             this.nacStatuses = nacStatuses;
             return this;
@@ -351,7 +356,7 @@ public class ExportUserDevicesRequest extends Request {
         /**
          * PaStatuses.
          */
-        public Builder paStatuses(java.util.List < String > paStatuses) {
+        public Builder paStatuses(java.util.List<String> paStatuses) {
             this.putBodyParameter("PaStatuses", paStatuses);
             this.paStatuses = paStatuses;
             return this;

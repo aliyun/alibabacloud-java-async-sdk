@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
     private Integer totalNum;
 
     @com.aliyun.core.annotation.NameInMap("UserGroups")
-    private java.util.List < UserGroups> userGroups;
+    private java.util.List<UserGroups> userGroups;
 
     private ListUserGroupsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -52,14 +57,14 @@ public class ListUserGroupsResponseBody extends TeaModel {
     /**
      * @return userGroups
      */
-    public java.util.List < UserGroups> getUserGroups() {
+    public java.util.List<UserGroups> getUserGroups() {
         return this.userGroups;
     }
 
     public static final class Builder {
         private String requestId; 
         private Integer totalNum; 
-        private java.util.List < UserGroups> userGroups; 
+        private java.util.List<UserGroups> userGroups; 
 
         /**
          * RequestId.
@@ -80,7 +85,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         /**
          * UserGroups.
          */
-        public Builder userGroups(java.util.List < UserGroups> userGroups) {
+        public Builder userGroups(java.util.List<UserGroups> userGroups) {
             this.userGroups = userGroups;
             return this;
         }
@@ -206,7 +211,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
      */
     public static class UserGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
-        private java.util.List < Attributes> attributes;
+        private java.util.List<Attributes> attributes;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -239,7 +244,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.List < Attributes> getAttributes() {
+        public java.util.List<Attributes> getAttributes() {
             return this.attributes;
         }
 
@@ -272,7 +277,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Attributes> attributes; 
+            private java.util.List<Attributes> attributes; 
             private String createTime; 
             private String description; 
             private String name; 
@@ -281,7 +286,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
             /**
              * Attributes.
              */
-            public Builder attributes(java.util.List < Attributes> attributes) {
+            public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
                 return this;
             }
