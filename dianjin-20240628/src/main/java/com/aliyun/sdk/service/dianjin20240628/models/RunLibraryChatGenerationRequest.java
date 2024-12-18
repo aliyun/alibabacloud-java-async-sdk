@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class RunLibraryChatGenerationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("docIdList")
-    private java.util.List < String > docIdList;
+    private java.util.List<String> docIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("enableFollowUp")
@@ -74,7 +79,7 @@ public class RunLibraryChatGenerationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("subQueryList")
-    private java.util.List < String > subQueryList;
+    private java.util.List<String> subQueryList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("textSearchParameter")
@@ -138,7 +143,7 @@ public class RunLibraryChatGenerationRequest extends Request {
     /**
      * @return docIdList
      */
-    public java.util.List < String > getDocIdList() {
+    public java.util.List<String> getDocIdList() {
         return this.docIdList;
     }
 
@@ -229,7 +234,7 @@ public class RunLibraryChatGenerationRequest extends Request {
     /**
      * @return subQueryList
      */
-    public java.util.List < String > getSubQueryList() {
+    public java.util.List<String> getSubQueryList() {
         return this.subQueryList;
     }
 
@@ -263,7 +268,7 @@ public class RunLibraryChatGenerationRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunLibraryChatGenerationRequest, Builder> {
         private String workspaceId; 
-        private java.util.List < String > docIdList; 
+        private java.util.List<String> docIdList; 
         private Boolean enableFollowUp; 
         private Boolean enableMultiQuery; 
         private Boolean enableOpenQa; 
@@ -276,7 +281,7 @@ public class RunLibraryChatGenerationRequest extends Request {
         private String rerankType; 
         private String sessionId; 
         private Boolean stream; 
-        private java.util.List < String > subQueryList; 
+        private java.util.List<String> subQueryList; 
         private TextSearchParameter textSearchParameter; 
         private Integer topK; 
         private VectorSearchParameter vectorSearchParameter; 
@@ -324,7 +329,7 @@ public class RunLibraryChatGenerationRequest extends Request {
         /**
          * docIdList.
          */
-        public Builder docIdList(java.util.List < String > docIdList) {
+        public Builder docIdList(java.util.List<String> docIdList) {
             this.putBodyParameter("docIdList", docIdList);
             this.docIdList = docIdList;
             return this;
@@ -450,7 +455,7 @@ public class RunLibraryChatGenerationRequest extends Request {
         /**
          * subQueryList.
          */
-        public Builder subQueryList(java.util.List < String > subQueryList) {
+        public Builder subQueryList(java.util.List<String> subQueryList) {
             this.putBodyParameter("subQueryList", subQueryList);
             this.subQueryList = subQueryList;
             return this;
@@ -721,10 +726,10 @@ public class RunLibraryChatGenerationRequest extends Request {
      */
     public static class QueryCriteria extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("and")
-        private java.util.List < And> and;
+        private java.util.List<And> and;
 
         @com.aliyun.core.annotation.NameInMap("or")
-        private java.util.List < Or> or;
+        private java.util.List<Or> or;
 
         private QueryCriteria(Builder builder) {
             this.and = builder.and;
@@ -742,25 +747,25 @@ public class RunLibraryChatGenerationRequest extends Request {
         /**
          * @return and
          */
-        public java.util.List < And> getAnd() {
+        public java.util.List<And> getAnd() {
             return this.and;
         }
 
         /**
          * @return or
          */
-        public java.util.List < Or> getOr() {
+        public java.util.List<Or> getOr() {
             return this.or;
         }
 
         public static final class Builder {
-            private java.util.List < And> and; 
-            private java.util.List < Or> or; 
+            private java.util.List<And> and; 
+            private java.util.List<Or> or; 
 
             /**
              * and.
              */
-            public Builder and(java.util.List < And> and) {
+            public Builder and(java.util.List<And> and) {
                 this.and = and;
                 return this;
             }
@@ -768,7 +773,7 @@ public class RunLibraryChatGenerationRequest extends Request {
             /**
              * or.
              */
-            public Builder or(java.util.List < Or> or) {
+            public Builder or(java.util.List<Or> or) {
                 this.or = or;
                 return this;
             }

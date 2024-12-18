@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetDocumentChunkListRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("chunkIdList")
-    private java.util.List < String > chunkIdList;
+    private java.util.List<String> chunkIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("docId")
@@ -87,7 +92,7 @@ public class GetDocumentChunkListRequest extends Request {
     /**
      * @return chunkIdList
      */
-    public java.util.List < String > getChunkIdList() {
+    public java.util.List<String> getChunkIdList() {
         return this.chunkIdList;
     }
 
@@ -142,7 +147,7 @@ public class GetDocumentChunkListRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetDocumentChunkListRequest, Builder> {
         private String workspaceId; 
-        private java.util.List < String > chunkIdList; 
+        private java.util.List<String> chunkIdList; 
         private String docId; 
         private String libraryId; 
         private String order; 
@@ -183,7 +188,7 @@ public class GetDocumentChunkListRequest extends Request {
         /**
          * chunkIdList.
          */
-        public Builder chunkIdList(java.util.List < String > chunkIdList) {
+        public Builder chunkIdList(java.util.List<String> chunkIdList) {
             this.putBodyParameter("chunkIdList", chunkIdList);
             this.chunkIdList = chunkIdList;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -199,22 +204,22 @@ public class GetAppConfigResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("embeddingTypeList")
-        private java.util.List < java.util.Map<String, String>> embeddingTypeList;
+        private java.util.List<java.util.Map<String, String>> embeddingTypeList;
 
         @com.aliyun.core.annotation.NameInMap("frontendConfig")
-        private java.util.Map < String, Boolean > frontendConfig;
+        private java.util.Map<String, Boolean> frontendConfig;
 
         @com.aliyun.core.annotation.NameInMap("libraryDocumentStatusList")
-        private java.util.List < java.util.Map<String, String>> libraryDocumentStatusList;
+        private java.util.List<java.util.Map<String, String>> libraryDocumentStatusList;
 
         @com.aliyun.core.annotation.NameInMap("llmHelperTypeList")
-        private java.util.List < java.util.Map<String, String>> llmHelperTypeList;
+        private java.util.List<java.util.Map<String, String>> llmHelperTypeList;
 
         @com.aliyun.core.annotation.NameInMap("textIndexCategoryList")
-        private java.util.List < String > textIndexCategoryList;
+        private java.util.List<String> textIndexCategoryList;
 
         @com.aliyun.core.annotation.NameInMap("vectorIndexCategoryList")
-        private java.util.List < String > vectorIndexCategoryList;
+        private java.util.List<String> vectorIndexCategoryList;
 
         private Data(Builder builder) {
             this.embeddingTypeList = builder.embeddingTypeList;
@@ -236,57 +241,57 @@ public class GetAppConfigResponseBody extends TeaModel {
         /**
          * @return embeddingTypeList
          */
-        public java.util.List < java.util.Map<String, String>> getEmbeddingTypeList() {
+        public java.util.List<java.util.Map<String, String>> getEmbeddingTypeList() {
             return this.embeddingTypeList;
         }
 
         /**
          * @return frontendConfig
          */
-        public java.util.Map < String, Boolean > getFrontendConfig() {
+        public java.util.Map<String, Boolean> getFrontendConfig() {
             return this.frontendConfig;
         }
 
         /**
          * @return libraryDocumentStatusList
          */
-        public java.util.List < java.util.Map<String, String>> getLibraryDocumentStatusList() {
+        public java.util.List<java.util.Map<String, String>> getLibraryDocumentStatusList() {
             return this.libraryDocumentStatusList;
         }
 
         /**
          * @return llmHelperTypeList
          */
-        public java.util.List < java.util.Map<String, String>> getLlmHelperTypeList() {
+        public java.util.List<java.util.Map<String, String>> getLlmHelperTypeList() {
             return this.llmHelperTypeList;
         }
 
         /**
          * @return textIndexCategoryList
          */
-        public java.util.List < String > getTextIndexCategoryList() {
+        public java.util.List<String> getTextIndexCategoryList() {
             return this.textIndexCategoryList;
         }
 
         /**
          * @return vectorIndexCategoryList
          */
-        public java.util.List < String > getVectorIndexCategoryList() {
+        public java.util.List<String> getVectorIndexCategoryList() {
             return this.vectorIndexCategoryList;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, String>> embeddingTypeList; 
-            private java.util.Map < String, Boolean > frontendConfig; 
-            private java.util.List < java.util.Map<String, String>> libraryDocumentStatusList; 
-            private java.util.List < java.util.Map<String, String>> llmHelperTypeList; 
-            private java.util.List < String > textIndexCategoryList; 
-            private java.util.List < String > vectorIndexCategoryList; 
+            private java.util.List<java.util.Map<String, String>> embeddingTypeList; 
+            private java.util.Map<String, Boolean> frontendConfig; 
+            private java.util.List<java.util.Map<String, String>> libraryDocumentStatusList; 
+            private java.util.List<java.util.Map<String, String>> llmHelperTypeList; 
+            private java.util.List<String> textIndexCategoryList; 
+            private java.util.List<String> vectorIndexCategoryList; 
 
             /**
              * embeddingTypeList.
              */
-            public Builder embeddingTypeList(java.util.List < java.util.Map<String, String>> embeddingTypeList) {
+            public Builder embeddingTypeList(java.util.List<java.util.Map<String, String>> embeddingTypeList) {
                 this.embeddingTypeList = embeddingTypeList;
                 return this;
             }
@@ -294,7 +299,7 @@ public class GetAppConfigResponseBody extends TeaModel {
             /**
              * frontendConfig.
              */
-            public Builder frontendConfig(java.util.Map < String, Boolean > frontendConfig) {
+            public Builder frontendConfig(java.util.Map<String, Boolean> frontendConfig) {
                 this.frontendConfig = frontendConfig;
                 return this;
             }
@@ -302,7 +307,7 @@ public class GetAppConfigResponseBody extends TeaModel {
             /**
              * libraryDocumentStatusList.
              */
-            public Builder libraryDocumentStatusList(java.util.List < java.util.Map<String, String>> libraryDocumentStatusList) {
+            public Builder libraryDocumentStatusList(java.util.List<java.util.Map<String, String>> libraryDocumentStatusList) {
                 this.libraryDocumentStatusList = libraryDocumentStatusList;
                 return this;
             }
@@ -310,7 +315,7 @@ public class GetAppConfigResponseBody extends TeaModel {
             /**
              * llmHelperTypeList.
              */
-            public Builder llmHelperTypeList(java.util.List < java.util.Map<String, String>> llmHelperTypeList) {
+            public Builder llmHelperTypeList(java.util.List<java.util.Map<String, String>> llmHelperTypeList) {
                 this.llmHelperTypeList = llmHelperTypeList;
                 return this;
             }
@@ -318,7 +323,7 @@ public class GetAppConfigResponseBody extends TeaModel {
             /**
              * textIndexCategoryList.
              */
-            public Builder textIndexCategoryList(java.util.List < String > textIndexCategoryList) {
+            public Builder textIndexCategoryList(java.util.List<String> textIndexCategoryList) {
                 this.textIndexCategoryList = textIndexCategoryList;
                 return this;
             }
@@ -326,7 +331,7 @@ public class GetAppConfigResponseBody extends TeaModel {
             /**
              * vectorIndexCategoryList.
              */
-            public Builder vectorIndexCategoryList(java.util.List < String > vectorIndexCategoryList) {
+            public Builder vectorIndexCategoryList(java.util.List<String> vectorIndexCategoryList) {
                 this.vectorIndexCategoryList = vectorIndexCategoryList;
                 return this;
             }

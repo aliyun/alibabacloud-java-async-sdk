@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class UpdateDocumentRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("meta")
-    private java.util.Map < String, ? > meta;
+    private java.util.Map<String, ?> meta;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("title")
@@ -81,7 +86,7 @@ public class UpdateDocumentRequest extends Request {
     /**
      * @return meta
      */
-    public java.util.Map < String, ? > getMeta() {
+    public java.util.Map<String, ?> getMeta() {
         return this.meta;
     }
 
@@ -96,7 +101,7 @@ public class UpdateDocumentRequest extends Request {
         private String workspaceId; 
         private String docId; 
         private String libraryId; 
-        private java.util.Map < String, ? > meta; 
+        private java.util.Map<String, ?> meta; 
         private String title; 
 
         private Builder() {
@@ -151,7 +156,7 @@ public class UpdateDocumentRequest extends Request {
         /**
          * meta.
          */
-        public Builder meta(java.util.Map < String, ? > meta) {
+        public Builder meta(java.util.Map<String, ?> meta) {
             this.putBodyParameter("meta", meta);
             this.meta = meta;
             return this;

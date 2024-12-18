@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -441,7 +446,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         private String customerServiceName;
 
         @com.aliyun.core.annotation.NameInMap("dialogueList")
-        private java.util.List < DialogueList> dialogueList;
+        private java.util.List<DialogueList> dialogueList;
 
         @com.aliyun.core.annotation.NameInMap("gmtService")
         private String gmtService;
@@ -502,7 +507,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         /**
          * @return dialogueList
          */
-        public java.util.List < DialogueList> getDialogueList() {
+        public java.util.List<DialogueList> getDialogueList() {
             return this.dialogueList;
         }
 
@@ -519,7 +524,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             private String customerName; 
             private String customerServiceId; 
             private String customerServiceName; 
-            private java.util.List < DialogueList> dialogueList; 
+            private java.util.List<DialogueList> dialogueList; 
             private String gmtService; 
 
             /**
@@ -565,7 +570,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             /**
              * dialogueList.
              */
-            public Builder dialogueList(java.util.List < DialogueList> dialogueList) {
+            public Builder dialogueList(java.util.List<DialogueList> dialogueList) {
                 this.dialogueList = dialogueList;
                 return this;
             }
@@ -844,7 +849,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         private String mode;
 
         @com.aliyun.core.annotation.NameInMap("originDialogue")
-        private java.util.List < OriginDialogue> originDialogue;
+        private java.util.List<OriginDialogue> originDialogue;
 
         @com.aliyun.core.annotation.NameInMap("qualityGroupId")
         private String qualityGroupId;
@@ -857,6 +862,9 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ruleType")
         private String ruleType;
+
+        @com.aliyun.core.annotation.NameInMap("subNodeCol")
+        private java.util.List<?> subNodeCol;
 
         private QualityCheckList(Builder builder) {
             this.bizType = builder.bizType;
@@ -872,6 +880,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             this.ruleDescription = builder.ruleDescription;
             this.ruleId = builder.ruleId;
             this.ruleType = builder.ruleType;
+            this.subNodeCol = builder.subNodeCol;
         }
 
         public static Builder builder() {
@@ -941,7 +950,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         /**
          * @return originDialogue
          */
-        public java.util.List < OriginDialogue> getOriginDialogue() {
+        public java.util.List<OriginDialogue> getOriginDialogue() {
             return this.originDialogue;
         }
 
@@ -973,6 +982,13 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             return this.ruleType;
         }
 
+        /**
+         * @return subNodeCol
+         */
+        public java.util.List<?> getSubNodeCol() {
+            return this.subNodeCol;
+        }
+
         public static final class Builder {
             private String bizType; 
             private String checkExplanation; 
@@ -982,11 +998,12 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             private String gmtEnd; 
             private String gmtStart; 
             private String mode; 
-            private java.util.List < OriginDialogue> originDialogue; 
+            private java.util.List<OriginDialogue> originDialogue; 
             private String qualityGroupId; 
             private String ruleDescription; 
             private String ruleId; 
             private String ruleType; 
+            private java.util.List<?> subNodeCol; 
 
             /**
              * bizType.
@@ -1055,7 +1072,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             /**
              * originDialogue.
              */
-            public Builder originDialogue(java.util.List < OriginDialogue> originDialogue) {
+            public Builder originDialogue(java.util.List<OriginDialogue> originDialogue) {
                 this.originDialogue = originDialogue;
                 return this;
             }
@@ -1092,6 +1109,14 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * subNodeCol.
+             */
+            public Builder subNodeCol(java.util.List<?> subNodeCol) {
+                this.subNodeCol = subNodeCol;
+                return this;
+            }
+
             public QualityCheckList build() {
                 return new QualityCheckList(this);
             } 
@@ -1119,7 +1144,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         private String gmtStart;
 
         @com.aliyun.core.annotation.NameInMap("qualityCheckList")
-        private java.util.List < QualityCheckList> qualityCheckList;
+        private java.util.List<QualityCheckList> qualityCheckList;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
@@ -1176,7 +1201,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         /**
          * @return qualityCheckList
          */
-        public java.util.List < QualityCheckList> getQualityCheckList() {
+        public java.util.List<QualityCheckList> getQualityCheckList() {
             return this.qualityCheckList;
         }
 
@@ -1199,7 +1224,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtEnd; 
             private String gmtStart; 
-            private java.util.List < QualityCheckList> qualityCheckList; 
+            private java.util.List<QualityCheckList> qualityCheckList; 
             private String status; 
             private String taskId; 
 
@@ -1238,7 +1263,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             /**
              * qualityCheckList.
              */
-            public Builder qualityCheckList(java.util.List < QualityCheckList> qualityCheckList) {
+            public Builder qualityCheckList(java.util.List<QualityCheckList> qualityCheckList) {
                 this.qualityCheckList = qualityCheckList;
                 return this;
             }

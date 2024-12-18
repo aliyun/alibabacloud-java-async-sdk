@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,12 +25,12 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("anaYears")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Integer > anaYears;
+    private java.util.List<Integer> anaYears;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("docInfos")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DocInfos> docInfos;
+    private java.util.List<DocInfos> docInfos;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("enableTable")
@@ -73,14 +78,14 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
     /**
      * @return anaYears
      */
-    public java.util.List < Integer > getAnaYears() {
+    public java.util.List<Integer> getAnaYears() {
         return this.anaYears;
     }
 
     /**
      * @return docInfos
      */
-    public java.util.List < DocInfos> getDocInfos() {
+    public java.util.List<DocInfos> getDocInfos() {
         return this.docInfos;
     }
 
@@ -107,8 +112,8 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateAnnualDocSummaryTaskRequest, Builder> {
         private String workspaceId; 
-        private java.util.List < Integer > anaYears; 
-        private java.util.List < DocInfos> docInfos; 
+        private java.util.List<Integer> anaYears; 
+        private java.util.List<DocInfos> docInfos; 
         private Boolean enableTable; 
         private String instruction; 
         private String modelId; 
@@ -142,7 +147,7 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder anaYears(java.util.List < Integer > anaYears) {
+        public Builder anaYears(java.util.List<Integer> anaYears) {
             this.putBodyParameter("anaYears", anaYears);
             this.anaYears = anaYears;
             return this;
@@ -151,7 +156,7 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder docInfos(java.util.List < DocInfos> docInfos) {
+        public Builder docInfos(java.util.List<DocInfos> docInfos) {
             this.putBodyParameter("docInfos", docInfos);
             this.docInfos = docInfos;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class InvokePluginRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("params")
-    private java.util.Map < String, ? > params;
+    private java.util.Map<String, ?> params;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pluginId")
@@ -55,7 +60,7 @@ public class InvokePluginRequest extends Request {
     /**
      * @return params
      */
-    public java.util.Map < String, ? > getParams() {
+    public java.util.Map<String, ?> getParams() {
         return this.params;
     }
 
@@ -68,7 +73,7 @@ public class InvokePluginRequest extends Request {
 
     public static final class Builder extends Request.Builder<InvokePluginRequest, Builder> {
         private String workspaceId; 
-        private java.util.Map < String, ? > params; 
+        private java.util.Map<String, ?> params; 
         private String pluginId; 
 
         private Builder() {
@@ -97,7 +102,7 @@ public class InvokePluginRequest extends Request {
         /**
          * params.
          */
-        public Builder params(java.util.Map < String, ? > params) {
+        public Builder params(java.util.Map<String, ?> params) {
             this.putBodyParameter("params", params);
             this.params = params;
             return this;

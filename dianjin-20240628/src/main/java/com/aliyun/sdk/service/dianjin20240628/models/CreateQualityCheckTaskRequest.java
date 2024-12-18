@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,11 +34,11 @@ public class CreateQualityCheckTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("metaData")
-    private java.util.Map < String, String > metaData;
+    private java.util.Map<String, String> metaData;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("qualityGroup")
-    private java.util.List < String > qualityGroup;
+    private java.util.List<String> qualityGroup;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("requestId")
@@ -93,14 +98,14 @@ public class CreateQualityCheckTaskRequest extends Request {
     /**
      * @return metaData
      */
-    public java.util.Map < String, String > getMetaData() {
+    public java.util.Map<String, String> getMetaData() {
         return this.metaData;
     }
 
     /**
      * @return qualityGroup
      */
-    public java.util.List < String > getQualityGroup() {
+    public java.util.List<String> getQualityGroup() {
         return this.qualityGroup;
     }
 
@@ -122,8 +127,8 @@ public class CreateQualityCheckTaskRequest extends Request {
         private String workspaceId; 
         private ConversationList conversationList; 
         private String gmtService; 
-        private java.util.Map < String, String > metaData; 
-        private java.util.List < String > qualityGroup; 
+        private java.util.Map<String, String> metaData; 
+        private java.util.List<String> qualityGroup; 
         private String requestId; 
         private String type; 
 
@@ -178,7 +183,7 @@ public class CreateQualityCheckTaskRequest extends Request {
         /**
          * metaData.
          */
-        public Builder metaData(java.util.Map < String, String > metaData) {
+        public Builder metaData(java.util.Map<String, String> metaData) {
             this.putBodyParameter("metaData", metaData);
             this.metaData = metaData;
             return this;
@@ -187,7 +192,7 @@ public class CreateQualityCheckTaskRequest extends Request {
         /**
          * qualityGroup.
          */
-        public Builder qualityGroup(java.util.List < String > qualityGroup) {
+        public Builder qualityGroup(java.util.List<String> qualityGroup) {
             this.putBodyParameter("qualityGroup", qualityGroup);
             this.qualityGroup = qualityGroup;
             return this;
@@ -464,7 +469,7 @@ public class CreateQualityCheckTaskRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("dialogueList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < DialogueList> dialogueList;
+        private java.util.List<DialogueList> dialogueList;
 
         @com.aliyun.core.annotation.NameInMap("gmtService")
         private String gmtService;
@@ -525,7 +530,7 @@ public class CreateQualityCheckTaskRequest extends Request {
         /**
          * @return dialogueList
          */
-        public java.util.List < DialogueList> getDialogueList() {
+        public java.util.List<DialogueList> getDialogueList() {
             return this.dialogueList;
         }
 
@@ -542,7 +547,7 @@ public class CreateQualityCheckTaskRequest extends Request {
             private String customerName; 
             private String customerServiceId; 
             private String customerServiceName; 
-            private java.util.List < DialogueList> dialogueList; 
+            private java.util.List<DialogueList> dialogueList; 
             private String gmtService; 
 
             /**
@@ -588,7 +593,7 @@ public class CreateQualityCheckTaskRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder dialogueList(java.util.List < DialogueList> dialogueList) {
+            public Builder dialogueList(java.util.List<DialogueList> dialogueList) {
                 this.dialogueList = dialogueList;
                 return this;
             }

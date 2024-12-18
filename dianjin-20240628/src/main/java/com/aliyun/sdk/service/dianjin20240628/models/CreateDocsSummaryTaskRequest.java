@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class CreateDocsSummaryTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("docInfos")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DocInfos> docInfos;
+    private java.util.List<DocInfos> docInfos;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("enableTable")
@@ -67,7 +72,7 @@ public class CreateDocsSummaryTaskRequest extends Request {
     /**
      * @return docInfos
      */
-    public java.util.List < DocInfos> getDocInfos() {
+    public java.util.List<DocInfos> getDocInfos() {
         return this.docInfos;
     }
 
@@ -94,7 +99,7 @@ public class CreateDocsSummaryTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDocsSummaryTaskRequest, Builder> {
         private String workspaceId; 
-        private java.util.List < DocInfos> docInfos; 
+        private java.util.List<DocInfos> docInfos; 
         private Boolean enableTable; 
         private String instruction; 
         private String modelId; 
@@ -127,7 +132,7 @@ public class CreateDocsSummaryTaskRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder docInfos(java.util.List < DocInfos> docInfos) {
+        public Builder docInfos(java.util.List<DocInfos> docInfos) {
             this.putBodyParameter("docInfos", docInfos);
             this.docInfos = docInfos;
             return this;

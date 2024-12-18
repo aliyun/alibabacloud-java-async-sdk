@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,11 +24,11 @@ public class GetFilterDocumentListRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("and")
-    private java.util.List < And> and;
+    private java.util.List<And> and;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("docIdList")
-    private java.util.List < String > docIdList;
+    private java.util.List<String> docIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("libraryId")
@@ -32,7 +37,7 @@ public class GetFilterDocumentListRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("or")
-    private java.util.List < Or> or;
+    private java.util.List<Or> or;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("page")
@@ -44,7 +49,7 @@ public class GetFilterDocumentListRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("status")
-    private java.util.List < String > status;
+    private java.util.List<String> status;
 
     private GetFilterDocumentListRequest(Builder builder) {
         super(builder);
@@ -81,14 +86,14 @@ public class GetFilterDocumentListRequest extends Request {
     /**
      * @return and
      */
-    public java.util.List < And> getAnd() {
+    public java.util.List<And> getAnd() {
         return this.and;
     }
 
     /**
      * @return docIdList
      */
-    public java.util.List < String > getDocIdList() {
+    public java.util.List<String> getDocIdList() {
         return this.docIdList;
     }
 
@@ -102,7 +107,7 @@ public class GetFilterDocumentListRequest extends Request {
     /**
      * @return or
      */
-    public java.util.List < Or> getOr() {
+    public java.util.List<Or> getOr() {
         return this.or;
     }
 
@@ -123,19 +128,19 @@ public class GetFilterDocumentListRequest extends Request {
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
     public static final class Builder extends Request.Builder<GetFilterDocumentListRequest, Builder> {
         private String workspaceId; 
-        private java.util.List < And> and; 
-        private java.util.List < String > docIdList; 
+        private java.util.List<And> and; 
+        private java.util.List<String> docIdList; 
         private String libraryId; 
-        private java.util.List < Or> or; 
+        private java.util.List<Or> or; 
         private Integer page; 
         private Integer pageSize; 
-        private java.util.List < String > status; 
+        private java.util.List<String> status; 
 
         private Builder() {
             super();
@@ -168,7 +173,7 @@ public class GetFilterDocumentListRequest extends Request {
         /**
          * and.
          */
-        public Builder and(java.util.List < And> and) {
+        public Builder and(java.util.List<And> and) {
             this.putBodyParameter("and", and);
             this.and = and;
             return this;
@@ -177,7 +182,7 @@ public class GetFilterDocumentListRequest extends Request {
         /**
          * docIdList.
          */
-        public Builder docIdList(java.util.List < String > docIdList) {
+        public Builder docIdList(java.util.List<String> docIdList) {
             this.putBodyParameter("docIdList", docIdList);
             this.docIdList = docIdList;
             return this;
@@ -198,7 +203,7 @@ public class GetFilterDocumentListRequest extends Request {
         /**
          * or.
          */
-        public Builder or(java.util.List < Or> or) {
+        public Builder or(java.util.List<Or> or) {
             this.putBodyParameter("or", or);
             this.or = or;
             return this;
@@ -225,7 +230,7 @@ public class GetFilterDocumentListRequest extends Request {
         /**
          * status.
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             this.putBodyParameter("status", status);
             this.status = status;
             return this;

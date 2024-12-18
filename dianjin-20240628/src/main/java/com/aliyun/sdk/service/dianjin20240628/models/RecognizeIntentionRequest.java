@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,11 +38,11 @@ public class RecognizeIntentionRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("globalIntentionList")
-    private java.util.List < GlobalIntentionList> globalIntentionList;
+    private java.util.List<GlobalIntentionList> globalIntentionList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("hierarchicalIntentionList")
-    private java.util.List < HierarchicalIntentionList> hierarchicalIntentionList;
+    private java.util.List<HierarchicalIntentionList> hierarchicalIntentionList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("intentionDomainCode")
@@ -45,7 +50,7 @@ public class RecognizeIntentionRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("intentionList")
-    private java.util.List < IntentionList> intentionList;
+    private java.util.List<IntentionList> intentionList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("opType")
@@ -113,14 +118,14 @@ public class RecognizeIntentionRequest extends Request {
     /**
      * @return globalIntentionList
      */
-    public java.util.List < GlobalIntentionList> getGlobalIntentionList() {
+    public java.util.List<GlobalIntentionList> getGlobalIntentionList() {
         return this.globalIntentionList;
     }
 
     /**
      * @return hierarchicalIntentionList
      */
-    public java.util.List < HierarchicalIntentionList> getHierarchicalIntentionList() {
+    public java.util.List<HierarchicalIntentionList> getHierarchicalIntentionList() {
         return this.hierarchicalIntentionList;
     }
 
@@ -134,7 +139,7 @@ public class RecognizeIntentionRequest extends Request {
     /**
      * @return intentionList
      */
-    public java.util.List < IntentionList> getIntentionList() {
+    public java.util.List<IntentionList> getIntentionList() {
         return this.intentionList;
     }
 
@@ -157,10 +162,10 @@ public class RecognizeIntentionRequest extends Request {
         private Boolean analysis; 
         private String bizType; 
         private String conversation; 
-        private java.util.List < GlobalIntentionList> globalIntentionList; 
-        private java.util.List < HierarchicalIntentionList> hierarchicalIntentionList; 
+        private java.util.List<GlobalIntentionList> globalIntentionList; 
+        private java.util.List<HierarchicalIntentionList> hierarchicalIntentionList; 
         private String intentionDomainCode; 
-        private java.util.List < IntentionList> intentionList; 
+        private java.util.List<IntentionList> intentionList; 
         private String opType; 
         private Boolean recommend; 
 
@@ -227,7 +232,7 @@ public class RecognizeIntentionRequest extends Request {
         /**
          * globalIntentionList.
          */
-        public Builder globalIntentionList(java.util.List < GlobalIntentionList> globalIntentionList) {
+        public Builder globalIntentionList(java.util.List<GlobalIntentionList> globalIntentionList) {
             this.putBodyParameter("globalIntentionList", globalIntentionList);
             this.globalIntentionList = globalIntentionList;
             return this;
@@ -236,7 +241,7 @@ public class RecognizeIntentionRequest extends Request {
         /**
          * hierarchicalIntentionList.
          */
-        public Builder hierarchicalIntentionList(java.util.List < HierarchicalIntentionList> hierarchicalIntentionList) {
+        public Builder hierarchicalIntentionList(java.util.List<HierarchicalIntentionList> hierarchicalIntentionList) {
             this.putBodyParameter("hierarchicalIntentionList", hierarchicalIntentionList);
             this.hierarchicalIntentionList = hierarchicalIntentionList;
             return this;
@@ -254,7 +259,7 @@ public class RecognizeIntentionRequest extends Request {
         /**
          * intentionList.
          */
-        public Builder intentionList(java.util.List < IntentionList> intentionList) {
+        public Builder intentionList(java.util.List<IntentionList> intentionList) {
             this.putBodyParameter("intentionList", intentionList);
             this.intentionList = intentionList;
             return this;

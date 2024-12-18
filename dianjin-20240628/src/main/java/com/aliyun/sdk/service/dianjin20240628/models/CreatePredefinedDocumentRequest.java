@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreatePredefinedDocumentRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("chunks")
-    private java.util.List < Chunks> chunks;
+    private java.util.List<Chunks> chunks;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("libraryId")
@@ -27,7 +32,7 @@ public class CreatePredefinedDocumentRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("metadata")
-    private java.util.Map < String, ? > metadata;
+    private java.util.Map<String, ?> metadata;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("title")
@@ -65,7 +70,7 @@ public class CreatePredefinedDocumentRequest extends Request {
     /**
      * @return chunks
      */
-    public java.util.List < Chunks> getChunks() {
+    public java.util.List<Chunks> getChunks() {
         return this.chunks;
     }
 
@@ -79,7 +84,7 @@ public class CreatePredefinedDocumentRequest extends Request {
     /**
      * @return metadata
      */
-    public java.util.Map < String, ? > getMetadata() {
+    public java.util.Map<String, ?> getMetadata() {
         return this.metadata;
     }
 
@@ -92,9 +97,9 @@ public class CreatePredefinedDocumentRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreatePredefinedDocumentRequest, Builder> {
         private String workspaceId; 
-        private java.util.List < Chunks> chunks; 
+        private java.util.List<Chunks> chunks; 
         private String libraryId; 
-        private java.util.Map < String, ? > metadata; 
+        private java.util.Map<String, ?> metadata; 
         private String title; 
 
         private Builder() {
@@ -125,7 +130,7 @@ public class CreatePredefinedDocumentRequest extends Request {
         /**
          * chunks.
          */
-        public Builder chunks(java.util.List < Chunks> chunks) {
+        public Builder chunks(java.util.List<Chunks> chunks) {
             this.putBodyParameter("chunks", chunks);
             this.chunks = chunks;
             return this;
@@ -143,7 +148,7 @@ public class CreatePredefinedDocumentRequest extends Request {
         /**
          * metadata.
          */
-        public Builder metadata(java.util.Map < String, ? > metadata) {
+        public Builder metadata(java.util.Map<String, ?> metadata) {
             this.putBodyParameter("metadata", metadata);
             this.metadata = metadata;
             return this;
@@ -173,7 +178,7 @@ public class CreatePredefinedDocumentRequest extends Request {
      */
     public static class Chunks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chunkMeta")
-        private java.util.Map < String, ? > chunkMeta;
+        private java.util.Map<String, ?> chunkMeta;
 
         @com.aliyun.core.annotation.NameInMap("chunkOrder")
         private Integer chunkOrder;
@@ -202,7 +207,7 @@ public class CreatePredefinedDocumentRequest extends Request {
         /**
          * @return chunkMeta
          */
-        public java.util.Map < String, ? > getChunkMeta() {
+        public java.util.Map<String, ?> getChunkMeta() {
             return this.chunkMeta;
         }
 
@@ -228,7 +233,7 @@ public class CreatePredefinedDocumentRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > chunkMeta; 
+            private java.util.Map<String, ?> chunkMeta; 
             private Integer chunkOrder; 
             private String chunkText; 
             private String chunkType; 
@@ -236,7 +241,7 @@ public class CreatePredefinedDocumentRequest extends Request {
             /**
              * chunkMeta.
              */
-            public Builder chunkMeta(java.util.Map < String, ? > chunkMeta) {
+            public Builder chunkMeta(java.util.Map<String, ?> chunkMeta) {
                 this.chunkMeta = chunkMeta;
                 return this;
             }

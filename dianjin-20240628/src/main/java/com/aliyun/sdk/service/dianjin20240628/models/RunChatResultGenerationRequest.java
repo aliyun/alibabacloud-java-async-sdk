@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,12 +24,12 @@ public class RunChatResultGenerationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("inferenceParameters")
-    private java.util.Map < String, ? > inferenceParameters;
+    private java.util.Map<String, ?> inferenceParameters;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("messages")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Messages> messages;
+    private java.util.List<Messages> messages;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("modelId")
@@ -41,7 +46,7 @@ public class RunChatResultGenerationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tools")
-    private java.util.List < Tools> tools;
+    private java.util.List<Tools> tools;
 
     private RunChatResultGenerationRequest(Builder builder) {
         super(builder);
@@ -77,14 +82,14 @@ public class RunChatResultGenerationRequest extends Request {
     /**
      * @return inferenceParameters
      */
-    public java.util.Map < String, ? > getInferenceParameters() {
+    public java.util.Map<String, ?> getInferenceParameters() {
         return this.inferenceParameters;
     }
 
     /**
      * @return messages
      */
-    public java.util.List < Messages> getMessages() {
+    public java.util.List<Messages> getMessages() {
         return this.messages;
     }
 
@@ -112,18 +117,18 @@ public class RunChatResultGenerationRequest extends Request {
     /**
      * @return tools
      */
-    public java.util.List < Tools> getTools() {
+    public java.util.List<Tools> getTools() {
         return this.tools;
     }
 
     public static final class Builder extends Request.Builder<RunChatResultGenerationRequest, Builder> {
         private String workspaceId; 
-        private java.util.Map < String, ? > inferenceParameters; 
-        private java.util.List < Messages> messages; 
+        private java.util.Map<String, ?> inferenceParameters; 
+        private java.util.List<Messages> messages; 
         private String modelId; 
         private String sessionId; 
         private Boolean stream; 
-        private java.util.List < Tools> tools; 
+        private java.util.List<Tools> tools; 
 
         private Builder() {
             super();
@@ -155,7 +160,7 @@ public class RunChatResultGenerationRequest extends Request {
         /**
          * inferenceParameters.
          */
-        public Builder inferenceParameters(java.util.Map < String, ? > inferenceParameters) {
+        public Builder inferenceParameters(java.util.Map<String, ?> inferenceParameters) {
             this.putBodyParameter("inferenceParameters", inferenceParameters);
             this.inferenceParameters = inferenceParameters;
             return this;
@@ -164,7 +169,7 @@ public class RunChatResultGenerationRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder messages(java.util.List < Messages> messages) {
+        public Builder messages(java.util.List<Messages> messages) {
             this.putBodyParameter("messages", messages);
             this.messages = messages;
             return this;
@@ -203,7 +208,7 @@ public class RunChatResultGenerationRequest extends Request {
         /**
          * tools.
          */
-        public Builder tools(java.util.List < Tools> tools) {
+        public Builder tools(java.util.List<Tools> tools) {
             this.putBodyParameter("tools", tools);
             this.tools = tools;
             return this;
@@ -291,7 +296,7 @@ public class RunChatResultGenerationRequest extends Request {
      */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("properties")
-        private java.util.Map < String, ? > properties;
+        private java.util.Map<String, ?> properties;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -312,7 +317,7 @@ public class RunChatResultGenerationRequest extends Request {
         /**
          * @return properties
          */
-        public java.util.Map < String, ? > getProperties() {
+        public java.util.Map<String, ?> getProperties() {
             return this.properties;
         }
 
@@ -324,13 +329,13 @@ public class RunChatResultGenerationRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > properties; 
+            private java.util.Map<String, ?> properties; 
             private String type; 
 
             /**
              * properties.
              */
-            public Builder properties(java.util.Map < String, ? > properties) {
+            public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
                 return this;
             }
@@ -367,7 +372,7 @@ public class RunChatResultGenerationRequest extends Request {
         private Parameters parameters;
 
         @com.aliyun.core.annotation.NameInMap("required")
-        private java.util.List < String > required;
+        private java.util.List<String> required;
 
         private Function(Builder builder) {
             this.description = builder.description;
@@ -408,7 +413,7 @@ public class RunChatResultGenerationRequest extends Request {
         /**
          * @return required
          */
-        public java.util.List < String > getRequired() {
+        public java.util.List<String> getRequired() {
             return this.required;
         }
 
@@ -416,7 +421,7 @@ public class RunChatResultGenerationRequest extends Request {
             private String description; 
             private String name; 
             private Parameters parameters; 
-            private java.util.List < String > required; 
+            private java.util.List<String> required; 
 
             /**
              * description.
@@ -445,7 +450,7 @@ public class RunChatResultGenerationRequest extends Request {
             /**
              * required.
              */
-            public Builder required(java.util.List < String > required) {
+            public Builder required(java.util.List<String> required) {
                 this.required = required;
                 return this;
             }

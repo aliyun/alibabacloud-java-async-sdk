@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1324,7 +1329,7 @@ public class GetLibraryListResponseBody extends TeaModel {
         private Long pageSize;
 
         @com.aliyun.core.annotation.NameInMap("records")
-        private java.util.List < Records> records;
+        private java.util.List<Records> records;
 
         @com.aliyun.core.annotation.NameInMap("totalPages")
         private Long totalPages;
@@ -1365,7 +1370,7 @@ public class GetLibraryListResponseBody extends TeaModel {
         /**
          * @return records
          */
-        public java.util.List < Records> getRecords() {
+        public java.util.List<Records> getRecords() {
             return this.records;
         }
 
@@ -1386,7 +1391,7 @@ public class GetLibraryListResponseBody extends TeaModel {
         public static final class Builder {
             private Long currentPage; 
             private Long pageSize; 
-            private java.util.List < Records> records; 
+            private java.util.List<Records> records; 
             private Long totalPages; 
             private Long totalRecords; 
 
@@ -1409,7 +1414,7 @@ public class GetLibraryListResponseBody extends TeaModel {
             /**
              * records.
              */
-            public Builder records(java.util.List < Records> records) {
+            public Builder records(java.util.List<Records> records) {
                 this.records = records;
                 return this;
             }

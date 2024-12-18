@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetTaskResultResponseBody extends TeaModel {
     private Long cost;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.Map < String, ? > data;
+    private java.util.Map<String, ?> data;
 
     @com.aliyun.core.annotation.NameInMap("dataType")
     private String dataType;
@@ -65,7 +70,7 @@ public class GetTaskResultResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.Map < String, ? > getData() {
+    public java.util.Map<String, ?> getData() {
         return this.data;
     }
 
@@ -113,7 +118,7 @@ public class GetTaskResultResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long cost; 
-        private java.util.Map < String, ? > data; 
+        private java.util.Map<String, ?> data; 
         private String dataType; 
         private String errCode; 
         private String message; 
@@ -132,7 +137,7 @@ public class GetTaskResultResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(java.util.Map < String, ? > data) {
+        public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
             return this;
         }

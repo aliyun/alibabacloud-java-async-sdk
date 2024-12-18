@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -199,13 +204,13 @@ public class RecallDocumentResponseBody extends TeaModel {
      */
     public static class Pos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("axisArray")
-        private java.util.List < Double > axisArray;
+        private java.util.List<Double> axisArray;
 
         @com.aliyun.core.annotation.NameInMap("page")
         private Integer page;
 
         @com.aliyun.core.annotation.NameInMap("textHighlightArea")
-        private java.util.List < Integer > textHighlightArea;
+        private java.util.List<Integer> textHighlightArea;
 
         private Pos(Builder builder) {
             this.axisArray = builder.axisArray;
@@ -224,7 +229,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return axisArray
          */
-        public java.util.List < Double > getAxisArray() {
+        public java.util.List<Double> getAxisArray() {
             return this.axisArray;
         }
 
@@ -238,19 +243,19 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return textHighlightArea
          */
-        public java.util.List < Integer > getTextHighlightArea() {
+        public java.util.List<Integer> getTextHighlightArea() {
             return this.textHighlightArea;
         }
 
         public static final class Builder {
-            private java.util.List < Double > axisArray; 
+            private java.util.List<Double> axisArray; 
             private Integer page; 
-            private java.util.List < Integer > textHighlightArea; 
+            private java.util.List<Integer> textHighlightArea; 
 
             /**
              * axisArray.
              */
-            public Builder axisArray(java.util.List < Double > axisArray) {
+            public Builder axisArray(java.util.List<Double> axisArray) {
                 this.axisArray = axisArray;
                 return this;
             }
@@ -266,7 +271,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * textHighlightArea.
              */
-            public Builder textHighlightArea(java.util.List < Integer > textHighlightArea) {
+            public Builder textHighlightArea(java.util.List<Integer> textHighlightArea) {
                 this.textHighlightArea = textHighlightArea;
                 return this;
             }
@@ -289,7 +294,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         private String chunkId;
 
         @com.aliyun.core.annotation.NameInMap("chunkMeta")
-        private java.util.Map < String, ? > chunkMeta;
+        private java.util.Map<String, ?> chunkMeta;
 
         @com.aliyun.core.annotation.NameInMap("chunkOssUrl")
         private String chunkOssUrl;
@@ -316,7 +321,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         private String nextChunkId;
 
         @com.aliyun.core.annotation.NameInMap("pos")
-        private java.util.List < Pos> pos;
+        private java.util.List<Pos> pos;
 
         @com.aliyun.core.annotation.NameInMap("preChunkId")
         private String preChunkId;
@@ -362,7 +367,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return chunkMeta
          */
-        public java.util.Map < String, ? > getChunkMeta() {
+        public java.util.Map<String, ?> getChunkMeta() {
             return this.chunkMeta;
         }
 
@@ -425,7 +430,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return pos
          */
-        public java.util.List < Pos> getPos() {
+        public java.util.List<Pos> getPos() {
             return this.pos;
         }
 
@@ -452,7 +457,7 @@ public class RecallDocumentResponseBody extends TeaModel {
 
         public static final class Builder {
             private String chunkId; 
-            private java.util.Map < String, ? > chunkMeta; 
+            private java.util.Map<String, ?> chunkMeta; 
             private String chunkOssUrl; 
             private String chunkText; 
             private String chunkType; 
@@ -461,7 +466,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             private String libraryId; 
             private String libraryName; 
             private String nextChunkId; 
-            private java.util.List < Pos> pos; 
+            private java.util.List<Pos> pos; 
             private String preChunkId; 
             private Float score; 
             private String title; 
@@ -477,7 +482,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * chunkMeta.
              */
-            public Builder chunkMeta(java.util.Map < String, ? > chunkMeta) {
+            public Builder chunkMeta(java.util.Map<String, ?> chunkMeta) {
                 this.chunkMeta = chunkMeta;
                 return this;
             }
@@ -549,7 +554,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * pos.
              */
-            public Builder pos(java.util.List < Pos> pos) {
+            public Builder pos(java.util.List<Pos> pos) {
                 this.pos = pos;
                 return this;
             }
@@ -593,13 +598,13 @@ public class RecallDocumentResponseBody extends TeaModel {
      */
     public static class ChunkPartListPos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("axisArray")
-        private java.util.List < Double > axisArray;
+        private java.util.List<Double> axisArray;
 
         @com.aliyun.core.annotation.NameInMap("page")
         private Integer page;
 
         @com.aliyun.core.annotation.NameInMap("textHighlightArea")
-        private java.util.List < Integer > textHighlightArea;
+        private java.util.List<Integer> textHighlightArea;
 
         private ChunkPartListPos(Builder builder) {
             this.axisArray = builder.axisArray;
@@ -618,7 +623,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return axisArray
          */
-        public java.util.List < Double > getAxisArray() {
+        public java.util.List<Double> getAxisArray() {
             return this.axisArray;
         }
 
@@ -632,19 +637,19 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return textHighlightArea
          */
-        public java.util.List < Integer > getTextHighlightArea() {
+        public java.util.List<Integer> getTextHighlightArea() {
             return this.textHighlightArea;
         }
 
         public static final class Builder {
-            private java.util.List < Double > axisArray; 
+            private java.util.List<Double> axisArray; 
             private Integer page; 
-            private java.util.List < Integer > textHighlightArea; 
+            private java.util.List<Integer> textHighlightArea; 
 
             /**
              * axisArray.
              */
-            public Builder axisArray(java.util.List < Double > axisArray) {
+            public Builder axisArray(java.util.List<Double> axisArray) {
                 this.axisArray = axisArray;
                 return this;
             }
@@ -660,7 +665,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * textHighlightArea.
              */
-            public Builder textHighlightArea(java.util.List < Integer > textHighlightArea) {
+            public Builder textHighlightArea(java.util.List<Integer> textHighlightArea) {
                 this.textHighlightArea = textHighlightArea;
                 return this;
             }
@@ -683,7 +688,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         private String chunkId;
 
         @com.aliyun.core.annotation.NameInMap("chunkMeta")
-        private java.util.Map < String, ? > chunkMeta;
+        private java.util.Map<String, ?> chunkMeta;
 
         @com.aliyun.core.annotation.NameInMap("chunkOssUrl")
         private String chunkOssUrl;
@@ -710,7 +715,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         private String nextChunkId;
 
         @com.aliyun.core.annotation.NameInMap("pos")
-        private java.util.List < ChunkPartListPos> pos;
+        private java.util.List<ChunkPartListPos> pos;
 
         @com.aliyun.core.annotation.NameInMap("preChunkId")
         private String preChunkId;
@@ -756,7 +761,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return chunkMeta
          */
-        public java.util.Map < String, ? > getChunkMeta() {
+        public java.util.Map<String, ?> getChunkMeta() {
             return this.chunkMeta;
         }
 
@@ -819,7 +824,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return pos
          */
-        public java.util.List < ChunkPartListPos> getPos() {
+        public java.util.List<ChunkPartListPos> getPos() {
             return this.pos;
         }
 
@@ -846,7 +851,7 @@ public class RecallDocumentResponseBody extends TeaModel {
 
         public static final class Builder {
             private String chunkId; 
-            private java.util.Map < String, ? > chunkMeta; 
+            private java.util.Map<String, ?> chunkMeta; 
             private String chunkOssUrl; 
             private String chunkText; 
             private String chunkType; 
@@ -855,7 +860,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             private String libraryId; 
             private String libraryName; 
             private String nextChunkId; 
-            private java.util.List < ChunkPartListPos> pos; 
+            private java.util.List<ChunkPartListPos> pos; 
             private String preChunkId; 
             private Float score; 
             private String title; 
@@ -871,7 +876,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * chunkMeta.
              */
-            public Builder chunkMeta(java.util.Map < String, ? > chunkMeta) {
+            public Builder chunkMeta(java.util.Map<String, ?> chunkMeta) {
                 this.chunkMeta = chunkMeta;
                 return this;
             }
@@ -943,7 +948,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * pos.
              */
-            public Builder pos(java.util.List < ChunkPartListPos> pos) {
+            public Builder pos(java.util.List<ChunkPartListPos> pos) {
                 this.pos = pos;
                 return this;
             }
@@ -990,7 +995,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         private String docId;
 
         @com.aliyun.core.annotation.NameInMap("documentMeta")
-        private java.util.Map < String, ? > documentMeta;
+        private java.util.Map<String, ?> documentMeta;
 
         @com.aliyun.core.annotation.NameInMap("fileType")
         private String fileType;
@@ -1035,7 +1040,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return documentMeta
          */
-        public java.util.Map < String, ? > getDocumentMeta() {
+        public java.util.Map<String, ?> getDocumentMeta() {
             return this.documentMeta;
         }
 
@@ -1076,7 +1081,7 @@ public class RecallDocumentResponseBody extends TeaModel {
 
         public static final class Builder {
             private String docId; 
-            private java.util.Map < String, ? > documentMeta; 
+            private java.util.Map<String, ?> documentMeta; 
             private String fileType; 
             private String gmtCreate; 
             private String libraryId; 
@@ -1094,7 +1099,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * documentMeta.
              */
-            public Builder documentMeta(java.util.Map < String, ? > documentMeta) {
+            public Builder documentMeta(java.util.Map<String, ?> documentMeta) {
                 this.documentMeta = documentMeta;
                 return this;
             }
@@ -1154,13 +1159,13 @@ public class RecallDocumentResponseBody extends TeaModel {
      */
     public static class TextChunkListPos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("axisArray")
-        private java.util.List < Double > axisArray;
+        private java.util.List<Double> axisArray;
 
         @com.aliyun.core.annotation.NameInMap("page")
         private Integer page;
 
         @com.aliyun.core.annotation.NameInMap("textHighlightArea")
-        private java.util.List < Integer > textHighlightArea;
+        private java.util.List<Integer> textHighlightArea;
 
         private TextChunkListPos(Builder builder) {
             this.axisArray = builder.axisArray;
@@ -1179,7 +1184,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return axisArray
          */
-        public java.util.List < Double > getAxisArray() {
+        public java.util.List<Double> getAxisArray() {
             return this.axisArray;
         }
 
@@ -1193,19 +1198,19 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return textHighlightArea
          */
-        public java.util.List < Integer > getTextHighlightArea() {
+        public java.util.List<Integer> getTextHighlightArea() {
             return this.textHighlightArea;
         }
 
         public static final class Builder {
-            private java.util.List < Double > axisArray; 
+            private java.util.List<Double> axisArray; 
             private Integer page; 
-            private java.util.List < Integer > textHighlightArea; 
+            private java.util.List<Integer> textHighlightArea; 
 
             /**
              * axisArray.
              */
-            public Builder axisArray(java.util.List < Double > axisArray) {
+            public Builder axisArray(java.util.List<Double> axisArray) {
                 this.axisArray = axisArray;
                 return this;
             }
@@ -1221,7 +1226,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * textHighlightArea.
              */
-            public Builder textHighlightArea(java.util.List < Integer > textHighlightArea) {
+            public Builder textHighlightArea(java.util.List<Integer> textHighlightArea) {
                 this.textHighlightArea = textHighlightArea;
                 return this;
             }
@@ -1244,7 +1249,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         private String chunkId;
 
         @com.aliyun.core.annotation.NameInMap("chunkMeta")
-        private java.util.Map < String, ? > chunkMeta;
+        private java.util.Map<String, ?> chunkMeta;
 
         @com.aliyun.core.annotation.NameInMap("chunkOssUrl")
         private String chunkOssUrl;
@@ -1271,7 +1276,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         private String nextChunkId;
 
         @com.aliyun.core.annotation.NameInMap("pos")
-        private java.util.List < TextChunkListPos> pos;
+        private java.util.List<TextChunkListPos> pos;
 
         @com.aliyun.core.annotation.NameInMap("preChunkId")
         private String preChunkId;
@@ -1317,7 +1322,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return chunkMeta
          */
-        public java.util.Map < String, ? > getChunkMeta() {
+        public java.util.Map<String, ?> getChunkMeta() {
             return this.chunkMeta;
         }
 
@@ -1380,7 +1385,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return pos
          */
-        public java.util.List < TextChunkListPos> getPos() {
+        public java.util.List<TextChunkListPos> getPos() {
             return this.pos;
         }
 
@@ -1407,7 +1412,7 @@ public class RecallDocumentResponseBody extends TeaModel {
 
         public static final class Builder {
             private String chunkId; 
-            private java.util.Map < String, ? > chunkMeta; 
+            private java.util.Map<String, ?> chunkMeta; 
             private String chunkOssUrl; 
             private String chunkText; 
             private String chunkType; 
@@ -1416,7 +1421,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             private String libraryId; 
             private String libraryName; 
             private String nextChunkId; 
-            private java.util.List < TextChunkListPos> pos; 
+            private java.util.List<TextChunkListPos> pos; 
             private String preChunkId; 
             private Float score; 
             private String title; 
@@ -1432,7 +1437,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * chunkMeta.
              */
-            public Builder chunkMeta(java.util.Map < String, ? > chunkMeta) {
+            public Builder chunkMeta(java.util.Map<String, ?> chunkMeta) {
                 this.chunkMeta = chunkMeta;
                 return this;
             }
@@ -1504,7 +1509,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * pos.
              */
-            public Builder pos(java.util.List < TextChunkListPos> pos) {
+            public Builder pos(java.util.List<TextChunkListPos> pos) {
                 this.pos = pos;
                 return this;
             }
@@ -1548,13 +1553,13 @@ public class RecallDocumentResponseBody extends TeaModel {
      */
     public static class VectorChunkListPos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("axisArray")
-        private java.util.List < Double > axisArray;
+        private java.util.List<Double> axisArray;
 
         @com.aliyun.core.annotation.NameInMap("page")
         private Integer page;
 
         @com.aliyun.core.annotation.NameInMap("textHighlightArea")
-        private java.util.List < Integer > textHighlightArea;
+        private java.util.List<Integer> textHighlightArea;
 
         private VectorChunkListPos(Builder builder) {
             this.axisArray = builder.axisArray;
@@ -1573,7 +1578,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return axisArray
          */
-        public java.util.List < Double > getAxisArray() {
+        public java.util.List<Double> getAxisArray() {
             return this.axisArray;
         }
 
@@ -1587,19 +1592,19 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return textHighlightArea
          */
-        public java.util.List < Integer > getTextHighlightArea() {
+        public java.util.List<Integer> getTextHighlightArea() {
             return this.textHighlightArea;
         }
 
         public static final class Builder {
-            private java.util.List < Double > axisArray; 
+            private java.util.List<Double> axisArray; 
             private Integer page; 
-            private java.util.List < Integer > textHighlightArea; 
+            private java.util.List<Integer> textHighlightArea; 
 
             /**
              * axisArray.
              */
-            public Builder axisArray(java.util.List < Double > axisArray) {
+            public Builder axisArray(java.util.List<Double> axisArray) {
                 this.axisArray = axisArray;
                 return this;
             }
@@ -1615,7 +1620,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * textHighlightArea.
              */
-            public Builder textHighlightArea(java.util.List < Integer > textHighlightArea) {
+            public Builder textHighlightArea(java.util.List<Integer> textHighlightArea) {
                 this.textHighlightArea = textHighlightArea;
                 return this;
             }
@@ -1638,7 +1643,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         private String chunkId;
 
         @com.aliyun.core.annotation.NameInMap("chunkMeta")
-        private java.util.Map < String, ? > chunkMeta;
+        private java.util.Map<String, ?> chunkMeta;
 
         @com.aliyun.core.annotation.NameInMap("chunkOssUrl")
         private String chunkOssUrl;
@@ -1665,7 +1670,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         private String nextChunkId;
 
         @com.aliyun.core.annotation.NameInMap("pos")
-        private java.util.List < VectorChunkListPos> pos;
+        private java.util.List<VectorChunkListPos> pos;
 
         @com.aliyun.core.annotation.NameInMap("preChunkId")
         private String preChunkId;
@@ -1711,7 +1716,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return chunkMeta
          */
-        public java.util.Map < String, ? > getChunkMeta() {
+        public java.util.Map<String, ?> getChunkMeta() {
             return this.chunkMeta;
         }
 
@@ -1774,7 +1779,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return pos
          */
-        public java.util.List < VectorChunkListPos> getPos() {
+        public java.util.List<VectorChunkListPos> getPos() {
             return this.pos;
         }
 
@@ -1801,7 +1806,7 @@ public class RecallDocumentResponseBody extends TeaModel {
 
         public static final class Builder {
             private String chunkId; 
-            private java.util.Map < String, ? > chunkMeta; 
+            private java.util.Map<String, ?> chunkMeta; 
             private String chunkOssUrl; 
             private String chunkText; 
             private String chunkType; 
@@ -1810,7 +1815,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             private String libraryId; 
             private String libraryName; 
             private String nextChunkId; 
-            private java.util.List < VectorChunkListPos> pos; 
+            private java.util.List<VectorChunkListPos> pos; 
             private String preChunkId; 
             private Float score; 
             private String title; 
@@ -1826,7 +1831,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * chunkMeta.
              */
-            public Builder chunkMeta(java.util.Map < String, ? > chunkMeta) {
+            public Builder chunkMeta(java.util.Map<String, ?> chunkMeta) {
                 this.chunkMeta = chunkMeta;
                 return this;
             }
@@ -1898,7 +1903,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * pos.
              */
-            public Builder pos(java.util.List < VectorChunkListPos> pos) {
+            public Builder pos(java.util.List<VectorChunkListPos> pos) {
                 this.pos = pos;
                 return this;
             }
@@ -1942,22 +1947,22 @@ public class RecallDocumentResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chunkList")
-        private java.util.List < ChunkList> chunkList;
+        private java.util.List<ChunkList> chunkList;
 
         @com.aliyun.core.annotation.NameInMap("chunkPartList")
-        private java.util.List < ChunkPartList> chunkPartList;
+        private java.util.List<ChunkPartList> chunkPartList;
 
         @com.aliyun.core.annotation.NameInMap("chunkTextList")
-        private java.util.List < String > chunkTextList;
+        private java.util.List<String> chunkTextList;
 
         @com.aliyun.core.annotation.NameInMap("documents")
-        private java.util.List < Documents> documents;
+        private java.util.List<Documents> documents;
 
         @com.aliyun.core.annotation.NameInMap("embeddingElapsedMs")
         private Long embeddingElapsedMs;
 
         @com.aliyun.core.annotation.NameInMap("textChunkList")
-        private java.util.List < TextChunkList> textChunkList;
+        private java.util.List<TextChunkList> textChunkList;
 
         @com.aliyun.core.annotation.NameInMap("textSearchElapsedMs")
         private Long textSearchElapsedMs;
@@ -1966,7 +1971,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         private Long totalElapsedMs;
 
         @com.aliyun.core.annotation.NameInMap("vectorChunkList")
-        private java.util.List < VectorChunkList> vectorChunkList;
+        private java.util.List<VectorChunkList> vectorChunkList;
 
         @com.aliyun.core.annotation.NameInMap("vectorSearchElapsedMs")
         private Long vectorSearchElapsedMs;
@@ -1995,28 +2000,28 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return chunkList
          */
-        public java.util.List < ChunkList> getChunkList() {
+        public java.util.List<ChunkList> getChunkList() {
             return this.chunkList;
         }
 
         /**
          * @return chunkPartList
          */
-        public java.util.List < ChunkPartList> getChunkPartList() {
+        public java.util.List<ChunkPartList> getChunkPartList() {
             return this.chunkPartList;
         }
 
         /**
          * @return chunkTextList
          */
-        public java.util.List < String > getChunkTextList() {
+        public java.util.List<String> getChunkTextList() {
             return this.chunkTextList;
         }
 
         /**
          * @return documents
          */
-        public java.util.List < Documents> getDocuments() {
+        public java.util.List<Documents> getDocuments() {
             return this.documents;
         }
 
@@ -2030,7 +2035,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return textChunkList
          */
-        public java.util.List < TextChunkList> getTextChunkList() {
+        public java.util.List<TextChunkList> getTextChunkList() {
             return this.textChunkList;
         }
 
@@ -2051,7 +2056,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         /**
          * @return vectorChunkList
          */
-        public java.util.List < VectorChunkList> getVectorChunkList() {
+        public java.util.List<VectorChunkList> getVectorChunkList() {
             return this.vectorChunkList;
         }
 
@@ -2063,21 +2068,21 @@ public class RecallDocumentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ChunkList> chunkList; 
-            private java.util.List < ChunkPartList> chunkPartList; 
-            private java.util.List < String > chunkTextList; 
-            private java.util.List < Documents> documents; 
+            private java.util.List<ChunkList> chunkList; 
+            private java.util.List<ChunkPartList> chunkPartList; 
+            private java.util.List<String> chunkTextList; 
+            private java.util.List<Documents> documents; 
             private Long embeddingElapsedMs; 
-            private java.util.List < TextChunkList> textChunkList; 
+            private java.util.List<TextChunkList> textChunkList; 
             private Long textSearchElapsedMs; 
             private Long totalElapsedMs; 
-            private java.util.List < VectorChunkList> vectorChunkList; 
+            private java.util.List<VectorChunkList> vectorChunkList; 
             private Long vectorSearchElapsedMs; 
 
             /**
              * chunkList.
              */
-            public Builder chunkList(java.util.List < ChunkList> chunkList) {
+            public Builder chunkList(java.util.List<ChunkList> chunkList) {
                 this.chunkList = chunkList;
                 return this;
             }
@@ -2085,7 +2090,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * chunkPartList.
              */
-            public Builder chunkPartList(java.util.List < ChunkPartList> chunkPartList) {
+            public Builder chunkPartList(java.util.List<ChunkPartList> chunkPartList) {
                 this.chunkPartList = chunkPartList;
                 return this;
             }
@@ -2093,7 +2098,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * chunkTextList.
              */
-            public Builder chunkTextList(java.util.List < String > chunkTextList) {
+            public Builder chunkTextList(java.util.List<String> chunkTextList) {
                 this.chunkTextList = chunkTextList;
                 return this;
             }
@@ -2101,7 +2106,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * documents.
              */
-            public Builder documents(java.util.List < Documents> documents) {
+            public Builder documents(java.util.List<Documents> documents) {
                 this.documents = documents;
                 return this;
             }
@@ -2117,7 +2122,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * textChunkList.
              */
-            public Builder textChunkList(java.util.List < TextChunkList> textChunkList) {
+            public Builder textChunkList(java.util.List<TextChunkList> textChunkList) {
                 this.textChunkList = textChunkList;
                 return this;
             }
@@ -2141,7 +2146,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             /**
              * vectorChunkList.
              */
-            public Builder vectorChunkList(java.util.List < VectorChunkList> vectorChunkList) {
+            public Builder vectorChunkList(java.util.List<VectorChunkList> vectorChunkList) {
                 this.vectorChunkList = vectorChunkList;
                 return this;
             }

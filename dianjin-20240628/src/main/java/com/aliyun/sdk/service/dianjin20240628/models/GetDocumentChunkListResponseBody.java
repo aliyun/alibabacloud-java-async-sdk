@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -199,13 +204,13 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
      */
     public static class Pos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("axisArray")
-        private java.util.List < Double > axisArray;
+        private java.util.List<Double> axisArray;
 
         @com.aliyun.core.annotation.NameInMap("page")
         private Integer page;
 
         @com.aliyun.core.annotation.NameInMap("textHighlightArea")
-        private java.util.List < Integer > textHighlightArea;
+        private java.util.List<Integer> textHighlightArea;
 
         private Pos(Builder builder) {
             this.axisArray = builder.axisArray;
@@ -224,7 +229,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         /**
          * @return axisArray
          */
-        public java.util.List < Double > getAxisArray() {
+        public java.util.List<Double> getAxisArray() {
             return this.axisArray;
         }
 
@@ -238,19 +243,19 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         /**
          * @return textHighlightArea
          */
-        public java.util.List < Integer > getTextHighlightArea() {
+        public java.util.List<Integer> getTextHighlightArea() {
             return this.textHighlightArea;
         }
 
         public static final class Builder {
-            private java.util.List < Double > axisArray; 
+            private java.util.List<Double> axisArray; 
             private Integer page; 
-            private java.util.List < Integer > textHighlightArea; 
+            private java.util.List<Integer> textHighlightArea; 
 
             /**
              * axisArray.
              */
-            public Builder axisArray(java.util.List < Double > axisArray) {
+            public Builder axisArray(java.util.List<Double> axisArray) {
                 this.axisArray = axisArray;
                 return this;
             }
@@ -266,7 +271,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             /**
              * textHighlightArea.
              */
-            public Builder textHighlightArea(java.util.List < Integer > textHighlightArea) {
+            public Builder textHighlightArea(java.util.List<Integer> textHighlightArea) {
                 this.textHighlightArea = textHighlightArea;
                 return this;
             }
@@ -289,7 +294,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         private String chunkId;
 
         @com.aliyun.core.annotation.NameInMap("chunkMeta")
-        private java.util.Map < String, ? > chunkMeta;
+        private java.util.Map<String, ?> chunkMeta;
 
         @com.aliyun.core.annotation.NameInMap("chunkOssUrl")
         private String chunkOssUrl;
@@ -316,7 +321,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         private String nextChunkId;
 
         @com.aliyun.core.annotation.NameInMap("pos")
-        private java.util.List < Pos> pos;
+        private java.util.List<Pos> pos;
 
         @com.aliyun.core.annotation.NameInMap("preChunkId")
         private String preChunkId;
@@ -362,7 +367,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         /**
          * @return chunkMeta
          */
-        public java.util.Map < String, ? > getChunkMeta() {
+        public java.util.Map<String, ?> getChunkMeta() {
             return this.chunkMeta;
         }
 
@@ -425,7 +430,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         /**
          * @return pos
          */
-        public java.util.List < Pos> getPos() {
+        public java.util.List<Pos> getPos() {
             return this.pos;
         }
 
@@ -452,7 +457,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String chunkId; 
-            private java.util.Map < String, ? > chunkMeta; 
+            private java.util.Map<String, ?> chunkMeta; 
             private String chunkOssUrl; 
             private String chunkText; 
             private String chunkType; 
@@ -461,7 +466,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             private String libraryId; 
             private String libraryName; 
             private String nextChunkId; 
-            private java.util.List < Pos> pos; 
+            private java.util.List<Pos> pos; 
             private String preChunkId; 
             private Float score; 
             private String title; 
@@ -477,7 +482,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             /**
              * chunkMeta.
              */
-            public Builder chunkMeta(java.util.Map < String, ? > chunkMeta) {
+            public Builder chunkMeta(java.util.Map<String, ?> chunkMeta) {
                 this.chunkMeta = chunkMeta;
                 return this;
             }
@@ -549,7 +554,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             /**
              * pos.
              */
-            public Builder pos(java.util.List < Pos> pos) {
+            public Builder pos(java.util.List<Pos> pos) {
                 this.pos = pos;
                 return this;
             }
@@ -599,7 +604,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         private Long pageSize;
 
         @com.aliyun.core.annotation.NameInMap("records")
-        private java.util.List < Records> records;
+        private java.util.List<Records> records;
 
         @com.aliyun.core.annotation.NameInMap("totalPages")
         private Long totalPages;
@@ -640,7 +645,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         /**
          * @return records
          */
-        public java.util.List < Records> getRecords() {
+        public java.util.List<Records> getRecords() {
             return this.records;
         }
 
@@ -661,7 +666,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         public static final class Builder {
             private Long currentPage; 
             private Long pageSize; 
-            private java.util.List < Records> records; 
+            private java.util.List<Records> records; 
             private Long totalPages; 
             private Long totalRecords; 
 
@@ -684,7 +689,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             /**
              * records.
              */
-            public Builder records(java.util.List < Records> records) {
+            public Builder records(java.util.List<Records> records) {
                 this.records = records;
                 return this;
             }

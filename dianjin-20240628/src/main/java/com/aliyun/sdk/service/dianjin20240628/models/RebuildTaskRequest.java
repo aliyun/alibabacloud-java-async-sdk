@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class RebuildTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("taskIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > taskIds;
+    private java.util.List<String> taskIds;
 
     private RebuildTaskRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class RebuildTaskRequest extends Request {
     /**
      * @return taskIds
      */
-    public java.util.List < String > getTaskIds() {
+    public java.util.List<String> getTaskIds() {
         return this.taskIds;
     }
 
     public static final class Builder extends Request.Builder<RebuildTaskRequest, Builder> {
         private String workspaceId; 
-        private java.util.List < String > taskIds; 
+        private java.util.List<String> taskIds; 
 
         private Builder() {
             super();
@@ -84,7 +89,7 @@ public class RebuildTaskRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder taskIds(java.util.List < String > taskIds) {
+        public Builder taskIds(java.util.List<String> taskIds) {
             this.putBodyParameter("taskIds", taskIds);
             this.taskIds = taskIds;
             return this;

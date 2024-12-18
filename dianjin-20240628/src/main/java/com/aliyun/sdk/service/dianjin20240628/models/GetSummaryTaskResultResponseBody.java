@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -205,7 +210,7 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
         private String role;
 
         @com.aliyun.core.annotation.NameInMap("toolCalls")
-        private java.util.List < java.util.Map<String, ?>> toolCalls;
+        private java.util.List<java.util.Map<String, ?>> toolCalls;
 
         private Message(Builder builder) {
             this.content = builder.content;
@@ -238,14 +243,14 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
         /**
          * @return toolCalls
          */
-        public java.util.List < java.util.Map<String, ?>> getToolCalls() {
+        public java.util.List<java.util.Map<String, ?>> getToolCalls() {
             return this.toolCalls;
         }
 
         public static final class Builder {
             private String content; 
             private String role; 
-            private java.util.List < java.util.Map<String, ?>> toolCalls; 
+            private java.util.List<java.util.Map<String, ?>> toolCalls; 
 
             /**
              * content.
@@ -266,7 +271,7 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
             /**
              * toolCalls.
              */
-            public Builder toolCalls(java.util.List < java.util.Map<String, ?>> toolCalls) {
+            public Builder toolCalls(java.util.List<java.util.Map<String, ?>> toolCalls) {
                 this.toolCalls = toolCalls;
                 return this;
             }
@@ -500,7 +505,7 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("choices")
-        private java.util.List < Choices> choices;
+        private java.util.List<Choices> choices;
 
         @com.aliyun.core.annotation.NameInMap("created")
         private Long created;
@@ -545,7 +550,7 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
         /**
          * @return choices
          */
-        public java.util.List < Choices> getChoices() {
+        public java.util.List<Choices> getChoices() {
             return this.choices;
         }
 
@@ -599,7 +604,7 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Choices> choices; 
+            private java.util.List<Choices> choices; 
             private Long created; 
             private String id; 
             private String modelId; 
@@ -611,7 +616,7 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
             /**
              * choices.
              */
-            public Builder choices(java.util.List < Choices> choices) {
+            public Builder choices(java.util.List<Choices> choices) {
                 this.choices = choices;
                 return this;
             }

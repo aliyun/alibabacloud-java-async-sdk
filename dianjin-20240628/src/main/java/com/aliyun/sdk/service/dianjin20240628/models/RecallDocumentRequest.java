@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class RecallDocumentRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("filters")
-    private java.util.List < Filters> filters;
+    private java.util.List<Filters> filters;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("query")
@@ -66,7 +71,7 @@ public class RecallDocumentRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -93,7 +98,7 @@ public class RecallDocumentRequest extends Request {
 
     public static final class Builder extends Request.Builder<RecallDocumentRequest, Builder> {
         private String workspaceId; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private String query; 
         private Boolean rearrangement; 
         private Integer topK; 
@@ -126,7 +131,7 @@ public class RecallDocumentRequest extends Request {
         /**
          * filters.
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putBodyParameter("filters", filters);
             this.filters = filters;
             return this;
@@ -388,23 +393,23 @@ public class RecallDocumentRequest extends Request {
      */
     public static class Filters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("and")
-        private java.util.List < And> and;
+        private java.util.List<And> and;
 
         @com.aliyun.core.annotation.NameInMap("chunkType")
         private String chunkType;
 
         @com.aliyun.core.annotation.NameInMap("docIdList")
-        private java.util.List < String > docIdList;
+        private java.util.List<String> docIdList;
 
         @com.aliyun.core.annotation.NameInMap("libraryId")
         @com.aliyun.core.annotation.Validation(required = true)
         private String libraryId;
 
         @com.aliyun.core.annotation.NameInMap("or")
-        private java.util.List < Or> or;
+        private java.util.List<Or> or;
 
         @com.aliyun.core.annotation.NameInMap("status")
-        private java.util.List < String > status;
+        private java.util.List<String> status;
 
         private Filters(Builder builder) {
             this.and = builder.and;
@@ -426,7 +431,7 @@ public class RecallDocumentRequest extends Request {
         /**
          * @return and
          */
-        public java.util.List < And> getAnd() {
+        public java.util.List<And> getAnd() {
             return this.and;
         }
 
@@ -440,7 +445,7 @@ public class RecallDocumentRequest extends Request {
         /**
          * @return docIdList
          */
-        public java.util.List < String > getDocIdList() {
+        public java.util.List<String> getDocIdList() {
             return this.docIdList;
         }
 
@@ -454,29 +459,29 @@ public class RecallDocumentRequest extends Request {
         /**
          * @return or
          */
-        public java.util.List < Or> getOr() {
+        public java.util.List<Or> getOr() {
             return this.or;
         }
 
         /**
          * @return status
          */
-        public java.util.List < String > getStatus() {
+        public java.util.List<String> getStatus() {
             return this.status;
         }
 
         public static final class Builder {
-            private java.util.List < And> and; 
+            private java.util.List<And> and; 
             private String chunkType; 
-            private java.util.List < String > docIdList; 
+            private java.util.List<String> docIdList; 
             private String libraryId; 
-            private java.util.List < Or> or; 
-            private java.util.List < String > status; 
+            private java.util.List<Or> or; 
+            private java.util.List<String> status; 
 
             /**
              * and.
              */
-            public Builder and(java.util.List < And> and) {
+            public Builder and(java.util.List<And> and) {
                 this.and = and;
                 return this;
             }
@@ -492,7 +497,7 @@ public class RecallDocumentRequest extends Request {
             /**
              * docIdList.
              */
-            public Builder docIdList(java.util.List < String > docIdList) {
+            public Builder docIdList(java.util.List<String> docIdList) {
                 this.docIdList = docIdList;
                 return this;
             }
@@ -511,7 +516,7 @@ public class RecallDocumentRequest extends Request {
             /**
              * or.
              */
-            public Builder or(java.util.List < Or> or) {
+            public Builder or(java.util.List<Or> or) {
                 this.or = or;
                 return this;
             }
@@ -519,7 +524,7 @@ public class RecallDocumentRequest extends Request {
             /**
              * status.
              */
-            public Builder status(java.util.List < String > status) {
+            public Builder status(java.util.List<String> status) {
                 this.status = status;
                 return this;
             }

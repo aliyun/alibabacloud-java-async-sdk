@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class DeleteDocumentRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("docIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > docIds;
+    private java.util.List<String> docIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("libraryId")
@@ -57,7 +62,7 @@ public class DeleteDocumentRequest extends Request {
     /**
      * @return docIds
      */
-    public java.util.List < String > getDocIds() {
+    public java.util.List<String> getDocIds() {
         return this.docIds;
     }
 
@@ -70,7 +75,7 @@ public class DeleteDocumentRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteDocumentRequest, Builder> {
         private String workspaceId; 
-        private java.util.List < String > docIds; 
+        private java.util.List<String> docIds; 
         private String libraryId; 
 
         private Builder() {
@@ -99,7 +104,7 @@ public class DeleteDocumentRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder docIds(java.util.List < String > docIds) {
+        public Builder docIds(java.util.List<String> docIds) {
             this.putBodyParameter("docIds", docIds);
             this.docIds = docIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dianjin20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -202,7 +207,7 @@ public class GetDocumentListResponseBody extends TeaModel {
         private String docId;
 
         @com.aliyun.core.annotation.NameInMap("documentMeta")
-        private java.util.Map < String, ? > documentMeta;
+        private java.util.Map<String, ?> documentMeta;
 
         @com.aliyun.core.annotation.NameInMap("fileType")
         private String fileType;
@@ -255,7 +260,7 @@ public class GetDocumentListResponseBody extends TeaModel {
         /**
          * @return documentMeta
          */
-        public java.util.Map < String, ? > getDocumentMeta() {
+        public java.util.Map<String, ?> getDocumentMeta() {
             return this.documentMeta;
         }
 
@@ -310,7 +315,7 @@ public class GetDocumentListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String docId; 
-            private java.util.Map < String, ? > documentMeta; 
+            private java.util.Map<String, ?> documentMeta; 
             private String fileType; 
             private String gmtCreate; 
             private String gmtModified; 
@@ -330,7 +335,7 @@ public class GetDocumentListResponseBody extends TeaModel {
             /**
              * documentMeta.
              */
-            public Builder documentMeta(java.util.Map < String, ? > documentMeta) {
+            public Builder documentMeta(java.util.Map<String, ?> documentMeta) {
                 this.documentMeta = documentMeta;
                 return this;
             }
@@ -412,7 +417,7 @@ public class GetDocumentListResponseBody extends TeaModel {
         private Long pageSize;
 
         @com.aliyun.core.annotation.NameInMap("records")
-        private java.util.List < Records> records;
+        private java.util.List<Records> records;
 
         @com.aliyun.core.annotation.NameInMap("totalPages")
         private Long totalPages;
@@ -453,7 +458,7 @@ public class GetDocumentListResponseBody extends TeaModel {
         /**
          * @return records
          */
-        public java.util.List < Records> getRecords() {
+        public java.util.List<Records> getRecords() {
             return this.records;
         }
 
@@ -474,7 +479,7 @@ public class GetDocumentListResponseBody extends TeaModel {
         public static final class Builder {
             private Long currentPage; 
             private Long pageSize; 
-            private java.util.List < Records> records; 
+            private java.util.List<Records> records; 
             private Long totalPages; 
             private Long totalRecords; 
 
@@ -497,7 +502,7 @@ public class GetDocumentListResponseBody extends TeaModel {
             /**
              * records.
              */
-            public Builder records(java.util.List < Records> records) {
+            public Builder records(java.util.List<Records> records) {
                 this.records = records;
                 return this;
             }
