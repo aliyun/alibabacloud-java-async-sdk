@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
@@ -61,7 +66,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -102,7 +107,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBClusterId; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
@@ -123,7 +128,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         /**
          * <p>The details of databases and tables that can be restored.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -200,7 +205,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         private String database;
 
         @com.aliyun.core.annotation.NameInMap("Tables")
-        private java.util.List < String > tables;
+        private java.util.List<String> tables;
 
         private Items(Builder builder) {
             this.database = builder.database;
@@ -225,13 +230,13 @@ public class DescribeMetaListResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.List < String > getTables() {
+        public java.util.List<String> getTables() {
             return this.tables;
         }
 
         public static final class Builder {
             private String database; 
-            private java.util.List < String > tables; 
+            private java.util.List<String> tables; 
 
             /**
              * <p>The name of the database that can be restored.</p>
@@ -247,7 +252,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
             /**
              * <p>The name of the table that can be restored.</p>
              */
-            public Builder tables(java.util.List < String > tables) {
+            public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
                 return this;
             }

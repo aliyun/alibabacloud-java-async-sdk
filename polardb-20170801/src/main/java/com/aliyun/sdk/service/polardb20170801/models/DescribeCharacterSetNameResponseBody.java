@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -105,7 +110,7 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
      */
     public static class CharacterSetNameItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CharacterSetName")
-        private java.util.List < String > characterSetName;
+        private java.util.List<String> characterSetName;
 
         private CharacterSetNameItems(Builder builder) {
             this.characterSetName = builder.characterSetName;
@@ -122,17 +127,17 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         /**
          * @return characterSetName
          */
-        public java.util.List < String > getCharacterSetName() {
+        public java.util.List<String> getCharacterSetName() {
             return this.characterSetName;
         }
 
         public static final class Builder {
-            private java.util.List < String > characterSetName; 
+            private java.util.List<String> characterSetName; 
 
             /**
              * CharacterSetName.
              */
-            public Builder characterSetName(java.util.List < String > characterSetName) {
+            public Builder characterSetName(java.util.List<String> characterSetName) {
                 this.characterSetName = characterSetName;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -490,7 +495,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("TimerInfos")
-        private java.util.List < TimerInfos> timerInfos;
+        private java.util.List<TimerInfos> timerInfos;
 
         @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
         private Integer totalRecordCount;
@@ -527,7 +532,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         /**
          * @return timerInfos
          */
-        public java.util.List < TimerInfos> getTimerInfos() {
+        public java.util.List<TimerInfos> getTimerInfos() {
             return this.timerInfos;
         }
 
@@ -541,7 +546,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < TimerInfos> timerInfos; 
+            private java.util.List<TimerInfos> timerInfos; 
             private Integer totalRecordCount; 
 
             /**
@@ -569,7 +574,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             /**
              * <p>The details of the scheduled tasks.</p>
              */
-            public Builder timerInfos(java.util.List < TimerInfos> timerInfos) {
+            public Builder timerInfos(java.util.List<TimerInfos> timerInfos) {
                 this.timerInfos = timerInfos;
                 return this;
             }

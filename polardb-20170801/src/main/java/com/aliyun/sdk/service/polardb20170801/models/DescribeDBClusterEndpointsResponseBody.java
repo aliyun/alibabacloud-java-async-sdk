@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String requestId; 
 
         /**
          * <p>The information about the endpoints.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -300,7 +305,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressItems")
-        private java.util.List < AddressItems> addressItems;
+        private java.util.List<AddressItems> addressItems;
 
         @com.aliyun.core.annotation.NameInMap("AutoAddNewNodes")
         private String autoAddNewNodes;
@@ -365,7 +370,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         /**
          * @return addressItems
          */
-        public java.util.List < AddressItems> getAddressItems() {
+        public java.util.List<AddressItems> getAddressItems() {
             return this.addressItems;
         }
 
@@ -454,7 +459,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AddressItems> addressItems; 
+            private java.util.List<AddressItems> addressItems; 
             private String autoAddNewNodes; 
             private String DBClusterId; 
             private String DBEndpointDescription; 
@@ -471,7 +476,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             /**
              * <p>The details of the endpoint.</p>
              */
-            public Builder addressItems(java.util.List < AddressItems> addressItems) {
+            public Builder addressItems(java.util.List<AddressItems> addressItems) {
                 this.addressItems = addressItems;
                 return this;
             }

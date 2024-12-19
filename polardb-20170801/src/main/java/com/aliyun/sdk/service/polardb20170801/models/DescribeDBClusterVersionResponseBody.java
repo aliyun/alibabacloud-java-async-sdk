@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     private String DBRevisionVersion;
 
     @com.aliyun.core.annotation.NameInMap("DBRevisionVersionList")
-    private java.util.List < DBRevisionVersionList> DBRevisionVersionList;
+    private java.util.List<DBRevisionVersionList> DBRevisionVersionList;
 
     @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
@@ -46,7 +51,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     private String proxyRevisionVersion;
 
     @com.aliyun.core.annotation.NameInMap("ProxyRevisionVersionList")
-    private java.util.List < ProxyRevisionVersionList> proxyRevisionVersionList;
+    private java.util.List<ProxyRevisionVersionList> proxyRevisionVersionList;
 
     @com.aliyun.core.annotation.NameInMap("ProxyVersionStatus")
     private String proxyVersionStatus;
@@ -110,7 +115,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     /**
      * @return DBRevisionVersionList
      */
-    public java.util.List < DBRevisionVersionList> getDBRevisionVersionList() {
+    public java.util.List<DBRevisionVersionList> getDBRevisionVersionList() {
         return this.DBRevisionVersionList;
     }
 
@@ -159,7 +164,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     /**
      * @return proxyRevisionVersionList
      */
-    public java.util.List < ProxyRevisionVersionList> getProxyRevisionVersionList() {
+    public java.util.List<ProxyRevisionVersionList> getProxyRevisionVersionList() {
         return this.proxyRevisionVersionList;
     }
 
@@ -182,14 +187,14 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         private String DBLatestVersion; 
         private String DBMinorVersion; 
         private String DBRevisionVersion; 
-        private java.util.List < DBRevisionVersionList> DBRevisionVersionList; 
+        private java.util.List<DBRevisionVersionList> DBRevisionVersionList; 
         private String DBVersion; 
         private String DBVersionStatus; 
         private String isLatestVersion; 
         private String isProxyLatestVersion; 
         private String proxyLatestVersion; 
         private String proxyRevisionVersion; 
-        private java.util.List < ProxyRevisionVersionList> proxyRevisionVersionList; 
+        private java.util.List<ProxyRevisionVersionList> proxyRevisionVersionList; 
         private String proxyVersionStatus; 
         private String requestId; 
 
@@ -252,7 +257,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         /**
          * <p>The versions to which the cluster can be upgraded.</p>
          */
-        public Builder DBRevisionVersionList(java.util.List < DBRevisionVersionList> DBRevisionVersionList) {
+        public Builder DBRevisionVersionList(java.util.List<DBRevisionVersionList> DBRevisionVersionList) {
             this.DBRevisionVersionList = DBRevisionVersionList;
             return this;
         }
@@ -353,7 +358,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
          * <li><strong>Beta</strong>: The PolarProxy revision version is a Beta version.</li>
          * </ul>
          */
-        public Builder proxyRevisionVersionList(java.util.List < ProxyRevisionVersionList> proxyRevisionVersionList) {
+        public Builder proxyRevisionVersionList(java.util.List<ProxyRevisionVersionList> proxyRevisionVersionList) {
             this.proxyRevisionVersionList = proxyRevisionVersionList;
             return this;
         }

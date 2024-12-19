@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -57,7 +62,7 @@ public class CreateDBEndpointAddressRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneInfo")
-    private java.util.List < ZoneInfo> zoneInfo;
+    private java.util.List<ZoneInfo> zoneInfo;
 
     private CreateDBEndpointAddressRequest(Builder builder) {
         super(builder);
@@ -160,7 +165,7 @@ public class CreateDBEndpointAddressRequest extends Request {
     /**
      * @return zoneInfo
      */
-    public java.util.List < ZoneInfo> getZoneInfo() {
+    public java.util.List<ZoneInfo> getZoneInfo() {
         return this.zoneInfo;
     }
 
@@ -175,7 +180,7 @@ public class CreateDBEndpointAddressRequest extends Request {
         private Long resourceOwnerId; 
         private String securityGroupId; 
         private String VPCId; 
-        private java.util.List < ZoneInfo> zoneInfo; 
+        private java.util.List<ZoneInfo> zoneInfo; 
 
         private Builder() {
             super();
@@ -318,7 +323,7 @@ public class CreateDBEndpointAddressRequest extends Request {
         /**
          * <p>The details of the zones.</p>
          */
-        public Builder zoneInfo(java.util.List < ZoneInfo> zoneInfo) {
+        public Builder zoneInfo(java.util.List<ZoneInfo> zoneInfo) {
             this.putQueryParameter("ZoneInfo", zoneInfo);
             this.zoneInfo = zoneInfo;
             return this;

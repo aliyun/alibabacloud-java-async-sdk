@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -263,7 +268,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupJob")
-        private java.util.List < BackupJob> backupJob;
+        private java.util.List<BackupJob> backupJob;
 
         private Items(Builder builder) {
             this.backupJob = builder.backupJob;
@@ -280,17 +285,17 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         /**
          * @return backupJob
          */
-        public java.util.List < BackupJob> getBackupJob() {
+        public java.util.List<BackupJob> getBackupJob() {
             return this.backupJob;
         }
 
         public static final class Builder {
-            private java.util.List < BackupJob> backupJob; 
+            private java.util.List<BackupJob> backupJob; 
 
             /**
              * BackupJob.
              */
-            public Builder backupJob(java.util.List < BackupJob> backupJob) {
+            public Builder backupJob(java.util.List<BackupJob> backupJob) {
                 this.backupJob = backupJob;
                 return this;
             }

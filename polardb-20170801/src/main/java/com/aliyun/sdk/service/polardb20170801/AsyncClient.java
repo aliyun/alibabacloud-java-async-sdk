@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CancelActiveOperationTasks  CancelActiveOperationTasksRequest
+     * @return CancelActiveOperationTasksResponse
+     */
+    CompletableFuture<CancelActiveOperationTasksResponse> cancelActiveOperationTasks(CancelActiveOperationTasksRequest request);
+
+    /**
      * @param request the request parameters of CancelScheduleTasks  CancelScheduleTasksRequest
      * @return CancelScheduleTasksResponse
      */
@@ -348,6 +354,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeActivationCodesResponse
      */
     CompletableFuture<DescribeActivationCodesResponse> describeActivationCodes(DescribeActivationCodesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeActiveOperationTasks  DescribeActiveOperationTasksRequest
+     * @return DescribeActiveOperationTasksResponse
+     */
+    CompletableFuture<DescribeActiveOperationTasksResponse> describeActiveOperationTasks(DescribeActiveOperationTasksRequest request);
 
     /**
      * @param request the request parameters of DescribeAutoRenewAttribute  DescribeAutoRenewAttributeRequest
@@ -827,6 +839,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyAccountPasswordResponse
      */
     CompletableFuture<ModifyAccountPasswordResponse> modifyAccountPassword(ModifyAccountPasswordRequest request);
+
+    /**
+     * @param request the request parameters of ModifyActiveOperationTasks  ModifyActiveOperationTasksRequest
+     * @return ModifyActiveOperationTasksResponse
+     */
+    CompletableFuture<ModifyActiveOperationTasksResponse> modifyActiveOperationTasks(ModifyActiveOperationTasksRequest request);
 
     /**
      * @param request the request parameters of ModifyAutoRenewAttribute  ModifyAutoRenewAttributeRequest

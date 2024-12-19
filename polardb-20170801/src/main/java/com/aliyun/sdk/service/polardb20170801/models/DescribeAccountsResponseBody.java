@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAccountsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Accounts")
-    private java.util.List < Accounts> accounts;
+    private java.util.List<Accounts> accounts;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -42,7 +47,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
     /**
      * @return accounts
      */
-    public java.util.List < Accounts> getAccounts() {
+    public java.util.List<Accounts> getAccounts() {
         return this.accounts;
     }
 
@@ -68,7 +73,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Accounts> accounts; 
+        private java.util.List<Accounts> accounts; 
         private Integer pageNumber; 
         private Integer pageRecordCount; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>The details of the account.</p>
          */
-        public Builder accounts(java.util.List < Accounts> accounts) {
+        public Builder accounts(java.util.List<Accounts> accounts) {
             this.accounts = accounts;
             return this;
         }
@@ -219,7 +224,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private String accountType;
 
         @com.aliyun.core.annotation.NameInMap("DatabasePrivileges")
-        private java.util.List < DatabasePrivileges> databasePrivileges;
+        private java.util.List<DatabasePrivileges> databasePrivileges;
 
         private Accounts(Builder builder) {
             this.accountDescription = builder.accountDescription;
@@ -284,7 +289,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * @return databasePrivileges
          */
-        public java.util.List < DatabasePrivileges> getDatabasePrivileges() {
+        public java.util.List<DatabasePrivileges> getDatabasePrivileges() {
             return this.databasePrivileges;
         }
 
@@ -295,7 +300,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountPasswordValidTime; 
             private String accountStatus; 
             private String accountType; 
-            private java.util.List < DatabasePrivileges> databasePrivileges; 
+            private java.util.List<DatabasePrivileges> databasePrivileges; 
 
             /**
              * <p>The description of the account.</p>
@@ -379,7 +384,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             /**
              * <p>The list of database permissions that are granted to the account.</p>
              */
-            public Builder databasePrivileges(java.util.List < DatabasePrivileges> databasePrivileges) {
+            public Builder databasePrivileges(java.util.List<DatabasePrivileges> databasePrivileges) {
                 this.databasePrivileges = databasePrivileges;
                 return this;
             }

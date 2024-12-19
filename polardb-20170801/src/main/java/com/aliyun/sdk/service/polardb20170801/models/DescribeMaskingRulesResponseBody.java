@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -158,7 +163,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleList")
-        private java.util.List < String > ruleList;
+        private java.util.List<String> ruleList;
 
         @com.aliyun.core.annotation.NameInMap("RuleVersion")
         private String ruleVersion;
@@ -179,7 +184,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < String > getRuleList() {
+        public java.util.List<String> getRuleList() {
             return this.ruleList;
         }
 
@@ -191,13 +196,13 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > ruleList; 
+            private java.util.List<String> ruleList; 
             private String ruleVersion; 
 
             /**
              * <p>Details about the masking rules.</p>
              */
-            public Builder ruleList(java.util.List < String > ruleList) {
+            public Builder ruleList(java.util.List<String> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }

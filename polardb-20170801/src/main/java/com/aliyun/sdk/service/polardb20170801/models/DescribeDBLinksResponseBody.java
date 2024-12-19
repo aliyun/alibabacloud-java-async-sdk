@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
     private String DBInstanceName;
 
     @com.aliyun.core.annotation.NameInMap("DBLinkInfos")
-    private java.util.List < DBLinkInfos> DBLinkInfos;
+    private java.util.List<DBLinkInfos> DBLinkInfos;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
     /**
      * @return DBLinkInfos
      */
-    public java.util.List < DBLinkInfos> getDBLinkInfos() {
+    public java.util.List<DBLinkInfos> getDBLinkInfos() {
         return this.DBLinkInfos;
     }
 
@@ -58,7 +63,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBInstanceName; 
-        private java.util.List < DBLinkInfos> DBLinkInfos; 
+        private java.util.List<DBLinkInfos> DBLinkInfos; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeDBLinksResponseBody extends TeaModel {
         /**
          * <p>Details about the database links.</p>
          */
-        public Builder DBLinkInfos(java.util.List < DBLinkInfos> DBLinkInfos) {
+        public Builder DBLinkInfos(java.util.List<DBLinkInfos> DBLinkInfos) {
             this.DBLinkInfos = DBLinkInfos;
             return this;
         }

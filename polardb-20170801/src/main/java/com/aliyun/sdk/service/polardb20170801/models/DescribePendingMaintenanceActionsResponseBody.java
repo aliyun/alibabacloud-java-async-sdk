@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TypeList")
-    private java.util.List < TypeList> typeList;
+    private java.util.List<TypeList> typeList;
 
     private DescribePendingMaintenanceActionsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
     /**
      * @return typeList
      */
-    public java.util.List < TypeList> getTypeList() {
+    public java.util.List<TypeList> getTypeList() {
         return this.typeList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TypeList> typeList; 
+        private java.util.List<TypeList> typeList; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
         /**
          * <p>The details of pending events.</p>
          */
-        public Builder typeList(java.util.List < TypeList> typeList) {
+        public Builder typeList(java.util.List<TypeList> typeList) {
             this.typeList = typeList;
             return this;
         }

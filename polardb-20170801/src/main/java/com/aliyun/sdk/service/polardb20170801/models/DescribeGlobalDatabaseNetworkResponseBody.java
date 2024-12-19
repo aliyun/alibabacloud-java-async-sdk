@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Connections")
-    private java.util.List < Connections> connections;
+    private java.util.List<Connections> connections;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -22,7 +27,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.NameInMap("DBClusters")
-    private java.util.List < DBClusters> DBClusters;
+    private java.util.List<DBClusters> DBClusters;
 
     @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
@@ -74,7 +79,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     /**
      * @return connections
      */
-    public java.util.List < Connections> getConnections() {
+    public java.util.List<Connections> getConnections() {
         return this.connections;
     }
 
@@ -95,7 +100,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     /**
      * @return DBClusters
      */
-    public java.util.List < DBClusters> getDBClusters() {
+    public java.util.List<DBClusters> getDBClusters() {
         return this.DBClusters;
     }
 
@@ -156,10 +161,10 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Connections> connections; 
+        private java.util.List<Connections> connections; 
         private String createTime; 
         private String DBClusterId; 
-        private java.util.List < DBClusters> DBClusters; 
+        private java.util.List<DBClusters> DBClusters; 
         private String DBType; 
         private String DBVersion; 
         private String GDNDescription; 
@@ -172,7 +177,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         /**
          * <p>The information about the connection to the cluster.</p>
          */
-        public Builder connections(java.util.List < Connections> connections) {
+        public Builder connections(java.util.List<Connections> connections) {
             this.connections = connections;
             return this;
         }
@@ -202,7 +207,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         /**
          * <p>The clusters in the GDN.</p>
          */
-        public Builder DBClusters(java.util.List < DBClusters> DBClusters) {
+        public Builder DBClusters(java.util.List<DBClusters> DBClusters) {
             this.DBClusters = DBClusters;
             return this;
         }
@@ -684,7 +689,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         private String DBNodeClass;
 
         @com.aliyun.core.annotation.NameInMap("DBNodes")
-        private java.util.List < DBNodes> DBNodes;
+        private java.util.List<DBNodes> DBNodes;
 
         @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
@@ -781,7 +786,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         /**
          * @return DBNodes
          */
-        public java.util.List < DBNodes> getDBNodes() {
+        public java.util.List<DBNodes> getDBNodes() {
             return this.DBNodes;
         }
 
@@ -861,7 +866,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             private String DBClusterId; 
             private String DBClusterStatus; 
             private String DBNodeClass; 
-            private java.util.List < DBNodes> DBNodes; 
+            private java.util.List<DBNodes> DBNodes; 
             private String DBType; 
             private String DBVersion; 
             private String expireTime; 
@@ -931,7 +936,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             /**
              * <p>The nodes of the cluster.</p>
              */
-            public Builder DBNodes(java.util.List < DBNodes> DBNodes) {
+            public Builder DBNodes(java.util.List<DBNodes> DBNodes) {
                 this.DBNodes = DBNodes;
                 return this;
             }

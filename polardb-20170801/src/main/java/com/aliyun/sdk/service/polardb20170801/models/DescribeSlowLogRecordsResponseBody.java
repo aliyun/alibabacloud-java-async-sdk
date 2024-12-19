@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -474,7 +479,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SQLSlowRecord")
-        private java.util.List < SQLSlowRecord> SQLSlowRecord;
+        private java.util.List<SQLSlowRecord> SQLSlowRecord;
 
         private Items(Builder builder) {
             this.SQLSlowRecord = builder.SQLSlowRecord;
@@ -491,17 +496,17 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         /**
          * @return SQLSlowRecord
          */
-        public java.util.List < SQLSlowRecord> getSQLSlowRecord() {
+        public java.util.List<SQLSlowRecord> getSQLSlowRecord() {
             return this.SQLSlowRecord;
         }
 
         public static final class Builder {
-            private java.util.List < SQLSlowRecord> SQLSlowRecord; 
+            private java.util.List<SQLSlowRecord> SQLSlowRecord; 
 
             /**
              * SQLSlowRecord.
              */
-            public Builder SQLSlowRecord(java.util.List < SQLSlowRecord> SQLSlowRecord) {
+            public Builder SQLSlowRecord(java.util.List<SQLSlowRecord> SQLSlowRecord) {
                 this.SQLSlowRecord = SQLSlowRecord;
                 return this;
             }

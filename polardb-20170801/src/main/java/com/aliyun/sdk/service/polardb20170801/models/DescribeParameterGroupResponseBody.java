@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeParameterGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ParameterGroup")
-    private java.util.List < ParameterGroup> parameterGroup;
+    private java.util.List<ParameterGroup> parameterGroup;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     /**
      * @return parameterGroup
      */
-    public java.util.List < ParameterGroup> getParameterGroup() {
+    public java.util.List<ParameterGroup> getParameterGroup() {
         return this.parameterGroup;
     }
 
@@ -46,13 +51,13 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ParameterGroup> parameterGroup; 
+        private java.util.List<ParameterGroup> parameterGroup; 
         private String requestId; 
 
         /**
          * <p>Details about the parameter templates.</p>
          */
-        public Builder parameterGroup(java.util.List < ParameterGroup> parameterGroup) {
+        public Builder parameterGroup(java.util.List<ParameterGroup> parameterGroup) {
             this.parameterGroup = parameterGroup;
             return this;
         }
@@ -170,7 +175,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         private Integer parameterCounts;
 
         @com.aliyun.core.annotation.NameInMap("ParameterDetail")
-        private java.util.List < ParameterDetail> parameterDetail;
+        private java.util.List<ParameterDetail> parameterDetail;
 
         @com.aliyun.core.annotation.NameInMap("ParameterGroupDesc")
         private String parameterGroupDesc;
@@ -243,7 +248,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         /**
          * @return parameterDetail
          */
-        public java.util.List < ParameterDetail> getParameterDetail() {
+        public java.util.List<ParameterDetail> getParameterDetail() {
             return this.parameterDetail;
         }
 
@@ -281,7 +286,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             private String DBVersion; 
             private String forceRestart; 
             private Integer parameterCounts; 
-            private java.util.List < ParameterDetail> parameterDetail; 
+            private java.util.List<ParameterDetail> parameterDetail; 
             private String parameterGroupDesc; 
             private String parameterGroupId; 
             private String parameterGroupName; 
@@ -349,7 +354,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             /**
              * <p>Details about the parameters.</p>
              */
-            public Builder parameterDetail(java.util.List < ParameterDetail> parameterDetail) {
+            public Builder parameterDetail(java.util.List<ParameterDetail> parameterDetail) {
                 this.parameterDetail = parameterDetail;
                 return this;
             }

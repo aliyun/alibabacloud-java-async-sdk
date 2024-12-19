@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AvailableZones")
-    private java.util.List < AvailableZones> availableZones;
+    private java.util.List<AvailableZones> availableZones;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
     /**
      * @return availableZones
      */
-    public java.util.List < AvailableZones> getAvailableZones() {
+    public java.util.List<AvailableZones> getAvailableZones() {
         return this.availableZones;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AvailableZones> availableZones; 
+        private java.util.List<AvailableZones> availableZones; 
         private String requestId; 
 
         /**
          * <p>The available zones of the cluster.</p>
          */
-        public Builder availableZones(java.util.List < AvailableZones> availableZones) {
+        public Builder availableZones(java.util.List<AvailableZones> availableZones) {
             this.availableZones = availableZones;
             return this;
         }
@@ -168,7 +173,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
      */
     public static class SupportedEngines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableResources")
-        private java.util.List < AvailableResources> availableResources;
+        private java.util.List<AvailableResources> availableResources;
 
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
@@ -189,7 +194,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
         /**
          * @return availableResources
          */
-        public java.util.List < AvailableResources> getAvailableResources() {
+        public java.util.List<AvailableResources> getAvailableResources() {
             return this.availableResources;
         }
 
@@ -201,13 +206,13 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AvailableResources> availableResources; 
+            private java.util.List<AvailableResources> availableResources; 
             private String engine; 
 
             /**
              * <p>The available resources.</p>
              */
-            public Builder availableResources(java.util.List < AvailableResources> availableResources) {
+            public Builder availableResources(java.util.List<AvailableResources> availableResources) {
                 this.availableResources = availableResources;
                 return this;
             }
@@ -241,7 +246,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("SupportedEngines")
-        private java.util.List < SupportedEngines> supportedEngines;
+        private java.util.List<SupportedEngines> supportedEngines;
 
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
@@ -270,7 +275,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
         /**
          * @return supportedEngines
          */
-        public java.util.List < SupportedEngines> getSupportedEngines() {
+        public java.util.List<SupportedEngines> getSupportedEngines() {
             return this.supportedEngines;
         }
 
@@ -283,7 +288,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String regionId; 
-            private java.util.List < SupportedEngines> supportedEngines; 
+            private java.util.List<SupportedEngines> supportedEngines; 
             private String zoneId; 
 
             /**
@@ -300,7 +305,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             /**
              * <p>The database engines that the available resources support.</p>
              */
-            public Builder supportedEngines(java.util.List < SupportedEngines> supportedEngines) {
+            public Builder supportedEngines(java.util.List<SupportedEngines> supportedEngines) {
                 this.supportedEngines = supportedEngines;
                 return this;
             }

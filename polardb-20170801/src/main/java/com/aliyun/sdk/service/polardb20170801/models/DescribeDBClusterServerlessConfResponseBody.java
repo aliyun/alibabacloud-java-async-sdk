@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -226,10 +231,12 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the no-activity suspension feature is enabled. Default value: false. Valid values:</p>
+         * <p>Whether to enable idle shutdown. Values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Enable</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disable (default)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,7 +248,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the serverless cluster.</p>
+         * <p>Serverless cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-bp10gr51qasnl****</p>
@@ -252,7 +259,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5E71541A-6007-4DCC-A38A-F872C31FEB45</p>
@@ -263,7 +270,10 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * ScaleApRoNumMax.
+         * <p>Maximum limit for the number of read-only column storage nodes. Range: 0~7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleApRoNumMax(String scaleApRoNumMax) {
             this.scaleApRoNumMax = scaleApRoNumMax;
@@ -271,7 +281,10 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * ScaleApRoNumMin.
+         * <p>Minimum limit for the number of read-only column storage nodes. Range: 0~7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleApRoNumMin(String scaleApRoNumMin) {
             this.scaleApRoNumMin = scaleApRoNumMin;
@@ -279,7 +292,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.</p>
+         * <p>Maximum scaling limit for a single node. Range: 1 PCU~32 PCU.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -290,7 +303,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The minimum number of PCUs per node for scaling. Valid values: 1 PCU to 31 PCUs.</p>
+         * <p>Minimum scaling limit for a single node. Range: 1 PCU~31 PCU.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -301,7 +314,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+         * <p>Maximum scaling limit for the number of read-only nodes. Range: 0~15.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -312,7 +325,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+         * <p>Minimum scaling limit for the number of read-only nodes. Range: 0~15.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -323,7 +336,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detection period for no-activity suspension. Valid values: 300 to 86400. Unit: seconds. The value must be a multiple of 300.</p>
+         * <p>Detection duration for idle shutdown. Range: 300~86,400. Unit: seconds. The detection duration must be a multiple of 300 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -334,7 +347,10 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * ServerlessRuleCpuEnlargeThreshold.
+         * <p>CPU upscale threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder serverlessRuleCpuEnlargeThreshold(String serverlessRuleCpuEnlargeThreshold) {
             this.serverlessRuleCpuEnlargeThreshold = serverlessRuleCpuEnlargeThreshold;
@@ -342,7 +358,10 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * ServerlessRuleCpuShrinkThreshold.
+         * <p>CPU downscale threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder serverlessRuleCpuShrinkThreshold(String serverlessRuleCpuShrinkThreshold) {
             this.serverlessRuleCpuShrinkThreshold = serverlessRuleCpuShrinkThreshold;
@@ -350,7 +369,16 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * ServerlessRuleMode.
+         * <p>Elasticity sensitivity. Values:</p>
+         * <ul>
+         * <li><p>normal: Standard</p>
+         * </li>
+         * <li><p>flexible: Sensitive</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder serverlessRuleMode(String serverlessRuleMode) {
             this.serverlessRuleMode = serverlessRuleMode;
@@ -358,7 +386,12 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * Switchs.
+         * <p>Whether steady state is enabled. Values:</p>
+         * <p>1: Enabled</p>
+         * <p>0: Disabled</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder switchs(String switchs) {
             this.switchs = switchs;

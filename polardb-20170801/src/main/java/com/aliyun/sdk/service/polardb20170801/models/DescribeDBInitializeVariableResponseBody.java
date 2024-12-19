@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -248,7 +253,7 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
      */
     public static class Variables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Variable")
-        private java.util.List < Variable> variable;
+        private java.util.List<Variable> variable;
 
         private Variables(Builder builder) {
             this.variable = builder.variable;
@@ -265,17 +270,17 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
         /**
          * @return variable
          */
-        public java.util.List < Variable> getVariable() {
+        public java.util.List<Variable> getVariable() {
             return this.variable;
         }
 
         public static final class Builder {
-            private java.util.List < Variable> variable; 
+            private java.util.List<Variable> variable; 
 
             /**
              * Variable.
              */
-            public Builder variable(java.util.List < Variable> variable) {
+            public Builder variable(java.util.List<Variable> variable) {
                 this.variable = variable;
                 return this;
             }

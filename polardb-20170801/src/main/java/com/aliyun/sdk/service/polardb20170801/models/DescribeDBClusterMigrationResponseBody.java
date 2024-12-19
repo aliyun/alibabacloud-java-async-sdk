@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     private String comment;
 
     @com.aliyun.core.annotation.NameInMap("DBClusterEndpointList")
-    private java.util.List < DBClusterEndpointList> DBClusterEndpointList;
+    private java.util.List<DBClusterEndpointList> DBClusterEndpointList;
 
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
@@ -37,7 +42,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     private String migrationStatus;
 
     @com.aliyun.core.annotation.NameInMap("RdsEndpointList")
-    private java.util.List < RdsEndpointList> rdsEndpointList;
+    private java.util.List<RdsEndpointList> rdsEndpointList;
 
     @com.aliyun.core.annotation.NameInMap("RdsReadWriteMode")
     private String rdsReadWriteMode;
@@ -89,7 +94,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     /**
      * @return DBClusterEndpointList
      */
-    public java.util.List < DBClusterEndpointList> getDBClusterEndpointList() {
+    public java.util.List<DBClusterEndpointList> getDBClusterEndpointList() {
         return this.DBClusterEndpointList;
     }
 
@@ -138,7 +143,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     /**
      * @return rdsEndpointList
      */
-    public java.util.List < RdsEndpointList> getRdsEndpointList() {
+    public java.util.List<RdsEndpointList> getRdsEndpointList() {
         return this.rdsEndpointList;
     }
 
@@ -179,14 +184,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
 
     public static final class Builder {
         private String comment; 
-        private java.util.List < DBClusterEndpointList> DBClusterEndpointList; 
+        private java.util.List<DBClusterEndpointList> DBClusterEndpointList; 
         private String DBClusterId; 
         private String DBClusterReadWriteMode; 
         private Integer delayedSeconds; 
         private String dtsInstanceId; 
         private String expiredTime; 
         private String migrationStatus; 
-        private java.util.List < RdsEndpointList> rdsEndpointList; 
+        private java.util.List<RdsEndpointList> rdsEndpointList; 
         private String rdsReadWriteMode; 
         private String requestId; 
         private String sourceRDSDBInstanceId; 
@@ -211,7 +216,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         /**
          * <p>The port number.</p>
          */
-        public Builder DBClusterEndpointList(java.util.List < DBClusterEndpointList> DBClusterEndpointList) {
+        public Builder DBClusterEndpointList(java.util.List<DBClusterEndpointList> DBClusterEndpointList) {
             this.DBClusterEndpointList = DBClusterEndpointList;
             return this;
         }
@@ -292,9 +297,9 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The port number.</p>
+         * <p>The endpoints of the ApsaraDB RDS instance.</p>
          */
-        public Builder rdsEndpointList(java.util.List < RdsEndpointList> rdsEndpointList) {
+        public Builder rdsEndpointList(java.util.List<RdsEndpointList> rdsEndpointList) {
             this.rdsEndpointList = rdsEndpointList;
             return this;
         }
@@ -333,7 +338,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * SrcDbType.
+         * <p>The type of the source database. Valid values:</p>
+         * <ul>
+         * <li><strong>PolarDBMySQL</strong>: The source database is a PolarDB for MySQL database when the major version of your PolarDB cluster is upgraded.</li>
+         * <li><strong>RDS</strong>: The source database is an ApsaraDB RDS database when data is migrated from ApsaraDB RDS to PolarDB for MySQL.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PolarDBMySQL</p>
          */
         public Builder srcDbType(String srcDbType) {
             this.srcDbType = srcDbType;
@@ -575,7 +587,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
      */
     public static class DBClusterEndpointList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressItems")
-        private java.util.List < AddressItems> addressItems;
+        private java.util.List<AddressItems> addressItems;
 
         @com.aliyun.core.annotation.NameInMap("DBEndpointId")
         private String DBEndpointId;
@@ -604,7 +616,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         /**
          * @return addressItems
          */
-        public java.util.List < AddressItems> getAddressItems() {
+        public java.util.List<AddressItems> getAddressItems() {
             return this.addressItems;
         }
 
@@ -630,7 +642,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AddressItems> addressItems; 
+            private java.util.List<AddressItems> addressItems; 
             private String DBEndpointId; 
             private String endpointType; 
             private String readWriteMode; 
@@ -638,7 +650,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             /**
              * <p>The VPC ID.</p>
              */
-            public Builder addressItems(java.util.List < AddressItems> addressItems) {
+            public Builder addressItems(java.util.List<AddressItems> addressItems) {
                 this.addressItems = addressItems;
                 return this;
             }
@@ -848,7 +860,11 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the request.</p>
+             * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong></li>
+             * <li><strong>Disabled</strong></li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enabled</p>
@@ -895,7 +911,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
      */
     public static class RdsEndpointList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressItems")
-        private java.util.List < RdsEndpointListAddressItems> addressItems;
+        private java.util.List<RdsEndpointListAddressItems> addressItems;
 
         @com.aliyun.core.annotation.NameInMap("CustinsType")
         private String custinsType;
@@ -924,7 +940,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         /**
          * @return addressItems
          */
-        public java.util.List < RdsEndpointListAddressItems> getAddressItems() {
+        public java.util.List<RdsEndpointListAddressItems> getAddressItems() {
             return this.addressItems;
         }
 
@@ -950,7 +966,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < RdsEndpointListAddressItems> addressItems; 
+            private java.util.List<RdsEndpointListAddressItems> addressItems; 
             private String custinsType; 
             private String DBEndpointId; 
             private String endpointType; 
@@ -958,13 +974,18 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             /**
              * <p>The VPC ID.</p>
              */
-            public Builder addressItems(java.util.List < RdsEndpointListAddressItems> addressItems) {
+            public Builder addressItems(java.util.List<RdsEndpointListAddressItems> addressItems) {
                 this.addressItems = addressItems;
                 return this;
             }
 
             /**
-             * CustinsType.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadOnly
+             * Maxscale
+             * Primary</p>
              */
             public Builder custinsType(String custinsType) {
                 this.custinsType = custinsType;
@@ -972,10 +993,10 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the replication between ApsaraDB RDS and PolarDB. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * <p>The ID of the endpoint.</p>
              * 
              * <strong>example:</strong>
-             * <p>pe-***********</p>
+             * <p>rm-************-normal</p>
              */
             public Builder DBEndpointId(String DBEndpointId) {
                 this.DBEndpointId = DBEndpointId;
@@ -983,10 +1004,14 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: the standard endpoint</li>
+             * <li><strong>ReadWriteSplitting</strong>: the read/write splitting endpoint</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Cluster</p>
+             * <p>Normal</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;

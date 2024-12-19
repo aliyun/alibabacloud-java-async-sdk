@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDBNodesParametersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBNodeIds")
-    private java.util.List < DBNodeIds> DBNodeIds;
+    private java.util.List<DBNodeIds> DBNodeIds;
 
     @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
@@ -46,7 +51,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
     /**
      * @return DBNodeIds
      */
-    public java.util.List < DBNodeIds> getDBNodeIds() {
+    public java.util.List<DBNodeIds> getDBNodeIds() {
         return this.DBNodeIds;
     }
 
@@ -79,7 +84,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DBNodeIds> DBNodeIds; 
+        private java.util.List<DBNodeIds> DBNodeIds; 
         private String DBType; 
         private String DBVersion; 
         private String engine; 
@@ -88,7 +93,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         /**
          * <p>The IDs of the nodes.</p>
          */
-        public Builder DBNodeIds(java.util.List < DBNodeIds> DBNodeIds) {
+        public Builder DBNodeIds(java.util.List<DBNodeIds> DBNodeIds) {
             this.DBNodeIds = DBNodeIds;
             return this;
         }
@@ -483,7 +488,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         private String DBNodeId;
 
         @com.aliyun.core.annotation.NameInMap("RunningParameters")
-        private java.util.List < RunningParameters> runningParameters;
+        private java.util.List<RunningParameters> runningParameters;
 
         private DBNodeIds(Builder builder) {
             this.DBNodeId = builder.DBNodeId;
@@ -508,13 +513,13 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
         /**
          * @return runningParameters
          */
-        public java.util.List < RunningParameters> getRunningParameters() {
+        public java.util.List<RunningParameters> getRunningParameters() {
             return this.runningParameters;
         }
 
         public static final class Builder {
             private String DBNodeId; 
-            private java.util.List < RunningParameters> runningParameters; 
+            private java.util.List<RunningParameters> runningParameters; 
 
             /**
              * <p>The ID of the node.</p>
@@ -530,7 +535,7 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
             /**
              * <p>The parameters of the current node.</p>
              */
-            public Builder runningParameters(java.util.List < RunningParameters> runningParameters) {
+            public Builder runningParameters(java.util.List<RunningParameters> runningParameters) {
                 this.runningParameters = runningParameters;
                 return this;
             }

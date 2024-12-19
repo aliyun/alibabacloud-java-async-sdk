@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class ModifyDBNodesClassRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBNode")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DBNode> DBNode;
+    private java.util.List<DBNode> DBNode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModifyType")
@@ -109,7 +114,7 @@ public class ModifyDBNodesClassRequest extends Request {
     /**
      * @return DBNode
      */
-    public java.util.List < DBNode> getDBNode() {
+    public java.util.List<DBNode> getDBNode() {
         return this.DBNode;
     }
 
@@ -179,7 +184,7 @@ public class ModifyDBNodesClassRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDBNodesClassRequest, Builder> {
         private String clientToken; 
         private String DBClusterId; 
-        private java.util.List < DBNode> DBNode; 
+        private java.util.List<DBNode> DBNode; 
         private String modifyType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -239,7 +244,7 @@ public class ModifyDBNodesClassRequest extends Request {
          * <p>The details of the nodes.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder DBNode(java.util.List < DBNode> DBNode) {
+        public Builder DBNode(java.util.List<DBNode> DBNode) {
             this.putQueryParameter("DBNode", DBNode);
             this.DBNode = DBNode;
             return this;

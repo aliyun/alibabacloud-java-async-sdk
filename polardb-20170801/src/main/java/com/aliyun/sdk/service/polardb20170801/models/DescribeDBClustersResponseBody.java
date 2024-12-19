@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -380,7 +385,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
      */
     public static class DBNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBNode")
-        private java.util.List < DBNode> DBNode;
+        private java.util.List<DBNode> DBNode;
 
         private DBNodes(Builder builder) {
             this.DBNode = builder.DBNode;
@@ -397,17 +402,17 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         /**
          * @return DBNode
          */
-        public java.util.List < DBNode> getDBNode() {
+        public java.util.List<DBNode> getDBNode() {
             return this.DBNode;
         }
 
         public static final class Builder {
-            private java.util.List < DBNode> DBNode; 
+            private java.util.List<DBNode> DBNode; 
 
             /**
              * DBNode.
              */
-            public Builder DBNode(java.util.List < DBNode> DBNode) {
+            public Builder DBNode(java.util.List<DBNode> DBNode) {
                 this.DBNode = DBNode;
                 return this;
             }
@@ -500,7 +505,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -517,17 +522,17 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1431,7 +1436,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBCluster")
-        private java.util.List < DBCluster> DBCluster;
+        private java.util.List<DBCluster> DBCluster;
 
         private Items(Builder builder) {
             this.DBCluster = builder.DBCluster;
@@ -1448,17 +1453,17 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         /**
          * @return DBCluster
          */
-        public java.util.List < DBCluster> getDBCluster() {
+        public java.util.List<DBCluster> getDBCluster() {
             return this.DBCluster;
         }
 
         public static final class Builder {
-            private java.util.List < DBCluster> DBCluster; 
+            private java.util.List<DBCluster> DBCluster; 
 
             /**
              * DBCluster.
              */
-            public Builder DBCluster(java.util.List < DBCluster> DBCluster) {
+            public Builder DBCluster(java.util.List<DBCluster> DBCluster) {
                 this.DBCluster = DBCluster;
                 return this;
             }

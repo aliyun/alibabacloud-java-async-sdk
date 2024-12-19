@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -57,6 +62,10 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyClusterIdListNeedToSync")
+    private String standbyClusterIdListNeedToSync;
+
     private ModifyDBClusterAndNodesParametersRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
@@ -70,6 +79,7 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
         this.plannedStartTime = builder.plannedStartTime;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.standbyClusterIdListNeedToSync = builder.standbyClusterIdListNeedToSync;
     }
 
     public static Builder builder() {
@@ -162,6 +172,13 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return standbyClusterIdListNeedToSync
+     */
+    public String getStandbyClusterIdListNeedToSync() {
+        return this.standbyClusterIdListNeedToSync;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBClusterAndNodesParametersRequest, Builder> {
         private String DBClusterId; 
         private String DBNodeIds; 
@@ -174,6 +191,7 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
         private String plannedStartTime; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String standbyClusterIdListNeedToSync; 
 
         private Builder() {
             super();
@@ -192,6 +210,7 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
             this.plannedStartTime = request.plannedStartTime;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.standbyClusterIdListNeedToSync = request.standbyClusterIdListNeedToSync;
         } 
 
         /**
@@ -335,6 +354,15 @@ public class ModifyDBClusterAndNodesParametersRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * StandbyClusterIdListNeedToSync.
+         */
+        public Builder standbyClusterIdListNeedToSync(String standbyClusterIdListNeedToSync) {
+            this.putQueryParameter("StandbyClusterIdListNeedToSync", standbyClusterIdListNeedToSync);
+            this.standbyClusterIdListNeedToSync = standbyClusterIdListNeedToSync;
             return this;
         }
 

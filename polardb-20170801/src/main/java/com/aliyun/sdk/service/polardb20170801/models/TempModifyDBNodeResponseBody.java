@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.NameInMap("DBNodeIds")
-    private java.util.List < String > DBNodeIds;
+    private java.util.List<String> DBNodeIds;
 
     @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
@@ -49,7 +54,7 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
     /**
      * @return DBNodeIds
      */
-    public java.util.List < String > getDBNodeIds() {
+    public java.util.List<String> getDBNodeIds() {
         return this.DBNodeIds;
     }
 
@@ -69,7 +74,7 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBClusterId; 
-        private java.util.List < String > DBNodeIds; 
+        private java.util.List<String> DBNodeIds; 
         private String orderId; 
         private String requestId; 
 
@@ -87,7 +92,7 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
         /**
          * <p>The details of the nodes.</p>
          */
-        public Builder DBNodeIds(java.util.List < String > DBNodeIds) {
+        public Builder DBNodeIds(java.util.List<String> DBNodeIds) {
             this.DBNodeIds = DBNodeIds;
             return this;
         }

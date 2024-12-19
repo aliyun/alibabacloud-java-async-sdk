@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDBClusterSSLResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -57,14 +62,14 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String requestId; 
         private String SSLAutoRotate; 
 
         /**
          * <p>The list of SSL connections.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -114,6 +119,9 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBEndpointId")
         private String DBEndpointId;
 
+        @com.aliyun.core.annotation.NameInMap("SSLAutoRotate")
+        private String SSLAutoRotate;
+
         @com.aliyun.core.annotation.NameInMap("SSLConnectionString")
         private String SSLConnectionString;
 
@@ -125,6 +133,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
 
         private Items(Builder builder) {
             this.DBEndpointId = builder.DBEndpointId;
+            this.SSLAutoRotate = builder.SSLAutoRotate;
             this.SSLConnectionString = builder.SSLConnectionString;
             this.SSLEnabled = builder.SSLEnabled;
             this.SSLExpireTime = builder.SSLExpireTime;
@@ -143,6 +152,13 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
          */
         public String getDBEndpointId() {
             return this.DBEndpointId;
+        }
+
+        /**
+         * @return SSLAutoRotate
+         */
+        public String getSSLAutoRotate() {
+            return this.SSLAutoRotate;
         }
 
         /**
@@ -168,6 +184,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
 
         public static final class Builder {
             private String DBEndpointId; 
+            private String SSLAutoRotate; 
             private String SSLConnectionString; 
             private String SSLEnabled; 
             private String SSLExpireTime; 
@@ -180,6 +197,24 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
              */
             public Builder DBEndpointId(String DBEndpointId) {
                 this.DBEndpointId = DBEndpointId;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether automatic rotation of SSL certificates is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>Enable</strong>: The feature is enabled.</li>
+             * <li><strong>Disable</strong>: The feature is disabled.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is valid only for a PolarDB for MySQL cluster.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
+             */
+            public Builder SSLAutoRotate(String SSLAutoRotate) {
+                this.SSLAutoRotate = SSLAutoRotate;
                 return this;
             }
 

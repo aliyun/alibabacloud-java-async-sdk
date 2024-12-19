@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -79,7 +84,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private Integer pageNumber; 
         private Integer pageRecordCount; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         /**
          * <p>Details about the GDNs.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -257,7 +262,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("DBClusters")
-        private java.util.List < DBClusters> DBClusters;
+        private java.util.List<DBClusters> DBClusters;
 
         @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
@@ -302,7 +307,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         /**
          * @return DBClusters
          */
-        public java.util.List < DBClusters> getDBClusters() {
+        public java.util.List<DBClusters> getDBClusters() {
             return this.DBClusters;
         }
 
@@ -343,7 +348,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
-            private java.util.List < DBClusters> DBClusters; 
+            private java.util.List<DBClusters> DBClusters; 
             private String DBType; 
             private String DBVersion; 
             private String GDNDescription; 
@@ -364,7 +369,7 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
             /**
              * <p>Details about clusters in the GDN.</p>
              */
-            public Builder DBClusters(java.util.List < DBClusters> DBClusters) {
+            public Builder DBClusters(java.util.List<DBClusters> DBClusters) {
                 this.DBClusters = DBClusters;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.NameInMap("KeyList")
-    private java.util.List < String > keyList;
+    private java.util.List<String> keyList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     /**
      * @return keyList
      */
-    public java.util.List < String > getKeyList() {
+    public java.util.List<String> getKeyList() {
         return this.keyList;
     }
 
@@ -58,7 +63,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBClusterId; 
-        private java.util.List < String > keyList; 
+        private java.util.List<String> keyList; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         /**
          * <p>Cluster key list.</p>
          */
-        public Builder keyList(java.util.List < String > keyList) {
+        public Builder keyList(java.util.List<String> keyList) {
             this.keyList = keyList;
             return this;
         }

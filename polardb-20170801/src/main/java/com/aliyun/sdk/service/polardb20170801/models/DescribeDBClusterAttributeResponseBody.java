@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -55,7 +60,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     private String DBClusterStatus;
 
     @com.aliyun.core.annotation.NameInMap("DBNodes")
-    private java.util.List < DBNodes> DBNodes;
+    private java.util.List<DBNodes> DBNodes;
 
     @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
@@ -190,7 +195,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     private String supportInstantSwitchWithImci;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
@@ -376,7 +381,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     /**
      * @return DBNodes
      */
-    public java.util.List < DBNodes> getDBNodes() {
+    public java.util.List<DBNodes> getDBNodes() {
         return this.DBNodes;
     }
 
@@ -691,7 +696,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -731,7 +736,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String DBClusterId; 
         private String DBClusterNetworkType; 
         private String DBClusterStatus; 
-        private java.util.List < DBNodes> DBNodes; 
+        private java.util.List<DBNodes> DBNodes; 
         private String DBType; 
         private String DBVersion; 
         private String DBVersionStatus; 
@@ -776,7 +781,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String strictConsistency; 
         private String subCategory; 
         private String supportInstantSwitchWithImci; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String VPCId; 
         private String vSwitchId; 
         private String zoneIds; 
@@ -964,7 +969,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         /**
          * <p>The information about the nodes.</p>
          */
-        public Builder DBNodes(java.util.List < DBNodes> DBNodes) {
+        public Builder DBNodes(java.util.List<DBNodes> DBNodes) {
             this.DBNodes = DBNodes;
             return this;
         }
@@ -1564,7 +1569,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         /**
          * <p>Details of tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }

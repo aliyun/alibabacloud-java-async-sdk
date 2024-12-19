@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -584,7 +589,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
      */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Parameters")
-        private java.util.List < ParametersParameters> parameters;
+        private java.util.List<ParametersParameters> parameters;
 
         private Parameters(Builder builder) {
             this.parameters = builder.parameters;
@@ -601,17 +606,17 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.List < ParametersParameters> getParameters() {
+        public java.util.List<ParametersParameters> getParameters() {
             return this.parameters;
         }
 
         public static final class Builder {
-            private java.util.List < ParametersParameters> parameters; 
+            private java.util.List<ParametersParameters> parameters; 
 
             /**
              * <p>A comparison of parameters between the source RDS instance and the destination PolarDB cluster.</p>
              */
-            public Builder parameters(java.util.List < ParametersParameters> parameters) {
+            public Builder parameters(java.util.List<ParametersParameters> parameters) {
                 this.parameters = parameters;
                 return this;
             }
@@ -955,7 +960,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
      */
     public static class RunningParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Parameter")
-        private java.util.List < Parameter> parameter;
+        private java.util.List<Parameter> parameter;
 
         private RunningParameters(Builder builder) {
             this.parameter = builder.parameter;
@@ -972,17 +977,17 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         /**
          * @return parameter
          */
-        public java.util.List < Parameter> getParameter() {
+        public java.util.List<Parameter> getParameter() {
             return this.parameter;
         }
 
         public static final class Builder {
-            private java.util.List < Parameter> parameter; 
+            private java.util.List<Parameter> parameter; 
 
             /**
              * Parameter.
              */
-            public Builder parameter(java.util.List < Parameter> parameter) {
+            public Builder parameter(java.util.List<Parameter> parameter) {
                 this.parameter = parameter;
                 return this;
             }

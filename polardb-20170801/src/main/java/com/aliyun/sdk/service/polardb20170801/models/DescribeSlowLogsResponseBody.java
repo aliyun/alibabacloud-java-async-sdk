@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -592,7 +597,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SQLSlowLog")
-        private java.util.List < SQLSlowLog> SQLSlowLog;
+        private java.util.List<SQLSlowLog> SQLSlowLog;
 
         private Items(Builder builder) {
             this.SQLSlowLog = builder.SQLSlowLog;
@@ -609,17 +614,17 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * @return SQLSlowLog
          */
-        public java.util.List < SQLSlowLog> getSQLSlowLog() {
+        public java.util.List<SQLSlowLog> getSQLSlowLog() {
             return this.SQLSlowLog;
         }
 
         public static final class Builder {
-            private java.util.List < SQLSlowLog> SQLSlowLog; 
+            private java.util.List<SQLSlowLog> SQLSlowLog; 
 
             /**
              * SQLSlowLog.
              */
-            public Builder SQLSlowLog(java.util.List < SQLSlowLog> SQLSlowLog) {
+            public Builder SQLSlowLog(java.util.List<SQLSlowLog> SQLSlowLog) {
                 this.SQLSlowLog = SQLSlowLog;
                 return this;
             }
