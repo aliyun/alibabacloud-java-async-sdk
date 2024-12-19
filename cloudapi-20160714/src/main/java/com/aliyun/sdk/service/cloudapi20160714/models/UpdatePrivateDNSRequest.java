@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class UpdatePrivateDNSRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Records")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Records> records;
+    private java.util.List<Records> records;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
@@ -62,7 +67,7 @@ public class UpdatePrivateDNSRequest extends Request {
     /**
      * @return records
      */
-    public java.util.List < Records> getRecords() {
+    public java.util.List<Records> getRecords() {
         return this.records;
     }
 
@@ -82,7 +87,7 @@ public class UpdatePrivateDNSRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdatePrivateDNSRequest, Builder> {
         private String intranetDomain; 
-        private java.util.List < Records> records; 
+        private java.util.List<Records> records; 
         private String securityToken; 
         private String type; 
 
@@ -99,6 +104,7 @@ public class UpdatePrivateDNSRequest extends Request {
         } 
 
         /**
+         * <p>The internal domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,9 +117,10 @@ public class UpdatePrivateDNSRequest extends Request {
         }
 
         /**
+         * <p>The resolution records. This parameter is valid only when Type is set to A.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder records(java.util.List < Records> records) {
+        public Builder records(java.util.List<Records> records) {
             String recordsShrink = shrink(records, "Records", "json");
             this.putBodyParameter("Records", recordsShrink);
             this.records = records;
@@ -130,6 +137,11 @@ public class UpdatePrivateDNSRequest extends Request {
         }
 
         /**
+         * <p>The internal domain name resolution type. Valid values:</p>
+         * <ul>
+         * <li>VPC: resolution for virtual private cloud (VPC) access authorizations. A resolution of this type can be bound only to traditional dedicated instances.</li>
+         * <li>A: resolution that supports A records. A resolution of this type can be bound only to VPC integration dedicated instances.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +205,10 @@ public class UpdatePrivateDNSRequest extends Request {
             private Integer weight; 
 
             /**
-             * Record.
+             * <p>The resolution record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.2</p>
              */
             public Builder record(String record) {
                 this.record = record;
@@ -201,7 +216,10 @@ public class UpdatePrivateDNSRequest extends Request {
             }
 
             /**
-             * Weight.
+             * <p>The weight of the record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

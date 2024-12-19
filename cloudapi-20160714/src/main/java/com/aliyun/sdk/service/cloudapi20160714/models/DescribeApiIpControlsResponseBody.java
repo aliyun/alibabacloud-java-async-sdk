@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -293,7 +298,7 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
      */
     public static class ApiIpControls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiIpControlItem")
-        private java.util.List < ApiIpControlItem> apiIpControlItem;
+        private java.util.List<ApiIpControlItem> apiIpControlItem;
 
         private ApiIpControls(Builder builder) {
             this.apiIpControlItem = builder.apiIpControlItem;
@@ -310,17 +315,17 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
         /**
          * @return apiIpControlItem
          */
-        public java.util.List < ApiIpControlItem> getApiIpControlItem() {
+        public java.util.List<ApiIpControlItem> getApiIpControlItem() {
             return this.apiIpControlItem;
         }
 
         public static final class Builder {
-            private java.util.List < ApiIpControlItem> apiIpControlItem; 
+            private java.util.List<ApiIpControlItem> apiIpControlItem; 
 
             /**
              * ApiIpControlItem.
              */
-            public Builder apiIpControlItem(java.util.List < ApiIpControlItem> apiIpControlItem) {
+            public Builder apiIpControlItem(java.util.List<ApiIpControlItem> apiIpControlItem) {
                 this.apiIpControlItem = apiIpControlItem;
                 return this;
             }

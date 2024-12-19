@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,6 +24,10 @@ public class ModifyApiGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CompatibleFlags")
     private String compatibleFlags;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomAppCodeConfig")
+    private String customAppCodeConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomTraceConfig")
@@ -67,7 +76,7 @@ public class ModifyApiGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserLogConfig")
@@ -77,6 +86,7 @@ public class ModifyApiGroupRequest extends Request {
         super(builder);
         this.basePath = builder.basePath;
         this.compatibleFlags = builder.compatibleFlags;
+        this.customAppCodeConfig = builder.customAppCodeConfig;
         this.customTraceConfig = builder.customTraceConfig;
         this.customerConfigs = builder.customerConfigs;
         this.defaultDomain = builder.defaultDomain;
@@ -117,6 +127,13 @@ public class ModifyApiGroupRequest extends Request {
      */
     public String getCompatibleFlags() {
         return this.compatibleFlags;
+    }
+
+    /**
+     * @return customAppCodeConfig
+     */
+    public String getCustomAppCodeConfig() {
+        return this.customAppCodeConfig;
     }
 
     /**
@@ -199,7 +216,7 @@ public class ModifyApiGroupRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -213,6 +230,7 @@ public class ModifyApiGroupRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyApiGroupRequest, Builder> {
         private String basePath; 
         private String compatibleFlags; 
+        private String customAppCodeConfig; 
         private String customTraceConfig; 
         private String customerConfigs; 
         private String defaultDomain; 
@@ -224,7 +242,7 @@ public class ModifyApiGroupRequest extends Request {
         private String rpcPattern; 
         private String securityToken; 
         private String supportSSE; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String userLogConfig; 
 
         private Builder() {
@@ -235,6 +253,7 @@ public class ModifyApiGroupRequest extends Request {
             super(request);
             this.basePath = request.basePath;
             this.compatibleFlags = request.compatibleFlags;
+            this.customAppCodeConfig = request.customAppCodeConfig;
             this.customTraceConfig = request.customTraceConfig;
             this.customerConfigs = request.customerConfigs;
             this.defaultDomain = request.defaultDomain;
@@ -271,6 +290,18 @@ public class ModifyApiGroupRequest extends Request {
         public Builder compatibleFlags(String compatibleFlags) {
             this.putQueryParameter("CompatibleFlags", compatibleFlags);
             this.compatibleFlags = compatibleFlags;
+            return this;
+        }
+
+        /**
+         * <p>The custom appcode configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;location&quot;:&quot;HEADER&quot;,&quot;name&quot;:&quot;myAppCodeHeader&quot;}</p>
+         */
+        public Builder customAppCodeConfig(String customAppCodeConfig) {
+            this.putQueryParameter("CustomAppCodeConfig", customAppCodeConfig);
+            this.customAppCodeConfig = customAppCodeConfig;
             return this;
         }
 
@@ -323,7 +354,10 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * FilterAppCodeForBackend.
+         * <p>If filter AppCode for backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder filterAppCodeForBackend(String filterAppCodeForBackend) {
             this.putQueryParameter("FilterAppCodeForBackend", filterAppCodeForBackend);
@@ -370,6 +404,9 @@ public class ModifyApiGroupRequest extends Request {
 
         /**
          * <p>The RPC mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder rpcPattern(String rpcPattern) {
             this.putQueryParameter("RpcPattern", rpcPattern);
@@ -387,7 +424,10 @@ public class ModifyApiGroupRequest extends Request {
         }
 
         /**
-         * SupportSSE.
+         * <p>If support SSE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportSSE(String supportSSE) {
             this.putQueryParameter("SupportSSE", supportSSE);
@@ -401,7 +441,7 @@ public class ModifyApiGroupRequest extends Request {
          * <strong>example:</strong>
          * <p>Key， Value</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

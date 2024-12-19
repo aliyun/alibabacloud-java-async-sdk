@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -98,7 +103,14 @@ public class DeletePrivateDNSRequest extends Request {
         } 
 
         /**
-         * Force.
+         * <p>Specifies whether to force delete the resolution.</p>
+         * <ul>
+         * <li>true: force deletes the resolution if the resolution is associated with an instance.</li>
+         * <li>false: does not force delete the resolution if the resolution is associated with an instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -107,6 +119,7 @@ public class DeletePrivateDNSRequest extends Request {
         }
 
         /**
+         * <p>The internal domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +141,11 @@ public class DeletePrivateDNSRequest extends Request {
         }
 
         /**
+         * <p>The internal domain name resolution type. Valid values:</p>
+         * <ul>
+         * <li>VPC: resolution for virtual private cloud (VPC) access authorizations. A resolution of this type can be bound only to traditional dedicated instances.</li>
+         * <li>A: resolution that supports A records. A resolution of this type can be bound only to VPC integration dedicated instances.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

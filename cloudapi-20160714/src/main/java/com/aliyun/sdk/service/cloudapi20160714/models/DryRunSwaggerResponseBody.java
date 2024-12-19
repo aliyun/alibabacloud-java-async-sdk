@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -261,7 +266,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
      */
     public static class Failed extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiImportSwaggerFailed")
-        private java.util.List < ApiImportSwaggerFailed> apiImportSwaggerFailed;
+        private java.util.List<ApiImportSwaggerFailed> apiImportSwaggerFailed;
 
         private Failed(Builder builder) {
             this.apiImportSwaggerFailed = builder.apiImportSwaggerFailed;
@@ -278,17 +283,17 @@ public class DryRunSwaggerResponseBody extends TeaModel {
         /**
          * @return apiImportSwaggerFailed
          */
-        public java.util.List < ApiImportSwaggerFailed> getApiImportSwaggerFailed() {
+        public java.util.List<ApiImportSwaggerFailed> getApiImportSwaggerFailed() {
             return this.apiImportSwaggerFailed;
         }
 
         public static final class Builder {
-            private java.util.List < ApiImportSwaggerFailed> apiImportSwaggerFailed; 
+            private java.util.List<ApiImportSwaggerFailed> apiImportSwaggerFailed; 
 
             /**
              * ApiImportSwaggerFailed.
              */
-            public Builder apiImportSwaggerFailed(java.util.List < ApiImportSwaggerFailed> apiImportSwaggerFailed) {
+            public Builder apiImportSwaggerFailed(java.util.List<ApiImportSwaggerFailed> apiImportSwaggerFailed) {
                 this.apiImportSwaggerFailed = apiImportSwaggerFailed;
                 return this;
             }
@@ -404,7 +409,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
      */
     public static class ModelFailed extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiImportModelFailed")
-        private java.util.List < ApiImportModelFailed> apiImportModelFailed;
+        private java.util.List<ApiImportModelFailed> apiImportModelFailed;
 
         private ModelFailed(Builder builder) {
             this.apiImportModelFailed = builder.apiImportModelFailed;
@@ -421,17 +426,17 @@ public class DryRunSwaggerResponseBody extends TeaModel {
         /**
          * @return apiImportModelFailed
          */
-        public java.util.List < ApiImportModelFailed> getApiImportModelFailed() {
+        public java.util.List<ApiImportModelFailed> getApiImportModelFailed() {
             return this.apiImportModelFailed;
         }
 
         public static final class Builder {
-            private java.util.List < ApiImportModelFailed> apiImportModelFailed; 
+            private java.util.List<ApiImportModelFailed> apiImportModelFailed; 
 
             /**
              * ApiImportModelFailed.
              */
-            public Builder apiImportModelFailed(java.util.List < ApiImportModelFailed> apiImportModelFailed) {
+            public Builder apiImportModelFailed(java.util.List<ApiImportModelFailed> apiImportModelFailed) {
                 this.apiImportModelFailed = apiImportModelFailed;
                 return this;
             }
@@ -570,7 +575,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
      */
     public static class ModelSuccess extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiImportModelSuccess")
-        private java.util.List < ApiImportModelSuccess> apiImportModelSuccess;
+        private java.util.List<ApiImportModelSuccess> apiImportModelSuccess;
 
         private ModelSuccess(Builder builder) {
             this.apiImportModelSuccess = builder.apiImportModelSuccess;
@@ -587,17 +592,17 @@ public class DryRunSwaggerResponseBody extends TeaModel {
         /**
          * @return apiImportModelSuccess
          */
-        public java.util.List < ApiImportModelSuccess> getApiImportModelSuccess() {
+        public java.util.List<ApiImportModelSuccess> getApiImportModelSuccess() {
             return this.apiImportModelSuccess;
         }
 
         public static final class Builder {
-            private java.util.List < ApiImportModelSuccess> apiImportModelSuccess; 
+            private java.util.List<ApiImportModelSuccess> apiImportModelSuccess; 
 
             /**
              * ApiImportModelSuccess.
              */
-            public Builder apiImportModelSuccess(java.util.List < ApiImportModelSuccess> apiImportModelSuccess) {
+            public Builder apiImportModelSuccess(java.util.List<ApiImportModelSuccess> apiImportModelSuccess) {
                 this.apiImportModelSuccess = apiImportModelSuccess;
                 return this;
             }
@@ -759,7 +764,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
      */
     public static class Success extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiDryRunSwaggerSuccess")
-        private java.util.List < ApiDryRunSwaggerSuccess> apiDryRunSwaggerSuccess;
+        private java.util.List<ApiDryRunSwaggerSuccess> apiDryRunSwaggerSuccess;
 
         private Success(Builder builder) {
             this.apiDryRunSwaggerSuccess = builder.apiDryRunSwaggerSuccess;
@@ -776,17 +781,17 @@ public class DryRunSwaggerResponseBody extends TeaModel {
         /**
          * @return apiDryRunSwaggerSuccess
          */
-        public java.util.List < ApiDryRunSwaggerSuccess> getApiDryRunSwaggerSuccess() {
+        public java.util.List<ApiDryRunSwaggerSuccess> getApiDryRunSwaggerSuccess() {
             return this.apiDryRunSwaggerSuccess;
         }
 
         public static final class Builder {
-            private java.util.List < ApiDryRunSwaggerSuccess> apiDryRunSwaggerSuccess; 
+            private java.util.List<ApiDryRunSwaggerSuccess> apiDryRunSwaggerSuccess; 
 
             /**
              * ApiDryRunSwaggerSuccess.
              */
-            public Builder apiDryRunSwaggerSuccess(java.util.List < ApiDryRunSwaggerSuccess> apiDryRunSwaggerSuccess) {
+            public Builder apiDryRunSwaggerSuccess(java.util.List<ApiDryRunSwaggerSuccess> apiDryRunSwaggerSuccess) {
                 this.apiDryRunSwaggerSuccess = apiDryRunSwaggerSuccess;
                 return this;
             }

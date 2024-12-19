@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -86,7 +91,7 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * InstanceClusters.
+         * <p>The instance cluster list.</p>
          */
         public Builder instanceClusters(InstanceClusters instanceClusters) {
             this.instanceClusters = instanceClusters;
@@ -362,7 +367,7 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
      */
     public static class InstanceClusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceCluster")
-        private java.util.List < InstanceCluster> instanceCluster;
+        private java.util.List<InstanceCluster> instanceCluster;
 
         private InstanceClusters(Builder builder) {
             this.instanceCluster = builder.instanceCluster;
@@ -379,17 +384,17 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         /**
          * @return instanceCluster
          */
-        public java.util.List < InstanceCluster> getInstanceCluster() {
+        public java.util.List<InstanceCluster> getInstanceCluster() {
             return this.instanceCluster;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceCluster> instanceCluster; 
+            private java.util.List<InstanceCluster> instanceCluster; 
 
             /**
              * InstanceCluster.
              */
-            public Builder instanceCluster(java.util.List < InstanceCluster> instanceCluster) {
+            public Builder instanceCluster(java.util.List<InstanceCluster> instanceCluster) {
                 this.instanceCluster = instanceCluster;
                 return this;
             }

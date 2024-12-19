@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
      */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagInfo")
-        private java.util.List < TagInfo> tagInfo;
+        private java.util.List<TagInfo> tagInfo;
 
         private Tag(Builder builder) {
             this.tagInfo = builder.tagInfo;
@@ -241,17 +246,17 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         /**
          * @return tagInfo
          */
-        public java.util.List < TagInfo> getTagInfo() {
+        public java.util.List<TagInfo> getTagInfo() {
             return this.tagInfo;
         }
 
         public static final class Builder {
-            private java.util.List < TagInfo> tagInfo; 
+            private java.util.List<TagInfo> tagInfo; 
 
             /**
              * TagInfo.
              */
-            public Builder tagInfo(java.util.List < TagInfo> tagInfo) {
+            public Builder tagInfo(java.util.List<TagInfo> tagInfo) {
                 this.tagInfo = tagInfo;
                 return this;
             }
@@ -561,7 +566,7 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
      */
     public static class AuthorizedApps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizedApp")
-        private java.util.List < AuthorizedApp> authorizedApp;
+        private java.util.List<AuthorizedApp> authorizedApp;
 
         private AuthorizedApps(Builder builder) {
             this.authorizedApp = builder.authorizedApp;
@@ -578,17 +583,17 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         /**
          * @return authorizedApp
          */
-        public java.util.List < AuthorizedApp> getAuthorizedApp() {
+        public java.util.List<AuthorizedApp> getAuthorizedApp() {
             return this.authorizedApp;
         }
 
         public static final class Builder {
-            private java.util.List < AuthorizedApp> authorizedApp; 
+            private java.util.List<AuthorizedApp> authorizedApp; 
 
             /**
              * AuthorizedApp.
              */
-            public Builder authorizedApp(java.util.List < AuthorizedApp> authorizedApp) {
+            public Builder authorizedApp(java.util.List<AuthorizedApp> authorizedApp) {
                 this.authorizedApp = authorizedApp;
                 return this;
             }

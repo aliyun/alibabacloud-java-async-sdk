@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -657,6 +662,9 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
             /**
              * <p>The time when API Gateway finished forwarding the request to the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224969</p>
              */
             public Builder backendRequestEnd(Long backendRequestEnd) {
                 this.backendRequestEnd = backendRequestEnd;
@@ -665,6 +673,9 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
             /**
              * <p>The time when API Gateway started to forward the request to the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224969</p>
              */
             public Builder backendRequestStart(Long backendRequestStart) {
                 this.backendRequestStart = backendRequestStart;
@@ -673,6 +684,9 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
             /**
              * <p>The time when API Gateway finished receiving the response from the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224989</p>
              */
             public Builder backendResponseEnd(Long backendResponseEnd) {
                 this.backendResponseEnd = backendResponseEnd;
@@ -681,6 +695,9 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
             /**
              * <p>The time when API Gateway started to receive the response from the backend service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224989</p>
              */
             public Builder backendResponseStart(Long backendResponseStart) {
                 this.backendResponseStart = backendResponseStart;
@@ -788,6 +805,9 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
             /**
              * <p>The time when API Gateway finished receiving the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224968</p>
              */
             public Builder frontRequestEnd(Long frontRequestEnd) {
                 this.frontRequestEnd = frontRequestEnd;
@@ -796,6 +816,9 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
             /**
              * <p>The time when API Gateway started to receive the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224968</p>
              */
             public Builder frontRequestStart(Long frontRequestStart) {
                 this.frontRequestStart = frontRequestStart;
@@ -804,6 +827,9 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
             /**
              * <p>The time when API Gateway finished forwarding the response to the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224989</p>
              */
             public Builder frontResponseEnd(Long frontResponseEnd) {
                 this.frontResponseEnd = frontResponseEnd;
@@ -812,6 +838,9 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
             /**
              * <p>The time when API Gateway started to forward the response to the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731487224989</p>
              */
             public Builder frontResponseStart(Long frontResponseStart) {
                 this.frontResponseStart = frontResponseStart;
@@ -1097,7 +1126,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
      */
     public static class RequestLogs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestLog")
-        private java.util.List < RequestLog> requestLog;
+        private java.util.List<RequestLog> requestLog;
 
         private RequestLogs(Builder builder) {
             this.requestLog = builder.requestLog;
@@ -1114,17 +1143,17 @@ public class QueryRequestLogsResponseBody extends TeaModel {
         /**
          * @return requestLog
          */
-        public java.util.List < RequestLog> getRequestLog() {
+        public java.util.List<RequestLog> getRequestLog() {
             return this.requestLog;
         }
 
         public static final class Builder {
-            private java.util.List < RequestLog> requestLog; 
+            private java.util.List<RequestLog> requestLog; 
 
             /**
              * RequestLog.
              */
-            public Builder requestLog(java.util.List < RequestLog> requestLog) {
+            public Builder requestLog(java.util.List<RequestLog> requestLog) {
                 this.requestLog = requestLog;
                 return this;
             }

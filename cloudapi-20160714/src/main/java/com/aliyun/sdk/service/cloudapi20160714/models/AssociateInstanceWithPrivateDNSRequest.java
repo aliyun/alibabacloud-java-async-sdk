@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class AssociateInstanceWithPrivateDNSRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IntranetDomains")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > intranetDomains;
+    private java.util.List<String> intranetDomains;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
@@ -56,7 +61,7 @@ public class AssociateInstanceWithPrivateDNSRequest extends Request {
     /**
      * @return intranetDomains
      */
-    public java.util.List < String > getIntranetDomains() {
+    public java.util.List<String> getIntranetDomains() {
         return this.intranetDomains;
     }
 
@@ -69,7 +74,7 @@ public class AssociateInstanceWithPrivateDNSRequest extends Request {
 
     public static final class Builder extends Request.Builder<AssociateInstanceWithPrivateDNSRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > intranetDomains; 
+        private java.util.List<String> intranetDomains; 
         private String securityToken; 
 
         private Builder() {
@@ -84,6 +89,7 @@ public class AssociateInstanceWithPrivateDNSRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,9 +102,10 @@ public class AssociateInstanceWithPrivateDNSRequest extends Request {
         }
 
         /**
+         * <p>The internal domain names included in the resolution.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder intranetDomains(java.util.List < String > intranetDomains) {
+        public Builder intranetDomains(java.util.List<String> intranetDomains) {
             String intranetDomainsShrink = shrink(intranetDomains, "IntranetDomains", "json");
             this.putBodyParameter("IntranetDomains", intranetDomainsShrink);
             this.intranetDomains = intranetDomains;

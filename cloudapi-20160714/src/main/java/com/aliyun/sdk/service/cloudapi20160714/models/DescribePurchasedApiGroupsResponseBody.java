@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -412,7 +417,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
      */
     public static class PurchasedApiGroupAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PurchasedApiGroupAttribute")
-        private java.util.List < PurchasedApiGroupAttribute> purchasedApiGroupAttribute;
+        private java.util.List<PurchasedApiGroupAttribute> purchasedApiGroupAttribute;
 
         private PurchasedApiGroupAttributes(Builder builder) {
             this.purchasedApiGroupAttribute = builder.purchasedApiGroupAttribute;
@@ -429,17 +434,17 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
         /**
          * @return purchasedApiGroupAttribute
          */
-        public java.util.List < PurchasedApiGroupAttribute> getPurchasedApiGroupAttribute() {
+        public java.util.List<PurchasedApiGroupAttribute> getPurchasedApiGroupAttribute() {
             return this.purchasedApiGroupAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < PurchasedApiGroupAttribute> purchasedApiGroupAttribute; 
+            private java.util.List<PurchasedApiGroupAttribute> purchasedApiGroupAttribute; 
 
             /**
              * PurchasedApiGroupAttribute.
              */
-            public Builder purchasedApiGroupAttribute(java.util.List < PurchasedApiGroupAttribute> purchasedApiGroupAttribute) {
+            public Builder purchasedApiGroupAttribute(java.util.List<PurchasedApiGroupAttribute> purchasedApiGroupAttribute) {
                 this.purchasedApiGroupAttribute = purchasedApiGroupAttribute;
                 return this;
             }

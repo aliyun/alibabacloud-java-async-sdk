@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagInfo")
-        private java.util.List < TagInfo> tagInfo;
+        private java.util.List<TagInfo> tagInfo;
 
         private Tags(Builder builder) {
             this.tagInfo = builder.tagInfo;
@@ -241,17 +246,17 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         /**
          * @return tagInfo
          */
-        public java.util.List < TagInfo> getTagInfo() {
+        public java.util.List<TagInfo> getTagInfo() {
             return this.tagInfo;
         }
 
         public static final class Builder {
-            private java.util.List < TagInfo> tagInfo; 
+            private java.util.List<TagInfo> tagInfo; 
 
             /**
              * TagInfo.
              */
-            public Builder tagInfo(java.util.List < TagInfo> tagInfo) {
+            public Builder tagInfo(java.util.List<TagInfo> tagInfo) {
                 this.tagInfo = tagInfo;
                 return this;
             }
@@ -525,7 +530,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
      */
     public static class VpcAccessAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpcAccessAttribute")
-        private java.util.List < VpcAccessAttribute> vpcAccessAttribute;
+        private java.util.List<VpcAccessAttribute> vpcAccessAttribute;
 
         private VpcAccessAttributes(Builder builder) {
             this.vpcAccessAttribute = builder.vpcAccessAttribute;
@@ -542,17 +547,17 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
         /**
          * @return vpcAccessAttribute
          */
-        public java.util.List < VpcAccessAttribute> getVpcAccessAttribute() {
+        public java.util.List<VpcAccessAttribute> getVpcAccessAttribute() {
             return this.vpcAccessAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < VpcAccessAttribute> vpcAccessAttribute; 
+            private java.util.List<VpcAccessAttribute> vpcAccessAttribute; 
 
             /**
              * VpcAccessAttribute.
              */
-            public Builder vpcAccessAttribute(java.util.List < VpcAccessAttribute> vpcAccessAttribute) {
+            public Builder vpcAccessAttribute(java.util.List<VpcAccessAttribute> vpcAccessAttribute) {
                 this.vpcAccessAttribute = vpcAccessAttribute;
                 return this;
             }

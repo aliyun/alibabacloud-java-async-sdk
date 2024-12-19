@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class DescribeDatasetListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeDatasetListRequest(Builder builder) {
         super(builder);
@@ -85,7 +90,7 @@ public class DescribeDatasetListRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -94,7 +99,7 @@ public class DescribeDatasetListRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -155,9 +160,9 @@ public class DescribeDatasetListRequest extends Request {
         }
 
         /**
-         * <p>指定规则所适用的对象标签，可设置多个</p>
+         * <p>Specify the object labels to which the rule applies, and multiple labels can be set</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -215,7 +220,7 @@ public class DescribeDatasetListRequest extends Request {
             private String value; 
 
             /**
-             * <p>标签键</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -226,7 +231,7 @@ public class DescribeDatasetListRequest extends Request {
             }
 
             /**
-             * <p>标签值</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>

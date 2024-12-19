@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -293,7 +298,7 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
      */
     public static class ApiSignatures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiSignatureItem")
-        private java.util.List < ApiSignatureItem> apiSignatureItem;
+        private java.util.List<ApiSignatureItem> apiSignatureItem;
 
         private ApiSignatures(Builder builder) {
             this.apiSignatureItem = builder.apiSignatureItem;
@@ -310,17 +315,17 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
         /**
          * @return apiSignatureItem
          */
-        public java.util.List < ApiSignatureItem> getApiSignatureItem() {
+        public java.util.List<ApiSignatureItem> getApiSignatureItem() {
             return this.apiSignatureItem;
         }
 
         public static final class Builder {
-            private java.util.List < ApiSignatureItem> apiSignatureItem; 
+            private java.util.List<ApiSignatureItem> apiSignatureItem; 
 
             /**
              * ApiSignatureItem.
              */
-            public Builder apiSignatureItem(java.util.List < ApiSignatureItem> apiSignatureItem) {
+            public Builder apiSignatureItem(java.util.List<ApiSignatureItem> apiSignatureItem) {
                 this.apiSignatureItem = apiSignatureItem;
                 return this;
             }

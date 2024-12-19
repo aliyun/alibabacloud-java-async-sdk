@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,10 @@ public class ListPrivateDNSRequest extends Request {
         } 
 
         /**
-         * IntranetDomain.
+         * <p>The internal domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api.demo.com</p>
          */
         public Builder intranetDomain(String intranetDomain) {
             this.putQueryParameter("IntranetDomain", intranetDomain);
@@ -100,7 +108,14 @@ public class ListPrivateDNSRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The internal domain name resolution type. Valid values:</p>
+         * <ul>
+         * <li>VPC: resolution for virtual private cloud (VPC) access authorizations. A resolution of this type can be bound only to traditional dedicated instances.</li>
+         * <li>A: resolution that supports A records. A resolution of this type can be bound only to VPC integration dedicated instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

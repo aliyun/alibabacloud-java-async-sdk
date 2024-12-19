@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -297,7 +302,7 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
      */
     public static class ApiAbolishResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiAbolishResult")
-        private java.util.List < ApiAbolishResult> apiAbolishResult;
+        private java.util.List<ApiAbolishResult> apiAbolishResult;
 
         private ApiAbolishResults(Builder builder) {
             this.apiAbolishResult = builder.apiAbolishResult;
@@ -314,17 +319,17 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
         /**
          * @return apiAbolishResult
          */
-        public java.util.List < ApiAbolishResult> getApiAbolishResult() {
+        public java.util.List<ApiAbolishResult> getApiAbolishResult() {
             return this.apiAbolishResult;
         }
 
         public static final class Builder {
-            private java.util.List < ApiAbolishResult> apiAbolishResult; 
+            private java.util.List<ApiAbolishResult> apiAbolishResult; 
 
             /**
              * ApiAbolishResult.
              */
-            public Builder apiAbolishResult(java.util.List < ApiAbolishResult> apiAbolishResult) {
+            public Builder apiAbolishResult(java.util.List<ApiAbolishResult> apiAbolishResult) {
                 this.apiAbolishResult = apiAbolishResult;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class ModifyAppRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ModifyAppRequest(Builder builder) {
         super(builder);
@@ -98,7 +103,7 @@ public class ModifyAppRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -108,7 +113,7 @@ public class ModifyAppRequest extends Request {
         private String description; 
         private String extend; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -125,7 +130,7 @@ public class ModifyAppRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The ID of the app.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,8 +143,8 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * <p>The ID must be 4 to 26 characters in length and can contain letters, digits, and underscores (_). It must start with a letter.</p>
-         * <p>If you do not want to modify the existing value, do not specify this parameter.</p>
+         * <p>The value must be 4 to 26 characters in length and can contain letters, digits, and underscores (_). It must start with a letter.</p>
+         * <p>This parameter is required only when you want to modify the value.</p>
          * 
          * <strong>example:</strong>
          * <p>jiedian_pord</p>
@@ -151,8 +156,8 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * <p>The description of the application. The description can be up to 180 characters in length.</p>
-         * <p>If you do not want to modify the existing value, do not specify this parameter.</p>
+         * <p>The description of the app. The description can contain a maximum of 180 characters in length.</p>
+         * <p>This parameter is required only when you want to modify the value.</p>
          * 
          * <strong>example:</strong>
          * <p>modidyTest</p>
@@ -164,7 +169,10 @@ public class ModifyAppRequest extends Request {
         }
 
         /**
-         * Extend.
+         * <p>扩展信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110461946884</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -187,7 +195,7 @@ public class ModifyAppRequest extends Request {
          * <strong>example:</strong>
          * <p>Key， Value</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -246,8 +254,8 @@ public class ModifyAppRequest extends Request {
             private String value; 
 
             /**
-             * <p>The key of the tag.</p>
-             * <p>Valid values of n: <code>[1, 20]</code>.</p>
+             * <p>The value of the tag.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -260,7 +268,7 @@ public class ModifyAppRequest extends Request {
 
             /**
              * <p>The value of the tag.</p>
-             * <p>Valid values of n: <code>[1, 20]</code>.</p>
+             * <p>N can be an integer from 1 to 20.``</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -266,7 +271,7 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
      */
     public static class ApiUpdateVpcInfoResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiUpdateVpcInfoResult")
-        private java.util.List < ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult;
+        private java.util.List<ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult;
 
         private ApiUpdateVpcInfoResults(Builder builder) {
             this.apiUpdateVpcInfoResult = builder.apiUpdateVpcInfoResult;
@@ -283,17 +288,17 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
         /**
          * @return apiUpdateVpcInfoResult
          */
-        public java.util.List < ApiUpdateVpcInfoResult> getApiUpdateVpcInfoResult() {
+        public java.util.List<ApiUpdateVpcInfoResult> getApiUpdateVpcInfoResult() {
             return this.apiUpdateVpcInfoResult;
         }
 
         public static final class Builder {
-            private java.util.List < ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult; 
+            private java.util.List<ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult; 
 
             /**
              * ApiUpdateVpcInfoResult.
              */
-            public Builder apiUpdateVpcInfoResult(java.util.List < ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult) {
+            public Builder apiUpdateVpcInfoResult(java.util.List<ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult) {
                 this.apiUpdateVpcInfoResult = apiUpdateVpcInfoResult;
                 return this;
             }

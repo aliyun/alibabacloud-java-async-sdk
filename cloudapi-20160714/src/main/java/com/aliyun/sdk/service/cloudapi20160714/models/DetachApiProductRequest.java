@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class DetachApiProductRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Apis")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Apis> apis;
+    private java.util.List<Apis> apis;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
@@ -56,7 +61,7 @@ public class DetachApiProductRequest extends Request {
     /**
      * @return apis
      */
-    public java.util.List < Apis> getApis() {
+    public java.util.List<Apis> getApis() {
         return this.apis;
     }
 
@@ -69,7 +74,7 @@ public class DetachApiProductRequest extends Request {
 
     public static final class Builder extends Request.Builder<DetachApiProductRequest, Builder> {
         private String apiProductId; 
-        private java.util.List < Apis> apis; 
+        private java.util.List<Apis> apis; 
         private String securityToken; 
 
         private Builder() {
@@ -100,7 +105,7 @@ public class DetachApiProductRequest extends Request {
          * <p>The APIs that you want to detach from the API product.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder apis(java.util.List < Apis> apis) {
+        public Builder apis(java.util.List<Apis> apis) {
             this.putQueryParameter("Apis", apis);
             this.apis = apis;
             return this;

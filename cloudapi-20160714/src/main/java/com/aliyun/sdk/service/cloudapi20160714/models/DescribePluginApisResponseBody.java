@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -413,7 +418,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
      */
     public static class ApiSummarys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiPluginSummary")
-        private java.util.List < ApiPluginSummary> apiPluginSummary;
+        private java.util.List<ApiPluginSummary> apiPluginSummary;
 
         private ApiSummarys(Builder builder) {
             this.apiPluginSummary = builder.apiPluginSummary;
@@ -430,17 +435,17 @@ public class DescribePluginApisResponseBody extends TeaModel {
         /**
          * @return apiPluginSummary
          */
-        public java.util.List < ApiPluginSummary> getApiPluginSummary() {
+        public java.util.List<ApiPluginSummary> getApiPluginSummary() {
             return this.apiPluginSummary;
         }
 
         public static final class Builder {
-            private java.util.List < ApiPluginSummary> apiPluginSummary; 
+            private java.util.List<ApiPluginSummary> apiPluginSummary; 
 
             /**
              * ApiPluginSummary.
              */
-            public Builder apiPluginSummary(java.util.List < ApiPluginSummary> apiPluginSummary) {
+            public Builder apiPluginSummary(java.util.List<ApiPluginSummary> apiPluginSummary) {
                 this.apiPluginSummary = apiPluginSummary;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -54,7 +59,7 @@ public class DescribeDeployedApisRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeDeployedApisRequest(Builder builder) {
         super(builder);
@@ -157,7 +162,7 @@ public class DescribeDeployedApisRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -172,7 +177,7 @@ public class DescribeDeployedApisRequest extends Request {
         private Integer pageSize; 
         private String securityToken; 
         private String stageName; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -206,7 +211,10 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * ApiMethod.
+         * <p>The HTTP method of the API request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         public Builder apiMethod(String apiMethod) {
             this.putQueryParameter("ApiMethod", apiMethod);
@@ -227,7 +235,10 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * ApiPath.
+         * <p>The request path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/st4</p>
          */
         public Builder apiPath(String apiPath) {
             this.putQueryParameter("ApiPath", apiPath);
@@ -311,7 +322,7 @@ public class DescribeDeployedApisRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

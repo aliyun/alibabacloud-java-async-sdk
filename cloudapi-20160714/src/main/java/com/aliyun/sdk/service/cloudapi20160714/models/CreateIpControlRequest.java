@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class CreateIpControlRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpControlPolicys")
-    private java.util.List < IpControlPolicys> ipControlPolicys;
+    private java.util.List<IpControlPolicys> ipControlPolicys;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpControlType")
@@ -73,7 +78,7 @@ public class CreateIpControlRequest extends Request {
     /**
      * @return ipControlPolicys
      */
-    public java.util.List < IpControlPolicys> getIpControlPolicys() {
+    public java.util.List<IpControlPolicys> getIpControlPolicys() {
         return this.ipControlPolicys;
     }
 
@@ -94,7 +99,7 @@ public class CreateIpControlRequest extends Request {
     public static final class Builder extends Request.Builder<CreateIpControlRequest, Builder> {
         private String description; 
         private String ipControlName; 
-        private java.util.List < IpControlPolicys> ipControlPolicys; 
+        private java.util.List<IpControlPolicys> ipControlPolicys; 
         private String ipControlType; 
         private String securityToken; 
 
@@ -139,7 +144,7 @@ public class CreateIpControlRequest extends Request {
         /**
          * <p>The information about the policies. The information is an array of ipcontrolpolicys data.</p>
          */
-        public Builder ipControlPolicys(java.util.List < IpControlPolicys> ipControlPolicys) {
+        public Builder ipControlPolicys(java.util.List<IpControlPolicys> ipControlPolicys) {
             this.putQueryParameter("IpControlPolicys", ipControlPolicys);
             this.ipControlPolicys = ipControlPolicys;
             return this;

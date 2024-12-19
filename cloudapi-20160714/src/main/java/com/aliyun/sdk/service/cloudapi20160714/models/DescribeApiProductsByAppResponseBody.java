@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -201,7 +206,7 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
      */
     public static class ApiProductInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiProductInfo")
-        private java.util.List < ApiProductInfo> apiProductInfo;
+        private java.util.List<ApiProductInfo> apiProductInfo;
 
         private ApiProductInfoList(Builder builder) {
             this.apiProductInfo = builder.apiProductInfo;
@@ -218,17 +223,17 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
         /**
          * @return apiProductInfo
          */
-        public java.util.List < ApiProductInfo> getApiProductInfo() {
+        public java.util.List<ApiProductInfo> getApiProductInfo() {
             return this.apiProductInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ApiProductInfo> apiProductInfo; 
+            private java.util.List<ApiProductInfo> apiProductInfo; 
 
             /**
              * ApiProductInfo.
              */
-            public Builder apiProductInfo(java.util.List < ApiProductInfo> apiProductInfo) {
+            public Builder apiProductInfo(java.util.List<ApiProductInfo> apiProductInfo) {
                 this.apiProductInfo = apiProductInfo;
                 return this;
             }

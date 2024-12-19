@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -175,7 +180,7 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
      */
     public static class CallDownloads extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorItem")
-        private java.util.List < MonitorItem> monitorItem;
+        private java.util.List<MonitorItem> monitorItem;
 
         private CallDownloads(Builder builder) {
             this.monitorItem = builder.monitorItem;
@@ -192,17 +197,17 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
         /**
          * @return monitorItem
          */
-        public java.util.List < MonitorItem> getMonitorItem() {
+        public java.util.List<MonitorItem> getMonitorItem() {
             return this.monitorItem;
         }
 
         public static final class Builder {
-            private java.util.List < MonitorItem> monitorItem; 
+            private java.util.List<MonitorItem> monitorItem; 
 
             /**
              * MonitorItem.
              */
-            public Builder monitorItem(java.util.List < MonitorItem> monitorItem) {
+            public Builder monitorItem(java.util.List<MonitorItem> monitorItem) {
                 this.monitorItem = monitorItem;
                 return this;
             }
@@ -295,7 +300,7 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
      */
     public static class CallUploads extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorItem")
-        private java.util.List < CallUploadsMonitorItem> monitorItem;
+        private java.util.List<CallUploadsMonitorItem> monitorItem;
 
         private CallUploads(Builder builder) {
             this.monitorItem = builder.monitorItem;
@@ -312,17 +317,17 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
         /**
          * @return monitorItem
          */
-        public java.util.List < CallUploadsMonitorItem> getMonitorItem() {
+        public java.util.List<CallUploadsMonitorItem> getMonitorItem() {
             return this.monitorItem;
         }
 
         public static final class Builder {
-            private java.util.List < CallUploadsMonitorItem> monitorItem; 
+            private java.util.List<CallUploadsMonitorItem> monitorItem; 
 
             /**
              * MonitorItem.
              */
-            public Builder monitorItem(java.util.List < CallUploadsMonitorItem> monitorItem) {
+            public Builder monitorItem(java.util.List<CallUploadsMonitorItem> monitorItem) {
                 this.monitorItem = monitorItem;
                 return this;
             }

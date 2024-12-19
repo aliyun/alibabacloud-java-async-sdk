@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -53,7 +58,7 @@ public class CreateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Token")
@@ -70,7 +75,7 @@ public class CreateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneVSwitchSecurityGroup")
-    private java.util.List < ZoneVSwitchSecurityGroup> zoneVSwitchSecurityGroup;
+    private java.util.List<ZoneVSwitchSecurityGroup> zoneVSwitchSecurityGroup;
 
     private CreateInstanceRequest(Builder builder) {
         super(builder);
@@ -169,7 +174,7 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -197,7 +202,7 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return zoneVSwitchSecurityGroup
      */
-    public java.util.List < ZoneVSwitchSecurityGroup> getZoneVSwitchSecurityGroup() {
+    public java.util.List<ZoneVSwitchSecurityGroup> getZoneVSwitchSecurityGroup() {
         return this.zoneVSwitchSecurityGroup;
     }
 
@@ -211,11 +216,11 @@ public class CreateInstanceRequest extends Request {
         private String instanceSpec; 
         private String instanceType; 
         private String pricingCycle; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String token; 
         private String userVpcId; 
         private String zoneId; 
-        private java.util.List < ZoneVSwitchSecurityGroup> zoneVSwitchSecurityGroup; 
+        private java.util.List<ZoneVSwitchSecurityGroup> zoneVSwitchSecurityGroup; 
 
         private Builder() {
             super();
@@ -389,7 +394,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The tags that you want to add to the instance.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -441,7 +446,7 @@ public class CreateInstanceRequest extends Request {
          * <p> This parameter is in invitational preview and not available for public use.</p>
          * </blockquote>
          */
-        public Builder zoneVSwitchSecurityGroup(java.util.List < ZoneVSwitchSecurityGroup> zoneVSwitchSecurityGroup) {
+        public Builder zoneVSwitchSecurityGroup(java.util.List<ZoneVSwitchSecurityGroup> zoneVSwitchSecurityGroup) {
             this.putQueryParameter("ZoneVSwitchSecurityGroup", zoneVSwitchSecurityGroup);
             this.zoneVSwitchSecurityGroup = zoneVSwitchSecurityGroup;
             return this;

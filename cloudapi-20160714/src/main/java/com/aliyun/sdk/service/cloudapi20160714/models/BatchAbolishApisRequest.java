@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class BatchAbolishApisRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Api")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Api> api;
+    private java.util.List<Api> api;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
@@ -43,7 +48,7 @@ public class BatchAbolishApisRequest extends Request {
     /**
      * @return api
      */
-    public java.util.List < Api> getApi() {
+    public java.util.List<Api> getApi() {
         return this.api;
     }
 
@@ -55,7 +60,7 @@ public class BatchAbolishApisRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchAbolishApisRequest, Builder> {
-        private java.util.List < Api> api; 
+        private java.util.List<Api> api; 
         private String securityToken; 
 
         private Builder() {
@@ -72,7 +77,7 @@ public class BatchAbolishApisRequest extends Request {
          * <p>The APIs that you want to operate.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder api(java.util.List < Api> api) {
+        public Builder api(java.util.List<Api> api) {
             this.putQueryParameter("Api", api);
             this.api = api;
             return this;

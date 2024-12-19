@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -361,7 +366,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
      */
     public static class ApiResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiResult")
-        private java.util.List < ApiResult> apiResult;
+        private java.util.List<ApiResult> apiResult;
 
         private ApiResults(Builder builder) {
             this.apiResult = builder.apiResult;
@@ -378,17 +383,17 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         /**
          * @return apiResult
          */
-        public java.util.List < ApiResult> getApiResult() {
+        public java.util.List<ApiResult> getApiResult() {
             return this.apiResult;
         }
 
         public static final class Builder {
-            private java.util.List < ApiResult> apiResult; 
+            private java.util.List<ApiResult> apiResult; 
 
             /**
              * ApiResult.
              */
-            public Builder apiResult(java.util.List < ApiResult> apiResult) {
+            public Builder apiResult(java.util.List<ApiResult> apiResult) {
                 this.apiResult = apiResult;
                 return this;
             }
@@ -557,7 +562,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
      */
     public static class ModelResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModelResult")
-        private java.util.List < ModelResult> modelResult;
+        private java.util.List<ModelResult> modelResult;
 
         private ModelResults(Builder builder) {
             this.modelResult = builder.modelResult;
@@ -574,17 +579,17 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
         /**
          * @return modelResult
          */
-        public java.util.List < ModelResult> getModelResult() {
+        public java.util.List<ModelResult> getModelResult() {
             return this.modelResult;
         }
 
         public static final class Builder {
-            private java.util.List < ModelResult> modelResult; 
+            private java.util.List<ModelResult> modelResult; 
 
             /**
              * ModelResult.
              */
-            public Builder modelResult(java.util.List < ModelResult> modelResult) {
+            public Builder modelResult(java.util.List<ModelResult> modelResult) {
                 this.modelResult = modelResult;
                 return this;
             }

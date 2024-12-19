@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ImportSwaggerRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GlobalCondition")
-    private java.util.Map < String, ? > globalCondition;
+    private java.util.Map<String, ?> globalCondition;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
@@ -92,7 +97,7 @@ public class ImportSwaggerRequest extends Request {
     /**
      * @return globalCondition
      */
-    public java.util.Map < String, ? > getGlobalCondition() {
+    public java.util.Map<String, ?> getGlobalCondition() {
         return this.globalCondition;
     }
 
@@ -121,7 +126,7 @@ public class ImportSwaggerRequest extends Request {
         private String data; 
         private String dataFormat; 
         private Boolean dryRun; 
-        private java.util.Map < String, ? > globalCondition; 
+        private java.util.Map<String, ?> globalCondition; 
         private String groupId; 
         private Boolean overwrite; 
         private String securityToken; 
@@ -189,7 +194,7 @@ public class ImportSwaggerRequest extends Request {
          * <strong>example:</strong>
          * <p>{}</p>
          */
-        public Builder globalCondition(java.util.Map < String, ? > globalCondition) {
+        public Builder globalCondition(java.util.Map<String, ?> globalCondition) {
             String globalConditionShrink = shrink(globalCondition, "GlobalCondition", "json");
             this.putQueryParameter("GlobalCondition", globalConditionShrink);
             this.globalCondition = globalCondition;

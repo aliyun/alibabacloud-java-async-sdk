@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
      */
     public static class TrafficControlItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrafficControlItem")
-        private java.util.List < TrafficControlItem> trafficControlItem;
+        private java.util.List<TrafficControlItem> trafficControlItem;
 
         private TrafficControlItems(Builder builder) {
             this.trafficControlItem = builder.trafficControlItem;
@@ -195,17 +200,17 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
         /**
          * @return trafficControlItem
          */
-        public java.util.List < TrafficControlItem> getTrafficControlItem() {
+        public java.util.List<TrafficControlItem> getTrafficControlItem() {
             return this.trafficControlItem;
         }
 
         public static final class Builder {
-            private java.util.List < TrafficControlItem> trafficControlItem; 
+            private java.util.List<TrafficControlItem> trafficControlItem; 
 
             /**
              * TrafficControlItem.
              */
-            public Builder trafficControlItem(java.util.List < TrafficControlItem> trafficControlItem) {
+            public Builder trafficControlItem(java.util.List<TrafficControlItem> trafficControlItem) {
                 this.trafficControlItem = trafficControlItem;
                 return this;
             }

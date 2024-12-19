@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -974,7 +979,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
      */
     public static class InstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
-        private java.util.List < Instance> instance;
+        private java.util.List<Instance> instance;
 
         private InstanceList(Builder builder) {
             this.instance = builder.instance;
@@ -991,17 +996,17 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < Instance> instance; 
+            private java.util.List<Instance> instance; 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }

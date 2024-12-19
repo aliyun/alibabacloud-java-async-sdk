@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -390,7 +395,7 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
      */
     public static class ApiInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiInfo")
-        private java.util.List < ApiInfo> apiInfo;
+        private java.util.List<ApiInfo> apiInfo;
 
         private ApiInfoList(Builder builder) {
             this.apiInfo = builder.apiInfo;
@@ -407,17 +412,17 @@ public class DescribeApiProductApisResponseBody extends TeaModel {
         /**
          * @return apiInfo
          */
-        public java.util.List < ApiInfo> getApiInfo() {
+        public java.util.List<ApiInfo> getApiInfo() {
             return this.apiInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ApiInfo> apiInfo; 
+            private java.util.List<ApiInfo> apiInfo; 
 
             /**
              * ApiInfo.
              */
-            public Builder apiInfo(java.util.List < ApiInfo> apiInfo) {
+            public Builder apiInfo(java.util.List<ApiInfo> apiInfo) {
                 this.apiInfo = apiInfo;
                 return this;
             }

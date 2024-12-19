@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -251,7 +256,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
      */
     public static class Acls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Acl")
-        private java.util.List < Acl> acl;
+        private java.util.List<Acl> acl;
 
         private Acls(Builder builder) {
             this.acl = builder.acl;
@@ -268,17 +273,17 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         /**
          * @return acl
          */
-        public java.util.List < Acl> getAcl() {
+        public java.util.List<Acl> getAcl() {
             return this.acl;
         }
 
         public static final class Builder {
-            private java.util.List < Acl> acl; 
+            private java.util.List<Acl> acl; 
 
             /**
              * Acl.
              */
-            public Builder acl(java.util.List < Acl> acl) {
+            public Builder acl(java.util.List<Acl> acl) {
                 this.acl = acl;
                 return this;
             }

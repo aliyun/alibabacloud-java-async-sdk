@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,6 +35,10 @@ public class SetDomainCertificateRequest extends Request {
     private String certificatePrivateKey;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientCertSDnPassThrough")
+    private Boolean clientCertSDnPassThrough;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
@@ -44,6 +53,10 @@ public class SetDomainCertificateRequest extends Request {
     private String securityToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SslOcspEnable")
+    private Boolean sslOcspEnable;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SslVerifyDepth")
     private String sslVerifyDepth;
 
@@ -53,9 +66,11 @@ public class SetDomainCertificateRequest extends Request {
         this.certificateBody = builder.certificateBody;
         this.certificateName = builder.certificateName;
         this.certificatePrivateKey = builder.certificatePrivateKey;
+        this.clientCertSDnPassThrough = builder.clientCertSDnPassThrough;
         this.domainName = builder.domainName;
         this.groupId = builder.groupId;
         this.securityToken = builder.securityToken;
+        this.sslOcspEnable = builder.sslOcspEnable;
         this.sslVerifyDepth = builder.sslVerifyDepth;
     }
 
@@ -101,6 +116,13 @@ public class SetDomainCertificateRequest extends Request {
     }
 
     /**
+     * @return clientCertSDnPassThrough
+     */
+    public Boolean getClientCertSDnPassThrough() {
+        return this.clientCertSDnPassThrough;
+    }
+
+    /**
      * @return domainName
      */
     public String getDomainName() {
@@ -122,6 +144,13 @@ public class SetDomainCertificateRequest extends Request {
     }
 
     /**
+     * @return sslOcspEnable
+     */
+    public Boolean getSslOcspEnable() {
+        return this.sslOcspEnable;
+    }
+
+    /**
      * @return sslVerifyDepth
      */
     public String getSslVerifyDepth() {
@@ -133,9 +162,11 @@ public class SetDomainCertificateRequest extends Request {
         private String certificateBody; 
         private String certificateName; 
         private String certificatePrivateKey; 
+        private Boolean clientCertSDnPassThrough; 
         private String domainName; 
         private String groupId; 
         private String securityToken; 
+        private Boolean sslOcspEnable; 
         private String sslVerifyDepth; 
 
         private Builder() {
@@ -148,9 +179,11 @@ public class SetDomainCertificateRequest extends Request {
             this.certificateBody = request.certificateBody;
             this.certificateName = request.certificateName;
             this.certificatePrivateKey = request.certificatePrivateKey;
+            this.clientCertSDnPassThrough = request.clientCertSDnPassThrough;
             this.domainName = request.domainName;
             this.groupId = request.groupId;
             this.securityToken = request.securityToken;
+            this.sslOcspEnable = request.sslOcspEnable;
             this.sslVerifyDepth = request.sslVerifyDepth;
         } 
 
@@ -204,6 +237,18 @@ public class SetDomainCertificateRequest extends Request {
         }
 
         /**
+         * <p>If pass ssl_client_s_dn of the cert to backend header &quot;X-Client-S-Dn&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
+        public Builder clientCertSDnPassThrough(Boolean clientCertSDnPassThrough) {
+            this.putQueryParameter("ClientCertSDnPassThrough", clientCertSDnPassThrough);
+            this.clientCertSDnPassThrough = clientCertSDnPassThrough;
+            return this;
+        }
+
+        /**
          * <p>The custom domain name.</p>
          * <p>This parameter is required.</p>
          * 
@@ -235,6 +280,18 @@ public class SetDomainCertificateRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * <p>If enable ssl OCSP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
+        public Builder sslOcspEnable(Boolean sslOcspEnable) {
+            this.putQueryParameter("SslOcspEnable", sslOcspEnable);
+            this.sslOcspEnable = sslOcspEnable;
             return this;
         }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagInfo")
-        private java.util.List < TagInfo> tagInfo;
+        private java.util.List<TagInfo> tagInfo;
 
         private Tags(Builder builder) {
             this.tagInfo = builder.tagInfo;
@@ -241,17 +246,17 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         /**
          * @return tagInfo
          */
-        public java.util.List < TagInfo> getTagInfo() {
+        public java.util.List<TagInfo> getTagInfo() {
             return this.tagInfo;
         }
 
         public static final class Builder {
-            private java.util.List < TagInfo> tagInfo; 
+            private java.util.List<TagInfo> tagInfo; 
 
             /**
              * TagInfo.
              */
-            public Builder tagInfo(java.util.List < TagInfo> tagInfo) {
+            public Builder tagInfo(java.util.List<TagInfo> tagInfo) {
                 this.tagInfo = tagInfo;
                 return this;
             }
@@ -648,7 +653,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
      */
     public static class ApiGroupAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiGroupAttribute")
-        private java.util.List < ApiGroupAttribute> apiGroupAttribute;
+        private java.util.List<ApiGroupAttribute> apiGroupAttribute;
 
         private ApiGroupAttributes(Builder builder) {
             this.apiGroupAttribute = builder.apiGroupAttribute;
@@ -665,17 +670,17 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
         /**
          * @return apiGroupAttribute
          */
-        public java.util.List < ApiGroupAttribute> getApiGroupAttribute() {
+        public java.util.List<ApiGroupAttribute> getApiGroupAttribute() {
             return this.apiGroupAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < ApiGroupAttribute> apiGroupAttribute; 
+            private java.util.List<ApiGroupAttribute> apiGroupAttribute; 
 
             /**
              * ApiGroupAttribute.
              */
-            public Builder apiGroupAttribute(java.util.List < ApiGroupAttribute> apiGroupAttribute) {
+            public Builder apiGroupAttribute(java.util.List<ApiGroupAttribute> apiGroupAttribute) {
                 this.apiGroupAttribute = apiGroupAttribute;
                 return this;
             }

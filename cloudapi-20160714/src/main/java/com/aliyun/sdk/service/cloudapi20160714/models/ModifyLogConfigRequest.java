@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -121,7 +126,18 @@ public class ModifyLogConfigRequest extends Request {
         }
 
         /**
-         * LogType.
+         * <p>The log type. Valid values:</p>
+         * <ul>
+         * <li><strong>log</strong>: other logs</li>
+         * <li><strong>survey</strong>: inspection logs</li>
+         * </ul>
+         * <p>Enumeration value:</p>
+         * <ul>
+         * <li>PROVIDER</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROVIDER</p>
          */
         public Builder logType(String logType) {
             this.putQueryParameter("LogType", logType);
@@ -139,6 +155,7 @@ public class ModifyLogConfigRequest extends Request {
         }
 
         /**
+         * <p>The name of the Logstore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +168,7 @@ public class ModifyLogConfigRequest extends Request {
         }
 
         /**
+         * <p>The name of the Log Service project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

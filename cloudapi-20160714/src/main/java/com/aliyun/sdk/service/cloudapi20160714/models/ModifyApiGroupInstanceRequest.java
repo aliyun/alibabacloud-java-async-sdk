@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class ModifyApiGroupInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetInstanceId")
@@ -80,7 +85,7 @@ public class ModifyApiGroupInstanceRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -95,7 +100,7 @@ public class ModifyApiGroupInstanceRequest extends Request {
         private String groupId; 
         private String remark; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String targetInstanceId; 
 
         private Builder() {
@@ -112,6 +117,7 @@ public class ModifyApiGroupInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the API group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +130,10 @@ public class ModifyApiGroupInstanceRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>migrate</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -142,15 +151,16 @@ public class ModifyApiGroupInstanceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag of objects that match the rule. You can specify multiple tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
+         * <p>The ID of the instance to which you want to migrate the API group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,6 +226,7 @@ public class ModifyApiGroupInstanceRequest extends Request {
             private String value; 
 
             /**
+             * <p>The tag key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -227,6 +238,7 @@ public class ModifyApiGroupInstanceRequest extends Request {
             }
 
             /**
+             * <p>The tag value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

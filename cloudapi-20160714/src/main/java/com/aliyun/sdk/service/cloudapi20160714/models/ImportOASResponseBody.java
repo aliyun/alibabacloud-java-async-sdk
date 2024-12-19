@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -205,7 +210,7 @@ public class ImportOASResponseBody extends TeaModel {
      */
     public static class ErrorMessages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
-        private java.util.List < String > errorMessage;
+        private java.util.List<String> errorMessage;
 
         private ErrorMessages(Builder builder) {
             this.errorMessage = builder.errorMessage;
@@ -222,17 +227,17 @@ public class ImportOASResponseBody extends TeaModel {
         /**
          * @return errorMessage
          */
-        public java.util.List < String > getErrorMessage() {
+        public java.util.List<String> getErrorMessage() {
             return this.errorMessage;
         }
 
         public static final class Builder {
-            private java.util.List < String > errorMessage; 
+            private java.util.List<String> errorMessage; 
 
             /**
              * ErrorMessage.
              */
-            public Builder errorMessage(java.util.List < String > errorMessage) {
+            public Builder errorMessage(java.util.List<String> errorMessage) {
                 this.errorMessage = errorMessage;
                 return this;
             }
@@ -348,7 +353,7 @@ public class ImportOASResponseBody extends TeaModel {
      */
     public static class FailedApis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedApi")
-        private java.util.List < FailedApi> failedApi;
+        private java.util.List<FailedApi> failedApi;
 
         private FailedApis(Builder builder) {
             this.failedApi = builder.failedApi;
@@ -365,17 +370,17 @@ public class ImportOASResponseBody extends TeaModel {
         /**
          * @return failedApi
          */
-        public java.util.List < FailedApi> getFailedApi() {
+        public java.util.List<FailedApi> getFailedApi() {
             return this.failedApi;
         }
 
         public static final class Builder {
-            private java.util.List < FailedApi> failedApi; 
+            private java.util.List<FailedApi> failedApi; 
 
             /**
              * FailedApi.
              */
-            public Builder failedApi(java.util.List < FailedApi> failedApi) {
+            public Builder failedApi(java.util.List<FailedApi> failedApi) {
                 this.failedApi = failedApi;
                 return this;
             }
@@ -491,7 +496,7 @@ public class ImportOASResponseBody extends TeaModel {
      */
     public static class FailedModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedModel")
-        private java.util.List < FailedModel> failedModel;
+        private java.util.List<FailedModel> failedModel;
 
         private FailedModels(Builder builder) {
             this.failedModel = builder.failedModel;
@@ -508,17 +513,17 @@ public class ImportOASResponseBody extends TeaModel {
         /**
          * @return failedModel
          */
-        public java.util.List < FailedModel> getFailedModel() {
+        public java.util.List<FailedModel> getFailedModel() {
             return this.failedModel;
         }
 
         public static final class Builder {
-            private java.util.List < FailedModel> failedModel; 
+            private java.util.List<FailedModel> failedModel; 
 
             /**
              * FailedModel.
              */
-            public Builder failedModel(java.util.List < FailedModel> failedModel) {
+            public Builder failedModel(java.util.List<FailedModel> failedModel) {
                 this.failedModel = failedModel;
                 return this;
             }
@@ -657,7 +662,7 @@ public class ImportOASResponseBody extends TeaModel {
      */
     public static class SuccessApis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SuccessApi")
-        private java.util.List < SuccessApi> successApi;
+        private java.util.List<SuccessApi> successApi;
 
         private SuccessApis(Builder builder) {
             this.successApi = builder.successApi;
@@ -674,17 +679,17 @@ public class ImportOASResponseBody extends TeaModel {
         /**
          * @return successApi
          */
-        public java.util.List < SuccessApi> getSuccessApi() {
+        public java.util.List<SuccessApi> getSuccessApi() {
             return this.successApi;
         }
 
         public static final class Builder {
-            private java.util.List < SuccessApi> successApi; 
+            private java.util.List<SuccessApi> successApi; 
 
             /**
              * SuccessApi.
              */
-            public Builder successApi(java.util.List < SuccessApi> successApi) {
+            public Builder successApi(java.util.List<SuccessApi> successApi) {
                 this.successApi = successApi;
                 return this;
             }
@@ -823,7 +828,7 @@ public class ImportOASResponseBody extends TeaModel {
      */
     public static class SuccessModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SuccessModel")
-        private java.util.List < SuccessModel> successModel;
+        private java.util.List<SuccessModel> successModel;
 
         private SuccessModels(Builder builder) {
             this.successModel = builder.successModel;
@@ -840,17 +845,17 @@ public class ImportOASResponseBody extends TeaModel {
         /**
          * @return successModel
          */
-        public java.util.List < SuccessModel> getSuccessModel() {
+        public java.util.List<SuccessModel> getSuccessModel() {
             return this.successModel;
         }
 
         public static final class Builder {
-            private java.util.List < SuccessModel> successModel; 
+            private java.util.List<SuccessModel> successModel; 
 
             /**
              * SuccessModel.
              */
-            public Builder successModel(java.util.List < SuccessModel> successModel) {
+            public Builder successModel(java.util.List<SuccessModel> successModel) {
                 this.successModel = successModel;
                 return this;
             }
@@ -870,7 +875,7 @@ public class ImportOASResponseBody extends TeaModel {
      */
     public static class WarningMessages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WarningMessage")
-        private java.util.List < String > warningMessage;
+        private java.util.List<String> warningMessage;
 
         private WarningMessages(Builder builder) {
             this.warningMessage = builder.warningMessage;
@@ -887,17 +892,17 @@ public class ImportOASResponseBody extends TeaModel {
         /**
          * @return warningMessage
          */
-        public java.util.List < String > getWarningMessage() {
+        public java.util.List<String> getWarningMessage() {
             return this.warningMessage;
         }
 
         public static final class Builder {
-            private java.util.List < String > warningMessage; 
+            private java.util.List<String> warningMessage; 
 
             /**
              * WarningMessage.
              */
-            public Builder warningMessage(java.util.List < String > warningMessage) {
+            public Builder warningMessage(java.util.List<String> warningMessage) {
                 this.warningMessage = warningMessage;
                 return this;
             }

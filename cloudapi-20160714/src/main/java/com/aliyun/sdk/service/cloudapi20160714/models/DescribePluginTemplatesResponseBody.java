@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
      */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Template")
-        private java.util.List < Template> template;
+        private java.util.List<Template> template;
 
         private Templates(Builder builder) {
             this.template = builder.template;
@@ -241,17 +246,17 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
         /**
          * @return template
          */
-        public java.util.List < Template> getTemplate() {
+        public java.util.List<Template> getTemplate() {
             return this.template;
         }
 
         public static final class Builder {
-            private java.util.List < Template> template; 
+            private java.util.List<Template> template; 
 
             /**
              * Template.
              */
-            public Builder template(java.util.List < Template> template) {
+            public Builder template(java.util.List<Template> template) {
                 this.template = template;
                 return this;
             }

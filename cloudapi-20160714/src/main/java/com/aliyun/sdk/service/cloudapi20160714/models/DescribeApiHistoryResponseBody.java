@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1068,7 +1073,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
      */
     public static class ConstantParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConstantParameter")
-        private java.util.List < ConstantParameter> constantParameter;
+        private java.util.List<ConstantParameter> constantParameter;
 
         private ConstantParameters(Builder builder) {
             this.constantParameter = builder.constantParameter;
@@ -1085,17 +1090,17 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         /**
          * @return constantParameter
          */
-        public java.util.List < ConstantParameter> getConstantParameter() {
+        public java.util.List<ConstantParameter> getConstantParameter() {
             return this.constantParameter;
         }
 
         public static final class Builder {
-            private java.util.List < ConstantParameter> constantParameter; 
+            private java.util.List<ConstantParameter> constantParameter; 
 
             /**
              * ConstantParameter.
              */
-            public Builder constantParameter(java.util.List < ConstantParameter> constantParameter) {
+            public Builder constantParameter(java.util.List<ConstantParameter> constantParameter) {
                 this.constantParameter = constantParameter;
                 return this;
             }
@@ -1257,7 +1262,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
      */
     public static class CustomSystemParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomSystemParameter")
-        private java.util.List < CustomSystemParameter> customSystemParameter;
+        private java.util.List<CustomSystemParameter> customSystemParameter;
 
         private CustomSystemParameters(Builder builder) {
             this.customSystemParameter = builder.customSystemParameter;
@@ -1274,17 +1279,17 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         /**
          * @return customSystemParameter
          */
-        public java.util.List < CustomSystemParameter> getCustomSystemParameter() {
+        public java.util.List<CustomSystemParameter> getCustomSystemParameter() {
             return this.customSystemParameter;
         }
 
         public static final class Builder {
-            private java.util.List < CustomSystemParameter> customSystemParameter; 
+            private java.util.List<CustomSystemParameter> customSystemParameter; 
 
             /**
              * CustomSystemParameter.
              */
-            public Builder customSystemParameter(java.util.List < CustomSystemParameter> customSystemParameter) {
+            public Builder customSystemParameter(java.util.List<CustomSystemParameter> customSystemParameter) {
                 this.customSystemParameter = customSystemParameter;
                 return this;
             }
@@ -1400,7 +1405,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
      */
     public static class ErrorCodeSamples extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCodeSample")
-        private java.util.List < ErrorCodeSample> errorCodeSample;
+        private java.util.List<ErrorCodeSample> errorCodeSample;
 
         private ErrorCodeSamples(Builder builder) {
             this.errorCodeSample = builder.errorCodeSample;
@@ -1417,17 +1422,17 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         /**
          * @return errorCodeSample
          */
-        public java.util.List < ErrorCodeSample> getErrorCodeSample() {
+        public java.util.List<ErrorCodeSample> getErrorCodeSample() {
             return this.errorCodeSample;
         }
 
         public static final class Builder {
-            private java.util.List < ErrorCodeSample> errorCodeSample; 
+            private java.util.List<ErrorCodeSample> errorCodeSample; 
 
             /**
              * ErrorCodeSample.
              */
-            public Builder errorCodeSample(java.util.List < ErrorCodeSample> errorCodeSample) {
+            public Builder errorCodeSample(java.util.List<ErrorCodeSample> errorCodeSample) {
                 this.errorCodeSample = errorCodeSample;
                 return this;
             }
@@ -2204,7 +2209,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
      */
     public static class RequestParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestParameter")
-        private java.util.List < RequestParameter> requestParameter;
+        private java.util.List<RequestParameter> requestParameter;
 
         private RequestParameters(Builder builder) {
             this.requestParameter = builder.requestParameter;
@@ -2221,17 +2226,17 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         /**
          * @return requestParameter
          */
-        public java.util.List < RequestParameter> getRequestParameter() {
+        public java.util.List<RequestParameter> getRequestParameter() {
             return this.requestParameter;
         }
 
         public static final class Builder {
-            private java.util.List < RequestParameter> requestParameter; 
+            private java.util.List<RequestParameter> requestParameter; 
 
             /**
              * RequestParameter.
              */
-            public Builder requestParameter(java.util.List < RequestParameter> requestParameter) {
+            public Builder requestParameter(java.util.List<RequestParameter> requestParameter) {
                 this.requestParameter = requestParameter;
                 return this;
             }
@@ -2462,7 +2467,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
      */
     public static class ResultDescriptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResultDescription")
-        private java.util.List < ResultDescription> resultDescription;
+        private java.util.List<ResultDescription> resultDescription;
 
         private ResultDescriptions(Builder builder) {
             this.resultDescription = builder.resultDescription;
@@ -2479,17 +2484,17 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         /**
          * @return resultDescription
          */
-        public java.util.List < ResultDescription> getResultDescription() {
+        public java.util.List<ResultDescription> getResultDescription() {
             return this.resultDescription;
         }
 
         public static final class Builder {
-            private java.util.List < ResultDescription> resultDescription; 
+            private java.util.List<ResultDescription> resultDescription; 
 
             /**
              * ResultDescription.
              */
-            public Builder resultDescription(java.util.List < ResultDescription> resultDescription) {
+            public Builder resultDescription(java.util.List<ResultDescription> resultDescription) {
                 this.resultDescription = resultDescription;
                 return this;
             }
@@ -3009,7 +3014,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
      */
     public static class MockHeaders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MockHeader")
-        private java.util.List < MockHeader> mockHeader;
+        private java.util.List<MockHeader> mockHeader;
 
         private MockHeaders(Builder builder) {
             this.mockHeader = builder.mockHeader;
@@ -3026,17 +3031,17 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         /**
          * @return mockHeader
          */
-        public java.util.List < MockHeader> getMockHeader() {
+        public java.util.List<MockHeader> getMockHeader() {
             return this.mockHeader;
         }
 
         public static final class Builder {
-            private java.util.List < MockHeader> mockHeader; 
+            private java.util.List<MockHeader> mockHeader; 
 
             /**
              * MockHeader.
              */
-            public Builder mockHeader(java.util.List < MockHeader> mockHeader) {
+            public Builder mockHeader(java.util.List<MockHeader> mockHeader) {
                 this.mockHeader = mockHeader;
                 return this;
             }
@@ -3839,7 +3844,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
      */
     public static class ServiceParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceParameter")
-        private java.util.List < ServiceParameter> serviceParameter;
+        private java.util.List<ServiceParameter> serviceParameter;
 
         private ServiceParameters(Builder builder) {
             this.serviceParameter = builder.serviceParameter;
@@ -3856,17 +3861,17 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         /**
          * @return serviceParameter
          */
-        public java.util.List < ServiceParameter> getServiceParameter() {
+        public java.util.List<ServiceParameter> getServiceParameter() {
             return this.serviceParameter;
         }
 
         public static final class Builder {
-            private java.util.List < ServiceParameter> serviceParameter; 
+            private java.util.List<ServiceParameter> serviceParameter; 
 
             /**
              * ServiceParameter.
              */
-            public Builder serviceParameter(java.util.List < ServiceParameter> serviceParameter) {
+            public Builder serviceParameter(java.util.List<ServiceParameter> serviceParameter) {
                 this.serviceParameter = serviceParameter;
                 return this;
             }
@@ -3959,7 +3964,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
      */
     public static class ServiceParametersMap extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceParameterMap")
-        private java.util.List < ServiceParameterMap> serviceParameterMap;
+        private java.util.List<ServiceParameterMap> serviceParameterMap;
 
         private ServiceParametersMap(Builder builder) {
             this.serviceParameterMap = builder.serviceParameterMap;
@@ -3976,17 +3981,17 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         /**
          * @return serviceParameterMap
          */
-        public java.util.List < ServiceParameterMap> getServiceParameterMap() {
+        public java.util.List<ServiceParameterMap> getServiceParameterMap() {
             return this.serviceParameterMap;
         }
 
         public static final class Builder {
-            private java.util.List < ServiceParameterMap> serviceParameterMap; 
+            private java.util.List<ServiceParameterMap> serviceParameterMap; 
 
             /**
              * ServiceParameterMap.
              */
-            public Builder serviceParameterMap(java.util.List < ServiceParameterMap> serviceParameterMap) {
+            public Builder serviceParameterMap(java.util.List<ServiceParameterMap> serviceParameterMap) {
                 this.serviceParameterMap = serviceParameterMap;
                 return this;
             }
@@ -4148,7 +4153,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
      */
     public static class SystemParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SystemParameter")
-        private java.util.List < SystemParameter> systemParameter;
+        private java.util.List<SystemParameter> systemParameter;
 
         private SystemParameters(Builder builder) {
             this.systemParameter = builder.systemParameter;
@@ -4165,17 +4170,17 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         /**
          * @return systemParameter
          */
-        public java.util.List < SystemParameter> getSystemParameter() {
+        public java.util.List<SystemParameter> getSystemParameter() {
             return this.systemParameter;
         }
 
         public static final class Builder {
-            private java.util.List < SystemParameter> systemParameter; 
+            private java.util.List<SystemParameter> systemParameter; 
 
             /**
              * SystemParameter.
              */
-            public Builder systemParameter(java.util.List < SystemParameter> systemParameter) {
+            public Builder systemParameter(java.util.List<SystemParameter> systemParameter) {
                 this.systemParameter = systemParameter;
                 return this;
             }

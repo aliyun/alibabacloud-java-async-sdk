@@ -66,6 +66,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddTrafficSpecialControlResponse> addTrafficSpecialControl(AddTrafficSpecialControlRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>An internal domain name resolution can be associated only with a dedicated instance, not with a shared instance or shared instance cluster.</p>
+     * 
      * @param request the request parameters of AssociateInstanceWithPrivateDNS  AssociateInstanceWithPrivateDNSRequest
      * @return AssociateInstanceWithPrivateDNSResponse
      */
@@ -255,6 +258,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePluginResponse> createPlugin(CreatePluginRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>An internal domain name resolution of the virtual private cloud (VPC) type can be bound only to traditional dedicated instances. An internal domain name resolution of the A type can be bound only to VPC integration dedicated instances.</p>
+     * 
      * @param request the request parameters of CreatePrivateDNS  CreatePrivateDNSRequest
      * @return CreatePrivateDNSResponse
      */
@@ -1362,8 +1368,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>  This operation is intended for API callers.</p>
      * <ul>
-     * <li><strong>AppName</strong> or <strong>Description</strong> can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a success response.</li>
-     * <li>You can call this operation up to 50 times per second per account.</li>
+     * <li>AppName or Description can be modified. If these parameters are not specified, no modifications are made and the operation will directly return a successful response.********</li>
+     * <li>The QPS limit on this operation is 50 per user.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyApp  ModifyAppRequest

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -307,7 +312,10 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             }
 
             /**
-             * ApiMethod.
+             * <p>The HTTP method of the API request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POST</p>
              */
             public Builder apiMethod(String apiMethod) {
                 this.apiMethod = apiMethod;
@@ -326,7 +334,10 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             }
 
             /**
-             * ApiPath.
+             * <p>The request path of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/trademark/search</p>
              */
             public Builder apiPath(String apiPath) {
                 this.apiPath = apiPath;
@@ -433,7 +444,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
      */
     public static class DeployedApis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeployedApiItem")
-        private java.util.List < DeployedApiItem> deployedApiItem;
+        private java.util.List<DeployedApiItem> deployedApiItem;
 
         private DeployedApis(Builder builder) {
             this.deployedApiItem = builder.deployedApiItem;
@@ -450,17 +461,17 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
         /**
          * @return deployedApiItem
          */
-        public java.util.List < DeployedApiItem> getDeployedApiItem() {
+        public java.util.List<DeployedApiItem> getDeployedApiItem() {
             return this.deployedApiItem;
         }
 
         public static final class Builder {
-            private java.util.List < DeployedApiItem> deployedApiItem; 
+            private java.util.List<DeployedApiItem> deployedApiItem; 
 
             /**
              * DeployedApiItem.
              */
-            public Builder deployedApiItem(java.util.List < DeployedApiItem> deployedApiItem) {
+            public Builder deployedApiItem(java.util.List<DeployedApiItem> deployedApiItem) {
                 this.deployedApiItem = deployedApiItem;
                 return this;
             }

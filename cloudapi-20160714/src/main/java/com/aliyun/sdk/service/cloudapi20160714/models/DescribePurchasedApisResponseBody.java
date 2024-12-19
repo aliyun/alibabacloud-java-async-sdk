@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -440,7 +445,7 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
      */
     public static class PurchasedApis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PurchasedApi")
-        private java.util.List < PurchasedApi> purchasedApi;
+        private java.util.List<PurchasedApi> purchasedApi;
 
         private PurchasedApis(Builder builder) {
             this.purchasedApi = builder.purchasedApi;
@@ -457,17 +462,17 @@ public class DescribePurchasedApisResponseBody extends TeaModel {
         /**
          * @return purchasedApi
          */
-        public java.util.List < PurchasedApi> getPurchasedApi() {
+        public java.util.List<PurchasedApi> getPurchasedApi() {
             return this.purchasedApi;
         }
 
         public static final class Builder {
-            private java.util.List < PurchasedApi> purchasedApi; 
+            private java.util.List<PurchasedApi> purchasedApi; 
 
             /**
              * PurchasedApi.
              */
-            public Builder purchasedApi(java.util.List < PurchasedApi> purchasedApi) {
+            public Builder purchasedApi(java.util.List<PurchasedApi> purchasedApi) {
                 this.purchasedApi = purchasedApi;
                 return this;
             }

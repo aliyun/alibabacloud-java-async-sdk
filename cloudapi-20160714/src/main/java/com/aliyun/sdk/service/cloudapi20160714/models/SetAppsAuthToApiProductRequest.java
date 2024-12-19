@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class SetAppsAuthToApiProductRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > appIds;
+    private java.util.List<Long> appIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthValidTime")
@@ -66,7 +71,7 @@ public class SetAppsAuthToApiProductRequest extends Request {
     /**
      * @return appIds
      */
-    public java.util.List < Long > getAppIds() {
+    public java.util.List<Long> getAppIds() {
         return this.appIds;
     }
 
@@ -93,7 +98,7 @@ public class SetAppsAuthToApiProductRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetAppsAuthToApiProductRequest, Builder> {
         private String apiProductId; 
-        private java.util.List < Long > appIds; 
+        private java.util.List<Long> appIds; 
         private String authValidTime; 
         private String description; 
         private String securityToken; 
@@ -112,6 +117,7 @@ public class SetAppsAuthToApiProductRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the API product.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,16 +130,20 @@ public class SetAppsAuthToApiProductRequest extends Request {
         }
 
         /**
+         * <p>The IDs of the applications that you want to authorize.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder appIds(java.util.List < Long > appIds) {
+        public Builder appIds(java.util.List<Long> appIds) {
             this.putQueryParameter("AppIds", appIds);
             this.appIds = appIds;
             return this;
         }
 
         /**
-         * AuthValidTime.
+         * <p>The time (UTC) when the authorization expires. If this parameter is empty, the authorization does not expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-31T08:15:39Z</p>
          */
         public Builder authValidTime(String authValidTime) {
             this.putQueryParameter("AuthValidTime", authValidTime);
@@ -142,7 +152,10 @@ public class SetAppsAuthToApiProductRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

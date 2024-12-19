@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -293,7 +298,7 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
      */
     public static class IpControlPolicyItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpControlPolicyItem")
-        private java.util.List < IpControlPolicyItem> ipControlPolicyItem;
+        private java.util.List<IpControlPolicyItem> ipControlPolicyItem;
 
         private IpControlPolicyItems(Builder builder) {
             this.ipControlPolicyItem = builder.ipControlPolicyItem;
@@ -310,17 +315,17 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
         /**
          * @return ipControlPolicyItem
          */
-        public java.util.List < IpControlPolicyItem> getIpControlPolicyItem() {
+        public java.util.List<IpControlPolicyItem> getIpControlPolicyItem() {
             return this.ipControlPolicyItem;
         }
 
         public static final class Builder {
-            private java.util.List < IpControlPolicyItem> ipControlPolicyItem; 
+            private java.util.List<IpControlPolicyItem> ipControlPolicyItem; 
 
             /**
              * IpControlPolicyItem.
              */
-            public Builder ipControlPolicyItem(java.util.List < IpControlPolicyItem> ipControlPolicyItem) {
+            public Builder ipControlPolicyItem(java.util.List<IpControlPolicyItem> ipControlPolicyItem) {
                 this.ipControlPolicyItem = ipControlPolicyItem;
                 return this;
             }

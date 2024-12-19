@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDatasetListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DatasetInfoList")
-    private java.util.List < DatasetInfoList> datasetInfoList;
+    private java.util.List<DatasetInfoList> datasetInfoList;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
     /**
      * @return datasetInfoList
      */
-    public java.util.List < DatasetInfoList> getDatasetInfoList() {
+    public java.util.List<DatasetInfoList> getDatasetInfoList() {
         return this.datasetInfoList;
     }
 
@@ -79,7 +84,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DatasetInfoList> datasetInfoList; 
+        private java.util.List<DatasetInfoList> datasetInfoList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         /**
          * <p>The returned dataset information. It is an array consisting of datasetinfo.</p>
          */
-        public Builder datasetInfoList(java.util.List < DatasetInfoList> datasetInfoList) {
+        public Builder datasetInfoList(java.util.List<DatasetInfoList> datasetInfoList) {
             this.datasetInfoList = datasetInfoList;
             return this;
         }
@@ -188,7 +193,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * <p>标签的键</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>ENV</p>
@@ -199,7 +204,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>标签值</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -239,7 +244,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         private String modifiedTime;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private DatasetInfoList(Builder builder) {
             this.createdTime = builder.createdTime;
@@ -296,7 +301,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -306,7 +311,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             private String datasetName; 
             private String datasetType; 
             private String modifiedTime; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The time when the dataset was created. The time is displayed in UTC.</p>
@@ -369,9 +374,9 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>标签</p>
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

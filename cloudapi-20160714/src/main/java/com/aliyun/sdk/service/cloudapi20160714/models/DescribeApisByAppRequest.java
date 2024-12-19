@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -167,7 +172,10 @@ public class DescribeApisByAppRequest extends Request {
         } 
 
         /**
-         * ApiName.
+         * <p>The name of the API. The name is used for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>getPersonInfo</p>
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -176,7 +184,10 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * ApiUid.
+         * <p>The API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b19240592b1b4e74961fb8438ed7550c</p>
          */
         public Builder apiUid(String apiUid) {
             this.putQueryParameter("ApiUid", apiUid);
@@ -185,6 +196,7 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +209,10 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -206,7 +221,10 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * Method.
+         * <p>The request HTTP method of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -215,7 +233,10 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -224,7 +245,10 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -233,7 +257,10 @@ public class DescribeApisByAppRequest extends Request {
         }
 
         /**
-         * Path.
+         * <p>The request path of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/tt</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -94,7 +99,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of pages to return the results on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +110,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +121,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ015</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -492,7 +509,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
      */
     public static class AppApiRelationInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppApiRelationInfo")
-        private java.util.List < AppApiRelationInfo> appApiRelationInfo;
+        private java.util.List<AppApiRelationInfo> appApiRelationInfo;
 
         private AppApiRelationInfos(Builder builder) {
             this.appApiRelationInfo = builder.appApiRelationInfo;
@@ -509,17 +526,17 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         /**
          * @return appApiRelationInfo
          */
-        public java.util.List < AppApiRelationInfo> getAppApiRelationInfo() {
+        public java.util.List<AppApiRelationInfo> getAppApiRelationInfo() {
             return this.appApiRelationInfo;
         }
 
         public static final class Builder {
-            private java.util.List < AppApiRelationInfo> appApiRelationInfo; 
+            private java.util.List<AppApiRelationInfo> appApiRelationInfo; 
 
             /**
              * AppApiRelationInfo.
              */
-            public Builder appApiRelationInfo(java.util.List < AppApiRelationInfo> appApiRelationInfo) {
+            public Builder appApiRelationInfo(java.util.List<AppApiRelationInfo> appApiRelationInfo) {
                 this.appApiRelationInfo = appApiRelationInfo;
                 return this;
             }

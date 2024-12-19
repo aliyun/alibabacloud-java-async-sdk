@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeBackendListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BackendInfoList")
-    private java.util.List < BackendInfoList> backendInfoList;
+    private java.util.List<BackendInfoList> backendInfoList;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
     /**
      * @return backendInfoList
      */
-    public java.util.List < BackendInfoList> getBackendInfoList() {
+    public java.util.List<BackendInfoList> getBackendInfoList() {
         return this.backendInfoList;
     }
 
@@ -79,7 +84,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BackendInfoList> backendInfoList; 
+        private java.util.List<BackendInfoList> backendInfoList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
         /**
          * <p>The backend services.</p>
          */
-        public Builder backendInfoList(java.util.List < BackendInfoList> backendInfoList) {
+        public Builder backendInfoList(java.util.List<BackendInfoList> backendInfoList) {
             this.backendInfoList = backendInfoList;
             return this;
         }
@@ -242,7 +247,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
         private String modifiedTime;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private BackendInfoList(Builder builder) {
             this.backendId = builder.backendId;
@@ -307,7 +312,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -318,7 +323,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
             private String createdTime; 
             private String description; 
             private String modifiedTime; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The ID of the backend service.</p>
@@ -389,7 +394,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
             /**
              * <p>The list of tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

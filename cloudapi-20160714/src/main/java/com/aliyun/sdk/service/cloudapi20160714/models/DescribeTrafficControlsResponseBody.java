@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
      */
     public static class Specials extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Special")
-        private java.util.List < Special> special;
+        private java.util.List<Special> special;
 
         private Specials(Builder builder) {
             this.special = builder.special;
@@ -241,17 +246,17 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         /**
          * @return special
          */
-        public java.util.List < Special> getSpecial() {
+        public java.util.List<Special> getSpecial() {
             return this.special;
         }
 
         public static final class Builder {
-            private java.util.List < Special> special; 
+            private java.util.List<Special> special; 
 
             /**
              * Special.
              */
-            public Builder special(java.util.List < Special> special) {
+            public Builder special(java.util.List<Special> special) {
                 this.special = special;
                 return this;
             }
@@ -345,7 +350,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
      */
     public static class SpecialPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpecialPolicy")
-        private java.util.List < SpecialPolicy> specialPolicy;
+        private java.util.List<SpecialPolicy> specialPolicy;
 
         private SpecialPolicies(Builder builder) {
             this.specialPolicy = builder.specialPolicy;
@@ -362,17 +367,17 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         /**
          * @return specialPolicy
          */
-        public java.util.List < SpecialPolicy> getSpecialPolicy() {
+        public java.util.List<SpecialPolicy> getSpecialPolicy() {
             return this.specialPolicy;
         }
 
         public static final class Builder {
-            private java.util.List < SpecialPolicy> specialPolicy; 
+            private java.util.List<SpecialPolicy> specialPolicy; 
 
             /**
              * SpecialPolicy.
              */
-            public Builder specialPolicy(java.util.List < SpecialPolicy> specialPolicy) {
+            public Builder specialPolicy(java.util.List<SpecialPolicy> specialPolicy) {
                 this.specialPolicy = specialPolicy;
                 return this;
             }
@@ -651,7 +656,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
      */
     public static class TrafficControls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrafficControl")
-        private java.util.List < TrafficControl> trafficControl;
+        private java.util.List<TrafficControl> trafficControl;
 
         private TrafficControls(Builder builder) {
             this.trafficControl = builder.trafficControl;
@@ -668,17 +673,17 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
         /**
          * @return trafficControl
          */
-        public java.util.List < TrafficControl> getTrafficControl() {
+        public java.util.List<TrafficControl> getTrafficControl() {
             return this.trafficControl;
         }
 
         public static final class Builder {
-            private java.util.List < TrafficControl> trafficControl; 
+            private java.util.List<TrafficControl> trafficControl; 
 
             /**
              * TrafficControl.
              */
-            public Builder trafficControl(java.util.List < TrafficControl> trafficControl) {
+            public Builder trafficControl(java.util.List<TrafficControl> trafficControl) {
                 this.trafficControl = trafficControl;
                 return this;
             }

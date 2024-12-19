@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -189,6 +194,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The variable name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SLA</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -199,7 +207,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * <p>The variable value.</p>
              * 
              * <strong>example:</strong>
-             * <p>2500</p>
+             * <p>99.95%</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -221,7 +229,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class InstanceSpecAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpecAttribute")
-        private java.util.List < SpecAttribute> specAttribute;
+        private java.util.List<SpecAttribute> specAttribute;
 
         private InstanceSpecAttributes(Builder builder) {
             this.specAttribute = builder.specAttribute;
@@ -238,17 +246,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return specAttribute
          */
-        public java.util.List < SpecAttribute> getSpecAttribute() {
+        public java.util.List<SpecAttribute> getSpecAttribute() {
             return this.specAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < SpecAttribute> specAttribute; 
+            private java.util.List<SpecAttribute> specAttribute; 
 
             /**
              * SpecAttribute.
              */
-            public Builder specAttribute(java.util.List < SpecAttribute> specAttribute) {
+            public Builder specAttribute(java.util.List<SpecAttribute> specAttribute) {
                 this.specAttribute = specAttribute;
                 return this;
             }
@@ -387,7 +395,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class NetworkInterfaceAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkInterfaceAttribute")
-        private java.util.List < NetworkInterfaceAttribute> networkInterfaceAttribute;
+        private java.util.List<NetworkInterfaceAttribute> networkInterfaceAttribute;
 
         private NetworkInterfaceAttributes(Builder builder) {
             this.networkInterfaceAttribute = builder.networkInterfaceAttribute;
@@ -404,17 +412,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return networkInterfaceAttribute
          */
-        public java.util.List < NetworkInterfaceAttribute> getNetworkInterfaceAttribute() {
+        public java.util.List<NetworkInterfaceAttribute> getNetworkInterfaceAttribute() {
             return this.networkInterfaceAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < NetworkInterfaceAttribute> networkInterfaceAttribute; 
+            private java.util.List<NetworkInterfaceAttribute> networkInterfaceAttribute; 
 
             /**
              * NetworkInterfaceAttribute.
              */
-            public Builder networkInterfaceAttribute(java.util.List < NetworkInterfaceAttribute> networkInterfaceAttribute) {
+            public Builder networkInterfaceAttribute(java.util.List<NetworkInterfaceAttribute> networkInterfaceAttribute) {
                 this.networkInterfaceAttribute = networkInterfaceAttribute;
                 return this;
             }
@@ -434,7 +442,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class PrivateDnsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateDns")
-        private java.util.List < String > privateDns;
+        private java.util.List<String> privateDns;
 
         private PrivateDnsList(Builder builder) {
             this.privateDns = builder.privateDns;
@@ -451,17 +459,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return privateDns
          */
-        public java.util.List < String > getPrivateDns() {
+        public java.util.List<String> getPrivateDns() {
             return this.privateDns;
         }
 
         public static final class Builder {
-            private java.util.List < String > privateDns; 
+            private java.util.List<String> privateDns; 
 
             /**
              * PrivateDns.
              */
-            public Builder privateDns(java.util.List < String > privateDns) {
+            public Builder privateDns(java.util.List<String> privateDns) {
                 this.privateDns = privateDns;
                 return this;
             }
@@ -518,7 +526,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cookie</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -526,10 +537,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The variable value.</p>
+             * <p>The tag value of the instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>2500</p>
+             * <p>240</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -551,7 +562,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagInfo")
-        private java.util.List < TagInfo> tagInfo;
+        private java.util.List<TagInfo> tagInfo;
 
         private Tags(Builder builder) {
             this.tagInfo = builder.tagInfo;
@@ -568,17 +579,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return tagInfo
          */
-        public java.util.List < TagInfo> getTagInfo() {
+        public java.util.List<TagInfo> getTagInfo() {
             return this.tagInfo;
         }
 
         public static final class Builder {
-            private java.util.List < TagInfo> tagInfo; 
+            private java.util.List<TagInfo> tagInfo; 
 
             /**
              * TagInfo.
              */
-            public Builder tagInfo(java.util.List < TagInfo> tagInfo) {
+            public Builder tagInfo(java.util.List<TagInfo> tagInfo) {
                 this.tagInfo = tagInfo;
                 return this;
             }
@@ -687,6 +698,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkInterfaceAttributes")
         private NetworkInterfaceAttributes networkInterfaceAttributes;
 
+        @com.aliyun.core.annotation.NameInMap("NewVpcEgressAddress")
+        private String newVpcEgressAddress;
+
         @com.aliyun.core.annotation.NameInMap("PrivateDnsList")
         private PrivateDnsList privateDnsList;
 
@@ -757,6 +771,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.maintainEndTime = builder.maintainEndTime;
             this.maintainStartTime = builder.maintainStartTime;
             this.networkInterfaceAttributes = builder.networkInterfaceAttributes;
+            this.newVpcEgressAddress = builder.newVpcEgressAddress;
             this.privateDnsList = builder.privateDnsList;
             this.regionId = builder.regionId;
             this.status = builder.status;
@@ -991,6 +1006,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return newVpcEgressAddress
+         */
+        public String getNewVpcEgressAddress() {
+            return this.newVpcEgressAddress;
+        }
+
+        /**
          * @return privateDnsList
          */
         public PrivateDnsList getPrivateDnsList() {
@@ -1112,6 +1134,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String maintainEndTime; 
             private String maintainStartTime; 
             private NetworkInterfaceAttributes networkInterfaceAttributes; 
+            private String newVpcEgressAddress; 
             private PrivateDnsList privateDnsList; 
             private String regionId; 
             private String status; 
@@ -1483,7 +1506,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateDnsList.
+             * <p>The new VPC egress CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.253.0/26</p>
+             */
+            public Builder newVpcEgressAddress(String newVpcEgressAddress) {
+                this.newVpcEgressAddress = newVpcEgressAddress;
+                return this;
+            }
+
+            /**
+             * <p>The private DNS list.</p>
              */
             public Builder privateDnsList(PrivateDnsList privateDnsList) {
                 this.privateDnsList = privateDnsList;
@@ -1524,7 +1558,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the instance.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1610,6 +1644,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Multi-Availability Zone 3(b,c,a)</p>
              */
             public Builder zoneLocalName(String zoneLocalName) {
                 this.zoneLocalName = zoneLocalName;
@@ -1631,7 +1668,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceAttribute")
-        private java.util.List < InstanceAttribute> instanceAttribute;
+        private java.util.List<InstanceAttribute> instanceAttribute;
 
         private Instances(Builder builder) {
             this.instanceAttribute = builder.instanceAttribute;
@@ -1648,17 +1685,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return instanceAttribute
          */
-        public java.util.List < InstanceAttribute> getInstanceAttribute() {
+        public java.util.List<InstanceAttribute> getInstanceAttribute() {
             return this.instanceAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceAttribute> instanceAttribute; 
+            private java.util.List<InstanceAttribute> instanceAttribute; 
 
             /**
              * InstanceAttribute.
              */
-            public Builder instanceAttribute(java.util.List < InstanceAttribute> instanceAttribute) {
+            public Builder instanceAttribute(java.util.List<InstanceAttribute> instanceAttribute) {
                 this.instanceAttribute = instanceAttribute;
                 return this;
             }

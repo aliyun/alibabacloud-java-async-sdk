@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -362,7 +367,7 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
      */
     public static class Plugins extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PluginAttribute")
-        private java.util.List < PluginAttribute> pluginAttribute;
+        private java.util.List<PluginAttribute> pluginAttribute;
 
         private Plugins(Builder builder) {
             this.pluginAttribute = builder.pluginAttribute;
@@ -379,17 +384,17 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
         /**
          * @return pluginAttribute
          */
-        public java.util.List < PluginAttribute> getPluginAttribute() {
+        public java.util.List<PluginAttribute> getPluginAttribute() {
             return this.pluginAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < PluginAttribute> pluginAttribute; 
+            private java.util.List<PluginAttribute> pluginAttribute; 
 
             /**
              * PluginAttribute.
              */
-            public Builder pluginAttribute(java.util.List < PluginAttribute> pluginAttribute) {
+            public Builder pluginAttribute(java.util.List<PluginAttribute> pluginAttribute) {
                 this.pluginAttribute = pluginAttribute;
                 return this;
             }

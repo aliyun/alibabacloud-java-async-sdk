@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -505,7 +510,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
      */
     public static class ApiVpcAccessInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiVpcAccessInfo")
-        private java.util.List < ApiVpcAccessInfo> apiVpcAccessInfo;
+        private java.util.List<ApiVpcAccessInfo> apiVpcAccessInfo;
 
         private ApiVpcAccessInfos(Builder builder) {
             this.apiVpcAccessInfo = builder.apiVpcAccessInfo;
@@ -522,17 +527,17 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
         /**
          * @return apiVpcAccessInfo
          */
-        public java.util.List < ApiVpcAccessInfo> getApiVpcAccessInfo() {
+        public java.util.List<ApiVpcAccessInfo> getApiVpcAccessInfo() {
             return this.apiVpcAccessInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ApiVpcAccessInfo> apiVpcAccessInfo; 
+            private java.util.List<ApiVpcAccessInfo> apiVpcAccessInfo; 
 
             /**
              * ApiVpcAccessInfo.
              */
-            public Builder apiVpcAccessInfo(java.util.List < ApiVpcAccessInfo> apiVpcAccessInfo) {
+            public Builder apiVpcAccessInfo(java.util.List<ApiVpcAccessInfo> apiVpcAccessInfo) {
                 this.apiVpcAccessInfo = apiVpcAccessInfo;
                 return this;
             }

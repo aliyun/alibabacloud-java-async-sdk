@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -252,7 +257,7 @@ public class DescribeApisResponseBody extends TeaModel {
      */
     public static class DeployedInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeployedInfo")
-        private java.util.List < DeployedInfo> deployedInfo;
+        private java.util.List<DeployedInfo> deployedInfo;
 
         private DeployedInfos(Builder builder) {
             this.deployedInfo = builder.deployedInfo;
@@ -269,17 +274,17 @@ public class DescribeApisResponseBody extends TeaModel {
         /**
          * @return deployedInfo
          */
-        public java.util.List < DeployedInfo> getDeployedInfo() {
+        public java.util.List<DeployedInfo> getDeployedInfo() {
             return this.deployedInfo;
         }
 
         public static final class Builder {
-            private java.util.List < DeployedInfo> deployedInfo; 
+            private java.util.List<DeployedInfo> deployedInfo; 
 
             /**
              * DeployedInfo.
              */
-            public Builder deployedInfo(java.util.List < DeployedInfo> deployedInfo) {
+            public Builder deployedInfo(java.util.List<DeployedInfo> deployedInfo) {
                 this.deployedInfo = deployedInfo;
                 return this;
             }
@@ -372,7 +377,7 @@ public class DescribeApisResponseBody extends TeaModel {
      */
     public static class TagList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private TagList(Builder builder) {
             this.tag = builder.tag;
@@ -389,17 +394,17 @@ public class DescribeApisResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -743,7 +748,7 @@ public class DescribeApisResponseBody extends TeaModel {
      */
     public static class ApiSummarys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiSummary")
-        private java.util.List < ApiSummary> apiSummary;
+        private java.util.List<ApiSummary> apiSummary;
 
         private ApiSummarys(Builder builder) {
             this.apiSummary = builder.apiSummary;
@@ -760,17 +765,17 @@ public class DescribeApisResponseBody extends TeaModel {
         /**
          * @return apiSummary
          */
-        public java.util.List < ApiSummary> getApiSummary() {
+        public java.util.List<ApiSummary> getApiSummary() {
             return this.apiSummary;
         }
 
         public static final class Builder {
-            private java.util.List < ApiSummary> apiSummary; 
+            private java.util.List<ApiSummary> apiSummary; 
 
             /**
              * ApiSummary.
              */
-            public Builder apiSummary(java.util.List < ApiSummary> apiSummary) {
+            public Builder apiSummary(java.util.List<ApiSummary> apiSummary) {
                 this.apiSummary = apiSummary;
                 return this;
             }

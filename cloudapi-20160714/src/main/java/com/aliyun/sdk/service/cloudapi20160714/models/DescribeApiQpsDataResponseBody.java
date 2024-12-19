@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -175,7 +180,7 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
      */
     public static class CallFails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorItem")
-        private java.util.List < MonitorItem> monitorItem;
+        private java.util.List<MonitorItem> monitorItem;
 
         private CallFails(Builder builder) {
             this.monitorItem = builder.monitorItem;
@@ -192,17 +197,17 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
         /**
          * @return monitorItem
          */
-        public java.util.List < MonitorItem> getMonitorItem() {
+        public java.util.List<MonitorItem> getMonitorItem() {
             return this.monitorItem;
         }
 
         public static final class Builder {
-            private java.util.List < MonitorItem> monitorItem; 
+            private java.util.List<MonitorItem> monitorItem; 
 
             /**
              * MonitorItem.
              */
-            public Builder monitorItem(java.util.List < MonitorItem> monitorItem) {
+            public Builder monitorItem(java.util.List<MonitorItem> monitorItem) {
                 this.monitorItem = monitorItem;
                 return this;
             }
@@ -295,7 +300,7 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
      */
     public static class CallSuccesses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorItem")
-        private java.util.List < CallSuccessesMonitorItem> monitorItem;
+        private java.util.List<CallSuccessesMonitorItem> monitorItem;
 
         private CallSuccesses(Builder builder) {
             this.monitorItem = builder.monitorItem;
@@ -312,17 +317,17 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
         /**
          * @return monitorItem
          */
-        public java.util.List < CallSuccessesMonitorItem> getMonitorItem() {
+        public java.util.List<CallSuccessesMonitorItem> getMonitorItem() {
             return this.monitorItem;
         }
 
         public static final class Builder {
-            private java.util.List < CallSuccessesMonitorItem> monitorItem; 
+            private java.util.List<CallSuccessesMonitorItem> monitorItem; 
 
             /**
              * MonitorItem.
              */
-            public Builder monitorItem(java.util.List < CallSuccessesMonitorItem> monitorItem) {
+            public Builder monitorItem(java.util.List<CallSuccessesMonitorItem> monitorItem) {
                 this.monitorItem = monitorItem;
                 return this;
             }

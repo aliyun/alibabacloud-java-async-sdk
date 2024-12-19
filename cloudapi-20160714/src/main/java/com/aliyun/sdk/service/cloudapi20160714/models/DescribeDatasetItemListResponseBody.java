@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDatasetItemListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DatasetItemInfoList")
-    private java.util.List < DatasetItemInfoList> datasetItemInfoList;
+    private java.util.List<DatasetItemInfoList> datasetItemInfoList;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
     /**
      * @return datasetItemInfoList
      */
-    public java.util.List < DatasetItemInfoList> getDatasetItemInfoList() {
+    public java.util.List<DatasetItemInfoList> getDatasetItemInfoList() {
         return this.datasetItemInfoList;
     }
 
@@ -79,7 +84,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DatasetItemInfoList> datasetItemInfoList; 
+        private java.util.List<DatasetItemInfoList> datasetItemInfoList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeDatasetItemListResponseBody extends TeaModel {
         /**
          * <p>The Dataset information.</p>
          */
-        public Builder datasetItemInfoList(java.util.List < DatasetItemInfoList> datasetItemInfoList) {
+        public Builder datasetItemInfoList(java.util.List<DatasetItemInfoList> datasetItemInfoList) {
             this.datasetItemInfoList = datasetItemInfoList;
             return this;
         }

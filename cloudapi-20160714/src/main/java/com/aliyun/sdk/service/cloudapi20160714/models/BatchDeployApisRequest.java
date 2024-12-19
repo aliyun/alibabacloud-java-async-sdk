@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class BatchDeployApisRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Api")
-    private java.util.List < Api> api;
+    private java.util.List<Api> api;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -54,7 +59,7 @@ public class BatchDeployApisRequest extends Request {
     /**
      * @return api
      */
-    public java.util.List < Api> getApi() {
+    public java.util.List<Api> getApi() {
         return this.api;
     }
 
@@ -80,7 +85,7 @@ public class BatchDeployApisRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchDeployApisRequest, Builder> {
-        private java.util.List < Api> api; 
+        private java.util.List<Api> api; 
         private String description; 
         private String securityToken; 
         private String stageName; 
@@ -100,7 +105,7 @@ public class BatchDeployApisRequest extends Request {
         /**
          * <p>The APIs that you want to publish.</p>
          */
-        public Builder api(java.util.List < Api> api) {
+        public Builder api(java.util.List<Api> api) {
             this.putQueryParameter("Api", api);
             this.api = api;
             return this;

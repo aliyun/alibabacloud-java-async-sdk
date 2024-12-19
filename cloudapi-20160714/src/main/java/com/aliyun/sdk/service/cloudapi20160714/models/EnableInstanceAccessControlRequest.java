@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -113,6 +118,7 @@ public class EnableInstanceAccessControlRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the access control policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +131,11 @@ public class EnableInstanceAccessControlRequest extends Request {
         }
 
         /**
+         * <p>The ACL type. Valid values:</p>
+         * <ul>
+         * <li>black: blacklist</li>
+         * <li>white: whitelist</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +148,10 @@ public class EnableInstanceAccessControlRequest extends Request {
         }
 
         /**
-         * AddressIPVersion.
+         * <p>The IP version. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.putQueryParameter("AddressIPVersion", addressIPVersion);
@@ -146,6 +160,7 @@ public class EnableInstanceAccessControlRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

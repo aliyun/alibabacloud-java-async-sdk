@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -209,7 +214,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * DeleteVpcIpBlock.
+         * <p>If delete VPC Ip block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteVpcIpBlock(String deleteVpcIpBlock) {
             this.putQueryParameter("DeleteVpcIpBlock", deleteVpcIpBlock);
@@ -218,7 +226,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * EgressIpv6Enable.
+         * <p>If enable outbound IPv6 Traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder egressIpv6Enable(String egressIpv6Enable) {
             this.putQueryParameter("EgressIpv6Enable", egressIpv6Enable);
@@ -227,7 +238,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * HttpsPolicy.
+         * <p>The HTTPS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTPS2_TLS1_0</p>
          */
         public Builder httpsPolicy(String httpsPolicy) {
             this.putQueryParameter("HttpsPolicy", httpsPolicy);
@@ -236,7 +250,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * IPV6Enabled.
+         * <p>If enable inbound IPv6 Traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder IPV6Enabled(String IPV6Enabled) {
             this.putQueryParameter("IPV6Enabled", IPV6Enabled);
@@ -245,6 +262,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +275,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>Instance Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apigatewayInstance</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -266,7 +287,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * IntranetSegments.
+         * <p>Custom private CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.0.0.1/24</p>
          */
         public Builder intranetSegments(String intranetSegments) {
             this.putQueryParameter("IntranetSegments", intranetSegments);
@@ -275,7 +299,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * MaintainEndTime.
+         * <p>Maintainable end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23:00Z</p>
          */
         public Builder maintainEndTime(String maintainEndTime) {
             this.putQueryParameter("MaintainEndTime", maintainEndTime);
@@ -284,7 +311,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * MaintainStartTime.
+         * <p>Maintainable start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18:00Z</p>
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.putQueryParameter("MaintainStartTime", maintainStartTime);
@@ -303,7 +333,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Token.
+         * <p>The token of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c20d86c4-1eb3-4d0b-afe9-c586df1e2136</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -312,7 +345,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * VpcSlbIntranetEnable.
+         * <p>Specifies whether to enable the self-calling domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder vpcSlbIntranetEnable(String vpcSlbIntranetEnable) {
             this.putQueryParameter("VpcSlbIntranetEnable", vpcSlbIntranetEnable);

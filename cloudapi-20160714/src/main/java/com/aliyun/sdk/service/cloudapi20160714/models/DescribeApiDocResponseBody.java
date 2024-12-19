@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -573,7 +578,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
      */
     public static class ErrorCodeSamples extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCodeSample")
-        private java.util.List < ErrorCodeSample> errorCodeSample;
+        private java.util.List<ErrorCodeSample> errorCodeSample;
 
         private ErrorCodeSamples(Builder builder) {
             this.errorCodeSample = builder.errorCodeSample;
@@ -590,17 +595,17 @@ public class DescribeApiDocResponseBody extends TeaModel {
         /**
          * @return errorCodeSample
          */
-        public java.util.List < ErrorCodeSample> getErrorCodeSample() {
+        public java.util.List<ErrorCodeSample> getErrorCodeSample() {
             return this.errorCodeSample;
         }
 
         public static final class Builder {
-            private java.util.List < ErrorCodeSample> errorCodeSample; 
+            private java.util.List<ErrorCodeSample> errorCodeSample; 
 
             /**
              * ErrorCodeSample.
              */
-            public Builder errorCodeSample(java.util.List < ErrorCodeSample> errorCodeSample) {
+            public Builder errorCodeSample(java.util.List<ErrorCodeSample> errorCodeSample) {
                 this.errorCodeSample = errorCodeSample;
                 return this;
             }
@@ -1232,7 +1237,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
      */
     public static class RequestParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestParameter")
-        private java.util.List < RequestParameter> requestParameter;
+        private java.util.List<RequestParameter> requestParameter;
 
         private RequestParameters(Builder builder) {
             this.requestParameter = builder.requestParameter;
@@ -1249,17 +1254,17 @@ public class DescribeApiDocResponseBody extends TeaModel {
         /**
          * @return requestParameter
          */
-        public java.util.List < RequestParameter> getRequestParameter() {
+        public java.util.List<RequestParameter> getRequestParameter() {
             return this.requestParameter;
         }
 
         public static final class Builder {
-            private java.util.List < RequestParameter> requestParameter; 
+            private java.util.List<RequestParameter> requestParameter; 
 
             /**
              * RequestParameter.
              */
-            public Builder requestParameter(java.util.List < RequestParameter> requestParameter) {
+            public Builder requestParameter(java.util.List<RequestParameter> requestParameter) {
                 this.requestParameter = requestParameter;
                 return this;
             }

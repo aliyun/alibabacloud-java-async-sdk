@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ExportOASRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApiIdList")
-    private java.util.List < String > apiIdList;
+    private java.util.List<String> apiIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataFormat")
@@ -72,7 +77,7 @@ public class ExportOASRequest extends Request {
     /**
      * @return apiIdList
      */
-    public java.util.List < String > getApiIdList() {
+    public java.util.List<String> getApiIdList() {
         return this.apiIdList;
     }
 
@@ -126,7 +131,7 @@ public class ExportOASRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ExportOASRequest, Builder> {
-        private java.util.List < String > apiIdList; 
+        private java.util.List<String> apiIdList; 
         private String dataFormat; 
         private String groupId; 
         private String oasVersion; 
@@ -154,7 +159,7 @@ public class ExportOASRequest extends Request {
         /**
          * <p>The APIs that you want to export.</p>
          */
-        public Builder apiIdList(java.util.List < String > apiIdList) {
+        public Builder apiIdList(java.util.List<String> apiIdList) {
             String apiIdListShrink = shrink(apiIdList, "ApiIdList", "json");
             this.putQueryParameter("ApiIdList", apiIdListShrink);
             this.apiIdList = apiIdList;

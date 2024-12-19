@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListPrivateDNSResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("PrivateDNSList")
-    private java.util.List < PrivateDNSList> privateDNSList;
+    private java.util.List<PrivateDNSList> privateDNSList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class ListPrivateDNSResponseBody extends TeaModel {
     /**
      * @return privateDNSList
      */
-    public java.util.List < PrivateDNSList> getPrivateDNSList() {
+    public java.util.List<PrivateDNSList> getPrivateDNSList() {
         return this.privateDNSList;
     }
 
@@ -81,12 +86,15 @@ public class ListPrivateDNSResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < PrivateDNSList> privateDNSList; 
+        private java.util.List<PrivateDNSList> privateDNSList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +102,10 @@ public class ListPrivateDNSResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,15 +113,18 @@ public class ListPrivateDNSResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateDNSList.
+         * <p>The internal domain name resolutions.</p>
          */
-        public Builder privateDNSList(java.util.List < PrivateDNSList> privateDNSList) {
+        public Builder privateDNSList(java.util.List<PrivateDNSList> privateDNSList) {
             this.privateDNSList = privateDNSList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BZ016</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +132,10 @@ public class ListPrivateDNSResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -176,7 +193,10 @@ public class ListPrivateDNSResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Record.
+             * <p>The resolution record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1</p>
              */
             public Builder record(String record) {
                 this.record = record;
@@ -184,7 +204,10 @@ public class ListPrivateDNSResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * <p>The weight of the record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -206,7 +229,7 @@ public class ListPrivateDNSResponseBody extends TeaModel {
      */
     public static class PrivateDNSList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindInstances")
-        private java.util.List < String > bindInstances;
+        private java.util.List<String> bindInstances;
 
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
@@ -215,7 +238,7 @@ public class ListPrivateDNSResponseBody extends TeaModel {
         private String intranetDomain;
 
         @com.aliyun.core.annotation.NameInMap("Records")
-        private java.util.List < Records> records;
+        private java.util.List<Records> records;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -239,7 +262,7 @@ public class ListPrivateDNSResponseBody extends TeaModel {
         /**
          * @return bindInstances
          */
-        public java.util.List < String > getBindInstances() {
+        public java.util.List<String> getBindInstances() {
             return this.bindInstances;
         }
 
@@ -260,7 +283,7 @@ public class ListPrivateDNSResponseBody extends TeaModel {
         /**
          * @return records
          */
-        public java.util.List < Records> getRecords() {
+        public java.util.List<Records> getRecords() {
             return this.records;
         }
 
@@ -272,22 +295,25 @@ public class ListPrivateDNSResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > bindInstances; 
+            private java.util.List<String> bindInstances; 
             private String createdTime; 
             private String intranetDomain; 
-            private java.util.List < Records> records; 
+            private java.util.List<Records> records; 
             private String type; 
 
             /**
-             * BindInstances.
+             * <p>The instances that are associated with the resolution.</p>
              */
-            public Builder bindInstances(java.util.List < String > bindInstances) {
+            public Builder bindInstances(java.util.List<String> bindInstances) {
                 this.bindInstances = bindInstances;
                 return this;
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the resolution was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-10T08:17:00Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -295,7 +321,10 @@ public class ListPrivateDNSResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetDomain.
+             * <p>The internal domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api.demo.com</p>
              */
             public Builder intranetDomain(String intranetDomain) {
                 this.intranetDomain = intranetDomain;
@@ -303,15 +332,22 @@ public class ListPrivateDNSResponseBody extends TeaModel {
             }
 
             /**
-             * Records.
+             * <p>The resolution records.</p>
              */
-            public Builder records(java.util.List < Records> records) {
+            public Builder records(java.util.List<Records> records) {
                 this.records = records;
                 return this;
             }
 
             /**
-             * Type.
+             * <p>The internal domain name resolution type. Valid values:</p>
+             * <ul>
+             * <li>VPC: resolution for VPC access authorizations. A resolution of this type can be bound only to traditional dedicated instances.</li>
+             * <li>A: resolution that supports A records. A resolution of this type can be bound only to VPC integration dedicated instances.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder type(String type) {
                 this.type = type;

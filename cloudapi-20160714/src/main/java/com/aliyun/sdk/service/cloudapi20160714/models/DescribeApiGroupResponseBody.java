@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,6 +34,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
+
+    @com.aliyun.core.annotation.NameInMap("CustomAppCodeConfig")
+    private String customAppCodeConfig;
 
     @com.aliyun.core.annotation.NameInMap("CustomDomains")
     private CustomDomains customDomains;
@@ -118,6 +126,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         this.cmsMonitorGroup = builder.cmsMonitorGroup;
         this.compatibleFlags = builder.compatibleFlags;
         this.createdTime = builder.createdTime;
+        this.customAppCodeConfig = builder.customAppCodeConfig;
         this.customDomains = builder.customDomains;
         this.customTraceConfig = builder.customTraceConfig;
         this.customerConfigs = builder.customerConfigs;
@@ -195,6 +204,13 @@ public class DescribeApiGroupResponseBody extends TeaModel {
      */
     public String getCreatedTime() {
         return this.createdTime;
+    }
+
+    /**
+     * @return customAppCodeConfig
+     */
+    public String getCustomAppCodeConfig() {
+        return this.customAppCodeConfig;
     }
 
     /**
@@ -393,6 +409,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         private String cmsMonitorGroup; 
         private String compatibleFlags; 
         private String createdTime; 
+        private String customAppCodeConfig; 
         private CustomDomains customDomains; 
         private String customTraceConfig; 
         private String customerConfigs; 
@@ -488,6 +505,17 @@ public class DescribeApiGroupResponseBody extends TeaModel {
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
+            return this;
+        }
+
+        /**
+         * <p>The custom appcode configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;location&quot;:&quot;HEADER&quot;,&quot;name&quot;:&quot;myAppCodeHeader&quot;}</p>
+         */
+        public Builder customAppCodeConfig(String customAppCodeConfig) {
+            this.customAppCodeConfig = customAppCodeConfig;
             return this;
         }
 
@@ -1206,7 +1234,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
      */
     public static class CustomDomains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainItem")
-        private java.util.List < DomainItem> domainItem;
+        private java.util.List<DomainItem> domainItem;
 
         private CustomDomains(Builder builder) {
             this.domainItem = builder.domainItem;
@@ -1223,17 +1251,17 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         /**
          * @return domainItem
          */
-        public java.util.List < DomainItem> getDomainItem() {
+        public java.util.List<DomainItem> getDomainItem() {
             return this.domainItem;
         }
 
         public static final class Builder {
-            private java.util.List < DomainItem> domainItem; 
+            private java.util.List<DomainItem> domainItem; 
 
             /**
              * DomainItem.
              */
-            public Builder domainItem(java.util.List < DomainItem> domainItem) {
+            public Builder domainItem(java.util.List<DomainItem> domainItem) {
                 this.domainItem = domainItem;
                 return this;
             }
@@ -1349,7 +1377,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
      */
     public static class StageItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StageInfo")
-        private java.util.List < StageInfo> stageInfo;
+        private java.util.List<StageInfo> stageInfo;
 
         private StageItems(Builder builder) {
             this.stageInfo = builder.stageInfo;
@@ -1366,17 +1394,17 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         /**
          * @return stageInfo
          */
-        public java.util.List < StageInfo> getStageInfo() {
+        public java.util.List<StageInfo> getStageInfo() {
             return this.stageInfo;
         }
 
         public static final class Builder {
-            private java.util.List < StageInfo> stageInfo; 
+            private java.util.List<StageInfo> stageInfo; 
 
             /**
              * StageInfo.
              */
-            public Builder stageInfo(java.util.List < StageInfo> stageInfo) {
+            public Builder stageInfo(java.util.List<StageInfo> stageInfo) {
                 this.stageInfo = stageInfo;
                 return this;
             }
