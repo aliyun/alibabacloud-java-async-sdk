@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcipam20230228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
     private Long count;
 
     @com.aliyun.core.annotation.NameInMap("IpamPoolCidrs")
-    private java.util.List < IpamPoolCidrs> ipamPoolCidrs;
+    private java.util.List<IpamPoolCidrs> ipamPoolCidrs;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
@@ -57,7 +62,7 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
     /**
      * @return ipamPoolCidrs
      */
-    public java.util.List < IpamPoolCidrs> getIpamPoolCidrs() {
+    public java.util.List<IpamPoolCidrs> getIpamPoolCidrs() {
         return this.ipamPoolCidrs;
     }
 
@@ -91,7 +96,7 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long count; 
-        private java.util.List < IpamPoolCidrs> ipamPoolCidrs; 
+        private java.util.List<IpamPoolCidrs> ipamPoolCidrs; 
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -108,7 +113,7 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
         /**
          * IpamPoolCidrs.
          */
-        public Builder ipamPoolCidrs(java.util.List < IpamPoolCidrs> ipamPoolCidrs) {
+        public Builder ipamPoolCidrs(java.util.List<IpamPoolCidrs> ipamPoolCidrs) {
             this.ipamPoolCidrs = ipamPoolCidrs;
             return this;
         }

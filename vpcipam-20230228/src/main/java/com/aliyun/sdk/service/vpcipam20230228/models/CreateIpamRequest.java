@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcipam20230228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class CreateIpamRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperatingRegionList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > operatingRegionList;
+    private java.util.List<String> operatingRegionList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -60,7 +65,7 @@ public class CreateIpamRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private CreateIpamRequest(Builder builder) {
         super(builder);
@@ -122,7 +127,7 @@ public class CreateIpamRequest extends Request {
     /**
      * @return operatingRegionList
      */
-    public java.util.List < String > getOperatingRegionList() {
+    public java.util.List<String> getOperatingRegionList() {
         return this.operatingRegionList;
     }
 
@@ -171,7 +176,7 @@ public class CreateIpamRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -180,14 +185,14 @@ public class CreateIpamRequest extends Request {
         private Boolean dryRun; 
         private String ipamDescription; 
         private String ipamName; 
-        private java.util.List < String > operatingRegionList; 
+        private java.util.List<String> operatingRegionList; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -248,7 +253,7 @@ public class CreateIpamRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder operatingRegionList(java.util.List < String > operatingRegionList) {
+        public Builder operatingRegionList(java.util.List<String> operatingRegionList) {
             this.putQueryParameter("OperatingRegionList", operatingRegionList);
             this.operatingRegionList = operatingRegionList;
             return this;
@@ -314,7 +319,7 @@ public class CreateIpamRequest extends Request {
         /**
          * Tag.
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

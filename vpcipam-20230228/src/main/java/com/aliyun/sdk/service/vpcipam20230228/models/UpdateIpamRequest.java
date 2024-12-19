@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcipam20230228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateIpamRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddOperatingRegion")
-    private java.util.List < String > addOperatingRegion;
+    private java.util.List<String> addOperatingRegion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -52,7 +57,7 @@ public class UpdateIpamRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemoveOperatingRegion")
-    private java.util.List < String > removeOperatingRegion;
+    private java.util.List<String> removeOperatingRegion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -94,7 +99,7 @@ public class UpdateIpamRequest extends Request {
     /**
      * @return addOperatingRegion
      */
-    public java.util.List < String > getAddOperatingRegion() {
+    public java.util.List<String> getAddOperatingRegion() {
         return this.addOperatingRegion;
     }
 
@@ -157,7 +162,7 @@ public class UpdateIpamRequest extends Request {
     /**
      * @return removeOperatingRegion
      */
-    public java.util.List < String > getRemoveOperatingRegion() {
+    public java.util.List<String> getRemoveOperatingRegion() {
         return this.removeOperatingRegion;
     }
 
@@ -176,7 +181,7 @@ public class UpdateIpamRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateIpamRequest, Builder> {
-        private java.util.List < String > addOperatingRegion; 
+        private java.util.List<String> addOperatingRegion; 
         private String clientToken; 
         private Boolean dryRun; 
         private String ipamDescription; 
@@ -185,7 +190,7 @@ public class UpdateIpamRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < String > removeOperatingRegion; 
+        private java.util.List<String> removeOperatingRegion; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -212,7 +217,7 @@ public class UpdateIpamRequest extends Request {
         /**
          * AddOperatingRegion.
          */
-        public Builder addOperatingRegion(java.util.List < String > addOperatingRegion) {
+        public Builder addOperatingRegion(java.util.List<String> addOperatingRegion) {
             this.putQueryParameter("AddOperatingRegion", addOperatingRegion);
             this.addOperatingRegion = addOperatingRegion;
             return this;
@@ -299,7 +304,7 @@ public class UpdateIpamRequest extends Request {
         /**
          * RemoveOperatingRegion.
          */
-        public Builder removeOperatingRegion(java.util.List < String > removeOperatingRegion) {
+        public Builder removeOperatingRegion(java.util.List<String> removeOperatingRegion) {
             this.putQueryParameter("RemoveOperatingRegion", removeOperatingRegion);
             this.removeOperatingRegion = removeOperatingRegion;
             return this;

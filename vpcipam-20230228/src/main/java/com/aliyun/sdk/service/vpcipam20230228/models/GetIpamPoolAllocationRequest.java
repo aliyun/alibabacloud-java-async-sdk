@@ -12,19 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteIpamPoolAllocationRequest} extends {@link RequestModel}
+ * {@link GetIpamPoolAllocationRequest} extends {@link RequestModel}
  *
- * <p>DeleteIpamPoolAllocationRequest</p>
+ * <p>GetIpamPoolAllocationRequest</p>
  */
-public class DeleteIpamPoolAllocationRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ClientToken")
-    private String clientToken;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DryRun")
-    private Boolean dryRun;
-
+public class GetIpamPoolAllocationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpamPoolAllocationId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -35,10 +27,8 @@ public class DeleteIpamPoolAllocationRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    private DeleteIpamPoolAllocationRequest(Builder builder) {
+    private GetIpamPoolAllocationRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
-        this.dryRun = builder.dryRun;
         this.ipamPoolAllocationId = builder.ipamPoolAllocationId;
         this.regionId = builder.regionId;
     }
@@ -47,27 +37,13 @@ public class DeleteIpamPoolAllocationRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteIpamPoolAllocationRequest create() {
+    public static GetIpamPoolAllocationRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
-     * @return dryRun
-     */
-    public Boolean getDryRun() {
-        return this.dryRun;
     }
 
     /**
@@ -84,9 +60,7 @@ public class DeleteIpamPoolAllocationRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteIpamPoolAllocationRequest, Builder> {
-        private String clientToken; 
-        private Boolean dryRun; 
+    public static final class Builder extends Request.Builder<GetIpamPoolAllocationRequest, Builder> {
         private String ipamPoolAllocationId; 
         private String regionId; 
 
@@ -94,37 +68,17 @@ public class DeleteIpamPoolAllocationRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteIpamPoolAllocationRequest request) {
+        private Builder(GetIpamPoolAllocationRequest request) {
             super(request);
-            this.clientToken = request.clientToken;
-            this.dryRun = request.dryRun;
             this.ipamPoolAllocationId = request.ipamPoolAllocationId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * ClientToken.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * DryRun.
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ipam-alloc-c4vhvr3b22mmc6****</p>
+         * <p>ipam-pool-alloc-112za33e4****</p>
          */
         public Builder ipamPoolAllocationId(String ipamPoolAllocationId) {
             this.putQueryParameter("IpamPoolAllocationId", ipamPoolAllocationId);
@@ -145,8 +99,8 @@ public class DeleteIpamPoolAllocationRequest extends Request {
         }
 
         @Override
-        public DeleteIpamPoolAllocationRequest build() {
-            return new DeleteIpamPoolAllocationRequest(this);
+        public GetIpamPoolAllocationRequest build() {
+            return new GetIpamPoolAllocationRequest(this);
         } 
 
     } 

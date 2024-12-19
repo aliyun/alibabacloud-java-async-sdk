@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcipam20230228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListIpamResourceDiscoveriesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpamResourceDiscoveryIds")
-    private java.util.List < String > ipamResourceDiscoveryIds;
+    private java.util.List<String> ipamResourceDiscoveryIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpamResourceDiscoveryName")
@@ -56,7 +61,7 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -94,7 +99,7 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
     /**
      * @return ipamResourceDiscoveryIds
      */
-    public java.util.List < String > getIpamResourceDiscoveryIds() {
+    public java.util.List<String> getIpamResourceDiscoveryIds() {
         return this.ipamResourceDiscoveryIds;
     }
 
@@ -164,7 +169,7 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -176,7 +181,7 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListIpamResourceDiscoveriesRequest, Builder> {
-        private java.util.List < String > ipamResourceDiscoveryIds; 
+        private java.util.List<String> ipamResourceDiscoveryIds; 
         private String ipamResourceDiscoveryName; 
         private Integer maxResults; 
         private String nextToken; 
@@ -186,7 +191,7 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String type; 
 
         private Builder() {
@@ -212,7 +217,7 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         /**
          * IpamResourceDiscoveryIds.
          */
-        public Builder ipamResourceDiscoveryIds(java.util.List < String > ipamResourceDiscoveryIds) {
+        public Builder ipamResourceDiscoveryIds(java.util.List<String> ipamResourceDiscoveryIds) {
             this.putQueryParameter("IpamResourceDiscoveryIds", ipamResourceDiscoveryIds);
             this.ipamResourceDiscoveryIds = ipamResourceDiscoveryIds;
             return this;
@@ -305,7 +310,7 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

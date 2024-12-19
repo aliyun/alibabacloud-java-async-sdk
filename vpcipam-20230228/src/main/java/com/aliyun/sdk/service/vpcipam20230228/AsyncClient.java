@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteIpamScopeResponse> deleteIpamScope(DeleteIpamScopeRequest request);
 
     /**
+     * @param request the request parameters of GetIpamPoolAllocation  GetIpamPoolAllocationRequest
+     * @return GetIpamPoolAllocationResponse
+     */
+    CompletableFuture<GetIpamPoolAllocationResponse> getIpamPoolAllocation(GetIpamPoolAllocationRequest request);
+
+    /**
      * @param request the request parameters of GetVpcIpamServiceStatus  GetVpcIpamServiceStatusRequest
      * @return GetVpcIpamServiceStatusResponse
      */

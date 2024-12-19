@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcipam20230228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
     private Long count;
 
     @com.aliyun.core.annotation.NameInMap("IpamPoolAllocations")
-    private java.util.List < IpamPoolAllocations> ipamPoolAllocations;
+    private java.util.List<IpamPoolAllocations> ipamPoolAllocations;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
@@ -57,7 +62,7 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
     /**
      * @return ipamPoolAllocations
      */
-    public java.util.List < IpamPoolAllocations> getIpamPoolAllocations() {
+    public java.util.List<IpamPoolAllocations> getIpamPoolAllocations() {
         return this.ipamPoolAllocations;
     }
 
@@ -91,7 +96,7 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long count; 
-        private java.util.List < IpamPoolAllocations> ipamPoolAllocations; 
+        private java.util.List<IpamPoolAllocations> ipamPoolAllocations; 
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -108,7 +113,7 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         /**
          * IpamPoolAllocations.
          */
-        public Builder ipamPoolAllocations(java.util.List < IpamPoolAllocations> ipamPoolAllocations) {
+        public Builder ipamPoolAllocations(java.util.List<IpamPoolAllocations> ipamPoolAllocations) {
             this.ipamPoolAllocations = ipamPoolAllocations;
             return this;
         }

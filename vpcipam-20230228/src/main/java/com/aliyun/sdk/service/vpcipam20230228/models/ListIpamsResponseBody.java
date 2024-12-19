@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcipam20230228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListIpamsResponseBody extends TeaModel {
     private Long count;
 
     @com.aliyun.core.annotation.NameInMap("Ipams")
-    private java.util.List < Ipams> ipams;
+    private java.util.List<Ipams> ipams;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
@@ -57,7 +62,7 @@ public class ListIpamsResponseBody extends TeaModel {
     /**
      * @return ipams
      */
-    public java.util.List < Ipams> getIpams() {
+    public java.util.List<Ipams> getIpams() {
         return this.ipams;
     }
 
@@ -91,7 +96,7 @@ public class ListIpamsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long count; 
-        private java.util.List < Ipams> ipams; 
+        private java.util.List<Ipams> ipams; 
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -108,7 +113,7 @@ public class ListIpamsResponseBody extends TeaModel {
         /**
          * Ipams.
          */
-        public Builder ipams(java.util.List < Ipams> ipams) {
+        public Builder ipams(java.util.List<Ipams> ipams) {
             this.ipams = ipams;
             return this;
         }
@@ -247,7 +252,7 @@ public class ListIpamsResponseBody extends TeaModel {
         private String ipamStatus;
 
         @com.aliyun.core.annotation.NameInMap("OperatingRegionList")
-        private java.util.List < String > operatingRegionList;
+        private java.util.List<String> operatingRegionList;
 
         @com.aliyun.core.annotation.NameInMap("OwnerId")
         private Long ownerId;
@@ -271,7 +276,7 @@ public class ListIpamsResponseBody extends TeaModel {
         private Integer scopeCount;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Ipams(Builder builder) {
             this.createTime = builder.createTime;
@@ -352,7 +357,7 @@ public class ListIpamsResponseBody extends TeaModel {
         /**
          * @return operatingRegionList
          */
-        public java.util.List < String > getOperatingRegionList() {
+        public java.util.List<String> getOperatingRegionList() {
             return this.operatingRegionList;
         }
 
@@ -408,7 +413,7 @@ public class ListIpamsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -420,7 +425,7 @@ public class ListIpamsResponseBody extends TeaModel {
             private String ipamId; 
             private String ipamName; 
             private String ipamStatus; 
-            private java.util.List < String > operatingRegionList; 
+            private java.util.List<String> operatingRegionList; 
             private Long ownerId; 
             private String privateDefaultScopeId; 
             private String publicDefaultScopeId; 
@@ -428,7 +433,7 @@ public class ListIpamsResponseBody extends TeaModel {
             private Integer resourceDiscoveryAssociationCount; 
             private String resourceGroupId; 
             private Integer scopeCount; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * CreateTime.
@@ -489,7 +494,7 @@ public class ListIpamsResponseBody extends TeaModel {
             /**
              * OperatingRegionList.
              */
-            public Builder operatingRegionList(java.util.List < String > operatingRegionList) {
+            public Builder operatingRegionList(java.util.List<String> operatingRegionList) {
                 this.operatingRegionList = operatingRegionList;
                 return this;
             }
@@ -553,7 +558,7 @@ public class ListIpamsResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

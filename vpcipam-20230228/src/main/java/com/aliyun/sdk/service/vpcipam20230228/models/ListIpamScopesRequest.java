@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcipam20230228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListIpamScopesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpamScopeIds")
-    private java.util.List < String > ipamScopeIds;
+    private java.util.List<String> ipamScopeIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpamScopeName")
@@ -64,7 +69,7 @@ public class ListIpamScopesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private ListIpamScopesRequest(Builder builder) {
         super(builder);
@@ -106,7 +111,7 @@ public class ListIpamScopesRequest extends Request {
     /**
      * @return ipamScopeIds
      */
-    public java.util.List < String > getIpamScopeIds() {
+    public java.util.List<String> getIpamScopeIds() {
         return this.ipamScopeIds;
     }
 
@@ -183,13 +188,13 @@ public class ListIpamScopesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<ListIpamScopesRequest, Builder> {
         private String ipamId; 
-        private java.util.List < String > ipamScopeIds; 
+        private java.util.List<String> ipamScopeIds; 
         private String ipamScopeName; 
         private String ipamScopeType; 
         private Long maxResults; 
@@ -200,7 +205,7 @@ public class ListIpamScopesRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -235,7 +240,7 @@ public class ListIpamScopesRequest extends Request {
         /**
          * IpamScopeIds.
          */
-        public Builder ipamScopeIds(java.util.List < String > ipamScopeIds) {
+        public Builder ipamScopeIds(java.util.List<String> ipamScopeIds) {
             this.putQueryParameter("IpamScopeIds", ipamScopeIds);
             this.ipamScopeIds = ipamScopeIds;
             return this;
@@ -337,7 +342,7 @@ public class ListIpamScopesRequest extends Request {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

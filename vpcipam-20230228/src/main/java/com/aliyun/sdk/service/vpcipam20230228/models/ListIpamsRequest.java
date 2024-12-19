@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcipam20230228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListIpamsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpamIds")
-    private java.util.List < String > ipamIds;
+    private java.util.List<String> ipamIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpamName")
@@ -56,7 +61,7 @@ public class ListIpamsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private ListIpamsRequest(Builder builder) {
         super(builder);
@@ -89,7 +94,7 @@ public class ListIpamsRequest extends Request {
     /**
      * @return ipamIds
      */
-    public java.util.List < String > getIpamIds() {
+    public java.util.List<String> getIpamIds() {
         return this.ipamIds;
     }
 
@@ -159,12 +164,12 @@ public class ListIpamsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<ListIpamsRequest, Builder> {
-        private java.util.List < String > ipamIds; 
+        private java.util.List<String> ipamIds; 
         private String ipamName; 
         private Long maxResults; 
         private String nextToken; 
@@ -174,7 +179,7 @@ public class ListIpamsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -198,7 +203,7 @@ public class ListIpamsRequest extends Request {
         /**
          * IpamIds.
          */
-        public Builder ipamIds(java.util.List < String > ipamIds) {
+        public Builder ipamIds(java.util.List<String> ipamIds) {
             this.putQueryParameter("IpamIds", ipamIds);
             this.ipamIds = ipamIds;
             return this;
@@ -291,7 +296,7 @@ public class ListIpamsRequest extends Request {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

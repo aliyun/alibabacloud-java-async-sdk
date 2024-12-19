@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcipam20230228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListIpamPoolsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpamPoolIds")
-    private java.util.List < String > ipamPoolIds;
+    private java.util.List<String> ipamPoolIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpamPoolName")
@@ -72,7 +77,7 @@ public class ListIpamPoolsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private ListIpamPoolsRequest(Builder builder) {
         super(builder);
@@ -109,7 +114,7 @@ public class ListIpamPoolsRequest extends Request {
     /**
      * @return ipamPoolIds
      */
-    public java.util.List < String > getIpamPoolIds() {
+    public java.util.List<String> getIpamPoolIds() {
         return this.ipamPoolIds;
     }
 
@@ -207,12 +212,12 @@ public class ListIpamPoolsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<ListIpamPoolsRequest, Builder> {
-        private java.util.List < String > ipamPoolIds; 
+        private java.util.List<String> ipamPoolIds; 
         private String ipamPoolName; 
         private String ipamScopeId; 
         private Boolean isShared; 
@@ -226,7 +231,7 @@ public class ListIpamPoolsRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String sourceIpamPoolId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -254,7 +259,7 @@ public class ListIpamPoolsRequest extends Request {
         /**
          * IpamPoolIds.
          */
-        public Builder ipamPoolIds(java.util.List < String > ipamPoolIds) {
+        public Builder ipamPoolIds(java.util.List<String> ipamPoolIds) {
             this.putQueryParameter("IpamPoolIds", ipamPoolIds);
             this.ipamPoolIds = ipamPoolIds;
             return this;
@@ -383,7 +388,7 @@ public class ListIpamPoolsRequest extends Request {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

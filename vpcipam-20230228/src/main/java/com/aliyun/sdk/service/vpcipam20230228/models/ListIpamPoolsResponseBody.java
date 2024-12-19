@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcipam20230228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
     private Long count;
 
     @com.aliyun.core.annotation.NameInMap("IpamPools")
-    private java.util.List < IpamPools> ipamPools;
+    private java.util.List<IpamPools> ipamPools;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
@@ -57,7 +62,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
     /**
      * @return ipamPools
      */
-    public java.util.List < IpamPools> getIpamPools() {
+    public java.util.List<IpamPools> getIpamPools() {
         return this.ipamPools;
     }
 
@@ -91,7 +96,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long count; 
-        private java.util.List < IpamPools> ipamPools; 
+        private java.util.List<IpamPools> ipamPools; 
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -108,7 +113,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         /**
          * IpamPools.
          */
-        public Builder ipamPools(java.util.List < IpamPools> ipamPools) {
+        public Builder ipamPools(java.util.List<IpamPools> ipamPools) {
             this.ipamPools = ipamPools;
             return this;
         }
@@ -282,6 +287,9 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("SourceIpamPoolId")
         private String sourceIpamPoolId;
 
@@ -289,7 +297,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private IpamPools(Builder builder) {
             this.allocationDefaultCidrMask = builder.allocationDefaultCidrMask;
@@ -311,6 +319,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             this.poolDepth = builder.poolDepth;
             this.poolRegionId = builder.poolRegionId;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.sourceIpamPoolId = builder.sourceIpamPoolId;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -458,6 +467,13 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return sourceIpamPoolId
          */
         public String getSourceIpamPoolId() {
@@ -474,7 +490,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -498,9 +514,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             private Integer poolDepth; 
             private String poolRegionId; 
             private String regionId; 
+            private String resourceGroupId; 
             private String sourceIpamPoolId; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * AllocationDefaultCidrMask.
@@ -655,6 +672,14 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * SourceIpamPoolId.
              */
             public Builder sourceIpamPoolId(String sourceIpamPoolId) {
@@ -673,7 +698,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

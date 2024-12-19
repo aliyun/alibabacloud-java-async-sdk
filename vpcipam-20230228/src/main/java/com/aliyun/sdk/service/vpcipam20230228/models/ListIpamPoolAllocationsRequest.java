@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcipam20230228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListIpamPoolAllocationsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpamPoolAllocationIds")
-    private java.util.List < String > ipamPoolAllocationIds;
+    private java.util.List<String> ipamPoolAllocationIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpamPoolAllocationName")
@@ -76,7 +81,7 @@ public class ListIpamPoolAllocationsRequest extends Request {
     /**
      * @return ipamPoolAllocationIds
      */
-    public java.util.List < String > getIpamPoolAllocationIds() {
+    public java.util.List<String> getIpamPoolAllocationIds() {
         return this.ipamPoolAllocationIds;
     }
 
@@ -117,7 +122,7 @@ public class ListIpamPoolAllocationsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListIpamPoolAllocationsRequest, Builder> {
         private String cidr; 
-        private java.util.List < String > ipamPoolAllocationIds; 
+        private java.util.List<String> ipamPoolAllocationIds; 
         private String ipamPoolAllocationName; 
         private String ipamPoolId; 
         private Integer maxResults; 
@@ -151,7 +156,7 @@ public class ListIpamPoolAllocationsRequest extends Request {
         /**
          * IpamPoolAllocationIds.
          */
-        public Builder ipamPoolAllocationIds(java.util.List < String > ipamPoolAllocationIds) {
+        public Builder ipamPoolAllocationIds(java.util.List<String> ipamPoolAllocationIds) {
             this.putQueryParameter("IpamPoolAllocationIds", ipamPoolAllocationIds);
             this.ipamPoolAllocationIds = ipamPoolAllocationIds;
             return this;

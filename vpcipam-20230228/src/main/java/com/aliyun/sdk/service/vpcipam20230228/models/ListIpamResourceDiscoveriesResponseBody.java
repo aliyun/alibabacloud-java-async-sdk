@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcipam20230228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("IpamResourceDiscoveries")
-    private java.util.List < IpamResourceDiscoveries> ipamResourceDiscoveries;
+    private java.util.List<IpamResourceDiscoveries> ipamResourceDiscoveries;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -57,7 +62,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
     /**
      * @return ipamResourceDiscoveries
      */
-    public java.util.List < IpamResourceDiscoveries> getIpamResourceDiscoveries() {
+    public java.util.List<IpamResourceDiscoveries> getIpamResourceDiscoveries() {
         return this.ipamResourceDiscoveries;
     }
 
@@ -91,7 +96,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < IpamResourceDiscoveries> ipamResourceDiscoveries; 
+        private java.util.List<IpamResourceDiscoveries> ipamResourceDiscoveries; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -108,7 +113,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         /**
          * IpamResourceDiscoveries.
          */
-        public Builder ipamResourceDiscoveries(java.util.List < IpamResourceDiscoveries> ipamResourceDiscoveries) {
+        public Builder ipamResourceDiscoveries(java.util.List<IpamResourceDiscoveries> ipamResourceDiscoveries) {
             this.ipamResourceDiscoveries = ipamResourceDiscoveries;
             return this;
         }
@@ -241,7 +246,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         private String ipamResourceDiscoveryStatus;
 
         @com.aliyun.core.annotation.NameInMap("OperatingRegionList")
-        private java.util.List < String > operatingRegionList;
+        private java.util.List<String> operatingRegionList;
 
         @com.aliyun.core.annotation.NameInMap("OwnerId")
         private Long ownerId;
@@ -253,7 +258,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -318,7 +323,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         /**
          * @return operatingRegionList
          */
-        public java.util.List < String > getOperatingRegionList() {
+        public java.util.List<String> getOperatingRegionList() {
             return this.operatingRegionList;
         }
 
@@ -346,7 +351,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -363,11 +368,11 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             private String ipamResourceDiscoveryId; 
             private String ipamResourceDiscoveryName; 
             private String ipamResourceDiscoveryStatus; 
-            private java.util.List < String > operatingRegionList; 
+            private java.util.List<String> operatingRegionList; 
             private Long ownerId; 
             private String regionId; 
             private String resourceGroupId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String type; 
 
             /**
@@ -413,7 +418,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             /**
              * OperatingRegionList.
              */
-            public Builder operatingRegionList(java.util.List < String > operatingRegionList) {
+            public Builder operatingRegionList(java.util.List<String> operatingRegionList) {
                 this.operatingRegionList = operatingRegionList;
                 return this;
             }
@@ -445,7 +450,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

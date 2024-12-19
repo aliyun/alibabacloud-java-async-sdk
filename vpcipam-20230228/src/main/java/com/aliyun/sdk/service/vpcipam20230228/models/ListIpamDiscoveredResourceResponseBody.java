@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcipam20230228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("IpamDiscoveredResources")
-    private java.util.List < IpamDiscoveredResources> ipamDiscoveredResources;
+    private java.util.List<IpamDiscoveredResources> ipamDiscoveredResources;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -57,7 +62,7 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
     /**
      * @return ipamDiscoveredResources
      */
-    public java.util.List < IpamDiscoveredResources> getIpamDiscoveredResources() {
+    public java.util.List<IpamDiscoveredResources> getIpamDiscoveredResources() {
         return this.ipamDiscoveredResources;
     }
 
@@ -91,7 +96,7 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < IpamDiscoveredResources> ipamDiscoveredResources; 
+        private java.util.List<IpamDiscoveredResources> ipamDiscoveredResources; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -108,7 +113,7 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
         /**
          * IpamDiscoveredResources.
          */
-        public Builder ipamDiscoveredResources(java.util.List < IpamDiscoveredResources> ipamDiscoveredResources) {
+        public Builder ipamDiscoveredResources(java.util.List<IpamDiscoveredResources> ipamDiscoveredResources) {
             this.ipamDiscoveredResources = ipamDiscoveredResources;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpcipam20230228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListIpamScopesResponseBody extends TeaModel {
     private Long count;
 
     @com.aliyun.core.annotation.NameInMap("IpamScopes")
-    private java.util.List < IpamScopes> ipamScopes;
+    private java.util.List<IpamScopes> ipamScopes;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
@@ -57,7 +62,7 @@ public class ListIpamScopesResponseBody extends TeaModel {
     /**
      * @return ipamScopes
      */
-    public java.util.List < IpamScopes> getIpamScopes() {
+    public java.util.List<IpamScopes> getIpamScopes() {
         return this.ipamScopes;
     }
 
@@ -91,7 +96,7 @@ public class ListIpamScopesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long count; 
-        private java.util.List < IpamScopes> ipamScopes; 
+        private java.util.List<IpamScopes> ipamScopes; 
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -108,7 +113,7 @@ public class ListIpamScopesResponseBody extends TeaModel {
         /**
          * IpamScopes.
          */
-        public Builder ipamScopes(java.util.List < IpamScopes> ipamScopes) {
+        public Builder ipamScopes(java.util.List<IpamScopes> ipamScopes) {
             this.ipamScopes = ipamScopes;
             return this;
         }
@@ -255,11 +260,14 @@ public class ListIpamScopesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private IpamScopes(Builder builder) {
             this.createTime = builder.createTime;
@@ -272,6 +280,7 @@ public class ListIpamScopesResponseBody extends TeaModel {
             this.ownerId = builder.ownerId;
             this.poolCount = builder.poolCount;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.tags = builder.tags;
         }
@@ -355,6 +364,13 @@ public class ListIpamScopesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -364,7 +380,7 @@ public class ListIpamScopesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -379,8 +395,9 @@ public class ListIpamScopesResponseBody extends TeaModel {
             private Long ownerId; 
             private Integer poolCount; 
             private String regionId; 
+            private String resourceGroupId; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * CreateTime.
@@ -463,6 +480,14 @@ public class ListIpamScopesResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
@@ -473,7 +498,7 @@ public class ListIpamScopesResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
