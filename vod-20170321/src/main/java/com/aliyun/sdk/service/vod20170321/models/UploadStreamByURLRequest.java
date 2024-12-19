@@ -41,6 +41,10 @@ public class UploadStreamByURLRequest extends Request {
     private String streamURL;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UploadMetadata")
+    private String uploadMetadata;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
@@ -51,6 +55,7 @@ public class UploadStreamByURLRequest extends Request {
         this.HDRType = builder.HDRType;
         this.mediaId = builder.mediaId;
         this.streamURL = builder.streamURL;
+        this.uploadMetadata = builder.uploadMetadata;
         this.userData = builder.userData;
     }
 
@@ -103,6 +108,13 @@ public class UploadStreamByURLRequest extends Request {
     }
 
     /**
+     * @return uploadMetadata
+     */
+    public String getUploadMetadata() {
+        return this.uploadMetadata;
+    }
+
+    /**
      * @return userData
      */
     public String getUserData() {
@@ -115,6 +127,7 @@ public class UploadStreamByURLRequest extends Request {
         private String HDRType; 
         private String mediaId; 
         private String streamURL; 
+        private String uploadMetadata; 
         private String userData; 
 
         private Builder() {
@@ -128,6 +141,7 @@ public class UploadStreamByURLRequest extends Request {
             this.HDRType = request.HDRType;
             this.mediaId = request.mediaId;
             this.streamURL = request.streamURL;
+            this.uploadMetadata = request.uploadMetadata;
             this.userData = request.userData;
         } 
 
@@ -214,6 +228,15 @@ public class UploadStreamByURLRequest extends Request {
         public Builder streamURL(String streamURL) {
             this.putQueryParameter("StreamURL", streamURL);
             this.streamURL = streamURL;
+            return this;
+        }
+
+        /**
+         * UploadMetadata.
+         */
+        public Builder uploadMetadata(String uploadMetadata) {
+            this.putQueryParameter("UploadMetadata", uploadMetadata);
+            this.uploadMetadata = uploadMetadata;
             return this;
         }
 

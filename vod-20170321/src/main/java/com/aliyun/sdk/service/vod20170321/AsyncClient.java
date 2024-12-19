@@ -139,6 +139,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachAppPolicyToIdentityResponse> attachAppPolicyToIdentity(AttachAppPolicyToIdentityRequest request);
 
     /**
+     * @param request the request parameters of BatchGetMediaInfos  BatchGetMediaInfosRequest
+     * @return BatchGetMediaInfosResponse
+     */
+    CompletableFuture<BatchGetMediaInfosResponse> batchGetMediaInfos(BatchGetMediaInfosRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>This operation is available only in the <strong>China (Shanghai)</strong> region.</p>
