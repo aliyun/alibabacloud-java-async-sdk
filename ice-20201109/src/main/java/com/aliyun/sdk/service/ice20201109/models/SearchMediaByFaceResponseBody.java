@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("MediaInfoList")
-    private java.util.List < MediaInfoList> mediaInfoList;
+    private java.util.List<MediaInfoList> mediaInfoList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -53,7 +58,7 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
     /**
      * @return mediaInfoList
      */
-    public java.util.List < MediaInfoList> getMediaInfoList() {
+    public java.util.List<MediaInfoList> getMediaInfoList() {
         return this.mediaInfoList;
     }
 
@@ -80,7 +85,7 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < MediaInfoList> mediaInfoList; 
+        private java.util.List<MediaInfoList> mediaInfoList; 
         private String requestId; 
         private String success; 
         private Long total; 
@@ -99,7 +104,7 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
         /**
          * <p>The media assets that meet the conditions.</p>
          */
-        public Builder mediaInfoList(java.util.List < MediaInfoList> mediaInfoList) {
+        public Builder mediaInfoList(java.util.List<MediaInfoList> mediaInfoList) {
             this.mediaInfoList = mediaInfoList;
             return this;
         }

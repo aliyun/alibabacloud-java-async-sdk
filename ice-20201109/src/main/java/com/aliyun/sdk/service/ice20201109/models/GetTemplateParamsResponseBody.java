@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetTemplateParamsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ParamList")
-    private java.util.List < ParamList> paramList;
+    private java.util.List<ParamList> paramList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class GetTemplateParamsResponseBody extends TeaModel {
     /**
      * @return paramList
      */
-    public java.util.List < ParamList> getParamList() {
+    public java.util.List<ParamList> getParamList() {
         return this.paramList;
     }
 
@@ -57,14 +62,14 @@ public class GetTemplateParamsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ParamList> paramList; 
+        private java.util.List<ParamList> paramList; 
         private String requestId; 
         private String templateId; 
 
         /**
          * <p>The queried parameters.</p>
          */
-        public Builder paramList(java.util.List < ParamList> paramList) {
+        public Builder paramList(java.util.List<ParamList> paramList) {
             this.paramList = paramList;
             return this;
         }

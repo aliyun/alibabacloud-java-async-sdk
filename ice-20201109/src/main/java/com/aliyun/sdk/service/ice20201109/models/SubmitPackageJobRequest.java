@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class SubmitPackageJobRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Inputs")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Inputs> inputs;
+    private java.util.List<Inputs> inputs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -59,7 +64,7 @@ public class SubmitPackageJobRequest extends Request {
     /**
      * @return inputs
      */
-    public java.util.List < Inputs> getInputs() {
+    public java.util.List<Inputs> getInputs() {
         return this.inputs;
     }
 
@@ -92,7 +97,7 @@ public class SubmitPackageJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubmitPackageJobRequest, Builder> {
-        private java.util.List < Inputs> inputs; 
+        private java.util.List<Inputs> inputs; 
         private String name; 
         private Output output; 
         private ScheduleConfig scheduleConfig; 
@@ -115,7 +120,7 @@ public class SubmitPackageJobRequest extends Request {
          * <p>The input of the job.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder inputs(java.util.List < Inputs> inputs) {
+        public Builder inputs(java.util.List<Inputs> inputs) {
             String inputsShrink = shrink(inputs, "Inputs", "json");
             this.putQueryParameter("Inputs", inputsShrink);
             this.inputs = inputs;

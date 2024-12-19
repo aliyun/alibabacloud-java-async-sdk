@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class SearchMediaResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("MediaInfoList")
-    private java.util.List < MediaInfoList> mediaInfoList;
+    private java.util.List<MediaInfoList> mediaInfoList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -57,7 +62,7 @@ public class SearchMediaResponseBody extends TeaModel {
     /**
      * @return mediaInfoList
      */
-    public java.util.List < MediaInfoList> getMediaInfoList() {
+    public java.util.List<MediaInfoList> getMediaInfoList() {
         return this.mediaInfoList;
     }
 
@@ -91,7 +96,7 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < MediaInfoList> mediaInfoList; 
+        private java.util.List<MediaInfoList> mediaInfoList; 
         private String requestId; 
         private String scrollToken; 
         private String success; 
@@ -111,7 +116,7 @@ public class SearchMediaResponseBody extends TeaModel {
         /**
          * <p>The media assets that meet the requirements.</p>
          */
-        public Builder mediaInfoList(java.util.List < MediaInfoList> mediaInfoList) {
+        public Builder mediaInfoList(java.util.List<MediaInfoList> mediaInfoList) {
             this.mediaInfoList = mediaInfoList;
             return this;
         }
@@ -294,7 +299,7 @@ public class SearchMediaResponseBody extends TeaModel {
         private Double to;
 
         @com.aliyun.core.annotation.NameInMap("Tracks")
-        private java.util.List < Tracks> tracks;
+        private java.util.List<Tracks> tracks;
 
         @com.aliyun.core.annotation.NameInMap("clipId")
         private String clipId;
@@ -379,7 +384,7 @@ public class SearchMediaResponseBody extends TeaModel {
         /**
          * @return tracks
          */
-        public java.util.List < Tracks> getTracks() {
+        public java.util.List<Tracks> getTracks() {
             return this.tracks;
         }
 
@@ -399,7 +404,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private Double score; 
             private String tableBatchSeqId; 
             private Double to; 
-            private java.util.List < Tracks> tracks; 
+            private java.util.List<Tracks> tracks; 
             private String clipId; 
 
             /**
@@ -487,7 +492,7 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The track sequence.</p>
              */
-            public Builder tracks(java.util.List < Tracks> tracks) {
+            public Builder tracks(java.util.List<Tracks> tracks) {
                 this.tracks = tracks;
                 return this;
             }
@@ -533,7 +538,7 @@ public class SearchMediaResponseBody extends TeaModel {
         private String labelType;
 
         @com.aliyun.core.annotation.NameInMap("Occurrences")
-        private java.util.List < Occurrences> occurrences;
+        private java.util.List<Occurrences> occurrences;
 
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
@@ -594,7 +599,7 @@ public class SearchMediaResponseBody extends TeaModel {
         /**
          * @return occurrences
          */
-        public java.util.List < Occurrences> getOccurrences() {
+        public java.util.List<Occurrences> getOccurrences() {
             return this.occurrences;
         }
 
@@ -611,7 +616,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private String labelId; 
             private String labelName; 
             private String labelType; 
-            private java.util.List < Occurrences> occurrences; 
+            private java.util.List<Occurrences> occurrences; 
             private String source; 
 
             /**
@@ -663,7 +668,7 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The clips.</p>
              */
-            public Builder occurrences(java.util.List < Occurrences> occurrences) {
+            public Builder occurrences(java.util.List<Occurrences> occurrences) {
                 this.occurrences = occurrences;
                 return this;
             }
@@ -972,13 +977,13 @@ public class SearchMediaResponseBody extends TeaModel {
      */
     public static class AiData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AiLabelInfo")
-        private java.util.List < AiLabelInfo> aiLabelInfo;
+        private java.util.List<AiLabelInfo> aiLabelInfo;
 
         @com.aliyun.core.annotation.NameInMap("AsrInfo")
-        private java.util.List < AsrInfo> asrInfo;
+        private java.util.List<AsrInfo> asrInfo;
 
         @com.aliyun.core.annotation.NameInMap("OcrInfo")
-        private java.util.List < OcrInfo> ocrInfo;
+        private java.util.List<OcrInfo> ocrInfo;
 
         private AiData(Builder builder) {
             this.aiLabelInfo = builder.aiLabelInfo;
@@ -997,33 +1002,33 @@ public class SearchMediaResponseBody extends TeaModel {
         /**
          * @return aiLabelInfo
          */
-        public java.util.List < AiLabelInfo> getAiLabelInfo() {
+        public java.util.List<AiLabelInfo> getAiLabelInfo() {
             return this.aiLabelInfo;
         }
 
         /**
          * @return asrInfo
          */
-        public java.util.List < AsrInfo> getAsrInfo() {
+        public java.util.List<AsrInfo> getAsrInfo() {
             return this.asrInfo;
         }
 
         /**
          * @return ocrInfo
          */
-        public java.util.List < OcrInfo> getOcrInfo() {
+        public java.util.List<OcrInfo> getOcrInfo() {
             return this.ocrInfo;
         }
 
         public static final class Builder {
-            private java.util.List < AiLabelInfo> aiLabelInfo; 
-            private java.util.List < AsrInfo> asrInfo; 
-            private java.util.List < OcrInfo> ocrInfo; 
+            private java.util.List<AiLabelInfo> aiLabelInfo; 
+            private java.util.List<AsrInfo> asrInfo; 
+            private java.util.List<OcrInfo> ocrInfo; 
 
             /**
              * <p>The tags of the intelligent AI job.</p>
              */
-            public Builder aiLabelInfo(java.util.List < AiLabelInfo> aiLabelInfo) {
+            public Builder aiLabelInfo(java.util.List<AiLabelInfo> aiLabelInfo) {
                 this.aiLabelInfo = aiLabelInfo;
                 return this;
             }
@@ -1031,7 +1036,7 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The information about audio files.</p>
              */
-            public Builder asrInfo(java.util.List < AsrInfo> asrInfo) {
+            public Builder asrInfo(java.util.List<AsrInfo> asrInfo) {
                 this.asrInfo = asrInfo;
                 return this;
             }
@@ -1039,7 +1044,7 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The subtitles.</p>
              */
-            public Builder ocrInfo(java.util.List < OcrInfo> ocrInfo) {
+            public Builder ocrInfo(java.util.List<OcrInfo> ocrInfo) {
                 this.ocrInfo = ocrInfo;
                 return this;
             }
@@ -2194,10 +2199,10 @@ public class SearchMediaResponseBody extends TeaModel {
         private AiRoughData aiRoughData;
 
         @com.aliyun.core.annotation.NameInMap("FileInfoList")
-        private java.util.List < FileInfoList> fileInfoList;
+        private java.util.List<FileInfoList> fileInfoList;
 
         @com.aliyun.core.annotation.NameInMap("IndexStatusList")
-        private java.util.List < IndexStatusList> indexStatusList;
+        private java.util.List<IndexStatusList> indexStatusList;
 
         @com.aliyun.core.annotation.NameInMap("MediaBasicInfo")
         private MediaBasicInfo mediaBasicInfo;
@@ -2239,14 +2244,14 @@ public class SearchMediaResponseBody extends TeaModel {
         /**
          * @return fileInfoList
          */
-        public java.util.List < FileInfoList> getFileInfoList() {
+        public java.util.List<FileInfoList> getFileInfoList() {
             return this.fileInfoList;
         }
 
         /**
          * @return indexStatusList
          */
-        public java.util.List < IndexStatusList> getIndexStatusList() {
+        public java.util.List<IndexStatusList> getIndexStatusList() {
             return this.indexStatusList;
         }
 
@@ -2267,8 +2272,8 @@ public class SearchMediaResponseBody extends TeaModel {
         public static final class Builder {
             private AiData aiData; 
             private AiRoughData aiRoughData; 
-            private java.util.List < FileInfoList> fileInfoList; 
-            private java.util.List < IndexStatusList> indexStatusList; 
+            private java.util.List<FileInfoList> fileInfoList; 
+            private java.util.List<IndexStatusList> indexStatusList; 
             private MediaBasicInfo mediaBasicInfo; 
             private String mediaId; 
 
@@ -2291,7 +2296,7 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * <p>The information about the files.</p>
              */
-            public Builder fileInfoList(java.util.List < FileInfoList> fileInfoList) {
+            public Builder fileInfoList(java.util.List<FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
                 return this;
             }
@@ -2299,7 +2304,7 @@ public class SearchMediaResponseBody extends TeaModel {
             /**
              * IndexStatusList.
              */
-            public Builder indexStatusList(java.util.List < IndexStatusList> indexStatusList) {
+            public Builder indexStatusList(java.util.List<IndexStatusList> indexStatusList) {
                 this.indexStatusList = indexStatusList;
                 return this;
             }

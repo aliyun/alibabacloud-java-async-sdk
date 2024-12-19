@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
     private Integer maxResults;
 
     @com.aliyun.core.annotation.NameInMap("MediaInfos")
-    private java.util.List < MediaInfos> mediaInfos;
+    private java.util.List<MediaInfos> mediaInfos;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -53,7 +58,7 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
     /**
      * @return mediaInfos
      */
-    public java.util.List < MediaInfos> getMediaInfos() {
+    public java.util.List<MediaInfos> getMediaInfos() {
         return this.mediaInfos;
     }
 
@@ -80,7 +85,7 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer maxResults; 
-        private java.util.List < MediaInfos> mediaInfos; 
+        private java.util.List<MediaInfos> mediaInfos; 
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
@@ -99,7 +104,7 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
         /**
          * <p>The media assets that meet the specified conditions.</p>
          */
-        public Builder mediaInfos(java.util.List < MediaInfos> mediaInfos) {
+        public Builder mediaInfos(java.util.List<MediaInfos> mediaInfos) {
             this.mediaInfos = mediaInfos;
             return this;
         }
@@ -1048,7 +1053,7 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
      */
     public static class MediaInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileInfoList")
-        private java.util.List < FileInfoList> fileInfoList;
+        private java.util.List<FileInfoList> fileInfoList;
 
         @com.aliyun.core.annotation.NameInMap("MediaBasicInfo")
         private MediaBasicInfo mediaBasicInfo;
@@ -1073,7 +1078,7 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
         /**
          * @return fileInfoList
          */
-        public java.util.List < FileInfoList> getFileInfoList() {
+        public java.util.List<FileInfoList> getFileInfoList() {
             return this.fileInfoList;
         }
 
@@ -1092,14 +1097,14 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FileInfoList> fileInfoList; 
+            private java.util.List<FileInfoList> fileInfoList; 
             private MediaBasicInfo mediaBasicInfo; 
             private String mediaId; 
 
             /**
              * <p>FileInfos</p>
              */
-            public Builder fileInfoList(java.util.List < FileInfoList> fileInfoList) {
+            public Builder fileInfoList(java.util.List<FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
     private String sortBy;
 
     @com.aliyun.core.annotation.NameInMap("TemplateList")
-    private java.util.List < TemplateList> templateList;
+    private java.util.List<TemplateList> templateList;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -78,7 +83,7 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
     /**
      * @return templateList
      */
-    public java.util.List < TemplateList> getTemplateList() {
+    public java.util.List<TemplateList> getTemplateList() {
         return this.templateList;
     }
 
@@ -94,7 +99,7 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private String sortBy; 
-        private java.util.List < TemplateList> templateList; 
+        private java.util.List<TemplateList> templateList; 
         private Long totalCount; 
 
         /**
@@ -144,7 +149,7 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
         /**
          * <p>The list of the templates.</p>
          */
-        public Builder templateList(java.util.List < TemplateList> templateList) {
+        public Builder templateList(java.util.List<TemplateList> templateList) {
             this.templateList = templateList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SmartSysAvatarModelList")
-    private java.util.List < SmartSysAvatarModelList> smartSysAvatarModelList;
+    private java.util.List<SmartSysAvatarModelList> smartSysAvatarModelList;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -45,7 +50,7 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
     /**
      * @return smartSysAvatarModelList
      */
-    public java.util.List < SmartSysAvatarModelList> getSmartSysAvatarModelList() {
+    public java.util.List<SmartSysAvatarModelList> getSmartSysAvatarModelList() {
         return this.smartSysAvatarModelList;
     }
 
@@ -58,7 +63,7 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SmartSysAvatarModelList> smartSysAvatarModelList; 
+        private java.util.List<SmartSysAvatarModelList> smartSysAvatarModelList; 
         private Integer totalCount; 
 
         /**
@@ -75,7 +80,7 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
         /**
          * <p>The queried digital humans.</p>
          */
-        public Builder smartSysAvatarModelList(java.util.List < SmartSysAvatarModelList> smartSysAvatarModelList) {
+        public Builder smartSysAvatarModelList(java.util.List<SmartSysAvatarModelList> smartSysAvatarModelList) {
             this.smartSysAvatarModelList = smartSysAvatarModelList;
             return this;
         }

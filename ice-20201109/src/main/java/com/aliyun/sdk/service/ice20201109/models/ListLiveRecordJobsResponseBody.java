@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListLiveRecordJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LiveRecordJobs")
-    private java.util.List < LiveRecordJobs> liveRecordJobs;
+    private java.util.List<LiveRecordJobs> liveRecordJobs;
 
     @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
@@ -50,7 +55,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
     /**
      * @return liveRecordJobs
      */
-    public java.util.List < LiveRecordJobs> getLiveRecordJobs() {
+    public java.util.List<LiveRecordJobs> getLiveRecordJobs() {
         return this.liveRecordJobs;
     }
 
@@ -90,7 +95,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LiveRecordJobs> liveRecordJobs; 
+        private java.util.List<LiveRecordJobs> liveRecordJobs; 
         private Long pageNo; 
         private Long pageSize; 
         private String requestId; 
@@ -100,7 +105,7 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         /**
          * <p>The list of live stream recording jobs.</p>
          */
-        public Builder liveRecordJobs(java.util.List < LiveRecordJobs> liveRecordJobs) {
+        public Builder liveRecordJobs(java.util.List<LiveRecordJobs> liveRecordJobs) {
             this.liveRecordJobs = liveRecordJobs;
             return this;
         }

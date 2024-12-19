@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
      */
     public static class OutputStream extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StreamInfos")
-        private java.util.List < StreamInfos> streamInfos;
+        private java.util.List<StreamInfos> streamInfos;
 
         private OutputStream(Builder builder) {
             this.streamInfos = builder.streamInfos;
@@ -172,17 +177,17 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
         /**
          * @return streamInfos
          */
-        public java.util.List < StreamInfos> getStreamInfos() {
+        public java.util.List<StreamInfos> getStreamInfos() {
             return this.streamInfos;
         }
 
         public static final class Builder {
-            private java.util.List < StreamInfos> streamInfos; 
+            private java.util.List<StreamInfos> streamInfos; 
 
             /**
              * <p>The information about the output stream.</p>
              */
-            public Builder streamInfos(java.util.List < StreamInfos> streamInfos) {
+            public Builder streamInfos(java.util.List<StreamInfos> streamInfos) {
                 this.streamInfos = streamInfos;
                 return this;
             }

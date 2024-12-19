@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1398,13 +1403,13 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
      */
     public static class MediaInfoProperty extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioStreamInfoList")
-        private java.util.List < AudioStreamInfoList> audioStreamInfoList;
+        private java.util.List<AudioStreamInfoList> audioStreamInfoList;
 
         @com.aliyun.core.annotation.NameInMap("FileBasicInfo")
         private FileBasicInfo fileBasicInfo;
 
         @com.aliyun.core.annotation.NameInMap("VideoStreamInfoList")
-        private java.util.List < VideoStreamInfoList> videoStreamInfoList;
+        private java.util.List<VideoStreamInfoList> videoStreamInfoList;
 
         private MediaInfoProperty(Builder builder) {
             this.audioStreamInfoList = builder.audioStreamInfoList;
@@ -1423,7 +1428,7 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         /**
          * @return audioStreamInfoList
          */
-        public java.util.List < AudioStreamInfoList> getAudioStreamInfoList() {
+        public java.util.List<AudioStreamInfoList> getAudioStreamInfoList() {
             return this.audioStreamInfoList;
         }
 
@@ -1437,19 +1442,19 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         /**
          * @return videoStreamInfoList
          */
-        public java.util.List < VideoStreamInfoList> getVideoStreamInfoList() {
+        public java.util.List<VideoStreamInfoList> getVideoStreamInfoList() {
             return this.videoStreamInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < AudioStreamInfoList> audioStreamInfoList; 
+            private java.util.List<AudioStreamInfoList> audioStreamInfoList; 
             private FileBasicInfo fileBasicInfo; 
-            private java.util.List < VideoStreamInfoList> videoStreamInfoList; 
+            private java.util.List<VideoStreamInfoList> videoStreamInfoList; 
 
             /**
              * <p>The information about the audio stream.</p>
              */
-            public Builder audioStreamInfoList(java.util.List < AudioStreamInfoList> audioStreamInfoList) {
+            public Builder audioStreamInfoList(java.util.List<AudioStreamInfoList> audioStreamInfoList) {
                 this.audioStreamInfoList = audioStreamInfoList;
                 return this;
             }
@@ -1465,7 +1470,7 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
             /**
              * <p>The information about the video stream.</p>
              */
-            public Builder videoStreamInfoList(java.util.List < VideoStreamInfoList> videoStreamInfoList) {
+            public Builder videoStreamInfoList(java.util.List<VideoStreamInfoList> videoStreamInfoList) {
                 this.videoStreamInfoList = videoStreamInfoList;
                 return this;
             }
@@ -1585,7 +1590,7 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("SubmitResultJson")
-        private java.util.Map < String, ? > submitResultJson;
+        private java.util.Map<String, ?> submitResultJson;
 
         @com.aliyun.core.annotation.NameInMap("SubmitTime")
         private String submitTime;
@@ -1686,7 +1691,7 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
         /**
          * @return submitResultJson
          */
-        public java.util.Map < String, ? > getSubmitResultJson() {
+        public java.util.Map<String, ?> getSubmitResultJson() {
             return this.submitResultJson;
         }
 
@@ -1721,7 +1726,7 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
             private String requestId; 
             private ScheduleConfig scheduleConfig; 
             private String status; 
-            private java.util.Map < String, ? > submitResultJson; 
+            private java.util.Map<String, ?> submitResultJson; 
             private String submitTime; 
             private String triggerSource; 
             private String userData; 
@@ -1822,7 +1827,7 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{}</p>
              */
-            public Builder submitResultJson(java.util.Map < String, ? > submitResultJson) {
+            public Builder submitResultJson(java.util.Map<String, ?> submitResultJson) {
                 this.submitResultJson = submitResultJson;
                 return this;
             }

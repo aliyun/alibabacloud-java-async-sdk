@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EditingBatchJobList")
-    private java.util.List < EditingBatchJobList> editingBatchJobList;
+    private java.util.List<EditingBatchJobList> editingBatchJobList;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -42,7 +47,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
     /**
      * @return editingBatchJobList
      */
-    public java.util.List < EditingBatchJobList> getEditingBatchJobList() {
+    public java.util.List<EditingBatchJobList> getEditingBatchJobList() {
         return this.editingBatchJobList;
     }
 
@@ -68,7 +73,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EditingBatchJobList> editingBatchJobList; 
+        private java.util.List<EditingBatchJobList> editingBatchJobList; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         /**
          * <p>The queried quick video production jobs.</p>
          */
-        public Builder editingBatchJobList(java.util.List < EditingBatchJobList> editingBatchJobList) {
+        public Builder editingBatchJobList(java.util.List<EditingBatchJobList> editingBatchJobList) {
             this.editingBatchJobList = editingBatchJobList;
             return this;
         }

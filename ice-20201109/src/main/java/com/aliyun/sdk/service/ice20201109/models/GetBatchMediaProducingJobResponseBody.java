@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -304,7 +309,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("SubJobList")
-        private java.util.List < SubJobList> subJobList;
+        private java.util.List<SubJobList> subJobList;
 
         @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
@@ -405,7 +410,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         /**
          * @return subJobList
          */
-        public java.util.List < SubJobList> getSubJobList() {
+        public java.util.List<SubJobList> getSubJobList() {
             return this.subJobList;
         }
 
@@ -427,7 +432,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
             private String modifiedTime; 
             private String outputConfig; 
             private String status; 
-            private java.util.List < SubJobList> subJobList; 
+            private java.util.List<SubJobList> subJobList; 
             private String userData; 
 
             /**
@@ -564,7 +569,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
             /**
              * <p>The quick video production subjobs.</p>
              */
-            public Builder subJobList(java.util.List < SubJobList> subJobList) {
+            public Builder subJobList(java.util.List<SubJobList> subJobList) {
                 this.subJobList = subJobList;
                 return this;
             }

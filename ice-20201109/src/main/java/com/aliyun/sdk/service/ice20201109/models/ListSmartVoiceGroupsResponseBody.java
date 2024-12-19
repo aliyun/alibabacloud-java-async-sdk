@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("VoiceGroups")
-    private java.util.List < VoiceGroups> voiceGroups;
+    private java.util.List<VoiceGroups> voiceGroups;
 
     private ListSmartVoiceGroupsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
     /**
      * @return voiceGroups
      */
-    public java.util.List < VoiceGroups> getVoiceGroups() {
+    public java.util.List<VoiceGroups> getVoiceGroups() {
         return this.voiceGroups;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < VoiceGroups> voiceGroups; 
+        private java.util.List<VoiceGroups> voiceGroups; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         /**
          * <p>The queried speaker groups.</p>
          */
-        public Builder voiceGroups(java.util.List < VoiceGroups> voiceGroups) {
+        public Builder voiceGroups(java.util.List<VoiceGroups> voiceGroups) {
             this.voiceGroups = voiceGroups;
             return this;
         }
@@ -288,7 +293,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         private String type;
 
         @com.aliyun.core.annotation.NameInMap("VoiceList")
-        private java.util.List < VoiceList> voiceList;
+        private java.util.List<VoiceList> voiceList;
 
         private VoiceGroups(Builder builder) {
             this.type = builder.type;
@@ -313,13 +318,13 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         /**
          * @return voiceList
          */
-        public java.util.List < VoiceList> getVoiceList() {
+        public java.util.List<VoiceList> getVoiceList() {
             return this.voiceList;
         }
 
         public static final class Builder {
             private String type; 
-            private java.util.List < VoiceList> voiceList; 
+            private java.util.List<VoiceList> voiceList; 
 
             /**
              * <p>The name of the speaker group.</p>
@@ -332,7 +337,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             /**
              * <p>The speakers.</p>
              */
-            public Builder voiceList(java.util.List < VoiceList> voiceList) {
+            public Builder voiceList(java.util.List<VoiceList> voiceList) {
                 this.voiceList = voiceList;
                 return this;
             }

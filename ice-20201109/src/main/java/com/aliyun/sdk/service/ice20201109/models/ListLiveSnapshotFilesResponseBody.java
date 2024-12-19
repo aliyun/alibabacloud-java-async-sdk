@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListLiveSnapshotFilesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FileList")
-    private java.util.List < FileList> fileList;
+    private java.util.List<FileList> fileList;
 
     @com.aliyun.core.annotation.NameInMap("NextStartTime")
     private String nextStartTime;
@@ -38,7 +43,7 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
     /**
      * @return fileList
      */
-    public java.util.List < FileList> getFileList() {
+    public java.util.List<FileList> getFileList() {
         return this.fileList;
     }
 
@@ -57,14 +62,14 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FileList> fileList; 
+        private java.util.List<FileList> fileList; 
         private String nextStartTime; 
         private String requestId; 
 
         /**
          * <p>The list of files.</p>
          */
-        public Builder fileList(java.util.List < FileList> fileList) {
+        public Builder fileList(java.util.List<FileList> fileList) {
             this.fileList = fileList;
             return this;
         }

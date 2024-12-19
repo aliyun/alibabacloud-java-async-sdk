@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -450,7 +455,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
      */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         private Results(Builder builder) {
             this.result = builder.result;
@@ -467,17 +472,17 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
         public static final class Builder {
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
 
             /**
              * Result.
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }
@@ -613,7 +618,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
      */
     public static class CoverImageCensorResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CoverImageCensorResult")
-        private java.util.List < CoverImageCensorResult> coverImageCensorResult;
+        private java.util.List<CoverImageCensorResult> coverImageCensorResult;
 
         private CoverImageCensorResults(Builder builder) {
             this.coverImageCensorResult = builder.coverImageCensorResult;
@@ -630,17 +635,17 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         /**
          * @return coverImageCensorResult
          */
-        public java.util.List < CoverImageCensorResult> getCoverImageCensorResult() {
+        public java.util.List<CoverImageCensorResult> getCoverImageCensorResult() {
             return this.coverImageCensorResult;
         }
 
         public static final class Builder {
-            private java.util.List < CoverImageCensorResult> coverImageCensorResult; 
+            private java.util.List<CoverImageCensorResult> coverImageCensorResult; 
 
             /**
              * CoverImageCensorResult.
              */
-            public Builder coverImageCensorResult(java.util.List < CoverImageCensorResult> coverImageCensorResult) {
+            public Builder coverImageCensorResult(java.util.List<CoverImageCensorResult> coverImageCensorResult) {
                 this.coverImageCensorResult = coverImageCensorResult;
                 return this;
             }
@@ -1211,7 +1216,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
      */
     public static class CensorResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CensorResult")
-        private java.util.List < CensorResult> censorResult;
+        private java.util.List<CensorResult> censorResult;
 
         private CensorResults(Builder builder) {
             this.censorResult = builder.censorResult;
@@ -1228,17 +1233,17 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         /**
          * @return censorResult
          */
-        public java.util.List < CensorResult> getCensorResult() {
+        public java.util.List<CensorResult> getCensorResult() {
             return this.censorResult;
         }
 
         public static final class Builder {
-            private java.util.List < CensorResult> censorResult; 
+            private java.util.List<CensorResult> censorResult; 
 
             /**
              * CensorResult.
              */
-            public Builder censorResult(java.util.List < CensorResult> censorResult) {
+            public Builder censorResult(java.util.List<CensorResult> censorResult) {
                 this.censorResult = censorResult;
                 return this;
             }
@@ -1447,7 +1452,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
      */
     public static class VideoTimelineCensorResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CensorResult")
-        private java.util.List < CensorResultsCensorResult> censorResult;
+        private java.util.List<CensorResultsCensorResult> censorResult;
 
         private VideoTimelineCensorResults(Builder builder) {
             this.censorResult = builder.censorResult;
@@ -1464,17 +1469,17 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         /**
          * @return censorResult
          */
-        public java.util.List < CensorResultsCensorResult> getCensorResult() {
+        public java.util.List<CensorResultsCensorResult> getCensorResult() {
             return this.censorResult;
         }
 
         public static final class Builder {
-            private java.util.List < CensorResultsCensorResult> censorResult; 
+            private java.util.List<CensorResultsCensorResult> censorResult; 
 
             /**
              * CensorResult.
              */
-            public Builder censorResult(java.util.List < CensorResultsCensorResult> censorResult) {
+            public Builder censorResult(java.util.List<CensorResultsCensorResult> censorResult) {
                 this.censorResult = censorResult;
                 return this;
             }
@@ -1590,7 +1595,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
      */
     public static class VideoTimelines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VideoTimeline")
-        private java.util.List < VideoTimeline> videoTimeline;
+        private java.util.List<VideoTimeline> videoTimeline;
 
         private VideoTimelines(Builder builder) {
             this.videoTimeline = builder.videoTimeline;
@@ -1607,17 +1612,17 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         /**
          * @return videoTimeline
          */
-        public java.util.List < VideoTimeline> getVideoTimeline() {
+        public java.util.List<VideoTimeline> getVideoTimeline() {
             return this.videoTimeline;
         }
 
         public static final class Builder {
-            private java.util.List < VideoTimeline> videoTimeline; 
+            private java.util.List<VideoTimeline> videoTimeline; 
 
             /**
              * VideoTimeline.
              */
-            public Builder videoTimeline(java.util.List < VideoTimeline> videoTimeline) {
+            public Builder videoTimeline(java.util.List<VideoTimeline> videoTimeline) {
                 this.videoTimeline = videoTimeline;
                 return this;
             }
@@ -2305,7 +2310,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
      */
     public static class MediaCensorJobList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaCensorJob")
-        private java.util.List < MediaCensorJob> mediaCensorJob;
+        private java.util.List<MediaCensorJob> mediaCensorJob;
 
         private MediaCensorJobList(Builder builder) {
             this.mediaCensorJob = builder.mediaCensorJob;
@@ -2322,17 +2327,17 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         /**
          * @return mediaCensorJob
          */
-        public java.util.List < MediaCensorJob> getMediaCensorJob() {
+        public java.util.List<MediaCensorJob> getMediaCensorJob() {
             return this.mediaCensorJob;
         }
 
         public static final class Builder {
-            private java.util.List < MediaCensorJob> mediaCensorJob; 
+            private java.util.List<MediaCensorJob> mediaCensorJob; 
 
             /**
              * MediaCensorJob.
              */
-            public Builder mediaCensorJob(java.util.List < MediaCensorJob> mediaCensorJob) {
+            public Builder mediaCensorJob(java.util.List<MediaCensorJob> mediaCensorJob) {
                 this.mediaCensorJob = mediaCensorJob;
                 return this;
             }
@@ -2352,7 +2357,7 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
      */
     public static class NonExistIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("String")
-        private java.util.List < String > string;
+        private java.util.List<String> string;
 
         private NonExistIds(Builder builder) {
             this.string = builder.string;
@@ -2369,17 +2374,17 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         /**
          * @return string
          */
-        public java.util.List < String > getString() {
+        public java.util.List<String> getString() {
             return this.string;
         }
 
         public static final class Builder {
-            private java.util.List < String > string; 
+            private java.util.List<String> string; 
 
             /**
              * String.
              */
-            public Builder string(java.util.List < String > string) {
+            public Builder string(java.util.List<String> string) {
                 this.string = string;
                 return this;
             }

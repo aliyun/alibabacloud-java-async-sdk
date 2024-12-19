@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteLiveSnapshotFilesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreateTimestampList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > createTimestampList;
+    private java.util.List<Long> createTimestampList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeleteOriginalFile")
@@ -49,7 +54,7 @@ public class DeleteLiveSnapshotFilesRequest extends Request {
     /**
      * @return createTimestampList
      */
-    public java.util.List < Long > getCreateTimestampList() {
+    public java.util.List<Long> getCreateTimestampList() {
         return this.createTimestampList;
     }
 
@@ -68,7 +73,7 @@ public class DeleteLiveSnapshotFilesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteLiveSnapshotFilesRequest, Builder> {
-        private java.util.List < Long > createTimestampList; 
+        private java.util.List<Long> createTimestampList; 
         private Boolean deleteOriginalFile; 
         private String jobId; 
 
@@ -87,7 +92,7 @@ public class DeleteLiveSnapshotFilesRequest extends Request {
          * <p>The list of timestamps when the jobs were created. The values are UNIX timestamps representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A maximum of 200 jobs can be deleted at a time.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder createTimestampList(java.util.List < Long > createTimestampList) {
+        public Builder createTimestampList(java.util.List<Long> createTimestampList) {
             String createTimestampListShrink = shrink(createTimestampList, "CreateTimestampList", "json");
             this.putQueryParameter("CreateTimestampList", createTimestampListShrink);
             this.createTimestampList = createTimestampList;

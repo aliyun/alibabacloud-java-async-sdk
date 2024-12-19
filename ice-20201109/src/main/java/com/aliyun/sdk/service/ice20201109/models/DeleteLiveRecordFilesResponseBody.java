@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteLiveRecordFilesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DeleteFileInfoList")
-    private java.util.List < DeleteFileInfoList> deleteFileInfoList;
+    private java.util.List<DeleteFileInfoList> deleteFileInfoList;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -38,7 +43,7 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
     /**
      * @return deleteFileInfoList
      */
-    public java.util.List < DeleteFileInfoList> getDeleteFileInfoList() {
+    public java.util.List<DeleteFileInfoList> getDeleteFileInfoList() {
         return this.deleteFileInfoList;
     }
 
@@ -57,14 +62,14 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DeleteFileInfoList> deleteFileInfoList; 
+        private java.util.List<DeleteFileInfoList> deleteFileInfoList; 
         private String message; 
         private String requestId; 
 
         /**
          * <p>The list of files deleted.</p>
          */
-        public Builder deleteFileInfoList(java.util.List < DeleteFileInfoList> deleteFileInfoList) {
+        public Builder deleteFileInfoList(java.util.List<DeleteFileInfoList> deleteFileInfoList) {
             this.deleteFileInfoList = deleteFileInfoList;
             return this;
         }

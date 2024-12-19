@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,10 +42,10 @@ public class QueryIProductionJobResponseBody extends TeaModel {
     private Output output;
 
     @com.aliyun.core.annotation.NameInMap("OutputFiles")
-    private java.util.List < String > outputFiles;
+    private java.util.List<String> outputFiles;
 
     @com.aliyun.core.annotation.NameInMap("OutputUrls")
-    private java.util.List < String > outputUrls;
+    private java.util.List<String> outputUrls;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -146,14 +151,14 @@ public class QueryIProductionJobResponseBody extends TeaModel {
     /**
      * @return outputFiles
      */
-    public java.util.List < String > getOutputFiles() {
+    public java.util.List<String> getOutputFiles() {
         return this.outputFiles;
     }
 
     /**
      * @return outputUrls
      */
-    public java.util.List < String > getOutputUrls() {
+    public java.util.List<String> getOutputUrls() {
         return this.outputUrls;
     }
 
@@ -208,8 +213,8 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         private String jobParams; 
         private String name; 
         private Output output; 
-        private java.util.List < String > outputFiles; 
-        private java.util.List < String > outputUrls; 
+        private java.util.List<String> outputFiles; 
+        private java.util.List<String> outputUrls; 
         private String requestId; 
         private String result; 
         private ScheduleConfig scheduleConfig; 
@@ -305,7 +310,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         /**
          * <p>The output files.</p>
          */
-        public Builder outputFiles(java.util.List < String > outputFiles) {
+        public Builder outputFiles(java.util.List<String> outputFiles) {
             this.outputFiles = outputFiles;
             return this;
         }
@@ -313,7 +318,7 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         /**
          * <p>The URLs of the output files.</p>
          */
-        public Builder outputUrls(java.util.List < String > outputUrls) {
+        public Builder outputUrls(java.util.List<String> outputUrls) {
             this.outputUrls = outputUrls;
             return this;
         }

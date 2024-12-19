@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1517,16 +1522,16 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
      */
     public static class FileInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioStreamInfoList")
-        private java.util.List < AudioStreamInfoList> audioStreamInfoList;
+        private java.util.List<AudioStreamInfoList> audioStreamInfoList;
 
         @com.aliyun.core.annotation.NameInMap("FileBasicInfo")
         private FileBasicInfo fileBasicInfo;
 
         @com.aliyun.core.annotation.NameInMap("SubtitleStreamInfoList")
-        private java.util.List < SubtitleStreamInfoList> subtitleStreamInfoList;
+        private java.util.List<SubtitleStreamInfoList> subtitleStreamInfoList;
 
         @com.aliyun.core.annotation.NameInMap("VideoStreamInfoList")
-        private java.util.List < VideoStreamInfoList> videoStreamInfoList;
+        private java.util.List<VideoStreamInfoList> videoStreamInfoList;
 
         private FileInfoList(Builder builder) {
             this.audioStreamInfoList = builder.audioStreamInfoList;
@@ -1546,7 +1551,7 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         /**
          * @return audioStreamInfoList
          */
-        public java.util.List < AudioStreamInfoList> getAudioStreamInfoList() {
+        public java.util.List<AudioStreamInfoList> getAudioStreamInfoList() {
             return this.audioStreamInfoList;
         }
 
@@ -1560,27 +1565,27 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         /**
          * @return subtitleStreamInfoList
          */
-        public java.util.List < SubtitleStreamInfoList> getSubtitleStreamInfoList() {
+        public java.util.List<SubtitleStreamInfoList> getSubtitleStreamInfoList() {
             return this.subtitleStreamInfoList;
         }
 
         /**
          * @return videoStreamInfoList
          */
-        public java.util.List < VideoStreamInfoList> getVideoStreamInfoList() {
+        public java.util.List<VideoStreamInfoList> getVideoStreamInfoList() {
             return this.videoStreamInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < AudioStreamInfoList> audioStreamInfoList; 
+            private java.util.List<AudioStreamInfoList> audioStreamInfoList; 
             private FileBasicInfo fileBasicInfo; 
-            private java.util.List < SubtitleStreamInfoList> subtitleStreamInfoList; 
-            private java.util.List < VideoStreamInfoList> videoStreamInfoList; 
+            private java.util.List<SubtitleStreamInfoList> subtitleStreamInfoList; 
+            private java.util.List<VideoStreamInfoList> videoStreamInfoList; 
 
             /**
              * AudioStreamInfoList.
              */
-            public Builder audioStreamInfoList(java.util.List < AudioStreamInfoList> audioStreamInfoList) {
+            public Builder audioStreamInfoList(java.util.List<AudioStreamInfoList> audioStreamInfoList) {
                 this.audioStreamInfoList = audioStreamInfoList;
                 return this;
             }
@@ -1596,7 +1601,7 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
             /**
              * SubtitleStreamInfoList.
              */
-            public Builder subtitleStreamInfoList(java.util.List < SubtitleStreamInfoList> subtitleStreamInfoList) {
+            public Builder subtitleStreamInfoList(java.util.List<SubtitleStreamInfoList> subtitleStreamInfoList) {
                 this.subtitleStreamInfoList = subtitleStreamInfoList;
                 return this;
             }
@@ -1604,7 +1609,7 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
             /**
              * VideoStreamInfoList.
              */
-            public Builder videoStreamInfoList(java.util.List < VideoStreamInfoList> videoStreamInfoList) {
+            public Builder videoStreamInfoList(java.util.List<VideoStreamInfoList> videoStreamInfoList) {
                 this.videoStreamInfoList = videoStreamInfoList;
                 return this;
             }
@@ -1957,7 +1962,7 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         private DynamicMetaData dynamicMetaData;
 
         @com.aliyun.core.annotation.NameInMap("FileInfoList")
-        private java.util.List < FileInfoList> fileInfoList;
+        private java.util.List<FileInfoList> fileInfoList;
 
         @com.aliyun.core.annotation.NameInMap("MediaBasicInfo")
         private MediaBasicInfo mediaBasicInfo;
@@ -1990,7 +1995,7 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         /**
          * @return fileInfoList
          */
-        public java.util.List < FileInfoList> getFileInfoList() {
+        public java.util.List<FileInfoList> getFileInfoList() {
             return this.fileInfoList;
         }
 
@@ -2010,7 +2015,7 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private DynamicMetaData dynamicMetaData; 
-            private java.util.List < FileInfoList> fileInfoList; 
+            private java.util.List<FileInfoList> fileInfoList; 
             private MediaBasicInfo mediaBasicInfo; 
             private String mediaId; 
 
@@ -2025,7 +2030,7 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
             /**
              * <p>FileInfos</p>
              */
-            public Builder fileInfoList(java.util.List < FileInfoList> fileInfoList) {
+            public Builder fileInfoList(java.util.List<FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SmartJobList")
-    private java.util.List < SmartJobList> smartJobList;
+    private java.util.List<SmartJobList> smartJobList;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
@@ -67,7 +72,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
     /**
      * @return smartJobList
      */
-    public java.util.List < SmartJobList> getSmartJobList() {
+    public java.util.List<SmartJobList> getSmartJobList() {
         return this.smartJobList;
     }
 
@@ -82,7 +87,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
         private String maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < SmartJobList> smartJobList; 
+        private java.util.List<SmartJobList> smartJobList; 
         private String totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
         /**
          * <p>The queried intelligent jobs.</p>
          */
-        public Builder smartJobList(java.util.List < SmartJobList> smartJobList) {
+        public Builder smartJobList(java.util.List<SmartJobList> smartJobList) {
             this.smartJobList = smartJobList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
     private String itemId;
 
     @com.aliyun.core.annotation.NameInMap("LicenseConfigs")
-    private java.util.List < LicenseConfigs> licenseConfigs;
+    private java.util.List<LicenseConfigs> licenseConfigs;
 
     @com.aliyun.core.annotation.NameInMap("ModificationTime")
     private String modificationTime;
@@ -119,7 +124,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
     /**
      * @return licenseConfigs
      */
-    public java.util.List < LicenseConfigs> getLicenseConfigs() {
+    public java.util.List<LicenseConfigs> getLicenseConfigs() {
         return this.licenseConfigs;
     }
 
@@ -152,7 +157,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         private String expiredOn; 
         private String instanceId; 
         private String itemId; 
-        private java.util.List < LicenseConfigs> licenseConfigs; 
+        private java.util.List<LicenseConfigs> licenseConfigs; 
         private String modificationTime; 
         private String status; 
         private Long userId; 
@@ -216,7 +221,7 @@ public class LicenseInstanceAppDTO extends TeaModel {
         /**
          * LicenseConfigs.
          */
-        public Builder licenseConfigs(java.util.List < LicenseConfigs> licenseConfigs) {
+        public Builder licenseConfigs(java.util.List<LicenseConfigs> licenseConfigs) {
             this.licenseConfigs = licenseConfigs;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class UpdateLiveRecordTemplateRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RecordFormat")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < RecordFormat> recordFormat;
+    private java.util.List<RecordFormat> recordFormat;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplateId")
@@ -57,7 +62,7 @@ public class UpdateLiveRecordTemplateRequest extends Request {
     /**
      * @return recordFormat
      */
-    public java.util.List < RecordFormat> getRecordFormat() {
+    public java.util.List<RecordFormat> getRecordFormat() {
         return this.recordFormat;
     }
 
@@ -70,7 +75,7 @@ public class UpdateLiveRecordTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateLiveRecordTemplateRequest, Builder> {
         private String name; 
-        private java.util.List < RecordFormat> recordFormat; 
+        private java.util.List<RecordFormat> recordFormat; 
         private String templateId; 
 
         private Builder() {
@@ -101,7 +106,7 @@ public class UpdateLiveRecordTemplateRequest extends Request {
          * <p>The list of recording formats.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder recordFormat(java.util.List < RecordFormat> recordFormat) {
+        public Builder recordFormat(java.util.List<RecordFormat> recordFormat) {
             String recordFormatShrink = shrink(recordFormat, "RecordFormat", "json");
             this.putBodyParameter("RecordFormat", recordFormatShrink);
             this.recordFormat = recordFormat;

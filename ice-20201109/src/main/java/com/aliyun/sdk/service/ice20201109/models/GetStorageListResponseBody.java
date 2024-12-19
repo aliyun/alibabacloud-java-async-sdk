@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetStorageListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StorageInfoList")
-    private java.util.List < StorageInfoList> storageInfoList;
+    private java.util.List<StorageInfoList> storageInfoList;
 
     private GetStorageListResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class GetStorageListResponseBody extends TeaModel {
     /**
      * @return storageInfoList
      */
-    public java.util.List < StorageInfoList> getStorageInfoList() {
+    public java.util.List<StorageInfoList> getStorageInfoList() {
         return this.storageInfoList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < StorageInfoList> storageInfoList; 
+        private java.util.List<StorageInfoList> storageInfoList; 
 
         /**
          * <p>Id of the request</p>
@@ -63,7 +68,7 @@ public class GetStorageListResponseBody extends TeaModel {
         /**
          * StorageInfoList.
          */
-        public Builder storageInfoList(java.util.List < StorageInfoList> storageInfoList) {
+        public Builder storageInfoList(java.util.List<StorageInfoList> storageInfoList) {
             this.storageInfoList = storageInfoList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -307,7 +312,7 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomizedVoiceList")
-        private java.util.List < CustomizedVoiceList> customizedVoiceList;
+        private java.util.List<CustomizedVoiceList> customizedVoiceList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -328,7 +333,7 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         /**
          * @return customizedVoiceList
          */
-        public java.util.List < CustomizedVoiceList> getCustomizedVoiceList() {
+        public java.util.List<CustomizedVoiceList> getCustomizedVoiceList() {
             return this.customizedVoiceList;
         }
 
@@ -340,13 +345,13 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CustomizedVoiceList> customizedVoiceList; 
+            private java.util.List<CustomizedVoiceList> customizedVoiceList; 
             private Integer totalCount; 
 
             /**
              * <p>The queried personalized human voices.</p>
              */
-            public Builder customizedVoiceList(java.util.List < CustomizedVoiceList> customizedVoiceList) {
+            public Builder customizedVoiceList(java.util.List<CustomizedVoiceList> customizedVoiceList) {
                 this.customizedVoiceList = customizedVoiceList;
                 return this;
             }

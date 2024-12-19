@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class ListLiveSnapshotTemplatesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateIds")
-    private java.util.List < String > templateIds;
+    private java.util.List<String> templateIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -90,7 +95,7 @@ public class ListLiveSnapshotTemplatesRequest extends Request {
     /**
      * @return templateIds
      */
-    public java.util.List < String > getTemplateIds() {
+    public java.util.List<String> getTemplateIds() {
         return this.templateIds;
     }
 
@@ -106,7 +111,7 @@ public class ListLiveSnapshotTemplatesRequest extends Request {
         private Integer pageSize; 
         private String searchKeyWord; 
         private String sortBy; 
-        private java.util.List < String > templateIds; 
+        private java.util.List<String> templateIds; 
         private String type; 
 
         private Builder() {
@@ -186,7 +191,7 @@ public class ListLiveSnapshotTemplatesRequest extends Request {
          * <li>The maximum length of the array is 200.</li>
          * </ul>
          */
-        public Builder templateIds(java.util.List < String > templateIds) {
+        public Builder templateIds(java.util.List<String> templateIds) {
             this.putQueryParameter("TemplateIds", templateIds);
             this.templateIds = templateIds;
             return this;

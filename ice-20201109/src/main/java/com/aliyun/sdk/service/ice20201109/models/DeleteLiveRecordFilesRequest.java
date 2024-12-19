@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteLiveRecordFilesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecordIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > recordIds;
+    private java.util.List<String> recordIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemoveFile")
@@ -43,7 +48,7 @@ public class DeleteLiveRecordFilesRequest extends Request {
     /**
      * @return recordIds
      */
-    public java.util.List < String > getRecordIds() {
+    public java.util.List<String> getRecordIds() {
         return this.recordIds;
     }
 
@@ -55,7 +60,7 @@ public class DeleteLiveRecordFilesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteLiveRecordFilesRequest, Builder> {
-        private java.util.List < String > recordIds; 
+        private java.util.List<String> recordIds; 
         private Boolean removeFile; 
 
         private Builder() {
@@ -72,7 +77,7 @@ public class DeleteLiveRecordFilesRequest extends Request {
          * <p>The collection of IDs of recording files.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder recordIds(java.util.List < String > recordIds) {
+        public Builder recordIds(java.util.List<String> recordIds) {
             this.putQueryParameter("RecordIds", recordIds);
             this.recordIds = recordIds;
             return this;

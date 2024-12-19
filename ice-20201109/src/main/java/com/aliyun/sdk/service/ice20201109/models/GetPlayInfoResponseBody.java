@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
     private MediaBase mediaBase;
 
     @com.aliyun.core.annotation.NameInMap("PlayInfoList")
-    private java.util.List < PlayInfoList> playInfoList;
+    private java.util.List<PlayInfoList> playInfoList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
     /**
      * @return playInfoList
      */
-    public java.util.List < PlayInfoList> getPlayInfoList() {
+    public java.util.List<PlayInfoList> getPlayInfoList() {
         return this.playInfoList;
     }
 
@@ -58,7 +63,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
 
     public static final class Builder {
         private MediaBase mediaBase; 
-        private java.util.List < PlayInfoList> playInfoList; 
+        private java.util.List<PlayInfoList> playInfoList; 
         private String requestId; 
 
         /**
@@ -72,7 +77,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
         /**
          * <p>The information about the audio or video stream.</p>
          */
-        public Builder playInfoList(java.util.List < PlayInfoList> playInfoList) {
+        public Builder playInfoList(java.util.List<PlayInfoList> playInfoList) {
             this.playInfoList = playInfoList;
             return this;
         }

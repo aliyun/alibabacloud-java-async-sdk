@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("MediaList")
-    private java.util.List < MediaList> mediaList;
+    private java.util.List<MediaList> mediaList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -53,7 +58,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
     /**
      * @return mediaList
      */
-    public java.util.List < MediaList> getMediaList() {
+    public java.util.List<MediaList> getMediaList() {
         return this.mediaList;
     }
 
@@ -80,7 +85,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < MediaList> mediaList; 
+        private java.util.List<MediaList> mediaList; 
         private String requestId; 
         private String success; 
         private Long total; 
@@ -99,7 +104,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         /**
          * <p>The media assets that contain the specified content.</p>
          */
-        public Builder mediaList(java.util.List < MediaList> mediaList) {
+        public Builder mediaList(java.util.List<MediaList> mediaList) {
             this.mediaList = mediaList;
             return this;
         }
@@ -274,7 +279,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         private Double to;
 
         @com.aliyun.core.annotation.NameInMap("Tracks")
-        private java.util.List < Tracks> tracks;
+        private java.util.List<Tracks> tracks;
 
         private Occurrences(Builder builder) {
             this.clipId = builder.clipId;
@@ -363,7 +368,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         /**
          * @return tracks
          */
-        public java.util.List < Tracks> getTracks() {
+        public java.util.List<Tracks> getTracks() {
             return this.tracks;
         }
 
@@ -377,7 +382,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             private Double score; 
             private String tableBatchSeqId; 
             private Double to; 
-            private java.util.List < Tracks> tracks; 
+            private java.util.List<Tracks> tracks; 
 
             /**
              * <p>The ID of the clip.</p>
@@ -475,7 +480,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             /**
              * <p>The tracks.</p>
              */
-            public Builder tracks(java.util.List < Tracks> tracks) {
+            public Builder tracks(java.util.List<Tracks> tracks) {
                 this.tracks = tracks;
                 return this;
             }
@@ -510,7 +515,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         private String labelType;
 
         @com.aliyun.core.annotation.NameInMap("Occurrences")
-        private java.util.List < Occurrences> occurrences;
+        private java.util.List<Occurrences> occurrences;
 
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
@@ -571,7 +576,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         /**
          * @return occurrences
          */
-        public java.util.List < Occurrences> getOccurrences() {
+        public java.util.List<Occurrences> getOccurrences() {
             return this.occurrences;
         }
 
@@ -588,7 +593,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             private String labelId; 
             private String labelName; 
             private String labelType; 
-            private java.util.List < Occurrences> occurrences; 
+            private java.util.List<Occurrences> occurrences; 
             private String source; 
 
             /**
@@ -640,7 +645,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             /**
              * <p>The information about the clips.</p>
              */
-            public Builder occurrences(java.util.List < Occurrences> occurrences) {
+            public Builder occurrences(java.util.List<Occurrences> occurrences) {
                 this.occurrences = occurrences;
                 return this;
             }
@@ -949,13 +954,13 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
      */
     public static class AiData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AiLabelInfo")
-        private java.util.List < AiLabelInfo> aiLabelInfo;
+        private java.util.List<AiLabelInfo> aiLabelInfo;
 
         @com.aliyun.core.annotation.NameInMap("AsrInfo")
-        private java.util.List < AsrInfo> asrInfo;
+        private java.util.List<AsrInfo> asrInfo;
 
         @com.aliyun.core.annotation.NameInMap("OcrInfo")
-        private java.util.List < OcrInfo> ocrInfo;
+        private java.util.List<OcrInfo> ocrInfo;
 
         private AiData(Builder builder) {
             this.aiLabelInfo = builder.aiLabelInfo;
@@ -974,33 +979,33 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         /**
          * @return aiLabelInfo
          */
-        public java.util.List < AiLabelInfo> getAiLabelInfo() {
+        public java.util.List<AiLabelInfo> getAiLabelInfo() {
             return this.aiLabelInfo;
         }
 
         /**
          * @return asrInfo
          */
-        public java.util.List < AsrInfo> getAsrInfo() {
+        public java.util.List<AsrInfo> getAsrInfo() {
             return this.asrInfo;
         }
 
         /**
          * @return ocrInfo
          */
-        public java.util.List < OcrInfo> getOcrInfo() {
+        public java.util.List<OcrInfo> getOcrInfo() {
             return this.ocrInfo;
         }
 
         public static final class Builder {
-            private java.util.List < AiLabelInfo> aiLabelInfo; 
-            private java.util.List < AsrInfo> asrInfo; 
-            private java.util.List < OcrInfo> ocrInfo; 
+            private java.util.List<AiLabelInfo> aiLabelInfo; 
+            private java.util.List<AsrInfo> asrInfo; 
+            private java.util.List<OcrInfo> ocrInfo; 
 
             /**
              * <p>The tags of the AI job.</p>
              */
-            public Builder aiLabelInfo(java.util.List < AiLabelInfo> aiLabelInfo) {
+            public Builder aiLabelInfo(java.util.List<AiLabelInfo> aiLabelInfo) {
                 this.aiLabelInfo = aiLabelInfo;
                 return this;
             }
@@ -1008,7 +1013,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             /**
              * <p>The information about audio files.</p>
              */
-            public Builder asrInfo(java.util.List < AsrInfo> asrInfo) {
+            public Builder asrInfo(java.util.List<AsrInfo> asrInfo) {
                 this.asrInfo = asrInfo;
                 return this;
             }
@@ -1016,7 +1021,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             /**
              * <p>The information about subtitle files.</p>
              */
-            public Builder ocrInfo(java.util.List < OcrInfo> ocrInfo) {
+            public Builder ocrInfo(java.util.List<OcrInfo> ocrInfo) {
                 this.ocrInfo = ocrInfo;
                 return this;
             }
@@ -1063,7 +1068,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         private Long size;
 
         @com.aliyun.core.annotation.NameInMap("Snapshots")
-        private java.util.List < String > snapshots;
+        private java.util.List<String> snapshots;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -1168,7 +1173,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         /**
          * @return snapshots
          */
-        public java.util.List < String > getSnapshots() {
+        public java.util.List<String> getSnapshots() {
             return this.snapshots;
         }
 
@@ -1210,7 +1215,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             private String mediaId; 
             private String modificationTime; 
             private Long size; 
-            private java.util.List < String > snapshots; 
+            private java.util.List<String> snapshots; 
             private String status; 
             private String storageLocation; 
             private String tags; 
@@ -1312,7 +1317,7 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
             /**
              * <p>The array of video snapshot URLs.</p>
              */
-            public Builder snapshots(java.util.List < String > snapshots) {
+            public Builder snapshots(java.util.List<String> snapshots) {
                 this.snapshots = snapshots;
                 return this;
             }

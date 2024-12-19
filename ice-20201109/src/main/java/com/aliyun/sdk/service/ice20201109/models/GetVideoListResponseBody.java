@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetVideoListResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("MediaList")
-    private java.util.List < MediaList> mediaList;
+    private java.util.List<MediaList> mediaList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -53,7 +58,7 @@ public class GetVideoListResponseBody extends TeaModel {
     /**
      * @return mediaList
      */
-    public java.util.List < MediaList> getMediaList() {
+    public java.util.List<MediaList> getMediaList() {
         return this.mediaList;
     }
 
@@ -80,7 +85,7 @@ public class GetVideoListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < MediaList> mediaList; 
+        private java.util.List<MediaList> mediaList; 
         private String requestId; 
         private String success; 
         private Long total; 
@@ -99,7 +104,7 @@ public class GetVideoListResponseBody extends TeaModel {
         /**
          * <p>The information about the audio and video files.</p>
          */
-        public Builder mediaList(java.util.List < MediaList> mediaList) {
+        public Builder mediaList(java.util.List<MediaList> mediaList) {
             this.mediaList = mediaList;
             return this;
         }
@@ -185,7 +190,7 @@ public class GetVideoListResponseBody extends TeaModel {
         private Long size;
 
         @com.aliyun.core.annotation.NameInMap("Snapshots")
-        private java.util.List < String > snapshots;
+        private java.util.List<String> snapshots;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -298,7 +303,7 @@ public class GetVideoListResponseBody extends TeaModel {
         /**
          * @return snapshots
          */
-        public java.util.List < String > getSnapshots() {
+        public java.util.List<String> getSnapshots() {
             return this.snapshots;
         }
 
@@ -341,7 +346,7 @@ public class GetVideoListResponseBody extends TeaModel {
             private String mediaId; 
             private String modificationTime; 
             private Long size; 
-            private java.util.List < String > snapshots; 
+            private java.util.List<String> snapshots; 
             private String status; 
             private String storageLocation; 
             private String tags; 
@@ -454,7 +459,7 @@ public class GetVideoListResponseBody extends TeaModel {
             /**
              * <p>The array of video snapshot URLs.</p>
              */
-            public Builder snapshots(java.util.List < String > snapshots) {
+            public Builder snapshots(java.util.List<String> snapshots) {
                 this.snapshots = snapshots;
                 return this;
             }

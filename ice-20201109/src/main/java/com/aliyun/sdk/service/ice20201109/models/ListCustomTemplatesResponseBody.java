@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCustomTemplatesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CustomTemplateList")
-    private java.util.List < CustomTemplateList> customTemplateList;
+    private java.util.List<CustomTemplateList> customTemplateList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
     /**
      * @return customTemplateList
      */
-    public java.util.List < CustomTemplateList> getCustomTemplateList() {
+    public java.util.List<CustomTemplateList> getCustomTemplateList() {
         return this.customTemplateList;
     }
 
@@ -57,14 +62,14 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CustomTemplateList> customTemplateList; 
+        private java.util.List<CustomTemplateList> customTemplateList; 
         private String requestId; 
         private Integer total; 
 
         /**
          * <p>The queried templates.</p>
          */
-        public Builder customTemplateList(java.util.List < CustomTemplateList> customTemplateList) {
+        public Builder customTemplateList(java.util.List<CustomTemplateList> customTemplateList) {
             this.customTemplateList = customTemplateList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDNADBResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DBList")
-    private java.util.List < DBList> DBList;
+    private java.util.List<DBList> DBList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListDNADBResponseBody extends TeaModel {
     /**
      * @return DBList
      */
-    public java.util.List < DBList> getDBList() {
+    public java.util.List<DBList> getDBList() {
         return this.DBList;
     }
 
@@ -46,13 +51,13 @@ public class ListDNADBResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DBList> DBList; 
+        private java.util.List<DBList> DBList; 
         private String requestId; 
 
         /**
          * <p>The queried media fingerprint libraries.</p>
          */
-        public Builder DBList(java.util.List < DBList> DBList) {
+        public Builder DBList(java.util.List<DBList> DBList) {
             this.DBList = DBList;
             return this;
         }

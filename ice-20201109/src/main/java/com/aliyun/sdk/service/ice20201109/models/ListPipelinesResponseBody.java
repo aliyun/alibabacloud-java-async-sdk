@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPipelinesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PipelineList")
-    private java.util.List < PipelineList> pipelineList;
+    private java.util.List<PipelineList> pipelineList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListPipelinesResponseBody extends TeaModel {
     /**
      * @return pipelineList
      */
-    public java.util.List < PipelineList> getPipelineList() {
+    public java.util.List<PipelineList> getPipelineList() {
         return this.pipelineList;
     }
 
@@ -46,13 +51,13 @@ public class ListPipelinesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PipelineList> pipelineList; 
+        private java.util.List<PipelineList> pipelineList; 
         private String requestId; 
 
         /**
          * <p>The queried MPS queues.</p>
          */
-        public Builder pipelineList(java.util.List < PipelineList> pipelineList) {
+        public Builder pipelineList(java.util.List<PipelineList> pipelineList) {
             this.pipelineList = pipelineList;
             return this;
         }

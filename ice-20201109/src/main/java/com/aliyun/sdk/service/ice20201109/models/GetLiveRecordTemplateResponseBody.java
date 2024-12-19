@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -233,7 +238,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("RecordFormatList")
-        private java.util.List < RecordFormatList> recordFormatList;
+        private java.util.List<RecordFormatList> recordFormatList;
 
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
@@ -282,7 +287,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         /**
          * @return recordFormatList
          */
-        public java.util.List < RecordFormatList> getRecordFormatList() {
+        public java.util.List<RecordFormatList> getRecordFormatList() {
             return this.recordFormatList;
         }
 
@@ -304,7 +309,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             private String createTime; 
             private String lastModified; 
             private String name; 
-            private java.util.List < RecordFormatList> recordFormatList; 
+            private java.util.List<RecordFormatList> recordFormatList; 
             private String templateId; 
             private String type; 
 
@@ -346,7 +351,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
             /**
              * <p>The list of recording formats.</p>
              */
-            public Builder recordFormatList(java.util.List < RecordFormatList> recordFormatList) {
+            public Builder recordFormatList(java.util.List<RecordFormatList> recordFormatList) {
                 this.recordFormatList = recordFormatList;
                 return this;
             }

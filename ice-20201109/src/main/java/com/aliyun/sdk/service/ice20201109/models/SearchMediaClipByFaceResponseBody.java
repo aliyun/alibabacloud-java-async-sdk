@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("MediaClipList")
-    private java.util.List < MediaClipList> mediaClipList;
+    private java.util.List<MediaClipList> mediaClipList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -53,7 +58,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
     /**
      * @return mediaClipList
      */
-    public java.util.List < MediaClipList> getMediaClipList() {
+    public java.util.List<MediaClipList> getMediaClipList() {
         return this.mediaClipList;
     }
 
@@ -80,7 +85,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < MediaClipList> mediaClipList; 
+        private java.util.List<MediaClipList> mediaClipList; 
         private String requestId; 
         private String success; 
         private Long total; 
@@ -99,7 +104,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         /**
          * <p>The media asset clips that meet the requirements.</p>
          */
-        public Builder mediaClipList(java.util.List < MediaClipList> mediaClipList) {
+        public Builder mediaClipList(java.util.List<MediaClipList> mediaClipList) {
             this.mediaClipList = mediaClipList;
             return this;
         }
@@ -349,7 +354,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         private Float startTime;
 
         @com.aliyun.core.annotation.NameInMap("TrackData")
-        private java.util.List < TrackData> trackData;
+        private java.util.List<TrackData> trackData;
 
         private OccurrencesInfos(Builder builder) {
             this.endTime = builder.endTime;
@@ -390,7 +395,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         /**
          * @return trackData
          */
-        public java.util.List < TrackData> getTrackData() {
+        public java.util.List<TrackData> getTrackData() {
             return this.trackData;
         }
 
@@ -398,7 +403,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             private Float endTime; 
             private String expression; 
             private Float startTime; 
-            private java.util.List < TrackData> trackData; 
+            private java.util.List<TrackData> trackData; 
 
             /**
              * <p>The end time of the clip. Unit: seconds. The value is of the Float type.</p>
@@ -433,7 +438,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             /**
              * <p>The information about the face in the clip.</p>
              */
-            public Builder trackData(java.util.List < TrackData> trackData) {
+            public Builder trackData(java.util.List<TrackData> trackData) {
                 this.trackData = trackData;
                 return this;
             }
@@ -462,7 +467,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         private String labelName;
 
         @com.aliyun.core.annotation.NameInMap("OccurrencesInfos")
-        private java.util.List < OccurrencesInfos> occurrencesInfos;
+        private java.util.List<OccurrencesInfos> occurrencesInfos;
 
         @com.aliyun.core.annotation.NameInMap("Score")
         private Float score;
@@ -507,7 +512,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         /**
          * @return occurrencesInfos
          */
-        public java.util.List < OccurrencesInfos> getOccurrencesInfos() {
+        public java.util.List<OccurrencesInfos> getOccurrencesInfos() {
             return this.occurrencesInfos;
         }
 
@@ -522,7 +527,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             private String category; 
             private String entityId; 
             private String labelName; 
-            private java.util.List < OccurrencesInfos> occurrencesInfos; 
+            private java.util.List<OccurrencesInfos> occurrencesInfos; 
             private Float score; 
 
             /**
@@ -558,7 +563,7 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
             /**
              * <p>The information about clips related to the face.</p>
              */
-            public Builder occurrencesInfos(java.util.List < OccurrencesInfos> occurrencesInfos) {
+            public Builder occurrencesInfos(java.util.List<OccurrencesInfos> occurrencesInfos) {
                 this.occurrencesInfos = occurrencesInfos;
                 return this;
             }

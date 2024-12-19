@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -208,7 +213,7 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DemonstrationList")
-        private java.util.List < DemonstrationList> demonstrationList;
+        private java.util.List<DemonstrationList> demonstrationList;
 
         private Data(Builder builder) {
             this.demonstrationList = builder.demonstrationList;
@@ -225,17 +230,17 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
         /**
          * @return demonstrationList
          */
-        public java.util.List < DemonstrationList> getDemonstrationList() {
+        public java.util.List<DemonstrationList> getDemonstrationList() {
             return this.demonstrationList;
         }
 
         public static final class Builder {
-            private java.util.List < DemonstrationList> demonstrationList; 
+            private java.util.List<DemonstrationList> demonstrationList; 
 
             /**
              * <p>A list of 20 text entries to be read and the corresponding sample audio.</p>
              */
-            public Builder demonstrationList(java.util.List < DemonstrationList> demonstrationList) {
+            public Builder demonstrationList(java.util.List<DemonstrationList> demonstrationList) {
                 this.demonstrationList = demonstrationList;
                 return this;
             }

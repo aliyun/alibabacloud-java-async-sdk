@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -409,7 +414,7 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomizedVoiceJobList")
-        private java.util.List < CustomizedVoiceJobList> customizedVoiceJobList;
+        private java.util.List<CustomizedVoiceJobList> customizedVoiceJobList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -430,7 +435,7 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         /**
          * @return customizedVoiceJobList
          */
-        public java.util.List < CustomizedVoiceJobList> getCustomizedVoiceJobList() {
+        public java.util.List<CustomizedVoiceJobList> getCustomizedVoiceJobList() {
             return this.customizedVoiceJobList;
         }
 
@@ -442,13 +447,13 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CustomizedVoiceJobList> customizedVoiceJobList; 
+            private java.util.List<CustomizedVoiceJobList> customizedVoiceJobList; 
             private Integer totalCount; 
 
             /**
              * <p>The queried human voice cloning jobs.</p>
              */
-            public Builder customizedVoiceJobList(java.util.List < CustomizedVoiceJobList> customizedVoiceJobList) {
+            public Builder customizedVoiceJobList(java.util.List<CustomizedVoiceJobList> customizedVoiceJobList) {
                 this.customizedVoiceJobList = customizedVoiceJobList;
                 return this;
             }

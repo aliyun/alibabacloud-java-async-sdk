@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DeleteFileResultList")
-    private java.util.List < DeleteFileResultList> deleteFileResultList;
+    private java.util.List<DeleteFileResultList> deleteFileResultList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
     /**
      * @return deleteFileResultList
      */
-    public java.util.List < DeleteFileResultList> getDeleteFileResultList() {
+    public java.util.List<DeleteFileResultList> getDeleteFileResultList() {
         return this.deleteFileResultList;
     }
 
@@ -46,13 +51,13 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DeleteFileResultList> deleteFileResultList; 
+        private java.util.List<DeleteFileResultList> deleteFileResultList; 
         private String requestId; 
 
         /**
          * <p>The list of deleted files.</p>
          */
-        public Builder deleteFileResultList(java.util.List < DeleteFileResultList> deleteFileResultList) {
+        public Builder deleteFileResultList(java.util.List<DeleteFileResultList> deleteFileResultList) {
             this.deleteFileResultList = deleteFileResultList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class SubmitTranscodeJobRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InputGroup")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < InputGroup> inputGroup;
+    private java.util.List<InputGroup> inputGroup;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -28,7 +33,7 @@ public class SubmitTranscodeJobRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OutputGroup")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < OutputGroup> outputGroup;
+    private java.util.List<OutputGroup> outputGroup;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScheduleConfig")
@@ -71,7 +76,7 @@ public class SubmitTranscodeJobRequest extends Request {
     /**
      * @return inputGroup
      */
-    public java.util.List < InputGroup> getInputGroup() {
+    public java.util.List<InputGroup> getInputGroup() {
         return this.inputGroup;
     }
 
@@ -85,7 +90,7 @@ public class SubmitTranscodeJobRequest extends Request {
     /**
      * @return outputGroup
      */
-    public java.util.List < OutputGroup> getOutputGroup() {
+    public java.util.List<OutputGroup> getOutputGroup() {
         return this.outputGroup;
     }
 
@@ -105,9 +110,9 @@ public class SubmitTranscodeJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitTranscodeJobRequest, Builder> {
         private String clientToken; 
-        private java.util.List < InputGroup> inputGroup; 
+        private java.util.List<InputGroup> inputGroup; 
         private String name; 
-        private java.util.List < OutputGroup> outputGroup; 
+        private java.util.List<OutputGroup> outputGroup; 
         private ScheduleConfig scheduleConfig; 
         private String userData; 
 
@@ -144,7 +149,7 @@ public class SubmitTranscodeJobRequest extends Request {
          * <strong>example:</strong>
          * <p>job-name</p>
          */
-        public Builder inputGroup(java.util.List < InputGroup> inputGroup) {
+        public Builder inputGroup(java.util.List<InputGroup> inputGroup) {
             String inputGroupShrink = shrink(inputGroup, "InputGroup", "json");
             this.putQueryParameter("InputGroup", inputGroupShrink);
             this.inputGroup = inputGroup;
@@ -170,7 +175,7 @@ public class SubmitTranscodeJobRequest extends Request {
          * <strong>example:</strong>
          * <p>user-data</p>
          */
-        public Builder outputGroup(java.util.List < OutputGroup> outputGroup) {
+        public Builder outputGroup(java.util.List<OutputGroup> outputGroup) {
             String outputGroupShrink = shrink(outputGroup, "OutputGroup", "json");
             this.putQueryParameter("OutputGroup", outputGroupShrink);
             this.outputGroup = outputGroup;
@@ -3165,19 +3170,19 @@ public class SubmitTranscodeJobRequest extends Request {
      */
     public static class ProcessConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CombineConfigs")
-        private java.util.List < CombineConfigs> combineConfigs;
+        private java.util.List<CombineConfigs> combineConfigs;
 
         @com.aliyun.core.annotation.NameInMap("Encryption")
         private Encryption encryption;
 
         @com.aliyun.core.annotation.NameInMap("ImageWatermarks")
-        private java.util.List < ImageWatermarks> imageWatermarks;
+        private java.util.List<ImageWatermarks> imageWatermarks;
 
         @com.aliyun.core.annotation.NameInMap("Subtitles")
-        private java.util.List < Subtitles> subtitles;
+        private java.util.List<Subtitles> subtitles;
 
         @com.aliyun.core.annotation.NameInMap("TextWatermarks")
-        private java.util.List < TextWatermarks> textWatermarks;
+        private java.util.List<TextWatermarks> textWatermarks;
 
         @com.aliyun.core.annotation.NameInMap("Transcode")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -3203,7 +3208,7 @@ public class SubmitTranscodeJobRequest extends Request {
         /**
          * @return combineConfigs
          */
-        public java.util.List < CombineConfigs> getCombineConfigs() {
+        public java.util.List<CombineConfigs> getCombineConfigs() {
             return this.combineConfigs;
         }
 
@@ -3217,21 +3222,21 @@ public class SubmitTranscodeJobRequest extends Request {
         /**
          * @return imageWatermarks
          */
-        public java.util.List < ImageWatermarks> getImageWatermarks() {
+        public java.util.List<ImageWatermarks> getImageWatermarks() {
             return this.imageWatermarks;
         }
 
         /**
          * @return subtitles
          */
-        public java.util.List < Subtitles> getSubtitles() {
+        public java.util.List<Subtitles> getSubtitles() {
             return this.subtitles;
         }
 
         /**
          * @return textWatermarks
          */
-        public java.util.List < TextWatermarks> getTextWatermarks() {
+        public java.util.List<TextWatermarks> getTextWatermarks() {
             return this.textWatermarks;
         }
 
@@ -3243,17 +3248,17 @@ public class SubmitTranscodeJobRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < CombineConfigs> combineConfigs; 
+            private java.util.List<CombineConfigs> combineConfigs; 
             private Encryption encryption; 
-            private java.util.List < ImageWatermarks> imageWatermarks; 
-            private java.util.List < Subtitles> subtitles; 
-            private java.util.List < TextWatermarks> textWatermarks; 
+            private java.util.List<ImageWatermarks> imageWatermarks; 
+            private java.util.List<Subtitles> subtitles; 
+            private java.util.List<TextWatermarks> textWatermarks; 
             private Transcode transcode; 
 
             /**
              * <p>The multi-input stream merge configuration.</p>
              */
-            public Builder combineConfigs(java.util.List < CombineConfigs> combineConfigs) {
+            public Builder combineConfigs(java.util.List<CombineConfigs> combineConfigs) {
                 this.combineConfigs = combineConfigs;
                 return this;
             }
@@ -3269,7 +3274,7 @@ public class SubmitTranscodeJobRequest extends Request {
             /**
              * <p>The watermark configuration of an image.</p>
              */
-            public Builder imageWatermarks(java.util.List < ImageWatermarks> imageWatermarks) {
+            public Builder imageWatermarks(java.util.List<ImageWatermarks> imageWatermarks) {
                 this.imageWatermarks = imageWatermarks;
                 return this;
             }
@@ -3277,7 +3282,7 @@ public class SubmitTranscodeJobRequest extends Request {
             /**
              * <p>The subtitle configuration.</p>
              */
-            public Builder subtitles(java.util.List < Subtitles> subtitles) {
+            public Builder subtitles(java.util.List<Subtitles> subtitles) {
                 this.subtitles = subtitles;
                 return this;
             }
@@ -3285,7 +3290,7 @@ public class SubmitTranscodeJobRequest extends Request {
             /**
              * <p>The configurations of the text watermark.</p>
              */
-            public Builder textWatermarks(java.util.List < TextWatermarks> textWatermarks) {
+            public Builder textWatermarks(java.util.List<TextWatermarks> textWatermarks) {
                 this.textWatermarks = textWatermarks;
                 return this;
             }

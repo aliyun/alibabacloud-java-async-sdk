@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TemplateContentList")
-    private java.util.List < TemplateContentList> templateContentList;
+    private java.util.List<TemplateContentList> templateContentList;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -45,7 +50,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
     /**
      * @return templateContentList
      */
-    public java.util.List < TemplateContentList> getTemplateContentList() {
+    public java.util.List<TemplateContentList> getTemplateContentList() {
         return this.templateContentList;
     }
 
@@ -58,7 +63,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TemplateContentList> templateContentList; 
+        private java.util.List<TemplateContentList> templateContentList; 
         private Integer totalCount; 
 
         /**
@@ -75,7 +80,7 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
         /**
          * <p>The list of transcoding templates.</p>
          */
-        public Builder templateContentList(java.util.List < TemplateContentList> templateContentList) {
+        public Builder templateContentList(java.util.List<TemplateContentList> templateContentList) {
             this.templateContentList = templateContentList;
             return this;
         }

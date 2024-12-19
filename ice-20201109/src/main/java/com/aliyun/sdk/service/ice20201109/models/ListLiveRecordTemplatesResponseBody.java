@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     private Long pageSize;
 
     @com.aliyun.core.annotation.NameInMap("RecordTemplateList")
-    private java.util.List < RecordTemplateList> recordTemplateList;
+    private java.util.List<RecordTemplateList> recordTemplateList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -64,7 +69,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     /**
      * @return recordTemplateList
      */
-    public java.util.List < RecordTemplateList> getRecordTemplateList() {
+    public java.util.List<RecordTemplateList> getRecordTemplateList() {
         return this.recordTemplateList;
     }
 
@@ -92,7 +97,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     public static final class Builder {
         private Long pageNo; 
         private Long pageSize; 
-        private java.util.List < RecordTemplateList> recordTemplateList; 
+        private java.util.List<RecordTemplateList> recordTemplateList; 
         private String requestId; 
         private String sortBy; 
         private Long totalCount; 
@@ -122,7 +127,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         /**
          * <p>The list of recording templates.</p>
          */
-        public Builder recordTemplateList(java.util.List < RecordTemplateList> recordTemplateList) {
+        public Builder recordTemplateList(java.util.List<RecordTemplateList> recordTemplateList) {
             this.recordTemplateList = recordTemplateList;
             return this;
         }
@@ -330,7 +335,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("RecordFormatList")
-        private java.util.List < RecordFormatList> recordFormatList;
+        private java.util.List<RecordFormatList> recordFormatList;
 
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
@@ -379,7 +384,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         /**
          * @return recordFormatList
          */
-        public java.util.List < RecordFormatList> getRecordFormatList() {
+        public java.util.List<RecordFormatList> getRecordFormatList() {
             return this.recordFormatList;
         }
 
@@ -401,7 +406,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             private String createTime; 
             private String lastModified; 
             private String name; 
-            private java.util.List < RecordFormatList> recordFormatList; 
+            private java.util.List<RecordFormatList> recordFormatList; 
             private String templateId; 
             private String type; 
 
@@ -443,7 +448,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
             /**
              * <p>The list of recording formats.</p>
              */
-            public Builder recordFormatList(java.util.List < RecordFormatList> recordFormatList) {
+            public Builder recordFormatList(java.util.List<RecordFormatList> recordFormatList) {
                 this.recordFormatList = recordFormatList;
                 return this;
             }

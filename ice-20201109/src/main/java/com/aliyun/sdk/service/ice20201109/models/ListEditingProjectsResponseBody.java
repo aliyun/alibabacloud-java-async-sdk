@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class ListEditingProjectsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("ProjectList")
-    private java.util.List < ProjectList> projectList;
+    private java.util.List<ProjectList> projectList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -57,7 +62,7 @@ public class ListEditingProjectsResponseBody extends TeaModel {
     /**
      * @return projectList
      */
-    public java.util.List < ProjectList> getProjectList() {
+    public java.util.List<ProjectList> getProjectList() {
         return this.projectList;
     }
 
@@ -71,7 +76,7 @@ public class ListEditingProjectsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < ProjectList> projectList; 
+        private java.util.List<ProjectList> projectList; 
         private String requestId; 
 
         /**
@@ -100,7 +105,7 @@ public class ListEditingProjectsResponseBody extends TeaModel {
         /**
          * <p>The queried online editing projects.</p>
          */
-        public Builder projectList(java.util.List < ProjectList> projectList) {
+        public Builder projectList(java.util.List<ProjectList> projectList) {
             this.projectList = projectList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribePlayListResponseBody extends TeaModel {
     private Long pageSize;
 
     @com.aliyun.core.annotation.NameInMap("PlayList")
-    private java.util.List < PlayList> playList;
+    private java.util.List<PlayList> playList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class DescribePlayListResponseBody extends TeaModel {
     /**
      * @return playList
      */
-    public java.util.List < PlayList> getPlayList() {
+    public java.util.List<PlayList> getPlayList() {
         return this.playList;
     }
 
@@ -81,7 +86,7 @@ public class DescribePlayListResponseBody extends TeaModel {
     public static final class Builder {
         private Long pageNum; 
         private Long pageSize; 
-        private java.util.List < PlayList> playList; 
+        private java.util.List<PlayList> playList; 
         private String requestId; 
         private Long totalNum; 
 
@@ -104,7 +109,7 @@ public class DescribePlayListResponseBody extends TeaModel {
         /**
          * PlayList.
          */
-        public Builder playList(java.util.List < PlayList> playList) {
+        public Builder playList(java.util.List<PlayList> playList) {
             this.playList = playList;
             return this;
         }

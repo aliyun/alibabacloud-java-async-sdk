@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("IndexJobInfoList")
-    private java.util.List < IndexJobInfoList> indexJobInfoList;
+    private java.util.List<IndexJobInfoList> indexJobInfoList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -49,7 +54,7 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
     /**
      * @return indexJobInfoList
      */
-    public java.util.List < IndexJobInfoList> getIndexJobInfoList() {
+    public java.util.List<IndexJobInfoList> getIndexJobInfoList() {
         return this.indexJobInfoList;
     }
 
@@ -69,7 +74,7 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < IndexJobInfoList> indexJobInfoList; 
+        private java.util.List<IndexJobInfoList> indexJobInfoList; 
         private String requestId; 
         private String success; 
 
@@ -87,7 +92,7 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
         /**
          * <p>The indexing jobs enabled for the media asset.</p>
          */
-        public Builder indexJobInfoList(java.util.List < IndexJobInfoList> indexJobInfoList) {
+        public Builder indexJobInfoList(java.util.List<IndexJobInfoList> indexJobInfoList) {
             this.indexJobInfoList = indexJobInfoList;
             return this;
         }

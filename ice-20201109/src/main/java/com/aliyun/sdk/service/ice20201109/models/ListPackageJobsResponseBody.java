@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -300,7 +305,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
         private String finishTime;
 
         @com.aliyun.core.annotation.NameInMap("Inputs")
-        private java.util.List < Inputs> inputs;
+        private java.util.List<Inputs> inputs;
 
         @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
@@ -385,7 +390,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
         /**
          * @return inputs
          */
-        public java.util.List < Inputs> getInputs() {
+        public java.util.List<Inputs> getInputs() {
             return this.inputs;
         }
 
@@ -470,7 +475,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
             private String code; 
             private String createTime; 
             private String finishTime; 
-            private java.util.List < Inputs> inputs; 
+            private java.util.List<Inputs> inputs; 
             private String jobId; 
             private String message; 
             private String modifiedTime; 
@@ -519,7 +524,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
             /**
              * <p>The input of the job.</p>
              */
-            public Builder inputs(java.util.List < Inputs> inputs) {
+            public Builder inputs(java.util.List<Inputs> inputs) {
                 this.inputs = inputs;
                 return this;
             }
@@ -665,7 +670,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
         private String nextPageToken;
 
         @com.aliyun.core.annotation.NameInMap("PackageJobs")
-        private java.util.List < PackageJobs> packageJobs;
+        private java.util.List<PackageJobs> packageJobs;
 
         private PackageJobList(Builder builder) {
             this.nextPageToken = builder.nextPageToken;
@@ -690,13 +695,13 @@ public class ListPackageJobsResponseBody extends TeaModel {
         /**
          * @return packageJobs
          */
-        public java.util.List < PackageJobs> getPackageJobs() {
+        public java.util.List<PackageJobs> getPackageJobs() {
             return this.packageJobs;
         }
 
         public static final class Builder {
             private String nextPageToken; 
-            private java.util.List < PackageJobs> packageJobs; 
+            private java.util.List<PackageJobs> packageJobs; 
 
             /**
              * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The token of the next page is returned after you call this operation for the first time.</p>
@@ -712,7 +717,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
             /**
              * <p>The list of packaging jobs.</p>
              */
-            public Builder packageJobs(java.util.List < PackageJobs> packageJobs) {
+            public Builder packageJobs(java.util.List<PackageJobs> packageJobs) {
                 this.packageJobs = packageJobs;
                 return this;
             }

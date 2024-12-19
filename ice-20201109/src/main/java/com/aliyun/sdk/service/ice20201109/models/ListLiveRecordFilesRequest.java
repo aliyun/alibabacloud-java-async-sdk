@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListLiveRecordFilesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobIds")
-    private java.util.List < String > jobIds;
+    private java.util.List<String> jobIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNo")
@@ -74,7 +79,7 @@ public class ListLiveRecordFilesRequest extends Request {
     /**
      * @return jobIds
      */
-    public java.util.List < String > getJobIds() {
+    public java.util.List<String> getJobIds() {
         return this.jobIds;
     }
 
@@ -115,7 +120,7 @@ public class ListLiveRecordFilesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListLiveRecordFilesRequest, Builder> {
         private String endTime; 
-        private java.util.List < String > jobIds; 
+        private java.util.List<String> jobIds; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String recordFormat; 
@@ -152,7 +157,7 @@ public class ListLiveRecordFilesRequest extends Request {
         /**
          * <p>The list of job IDs.</p>
          */
-        public Builder jobIds(java.util.List < String > jobIds) {
+        public Builder jobIds(java.util.List<String> jobIds) {
             this.putQueryParameter("JobIds", jobIds);
             this.jobIds = jobIds;
             return this;

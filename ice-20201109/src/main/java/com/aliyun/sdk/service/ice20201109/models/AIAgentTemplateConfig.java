@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -190,7 +195,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         private String greeting;
 
         @com.aliyun.core.annotation.NameInMap("LlmHistory")
-        private java.util.List < LlmHistory> llmHistory;
+        private java.util.List<LlmHistory> llmHistory;
 
         @com.aliyun.core.annotation.NameInMap("LlmHistoryLimit")
         private Integer llmHistoryLimit;
@@ -311,7 +316,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         /**
          * @return llmHistory
          */
-        public java.util.List < LlmHistory> getLlmHistory() {
+        public java.util.List<LlmHistory> getLlmHistory() {
             return this.llmHistory;
         }
 
@@ -394,7 +399,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Boolean enableVoiceInterrupt; 
             private Boolean gracefulShutdown; 
             private String greeting; 
-            private java.util.List < LlmHistory> llmHistory; 
+            private java.util.List<LlmHistory> llmHistory; 
             private Integer llmHistoryLimit; 
             private Integer maxIdleTime; 
             private Boolean useVoiceprint; 
@@ -473,7 +478,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             /**
              * LlmHistory.
              */
-            public Builder llmHistory(java.util.List < LlmHistory> llmHistory) {
+            public Builder llmHistory(java.util.List<LlmHistory> llmHistory) {
                 this.llmHistory = llmHistory;
                 return this;
             }
@@ -661,7 +666,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         private String greeting;
 
         @com.aliyun.core.annotation.NameInMap("LlmHistory")
-        private java.util.List < VisionChatLlmHistory> llmHistory;
+        private java.util.List<VisionChatLlmHistory> llmHistory;
 
         @com.aliyun.core.annotation.NameInMap("LlmHistoryLimit")
         private Integer llmHistoryLimit;
@@ -774,7 +779,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         /**
          * @return llmHistory
          */
-        public java.util.List < VisionChatLlmHistory> getLlmHistory() {
+        public java.util.List<VisionChatLlmHistory> getLlmHistory() {
             return this.llmHistory;
         }
 
@@ -856,7 +861,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Boolean enableVoiceInterrupt; 
             private Boolean gracefulShutdown; 
             private String greeting; 
-            private java.util.List < VisionChatLlmHistory> llmHistory; 
+            private java.util.List<VisionChatLlmHistory> llmHistory; 
             private Integer llmHistoryLimit; 
             private Integer maxIdleTime; 
             private Boolean useVoiceprint; 
@@ -927,7 +932,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             /**
              * LlmHistory.
              */
-            public Builder llmHistory(java.util.List < VisionChatLlmHistory> llmHistory) {
+            public Builder llmHistory(java.util.List<VisionChatLlmHistory> llmHistory) {
                 this.llmHistory = llmHistory;
                 return this;
             }
@@ -1121,7 +1126,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         private String greeting;
 
         @com.aliyun.core.annotation.NameInMap("LlmHistory")
-        private java.util.List < VoiceChatLlmHistory> llmHistory;
+        private java.util.List<VoiceChatLlmHistory> llmHistory;
 
         @com.aliyun.core.annotation.NameInMap("LlmHistoryLimit")
         private Integer llmHistoryLimit;
@@ -1250,7 +1255,7 @@ public class AIAgentTemplateConfig extends TeaModel {
         /**
          * @return llmHistory
          */
-        public java.util.List < VoiceChatLlmHistory> getLlmHistory() {
+        public java.util.List<VoiceChatLlmHistory> getLlmHistory() {
             return this.llmHistory;
         }
 
@@ -1334,7 +1339,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             private Boolean enableVoiceInterrupt; 
             private Boolean gracefulShutdown; 
             private String greeting; 
-            private java.util.List < VoiceChatLlmHistory> llmHistory; 
+            private java.util.List<VoiceChatLlmHistory> llmHistory; 
             private Integer llmHistoryLimit; 
             private Integer maxIdleTime; 
             private Boolean useVoiceprint; 
@@ -1421,7 +1426,7 @@ public class AIAgentTemplateConfig extends TeaModel {
             /**
              * LlmHistory.
              */
-            public Builder llmHistory(java.util.List < VoiceChatLlmHistory> llmHistory) {
+            public Builder llmHistory(java.util.List<VoiceChatLlmHistory> llmHistory) {
                 this.llmHistory = llmHistory;
                 return this;
             }

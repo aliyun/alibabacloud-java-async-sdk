@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListSearchLibResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SearchLibInfoList")
-    private java.util.List < SearchLibInfoList> searchLibInfoList;
+    private java.util.List<SearchLibInfoList> searchLibInfoList;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
@@ -60,7 +65,7 @@ public class ListSearchLibResponseBody extends TeaModel {
     /**
      * @return searchLibInfoList
      */
-    public java.util.List < SearchLibInfoList> getSearchLibInfoList() {
+    public java.util.List<SearchLibInfoList> getSearchLibInfoList() {
         return this.searchLibInfoList;
     }
 
@@ -81,7 +86,7 @@ public class ListSearchLibResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String requestId; 
-        private java.util.List < SearchLibInfoList> searchLibInfoList; 
+        private java.util.List<SearchLibInfoList> searchLibInfoList; 
         private String success; 
         private Long total; 
 
@@ -110,7 +115,7 @@ public class ListSearchLibResponseBody extends TeaModel {
         /**
          * <p>Information about search libraries.</p>
          */
-        public Builder searchLibInfoList(java.util.List < SearchLibInfoList> searchLibInfoList) {
+        public Builder searchLibInfoList(java.util.List<SearchLibInfoList> searchLibInfoList) {
             this.searchLibInfoList = searchLibInfoList;
             return this;
         }

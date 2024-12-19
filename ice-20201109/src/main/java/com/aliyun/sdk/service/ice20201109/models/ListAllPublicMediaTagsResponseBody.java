@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAllPublicMediaTagsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MediaTagList")
-    private java.util.List < MediaTagList> mediaTagList;
+    private java.util.List<MediaTagList> mediaTagList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
     /**
      * @return mediaTagList
      */
-    public java.util.List < MediaTagList> getMediaTagList() {
+    public java.util.List<MediaTagList> getMediaTagList() {
         return this.mediaTagList;
     }
 
@@ -46,13 +51,13 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MediaTagList> mediaTagList; 
+        private java.util.List<MediaTagList> mediaTagList; 
         private String requestId; 
 
         /**
          * <p>The tags of media assets in the public media library.</p>
          */
-        public Builder mediaTagList(java.util.List < MediaTagList> mediaTagList) {
+        public Builder mediaTagList(java.util.List<MediaTagList> mediaTagList) {
             this.mediaTagList = mediaTagList;
             return this;
         }
@@ -184,7 +189,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         private String mediaTagNameEnglish;
 
         @com.aliyun.core.annotation.NameInMap("Options")
-        private java.util.List < Options> options;
+        private java.util.List<Options> options;
 
         private MediaTagList(Builder builder) {
             this.mediaTagId = builder.mediaTagId;
@@ -225,7 +230,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         /**
          * @return options
          */
-        public java.util.List < Options> getOptions() {
+        public java.util.List<Options> getOptions() {
             return this.options;
         }
 
@@ -233,7 +238,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             private String mediaTagId; 
             private String mediaTagNameChinese; 
             private String mediaTagNameEnglish; 
-            private java.util.List < Options> options; 
+            private java.util.List<Options> options; 
 
             /**
              * <p>The ID of the media tag.</p>
@@ -268,7 +273,7 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
             /**
              * <p>The options.</p>
              */
-            public Builder options(java.util.List < Options> options) {
+            public Builder options(java.util.List<Options> options) {
                 this.options = options;
                 return this;
             }

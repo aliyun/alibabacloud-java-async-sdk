@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class AppInfoDTO extends TeaModel {
     private String itemId;
 
     @com.aliyun.core.annotation.NameInMap("Platforms")
-    private java.util.List < Platforms> platforms;
+    private java.util.List<Platforms> platforms;
 
     @com.aliyun.core.annotation.NameInMap("UserId")
     private Long userId;
@@ -78,7 +83,7 @@ public class AppInfoDTO extends TeaModel {
     /**
      * @return platforms
      */
-    public java.util.List < Platforms> getPlatforms() {
+    public java.util.List<Platforms> getPlatforms() {
         return this.platforms;
     }
 
@@ -94,7 +99,7 @@ public class AppInfoDTO extends TeaModel {
         private Integer appType; 
         private String gmtCreate; 
         private String itemId; 
-        private java.util.List < Platforms> platforms; 
+        private java.util.List<Platforms> platforms; 
         private Long userId; 
 
         /**
@@ -132,7 +137,7 @@ public class AppInfoDTO extends TeaModel {
         /**
          * Platforms.
          */
-        public Builder platforms(java.util.List < Platforms> platforms) {
+        public Builder platforms(java.util.List<Platforms> platforms) {
             this.platforms = platforms;
             return this;
         }
@@ -162,7 +167,7 @@ public class AppInfoDTO extends TeaModel {
         private String itemId;
 
         @com.aliyun.core.annotation.NameInMap("LicenseItemIds")
-        private java.util.List < String > licenseItemIds;
+        private java.util.List<String> licenseItemIds;
 
         @com.aliyun.core.annotation.NameInMap("PkgName")
         private String pkgName;
@@ -203,7 +208,7 @@ public class AppInfoDTO extends TeaModel {
         /**
          * @return licenseItemIds
          */
-        public java.util.List < String > getLicenseItemIds() {
+        public java.util.List<String> getLicenseItemIds() {
             return this.licenseItemIds;
         }
 
@@ -237,7 +242,7 @@ public class AppInfoDTO extends TeaModel {
 
         public static final class Builder {
             private String itemId; 
-            private java.util.List < String > licenseItemIds; 
+            private java.util.List<String> licenseItemIds; 
             private String pkgName; 
             private String pkgSignature; 
             private Long platformType; 
@@ -254,7 +259,7 @@ public class AppInfoDTO extends TeaModel {
             /**
              * LicenseItemIds.
              */
-            public Builder licenseItemIds(java.util.List < String > licenseItemIds) {
+            public Builder licenseItemIds(java.util.List<String> licenseItemIds) {
                 this.licenseItemIds = licenseItemIds;
                 return this;
             }

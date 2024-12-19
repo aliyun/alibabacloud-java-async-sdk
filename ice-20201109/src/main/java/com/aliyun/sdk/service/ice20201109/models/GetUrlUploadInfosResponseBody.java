@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetUrlUploadInfosResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NonExists")
-    private java.util.List < String > nonExists;
+    private java.util.List<String> nonExists;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("URLUploadInfoList")
-    private java.util.List < URLUploadInfoList> URLUploadInfoList;
+    private java.util.List<URLUploadInfoList> URLUploadInfoList;
 
     private GetUrlUploadInfosResponseBody(Builder builder) {
         this.nonExists = builder.nonExists;
@@ -38,7 +43,7 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
     /**
      * @return nonExists
      */
-    public java.util.List < String > getNonExists() {
+    public java.util.List<String> getNonExists() {
         return this.nonExists;
     }
 
@@ -52,19 +57,19 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
     /**
      * @return URLUploadInfoList
      */
-    public java.util.List < URLUploadInfoList> getURLUploadInfoList() {
+    public java.util.List<URLUploadInfoList> getURLUploadInfoList() {
         return this.URLUploadInfoList;
     }
 
     public static final class Builder {
-        private java.util.List < String > nonExists; 
+        private java.util.List<String> nonExists; 
         private String requestId; 
-        private java.util.List < URLUploadInfoList> URLUploadInfoList; 
+        private java.util.List<URLUploadInfoList> URLUploadInfoList; 
 
         /**
          * <p>The job IDs or upload URLs that do not exist.</p>
          */
-        public Builder nonExists(java.util.List < String > nonExists) {
+        public Builder nonExists(java.util.List<String> nonExists) {
             this.nonExists = nonExists;
             return this;
         }
@@ -83,7 +88,7 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
         /**
          * <p>The details about URL-based upload jobs.</p>
          */
-        public Builder URLUploadInfoList(java.util.List < URLUploadInfoList> URLUploadInfoList) {
+        public Builder URLUploadInfoList(java.util.List<URLUploadInfoList> URLUploadInfoList) {
             this.URLUploadInfoList = URLUploadInfoList;
             return this;
         }

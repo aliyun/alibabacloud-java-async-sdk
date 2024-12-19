@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SearchPublicMediaInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PublicMediaInfos")
-    private java.util.List < PublicMediaInfos> publicMediaInfos;
+    private java.util.List<PublicMediaInfos> publicMediaInfos;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
     /**
      * @return publicMediaInfos
      */
-    public java.util.List < PublicMediaInfos> getPublicMediaInfos() {
+    public java.util.List<PublicMediaInfos> getPublicMediaInfos() {
         return this.publicMediaInfos;
     }
 
@@ -57,14 +62,14 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PublicMediaInfos> publicMediaInfos; 
+        private java.util.List<PublicMediaInfos> publicMediaInfos; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * PublicMediaInfos.
          */
-        public Builder publicMediaInfos(java.util.List < PublicMediaInfos> publicMediaInfos) {
+        public Builder publicMediaInfos(java.util.List<PublicMediaInfos> publicMediaInfos) {
             this.publicMediaInfos = publicMediaInfos;
             return this;
         }

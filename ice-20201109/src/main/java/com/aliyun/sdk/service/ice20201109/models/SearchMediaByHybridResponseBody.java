@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("MediaList")
-    private java.util.List < MediaList> mediaList;
+    private java.util.List<MediaList> mediaList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -53,7 +58,7 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
     /**
      * @return mediaList
      */
-    public java.util.List < MediaList> getMediaList() {
+    public java.util.List<MediaList> getMediaList() {
         return this.mediaList;
     }
 
@@ -80,7 +85,7 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < MediaList> mediaList; 
+        private java.util.List<MediaList> mediaList; 
         private String requestId; 
         private String success; 
         private Long total; 
@@ -96,7 +101,7 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
         /**
          * MediaList.
          */
-        public Builder mediaList(java.util.List < MediaList> mediaList) {
+        public Builder mediaList(java.util.List<MediaList> mediaList) {
             this.mediaList = mediaList;
             return this;
         }
@@ -226,7 +231,7 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
      */
     public static class MediaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClipInfo")
-        private java.util.List < ClipInfo> clipInfo;
+        private java.util.List<ClipInfo> clipInfo;
 
         @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
@@ -247,7 +252,7 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
         /**
          * @return clipInfo
          */
-        public java.util.List < ClipInfo> getClipInfo() {
+        public java.util.List<ClipInfo> getClipInfo() {
             return this.clipInfo;
         }
 
@@ -259,13 +264,13 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ClipInfo> clipInfo; 
+            private java.util.List<ClipInfo> clipInfo; 
             private String mediaId; 
 
             /**
              * ClipInfo.
              */
-            public Builder clipInfo(java.util.List < ClipInfo> clipInfo) {
+            public Builder clipInfo(java.util.List<ClipInfo> clipInfo) {
                 this.clipInfo = clipInfo;
                 return this;
             }

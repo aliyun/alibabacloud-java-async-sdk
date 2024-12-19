@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -2912,19 +2917,19 @@ public class GetTranscodeJobResponseBody extends TeaModel {
      */
     public static class ProcessConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CombineConfigs")
-        private java.util.List < CombineConfigs> combineConfigs;
+        private java.util.List<CombineConfigs> combineConfigs;
 
         @com.aliyun.core.annotation.NameInMap("Encryption")
         private Encryption encryption;
 
         @com.aliyun.core.annotation.NameInMap("ImageWatermarks")
-        private java.util.List < ImageWatermarks> imageWatermarks;
+        private java.util.List<ImageWatermarks> imageWatermarks;
 
         @com.aliyun.core.annotation.NameInMap("Subtitles")
-        private java.util.List < Subtitles> subtitles;
+        private java.util.List<Subtitles> subtitles;
 
         @com.aliyun.core.annotation.NameInMap("TextWatermarks")
-        private java.util.List < TextWatermarks> textWatermarks;
+        private java.util.List<TextWatermarks> textWatermarks;
 
         @com.aliyun.core.annotation.NameInMap("Transcode")
         private Transcode transcode;
@@ -2949,7 +2954,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         /**
          * @return combineConfigs
          */
-        public java.util.List < CombineConfigs> getCombineConfigs() {
+        public java.util.List<CombineConfigs> getCombineConfigs() {
             return this.combineConfigs;
         }
 
@@ -2963,21 +2968,21 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         /**
          * @return imageWatermarks
          */
-        public java.util.List < ImageWatermarks> getImageWatermarks() {
+        public java.util.List<ImageWatermarks> getImageWatermarks() {
             return this.imageWatermarks;
         }
 
         /**
          * @return subtitles
          */
-        public java.util.List < Subtitles> getSubtitles() {
+        public java.util.List<Subtitles> getSubtitles() {
             return this.subtitles;
         }
 
         /**
          * @return textWatermarks
          */
-        public java.util.List < TextWatermarks> getTextWatermarks() {
+        public java.util.List<TextWatermarks> getTextWatermarks() {
             return this.textWatermarks;
         }
 
@@ -2989,17 +2994,17 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CombineConfigs> combineConfigs; 
+            private java.util.List<CombineConfigs> combineConfigs; 
             private Encryption encryption; 
-            private java.util.List < ImageWatermarks> imageWatermarks; 
-            private java.util.List < Subtitles> subtitles; 
-            private java.util.List < TextWatermarks> textWatermarks; 
+            private java.util.List<ImageWatermarks> imageWatermarks; 
+            private java.util.List<Subtitles> subtitles; 
+            private java.util.List<TextWatermarks> textWatermarks; 
             private Transcode transcode; 
 
             /**
              * <p>The multi-input stream merge configuration.</p>
              */
-            public Builder combineConfigs(java.util.List < CombineConfigs> combineConfigs) {
+            public Builder combineConfigs(java.util.List<CombineConfigs> combineConfigs) {
                 this.combineConfigs = combineConfigs;
                 return this;
             }
@@ -3015,7 +3020,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             /**
              * <p>The watermark configuration of an image.</p>
              */
-            public Builder imageWatermarks(java.util.List < ImageWatermarks> imageWatermarks) {
+            public Builder imageWatermarks(java.util.List<ImageWatermarks> imageWatermarks) {
                 this.imageWatermarks = imageWatermarks;
                 return this;
             }
@@ -3023,7 +3028,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             /**
              * <p>The subtitle configuration.</p>
              */
-            public Builder subtitles(java.util.List < Subtitles> subtitles) {
+            public Builder subtitles(java.util.List<Subtitles> subtitles) {
                 this.subtitles = subtitles;
                 return this;
             }
@@ -3031,7 +3036,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             /**
              * <p>The configurations of the text watermark.</p>
              */
-            public Builder textWatermarks(java.util.List < TextWatermarks> textWatermarks) {
+            public Builder textWatermarks(java.util.List<TextWatermarks> textWatermarks) {
                 this.textWatermarks = textWatermarks;
                 return this;
             }
@@ -4539,13 +4544,13 @@ public class GetTranscodeJobResponseBody extends TeaModel {
      */
     public static class OutFileMeta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioStreamInfoList")
-        private java.util.List < AudioStreamInfoList> audioStreamInfoList;
+        private java.util.List<AudioStreamInfoList> audioStreamInfoList;
 
         @com.aliyun.core.annotation.NameInMap("FileBasicInfo")
         private FileBasicInfo fileBasicInfo;
 
         @com.aliyun.core.annotation.NameInMap("VideoStreamInfoList")
-        private java.util.List < VideoStreamInfoList> videoStreamInfoList;
+        private java.util.List<VideoStreamInfoList> videoStreamInfoList;
 
         private OutFileMeta(Builder builder) {
             this.audioStreamInfoList = builder.audioStreamInfoList;
@@ -4564,7 +4569,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         /**
          * @return audioStreamInfoList
          */
-        public java.util.List < AudioStreamInfoList> getAudioStreamInfoList() {
+        public java.util.List<AudioStreamInfoList> getAudioStreamInfoList() {
             return this.audioStreamInfoList;
         }
 
@@ -4578,19 +4583,19 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         /**
          * @return videoStreamInfoList
          */
-        public java.util.List < VideoStreamInfoList> getVideoStreamInfoList() {
+        public java.util.List<VideoStreamInfoList> getVideoStreamInfoList() {
             return this.videoStreamInfoList;
         }
 
         public static final class Builder {
-            private java.util.List < AudioStreamInfoList> audioStreamInfoList; 
+            private java.util.List<AudioStreamInfoList> audioStreamInfoList; 
             private FileBasicInfo fileBasicInfo; 
-            private java.util.List < VideoStreamInfoList> videoStreamInfoList; 
+            private java.util.List<VideoStreamInfoList> videoStreamInfoList; 
 
             /**
              * <p>The information about the audio stream.</p>
              */
-            public Builder audioStreamInfoList(java.util.List < AudioStreamInfoList> audioStreamInfoList) {
+            public Builder audioStreamInfoList(java.util.List<AudioStreamInfoList> audioStreamInfoList) {
                 this.audioStreamInfoList = audioStreamInfoList;
                 return this;
             }
@@ -4606,7 +4611,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             /**
              * <p>The information about the video stream.</p>
              */
-            public Builder videoStreamInfoList(java.util.List < VideoStreamInfoList> videoStreamInfoList) {
+            public Builder videoStreamInfoList(java.util.List<VideoStreamInfoList> videoStreamInfoList) {
                 this.videoStreamInfoList = videoStreamInfoList;
                 return this;
             }
@@ -7186,7 +7191,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         private OverwriteParamsMuxConfig muxConfig;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, String > tags;
+        private java.util.Map<String, String> tags;
 
         @com.aliyun.core.annotation.NameInMap("TransConfig")
         private OverwriteParamsTransConfig transConfig;
@@ -7235,7 +7240,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, String > getTags() {
+        public java.util.Map<String, String> getTags() {
             return this.tags;
         }
 
@@ -7257,7 +7262,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private OverwriteParamsAudio audio; 
             private OverwriteParamsContainer container; 
             private OverwriteParamsMuxConfig muxConfig; 
-            private java.util.Map < String, String > tags; 
+            private java.util.Map<String, String> tags; 
             private OverwriteParamsTransConfig transConfig; 
             private OverwriteParamsVideo video; 
 
@@ -7288,7 +7293,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.Map < String, String > tags) {
+            public Builder tags(java.util.Map<String, String> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -7394,22 +7399,22 @@ public class GetTranscodeJobResponseBody extends TeaModel {
      */
     public static class TranscodeJobListProcessConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CombineConfigs")
-        private java.util.List < ProcessConfigCombineConfigs> combineConfigs;
+        private java.util.List<ProcessConfigCombineConfigs> combineConfigs;
 
         @com.aliyun.core.annotation.NameInMap("Encryption")
         private ProcessConfigEncryption encryption;
 
         @com.aliyun.core.annotation.NameInMap("ImageWatermarks")
-        private java.util.List < ProcessConfigImageWatermarks> imageWatermarks;
+        private java.util.List<ProcessConfigImageWatermarks> imageWatermarks;
 
         @com.aliyun.core.annotation.NameInMap("IsInheritTags")
         private Boolean isInheritTags;
 
         @com.aliyun.core.annotation.NameInMap("Subtitles")
-        private java.util.List < ProcessConfigSubtitles> subtitles;
+        private java.util.List<ProcessConfigSubtitles> subtitles;
 
         @com.aliyun.core.annotation.NameInMap("TextWatermarks")
-        private java.util.List < ProcessConfigTextWatermarks> textWatermarks;
+        private java.util.List<ProcessConfigTextWatermarks> textWatermarks;
 
         @com.aliyun.core.annotation.NameInMap("Transcode")
         private ProcessConfigTranscode transcode;
@@ -7435,7 +7440,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         /**
          * @return combineConfigs
          */
-        public java.util.List < ProcessConfigCombineConfigs> getCombineConfigs() {
+        public java.util.List<ProcessConfigCombineConfigs> getCombineConfigs() {
             return this.combineConfigs;
         }
 
@@ -7449,7 +7454,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         /**
          * @return imageWatermarks
          */
-        public java.util.List < ProcessConfigImageWatermarks> getImageWatermarks() {
+        public java.util.List<ProcessConfigImageWatermarks> getImageWatermarks() {
             return this.imageWatermarks;
         }
 
@@ -7463,14 +7468,14 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         /**
          * @return subtitles
          */
-        public java.util.List < ProcessConfigSubtitles> getSubtitles() {
+        public java.util.List<ProcessConfigSubtitles> getSubtitles() {
             return this.subtitles;
         }
 
         /**
          * @return textWatermarks
          */
-        public java.util.List < ProcessConfigTextWatermarks> getTextWatermarks() {
+        public java.util.List<ProcessConfigTextWatermarks> getTextWatermarks() {
             return this.textWatermarks;
         }
 
@@ -7482,18 +7487,18 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ProcessConfigCombineConfigs> combineConfigs; 
+            private java.util.List<ProcessConfigCombineConfigs> combineConfigs; 
             private ProcessConfigEncryption encryption; 
-            private java.util.List < ProcessConfigImageWatermarks> imageWatermarks; 
+            private java.util.List<ProcessConfigImageWatermarks> imageWatermarks; 
             private Boolean isInheritTags; 
-            private java.util.List < ProcessConfigSubtitles> subtitles; 
-            private java.util.List < ProcessConfigTextWatermarks> textWatermarks; 
+            private java.util.List<ProcessConfigSubtitles> subtitles; 
+            private java.util.List<ProcessConfigTextWatermarks> textWatermarks; 
             private ProcessConfigTranscode transcode; 
 
             /**
              * <p>The multi-input stream merge configuration.</p>
              */
-            public Builder combineConfigs(java.util.List < ProcessConfigCombineConfigs> combineConfigs) {
+            public Builder combineConfigs(java.util.List<ProcessConfigCombineConfigs> combineConfigs) {
                 this.combineConfigs = combineConfigs;
                 return this;
             }
@@ -7509,7 +7514,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             /**
              * <p>The watermark configuration of an image.</p>
              */
-            public Builder imageWatermarks(java.util.List < ProcessConfigImageWatermarks> imageWatermarks) {
+            public Builder imageWatermarks(java.util.List<ProcessConfigImageWatermarks> imageWatermarks) {
                 this.imageWatermarks = imageWatermarks;
                 return this;
             }
@@ -7528,7 +7533,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             /**
              * <p>The subtitle configuration.</p>
              */
-            public Builder subtitles(java.util.List < ProcessConfigSubtitles> subtitles) {
+            public Builder subtitles(java.util.List<ProcessConfigSubtitles> subtitles) {
                 this.subtitles = subtitles;
                 return this;
             }
@@ -7536,7 +7541,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             /**
              * <p>The configurations of the text watermark.</p>
              */
-            public Builder textWatermarks(java.util.List < ProcessConfigTextWatermarks> textWatermarks) {
+            public Builder textWatermarks(java.util.List<ProcessConfigTextWatermarks> textWatermarks) {
                 this.textWatermarks = textWatermarks;
                 return this;
             }
@@ -7643,7 +7648,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         private String finishTime;
 
         @com.aliyun.core.annotation.NameInMap("InputGroup")
-        private java.util.List < TranscodeJobListInputGroup> inputGroup;
+        private java.util.List<TranscodeJobListInputGroup> inputGroup;
 
         @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
@@ -7676,7 +7681,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("SubmitResultJson")
-        private java.util.Map < String, ? > submitResultJson;
+        private java.util.Map<String, ?> submitResultJson;
 
         @com.aliyun.core.annotation.NameInMap("SubmitTime")
         private String submitTime;
@@ -7728,7 +7733,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         /**
          * @return inputGroup
          */
-        public java.util.List < TranscodeJobListInputGroup> getInputGroup() {
+        public java.util.List<TranscodeJobListInputGroup> getInputGroup() {
             return this.inputGroup;
         }
 
@@ -7805,7 +7810,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         /**
          * @return submitResultJson
          */
-        public java.util.Map < String, ? > getSubmitResultJson() {
+        public java.util.Map<String, ?> getSubmitResultJson() {
             return this.submitResultJson;
         }
 
@@ -7826,7 +7831,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private String finishTime; 
-            private java.util.List < TranscodeJobListInputGroup> inputGroup; 
+            private java.util.List<TranscodeJobListInputGroup> inputGroup; 
             private String jobId; 
             private Integer jobIndex; 
             private String name; 
@@ -7837,7 +7842,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             private String requestId; 
             private TranscodeJobListScheduleConfig scheduleConfig; 
             private String status; 
-            private java.util.Map < String, ? > submitResultJson; 
+            private java.util.Map<String, ?> submitResultJson; 
             private String submitTime; 
             private String userData; 
 
@@ -7866,7 +7871,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             /**
              * <p>The input group of the job. An input of a single file indicates a transcoding job. An input of multiple files indicates an audio and video stream merge job.</p>
              */
-            public Builder inputGroup(java.util.List < TranscodeJobListInputGroup> inputGroup) {
+            public Builder inputGroup(java.util.List<TranscodeJobListInputGroup> inputGroup) {
                 this.inputGroup = inputGroup;
                 return this;
             }
@@ -7975,7 +7980,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{}</p>
              */
-            public Builder submitResultJson(java.util.Map < String, ? > submitResultJson) {
+            public Builder submitResultJson(java.util.Map<String, ?> submitResultJson) {
                 this.submitResultJson = submitResultJson;
                 return this;
             }
@@ -8023,7 +8028,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         private String finishTime;
 
         @com.aliyun.core.annotation.NameInMap("InputGroup")
-        private java.util.List < InputGroup> inputGroup;
+        private java.util.List<InputGroup> inputGroup;
 
         @com.aliyun.core.annotation.NameInMap("JobCount")
         private Integer jobCount;
@@ -8032,7 +8037,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("OutputGroup")
-        private java.util.List < OutputGroup> outputGroup;
+        private java.util.List<OutputGroup> outputGroup;
 
         @com.aliyun.core.annotation.NameInMap("ParentJobId")
         private String parentJobId;
@@ -8053,7 +8058,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         private String submitTime;
 
         @com.aliyun.core.annotation.NameInMap("TranscodeJobList")
-        private java.util.List < TranscodeJobList> transcodeJobList;
+        private java.util.List<TranscodeJobList> transcodeJobList;
 
         @com.aliyun.core.annotation.NameInMap("TriggerSource")
         private String triggerSource;
@@ -8104,7 +8109,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         /**
          * @return inputGroup
          */
-        public java.util.List < InputGroup> getInputGroup() {
+        public java.util.List<InputGroup> getInputGroup() {
             return this.inputGroup;
         }
 
@@ -8125,7 +8130,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         /**
          * @return outputGroup
          */
-        public java.util.List < OutputGroup> getOutputGroup() {
+        public java.util.List<OutputGroup> getOutputGroup() {
             return this.outputGroup;
         }
 
@@ -8174,7 +8179,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         /**
          * @return transcodeJobList
          */
-        public java.util.List < TranscodeJobList> getTranscodeJobList() {
+        public java.util.List<TranscodeJobList> getTranscodeJobList() {
             return this.transcodeJobList;
         }
 
@@ -8195,17 +8200,17 @@ public class GetTranscodeJobResponseBody extends TeaModel {
         public static final class Builder {
             private String createTime; 
             private String finishTime; 
-            private java.util.List < InputGroup> inputGroup; 
+            private java.util.List<InputGroup> inputGroup; 
             private Integer jobCount; 
             private String name; 
-            private java.util.List < OutputGroup> outputGroup; 
+            private java.util.List<OutputGroup> outputGroup; 
             private String parentJobId; 
             private Integer percent; 
             private String requestId; 
             private ScheduleConfig scheduleConfig; 
             private String status; 
             private String submitTime; 
-            private java.util.List < TranscodeJobList> transcodeJobList; 
+            private java.util.List<TranscodeJobList> transcodeJobList; 
             private String triggerSource; 
             private String userData; 
 
@@ -8234,7 +8239,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             /**
              * <p>The input group of the job. An input of a single file indicates a transcoding job. An input of multiple files indicates an audio and video stream merge job.</p>
              */
-            public Builder inputGroup(java.util.List < InputGroup> inputGroup) {
+            public Builder inputGroup(java.util.List<InputGroup> inputGroup) {
                 this.inputGroup = inputGroup;
                 return this;
             }
@@ -8264,7 +8269,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             /**
              * <p>The output group of the job.</p>
              */
-            public Builder outputGroup(java.util.List < OutputGroup> outputGroup) {
+            public Builder outputGroup(java.util.List<OutputGroup> outputGroup) {
                 this.outputGroup = outputGroup;
                 return this;
             }
@@ -8339,7 +8344,7 @@ public class GetTranscodeJobResponseBody extends TeaModel {
             /**
              * <p>The list of subjobs.</p>
              */
-            public Builder transcodeJobList(java.util.List < TranscodeJobList> transcodeJobList) {
+            public Builder transcodeJobList(java.util.List<TranscodeJobList> transcodeJobList) {
                 this.transcodeJobList = transcodeJobList;
                 return this;
             }

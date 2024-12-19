@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SystemTemplateList")
-    private java.util.List < SystemTemplateList> systemTemplateList;
+    private java.util.List<SystemTemplateList> systemTemplateList;
 
     @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
@@ -45,7 +50,7 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
     /**
      * @return systemTemplateList
      */
-    public java.util.List < SystemTemplateList> getSystemTemplateList() {
+    public java.util.List<SystemTemplateList> getSystemTemplateList() {
         return this.systemTemplateList;
     }
 
@@ -58,7 +63,7 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SystemTemplateList> systemTemplateList; 
+        private java.util.List<SystemTemplateList> systemTemplateList; 
         private Integer total; 
 
         /**
@@ -75,7 +80,7 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
         /**
          * <p>The queried templates.</p>
          */
-        public Builder systemTemplateList(java.util.List < SystemTemplateList> systemTemplateList) {
+        public Builder systemTemplateList(java.util.List<SystemTemplateList> systemTemplateList) {
             this.systemTemplateList = systemTemplateList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListLiveTranscodeJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("JobList")
-    private java.util.List < JobList> jobList;
+    private java.util.List<JobList> jobList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
     /**
      * @return jobList
      */
-    public java.util.List < JobList> getJobList() {
+    public java.util.List<JobList> getJobList() {
         return this.jobList;
     }
 
@@ -57,14 +62,14 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < JobList> jobList; 
+        private java.util.List<JobList> jobList; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
          * <p>The list of transcoding jobs.</p>
          */
-        public Builder jobList(java.util.List < JobList> jobList) {
+        public Builder jobList(java.util.List<JobList> jobList) {
             this.jobList = jobList;
             return this;
         }
@@ -178,7 +183,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
      */
     public static class OutputStream extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StreamInfos")
-        private java.util.List < StreamInfos> streamInfos;
+        private java.util.List<StreamInfos> streamInfos;
 
         private OutputStream(Builder builder) {
             this.streamInfos = builder.streamInfos;
@@ -195,17 +200,17 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         /**
          * @return streamInfos
          */
-        public java.util.List < StreamInfos> getStreamInfos() {
+        public java.util.List<StreamInfos> getStreamInfos() {
             return this.streamInfos;
         }
 
         public static final class Builder {
-            private java.util.List < StreamInfos> streamInfos; 
+            private java.util.List<StreamInfos> streamInfos; 
 
             /**
              * <p>The list of stream URLs.</p>
              */
-            public Builder streamInfos(java.util.List < StreamInfos> streamInfos) {
+            public Builder streamInfos(java.util.List<StreamInfos> streamInfos) {
                 this.streamInfos = streamInfos;
                 return this;
             }
