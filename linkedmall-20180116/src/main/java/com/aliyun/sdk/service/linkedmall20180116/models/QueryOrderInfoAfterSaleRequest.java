@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrderInfoAfterSaleRequest} extends {@link RequestModel}
  *
  * <p>QueryOrderInfoAfterSaleRequest</p>
  */
 public class QueryOrderInfoAfterSaleRequest extends Request {
-    @Query
-    @NameInMap("AccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
     private String accountType;
 
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("ChannelUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelUserId;
 
-    @Query
-    @NameInMap("LmOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LmOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lmOrderId;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
     private String thirdPartyUserId;
 
-    @Query
-    @NameInMap("UseAnonymousTbAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseAnonymousTbAccount")
     private Boolean useAnonymousTbAccount;
 
     private QueryOrderInfoAfterSaleRequest(Builder builder) {
@@ -136,7 +141,10 @@ public class QueryOrderInfoAfterSaleRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -145,7 +153,10 @@ public class QueryOrderInfoAfterSaleRequest extends Request {
         }
 
         /**
-         * ChannelUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22******323</p>
          */
         public Builder channelUserId(String channelUserId) {
             this.putQueryParameter("ChannelUserId", channelUserId);
@@ -154,7 +165,10 @@ public class QueryOrderInfoAfterSaleRequest extends Request {
         }
 
         /**
-         * LmOrderId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40******84</p>
          */
         public Builder lmOrderId(String lmOrderId) {
             this.putQueryParameter("LmOrderId", lmOrderId);

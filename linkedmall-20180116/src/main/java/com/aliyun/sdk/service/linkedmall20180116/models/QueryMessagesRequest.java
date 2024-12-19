@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMessagesRequest} extends {@link RequestModel}
  *
  * <p>QueryMessagesRequest</p>
  */
 public class QueryMessagesRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("ExtJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtJson")
     private String extJson;
 
-    @Query
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private QueryMessagesRequest(Builder builder) {
@@ -84,7 +89,10 @@ public class QueryMessagesRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL2******001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -102,7 +110,10 @@ public class QueryMessagesRequest extends Request {
         }
 
         /**
-         * Topic.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic_******_api</p>
          */
         public Builder topic(String topic) {
             this.putQueryParameter("Topic", topic);

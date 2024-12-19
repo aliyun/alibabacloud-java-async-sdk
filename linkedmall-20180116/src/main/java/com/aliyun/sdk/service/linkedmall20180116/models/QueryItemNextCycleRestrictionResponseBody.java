@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryItemNextCycleRestrictionResponseBody} extends {@link TeaModel}
  *
  * <p>QueryItemNextCycleRestrictionResponseBody</p>
  */
 public class QueryItemNextCycleRestrictionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
-    private java.util.List < Model> model;
+    @com.aliyun.core.annotation.NameInMap("Model")
+    private java.util.List<Model> model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryItemNextCycleRestrictionResponseBody(Builder builder) {
@@ -60,7 +65,7 @@ public class QueryItemNextCycleRestrictionResponseBody extends TeaModel {
     /**
      * @return model
      */
-    public java.util.List < Model> getModel() {
+    public java.util.List<Model> getModel() {
         return this.model;
     }
 
@@ -81,7 +86,7 @@ public class QueryItemNextCycleRestrictionResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < Model> model; 
+        private java.util.List<Model> model; 
         private String requestId; 
         private Boolean success; 
 
@@ -104,7 +109,7 @@ public class QueryItemNextCycleRestrictionResponseBody extends TeaModel {
         /**
          * Model.
          */
-        public Builder model(java.util.List < Model> model) {
+        public Builder model(java.util.List<Model> model) {
             this.model = model;
             return this;
         }
@@ -131,23 +136,29 @@ public class QueryItemNextCycleRestrictionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryItemNextCycleRestrictionResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryItemNextCycleRestrictionResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("RestrictionQuantity")
+        @com.aliyun.core.annotation.NameInMap("RestrictionQuantity")
         private Integer restrictionQuantity;
 
         private Model(Builder builder) {

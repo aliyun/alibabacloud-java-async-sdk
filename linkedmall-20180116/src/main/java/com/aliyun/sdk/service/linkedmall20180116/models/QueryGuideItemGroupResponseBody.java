@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryGuideItemGroupResponseBody} extends {@link TeaModel}
  *
  * <p>QueryGuideItemGroupResponseBody</p>
  */
 public class QueryGuideItemGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("GuideItemGroup")
+    @com.aliyun.core.annotation.NameInMap("GuideItemGroup")
     private GuideItemGroup guideItemGroup;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryGuideItemGroupResponseBody(Builder builder) {
@@ -171,35 +176,41 @@ public class QueryGuideItemGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryGuideItemGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryGuideItemGroupResponseBody</p>
+     */
     public static class ItemInfo extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("ItemTitle")
+        @com.aliyun.core.annotation.NameInMap("ItemTitle")
         private String itemTitle;
 
-        @NameInMap("ItemUrl")
+        @com.aliyun.core.annotation.NameInMap("ItemUrl")
         private String itemUrl;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("MainPicUrl")
+        @com.aliyun.core.annotation.NameInMap("MainPicUrl")
         private String mainPicUrl;
 
-        @NameInMap("PointPrice")
+        @com.aliyun.core.annotation.NameInMap("PointPrice")
         private Long pointPrice;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Long points;
 
-        @NameInMap("PointsAmount")
+        @com.aliyun.core.annotation.NameInMap("PointsAmount")
         private Long pointsAmount;
 
-        @NameInMap("PriceCent")
+        @com.aliyun.core.annotation.NameInMap("PriceCent")
         private Long priceCent;
 
-        @NameInMap("ReservePrice")
+        @com.aliyun.core.annotation.NameInMap("ReservePrice")
         private String reservePrice;
 
         private ItemInfo(Builder builder) {
@@ -392,9 +403,15 @@ public class QueryGuideItemGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryGuideItemGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryGuideItemGroupResponseBody</p>
+     */
     public static class GuideItemGroup extends TeaModel {
-        @NameInMap("ItemInfo")
-        private java.util.List < ItemInfo> itemInfo;
+        @com.aliyun.core.annotation.NameInMap("ItemInfo")
+        private java.util.List<ItemInfo> itemInfo;
 
         private GuideItemGroup(Builder builder) {
             this.itemInfo = builder.itemInfo;
@@ -411,17 +428,17 @@ public class QueryGuideItemGroupResponseBody extends TeaModel {
         /**
          * @return itemInfo
          */
-        public java.util.List < ItemInfo> getItemInfo() {
+        public java.util.List<ItemInfo> getItemInfo() {
             return this.itemInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ItemInfo> itemInfo; 
+            private java.util.List<ItemInfo> itemInfo; 
 
             /**
              * ItemInfo.
              */
-            public Builder itemInfo(java.util.List < ItemInfo> itemInfo) {
+            public Builder itemInfo(java.util.List<ItemInfo> itemInfo) {
                 this.itemInfo = itemInfo;
                 return this;
             }

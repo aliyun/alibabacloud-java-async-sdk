@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryItemNextCycleRestrictionRequest} extends {@link RequestModel}
  *
  * <p>QueryItemNextCycleRestrictionRequest</p>
  */
 public class QueryItemNextCycleRestrictionRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Body
-    @NameInMap("LmItemId")
-    @Validation(required = true)
-    private java.util.List < String > lmItemId;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LmItemId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> lmItemId;
 
-    @Query
-    @NameInMap("SubBizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubBizId")
     private String subBizId;
 
     private QueryItemNextCycleRestrictionRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class QueryItemNextCycleRestrictionRequest extends Request {
     /**
      * @return lmItemId
      */
-    public java.util.List < String > getLmItemId() {
+    public java.util.List<String> getLmItemId() {
         return this.lmItemId;
     }
 
@@ -69,7 +74,7 @@ public class QueryItemNextCycleRestrictionRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryItemNextCycleRestrictionRequest, Builder> {
         private String bizId; 
-        private java.util.List < String > lmItemId; 
+        private java.util.List<String> lmItemId; 
         private String subBizId; 
 
         private Builder() {
@@ -84,7 +89,7 @@ public class QueryItemNextCycleRestrictionRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -93,9 +98,9 @@ public class QueryItemNextCycleRestrictionRequest extends Request {
         }
 
         /**
-         * LmItemId.
+         * <p>This parameter is required.</p>
          */
-        public Builder lmItemId(java.util.List < String > lmItemId) {
+        public Builder lmItemId(java.util.List<String> lmItemId) {
             String lmItemIdShrink = shrink(lmItemId, "LmItemId", "json");
             this.putBodyParameter("LmItemId", lmItemIdShrink);
             this.lmItemId = lmItemId;

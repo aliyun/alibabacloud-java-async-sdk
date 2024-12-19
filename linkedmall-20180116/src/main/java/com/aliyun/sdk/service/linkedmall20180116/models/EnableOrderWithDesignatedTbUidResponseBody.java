@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
  *
  * <p>EnableOrderWithDesignatedTbUidResponseBody</p>
  */
 public class EnableOrderWithDesignatedTbUidResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private EnableOrderWithDesignatedTbUidResponseBody(Builder builder) {
@@ -198,7 +203,10 @@ public class EnableOrderWithDesignatedTbUidResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize
+         * <p>pageSize</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -251,15 +259,21 @@ public class EnableOrderWithDesignatedTbUidResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EnableOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>EnableOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class LmOrderList extends TeaModel {
-        @NameInMap("ExtJson")
-        private java.util.Map < String, String > extJson;
+        @com.aliyun.core.annotation.NameInMap("ExtJson")
+        private java.util.Map<String, String> extJson;
 
-        @NameInMap("LmOrderId")
+        @com.aliyun.core.annotation.NameInMap("LmOrderId")
         private String lmOrderId;
 
-        @NameInMap("SubLmOrderIdList")
-        private java.util.List < String > subLmOrderIdList;
+        @com.aliyun.core.annotation.NameInMap("SubLmOrderIdList")
+        private java.util.List<String> subLmOrderIdList;
 
         private LmOrderList(Builder builder) {
             this.extJson = builder.extJson;
@@ -278,7 +292,7 @@ public class EnableOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return extJson
          */
-        public java.util.Map < String, String > getExtJson() {
+        public java.util.Map<String, String> getExtJson() {
             return this.extJson;
         }
 
@@ -292,19 +306,19 @@ public class EnableOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return subLmOrderIdList
          */
-        public java.util.List < String > getSubLmOrderIdList() {
+        public java.util.List<String> getSubLmOrderIdList() {
             return this.subLmOrderIdList;
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > extJson; 
+            private java.util.Map<String, String> extJson; 
             private String lmOrderId; 
-            private java.util.List < String > subLmOrderIdList; 
+            private java.util.List<String> subLmOrderIdList; 
 
             /**
              * ExtJson.
              */
-            public Builder extJson(java.util.Map < String, String > extJson) {
+            public Builder extJson(java.util.Map<String, String> extJson) {
                 this.extJson = extJson;
                 return this;
             }
@@ -320,7 +334,7 @@ public class EnableOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * SubLmOrderIdList.
              */
-            public Builder subLmOrderIdList(java.util.List < String > subLmOrderIdList) {
+            public Builder subLmOrderIdList(java.util.List<String> subLmOrderIdList) {
                 this.subLmOrderIdList = subLmOrderIdList;
                 return this;
             }
@@ -332,17 +346,23 @@ public class EnableOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EnableOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>EnableOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("LmOrderList")
-        private java.util.List < LmOrderList> lmOrderList;
+        @com.aliyun.core.annotation.NameInMap("LmOrderList")
+        private java.util.List<LmOrderList> lmOrderList;
 
-        @NameInMap("OrderIds")
-        private java.util.List < String > orderIds;
+        @com.aliyun.core.annotation.NameInMap("OrderIds")
+        private java.util.List<String> orderIds;
 
-        @NameInMap("PayTradeIds")
-        private java.util.List < String > payTradeIds;
+        @com.aliyun.core.annotation.NameInMap("PayTradeIds")
+        private java.util.List<String> payTradeIds;
 
-        @NameInMap("RedirectUrl")
+        @com.aliyun.core.annotation.NameInMap("RedirectUrl")
         private String redirectUrl;
 
         private Model(Builder builder) {
@@ -363,21 +383,21 @@ public class EnableOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return lmOrderList
          */
-        public java.util.List < LmOrderList> getLmOrderList() {
+        public java.util.List<LmOrderList> getLmOrderList() {
             return this.lmOrderList;
         }
 
         /**
          * @return orderIds
          */
-        public java.util.List < String > getOrderIds() {
+        public java.util.List<String> getOrderIds() {
             return this.orderIds;
         }
 
         /**
          * @return payTradeIds
          */
-        public java.util.List < String > getPayTradeIds() {
+        public java.util.List<String> getPayTradeIds() {
             return this.payTradeIds;
         }
 
@@ -389,15 +409,15 @@ public class EnableOrderWithDesignatedTbUidResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < LmOrderList> lmOrderList; 
-            private java.util.List < String > orderIds; 
-            private java.util.List < String > payTradeIds; 
+            private java.util.List<LmOrderList> lmOrderList; 
+            private java.util.List<String> orderIds; 
+            private java.util.List<String> payTradeIds; 
             private String redirectUrl; 
 
             /**
              * LmOrderList.
              */
-            public Builder lmOrderList(java.util.List < LmOrderList> lmOrderList) {
+            public Builder lmOrderList(java.util.List<LmOrderList> lmOrderList) {
                 this.lmOrderList = lmOrderList;
                 return this;
             }
@@ -405,7 +425,7 @@ public class EnableOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * OrderIds.
              */
-            public Builder orderIds(java.util.List < String > orderIds) {
+            public Builder orderIds(java.util.List<String> orderIds) {
                 this.orderIds = orderIds;
                 return this;
             }
@@ -413,7 +433,7 @@ public class EnableOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * PayTradeIds.
              */
-            public Builder payTradeIds(java.util.List < String > payTradeIds) {
+            public Builder payTradeIds(java.util.List<String> payTradeIds) {
                 this.payTradeIds = payTradeIds;
                 return this;
             }

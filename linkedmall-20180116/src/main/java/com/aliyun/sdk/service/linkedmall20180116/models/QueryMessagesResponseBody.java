@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMessagesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMessagesResponseBody</p>
  */
 public class QueryMessagesResponseBody extends TeaModel {
-    @NameInMap("BizMessages")
+    @com.aliyun.core.annotation.NameInMap("BizMessages")
     private BizMessages bizMessages;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryMessagesResponseBody(Builder builder) {
@@ -191,17 +196,23 @@ public class QueryMessagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMessagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMessagesResponseBody</p>
+     */
     public static class BizMessage extends TeaModel {
-        @NameInMap("ContentMapJson")
+        @com.aliyun.core.annotation.NameInMap("ContentMapJson")
         private String contentMapJson;
 
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private Long dataId;
 
-        @NameInMap("PubTime")
+        @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private BizMessage(Builder builder) {
@@ -292,9 +303,15 @@ public class QueryMessagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMessagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMessagesResponseBody</p>
+     */
     public static class BizMessages extends TeaModel {
-        @NameInMap("BizMessage")
-        private java.util.List < BizMessage> bizMessage;
+        @com.aliyun.core.annotation.NameInMap("BizMessage")
+        private java.util.List<BizMessage> bizMessage;
 
         private BizMessages(Builder builder) {
             this.bizMessage = builder.bizMessage;
@@ -311,17 +328,17 @@ public class QueryMessagesResponseBody extends TeaModel {
         /**
          * @return bizMessage
          */
-        public java.util.List < BizMessage> getBizMessage() {
+        public java.util.List<BizMessage> getBizMessage() {
             return this.bizMessage;
         }
 
         public static final class Builder {
-            private java.util.List < BizMessage> bizMessage; 
+            private java.util.List<BizMessage> bizMessage; 
 
             /**
              * BizMessage.
              */
-            public Builder bizMessage(java.util.List < BizMessage> bizMessage) {
+            public Builder bizMessage(java.util.List<BizMessage> bizMessage) {
                 this.bizMessage = bizMessage;
                 return this;
             }

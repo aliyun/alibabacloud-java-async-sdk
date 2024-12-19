@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefundPointRequest} extends {@link RequestModel}
  *
  * <p>RefundPointRequest</p>
  */
 public class RefundPointRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("LmOrderId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LmOrderId")
     private String lmOrderId;
 
-    @Query
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @Query
-    @NameInMap("SellerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SellerId")
     private String sellerId;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
     private String thirdPartyUserId;
 
-    @Query
-    @NameInMap("UseAnonymousTbAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseAnonymousTbAccount")
     private Boolean useAnonymousTbAccount;
 
     private RefundPointRequest(Builder builder) {
@@ -125,7 +130,10 @@ public class RefundPointRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20191223****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);

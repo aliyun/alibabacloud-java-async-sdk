@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryGuideItemGroupForCrowdOperationResponseBody} extends {@link TeaModel}
  *
  * <p>QueryGuideItemGroupForCrowdOperationResponseBody</p>
  */
 public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
-    private java.util.List < Model> model;
+    @com.aliyun.core.annotation.NameInMap("Model")
+    private java.util.List<Model> model;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryGuideItemGroupForCrowdOperationResponseBody(Builder builder) {
@@ -91,7 +96,7 @@ public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
     /**
      * @return model
      */
-    public java.util.List < Model> getModel() {
+    public java.util.List<Model> getModel() {
         return this.model;
     }
 
@@ -148,7 +153,7 @@ public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
         private String code; 
         private String logsId; 
         private String message; 
-        private java.util.List < Model> model; 
+        private java.util.List<Model> model; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -184,7 +189,7 @@ public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
         /**
          * Model.
          */
-        public Builder model(java.util.List < Model> model) {
+        public Builder model(java.util.List<Model> model) {
             this.model = model;
             return this;
         }
@@ -198,7 +203,10 @@ public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize
+         * <p>pageSize</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -251,50 +259,56 @@ public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryGuideItemGroupForCrowdOperationResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryGuideItemGroupForCrowdOperationResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("AtmospherePicUrl")
+        @com.aliyun.core.annotation.NameInMap("AtmospherePicUrl")
         private String atmospherePicUrl;
 
-        @NameInMap("CanSell")
+        @com.aliyun.core.annotation.NameInMap("CanSell")
         private Boolean canSell;
 
-        @NameInMap("CustomizedAttributeMap")
-        private java.util.Map < String, String > customizedAttributeMap;
+        @com.aliyun.core.annotation.NameInMap("CustomizedAttributeMap")
+        private java.util.Map<String, String> customizedAttributeMap;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private String itemId;
 
-        @NameInMap("ItemTitle")
+        @com.aliyun.core.annotation.NameInMap("ItemTitle")
         private String itemTitle;
 
-        @NameInMap("ItemUrl")
+        @com.aliyun.core.annotation.NameInMap("ItemUrl")
         private String itemUrl;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("MainPicUrl")
+        @com.aliyun.core.annotation.NameInMap("MainPicUrl")
         private String mainPicUrl;
 
-        @NameInMap("PointPrice")
+        @com.aliyun.core.annotation.NameInMap("PointPrice")
         private Long pointPrice;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Long points;
 
-        @NameInMap("PointsAmount")
+        @com.aliyun.core.annotation.NameInMap("PointsAmount")
         private Long pointsAmount;
 
-        @NameInMap("PriceCent")
+        @com.aliyun.core.annotation.NameInMap("PriceCent")
         private Long priceCent;
 
-        @NameInMap("ReservePrice")
+        @com.aliyun.core.annotation.NameInMap("ReservePrice")
         private String reservePrice;
 
-        @NameInMap("Tags")
-        private java.util.List < Integer > tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Integer> tags;
 
-        @NameInMap("WhitePicUrl")
+        @com.aliyun.core.annotation.NameInMap("WhitePicUrl")
         private String whitePicUrl;
 
         private Model(Builder builder) {
@@ -340,7 +354,7 @@ public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
         /**
          * @return customizedAttributeMap
          */
-        public java.util.Map < String, String > getCustomizedAttributeMap() {
+        public java.util.Map<String, String> getCustomizedAttributeMap() {
             return this.customizedAttributeMap;
         }
 
@@ -417,7 +431,7 @@ public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Integer > getTags() {
+        public java.util.List<Integer> getTags() {
             return this.tags;
         }
 
@@ -431,7 +445,7 @@ public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
         public static final class Builder {
             private String atmospherePicUrl; 
             private Boolean canSell; 
-            private java.util.Map < String, String > customizedAttributeMap; 
+            private java.util.Map<String, String> customizedAttributeMap; 
             private String itemId; 
             private String itemTitle; 
             private String itemUrl; 
@@ -442,7 +456,7 @@ public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
             private Long pointsAmount; 
             private Long priceCent; 
             private String reservePrice; 
-            private java.util.List < Integer > tags; 
+            private java.util.List<Integer> tags; 
             private String whitePicUrl; 
 
             /**
@@ -464,7 +478,7 @@ public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
             /**
              * CustomizedAttributeMap.
              */
-            public Builder customizedAttributeMap(java.util.Map < String, String > customizedAttributeMap) {
+            public Builder customizedAttributeMap(java.util.Map<String, String> customizedAttributeMap) {
                 this.customizedAttributeMap = customizedAttributeMap;
                 return this;
             }
@@ -552,7 +566,7 @@ public class QueryGuideItemGroupForCrowdOperationResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Integer > tags) {
+            public Builder tags(java.util.List<Integer> tags) {
                 this.tags = tags;
                 return this;
             }

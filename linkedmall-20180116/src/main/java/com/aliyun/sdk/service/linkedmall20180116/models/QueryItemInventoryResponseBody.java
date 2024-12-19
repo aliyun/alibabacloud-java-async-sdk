@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryItemInventoryResponseBody} extends {@link TeaModel}
  *
  * <p>QueryItemInventoryResponseBody</p>
  */
 public class QueryItemInventoryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ItemList")
+    @com.aliyun.core.annotation.NameInMap("ItemList")
     private ItemList itemList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryItemInventoryResponseBody(Builder builder) {
@@ -171,8 +176,14 @@ public class QueryItemInventoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryItemInventoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryItemInventoryResponseBody</p>
+     */
     public static class Inventory extends TeaModel {
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Long quantity;
 
         private Inventory(Builder builder) {
@@ -212,11 +223,17 @@ public class QueryItemInventoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryItemInventoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryItemInventoryResponseBody</p>
+     */
     public static class Sku extends TeaModel {
-        @NameInMap("Inventory")
+        @com.aliyun.core.annotation.NameInMap("Inventory")
         private Inventory inventory;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
         private Sku(Builder builder) {
@@ -259,7 +276,10 @@ public class QueryItemInventoryResponseBody extends TeaModel {
             }
 
             /**
-             * skuId
+             * <p>skuId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4901251235576</p>
              */
             public Builder skuId(Long skuId) {
                 this.skuId = skuId;
@@ -273,9 +293,15 @@ public class QueryItemInventoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryItemInventoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryItemInventoryResponseBody</p>
+     */
     public static class SkuList extends TeaModel {
-        @NameInMap("Sku")
-        private java.util.List < Sku> sku;
+        @com.aliyun.core.annotation.NameInMap("Sku")
+        private java.util.List<Sku> sku;
 
         private SkuList(Builder builder) {
             this.sku = builder.sku;
@@ -292,17 +318,17 @@ public class QueryItemInventoryResponseBody extends TeaModel {
         /**
          * @return sku
          */
-        public java.util.List < Sku> getSku() {
+        public java.util.List<Sku> getSku() {
             return this.sku;
         }
 
         public static final class Builder {
-            private java.util.List < Sku> sku; 
+            private java.util.List<Sku> sku; 
 
             /**
              * Sku.
              */
-            public Builder sku(java.util.List < Sku> sku) {
+            public Builder sku(java.util.List<Sku> sku) {
                 this.sku = sku;
                 return this;
             }
@@ -314,14 +340,20 @@ public class QueryItemInventoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryItemInventoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryItemInventoryResponseBody</p>
+     */
     public static class Item extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("SkuList")
+        @com.aliyun.core.annotation.NameInMap("SkuList")
         private SkuList skuList;
 
         private Item(Builder builder) {
@@ -395,9 +427,15 @@ public class QueryItemInventoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryItemInventoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryItemInventoryResponseBody</p>
+     */
     public static class ItemList extends TeaModel {
-        @NameInMap("Item")
-        private java.util.List < Item> item;
+        @com.aliyun.core.annotation.NameInMap("Item")
+        private java.util.List<Item> item;
 
         private ItemList(Builder builder) {
             this.item = builder.item;
@@ -414,17 +452,17 @@ public class QueryItemInventoryResponseBody extends TeaModel {
         /**
          * @return item
          */
-        public java.util.List < Item> getItem() {
+        public java.util.List<Item> getItem() {
             return this.item;
         }
 
         public static final class Builder {
-            private java.util.List < Item> item; 
+            private java.util.List<Item> item; 
 
             /**
              * Item.
              */
-            public Builder item(java.util.List < Item> item) {
+            public Builder item(java.util.List<Item> item) {
                 this.item = item;
                 return this;
             }

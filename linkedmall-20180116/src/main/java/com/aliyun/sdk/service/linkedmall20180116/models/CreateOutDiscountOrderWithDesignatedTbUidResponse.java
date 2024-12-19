@@ -1,27 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOutDiscountOrderWithDesignatedTbUidResponse} extends {@link TeaModel}
  *
  * <p>CreateOutDiscountOrderWithDesignatedTbUidResponse</p>
  */
 public class CreateOutDiscountOrderWithDesignatedTbUidResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
-    private java.util.Map < String, String > headers;
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map<String, String> headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("body")
     private CreateOutDiscountOrderWithDesignatedTbUidResponseBody body;
 
     private CreateOutDiscountOrderWithDesignatedTbUidResponse(BuilderImpl builder) {
@@ -43,7 +45,7 @@ public class CreateOutDiscountOrderWithDesignatedTbUidResponse extends Response 
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -63,7 +65,7 @@ public class CreateOutDiscountOrderWithDesignatedTbUidResponse extends Response 
 
     public interface Builder extends Response.Builder<CreateOutDiscountOrderWithDesignatedTbUidResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
@@ -77,7 +79,7 @@ public class CreateOutDiscountOrderWithDesignatedTbUidResponse extends Response 
     private static final class BuilderImpl
             extends Response.BuilderImpl<CreateOutDiscountOrderWithDesignatedTbUidResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
         private CreateOutDiscountOrderWithDesignatedTbUidResponseBody body; 
 
@@ -96,7 +98,7 @@ public class CreateOutDiscountOrderWithDesignatedTbUidResponse extends Response 
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }

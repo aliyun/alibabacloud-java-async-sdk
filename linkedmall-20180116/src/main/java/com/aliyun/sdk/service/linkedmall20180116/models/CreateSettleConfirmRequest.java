@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSettleConfirmRequest} extends {@link RequestModel}
  *
  * <p>CreateSettleConfirmRequest</p>
  */
 public class CreateSettleConfirmRequest extends Request {
-    @Body
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @Body
-    @NameInMap("ExtInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtInfo")
     private String extInfo;
 
-    @Body
-    @NameInMap("MerchantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MerchantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String merchantId;
 
-    @Body
-    @NameInMap("OutRequestNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutRequestNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outRequestNo;
 
-    @Body
-    @NameInMap("OutTradeNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutTradeNo")
     private String outTradeNo;
 
-    @Body
-    @NameInMap("SettleInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SettleInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String settleInfo;
 
-    @Body
-    @NameInMap("TradeNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TradeNo")
     private String tradeNo;
 
     private CreateSettleConfirmRequest(Builder builder) {
@@ -159,7 +164,7 @@ public class CreateSettleConfirmRequest extends Request {
         }
 
         /**
-         * MerchantId.
+         * <p>This parameter is required.</p>
          */
         public Builder merchantId(String merchantId) {
             this.putBodyParameter("MerchantId", merchantId);
@@ -168,7 +173,7 @@ public class CreateSettleConfirmRequest extends Request {
         }
 
         /**
-         * OutRequestNo.
+         * <p>This parameter is required.</p>
          */
         public Builder outRequestNo(String outRequestNo) {
             this.putBodyParameter("OutRequestNo", outRequestNo);
@@ -186,7 +191,7 @@ public class CreateSettleConfirmRequest extends Request {
         }
 
         /**
-         * SettleInfo.
+         * <p>This parameter is required.</p>
          */
         public Builder settleInfo(String settleInfo) {
             this.putBodyParameter("SettleInfo", settleInfo);

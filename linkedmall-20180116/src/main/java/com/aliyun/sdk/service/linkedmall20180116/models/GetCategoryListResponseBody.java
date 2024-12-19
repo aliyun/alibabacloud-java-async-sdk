@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCategoryListResponseBody} extends {@link TeaModel}
  *
  * <p>GetCategoryListResponseBody</p>
  */
 public class GetCategoryListResponseBody extends TeaModel {
-    @NameInMap("CategoryList")
+    @com.aliyun.core.annotation.NameInMap("CategoryList")
     private CategoryList categoryList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCategoryListResponseBody(Builder builder) {
@@ -111,11 +116,17 @@ public class GetCategoryListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCategoryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCategoryListResponseBody</p>
+     */
     public static class Category extends TeaModel {
-        @NameInMap("CategoryId")
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Category(Builder builder) {
@@ -172,9 +183,15 @@ public class GetCategoryListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCategoryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCategoryListResponseBody</p>
+     */
     public static class CategoryList extends TeaModel {
-        @NameInMap("Category")
-        private java.util.List < Category> category;
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private java.util.List<Category> category;
 
         private CategoryList(Builder builder) {
             this.category = builder.category;
@@ -191,17 +208,17 @@ public class GetCategoryListResponseBody extends TeaModel {
         /**
          * @return category
          */
-        public java.util.List < Category> getCategory() {
+        public java.util.List<Category> getCategory() {
             return this.category;
         }
 
         public static final class Builder {
-            private java.util.List < Category> category; 
+            private java.util.List<Category> category; 
 
             /**
              * Category.
              */
-            public Builder category(java.util.List < Category> category) {
+            public Builder category(java.util.List<Category> category) {
                 this.category = category;
                 return this;
             }

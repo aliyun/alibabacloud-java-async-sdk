@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySupplierItemBillDownloadUrlRequest} extends {@link RequestModel}
  *
  * <p>QuerySupplierItemBillDownloadUrlRequest</p>
  */
 public class QuerySupplierItemBillDownloadUrlRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BillId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillId")
     private String billId;
 
-    @Body
-    @NameInMap("BillPeriod")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillPeriod")
     private String billPeriod;
 
-    @Body
-    @NameInMap("BillStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillStatus")
     private String billStatus;
 
-    @Body
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @Body
-    @NameInMap("BizName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizName")
     private String bizName;
 
-    @Body
-    @NameInMap("LmShopId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LmShopId")
     private Long lmShopId;
 
-    @Body
-    @NameInMap("LmShopName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LmShopName")
     private String lmShopName;
 
-    @Body
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private QuerySupplierItemBillDownloadUrlRequest(Builder builder) {

@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSwitchUrlRequest} extends {@link RequestModel}
  *
  * <p>GetSwitchUrlRequest</p>
  */
 public class GetSwitchUrlRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("BizUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizUid;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
     private String thirdPartyUserId;
 
-    @Body
-    @NameInMap("Url")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String url;
 
-    @Query
-    @NameInMap("UseAnonymousTbAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseAnonymousTbAccount")
     private Boolean useAnonymousTbAccount;
 
     private GetSwitchUrlRequest(Builder builder) {
@@ -113,7 +118,10 @@ public class GetSwitchUrlRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20211119****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -122,7 +130,10 @@ public class GetSwitchUrlRequest extends Request {
         }
 
         /**
-         * BizUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>221249435****</p>
          */
         public Builder bizUid(String bizUid) {
             this.putQueryParameter("BizUid", bizUid);
@@ -140,7 +151,7 @@ public class GetSwitchUrlRequest extends Request {
         }
 
         /**
-         * Url.
+         * <p>This parameter is required.</p>
          */
         public Builder url(String url) {
             this.putBodyParameter("Url", url);

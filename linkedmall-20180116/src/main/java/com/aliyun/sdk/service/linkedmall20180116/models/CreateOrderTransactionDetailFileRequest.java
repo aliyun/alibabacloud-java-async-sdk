@@ -1,99 +1,104 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrderTransactionDetailFileRequest} extends {@link RequestModel}
  *
  * <p>CreateOrderTransactionDetailFileRequest</p>
  */
 public class CreateOrderTransactionDetailFileRequest extends Request {
-    @Body
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @Body
-    @NameInMap("BizName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizName")
     private String bizName;
 
-    @Body
-    @NameInMap("ChannelName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelName")
     private String channelName;
 
-    @Body
-    @NameInMap("CreateEndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateEndTime")
     private String createEndTime;
 
-    @Body
-    @NameInMap("CreateStartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateStartTime")
     private String createStartTime;
 
-    @Body
-    @NameInMap("ItemId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemId")
     private String itemId;
 
-    @Body
-    @NameInMap("LmShopId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LmShopId")
     private String lmShopId;
 
-    @Body
-    @NameInMap("OrderStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderStatus")
     private String orderStatus;
 
-    @Body
-    @NameInMap("PayStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PayStatus")
     private String payStatus;
 
-    @Body
-    @NameInMap("PaymentEndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PaymentEndTime")
     private String paymentEndTime;
 
-    @Body
-    @NameInMap("PaymentStartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PaymentStartTime")
     private String paymentStartTime;
 
-    @Body
-    @NameInMap("PoCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PoCode")
     private String poCode;
 
-    @Body
-    @NameInMap("RefundEndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RefundEndTime")
     private String refundEndTime;
 
-    @Body
-    @NameInMap("RefundStartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RefundStartTime")
     private String refundStartTime;
 
-    @Body
-    @NameInMap("SellerId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SellerId")
     private String sellerId;
 
-    @Body
-    @NameInMap("SellerName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SellerName")
     private String sellerName;
 
-    @Body
-    @NameInMap("SettlementNode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SettlementNode")
     private String settlementNode;
 
-    @Body
-    @NameInMap("ShopName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShopName")
     private String shopName;
 
-    @Body
-    @NameInMap("TbMainOrderId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbMainOrderId")
     private String tbMainOrderId;
 
-    @Body
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
-    @Body
-    @NameInMap("TenantName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantName")
     private String tenantName;
 
     private CreateOrderTransactionDetailFileRequest(Builder builder) {

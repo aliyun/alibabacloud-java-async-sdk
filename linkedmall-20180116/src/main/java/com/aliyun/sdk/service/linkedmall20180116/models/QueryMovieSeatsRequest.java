@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMovieSeatsRequest} extends {@link RequestModel}
  *
  * <p>QueryMovieSeatsRequest</p>
  */
 public class QueryMovieSeatsRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("ExtJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtJson")
     private String extJson;
 
-    @Query
-    @NameInMap("ScheduleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long scheduleId;
 
     private QueryMovieSeatsRequest(Builder builder) {
@@ -84,7 +89,10 @@ public class QueryMovieSeatsRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******004</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -102,7 +110,10 @@ public class QueryMovieSeatsRequest extends Request {
         }
 
         /**
-         * ScheduleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9******5</p>
          */
         public Builder scheduleId(Long scheduleId) {
             this.putQueryParameter("ScheduleId", scheduleId);

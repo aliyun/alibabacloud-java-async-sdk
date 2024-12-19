@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMovieSeatsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMovieSeatsResponseBody</p>
  */
 public class QueryMovieSeatsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SeatMap")
+    @com.aliyun.core.annotation.NameInMap("SeatMap")
     private SeatMap seatMap;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryMovieSeatsResponseBody(Builder builder) {
@@ -191,35 +196,41 @@ public class QueryMovieSeatsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMovieSeatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMovieSeatsResponseBody</p>
+     */
     public static class Seat extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("Column")
+        @com.aliyun.core.annotation.NameInMap("Column")
         private Long column;
 
-        @NameInMap("ExtId")
+        @com.aliyun.core.annotation.NameInMap("ExtId")
         private String extId;
 
-        @NameInMap("Flag")
+        @com.aliyun.core.annotation.NameInMap("Flag")
         private Long flag;
 
-        @NameInMap("LeftPx")
+        @com.aliyun.core.annotation.NameInMap("LeftPx")
         private Long leftPx;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Row")
+        @com.aliyun.core.annotation.NameInMap("Row")
         private Long row;
 
-        @NameInMap("RowName")
+        @com.aliyun.core.annotation.NameInMap("RowName")
         private String rowName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("TopPx")
+        @com.aliyun.core.annotation.NameInMap("TopPx")
         private Long topPx;
 
         private Seat(Builder builder) {
@@ -412,9 +423,15 @@ public class QueryMovieSeatsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMovieSeatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMovieSeatsResponseBody</p>
+     */
     public static class Seats extends TeaModel {
-        @NameInMap("Seat")
-        private java.util.List < Seat> seat;
+        @com.aliyun.core.annotation.NameInMap("Seat")
+        private java.util.List<Seat> seat;
 
         private Seats(Builder builder) {
             this.seat = builder.seat;
@@ -431,17 +448,17 @@ public class QueryMovieSeatsResponseBody extends TeaModel {
         /**
          * @return seat
          */
-        public java.util.List < Seat> getSeat() {
+        public java.util.List<Seat> getSeat() {
             return this.seat;
         }
 
         public static final class Builder {
-            private java.util.List < Seat> seat; 
+            private java.util.List<Seat> seat; 
 
             /**
              * Seat.
              */
-            public Builder seat(java.util.List < Seat> seat) {
+            public Builder seat(java.util.List<Seat> seat) {
                 this.seat = seat;
                 return this;
             }
@@ -453,50 +470,56 @@ public class QueryMovieSeatsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMovieSeatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMovieSeatsResponseBody</p>
+     */
     public static class SeatMap extends TeaModel {
-        @NameInMap("MaxCanBuy")
+        @com.aliyun.core.annotation.NameInMap("MaxCanBuy")
         private Long maxCanBuy;
 
-        @NameInMap("MaxColumn")
+        @com.aliyun.core.annotation.NameInMap("MaxColumn")
         private Long maxColumn;
 
-        @NameInMap("MaxLeftPx")
+        @com.aliyun.core.annotation.NameInMap("MaxLeftPx")
         private Long maxLeftPx;
 
-        @NameInMap("MaxRow")
+        @com.aliyun.core.annotation.NameInMap("MaxRow")
         private Long maxRow;
 
-        @NameInMap("MaxTopPx")
+        @com.aliyun.core.annotation.NameInMap("MaxTopPx")
         private Long maxTopPx;
 
-        @NameInMap("MinColumn")
+        @com.aliyun.core.annotation.NameInMap("MinColumn")
         private Long minColumn;
 
-        @NameInMap("MinLeftPx")
+        @com.aliyun.core.annotation.NameInMap("MinLeftPx")
         private Long minLeftPx;
 
-        @NameInMap("MinRow")
+        @com.aliyun.core.annotation.NameInMap("MinRow")
         private Long minRow;
 
-        @NameInMap("MinTopPx")
+        @com.aliyun.core.annotation.NameInMap("MinTopPx")
         private Long minTopPx;
 
-        @NameInMap("Notice")
+        @com.aliyun.core.annotation.NameInMap("Notice")
         private String notice;
 
-        @NameInMap("Regular")
+        @com.aliyun.core.annotation.NameInMap("Regular")
         private Boolean regular;
 
-        @NameInMap("SeatCount")
+        @com.aliyun.core.annotation.NameInMap("SeatCount")
         private Long seatCount;
 
-        @NameInMap("Seats")
+        @com.aliyun.core.annotation.NameInMap("Seats")
         private Seats seats;
 
-        @NameInMap("SoldCount")
+        @com.aliyun.core.annotation.NameInMap("SoldCount")
         private Long soldCount;
 
-        @NameInMap("TipMessage")
+        @com.aliyun.core.annotation.NameInMap("TipMessage")
         private String tipMessage;
 
         private SeatMap(Builder builder) {

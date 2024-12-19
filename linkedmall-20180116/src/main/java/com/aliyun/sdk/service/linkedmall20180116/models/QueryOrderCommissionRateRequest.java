@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrderCommissionRateRequest} extends {@link RequestModel}
  *
  * <p>QueryOrderCommissionRateRequest</p>
  */
 public class QueryOrderCommissionRateRequest extends Request {
-    @Query
-    @NameInMap("AccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
     private String accountType;
 
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("BizUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizUid;
 
-    @Query
-    @NameInMap("LmOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LmOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long lmOrderId;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
     private String thirdPartyUserId;
 
-    @Query
-    @NameInMap("UseAnonymousTbAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseAnonymousTbAccount")
     private Boolean useAnonymousTbAccount;
 
     private QueryOrderCommissionRateRequest(Builder builder) {
@@ -136,7 +141,10 @@ public class QueryOrderCommissionRateRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******002</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -145,7 +153,10 @@ public class QueryOrderCommissionRateRequest extends Request {
         }
 
         /**
-         * BizUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>221249435****</p>
          */
         public Builder bizUid(String bizUid) {
             this.putQueryParameter("BizUid", bizUid);
@@ -154,7 +165,10 @@ public class QueryOrderCommissionRateRequest extends Request {
         }
 
         /**
-         * LmOrderId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45******23</p>
          */
         public Builder lmOrderId(Long lmOrderId) {
             this.putQueryParameter("LmOrderId", lmOrderId);

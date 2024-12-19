@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCategoryChainResponseBody} extends {@link TeaModel}
  *
  * <p>GetCategoryChainResponseBody</p>
  */
 public class GetCategoryChainResponseBody extends TeaModel {
-    @NameInMap("CategoryList")
-    private java.util.List < CategoryList> categoryList;
+    @com.aliyun.core.annotation.NameInMap("CategoryList")
+    private java.util.List<CategoryList> categoryList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCategoryChainResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class GetCategoryChainResponseBody extends TeaModel {
     /**
      * @return categoryList
      */
-    public java.util.List < CategoryList> getCategoryList() {
+    public java.util.List<CategoryList> getCategoryList() {
         return this.categoryList;
     }
 
@@ -68,7 +73,7 @@ public class GetCategoryChainResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CategoryList> categoryList; 
+        private java.util.List<CategoryList> categoryList; 
         private String code; 
         private String message; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class GetCategoryChainResponseBody extends TeaModel {
         /**
          * CategoryList.
          */
-        public Builder categoryList(java.util.List < CategoryList> categoryList) {
+        public Builder categoryList(java.util.List<CategoryList> categoryList) {
             this.categoryList = categoryList;
             return this;
         }
@@ -111,11 +116,17 @@ public class GetCategoryChainResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCategoryChainResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCategoryChainResponseBody</p>
+     */
     public static class CategoryList extends TeaModel {
-        @NameInMap("CategoryId")
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private CategoryList(Builder builder) {

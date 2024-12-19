@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefundOrderResponseBody} extends {@link TeaModel}
  *
  * <p>RefundOrderResponseBody</p>
  */
 public class RefundOrderResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RefundResponse")
+    @com.aliyun.core.annotation.NameInMap("RefundResponse")
     private RefundResponse refundResponse;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RefundOrderResponseBody(Builder builder) {
@@ -111,20 +116,26 @@ public class RefundOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RefundOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>RefundOrderResponseBody</p>
+     */
     public static class RefundResponse extends TeaModel {
-        @NameInMap("FundChange")
+        @com.aliyun.core.annotation.NameInMap("FundChange")
         private String fundChange;
 
-        @NameInMap("GmtRefundPay")
+        @com.aliyun.core.annotation.NameInMap("GmtRefundPay")
         private String gmtRefundPay;
 
-        @NameInMap("OutRequestNo")
+        @com.aliyun.core.annotation.NameInMap("OutRequestNo")
         private String outRequestNo;
 
-        @NameInMap("OutTradeNo")
+        @com.aliyun.core.annotation.NameInMap("OutTradeNo")
         private String outTradeNo;
 
-        @NameInMap("TradeNo")
+        @com.aliyun.core.annotation.NameInMap("TradeNo")
         private String tradeNo;
 
         private RefundResponse(Builder builder) {

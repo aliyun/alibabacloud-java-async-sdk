@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseMovieSeatRequest} extends {@link RequestModel}
  *
  * <p>ReleaseMovieSeatRequest</p>
  */
 public class ReleaseMovieSeatRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("BizUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizUid;
 
-    @Query
-    @NameInMap("ExtJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtJson")
     private String extJson;
 
-    @Query
-    @NameInMap("LockSeatApplyKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LockSeatApplyKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lockSeatApplyKey;
 
     private ReleaseMovieSeatRequest(Builder builder) {
@@ -99,7 +104,10 @@ public class ReleaseMovieSeatRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******005</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -108,7 +116,10 @@ public class ReleaseMovieSeatRequest extends Request {
         }
 
         /**
-         * BizUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>221249435****</p>
          */
         public Builder bizUid(String bizUid) {
             this.putQueryParameter("BizUid", bizUid);
@@ -126,7 +137,10 @@ public class ReleaseMovieSeatRequest extends Request {
         }
 
         /**
-         * LockSeatApplyKey.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder lockSeatApplyKey(String lockSeatApplyKey) {
             this.putQueryParameter("LockSeatApplyKey", lockSeatApplyKey);

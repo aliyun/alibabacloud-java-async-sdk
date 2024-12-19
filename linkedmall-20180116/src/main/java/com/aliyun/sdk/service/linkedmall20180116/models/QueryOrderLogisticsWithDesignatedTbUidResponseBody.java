@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrderLogisticsWithDesignatedTbUidResponseBody} extends {@link TeaModel}
  *
  * <p>QueryOrderLogisticsWithDesignatedTbUidResponseBody</p>
  */
 public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
-    private java.util.List < Model> model;
+    @com.aliyun.core.annotation.NameInMap("Model")
+    private java.util.List<Model> model;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryOrderLogisticsWithDesignatedTbUidResponseBody(Builder builder) {
@@ -91,7 +96,7 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
     /**
      * @return model
      */
-    public java.util.List < Model> getModel() {
+    public java.util.List<Model> getModel() {
         return this.model;
     }
 
@@ -148,7 +153,7 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
         private String code; 
         private String logsId; 
         private String message; 
-        private java.util.List < Model> model; 
+        private java.util.List<Model> model; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -184,7 +189,7 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
         /**
          * Model.
          */
-        public Builder model(java.util.List < Model> model) {
+        public Builder model(java.util.List<Model> model) {
             this.model = model;
             return this;
         }
@@ -198,7 +203,10 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
         }
 
         /**
-         * pageSize
+         * <p>pageSize</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -251,20 +259,26 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link QueryOrderLogisticsWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderLogisticsWithDesignatedTbUidResponseBody</p>
+     */
     public static class Fetcher extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ZipCode")
+        @com.aliyun.core.annotation.NameInMap("ZipCode")
         private String zipCode;
 
         private Fetcher(Builder builder) {
@@ -372,17 +386,23 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderLogisticsWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderLogisticsWithDesignatedTbUidResponseBody</p>
+     */
     public static class LogisticsDetailList extends TeaModel {
-        @NameInMap("OcurrTimeStr")
+        @com.aliyun.core.annotation.NameInMap("OcurrTimeStr")
         private String ocurrTimeStr;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("StanderdDesc")
+        @com.aliyun.core.annotation.NameInMap("StanderdDesc")
         private String standerdDesc;
 
-        @NameInMap("StatusIcon")
+        @com.aliyun.core.annotation.NameInMap("StatusIcon")
         private String statusIcon;
 
         private LogisticsDetailList(Builder builder) {
@@ -473,17 +493,23 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderLogisticsWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderLogisticsWithDesignatedTbUidResponseBody</p>
+     */
     public static class PackageGoodItems extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
         private PackageGoodItems(Builder builder) {
@@ -574,20 +600,26 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderLogisticsWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderLogisticsWithDesignatedTbUidResponseBody</p>
+     */
     public static class Receiver extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ZipCode")
+        @com.aliyun.core.annotation.NameInMap("ZipCode")
         private String zipCode;
 
         private Receiver(Builder builder) {
@@ -695,35 +727,41 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderLogisticsWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderLogisticsWithDesignatedTbUidResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("DataProvider")
+        @com.aliyun.core.annotation.NameInMap("DataProvider")
         private String dataProvider;
 
-        @NameInMap("DataProviderTitle")
+        @com.aliyun.core.annotation.NameInMap("DataProviderTitle")
         private String dataProviderTitle;
 
-        @NameInMap("Fetcher")
+        @com.aliyun.core.annotation.NameInMap("Fetcher")
         private Fetcher fetcher;
 
-        @NameInMap("LogisticsCompanyCode")
+        @com.aliyun.core.annotation.NameInMap("LogisticsCompanyCode")
         private String logisticsCompanyCode;
 
-        @NameInMap("LogisticsCompanyName")
+        @com.aliyun.core.annotation.NameInMap("LogisticsCompanyName")
         private String logisticsCompanyName;
 
-        @NameInMap("LogisticsDetailList")
-        private java.util.List < LogisticsDetailList> logisticsDetailList;
+        @com.aliyun.core.annotation.NameInMap("LogisticsDetailList")
+        private java.util.List<LogisticsDetailList> logisticsDetailList;
 
-        @NameInMap("MailNo")
+        @com.aliyun.core.annotation.NameInMap("MailNo")
         private String mailNo;
 
-        @NameInMap("PackageGoodItems")
-        private java.util.List < PackageGoodItems> packageGoodItems;
+        @com.aliyun.core.annotation.NameInMap("PackageGoodItems")
+        private java.util.List<PackageGoodItems> packageGoodItems;
 
-        @NameInMap("Receiver")
+        @com.aliyun.core.annotation.NameInMap("Receiver")
         private Receiver receiver;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
         private Model(Builder builder) {
@@ -785,7 +823,7 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
         /**
          * @return logisticsDetailList
          */
-        public java.util.List < LogisticsDetailList> getLogisticsDetailList() {
+        public java.util.List<LogisticsDetailList> getLogisticsDetailList() {
             return this.logisticsDetailList;
         }
 
@@ -799,7 +837,7 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
         /**
          * @return packageGoodItems
          */
-        public java.util.List < PackageGoodItems> getPackageGoodItems() {
+        public java.util.List<PackageGoodItems> getPackageGoodItems() {
             return this.packageGoodItems;
         }
 
@@ -823,9 +861,9 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
             private Fetcher fetcher; 
             private String logisticsCompanyCode; 
             private String logisticsCompanyName; 
-            private java.util.List < LogisticsDetailList> logisticsDetailList; 
+            private java.util.List<LogisticsDetailList> logisticsDetailList; 
             private String mailNo; 
-            private java.util.List < PackageGoodItems> packageGoodItems; 
+            private java.util.List<PackageGoodItems> packageGoodItems; 
             private Receiver receiver; 
             private String requestId; 
 
@@ -872,7 +910,7 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
             /**
              * LogisticsDetailList.
              */
-            public Builder logisticsDetailList(java.util.List < LogisticsDetailList> logisticsDetailList) {
+            public Builder logisticsDetailList(java.util.List<LogisticsDetailList> logisticsDetailList) {
                 this.logisticsDetailList = logisticsDetailList;
                 return this;
             }
@@ -888,7 +926,7 @@ public class QueryOrderLogisticsWithDesignatedTbUidResponseBody extends TeaModel
             /**
              * PackageGoodItems.
              */
-            public Builder packageGoodItems(java.util.List < PackageGoodItems> packageGoodItems) {
+            public Builder packageGoodItems(java.util.List<PackageGoodItems> packageGoodItems) {
                 this.packageGoodItems = packageGoodItems;
                 return this;
             }

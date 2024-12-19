@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
  *
  * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
  */
 public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private RenderOrderWithDesignatedTbUidResponseBody(Builder builder) {
@@ -198,7 +203,10 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize
+         * <p>pageSize</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -251,26 +259,32 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class AddressInfos extends TeaModel {
-        @NameInMap("AddressDetail")
+        @com.aliyun.core.annotation.NameInMap("AddressDetail")
         private String addressDetail;
 
-        @NameInMap("AddressId")
+        @com.aliyun.core.annotation.NameInMap("AddressId")
         private Long addressId;
 
-        @NameInMap("DivisionCode")
+        @com.aliyun.core.annotation.NameInMap("DivisionCode")
         private String divisionCode;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("Receiver")
+        @com.aliyun.core.annotation.NameInMap("Receiver")
         private String receiver;
 
-        @NameInMap("ReceiverPhone")
+        @com.aliyun.core.annotation.NameInMap("ReceiverPhone")
         private String receiverPhone;
 
-        @NameInMap("TownDivisionCode")
+        @com.aliyun.core.annotation.NameInMap("TownDivisionCode")
         private String townDivisionCode;
 
         private AddressInfos(Builder builder) {
@@ -412,17 +426,23 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class DeliveryInfos extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("PostFee")
+        @com.aliyun.core.annotation.NameInMap("PostFee")
         private Long postFee;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private Long serviceType;
 
         private DeliveryInfos(Builder builder) {
@@ -483,7 +503,10 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * <p>id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -513,11 +536,17 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class InvoiceInfo extends TeaModel {
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private InvoiceInfo(Builder builder) {
@@ -574,38 +603,44 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class AvailableItems extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("LmShopId")
+        @com.aliyun.core.annotation.NameInMap("LmShopId")
         private Long lmShopId;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private Integer number;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Long points;
 
-        @NameInMap("PointsAmount")
+        @com.aliyun.core.annotation.NameInMap("PointsAmount")
         private Long pointsAmount;
 
-        @NameInMap("PriceCent")
+        @com.aliyun.core.annotation.NameInMap("PriceCent")
         private Long priceCent;
 
-        @NameInMap("Removed")
+        @com.aliyun.core.annotation.NameInMap("Removed")
         private Boolean removed;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
-        @NameInMap("TbSellerId")
+        @com.aliyun.core.annotation.NameInMap("TbSellerId")
         private Long tbSellerId;
 
-        @NameInMap("UserPayFee")
+        @com.aliyun.core.annotation.NameInMap("UserPayFee")
         private Long userPayFee;
 
         private AvailableItems(Builder builder) {
@@ -785,7 +820,10 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             }
 
             /**
-             * skuid
+             * <p>skuid</p>
+             * 
+             * <strong>example:</strong>
+             * <p>457***764</p>
              */
             public Builder skuId(Long skuId) {
                 this.skuId = skuId;
@@ -815,56 +853,62 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class ItemPromInstVOS extends TeaModel {
-        @NameInMap("AvailableItems")
-        private java.util.List < AvailableItems> availableItems;
+        @com.aliyun.core.annotation.NameInMap("AvailableItems")
+        private java.util.List<AvailableItems> availableItems;
 
-        @NameInMap("CanUse")
+        @com.aliyun.core.annotation.NameInMap("CanUse")
         private Boolean canUse;
 
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Long discountPrice;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("PromotionType")
+        @com.aliyun.core.annotation.NameInMap("PromotionType")
         private String promotionType;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
-        @NameInMap("SkuIds")
-        private java.util.List < Long > skuIds;
+        @com.aliyun.core.annotation.NameInMap("SkuIds")
+        private java.util.List<Long> skuIds;
 
-        @NameInMap("SpecialPrice")
+        @com.aliyun.core.annotation.NameInMap("SpecialPrice")
         private Long specialPrice;
 
-        @NameInMap("SubBizCode")
+        @com.aliyun.core.annotation.NameInMap("SubBizCode")
         private String subBizCode;
 
-        @NameInMap("TbSellerId")
+        @com.aliyun.core.annotation.NameInMap("TbSellerId")
         private Long tbSellerId;
 
-        @NameInMap("ThresholdPrice")
+        @com.aliyun.core.annotation.NameInMap("ThresholdPrice")
         private Long thresholdPrice;
 
-        @NameInMap("UseStartTime")
+        @com.aliyun.core.annotation.NameInMap("UseStartTime")
         private Long useStartTime;
 
         private ItemPromInstVOS(Builder builder) {
@@ -898,7 +942,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return availableItems
          */
-        public java.util.List < AvailableItems> getAvailableItems() {
+        public java.util.List<AvailableItems> getAvailableItems() {
             return this.availableItems;
         }
 
@@ -975,7 +1019,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return skuIds
          */
-        public java.util.List < Long > getSkuIds() {
+        public java.util.List<Long> getSkuIds() {
             return this.skuIds;
         }
 
@@ -1015,7 +1059,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AvailableItems> availableItems; 
+            private java.util.List<AvailableItems> availableItems; 
             private Boolean canUse; 
             private Long discountPrice; 
             private Long expireTime; 
@@ -1026,7 +1070,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             private String promotionType; 
             private String reason; 
             private Boolean selected; 
-            private java.util.List < Long > skuIds; 
+            private java.util.List<Long> skuIds; 
             private Long specialPrice; 
             private String subBizCode; 
             private Long tbSellerId; 
@@ -1036,7 +1080,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * AvailableItems.
              */
-            public Builder availableItems(java.util.List < AvailableItems> availableItems) {
+            public Builder availableItems(java.util.List<AvailableItems> availableItems) {
                 this.availableItems = availableItems;
                 return this;
             }
@@ -1124,7 +1168,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * SkuIds.
              */
-            public Builder skuIds(java.util.List < Long > skuIds) {
+            public Builder skuIds(java.util.List<Long> skuIds) {
                 this.skuIds = skuIds;
                 return this;
             }
@@ -1176,71 +1220,77 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class LmItemInfos extends TeaModel {
-        @NameInMap("ActualPrice")
+        @com.aliyun.core.annotation.NameInMap("ActualPrice")
         private Long actualPrice;
 
-        @NameInMap("CanSell")
+        @com.aliyun.core.annotation.NameInMap("CanSell")
         private Boolean canSell;
 
-        @NameInMap("Cash")
+        @com.aliyun.core.annotation.NameInMap("Cash")
         private Long cash;
 
-        @NameInMap("Features")
-        private java.util.Map < String, String > features;
+        @com.aliyun.core.annotation.NameInMap("Features")
+        private java.util.Map<String, String> features;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("ItemName")
+        @com.aliyun.core.annotation.NameInMap("ItemName")
         private String itemName;
 
-        @NameInMap("ItemPicUrl")
+        @com.aliyun.core.annotation.NameInMap("ItemPicUrl")
         private String itemPicUrl;
 
-        @NameInMap("ItemPromInstVOS")
-        private java.util.List < ItemPromInstVOS> itemPromInstVOS;
+        @com.aliyun.core.annotation.NameInMap("ItemPromInstVOS")
+        private java.util.List<ItemPromInstVOS> itemPromInstVOS;
 
-        @NameInMap("ItemUrl")
+        @com.aliyun.core.annotation.NameInMap("ItemUrl")
         private String itemUrl;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PointPrice")
+        @com.aliyun.core.annotation.NameInMap("PointPrice")
         private Long pointPrice;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Long points;
 
-        @NameInMap("PromotionFee")
+        @com.aliyun.core.annotation.NameInMap("PromotionFee")
         private Long promotionFee;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("ReservePrice")
+        @com.aliyun.core.annotation.NameInMap("ReservePrice")
         private Long reservePrice;
 
-        @NameInMap("SellerId")
+        @com.aliyun.core.annotation.NameInMap("SellerId")
         private Long sellerId;
 
-        @NameInMap("SellerNick")
+        @com.aliyun.core.annotation.NameInMap("SellerNick")
         private String sellerNick;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
-        @NameInMap("SkuName")
+        @com.aliyun.core.annotation.NameInMap("SkuName")
         private String skuName;
 
-        @NameInMap("TbShopName")
+        @com.aliyun.core.annotation.NameInMap("TbShopName")
         private String tbShopName;
 
-        @NameInMap("VirtualItemType")
+        @com.aliyun.core.annotation.NameInMap("VirtualItemType")
         private String virtualItemType;
 
         private LmItemInfos(Builder builder) {
@@ -1300,7 +1350,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return features
          */
-        public java.util.Map < String, String > getFeatures() {
+        public java.util.Map<String, String> getFeatures() {
             return this.features;
         }
 
@@ -1328,7 +1378,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return itemPromInstVOS
          */
-        public java.util.List < ItemPromInstVOS> getItemPromInstVOS() {
+        public java.util.List<ItemPromInstVOS> getItemPromInstVOS() {
             return this.itemPromInstVOS;
         }
 
@@ -1434,11 +1484,11 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             private Long actualPrice; 
             private Boolean canSell; 
             private Long cash; 
-            private java.util.Map < String, String > features; 
+            private java.util.Map<String, String> features; 
             private Long itemId; 
             private String itemName; 
             private String itemPicUrl; 
-            private java.util.List < ItemPromInstVOS> itemPromInstVOS; 
+            private java.util.List<ItemPromInstVOS> itemPromInstVOS; 
             private String itemUrl; 
             private String lmItemId; 
             private String message; 
@@ -1481,7 +1531,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * Features.
              */
-            public Builder features(java.util.Map < String, String > features) {
+            public Builder features(java.util.Map<String, String> features) {
                 this.features = features;
                 return this;
             }
@@ -1513,7 +1563,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * ItemPromInstVOS.
              */
-            public Builder itemPromInstVOS(java.util.List < ItemPromInstVOS> itemPromInstVOS) {
+            public Builder itemPromInstVOS(java.util.List<ItemPromInstVOS> itemPromInstVOS) {
                 this.itemPromInstVOS = itemPromInstVOS;
                 return this;
             }
@@ -1599,7 +1649,10 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             }
 
             /**
-             * skuid
+             * <p>skuid</p>
+             * 
+             * <strong>example:</strong>
+             * <p>493***981</p>
              */
             public Builder skuId(Long skuId) {
                 this.skuId = skuId;
@@ -1637,38 +1690,44 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class ShopPromInstVOSAvailableItems extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("LmShopId")
+        @com.aliyun.core.annotation.NameInMap("LmShopId")
         private Long lmShopId;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private Integer number;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Long points;
 
-        @NameInMap("PointsAmount")
+        @com.aliyun.core.annotation.NameInMap("PointsAmount")
         private Long pointsAmount;
 
-        @NameInMap("PriceCent")
+        @com.aliyun.core.annotation.NameInMap("PriceCent")
         private Long priceCent;
 
-        @NameInMap("Removed")
+        @com.aliyun.core.annotation.NameInMap("Removed")
         private Boolean removed;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
-        @NameInMap("TbSellerId")
+        @com.aliyun.core.annotation.NameInMap("TbSellerId")
         private Long tbSellerId;
 
-        @NameInMap("UserPayFee")
+        @com.aliyun.core.annotation.NameInMap("UserPayFee")
         private Long userPayFee;
 
         private ShopPromInstVOSAvailableItems(Builder builder) {
@@ -1848,7 +1907,10 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             }
 
             /**
-             * skuid
+             * <p>skuid</p>
+             * 
+             * <strong>example:</strong>
+             * <p>493***981</p>
              */
             public Builder skuId(Long skuId) {
                 this.skuId = skuId;
@@ -1878,56 +1940,62 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class ShopPromInstVOS extends TeaModel {
-        @NameInMap("AvailableItems")
-        private java.util.List < ShopPromInstVOSAvailableItems> availableItems;
+        @com.aliyun.core.annotation.NameInMap("AvailableItems")
+        private java.util.List<ShopPromInstVOSAvailableItems> availableItems;
 
-        @NameInMap("CanUse")
+        @com.aliyun.core.annotation.NameInMap("CanUse")
         private Boolean canUse;
 
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Long discountPrice;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("PromotionType")
+        @com.aliyun.core.annotation.NameInMap("PromotionType")
         private String promotionType;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
-        @NameInMap("SkuIds")
-        private java.util.List < Long > skuIds;
+        @com.aliyun.core.annotation.NameInMap("SkuIds")
+        private java.util.List<Long> skuIds;
 
-        @NameInMap("SpecialPrice")
+        @com.aliyun.core.annotation.NameInMap("SpecialPrice")
         private Long specialPrice;
 
-        @NameInMap("SubBizCode")
+        @com.aliyun.core.annotation.NameInMap("SubBizCode")
         private String subBizCode;
 
-        @NameInMap("TbSellerId")
+        @com.aliyun.core.annotation.NameInMap("TbSellerId")
         private Long tbSellerId;
 
-        @NameInMap("ThresholdPrice")
+        @com.aliyun.core.annotation.NameInMap("ThresholdPrice")
         private Long thresholdPrice;
 
-        @NameInMap("UseStartTime")
+        @com.aliyun.core.annotation.NameInMap("UseStartTime")
         private Long useStartTime;
 
         private ShopPromInstVOS(Builder builder) {
@@ -1961,7 +2029,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return availableItems
          */
-        public java.util.List < ShopPromInstVOSAvailableItems> getAvailableItems() {
+        public java.util.List<ShopPromInstVOSAvailableItems> getAvailableItems() {
             return this.availableItems;
         }
 
@@ -2038,7 +2106,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return skuIds
          */
-        public java.util.List < Long > getSkuIds() {
+        public java.util.List<Long> getSkuIds() {
             return this.skuIds;
         }
 
@@ -2078,7 +2146,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ShopPromInstVOSAvailableItems> availableItems; 
+            private java.util.List<ShopPromInstVOSAvailableItems> availableItems; 
             private Boolean canUse; 
             private Long discountPrice; 
             private Long expireTime; 
@@ -2089,7 +2157,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             private String promotionType; 
             private String reason; 
             private Boolean selected; 
-            private java.util.List < Long > skuIds; 
+            private java.util.List<Long> skuIds; 
             private Long specialPrice; 
             private String subBizCode; 
             private Long tbSellerId; 
@@ -2099,7 +2167,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * AvailableItems.
              */
-            public Builder availableItems(java.util.List < ShopPromInstVOSAvailableItems> availableItems) {
+            public Builder availableItems(java.util.List<ShopPromInstVOSAvailableItems> availableItems) {
                 this.availableItems = availableItems;
                 return this;
             }
@@ -2187,7 +2255,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * SkuIds.
              */
-            public Builder skuIds(java.util.List < Long > skuIds) {
+            public Builder skuIds(java.util.List<Long> skuIds) {
                 this.skuIds = skuIds;
                 return this;
             }
@@ -2239,32 +2307,38 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class RenderOrderInfos extends TeaModel {
-        @NameInMap("CanSell")
+        @com.aliyun.core.annotation.NameInMap("CanSell")
         private Boolean canSell;
 
-        @NameInMap("DeliveryInfos")
-        private java.util.List < DeliveryInfos> deliveryInfos;
+        @com.aliyun.core.annotation.NameInMap("DeliveryInfos")
+        private java.util.List<DeliveryInfos> deliveryInfos;
 
-        @NameInMap("ExtInfo")
-        private java.util.Map < String, String > extInfo;
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
+        private java.util.Map<String, String> extInfo;
 
-        @NameInMap("InvoiceInfo")
+        @com.aliyun.core.annotation.NameInMap("InvoiceInfo")
         private InvoiceInfo invoiceInfo;
 
-        @NameInMap("LmItemInfos")
-        private java.util.List < LmItemInfos> lmItemInfos;
+        @com.aliyun.core.annotation.NameInMap("LmItemInfos")
+        private java.util.List<LmItemInfos> lmItemInfos;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("SellerId")
+        @com.aliyun.core.annotation.NameInMap("SellerId")
         private Long sellerId;
 
-        @NameInMap("ShopPromInstVOS")
-        private java.util.List < ShopPromInstVOS> shopPromInstVOS;
+        @com.aliyun.core.annotation.NameInMap("ShopPromInstVOS")
+        private java.util.List<ShopPromInstVOS> shopPromInstVOS;
 
-        @NameInMap("TbShopName")
+        @com.aliyun.core.annotation.NameInMap("TbShopName")
         private String tbShopName;
 
         private RenderOrderInfos(Builder builder) {
@@ -2297,14 +2371,14 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return deliveryInfos
          */
-        public java.util.List < DeliveryInfos> getDeliveryInfos() {
+        public java.util.List<DeliveryInfos> getDeliveryInfos() {
             return this.deliveryInfos;
         }
 
         /**
          * @return extInfo
          */
-        public java.util.Map < String, String > getExtInfo() {
+        public java.util.Map<String, String> getExtInfo() {
             return this.extInfo;
         }
 
@@ -2318,7 +2392,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return lmItemInfos
          */
-        public java.util.List < LmItemInfos> getLmItemInfos() {
+        public java.util.List<LmItemInfos> getLmItemInfos() {
             return this.lmItemInfos;
         }
 
@@ -2339,7 +2413,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return shopPromInstVOS
          */
-        public java.util.List < ShopPromInstVOS> getShopPromInstVOS() {
+        public java.util.List<ShopPromInstVOS> getShopPromInstVOS() {
             return this.shopPromInstVOS;
         }
 
@@ -2352,13 +2426,13 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean canSell; 
-            private java.util.List < DeliveryInfos> deliveryInfos; 
-            private java.util.Map < String, String > extInfo; 
+            private java.util.List<DeliveryInfos> deliveryInfos; 
+            private java.util.Map<String, String> extInfo; 
             private InvoiceInfo invoiceInfo; 
-            private java.util.List < LmItemInfos> lmItemInfos; 
+            private java.util.List<LmItemInfos> lmItemInfos; 
             private String message; 
             private Long sellerId; 
-            private java.util.List < ShopPromInstVOS> shopPromInstVOS; 
+            private java.util.List<ShopPromInstVOS> shopPromInstVOS; 
             private String tbShopName; 
 
             /**
@@ -2372,7 +2446,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * DeliveryInfos.
              */
-            public Builder deliveryInfos(java.util.List < DeliveryInfos> deliveryInfos) {
+            public Builder deliveryInfos(java.util.List<DeliveryInfos> deliveryInfos) {
                 this.deliveryInfos = deliveryInfos;
                 return this;
             }
@@ -2380,7 +2454,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * ExtInfo.
              */
-            public Builder extInfo(java.util.Map < String, String > extInfo) {
+            public Builder extInfo(java.util.Map<String, String> extInfo) {
                 this.extInfo = extInfo;
                 return this;
             }
@@ -2396,7 +2470,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * LmItemInfos.
              */
-            public Builder lmItemInfos(java.util.List < LmItemInfos> lmItemInfos) {
+            public Builder lmItemInfos(java.util.List<LmItemInfos> lmItemInfos) {
                 this.lmItemInfos = lmItemInfos;
                 return this;
             }
@@ -2420,7 +2494,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * ShopPromInstVOS.
              */
-            public Builder shopPromInstVOS(java.util.List < ShopPromInstVOS> shopPromInstVOS) {
+            public Builder shopPromInstVOS(java.util.List<ShopPromInstVOS> shopPromInstVOS) {
                 this.shopPromInstVOS = shopPromInstVOS;
                 return this;
             }
@@ -2440,17 +2514,23 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class UnsellableRenderOrderInfosDeliveryInfos extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("PostFee")
+        @com.aliyun.core.annotation.NameInMap("PostFee")
         private Long postFee;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private Long serviceType;
 
         private UnsellableRenderOrderInfosDeliveryInfos(Builder builder) {
@@ -2511,7 +2591,10 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * <p>id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -2541,11 +2624,17 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class UnsellableRenderOrderInfosInvoiceInfo extends TeaModel {
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private UnsellableRenderOrderInfosInvoiceInfo(Builder builder) {
@@ -2602,38 +2691,44 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class ItemPromInstVOSAvailableItems extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("LmShopId")
+        @com.aliyun.core.annotation.NameInMap("LmShopId")
         private Long lmShopId;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private Integer number;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Long points;
 
-        @NameInMap("PointsAmount")
+        @com.aliyun.core.annotation.NameInMap("PointsAmount")
         private Long pointsAmount;
 
-        @NameInMap("PriceCent")
+        @com.aliyun.core.annotation.NameInMap("PriceCent")
         private Long priceCent;
 
-        @NameInMap("Removed")
+        @com.aliyun.core.annotation.NameInMap("Removed")
         private Boolean removed;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
-        @NameInMap("TbSellerId")
+        @com.aliyun.core.annotation.NameInMap("TbSellerId")
         private Long tbSellerId;
 
-        @NameInMap("UserPayFee")
+        @com.aliyun.core.annotation.NameInMap("UserPayFee")
         private Long userPayFee;
 
         private ItemPromInstVOSAvailableItems(Builder builder) {
@@ -2813,7 +2908,10 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             }
 
             /**
-             * skuid
+             * <p>skuid</p>
+             * 
+             * <strong>example:</strong>
+             * <p>504***414</p>
              */
             public Builder skuId(Long skuId) {
                 this.skuId = skuId;
@@ -2843,56 +2941,62 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class LmItemInfosItemPromInstVOS extends TeaModel {
-        @NameInMap("AvailableItems")
-        private java.util.List < ItemPromInstVOSAvailableItems> availableItems;
+        @com.aliyun.core.annotation.NameInMap("AvailableItems")
+        private java.util.List<ItemPromInstVOSAvailableItems> availableItems;
 
-        @NameInMap("CanUse")
+        @com.aliyun.core.annotation.NameInMap("CanUse")
         private Boolean canUse;
 
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Long discountPrice;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("PromotionType")
+        @com.aliyun.core.annotation.NameInMap("PromotionType")
         private String promotionType;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
-        @NameInMap("SkuIds")
-        private java.util.List < Long > skuIds;
+        @com.aliyun.core.annotation.NameInMap("SkuIds")
+        private java.util.List<Long> skuIds;
 
-        @NameInMap("SpecialPrice")
+        @com.aliyun.core.annotation.NameInMap("SpecialPrice")
         private Long specialPrice;
 
-        @NameInMap("SubBizCode")
+        @com.aliyun.core.annotation.NameInMap("SubBizCode")
         private String subBizCode;
 
-        @NameInMap("TbSellerId")
+        @com.aliyun.core.annotation.NameInMap("TbSellerId")
         private Long tbSellerId;
 
-        @NameInMap("ThresholdPrice")
+        @com.aliyun.core.annotation.NameInMap("ThresholdPrice")
         private Long thresholdPrice;
 
-        @NameInMap("UseStartTime")
+        @com.aliyun.core.annotation.NameInMap("UseStartTime")
         private Long useStartTime;
 
         private LmItemInfosItemPromInstVOS(Builder builder) {
@@ -2926,7 +3030,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return availableItems
          */
-        public java.util.List < ItemPromInstVOSAvailableItems> getAvailableItems() {
+        public java.util.List<ItemPromInstVOSAvailableItems> getAvailableItems() {
             return this.availableItems;
         }
 
@@ -3003,7 +3107,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return skuIds
          */
-        public java.util.List < Long > getSkuIds() {
+        public java.util.List<Long> getSkuIds() {
             return this.skuIds;
         }
 
@@ -3043,7 +3147,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ItemPromInstVOSAvailableItems> availableItems; 
+            private java.util.List<ItemPromInstVOSAvailableItems> availableItems; 
             private Boolean canUse; 
             private Long discountPrice; 
             private Long expireTime; 
@@ -3054,7 +3158,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             private String promotionType; 
             private String reason; 
             private Boolean selected; 
-            private java.util.List < Long > skuIds; 
+            private java.util.List<Long> skuIds; 
             private Long specialPrice; 
             private String subBizCode; 
             private Long tbSellerId; 
@@ -3064,7 +3168,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * AvailableItems.
              */
-            public Builder availableItems(java.util.List < ItemPromInstVOSAvailableItems> availableItems) {
+            public Builder availableItems(java.util.List<ItemPromInstVOSAvailableItems> availableItems) {
                 this.availableItems = availableItems;
                 return this;
             }
@@ -3150,9 +3254,9 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             }
 
             /**
-             * skuid
+             * <p>skuid</p>
              */
-            public Builder skuIds(java.util.List < Long > skuIds) {
+            public Builder skuIds(java.util.List<Long> skuIds) {
                 this.skuIds = skuIds;
                 return this;
             }
@@ -3204,71 +3308,77 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class UnsellableRenderOrderInfosLmItemInfos extends TeaModel {
-        @NameInMap("ActualPrice")
+        @com.aliyun.core.annotation.NameInMap("ActualPrice")
         private Long actualPrice;
 
-        @NameInMap("CanSell")
+        @com.aliyun.core.annotation.NameInMap("CanSell")
         private Boolean canSell;
 
-        @NameInMap("Cash")
+        @com.aliyun.core.annotation.NameInMap("Cash")
         private Long cash;
 
-        @NameInMap("Features")
-        private java.util.Map < String, String > features;
+        @com.aliyun.core.annotation.NameInMap("Features")
+        private java.util.Map<String, String> features;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("ItemName")
+        @com.aliyun.core.annotation.NameInMap("ItemName")
         private String itemName;
 
-        @NameInMap("ItemPicUrl")
+        @com.aliyun.core.annotation.NameInMap("ItemPicUrl")
         private String itemPicUrl;
 
-        @NameInMap("ItemPromInstVOS")
-        private java.util.List < LmItemInfosItemPromInstVOS> itemPromInstVOS;
+        @com.aliyun.core.annotation.NameInMap("ItemPromInstVOS")
+        private java.util.List<LmItemInfosItemPromInstVOS> itemPromInstVOS;
 
-        @NameInMap("ItemUrl")
+        @com.aliyun.core.annotation.NameInMap("ItemUrl")
         private String itemUrl;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PointPrice")
+        @com.aliyun.core.annotation.NameInMap("PointPrice")
         private Long pointPrice;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Long points;
 
-        @NameInMap("PromotionFee")
+        @com.aliyun.core.annotation.NameInMap("PromotionFee")
         private Long promotionFee;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("ReservePrice")
+        @com.aliyun.core.annotation.NameInMap("ReservePrice")
         private Long reservePrice;
 
-        @NameInMap("SellerId")
+        @com.aliyun.core.annotation.NameInMap("SellerId")
         private Long sellerId;
 
-        @NameInMap("SellerNick")
+        @com.aliyun.core.annotation.NameInMap("SellerNick")
         private String sellerNick;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
-        @NameInMap("SkuName")
+        @com.aliyun.core.annotation.NameInMap("SkuName")
         private String skuName;
 
-        @NameInMap("TbShopName")
+        @com.aliyun.core.annotation.NameInMap("TbShopName")
         private String tbShopName;
 
-        @NameInMap("VirtualItemType")
+        @com.aliyun.core.annotation.NameInMap("VirtualItemType")
         private String virtualItemType;
 
         private UnsellableRenderOrderInfosLmItemInfos(Builder builder) {
@@ -3328,7 +3438,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return features
          */
-        public java.util.Map < String, String > getFeatures() {
+        public java.util.Map<String, String> getFeatures() {
             return this.features;
         }
 
@@ -3356,7 +3466,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return itemPromInstVOS
          */
-        public java.util.List < LmItemInfosItemPromInstVOS> getItemPromInstVOS() {
+        public java.util.List<LmItemInfosItemPromInstVOS> getItemPromInstVOS() {
             return this.itemPromInstVOS;
         }
 
@@ -3462,11 +3572,11 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             private Long actualPrice; 
             private Boolean canSell; 
             private Long cash; 
-            private java.util.Map < String, String > features; 
+            private java.util.Map<String, String> features; 
             private Long itemId; 
             private String itemName; 
             private String itemPicUrl; 
-            private java.util.List < LmItemInfosItemPromInstVOS> itemPromInstVOS; 
+            private java.util.List<LmItemInfosItemPromInstVOS> itemPromInstVOS; 
             private String itemUrl; 
             private String lmItemId; 
             private String message; 
@@ -3509,7 +3619,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * Features.
              */
-            public Builder features(java.util.Map < String, String > features) {
+            public Builder features(java.util.Map<String, String> features) {
                 this.features = features;
                 return this;
             }
@@ -3541,7 +3651,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * ItemPromInstVOS.
              */
-            public Builder itemPromInstVOS(java.util.List < LmItemInfosItemPromInstVOS> itemPromInstVOS) {
+            public Builder itemPromInstVOS(java.util.List<LmItemInfosItemPromInstVOS> itemPromInstVOS) {
                 this.itemPromInstVOS = itemPromInstVOS;
                 return this;
             }
@@ -3627,7 +3737,10 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             }
 
             /**
-             * skuid
+             * <p>skuid</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder skuId(Long skuId) {
                 this.skuId = skuId;
@@ -3665,38 +3778,44 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class UnsellableRenderOrderInfosShopPromInstVOSAvailableItems extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("LmShopId")
+        @com.aliyun.core.annotation.NameInMap("LmShopId")
         private Long lmShopId;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private Integer number;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Long points;
 
-        @NameInMap("PointsAmount")
+        @com.aliyun.core.annotation.NameInMap("PointsAmount")
         private Long pointsAmount;
 
-        @NameInMap("PriceCent")
+        @com.aliyun.core.annotation.NameInMap("PriceCent")
         private Long priceCent;
 
-        @NameInMap("Removed")
+        @com.aliyun.core.annotation.NameInMap("Removed")
         private Boolean removed;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
-        @NameInMap("TbSellerId")
+        @com.aliyun.core.annotation.NameInMap("TbSellerId")
         private Long tbSellerId;
 
-        @NameInMap("UserPayFee")
+        @com.aliyun.core.annotation.NameInMap("UserPayFee")
         private Long userPayFee;
 
         private UnsellableRenderOrderInfosShopPromInstVOSAvailableItems(Builder builder) {
@@ -3876,7 +3995,10 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             }
 
             /**
-             * skuid
+             * <p>skuid</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder skuId(Long skuId) {
                 this.skuId = skuId;
@@ -3906,56 +4028,62 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class UnsellableRenderOrderInfosShopPromInstVOS extends TeaModel {
-        @NameInMap("AvailableItems")
-        private java.util.List < UnsellableRenderOrderInfosShopPromInstVOSAvailableItems> availableItems;
+        @com.aliyun.core.annotation.NameInMap("AvailableItems")
+        private java.util.List<UnsellableRenderOrderInfosShopPromInstVOSAvailableItems> availableItems;
 
-        @NameInMap("CanUse")
+        @com.aliyun.core.annotation.NameInMap("CanUse")
         private Boolean canUse;
 
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Long discountPrice;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("PromotionType")
+        @com.aliyun.core.annotation.NameInMap("PromotionType")
         private String promotionType;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
-        @NameInMap("SkuIds")
-        private java.util.List < Long > skuIds;
+        @com.aliyun.core.annotation.NameInMap("SkuIds")
+        private java.util.List<Long> skuIds;
 
-        @NameInMap("SpecialPrice")
+        @com.aliyun.core.annotation.NameInMap("SpecialPrice")
         private Long specialPrice;
 
-        @NameInMap("SubBizCode")
+        @com.aliyun.core.annotation.NameInMap("SubBizCode")
         private String subBizCode;
 
-        @NameInMap("TbSellerId")
+        @com.aliyun.core.annotation.NameInMap("TbSellerId")
         private Long tbSellerId;
 
-        @NameInMap("ThresholdPrice")
+        @com.aliyun.core.annotation.NameInMap("ThresholdPrice")
         private Long thresholdPrice;
 
-        @NameInMap("UseStartTime")
+        @com.aliyun.core.annotation.NameInMap("UseStartTime")
         private Long useStartTime;
 
         private UnsellableRenderOrderInfosShopPromInstVOS(Builder builder) {
@@ -3989,7 +4117,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return availableItems
          */
-        public java.util.List < UnsellableRenderOrderInfosShopPromInstVOSAvailableItems> getAvailableItems() {
+        public java.util.List<UnsellableRenderOrderInfosShopPromInstVOSAvailableItems> getAvailableItems() {
             return this.availableItems;
         }
 
@@ -4066,7 +4194,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return skuIds
          */
-        public java.util.List < Long > getSkuIds() {
+        public java.util.List<Long> getSkuIds() {
             return this.skuIds;
         }
 
@@ -4106,7 +4234,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < UnsellableRenderOrderInfosShopPromInstVOSAvailableItems> availableItems; 
+            private java.util.List<UnsellableRenderOrderInfosShopPromInstVOSAvailableItems> availableItems; 
             private Boolean canUse; 
             private Long discountPrice; 
             private Long expireTime; 
@@ -4117,7 +4245,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             private String promotionType; 
             private String reason; 
             private Boolean selected; 
-            private java.util.List < Long > skuIds; 
+            private java.util.List<Long> skuIds; 
             private Long specialPrice; 
             private String subBizCode; 
             private Long tbSellerId; 
@@ -4127,7 +4255,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * AvailableItems.
              */
-            public Builder availableItems(java.util.List < UnsellableRenderOrderInfosShopPromInstVOSAvailableItems> availableItems) {
+            public Builder availableItems(java.util.List<UnsellableRenderOrderInfosShopPromInstVOSAvailableItems> availableItems) {
                 this.availableItems = availableItems;
                 return this;
             }
@@ -4213,9 +4341,9 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             }
 
             /**
-             * skuid
+             * <p>skuid</p>
              */
-            public Builder skuIds(java.util.List < Long > skuIds) {
+            public Builder skuIds(java.util.List<Long> skuIds) {
                 this.skuIds = skuIds;
                 return this;
             }
@@ -4267,32 +4395,38 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class UnsellableRenderOrderInfos extends TeaModel {
-        @NameInMap("CanSell")
+        @com.aliyun.core.annotation.NameInMap("CanSell")
         private Boolean canSell;
 
-        @NameInMap("DeliveryInfos")
-        private java.util.List < UnsellableRenderOrderInfosDeliveryInfos> deliveryInfos;
+        @com.aliyun.core.annotation.NameInMap("DeliveryInfos")
+        private java.util.List<UnsellableRenderOrderInfosDeliveryInfos> deliveryInfos;
 
-        @NameInMap("ExtInfo")
-        private java.util.Map < String, String > extInfo;
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
+        private java.util.Map<String, String> extInfo;
 
-        @NameInMap("InvoiceInfo")
+        @com.aliyun.core.annotation.NameInMap("InvoiceInfo")
         private UnsellableRenderOrderInfosInvoiceInfo invoiceInfo;
 
-        @NameInMap("LmItemInfos")
-        private java.util.List < UnsellableRenderOrderInfosLmItemInfos> lmItemInfos;
+        @com.aliyun.core.annotation.NameInMap("LmItemInfos")
+        private java.util.List<UnsellableRenderOrderInfosLmItemInfos> lmItemInfos;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("SellerId")
+        @com.aliyun.core.annotation.NameInMap("SellerId")
         private Long sellerId;
 
-        @NameInMap("ShopPromInstVOS")
-        private java.util.List < UnsellableRenderOrderInfosShopPromInstVOS> shopPromInstVOS;
+        @com.aliyun.core.annotation.NameInMap("ShopPromInstVOS")
+        private java.util.List<UnsellableRenderOrderInfosShopPromInstVOS> shopPromInstVOS;
 
-        @NameInMap("TbShopName")
+        @com.aliyun.core.annotation.NameInMap("TbShopName")
         private String tbShopName;
 
         private UnsellableRenderOrderInfos(Builder builder) {
@@ -4325,14 +4459,14 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return deliveryInfos
          */
-        public java.util.List < UnsellableRenderOrderInfosDeliveryInfos> getDeliveryInfos() {
+        public java.util.List<UnsellableRenderOrderInfosDeliveryInfos> getDeliveryInfos() {
             return this.deliveryInfos;
         }
 
         /**
          * @return extInfo
          */
-        public java.util.Map < String, String > getExtInfo() {
+        public java.util.Map<String, String> getExtInfo() {
             return this.extInfo;
         }
 
@@ -4346,7 +4480,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return lmItemInfos
          */
-        public java.util.List < UnsellableRenderOrderInfosLmItemInfos> getLmItemInfos() {
+        public java.util.List<UnsellableRenderOrderInfosLmItemInfos> getLmItemInfos() {
             return this.lmItemInfos;
         }
 
@@ -4367,7 +4501,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return shopPromInstVOS
          */
-        public java.util.List < UnsellableRenderOrderInfosShopPromInstVOS> getShopPromInstVOS() {
+        public java.util.List<UnsellableRenderOrderInfosShopPromInstVOS> getShopPromInstVOS() {
             return this.shopPromInstVOS;
         }
 
@@ -4380,13 +4514,13 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean canSell; 
-            private java.util.List < UnsellableRenderOrderInfosDeliveryInfos> deliveryInfos; 
-            private java.util.Map < String, String > extInfo; 
+            private java.util.List<UnsellableRenderOrderInfosDeliveryInfos> deliveryInfos; 
+            private java.util.Map<String, String> extInfo; 
             private UnsellableRenderOrderInfosInvoiceInfo invoiceInfo; 
-            private java.util.List < UnsellableRenderOrderInfosLmItemInfos> lmItemInfos; 
+            private java.util.List<UnsellableRenderOrderInfosLmItemInfos> lmItemInfos; 
             private String message; 
             private Long sellerId; 
-            private java.util.List < UnsellableRenderOrderInfosShopPromInstVOS> shopPromInstVOS; 
+            private java.util.List<UnsellableRenderOrderInfosShopPromInstVOS> shopPromInstVOS; 
             private String tbShopName; 
 
             /**
@@ -4400,7 +4534,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * DeliveryInfos.
              */
-            public Builder deliveryInfos(java.util.List < UnsellableRenderOrderInfosDeliveryInfos> deliveryInfos) {
+            public Builder deliveryInfos(java.util.List<UnsellableRenderOrderInfosDeliveryInfos> deliveryInfos) {
                 this.deliveryInfos = deliveryInfos;
                 return this;
             }
@@ -4408,7 +4542,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * ExtInfo.
              */
-            public Builder extInfo(java.util.Map < String, String > extInfo) {
+            public Builder extInfo(java.util.Map<String, String> extInfo) {
                 this.extInfo = extInfo;
                 return this;
             }
@@ -4424,7 +4558,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * LmItemInfos.
              */
-            public Builder lmItemInfos(java.util.List < UnsellableRenderOrderInfosLmItemInfos> lmItemInfos) {
+            public Builder lmItemInfos(java.util.List<UnsellableRenderOrderInfosLmItemInfos> lmItemInfos) {
                 this.lmItemInfos = lmItemInfos;
                 return this;
             }
@@ -4448,7 +4582,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * ShopPromInstVOS.
              */
-            public Builder shopPromInstVOS(java.util.List < UnsellableRenderOrderInfosShopPromInstVOS> shopPromInstVOS) {
+            public Builder shopPromInstVOS(java.util.List<UnsellableRenderOrderInfosShopPromInstVOS> shopPromInstVOS) {
                 this.shopPromInstVOS = shopPromInstVOS;
                 return this;
             }
@@ -4468,27 +4602,33 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("AddressInfos")
-        private java.util.List < AddressInfos> addressInfos;
+        @com.aliyun.core.annotation.NameInMap("AddressInfos")
+        private java.util.List<AddressInfos> addressInfos;
 
-        @NameInMap("BuyerCurrentPoints")
+        @com.aliyun.core.annotation.NameInMap("BuyerCurrentPoints")
         private Long buyerCurrentPoints;
 
-        @NameInMap("CanSell")
+        @com.aliyun.core.annotation.NameInMap("CanSell")
         private Boolean canSell;
 
-        @NameInMap("ExtInfo")
-        private java.util.Map < String, String > extInfo;
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
+        private java.util.Map<String, String> extInfo;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("RenderOrderInfos")
-        private java.util.List < RenderOrderInfos> renderOrderInfos;
+        @com.aliyun.core.annotation.NameInMap("RenderOrderInfos")
+        private java.util.List<RenderOrderInfos> renderOrderInfos;
 
-        @NameInMap("UnsellableRenderOrderInfos")
-        private java.util.List < UnsellableRenderOrderInfos> unsellableRenderOrderInfos;
+        @com.aliyun.core.annotation.NameInMap("UnsellableRenderOrderInfos")
+        private java.util.List<UnsellableRenderOrderInfos> unsellableRenderOrderInfos;
 
         private Model(Builder builder) {
             this.addressInfos = builder.addressInfos;
@@ -4511,7 +4651,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return addressInfos
          */
-        public java.util.List < AddressInfos> getAddressInfos() {
+        public java.util.List<AddressInfos> getAddressInfos() {
             return this.addressInfos;
         }
 
@@ -4532,7 +4672,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return extInfo
          */
-        public java.util.Map < String, String > getExtInfo() {
+        public java.util.Map<String, String> getExtInfo() {
             return this.extInfo;
         }
 
@@ -4546,30 +4686,30 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
         /**
          * @return renderOrderInfos
          */
-        public java.util.List < RenderOrderInfos> getRenderOrderInfos() {
+        public java.util.List<RenderOrderInfos> getRenderOrderInfos() {
             return this.renderOrderInfos;
         }
 
         /**
          * @return unsellableRenderOrderInfos
          */
-        public java.util.List < UnsellableRenderOrderInfos> getUnsellableRenderOrderInfos() {
+        public java.util.List<UnsellableRenderOrderInfos> getUnsellableRenderOrderInfos() {
             return this.unsellableRenderOrderInfos;
         }
 
         public static final class Builder {
-            private java.util.List < AddressInfos> addressInfos; 
+            private java.util.List<AddressInfos> addressInfos; 
             private Long buyerCurrentPoints; 
             private Boolean canSell; 
-            private java.util.Map < String, String > extInfo; 
+            private java.util.Map<String, String> extInfo; 
             private String message; 
-            private java.util.List < RenderOrderInfos> renderOrderInfos; 
-            private java.util.List < UnsellableRenderOrderInfos> unsellableRenderOrderInfos; 
+            private java.util.List<RenderOrderInfos> renderOrderInfos; 
+            private java.util.List<UnsellableRenderOrderInfos> unsellableRenderOrderInfos; 
 
             /**
              * AddressInfos.
              */
-            public Builder addressInfos(java.util.List < AddressInfos> addressInfos) {
+            public Builder addressInfos(java.util.List<AddressInfos> addressInfos) {
                 this.addressInfos = addressInfos;
                 return this;
             }
@@ -4593,7 +4733,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * ExtInfo.
              */
-            public Builder extInfo(java.util.Map < String, String > extInfo) {
+            public Builder extInfo(java.util.Map<String, String> extInfo) {
                 this.extInfo = extInfo;
                 return this;
             }
@@ -4609,7 +4749,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * RenderOrderInfos.
              */
-            public Builder renderOrderInfos(java.util.List < RenderOrderInfos> renderOrderInfos) {
+            public Builder renderOrderInfos(java.util.List<RenderOrderInfos> renderOrderInfos) {
                 this.renderOrderInfos = renderOrderInfos;
                 return this;
             }
@@ -4617,7 +4757,7 @@ public class RenderOrderWithDesignatedTbUidResponseBody extends TeaModel {
             /**
              * UnsellableRenderOrderInfos.
              */
-            public Builder unsellableRenderOrderInfos(java.util.List < UnsellableRenderOrderInfos> unsellableRenderOrderInfos) {
+            public Builder unsellableRenderOrderInfos(java.util.List<UnsellableRenderOrderInfos> unsellableRenderOrderInfos) {
                 this.unsellableRenderOrderInfos = unsellableRenderOrderInfos;
                 return this;
             }

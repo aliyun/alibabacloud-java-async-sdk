@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUpcomingMoviesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUpcomingMoviesResponseBody</p>
  */
 public class QueryUpcomingMoviesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Movies")
+    @com.aliyun.core.annotation.NameInMap("Movies")
     private Movies movies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryUpcomingMoviesResponseBody(Builder builder) {
@@ -211,62 +216,68 @@ public class QueryUpcomingMoviesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUpcomingMoviesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUpcomingMoviesResponseBody</p>
+     */
     public static class Movie extends TeaModel {
-        @NameInMap("BackgroundPicture")
+        @com.aliyun.core.annotation.NameInMap("BackgroundPicture")
         private String backgroundPicture;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Director")
+        @com.aliyun.core.annotation.NameInMap("Director")
         private String director;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Highlight")
+        @com.aliyun.core.annotation.NameInMap("Highlight")
         private String highlight;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("LeadingRole")
+        @com.aliyun.core.annotation.NameInMap("LeadingRole")
         private String leadingRole;
 
-        @NameInMap("MovieName")
+        @com.aliyun.core.annotation.NameInMap("MovieName")
         private String movieName;
 
-        @NameInMap("MovieNameEn")
+        @com.aliyun.core.annotation.NameInMap("MovieNameEn")
         private String movieNameEn;
 
-        @NameInMap("MovieTypeList")
+        @com.aliyun.core.annotation.NameInMap("MovieTypeList")
         private String movieTypeList;
 
-        @NameInMap("MovieVersion")
+        @com.aliyun.core.annotation.NameInMap("MovieVersion")
         private String movieVersion;
 
-        @NameInMap("OpenDay")
+        @com.aliyun.core.annotation.NameInMap("OpenDay")
         private String openDay;
 
-        @NameInMap("OpenTime")
+        @com.aliyun.core.annotation.NameInMap("OpenTime")
         private String openTime;
 
-        @NameInMap("Poster")
+        @com.aliyun.core.annotation.NameInMap("Poster")
         private String poster;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("TrailerList")
+        @com.aliyun.core.annotation.NameInMap("TrailerList")
         private String trailerList;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Movie(Builder builder) {
@@ -612,9 +623,15 @@ public class QueryUpcomingMoviesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryUpcomingMoviesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUpcomingMoviesResponseBody</p>
+     */
     public static class Movies extends TeaModel {
-        @NameInMap("Movie")
-        private java.util.List < Movie> movie;
+        @com.aliyun.core.annotation.NameInMap("Movie")
+        private java.util.List<Movie> movie;
 
         private Movies(Builder builder) {
             this.movie = builder.movie;
@@ -631,17 +648,17 @@ public class QueryUpcomingMoviesResponseBody extends TeaModel {
         /**
          * @return movie
          */
-        public java.util.List < Movie> getMovie() {
+        public java.util.List<Movie> getMovie() {
             return this.movie;
         }
 
         public static final class Builder {
-            private java.util.List < Movie> movie; 
+            private java.util.List<Movie> movie; 
 
             /**
              * Movie.
              */
-            public Builder movie(java.util.List < Movie> movie) {
+            public Builder movie(java.util.List<Movie> movie) {
                 this.movie = movie;
                 return this;
             }

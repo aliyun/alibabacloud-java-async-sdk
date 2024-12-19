@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBestSession4ItemsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryBestSession4ItemsResponseBody</p>
  */
 public class QueryBestSession4ItemsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LmItemActivitySessionModelList")
+    @com.aliyun.core.annotation.NameInMap("LmItemActivitySessionModelList")
     private LmItemActivitySessionModelList lmItemActivitySessionModelList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryBestSession4ItemsResponseBody(Builder builder) {
@@ -111,35 +116,41 @@ public class QueryBestSession4ItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryBestSession4ItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBestSession4ItemsResponseBody</p>
+     */
     public static class LmActivitySessionModel extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayDate")
+        @com.aliyun.core.annotation.NameInMap("DisplayDate")
         private String displayDate;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("ExtInfo")
-        private java.util.Map < String, ? > extInfo;
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
+        private java.util.Map<String, ?> extInfo;
 
-        @NameInMap("LmActivityId")
+        @com.aliyun.core.annotation.NameInMap("LmActivityId")
         private Long lmActivityId;
 
-        @NameInMap("LmSessionId")
+        @com.aliyun.core.annotation.NameInMap("LmSessionId")
         private Long lmSessionId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
-        @NameInMap("SubBizCode")
+        @com.aliyun.core.annotation.NameInMap("SubBizCode")
         private String subBizCode;
 
         private LmActivitySessionModel(Builder builder) {
@@ -194,7 +205,7 @@ public class QueryBestSession4ItemsResponseBody extends TeaModel {
         /**
          * @return extInfo
          */
-        public java.util.Map < String, ? > getExtInfo() {
+        public java.util.Map<String, ?> getExtInfo() {
             return this.extInfo;
         }
 
@@ -238,7 +249,7 @@ public class QueryBestSession4ItemsResponseBody extends TeaModel {
             private String description; 
             private String displayDate; 
             private String endDate; 
-            private java.util.Map < String, ? > extInfo; 
+            private java.util.Map<String, ?> extInfo; 
             private Long lmActivityId; 
             private Long lmSessionId; 
             private String name; 
@@ -280,7 +291,7 @@ public class QueryBestSession4ItemsResponseBody extends TeaModel {
             /**
              * ExtInfo.
              */
-            public Builder extInfo(java.util.Map < String, ? > extInfo) {
+            public Builder extInfo(java.util.Map<String, ?> extInfo) {
                 this.extInfo = extInfo;
                 return this;
             }
@@ -332,14 +343,20 @@ public class QueryBestSession4ItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryBestSession4ItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBestSession4ItemsResponseBody</p>
+     */
     public static class LmItemActivitySessionModel extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmActivitySessionModel")
+        @com.aliyun.core.annotation.NameInMap("LmActivitySessionModel")
         private LmActivitySessionModel lmActivitySessionModel;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
         private LmItemActivitySessionModel(Builder builder) {
@@ -413,9 +430,15 @@ public class QueryBestSession4ItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryBestSession4ItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBestSession4ItemsResponseBody</p>
+     */
     public static class LmItemActivitySessionModelList extends TeaModel {
-        @NameInMap("LmItemActivitySessionModel")
-        private java.util.List < LmItemActivitySessionModel> lmItemActivitySessionModel;
+        @com.aliyun.core.annotation.NameInMap("LmItemActivitySessionModel")
+        private java.util.List<LmItemActivitySessionModel> lmItemActivitySessionModel;
 
         private LmItemActivitySessionModelList(Builder builder) {
             this.lmItemActivitySessionModel = builder.lmItemActivitySessionModel;
@@ -432,17 +455,17 @@ public class QueryBestSession4ItemsResponseBody extends TeaModel {
         /**
          * @return lmItemActivitySessionModel
          */
-        public java.util.List < LmItemActivitySessionModel> getLmItemActivitySessionModel() {
+        public java.util.List<LmItemActivitySessionModel> getLmItemActivitySessionModel() {
             return this.lmItemActivitySessionModel;
         }
 
         public static final class Builder {
-            private java.util.List < LmItemActivitySessionModel> lmItemActivitySessionModel; 
+            private java.util.List<LmItemActivitySessionModel> lmItemActivitySessionModel; 
 
             /**
              * LmItemActivitySessionModel.
              */
-            public Builder lmItemActivitySessionModel(java.util.List < LmItemActivitySessionModel> lmItemActivitySessionModel) {
+            public Builder lmItemActivitySessionModel(java.util.List<LmItemActivitySessionModel> lmItemActivitySessionModel) {
                 this.lmItemActivitySessionModel = lmItemActivitySessionModel;
                 return this;
             }

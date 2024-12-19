@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryChannelItemBillDownloadUrlResponseBody} extends {@link TeaModel}
  *
  * <p>QueryChannelItemBillDownloadUrlResponseBody</p>
  */
 public class QueryChannelItemBillDownloadUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryChannelItemBillDownloadUrlResponseBody(Builder builder) {
@@ -131,14 +136,20 @@ public class QueryChannelItemBillDownloadUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryChannelItemBillDownloadUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryChannelItemBillDownloadUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BillId")
+        @com.aliyun.core.annotation.NameInMap("BillId")
         private String billId;
 
-        @NameInMap("FileDownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("FileDownloadUrl")
         private String fileDownloadUrl;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private Data(Builder builder) {
@@ -212,17 +223,23 @@ public class QueryChannelItemBillDownloadUrlResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryChannelItemBillDownloadUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryChannelItemBillDownloadUrlResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("Data")
-        private java.util.List < Data> data;
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<Data> data;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Model(Builder builder) {
@@ -243,7 +260,7 @@ public class QueryChannelItemBillDownloadUrlResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -269,7 +286,7 @@ public class QueryChannelItemBillDownloadUrlResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer total; 
@@ -277,7 +294,7 @@ public class QueryChannelItemBillDownloadUrlResponseBody extends TeaModel {
             /**
              * Data.
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenderOrderWithDesignatedTbUidRequest} extends {@link RequestModel}
  *
  * <p>RenderOrderWithDesignatedTbUidRequest</p>
  */
 public class RenderOrderWithDesignatedTbUidRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Body
-    @NameInMap("DeliveryAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeliveryAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deliveryAddress;
 
-    @Body
-    @NameInMap("ItemList")
-    @Validation(required = true)
-    private java.util.List < ItemList> itemList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ItemList> itemList;
 
-    @Body
-    @NameInMap("TbAccountType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbAccountType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tbAccountType;
 
-    @Body
-    @NameInMap("TbUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbUserId")
     private Long tbUserId;
 
-    @Body
-    @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartyUserId;
 
     private RenderOrderWithDesignatedTbUidRequest(Builder builder) {
@@ -93,7 +98,7 @@ public class RenderOrderWithDesignatedTbUidRequest extends Request {
     /**
      * @return itemList
      */
-    public java.util.List < ItemList> getItemList() {
+    public java.util.List<ItemList> getItemList() {
         return this.itemList;
     }
 
@@ -122,7 +127,7 @@ public class RenderOrderWithDesignatedTbUidRequest extends Request {
         private String regionId; 
         private String bizId; 
         private String deliveryAddress; 
-        private java.util.List < ItemList> itemList; 
+        private java.util.List<ItemList> itemList; 
         private String tbAccountType; 
         private Long tbUserId; 
         private String thirdPartyUserId; 
@@ -152,7 +157,10 @@ public class RenderOrderWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL202***001</p>
          */
         public Builder bizId(String bizId) {
             this.putBodyParameter("BizId", bizId);
@@ -161,7 +169,7 @@ public class RenderOrderWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * DeliveryAddress.
+         * <p>This parameter is required.</p>
          */
         public Builder deliveryAddress(String deliveryAddress) {
             this.putBodyParameter("DeliveryAddress", deliveryAddress);
@@ -170,9 +178,9 @@ public class RenderOrderWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * ItemList.
+         * <p>This parameter is required.</p>
          */
-        public Builder itemList(java.util.List < ItemList> itemList) {
+        public Builder itemList(java.util.List<ItemList> itemList) {
             String itemListShrink = shrink(itemList, "ItemList", "json");
             this.putBodyParameter("ItemList", itemListShrink);
             this.itemList = itemList;
@@ -180,7 +188,10 @@ public class RenderOrderWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * TbAccountType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANONY</p>
          */
         public Builder tbAccountType(String tbAccountType) {
             this.putBodyParameter("TbAccountType", tbAccountType);
@@ -198,7 +209,10 @@ public class RenderOrderWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * ThirdPartyUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>U123***23</p>
          */
         public Builder thirdPartyUserId(String thirdPartyUserId) {
             this.putBodyParameter("ThirdPartyUserId", thirdPartyUserId);
@@ -213,17 +227,23 @@ public class RenderOrderWithDesignatedTbUidRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RenderOrderWithDesignatedTbUidRequest} extends {@link TeaModel}
+     *
+     * <p>RenderOrderWithDesignatedTbUidRequest</p>
+     */
     public static class ItemList extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
         private ItemList(Builder builder) {

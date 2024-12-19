@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserGameProcessResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserGameProcessResponseBody</p>
  */
 public class ListUserGameProcessResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
-    private java.util.List < Model> model;
+    @com.aliyun.core.annotation.NameInMap("Model")
+    private java.util.List<Model> model;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListUserGameProcessResponseBody(Builder builder) {
@@ -69,7 +74,7 @@ public class ListUserGameProcessResponseBody extends TeaModel {
     /**
      * @return model
      */
-    public java.util.List < Model> getModel() {
+    public java.util.List<Model> getModel() {
         return this.model;
     }
 
@@ -104,7 +109,7 @@ public class ListUserGameProcessResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < Model> model; 
+        private java.util.List<Model> model; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -129,7 +134,7 @@ public class ListUserGameProcessResponseBody extends TeaModel {
         /**
          * Model.
          */
-        public Builder model(java.util.List < Model> model) {
+        public Builder model(java.util.List<Model> model) {
             this.model = model;
             return this;
         }
@@ -143,7 +148,10 @@ public class ListUserGameProcessResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -172,47 +180,53 @@ public class ListUserGameProcessResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserGameProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserGameProcessResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("ActivityId")
+        @com.aliyun.core.annotation.NameInMap("ActivityId")
         private String activityId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CurrentShowContent")
+        @com.aliyun.core.annotation.NameInMap("CurrentShowContent")
         private String currentShowContent;
 
-        @NameInMap("CurrentStepId")
+        @com.aliyun.core.annotation.NameInMap("CurrentStepId")
         private String currentStepId;
 
-        @NameInMap("CurrentStepStatus")
+        @com.aliyun.core.annotation.NameInMap("CurrentStepStatus")
         private String currentStepStatus;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("ExtInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
         private String extInfo;
 
-        @NameInMap("GameId")
+        @com.aliyun.core.annotation.NameInMap("GameId")
         private String gameId;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProcessId")
+        @com.aliyun.core.annotation.NameInMap("ProcessId")
         private String processId;
 
-        @NameInMap("RouteId")
+        @com.aliyun.core.annotation.NameInMap("RouteId")
         private String routeId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Model(Builder builder) {

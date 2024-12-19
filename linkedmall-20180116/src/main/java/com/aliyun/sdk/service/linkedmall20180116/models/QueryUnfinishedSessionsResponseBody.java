@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUnfinishedSessionsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUnfinishedSessionsResponseBody</p>
  */
 public class QueryUnfinishedSessionsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LmActivitySessionModelList")
+    @com.aliyun.core.annotation.NameInMap("LmActivitySessionModelList")
     private LmActivitySessionModelList lmActivitySessionModelList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryUnfinishedSessionsResponseBody(Builder builder) {
@@ -171,32 +176,38 @@ public class QueryUnfinishedSessionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUnfinishedSessionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUnfinishedSessionsResponseBody</p>
+     */
     public static class LmActivitySessionModel extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayDate")
+        @com.aliyun.core.annotation.NameInMap("DisplayDate")
         private String displayDate;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("LmActivityId")
+        @com.aliyun.core.annotation.NameInMap("LmActivityId")
         private Long lmActivityId;
 
-        @NameInMap("LmSessionId")
+        @com.aliyun.core.annotation.NameInMap("LmSessionId")
         private Long lmSessionId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
-        @NameInMap("SubBizCode")
+        @com.aliyun.core.annotation.NameInMap("SubBizCode")
         private String subBizCode;
 
         private LmActivitySessionModel(Builder builder) {
@@ -372,9 +383,15 @@ public class QueryUnfinishedSessionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryUnfinishedSessionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUnfinishedSessionsResponseBody</p>
+     */
     public static class LmActivitySessionModelList extends TeaModel {
-        @NameInMap("LmActivitySessionModel")
-        private java.util.List < LmActivitySessionModel> lmActivitySessionModel;
+        @com.aliyun.core.annotation.NameInMap("LmActivitySessionModel")
+        private java.util.List<LmActivitySessionModel> lmActivitySessionModel;
 
         private LmActivitySessionModelList(Builder builder) {
             this.lmActivitySessionModel = builder.lmActivitySessionModel;
@@ -391,17 +408,17 @@ public class QueryUnfinishedSessionsResponseBody extends TeaModel {
         /**
          * @return lmActivitySessionModel
          */
-        public java.util.List < LmActivitySessionModel> getLmActivitySessionModel() {
+        public java.util.List<LmActivitySessionModel> getLmActivitySessionModel() {
             return this.lmActivitySessionModel;
         }
 
         public static final class Builder {
-            private java.util.List < LmActivitySessionModel> lmActivitySessionModel; 
+            private java.util.List<LmActivitySessionModel> lmActivitySessionModel; 
 
             /**
              * LmActivitySessionModel.
              */
-            public Builder lmActivitySessionModel(java.util.List < LmActivitySessionModel> lmActivitySessionModel) {
+            public Builder lmActivitySessionModel(java.util.List<LmActivitySessionModel> lmActivitySessionModel) {
                 this.lmActivitySessionModel = lmActivitySessionModel;
                 return this;
             }

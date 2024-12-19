@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserTokenPageRequest} extends {@link RequestModel}
  *
  * <p>GetUserTokenPageRequest</p>
  */
 public class GetUserTokenPageRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("ExpireSeconds")
-    @Validation(required = true, maximum = 86400, minimum = 60)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpireSeconds")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 86400, minimum = 60)
     private Long expireSeconds;
 
-    @Query
-    @NameInMap("ExtJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtJson")
     private String extJson;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartyUserId;
 
-    @Query
-    @NameInMap("UserNick")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserNick")
     private String userNick;
 
     private GetUserTokenPageRequest(Builder builder) {
@@ -113,7 +118,10 @@ public class GetUserTokenPageRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -122,7 +130,10 @@ public class GetUserTokenPageRequest extends Request {
         }
 
         /**
-         * ExpireSeconds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder expireSeconds(Long expireSeconds) {
             this.putQueryParameter("ExpireSeconds", expireSeconds);
@@ -140,7 +151,10 @@ public class GetUserTokenPageRequest extends Request {
         }
 
         /**
-         * ThirdPartyUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22******234</p>
          */
         public Builder thirdPartyUserId(String thirdPartyUserId) {
             this.putQueryParameter("ThirdPartyUserId", thirdPartyUserId);

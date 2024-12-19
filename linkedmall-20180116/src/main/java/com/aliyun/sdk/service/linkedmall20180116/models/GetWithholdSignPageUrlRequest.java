@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWithholdSignPageUrlRequest} extends {@link RequestModel}
  *
  * <p>GetWithholdSignPageUrlRequest</p>
  */
 public class GetWithholdSignPageUrlRequest extends Request {
-    @Body
-    @NameInMap("DeviceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceType")
     private String deviceType;
 
-    @Body
-    @NameInMap("ExtInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtInfo")
     private String extInfo;
 
-    @Body
-    @NameInMap("ExternalAgreementNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalAgreementNo")
     private String externalAgreementNo;
 
-    @Body
-    @NameInMap("IdentityParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdentityParameters")
     private String identityParameters;
 
-    @Body
-    @NameInMap("MerchantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MerchantId")
     private String merchantId;
 
-    @Body
-    @NameInMap("MerchantServiceDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MerchantServiceDescription")
     private String merchantServiceDescription;
 
-    @Body
-    @NameInMap("MerchantServiceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MerchantServiceName")
     private String merchantServiceName;
 
-    @Body
-    @NameInMap("NotifyUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotifyUrl")
     private String notifyUrl;
 
-    @Body
-    @NameInMap("OutRequestNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutRequestNo")
     private String outRequestNo;
 
-    @Body
-    @NameInMap("ReturnUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReturnUrl")
     private String returnUrl;
 
     private GetWithholdSignPageUrlRequest(Builder builder) {

@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrderDetailInnerRequest} extends {@link RequestModel}
  *
  * <p>QueryOrderDetailInnerRequest</p>
  */
 public class QueryOrderDetailInnerRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("BizUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizUid;
 
-    @Query
-    @NameInMap("FilterOption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterOption")
     private String filterOption;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
     private String thirdPartyUserId;
 
-    @Query
-    @NameInMap("UseAnonymousTbAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseAnonymousTbAccount")
     private Boolean useAnonymousTbAccount;
 
     private QueryOrderDetailInnerRequest(Builder builder) {
@@ -112,7 +117,10 @@ public class QueryOrderDetailInnerRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20210927****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -121,7 +129,10 @@ public class QueryOrderDetailInnerRequest extends Request {
         }
 
         /**
-         * BizUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>208823220453****</p>
          */
         public Builder bizUid(String bizUid) {
             this.putQueryParameter("BizUid", bizUid);

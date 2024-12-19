@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteNodeResponseBody} extends {@link TeaModel}
  *
  * <p>ExecuteNodeResponseBody</p>
  */
 public class ExecuteNodeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ExecuteNodeResponseBody(Builder builder) {
@@ -211,12 +216,18 @@ public class ExecuteNodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExecuteNodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExecuteNodeResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("ProcessInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ProcessInstanceId")
         private String processInstanceId;
 
-        @NameInMap("ResponseData")
-        private java.util.Map < String, ? > responseData;
+        @com.aliyun.core.annotation.NameInMap("ResponseData")
+        private java.util.Map<String, ?> responseData;
 
         private Model(Builder builder) {
             this.processInstanceId = builder.processInstanceId;
@@ -241,13 +252,13 @@ public class ExecuteNodeResponseBody extends TeaModel {
         /**
          * @return responseData
          */
-        public java.util.Map < String, ? > getResponseData() {
+        public java.util.Map<String, ?> getResponseData() {
             return this.responseData;
         }
 
         public static final class Builder {
             private String processInstanceId; 
-            private java.util.Map < String, ? > responseData; 
+            private java.util.Map<String, ?> responseData; 
 
             /**
              * ProcessInstanceId.
@@ -260,7 +271,7 @@ public class ExecuteNodeResponseBody extends TeaModel {
             /**
              * ResponseData.
              */
-            public Builder responseData(java.util.Map < String, ? > responseData) {
+            public Builder responseData(java.util.Map<String, ?> responseData) {
                 this.responseData = responseData;
                 return this;
             }

@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBizItemListWithCacheResponseBody} extends {@link TeaModel}
  *
  * <p>QueryBizItemListWithCacheResponseBody</p>
  */
 public class QueryBizItemListWithCacheResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ItemList")
-    private java.util.List < ItemList> itemList;
+    @com.aliyun.core.annotation.NameInMap("ItemList")
+    private java.util.List<ItemList> itemList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryBizItemListWithCacheResponseBody(Builder builder) {
@@ -65,7 +70,7 @@ public class QueryBizItemListWithCacheResponseBody extends TeaModel {
     /**
      * @return itemList
      */
-    public java.util.List < ItemList> getItemList() {
+    public java.util.List<ItemList> getItemList() {
         return this.itemList;
     }
 
@@ -113,7 +118,7 @@ public class QueryBizItemListWithCacheResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < ItemList> itemList; 
+        private java.util.List<ItemList> itemList; 
         private String message; 
         private Long pageNumber; 
         private Long pageSize; 
@@ -132,7 +137,7 @@ public class QueryBizItemListWithCacheResponseBody extends TeaModel {
         /**
          * ItemList.
          */
-        public Builder itemList(java.util.List < ItemList> itemList) {
+        public Builder itemList(java.util.List<ItemList> itemList) {
             this.itemList = itemList;
             return this;
         }
@@ -191,38 +196,44 @@ public class QueryBizItemListWithCacheResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryBizItemListWithCacheResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBizItemListWithCacheResponseBody</p>
+     */
     public static class ItemList extends TeaModel {
-        @NameInMap("CanSell")
+        @com.aliyun.core.annotation.NameInMap("CanSell")
         private Boolean canSell;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("ItemTitle")
+        @com.aliyun.core.annotation.NameInMap("ItemTitle")
         private String itemTitle;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("MainPicUrl")
+        @com.aliyun.core.annotation.NameInMap("MainPicUrl")
         private String mainPicUrl;
 
-        @NameInMap("PointPrice")
+        @com.aliyun.core.annotation.NameInMap("PointPrice")
         private Long pointPrice;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Long points;
 
-        @NameInMap("PointsAmount")
+        @com.aliyun.core.annotation.NameInMap("PointsAmount")
         private Long pointsAmount;
 
-        @NameInMap("PriceCent")
+        @com.aliyun.core.annotation.NameInMap("PriceCent")
         private Long priceCent;
 
-        @NameInMap("ReservePrice")
+        @com.aliyun.core.annotation.NameInMap("ReservePrice")
         private Long reservePrice;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
         private ItemList(Builder builder) {

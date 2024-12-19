@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrderPayUrlForOutDiscountRequest} extends {@link RequestModel}
  *
  * <p>CreateOrderPayUrlForOutDiscountRequest</p>
  */
 public class CreateOrderPayUrlForOutDiscountRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("BizUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizUid;
 
-    @Body
-    @NameInMap("BuyInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BuyInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String buyInfo;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
     private String thirdPartyUserId;
 
-    @Query
-    @NameInMap("UseAnonymousTbAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseAnonymousTbAccount")
     private Boolean useAnonymousTbAccount;
 
     private CreateOrderPayUrlForOutDiscountRequest(Builder builder) {
@@ -113,7 +118,10 @@ public class CreateOrderPayUrlForOutDiscountRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20****201229</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -122,7 +130,10 @@ public class CreateOrderPayUrlForOutDiscountRequest extends Request {
         }
 
         /**
-         * BizUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20882****3220453</p>
          */
         public Builder bizUid(String bizUid) {
             this.putQueryParameter("BizUid", bizUid);
@@ -131,7 +142,10 @@ public class CreateOrderPayUrlForOutDiscountRequest extends Request {
         }
 
         /**
-         * BuyInfo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;addressId&quot;:&quot;158<em><strong><strong>11&quot;,&quot;deliveryInfoId&quot;:&quot;20&quot;,&quot;extJson&quot;:{&quot;subBizCode&quot;:&quot;defaultSubBizCode&quot;},&quot;orderItems&quot;:[{&quot;lmItemId&quot;:&quot;1002</strong></strong>123-67150<strong><strong>12&quot;,&quot;number&quot;:1,&quot;outDiscountFee&quot;:&quot;0&quot;,&quot;price&quot;:&quot;1&quot;,&quot;skuId&quot;:4830321</strong></strong></em>}],&quot;outDiscountInfos&quot;:{&quot;promotionInfos&quot;:[],&quot;totalDiscountFee&quot;:&quot;0&quot;},&quot;postFee&quot;:0,&quot;serviceType&quot;:-4}</p>
          */
         public Builder buyInfo(String buyInfo) {
             this.putBodyParameter("BuyInfo", buyInfo);

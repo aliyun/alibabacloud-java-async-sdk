@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryGuideItemGroupWithOutInventoryResponseBody} extends {@link TeaModel}
  *
  * <p>QueryGuideItemGroupWithOutInventoryResponseBody</p>
  */
 public class QueryGuideItemGroupWithOutInventoryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ItemList")
-    private java.util.List < ItemList> itemList;
+    @com.aliyun.core.annotation.NameInMap("ItemList")
+    private java.util.List<ItemList> itemList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryGuideItemGroupWithOutInventoryResponseBody(Builder builder) {
@@ -61,7 +66,7 @@ public class QueryGuideItemGroupWithOutInventoryResponseBody extends TeaModel {
     /**
      * @return itemList
      */
-    public java.util.List < ItemList> getItemList() {
+    public java.util.List<ItemList> getItemList() {
         return this.itemList;
     }
 
@@ -102,7 +107,7 @@ public class QueryGuideItemGroupWithOutInventoryResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < ItemList> itemList; 
+        private java.util.List<ItemList> itemList; 
         private String message; 
         private Long pageNumber; 
         private Long pageSize; 
@@ -120,7 +125,7 @@ public class QueryGuideItemGroupWithOutInventoryResponseBody extends TeaModel {
         /**
          * ItemList.
          */
-        public Builder itemList(java.util.List < ItemList> itemList) {
+        public Builder itemList(java.util.List<ItemList> itemList) {
             this.itemList = itemList;
             return this;
         }
@@ -171,44 +176,50 @@ public class QueryGuideItemGroupWithOutInventoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryGuideItemGroupWithOutInventoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryGuideItemGroupWithOutInventoryResponseBody</p>
+     */
     public static class ItemList extends TeaModel {
-        @NameInMap("CustomizedAttributeMap")
-        private java.util.Map < String, ? > customizedAttributeMap;
+        @com.aliyun.core.annotation.NameInMap("CustomizedAttributeMap")
+        private java.util.Map<String, ?> customizedAttributeMap;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private String itemId;
 
-        @NameInMap("ItemTitle")
+        @com.aliyun.core.annotation.NameInMap("ItemTitle")
         private String itemTitle;
 
-        @NameInMap("ItemUrl")
+        @com.aliyun.core.annotation.NameInMap("ItemUrl")
         private String itemUrl;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("MainPicUrl")
+        @com.aliyun.core.annotation.NameInMap("MainPicUrl")
         private String mainPicUrl;
 
-        @NameInMap("PointPrice")
+        @com.aliyun.core.annotation.NameInMap("PointPrice")
         private Long pointPrice;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Long points;
 
-        @NameInMap("PointsAmount")
+        @com.aliyun.core.annotation.NameInMap("PointsAmount")
         private Long pointsAmount;
 
-        @NameInMap("PriceCent")
+        @com.aliyun.core.annotation.NameInMap("PriceCent")
         private Long priceCent;
 
-        @NameInMap("ReservePrice")
+        @com.aliyun.core.annotation.NameInMap("ReservePrice")
         private String reservePrice;
 
-        @NameInMap("Tags")
-        private java.util.List < String > tags;
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<String> tags;
 
-        @NameInMap("WhitePicUrl")
+        @com.aliyun.core.annotation.NameInMap("WhitePicUrl")
         private String whitePicUrl;
 
         private ItemList(Builder builder) {
@@ -238,7 +249,7 @@ public class QueryGuideItemGroupWithOutInventoryResponseBody extends TeaModel {
         /**
          * @return customizedAttributeMap
          */
-        public java.util.Map < String, ? > getCustomizedAttributeMap() {
+        public java.util.Map<String, ?> getCustomizedAttributeMap() {
             return this.customizedAttributeMap;
         }
 
@@ -315,7 +326,7 @@ public class QueryGuideItemGroupWithOutInventoryResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
@@ -327,7 +338,7 @@ public class QueryGuideItemGroupWithOutInventoryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > customizedAttributeMap; 
+            private java.util.Map<String, ?> customizedAttributeMap; 
             private String itemId; 
             private String itemTitle; 
             private String itemUrl; 
@@ -338,13 +349,13 @@ public class QueryGuideItemGroupWithOutInventoryResponseBody extends TeaModel {
             private Long pointsAmount; 
             private Long priceCent; 
             private String reservePrice; 
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
             private String whitePicUrl; 
 
             /**
              * CustomizedAttributeMap.
              */
-            public Builder customizedAttributeMap(java.util.Map < String, ? > customizedAttributeMap) {
+            public Builder customizedAttributeMap(java.util.Map<String, ?> customizedAttributeMap) {
                 this.customizedAttributeMap = customizedAttributeMap;
                 return this;
             }
@@ -432,7 +443,7 @@ public class QueryGuideItemGroupWithOutInventoryResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }

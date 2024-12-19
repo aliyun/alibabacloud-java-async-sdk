@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnsignWithholdAgreementResponseBody} extends {@link TeaModel}
  *
  * <p>UnsignWithholdAgreementResponseBody</p>
  */
 public class UnsignWithholdAgreementResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WithholdSignResponse")
+    @com.aliyun.core.annotation.NameInMap("WithholdSignResponse")
     private WithholdSignResponse withholdSignResponse;
 
     private UnsignWithholdAgreementResponseBody(Builder builder) {
@@ -111,8 +116,14 @@ public class UnsignWithholdAgreementResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UnsignWithholdAgreementResponseBody} extends {@link TeaModel}
+     *
+     * <p>UnsignWithholdAgreementResponseBody</p>
+     */
     public static class WithholdSignResponse extends TeaModel {
-        @NameInMap("OutRequestNo")
+        @com.aliyun.core.annotation.NameInMap("OutRequestNo")
         private String outRequestNo;
 
         private WithholdSignResponse(Builder builder) {

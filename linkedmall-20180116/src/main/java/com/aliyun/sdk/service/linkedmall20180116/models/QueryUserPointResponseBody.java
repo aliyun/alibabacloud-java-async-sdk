@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserPointResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUserPointResponseBody</p>
  */
 public class QueryUserPointResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryUserPointResponseBody(Builder builder) {
@@ -111,35 +116,41 @@ public class QueryUserPointResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUserPointResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUserPointResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("BizUid")
+        @com.aliyun.core.annotation.NameInMap("BizUid")
         private String bizUid;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CurrentAmount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmount")
         private Long currentAmount;
 
-        @NameInMap("FrozenAmount")
+        @com.aliyun.core.annotation.NameInMap("FrozenAmount")
         private Long frozenAmount;
 
-        @NameInMap("HistoryAmount")
+        @com.aliyun.core.annotation.NameInMap("HistoryAmount")
         private Long historyAmount;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Model(Builder builder) {

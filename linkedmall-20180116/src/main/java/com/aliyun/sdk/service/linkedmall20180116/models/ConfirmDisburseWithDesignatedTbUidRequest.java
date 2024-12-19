@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfirmDisburseWithDesignatedTbUidRequest} extends {@link RequestModel}
  *
  * <p>ConfirmDisburseWithDesignatedTbUidRequest</p>
  */
 public class ConfirmDisburseWithDesignatedTbUidRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Body
-    @NameInMap("LmOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LmOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long lmOrderId;
 
-    @Body
-    @NameInMap("TbAccountType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbAccountType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tbAccountType;
 
-    @Body
-    @NameInMap("TbUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbUserId")
     private Long tbUserId;
 
-    @Body
-    @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartyUserId;
 
     private ConfirmDisburseWithDesignatedTbUidRequest(Builder builder) {
@@ -137,7 +142,10 @@ public class ConfirmDisburseWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL2022...03</p>
          */
         public Builder bizId(String bizId) {
             this.putBodyParameter("BizId", bizId);
@@ -146,7 +154,10 @@ public class ConfirmDisburseWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * LmOrderId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7068...44</p>
          */
         public Builder lmOrderId(Long lmOrderId) {
             this.putBodyParameter("LmOrderId", lmOrderId);
@@ -155,7 +166,10 @@ public class ConfirmDisburseWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * TbAccountType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANONY</p>
          */
         public Builder tbAccountType(String tbAccountType) {
             this.putBodyParameter("TbAccountType", tbAccountType);
@@ -173,7 +187,10 @@ public class ConfirmDisburseWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * ThirdPartyUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user***002</p>
          */
         public Builder thirdPartyUserId(String thirdPartyUserId) {
             this.putBodyParameter("ThirdPartyUserId", thirdPartyUserId);

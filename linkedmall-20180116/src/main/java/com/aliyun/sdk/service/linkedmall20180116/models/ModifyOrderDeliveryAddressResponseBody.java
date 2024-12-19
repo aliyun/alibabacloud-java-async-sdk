@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyOrderDeliveryAddressResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyOrderDeliveryAddressResponseBody</p>
  */
 public class ModifyOrderDeliveryAddressResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ModifyOrderDeliveryAddressResponseBody(Builder builder) {
@@ -211,9 +216,15 @@ public class ModifyOrderDeliveryAddressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyOrderDeliveryAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyOrderDeliveryAddressResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("ResultInfo")
-        private java.util.Map < String, ? > resultInfo;
+        @com.aliyun.core.annotation.NameInMap("ResultInfo")
+        private java.util.Map<String, ?> resultInfo;
 
         private Model(Builder builder) {
             this.resultInfo = builder.resultInfo;
@@ -230,17 +241,17 @@ public class ModifyOrderDeliveryAddressResponseBody extends TeaModel {
         /**
          * @return resultInfo
          */
-        public java.util.Map < String, ? > getResultInfo() {
+        public java.util.Map<String, ?> getResultInfo() {
             return this.resultInfo;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > resultInfo; 
+            private java.util.Map<String, ?> resultInfo; 
 
             /**
              * ResultInfo.
              */
-            public Builder resultInfo(java.util.Map < String, ? > resultInfo) {
+            public Builder resultInfo(java.util.Map<String, ?> resultInfo) {
                 this.resultInfo = resultInfo;
                 return this;
             }

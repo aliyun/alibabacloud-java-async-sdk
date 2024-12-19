@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserInfoRequest} extends {@link RequestModel}
  *
  * <p>GetUserInfoRequest</p>
  */
 public class GetUserInfoRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Body
-    @NameInMap("QueryJson")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QueryJson")
     private String queryJson;
 
-    @Query
-    @NameInMap("UserFlag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserFlag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userFlag;
 
     private GetUserInfoRequest(Builder builder) {
@@ -99,7 +104,10 @@ public class GetUserInfoRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alipay</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -108,7 +116,10 @@ public class GetUserInfoRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -126,7 +137,10 @@ public class GetUserInfoRequest extends Request {
         }
 
         /**
-         * UserFlag.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder userFlag(String userFlag) {
             this.putQueryParameter("UserFlag", userFlag);

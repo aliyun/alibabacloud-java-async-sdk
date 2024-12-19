@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBody} extends {@link TeaModel}
  *
  * <p>QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBody</p>
  */
 public class QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LmOrderList")
+    @com.aliyun.core.annotation.NameInMap("LmOrderList")
     private LmOrderList lmOrderList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBody(Builder builder) {
@@ -111,23 +116,29 @@ public class QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBody extends TeaMo
 
     } 
 
+    /**
+     * 
+     * {@link QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBody</p>
+     */
     public static class LmOrderListLmOrderList extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("ItemName")
+        @com.aliyun.core.annotation.NameInMap("ItemName")
         private String itemName;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("LmOrderId")
+        @com.aliyun.core.annotation.NameInMap("LmOrderId")
         private Long lmOrderId;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
-        @NameInMap("SkuName")
+        @com.aliyun.core.annotation.NameInMap("SkuName")
         private String skuName;
 
         private LmOrderListLmOrderList(Builder builder) {
@@ -252,9 +263,15 @@ public class QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBody</p>
+     */
     public static class LmOrderList extends TeaModel {
-        @NameInMap("LmOrderList")
-        private java.util.List < LmOrderListLmOrderList> lmOrderList;
+        @com.aliyun.core.annotation.NameInMap("LmOrderList")
+        private java.util.List<LmOrderListLmOrderList> lmOrderList;
 
         private LmOrderList(Builder builder) {
             this.lmOrderList = builder.lmOrderList;
@@ -271,17 +288,17 @@ public class QueryOrderItemInfoByPaymentIdForAiZhanYouResponseBody extends TeaMo
         /**
          * @return lmOrderList
          */
-        public java.util.List < LmOrderListLmOrderList> getLmOrderList() {
+        public java.util.List<LmOrderListLmOrderList> getLmOrderList() {
             return this.lmOrderList;
         }
 
         public static final class Builder {
-            private java.util.List < LmOrderListLmOrderList> lmOrderList; 
+            private java.util.List<LmOrderListLmOrderList> lmOrderList; 
 
             /**
              * LmOrderList.
              */
-            public Builder lmOrderList(java.util.List < LmOrderListLmOrderList> lmOrderList) {
+            public Builder lmOrderList(java.util.List<LmOrderListLmOrderList> lmOrderList) {
                 this.lmOrderList = lmOrderList;
                 return this;
             }

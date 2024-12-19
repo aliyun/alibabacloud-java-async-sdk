@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetItemPromotionRequest} extends {@link RequestModel}
  *
  * <p>GetItemPromotionRequest</p>
  */
 public class GetItemPromotionRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("ItemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ItemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long itemId;
 
-    @Query
-    @NameInMap("LmItemId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LmItemId")
     private String lmItemId;
 
     private GetItemPromotionRequest(Builder builder) {
@@ -84,7 +89,10 @@ public class GetItemPromotionRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******003</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -93,7 +101,10 @@ public class GetItemPromotionRequest extends Request {
         }
 
         /**
-         * ItemId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66262416****</p>
          */
         public Builder itemId(Long itemId) {
             this.putQueryParameter("ItemId", itemId);

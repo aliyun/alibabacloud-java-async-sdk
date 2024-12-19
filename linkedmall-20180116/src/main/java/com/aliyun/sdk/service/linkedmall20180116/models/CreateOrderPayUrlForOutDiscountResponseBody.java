@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrderPayUrlForOutDiscountResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOrderPayUrlForOutDiscountResponseBody</p>
  */
 public class CreateOrderPayUrlForOutDiscountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateOrderPayUrlForOutDiscountResponseBody(Builder builder) {
@@ -131,20 +136,26 @@ public class CreateOrderPayUrlForOutDiscountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOrderPayUrlForOutDiscountResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOrderPayUrlForOutDiscountResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("AllIdsMap")
-        private java.util.Map < String, java.util.Map<String, ?>> allIdsMap;
+        @com.aliyun.core.annotation.NameInMap("AllIdsMap")
+        private java.util.Map<String, java.util.Map<String, ?>> allIdsMap;
 
-        @NameInMap("LmOrderList")
-        private java.util.List < String > lmOrderList;
+        @com.aliyun.core.annotation.NameInMap("LmOrderList")
+        private java.util.List<String> lmOrderList;
 
-        @NameInMap("OrderIds")
-        private java.util.List < String > orderIds;
+        @com.aliyun.core.annotation.NameInMap("OrderIds")
+        private java.util.List<String> orderIds;
 
-        @NameInMap("PayTradeIds")
-        private java.util.List < String > payTradeIds;
+        @com.aliyun.core.annotation.NameInMap("PayTradeIds")
+        private java.util.List<String> payTradeIds;
 
-        @NameInMap("RedirectUrl")
+        @com.aliyun.core.annotation.NameInMap("RedirectUrl")
         private String redirectUrl;
 
         private Model(Builder builder) {
@@ -166,28 +177,28 @@ public class CreateOrderPayUrlForOutDiscountResponseBody extends TeaModel {
         /**
          * @return allIdsMap
          */
-        public java.util.Map < String, java.util.Map<String, ?>> getAllIdsMap() {
+        public java.util.Map<String, java.util.Map<String, ?>> getAllIdsMap() {
             return this.allIdsMap;
         }
 
         /**
          * @return lmOrderList
          */
-        public java.util.List < String > getLmOrderList() {
+        public java.util.List<String> getLmOrderList() {
             return this.lmOrderList;
         }
 
         /**
          * @return orderIds
          */
-        public java.util.List < String > getOrderIds() {
+        public java.util.List<String> getOrderIds() {
             return this.orderIds;
         }
 
         /**
          * @return payTradeIds
          */
-        public java.util.List < String > getPayTradeIds() {
+        public java.util.List<String> getPayTradeIds() {
             return this.payTradeIds;
         }
 
@@ -199,16 +210,16 @@ public class CreateOrderPayUrlForOutDiscountResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, java.util.Map<String, ?>> allIdsMap; 
-            private java.util.List < String > lmOrderList; 
-            private java.util.List < String > orderIds; 
-            private java.util.List < String > payTradeIds; 
+            private java.util.Map<String, java.util.Map<String, ?>> allIdsMap; 
+            private java.util.List<String> lmOrderList; 
+            private java.util.List<String> orderIds; 
+            private java.util.List<String> payTradeIds; 
             private String redirectUrl; 
 
             /**
              * AllIdsMap.
              */
-            public Builder allIdsMap(java.util.Map < String, java.util.Map<String, ?>> allIdsMap) {
+            public Builder allIdsMap(java.util.Map<String, java.util.Map<String, ?>> allIdsMap) {
                 this.allIdsMap = allIdsMap;
                 return this;
             }
@@ -216,7 +227,7 @@ public class CreateOrderPayUrlForOutDiscountResponseBody extends TeaModel {
             /**
              * LmOrderList.
              */
-            public Builder lmOrderList(java.util.List < String > lmOrderList) {
+            public Builder lmOrderList(java.util.List<String> lmOrderList) {
                 this.lmOrderList = lmOrderList;
                 return this;
             }
@@ -224,7 +235,7 @@ public class CreateOrderPayUrlForOutDiscountResponseBody extends TeaModel {
             /**
              * OrderIds.
              */
-            public Builder orderIds(java.util.List < String > orderIds) {
+            public Builder orderIds(java.util.List<String> orderIds) {
                 this.orderIds = orderIds;
                 return this;
             }
@@ -232,7 +243,7 @@ public class CreateOrderPayUrlForOutDiscountResponseBody extends TeaModel {
             /**
              * PayTradeIds.
              */
-            public Builder payTradeIds(java.util.List < String > payTradeIds) {
+            public Builder payTradeIds(java.util.List<String> payTradeIds) {
                 this.payTradeIds = payTradeIds;
                 return this;
             }

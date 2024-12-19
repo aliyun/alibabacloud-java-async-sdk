@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterUserAccountRequest} extends {@link RequestModel}
  *
  * <p>RegisterUserAccountRequest</p>
  */
 public class RegisterUserAccountRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Body
-    @NameInMap("TbAccountType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbAccountType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tbAccountType;
 
-    @Body
-    @NameInMap("TbUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbUserId")
     private Long tbUserId;
 
-    @Body
-    @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartyUserId;
 
     private RegisterUserAccountRequest(Builder builder) {
@@ -122,7 +127,10 @@ public class RegisterUserAccountRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL2022***0001</p>
          */
         public Builder bizId(String bizId) {
             this.putBodyParameter("BizId", bizId);
@@ -131,7 +139,10 @@ public class RegisterUserAccountRequest extends Request {
         }
 
         /**
-         * TbAccountType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANONY</p>
          */
         public Builder tbAccountType(String tbAccountType) {
             this.putBodyParameter("TbAccountType", tbAccountType);
@@ -149,7 +160,10 @@ public class RegisterUserAccountRequest extends Request {
         }
 
         /**
-         * ThirdPartyUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user***121</p>
          */
         public Builder thirdPartyUserId(String thirdPartyUserId) {
             this.putBodyParameter("ThirdPartyUserId", thirdPartyUserId);

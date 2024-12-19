@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InitModifyRefundResponseBody} extends {@link TeaModel}
  *
  * <p>InitModifyRefundResponseBody</p>
  */
 public class InitModifyRefundResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("InitApplyRefundData")
+    @com.aliyun.core.annotation.NameInMap("InitApplyRefundData")
     private InitApplyRefundData initApplyRefundData;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubLmOrderId")
+    @com.aliyun.core.annotation.NameInMap("SubLmOrderId")
     private String subLmOrderId;
 
     private InitModifyRefundResponseBody(Builder builder) {
@@ -131,11 +136,17 @@ public class InitModifyRefundResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InitModifyRefundResponseBody} extends {@link TeaModel}
+     *
+     * <p>InitModifyRefundResponseBody</p>
+     */
     public static class MaxRefundFeeData extends TeaModel {
-        @NameInMap("MaxRefundFee")
+        @com.aliyun.core.annotation.NameInMap("MaxRefundFee")
         private Integer maxRefundFee;
 
-        @NameInMap("MinRefundFee")
+        @com.aliyun.core.annotation.NameInMap("MinRefundFee")
         private Integer minRefundFee;
 
         private MaxRefundFeeData(Builder builder) {
@@ -192,17 +203,23 @@ public class InitModifyRefundResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InitModifyRefundResponseBody} extends {@link TeaModel}
+     *
+     * <p>InitModifyRefundResponseBody</p>
+     */
     public static class RefundReasonList extends TeaModel {
-        @NameInMap("ProofRequired")
+        @com.aliyun.core.annotation.NameInMap("ProofRequired")
         private Boolean proofRequired;
 
-        @NameInMap("ReasonTextId")
+        @com.aliyun.core.annotation.NameInMap("ReasonTextId")
         private Long reasonTextId;
 
-        @NameInMap("ReasonTips")
+        @com.aliyun.core.annotation.NameInMap("ReasonTips")
         private String reasonTips;
 
-        @NameInMap("RefundDescRequired")
+        @com.aliyun.core.annotation.NameInMap("RefundDescRequired")
         private Boolean refundDescRequired;
 
         private RefundReasonList(Builder builder) {
@@ -293,9 +310,15 @@ public class InitModifyRefundResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InitModifyRefundResponseBody} extends {@link TeaModel}
+     *
+     * <p>InitModifyRefundResponseBody</p>
+     */
     public static class InitApplyRefundDataRefundReasonList extends TeaModel {
-        @NameInMap("RefundReasonList")
-        private java.util.List < RefundReasonList> refundReasonList;
+        @com.aliyun.core.annotation.NameInMap("RefundReasonList")
+        private java.util.List<RefundReasonList> refundReasonList;
 
         private InitApplyRefundDataRefundReasonList(Builder builder) {
             this.refundReasonList = builder.refundReasonList;
@@ -312,17 +335,17 @@ public class InitModifyRefundResponseBody extends TeaModel {
         /**
          * @return refundReasonList
          */
-        public java.util.List < RefundReasonList> getRefundReasonList() {
+        public java.util.List<RefundReasonList> getRefundReasonList() {
             return this.refundReasonList;
         }
 
         public static final class Builder {
-            private java.util.List < RefundReasonList> refundReasonList; 
+            private java.util.List<RefundReasonList> refundReasonList; 
 
             /**
              * RefundReasonList.
              */
-            public Builder refundReasonList(java.util.List < RefundReasonList> refundReasonList) {
+            public Builder refundReasonList(java.util.List<RefundReasonList> refundReasonList) {
                 this.refundReasonList = refundReasonList;
                 return this;
             }
@@ -334,17 +357,23 @@ public class InitModifyRefundResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InitModifyRefundResponseBody} extends {@link TeaModel}
+     *
+     * <p>InitModifyRefundResponseBody</p>
+     */
     public static class InitApplyRefundData extends TeaModel {
-        @NameInMap("BizClaimType")
+        @com.aliyun.core.annotation.NameInMap("BizClaimType")
         private Integer bizClaimType;
 
-        @NameInMap("MainOrderRefund")
+        @com.aliyun.core.annotation.NameInMap("MainOrderRefund")
         private Boolean mainOrderRefund;
 
-        @NameInMap("MaxRefundFeeData")
+        @com.aliyun.core.annotation.NameInMap("MaxRefundFeeData")
         private MaxRefundFeeData maxRefundFeeData;
 
-        @NameInMap("RefundReasonList")
+        @com.aliyun.core.annotation.NameInMap("RefundReasonList")
         private InitApplyRefundDataRefundReasonList refundReasonList;
 
         private InitApplyRefundData(Builder builder) {

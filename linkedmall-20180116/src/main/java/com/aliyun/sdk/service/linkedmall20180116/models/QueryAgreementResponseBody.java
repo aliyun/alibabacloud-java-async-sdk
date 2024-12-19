@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAgreementResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAgreementResponseBody</p>
  */
 public class QueryAgreementResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("QueryAgreementResponse")
+    @com.aliyun.core.annotation.NameInMap("QueryAgreementResponse")
     private QueryAgreementResponse queryAgreementResponse;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryAgreementResponseBody(Builder builder) {
@@ -111,23 +116,29 @@ public class QueryAgreementResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAgreementResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAgreementResponseBody</p>
+     */
     public static class QueryAgreementResponse extends TeaModel {
-        @NameInMap("AgreementNo")
+        @com.aliyun.core.annotation.NameInMap("AgreementNo")
         private String agreementNo;
 
-        @NameInMap("ExternalAgreementNo")
+        @com.aliyun.core.annotation.NameInMap("ExternalAgreementNo")
         private String externalAgreementNo;
 
-        @NameInMap("InvalidTime")
+        @com.aliyun.core.annotation.NameInMap("InvalidTime")
         private String invalidTime;
 
-        @NameInMap("SignTime")
+        @com.aliyun.core.annotation.NameInMap("SignTime")
         private String signTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("ValidTime")
+        @com.aliyun.core.annotation.NameInMap("ValidTime")
         private String validTime;
 
         private QueryAgreementResponse(Builder builder) {

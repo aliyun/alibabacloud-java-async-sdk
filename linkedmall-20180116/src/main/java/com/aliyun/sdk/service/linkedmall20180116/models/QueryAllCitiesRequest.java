@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAllCitiesRequest} extends {@link RequestModel}
  *
  * <p>QueryAllCitiesRequest</p>
  */
 public class QueryAllCitiesRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("ExtJson")
-    private java.util.Map < String, ? > extJson;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtJson")
+    private java.util.Map<String, ?> extJson;
 
     private QueryAllCitiesRequest(Builder builder) {
         super(builder);
@@ -50,13 +55,13 @@ public class QueryAllCitiesRequest extends Request {
     /**
      * @return extJson
      */
-    public java.util.Map < String, ? > getExtJson() {
+    public java.util.Map<String, ?> getExtJson() {
         return this.extJson;
     }
 
     public static final class Builder extends Request.Builder<QueryAllCitiesRequest, Builder> {
         private String bizId; 
-        private java.util.Map < String, ? > extJson; 
+        private java.util.Map<String, ?> extJson; 
 
         private Builder() {
             super();
@@ -69,7 +74,10 @@ public class QueryAllCitiesRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -80,7 +88,7 @@ public class QueryAllCitiesRequest extends Request {
         /**
          * ExtJson.
          */
-        public Builder extJson(java.util.Map < String, ? > extJson) {
+        public Builder extJson(java.util.Map<String, ?> extJson) {
             String extJsonShrink = shrink(extJson, "ExtJson", "json");
             this.putQueryParameter("ExtJson", extJsonShrink);
             this.extJson = extJson;

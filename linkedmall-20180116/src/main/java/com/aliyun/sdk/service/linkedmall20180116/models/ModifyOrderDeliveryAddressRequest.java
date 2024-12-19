@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyOrderDeliveryAddressRequest} extends {@link RequestModel}
  *
  * <p>ModifyOrderDeliveryAddressRequest</p>
  */
 public class ModifyOrderDeliveryAddressRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("DeliveryAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deliveryAddress;
 
-    @Query
-    @NameInMap("ExtJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtJson")
     private String extJson;
 
-    @Query
-    @NameInMap("LmOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LmOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long lmOrderId;
 
     private ModifyOrderDeliveryAddressRequest(Builder builder) {
@@ -99,7 +104,10 @@ public class ModifyOrderDeliveryAddressRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20190325****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -108,7 +116,7 @@ public class ModifyOrderDeliveryAddressRequest extends Request {
         }
 
         /**
-         * DeliveryAddress.
+         * <p>This parameter is required.</p>
          */
         public Builder deliveryAddress(String deliveryAddress) {
             this.putQueryParameter("DeliveryAddress", deliveryAddress);
@@ -126,7 +134,10 @@ public class ModifyOrderDeliveryAddressRequest extends Request {
         }
 
         /**
-         * LmOrderId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53396****</p>
          */
         public Builder lmOrderId(Long lmOrderId) {
             this.putQueryParameter("LmOrderId", lmOrderId);

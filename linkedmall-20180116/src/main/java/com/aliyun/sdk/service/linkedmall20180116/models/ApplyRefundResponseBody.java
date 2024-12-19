@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyRefundResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyRefundResponseBody</p>
  */
 public class ApplyRefundResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RefundApplicationData")
+    @com.aliyun.core.annotation.NameInMap("RefundApplicationData")
     private RefundApplicationData refundApplicationData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ApplyRefundResponseBody(Builder builder) {
@@ -111,17 +116,23 @@ public class ApplyRefundResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyRefundResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyRefundResponseBody</p>
+     */
     public static class RefundApplicationData extends TeaModel {
-        @NameInMap("DisputeId")
+        @com.aliyun.core.annotation.NameInMap("DisputeId")
         private Long disputeId;
 
-        @NameInMap("DisputeStatus")
+        @com.aliyun.core.annotation.NameInMap("DisputeStatus")
         private Integer disputeStatus;
 
-        @NameInMap("DisputeType")
+        @com.aliyun.core.annotation.NameInMap("DisputeType")
         private Integer disputeType;
 
-        @NameInMap("SubLmOrderId")
+        @com.aliyun.core.annotation.NameInMap("SubLmOrderId")
         private String subLmOrderId;
 
         private RefundApplicationData(Builder builder) {

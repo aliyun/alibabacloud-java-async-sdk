@@ -1,49 +1,54 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReserveMovieSeatRequest} extends {@link RequestModel}
  *
  * <p>ReserveMovieSeatRequest</p>
  */
 public class ReserveMovieSeatRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("BizUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizUid;
 
-    @Query
-    @NameInMap("ExtJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtJson")
     private String extJson;
 
-    @Query
-    @NameInMap("Mobile")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mobile")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mobile;
 
-    @Query
-    @NameInMap("ScheduleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long scheduleId;
 
-    @Query
-    @NameInMap("SeatIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SeatIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String seatIds;
 
-    @Query
-    @NameInMap("SeatNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SeatNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String seatNames;
 
     private ReserveMovieSeatRequest(Builder builder) {
@@ -144,7 +149,10 @@ public class ReserveMovieSeatRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******003</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -153,7 +161,10 @@ public class ReserveMovieSeatRequest extends Request {
         }
 
         /**
-         * BizUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22******85759</p>
          */
         public Builder bizUid(String bizUid) {
             this.putQueryParameter("BizUid", bizUid);
@@ -171,7 +182,10 @@ public class ReserveMovieSeatRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>186******71</p>
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -180,7 +194,10 @@ public class ReserveMovieSeatRequest extends Request {
         }
 
         /**
-         * ScheduleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9******15</p>
          */
         public Builder scheduleId(Long scheduleId) {
             this.putQueryParameter("ScheduleId", scheduleId);
@@ -189,7 +206,7 @@ public class ReserveMovieSeatRequest extends Request {
         }
 
         /**
-         * SeatIds.
+         * <p>This parameter is required.</p>
          */
         public Builder seatIds(String seatIds) {
             this.putQueryParameter("SeatIds", seatIds);
@@ -198,7 +215,7 @@ public class ReserveMovieSeatRequest extends Request {
         }
 
         /**
-         * SeatNames.
+         * <p>This parameter is required.</p>
          */
         public Builder seatNames(String seatNames) {
             this.putQueryParameter("SeatNames", seatNames);

@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryItemDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QueryItemDetailResponseBody</p>
  */
 public class QueryItemDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Item")
+    @com.aliyun.core.annotation.NameInMap("Item")
     private Item item;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryItemDetailResponseBody(Builder builder) {
@@ -171,9 +176,15 @@ public class QueryItemDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryItemDetailResponseBody</p>
+     */
     public static class ItemImages extends TeaModel {
-        @NameInMap("ItemImage")
-        private java.util.List < String > itemImage;
+        @com.aliyun.core.annotation.NameInMap("ItemImage")
+        private java.util.List<String> itemImage;
 
         private ItemImages(Builder builder) {
             this.itemImage = builder.itemImage;
@@ -190,17 +201,17 @@ public class QueryItemDetailResponseBody extends TeaModel {
         /**
          * @return itemImage
          */
-        public java.util.List < String > getItemImage() {
+        public java.util.List<String> getItemImage() {
             return this.itemImage;
         }
 
         public static final class Builder {
-            private java.util.List < String > itemImage; 
+            private java.util.List<String> itemImage; 
 
             /**
              * ItemImage.
              */
-            public Builder itemImage(java.util.List < String > itemImage) {
+            public Builder itemImage(java.util.List<String> itemImage) {
                 this.itemImage = itemImage;
                 return this;
             }
@@ -212,53 +223,59 @@ public class QueryItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryItemDetailResponseBody</p>
+     */
     public static class Sku extends TeaModel {
-        @NameInMap("CanSell")
+        @com.aliyun.core.annotation.NameInMap("CanSell")
         private Boolean canSell;
 
-        @NameInMap("CustomizedAttributeMap")
-        private java.util.Map < String, ? > customizedAttributeMap;
+        @com.aliyun.core.annotation.NameInMap("CustomizedAttributeMap")
+        private java.util.Map<String, ?> customizedAttributeMap;
 
-        @NameInMap("ExtJson")
+        @com.aliyun.core.annotation.NameInMap("ExtJson")
         private String extJson;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("PointPrice")
+        @com.aliyun.core.annotation.NameInMap("PointPrice")
         private Long pointPrice;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Long points;
 
-        @NameInMap("PointsAmount")
+        @com.aliyun.core.annotation.NameInMap("PointsAmount")
         private Long pointsAmount;
 
-        @NameInMap("PriceCent")
+        @com.aliyun.core.annotation.NameInMap("PriceCent")
         private Long priceCent;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("ReservePrice")
+        @com.aliyun.core.annotation.NameInMap("ReservePrice")
         private Long reservePrice;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
-        @NameInMap("SkuPicUrl")
+        @com.aliyun.core.annotation.NameInMap("SkuPicUrl")
         private String skuPicUrl;
 
-        @NameInMap("SkuProperties")
+        @com.aliyun.core.annotation.NameInMap("SkuProperties")
         private String skuProperties;
 
-        @NameInMap("SkuPropertiesJson")
+        @com.aliyun.core.annotation.NameInMap("SkuPropertiesJson")
         private String skuPropertiesJson;
 
-        @NameInMap("SkuTitle")
+        @com.aliyun.core.annotation.NameInMap("SkuTitle")
         private String skuTitle;
 
         private Sku(Builder builder) {
@@ -298,7 +315,7 @@ public class QueryItemDetailResponseBody extends TeaModel {
         /**
          * @return customizedAttributeMap
          */
-        public java.util.Map < String, ? > getCustomizedAttributeMap() {
+        public java.util.Map<String, ?> getCustomizedAttributeMap() {
             return this.customizedAttributeMap;
         }
 
@@ -402,7 +419,7 @@ public class QueryItemDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean canSell; 
-            private java.util.Map < String, ? > customizedAttributeMap; 
+            private java.util.Map<String, ?> customizedAttributeMap; 
             private String extJson; 
             private Long itemId; 
             private String lmItemId; 
@@ -429,7 +446,7 @@ public class QueryItemDetailResponseBody extends TeaModel {
             /**
              * CustomizedAttributeMap.
              */
-            public Builder customizedAttributeMap(java.util.Map < String, ? > customizedAttributeMap) {
+            public Builder customizedAttributeMap(java.util.Map<String, ?> customizedAttributeMap) {
                 this.customizedAttributeMap = customizedAttributeMap;
                 return this;
             }
@@ -553,9 +570,15 @@ public class QueryItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryItemDetailResponseBody</p>
+     */
     public static class Skus extends TeaModel {
-        @NameInMap("Sku")
-        private java.util.List < Sku> sku;
+        @com.aliyun.core.annotation.NameInMap("Sku")
+        private java.util.List<Sku> sku;
 
         private Skus(Builder builder) {
             this.sku = builder.sku;
@@ -572,17 +595,17 @@ public class QueryItemDetailResponseBody extends TeaModel {
         /**
          * @return sku
          */
-        public java.util.List < Sku> getSku() {
+        public java.util.List<Sku> getSku() {
             return this.sku;
         }
 
         public static final class Builder {
-            private java.util.List < Sku> sku; 
+            private java.util.List<Sku> sku; 
 
             /**
              * Sku.
              */
-            public Builder sku(java.util.List < Sku> sku) {
+            public Builder sku(java.util.List<Sku> sku) {
                 this.sku = sku;
                 return this;
             }
@@ -594,98 +617,104 @@ public class QueryItemDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryItemDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryItemDetailResponseBody</p>
+     */
     public static class Item extends TeaModel {
-        @NameInMap("CanSell")
+        @com.aliyun.core.annotation.NameInMap("CanSell")
         private Boolean canSell;
 
-        @NameInMap("CategoryId")
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
 
-        @NameInMap("CenterInventory")
+        @com.aliyun.core.annotation.NameInMap("CenterInventory")
         private Boolean centerInventory;
 
-        @NameInMap("CustomizedAttributeMap")
-        private java.util.Map < String, ? > customizedAttributeMap;
+        @com.aliyun.core.annotation.NameInMap("CustomizedAttributeMap")
+        private java.util.Map<String, ?> customizedAttributeMap;
 
-        @NameInMap("DescOption")
+        @com.aliyun.core.annotation.NameInMap("DescOption")
         private String descOption;
 
-        @NameInMap("DescPath")
+        @com.aliyun.core.annotation.NameInMap("DescPath")
         private String descPath;
 
-        @NameInMap("ExtJson")
+        @com.aliyun.core.annotation.NameInMap("ExtJson")
         private String extJson;
 
-        @NameInMap("IforestProps")
+        @com.aliyun.core.annotation.NameInMap("IforestProps")
         private String iforestProps;
 
-        @NameInMap("IforestPropsJson")
+        @com.aliyun.core.annotation.NameInMap("IforestPropsJson")
         private String iforestPropsJson;
 
-        @NameInMap("IsCanSell")
+        @com.aliyun.core.annotation.NameInMap("IsCanSell")
         private Boolean isCanSell;
 
-        @NameInMap("IsSellerPayPostfee")
+        @com.aliyun.core.annotation.NameInMap("IsSellerPayPostfee")
         private Boolean isSellerPayPostfee;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("ItemImages")
+        @com.aliyun.core.annotation.NameInMap("ItemImages")
         private ItemImages itemImages;
 
-        @NameInMap("ItemTitle")
+        @com.aliyun.core.annotation.NameInMap("ItemTitle")
         private String itemTitle;
 
-        @NameInMap("LmItemCategory")
+        @com.aliyun.core.annotation.NameInMap("LmItemCategory")
         private String lmItemCategory;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("MainPicUrl")
+        @com.aliyun.core.annotation.NameInMap("MainPicUrl")
         private String mainPicUrl;
 
-        @NameInMap("MinPoints")
+        @com.aliyun.core.annotation.NameInMap("MinPoints")
         private Long minPoints;
 
-        @NameInMap("MinPrice")
+        @com.aliyun.core.annotation.NameInMap("MinPrice")
         private Long minPrice;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private String properties;
 
-        @NameInMap("PropertiesJson")
+        @com.aliyun.core.annotation.NameInMap("PropertiesJson")
         private String propertiesJson;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("ReservePrice")
+        @com.aliyun.core.annotation.NameInMap("ReservePrice")
         private Long reservePrice;
 
-        @NameInMap("SellerId")
+        @com.aliyun.core.annotation.NameInMap("SellerId")
         private Long sellerId;
 
-        @NameInMap("SellerPayPostfee")
+        @com.aliyun.core.annotation.NameInMap("SellerPayPostfee")
         private Boolean sellerPayPostfee;
 
-        @NameInMap("SellerType")
+        @com.aliyun.core.annotation.NameInMap("SellerType")
         private Integer sellerType;
 
-        @NameInMap("Skus")
+        @com.aliyun.core.annotation.NameInMap("Skus")
         private Skus skus;
 
-        @NameInMap("TbShopName")
+        @com.aliyun.core.annotation.NameInMap("TbShopName")
         private String tbShopName;
 
-        @NameInMap("TotalSoldQuantity")
+        @com.aliyun.core.annotation.NameInMap("TotalSoldQuantity")
         private Integer totalSoldQuantity;
 
-        @NameInMap("VideoPicUrl")
+        @com.aliyun.core.annotation.NameInMap("VideoPicUrl")
         private String videoPicUrl;
 
-        @NameInMap("VideoUrl")
+        @com.aliyun.core.annotation.NameInMap("VideoUrl")
         private String videoUrl;
 
         private Item(Builder builder) {
@@ -754,7 +783,7 @@ public class QueryItemDetailResponseBody extends TeaModel {
         /**
          * @return customizedAttributeMap
          */
-        public java.util.Map < String, ? > getCustomizedAttributeMap() {
+        public java.util.Map<String, ?> getCustomizedAttributeMap() {
             return this.customizedAttributeMap;
         }
 
@@ -951,7 +980,7 @@ public class QueryItemDetailResponseBody extends TeaModel {
             private Boolean canSell; 
             private Long categoryId; 
             private Boolean centerInventory; 
-            private java.util.Map < String, ? > customizedAttributeMap; 
+            private java.util.Map<String, ?> customizedAttributeMap; 
             private String descOption; 
             private String descPath; 
             private String extJson; 
@@ -1007,7 +1036,7 @@ public class QueryItemDetailResponseBody extends TeaModel {
             /**
              * CustomizedAttributeMap.
              */
-            public Builder customizedAttributeMap(java.util.Map < String, ? > customizedAttributeMap) {
+            public Builder customizedAttributeMap(java.util.Map<String, ?> customizedAttributeMap) {
                 this.customizedAttributeMap = customizedAttributeMap;
                 return this;
             }

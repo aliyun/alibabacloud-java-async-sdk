@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrderCommissionRateResponseBody} extends {@link TeaModel}
  *
  * <p>QueryOrderCommissionRateResponseBody</p>
  */
 public class QueryOrderCommissionRateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CommissionModels")
-    private java.util.List < CommissionModels> commissionModels;
+    @com.aliyun.core.annotation.NameInMap("CommissionModels")
+    private java.util.List<CommissionModels> commissionModels;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryOrderCommissionRateResponseBody(Builder builder) {
@@ -49,7 +54,7 @@ public class QueryOrderCommissionRateResponseBody extends TeaModel {
     /**
      * @return commissionModels
      */
-    public java.util.List < CommissionModels> getCommissionModels() {
+    public java.util.List<CommissionModels> getCommissionModels() {
         return this.commissionModels;
     }
 
@@ -69,7 +74,7 @@ public class QueryOrderCommissionRateResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < CommissionModels> commissionModels; 
+        private java.util.List<CommissionModels> commissionModels; 
         private String message; 
         private String requestId; 
 
@@ -84,7 +89,7 @@ public class QueryOrderCommissionRateResponseBody extends TeaModel {
         /**
          * CommissionModels.
          */
-        public Builder commissionModels(java.util.List < CommissionModels> commissionModels) {
+        public Builder commissionModels(java.util.List<CommissionModels> commissionModels) {
             this.commissionModels = commissionModels;
             return this;
         }
@@ -111,11 +116,17 @@ public class QueryOrderCommissionRateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryOrderCommissionRateResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderCommissionRateResponseBody</p>
+     */
     public static class Configs extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
-        @NameInMap("ValueUnit")
+        @com.aliyun.core.annotation.NameInMap("ValueUnit")
         private String valueUnit;
 
         private Configs(Builder builder) {
@@ -172,9 +183,15 @@ public class QueryOrderCommissionRateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderCommissionRateResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderCommissionRateResponseBody</p>
+     */
     public static class RateConfig extends TeaModel {
-        @NameInMap("Configs")
-        private java.util.List < Configs> configs;
+        @com.aliyun.core.annotation.NameInMap("Configs")
+        private java.util.List<Configs> configs;
 
         private RateConfig(Builder builder) {
             this.configs = builder.configs;
@@ -191,17 +208,17 @@ public class QueryOrderCommissionRateResponseBody extends TeaModel {
         /**
          * @return configs
          */
-        public java.util.List < Configs> getConfigs() {
+        public java.util.List<Configs> getConfigs() {
             return this.configs;
         }
 
         public static final class Builder {
-            private java.util.List < Configs> configs; 
+            private java.util.List<Configs> configs; 
 
             /**
              * Configs.
              */
-            public Builder configs(java.util.List < Configs> configs) {
+            public Builder configs(java.util.List<Configs> configs) {
                 this.configs = configs;
                 return this;
             }
@@ -213,11 +230,17 @@ public class QueryOrderCommissionRateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderCommissionRateResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderCommissionRateResponseBody</p>
+     */
     public static class CommissionInfo extends TeaModel {
-        @NameInMap("RateConfig")
+        @com.aliyun.core.annotation.NameInMap("RateConfig")
         private RateConfig rateConfig;
 
-        @NameInMap("RateType")
+        @com.aliyun.core.annotation.NameInMap("RateType")
         private String rateType;
 
         private CommissionInfo(Builder builder) {
@@ -274,11 +297,17 @@ public class QueryOrderCommissionRateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderCommissionRateResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderCommissionRateResponseBody</p>
+     */
     public static class CommissionModels extends TeaModel {
-        @NameInMap("CommissionInfo")
+        @com.aliyun.core.annotation.NameInMap("CommissionInfo")
         private CommissionInfo commissionInfo;
 
-        @NameInMap("LmOrderId")
+        @com.aliyun.core.annotation.NameInMap("LmOrderId")
         private Long lmOrderId;
 
         private CommissionModels(Builder builder) {

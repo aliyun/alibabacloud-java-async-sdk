@@ -1,59 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWithholdTradeRequest} extends {@link RequestModel}
  *
  * <p>CreateWithholdTradeRequest</p>
  */
 public class CreateWithholdTradeRequest extends Request {
-    @Body
-    @NameInMap("AgreementNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AgreementNo")
     private String agreementNo;
 
-    @Body
-    @NameInMap("Body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Body")
     private String body;
 
-    @Body
-    @NameInMap("BuyerId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BuyerId")
     private String buyerId;
 
-    @Body
-    @NameInMap("ExtInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtInfo")
     private String extInfo;
 
-    @Body
-    @NameInMap("GoodsDetail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GoodsDetail")
     private String goodsDetail;
 
-    @Body
-    @NameInMap("MerchantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MerchantId")
     private String merchantId;
 
-    @Body
-    @NameInMap("OutRequestNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutRequestNo")
     private String outRequestNo;
 
-    @Body
-    @NameInMap("OutTradeNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutTradeNo")
     private String outTradeNo;
 
-    @Body
-    @NameInMap("SettleMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SettleMode")
     private String settleMode;
 
-    @Body
-    @NameInMap("Subject")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Subject")
     private String subject;
 
-    @Body
-    @NameInMap("TotalAmount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TotalAmount")
     private String totalAmount;
 
     private CreateWithholdTradeRequest(Builder builder) {

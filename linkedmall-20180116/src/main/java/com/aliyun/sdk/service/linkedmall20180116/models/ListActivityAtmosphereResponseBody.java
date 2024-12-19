@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListActivityAtmosphereResponseBody} extends {@link TeaModel}
  *
  * <p>ListActivityAtmosphereResponseBody</p>
  */
 public class ListActivityAtmosphereResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
-    private java.util.List < Model> model;
+    @com.aliyun.core.annotation.NameInMap("Model")
+    private java.util.List<Model> model;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListActivityAtmosphereResponseBody(Builder builder) {
@@ -69,7 +74,7 @@ public class ListActivityAtmosphereResponseBody extends TeaModel {
     /**
      * @return model
      */
-    public java.util.List < Model> getModel() {
+    public java.util.List<Model> getModel() {
         return this.model;
     }
 
@@ -104,7 +109,7 @@ public class ListActivityAtmosphereResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < Model> model; 
+        private java.util.List<Model> model; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -129,7 +134,7 @@ public class ListActivityAtmosphereResponseBody extends TeaModel {
         /**
          * Model.
          */
-        public Builder model(java.util.List < Model> model) {
+        public Builder model(java.util.List<Model> model) {
             this.model = model;
             return this;
         }
@@ -143,7 +148,10 @@ public class ListActivityAtmosphereResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -172,14 +180,20 @@ public class ListActivityAtmosphereResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListActivityAtmosphereResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListActivityAtmosphereResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("BizUid")
+        @com.aliyun.core.annotation.NameInMap("BizUid")
         private String bizUid;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Model(Builder builder) {

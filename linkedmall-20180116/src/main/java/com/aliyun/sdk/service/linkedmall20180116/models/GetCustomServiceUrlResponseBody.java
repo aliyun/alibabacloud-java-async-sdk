@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomServiceUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetCustomServiceUrlResponseBody</p>
  */
 public class GetCustomServiceUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UrlData")
+    @com.aliyun.core.annotation.NameInMap("UrlData")
     private UrlData urlData;
 
     private GetCustomServiceUrlResponseBody(Builder builder) {
@@ -111,8 +116,14 @@ public class GetCustomServiceUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCustomServiceUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCustomServiceUrlResponseBody</p>
+     */
     public static class UrlData extends TeaModel {
-        @NameInMap("ReturnUrl")
+        @com.aliyun.core.annotation.NameInMap("ReturnUrl")
         private String returnUrl;
 
         private UrlData(Builder builder) {

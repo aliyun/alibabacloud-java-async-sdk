@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBizItemsRequest} extends {@link RequestModel}
  *
  * <p>ModifyBizItemsRequest</p>
  */
 public class ModifyBizItemsRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Body
-    @NameInMap("ItemList")
-    @Validation(required = true)
-    private java.util.List < ItemList> itemList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ItemList> itemList;
 
-    @Query
-    @NameInMap("SubBizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubBizId")
     private String subBizId;
 
     private ModifyBizItemsRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class ModifyBizItemsRequest extends Request {
     /**
      * @return itemList
      */
-    public java.util.List < ItemList> getItemList() {
+    public java.util.List<ItemList> getItemList() {
         return this.itemList;
     }
 
@@ -69,7 +74,7 @@ public class ModifyBizItemsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyBizItemsRequest, Builder> {
         private String bizId; 
-        private java.util.List < ItemList> itemList; 
+        private java.util.List<ItemList> itemList; 
         private String subBizId; 
 
         private Builder() {
@@ -84,7 +89,10 @@ public class ModifyBizItemsRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20211119****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -93,9 +101,9 @@ public class ModifyBizItemsRequest extends Request {
         }
 
         /**
-         * ItemList.
+         * <p>This parameter is required.</p>
          */
-        public Builder itemList(java.util.List < ItemList> itemList) {
+        public Builder itemList(java.util.List<ItemList> itemList) {
             this.putBodyParameter("ItemList", itemList);
             this.itemList = itemList;
             return this;
@@ -117,26 +125,32 @@ public class ModifyBizItemsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyBizItemsRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyBizItemsRequest</p>
+     */
     public static class SkuList extends TeaModel {
-        @NameInMap("BenefitId")
+        @com.aliyun.core.annotation.NameInMap("BenefitId")
         private String benefitId;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Long points;
 
-        @NameInMap("PointsAmount")
+        @com.aliyun.core.annotation.NameInMap("PointsAmount")
         private Long pointsAmount;
 
-        @NameInMap("PriceCent")
+        @com.aliyun.core.annotation.NameInMap("PriceCent")
         private Long priceCent;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
-        @NameInMap("StatusAction")
+        @com.aliyun.core.annotation.NameInMap("StatusAction")
         private Long statusAction;
 
         private SkuList(Builder builder) {
@@ -278,15 +292,21 @@ public class ModifyBizItemsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyBizItemsRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyBizItemsRequest</p>
+     */
     public static class ItemList extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("SkuList")
-        private java.util.List < SkuList> skuList;
+        @com.aliyun.core.annotation.NameInMap("SkuList")
+        private java.util.List<SkuList> skuList;
 
         private ItemList(Builder builder) {
             this.itemId = builder.itemId;
@@ -319,14 +339,14 @@ public class ModifyBizItemsRequest extends Request {
         /**
          * @return skuList
          */
-        public java.util.List < SkuList> getSkuList() {
+        public java.util.List<SkuList> getSkuList() {
             return this.skuList;
         }
 
         public static final class Builder {
             private Long itemId; 
             private String lmItemId; 
-            private java.util.List < SkuList> skuList; 
+            private java.util.List<SkuList> skuList; 
 
             /**
              * ItemId.
@@ -347,7 +367,7 @@ public class ModifyBizItemsRequest extends Request {
             /**
              * SkuList.
              */
-            public Builder skuList(java.util.List < SkuList> skuList) {
+            public Builder skuList(java.util.List<SkuList> skuList) {
                 this.skuList = skuList;
                 return this;
             }

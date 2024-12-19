@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryItemDetailInnerResponseBody} extends {@link TeaModel}
  *
  * <p>QueryItemDetailInnerResponseBody</p>
  */
 public class QueryItemDetailInnerResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Item")
+    @com.aliyun.core.annotation.NameInMap("Item")
     private Item item;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryItemDetailInnerResponseBody(Builder builder) {
@@ -111,11 +116,17 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryItemDetailInnerResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryItemDetailInnerResponseBody</p>
+     */
     public static class Values extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
         private Values(Builder builder) {
@@ -172,15 +183,21 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryItemDetailInnerResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryItemDetailInnerResponseBody</p>
+     */
     public static class SkuPropertys extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("Values")
-        private java.util.List < Values> values;
+        @com.aliyun.core.annotation.NameInMap("Values")
+        private java.util.List<Values> values;
 
         private SkuPropertys(Builder builder) {
             this.id = builder.id;
@@ -213,14 +230,14 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < Values> getValues() {
+        public java.util.List<Values> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private Long id; 
             private String text; 
-            private java.util.List < Values> values; 
+            private java.util.List<Values> values; 
 
             /**
              * Id.
@@ -241,7 +258,7 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
             /**
              * Values.
              */
-            public Builder values(java.util.List < Values> values) {
+            public Builder values(java.util.List<Values> values) {
                 this.values = values;
                 return this;
             }
@@ -253,50 +270,56 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryItemDetailInnerResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryItemDetailInnerResponseBody</p>
+     */
     public static class Skus extends TeaModel {
-        @NameInMap("ExtJson")
+        @com.aliyun.core.annotation.NameInMap("ExtJson")
         private String extJson;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("PointPrice")
+        @com.aliyun.core.annotation.NameInMap("PointPrice")
         private Long pointPrice;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Long points;
 
-        @NameInMap("PointsAmount")
+        @com.aliyun.core.annotation.NameInMap("PointsAmount")
         private Long pointsAmount;
 
-        @NameInMap("PriceCent")
+        @com.aliyun.core.annotation.NameInMap("PriceCent")
         private Long priceCent;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("ReservePrice")
+        @com.aliyun.core.annotation.NameInMap("ReservePrice")
         private Long reservePrice;
 
-        @NameInMap("SkuDesc")
+        @com.aliyun.core.annotation.NameInMap("SkuDesc")
         private String skuDesc;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
-        @NameInMap("SkuPicUrl")
+        @com.aliyun.core.annotation.NameInMap("SkuPicUrl")
         private String skuPicUrl;
 
-        @NameInMap("SkuPvs")
+        @com.aliyun.core.annotation.NameInMap("SkuPvs")
         private String skuPvs;
 
-        @NameInMap("SkuTitle")
+        @com.aliyun.core.annotation.NameInMap("SkuTitle")
         private String skuTitle;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Skus(Builder builder) {
@@ -528,7 +551,10 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
             }
 
             /**
-             * skuid
+             * <p>skuid</p>
+             * 
+             * <strong>example:</strong>
+             * <p>465309897****</p>
              */
             public Builder skuId(Long skuId) {
                 this.skuId = skuId;
@@ -574,95 +600,101 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryItemDetailInnerResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryItemDetailInnerResponseBody</p>
+     */
     public static class Item extends TeaModel {
-        @NameInMap("CanSell")
+        @com.aliyun.core.annotation.NameInMap("CanSell")
         private Boolean canSell;
 
-        @NameInMap("CategoryId")
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
 
-        @NameInMap("CategoryIds")
-        private java.util.List < Long > categoryIds;
+        @com.aliyun.core.annotation.NameInMap("CategoryIds")
+        private java.util.List<Long> categoryIds;
 
-        @NameInMap("CenterInventory")
+        @com.aliyun.core.annotation.NameInMap("CenterInventory")
         private Boolean centerInventory;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("DescOption")
+        @com.aliyun.core.annotation.NameInMap("DescOption")
         private String descOption;
 
-        @NameInMap("DescPath")
+        @com.aliyun.core.annotation.NameInMap("DescPath")
         private String descPath;
 
-        @NameInMap("FirstPicUrl")
+        @com.aliyun.core.annotation.NameInMap("FirstPicUrl")
         private String firstPicUrl;
 
-        @NameInMap("IforestProps")
-        private java.util.List < java.util.Map<String, ?>> iforestProps;
+        @com.aliyun.core.annotation.NameInMap("IforestProps")
+        private java.util.List<java.util.Map<String, ?>> iforestProps;
 
-        @NameInMap("IsCanSell")
+        @com.aliyun.core.annotation.NameInMap("IsCanSell")
         private Boolean isCanSell;
 
-        @NameInMap("IsSellerPayPostfee")
+        @com.aliyun.core.annotation.NameInMap("IsSellerPayPostfee")
         private Boolean isSellerPayPostfee;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("ItemImages")
-        private java.util.List < String > itemImages;
+        @com.aliyun.core.annotation.NameInMap("ItemImages")
+        private java.util.List<String> itemImages;
 
-        @NameInMap("ItemTitle")
+        @com.aliyun.core.annotation.NameInMap("ItemTitle")
         private String itemTitle;
 
-        @NameInMap("LmItemCategory")
+        @com.aliyun.core.annotation.NameInMap("LmItemCategory")
         private String lmItemCategory;
 
-        @NameInMap("LmShopId")
+        @com.aliyun.core.annotation.NameInMap("LmShopId")
         private Long lmShopId;
 
-        @NameInMap("MainPicUrl")
+        @com.aliyun.core.annotation.NameInMap("MainPicUrl")
         private String mainPicUrl;
 
-        @NameInMap("MinPoints")
+        @com.aliyun.core.annotation.NameInMap("MinPoints")
         private Long minPoints;
 
-        @NameInMap("MinPrice")
+        @com.aliyun.core.annotation.NameInMap("MinPrice")
         private Long minPrice;
 
-        @NameInMap("Properties")
-        private java.util.Map < String, ? > properties;
+        @com.aliyun.core.annotation.NameInMap("Properties")
+        private java.util.Map<String, ?> properties;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("ReservePrice")
+        @com.aliyun.core.annotation.NameInMap("ReservePrice")
         private Long reservePrice;
 
-        @NameInMap("SellerId")
+        @com.aliyun.core.annotation.NameInMap("SellerId")
         private Long sellerId;
 
-        @NameInMap("SellerNick")
+        @com.aliyun.core.annotation.NameInMap("SellerNick")
         private String sellerNick;
 
-        @NameInMap("SellerPayPostfee")
+        @com.aliyun.core.annotation.NameInMap("SellerPayPostfee")
         private Boolean sellerPayPostfee;
 
-        @NameInMap("SkuPropertys")
-        private java.util.List < SkuPropertys> skuPropertys;
+        @com.aliyun.core.annotation.NameInMap("SkuPropertys")
+        private java.util.List<SkuPropertys> skuPropertys;
 
-        @NameInMap("Skus")
-        private java.util.List < Skus> skus;
+        @com.aliyun.core.annotation.NameInMap("Skus")
+        private java.util.List<Skus> skus;
 
-        @NameInMap("TbShopName")
+        @com.aliyun.core.annotation.NameInMap("TbShopName")
         private String tbShopName;
 
-        @NameInMap("TotalSoldQuantity")
+        @com.aliyun.core.annotation.NameInMap("TotalSoldQuantity")
         private Integer totalSoldQuantity;
 
         private Item(Builder builder) {
@@ -723,7 +755,7 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         /**
          * @return categoryIds
          */
-        public java.util.List < Long > getCategoryIds() {
+        public java.util.List<Long> getCategoryIds() {
             return this.categoryIds;
         }
 
@@ -765,7 +797,7 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         /**
          * @return iforestProps
          */
-        public java.util.List < java.util.Map<String, ?>> getIforestProps() {
+        public java.util.List<java.util.Map<String, ?>> getIforestProps() {
             return this.iforestProps;
         }
 
@@ -793,7 +825,7 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         /**
          * @return itemImages
          */
-        public java.util.List < String > getItemImages() {
+        public java.util.List<String> getItemImages() {
             return this.itemImages;
         }
 
@@ -842,7 +874,7 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         /**
          * @return properties
          */
-        public java.util.Map < String, ? > getProperties() {
+        public java.util.Map<String, ?> getProperties() {
             return this.properties;
         }
 
@@ -891,14 +923,14 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         /**
          * @return skuPropertys
          */
-        public java.util.List < SkuPropertys> getSkuPropertys() {
+        public java.util.List<SkuPropertys> getSkuPropertys() {
             return this.skuPropertys;
         }
 
         /**
          * @return skus
          */
-        public java.util.List < Skus> getSkus() {
+        public java.util.List<Skus> getSkus() {
             return this.skus;
         }
 
@@ -919,32 +951,32 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean canSell; 
             private Long categoryId; 
-            private java.util.List < Long > categoryIds; 
+            private java.util.List<Long> categoryIds; 
             private Boolean centerInventory; 
             private String city; 
             private String descOption; 
             private String descPath; 
             private String firstPicUrl; 
-            private java.util.List < java.util.Map<String, ?>> iforestProps; 
+            private java.util.List<java.util.Map<String, ?>> iforestProps; 
             private Boolean isCanSell; 
             private Boolean isSellerPayPostfee; 
             private Long itemId; 
-            private java.util.List < String > itemImages; 
+            private java.util.List<String> itemImages; 
             private String itemTitle; 
             private String lmItemCategory; 
             private Long lmShopId; 
             private String mainPicUrl; 
             private Long minPoints; 
             private Long minPrice; 
-            private java.util.Map < String, ? > properties; 
+            private java.util.Map<String, ?> properties; 
             private String province; 
             private Integer quantity; 
             private Long reservePrice; 
             private Long sellerId; 
             private String sellerNick; 
             private Boolean sellerPayPostfee; 
-            private java.util.List < SkuPropertys> skuPropertys; 
-            private java.util.List < Skus> skus; 
+            private java.util.List<SkuPropertys> skuPropertys; 
+            private java.util.List<Skus> skus; 
             private String tbShopName; 
             private Integer totalSoldQuantity; 
 
@@ -967,7 +999,7 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
             /**
              * CategoryIds.
              */
-            public Builder categoryIds(java.util.List < Long > categoryIds) {
+            public Builder categoryIds(java.util.List<Long> categoryIds) {
                 this.categoryIds = categoryIds;
                 return this;
             }
@@ -1015,7 +1047,7 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
             /**
              * IforestProps.
              */
-            public Builder iforestProps(java.util.List < java.util.Map<String, ?>> iforestProps) {
+            public Builder iforestProps(java.util.List<java.util.Map<String, ?>> iforestProps) {
                 this.iforestProps = iforestProps;
                 return this;
             }
@@ -1047,7 +1079,7 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
             /**
              * ItemImages.
              */
-            public Builder itemImages(java.util.List < String > itemImages) {
+            public Builder itemImages(java.util.List<String> itemImages) {
                 this.itemImages = itemImages;
                 return this;
             }
@@ -1103,7 +1135,7 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
             /**
              * Properties.
              */
-            public Builder properties(java.util.Map < String, ? > properties) {
+            public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
                 return this;
             }
@@ -1159,7 +1191,7 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
             /**
              * SkuPropertys.
              */
-            public Builder skuPropertys(java.util.List < SkuPropertys> skuPropertys) {
+            public Builder skuPropertys(java.util.List<SkuPropertys> skuPropertys) {
                 this.skuPropertys = skuPropertys;
                 return this;
             }
@@ -1167,7 +1199,7 @@ public class QueryItemDetailInnerResponseBody extends TeaModel {
             /**
              * Skus.
              */
-            public Builder skus(java.util.List < Skus> skus) {
+            public Builder skus(java.util.List<Skus> skus) {
                 this.skus = skus;
                 return this;
             }

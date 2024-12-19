@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryInventoryOfItemsInBizItemGroupRequest} extends {@link RequestModel}
  *
  * <p>QueryInventoryOfItemsInBizItemGroupRequest</p>
  */
 public class QueryInventoryOfItemsInBizItemGroupRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("DivisionCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DivisionCode")
     private String divisionCode;
 
-    @Query
-    @NameInMap("ItemIds")
-    private java.util.List < Long > itemIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ItemIds")
+    private java.util.List<Long> itemIds;
 
-    @Query
-    @NameInMap("LmItemIds")
-    private java.util.List < String > lmItemIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LmItemIds")
+    private java.util.List<String> lmItemIds;
 
-    @Query
-    @NameInMap("SubBizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubBizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subBizId;
 
     private QueryInventoryOfItemsInBizItemGroupRequest(Builder builder) {
@@ -73,14 +78,14 @@ public class QueryInventoryOfItemsInBizItemGroupRequest extends Request {
     /**
      * @return itemIds
      */
-    public java.util.List < Long > getItemIds() {
+    public java.util.List<Long> getItemIds() {
         return this.itemIds;
     }
 
     /**
      * @return lmItemIds
      */
-    public java.util.List < String > getLmItemIds() {
+    public java.util.List<String> getLmItemIds() {
         return this.lmItemIds;
     }
 
@@ -94,8 +99,8 @@ public class QueryInventoryOfItemsInBizItemGroupRequest extends Request {
     public static final class Builder extends Request.Builder<QueryInventoryOfItemsInBizItemGroupRequest, Builder> {
         private String bizId; 
         private String divisionCode; 
-        private java.util.List < Long > itemIds; 
-        private java.util.List < String > lmItemIds; 
+        private java.util.List<Long> itemIds; 
+        private java.util.List<String> lmItemIds; 
         private String subBizId; 
 
         private Builder() {
@@ -112,7 +117,10 @@ public class QueryInventoryOfItemsInBizItemGroupRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -132,7 +140,7 @@ public class QueryInventoryOfItemsInBizItemGroupRequest extends Request {
         /**
          * ItemIds.
          */
-        public Builder itemIds(java.util.List < Long > itemIds) {
+        public Builder itemIds(java.util.List<Long> itemIds) {
             String itemIdsShrink = shrink(itemIds, "ItemIds", "json");
             this.putQueryParameter("ItemIds", itemIdsShrink);
             this.itemIds = itemIds;
@@ -142,7 +150,7 @@ public class QueryInventoryOfItemsInBizItemGroupRequest extends Request {
         /**
          * LmItemIds.
          */
-        public Builder lmItemIds(java.util.List < String > lmItemIds) {
+        public Builder lmItemIds(java.util.List<String> lmItemIds) {
             String lmItemIdsShrink = shrink(lmItemIds, "LmItemIds", "json");
             this.putQueryParameter("LmItemIds", lmItemIdsShrink);
             this.lmItemIds = lmItemIds;
@@ -150,7 +158,10 @@ public class QueryInventoryOfItemsInBizItemGroupRequest extends Request {
         }
 
         /**
-         * SubBizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52847******1a58205d3ce5e9328</p>
          */
         public Builder subBizId(String subBizId) {
             this.putQueryParameter("SubBizId", subBizId);

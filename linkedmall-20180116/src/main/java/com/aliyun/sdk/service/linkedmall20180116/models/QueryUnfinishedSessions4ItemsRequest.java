@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUnfinishedSessions4ItemsRequest} extends {@link RequestModel}
  *
  * <p>QueryUnfinishedSessions4ItemsRequest</p>
  */
 public class QueryUnfinishedSessions4ItemsRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("ItemIds")
-    private java.util.Map < String, ? > itemIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ItemIds")
+    private java.util.Map<String, ?> itemIds;
 
-    @Query
-    @NameInMap("LmItemIds")
-    private java.util.Map < String, ? > lmItemIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LmItemIds")
+    private java.util.Map<String, ?> lmItemIds;
 
-    @Query
-    @NameInMap("QueryTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryTime")
     private Long queryTime;
 
     private QueryUnfinishedSessions4ItemsRequest(Builder builder) {
@@ -60,14 +65,14 @@ public class QueryUnfinishedSessions4ItemsRequest extends Request {
     /**
      * @return itemIds
      */
-    public java.util.Map < String, ? > getItemIds() {
+    public java.util.Map<String, ?> getItemIds() {
         return this.itemIds;
     }
 
     /**
      * @return lmItemIds
      */
-    public java.util.Map < String, ? > getLmItemIds() {
+    public java.util.Map<String, ?> getLmItemIds() {
         return this.lmItemIds;
     }
 
@@ -80,8 +85,8 @@ public class QueryUnfinishedSessions4ItemsRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryUnfinishedSessions4ItemsRequest, Builder> {
         private String bizId; 
-        private java.util.Map < String, ? > itemIds; 
-        private java.util.Map < String, ? > lmItemIds; 
+        private java.util.Map<String, ?> itemIds; 
+        private java.util.Map<String, ?> lmItemIds; 
         private Long queryTime; 
 
         private Builder() {
@@ -97,7 +102,10 @@ public class QueryUnfinishedSessions4ItemsRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -108,7 +116,7 @@ public class QueryUnfinishedSessions4ItemsRequest extends Request {
         /**
          * ItemIds.
          */
-        public Builder itemIds(java.util.Map < String, ? > itemIds) {
+        public Builder itemIds(java.util.Map<String, ?> itemIds) {
             String itemIdsShrink = shrink(itemIds, "ItemIds", "json");
             this.putQueryParameter("ItemIds", itemIdsShrink);
             this.itemIds = itemIds;
@@ -118,7 +126,7 @@ public class QueryUnfinishedSessions4ItemsRequest extends Request {
         /**
          * LmItemIds.
          */
-        public Builder lmItemIds(java.util.Map < String, ? > lmItemIds) {
+        public Builder lmItemIds(java.util.Map<String, ?> lmItemIds) {
             String lmItemIdsShrink = shrink(lmItemIds, "LmItemIds", "json");
             this.putQueryParameter("LmItemIds", lmItemIdsShrink);
             this.lmItemIds = lmItemIds;

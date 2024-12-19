@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySupplierPriceAndPriceCentRequest} extends {@link RequestModel}
  *
  * <p>ModifySupplierPriceAndPriceCentRequest</p>
  */
 public class ModifySupplierPriceAndPriceCentRequest extends Request {
-    @Query
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @Query
-    @NameInMap("LmItemId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LmItemId")
     private String lmItemId;
 
-    @Query
-    @NameInMap("LmShopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LmShopId")
     private String lmShopId;
 
-    @Query
-    @NameInMap("PriceCent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PriceCent")
     private String priceCent;
 
-    @Query
-    @NameInMap("SkuId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkuId")
     private String skuId;
 
-    @Query
-    @NameInMap("SupplierPrice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupplierPrice")
     private String supplierPrice;
 
     private ModifySupplierPriceAndPriceCentRequest(Builder builder) {

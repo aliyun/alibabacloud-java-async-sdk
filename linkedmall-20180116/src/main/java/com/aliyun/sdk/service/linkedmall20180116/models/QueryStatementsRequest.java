@@ -1,64 +1,69 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryStatementsRequest} extends {@link RequestModel}
  *
  * <p>QueryStatementsRequest</p>
  */
 public class QueryStatementsRequest extends Request {
-    @Query
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @Query
-    @NameInMap("Currency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Currency")
     private String currency;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("ExtInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtInfo")
     private String extInfo;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PayeeIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayeeIds")
     private String payeeIds;
 
-    @Query
-    @NameInMap("SettleNoes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SettleNoes")
     private String settleNoes;
 
-    @Query
-    @NameInMap("SettleStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SettleStatus")
     private String settleStatus;
 
-    @Query
-    @NameInMap("SettleType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SettleType")
     private String settleType;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("TenantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
     private QueryStatementsRequest(Builder builder) {
@@ -308,7 +313,10 @@ public class QueryStatementsRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18******263</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("TenantId", tenantId);

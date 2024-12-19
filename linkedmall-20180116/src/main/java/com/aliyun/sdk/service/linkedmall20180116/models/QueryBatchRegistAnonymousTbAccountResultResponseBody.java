@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBatchRegistAnonymousTbAccountResultResponseBody} extends {@link TeaModel}
  *
  * <p>QueryBatchRegistAnonymousTbAccountResultResponseBody</p>
  */
 public class QueryBatchRegistAnonymousTbAccountResultResponseBody extends TeaModel {
-    @NameInMap("BatchId")
+    @com.aliyun.core.annotation.NameInMap("BatchId")
     private String batchId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("FailIds")
+    @com.aliyun.core.annotation.NameInMap("FailIds")
     private FailIds failIds;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private QueryBatchRegistAnonymousTbAccountResultResponseBody(Builder builder) {
@@ -151,9 +156,15 @@ public class QueryBatchRegistAnonymousTbAccountResultResponseBody extends TeaMod
 
     } 
 
+    /**
+     * 
+     * {@link QueryBatchRegistAnonymousTbAccountResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryBatchRegistAnonymousTbAccountResultResponseBody</p>
+     */
     public static class FailIds extends TeaModel {
-        @NameInMap("FailId")
-        private java.util.List < String > failId;
+        @com.aliyun.core.annotation.NameInMap("FailId")
+        private java.util.List<String> failId;
 
         private FailIds(Builder builder) {
             this.failId = builder.failId;
@@ -170,17 +181,17 @@ public class QueryBatchRegistAnonymousTbAccountResultResponseBody extends TeaMod
         /**
          * @return failId
          */
-        public java.util.List < String > getFailId() {
+        public java.util.List<String> getFailId() {
             return this.failId;
         }
 
         public static final class Builder {
-            private java.util.List < String > failId; 
+            private java.util.List<String> failId; 
 
             /**
              * FailId.
              */
-            public Builder failId(java.util.List < String > failId) {
+            public Builder failId(java.util.List<String> failId) {
                 this.failId = failId;
                 return this;
             }

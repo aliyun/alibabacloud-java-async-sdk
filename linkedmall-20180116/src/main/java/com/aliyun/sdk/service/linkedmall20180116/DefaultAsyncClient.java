@@ -94,6 +94,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddAddress  AddAddressRequest
+     * @return AddAddressResponse
+     */
     @Override
     public CompletableFuture<AddAddressResponse> addAddress(AddAddressRequest request) {
         try {
@@ -108,6 +112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddItemLimitRule  AddItemLimitRuleRequest
+     * @return AddItemLimitRuleResponse
+     */
     @Override
     public CompletableFuture<AddItemLimitRuleResponse> addItemLimitRule(AddItemLimitRuleRequest request) {
         try {
@@ -122,6 +130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddItemToSubBizs  AddItemToSubBizsRequest
+     * @return AddItemToSubBizsResponse
+     */
     @Override
     public CompletableFuture<AddItemToSubBizsResponse> addItemToSubBizs(AddItemToSubBizsRequest request) {
         try {
@@ -136,6 +148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddSupplierNewItems  AddSupplierNewItemsRequest
+     * @return AddSupplierNewItemsResponse
+     */
     @Override
     public CompletableFuture<AddSupplierNewItemsResponse> addSupplierNewItems(AddSupplierNewItemsRequest request) {
         try {
@@ -150,6 +166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyRefund  ApplyRefundRequest
+     * @return ApplyRefundResponse
+     */
     @Override
     public CompletableFuture<ApplyRefundResponse> applyRefund(ApplyRefundRequest request) {
         try {
@@ -164,6 +184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ApplyRefundWithDesignatedTbUid  ApplyRefundWithDesignatedTbUidRequest
+     * @return ApplyRefundWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<ApplyRefundWithDesignatedTbUidResponse> applyRefundWithDesignatedTbUid(ApplyRefundWithDesignatedTbUidRequest request) {
         try {
@@ -178,6 +202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchRegistAnonymousTbAccount  BatchRegistAnonymousTbAccountRequest
+     * @return BatchRegistAnonymousTbAccountResponse
+     */
     @Override
     public CompletableFuture<BatchRegistAnonymousTbAccountResponse> batchRegistAnonymousTbAccount(BatchRegistAnonymousTbAccountRequest request) {
         try {
@@ -192,6 +220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelOrder  CancelOrderRequest
+     * @return CancelOrderResponse
+     */
     @Override
     public CompletableFuture<CancelOrderResponse> cancelOrder(CancelOrderRequest request) {
         try {
@@ -206,6 +238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelOrderWithDesignatedTbUid  CancelOrderWithDesignatedTbUidRequest
+     * @return CancelOrderWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<CancelOrderWithDesignatedTbUidResponse> cancelOrderWithDesignatedTbUid(CancelOrderWithDesignatedTbUidRequest request) {
         try {
@@ -220,6 +256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelRealTbAccountSupport  CancelRealTbAccountSupportRequest
+     * @return CancelRealTbAccountSupportResponse
+     */
     @Override
     public CompletableFuture<CancelRealTbAccountSupportResponse> cancelRealTbAccountSupport(CancelRealTbAccountSupportRequest request) {
         try {
@@ -234,6 +274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelRefund  CancelRefundRequest
+     * @return CancelRefundResponse
+     */
     @Override
     public CompletableFuture<CancelRefundResponse> cancelRefund(CancelRefundRequest request) {
         try {
@@ -248,6 +292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelRefundWithDesignatedTbUid  CancelRefundWithDesignatedTbUidRequest
+     * @return CancelRefundWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<CancelRefundWithDesignatedTbUidResponse> cancelRefundWithDesignatedTbUid(CancelRefundWithDesignatedTbUidRequest request) {
         try {
@@ -262,6 +310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfirmDisburse  ConfirmDisburseRequest
+     * @return ConfirmDisburseResponse
+     */
     @Override
     public CompletableFuture<ConfirmDisburseResponse> confirmDisburse(ConfirmDisburseRequest request) {
         try {
@@ -276,6 +328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfirmDisburseWithDesignatedTbUid  ConfirmDisburseWithDesignatedTbUidRequest
+     * @return ConfirmDisburseWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<ConfirmDisburseWithDesignatedTbUidResponse> confirmDisburseWithDesignatedTbUid(ConfirmDisburseWithDesignatedTbUidRequest request) {
         try {
@@ -290,20 +346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<CreateMovieTicketOrderResponse> createMovieTicketOrder(CreateMovieTicketOrderRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateMovieTicketOrder").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMovieTicketOrderResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateMovieTicketOrderResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of CreateOrder  CreateOrderRequest
+     * @return CreateOrderResponse
+     */
     @Override
     public CompletableFuture<CreateOrderResponse> createOrder(CreateOrderRequest request) {
         try {
@@ -318,6 +364,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrderPayUrlForOutDiscount  CreateOrderPayUrlForOutDiscountRequest
+     * @return CreateOrderPayUrlForOutDiscountResponse
+     */
     @Override
     public CompletableFuture<CreateOrderPayUrlForOutDiscountResponse> createOrderPayUrlForOutDiscount(CreateOrderPayUrlForOutDiscountRequest request) {
         try {
@@ -332,6 +382,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrderTransactionDetailFile  CreateOrderTransactionDetailFileRequest
+     * @return CreateOrderTransactionDetailFileResponse
+     */
     @Override
     public CompletableFuture<CreateOrderTransactionDetailFileResponse> createOrderTransactionDetailFile(CreateOrderTransactionDetailFileRequest request) {
         try {
@@ -346,6 +400,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrderV2  CreateOrderV2Request
+     * @return CreateOrderV2Response
+     */
     @Override
     public CompletableFuture<CreateOrderV2Response> createOrderV2(CreateOrderV2Request request) {
         try {
@@ -360,6 +418,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrderWithDesignatedTbUid  CreateOrderWithDesignatedTbUidRequest
+     * @return CreateOrderWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<CreateOrderWithDesignatedTbUidResponse> createOrderWithDesignatedTbUid(CreateOrderWithDesignatedTbUidRequest request) {
         try {
@@ -374,6 +436,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOutDiscountOrderWithDesignatedTbUid  CreateOutDiscountOrderWithDesignatedTbUidRequest
+     * @return CreateOutDiscountOrderWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<CreateOutDiscountOrderWithDesignatedTbUidResponse> createOutDiscountOrderWithDesignatedTbUid(CreateOutDiscountOrderWithDesignatedTbUidRequest request) {
         try {
@@ -388,6 +454,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreatePayUrl  CreatePayUrlRequest
+     * @return CreatePayUrlResponse
+     */
     @Override
     public CompletableFuture<CreatePayUrlResponse> createPayUrl(CreatePayUrlRequest request) {
         try {
@@ -402,6 +472,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSettleConfirm  CreateSettleConfirmRequest
+     * @return CreateSettleConfirmResponse
+     */
     @Override
     public CompletableFuture<CreateSettleConfirmResponse> createSettleConfirm(CreateSettleConfirmRequest request) {
         try {
@@ -416,6 +490,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateVirtualProductOrder  CreateVirtualProductOrderRequest
+     * @return CreateVirtualProductOrderResponse
+     */
     @Override
     public CompletableFuture<CreateVirtualProductOrderResponse> createVirtualProductOrder(CreateVirtualProductOrderRequest request) {
         try {
@@ -430,6 +508,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateWithholdTrade  CreateWithholdTradeRequest
+     * @return CreateWithholdTradeResponse
+     */
     @Override
     public CompletableFuture<CreateWithholdTradeResponse> createWithholdTrade(CreateWithholdTradeRequest request) {
         try {
@@ -444,6 +526,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeductUserPoint  DeductUserPointRequest
+     * @return DeductUserPointResponse
+     */
     @Override
     public CompletableFuture<DeductUserPointResponse> deductUserPoint(DeductUserPointRequest request) {
         try {
@@ -458,6 +544,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteBizItems  DeleteBizItemsRequest
+     * @return DeleteBizItemsResponse
+     */
     @Override
     public CompletableFuture<DeleteBizItemsResponse> deleteBizItems(DeleteBizItemsRequest request) {
         try {
@@ -472,6 +562,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteItemLimitRule  DeleteItemLimitRuleRequest
+     * @return DeleteItemLimitRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteItemLimitRuleResponse> deleteItemLimitRule(DeleteItemLimitRuleRequest request) {
         try {
@@ -486,6 +580,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DownloadCpsBillFile  DownloadCpsBillFileRequest
+     * @return DownloadCpsBillFileResponse
+     */
     @Override
     public CompletableFuture<DownloadCpsBillFileResponse> downloadCpsBillFile(DownloadCpsBillFileRequest request) {
         try {
@@ -500,6 +598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DownloadItemBillFile  DownloadItemBillFileRequest
+     * @return DownloadItemBillFileResponse
+     */
     @Override
     public CompletableFuture<DownloadItemBillFileResponse> downloadItemBillFile(DownloadItemBillFileRequest request) {
         try {
@@ -514,6 +616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DownloadOrderTransactionDetailFile  DownloadOrderTransactionDetailFileRequest
+     * @return DownloadOrderTransactionDetailFileResponse
+     */
     @Override
     public CompletableFuture<DownloadOrderTransactionDetailFileResponse> downloadOrderTransactionDetailFile(DownloadOrderTransactionDetailFileRequest request) {
         try {
@@ -528,6 +634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableOrder  EnableOrderRequest
+     * @return EnableOrderResponse
+     */
     @Override
     public CompletableFuture<EnableOrderResponse> enableOrder(EnableOrderRequest request) {
         try {
@@ -542,6 +652,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableOrderWithDesignatedTbUid  EnableOrderWithDesignatedTbUidRequest
+     * @return EnableOrderWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<EnableOrderWithDesignatedTbUidResponse> enableOrderWithDesignatedTbUid(EnableOrderWithDesignatedTbUidRequest request) {
         try {
@@ -556,6 +670,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteNode  ExecuteNodeRequest
+     * @return ExecuteNodeResponse
+     */
     @Override
     public CompletableFuture<ExecuteNodeResponse> executeNode(ExecuteNodeRequest request) {
         try {
@@ -570,6 +688,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FreezeUserPoint  FreezeUserPointRequest
+     * @return FreezeUserPointResponse
+     */
     @Override
     public CompletableFuture<FreezeUserPointResponse> freezeUserPoint(FreezeUserPointRequest request) {
         try {
@@ -584,6 +706,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetActivityGameInfo  GetActivityGameInfoRequest
+     * @return GetActivityGameInfoResponse
+     */
     @Override
     public CompletableFuture<GetActivityGameInfoResponse> getActivityGameInfo(GetActivityGameInfoRequest request) {
         try {
@@ -598,6 +724,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCategoryChain  GetCategoryChainRequest
+     * @return GetCategoryChainResponse
+     */
     @Override
     public CompletableFuture<GetCategoryChainResponse> getCategoryChain(GetCategoryChainRequest request) {
         try {
@@ -612,6 +742,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCategoryList  GetCategoryListRequest
+     * @return GetCategoryListResponse
+     */
     @Override
     public CompletableFuture<GetCategoryListResponse> getCategoryList(GetCategoryListRequest request) {
         try {
@@ -626,6 +760,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCustomServiceUrl  GetCustomServiceUrlRequest
+     * @return GetCustomServiceUrlResponse
+     */
     @Override
     public CompletableFuture<GetCustomServiceUrlResponse> getCustomServiceUrl(GetCustomServiceUrlRequest request) {
         try {
@@ -640,6 +778,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetGuidePage  GetGuidePageRequest
+     * @return GetGuidePageResponse
+     */
     @Override
     public CompletableFuture<GetGuidePageResponse> getGuidePage(GetGuidePageRequest request) {
         try {
@@ -654,6 +796,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetItemPromotion  GetItemPromotionRequest
+     * @return GetItemPromotionResponse
+     */
     @Override
     public CompletableFuture<GetItemPromotionResponse> getItemPromotion(GetItemPromotionRequest request) {
         try {
@@ -668,6 +814,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLoginPage  GetLoginPageRequest
+     * @return GetLoginPageResponse
+     */
     @Override
     public CompletableFuture<GetLoginPageResponse> getLoginPage(GetLoginPageRequest request) {
         try {
@@ -682,6 +832,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSwitchUrl  GetSwitchUrlRequest
+     * @return GetSwitchUrlResponse
+     */
     @Override
     public CompletableFuture<GetSwitchUrlResponse> getSwitchUrl(GetSwitchUrlRequest request) {
         try {
@@ -696,6 +850,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserInfo  GetUserInfoRequest
+     * @return GetUserInfoResponse
+     */
     @Override
     public CompletableFuture<GetUserInfoResponse> getUserInfo(GetUserInfoRequest request) {
         try {
@@ -710,6 +868,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserTokenPage  GetUserTokenPageRequest
+     * @return GetUserTokenPageResponse
+     */
     @Override
     public CompletableFuture<GetUserTokenPageResponse> getUserTokenPage(GetUserTokenPageRequest request) {
         try {
@@ -724,6 +886,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetWithholdSignPageUrl  GetWithholdSignPageUrlRequest
+     * @return GetWithholdSignPageUrlResponse
+     */
     @Override
     public CompletableFuture<GetWithholdSignPageUrlResponse> getWithholdSignPageUrl(GetWithholdSignPageUrlRequest request) {
         try {
@@ -738,6 +904,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GiveUserPoint  GiveUserPointRequest
+     * @return GiveUserPointResponse
+     */
     @Override
     public CompletableFuture<GiveUserPointResponse> giveUserPoint(GiveUserPointRequest request) {
         try {
@@ -752,6 +922,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GrantPromotionToUser  GrantPromotionToUserRequest
+     * @return GrantPromotionToUserResponse
+     */
     @Override
     public CompletableFuture<GrantPromotionToUserResponse> grantPromotionToUser(GrantPromotionToUserRequest request) {
         try {
@@ -766,6 +940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GrantUserPoint  GrantUserPointRequest
+     * @return GrantUserPointResponse
+     */
     @Override
     public CompletableFuture<GrantUserPointResponse> grantUserPoint(GrantUserPointRequest request) {
         try {
@@ -780,6 +958,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InitApplyRefund  InitApplyRefundRequest
+     * @return InitApplyRefundResponse
+     */
     @Override
     public CompletableFuture<InitApplyRefundResponse> initApplyRefund(InitApplyRefundRequest request) {
         try {
@@ -794,6 +976,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InitApplyRefundWithDesignatedTbUid  InitApplyRefundWithDesignatedTbUidRequest
+     * @return InitApplyRefundWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<InitApplyRefundWithDesignatedTbUidResponse> initApplyRefundWithDesignatedTbUid(InitApplyRefundWithDesignatedTbUidRequest request) {
         try {
@@ -808,6 +994,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InitModifyRefund  InitModifyRefundRequest
+     * @return InitModifyRefundResponse
+     */
     @Override
     public CompletableFuture<InitModifyRefundResponse> initModifyRefund(InitModifyRefundRequest request) {
         try {
@@ -822,6 +1012,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InitModifyRefundWithDesignatedTbUid  InitModifyRefundWithDesignatedTbUidRequest
+     * @return InitModifyRefundWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<InitModifyRefundWithDesignatedTbUidResponse> initModifyRefundWithDesignatedTbUid(InitModifyRefundWithDesignatedTbUidRequest request) {
         try {
@@ -836,6 +1030,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListActivityAtmosphere  ListActivityAtmosphereRequest
+     * @return ListActivityAtmosphereResponse
+     */
     @Override
     public CompletableFuture<ListActivityAtmosphereResponse> listActivityAtmosphere(ListActivityAtmosphereRequest request) {
         try {
@@ -850,6 +1048,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListActivityGameInfo  ListActivityGameInfoRequest
+     * @return ListActivityGameInfoResponse
+     */
     @Override
     public CompletableFuture<ListActivityGameInfoResponse> listActivityGameInfo(ListActivityGameInfoRequest request) {
         try {
@@ -864,6 +1066,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListItemActivities  ListItemActivitiesRequest
+     * @return ListItemActivitiesResponse
+     */
     @Override
     public CompletableFuture<ListItemActivitiesResponse> listItemActivities(ListItemActivitiesRequest request) {
         try {
@@ -878,6 +1084,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserGameProcess  ListUserGameProcessRequest
+     * @return ListUserGameProcessResponse
+     */
     @Override
     public CompletableFuture<ListUserGameProcessResponse> listUserGameProcess(ListUserGameProcessRequest request) {
         try {
@@ -892,6 +1102,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUserPointRecords  ListUserPointRecordsRequest
+     * @return ListUserPointRecordsResponse
+     */
     @Override
     public CompletableFuture<ListUserPointRecordsResponse> listUserPointRecords(ListUserPointRecordsRequest request) {
         try {
@@ -906,6 +1120,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBasicAndBizItems  ModifyBasicAndBizItemsRequest
+     * @return ModifyBasicAndBizItemsResponse
+     */
     @Override
     public CompletableFuture<ModifyBasicAndBizItemsResponse> modifyBasicAndBizItems(ModifyBasicAndBizItemsRequest request) {
         try {
@@ -920,6 +1138,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBasicItemSupplierPrice  ModifyBasicItemSupplierPriceRequest
+     * @return ModifyBasicItemSupplierPriceResponse
+     */
     @Override
     public CompletableFuture<ModifyBasicItemSupplierPriceResponse> modifyBasicItemSupplierPrice(ModifyBasicItemSupplierPriceRequest request) {
         try {
@@ -934,6 +1156,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBizItems  ModifyBizItemsRequest
+     * @return ModifyBizItemsResponse
+     */
     @Override
     public CompletableFuture<ModifyBizItemsResponse> modifyBizItems(ModifyBizItemsRequest request) {
         try {
@@ -948,6 +1174,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyItemLimitRule  ModifyItemLimitRuleRequest
+     * @return ModifyItemLimitRuleResponse
+     */
     @Override
     public CompletableFuture<ModifyItemLimitRuleResponse> modifyItemLimitRule(ModifyItemLimitRuleRequest request) {
         try {
@@ -962,6 +1192,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyOrderDeliveryAddress  ModifyOrderDeliveryAddressRequest
+     * @return ModifyOrderDeliveryAddressResponse
+     */
     @Override
     public CompletableFuture<ModifyOrderDeliveryAddressResponse> modifyOrderDeliveryAddress(ModifyOrderDeliveryAddressRequest request) {
         try {
@@ -976,6 +1210,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyRefund  ModifyRefundRequest
+     * @return ModifyRefundResponse
+     */
     @Override
     public CompletableFuture<ModifyRefundResponse> modifyRefund(ModifyRefundRequest request) {
         try {
@@ -990,6 +1228,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyRefundWithDesignatedTbUid  ModifyRefundWithDesignatedTbUidRequest
+     * @return ModifyRefundWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<ModifyRefundWithDesignatedTbUidResponse> modifyRefundWithDesignatedTbUid(ModifyRefundWithDesignatedTbUidRequest request) {
         try {
@@ -1004,6 +1246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySettleAccount  ModifySettleAccountRequest
+     * @return ModifySettleAccountResponse
+     */
     @Override
     public CompletableFuture<ModifySettleAccountResponse> modifySettleAccount(ModifySettleAccountRequest request) {
         try {
@@ -1018,6 +1264,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySupplierPriceAndPriceCent  ModifySupplierPriceAndPriceCentRequest
+     * @return ModifySupplierPriceAndPriceCentResponse
+     */
     @Override
     public CompletableFuture<ModifySupplierPriceAndPriceCentResponse> modifySupplierPriceAndPriceCent(ModifySupplierPriceAndPriceCentRequest request) {
         try {
@@ -1032,34 +1282,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<NotifyPayOrderStatusResponse> notifyPayOrderStatus(NotifyPayOrderStatusRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("NotifyPayOrderStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(NotifyPayOrderStatusResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<NotifyPayOrderStatusResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<NotifyWithholdFundResponse> notifyWithholdFund(NotifyWithholdFundRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("NotifyWithholdFund").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(NotifyWithholdFundResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<NotifyWithholdFundResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+     * @param request the request parameters of OpenRealTbAccountSupport  OpenRealTbAccountSupportRequest
+     * @return OpenRealTbAccountSupportResponse
+     */
     @Override
     public CompletableFuture<OpenRealTbAccountSupportResponse> openRealTbAccountSupport(OpenRealTbAccountSupportRequest request) {
         try {
@@ -1074,6 +1300,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PushUserGameProcess  PushUserGameProcessRequest
+     * @return PushUserGameProcessResponse
+     */
     @Override
     public CompletableFuture<PushUserGameProcessResponse> pushUserGameProcess(PushUserGameProcessRequest request) {
         try {
@@ -1088,6 +1318,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryActivityItems  QueryActivityItemsRequest
+     * @return QueryActivityItemsResponse
+     */
     @Override
     public CompletableFuture<QueryActivityItemsResponse> queryActivityItems(QueryActivityItemsRequest request) {
         try {
@@ -1102,6 +1336,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAddress  QueryAddressRequest
+     * @return QueryAddressResponse
+     */
     @Override
     public CompletableFuture<QueryAddressResponse> queryAddress(QueryAddressRequest request) {
         try {
@@ -1116,6 +1354,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAddressDetail  QueryAddressDetailRequest
+     * @return QueryAddressDetailResponse
+     */
     @Override
     public CompletableFuture<QueryAddressDetailResponse> queryAddressDetail(QueryAddressDetailRequest request) {
         try {
@@ -1130,6 +1372,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAddressList  QueryAddressListRequest
+     * @return QueryAddressListResponse
+     */
     @Override
     public CompletableFuture<QueryAddressListResponse> queryAddressList(QueryAddressListRequest request) {
         try {
@@ -1144,6 +1390,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAdvertisementSettleInfo  QueryAdvertisementSettleInfoRequest
+     * @return QueryAdvertisementSettleInfoResponse
+     */
     @Override
     public CompletableFuture<QueryAdvertisementSettleInfoResponse> queryAdvertisementSettleInfo(QueryAdvertisementSettleInfoRequest request) {
         try {
@@ -1158,6 +1408,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAgreement  QueryAgreementRequest
+     * @return QueryAgreementResponse
+     */
     @Override
     public CompletableFuture<QueryAgreementResponse> queryAgreement(QueryAgreementRequest request) {
         try {
@@ -1172,6 +1426,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAllCinemas  QueryAllCinemasRequest
+     * @return QueryAllCinemasResponse
+     */
     @Override
     public CompletableFuture<QueryAllCinemasResponse> queryAllCinemas(QueryAllCinemasRequest request) {
         try {
@@ -1186,6 +1444,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAllCities  QueryAllCitiesRequest
+     * @return QueryAllCitiesResponse
+     */
     @Override
     public CompletableFuture<QueryAllCitiesResponse> queryAllCities(QueryAllCitiesRequest request) {
         try {
@@ -1200,6 +1462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBatchRegistAnonymousTbAccountResult  QueryBatchRegistAnonymousTbAccountResultRequest
+     * @return QueryBatchRegistAnonymousTbAccountResultResponse
+     */
     @Override
     public CompletableFuture<QueryBatchRegistAnonymousTbAccountResultResponse> queryBatchRegistAnonymousTbAccountResult(QueryBatchRegistAnonymousTbAccountResultRequest request) {
         try {
@@ -1214,6 +1480,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBestSession4Items  QueryBestSession4ItemsRequest
+     * @return QueryBestSession4ItemsResponse
+     */
     @Override
     public CompletableFuture<QueryBestSession4ItemsResponse> queryBestSession4Items(QueryBestSession4ItemsRequest request) {
         try {
@@ -1228,6 +1498,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBizItemList  QueryBizItemListRequest
+     * @return QueryBizItemListResponse
+     */
     @Override
     public CompletableFuture<QueryBizItemListResponse> queryBizItemList(QueryBizItemListRequest request) {
         try {
@@ -1242,6 +1516,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBizItemListV2  QueryBizItemListV2Request
+     * @return QueryBizItemListV2Response
+     */
     @Override
     public CompletableFuture<QueryBizItemListV2Response> queryBizItemListV2(QueryBizItemListV2Request request) {
         try {
@@ -1256,6 +1534,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBizItemListWithCache  QueryBizItemListWithCacheRequest
+     * @return QueryBizItemListWithCacheResponse
+     */
     @Override
     public CompletableFuture<QueryBizItemListWithCacheResponse> queryBizItemListWithCache(QueryBizItemListWithCacheRequest request) {
         try {
@@ -1270,6 +1552,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBizItems  QueryBizItemsRequest
+     * @return QueryBizItemsResponse
+     */
     @Override
     public CompletableFuture<QueryBizItemsResponse> queryBizItems(QueryBizItemsRequest request) {
         try {
@@ -1284,6 +1570,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBizItemsWithActivity  QueryBizItemsWithActivityRequest
+     * @return QueryBizItemsWithActivityResponse
+     */
     @Override
     public CompletableFuture<QueryBizItemsWithActivityResponse> queryBizItemsWithActivity(QueryBizItemsWithActivityRequest request) {
         try {
@@ -1298,6 +1588,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryBudgetTicketItemListByBizId  QueryBudgetTicketItemListByBizIdRequest
+     * @return QueryBudgetTicketItemListByBizIdResponse
+     */
     @Override
     public CompletableFuture<QueryBudgetTicketItemListByBizIdResponse> queryBudgetTicketItemListByBizId(QueryBudgetTicketItemListByBizIdRequest request) {
         try {
@@ -1312,6 +1606,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryChannelItemBillDownloadUrl  QueryChannelItemBillDownloadUrlRequest
+     * @return QueryChannelItemBillDownloadUrlResponse
+     */
     @Override
     public CompletableFuture<QueryChannelItemBillDownloadUrlResponse> queryChannelItemBillDownloadUrl(QueryChannelItemBillDownloadUrlRequest request) {
         try {
@@ -1326,6 +1624,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryGuideItemGroup  QueryGuideItemGroupRequest
+     * @return QueryGuideItemGroupResponse
+     */
     @Override
     public CompletableFuture<QueryGuideItemGroupResponse> queryGuideItemGroup(QueryGuideItemGroupRequest request) {
         try {
@@ -1340,6 +1642,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryGuideItemGroupForCrowdOperation  QueryGuideItemGroupForCrowdOperationRequest
+     * @return QueryGuideItemGroupForCrowdOperationResponse
+     */
     @Override
     public CompletableFuture<QueryGuideItemGroupForCrowdOperationResponse> queryGuideItemGroupForCrowdOperation(QueryGuideItemGroupForCrowdOperationRequest request) {
         try {
@@ -1354,6 +1660,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryGuideItemGroupWithOutInventory  QueryGuideItemGroupWithOutInventoryRequest
+     * @return QueryGuideItemGroupWithOutInventoryResponse
+     */
     @Override
     public CompletableFuture<QueryGuideItemGroupWithOutInventoryResponse> queryGuideItemGroupWithOutInventory(QueryGuideItemGroupWithOutInventoryRequest request) {
         try {
@@ -1368,6 +1678,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryHotMovies  QueryHotMoviesRequest
+     * @return QueryHotMoviesResponse
+     */
     @Override
     public CompletableFuture<QueryHotMoviesResponse> queryHotMovies(QueryHotMoviesRequest request) {
         try {
@@ -1382,6 +1696,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryInventoryOfItemsInBizItemGroup  QueryInventoryOfItemsInBizItemGroupRequest
+     * @return QueryInventoryOfItemsInBizItemGroupResponse
+     */
     @Override
     public CompletableFuture<QueryInventoryOfItemsInBizItemGroupResponse> queryInventoryOfItemsInBizItemGroup(QueryInventoryOfItemsInBizItemGroupRequest request) {
         try {
@@ -1396,6 +1714,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryItemDetail  QueryItemDetailRequest
+     * @return QueryItemDetailResponse
+     */
     @Override
     public CompletableFuture<QueryItemDetailResponse> queryItemDetail(QueryItemDetailRequest request) {
         try {
@@ -1410,6 +1732,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryItemDetailInner  QueryItemDetailInnerRequest
+     * @return QueryItemDetailInnerResponse
+     */
     @Override
     public CompletableFuture<QueryItemDetailInnerResponse> queryItemDetailInner(QueryItemDetailInnerRequest request) {
         try {
@@ -1424,6 +1750,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryItemDetailTea  QueryItemDetailTeaRequest
+     * @return QueryItemDetailTeaResponse
+     */
     @Override
     public CompletableFuture<QueryItemDetailTeaResponse> queryItemDetailTea(QueryItemDetailTeaRequest request) {
         try {
@@ -1438,6 +1768,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryItemInSubBizs  QueryItemInSubBizsRequest
+     * @return QueryItemInSubBizsResponse
+     */
     @Override
     public CompletableFuture<QueryItemInSubBizsResponse> queryItemInSubBizs(QueryItemInSubBizsRequest request) {
         try {
@@ -1452,6 +1786,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryItemInventory  QueryItemInventoryRequest
+     * @return QueryItemInventoryResponse
+     */
     @Override
     public CompletableFuture<QueryItemInventoryResponse> queryItemInventory(QueryItemInventoryRequest request) {
         try {
@@ -1466,6 +1804,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryItemInventoryV2  QueryItemInventoryV2Request
+     * @return QueryItemInventoryV2Response
+     */
     @Override
     public CompletableFuture<QueryItemInventoryV2Response> queryItemInventoryV2(QueryItemInventoryV2Request request) {
         try {
@@ -1480,6 +1822,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryItemNextCycleRestriction  QueryItemNextCycleRestrictionRequest
+     * @return QueryItemNextCycleRestrictionResponse
+     */
     @Override
     public CompletableFuture<QueryItemNextCycleRestrictionResponse> queryItemNextCycleRestriction(QueryItemNextCycleRestrictionRequest request) {
         try {
@@ -1494,6 +1840,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryLogistics  QueryLogisticsRequest
+     * @return QueryLogisticsResponse
+     */
     @Override
     public CompletableFuture<QueryLogisticsResponse> queryLogistics(QueryLogisticsRequest request) {
         try {
@@ -1508,6 +1858,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMediaSettleInfo  QueryMediaSettleInfoRequest
+     * @return QueryMediaSettleInfoResponse
+     */
     @Override
     public CompletableFuture<QueryMediaSettleInfoResponse> queryMediaSettleInfo(QueryMediaSettleInfoRequest request) {
         try {
@@ -1522,6 +1876,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMessages  QueryMessagesRequest
+     * @return QueryMessagesResponse
+     */
     @Override
     public CompletableFuture<QueryMessagesResponse> queryMessages(QueryMessagesRequest request) {
         try {
@@ -1536,6 +1894,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMovieComments  QueryMovieCommentsRequest
+     * @return QueryMovieCommentsResponse
+     */
     @Override
     public CompletableFuture<QueryMovieCommentsResponse> queryMovieComments(QueryMovieCommentsRequest request) {
         try {
@@ -1550,6 +1912,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMovieSchedules  QueryMovieSchedulesRequest
+     * @return QueryMovieSchedulesResponse
+     */
     @Override
     public CompletableFuture<QueryMovieSchedulesResponse> queryMovieSchedules(QueryMovieSchedulesRequest request) {
         try {
@@ -1564,6 +1930,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMovieSeats  QueryMovieSeatsRequest
+     * @return QueryMovieSeatsResponse
+     */
     @Override
     public CompletableFuture<QueryMovieSeatsResponse> queryMovieSeats(QueryMovieSeatsRequest request) {
         try {
@@ -1578,6 +1948,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryMovieTickets  QueryMovieTicketsRequest
+     * @return QueryMovieTicketsResponse
+     */
     @Override
     public CompletableFuture<QueryMovieTicketsResponse> queryMovieTickets(QueryMovieTicketsRequest request) {
         try {
@@ -1592,6 +1966,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOrderAndPaymentList  QueryOrderAndPaymentListRequest
+     * @return QueryOrderAndPaymentListResponse
+     */
     @Override
     public CompletableFuture<QueryOrderAndPaymentListResponse> queryOrderAndPaymentList(QueryOrderAndPaymentListRequest request) {
         try {
@@ -1606,6 +1984,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOrderAndPaymentListWithDesignatedTbUid  QueryOrderAndPaymentListWithDesignatedTbUidRequest
+     * @return QueryOrderAndPaymentListWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<QueryOrderAndPaymentListWithDesignatedTbUidResponse> queryOrderAndPaymentListWithDesignatedTbUid(QueryOrderAndPaymentListWithDesignatedTbUidRequest request) {
         try {
@@ -1620,6 +2002,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOrderCommissionRate  QueryOrderCommissionRateRequest
+     * @return QueryOrderCommissionRateResponse
+     */
     @Override
     public CompletableFuture<QueryOrderCommissionRateResponse> queryOrderCommissionRate(QueryOrderCommissionRateRequest request) {
         try {
@@ -1634,6 +2020,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOrderDetailInner  QueryOrderDetailInnerRequest
+     * @return QueryOrderDetailInnerResponse
+     */
     @Override
     public CompletableFuture<QueryOrderDetailInnerResponse> queryOrderDetailInner(QueryOrderDetailInnerRequest request) {
         try {
@@ -1648,6 +2038,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOrderIdByPayId  QueryOrderIdByPayIdRequest
+     * @return QueryOrderIdByPayIdResponse
+     */
     @Override
     public CompletableFuture<QueryOrderIdByPayIdResponse> queryOrderIdByPayId(QueryOrderIdByPayIdRequest request) {
         try {
@@ -1662,6 +2056,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOrderInfoAfterSale  QueryOrderInfoAfterSaleRequest
+     * @return QueryOrderInfoAfterSaleResponse
+     */
     @Override
     public CompletableFuture<QueryOrderInfoAfterSaleResponse> queryOrderInfoAfterSale(QueryOrderInfoAfterSaleRequest request) {
         try {
@@ -1676,6 +2074,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOrderItemInfoByPaymentIdForAiZhanYou  QueryOrderItemInfoByPaymentIdForAiZhanYouRequest
+     * @return QueryOrderItemInfoByPaymentIdForAiZhanYouResponse
+     */
     @Override
     public CompletableFuture<QueryOrderItemInfoByPaymentIdForAiZhanYouResponse> queryOrderItemInfoByPaymentIdForAiZhanYou(QueryOrderItemInfoByPaymentIdForAiZhanYouRequest request) {
         try {
@@ -1690,6 +2092,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOrderList  QueryOrderListRequest
+     * @return QueryOrderListResponse
+     */
     @Override
     public CompletableFuture<QueryOrderListResponse> queryOrderList(QueryOrderListRequest request) {
         try {
@@ -1704,6 +2110,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOrderListWithDesignatedTbUid  QueryOrderListWithDesignatedTbUidRequest
+     * @return QueryOrderListWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<QueryOrderListWithDesignatedTbUidResponse> queryOrderListWithDesignatedTbUid(QueryOrderListWithDesignatedTbUidRequest request) {
         try {
@@ -1718,6 +2128,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOrderLogistics  QueryOrderLogisticsRequest
+     * @return QueryOrderLogisticsResponse
+     */
     @Override
     public CompletableFuture<QueryOrderLogisticsResponse> queryOrderLogistics(QueryOrderLogisticsRequest request) {
         try {
@@ -1732,6 +2146,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOrderLogisticsWithDesignatedTbUid  QueryOrderLogisticsWithDesignatedTbUidRequest
+     * @return QueryOrderLogisticsWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<QueryOrderLogisticsWithDesignatedTbUidResponse> queryOrderLogisticsWithDesignatedTbUid(QueryOrderLogisticsWithDesignatedTbUidRequest request) {
         try {
@@ -1746,6 +2164,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRealTbAccountSupport  QueryRealTbAccountSupportRequest
+     * @return QueryRealTbAccountSupportResponse
+     */
     @Override
     public CompletableFuture<QueryRealTbAccountSupportResponse> queryRealTbAccountSupport(QueryRealTbAccountSupportRequest request) {
         try {
@@ -1760,6 +2182,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRefundApplicationDetail  QueryRefundApplicationDetailRequest
+     * @return QueryRefundApplicationDetailResponse
+     */
     @Override
     public CompletableFuture<QueryRefundApplicationDetailResponse> queryRefundApplicationDetail(QueryRefundApplicationDetailRequest request) {
         try {
@@ -1774,6 +2200,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryRefundApplyWithDesignatedTbUid  QueryRefundApplyWithDesignatedTbUidRequest
+     * @return QueryRefundApplyWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<QueryRefundApplyWithDesignatedTbUidResponse> queryRefundApplyWithDesignatedTbUid(QueryRefundApplyWithDesignatedTbUidRequest request) {
         try {
@@ -1788,6 +2218,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySellerLicense  QuerySellerLicenseRequest
+     * @return QuerySellerLicenseResponse
+     */
     @Override
     public CompletableFuture<QuerySellerLicenseResponse> querySellerLicense(QuerySellerLicenseRequest request) {
         try {
@@ -1802,6 +2236,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryStatements  QueryStatementsRequest
+     * @return QueryStatementsResponse
+     */
     @Override
     public CompletableFuture<QueryStatementsResponse> queryStatements(QueryStatementsRequest request) {
         try {
@@ -1816,6 +2254,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QuerySupplierItemBillDownloadUrl  QuerySupplierItemBillDownloadUrlRequest
+     * @return QuerySupplierItemBillDownloadUrlResponse
+     */
     @Override
     public CompletableFuture<QuerySupplierItemBillDownloadUrlResponse> querySupplierItemBillDownloadUrl(QuerySupplierItemBillDownloadUrlRequest request) {
         try {
@@ -1830,6 +2272,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUnfinishedActivities  QueryUnfinishedActivitiesRequest
+     * @return QueryUnfinishedActivitiesResponse
+     */
     @Override
     public CompletableFuture<QueryUnfinishedActivitiesResponse> queryUnfinishedActivities(QueryUnfinishedActivitiesRequest request) {
         try {
@@ -1844,6 +2290,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUnfinishedSessions  QueryUnfinishedSessionsRequest
+     * @return QueryUnfinishedSessionsResponse
+     */
     @Override
     public CompletableFuture<QueryUnfinishedSessionsResponse> queryUnfinishedSessions(QueryUnfinishedSessionsRequest request) {
         try {
@@ -1858,6 +2308,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUnfinishedSessions4Items  QueryUnfinishedSessions4ItemsRequest
+     * @return QueryUnfinishedSessions4ItemsResponse
+     */
     @Override
     public CompletableFuture<QueryUnfinishedSessions4ItemsResponse> queryUnfinishedSessions4Items(QueryUnfinishedSessions4ItemsRequest request) {
         try {
@@ -1872,6 +2326,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUpcomingMovies  QueryUpcomingMoviesRequest
+     * @return QueryUpcomingMoviesResponse
+     */
     @Override
     public CompletableFuture<QueryUpcomingMoviesResponse> queryUpcomingMovies(QueryUpcomingMoviesRequest request) {
         try {
@@ -1886,6 +2344,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUserAccount  QueryUserAccountRequest
+     * @return QueryUserAccountResponse
+     */
     @Override
     public CompletableFuture<QueryUserAccountResponse> queryUserAccount(QueryUserAccountRequest request) {
         try {
@@ -1900,6 +2362,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUserGameProcess  QueryUserGameProcessRequest
+     * @return QueryUserGameProcessResponse
+     */
     @Override
     public CompletableFuture<QueryUserGameProcessResponse> queryUserGameProcess(QueryUserGameProcessRequest request) {
         try {
@@ -1914,6 +2380,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryUserPoint  QueryUserPointRequest
+     * @return QueryUserPointResponse
+     */
     @Override
     public CompletableFuture<QueryUserPointResponse> queryUserPoint(QueryUserPointRequest request) {
         try {
@@ -1928,6 +2398,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryWithholdTrade  QueryWithholdTradeRequest
+     * @return QueryWithholdTradeResponse
+     */
     @Override
     public CompletableFuture<QueryWithholdTradeResponse> queryWithholdTrade(QueryWithholdTradeRequest request) {
         try {
@@ -1942,6 +2416,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RebindTbAccount  RebindTbAccountRequest
+     * @return RebindTbAccountResponse
+     */
     @Override
     public CompletableFuture<RebindTbAccountResponse> rebindTbAccount(RebindTbAccountRequest request) {
         try {
@@ -1956,6 +2434,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefreshSettlementOrderAccount  RefreshSettlementOrderAccountRequest
+     * @return RefreshSettlementOrderAccountResponse
+     */
     @Override
     public CompletableFuture<RefreshSettlementOrderAccountResponse> refreshSettlementOrderAccount(RefreshSettlementOrderAccountRequest request) {
         try {
@@ -1970,6 +2452,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefundOrder  RefundOrderRequest
+     * @return RefundOrderResponse
+     */
     @Override
     public CompletableFuture<RefundOrderResponse> refundOrder(RefundOrderRequest request) {
         try {
@@ -1984,6 +2470,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefundPoint  RefundPointRequest
+     * @return RefundPointResponse
+     */
     @Override
     public CompletableFuture<RefundPointResponse> refundPoint(RefundPointRequest request) {
         try {
@@ -1998,6 +2488,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefundUserPoint  RefundUserPointRequest
+     * @return RefundUserPointResponse
+     */
     @Override
     public CompletableFuture<RefundUserPointResponse> refundUserPoint(RefundUserPointRequest request) {
         try {
@@ -2012,6 +2506,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefuseMerchantSyncTask  RefuseMerchantSyncTaskRequest
+     * @return RefuseMerchantSyncTaskResponse
+     */
     @Override
     public CompletableFuture<RefuseMerchantSyncTaskResponse> refuseMerchantSyncTask(RefuseMerchantSyncTaskRequest request) {
         try {
@@ -2026,6 +2524,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RegistAnonymousTbAccount  RegistAnonymousTbAccountRequest
+     * @return RegistAnonymousTbAccountResponse
+     */
     @Override
     public CompletableFuture<RegistAnonymousTbAccountResponse> registAnonymousTbAccount(RegistAnonymousTbAccountRequest request) {
         try {
@@ -2040,6 +2542,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RegisterSettleAccount  RegisterSettleAccountRequest
+     * @return RegisterSettleAccountResponse
+     */
     @Override
     public CompletableFuture<RegisterSettleAccountResponse> registerSettleAccount(RegisterSettleAccountRequest request) {
         try {
@@ -2054,6 +2560,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RegisterUserAccount  RegisterUserAccountRequest
+     * @return RegisterUserAccountResponse
+     */
     @Override
     public CompletableFuture<RegisterUserAccountResponse> registerUserAccount(RegisterUserAccountRequest request) {
         try {
@@ -2068,6 +2578,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseMovieSeat  ReleaseMovieSeatRequest
+     * @return ReleaseMovieSeatResponse
+     */
     @Override
     public CompletableFuture<ReleaseMovieSeatResponse> releaseMovieSeat(ReleaseMovieSeatRequest request) {
         try {
@@ -2082,6 +2596,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveAddress  RemoveAddressRequest
+     * @return RemoveAddressResponse
+     */
     @Override
     public CompletableFuture<RemoveAddressResponse> removeAddress(RemoveAddressRequest request) {
         try {
@@ -2096,6 +2614,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveMessages  RemoveMessagesRequest
+     * @return RemoveMessagesResponse
+     */
     @Override
     public CompletableFuture<RemoveMessagesResponse> removeMessages(RemoveMessagesRequest request) {
         try {
@@ -2110,6 +2632,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenderH5Order  RenderH5OrderRequest
+     * @return RenderH5OrderResponse
+     */
     @Override
     public CompletableFuture<RenderH5OrderResponse> renderH5Order(RenderH5OrderRequest request) {
         try {
@@ -2124,6 +2650,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenderOrder  RenderOrderRequest
+     * @return RenderOrderResponse
+     */
     @Override
     public CompletableFuture<RenderOrderResponse> renderOrder(RenderOrderRequest request) {
         try {
@@ -2138,6 +2668,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RenderOrderWithDesignatedTbUid  RenderOrderWithDesignatedTbUidRequest
+     * @return RenderOrderWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<RenderOrderWithDesignatedTbUidResponse> renderOrderWithDesignatedTbUid(RenderOrderWithDesignatedTbUidRequest request) {
         try {
@@ -2152,6 +2686,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RepayForPayUrl  RepayForPayUrlRequest
+     * @return RepayForPayUrlResponse
+     */
     @Override
     public CompletableFuture<RepayForPayUrlResponse> repayForPayUrl(RepayForPayUrlRequest request) {
         try {
@@ -2166,6 +2704,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RepayOrder  RepayOrderRequest
+     * @return RepayOrderResponse
+     */
     @Override
     public CompletableFuture<RepayOrderResponse> repayOrder(RepayOrderRequest request) {
         try {
@@ -2180,6 +2722,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RepayWithDesignatedTbUid  RepayWithDesignatedTbUidRequest
+     * @return RepayWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<RepayWithDesignatedTbUidResponse> repayWithDesignatedTbUid(RepayWithDesignatedTbUidRequest request) {
         try {
@@ -2194,6 +2740,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReserveMovieSeat  ReserveMovieSeatRequest
+     * @return ReserveMovieSeatResponse
+     */
     @Override
     public CompletableFuture<ReserveMovieSeatResponse> reserveMovieSeat(ReserveMovieSeatRequest request) {
         try {
@@ -2208,6 +2758,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SettleOrder  SettleOrderRequest
+     * @return SettleOrderResponse
+     */
     @Override
     public CompletableFuture<SettleOrderResponse> settleOrder(SettleOrderRequest request) {
         try {
@@ -2222,6 +2776,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartUserGame  StartUserGameRequest
+     * @return StartUserGameResponse
+     */
     @Override
     public CompletableFuture<StartUserGameResponse> startUserGame(StartUserGameRequest request) {
         try {
@@ -2236,6 +2794,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitReturnGoodLogistics  SubmitReturnGoodLogisticsRequest
+     * @return SubmitReturnGoodLogisticsResponse
+     */
     @Override
     public CompletableFuture<SubmitReturnGoodLogisticsResponse> submitReturnGoodLogistics(SubmitReturnGoodLogisticsRequest request) {
         try {
@@ -2250,6 +2812,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitReturnGoodLogisticsWithDesignatedTbUid  SubmitReturnGoodLogisticsWithDesignatedTbUidRequest
+     * @return SubmitReturnGoodLogisticsWithDesignatedTbUidResponse
+     */
     @Override
     public CompletableFuture<SubmitReturnGoodLogisticsWithDesignatedTbUidResponse> submitReturnGoodLogisticsWithDesignatedTbUid(SubmitReturnGoodLogisticsWithDesignatedTbUidRequest request) {
         try {
@@ -2264,6 +2830,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SyncMerchantInfo  SyncMerchantInfoRequest
+     * @return SyncMerchantInfoResponse
+     */
     @Override
     public CompletableFuture<SyncMerchantInfoResponse> syncMerchantInfo(SyncMerchantInfoRequest request) {
         try {
@@ -2278,6 +2848,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnFreezeUserPoint  UnFreezeUserPointRequest
+     * @return UnFreezeUserPointResponse
+     */
     @Override
     public CompletableFuture<UnFreezeUserPointResponse> unFreezeUserPoint(UnFreezeUserPointRequest request) {
         try {
@@ -2292,6 +2866,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnsignWithholdAgreement  UnsignWithholdAgreementRequest
+     * @return UnsignWithholdAgreementResponse
+     */
     @Override
     public CompletableFuture<UnsignWithholdAgreementResponse> unsignWithholdAgreement(UnsignWithholdAgreementRequest request) {
         try {
@@ -2306,6 +2884,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAddress  UpdateAddressRequest
+     * @return UpdateAddressResponse
+     */
     @Override
     public CompletableFuture<UpdateAddressResponse> updateAddress(UpdateAddressRequest request) {
         try {
@@ -2320,6 +2902,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ValidateTaobaoAccount  ValidateTaobaoAccountRequest
+     * @return ValidateTaobaoAccountResponse
+     */
     @Override
     public CompletableFuture<ValidateTaobaoAccountResponse> validateTaobaoAccount(ValidateTaobaoAccountRequest request) {
         try {

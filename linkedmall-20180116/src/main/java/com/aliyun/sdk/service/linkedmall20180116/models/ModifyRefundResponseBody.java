@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRefundResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyRefundResponseBody</p>
  */
 public class ModifyRefundResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RefundApplicationData")
+    @com.aliyun.core.annotation.NameInMap("RefundApplicationData")
     private RefundApplicationData refundApplicationData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyRefundResponseBody(Builder builder) {
@@ -111,14 +116,20 @@ public class ModifyRefundResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyRefundResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyRefundResponseBody</p>
+     */
     public static class RefundApplicationData extends TeaModel {
-        @NameInMap("DisputeStatus")
+        @com.aliyun.core.annotation.NameInMap("DisputeStatus")
         private Integer disputeStatus;
 
-        @NameInMap("DisputeType")
+        @com.aliyun.core.annotation.NameInMap("DisputeType")
         private Integer disputeType;
 
-        @NameInMap("SubLmOrderId")
+        @com.aliyun.core.annotation.NameInMap("SubLmOrderId")
         private String subLmOrderId;
 
         private RefundApplicationData(Builder builder) {

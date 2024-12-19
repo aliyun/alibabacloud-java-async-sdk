@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushUserGameProcessResponseBody} extends {@link TeaModel}
  *
  * <p>PushUserGameProcessResponseBody</p>
  */
 public class PushUserGameProcessResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PushUserGameProcessResponseBody(Builder builder) {
@@ -111,41 +116,47 @@ public class PushUserGameProcessResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PushUserGameProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>PushUserGameProcessResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("ActivityId")
+        @com.aliyun.core.annotation.NameInMap("ActivityId")
         private String activityId;
 
-        @NameInMap("CurrentShowContent")
+        @com.aliyun.core.annotation.NameInMap("CurrentShowContent")
         private String currentShowContent;
 
-        @NameInMap("CurrentStepId")
+        @com.aliyun.core.annotation.NameInMap("CurrentStepId")
         private String currentStepId;
 
-        @NameInMap("CurrentStepStatus")
+        @com.aliyun.core.annotation.NameInMap("CurrentStepStatus")
         private String currentStepStatus;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("ExtInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
         private String extInfo;
 
-        @NameInMap("GameId")
+        @com.aliyun.core.annotation.NameInMap("GameId")
         private String gameId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProcessId")
+        @com.aliyun.core.annotation.NameInMap("ProcessId")
         private String processId;
 
-        @NameInMap("RouteId")
+        @com.aliyun.core.annotation.NameInMap("RouteId")
         private String routeId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Model(Builder builder) {

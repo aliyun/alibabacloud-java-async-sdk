@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InitModifyRefundRequest} extends {@link RequestModel}
  *
  * <p>InitModifyRefundRequest</p>
  */
 public class InitModifyRefundRequest extends Request {
-    @Query
-    @NameInMap("AccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
     private String accountType;
 
-    @Query
-    @NameInMap("BizClaimType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizClaimType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer bizClaimType;
 
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("BizUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizUid;
 
-    @Query
-    @NameInMap("DisputeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisputeId")
     private Long disputeId;
 
-    @Query
-    @NameInMap("GoodsStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GoodsStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer goodsStatus;
 
-    @Query
-    @NameInMap("SubLmOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubLmOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subLmOrderId;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
     private String thirdPartyUserId;
 
-    @Query
-    @NameInMap("UseAnonymousTbAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseAnonymousTbAccount")
     private Boolean useAnonymousTbAccount;
 
     private InitModifyRefundRequest(Builder builder) {
@@ -180,7 +185,10 @@ public class InitModifyRefundRequest extends Request {
         }
 
         /**
-         * BizClaimType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizClaimType(Integer bizClaimType) {
             this.putQueryParameter("BizClaimType", bizClaimType);
@@ -189,7 +197,10 @@ public class InitModifyRefundRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL202****11224</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -198,7 +209,10 @@ public class InitModifyRefundRequest extends Request {
         }
 
         /**
-         * BizUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22112****2411</p>
          */
         public Builder bizUid(String bizUid) {
             this.putQueryParameter("BizUid", bizUid);
@@ -216,7 +230,10 @@ public class InitModifyRefundRequest extends Request {
         }
 
         /**
-         * GoodsStatus.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder goodsStatus(Integer goodsStatus) {
             this.putQueryParameter("GoodsStatus", goodsStatus);
@@ -225,7 +242,10 @@ public class InitModifyRefundRequest extends Request {
         }
 
         /**
-         * SubLmOrderId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23******85</p>
          */
         public Builder subLmOrderId(String subLmOrderId) {
             this.putQueryParameter("SubLmOrderId", subLmOrderId);

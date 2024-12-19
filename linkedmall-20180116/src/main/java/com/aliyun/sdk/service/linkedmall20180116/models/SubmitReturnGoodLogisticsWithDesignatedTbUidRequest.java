@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitReturnGoodLogisticsWithDesignatedTbUidRequest} extends {@link RequestModel}
  *
  * <p>SubmitReturnGoodLogisticsWithDesignatedTbUidRequest</p>
  */
 public class SubmitReturnGoodLogisticsWithDesignatedTbUidRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Body
-    @NameInMap("CpCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CpCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cpCode;
 
-    @Body
-    @NameInMap("DisputeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisputeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long disputeId;
 
-    @Body
-    @NameInMap("LogisticsNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogisticsNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logisticsNo;
 
-    @Body
-    @NameInMap("SubLmOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubLmOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subLmOrderId;
 
-    @Body
-    @NameInMap("TbAccountType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbAccountType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tbAccountType;
 
-    @Body
-    @NameInMap("TbUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbUserId")
     private Long tbUserId;
 
-    @Body
-    @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartyUserId;
 
     private SubmitReturnGoodLogisticsWithDesignatedTbUidRequest(Builder builder) {
@@ -182,7 +187,10 @@ public class SubmitReturnGoodLogisticsWithDesignatedTbUidRequest extends Request
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20***003</p>
          */
         public Builder bizId(String bizId) {
             this.putBodyParameter("BizId", bizId);
@@ -191,7 +199,10 @@ public class SubmitReturnGoodLogisticsWithDesignatedTbUidRequest extends Request
         }
 
         /**
-         * CpCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YTO</p>
          */
         public Builder cpCode(String cpCode) {
             this.putBodyParameter("CpCode", cpCode);
@@ -200,7 +211,10 @@ public class SubmitReturnGoodLogisticsWithDesignatedTbUidRequest extends Request
         }
 
         /**
-         * DisputeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19145***4240</p>
          */
         public Builder disputeId(Long disputeId) {
             this.putBodyParameter("DisputeId", disputeId);
@@ -209,7 +223,10 @@ public class SubmitReturnGoodLogisticsWithDesignatedTbUidRequest extends Request
         }
 
         /**
-         * LogisticsNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YT685***0586</p>
          */
         public Builder logisticsNo(String logisticsNo) {
             this.putBodyParameter("LogisticsNo", logisticsNo);
@@ -218,7 +235,10 @@ public class SubmitReturnGoodLogisticsWithDesignatedTbUidRequest extends Request
         }
 
         /**
-         * SubLmOrderId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>702***47</p>
          */
         public Builder subLmOrderId(String subLmOrderId) {
             this.putBodyParameter("SubLmOrderId", subLmOrderId);
@@ -227,7 +247,10 @@ public class SubmitReturnGoodLogisticsWithDesignatedTbUidRequest extends Request
         }
 
         /**
-         * TbAccountType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANONY</p>
          */
         public Builder tbAccountType(String tbAccountType) {
             this.putBodyParameter("TbAccountType", tbAccountType);
@@ -245,7 +268,10 @@ public class SubmitReturnGoodLogisticsWithDesignatedTbUidRequest extends Request
         }
 
         /**
-         * ThirdPartyUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user0***01</p>
          */
         public Builder thirdPartyUserId(String thirdPartyUserId) {
             this.putBodyParameter("ThirdPartyUserId", thirdPartyUserId);

@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMovieSchedulesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMovieSchedulesResponseBody</p>
  */
 public class QueryMovieSchedulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Schedules")
+    @com.aliyun.core.annotation.NameInMap("Schedules")
     private Schedules schedules;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryMovieSchedulesResponseBody(Builder builder) {
@@ -191,47 +196,53 @@ public class QueryMovieSchedulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMovieSchedulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMovieSchedulesResponseBody</p>
+     */
     public static class Schedule extends TeaModel {
-        @NameInMap("CinemaId")
+        @com.aliyun.core.annotation.NameInMap("CinemaId")
         private Long cinemaId;
 
-        @NameInMap("HallName")
+        @com.aliyun.core.annotation.NameInMap("HallName")
         private String hallName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsExpired")
+        @com.aliyun.core.annotation.NameInMap("IsExpired")
         private Boolean isExpired;
 
-        @NameInMap("MaxCanBuy")
+        @com.aliyun.core.annotation.NameInMap("MaxCanBuy")
         private Long maxCanBuy;
 
-        @NameInMap("MovieId")
+        @com.aliyun.core.annotation.NameInMap("MovieId")
         private Long movieId;
 
-        @NameInMap("MovieVersion")
+        @com.aliyun.core.annotation.NameInMap("MovieVersion")
         private String movieVersion;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Long price;
 
-        @NameInMap("ReleaseDate")
+        @com.aliyun.core.annotation.NameInMap("ReleaseDate")
         private String releaseDate;
 
-        @NameInMap("ScheduleArea")
+        @com.aliyun.core.annotation.NameInMap("ScheduleArea")
         private String scheduleArea;
 
-        @NameInMap("SectionId")
+        @com.aliyun.core.annotation.NameInMap("SectionId")
         private String sectionId;
 
-        @NameInMap("ServiceFee")
+        @com.aliyun.core.annotation.NameInMap("ServiceFee")
         private Long serviceFee;
 
-        @NameInMap("SessionEndingTime")
+        @com.aliyun.core.annotation.NameInMap("SessionEndingTime")
         private String sessionEndingTime;
 
-        @NameInMap("SessionStartingTime")
+        @com.aliyun.core.annotation.NameInMap("SessionStartingTime")
         private String sessionStartingTime;
 
         private Schedule(Builder builder) {
@@ -492,9 +503,15 @@ public class QueryMovieSchedulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMovieSchedulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMovieSchedulesResponseBody</p>
+     */
     public static class Schedules extends TeaModel {
-        @NameInMap("Schedule")
-        private java.util.List < Schedule> schedule;
+        @com.aliyun.core.annotation.NameInMap("Schedule")
+        private java.util.List<Schedule> schedule;
 
         private Schedules(Builder builder) {
             this.schedule = builder.schedule;
@@ -511,17 +528,17 @@ public class QueryMovieSchedulesResponseBody extends TeaModel {
         /**
          * @return schedule
          */
-        public java.util.List < Schedule> getSchedule() {
+        public java.util.List<Schedule> getSchedule() {
             return this.schedule;
         }
 
         public static final class Builder {
-            private java.util.List < Schedule> schedule; 
+            private java.util.List<Schedule> schedule; 
 
             /**
              * Schedule.
              */
-            public Builder schedule(java.util.List < Schedule> schedule) {
+            public Builder schedule(java.util.List<Schedule> schedule) {
                 this.schedule = schedule;
                 return this;
             }

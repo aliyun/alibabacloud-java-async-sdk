@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddItemLimitRuleRequest} extends {@link RequestModel}
  *
  * <p>AddItemLimitRuleRequest</p>
  */
 public class AddItemLimitRuleRequest extends Request {
-    @Query
-    @NameInMap("BeginTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long beginTime;
 
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("ItemId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ItemId")
     private Long itemId;
 
-    @Query
-    @NameInMap("LmActivityId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LmActivityId")
     private Long lmActivityId;
 
-    @Query
-    @NameInMap("LmItemId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LmItemId")
     private String lmItemId;
 
-    @Query
-    @NameInMap("RuleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer ruleType;
 
-    @Query
-    @NameInMap("SubBizCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubBizCode")
     private String subBizCode;
 
-    @Query
-    @NameInMap("UpperNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpperNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer upperNum;
 
     private AddItemLimitRuleRequest(Builder builder) {
@@ -171,7 +176,10 @@ public class AddItemLimitRuleRequest extends Request {
         } 
 
         /**
-         * BeginTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638958044395</p>
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -180,7 +188,10 @@ public class AddItemLimitRuleRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -189,7 +200,10 @@ public class AddItemLimitRuleRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1647446400000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -225,7 +239,7 @@ public class AddItemLimitRuleRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * <p>This parameter is required.</p>
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -243,7 +257,7 @@ public class AddItemLimitRuleRequest extends Request {
         }
 
         /**
-         * UpperNum.
+         * <p>This parameter is required.</p>
          */
         public Builder upperNum(Integer upperNum) {
             this.putQueryParameter("UpperNum", upperNum);

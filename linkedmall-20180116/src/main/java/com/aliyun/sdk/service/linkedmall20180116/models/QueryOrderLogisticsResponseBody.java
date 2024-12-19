@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrderLogisticsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryOrderLogisticsResponseBody</p>
  */
 public class QueryOrderLogisticsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("OrderLogistics")
+    @com.aliyun.core.annotation.NameInMap("OrderLogistics")
     private OrderLogistics orderLogistics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryOrderLogisticsResponseBody(Builder builder) {
@@ -111,17 +116,23 @@ public class QueryOrderLogisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryOrderLogisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderLogisticsResponseBody</p>
+     */
     public static class Fetcher extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("ZipCode")
+        @com.aliyun.core.annotation.NameInMap("ZipCode")
         private String zipCode;
 
         private Fetcher(Builder builder) {
@@ -212,14 +223,20 @@ public class QueryOrderLogisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderLogisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderLogisticsResponseBody</p>
+     */
     public static class LogisticsDetailList extends TeaModel {
-        @NameInMap("OcurrTimeStr")
+        @com.aliyun.core.annotation.NameInMap("OcurrTimeStr")
         private String ocurrTimeStr;
 
-        @NameInMap("StanderdDesc")
+        @com.aliyun.core.annotation.NameInMap("StanderdDesc")
         private String standerdDesc;
 
-        @NameInMap("StatusIcon")
+        @com.aliyun.core.annotation.NameInMap("StatusIcon")
         private String statusIcon;
 
         private LogisticsDetailList(Builder builder) {
@@ -293,9 +310,15 @@ public class QueryOrderLogisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderLogisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderLogisticsResponseBody</p>
+     */
     public static class OrderLogisticsLogisticsDetailList extends TeaModel {
-        @NameInMap("LogisticsDetailList")
-        private java.util.List < LogisticsDetailList> logisticsDetailList;
+        @com.aliyun.core.annotation.NameInMap("LogisticsDetailList")
+        private java.util.List<LogisticsDetailList> logisticsDetailList;
 
         private OrderLogisticsLogisticsDetailList(Builder builder) {
             this.logisticsDetailList = builder.logisticsDetailList;
@@ -312,17 +335,17 @@ public class QueryOrderLogisticsResponseBody extends TeaModel {
         /**
          * @return logisticsDetailList
          */
-        public java.util.List < LogisticsDetailList> getLogisticsDetailList() {
+        public java.util.List<LogisticsDetailList> getLogisticsDetailList() {
             return this.logisticsDetailList;
         }
 
         public static final class Builder {
-            private java.util.List < LogisticsDetailList> logisticsDetailList; 
+            private java.util.List<LogisticsDetailList> logisticsDetailList; 
 
             /**
              * LogisticsDetailList.
              */
-            public Builder logisticsDetailList(java.util.List < LogisticsDetailList> logisticsDetailList) {
+            public Builder logisticsDetailList(java.util.List<LogisticsDetailList> logisticsDetailList) {
                 this.logisticsDetailList = logisticsDetailList;
                 return this;
             }
@@ -334,17 +357,23 @@ public class QueryOrderLogisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderLogisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderLogisticsResponseBody</p>
+     */
     public static class Receiver extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("ZipCode")
+        @com.aliyun.core.annotation.NameInMap("ZipCode")
         private String zipCode;
 
         private Receiver(Builder builder) {
@@ -435,26 +464,32 @@ public class QueryOrderLogisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderLogisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderLogisticsResponseBody</p>
+     */
     public static class OrderLogistics extends TeaModel {
-        @NameInMap("DataProvider")
+        @com.aliyun.core.annotation.NameInMap("DataProvider")
         private String dataProvider;
 
-        @NameInMap("DataProviderTitle")
+        @com.aliyun.core.annotation.NameInMap("DataProviderTitle")
         private String dataProviderTitle;
 
-        @NameInMap("Fetcher")
+        @com.aliyun.core.annotation.NameInMap("Fetcher")
         private Fetcher fetcher;
 
-        @NameInMap("LogisticsCompanyCode")
+        @com.aliyun.core.annotation.NameInMap("LogisticsCompanyCode")
         private String logisticsCompanyCode;
 
-        @NameInMap("LogisticsCompanyName")
+        @com.aliyun.core.annotation.NameInMap("LogisticsCompanyName")
         private String logisticsCompanyName;
 
-        @NameInMap("LogisticsDetailList")
+        @com.aliyun.core.annotation.NameInMap("LogisticsDetailList")
         private OrderLogisticsLogisticsDetailList logisticsDetailList;
 
-        @NameInMap("Receiver")
+        @com.aliyun.core.annotation.NameInMap("Receiver")
         private Receiver receiver;
 
         private OrderLogistics(Builder builder) {

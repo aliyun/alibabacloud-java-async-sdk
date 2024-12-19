@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryRefundApplyWithDesignatedTbUidResponseBody} extends {@link TeaModel}
  *
  * <p>QueryRefundApplyWithDesignatedTbUidResponseBody</p>
  */
 public class QueryRefundApplyWithDesignatedTbUidResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryRefundApplyWithDesignatedTbUidResponseBody(Builder builder) {
@@ -251,17 +256,23 @@ public class QueryRefundApplyWithDesignatedTbUidResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryRefundApplyWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRefundApplyWithDesignatedTbUidResponseBody</p>
+     */
     public static class ApplyReasonText extends TeaModel {
-        @NameInMap("ProofRequired")
+        @com.aliyun.core.annotation.NameInMap("ProofRequired")
         private Boolean proofRequired;
 
-        @NameInMap("ReasonTextId")
+        @com.aliyun.core.annotation.NameInMap("ReasonTextId")
         private Long reasonTextId;
 
-        @NameInMap("ReasonTips")
+        @com.aliyun.core.annotation.NameInMap("ReasonTips")
         private String reasonTips;
 
-        @NameInMap("RefundDescRequired")
+        @com.aliyun.core.annotation.NameInMap("RefundDescRequired")
         private Boolean refundDescRequired;
 
         private ApplyReasonText(Builder builder) {
@@ -352,11 +363,17 @@ public class QueryRefundApplyWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRefundApplyWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRefundApplyWithDesignatedTbUidResponseBody</p>
+     */
     public static class MaxRefundFeeData extends TeaModel {
-        @NameInMap("MaxRefundFee")
+        @com.aliyun.core.annotation.NameInMap("MaxRefundFee")
         private Long maxRefundFee;
 
-        @NameInMap("MinRefundFee")
+        @com.aliyun.core.annotation.NameInMap("MinRefundFee")
         private Long minRefundFee;
 
         private MaxRefundFeeData(Builder builder) {
@@ -413,77 +430,83 @@ public class QueryRefundApplyWithDesignatedTbUidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryRefundApplyWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryRefundApplyWithDesignatedTbUidResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("ApplyDisputeDesc")
+        @com.aliyun.core.annotation.NameInMap("ApplyDisputeDesc")
         private String applyDisputeDesc;
 
-        @NameInMap("ApplyReasonText")
+        @com.aliyun.core.annotation.NameInMap("ApplyReasonText")
         private ApplyReasonText applyReasonText;
 
-        @NameInMap("BizClaimType")
+        @com.aliyun.core.annotation.NameInMap("BizClaimType")
         private Integer bizClaimType;
 
-        @NameInMap("DisputeCreateTime")
+        @com.aliyun.core.annotation.NameInMap("DisputeCreateTime")
         private String disputeCreateTime;
 
-        @NameInMap("DisputeDesc")
+        @com.aliyun.core.annotation.NameInMap("DisputeDesc")
         private String disputeDesc;
 
-        @NameInMap("DisputeEndTime")
+        @com.aliyun.core.annotation.NameInMap("DisputeEndTime")
         private String disputeEndTime;
 
-        @NameInMap("DisputeId")
+        @com.aliyun.core.annotation.NameInMap("DisputeId")
         private Long disputeId;
 
-        @NameInMap("DisputeStatus")
+        @com.aliyun.core.annotation.NameInMap("DisputeStatus")
         private Integer disputeStatus;
 
-        @NameInMap("DisputeType")
+        @com.aliyun.core.annotation.NameInMap("DisputeType")
         private Integer disputeType;
 
-        @NameInMap("LmOrderId")
+        @com.aliyun.core.annotation.NameInMap("LmOrderId")
         private String lmOrderId;
 
-        @NameInMap("MaxRefundFeeData")
+        @com.aliyun.core.annotation.NameInMap("MaxRefundFeeData")
         private MaxRefundFeeData maxRefundFeeData;
 
-        @NameInMap("OrderLogisticsStatus")
+        @com.aliyun.core.annotation.NameInMap("OrderLogisticsStatus")
         private Integer orderLogisticsStatus;
 
-        @NameInMap("RealRefundFee")
+        @com.aliyun.core.annotation.NameInMap("RealRefundFee")
         private Long realRefundFee;
 
-        @NameInMap("RefundFee")
+        @com.aliyun.core.annotation.NameInMap("RefundFee")
         private Long refundFee;
 
-        @NameInMap("RefunderAddress")
+        @com.aliyun.core.annotation.NameInMap("RefunderAddress")
         private String refunderAddress;
 
-        @NameInMap("RefunderName")
+        @com.aliyun.core.annotation.NameInMap("RefunderName")
         private String refunderName;
 
-        @NameInMap("RefunderTel")
+        @com.aliyun.core.annotation.NameInMap("RefunderTel")
         private String refunderTel;
 
-        @NameInMap("RefunderZipCode")
+        @com.aliyun.core.annotation.NameInMap("RefunderZipCode")
         private String refunderZipCode;
 
-        @NameInMap("ReturnGoodCount")
+        @com.aliyun.core.annotation.NameInMap("ReturnGoodCount")
         private Integer returnGoodCount;
 
-        @NameInMap("ReturnGoodLogisticsStatus")
+        @com.aliyun.core.annotation.NameInMap("ReturnGoodLogisticsStatus")
         private Integer returnGoodLogisticsStatus;
 
-        @NameInMap("SellerAgreeMsg")
+        @com.aliyun.core.annotation.NameInMap("SellerAgreeMsg")
         private String sellerAgreeMsg;
 
-        @NameInMap("SellerRefuseAgreementMessage")
+        @com.aliyun.core.annotation.NameInMap("SellerRefuseAgreementMessage")
         private String sellerRefuseAgreementMessage;
 
-        @NameInMap("SellerRefuseReason")
+        @com.aliyun.core.annotation.NameInMap("SellerRefuseReason")
         private String sellerRefuseReason;
 
-        @NameInMap("SubLmOrderId")
+        @com.aliyun.core.annotation.NameInMap("SubLmOrderId")
         private String subLmOrderId;
 
         private Model(Builder builder) {

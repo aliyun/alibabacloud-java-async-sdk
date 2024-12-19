@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddItemToSubBizsRequest} extends {@link RequestModel}
  *
  * <p>AddItemToSubBizsRequest</p>
  */
 public class AddItemToSubBizsRequest extends Request {
-    @Body
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Body
-    @NameInMap("ItemId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemId")
     private Long itemId;
 
-    @Body
-    @NameInMap("LmItemId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LmItemId")
     private String lmItemId;
 
-    @Body
-    @NameInMap("SubBizIds")
-    private java.util.Map < String, ? > subBizIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubBizIds")
+    private java.util.Map<String, ?> subBizIds;
 
     private AddItemToSubBizsRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class AddItemToSubBizsRequest extends Request {
     /**
      * @return subBizIds
      */
-    public java.util.Map < String, ? > getSubBizIds() {
+    public java.util.Map<String, ?> getSubBizIds() {
         return this.subBizIds;
     }
 
@@ -82,7 +87,7 @@ public class AddItemToSubBizsRequest extends Request {
         private String bizId; 
         private Long itemId; 
         private String lmItemId; 
-        private java.util.Map < String, ? > subBizIds; 
+        private java.util.Map<String, ?> subBizIds; 
 
         private Builder() {
             super();
@@ -97,7 +102,10 @@ public class AddItemToSubBizsRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20190325****</p>
          */
         public Builder bizId(String bizId) {
             this.putBodyParameter("BizId", bizId);
@@ -126,7 +134,7 @@ public class AddItemToSubBizsRequest extends Request {
         /**
          * SubBizIds.
          */
-        public Builder subBizIds(java.util.Map < String, ? > subBizIds) {
+        public Builder subBizIds(java.util.Map<String, ?> subBizIds) {
             String subBizIdsShrink = shrink(subBizIds, "SubBizIds", "json");
             this.putBodyParameter("SubBizIds", subBizIdsShrink);
             this.subBizIds = subBizIds;

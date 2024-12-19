@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAllCitiesResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAllCitiesResponseBody</p>
  */
 public class QueryAllCitiesResponseBody extends TeaModel {
-    @NameInMap("Cities")
+    @com.aliyun.core.annotation.NameInMap("Cities")
     private Cities cities;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryAllCitiesResponseBody(Builder builder) {
@@ -191,20 +196,26 @@ public class QueryAllCitiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAllCitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllCitiesResponseBody</p>
+     */
     public static class City extends TeaModel {
-        @NameInMap("CityCode")
+        @com.aliyun.core.annotation.NameInMap("CityCode")
         private Long cityCode;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private Long parentId;
 
-        @NameInMap("PinYin")
+        @com.aliyun.core.annotation.NameInMap("PinYin")
         private String pinYin;
 
         private City(Builder builder) {
@@ -312,9 +323,15 @@ public class QueryAllCitiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAllCitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllCitiesResponseBody</p>
+     */
     public static class Cities extends TeaModel {
-        @NameInMap("City")
-        private java.util.List < City> city;
+        @com.aliyun.core.annotation.NameInMap("City")
+        private java.util.List<City> city;
 
         private Cities(Builder builder) {
             this.city = builder.city;
@@ -331,17 +348,17 @@ public class QueryAllCitiesResponseBody extends TeaModel {
         /**
          * @return city
          */
-        public java.util.List < City> getCity() {
+        public java.util.List<City> getCity() {
             return this.city;
         }
 
         public static final class Builder {
-            private java.util.List < City> city; 
+            private java.util.List<City> city; 
 
             /**
              * City.
              */
-            public Builder city(java.util.List < City> city) {
+            public Builder city(java.util.List<City> city) {
                 this.city = city;
                 return this;
             }

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBatchRegistAnonymousTbAccountResultRequest} extends {@link RequestModel}
  *
  * <p>QueryBatchRegistAnonymousTbAccountResultRequest</p>
  */
 public class QueryBatchRegistAnonymousTbAccountResultRequest extends Request {
-    @Query
-    @NameInMap("BatchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BatchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String batchId;
 
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
     private QueryBatchRegistAnonymousTbAccountResultRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class QueryBatchRegistAnonymousTbAccountResultRequest extends Request {
         } 
 
         /**
-         * BatchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10418*******</p>
          */
         public Builder batchId(String batchId) {
             this.putQueryParameter("BatchId", batchId);
@@ -79,7 +87,10 @@ public class QueryBatchRegistAnonymousTbAccountResultRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20210125****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);

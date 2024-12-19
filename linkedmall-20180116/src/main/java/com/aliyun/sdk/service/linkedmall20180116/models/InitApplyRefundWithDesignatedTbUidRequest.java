@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InitApplyRefundWithDesignatedTbUidRequest} extends {@link RequestModel}
  *
  * <p>InitApplyRefundWithDesignatedTbUidRequest</p>
  */
 public class InitApplyRefundWithDesignatedTbUidRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Body
-    @NameInMap("DisputeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisputeId")
     private Long disputeId;
 
-    @Body
-    @NameInMap("RefundCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RefundCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer refundCode;
 
-    @Body
-    @NameInMap("SubLmOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubLmOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subLmOrderId;
 
-    @Body
-    @NameInMap("TbAccountType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbAccountType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tbAccountType;
 
-    @Body
-    @NameInMap("TbUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbUserId")
     private Long tbUserId;
 
-    @Body
-    @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartyUserId;
 
     private InitApplyRefundWithDesignatedTbUidRequest(Builder builder) {
@@ -166,7 +171,10 @@ public class InitApplyRefundWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL2022***001</p>
          */
         public Builder bizId(String bizId) {
             this.putBodyParameter("BizId", bizId);
@@ -184,7 +192,10 @@ public class InitApplyRefundWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * RefundCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder refundCode(Integer refundCode) {
             this.putBodyParameter("RefundCode", refundCode);
@@ -193,7 +204,10 @@ public class InitApplyRefundWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * SubLmOrderId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>711***981</p>
          */
         public Builder subLmOrderId(String subLmOrderId) {
             this.putBodyParameter("SubLmOrderId", subLmOrderId);
@@ -202,7 +216,10 @@ public class InitApplyRefundWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * TbAccountType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANONY</p>
          */
         public Builder tbAccountType(String tbAccountType) {
             this.putBodyParameter("TbAccountType", tbAccountType);
@@ -220,7 +237,10 @@ public class InitApplyRefundWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * ThirdPartyUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u***001</p>
          */
         public Builder thirdPartyUserId(String thirdPartyUserId) {
             this.putBodyParameter("ThirdPartyUserId", thirdPartyUserId);

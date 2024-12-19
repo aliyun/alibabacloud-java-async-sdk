@@ -1,32 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefuseMerchantSyncTaskRequest} extends {@link RequestModel}
  *
  * <p>RefuseMerchantSyncTaskRequest</p>
  */
 public class RefuseMerchantSyncTaskRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("SellerNick")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SellerNick")
     private String sellerNick;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Query
-    @NameInMap("TimeStamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeStamp")
     private Long timeStamp;
 
     private RefuseMerchantSyncTaskRequest(Builder builder) {
@@ -97,7 +102,10 @@ public class RefuseMerchantSyncTaskRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20190325****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);

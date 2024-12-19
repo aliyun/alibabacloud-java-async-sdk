@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetUserInfoResponseBody</p>
  */
 public class GetUserInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LoginResult")
+    @com.aliyun.core.annotation.NameInMap("LoginResult")
     private LoginResult loginResult;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetUserInfoResponseBody(Builder builder) {
@@ -111,27 +116,33 @@ public class GetUserInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUserInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserInfoResponseBody</p>
+     */
     public static class LoginResult extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("BizUid")
+        @com.aliyun.core.annotation.NameInMap("BizUid")
         private String bizUid;
 
-        @NameInMap("BizUserName")
+        @com.aliyun.core.annotation.NameInMap("BizUserName")
         private String bizUserName;
 
-        @NameInMap("ExtInfo")
-        private java.util.Map < String, ? > extInfo;
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
+        private java.util.Map<String, ?> extInfo;
 
-        @NameInMap("LmUserId")
+        @com.aliyun.core.annotation.NameInMap("LmUserId")
         private Long lmUserId;
 
-        @NameInMap("ReturnUrl")
+        @com.aliyun.core.annotation.NameInMap("ReturnUrl")
         private String returnUrl;
 
-        @NameInMap("SubBizId")
-        private java.util.List < String > subBizId;
+        @com.aliyun.core.annotation.NameInMap("SubBizId")
+        private java.util.List<String> subBizId;
 
         private LoginResult(Builder builder) {
             this.bizId = builder.bizId;
@@ -175,7 +186,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         /**
          * @return extInfo
          */
-        public java.util.Map < String, ? > getExtInfo() {
+        public java.util.Map<String, ?> getExtInfo() {
             return this.extInfo;
         }
 
@@ -196,7 +207,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         /**
          * @return subBizId
          */
-        public java.util.List < String > getSubBizId() {
+        public java.util.List<String> getSubBizId() {
             return this.subBizId;
         }
 
@@ -204,10 +215,10 @@ public class GetUserInfoResponseBody extends TeaModel {
             private String bizId; 
             private String bizUid; 
             private String bizUserName; 
-            private java.util.Map < String, ? > extInfo; 
+            private java.util.Map<String, ?> extInfo; 
             private Long lmUserId; 
             private String returnUrl; 
-            private java.util.List < String > subBizId; 
+            private java.util.List<String> subBizId; 
 
             /**
              * BizId.
@@ -236,7 +247,7 @@ public class GetUserInfoResponseBody extends TeaModel {
             /**
              * ExtInfo.
              */
-            public Builder extInfo(java.util.Map < String, ? > extInfo) {
+            public Builder extInfo(java.util.Map<String, ?> extInfo) {
                 this.extInfo = extInfo;
                 return this;
             }
@@ -260,7 +271,7 @@ public class GetUserInfoResponseBody extends TeaModel {
             /**
              * SubBizId.
              */
-            public Builder subBizId(java.util.List < String > subBizId) {
+            public Builder subBizId(java.util.List<String> subBizId) {
                 this.subBizId = subBizId;
                 return this;
             }

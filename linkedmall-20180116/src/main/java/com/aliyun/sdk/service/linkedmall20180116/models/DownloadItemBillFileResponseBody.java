@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DownloadItemBillFileResponseBody} extends {@link TeaModel}
  *
  * <p>DownloadItemBillFileResponseBody</p>
  */
 public class DownloadItemBillFileResponseBody extends TeaModel {
-    @NameInMap("BizViewData")
-    private java.util.Map < String, ? > bizViewData;
+    @com.aliyun.core.annotation.NameInMap("BizViewData")
+    private java.util.Map<String, ?> bizViewData;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("OssUrl")
+    @com.aliyun.core.annotation.NameInMap("OssUrl")
     private String ossUrl;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DownloadItemBillFileResponseBody(Builder builder) {
@@ -74,7 +79,7 @@ public class DownloadItemBillFileResponseBody extends TeaModel {
     /**
      * @return bizViewData
      */
-    public java.util.Map < String, ? > getBizViewData() {
+    public java.util.Map<String, ?> getBizViewData() {
         return this.bizViewData;
     }
 
@@ -156,7 +161,7 @@ public class DownloadItemBillFileResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > bizViewData; 
+        private java.util.Map<String, ?> bizViewData; 
         private String code; 
         private String logsId; 
         private String message; 
@@ -172,7 +177,7 @@ public class DownloadItemBillFileResponseBody extends TeaModel {
         /**
          * BizViewData.
          */
-        public Builder bizViewData(java.util.Map < String, ? > bizViewData) {
+        public Builder bizViewData(java.util.Map<String, ?> bizViewData) {
             this.bizViewData = bizViewData;
             return this;
         }
@@ -218,7 +223,10 @@ public class DownloadItemBillFileResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize
+         * <p>pageSize</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;

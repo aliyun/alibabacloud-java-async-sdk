@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetActivityGameInfoRequest} extends {@link RequestModel}
  *
  * <p>GetActivityGameInfoRequest</p>
  */
 public class GetActivityGameInfoRequest extends Request {
-    @Query
-    @NameInMap("AccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
     private String accountType;
 
-    @Query
-    @NameInMap("ActivityId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActivityId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String activityId;
 
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Body
-    @NameInMap("ExtInfo")
-    private java.util.Map < String, ? > extInfo;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtInfo")
+    private java.util.Map<String, ?> extInfo;
 
-    @Query
-    @NameInMap("GameId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GameId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gameId;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartyUserId;
 
     private GetActivityGameInfoRequest(Builder builder) {
@@ -87,7 +92,7 @@ public class GetActivityGameInfoRequest extends Request {
     /**
      * @return extInfo
      */
-    public java.util.Map < String, ? > getExtInfo() {
+    public java.util.Map<String, ?> getExtInfo() {
         return this.extInfo;
     }
 
@@ -109,7 +114,7 @@ public class GetActivityGameInfoRequest extends Request {
         private String accountType; 
         private String activityId; 
         private String bizId; 
-        private java.util.Map < String, ? > extInfo; 
+        private java.util.Map<String, ?> extInfo; 
         private String gameId; 
         private String thirdPartyUserId; 
 
@@ -137,7 +142,10 @@ public class GetActivityGameInfoRequest extends Request {
         }
 
         /**
-         * ActivityId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>673</p>
          */
         public Builder activityId(String activityId) {
             this.putQueryParameter("ActivityId", activityId);
@@ -146,7 +154,10 @@ public class GetActivityGameInfoRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20211224****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -157,7 +168,7 @@ public class GetActivityGameInfoRequest extends Request {
         /**
          * ExtInfo.
          */
-        public Builder extInfo(java.util.Map < String, ? > extInfo) {
+        public Builder extInfo(java.util.Map<String, ?> extInfo) {
             String extInfoShrink = shrink(extInfo, "ExtInfo", "json");
             this.putBodyParameter("ExtInfo", extInfoShrink);
             this.extInfo = extInfo;
@@ -165,7 +176,10 @@ public class GetActivityGameInfoRequest extends Request {
         }
 
         /**
-         * GameId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>673476420068894723</p>
          */
         public Builder gameId(String gameId) {
             this.putQueryParameter("GameId", gameId);
@@ -174,7 +188,10 @@ public class GetActivityGameInfoRequest extends Request {
         }
 
         /**
-         * ThirdPartyUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>287384877****</p>
          */
         public Builder thirdPartyUserId(String thirdPartyUserId) {
             this.putQueryParameter("ThirdPartyUserId", thirdPartyUserId);

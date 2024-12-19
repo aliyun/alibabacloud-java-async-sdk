@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitReturnGoodLogisticsRequest} extends {@link RequestModel}
  *
  * <p>SubmitReturnGoodLogisticsRequest</p>
  */
 public class SubmitReturnGoodLogisticsRequest extends Request {
-    @Query
-    @NameInMap("AccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
     private String accountType;
 
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("BizUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizUid;
 
-    @Query
-    @NameInMap("CpCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cpCode;
 
-    @Query
-    @NameInMap("DisputeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisputeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long disputeId;
 
-    @Query
-    @NameInMap("LogisticsNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogisticsNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logisticsNo;
 
-    @Query
-    @NameInMap("SubLmOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubLmOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subLmOrderId;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
     private String thirdPartyUserId;
 
-    @Query
-    @NameInMap("UseAnonymousTbAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseAnonymousTbAccount")
     private Boolean useAnonymousTbAccount;
 
     private SubmitReturnGoodLogisticsRequest(Builder builder) {
@@ -181,7 +186,10 @@ public class SubmitReturnGoodLogisticsRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20****80001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -190,7 +198,10 @@ public class SubmitReturnGoodLogisticsRequest extends Request {
         }
 
         /**
-         * BizUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>250014030308185405</p>
          */
         public Builder bizUid(String bizUid) {
             this.putQueryParameter("BizUid", bizUid);
@@ -199,7 +210,10 @@ public class SubmitReturnGoodLogisticsRequest extends Request {
         }
 
         /**
-         * CpCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SF</p>
          */
         public Builder cpCode(String cpCode) {
             this.putQueryParameter("CpCode", cpCode);
@@ -208,7 +222,10 @@ public class SubmitReturnGoodLogisticsRequest extends Request {
         }
 
         /**
-         * DisputeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96281042016947370</p>
          */
         public Builder disputeId(Long disputeId) {
             this.putQueryParameter("DisputeId", disputeId);
@@ -217,7 +234,10 @@ public class SubmitReturnGoodLogisticsRequest extends Request {
         }
 
         /**
-         * LogisticsNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SF131*****7061</p>
          */
         public Builder logisticsNo(String logisticsNo) {
             this.putQueryParameter("LogisticsNo", logisticsNo);
@@ -226,7 +246,10 @@ public class SubmitReturnGoodLogisticsRequest extends Request {
         }
 
         /**
-         * SubLmOrderId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>368925182</p>
          */
         public Builder subLmOrderId(String subLmOrderId) {
             this.putQueryParameter("SubLmOrderId", subLmOrderId);

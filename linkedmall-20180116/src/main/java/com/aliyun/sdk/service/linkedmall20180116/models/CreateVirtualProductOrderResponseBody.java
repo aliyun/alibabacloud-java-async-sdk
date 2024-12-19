@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVirtualProductOrderResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVirtualProductOrderResponseBody</p>
  */
 public class CreateVirtualProductOrderResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private CreateVirtualProductOrderResponseBody(Builder builder) {
@@ -211,8 +216,14 @@ public class CreateVirtualProductOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVirtualProductOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateVirtualProductOrderResponseBody</p>
+     */
     public static class LmOrderList extends TeaModel {
-        @NameInMap("LmOrderId")
+        @com.aliyun.core.annotation.NameInMap("LmOrderId")
         private String lmOrderId;
 
         private LmOrderList(Builder builder) {
@@ -252,9 +263,15 @@ public class CreateVirtualProductOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateVirtualProductOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateVirtualProductOrderResponseBody</p>
+     */
     public static class ModelLmOrderList extends TeaModel {
-        @NameInMap("LmOrderList")
-        private java.util.List < LmOrderList> lmOrderList;
+        @com.aliyun.core.annotation.NameInMap("LmOrderList")
+        private java.util.List<LmOrderList> lmOrderList;
 
         private ModelLmOrderList(Builder builder) {
             this.lmOrderList = builder.lmOrderList;
@@ -271,17 +288,17 @@ public class CreateVirtualProductOrderResponseBody extends TeaModel {
         /**
          * @return lmOrderList
          */
-        public java.util.List < LmOrderList> getLmOrderList() {
+        public java.util.List<LmOrderList> getLmOrderList() {
             return this.lmOrderList;
         }
 
         public static final class Builder {
-            private java.util.List < LmOrderList> lmOrderList; 
+            private java.util.List<LmOrderList> lmOrderList; 
 
             /**
              * LmOrderList.
              */
-            public Builder lmOrderList(java.util.List < LmOrderList> lmOrderList) {
+            public Builder lmOrderList(java.util.List<LmOrderList> lmOrderList) {
                 this.lmOrderList = lmOrderList;
                 return this;
             }
@@ -293,9 +310,15 @@ public class CreateVirtualProductOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateVirtualProductOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateVirtualProductOrderResponseBody</p>
+     */
     public static class OrderIds extends TeaModel {
-        @NameInMap("OrderIds")
-        private java.util.List < String > orderIds;
+        @com.aliyun.core.annotation.NameInMap("OrderIds")
+        private java.util.List<String> orderIds;
 
         private OrderIds(Builder builder) {
             this.orderIds = builder.orderIds;
@@ -312,17 +335,17 @@ public class CreateVirtualProductOrderResponseBody extends TeaModel {
         /**
          * @return orderIds
          */
-        public java.util.List < String > getOrderIds() {
+        public java.util.List<String> getOrderIds() {
             return this.orderIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > orderIds; 
+            private java.util.List<String> orderIds; 
 
             /**
              * OrderIds.
              */
-            public Builder orderIds(java.util.List < String > orderIds) {
+            public Builder orderIds(java.util.List<String> orderIds) {
                 this.orderIds = orderIds;
                 return this;
             }
@@ -334,9 +357,15 @@ public class CreateVirtualProductOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateVirtualProductOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateVirtualProductOrderResponseBody</p>
+     */
     public static class PayTradeIds extends TeaModel {
-        @NameInMap("PayTradeIds")
-        private java.util.List < String > payTradeIds;
+        @com.aliyun.core.annotation.NameInMap("PayTradeIds")
+        private java.util.List<String> payTradeIds;
 
         private PayTradeIds(Builder builder) {
             this.payTradeIds = builder.payTradeIds;
@@ -353,17 +382,17 @@ public class CreateVirtualProductOrderResponseBody extends TeaModel {
         /**
          * @return payTradeIds
          */
-        public java.util.List < String > getPayTradeIds() {
+        public java.util.List<String> getPayTradeIds() {
             return this.payTradeIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > payTradeIds; 
+            private java.util.List<String> payTradeIds; 
 
             /**
              * PayTradeIds.
              */
-            public Builder payTradeIds(java.util.List < String > payTradeIds) {
+            public Builder payTradeIds(java.util.List<String> payTradeIds) {
                 this.payTradeIds = payTradeIds;
                 return this;
             }
@@ -375,17 +404,23 @@ public class CreateVirtualProductOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateVirtualProductOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateVirtualProductOrderResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("LmOrderList")
+        @com.aliyun.core.annotation.NameInMap("LmOrderList")
         private ModelLmOrderList lmOrderList;
 
-        @NameInMap("OrderIds")
+        @com.aliyun.core.annotation.NameInMap("OrderIds")
         private OrderIds orderIds;
 
-        @NameInMap("PayTradeIds")
+        @com.aliyun.core.annotation.NameInMap("PayTradeIds")
         private PayTradeIds payTradeIds;
 
-        @NameInMap("RedirectUrl")
+        @com.aliyun.core.annotation.NameInMap("RedirectUrl")
         private String redirectUrl;
 
         private Model(Builder builder) {

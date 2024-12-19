@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMediaSettleInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMediaSettleInfoResponseBody</p>
  */
 public class QueryMediaSettleInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryMediaSettleInfoResponseBody(Builder builder) {
@@ -211,38 +216,44 @@ public class QueryMediaSettleInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMediaSettleInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaSettleInfoResponseBody</p>
+     */
     public static class MediaSettleInfoList extends TeaModel {
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ExtInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
         private String extInfo;
 
-        @NameInMap("MediaName")
+        @com.aliyun.core.annotation.NameInMap("MediaName")
         private String mediaName;
 
-        @NameInMap("MediaSettleAmount")
+        @com.aliyun.core.annotation.NameInMap("MediaSettleAmount")
         private String mediaSettleAmount;
 
-        @NameInMap("MediaSettleDetailId")
+        @com.aliyun.core.annotation.NameInMap("MediaSettleDetailId")
         private String mediaSettleDetailId;
 
-        @NameInMap("ModifiedDate")
+        @com.aliyun.core.annotation.NameInMap("ModifiedDate")
         private String modifiedDate;
 
-        @NameInMap("SettleNo")
+        @com.aliyun.core.annotation.NameInMap("SettleNo")
         private String settleNo;
 
-        @NameInMap("SettleStatus")
+        @com.aliyun.core.annotation.NameInMap("SettleStatus")
         private String settleStatus;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private MediaSettleInfoList(Builder builder) {
@@ -452,17 +463,23 @@ public class QueryMediaSettleInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMediaSettleInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMediaSettleInfoResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("MediaSettleInfoList")
-        private java.util.List < MediaSettleInfoList> mediaSettleInfoList;
+        @com.aliyun.core.annotation.NameInMap("MediaSettleInfoList")
+        private java.util.List<MediaSettleInfoList> mediaSettleInfoList;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Model(Builder builder) {
@@ -483,7 +500,7 @@ public class QueryMediaSettleInfoResponseBody extends TeaModel {
         /**
          * @return mediaSettleInfoList
          */
-        public java.util.List < MediaSettleInfoList> getMediaSettleInfoList() {
+        public java.util.List<MediaSettleInfoList> getMediaSettleInfoList() {
             return this.mediaSettleInfoList;
         }
 
@@ -509,7 +526,7 @@ public class QueryMediaSettleInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < MediaSettleInfoList> mediaSettleInfoList; 
+            private java.util.List<MediaSettleInfoList> mediaSettleInfoList; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -517,7 +534,7 @@ public class QueryMediaSettleInfoResponseBody extends TeaModel {
             /**
              * MediaSettleInfoList.
              */
-            public Builder mediaSettleInfoList(java.util.List < MediaSettleInfoList> mediaSettleInfoList) {
+            public Builder mediaSettleInfoList(java.util.List<MediaSettleInfoList> mediaSettleInfoList) {
                 this.mediaSettleInfoList = mediaSettleInfoList;
                 return this;
             }

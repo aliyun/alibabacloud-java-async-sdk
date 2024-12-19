@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBizItemListV2Request} extends {@link RequestModel}
  *
  * <p>QueryBizItemListV2Request</p>
  */
 public class QueryBizItemListV2Request extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("CategoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CategoryId")
     private Long categoryId;
 
-    @Query
-    @NameInMap("ItemIds")
-    private java.util.List < Long > itemIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ItemIds")
+    private java.util.List<Long> itemIds;
 
-    @Query
-    @NameInMap("LmItemIds")
-    private java.util.List < String > lmItemIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LmItemIds")
+    private java.util.List<String> lmItemIds;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true, maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 20, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 20, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SubBizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubBizId")
     private String subBizId;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private QueryBizItemListV2Request(Builder builder) {
@@ -89,14 +94,14 @@ public class QueryBizItemListV2Request extends Request {
     /**
      * @return itemIds
      */
-    public java.util.List < Long > getItemIds() {
+    public java.util.List<Long> getItemIds() {
         return this.itemIds;
     }
 
     /**
      * @return lmItemIds
      */
-    public java.util.List < String > getLmItemIds() {
+    public java.util.List<String> getLmItemIds() {
         return this.lmItemIds;
     }
 
@@ -131,8 +136,8 @@ public class QueryBizItemListV2Request extends Request {
     public static final class Builder extends Request.Builder<QueryBizItemListV2Request, Builder> {
         private String bizId; 
         private Long categoryId; 
-        private java.util.List < Long > itemIds; 
-        private java.util.List < String > lmItemIds; 
+        private java.util.List<Long> itemIds; 
+        private java.util.List<String> lmItemIds; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String subBizId; 
@@ -155,7 +160,10 @@ public class QueryBizItemListV2Request extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20210802****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -175,7 +183,7 @@ public class QueryBizItemListV2Request extends Request {
         /**
          * ItemIds.
          */
-        public Builder itemIds(java.util.List < Long > itemIds) {
+        public Builder itemIds(java.util.List<Long> itemIds) {
             String itemIdsShrink = shrink(itemIds, "ItemIds", "json");
             this.putQueryParameter("ItemIds", itemIdsShrink);
             this.itemIds = itemIds;
@@ -185,7 +193,7 @@ public class QueryBizItemListV2Request extends Request {
         /**
          * LmItemIds.
          */
-        public Builder lmItemIds(java.util.List < String > lmItemIds) {
+        public Builder lmItemIds(java.util.List<String> lmItemIds) {
             String lmItemIdsShrink = shrink(lmItemIds, "LmItemIds", "json");
             this.putQueryParameter("LmItemIds", lmItemIdsShrink);
             this.lmItemIds = lmItemIds;
@@ -193,7 +201,10 @@ public class QueryBizItemListV2Request extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -202,7 +213,10 @@ public class QueryBizItemListV2Request extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -1,55 +1,60 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterSettleAccountRequest} extends {@link RequestModel}
  *
  * <p>RegisterSettleAccountRequest</p>
  */
 public class RegisterSettleAccountRequest extends Request {
-    @Body
-    @NameInMap("AccountChannel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountChannel")
     private String accountChannel;
 
-    @Body
-    @NameInMap("AccountName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountName")
     private String accountName;
 
-    @Body
-    @NameInMap("AccountNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountNo")
     private String accountNo;
 
-    @Body
-    @NameInMap("AccountPayType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountPayType")
     private String accountPayType;
 
-    @Body
-    @NameInMap("AccountType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountType")
     private String accountType;
 
-    @Body
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @Body
-    @NameInMap("CountryOrAreaCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CountryOrAreaCode")
     private String countryOrAreaCode;
 
-    @Body
-    @NameInMap("Currency")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Currency")
     private String currency;
 
-    @Body
-    @NameInMap("ExtInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtInfo")
     private String extInfo;
 
-    @Body
-    @NameInMap("IdempotentId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdempotentId")
     private String idempotentId;
 
     private RegisterSettleAccountRequest(Builder builder) {

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserPointRequest} extends {@link RequestModel}
  *
  * <p>QueryUserPointRequest</p>
  */
 public class QueryUserPointRequest extends Request {
-    @Query
-    @NameInMap("AccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
     private String accountType;
 
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("ExtInfo")
-    private java.util.Map < String, ? > extInfo;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtInfo")
+    private java.util.Map<String, ?> extInfo;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartyUserId;
 
     private QueryUserPointRequest(Builder builder) {
@@ -68,7 +73,7 @@ public class QueryUserPointRequest extends Request {
     /**
      * @return extInfo
      */
-    public java.util.Map < String, ? > getExtInfo() {
+    public java.util.Map<String, ?> getExtInfo() {
         return this.extInfo;
     }
 
@@ -82,7 +87,7 @@ public class QueryUserPointRequest extends Request {
     public static final class Builder extends Request.Builder<QueryUserPointRequest, Builder> {
         private String accountType; 
         private String bizId; 
-        private java.util.Map < String, ? > extInfo; 
+        private java.util.Map<String, ?> extInfo; 
         private String thirdPartyUserId; 
 
         private Builder() {
@@ -107,7 +112,10 @@ public class QueryUserPointRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******002</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -118,7 +126,7 @@ public class QueryUserPointRequest extends Request {
         /**
          * ExtInfo.
          */
-        public Builder extInfo(java.util.Map < String, ? > extInfo) {
+        public Builder extInfo(java.util.Map<String, ?> extInfo) {
             String extInfoShrink = shrink(extInfo, "ExtInfo", "json");
             this.putQueryParameter("ExtInfo", extInfoShrink);
             this.extInfo = extInfo;
@@ -126,7 +134,10 @@ public class QueryUserPointRequest extends Request {
         }
 
         /**
-         * ThirdPartyUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22******3646</p>
          */
         public Builder thirdPartyUserId(String thirdPartyUserId) {
             this.putQueryParameter("ThirdPartyUserId", thirdPartyUserId);

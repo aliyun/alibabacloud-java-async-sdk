@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUpcomingMoviesRequest} extends {@link RequestModel}
  *
  * <p>QueryUpcomingMoviesRequest</p>
  */
 public class QueryUpcomingMoviesRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("CityCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CityCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long cityCode;
 
-    @Query
-    @NameInMap("ExtJson")
-    private java.util.Map < String, ? > extJson;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtJson")
+    private java.util.Map<String, ?> extJson;
 
     private QueryUpcomingMoviesRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class QueryUpcomingMoviesRequest extends Request {
     /**
      * @return extJson
      */
-    public java.util.Map < String, ? > getExtJson() {
+    public java.util.Map<String, ?> getExtJson() {
         return this.extJson;
     }
 
     public static final class Builder extends Request.Builder<QueryUpcomingMoviesRequest, Builder> {
         private String bizId; 
         private Long cityCode; 
-        private java.util.Map < String, ? > extJson; 
+        private java.util.Map<String, ?> extJson; 
 
         private Builder() {
             super();
@@ -84,7 +89,10 @@ public class QueryUpcomingMoviesRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -93,7 +101,10 @@ public class QueryUpcomingMoviesRequest extends Request {
         }
 
         /**
-         * CityCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110100</p>
          */
         public Builder cityCode(Long cityCode) {
             this.putQueryParameter("CityCode", cityCode);
@@ -104,7 +115,7 @@ public class QueryUpcomingMoviesRequest extends Request {
         /**
          * ExtJson.
          */
-        public Builder extJson(java.util.Map < String, ? > extJson) {
+        public Builder extJson(java.util.Map<String, ?> extJson) {
             String extJsonShrink = shrink(extJson, "ExtJson", "json");
             this.putQueryParameter("ExtJson", extJsonShrink);
             this.extJson = extJson;

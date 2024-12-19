@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAllCinemasResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAllCinemasResponseBody</p>
  */
 public class QueryAllCinemasResponseBody extends TeaModel {
-    @NameInMap("Cinemas")
+    @com.aliyun.core.annotation.NameInMap("Cinemas")
     private Cinemas cinemas;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryAllCinemasResponseBody(Builder builder) {
@@ -211,35 +216,41 @@ public class QueryAllCinemasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAllCinemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllCinemasResponseBody</p>
+     */
     public static class Cinema extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("CinemaName")
+        @com.aliyun.core.annotation.NameInMap("CinemaName")
         private String cinemaName;
 
-        @NameInMap("CityId")
+        @com.aliyun.core.annotation.NameInMap("CityId")
         private Long cityId;
 
-        @NameInMap("CityName")
+        @com.aliyun.core.annotation.NameInMap("CityName")
         private String cityName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Latitude")
+        @com.aliyun.core.annotation.NameInMap("Latitude")
         private String latitude;
 
-        @NameInMap("Longitude")
+        @com.aliyun.core.annotation.NameInMap("Longitude")
         private String longitude;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("ScheduleCloseTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduleCloseTime")
         private Long scheduleCloseTime;
 
-        @NameInMap("StandardId")
+        @com.aliyun.core.annotation.NameInMap("StandardId")
         private String standardId;
 
         private Cinema(Builder builder) {
@@ -432,9 +443,15 @@ public class QueryAllCinemasResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAllCinemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAllCinemasResponseBody</p>
+     */
     public static class Cinemas extends TeaModel {
-        @NameInMap("Cinema")
-        private java.util.List < Cinema> cinema;
+        @com.aliyun.core.annotation.NameInMap("Cinema")
+        private java.util.List<Cinema> cinema;
 
         private Cinemas(Builder builder) {
             this.cinema = builder.cinema;
@@ -451,17 +468,17 @@ public class QueryAllCinemasResponseBody extends TeaModel {
         /**
          * @return cinema
          */
-        public java.util.List < Cinema> getCinema() {
+        public java.util.List<Cinema> getCinema() {
             return this.cinema;
         }
 
         public static final class Builder {
-            private java.util.List < Cinema> cinema; 
+            private java.util.List<Cinema> cinema; 
 
             /**
              * Cinema.
              */
-            public Builder cinema(java.util.List < Cinema> cinema) {
+            public Builder cinema(java.util.List<Cinema> cinema) {
                 this.cinema = cinema;
                 return this;
             }

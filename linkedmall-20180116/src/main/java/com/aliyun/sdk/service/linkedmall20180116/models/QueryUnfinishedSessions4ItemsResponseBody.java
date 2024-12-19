@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUnfinishedSessions4ItemsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUnfinishedSessions4ItemsResponseBody</p>
  */
 public class QueryUnfinishedSessions4ItemsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LmItemActivitySessionModelListList")
+    @com.aliyun.core.annotation.NameInMap("LmItemActivitySessionModelListList")
     private LmItemActivitySessionModelListList lmItemActivitySessionModelListList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryUnfinishedSessions4ItemsResponseBody(Builder builder) {
@@ -111,35 +116,41 @@ public class QueryUnfinishedSessions4ItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUnfinishedSessions4ItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUnfinishedSessions4ItemsResponseBody</p>
+     */
     public static class LmActivitySessionModel extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayDate")
+        @com.aliyun.core.annotation.NameInMap("DisplayDate")
         private String displayDate;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("ExtInfo")
-        private java.util.Map < String, ? > extInfo;
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
+        private java.util.Map<String, ?> extInfo;
 
-        @NameInMap("LmActivityId")
+        @com.aliyun.core.annotation.NameInMap("LmActivityId")
         private Long lmActivityId;
 
-        @NameInMap("LmSessionId")
+        @com.aliyun.core.annotation.NameInMap("LmSessionId")
         private Long lmSessionId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
-        @NameInMap("SubBizCode")
+        @com.aliyun.core.annotation.NameInMap("SubBizCode")
         private String subBizCode;
 
         private LmActivitySessionModel(Builder builder) {
@@ -194,7 +205,7 @@ public class QueryUnfinishedSessions4ItemsResponseBody extends TeaModel {
         /**
          * @return extInfo
          */
-        public java.util.Map < String, ? > getExtInfo() {
+        public java.util.Map<String, ?> getExtInfo() {
             return this.extInfo;
         }
 
@@ -238,7 +249,7 @@ public class QueryUnfinishedSessions4ItemsResponseBody extends TeaModel {
             private String description; 
             private String displayDate; 
             private String endDate; 
-            private java.util.Map < String, ? > extInfo; 
+            private java.util.Map<String, ?> extInfo; 
             private Long lmActivityId; 
             private Long lmSessionId; 
             private String name; 
@@ -280,7 +291,7 @@ public class QueryUnfinishedSessions4ItemsResponseBody extends TeaModel {
             /**
              * ExtInfo.
              */
-            public Builder extInfo(java.util.Map < String, ? > extInfo) {
+            public Builder extInfo(java.util.Map<String, ?> extInfo) {
                 this.extInfo = extInfo;
                 return this;
             }
@@ -332,9 +343,15 @@ public class QueryUnfinishedSessions4ItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryUnfinishedSessions4ItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUnfinishedSessions4ItemsResponseBody</p>
+     */
     public static class LmActivitySessionModels extends TeaModel {
-        @NameInMap("LmActivitySessionModel")
-        private java.util.List < LmActivitySessionModel> lmActivitySessionModel;
+        @com.aliyun.core.annotation.NameInMap("LmActivitySessionModel")
+        private java.util.List<LmActivitySessionModel> lmActivitySessionModel;
 
         private LmActivitySessionModels(Builder builder) {
             this.lmActivitySessionModel = builder.lmActivitySessionModel;
@@ -351,17 +368,17 @@ public class QueryUnfinishedSessions4ItemsResponseBody extends TeaModel {
         /**
          * @return lmActivitySessionModel
          */
-        public java.util.List < LmActivitySessionModel> getLmActivitySessionModel() {
+        public java.util.List<LmActivitySessionModel> getLmActivitySessionModel() {
             return this.lmActivitySessionModel;
         }
 
         public static final class Builder {
-            private java.util.List < LmActivitySessionModel> lmActivitySessionModel; 
+            private java.util.List<LmActivitySessionModel> lmActivitySessionModel; 
 
             /**
              * LmActivitySessionModel.
              */
-            public Builder lmActivitySessionModel(java.util.List < LmActivitySessionModel> lmActivitySessionModel) {
+            public Builder lmActivitySessionModel(java.util.List<LmActivitySessionModel> lmActivitySessionModel) {
                 this.lmActivitySessionModel = lmActivitySessionModel;
                 return this;
             }
@@ -373,14 +390,20 @@ public class QueryUnfinishedSessions4ItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryUnfinishedSessions4ItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUnfinishedSessions4ItemsResponseBody</p>
+     */
     public static class LmItemActivitySessionModelList extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmActivitySessionModels")
+        @com.aliyun.core.annotation.NameInMap("LmActivitySessionModels")
         private LmActivitySessionModels lmActivitySessionModels;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
         private LmItemActivitySessionModelList(Builder builder) {
@@ -454,9 +477,15 @@ public class QueryUnfinishedSessions4ItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryUnfinishedSessions4ItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUnfinishedSessions4ItemsResponseBody</p>
+     */
     public static class LmItemActivitySessionModelListList extends TeaModel {
-        @NameInMap("LmItemActivitySessionModelList")
-        private java.util.List < LmItemActivitySessionModelList> lmItemActivitySessionModelList;
+        @com.aliyun.core.annotation.NameInMap("LmItemActivitySessionModelList")
+        private java.util.List<LmItemActivitySessionModelList> lmItemActivitySessionModelList;
 
         private LmItemActivitySessionModelListList(Builder builder) {
             this.lmItemActivitySessionModelList = builder.lmItemActivitySessionModelList;
@@ -473,17 +502,17 @@ public class QueryUnfinishedSessions4ItemsResponseBody extends TeaModel {
         /**
          * @return lmItemActivitySessionModelList
          */
-        public java.util.List < LmItemActivitySessionModelList> getLmItemActivitySessionModelList() {
+        public java.util.List<LmItemActivitySessionModelList> getLmItemActivitySessionModelList() {
             return this.lmItemActivitySessionModelList;
         }
 
         public static final class Builder {
-            private java.util.List < LmItemActivitySessionModelList> lmItemActivitySessionModelList; 
+            private java.util.List<LmItemActivitySessionModelList> lmItemActivitySessionModelList; 
 
             /**
              * LmItemActivitySessionModelList.
              */
-            public Builder lmItemActivitySessionModelList(java.util.List < LmItemActivitySessionModelList> lmItemActivitySessionModelList) {
+            public Builder lmItemActivitySessionModelList(java.util.List<LmItemActivitySessionModelList> lmItemActivitySessionModelList) {
                 this.lmItemActivitySessionModelList = lmItemActivitySessionModelList;
                 return this;
             }

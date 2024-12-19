@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantPromotionToUserRequest} extends {@link RequestModel}
  *
  * <p>GrantPromotionToUserRequest</p>
  */
 public class GrantPromotionToUserRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("ExpireSeconds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpireSeconds")
     private Long expireSeconds;
 
-    @Query
-    @NameInMap("GrantMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrantMode")
     private String grantMode;
 
-    @Query
-    @NameInMap("GrantWay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrantWay")
     private String grantWay;
 
-    @Query
-    @NameInMap("IdempotentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdempotentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String idempotentId;
 
-    @Query
-    @NameInMap("PromotionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String promotionId;
 
-    @Query
-    @NameInMap("SecurityCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityCode")
     private String securityCode;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartyUserId;
 
-    @Body
-    @NameInMap("body")
-    private java.util.Map < String, ? > body;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    private java.util.Map<String, ?> body;
 
     private GrantPromotionToUserRequest(Builder builder) {
         super(builder);
@@ -137,7 +142,7 @@ public class GrantPromotionToUserRequest extends Request {
     /**
      * @return body
      */
-    public java.util.Map < String, ? > getBody() {
+    public java.util.Map<String, ?> getBody() {
         return this.body;
     }
 
@@ -150,7 +155,7 @@ public class GrantPromotionToUserRequest extends Request {
         private String promotionId; 
         private String securityCode; 
         private String thirdPartyUserId; 
-        private java.util.Map < String, ? > body; 
+        private java.util.Map<String, ?> body; 
 
         private Builder() {
             super();
@@ -170,7 +175,10 @@ public class GrantPromotionToUserRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20211118****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -206,7 +214,10 @@ public class GrantPromotionToUserRequest extends Request {
         }
 
         /**
-         * IdempotentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20211212211381431746-1202</p>
          */
         public Builder idempotentId(String idempotentId) {
             this.putQueryParameter("IdempotentId", idempotentId);
@@ -215,7 +226,10 @@ public class GrantPromotionToUserRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66482394364783****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -233,7 +247,7 @@ public class GrantPromotionToUserRequest extends Request {
         }
 
         /**
-         * ThirdPartyUserId.
+         * <p>This parameter is required.</p>
          */
         public Builder thirdPartyUserId(String thirdPartyUserId) {
             this.putQueryParameter("ThirdPartyUserId", thirdPartyUserId);
@@ -244,7 +258,7 @@ public class GrantPromotionToUserRequest extends Request {
         /**
          * body.
          */
-        public Builder body(java.util.Map < String, ? > body) {
+        public Builder body(java.util.Map<String, ?> body) {
             String bodyShrink = shrink(body, "body", "json");
             this.putBodyParameter("body", bodyShrink);
             this.body = body;

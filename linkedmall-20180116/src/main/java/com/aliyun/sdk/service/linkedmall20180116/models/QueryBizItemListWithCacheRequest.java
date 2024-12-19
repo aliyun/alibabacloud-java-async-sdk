@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryBizItemListWithCacheRequest} extends {@link RequestModel}
  *
  * <p>QueryBizItemListWithCacheRequest</p>
  */
 public class QueryBizItemListWithCacheRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("ItemIds")
-    @Validation(required = true)
-    private java.util.List < Long > itemIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ItemIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Long> itemIds;
 
-    @Query
-    @NameInMap("LmItemIds")
-    private java.util.List < String > lmItemIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LmItemIds")
+    private java.util.List<String> lmItemIds;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SubBizCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubBizCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subBizCode;
 
     private QueryBizItemListWithCacheRequest(Builder builder) {
@@ -72,14 +77,14 @@ public class QueryBizItemListWithCacheRequest extends Request {
     /**
      * @return itemIds
      */
-    public java.util.List < Long > getItemIds() {
+    public java.util.List<Long> getItemIds() {
         return this.itemIds;
     }
 
     /**
      * @return lmItemIds
      */
-    public java.util.List < String > getLmItemIds() {
+    public java.util.List<String> getLmItemIds() {
         return this.lmItemIds;
     }
 
@@ -106,8 +111,8 @@ public class QueryBizItemListWithCacheRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryBizItemListWithCacheRequest, Builder> {
         private String bizId; 
-        private java.util.List < Long > itemIds; 
-        private java.util.List < String > lmItemIds; 
+        private java.util.List<Long> itemIds; 
+        private java.util.List<String> lmItemIds; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String subBizCode; 
@@ -127,7 +132,10 @@ public class QueryBizItemListWithCacheRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20211119****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -136,9 +144,9 @@ public class QueryBizItemListWithCacheRequest extends Request {
         }
 
         /**
-         * ItemIds.
+         * <p>This parameter is required.</p>
          */
-        public Builder itemIds(java.util.List < Long > itemIds) {
+        public Builder itemIds(java.util.List<Long> itemIds) {
             String itemIdsShrink = shrink(itemIds, "ItemIds", "json");
             this.putQueryParameter("ItemIds", itemIdsShrink);
             this.itemIds = itemIds;
@@ -148,7 +156,7 @@ public class QueryBizItemListWithCacheRequest extends Request {
         /**
          * LmItemIds.
          */
-        public Builder lmItemIds(java.util.List < String > lmItemIds) {
+        public Builder lmItemIds(java.util.List<String> lmItemIds) {
             String lmItemIdsShrink = shrink(lmItemIds, "LmItemIds", "json");
             this.putQueryParameter("LmItemIds", lmItemIdsShrink);
             this.lmItemIds = lmItemIds;
@@ -174,7 +182,10 @@ public class QueryBizItemListWithCacheRequest extends Request {
         }
 
         /**
-         * SubBizCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ddaba53d5be4173808f2335eac0****</p>
          */
         public Builder subBizCode(String subBizCode) {
             this.putQueryParameter("SubBizCode", subBizCode);

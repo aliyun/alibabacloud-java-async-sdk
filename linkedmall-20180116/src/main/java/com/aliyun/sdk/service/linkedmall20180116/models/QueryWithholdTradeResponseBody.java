@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryWithholdTradeResponseBody} extends {@link TeaModel}
  *
  * <p>QueryWithholdTradeResponseBody</p>
  */
 public class QueryWithholdTradeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("QueryWithholdTradeResponse")
+    @com.aliyun.core.annotation.NameInMap("QueryWithholdTradeResponse")
     private QueryWithholdTradeResponse queryWithholdTradeResponse;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryWithholdTradeResponseBody(Builder builder) {
@@ -111,23 +116,29 @@ public class QueryWithholdTradeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryWithholdTradeResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWithholdTradeResponseBody</p>
+     */
     public static class QueryWithholdTradeResponse extends TeaModel {
-        @NameInMap("OutTradeNo")
+        @com.aliyun.core.annotation.NameInMap("OutTradeNo")
         private String outTradeNo;
 
-        @NameInMap("PaymentDate")
+        @com.aliyun.core.annotation.NameInMap("PaymentDate")
         private String paymentDate;
 
-        @NameInMap("SettleStatus")
+        @com.aliyun.core.annotation.NameInMap("SettleStatus")
         private String settleStatus;
 
-        @NameInMap("TotalAmount")
+        @com.aliyun.core.annotation.NameInMap("TotalAmount")
         private String totalAmount;
 
-        @NameInMap("TradeNo")
+        @com.aliyun.core.annotation.NameInMap("TradeNo")
         private String tradeNo;
 
-        @NameInMap("TradeStatus")
+        @com.aliyun.core.annotation.NameInMap("TradeStatus")
         private String tradeStatus;
 
         private QueryWithholdTradeResponse(Builder builder) {

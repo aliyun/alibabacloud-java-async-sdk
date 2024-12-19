@@ -1,74 +1,79 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVirtualProductOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateVirtualProductOrderRequest</p>
  */
 public class CreateVirtualProductOrderRequest extends Request {
-    @Query
-    @NameInMap("AccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
     private String accountType;
 
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("BizUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizUid;
 
-    @Query
-    @NameInMap("DeliveryAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryAddress")
     private String deliveryAddress;
 
-    @Query
-    @NameInMap("ExtJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtJson")
     private String extJson;
 
-    @Query
-    @NameInMap("ItemId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ItemId")
     private Long itemId;
 
-    @Query
-    @NameInMap("ItemList")
-    private java.util.List < ItemList> itemList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ItemList")
+    private java.util.List<ItemList> itemList;
 
-    @Query
-    @NameInMap("LmItemId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LmItemId")
     private String lmItemId;
 
-    @Query
-    @NameInMap("OrderExpireTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderExpireTime")
     private Long orderExpireTime;
 
-    @Query
-    @NameInMap("OutTradeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutTradeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outTradeId;
 
-    @Query
-    @NameInMap("Quantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Quantity")
     private Long quantity;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
     private String thirdPartyUserId;
 
-    @Query
-    @NameInMap("TotalAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TotalAmount")
     private Long totalAmount;
 
-    @Query
-    @NameInMap("UseAnonymousTbAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseAnonymousTbAccount")
     private Boolean useAnonymousTbAccount;
 
     private CreateVirtualProductOrderRequest(Builder builder) {
@@ -147,7 +152,7 @@ public class CreateVirtualProductOrderRequest extends Request {
     /**
      * @return itemList
      */
-    public java.util.List < ItemList> getItemList() {
+    public java.util.List<ItemList> getItemList() {
         return this.itemList;
     }
 
@@ -207,7 +212,7 @@ public class CreateVirtualProductOrderRequest extends Request {
         private String deliveryAddress; 
         private String extJson; 
         private Long itemId; 
-        private java.util.List < ItemList> itemList; 
+        private java.util.List<ItemList> itemList; 
         private String lmItemId; 
         private Long orderExpireTime; 
         private String outTradeId; 
@@ -248,7 +253,10 @@ public class CreateVirtualProductOrderRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20210508****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -257,7 +265,10 @@ public class CreateVirtualProductOrderRequest extends Request {
         }
 
         /**
-         * BizUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>221122411****</p>
          */
         public Builder bizUid(String bizUid) {
             this.putQueryParameter("BizUid", bizUid);
@@ -295,7 +306,7 @@ public class CreateVirtualProductOrderRequest extends Request {
         /**
          * ItemList.
          */
-        public Builder itemList(java.util.List < ItemList> itemList) {
+        public Builder itemList(java.util.List<ItemList> itemList) {
             this.putQueryParameter("ItemList", itemList);
             this.itemList = itemList;
             return this;
@@ -320,7 +331,10 @@ public class CreateVirtualProductOrderRequest extends Request {
         }
 
         /**
-         * OutTradeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>963****</p>
          */
         public Builder outTradeId(String outTradeId) {
             this.putQueryParameter("OutTradeId", outTradeId);
@@ -371,17 +385,23 @@ public class CreateVirtualProductOrderRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVirtualProductOrderRequest} extends {@link TeaModel}
+     *
+     * <p>CreateVirtualProductOrderRequest</p>
+     */
     public static class ItemList extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
         private ItemList(Builder builder) {

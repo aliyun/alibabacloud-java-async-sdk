@@ -1,68 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrderWithDesignatedTbUidRequest} extends {@link RequestModel}
  *
  * <p>CreateOrderWithDesignatedTbUidRequest</p>
  */
 public class CreateOrderWithDesignatedTbUidRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Body
-    @NameInMap("BuyerMessages")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BuyerMessages")
     private String buyerMessages;
 
-    @Body
-    @NameInMap("DeliveryAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeliveryAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deliveryAddress;
 
-    @Body
-    @NameInMap("DeliveryInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeliveryInfo")
     private String deliveryInfo;
 
-    @Body
-    @NameInMap("ExtInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtInfo")
     private String extInfo;
 
-    @Body
-    @NameInMap("OrderExpireTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderExpireTime")
     private Long orderExpireTime;
 
-    @Body
-    @NameInMap("OrderItems")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderItems")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderItems;
 
-    @Body
-    @NameInMap("OutTradeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutTradeId")
     private String outTradeId;
 
-    @Body
-    @NameInMap("TbAccountType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbAccountType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tbAccountType;
 
-    @Body
-    @NameInMap("TbUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TbUserId")
     private Long tbUserId;
 
-    @Body
-    @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartyUserId;
 
     private CreateOrderWithDesignatedTbUidRequest(Builder builder) {
@@ -222,7 +227,10 @@ public class CreateOrderWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******05</p>
          */
         public Builder bizId(String bizId) {
             this.putBodyParameter("BizId", bizId);
@@ -240,7 +248,7 @@ public class CreateOrderWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * DeliveryAddress.
+         * <p>This parameter is required.</p>
          */
         public Builder deliveryAddress(String deliveryAddress) {
             this.putBodyParameter("DeliveryAddress", deliveryAddress);
@@ -276,7 +284,10 @@ public class CreateOrderWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * OrderItems.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;lmItemId&quot;:&quot;10028102-655199865844&quot;,&quot;number&quot;:1,&quot;skuId&quot;: 4900752886354}]</p>
          */
         public Builder orderItems(String orderItems) {
             this.putBodyParameter("OrderItems", orderItems);
@@ -294,7 +305,10 @@ public class CreateOrderWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * TbAccountType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANONY</p>
          */
         public Builder tbAccountType(String tbAccountType) {
             this.putBodyParameter("TbAccountType", tbAccountType);
@@ -312,7 +326,10 @@ public class CreateOrderWithDesignatedTbUidRequest extends Request {
         }
 
         /**
-         * ThirdPartyUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>321******211</p>
          */
         public Builder thirdPartyUserId(String thirdPartyUserId) {
             this.putBodyParameter("ThirdPartyUserId", thirdPartyUserId);

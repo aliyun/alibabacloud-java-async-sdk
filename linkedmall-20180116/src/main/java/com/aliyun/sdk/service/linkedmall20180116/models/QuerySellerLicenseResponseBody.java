@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySellerLicenseResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySellerLicenseResponseBody</p>
  */
 public class QuerySellerLicenseResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QuerySellerLicenseResponseBody(Builder builder) {
@@ -98,7 +103,10 @@ public class QuerySellerLicenseResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5F0A38D5-F981-529A-911E-1B6D55D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +119,17 @@ public class QuerySellerLicenseResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySellerLicenseResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySellerLicenseResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("LicenseUrl")
+        @com.aliyun.core.annotation.NameInMap("LicenseUrl")
         private String licenseUrl;
 
-        @NameInMap("SellerId")
+        @com.aliyun.core.annotation.NameInMap("SellerId")
         private String sellerId;
 
         private Model(Builder builder) {

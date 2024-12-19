@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetItemPromotionResponseBody} extends {@link TeaModel}
  *
  * <p>GetItemPromotionResponseBody</p>
  */
 public class GetItemPromotionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ItemPromotionModel")
+    @com.aliyun.core.annotation.NameInMap("ItemPromotionModel")
     private ItemPromotionModel itemPromotionModel;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetItemPromotionResponseBody(Builder builder) {
@@ -171,35 +176,41 @@ public class GetItemPromotionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetItemPromotionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetItemPromotionResponseBody</p>
+     */
     public static class ItemPromotionModel extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ExtInfo")
-        private java.util.Map < String, ? > extInfo;
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
+        private java.util.Map<String, ?> extInfo;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("PromotionDesc")
+        @com.aliyun.core.annotation.NameInMap("PromotionDesc")
         private String promotionDesc;
 
-        @NameInMap("PromotionFlag")
+        @com.aliyun.core.annotation.NameInMap("PromotionFlag")
         private Boolean promotionFlag;
 
-        @NameInMap("PromotionId")
+        @com.aliyun.core.annotation.NameInMap("PromotionId")
         private String promotionId;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("SkuPromotion")
-        private java.util.Map < String, ? > skuPromotion;
+        @com.aliyun.core.annotation.NameInMap("SkuPromotion")
+        private java.util.Map<String, ?> skuPromotion;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private ItemPromotionModel(Builder builder) {
@@ -233,7 +244,7 @@ public class GetItemPromotionResponseBody extends TeaModel {
         /**
          * @return extInfo
          */
-        public java.util.Map < String, ? > getExtInfo() {
+        public java.util.Map<String, ?> getExtInfo() {
             return this.extInfo;
         }
 
@@ -282,7 +293,7 @@ public class GetItemPromotionResponseBody extends TeaModel {
         /**
          * @return skuPromotion
          */
-        public java.util.Map < String, ? > getSkuPromotion() {
+        public java.util.Map<String, ?> getSkuPromotion() {
             return this.skuPromotion;
         }
 
@@ -295,14 +306,14 @@ public class GetItemPromotionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String endTime; 
-            private java.util.Map < String, ? > extInfo; 
+            private java.util.Map<String, ?> extInfo; 
             private Long itemId; 
             private String lmItemId; 
             private String promotionDesc; 
             private Boolean promotionFlag; 
             private String promotionId; 
             private String promotionName; 
-            private java.util.Map < String, ? > skuPromotion; 
+            private java.util.Map<String, ?> skuPromotion; 
             private String startTime; 
 
             /**
@@ -316,7 +327,7 @@ public class GetItemPromotionResponseBody extends TeaModel {
             /**
              * ExtInfo.
              */
-            public Builder extInfo(java.util.Map < String, ? > extInfo) {
+            public Builder extInfo(java.util.Map<String, ?> extInfo) {
                 this.extInfo = extInfo;
                 return this;
             }
@@ -372,7 +383,7 @@ public class GetItemPromotionResponseBody extends TeaModel {
             /**
              * SkuPromotion.
              */
-            public Builder skuPromotion(java.util.Map < String, ? > skuPromotion) {
+            public Builder skuPromotion(java.util.Map<String, ?> skuPromotion) {
                 this.skuPromotion = skuPromotion;
                 return this;
             }

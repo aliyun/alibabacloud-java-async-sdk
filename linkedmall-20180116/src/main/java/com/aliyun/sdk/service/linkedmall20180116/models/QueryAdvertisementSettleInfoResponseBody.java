@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAdvertisementSettleInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAdvertisementSettleInfoResponseBody</p>
  */
 public class QueryAdvertisementSettleInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryAdvertisementSettleInfoResponseBody(Builder builder) {
@@ -211,41 +216,47 @@ public class QueryAdvertisementSettleInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAdvertisementSettleInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAdvertisementSettleInfoResponseBody</p>
+     */
     public static class AdvertiseSettleInfoList extends TeaModel {
-        @NameInMap("AdvertiseName")
+        @com.aliyun.core.annotation.NameInMap("AdvertiseName")
         private String advertiseName;
 
-        @NameInMap("AdvertiseSettleAmount")
+        @com.aliyun.core.annotation.NameInMap("AdvertiseSettleAmount")
         private String advertiseSettleAmount;
 
-        @NameInMap("AdvertiseSettleDetailId")
+        @com.aliyun.core.annotation.NameInMap("AdvertiseSettleDetailId")
         private String advertiseSettleDetailId;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ExtInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
         private String extInfo;
 
-        @NameInMap("MediaSettleDetailId")
+        @com.aliyun.core.annotation.NameInMap("MediaSettleDetailId")
         private String mediaSettleDetailId;
 
-        @NameInMap("ModifiedDate")
+        @com.aliyun.core.annotation.NameInMap("ModifiedDate")
         private String modifiedDate;
 
-        @NameInMap("SettleNo")
+        @com.aliyun.core.annotation.NameInMap("SettleNo")
         private String settleNo;
 
-        @NameInMap("SettleStatus")
+        @com.aliyun.core.annotation.NameInMap("SettleStatus")
         private String settleStatus;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private AdvertiseSettleInfoList(Builder builder) {
@@ -472,17 +483,23 @@ public class QueryAdvertisementSettleInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAdvertisementSettleInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAdvertisementSettleInfoResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("AdvertiseSettleInfoList")
-        private java.util.List < AdvertiseSettleInfoList> advertiseSettleInfoList;
+        @com.aliyun.core.annotation.NameInMap("AdvertiseSettleInfoList")
+        private java.util.List<AdvertiseSettleInfoList> advertiseSettleInfoList;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Model(Builder builder) {
@@ -503,7 +520,7 @@ public class QueryAdvertisementSettleInfoResponseBody extends TeaModel {
         /**
          * @return advertiseSettleInfoList
          */
-        public java.util.List < AdvertiseSettleInfoList> getAdvertiseSettleInfoList() {
+        public java.util.List<AdvertiseSettleInfoList> getAdvertiseSettleInfoList() {
             return this.advertiseSettleInfoList;
         }
 
@@ -529,7 +546,7 @@ public class QueryAdvertisementSettleInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AdvertiseSettleInfoList> advertiseSettleInfoList; 
+            private java.util.List<AdvertiseSettleInfoList> advertiseSettleInfoList; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -537,7 +554,7 @@ public class QueryAdvertisementSettleInfoResponseBody extends TeaModel {
             /**
              * AdvertiseSettleInfoList.
              */
-            public Builder advertiseSettleInfoList(java.util.List < AdvertiseSettleInfoList> advertiseSettleInfoList) {
+            public Builder advertiseSettleInfoList(java.util.List<AdvertiseSettleInfoList> advertiseSettleInfoList) {
                 this.advertiseSettleInfoList = advertiseSettleInfoList;
                 return this;
             }

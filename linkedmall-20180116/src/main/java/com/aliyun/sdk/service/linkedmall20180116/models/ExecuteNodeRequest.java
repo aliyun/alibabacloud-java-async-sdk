@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteNodeRequest} extends {@link RequestModel}
  *
  * <p>ExecuteNodeRequest</p>
  */
 public class ExecuteNodeRequest extends Request {
-    @Query
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @Query
-    @NameInMap("NodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeId;
 
-    @Query
-    @NameInMap("NodeInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeInstanceId")
     private String nodeInstanceId;
 
-    @Query
-    @NameInMap("ProcessId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String processId;
 
-    @Query
-    @NameInMap("ProcessInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessInstanceId")
     private String processInstanceId;
 
-    @Query
-    @NameInMap("RequestData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestData")
     private String requestData;
 
     private ExecuteNodeRequest(Builder builder) {
@@ -135,7 +140,10 @@ public class ExecuteNodeRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -153,7 +161,10 @@ public class ExecuteNodeRequest extends Request {
         }
 
         /**
-         * ProcessId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder processId(String processId) {
             this.putQueryParameter("ProcessId", processId);

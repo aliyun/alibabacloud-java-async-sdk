@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBizItemsResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyBizItemsResponseBody</p>
  */
 public class ModifyBizItemsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("FailedItemList")
+    @com.aliyun.core.annotation.NameInMap("FailedItemList")
     private FailedItemList failedItemList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ModifyBizItemsResponseBody(Builder builder) {
@@ -171,9 +176,15 @@ public class ModifyBizItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyBizItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyBizItemsResponseBody</p>
+     */
     public static class SkuIdList extends TeaModel {
-        @NameInMap("Sku")
-        private java.util.List < String > sku;
+        @com.aliyun.core.annotation.NameInMap("Sku")
+        private java.util.List<String> sku;
 
         private SkuIdList(Builder builder) {
             this.sku = builder.sku;
@@ -190,17 +201,17 @@ public class ModifyBizItemsResponseBody extends TeaModel {
         /**
          * @return sku
          */
-        public java.util.List < String > getSku() {
+        public java.util.List<String> getSku() {
             return this.sku;
         }
 
         public static final class Builder {
-            private java.util.List < String > sku; 
+            private java.util.List<String> sku; 
 
             /**
              * Sku.
              */
-            public Builder sku(java.util.List < String > sku) {
+            public Builder sku(java.util.List<String> sku) {
                 this.sku = sku;
                 return this;
             }
@@ -212,14 +223,20 @@ public class ModifyBizItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyBizItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyBizItemsResponseBody</p>
+     */
     public static class Item extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("SkuIdList")
+        @com.aliyun.core.annotation.NameInMap("SkuIdList")
         private SkuIdList skuIdList;
 
         private Item(Builder builder) {
@@ -293,9 +310,15 @@ public class ModifyBizItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyBizItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyBizItemsResponseBody</p>
+     */
     public static class FailedItemList extends TeaModel {
-        @NameInMap("Item")
-        private java.util.List < Item> item;
+        @com.aliyun.core.annotation.NameInMap("Item")
+        private java.util.List<Item> item;
 
         private FailedItemList(Builder builder) {
             this.item = builder.item;
@@ -312,17 +335,17 @@ public class ModifyBizItemsResponseBody extends TeaModel {
         /**
          * @return item
          */
-        public java.util.List < Item> getItem() {
+        public java.util.List<Item> getItem() {
             return this.item;
         }
 
         public static final class Builder {
-            private java.util.List < Item> item; 
+            private java.util.List<Item> item; 
 
             /**
              * Item.
              */
-            public Builder item(java.util.List < Item> item) {
+            public Builder item(java.util.List<Item> item) {
                 this.item = item;
                 return this;
             }

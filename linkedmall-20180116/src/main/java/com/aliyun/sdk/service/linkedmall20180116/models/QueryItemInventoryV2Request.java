@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryItemInventoryV2Request} extends {@link RequestModel}
  *
  * <p>QueryItemInventoryV2Request</p>
  */
 public class QueryItemInventoryV2Request extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("DivisionCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DivisionCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String divisionCode;
 
-    @Query
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
-    @Query
-    @NameInMap("ItemList")
-    @Validation(required = true)
-    private java.util.List < ItemList> itemList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ItemList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<ItemList> itemList;
 
     private QueryItemInventoryV2Request(Builder builder) {
         super(builder);
@@ -76,7 +81,7 @@ public class QueryItemInventoryV2Request extends Request {
     /**
      * @return itemList
      */
-    public java.util.List < ItemList> getItemList() {
+    public java.util.List<ItemList> getItemList() {
         return this.itemList;
     }
 
@@ -84,7 +89,7 @@ public class QueryItemInventoryV2Request extends Request {
         private String bizId; 
         private String divisionCode; 
         private String ip; 
-        private java.util.List < ItemList> itemList; 
+        private java.util.List<ItemList> itemList; 
 
         private Builder() {
             super();
@@ -99,7 +104,10 @@ public class QueryItemInventoryV2Request extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******01</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -108,7 +116,10 @@ public class QueryItemInventoryV2Request extends Request {
         }
 
         /**
-         * DivisionCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>520300</p>
          */
         public Builder divisionCode(String divisionCode) {
             this.putQueryParameter("DivisionCode", divisionCode);
@@ -126,9 +137,9 @@ public class QueryItemInventoryV2Request extends Request {
         }
 
         /**
-         * ItemList.
+         * <p>This parameter is required.</p>
          */
-        public Builder itemList(java.util.List < ItemList> itemList) {
+        public Builder itemList(java.util.List<ItemList> itemList) {
             this.putQueryParameter("ItemList", itemList);
             this.itemList = itemList;
             return this;
@@ -141,15 +152,21 @@ public class QueryItemInventoryV2Request extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryItemInventoryV2Request} extends {@link TeaModel}
+     *
+     * <p>QueryItemInventoryV2Request</p>
+     */
     public static class ItemList extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("SkuIdList")
-        private java.util.List < Long > skuIdList;
+        @com.aliyun.core.annotation.NameInMap("SkuIdList")
+        private java.util.List<Long> skuIdList;
 
         private ItemList(Builder builder) {
             this.itemId = builder.itemId;
@@ -182,14 +199,14 @@ public class QueryItemInventoryV2Request extends Request {
         /**
          * @return skuIdList
          */
-        public java.util.List < Long > getSkuIdList() {
+        public java.util.List<Long> getSkuIdList() {
             return this.skuIdList;
         }
 
         public static final class Builder {
             private Long itemId; 
             private String lmItemId; 
-            private java.util.List < Long > skuIdList; 
+            private java.util.List<Long> skuIdList; 
 
             /**
              * ItemId.
@@ -210,7 +227,7 @@ public class QueryItemInventoryV2Request extends Request {
             /**
              * SkuIdList.
              */
-            public Builder skuIdList(java.util.List < Long > skuIdList) {
+            public Builder skuIdList(java.util.List<Long> skuIdList) {
                 this.skuIdList = skuIdList;
                 return this;
             }

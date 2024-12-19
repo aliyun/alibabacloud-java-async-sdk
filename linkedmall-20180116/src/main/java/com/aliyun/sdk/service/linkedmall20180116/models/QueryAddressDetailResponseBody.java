@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAddressDetailResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAddressDetailResponseBody</p>
  */
 public class QueryAddressDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DeliveryAddress")
+    @com.aliyun.core.annotation.NameInMap("DeliveryAddress")
     private DeliveryAddress deliveryAddress;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryAddressDetailResponseBody(Builder builder) {
@@ -111,44 +116,50 @@ public class QueryAddressDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAddressDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAddressDetailResponseBody</p>
+     */
     public static class DeliveryAddress extends TeaModel {
-        @NameInMap("AddressDetail")
+        @com.aliyun.core.annotation.NameInMap("AddressDetail")
         private String addressDetail;
 
-        @NameInMap("AddressId")
+        @com.aliyun.core.annotation.NameInMap("AddressId")
         private Long addressId;
 
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("DivisionCode")
+        @com.aliyun.core.annotation.NameInMap("DivisionCode")
         private String divisionCode;
 
-        @NameInMap("FullName")
+        @com.aliyun.core.annotation.NameInMap("FullName")
         private String fullName;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("PostCode")
+        @com.aliyun.core.annotation.NameInMap("PostCode")
         private String postCode;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Town")
+        @com.aliyun.core.annotation.NameInMap("Town")
         private String town;
 
-        @NameInMap("TownDivisionCode")
+        @com.aliyun.core.annotation.NameInMap("TownDivisionCode")
         private String townDivisionCode;
 
         private DeliveryAddress(Builder builder) {

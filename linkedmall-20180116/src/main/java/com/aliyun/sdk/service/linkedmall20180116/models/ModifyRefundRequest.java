@@ -1,76 +1,81 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRefundRequest} extends {@link RequestModel}
  *
  * <p>ModifyRefundRequest</p>
  */
 public class ModifyRefundRequest extends Request {
-    @Query
-    @NameInMap("AccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
     private String accountType;
 
-    @Query
-    @NameInMap("ApplyReasonTextId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyReasonTextId")
     private Long applyReasonTextId;
 
-    @Query
-    @NameInMap("ApplyRefundCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyRefundCount")
     private Integer applyRefundCount;
 
-    @Query
-    @NameInMap("ApplyRefundFee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyRefundFee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long applyRefundFee;
 
-    @Query
-    @NameInMap("BizClaimType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizClaimType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer bizClaimType;
 
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("BizUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizUid;
 
-    @Query
-    @NameInMap("DisputeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisputeId")
     private Long disputeId;
 
-    @Query
-    @NameInMap("GoodsStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GoodsStatus")
     private Integer goodsStatus;
 
-    @Body
-    @NameInMap("LeaveMessage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LeaveMessage")
     private String leaveMessage;
 
-    @Body
-    @NameInMap("LeavePictureList")
-    private java.util.List < LeavePictureList> leavePictureList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LeavePictureList")
+    private java.util.List<LeavePictureList> leavePictureList;
 
-    @Query
-    @NameInMap("SubLmOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubLmOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subLmOrderId;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
     private String thirdPartyUserId;
 
-    @Query
-    @NameInMap("UseAnonymousTbAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseAnonymousTbAccount")
     private Boolean useAnonymousTbAccount;
 
     private ModifyRefundRequest(Builder builder) {
@@ -177,7 +182,7 @@ public class ModifyRefundRequest extends Request {
     /**
      * @return leavePictureList
      */
-    public java.util.List < LeavePictureList> getLeavePictureList() {
+    public java.util.List<LeavePictureList> getLeavePictureList() {
         return this.leavePictureList;
     }
 
@@ -213,7 +218,7 @@ public class ModifyRefundRequest extends Request {
         private Long disputeId; 
         private Integer goodsStatus; 
         private String leaveMessage; 
-        private java.util.List < LeavePictureList> leavePictureList; 
+        private java.util.List<LeavePictureList> leavePictureList; 
         private String subLmOrderId; 
         private String thirdPartyUserId; 
         private Boolean useAnonymousTbAccount; 
@@ -268,7 +273,10 @@ public class ModifyRefundRequest extends Request {
         }
 
         /**
-         * ApplyRefundFee.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>790</p>
          */
         public Builder applyRefundFee(Long applyRefundFee) {
             this.putQueryParameter("ApplyRefundFee", applyRefundFee);
@@ -277,7 +285,10 @@ public class ModifyRefundRequest extends Request {
         }
 
         /**
-         * BizClaimType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizClaimType(Integer bizClaimType) {
             this.putQueryParameter("BizClaimType", bizClaimType);
@@ -286,7 +297,10 @@ public class ModifyRefundRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******001</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -295,7 +309,10 @@ public class ModifyRefundRequest extends Request {
         }
 
         /**
-         * BizUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>220635******232</p>
          */
         public Builder bizUid(String bizUid) {
             this.putQueryParameter("BizUid", bizUid);
@@ -333,14 +350,17 @@ public class ModifyRefundRequest extends Request {
         /**
          * LeavePictureList.
          */
-        public Builder leavePictureList(java.util.List < LeavePictureList> leavePictureList) {
+        public Builder leavePictureList(java.util.List<LeavePictureList> leavePictureList) {
             this.putBodyParameter("LeavePictureList", leavePictureList);
             this.leavePictureList = leavePictureList;
             return this;
         }
 
         /**
-         * SubLmOrderId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38******75</p>
          */
         public Builder subLmOrderId(String subLmOrderId) {
             this.putQueryParameter("SubLmOrderId", subLmOrderId);
@@ -373,11 +393,17 @@ public class ModifyRefundRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyRefundRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyRefundRequest</p>
+     */
     public static class LeavePictureList extends TeaModel {
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Picture")
+        @com.aliyun.core.annotation.NameInMap("Picture")
         private String picture;
 
         private LeavePictureList(Builder builder) {

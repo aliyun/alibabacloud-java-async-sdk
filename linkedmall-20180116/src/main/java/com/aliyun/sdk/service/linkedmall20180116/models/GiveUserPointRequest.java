@@ -1,62 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GiveUserPointRequest} extends {@link RequestModel}
  *
  * <p>GiveUserPointRequest</p>
  */
 public class GiveUserPointRequest extends Request {
-    @Query
-    @NameInMap("AccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
     private String accountType;
 
-    @Query
-    @NameInMap("Amount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long amount;
 
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Body
-    @NameInMap("ExtInfo")
-    private java.util.Map < String, ? > extInfo;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtInfo")
+    private java.util.Map<String, ?> extInfo;
 
-    @Query
-    @NameInMap("IdempotentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdempotentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String idempotentId;
 
-    @Query
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
 
-    @Query
-    @NameInMap("TargetBizUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetBizUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetBizUid;
 
-    @Query
-    @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartyUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartyUserId;
 
-    @Query
-    @NameInMap("Title")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String title;
 
     private GiveUserPointRequest(Builder builder) {
@@ -110,7 +115,7 @@ public class GiveUserPointRequest extends Request {
     /**
      * @return extInfo
      */
-    public java.util.Map < String, ? > getExtInfo() {
+    public java.util.Map<String, ?> getExtInfo() {
         return this.extInfo;
     }
 
@@ -160,7 +165,7 @@ public class GiveUserPointRequest extends Request {
         private String accountType; 
         private Long amount; 
         private String bizId; 
-        private java.util.Map < String, ? > extInfo; 
+        private java.util.Map<String, ?> extInfo; 
         private String idempotentId; 
         private String message; 
         private String ruleId; 
@@ -196,7 +201,10 @@ public class GiveUserPointRequest extends Request {
         }
 
         /**
-         * Amount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder amount(Long amount) {
             this.putQueryParameter("Amount", amount);
@@ -205,7 +213,10 @@ public class GiveUserPointRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LMALL20******01</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -216,7 +227,7 @@ public class GiveUserPointRequest extends Request {
         /**
          * ExtInfo.
          */
-        public Builder extInfo(java.util.Map < String, ? > extInfo) {
+        public Builder extInfo(java.util.Map<String, ?> extInfo) {
             String extInfoShrink = shrink(extInfo, "ExtInfo", "json");
             this.putBodyParameter("ExtInfo", extInfoShrink);
             this.extInfo = extInfo;
@@ -224,7 +235,10 @@ public class GiveUserPointRequest extends Request {
         }
 
         /**
-         * IdempotentId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20211212******1746-1202</p>
          */
         public Builder idempotentId(String idempotentId) {
             this.putQueryParameter("IdempotentId", idempotentId);
@@ -242,7 +256,10 @@ public class GiveUserPointRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>136</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -251,7 +268,10 @@ public class GiveUserPointRequest extends Request {
         }
 
         /**
-         * TargetBizUid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22******45</p>
          */
         public Builder targetBizUid(String targetBizUid) {
             this.putQueryParameter("TargetBizUid", targetBizUid);
@@ -260,7 +280,10 @@ public class GiveUserPointRequest extends Request {
         }
 
         /**
-         * ThirdPartyUserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22******67</p>
          */
         public Builder thirdPartyUserId(String thirdPartyUserId) {
             this.putQueryParameter("ThirdPartyUserId", thirdPartyUserId);
@@ -269,7 +292,7 @@ public class GiveUserPointRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListItemActivitiesResponseBody} extends {@link TeaModel}
  *
  * <p>ListItemActivitiesResponseBody</p>
  */
 public class ListItemActivitiesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LmItemActivityModelList")
+    @com.aliyun.core.annotation.NameInMap("LmItemActivityModelList")
     private LmItemActivityModelList lmItemActivityModelList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListItemActivitiesResponseBody(Builder builder) {
@@ -111,29 +116,35 @@ public class ListItemActivitiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListItemActivitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListItemActivitiesResponseBody</p>
+     */
     public static class LmActivityPopModel extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("DisplayDate")
+        @com.aliyun.core.annotation.NameInMap("DisplayDate")
         private String displayDate;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("ExtInfo")
-        private java.util.Map < String, ? > extInfo;
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
+        private java.util.Map<String, ?> extInfo;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
-        @NameInMap("SubBizCode")
+        @com.aliyun.core.annotation.NameInMap("SubBizCode")
         private String subBizCode;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private LmActivityPopModel(Builder builder) {
@@ -179,7 +190,7 @@ public class ListItemActivitiesResponseBody extends TeaModel {
         /**
          * @return extInfo
          */
-        public java.util.Map < String, ? > getExtInfo() {
+        public java.util.Map<String, ?> getExtInfo() {
             return this.extInfo;
         }
 
@@ -215,7 +226,7 @@ public class ListItemActivitiesResponseBody extends TeaModel {
             private String bizId; 
             private String displayDate; 
             private String endDate; 
-            private java.util.Map < String, ? > extInfo; 
+            private java.util.Map<String, ?> extInfo; 
             private Long id; 
             private String startDate; 
             private String subBizCode; 
@@ -248,7 +259,7 @@ public class ListItemActivitiesResponseBody extends TeaModel {
             /**
              * ExtInfo.
              */
-            public Builder extInfo(java.util.Map < String, ? > extInfo) {
+            public Builder extInfo(java.util.Map<String, ?> extInfo) {
                 this.extInfo = extInfo;
                 return this;
             }
@@ -292,14 +303,20 @@ public class ListItemActivitiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListItemActivitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListItemActivitiesResponseBody</p>
+     */
     public static class LmItemActivityModel extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmActivityPopModel")
+        @com.aliyun.core.annotation.NameInMap("LmActivityPopModel")
         private LmActivityPopModel lmActivityPopModel;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
         private LmItemActivityModel(Builder builder) {
@@ -373,9 +390,15 @@ public class ListItemActivitiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListItemActivitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListItemActivitiesResponseBody</p>
+     */
     public static class LmItemActivityModelList extends TeaModel {
-        @NameInMap("LmItemActivityModel")
-        private java.util.List < LmItemActivityModel> lmItemActivityModel;
+        @com.aliyun.core.annotation.NameInMap("LmItemActivityModel")
+        private java.util.List<LmItemActivityModel> lmItemActivityModel;
 
         private LmItemActivityModelList(Builder builder) {
             this.lmItemActivityModel = builder.lmItemActivityModel;
@@ -392,17 +415,17 @@ public class ListItemActivitiesResponseBody extends TeaModel {
         /**
          * @return lmItemActivityModel
          */
-        public java.util.List < LmItemActivityModel> getLmItemActivityModel() {
+        public java.util.List<LmItemActivityModel> getLmItemActivityModel() {
             return this.lmItemActivityModel;
         }
 
         public static final class Builder {
-            private java.util.List < LmItemActivityModel> lmItemActivityModel; 
+            private java.util.List<LmItemActivityModel> lmItemActivityModel; 
 
             /**
              * LmItemActivityModel.
              */
-            public Builder lmItemActivityModel(java.util.List < LmItemActivityModel> lmItemActivityModel) {
+            public Builder lmItemActivityModel(java.util.List<LmItemActivityModel> lmItemActivityModel) {
                 this.lmItemActivityModel = lmItemActivityModel;
                 return this;
             }

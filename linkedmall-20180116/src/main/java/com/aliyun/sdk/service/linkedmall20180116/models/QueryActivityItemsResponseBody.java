@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryActivityItemsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryActivityItemsResponseBody</p>
  */
 public class QueryActivityItemsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LmActivityItemModelList")
+    @com.aliyun.core.annotation.NameInMap("LmActivityItemModelList")
     private LmActivityItemModelList lmActivityItemModelList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryActivityItemsResponseBody(Builder builder) {
@@ -171,38 +176,44 @@ public class QueryActivityItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryActivityItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryActivityItemsResponseBody</p>
+     */
     public static class LmActivityItemSkuModel extends TeaModel {
-        @NameInMap("ActivityPrice")
+        @com.aliyun.core.annotation.NameInMap("ActivityPrice")
         private Long activityPrice;
 
-        @NameInMap("ActivityStatus")
+        @com.aliyun.core.annotation.NameInMap("ActivityStatus")
         private String activityStatus;
 
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmActivityId")
+        @com.aliyun.core.annotation.NameInMap("LmActivityId")
         private Long lmActivityId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("ReservedPrice")
+        @com.aliyun.core.annotation.NameInMap("ReservedPrice")
         private Long reservedPrice;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
-        @NameInMap("SkuPicUrl")
+        @com.aliyun.core.annotation.NameInMap("SkuPicUrl")
         private String skuPicUrl;
 
-        @NameInMap("SkuTitle")
+        @com.aliyun.core.annotation.NameInMap("SkuTitle")
         private String skuTitle;
 
-        @NameInMap("Tips")
+        @com.aliyun.core.annotation.NameInMap("Tips")
         private String tips;
 
         private LmActivityItemSkuModel(Builder builder) {
@@ -374,7 +385,10 @@ public class QueryActivityItemsResponseBody extends TeaModel {
             }
 
             /**
-             * skuID
+             * <p>skuID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>478531731****</p>
              */
             public Builder skuId(Long skuId) {
                 this.skuId = skuId;
@@ -412,9 +426,15 @@ public class QueryActivityItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryActivityItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryActivityItemsResponseBody</p>
+     */
     public static class SkuModelList extends TeaModel {
-        @NameInMap("LmActivityItemSkuModel")
-        private java.util.List < LmActivityItemSkuModel> lmActivityItemSkuModel;
+        @com.aliyun.core.annotation.NameInMap("LmActivityItemSkuModel")
+        private java.util.List<LmActivityItemSkuModel> lmActivityItemSkuModel;
 
         private SkuModelList(Builder builder) {
             this.lmActivityItemSkuModel = builder.lmActivityItemSkuModel;
@@ -431,17 +451,17 @@ public class QueryActivityItemsResponseBody extends TeaModel {
         /**
          * @return lmActivityItemSkuModel
          */
-        public java.util.List < LmActivityItemSkuModel> getLmActivityItemSkuModel() {
+        public java.util.List<LmActivityItemSkuModel> getLmActivityItemSkuModel() {
             return this.lmActivityItemSkuModel;
         }
 
         public static final class Builder {
-            private java.util.List < LmActivityItemSkuModel> lmActivityItemSkuModel; 
+            private java.util.List<LmActivityItemSkuModel> lmActivityItemSkuModel; 
 
             /**
              * LmActivityItemSkuModel.
              */
-            public Builder lmActivityItemSkuModel(java.util.List < LmActivityItemSkuModel> lmActivityItemSkuModel) {
+            public Builder lmActivityItemSkuModel(java.util.List<LmActivityItemSkuModel> lmActivityItemSkuModel) {
                 this.lmActivityItemSkuModel = lmActivityItemSkuModel;
                 return this;
             }
@@ -453,50 +473,56 @@ public class QueryActivityItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryActivityItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryActivityItemsResponseBody</p>
+     */
     public static class LmActivityItemModel extends TeaModel {
-        @NameInMap("CanSell")
+        @com.aliyun.core.annotation.NameInMap("CanSell")
         private Boolean canSell;
 
-        @NameInMap("ItemActivityQuantity")
+        @com.aliyun.core.annotation.NameInMap("ItemActivityQuantity")
         private Integer itemActivityQuantity;
 
-        @NameInMap("ItemActivityStatus")
+        @com.aliyun.core.annotation.NameInMap("ItemActivityStatus")
         private String itemActivityStatus;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("ItemTitle")
+        @com.aliyun.core.annotation.NameInMap("ItemTitle")
         private String itemTitle;
 
-        @NameInMap("LmActivityId")
+        @com.aliyun.core.annotation.NameInMap("LmActivityId")
         private Long lmActivityId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("LmShopId")
+        @com.aliyun.core.annotation.NameInMap("LmShopId")
         private String lmShopId;
 
-        @NameInMap("MainPicUrl")
+        @com.aliyun.core.annotation.NameInMap("MainPicUrl")
         private String mainPicUrl;
 
-        @NameInMap("SellableQuantity")
+        @com.aliyun.core.annotation.NameInMap("SellableQuantity")
         private Integer sellableQuantity;
 
-        @NameInMap("SkuModelList")
+        @com.aliyun.core.annotation.NameInMap("SkuModelList")
         private SkuModelList skuModelList;
 
-        @NameInMap("TbSellerId")
+        @com.aliyun.core.annotation.NameInMap("TbSellerId")
         private Long tbSellerId;
 
-        @NameInMap("TbShopId")
+        @com.aliyun.core.annotation.NameInMap("TbShopId")
         private Long tbShopId;
 
-        @NameInMap("TbShopName")
+        @com.aliyun.core.annotation.NameInMap("TbShopName")
         private String tbShopName;
 
-        @NameInMap("Tips")
+        @com.aliyun.core.annotation.NameInMap("Tips")
         private String tips;
 
         private LmActivityItemModel(Builder builder) {
@@ -774,9 +800,15 @@ public class QueryActivityItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryActivityItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryActivityItemsResponseBody</p>
+     */
     public static class LmActivityItemModelList extends TeaModel {
-        @NameInMap("LmActivityItemModel")
-        private java.util.List < LmActivityItemModel> lmActivityItemModel;
+        @com.aliyun.core.annotation.NameInMap("LmActivityItemModel")
+        private java.util.List<LmActivityItemModel> lmActivityItemModel;
 
         private LmActivityItemModelList(Builder builder) {
             this.lmActivityItemModel = builder.lmActivityItemModel;
@@ -793,17 +825,17 @@ public class QueryActivityItemsResponseBody extends TeaModel {
         /**
          * @return lmActivityItemModel
          */
-        public java.util.List < LmActivityItemModel> getLmActivityItemModel() {
+        public java.util.List<LmActivityItemModel> getLmActivityItemModel() {
             return this.lmActivityItemModel;
         }
 
         public static final class Builder {
-            private java.util.List < LmActivityItemModel> lmActivityItemModel; 
+            private java.util.List<LmActivityItemModel> lmActivityItemModel; 
 
             /**
              * LmActivityItemModel.
              */
-            public Builder lmActivityItemModel(java.util.List < LmActivityItemModel> lmActivityItemModel) {
+            public Builder lmActivityItemModel(java.util.List<LmActivityItemModel> lmActivityItemModel) {
                 this.lmActivityItemModel = lmActivityItemModel;
                 return this;
             }

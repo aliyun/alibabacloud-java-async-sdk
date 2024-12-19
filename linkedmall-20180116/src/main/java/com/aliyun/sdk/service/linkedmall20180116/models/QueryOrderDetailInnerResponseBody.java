@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrderDetailInnerResponseBody} extends {@link TeaModel}
  *
  * <p>QueryOrderDetailInnerResponseBody</p>
  */
 public class QueryOrderDetailInnerResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryOrderDetailInnerResponseBody(Builder builder) {
@@ -111,20 +116,26 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryOrderDetailInnerResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderDetailInnerResponseBody</p>
+     */
     public static class FundStructure extends TeaModel {
-        @NameInMap("FundAmount")
+        @com.aliyun.core.annotation.NameInMap("FundAmount")
         private Long fundAmount;
 
-        @NameInMap("FundAmountMoney")
+        @com.aliyun.core.annotation.NameInMap("FundAmountMoney")
         private Long fundAmountMoney;
 
-        @NameInMap("FundType")
+        @com.aliyun.core.annotation.NameInMap("FundType")
         private String fundType;
 
-        @NameInMap("LmOrderId")
+        @com.aliyun.core.annotation.NameInMap("LmOrderId")
         private Long lmOrderId;
 
-        @NameInMap("TbSubOrderId")
+        @com.aliyun.core.annotation.NameInMap("TbSubOrderId")
         private Long tbSubOrderId;
 
         private FundStructure(Builder builder) {
@@ -232,9 +243,15 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderDetailInnerResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderDetailInnerResponseBody</p>
+     */
     public static class FundStructureModels extends TeaModel {
-        @NameInMap("FundStructure")
-        private java.util.List < FundStructure> fundStructure;
+        @com.aliyun.core.annotation.NameInMap("FundStructure")
+        private java.util.List<FundStructure> fundStructure;
 
         private FundStructureModels(Builder builder) {
             this.fundStructure = builder.fundStructure;
@@ -251,17 +268,17 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         /**
          * @return fundStructure
          */
-        public java.util.List < FundStructure> getFundStructure() {
+        public java.util.List<FundStructure> getFundStructure() {
             return this.fundStructure;
         }
 
         public static final class Builder {
-            private java.util.List < FundStructure> fundStructure; 
+            private java.util.List<FundStructure> fundStructure; 
 
             /**
              * FundStructure.
              */
-            public Builder fundStructure(java.util.List < FundStructure> fundStructure) {
+            public Builder fundStructure(java.util.List<FundStructure> fundStructure) {
                 this.fundStructure = fundStructure;
                 return this;
             }
@@ -273,20 +290,26 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderDetailInnerResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderDetailInnerResponseBody</p>
+     */
     public static class PostFee extends TeaModel {
-        @NameInMap("FundAmount")
+        @com.aliyun.core.annotation.NameInMap("FundAmount")
         private Long fundAmount;
 
-        @NameInMap("FundAmountMoney")
+        @com.aliyun.core.annotation.NameInMap("FundAmountMoney")
         private Long fundAmountMoney;
 
-        @NameInMap("FundType")
+        @com.aliyun.core.annotation.NameInMap("FundType")
         private String fundType;
 
-        @NameInMap("LmOrderId")
+        @com.aliyun.core.annotation.NameInMap("LmOrderId")
         private Long lmOrderId;
 
-        @NameInMap("TbSubOrderId")
+        @com.aliyun.core.annotation.NameInMap("TbSubOrderId")
         private Long tbSubOrderId;
 
         private PostFee(Builder builder) {
@@ -394,20 +417,26 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderDetailInnerResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderDetailInnerResponseBody</p>
+     */
     public static class ItemPrice extends TeaModel {
-        @NameInMap("FundAmount")
+        @com.aliyun.core.annotation.NameInMap("FundAmount")
         private Long fundAmount;
 
-        @NameInMap("FundAmountMoney")
+        @com.aliyun.core.annotation.NameInMap("FundAmountMoney")
         private Long fundAmountMoney;
 
-        @NameInMap("FundType")
+        @com.aliyun.core.annotation.NameInMap("FundType")
         private String fundType;
 
-        @NameInMap("TbOrderId")
+        @com.aliyun.core.annotation.NameInMap("TbOrderId")
         private Long tbOrderId;
 
-        @NameInMap("TbSubOrderId")
+        @com.aliyun.core.annotation.NameInMap("TbSubOrderId")
         private Long tbSubOrderId;
 
         private ItemPrice(Builder builder) {
@@ -515,9 +544,15 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderDetailInnerResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderDetailInnerResponseBody</p>
+     */
     public static class ItemPriceList extends TeaModel {
-        @NameInMap("ItemPrice")
-        private java.util.List < ItemPrice> itemPrice;
+        @com.aliyun.core.annotation.NameInMap("ItemPrice")
+        private java.util.List<ItemPrice> itemPrice;
 
         private ItemPriceList(Builder builder) {
             this.itemPrice = builder.itemPrice;
@@ -534,17 +569,17 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         /**
          * @return itemPrice
          */
-        public java.util.List < ItemPrice> getItemPrice() {
+        public java.util.List<ItemPrice> getItemPrice() {
             return this.itemPrice;
         }
 
         public static final class Builder {
-            private java.util.List < ItemPrice> itemPrice; 
+            private java.util.List<ItemPrice> itemPrice; 
 
             /**
              * ItemPrice.
              */
-            public Builder itemPrice(java.util.List < ItemPrice> itemPrice) {
+            public Builder itemPrice(java.util.List<ItemPrice> itemPrice) {
                 this.itemPrice = itemPrice;
                 return this;
             }
@@ -556,47 +591,53 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderDetailInnerResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderDetailInnerResponseBody</p>
+     */
     public static class SubItemOrder extends TeaModel {
-        @NameInMap("ChannelCode")
+        @com.aliyun.core.annotation.NameInMap("ChannelCode")
         private String channelCode;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("ItemPic")
+        @com.aliyun.core.annotation.NameInMap("ItemPic")
         private String itemPic;
 
-        @NameInMap("ItemPriceInfo")
+        @com.aliyun.core.annotation.NameInMap("ItemPriceInfo")
         private String itemPriceInfo;
 
-        @NameInMap("ItemPriceList")
+        @com.aliyun.core.annotation.NameInMap("ItemPriceList")
         private ItemPriceList itemPriceList;
 
-        @NameInMap("ItemTitle")
+        @com.aliyun.core.annotation.NameInMap("ItemTitle")
         private String itemTitle;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("LmOrderId")
+        @com.aliyun.core.annotation.NameInMap("LmOrderId")
         private Long lmOrderId;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private Integer number;
 
-        @NameInMap("PayStatus")
+        @com.aliyun.core.annotation.NameInMap("PayStatus")
         private Integer payStatus;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
-        @NameInMap("SkuName")
+        @com.aliyun.core.annotation.NameInMap("SkuName")
         private String skuName;
 
-        @NameInMap("TbSubOrderId")
+        @com.aliyun.core.annotation.NameInMap("TbSubOrderId")
         private Long tbSubOrderId;
 
-        @NameInMap("TotalPaymentInfo")
+        @com.aliyun.core.annotation.NameInMap("TotalPaymentInfo")
         private String totalPaymentInfo;
 
         private SubItemOrder(Builder builder) {
@@ -857,9 +898,15 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderDetailInnerResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderDetailInnerResponseBody</p>
+     */
     public static class SubItemOrderList extends TeaModel {
-        @NameInMap("SubItemOrder")
-        private java.util.List < SubItemOrder> subItemOrder;
+        @com.aliyun.core.annotation.NameInMap("SubItemOrder")
+        private java.util.List<SubItemOrder> subItemOrder;
 
         private SubItemOrderList(Builder builder) {
             this.subItemOrder = builder.subItemOrder;
@@ -876,17 +923,17 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         /**
          * @return subItemOrder
          */
-        public java.util.List < SubItemOrder> getSubItemOrder() {
+        public java.util.List<SubItemOrder> getSubItemOrder() {
             return this.subItemOrder;
         }
 
         public static final class Builder {
-            private java.util.List < SubItemOrder> subItemOrder; 
+            private java.util.List<SubItemOrder> subItemOrder; 
 
             /**
              * SubItemOrder.
              */
-            public Builder subItemOrder(java.util.List < SubItemOrder> subItemOrder) {
+            public Builder subItemOrder(java.util.List<SubItemOrder> subItemOrder) {
                 this.subItemOrder = subItemOrder;
                 return this;
             }
@@ -898,95 +945,101 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderDetailInnerResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderDetailInnerResponseBody</p>
+     */
     public static class Order extends TeaModel {
-        @NameInMap("ChannelBizType")
+        @com.aliyun.core.annotation.NameInMap("ChannelBizType")
         private String channelBizType;
 
-        @NameInMap("ChannelCode")
+        @com.aliyun.core.annotation.NameInMap("ChannelCode")
         private String channelCode;
 
-        @NameInMap("ChannelOrderId")
+        @com.aliyun.core.annotation.NameInMap("ChannelOrderId")
         private String channelOrderId;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("EnableStatus")
+        @com.aliyun.core.annotation.NameInMap("EnableStatus")
         private Integer enableStatus;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Eticket")
+        @com.aliyun.core.annotation.NameInMap("Eticket")
         private Boolean eticket;
 
-        @NameInMap("ExtInfo")
-        private java.util.Map < String, ? > extInfo;
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
+        private java.util.Map<String, ?> extInfo;
 
-        @NameInMap("FundStructureModels")
+        @com.aliyun.core.annotation.NameInMap("FundStructureModels")
         private FundStructureModels fundStructureModels;
 
-        @NameInMap("LmOrderId")
+        @com.aliyun.core.annotation.NameInMap("LmOrderId")
         private Long lmOrderId;
 
-        @NameInMap("LogisticsAddress")
+        @com.aliyun.core.annotation.NameInMap("LogisticsAddress")
         private String logisticsAddress;
 
-        @NameInMap("LogisticsCompName")
+        @com.aliyun.core.annotation.NameInMap("LogisticsCompName")
         private String logisticsCompName;
 
-        @NameInMap("LogisticsMobilePhone")
+        @com.aliyun.core.annotation.NameInMap("LogisticsMobilePhone")
         private String logisticsMobilePhone;
 
-        @NameInMap("LogisticsNo")
+        @com.aliyun.core.annotation.NameInMap("LogisticsNo")
         private String logisticsNo;
 
-        @NameInMap("LogisticsStatus")
+        @com.aliyun.core.annotation.NameInMap("LogisticsStatus")
         private Integer logisticsStatus;
 
-        @NameInMap("LogisticsStatusDesc")
+        @com.aliyun.core.annotation.NameInMap("LogisticsStatusDesc")
         private String logisticsStatusDesc;
 
-        @NameInMap("LogisticsUserName")
+        @com.aliyun.core.annotation.NameInMap("LogisticsUserName")
         private String logisticsUserName;
 
-        @NameInMap("OrderAmount")
+        @com.aliyun.core.annotation.NameInMap("OrderAmount")
         private Long orderAmount;
 
-        @NameInMap("OrderPayInfo")
+        @com.aliyun.core.annotation.NameInMap("OrderPayInfo")
         private String orderPayInfo;
 
-        @NameInMap("PayStatus")
+        @com.aliyun.core.annotation.NameInMap("PayStatus")
         private Integer payStatus;
 
-        @NameInMap("PayWaterStatus")
+        @com.aliyun.core.annotation.NameInMap("PayWaterStatus")
         private Integer payWaterStatus;
 
-        @NameInMap("PostFee")
+        @com.aliyun.core.annotation.NameInMap("PostFee")
         private PostFee postFee;
 
-        @NameInMap("RefundStatus")
+        @com.aliyun.core.annotation.NameInMap("RefundStatus")
         private Integer refundStatus;
 
-        @NameInMap("ResExtInfo")
+        @com.aliyun.core.annotation.NameInMap("ResExtInfo")
         private String resExtInfo;
 
-        @NameInMap("SellerId")
+        @com.aliyun.core.annotation.NameInMap("SellerId")
         private Long sellerId;
 
-        @NameInMap("SellerNick")
+        @com.aliyun.core.annotation.NameInMap("SellerNick")
         private String sellerNick;
 
-        @NameInMap("Shipping")
+        @com.aliyun.core.annotation.NameInMap("Shipping")
         private String shipping;
 
-        @NameInMap("ShopName")
+        @com.aliyun.core.annotation.NameInMap("ShopName")
         private String shopName;
 
-        @NameInMap("SubItemOrderList")
+        @com.aliyun.core.annotation.NameInMap("SubItemOrderList")
         private SubItemOrderList subItemOrderList;
 
-        @NameInMap("TbOrderId")
+        @com.aliyun.core.annotation.NameInMap("TbOrderId")
         private String tbOrderId;
 
         private Order(Builder builder) {
@@ -1082,7 +1135,7 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         /**
          * @return extInfo
          */
-        public java.util.Map < String, ? > getExtInfo() {
+        public java.util.Map<String, ?> getExtInfo() {
             return this.extInfo;
         }
 
@@ -1248,7 +1301,7 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
             private Integer enableStatus; 
             private Long endTime; 
             private Boolean eticket; 
-            private java.util.Map < String, ? > extInfo; 
+            private java.util.Map<String, ?> extInfo; 
             private FundStructureModels fundStructureModels; 
             private Long lmOrderId; 
             private String logisticsAddress; 
@@ -1331,7 +1384,7 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
             /**
              * ExtInfo.
              */
-            public Builder extInfo(java.util.Map < String, ? > extInfo) {
+            public Builder extInfo(java.util.Map<String, ?> extInfo) {
                 this.extInfo = extInfo;
                 return this;
             }
@@ -1519,8 +1572,14 @@ public class QueryOrderDetailInnerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderDetailInnerResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderDetailInnerResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("order")
+        @com.aliyun.core.annotation.NameInMap("order")
         private Order order;
 
         private Model(Builder builder) {

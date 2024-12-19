@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMovieTicketsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMovieTicketsResponseBody</p>
  */
 public class QueryMovieTicketsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("MovieTicket")
+    @com.aliyun.core.annotation.NameInMap("MovieTicket")
     private MovieTicket movieTicket;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryMovieTicketsResponseBody(Builder builder) {
@@ -191,17 +196,23 @@ public class QueryMovieTicketsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMovieTicketsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMovieTicketsResponseBody</p>
+     */
     public static class MovieTicket extends TeaModel {
-        @NameInMap("ReturnMessage")
+        @com.aliyun.core.annotation.NameInMap("ReturnMessage")
         private String returnMessage;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TbOrderId")
+        @com.aliyun.core.annotation.NameInMap("TbOrderId")
         private String tbOrderId;
 
-        @NameInMap("TicketContents")
+        @com.aliyun.core.annotation.NameInMap("TicketContents")
         private String ticketContents;
 
         private MovieTicket(Builder builder) {

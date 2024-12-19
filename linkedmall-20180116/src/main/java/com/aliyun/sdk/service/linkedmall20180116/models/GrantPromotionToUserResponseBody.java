@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GrantPromotionToUserResponseBody} extends {@link TeaModel}
  *
  * <p>GrantPromotionToUserResponseBody</p>
  */
 public class GrantPromotionToUserResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GrantPromotionToUserResponseBody(Builder builder) {
@@ -111,20 +116,26 @@ public class GrantPromotionToUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GrantPromotionToUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GrantPromotionToUserResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("EffectiveEndTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveEndTime")
         private Long effectiveEndTime;
 
-        @NameInMap("EffectiveStartTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveStartTime")
         private Long effectiveStartTime;
 
-        @NameInMap("PromotionInstanceId")
+        @com.aliyun.core.annotation.NameInMap("PromotionInstanceId")
         private String promotionInstanceId;
 
-        @NameInMap("SubBizCode")
+        @com.aliyun.core.annotation.NameInMap("SubBizCode")
         private String subBizCode;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Model(Builder builder) {

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAddressResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAddressResponseBody</p>
  */
 public class QueryAddressResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DivisionAddress")
+    @com.aliyun.core.annotation.NameInMap("DivisionAddress")
     private DivisionAddress divisionAddress;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryAddressResponseBody(Builder builder) {
@@ -111,17 +116,23 @@ public class QueryAddressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAddressResponseBody</p>
+     */
     public static class DivisionAddressDivisionAddress extends TeaModel {
-        @NameInMap("DivisionCode")
+        @com.aliyun.core.annotation.NameInMap("DivisionCode")
         private Long divisionCode;
 
-        @NameInMap("DivisionLevel")
+        @com.aliyun.core.annotation.NameInMap("DivisionLevel")
         private Integer divisionLevel;
 
-        @NameInMap("DivisionName")
+        @com.aliyun.core.annotation.NameInMap("DivisionName")
         private String divisionName;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private Long parentId;
 
         private DivisionAddressDivisionAddress(Builder builder) {
@@ -212,9 +223,15 @@ public class QueryAddressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAddressResponseBody</p>
+     */
     public static class DivisionAddress extends TeaModel {
-        @NameInMap("DivisionAddress")
-        private java.util.List < DivisionAddressDivisionAddress> divisionAddress;
+        @com.aliyun.core.annotation.NameInMap("DivisionAddress")
+        private java.util.List<DivisionAddressDivisionAddress> divisionAddress;
 
         private DivisionAddress(Builder builder) {
             this.divisionAddress = builder.divisionAddress;
@@ -231,17 +248,17 @@ public class QueryAddressResponseBody extends TeaModel {
         /**
          * @return divisionAddress
          */
-        public java.util.List < DivisionAddressDivisionAddress> getDivisionAddress() {
+        public java.util.List<DivisionAddressDivisionAddress> getDivisionAddress() {
             return this.divisionAddress;
         }
 
         public static final class Builder {
-            private java.util.List < DivisionAddressDivisionAddress> divisionAddress; 
+            private java.util.List<DivisionAddressDivisionAddress> divisionAddress; 
 
             /**
              * DivisionAddress.
              */
-            public Builder divisionAddress(java.util.List < DivisionAddressDivisionAddress> divisionAddress) {
+            public Builder divisionAddress(java.util.List<DivisionAddressDivisionAddress> divisionAddress) {
                 this.divisionAddress = divisionAddress;
                 return this;
             }

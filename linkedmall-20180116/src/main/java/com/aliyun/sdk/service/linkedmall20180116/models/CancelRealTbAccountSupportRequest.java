@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelRealTbAccountSupportRequest} extends {@link RequestModel}
  *
  * <p>CancelRealTbAccountSupportRequest</p>
  */
 public class CancelRealTbAccountSupportRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
     private CancelRealTbAccountSupportRequest(Builder builder) {
@@ -78,7 +83,7 @@ public class CancelRealTbAccountSupportRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
          */
         public Builder bizId(String bizId) {
             this.putBodyParameter("BizId", bizId);

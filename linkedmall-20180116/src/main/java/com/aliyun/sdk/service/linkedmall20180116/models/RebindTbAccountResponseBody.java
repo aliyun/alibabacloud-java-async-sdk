@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebindTbAccountResponseBody} extends {@link TeaModel}
  *
  * <p>RebindTbAccountResponseBody</p>
  */
 public class RebindTbAccountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private RebindTbAccountResponseBody(Builder builder) {
@@ -251,26 +256,32 @@ public class RebindTbAccountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RebindTbAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>RebindTbAccountResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("CUserId")
+        @com.aliyun.core.annotation.NameInMap("CUserId")
         private String cUserId;
 
-        @NameInMap("ExtInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
         private String extInfo;
 
-        @NameInMap("LmUid")
+        @com.aliyun.core.annotation.NameInMap("LmUid")
         private Long lmUid;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("TbAccountType")
+        @com.aliyun.core.annotation.NameInMap("TbAccountType")
         private String tbAccountType;
 
-        @NameInMap("TbUserId")
+        @com.aliyun.core.annotation.NameInMap("TbUserId")
         private Long tbUserId;
 
         private Model(Builder builder) {

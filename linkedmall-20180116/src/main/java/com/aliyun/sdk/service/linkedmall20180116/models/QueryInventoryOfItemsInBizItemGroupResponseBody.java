@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryInventoryOfItemsInBizItemGroupResponseBody} extends {@link TeaModel}
  *
  * <p>QueryInventoryOfItemsInBizItemGroupResponseBody</p>
  */
 public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ItemList")
-    private java.util.List < ItemList> itemList;
+    @com.aliyun.core.annotation.NameInMap("ItemList")
+    private java.util.List<ItemList> itemList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryInventoryOfItemsInBizItemGroupResponseBody(Builder builder) {
@@ -49,7 +54,7 @@ public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
     /**
      * @return itemList
      */
-    public java.util.List < ItemList> getItemList() {
+    public java.util.List<ItemList> getItemList() {
         return this.itemList;
     }
 
@@ -69,7 +74,7 @@ public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < ItemList> itemList; 
+        private java.util.List<ItemList> itemList; 
         private String message; 
         private String requestId; 
 
@@ -84,7 +89,7 @@ public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
         /**
          * ItemList.
          */
-        public Builder itemList(java.util.List < ItemList> itemList) {
+        public Builder itemList(java.util.List<ItemList> itemList) {
             this.itemList = itemList;
             return this;
         }
@@ -111,11 +116,17 @@ public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryInventoryOfItemsInBizItemGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInventoryOfItemsInBizItemGroupResponseBody</p>
+     */
     public static class SkuList extends TeaModel {
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
         private SkuList(Builder builder) {
@@ -172,23 +183,29 @@ public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryInventoryOfItemsInBizItemGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInventoryOfItemsInBizItemGroupResponseBody</p>
+     */
     public static class ItemList extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("SkuList")
-        private java.util.List < SkuList> skuList;
+        @com.aliyun.core.annotation.NameInMap("SkuList")
+        private java.util.List<SkuList> skuList;
 
-        @NameInMap("TotalQuantity")
+        @com.aliyun.core.annotation.NameInMap("TotalQuantity")
         private Long totalQuantity;
 
-        @NameInMap("TotalSoldQuantity")
+        @com.aliyun.core.annotation.NameInMap("TotalSoldQuantity")
         private Long totalSoldQuantity;
 
         private ItemList(Builder builder) {
@@ -232,7 +249,7 @@ public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
         /**
          * @return skuList
          */
-        public java.util.List < SkuList> getSkuList() {
+        public java.util.List<SkuList> getSkuList() {
             return this.skuList;
         }
 
@@ -254,7 +271,7 @@ public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
             private Long itemId; 
             private String lmItemId; 
             private Integer quantity; 
-            private java.util.List < SkuList> skuList; 
+            private java.util.List<SkuList> skuList; 
             private Long totalQuantity; 
             private Long totalSoldQuantity; 
 
@@ -285,7 +302,7 @@ public class QueryInventoryOfItemsInBizItemGroupResponseBody extends TeaModel {
             /**
              * SkuList.
              */
-            public Builder skuList(java.util.List < SkuList> skuList) {
+            public Builder skuList(java.util.List<SkuList> skuList) {
                 this.skuList = skuList;
                 return this;
             }

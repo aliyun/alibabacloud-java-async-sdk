@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryStatementsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryStatementsResponseBody</p>
  */
 public class QueryStatementsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryStatementsResponseBody(Builder builder) {
@@ -211,59 +216,65 @@ public class QueryStatementsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryStatementsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryStatementsResponseBody</p>
+     */
     public static class StatementList extends TeaModel {
-        @NameInMap("Attributes")
+        @com.aliyun.core.annotation.NameInMap("Attributes")
         private String attributes;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ExtInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
         private String extInfo;
 
-        @NameInMap("KpNoGenerateTime")
+        @com.aliyun.core.annotation.NameInMap("KpNoGenerateTime")
         private String kpNoGenerateTime;
 
-        @NameInMap("ModifiedDate")
+        @com.aliyun.core.annotation.NameInMap("ModifiedDate")
         private String modifiedDate;
 
-        @NameInMap("PayeeAccountId")
+        @com.aliyun.core.annotation.NameInMap("PayeeAccountId")
         private String payeeAccountId;
 
-        @NameInMap("PayeeAccountName")
+        @com.aliyun.core.annotation.NameInMap("PayeeAccountName")
         private String payeeAccountName;
 
-        @NameInMap("PayeeAccountNo")
+        @com.aliyun.core.annotation.NameInMap("PayeeAccountNo")
         private String payeeAccountNo;
 
-        @NameInMap("PayeeId")
+        @com.aliyun.core.annotation.NameInMap("PayeeId")
         private String payeeId;
 
-        @NameInMap("PayeeName")
+        @com.aliyun.core.annotation.NameInMap("PayeeName")
         private String payeeName;
 
-        @NameInMap("SettleAmount")
+        @com.aliyun.core.annotation.NameInMap("SettleAmount")
         private String settleAmount;
 
-        @NameInMap("SettleNo")
+        @com.aliyun.core.annotation.NameInMap("SettleNo")
         private String settleNo;
 
-        @NameInMap("SettleStatus")
+        @com.aliyun.core.annotation.NameInMap("SettleStatus")
         private String settleStatus;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StatusMessage")
+        @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
         private StatementList(Builder builder) {
@@ -592,17 +603,23 @@ public class QueryStatementsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryStatementsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryStatementsResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("StatementList")
-        private java.util.List < StatementList> statementList;
+        @com.aliyun.core.annotation.NameInMap("StatementList")
+        private java.util.List<StatementList> statementList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Model(Builder builder) {
@@ -637,7 +654,7 @@ public class QueryStatementsResponseBody extends TeaModel {
         /**
          * @return statementList
          */
-        public java.util.List < StatementList> getStatementList() {
+        public java.util.List<StatementList> getStatementList() {
             return this.statementList;
         }
 
@@ -651,7 +668,7 @@ public class QueryStatementsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < StatementList> statementList; 
+            private java.util.List<StatementList> statementList; 
             private Integer totalCount; 
 
             /**
@@ -673,7 +690,7 @@ public class QueryStatementsResponseBody extends TeaModel {
             /**
              * StatementList.
              */
-            public Builder statementList(java.util.List < StatementList> statementList) {
+            public Builder statementList(java.util.List<StatementList> statementList) {
                 this.statementList = statementList;
                 return this;
             }

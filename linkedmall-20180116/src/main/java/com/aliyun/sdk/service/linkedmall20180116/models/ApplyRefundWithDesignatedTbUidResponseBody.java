@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyRefundWithDesignatedTbUidResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyRefundWithDesignatedTbUidResponseBody</p>
  */
 public class ApplyRefundWithDesignatedTbUidResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ApplyRefundWithDesignatedTbUidResponseBody(Builder builder) {
@@ -198,7 +203,10 @@ public class ApplyRefundWithDesignatedTbUidResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize
+         * <p>pageSize</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -251,17 +259,23 @@ public class ApplyRefundWithDesignatedTbUidResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ApplyRefundWithDesignatedTbUidResponseBody} extends {@link TeaModel}
+     *
+     * <p>ApplyRefundWithDesignatedTbUidResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("DisputeId")
+        @com.aliyun.core.annotation.NameInMap("DisputeId")
         private Long disputeId;
 
-        @NameInMap("DisputeStatus")
+        @com.aliyun.core.annotation.NameInMap("DisputeStatus")
         private Integer disputeStatus;
 
-        @NameInMap("DisputeType")
+        @com.aliyun.core.annotation.NameInMap("DisputeType")
         private Integer disputeType;
 
-        @NameInMap("SubLmOrderId")
+        @com.aliyun.core.annotation.NameInMap("SubLmOrderId")
         private String subLmOrderId;
 
         private Model(Builder builder) {

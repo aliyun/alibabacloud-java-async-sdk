@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMovieCommentsResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMovieCommentsResponseBody</p>
  */
 public class QueryMovieCommentsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CommentList")
+    @com.aliyun.core.annotation.NameInMap("CommentList")
     private CommentList commentList;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Long count;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryMovieCommentsResponseBody(Builder builder) {
@@ -211,29 +216,35 @@ public class QueryMovieCommentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMovieCommentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMovieCommentsResponseBody</p>
+     */
     public static class Comment extends TeaModel {
-        @NameInMap("CommentTime")
+        @com.aliyun.core.annotation.NameInMap("CommentTime")
         private String commentTime;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("FavorCount")
+        @com.aliyun.core.annotation.NameInMap("FavorCount")
         private Long favorCount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MovieId")
+        @com.aliyun.core.annotation.NameInMap("MovieId")
         private Long movieId;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private Long remark;
 
-        @NameInMap("Subject")
+        @com.aliyun.core.annotation.NameInMap("Subject")
         private String subject;
 
         private Comment(Builder builder) {
@@ -392,9 +403,15 @@ public class QueryMovieCommentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryMovieCommentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryMovieCommentsResponseBody</p>
+     */
     public static class CommentList extends TeaModel {
-        @NameInMap("Comment")
-        private java.util.List < Comment> comment;
+        @com.aliyun.core.annotation.NameInMap("Comment")
+        private java.util.List<Comment> comment;
 
         private CommentList(Builder builder) {
             this.comment = builder.comment;
@@ -411,17 +428,17 @@ public class QueryMovieCommentsResponseBody extends TeaModel {
         /**
          * @return comment
          */
-        public java.util.List < Comment> getComment() {
+        public java.util.List<Comment> getComment() {
             return this.comment;
         }
 
         public static final class Builder {
-            private java.util.List < Comment> comment; 
+            private java.util.List<Comment> comment; 
 
             /**
              * Comment.
              */
-            public Builder comment(java.util.List < Comment> comment) {
+            public Builder comment(java.util.List<Comment> comment) {
                 this.comment = comment;
                 return this;
             }

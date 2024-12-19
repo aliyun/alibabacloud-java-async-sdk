@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGuidePageResponseBody} extends {@link TeaModel}
  *
  * <p>GetGuidePageResponseBody</p>
  */
 public class GetGuidePageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("MiniShopInfo")
-    private java.util.List < MiniShopInfo> miniShopInfo;
+    @com.aliyun.core.annotation.NameInMap("MiniShopInfo")
+    private java.util.List<MiniShopInfo> miniShopInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetGuidePageResponseBody(Builder builder) {
@@ -56,7 +61,7 @@ public class GetGuidePageResponseBody extends TeaModel {
     /**
      * @return miniShopInfo
      */
-    public java.util.List < MiniShopInfo> getMiniShopInfo() {
+    public java.util.List<MiniShopInfo> getMiniShopInfo() {
         return this.miniShopInfo;
     }
 
@@ -70,7 +75,7 @@ public class GetGuidePageResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < MiniShopInfo> miniShopInfo; 
+        private java.util.List<MiniShopInfo> miniShopInfo; 
         private String requestId; 
 
         /**
@@ -92,7 +97,7 @@ public class GetGuidePageResponseBody extends TeaModel {
         /**
          * MiniShopInfo.
          */
-        public Builder miniShopInfo(java.util.List < MiniShopInfo> miniShopInfo) {
+        public Builder miniShopInfo(java.util.List<MiniShopInfo> miniShopInfo) {
             this.miniShopInfo = miniShopInfo;
             return this;
         }
@@ -111,17 +116,23 @@ public class GetGuidePageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGuidePageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGuidePageResponseBody</p>
+     */
     public static class MiniShopInfo extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("LiteShopId")
+        @com.aliyun.core.annotation.NameInMap("LiteShopId")
         private String liteShopId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Src")
+        @com.aliyun.core.annotation.NameInMap("Src")
         private String src;
 
         private MiniShopInfo(Builder builder) {

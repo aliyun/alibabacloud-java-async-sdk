@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenderOrderResponseBody} extends {@link TeaModel}
  *
  * <p>RenderOrderResponseBody</p>
  */
 public class RenderOrderResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogsId")
+    @com.aliyun.core.annotation.NameInMap("LogsId")
     private String logsId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCode")
+    @com.aliyun.core.annotation.NameInMap("SubCode")
     private String subCode;
 
-    @NameInMap("SubMessage")
+    @com.aliyun.core.annotation.NameInMap("SubMessage")
     private String subMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private RenderOrderResponseBody(Builder builder) {
@@ -211,17 +216,23 @@ public class RenderOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RenderOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderResponseBody</p>
+     */
     public static class DeliveryInfos extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("PostFee")
+        @com.aliyun.core.annotation.NameInMap("PostFee")
         private Long postFee;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private Long serviceType;
 
         private DeliveryInfos(Builder builder) {
@@ -312,9 +323,15 @@ public class RenderOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderResponseBody</p>
+     */
     public static class RenderOrderInfosDeliveryInfos extends TeaModel {
-        @NameInMap("DeliveryInfos")
-        private java.util.List < DeliveryInfos> deliveryInfos;
+        @com.aliyun.core.annotation.NameInMap("DeliveryInfos")
+        private java.util.List<DeliveryInfos> deliveryInfos;
 
         private RenderOrderInfosDeliveryInfos(Builder builder) {
             this.deliveryInfos = builder.deliveryInfos;
@@ -331,17 +348,17 @@ public class RenderOrderResponseBody extends TeaModel {
         /**
          * @return deliveryInfos
          */
-        public java.util.List < DeliveryInfos> getDeliveryInfos() {
+        public java.util.List<DeliveryInfos> getDeliveryInfos() {
             return this.deliveryInfos;
         }
 
         public static final class Builder {
-            private java.util.List < DeliveryInfos> deliveryInfos; 
+            private java.util.List<DeliveryInfos> deliveryInfos; 
 
             /**
              * DeliveryInfos.
              */
-            public Builder deliveryInfos(java.util.List < DeliveryInfos> deliveryInfos) {
+            public Builder deliveryInfos(java.util.List<DeliveryInfos> deliveryInfos) {
                 this.deliveryInfos = deliveryInfos;
                 return this;
             }
@@ -353,47 +370,53 @@ public class RenderOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderResponseBody</p>
+     */
     public static class LmItemInfos extends TeaModel {
-        @NameInMap("ActualPrice")
+        @com.aliyun.core.annotation.NameInMap("ActualPrice")
         private Long actualPrice;
 
-        @NameInMap("CanSell")
+        @com.aliyun.core.annotation.NameInMap("CanSell")
         private Boolean canSell;
 
-        @NameInMap("Cash")
+        @com.aliyun.core.annotation.NameInMap("Cash")
         private Long cash;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("ItemName")
+        @com.aliyun.core.annotation.NameInMap("ItemName")
         private String itemName;
 
-        @NameInMap("ItemPicUrl")
+        @com.aliyun.core.annotation.NameInMap("ItemPicUrl")
         private String itemPicUrl;
 
-        @NameInMap("LmItemId")
+        @com.aliyun.core.annotation.NameInMap("LmItemId")
         private String lmItemId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Long points;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("SellerId")
+        @com.aliyun.core.annotation.NameInMap("SellerId")
         private Long sellerId;
 
-        @NameInMap("SellerNick")
+        @com.aliyun.core.annotation.NameInMap("SellerNick")
         private String sellerNick;
 
-        @NameInMap("SkuId")
+        @com.aliyun.core.annotation.NameInMap("SkuId")
         private Long skuId;
 
-        @NameInMap("SkuName")
+        @com.aliyun.core.annotation.NameInMap("SkuName")
         private String skuName;
 
         private LmItemInfos(Builder builder) {
@@ -654,9 +677,15 @@ public class RenderOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderResponseBody</p>
+     */
     public static class RenderOrderInfosLmItemInfos extends TeaModel {
-        @NameInMap("LmItemInfos")
-        private java.util.List < LmItemInfos> lmItemInfos;
+        @com.aliyun.core.annotation.NameInMap("LmItemInfos")
+        private java.util.List<LmItemInfos> lmItemInfos;
 
         private RenderOrderInfosLmItemInfos(Builder builder) {
             this.lmItemInfos = builder.lmItemInfos;
@@ -673,17 +702,17 @@ public class RenderOrderResponseBody extends TeaModel {
         /**
          * @return lmItemInfos
          */
-        public java.util.List < LmItemInfos> getLmItemInfos() {
+        public java.util.List<LmItemInfos> getLmItemInfos() {
             return this.lmItemInfos;
         }
 
         public static final class Builder {
-            private java.util.List < LmItemInfos> lmItemInfos; 
+            private java.util.List<LmItemInfos> lmItemInfos; 
 
             /**
              * LmItemInfos.
              */
-            public Builder lmItemInfos(java.util.List < LmItemInfos> lmItemInfos) {
+            public Builder lmItemInfos(java.util.List<LmItemInfos> lmItemInfos) {
                 this.lmItemInfos = lmItemInfos;
                 return this;
             }
@@ -695,14 +724,20 @@ public class RenderOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderResponseBody</p>
+     */
     public static class RenderOrderInfos extends TeaModel {
-        @NameInMap("DeliveryInfos")
+        @com.aliyun.core.annotation.NameInMap("DeliveryInfos")
         private RenderOrderInfosDeliveryInfos deliveryInfos;
 
-        @NameInMap("ExtInfo")
-        private java.util.Map < String, ? > extInfo;
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
+        private java.util.Map<String, ?> extInfo;
 
-        @NameInMap("LmItemInfos")
+        @com.aliyun.core.annotation.NameInMap("LmItemInfos")
         private RenderOrderInfosLmItemInfos lmItemInfos;
 
         private RenderOrderInfos(Builder builder) {
@@ -729,7 +764,7 @@ public class RenderOrderResponseBody extends TeaModel {
         /**
          * @return extInfo
          */
-        public java.util.Map < String, ? > getExtInfo() {
+        public java.util.Map<String, ?> getExtInfo() {
             return this.extInfo;
         }
 
@@ -742,7 +777,7 @@ public class RenderOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private RenderOrderInfosDeliveryInfos deliveryInfos; 
-            private java.util.Map < String, ? > extInfo; 
+            private java.util.Map<String, ?> extInfo; 
             private RenderOrderInfosLmItemInfos lmItemInfos; 
 
             /**
@@ -756,7 +791,7 @@ public class RenderOrderResponseBody extends TeaModel {
             /**
              * ExtInfo.
              */
-            public Builder extInfo(java.util.Map < String, ? > extInfo) {
+            public Builder extInfo(java.util.Map<String, ?> extInfo) {
                 this.extInfo = extInfo;
                 return this;
             }
@@ -776,9 +811,15 @@ public class RenderOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderResponseBody</p>
+     */
     public static class ModelRenderOrderInfos extends TeaModel {
-        @NameInMap("RenderOrderInfos")
-        private java.util.List < RenderOrderInfos> renderOrderInfos;
+        @com.aliyun.core.annotation.NameInMap("RenderOrderInfos")
+        private java.util.List<RenderOrderInfos> renderOrderInfos;
 
         private ModelRenderOrderInfos(Builder builder) {
             this.renderOrderInfos = builder.renderOrderInfos;
@@ -795,17 +836,17 @@ public class RenderOrderResponseBody extends TeaModel {
         /**
          * @return renderOrderInfos
          */
-        public java.util.List < RenderOrderInfos> getRenderOrderInfos() {
+        public java.util.List<RenderOrderInfos> getRenderOrderInfos() {
             return this.renderOrderInfos;
         }
 
         public static final class Builder {
-            private java.util.List < RenderOrderInfos> renderOrderInfos; 
+            private java.util.List<RenderOrderInfos> renderOrderInfos; 
 
             /**
              * RenderOrderInfos.
              */
-            public Builder renderOrderInfos(java.util.List < RenderOrderInfos> renderOrderInfos) {
+            public Builder renderOrderInfos(java.util.List<RenderOrderInfos> renderOrderInfos) {
                 this.renderOrderInfos = renderOrderInfos;
                 return this;
             }
@@ -817,8 +858,14 @@ public class RenderOrderResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RenderOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenderOrderResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("RenderOrderInfos")
+        @com.aliyun.core.annotation.NameInMap("RenderOrderInfos")
         private ModelRenderOrderInfos renderOrderInfos;
 
         private Model(Builder builder) {

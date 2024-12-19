@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20180116.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrderIdByPayIdResponseBody} extends {@link TeaModel}
  *
  * <p>QueryOrderIdByPayIdResponseBody</p>
  */
 public class QueryOrderIdByPayIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LmOrderIds")
+    @com.aliyun.core.annotation.NameInMap("LmOrderIds")
     private LmOrderIds lmOrderIds;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryOrderIdByPayIdResponseBody(Builder builder) {
@@ -111,8 +116,14 @@ public class QueryOrderIdByPayIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryOrderIdByPayIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderIdByPayIdResponseBody</p>
+     */
     public static class LmOrderIdsLmOrderIds extends TeaModel {
-        @NameInMap("LmOrderId")
+        @com.aliyun.core.annotation.NameInMap("LmOrderId")
         private Long lmOrderId;
 
         private LmOrderIdsLmOrderIds(Builder builder) {
@@ -152,9 +163,15 @@ public class QueryOrderIdByPayIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOrderIdByPayIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOrderIdByPayIdResponseBody</p>
+     */
     public static class LmOrderIds extends TeaModel {
-        @NameInMap("LmOrderIds")
-        private java.util.List < LmOrderIdsLmOrderIds> lmOrderIds;
+        @com.aliyun.core.annotation.NameInMap("LmOrderIds")
+        private java.util.List<LmOrderIdsLmOrderIds> lmOrderIds;
 
         private LmOrderIds(Builder builder) {
             this.lmOrderIds = builder.lmOrderIds;
@@ -171,17 +188,17 @@ public class QueryOrderIdByPayIdResponseBody extends TeaModel {
         /**
          * @return lmOrderIds
          */
-        public java.util.List < LmOrderIdsLmOrderIds> getLmOrderIds() {
+        public java.util.List<LmOrderIdsLmOrderIds> getLmOrderIds() {
             return this.lmOrderIds;
         }
 
         public static final class Builder {
-            private java.util.List < LmOrderIdsLmOrderIds> lmOrderIds; 
+            private java.util.List<LmOrderIdsLmOrderIds> lmOrderIds; 
 
             /**
              * LmOrderIds.
              */
-            public Builder lmOrderIds(java.util.List < LmOrderIdsLmOrderIds> lmOrderIds) {
+            public Builder lmOrderIds(java.util.List<LmOrderIdsLmOrderIds> lmOrderIds) {
                 this.lmOrderIds = lmOrderIds;
                 return this;
             }
