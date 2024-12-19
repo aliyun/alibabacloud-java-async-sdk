@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -81,6 +86,9 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
      * <p>UpdateLoginProfileResponseBody</p>
      */
     public static class LoginProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoDisableLoginStatus")
+        private String autoDisableLoginStatus;
+
         @com.aliyun.core.annotation.NameInMap("MFABindRequired")
         private Boolean MFABindRequired;
 
@@ -97,6 +105,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         private String userPrincipalName;
 
         private LoginProfile(Builder builder) {
+            this.autoDisableLoginStatus = builder.autoDisableLoginStatus;
             this.MFABindRequired = builder.MFABindRequired;
             this.passwordResetRequired = builder.passwordResetRequired;
             this.status = builder.status;
@@ -110,6 +119,13 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
 
         public static LoginProfile create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoDisableLoginStatus
+         */
+        public String getAutoDisableLoginStatus() {
+            return this.autoDisableLoginStatus;
         }
 
         /**
@@ -148,11 +164,20 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String autoDisableLoginStatus; 
             private Boolean MFABindRequired; 
             private Boolean passwordResetRequired; 
             private String status; 
             private String updateDate; 
             private String userPrincipalName; 
+
+            /**
+             * AutoDisableLoginStatus.
+             */
+            public Builder autoDisableLoginStatus(String autoDisableLoginStatus) {
+                this.autoDisableLoginStatus = autoDisableLoginStatus;
+                return this;
+            }
 
             /**
              * <p>Indicates whether MFA must be enabled.</p>

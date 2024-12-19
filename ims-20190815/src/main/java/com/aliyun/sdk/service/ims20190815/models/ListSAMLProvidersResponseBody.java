@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -274,7 +279,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
      */
     public static class SAMLProviders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SAMLProvider")
-        private java.util.List < SAMLProvider> SAMLProvider;
+        private java.util.List<SAMLProvider> SAMLProvider;
 
         private SAMLProviders(Builder builder) {
             this.SAMLProvider = builder.SAMLProvider;
@@ -291,17 +296,17 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         /**
          * @return SAMLProvider
          */
-        public java.util.List < SAMLProvider> getSAMLProvider() {
+        public java.util.List<SAMLProvider> getSAMLProvider() {
             return this.SAMLProvider;
         }
 
         public static final class Builder {
-            private java.util.List < SAMLProvider> SAMLProvider; 
+            private java.util.List<SAMLProvider> SAMLProvider; 
 
             /**
              * SAMLProvider.
              */
-            public Builder SAMLProvider(java.util.List < SAMLProvider> SAMLProvider) {
+            public Builder SAMLProvider(java.util.List<SAMLProvider> SAMLProvider) {
                 this.SAMLProvider = SAMLProvider;
                 return this;
             }

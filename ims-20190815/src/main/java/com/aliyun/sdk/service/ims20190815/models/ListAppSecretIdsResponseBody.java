@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
      */
     public static class AppSecrets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppSecret")
-        private java.util.List < AppSecret> appSecret;
+        private java.util.List<AppSecret> appSecret;
 
         private AppSecrets(Builder builder) {
             this.appSecret = builder.appSecret;
@@ -195,17 +200,17 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
         /**
          * @return appSecret
          */
-        public java.util.List < AppSecret> getAppSecret() {
+        public java.util.List<AppSecret> getAppSecret() {
             return this.appSecret;
         }
 
         public static final class Builder {
-            private java.util.List < AppSecret> appSecret; 
+            private java.util.List<AppSecret> appSecret; 
 
             /**
              * AppSecret.
              */
-            public Builder appSecret(java.util.List < AppSecret> appSecret) {
+            public Builder appSecret(java.util.List<AppSecret> appSecret) {
                 this.appSecret = appSecret;
                 return this;
             }

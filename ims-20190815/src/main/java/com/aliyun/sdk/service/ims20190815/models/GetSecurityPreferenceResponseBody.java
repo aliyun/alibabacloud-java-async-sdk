@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -370,6 +375,73 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
      *
      * <p>GetSecurityPreferenceResponseBody</p>
      */
+    public static class MaxIdleDays extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxIdleDaysForAccessKeys")
+        private Integer maxIdleDaysForAccessKeys;
+
+        @com.aliyun.core.annotation.NameInMap("MaxIdleDaysForUsers")
+        private Integer maxIdleDaysForUsers;
+
+        private MaxIdleDays(Builder builder) {
+            this.maxIdleDaysForAccessKeys = builder.maxIdleDaysForAccessKeys;
+            this.maxIdleDaysForUsers = builder.maxIdleDaysForUsers;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MaxIdleDays create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxIdleDaysForAccessKeys
+         */
+        public Integer getMaxIdleDaysForAccessKeys() {
+            return this.maxIdleDaysForAccessKeys;
+        }
+
+        /**
+         * @return maxIdleDaysForUsers
+         */
+        public Integer getMaxIdleDaysForUsers() {
+            return this.maxIdleDaysForUsers;
+        }
+
+        public static final class Builder {
+            private Integer maxIdleDaysForAccessKeys; 
+            private Integer maxIdleDaysForUsers; 
+
+            /**
+             * MaxIdleDaysForAccessKeys.
+             */
+            public Builder maxIdleDaysForAccessKeys(Integer maxIdleDaysForAccessKeys) {
+                this.maxIdleDaysForAccessKeys = maxIdleDaysForAccessKeys;
+                return this;
+            }
+
+            /**
+             * MaxIdleDaysForUsers.
+             */
+            public Builder maxIdleDaysForUsers(Integer maxIdleDaysForUsers) {
+                this.maxIdleDaysForUsers = maxIdleDaysForUsers;
+                return this;
+            }
+
+            public MaxIdleDays build() {
+                return new MaxIdleDays(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetSecurityPreferenceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSecurityPreferenceResponseBody</p>
+     */
     public static class PersonalInfoPreference extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowUserToManagePersonalDingTalk")
         private Boolean allowUserToManagePersonalDingTalk;
@@ -426,7 +498,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
      */
     public static class VerificationPreference extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VerificationTypes")
-        private java.util.List < String > verificationTypes;
+        private java.util.List<String> verificationTypes;
 
         private VerificationPreference(Builder builder) {
             this.verificationTypes = builder.verificationTypes;
@@ -443,17 +515,17 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         /**
          * @return verificationTypes
          */
-        public java.util.List < String > getVerificationTypes() {
+        public java.util.List<String> getVerificationTypes() {
             return this.verificationTypes;
         }
 
         public static final class Builder {
-            private java.util.List < String > verificationTypes; 
+            private java.util.List<String> verificationTypes; 
 
             /**
              * <p>The MFA methods.</p>
              */
-            public Builder verificationTypes(java.util.List < String > verificationTypes) {
+            public Builder verificationTypes(java.util.List<String> verificationTypes) {
                 this.verificationTypes = verificationTypes;
                 return this;
             }
@@ -481,6 +553,9 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MFAPreference")
         private MFAPreference MFAPreference;
 
+        @com.aliyun.core.annotation.NameInMap("MaxIdleDays")
+        private MaxIdleDays maxIdleDays;
+
         @com.aliyun.core.annotation.NameInMap("PersonalInfoPreference")
         private PersonalInfoPreference personalInfoPreference;
 
@@ -491,6 +566,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             this.accessKeyPreference = builder.accessKeyPreference;
             this.loginProfilePreference = builder.loginProfilePreference;
             this.MFAPreference = builder.MFAPreference;
+            this.maxIdleDays = builder.maxIdleDays;
             this.personalInfoPreference = builder.personalInfoPreference;
             this.verificationPreference = builder.verificationPreference;
         }
@@ -525,6 +601,13 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxIdleDays
+         */
+        public MaxIdleDays getMaxIdleDays() {
+            return this.maxIdleDays;
+        }
+
+        /**
          * @return personalInfoPreference
          */
         public PersonalInfoPreference getPersonalInfoPreference() {
@@ -542,6 +625,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private AccessKeyPreference accessKeyPreference; 
             private LoginProfilePreference loginProfilePreference; 
             private MFAPreference MFAPreference; 
+            private MaxIdleDays maxIdleDays; 
             private PersonalInfoPreference personalInfoPreference; 
             private VerificationPreference verificationPreference; 
 
@@ -566,6 +650,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
              */
             public Builder MFAPreference(MFAPreference MFAPreference) {
                 this.MFAPreference = MFAPreference;
+                return this;
+            }
+
+            /**
+             * MaxIdleDays.
+             */
+            public Builder maxIdleDays(MaxIdleDays maxIdleDays) {
+                this.maxIdleDays = maxIdleDays;
                 return this;
             }
 

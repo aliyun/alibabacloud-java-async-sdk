@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -102,6 +107,9 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachedSystemPoliciesPerUserQuota")
         private Integer attachedSystemPoliciesPerUserQuota;
 
+        @com.aliyun.core.annotation.NameInMap("ConditionsPerAKPolicyQuota")
+        private Integer conditionsPerAKPolicyQuota;
+
         @com.aliyun.core.annotation.NameInMap("Groups")
         private Integer groups;
 
@@ -110,6 +118,9 @@ public class GetAccountSummaryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("GroupsQuota")
         private Integer groupsQuota;
+
+        @com.aliyun.core.annotation.NameInMap("IPItemsPerAKPolicyQuota")
+        private Integer IPItemsPerAKPolicyQuota;
 
         @com.aliyun.core.annotation.NameInMap("MFADevices")
         private Integer MFADevices;
@@ -152,9 +163,11 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             this.attachedSystemPoliciesPerGroupQuota = builder.attachedSystemPoliciesPerGroupQuota;
             this.attachedSystemPoliciesPerRoleQuota = builder.attachedSystemPoliciesPerRoleQuota;
             this.attachedSystemPoliciesPerUserQuota = builder.attachedSystemPoliciesPerUserQuota;
+            this.conditionsPerAKPolicyQuota = builder.conditionsPerAKPolicyQuota;
             this.groups = builder.groups;
             this.groupsPerUserQuota = builder.groupsPerUserQuota;
             this.groupsQuota = builder.groupsQuota;
+            this.IPItemsPerAKPolicyQuota = builder.IPItemsPerAKPolicyQuota;
             this.MFADevices = builder.MFADevices;
             this.MFADevicesInUse = builder.MFADevicesInUse;
             this.policies = builder.policies;
@@ -226,6 +239,13 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         }
 
         /**
+         * @return conditionsPerAKPolicyQuota
+         */
+        public Integer getConditionsPerAKPolicyQuota() {
+            return this.conditionsPerAKPolicyQuota;
+        }
+
+        /**
          * @return groups
          */
         public Integer getGroups() {
@@ -244,6 +264,13 @@ public class GetAccountSummaryResponseBody extends TeaModel {
          */
         public Integer getGroupsQuota() {
             return this.groupsQuota;
+        }
+
+        /**
+         * @return IPItemsPerAKPolicyQuota
+         */
+        public Integer getIPItemsPerAKPolicyQuota() {
+            return this.IPItemsPerAKPolicyQuota;
         }
 
         /**
@@ -331,9 +358,11 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             private Integer attachedSystemPoliciesPerGroupQuota; 
             private Integer attachedSystemPoliciesPerRoleQuota; 
             private Integer attachedSystemPoliciesPerUserQuota; 
+            private Integer conditionsPerAKPolicyQuota; 
             private Integer groups; 
             private Integer groupsPerUserQuota; 
             private Integer groupsQuota; 
+            private Integer IPItemsPerAKPolicyQuota; 
             private Integer MFADevices; 
             private Integer MFADevicesInUse; 
             private Integer policies; 
@@ -424,6 +453,14 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
+             * ConditionsPerAKPolicyQuota.
+             */
+            public Builder conditionsPerAKPolicyQuota(Integer conditionsPerAKPolicyQuota) {
+                this.conditionsPerAKPolicyQuota = conditionsPerAKPolicyQuota;
+                return this;
+            }
+
+            /**
              * <p>The number of RAM user groups.</p>
              * 
              * <strong>example:</strong>
@@ -453,6 +490,14 @@ public class GetAccountSummaryResponseBody extends TeaModel {
              */
             public Builder groupsQuota(Integer groupsQuota) {
                 this.groupsQuota = groupsQuota;
+                return this;
+            }
+
+            /**
+             * IPItemsPerAKPolicyQuota.
+             */
+            public Builder IPItemsPerAKPolicyQuota(Integer IPItemsPerAKPolicyQuota) {
+                this.IPItemsPerAKPolicyQuota = IPItemsPerAKPolicyQuota;
                 return this;
             }
 

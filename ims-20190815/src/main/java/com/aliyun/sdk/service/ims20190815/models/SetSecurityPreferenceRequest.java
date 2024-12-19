@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class SetSecurityPreferenceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VerificationTypes")
-    private java.util.List < String > verificationTypes;
+    private java.util.List<String> verificationTypes;
 
     private SetSecurityPreferenceRequest(Builder builder) {
         super(builder);
@@ -145,7 +150,7 @@ public class SetSecurityPreferenceRequest extends Request {
     /**
      * @return verificationTypes
      */
-    public java.util.List < String > getVerificationTypes() {
+    public java.util.List<String> getVerificationTypes() {
         return this.verificationTypes;
     }
 
@@ -159,7 +164,7 @@ public class SetSecurityPreferenceRequest extends Request {
         private Integer loginSessionDuration; 
         private String MFAOperationForLogin; 
         private String operationForRiskLogin; 
-        private java.util.List < String > verificationTypes; 
+        private java.util.List<String> verificationTypes; 
 
         private Builder() {
             super();
@@ -327,7 +332,7 @@ public class SetSecurityPreferenceRequest extends Request {
         /**
          * <p>The MFA methods.</p>
          */
-        public Builder verificationTypes(java.util.List < String > verificationTypes) {
+        public Builder verificationTypes(java.util.List<String> verificationTypes) {
             String verificationTypesShrink = shrink(verificationTypes, "VerificationTypes", "json");
             this.putQueryParameter("VerificationTypes", verificationTypesShrink);
             this.verificationTypes = verificationTypes;

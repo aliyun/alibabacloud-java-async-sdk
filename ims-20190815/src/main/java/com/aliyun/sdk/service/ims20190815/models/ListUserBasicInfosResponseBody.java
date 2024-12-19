@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -248,7 +253,7 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
      */
     public static class UserBasicInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserBasicInfo")
-        private java.util.List < UserBasicInfo> userBasicInfo;
+        private java.util.List<UserBasicInfo> userBasicInfo;
 
         private UserBasicInfos(Builder builder) {
             this.userBasicInfo = builder.userBasicInfo;
@@ -265,17 +270,17 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         /**
          * @return userBasicInfo
          */
-        public java.util.List < UserBasicInfo> getUserBasicInfo() {
+        public java.util.List<UserBasicInfo> getUserBasicInfo() {
             return this.userBasicInfo;
         }
 
         public static final class Builder {
-            private java.util.List < UserBasicInfo> userBasicInfo; 
+            private java.util.List<UserBasicInfo> userBasicInfo; 
 
             /**
              * UserBasicInfo.
              */
-            public Builder userBasicInfo(java.util.List < UserBasicInfo> userBasicInfo) {
+            public Builder userBasicInfo(java.util.List<UserBasicInfo> userBasicInfo) {
                 this.userBasicInfo = userBasicInfo;
                 return this;
             }

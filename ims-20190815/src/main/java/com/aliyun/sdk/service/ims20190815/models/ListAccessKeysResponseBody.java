@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -205,7 +210,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
      */
     public static class AccessKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKey")
-        private java.util.List < AccessKey> accessKey;
+        private java.util.List<AccessKey> accessKey;
 
         private AccessKeys(Builder builder) {
             this.accessKey = builder.accessKey;
@@ -222,17 +227,17 @@ public class ListAccessKeysResponseBody extends TeaModel {
         /**
          * @return accessKey
          */
-        public java.util.List < AccessKey> getAccessKey() {
+        public java.util.List<AccessKey> getAccessKey() {
             return this.accessKey;
         }
 
         public static final class Builder {
-            private java.util.List < AccessKey> accessKey; 
+            private java.util.List<AccessKey> accessKey; 
 
             /**
              * AccessKey.
              */
-            public Builder accessKey(java.util.List < AccessKey> accessKey) {
+            public Builder accessKey(java.util.List<AccessKey> accessKey) {
                 this.accessKey = accessKey;
                 return this;
             }

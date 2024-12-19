@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -81,6 +86,9 @@ public class GetLoginProfileResponseBody extends TeaModel {
      * <p>GetLoginProfileResponseBody</p>
      */
     public static class LoginProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoDisableLoginStatus")
+        private String autoDisableLoginStatus;
+
         @com.aliyun.core.annotation.NameInMap("LastLoginTime")
         private String lastLoginTime;
 
@@ -100,6 +108,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
         private String userPrincipalName;
 
         private LoginProfile(Builder builder) {
+            this.autoDisableLoginStatus = builder.autoDisableLoginStatus;
             this.lastLoginTime = builder.lastLoginTime;
             this.MFABindRequired = builder.MFABindRequired;
             this.passwordResetRequired = builder.passwordResetRequired;
@@ -114,6 +123,13 @@ public class GetLoginProfileResponseBody extends TeaModel {
 
         public static LoginProfile create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoDisableLoginStatus
+         */
+        public String getAutoDisableLoginStatus() {
+            return this.autoDisableLoginStatus;
         }
 
         /**
@@ -159,12 +175,21 @@ public class GetLoginProfileResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String autoDisableLoginStatus; 
             private String lastLoginTime; 
             private Boolean MFABindRequired; 
             private Boolean passwordResetRequired; 
             private String status; 
             private String updateDate; 
             private String userPrincipalName; 
+
+            /**
+             * AutoDisableLoginStatus.
+             */
+            public Builder autoDisableLoginStatus(String autoDisableLoginStatus) {
+                this.autoDisableLoginStatus = autoDisableLoginStatus;
+                return this;
+            }
 
             /**
              * <p>The time of the most recent logon. The time is displayed in UTC.</p>
