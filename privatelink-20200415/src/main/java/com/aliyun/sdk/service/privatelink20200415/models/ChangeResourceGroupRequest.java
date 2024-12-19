@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ChangeResourceGroupRequest</p>
@@ -83,7 +89,11 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -92,7 +102,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The resource IDs. You can specify up to 50 resource IDs.
+         * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-hp3i05294c2d2d****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -101,11 +115,14 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of resource. Valid values:
-         * <p>
+         * <p>The type of resource. Valid values:</p>
+         * <ul>
+         * <li><strong>VpcEndpoint</strong>: endpoint</li>
+         * <li><strong>VpcEndpointService</strong>: endpoint service</li>
+         * </ul>
          * 
-         * *   **VpcEndpoint**: endpoint
-         * *   **VpcEndpointService**: endpoint service
+         * <strong>example:</strong>
+         * <p>VpcEndpoint</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

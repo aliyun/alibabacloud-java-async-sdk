@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcEndpointSecurityGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListVpcEndpointSecurityGroupsResponseBody</p>
@@ -21,7 +27,7 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SecurityGroups")
-    private java.util.List < SecurityGroups> securityGroups;
+    private java.util.List<SecurityGroups> securityGroups;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -66,7 +72,7 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
     /**
      * @return securityGroups
      */
-    public java.util.List < SecurityGroups> getSecurityGroups() {
+    public java.util.List<SecurityGroups> getSecurityGroups() {
         return this.securityGroups;
     }
 
@@ -81,11 +87,14 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < SecurityGroups> securityGroups; 
+        private java.util.List<SecurityGroups> securityGroups; 
         private Integer totalCount; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,11 +102,14 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If no value is returned for **NextToken**, no next requests are performed.
-         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +117,10 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,15 +128,18 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the security groups.
+         * <p>The information about the security groups.</p>
          */
-        public Builder securityGroups(java.util.List < SecurityGroups> securityGroups) {
+        public Builder securityGroups(java.util.List<SecurityGroups> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -134,6 +152,12 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVpcEndpointSecurityGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcEndpointSecurityGroupsResponseBody</p>
+     */
     public static class SecurityGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
@@ -173,7 +197,10 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
             private String securityGroupStatus; 
 
             /**
-             * The ID of the security group that is associated with the endpoint.
+             * <p>The ID of the security group that is associated with the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-hp33bw6ynvm2yb0e****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -181,11 +208,15 @@ public class ListVpcEndpointSecurityGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The associate status of the security group, valid values:
-             * <p>
-             * - Attaching: The security group is being attached.
-             * - Attached: The security group is attached.
-             * - Detaching: The security group is being detached.
+             * <p>The associate status of the security group, valid values:</p>
+             * <ul>
+             * <li>Attaching: The security group is being attached.</li>
+             * <li>Attached: The security group is attached.</li>
+             * <li>Detaching: The security group is being detached.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Attached</p>
              */
             public Builder securityGroupStatus(String securityGroupStatus) {
                 this.securityGroupStatus = securityGroupStatus;

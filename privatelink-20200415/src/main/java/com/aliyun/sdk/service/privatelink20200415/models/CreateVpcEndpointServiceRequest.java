@@ -1,16 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVpcEndpointServiceRequest} extends {@link RequestModel}
  *
  * <p>CreateVpcEndpointServiceRequest</p>
  */
 public class CreateVpcEndpointServiceRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressIpVersion")
+    private String addressIpVersion;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoAcceptEnabled")
     private Boolean autoAcceptEnabled;
@@ -34,7 +44,7 @@ public class CreateVpcEndpointServiceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Resource")
-    private java.util.List < Resource> resource;
+    private java.util.List<Resource> resource;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -50,11 +60,12 @@ public class CreateVpcEndpointServiceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceSupportIPv6")
+    @Deprecated
     private Boolean serviceSupportIPv6;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneAffinityEnabled")
@@ -62,6 +73,7 @@ public class CreateVpcEndpointServiceRequest extends Request {
 
     private CreateVpcEndpointServiceRequest(Builder builder) {
         super(builder);
+        this.addressIpVersion = builder.addressIpVersion;
         this.autoAcceptEnabled = builder.autoAcceptEnabled;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
@@ -87,6 +99,13 @@ public class CreateVpcEndpointServiceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return addressIpVersion
+     */
+    public String getAddressIpVersion() {
+        return this.addressIpVersion;
     }
 
     /**
@@ -127,7 +146,7 @@ public class CreateVpcEndpointServiceRequest extends Request {
     /**
      * @return resource
      */
-    public java.util.List < Resource> getResource() {
+    public java.util.List<Resource> getResource() {
         return this.resource;
     }
 
@@ -162,7 +181,7 @@ public class CreateVpcEndpointServiceRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -174,17 +193,18 @@ public class CreateVpcEndpointServiceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateVpcEndpointServiceRequest, Builder> {
+        private String addressIpVersion; 
         private Boolean autoAcceptEnabled; 
         private String clientToken; 
         private Boolean dryRun; 
         private String payer; 
         private String regionId; 
-        private java.util.List < Resource> resource; 
+        private java.util.List<Resource> resource; 
         private String resourceGroupId; 
         private String serviceDescription; 
         private String serviceResourceType; 
         private Boolean serviceSupportIPv6; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private Boolean zoneAffinityEnabled; 
 
         private Builder() {
@@ -193,6 +213,7 @@ public class CreateVpcEndpointServiceRequest extends Request {
 
         private Builder(CreateVpcEndpointServiceRequest request) {
             super(request);
+            this.addressIpVersion = request.addressIpVersion;
             this.autoAcceptEnabled = request.autoAcceptEnabled;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
@@ -208,11 +229,23 @@ public class CreateVpcEndpointServiceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to automatically accept endpoint connection requests. Valid values:
-         * <p>
+         * AddressIpVersion.
+         */
+        public Builder addressIpVersion(String addressIpVersion) {
+            this.putQueryParameter("AddressIpVersion", addressIpVersion);
+            this.addressIpVersion = addressIpVersion;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to automatically accept endpoint connection requests. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoAcceptEnabled(Boolean autoAcceptEnabled) {
             this.putQueryParameter("AutoAcceptEnabled", autoAcceptEnabled);
@@ -221,10 +254,11 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -233,11 +267,14 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request.
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -246,13 +283,14 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * The payer of the endpoint service. Valid values:
-         * <p>
+         * <p>The payer. Valid values:</p>
+         * <ul>
+         * <li><strong>Endpoint</strong>: service consumer</li>
+         * <li><strong>EndpointService</strong>: service provider</li>
+         * </ul>
          * 
-         * *   **Endpoint**: the service consumer
-         * *   **EndpointService**: the service provider
-         * 
-         * > By default, the feature of allowing the service provider to pay is unavailable. To use this feature, log on to the [Quota Center console](https://quotas.console.aliyun.com/white-list-products/privatelink/quotas) and click Privileges in the left-side navigation pane. On the **Privileges** page, enter the quota ID `privatelink_whitelist/epsvc_payer_mode`, and click Apply in the Actions column.
+         * <strong>example:</strong>
+         * <p>Endpoint</p>
          */
         public Builder payer(String payer) {
             this.putQueryParameter("Payer", payer);
@@ -261,10 +299,12 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * The region ID of the endpoint service.
-         * <p>
+         * <p>The region ID of the endpoint service.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -273,16 +313,19 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * The service resources of the endpoint service.
+         * <p>The service resources of the endpoint service.</p>
          */
-        public Builder resource(java.util.List < Resource> resource) {
+        public Builder resource(java.util.List<Resource> resource) {
             this.putQueryParameter("Resource", resource);
             this.resource = resource;
             return this;
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -291,7 +334,10 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * The description of the endpoint service.
+         * <p>The description of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is my EndpointService.</p>
          */
         public Builder serviceDescription(String serviceDescription) {
             this.putQueryParameter("ServiceDescription", serviceDescription);
@@ -300,12 +346,18 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * The type of the service resource. Valid values:
-         * <p>
+         * <p>The type of the service resource. Valid values:</p>
+         * <ul>
+         * <li><strong>slb</strong>: Classic Load Balancer (CLB) instance</li>
+         * <li><strong>alb</strong>: Application Load Balancer (ALB) instance</li>
+         * <li><strong>nlb</strong>: Network Load Balancer (NLB) instance</li>
+         * </ul>
+         * <blockquote>
+         * <p> You cannot access TCP/SSL listeners configured for NLB instances.</p>
+         * </blockquote>
          * 
-         * *   **slb**: a Classic Load Balancer (CLB) instance
-         * *   **alb**: an Application Load Balancer (ALB) instance
-         * *   **nlb**: a Network Load Balancer (NLB) instance
+         * <strong>example:</strong>
+         * <p>slb</p>
          */
         public Builder serviceResourceType(String serviceResourceType) {
             this.putQueryParameter("ServiceResourceType", serviceResourceType);
@@ -314,11 +366,14 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable IPv6 for the endpoint service. Valid values:
-         * <p>
+         * <p>Specifies whether to enable IPv6 for the endpoint service. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder serviceSupportIPv6(Boolean serviceSupportIPv6) {
             this.putQueryParameter("ServiceSupportIPv6", serviceSupportIPv6);
@@ -327,20 +382,23 @@ public class CreateVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * The tags to add to the resource.
+         * <p>The tags to add to the resource.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * Specifies whether to first resolve the domain name of the nearest endpoint that is associated with the endpoint service. Valid values:
-         * <p>
+         * <p>Specifies whether to first resolve the domain name of the nearest endpoint that is associated with the endpoint service. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder zoneAffinityEnabled(Boolean zoneAffinityEnabled) {
             this.putQueryParameter("ZoneAffinityEnabled", zoneAffinityEnabled);
@@ -355,6 +413,12 @@ public class CreateVpcEndpointServiceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateVpcEndpointServiceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateVpcEndpointServiceRequest</p>
+     */
     public static class Resource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -406,7 +470,10 @@ public class CreateVpcEndpointServiceRequest extends Request {
             private String zoneId; 
 
             /**
-             * The ID of the service resource that is added to the endpoint service. You can specify up to 20 service resource IDs.
+             * <p>The ID of the service resource that is added to the endpoint service. You can specify up to 20 service resource IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-hp32z1wp5peaoox2q****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -414,14 +481,18 @@ public class CreateVpcEndpointServiceRequest extends Request {
             }
 
             /**
-             * The type of the service resource that is added to the endpoint service. You can add up to 20 service resources to the endpoint service. Valid values:
-             * <p>
+             * <p>The type of the service resource that is added to the endpoint service. You can add up to 20 service resources to the endpoint service. Valid values:</p>
+             * <ul>
+             * <li><strong>slb</strong>: CLB instance</li>
+             * <li><strong>alb</strong>: ALB instance</li>
+             * <li><strong>nlb</strong>: NLB instance</li>
+             * </ul>
+             * <blockquote>
+             * <p> In regions where PrivateLink is supported, CLB instances deployed in virtual private clouds (VPCs) can serve as the service resources of the endpoint service. You cannot access TCP/SSL listeners configured for NLB instances.</p>
+             * </blockquote>
              * 
-             * *   **slb**: Classic Load Balancer (CLB) instance
-             * *   **alb**: Application Load Balancer (ALB) instance
-             * *   **nlb**: Network Load Balancer (NLB) instance
-             * 
-             * >  In regions where PrivateLink is supported, CLB instances deployed in virtual private clouds (VPCs) can serve as the service resources of the endpoint service.
+             * <strong>example:</strong>
+             * <p>slb</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -429,7 +500,10 @@ public class CreateVpcEndpointServiceRequest extends Request {
             }
 
             /**
-             * The zone ID.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-huhehaote-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -443,6 +517,12 @@ public class CreateVpcEndpointServiceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateVpcEndpointServiceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateVpcEndpointServiceRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -482,10 +562,11 @@ public class CreateVpcEndpointServiceRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -493,10 +574,11 @@ public class CreateVpcEndpointServiceRequest extends Request {
             }
 
             /**
-             * The value of the tag to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of the tag to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;

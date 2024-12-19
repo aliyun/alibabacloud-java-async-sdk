@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcEndpointConnectionsRequest} extends {@link RequestModel}
  *
  * <p>ListVpcEndpointConnectionsRequest</p>
@@ -196,16 +202,19 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         } 
 
         /**
-         * The state of the endpoint connection. Valid values:
-         * <p>
+         * <p>The state of the endpoint connection. Valid values:</p>
+         * <ul>
+         * <li><strong>Pending</strong>: The endpoint connection is being modified.</li>
+         * <li><strong>Connecting</strong>: The endpoint connection is being established.</li>
+         * <li><strong>Connected</strong>: The endpoint connection is established.</li>
+         * <li><strong>Disconnecting</strong>: The endpoint is being disconnected from the endpoint service.</li>
+         * <li><strong>Disconnected</strong>: The endpoint is disconnected from the endpoint service.</li>
+         * <li><strong>Deleting</strong>: The connection is being deleted.</li>
+         * <li><strong>ServiceDeleted</strong>: The corresponding endpoint service has been deleted.</li>
+         * </ul>
          * 
-         * *   **Pending**: The endpoint connection is being modified.
-         * *   **Connecting**: The endpoint connection is being established.
-         * *   **Connected**: The endpoint connection is established.
-         * *   **Disconnecting**: The endpoint is being disconnected from the endpoint service.
-         * *   **Disconnected**: The endpoint is disconnected from the endpoint service.
-         * *   **Deleting**: The connection is being deleted.
-         * *   **ServiceDeleted**: The corresponding endpoint service has been deleted.
+         * <strong>example:</strong>
+         * <p>Disconnected</p>
          */
         public Builder connectionStatus(String connectionStatus) {
             this.putQueryParameter("ConnectionStatus", connectionStatus);
@@ -214,7 +223,10 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * The endpoint ID.
+         * <p>The endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-hp33b2e43fays7s8****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -223,7 +235,10 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the endpoint belongs.
+         * <p>The ID of the Alibaba Cloud account to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25346073170691****</p>
          */
         public Builder endpointOwnerId(Long endpointOwnerId) {
             this.putQueryParameter("EndpointOwnerId", endpointOwnerId);
@@ -232,7 +247,10 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint elastic network interface (ENI).
+         * <p>The ID of the endpoint elastic network interface (ENI).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-hp32lk0pyv6o94hs****</p>
          */
         public Builder eniId(String eniId) {
             this.putQueryParameter("EniId", eniId);
@@ -241,7 +259,10 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.
+         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -250,11 +271,14 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
+         * <li>If a next request is to be performed, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.
-         * *   If a next request is to be performed, set the value to the value of **NextToken** that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -263,10 +287,12 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * The region ID of the endpoint connection.
-         * <p>
+         * <p>The region ID of the endpoint connection.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -275,7 +301,10 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * The ID of the replaced service resource in smooth migration scenarios.
+         * <p>The ID of the replaced service resource in smooth migration scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-hp32z1wp5peaoox2q****</p>
          */
         public Builder replacedResourceId(String replacedResourceId) {
             this.putQueryParameter("ReplacedResourceId", replacedResourceId);
@@ -284,7 +313,10 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the endpoint belongs.
+         * <p>The ID of the resource group to which the endpoint belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -293,7 +325,10 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * The service resource ID.
+         * <p>The service resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-hp32z1wp5peaoox2q****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -302,7 +337,10 @@ public class ListVpcEndpointConnectionsRequest extends Request {
         }
 
         /**
-         * The endpoint service ID.
+         * <p>The endpoint service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-hp3vpx8yqxblby3i****</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);

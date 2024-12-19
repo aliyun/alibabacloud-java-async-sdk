@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVpcEndpointAttributeRequest} extends {@link RequestModel}
  *
  * <p>GetVpcEndpointAttributeRequest</p>
@@ -69,7 +75,11 @@ public class GetVpcEndpointAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the endpoint whose attributes you want to query.
+         * <p>The ID of the endpoint whose attributes you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-hp33b2e43fays7s8****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -78,10 +88,12 @@ public class GetVpcEndpointAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the endpoint whose attributes you want to query.
-         * <p>
+         * <p>The region ID of the endpoint whose attributes you want to query.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

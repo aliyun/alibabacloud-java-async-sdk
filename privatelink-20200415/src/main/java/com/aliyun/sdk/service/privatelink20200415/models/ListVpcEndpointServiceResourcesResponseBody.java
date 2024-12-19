@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcEndpointServiceResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListVpcEndpointServiceResourcesResponseBody</p>
@@ -21,7 +27,7 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     private ListVpcEndpointServiceResourcesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -62,7 +68,7 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
@@ -70,10 +76,13 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -81,11 +90,14 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If no value is returned for **NextToken**, no next requests are performed.
-         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -93,7 +105,10 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,9 +116,9 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The service resources.
+         * <p>The service resources.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
             return this;
         }
@@ -114,6 +129,12 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVpcEndpointServiceResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcEndpointServiceResourcesResponseBody</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoAllocatedEnabled")
         private Boolean autoAllocatedEnabled;
@@ -261,11 +282,14 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Indicates whether automatic resource allocation is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether automatic resource allocation is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoAllocatedEnabled(Boolean autoAllocatedEnabled) {
                 this.autoAllocatedEnabled = autoAllocatedEnabled;
@@ -273,7 +297,10 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the service resource.
+             * <p>The IP address of the service resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.23</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -281,7 +308,10 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the service resource is deployed.
+             * <p>The ID of the region where the service resource is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-huhehaote</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -289,7 +319,10 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of endpoints that are associated with the service resource that is smoothly migrated.
+             * <p>The number of endpoints that are associated with the service resource that is smoothly migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder relatedDeprecatedEndpointCount(Long relatedDeprecatedEndpointCount) {
                 this.relatedDeprecatedEndpointCount = relatedDeprecatedEndpointCount;
@@ -297,7 +330,10 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of endpoints that are associated with the service resource.
+             * <p>The number of endpoints that are associated with the service resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder relatedEndpointCount(Long relatedEndpointCount) {
                 this.relatedEndpointCount = relatedEndpointCount;
@@ -305,7 +341,10 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The service resource ID.
+             * <p>The service resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-hp32z1wp5peaoox2q****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -313,11 +352,14 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether IPv6 is enabled for the endpoint service. Valid values:
-             * <p>
+             * <p>Indicates whether IPv6 is enabled for the endpoint service. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder resourceSupportIPv6(Boolean resourceSupportIPv6) {
                 this.resourceSupportIPv6 = resourceSupportIPv6;
@@ -325,10 +367,11 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service resource.
-             * <p>
+             * <p>The type of the service resource.</p>
+             * <p>Only <strong>slb</strong> is returned. This value indicates a Classic Load Balancer (CLB) instance.</p>
              * 
-             * Only **slb** is returned. This value indicates a Classic Load Balancer (CLB) instance.
+             * <strong>example:</strong>
+             * <p>slb</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -336,7 +379,10 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch to which the service resource belongs.
+             * <p>The ID of the vSwitch to which the service resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-hp3uf6045ljdhd5zr****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -344,7 +390,10 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) to which the service resource belongs.
+             * <p>The ID of the virtual private cloud (VPC) to which the service resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-hp356stwkxg3fn2xe****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -352,7 +401,10 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone to which the service resource belongs.
+             * <p>The ID of the zone to which the service resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-huhehaote-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

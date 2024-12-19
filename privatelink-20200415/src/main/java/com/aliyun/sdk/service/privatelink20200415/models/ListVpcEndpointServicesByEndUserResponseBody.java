@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcEndpointServicesByEndUserResponseBody} extends {@link TeaModel}
  *
  * <p>ListVpcEndpointServicesByEndUserResponseBody</p>
@@ -21,7 +27,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Services")
-    private java.util.List < Services> services;
+    private java.util.List<Services> services;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
@@ -66,7 +72,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     /**
      * @return services
      */
-    public java.util.List < Services> getServices() {
+    public java.util.List<Services> getServices() {
         return this.services;
     }
 
@@ -81,11 +87,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Services> services; 
+        private java.util.List<Services> services; 
         private String totalCount; 
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,11 +102,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If no value is returned for <strong>NextToken</strong>, no next requests are performed.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+         * </ul>
          * 
-         * *   If no value is returned for **NextToken**, no next requests are performed.
-         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -105,7 +117,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,15 +128,18 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * The endpoint services.
+         * <p>The information about endpoint services.</p>
          */
-        public Builder services(java.util.List < Services> services) {
+        public Builder services(java.util.List<Services> services) {
             this.services = services;
             return this;
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -134,6 +152,12 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVpcEndpointServicesByEndUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcEndpointServicesByEndUserResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -173,7 +197,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -181,7 +208,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -195,7 +225,16 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVpcEndpointServicesByEndUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVpcEndpointServicesByEndUserResponseBody</p>
+     */
     public static class Services extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AddressIpVersion")
+        private String addressIpVersion;
+
         @com.aliyun.core.annotation.NameInMap("Payer")
         private String payer;
 
@@ -221,12 +260,13 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         private String serviceType;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Zones")
-        private java.util.List < String > zones;
+        private java.util.List<String> zones;
 
         private Services(Builder builder) {
+            this.addressIpVersion = builder.addressIpVersion;
             this.payer = builder.payer;
             this.resourceGroupId = builder.resourceGroupId;
             this.serviceDomain = builder.serviceDomain;
@@ -245,6 +285,13 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
 
         public static Services create() {
             return builder().build();
+        }
+
+        /**
+         * @return addressIpVersion
+         */
+        public String getAddressIpVersion() {
+            return this.addressIpVersion;
         }
 
         /**
@@ -306,18 +353,19 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         /**
          * @return zones
          */
-        public java.util.List < String > getZones() {
+        public java.util.List<String> getZones() {
             return this.zones;
         }
 
         public static final class Builder {
+            private String addressIpVersion; 
             private String payer; 
             private String resourceGroupId; 
             private String serviceDomain; 
@@ -326,15 +374,26 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             private String serviceResourceType; 
             private Boolean serviceSupportIPv6; 
             private String serviceType; 
-            private java.util.List < Tags> tags; 
-            private java.util.List < String > zones; 
+            private java.util.List<Tags> tags; 
+            private java.util.List<String> zones; 
 
             /**
-             * The payer. Valid values:
-             * <p>
+             * AddressIpVersion.
+             */
+            public Builder addressIpVersion(String addressIpVersion) {
+                this.addressIpVersion = addressIpVersion;
+                return this;
+            }
+
+            /**
+             * <p>The payer. Valid values:</p>
+             * <ul>
+             * <li><strong>Endpoint</strong>: the service consumer</li>
+             * <li><strong>EndpointService</strong>: the service provider</li>
+             * </ul>
              * 
-             * *   **Endpoint**: the service consumer
-             * *   **EndpointService**: the service provider
+             * <strong>example:</strong>
+             * <p>Endpoint</p>
              */
             public Builder payer(String payer) {
                 this.payer = payer;
@@ -342,7 +401,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmy*****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -350,7 +412,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the endpoint service that can be associated with the endpoint.
+             * <p>The domain name of the endpoint service that can be associated with the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>epsrv-hp3vpx8yqxblby3i****.cn-huhehaote.privatelink.aliyuncs.com</p>
              */
             public Builder serviceDomain(String serviceDomain) {
                 this.serviceDomain = serviceDomain;
@@ -358,7 +423,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the endpoint service that can be associated with the endpoint.
+             * <p>The ID of the endpoint service that can be associated with the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>epsrv-hp3vpx8yqxblby3i****</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -366,7 +434,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the endpoint service that can be associated with the endpoint.
+             * <p>The name of the endpoint service that can be associated with the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3vpx8yqxblby3i****</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -374,12 +445,15 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service resource. Valid values:
-             * <p>
+             * <p>The type of the service resource. Valid values:</p>
+             * <ul>
+             * <li><strong>slb</strong>: Classic Load Balancer (CLB) instance</li>
+             * <li><strong>alb</strong>: Application Load Balancer (ALB) instance</li>
+             * <li><strong>nlb</strong>: Network Load Balancer (NLB) instance</li>
+             * </ul>
              * 
-             * *   **slb**: Classic Load Balancer (CLB) instance
-             * *   **alb**: Application Load Balancer (ALB) instance
-             * *   **nlb**: Network Load Balancer (NLB) instance
+             * <strong>example:</strong>
+             * <p>slb</p>
              */
             public Builder serviceResourceType(String serviceResourceType) {
                 this.serviceResourceType = serviceResourceType;
@@ -387,11 +461,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether IPv6 is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether IPv6 is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder serviceSupportIPv6(Boolean serviceSupportIPv6) {
                 this.serviceSupportIPv6 = serviceSupportIPv6;
@@ -399,10 +476,11 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the endpoint service.
-             * <p>
+             * <p>The type of the endpoint service.</p>
+             * <p>Only <strong>Interface</strong> is returned, which indicates an interface endpoint. You can specify <strong>CLB</strong> and <strong>ALB</strong> instances as service resources.</p>
              * 
-             * Only **Interface** is returned, which indicates an interface endpoint. You can specify **CLB** and **ALB** instances as service resources.
+             * <strong>example:</strong>
+             * <p>Interface</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -410,17 +488,17 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * <p>The list of tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The zones of the endpoint service that can be associated with the endpoint.
+             * <p>The zones of the endpoint service that can be associated with the endpoint.</p>
              */
-            public Builder zones(java.util.List < String > zones) {
+            public Builder zones(java.util.List<String> zones) {
                 this.zones = zones;
                 return this;
             }

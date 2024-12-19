@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVpcEndpointServicesByEndUserRequest} extends {@link RequestModel}
  *
  * <p>ListVpcEndpointServicesByEndUserRequest</p>
@@ -43,7 +49,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListVpcEndpointServicesByEndUserRequest(Builder builder) {
         super(builder);
@@ -122,7 +128,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -134,7 +140,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         private String serviceId; 
         private String serviceName; 
         private String serviceType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -153,7 +159,10 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -162,11 +171,14 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
+         * <li>If a next request is to be performed, set the value to the value of <strong>NextToken</strong> that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.
-         * *   If a next request is to be performed, set the value to the value of **NextToken** that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -175,10 +187,12 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * The region ID of the endpoint.
-         * <p>
+         * <p>The region ID of the endpoint.</p>
+         * <p>You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -187,7 +201,10 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -196,7 +213,10 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint service that you want to query.
+         * <p>The ID of the endpoint service that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-hp3vpx8yqxblby3i****</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -205,7 +225,10 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * The name of the endpoint service that you want to query.
+         * <p>The name of the endpoint service that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3xdsq46ael67lo****</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -214,10 +237,11 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * The type of the endpoint service.
-         * <p>
+         * <p>The type of the endpoint service.</p>
+         * <p>Set the value to <strong>Interface</strong>. You can specify CLB and ALB instances as service resources for the endpoint service.</p>
          * 
-         * Set the value to **Interface**. You can specify CLB and ALB instances as service resources for the endpoint service.
+         * <strong>example:</strong>
+         * <p>Interface</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -226,9 +250,9 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -241,6 +265,12 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListVpcEndpointServicesByEndUserRequest} extends {@link TeaModel}
+     *
+     * <p>ListVpcEndpointServicesByEndUserRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -280,10 +310,11 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key must be 1 to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -291,10 +322,11 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
             }
 
             /**
-             * The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

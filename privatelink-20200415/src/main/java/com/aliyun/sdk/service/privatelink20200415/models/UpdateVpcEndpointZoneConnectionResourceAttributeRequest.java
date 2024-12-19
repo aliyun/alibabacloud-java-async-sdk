@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVpcEndpointZoneConnectionResourceAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateVpcEndpointZoneConnectionResourceAttributeRequest</p>
@@ -183,10 +189,11 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Req
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -195,11 +202,14 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Req
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -208,7 +218,11 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Req
         }
 
         /**
-         * The endpoint ID.
+         * <p>The endpoint ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ep-hp33b2e43fays7s8****</p>
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -217,10 +231,12 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Req
         }
 
         /**
-         * The region ID of the endpoint connection whose bandwidth you want to modify.
-         * <p>
+         * <p>The region ID of the endpoint connection whose bandwidth you want to modify.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -229,11 +245,14 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Req
         }
 
         /**
-         * The resource allocation mode. You can change the resource allocation mode only if the endpoint connection is in the **Disconnected** state. Valid values:
-         * <p>
+         * <p>The resource allocation mode. You can change the resource allocation mode only if the endpoint connection is in the <strong>Disconnected</strong> state. Valid values:</p>
+         * <ul>
+         * <li><strong>Auto</strong>: automatically and randomly allocates service resources. In this mode, the specified service resource is deleted.</li>
+         * <li><strong>Manual</strong>: manually allocates service resources. If you set the value to Manual, you must also specify the <strong>ResourceId</strong> and <strong>ResourceType</strong> parameters.</li>
+         * </ul>
          * 
-         * *   **Auto**: automatically and randomly allocates service resources. In this mode, the specified service resource is deleted.
-         * *   **Manual**: manually allocates service resources. If you set the value to Manual, you must also specify the **ResourceId** and **ResourceType** parameters.
+         * <strong>example:</strong>
+         * <p>Auto</p>
          */
         public Builder resourceAllocateMode(String resourceAllocateMode) {
             this.putQueryParameter("ResourceAllocateMode", resourceAllocateMode);
@@ -242,10 +261,13 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Req
         }
 
         /**
-         * The ID of the service resource that you want to manually allocate or migrate in the zone where the endpoint connection is deployed.
-         * <p>
+         * <p>The ID of the service resource that you want to manually allocate or migrate in the zone where the endpoint connection is deployed.</p>
+         * <blockquote>
+         * <p>If <strong>ResourceAllocateMode</strong> is set to <strong>Mannual</strong>, or <strong>ResourceReplaceMode</strong> is set, this parameter is required.</p>
+         * </blockquote>
          * 
-         * > If **ResourceAllocateMode** is set to **Mannual**, or **ResourceReplaceMode** is set, this parameter is required.
+         * <strong>example:</strong>
+         * <p>lb-hp32z1wp5peaoox2q****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -254,13 +276,17 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Req
         }
 
         /**
-         * The migration mode of the service resource. Valid values:
-         * <p>
+         * <p>The migration mode of the service resource. Valid values:</p>
+         * <ul>
+         * <li><strong>Graceful</strong>: smooth migration. Service resources in the zone are smoothly migrated.</li>
+         * <li><strong>Force</strong>: forced migration. Service resources in the zone are forcefully migrated.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You need to specify this parameter only if you want to migrate service resources and the endpoint connection is in the <strong>Connected</strong> state. If you specify this parameter, you must also specify the <strong>ResourceId</strong> and <strong>ResourceType</strong> parameters.</p>
+         * </blockquote>
          * 
-         * *   **Graceful**: smooth migration. Service resources in the zone are smoothly migrated.
-         * *   **Force**: forced migration. Service resources in the zone are forcefully migrated.
-         * 
-         * >  You need to specify this parameter only if you want to migrate service resources and the endpoint connection is in the **Connected** state. If you specify this parameter, you must also specify the **ResourceId** and **ResourceType** parameters.
+         * <strong>example:</strong>
+         * <p>Graceful</p>
          */
         public Builder resourceReplaceMode(String resourceReplaceMode) {
             this.putQueryParameter("ResourceReplaceMode", resourceReplaceMode);
@@ -269,13 +295,17 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Req
         }
 
         /**
-         * The type of the service resource. Valid values:
-         * <p>
+         * <p>The type of the service resource. Valid values:</p>
+         * <ul>
+         * <li><strong>slb</strong>: a CLB instance that supports PrivateLink. In addition, the CLB instance is deployed in a VPC.</li>
+         * <li><strong>alb</strong>: an Application Load Balancer (ALB) instance that supports PrivateLink. In addition, the ALB instance is deployed in a VPC.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If <strong>ResourceAllocateMode</strong> is set to <strong>Mannual</strong>, or <strong>ResourceReplaceMode</strong> is set, this parameter is required.</p>
+         * </blockquote>
          * 
-         * *   **slb**: a CLB instance that supports PrivateLink. In addition, the CLB instance is deployed in a VPC.
-         * *   **alb**: an Application Load Balancer (ALB) instance that supports PrivateLink. In addition, the ALB instance is deployed in a VPC.
-         * 
-         * > If **ResourceAllocateMode** is set to **Mannual**, or **ResourceReplaceMode** is set, this parameter is required.
+         * <strong>example:</strong>
+         * <p>slb</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -284,7 +314,11 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Req
         }
 
         /**
-         * The endpoint service ID.
+         * <p>The endpoint service ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-hp3vpx8yqxblby3i****</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -293,7 +327,11 @@ public class UpdateVpcEndpointZoneConnectionResourceAttributeRequest extends Req
         }
 
         /**
-         * The zone ID.
+         * <p>The zone ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

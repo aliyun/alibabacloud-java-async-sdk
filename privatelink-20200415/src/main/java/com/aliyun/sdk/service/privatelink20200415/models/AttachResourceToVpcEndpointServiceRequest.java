@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachResourceToVpcEndpointServiceRequest} extends {@link RequestModel}
  *
  * <p>AttachResourceToVpcEndpointServiceRequest</p>
@@ -141,10 +147,11 @@ public class AttachResourceToVpcEndpointServiceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -153,11 +160,14 @@ public class AttachResourceToVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -166,10 +176,12 @@ public class AttachResourceToVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * The region ID of the endpoint service to which you want to add the service resource.
-         * <p>
+         * <p>The region ID of the endpoint service to which you want to add the service resource.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -178,7 +190,11 @@ public class AttachResourceToVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * The service resource ID.
+         * <p>The service resource ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-hp32z1wp5peaoox2q****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -187,12 +203,19 @@ public class AttachResourceToVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * The type of the service resource. Valid values:
-         * <p>
+         * <p>The type of the service resource. Valid values:</p>
+         * <ul>
+         * <li><strong>slb</strong>: Classic Load Balancer (CLB) instance</li>
+         * <li><strong>alb</strong>: Application Load Balancer (ALB) instance</li>
+         * <li><strong>nlb</strong>: Network Load Balancer (NLB) instance</li>
+         * </ul>
+         * <blockquote>
+         * <p> You cannot access TCP/SSL listeners configured for NLB instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **slb**: a Classic Load Balancer (CLB) instance
-         * *   **alb**: an Application Load Balancer (ALB) instance
-         * *   **nlb**: a Network Load Balancer (NLB) instance
+         * <strong>example:</strong>
+         * <p>slb</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -201,7 +224,11 @@ public class AttachResourceToVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * The ID of the endpoint service to which you want to add the service resource.
+         * <p>The ID of the endpoint service to which you want to add the service resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epsrv-hp3vpx8yqxblby3i****</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -210,7 +237,10 @@ public class AttachResourceToVpcEndpointServiceRequest extends Request {
         }
 
         /**
-         * The zone ID of the service resource.
+         * <p>The zone ID of the service resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
