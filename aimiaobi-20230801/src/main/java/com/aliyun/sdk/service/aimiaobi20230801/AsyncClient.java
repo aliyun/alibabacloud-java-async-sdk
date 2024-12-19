@@ -116,6 +116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DocumentExtractionResponse> documentExtraction(DocumentExtractionRequest request);
 
     /**
+     * @param request the request parameters of ExportAnalysisTagDetailByTaskId  ExportAnalysisTagDetailByTaskIdRequest
+     * @return ExportAnalysisTagDetailByTaskIdResponse
+     */
+    CompletableFuture<ExportAnalysisTagDetailByTaskIdResponse> exportAnalysisTagDetailByTaskId(ExportAnalysisTagDetailByTaskIdRequest request);
+
+    /**
      * @param request the request parameters of ExportGeneratedContent  ExportGeneratedContentRequest
      * @return ExportGeneratedContentResponse
      */
