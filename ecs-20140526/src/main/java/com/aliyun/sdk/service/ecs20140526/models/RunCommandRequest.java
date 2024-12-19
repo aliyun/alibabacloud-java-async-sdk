@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -51,7 +56,7 @@ public class RunCommandRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    private java.util.List < String > instanceId;
+    private java.util.List<String> instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeepCommand")
@@ -75,7 +80,7 @@ public class RunCommandRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -100,11 +105,11 @@ public class RunCommandRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceTag")
-    private java.util.List < ResourceTag> resourceTag;
+    private java.util.List<ResourceTag> resourceTag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TerminationMode")
@@ -248,7 +253,7 @@ public class RunCommandRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -290,7 +295,7 @@ public class RunCommandRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -332,14 +337,14 @@ public class RunCommandRequest extends Request {
     /**
      * @return resourceTag
      */
-    public java.util.List < ResourceTag> getResourceTag() {
+    public java.util.List<ResourceTag> getResourceTag() {
         return this.resourceTag;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -402,20 +407,20 @@ public class RunCommandRequest extends Request {
         private String description; 
         private Boolean enableParameter; 
         private String frequency; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private Boolean keepCommand; 
         private String launcher; 
         private String name; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
         private String regionId; 
         private String repeatMode; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < ResourceTag> resourceTag; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<ResourceTag> resourceTag; 
+        private java.util.List<Tag> tag; 
         private String terminationMode; 
         private Boolean timed; 
         private Long timeout; 
@@ -665,7 +670,7 @@ public class RunCommandRequest extends Request {
          * <strong>example:</strong>
          * <p>i-bp185dy2o3o6neg****</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
@@ -744,7 +749,7 @@ public class RunCommandRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyvdIqaRY****&quot;}</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putQueryParameter("Parameters", parametersShrink);
             this.parameters = parameters;
@@ -829,7 +834,7 @@ public class RunCommandRequest extends Request {
         /**
          * <p>The tags of the instance. If you do not specify InstanceId.N, the command is run on the instances that have the specified tags.</p>
          */
-        public Builder resourceTag(java.util.List < ResourceTag> resourceTag) {
+        public Builder resourceTag(java.util.List<ResourceTag> resourceTag) {
             this.putQueryParameter("ResourceTag", resourceTag);
             this.resourceTag = resourceTag;
             return this;
@@ -838,7 +843,7 @@ public class RunCommandRequest extends Request {
         /**
          * <p>The description of the command. The description supports all character sets and can be up to 512 characters in length.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class ImportImageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskDeviceMapping")
-    private java.util.List < DiskDeviceMapping> diskDeviceMapping;
+    private java.util.List<DiskDeviceMapping> diskDeviceMapping;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
@@ -95,7 +100,7 @@ public class ImportImageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ImportImageRequest(Builder builder) {
         super(builder);
@@ -180,7 +185,7 @@ public class ImportImageRequest extends Request {
     /**
      * @return diskDeviceMapping
      */
-    public java.util.List < DiskDeviceMapping> getDiskDeviceMapping() {
+    public java.util.List<DiskDeviceMapping> getDiskDeviceMapping() {
         return this.diskDeviceMapping;
     }
 
@@ -278,7 +283,7 @@ public class ImportImageRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -289,7 +294,7 @@ public class ImportImageRequest extends Request {
         private String clientToken; 
         private String description; 
         private String detectionStrategy; 
-        private java.util.List < DiskDeviceMapping> diskDeviceMapping; 
+        private java.util.List<DiskDeviceMapping> diskDeviceMapping; 
         private Boolean dryRun; 
         private Features features; 
         private String imageName; 
@@ -303,7 +308,7 @@ public class ImportImageRequest extends Request {
         private Long resourceOwnerId; 
         private String roleName; 
         private String storageLocationArn; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -420,7 +425,7 @@ public class ImportImageRequest extends Request {
         /**
          * <p>The information of disks from which the custom images are created.</p>
          */
-        public Builder diskDeviceMapping(java.util.List < DiskDeviceMapping> diskDeviceMapping) {
+        public Builder diskDeviceMapping(java.util.List<DiskDeviceMapping> diskDeviceMapping) {
             this.putQueryParameter("DiskDeviceMapping", diskDeviceMapping);
             this.diskDeviceMapping = diskDeviceMapping;
             return this;
@@ -623,7 +628,7 @@ public class ImportImageRequest extends Request {
         /**
          * <p>The image tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

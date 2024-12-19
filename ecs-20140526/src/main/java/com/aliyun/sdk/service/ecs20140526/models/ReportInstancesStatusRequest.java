@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,11 +28,11 @@ public class ReportInstancesStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Device")
-    private java.util.List < String > device;
+    private java.util.List<String> device;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskId")
-    private java.util.List < String > diskId;
+    private java.util.List<String> diskId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
@@ -36,7 +41,7 @@ public class ReportInstancesStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instanceId;
+    private java.util.List<String> instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IssueCategory")
@@ -119,14 +124,14 @@ public class ReportInstancesStatusRequest extends Request {
     /**
      * @return device
      */
-    public java.util.List < String > getDevice() {
+    public java.util.List<String> getDevice() {
         return this.device;
     }
 
     /**
      * @return diskId
      */
-    public java.util.List < String > getDiskId() {
+    public java.util.List<String> getDiskId() {
         return this.diskId;
     }
 
@@ -140,7 +145,7 @@ public class ReportInstancesStatusRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -203,10 +208,10 @@ public class ReportInstancesStatusRequest extends Request {
     public static final class Builder extends Request.Builder<ReportInstancesStatusRequest, Builder> {
         private String sourceRegionId; 
         private String description; 
-        private java.util.List < String > device; 
-        private java.util.List < String > diskId; 
+        private java.util.List<String> device; 
+        private java.util.List<String> diskId; 
         private String endTime; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private String issueCategory; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -270,7 +275,7 @@ public class ReportInstancesStatusRequest extends Request {
          * <strong>example:</strong>
          * <p>/dev/xvdb</p>
          */
-        public Builder device(java.util.List < String > device) {
+        public Builder device(java.util.List<String> device) {
             this.putQueryParameter("Device", device);
             this.device = device;
             return this;
@@ -285,7 +290,7 @@ public class ReportInstancesStatusRequest extends Request {
          * <strong>example:</strong>
          * <p>d-bp1aeljlfad7x6u1****</p>
          */
-        public Builder diskId(java.util.List < String > diskId) {
+        public Builder diskId(java.util.List<String> diskId) {
             this.putQueryParameter("DiskId", diskId);
             this.diskId = diskId;
             return this;
@@ -310,7 +315,7 @@ public class ReportInstancesStatusRequest extends Request {
          * <strong>example:</strong>
          * <p>i-bp165p6xk2tmdhj0****</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;

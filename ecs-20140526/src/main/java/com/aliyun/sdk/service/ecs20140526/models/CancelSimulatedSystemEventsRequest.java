@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CancelSimulatedSystemEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > eventId;
+    private java.util.List<String> eventId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -76,7 +81,7 @@ public class CancelSimulatedSystemEventsRequest extends Request {
     /**
      * @return eventId
      */
-    public java.util.List < String > getEventId() {
+    public java.util.List<String> getEventId() {
         return this.eventId;
     }
 
@@ -117,7 +122,7 @@ public class CancelSimulatedSystemEventsRequest extends Request {
 
     public static final class Builder extends Request.Builder<CancelSimulatedSystemEventsRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < String > eventId; 
+        private java.util.List<String> eventId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -155,7 +160,7 @@ public class CancelSimulatedSystemEventsRequest extends Request {
          * <strong>example:</strong>
          * <p>e-xhskHun1256****</p>
          */
-        public Builder eventId(java.util.List < String > eventId) {
+        public Builder eventId(java.util.List<String> eventId) {
             this.putQueryParameter("EventId", eventId);
             this.eventId = eventId;
             return this;

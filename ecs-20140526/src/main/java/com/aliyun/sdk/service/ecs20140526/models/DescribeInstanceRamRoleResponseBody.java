@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -201,7 +206,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
      */
     public static class InstanceRamRoleSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceRamRoleSet")
-        private java.util.List < InstanceRamRoleSet> instanceRamRoleSet;
+        private java.util.List<InstanceRamRoleSet> instanceRamRoleSet;
 
         private InstanceRamRoleSets(Builder builder) {
             this.instanceRamRoleSet = builder.instanceRamRoleSet;
@@ -218,17 +223,17 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         /**
          * @return instanceRamRoleSet
          */
-        public java.util.List < InstanceRamRoleSet> getInstanceRamRoleSet() {
+        public java.util.List<InstanceRamRoleSet> getInstanceRamRoleSet() {
             return this.instanceRamRoleSet;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceRamRoleSet> instanceRamRoleSet; 
+            private java.util.List<InstanceRamRoleSet> instanceRamRoleSet; 
 
             /**
              * InstanceRamRoleSet.
              */
-            public Builder instanceRamRoleSet(java.util.List < InstanceRamRoleSet> instanceRamRoleSet) {
+            public Builder instanceRamRoleSet(java.util.List<InstanceRamRoleSet> instanceRamRoleSet) {
                 this.instanceRamRoleSet = instanceRamRoleSet;
                 return this;
             }

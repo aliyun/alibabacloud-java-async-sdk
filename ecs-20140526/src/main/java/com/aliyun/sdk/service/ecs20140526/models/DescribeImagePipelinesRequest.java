@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DescribeImagePipelinesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImagePipelineId")
-    private java.util.List < String > imagePipelineId;
+    private java.util.List<String> imagePipelineId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -60,7 +65,7 @@ public class DescribeImagePipelinesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeImagePipelinesRequest(Builder builder) {
         super(builder);
@@ -101,7 +106,7 @@ public class DescribeImagePipelinesRequest extends Request {
     /**
      * @return imagePipelineId
      */
-    public java.util.List < String > getImagePipelineId() {
+    public java.util.List<String> getImagePipelineId() {
         return this.imagePipelineId;
     }
 
@@ -171,13 +176,13 @@ public class DescribeImagePipelinesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeImagePipelinesRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < String > imagePipelineId; 
+        private java.util.List<String> imagePipelineId; 
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
@@ -187,7 +192,7 @@ public class DescribeImagePipelinesRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -224,7 +229,7 @@ public class DescribeImagePipelinesRequest extends Request {
          * <strong>example:</strong>
          * <p>ip-2ze5tsl5bp6nf2b3****</p>
          */
-        public Builder imagePipelineId(java.util.List < String > imagePipelineId) {
+        public Builder imagePipelineId(java.util.List<String> imagePipelineId) {
             this.putQueryParameter("ImagePipelineId", imagePipelineId);
             this.imagePipelineId = imagePipelineId;
             return this;
@@ -334,7 +339,7 @@ public class DescribeImagePipelinesRequest extends Request {
         /**
          * <p>The tags of the image template.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

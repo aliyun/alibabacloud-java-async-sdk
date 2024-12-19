@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeAutoProvisioningGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupId")
-    private java.util.List < String > autoProvisioningGroupId;
+    private java.util.List<String> autoProvisioningGroupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupName")
@@ -22,7 +27,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupStatus")
-    private java.util.List < String > autoProvisioningGroupStatus;
+    private java.util.List<String> autoProvisioningGroupStatus;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -60,7 +65,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeAutoProvisioningGroupsRequest(Builder builder) {
         super(builder);
@@ -94,7 +99,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
     /**
      * @return autoProvisioningGroupId
      */
-    public java.util.List < String > getAutoProvisioningGroupId() {
+    public java.util.List<String> getAutoProvisioningGroupId() {
         return this.autoProvisioningGroupId;
     }
 
@@ -108,7 +113,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
     /**
      * @return autoProvisioningGroupStatus
      */
-    public java.util.List < String > getAutoProvisioningGroupStatus() {
+    public java.util.List<String> getAutoProvisioningGroupStatus() {
         return this.autoProvisioningGroupStatus;
     }
 
@@ -171,14 +176,14 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeAutoProvisioningGroupsRequest, Builder> {
-        private java.util.List < String > autoProvisioningGroupId; 
+        private java.util.List<String> autoProvisioningGroupId; 
         private String autoProvisioningGroupName; 
-        private java.util.List < String > autoProvisioningGroupStatus; 
+        private java.util.List<String> autoProvisioningGroupStatus; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -187,7 +192,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -215,7 +220,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
          * <strong>example:</strong>
          * <p>apg-sn54avj8htgvtyh8****</p>
          */
-        public Builder autoProvisioningGroupId(java.util.List < String > autoProvisioningGroupId) {
+        public Builder autoProvisioningGroupId(java.util.List<String> autoProvisioningGroupId) {
             this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
             this.autoProvisioningGroupId = autoProvisioningGroupId;
             return this;
@@ -239,7 +244,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
          * <strong>example:</strong>
          * <p>active</p>
          */
-        public Builder autoProvisioningGroupStatus(java.util.List < String > autoProvisioningGroupStatus) {
+        public Builder autoProvisioningGroupStatus(java.util.List<String> autoProvisioningGroupStatus) {
             this.putQueryParameter("AutoProvisioningGroupStatus", autoProvisioningGroupStatus);
             this.autoProvisioningGroupStatus = autoProvisioningGroupStatus;
             return this;
@@ -337,7 +342,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         /**
          * <p>The tags that are added to the auto provisioning group.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

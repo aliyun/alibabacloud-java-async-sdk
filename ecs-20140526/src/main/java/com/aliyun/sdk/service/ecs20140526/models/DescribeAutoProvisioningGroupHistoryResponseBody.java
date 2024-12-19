@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -230,7 +235,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
      */
     public static class ActivityDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityDetail")
-        private java.util.List < ActivityDetail> activityDetail;
+        private java.util.List<ActivityDetail> activityDetail;
 
         private ActivityDetails(Builder builder) {
             this.activityDetail = builder.activityDetail;
@@ -247,17 +252,17 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         /**
          * @return activityDetail
          */
-        public java.util.List < ActivityDetail> getActivityDetail() {
+        public java.util.List<ActivityDetail> getActivityDetail() {
             return this.activityDetail;
         }
 
         public static final class Builder {
-            private java.util.List < ActivityDetail> activityDetail; 
+            private java.util.List<ActivityDetail> activityDetail; 
 
             /**
              * ActivityDetail.
              */
-            public Builder activityDetail(java.util.List < ActivityDetail> activityDetail) {
+            public Builder activityDetail(java.util.List<ActivityDetail> activityDetail) {
                 this.activityDetail = activityDetail;
                 return this;
             }
@@ -421,7 +426,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
      */
     public static class AutoProvisioningGroupHistories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupHistory")
-        private java.util.List < AutoProvisioningGroupHistory> autoProvisioningGroupHistory;
+        private java.util.List<AutoProvisioningGroupHistory> autoProvisioningGroupHistory;
 
         private AutoProvisioningGroupHistories(Builder builder) {
             this.autoProvisioningGroupHistory = builder.autoProvisioningGroupHistory;
@@ -438,17 +443,17 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         /**
          * @return autoProvisioningGroupHistory
          */
-        public java.util.List < AutoProvisioningGroupHistory> getAutoProvisioningGroupHistory() {
+        public java.util.List<AutoProvisioningGroupHistory> getAutoProvisioningGroupHistory() {
             return this.autoProvisioningGroupHistory;
         }
 
         public static final class Builder {
-            private java.util.List < AutoProvisioningGroupHistory> autoProvisioningGroupHistory; 
+            private java.util.List<AutoProvisioningGroupHistory> autoProvisioningGroupHistory; 
 
             /**
              * AutoProvisioningGroupHistory.
              */
-            public Builder autoProvisioningGroupHistory(java.util.List < AutoProvisioningGroupHistory> autoProvisioningGroupHistory) {
+            public Builder autoProvisioningGroupHistory(java.util.List<AutoProvisioningGroupHistory> autoProvisioningGroupHistory) {
                 this.autoProvisioningGroupHistory = autoProvisioningGroupHistory;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class DescribeSpotAdviceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypes")
-    private java.util.List < String > instanceTypes;
+    private java.util.List<String> instanceTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Memory")
@@ -143,7 +148,7 @@ public class DescribeSpotAdviceRequest extends Request {
     /**
      * @return instanceTypes
      */
-    public java.util.List < String > getInstanceTypes() {
+    public java.util.List<String> getInstanceTypes() {
         return this.instanceTypes;
     }
 
@@ -216,7 +221,7 @@ public class DescribeSpotAdviceRequest extends Request {
         private String gpuSpec; 
         private String instanceFamilyLevel; 
         private String instanceTypeFamily; 
-        private java.util.List < String > instanceTypes; 
+        private java.util.List<String> instanceTypes; 
         private Float memory; 
         private Integer minCores; 
         private Float minMemory; 
@@ -329,7 +334,7 @@ public class DescribeSpotAdviceRequest extends Request {
          * <strong>example:</strong>
          * <p>ecs.c5.large</p>
          */
-        public Builder instanceTypes(java.util.List < String > instanceTypes) {
+        public Builder instanceTypes(java.util.List<String> instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
             this.instanceTypes = instanceTypes;
             return this;

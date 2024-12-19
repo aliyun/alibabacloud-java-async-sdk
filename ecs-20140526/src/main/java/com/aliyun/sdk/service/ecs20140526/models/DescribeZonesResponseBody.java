@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class AvailableDedicatedHostTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DedicatedHostType")
-        private java.util.List < String > dedicatedHostType;
+        private java.util.List<String> dedicatedHostType;
 
         private AvailableDedicatedHostTypes(Builder builder) {
             this.dedicatedHostType = builder.dedicatedHostType;
@@ -99,17 +104,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return dedicatedHostType
          */
-        public java.util.List < String > getDedicatedHostType() {
+        public java.util.List<String> getDedicatedHostType() {
             return this.dedicatedHostType;
         }
 
         public static final class Builder {
-            private java.util.List < String > dedicatedHostType; 
+            private java.util.List<String> dedicatedHostType; 
 
             /**
              * DedicatedHostType.
              */
-            public Builder dedicatedHostType(java.util.List < String > dedicatedHostType) {
+            public Builder dedicatedHostType(java.util.List<String> dedicatedHostType) {
                 this.dedicatedHostType = dedicatedHostType;
                 return this;
             }
@@ -129,7 +134,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class AvailableDiskCategories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskCategories")
-        private java.util.List < String > diskCategories;
+        private java.util.List<String> diskCategories;
 
         private AvailableDiskCategories(Builder builder) {
             this.diskCategories = builder.diskCategories;
@@ -146,17 +151,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return diskCategories
          */
-        public java.util.List < String > getDiskCategories() {
+        public java.util.List<String> getDiskCategories() {
             return this.diskCategories;
         }
 
         public static final class Builder {
-            private java.util.List < String > diskCategories; 
+            private java.util.List<String> diskCategories; 
 
             /**
              * DiskCategories.
              */
-            public Builder diskCategories(java.util.List < String > diskCategories) {
+            public Builder diskCategories(java.util.List<String> diskCategories) {
                 this.diskCategories = diskCategories;
                 return this;
             }
@@ -176,7 +181,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class AvailableInstanceTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceTypes")
-        private java.util.List < String > instanceTypes;
+        private java.util.List<String> instanceTypes;
 
         private AvailableInstanceTypes(Builder builder) {
             this.instanceTypes = builder.instanceTypes;
@@ -193,17 +198,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return instanceTypes
          */
-        public java.util.List < String > getInstanceTypes() {
+        public java.util.List<String> getInstanceTypes() {
             return this.instanceTypes;
         }
 
         public static final class Builder {
-            private java.util.List < String > instanceTypes; 
+            private java.util.List<String> instanceTypes; 
 
             /**
              * InstanceTypes.
              */
-            public Builder instanceTypes(java.util.List < String > instanceTypes) {
+            public Builder instanceTypes(java.util.List<String> instanceTypes) {
                 this.instanceTypes = instanceTypes;
                 return this;
             }
@@ -223,7 +228,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class AvailableResourceCreation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceTypes")
-        private java.util.List < String > resourceTypes;
+        private java.util.List<String> resourceTypes;
 
         private AvailableResourceCreation(Builder builder) {
             this.resourceTypes = builder.resourceTypes;
@@ -240,17 +245,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return resourceTypes
          */
-        public java.util.List < String > getResourceTypes() {
+        public java.util.List<String> getResourceTypes() {
             return this.resourceTypes;
         }
 
         public static final class Builder {
-            private java.util.List < String > resourceTypes; 
+            private java.util.List<String> resourceTypes; 
 
             /**
              * ResourceTypes.
              */
-            public Builder resourceTypes(java.util.List < String > resourceTypes) {
+            public Builder resourceTypes(java.util.List<String> resourceTypes) {
                 this.resourceTypes = resourceTypes;
                 return this;
             }
@@ -270,7 +275,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class DataDiskCategories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("supportedDataDiskCategory")
-        private java.util.List < String > supportedDataDiskCategory;
+        private java.util.List<String> supportedDataDiskCategory;
 
         private DataDiskCategories(Builder builder) {
             this.supportedDataDiskCategory = builder.supportedDataDiskCategory;
@@ -287,17 +292,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return supportedDataDiskCategory
          */
-        public java.util.List < String > getSupportedDataDiskCategory() {
+        public java.util.List<String> getSupportedDataDiskCategory() {
             return this.supportedDataDiskCategory;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedDataDiskCategory; 
+            private java.util.List<String> supportedDataDiskCategory; 
 
             /**
              * supportedDataDiskCategory.
              */
-            public Builder supportedDataDiskCategory(java.util.List < String > supportedDataDiskCategory) {
+            public Builder supportedDataDiskCategory(java.util.List<String> supportedDataDiskCategory) {
                 this.supportedDataDiskCategory = supportedDataDiskCategory;
                 return this;
             }
@@ -317,7 +322,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class InstanceGenerations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("supportedInstanceGeneration")
-        private java.util.List < String > supportedInstanceGeneration;
+        private java.util.List<String> supportedInstanceGeneration;
 
         private InstanceGenerations(Builder builder) {
             this.supportedInstanceGeneration = builder.supportedInstanceGeneration;
@@ -334,17 +339,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return supportedInstanceGeneration
          */
-        public java.util.List < String > getSupportedInstanceGeneration() {
+        public java.util.List<String> getSupportedInstanceGeneration() {
             return this.supportedInstanceGeneration;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedInstanceGeneration; 
+            private java.util.List<String> supportedInstanceGeneration; 
 
             /**
              * supportedInstanceGeneration.
              */
-            public Builder supportedInstanceGeneration(java.util.List < String > supportedInstanceGeneration) {
+            public Builder supportedInstanceGeneration(java.util.List<String> supportedInstanceGeneration) {
                 this.supportedInstanceGeneration = supportedInstanceGeneration;
                 return this;
             }
@@ -364,7 +369,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class InstanceTypeFamilies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("supportedInstanceTypeFamily")
-        private java.util.List < String > supportedInstanceTypeFamily;
+        private java.util.List<String> supportedInstanceTypeFamily;
 
         private InstanceTypeFamilies(Builder builder) {
             this.supportedInstanceTypeFamily = builder.supportedInstanceTypeFamily;
@@ -381,17 +386,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return supportedInstanceTypeFamily
          */
-        public java.util.List < String > getSupportedInstanceTypeFamily() {
+        public java.util.List<String> getSupportedInstanceTypeFamily() {
             return this.supportedInstanceTypeFamily;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedInstanceTypeFamily; 
+            private java.util.List<String> supportedInstanceTypeFamily; 
 
             /**
              * supportedInstanceTypeFamily.
              */
-            public Builder supportedInstanceTypeFamily(java.util.List < String > supportedInstanceTypeFamily) {
+            public Builder supportedInstanceTypeFamily(java.util.List<String> supportedInstanceTypeFamily) {
                 this.supportedInstanceTypeFamily = supportedInstanceTypeFamily;
                 return this;
             }
@@ -411,7 +416,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class InstanceTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("supportedInstanceType")
-        private java.util.List < String > supportedInstanceType;
+        private java.util.List<String> supportedInstanceType;
 
         private InstanceTypes(Builder builder) {
             this.supportedInstanceType = builder.supportedInstanceType;
@@ -428,17 +433,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return supportedInstanceType
          */
-        public java.util.List < String > getSupportedInstanceType() {
+        public java.util.List<String> getSupportedInstanceType() {
             return this.supportedInstanceType;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedInstanceType; 
+            private java.util.List<String> supportedInstanceType; 
 
             /**
              * supportedInstanceType.
              */
-            public Builder supportedInstanceType(java.util.List < String > supportedInstanceType) {
+            public Builder supportedInstanceType(java.util.List<String> supportedInstanceType) {
                 this.supportedInstanceType = supportedInstanceType;
                 return this;
             }
@@ -458,7 +463,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class NetworkTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("supportedNetworkCategory")
-        private java.util.List < String > supportedNetworkCategory;
+        private java.util.List<String> supportedNetworkCategory;
 
         private NetworkTypes(Builder builder) {
             this.supportedNetworkCategory = builder.supportedNetworkCategory;
@@ -475,17 +480,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return supportedNetworkCategory
          */
-        public java.util.List < String > getSupportedNetworkCategory() {
+        public java.util.List<String> getSupportedNetworkCategory() {
             return this.supportedNetworkCategory;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedNetworkCategory; 
+            private java.util.List<String> supportedNetworkCategory; 
 
             /**
              * supportedNetworkCategory.
              */
-            public Builder supportedNetworkCategory(java.util.List < String > supportedNetworkCategory) {
+            public Builder supportedNetworkCategory(java.util.List<String> supportedNetworkCategory) {
                 this.supportedNetworkCategory = supportedNetworkCategory;
                 return this;
             }
@@ -505,7 +510,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class SystemDiskCategories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("supportedSystemDiskCategory")
-        private java.util.List < String > supportedSystemDiskCategory;
+        private java.util.List<String> supportedSystemDiskCategory;
 
         private SystemDiskCategories(Builder builder) {
             this.supportedSystemDiskCategory = builder.supportedSystemDiskCategory;
@@ -522,17 +527,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return supportedSystemDiskCategory
          */
-        public java.util.List < String > getSupportedSystemDiskCategory() {
+        public java.util.List<String> getSupportedSystemDiskCategory() {
             return this.supportedSystemDiskCategory;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedSystemDiskCategory; 
+            private java.util.List<String> supportedSystemDiskCategory; 
 
             /**
              * supportedSystemDiskCategory.
              */
-            public Builder supportedSystemDiskCategory(java.util.List < String > supportedSystemDiskCategory) {
+            public Builder supportedSystemDiskCategory(java.util.List<String> supportedSystemDiskCategory) {
                 this.supportedSystemDiskCategory = supportedSystemDiskCategory;
                 return this;
             }
@@ -722,7 +727,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class AvailableResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourcesInfo")
-        private java.util.List < ResourcesInfo> resourcesInfo;
+        private java.util.List<ResourcesInfo> resourcesInfo;
 
         private AvailableResources(Builder builder) {
             this.resourcesInfo = builder.resourcesInfo;
@@ -739,17 +744,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return resourcesInfo
          */
-        public java.util.List < ResourcesInfo> getResourcesInfo() {
+        public java.util.List<ResourcesInfo> getResourcesInfo() {
             return this.resourcesInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ResourcesInfo> resourcesInfo; 
+            private java.util.List<ResourcesInfo> resourcesInfo; 
 
             /**
              * ResourcesInfo.
              */
-            public Builder resourcesInfo(java.util.List < ResourcesInfo> resourcesInfo) {
+            public Builder resourcesInfo(java.util.List<ResourcesInfo> resourcesInfo) {
                 this.resourcesInfo = resourcesInfo;
                 return this;
             }
@@ -769,7 +774,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class AvailableVolumeCategories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VolumeCategories")
-        private java.util.List < String > volumeCategories;
+        private java.util.List<String> volumeCategories;
 
         private AvailableVolumeCategories(Builder builder) {
             this.volumeCategories = builder.volumeCategories;
@@ -786,17 +791,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return volumeCategories
          */
-        public java.util.List < String > getVolumeCategories() {
+        public java.util.List<String> getVolumeCategories() {
             return this.volumeCategories;
         }
 
         public static final class Builder {
-            private java.util.List < String > volumeCategories; 
+            private java.util.List<String> volumeCategories; 
 
             /**
              * VolumeCategories.
              */
-            public Builder volumeCategories(java.util.List < String > volumeCategories) {
+            public Builder volumeCategories(java.util.List<String> volumeCategories) {
                 this.volumeCategories = volumeCategories;
                 return this;
             }
@@ -816,7 +821,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class DedicatedHostGenerations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DedicatedHostGeneration")
-        private java.util.List < String > dedicatedHostGeneration;
+        private java.util.List<String> dedicatedHostGeneration;
 
         private DedicatedHostGenerations(Builder builder) {
             this.dedicatedHostGeneration = builder.dedicatedHostGeneration;
@@ -833,17 +838,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return dedicatedHostGeneration
          */
-        public java.util.List < String > getDedicatedHostGeneration() {
+        public java.util.List<String> getDedicatedHostGeneration() {
             return this.dedicatedHostGeneration;
         }
 
         public static final class Builder {
-            private java.util.List < String > dedicatedHostGeneration; 
+            private java.util.List<String> dedicatedHostGeneration; 
 
             /**
              * DedicatedHostGeneration.
              */
-            public Builder dedicatedHostGeneration(java.util.List < String > dedicatedHostGeneration) {
+            public Builder dedicatedHostGeneration(java.util.List<String> dedicatedHostGeneration) {
                 this.dedicatedHostGeneration = dedicatedHostGeneration;
                 return this;
             }
@@ -1116,7 +1121,7 @@ public class DescribeZonesResponseBody extends TeaModel {
      */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Zone")
-        private java.util.List < Zone> zone;
+        private java.util.List<Zone> zone;
 
         private Zones(Builder builder) {
             this.zone = builder.zone;
@@ -1133,17 +1138,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return zone
          */
-        public java.util.List < Zone> getZone() {
+        public java.util.List<Zone> getZone() {
             return this.zone;
         }
 
         public static final class Builder {
-            private java.util.List < Zone> zone; 
+            private java.util.List<Zone> zone; 
 
             /**
              * Zone.
              */
-            public Builder zone(java.util.List < Zone> zone) {
+            public Builder zone(java.util.List<Zone> zone) {
                 this.zone = zone;
                 return this;
             }

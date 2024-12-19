@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -264,7 +269,7 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
      */
     public static class DedicatedHostRenewAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DedicatedHostRenewAttribute")
-        private java.util.List < DedicatedHostRenewAttribute> dedicatedHostRenewAttribute;
+        private java.util.List<DedicatedHostRenewAttribute> dedicatedHostRenewAttribute;
 
         private DedicatedHostRenewAttributes(Builder builder) {
             this.dedicatedHostRenewAttribute = builder.dedicatedHostRenewAttribute;
@@ -281,17 +286,17 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
         /**
          * @return dedicatedHostRenewAttribute
          */
-        public java.util.List < DedicatedHostRenewAttribute> getDedicatedHostRenewAttribute() {
+        public java.util.List<DedicatedHostRenewAttribute> getDedicatedHostRenewAttribute() {
             return this.dedicatedHostRenewAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < DedicatedHostRenewAttribute> dedicatedHostRenewAttribute; 
+            private java.util.List<DedicatedHostRenewAttribute> dedicatedHostRenewAttribute; 
 
             /**
              * DedicatedHostRenewAttribute.
              */
-            public Builder dedicatedHostRenewAttribute(java.util.List < DedicatedHostRenewAttribute> dedicatedHostRenewAttribute) {
+            public Builder dedicatedHostRenewAttribute(java.util.List<DedicatedHostRenewAttribute> dedicatedHostRenewAttribute) {
                 this.dedicatedHostRenewAttribute = dedicatedHostRenewAttribute;
                 return this;
             }

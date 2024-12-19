@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class CreateImageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskDeviceMapping")
-    private java.util.List < DiskDeviceMapping> diskDeviceMapping;
+    private java.util.List<DiskDeviceMapping> diskDeviceMapping;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Features")
@@ -95,7 +100,7 @@ public class CreateImageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private CreateImageRequest(Builder builder) {
         super(builder);
@@ -180,7 +185,7 @@ public class CreateImageRequest extends Request {
     /**
      * @return diskDeviceMapping
      */
-    public java.util.List < DiskDeviceMapping> getDiskDeviceMapping() {
+    public java.util.List<DiskDeviceMapping> getDiskDeviceMapping() {
         return this.diskDeviceMapping;
     }
 
@@ -278,7 +283,7 @@ public class CreateImageRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -289,7 +294,7 @@ public class CreateImageRequest extends Request {
         private String clientToken; 
         private String description; 
         private String detectionStrategy; 
-        private java.util.List < DiskDeviceMapping> diskDeviceMapping; 
+        private java.util.List<DiskDeviceMapping> diskDeviceMapping; 
         private Features features; 
         private String imageFamily; 
         private String imageName; 
@@ -303,7 +308,7 @@ public class CreateImageRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String snapshotId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -426,7 +431,7 @@ public class CreateImageRequest extends Request {
         /**
          * <p>The information about the custom image.</p>
          */
-        public Builder diskDeviceMapping(java.util.List < DiskDeviceMapping> diskDeviceMapping) {
+        public Builder diskDeviceMapping(java.util.List<DiskDeviceMapping> diskDeviceMapping) {
             this.putQueryParameter("DiskDeviceMapping", diskDeviceMapping);
             this.diskDeviceMapping = diskDeviceMapping;
             return this;
@@ -612,7 +617,7 @@ public class CreateImageRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

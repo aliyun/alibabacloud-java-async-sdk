@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
      */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
-        private java.util.List < Resource> resource;
+        private java.util.List<Resource> resource;
 
         private Resources(Builder builder) {
             this.resource = builder.resource;
@@ -264,17 +269,17 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         /**
          * @return resource
          */
-        public java.util.List < Resource> getResource() {
+        public java.util.List<Resource> getResource() {
             return this.resource;
         }
 
         public static final class Builder {
-            private java.util.List < Resource> resource; 
+            private java.util.List<Resource> resource; 
 
             /**
              * Resource.
              */
-            public Builder resource(java.util.List < Resource> resource) {
+            public Builder resource(java.util.List<Resource> resource) {
                 this.resource = resource;
                 return this;
             }

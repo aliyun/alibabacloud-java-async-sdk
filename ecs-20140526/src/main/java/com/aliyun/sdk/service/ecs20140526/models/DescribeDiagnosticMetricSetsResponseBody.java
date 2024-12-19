@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MetricSets")
-    private java.util.List < MetricSets> metricSets;
+    private java.util.List<MetricSets> metricSets;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
     /**
      * @return metricSets
      */
-    public java.util.List < MetricSets> getMetricSets() {
+    public java.util.List<MetricSets> getMetricSets() {
         return this.metricSets;
     }
 
@@ -57,14 +62,14 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MetricSets> metricSets; 
+        private java.util.List<MetricSets> metricSets; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>A collection of diagnostic metrics.</p>
          */
-        public Builder metricSets(java.util.List < MetricSets> metricSets) {
+        public Builder metricSets(java.util.List<MetricSets> metricSets) {
             this.metricSets = metricSets;
             return this;
         }
@@ -108,7 +113,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("MetricIds")
-        private java.util.List < String > metricIds;
+        private java.util.List<String> metricIds;
 
         @com.aliyun.core.annotation.NameInMap("MetricSetId")
         private String metricSetId;
@@ -149,7 +154,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         /**
          * @return metricIds
          */
-        public java.util.List < String > getMetricIds() {
+        public java.util.List<String> getMetricIds() {
             return this.metricIds;
         }
 
@@ -183,7 +188,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
-            private java.util.List < String > metricIds; 
+            private java.util.List<String> metricIds; 
             private String metricSetId; 
             private String metricSetName; 
             private String resourceType; 
@@ -203,7 +208,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             /**
              * <p>The IDs of the diagnostic metrics.</p>
              */
-            public Builder metricIds(java.util.List < String > metricIds) {
+            public Builder metricIds(java.util.List<String> metricIds) {
                 this.metricIds = metricIds;
                 return this;
             }

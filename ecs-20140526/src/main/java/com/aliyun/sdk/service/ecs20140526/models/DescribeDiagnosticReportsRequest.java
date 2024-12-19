@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,11 +37,11 @@ public class DescribeDiagnosticReportsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReportIds")
-    private java.util.List < String > reportIds;
+    private java.util.List<String> reportIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIds")
-    private java.util.List < String > resourceIds;
+    private java.util.List<String> resourceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Severity")
@@ -102,14 +107,14 @@ public class DescribeDiagnosticReportsRequest extends Request {
     /**
      * @return reportIds
      */
-    public java.util.List < String > getReportIds() {
+    public java.util.List<String> getReportIds() {
         return this.reportIds;
     }
 
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -132,8 +137,8 @@ public class DescribeDiagnosticReportsRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
-        private java.util.List < String > reportIds; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> reportIds; 
+        private java.util.List<String> resourceIds; 
         private String severity; 
         private String status; 
 
@@ -207,7 +212,7 @@ public class DescribeDiagnosticReportsRequest extends Request {
         /**
          * <p>The IDs of diagnostic reports. You can specify up to 100 report IDs.</p>
          */
-        public Builder reportIds(java.util.List < String > reportIds) {
+        public Builder reportIds(java.util.List<String> reportIds) {
             this.putQueryParameter("ReportIds", reportIds);
             this.reportIds = reportIds;
             return this;
@@ -216,7 +221,7 @@ public class DescribeDiagnosticReportsRequest extends Request {
         /**
          * <p>The IDs of resources. You can specify up to 100 resource IDs.</p>
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
             this.resourceIds = resourceIds;
             return this;

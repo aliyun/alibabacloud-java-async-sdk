@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
@@ -87,7 +92,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -129,7 +134,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeImageSupportInstanceTypesRequest, Builder> {
         private String sourceRegionId; 
         private String actionType; 
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private String imageId; 
         private Long ownerId; 
         private String regionId; 
@@ -180,7 +185,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         /**
          * <p>The number of vCPUs of the instance type.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;

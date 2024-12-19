@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -206,7 +211,7 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
      */
     public static class PublicIpAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PublicIpAddresse")
-        private java.util.List < PublicIpAddresse> publicIpAddresse;
+        private java.util.List<PublicIpAddresse> publicIpAddresse;
 
         private PublicIpAddresses(Builder builder) {
             this.publicIpAddresse = builder.publicIpAddresse;
@@ -223,17 +228,17 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return publicIpAddresse
          */
-        public java.util.List < PublicIpAddresse> getPublicIpAddresse() {
+        public java.util.List<PublicIpAddresse> getPublicIpAddresse() {
             return this.publicIpAddresse;
         }
 
         public static final class Builder {
-            private java.util.List < PublicIpAddresse> publicIpAddresse; 
+            private java.util.List<PublicIpAddresse> publicIpAddresse; 
 
             /**
              * PublicIpAddresse.
              */
-            public Builder publicIpAddresse(java.util.List < PublicIpAddresse> publicIpAddresse) {
+            public Builder publicIpAddresse(java.util.List<PublicIpAddresse> publicIpAddresse) {
                 this.publicIpAddresse = publicIpAddresse;
                 return this;
             }
@@ -580,7 +585,7 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
      */
     public static class BandwidthPackages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthPackage")
-        private java.util.List < BandwidthPackage> bandwidthPackage;
+        private java.util.List<BandwidthPackage> bandwidthPackage;
 
         private BandwidthPackages(Builder builder) {
             this.bandwidthPackage = builder.bandwidthPackage;
@@ -597,17 +602,17 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
         /**
          * @return bandwidthPackage
          */
-        public java.util.List < BandwidthPackage> getBandwidthPackage() {
+        public java.util.List<BandwidthPackage> getBandwidthPackage() {
             return this.bandwidthPackage;
         }
 
         public static final class Builder {
-            private java.util.List < BandwidthPackage> bandwidthPackage; 
+            private java.util.List<BandwidthPackage> bandwidthPackage; 
 
             /**
              * BandwidthPackage.
              */
-            public Builder bandwidthPackage(java.util.List < BandwidthPackage> bandwidthPackage) {
+            public Builder bandwidthPackage(java.util.List<BandwidthPackage> bandwidthPackage) {
                 this.bandwidthPackage = bandwidthPackage;
                 return this;
             }

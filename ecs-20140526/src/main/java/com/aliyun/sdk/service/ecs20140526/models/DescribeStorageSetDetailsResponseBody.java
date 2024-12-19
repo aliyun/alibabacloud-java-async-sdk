@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -362,7 +367,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
      */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disk")
-        private java.util.List < Disk> disk;
+        private java.util.List<Disk> disk;
 
         private Disks(Builder builder) {
             this.disk = builder.disk;
@@ -379,17 +384,17 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         /**
          * @return disk
          */
-        public java.util.List < Disk> getDisk() {
+        public java.util.List<Disk> getDisk() {
             return this.disk;
         }
 
         public static final class Builder {
-            private java.util.List < Disk> disk; 
+            private java.util.List<Disk> disk; 
 
             /**
              * Disk.
              */
-            public Builder disk(java.util.List < Disk> disk) {
+            public Builder disk(java.util.List<Disk> disk) {
                 this.disk = disk;
                 return this;
             }

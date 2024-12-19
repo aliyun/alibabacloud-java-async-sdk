@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetricIds")
-    private java.util.List < String > metricIds;
+    private java.util.List<String> metricIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
@@ -78,7 +83,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
     /**
      * @return metricIds
      */
-    public java.util.List < String > getMetricIds() {
+    public java.util.List<String> getMetricIds() {
         return this.metricIds;
     }
 
@@ -106,7 +111,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDiagnosticMetricsRequest, Builder> {
         private String body; 
         private Integer maxResults; 
-        private java.util.List < String > metricIds; 
+        private java.util.List<String> metricIds; 
         private String nextToken; 
         private String regionId; 
         private String resourceType; 
@@ -149,7 +154,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         /**
          * <p>The ID of diagnostic metric.</p>
          */
-        public Builder metricIds(java.util.List < String > metricIds) {
+        public Builder metricIds(java.util.List<String> metricIds) {
             this.putQueryParameter("MetricIds", metricIds);
             this.metricIds = metricIds;
             return this;

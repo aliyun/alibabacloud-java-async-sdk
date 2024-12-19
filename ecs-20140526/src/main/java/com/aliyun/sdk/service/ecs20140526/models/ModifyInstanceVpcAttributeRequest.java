@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
-    private java.util.List < String > securityGroupId;
+    private java.util.List<String> securityGroupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
@@ -133,7 +138,7 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
     /**
      * @return securityGroupId
      */
-    public java.util.List < String > getSecurityGroupId() {
+    public java.util.List<String> getSecurityGroupId() {
         return this.securityGroupId;
     }
 
@@ -159,7 +164,7 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
         private String privateIpAddress; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > securityGroupId; 
+        private java.util.List<String> securityGroupId; 
         private String vSwitchId; 
         private String vpcId; 
 
@@ -266,7 +271,7 @@ public class ModifyInstanceVpcAttributeRequest extends Request {
          * <strong>example:</strong>
          * <p>sg-o6w9l8bc8dgmkw87****</p>
          */
-        public Builder securityGroupId(java.util.List < String > securityGroupId) {
+        public Builder securityGroupId(java.util.List<String> securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
             return this;

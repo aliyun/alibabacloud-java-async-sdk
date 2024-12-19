@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -290,7 +295,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
      */
     public static class Accounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Account")
-        private java.util.List < Account> account;
+        private java.util.List<Account> account;
 
         private Accounts(Builder builder) {
             this.account = builder.account;
@@ -307,17 +312,17 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         /**
          * @return account
          */
-        public java.util.List < Account> getAccount() {
+        public java.util.List<Account> getAccount() {
             return this.account;
         }
 
         public static final class Builder {
-            private java.util.List < Account> account; 
+            private java.util.List<Account> account; 
 
             /**
              * Account.
              */
-            public Builder account(java.util.List < Account> account) {
+            public Builder account(java.util.List<Account> account) {
                 this.account = account;
                 return this;
             }
@@ -387,7 +392,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
      */
     public static class ShareGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ShareGroup")
-        private java.util.List < ShareGroup> shareGroup;
+        private java.util.List<ShareGroup> shareGroup;
 
         private ShareGroups(Builder builder) {
             this.shareGroup = builder.shareGroup;
@@ -404,17 +409,17 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         /**
          * @return shareGroup
          */
-        public java.util.List < ShareGroup> getShareGroup() {
+        public java.util.List<ShareGroup> getShareGroup() {
             return this.shareGroup;
         }
 
         public static final class Builder {
-            private java.util.List < ShareGroup> shareGroup; 
+            private java.util.List<ShareGroup> shareGroup; 
 
             /**
              * ShareGroup.
              */
-            public Builder shareGroup(java.util.List < ShareGroup> shareGroup) {
+            public Builder shareGroup(java.util.List<ShareGroup> shareGroup) {
                 this.shareGroup = shareGroup;
                 return this;
             }

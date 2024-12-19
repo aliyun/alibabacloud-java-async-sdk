@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventId")
-    private java.util.List < String > eventId;
+    private java.util.List<String> eventId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventType")
@@ -38,11 +43,11 @@ public class DescribeInstancesFullStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceEventType")
-    private java.util.List < String > instanceEventType;
+    private java.util.List<String> instanceEventType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    private java.util.List < String > instanceId;
+    private java.util.List<String> instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -134,7 +139,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
     /**
      * @return eventId
      */
-    public java.util.List < String > getEventId() {
+    public java.util.List<String> getEventId() {
         return this.eventId;
     }
 
@@ -155,14 +160,14 @@ public class DescribeInstancesFullStatusRequest extends Request {
     /**
      * @return instanceEventType
      */
-    public java.util.List < String > getInstanceEventType() {
+    public java.util.List<String> getInstanceEventType() {
         return this.instanceEventType;
     }
 
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -226,11 +231,11 @@ public class DescribeInstancesFullStatusRequest extends Request {
         private EventPublishTime eventPublishTime; 
         private NotBefore notBefore; 
         private String sourceRegionId; 
-        private java.util.List < String > eventId; 
+        private java.util.List<String> eventId; 
         private String eventType; 
         private String healthStatus; 
-        private java.util.List < String > instanceEventType; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceEventType; 
+        private java.util.List<String> instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -297,7 +302,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
          * <strong>example:</strong>
          * <p>e-bp1hygp5b04o56l0****</p>
          */
-        public Builder eventId(java.util.List < String > eventId) {
+        public Builder eventId(java.util.List<String> eventId) {
             this.putQueryParameter("EventId", eventId);
             this.eventId = eventId;
             return this;
@@ -350,7 +355,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
          * <strong>example:</strong>
          * <p>InstanceExpiration.Stop</p>
          */
-        public Builder instanceEventType(java.util.List < String > instanceEventType) {
+        public Builder instanceEventType(java.util.List<String> instanceEventType) {
             this.putQueryParameter("InstanceEventType", instanceEventType);
             this.instanceEventType = instanceEventType;
             return this;
@@ -362,7 +367,7 @@ public class DescribeInstancesFullStatusRequest extends Request {
          * <strong>example:</strong>
          * <p>i-bp67acfmxazb4p****</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;

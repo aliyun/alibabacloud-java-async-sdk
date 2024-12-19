@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -205,7 +210,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
      */
     public static class Bandwidths extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
-        private java.util.List < Bandwidth> bandwidth;
+        private java.util.List<Bandwidth> bandwidth;
 
         private Bandwidths(Builder builder) {
             this.bandwidth = builder.bandwidth;
@@ -222,17 +227,17 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         /**
          * @return bandwidth
          */
-        public java.util.List < Bandwidth> getBandwidth() {
+        public java.util.List<Bandwidth> getBandwidth() {
             return this.bandwidth;
         }
 
         public static final class Builder {
-            private java.util.List < Bandwidth> bandwidth; 
+            private java.util.List<Bandwidth> bandwidth; 
 
             /**
              * Bandwidth.
              */
-            public Builder bandwidth(java.util.List < Bandwidth> bandwidth) {
+            public Builder bandwidth(java.util.List<Bandwidth> bandwidth) {
                 this.bandwidth = bandwidth;
                 return this;
             }

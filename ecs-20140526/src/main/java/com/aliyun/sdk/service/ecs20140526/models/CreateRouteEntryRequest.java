@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class CreateRouteEntryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextHopList")
-    private java.util.List < NextHopList> nextHopList;
+    private java.util.List<NextHopList> nextHopList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextHopType")
@@ -110,7 +115,7 @@ public class CreateRouteEntryRequest extends Request {
     /**
      * @return nextHopList
      */
-    public java.util.List < NextHopList> getNextHopList() {
+    public java.util.List<NextHopList> getNextHopList() {
         return this.nextHopList;
     }
 
@@ -167,7 +172,7 @@ public class CreateRouteEntryRequest extends Request {
         private String clientToken; 
         private String destinationCidrBlock; 
         private String nextHopId; 
-        private java.util.List < NextHopList> nextHopList; 
+        private java.util.List<NextHopList> nextHopList; 
         private String nextHopType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -225,7 +230,7 @@ public class CreateRouteEntryRequest extends Request {
         /**
          * NextHopList.
          */
-        public Builder nextHopList(java.util.List < NextHopList> nextHopList) {
+        public Builder nextHopList(java.util.List<NextHopList> nextHopList) {
             this.putQueryParameter("NextHopList", nextHopList);
             this.nextHopList = nextHopList;
             return this;

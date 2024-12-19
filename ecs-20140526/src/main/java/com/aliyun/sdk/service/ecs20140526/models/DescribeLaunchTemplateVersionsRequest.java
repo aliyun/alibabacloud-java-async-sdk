@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
-    private java.util.List < Long > launchTemplateVersion;
+    private java.util.List<Long> launchTemplateVersion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxVersion")
@@ -143,7 +148,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
     /**
      * @return launchTemplateVersion
      */
-    public java.util.List < Long > getLaunchTemplateVersion() {
+    public java.util.List<Long> getLaunchTemplateVersion() {
         return this.launchTemplateVersion;
     }
 
@@ -216,7 +221,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         private Boolean detailFlag; 
         private String launchTemplateId; 
         private String launchTemplateName; 
-        private java.util.List < Long > launchTemplateVersion; 
+        private java.util.List<Long> launchTemplateVersion; 
         private Long maxVersion; 
         private Long minVersion; 
         private String ownerAccount; 
@@ -320,7 +325,7 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder launchTemplateVersion(java.util.List < Long > launchTemplateVersion) {
+        public Builder launchTemplateVersion(java.util.List<Long> launchTemplateVersion) {
             this.putQueryParameter("LaunchTemplateVersion", launchTemplateVersion);
             this.launchTemplateVersion = launchTemplateVersion;
             return this;

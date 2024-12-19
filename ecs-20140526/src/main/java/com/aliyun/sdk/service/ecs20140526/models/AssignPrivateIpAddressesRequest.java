@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv4Prefix")
-    private java.util.List < String > ipv4Prefix;
+    private java.util.List<String> ipv4Prefix;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv4PrefixCount")
@@ -44,7 +49,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
-    private java.util.List < String > privateIpAddress;
+    private java.util.List<String> privateIpAddress;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -109,7 +114,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
     /**
      * @return ipv4Prefix
      */
-    public java.util.List < String > getIpv4Prefix() {
+    public java.util.List<String> getIpv4Prefix() {
         return this.ipv4Prefix;
     }
 
@@ -144,7 +149,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
     /**
      * @return privateIpAddress
      */
-    public java.util.List < String > getPrivateIpAddress() {
+    public java.util.List<String> getPrivateIpAddress() {
         return this.privateIpAddress;
     }
 
@@ -179,12 +184,12 @@ public class AssignPrivateIpAddressesRequest extends Request {
     public static final class Builder extends Request.Builder<AssignPrivateIpAddressesRequest, Builder> {
         private String sourceRegionId; 
         private String clientToken; 
-        private java.util.List < String > ipv4Prefix; 
+        private java.util.List<String> ipv4Prefix; 
         private Integer ipv4PrefixCount; 
         private String networkInterfaceId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < String > privateIpAddress; 
+        private java.util.List<String> privateIpAddress; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -237,7 +242,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
          * <p> To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</p>
          * </blockquote>
          */
-        public Builder ipv4Prefix(java.util.List < String > ipv4Prefix) {
+        public Builder ipv4Prefix(java.util.List<String> ipv4Prefix) {
             this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
             this.ipv4Prefix = ipv4Prefix;
             return this;
@@ -300,7 +305,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
          * <strong>example:</strong>
          * <p><code>10.1.**.**</code></p>
          */
-        public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
+        public Builder privateIpAddress(java.util.List<String> privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
             this.privateIpAddress = privateIpAddress;
             return this;

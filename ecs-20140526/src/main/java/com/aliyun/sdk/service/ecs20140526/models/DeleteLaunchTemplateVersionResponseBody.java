@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
      */
     public static class LaunchTemplateVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
-        private java.util.List < LaunchTemplateVersion> launchTemplateVersion;
+        private java.util.List<LaunchTemplateVersion> launchTemplateVersion;
 
         private LaunchTemplateVersions(Builder builder) {
             this.launchTemplateVersion = builder.launchTemplateVersion;
@@ -172,17 +177,17 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
         /**
          * @return launchTemplateVersion
          */
-        public java.util.List < LaunchTemplateVersion> getLaunchTemplateVersion() {
+        public java.util.List<LaunchTemplateVersion> getLaunchTemplateVersion() {
             return this.launchTemplateVersion;
         }
 
         public static final class Builder {
-            private java.util.List < LaunchTemplateVersion> launchTemplateVersion; 
+            private java.util.List<LaunchTemplateVersion> launchTemplateVersion; 
 
             /**
              * LaunchTemplateVersion.
              */
-            public Builder launchTemplateVersion(java.util.List < LaunchTemplateVersion> launchTemplateVersion) {
+            public Builder launchTemplateVersion(java.util.List<LaunchTemplateVersion> launchTemplateVersion) {
                 this.launchTemplateVersion = launchTemplateVersion;
                 return this;
             }

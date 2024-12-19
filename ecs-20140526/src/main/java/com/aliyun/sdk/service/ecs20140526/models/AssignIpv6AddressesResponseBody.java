@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -125,7 +130,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
      */
     public static class Ipv6PrefixSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6Prefix")
-        private java.util.List < String > ipv6Prefix;
+        private java.util.List<String> ipv6Prefix;
 
         private Ipv6PrefixSets(Builder builder) {
             this.ipv6Prefix = builder.ipv6Prefix;
@@ -142,17 +147,17 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         /**
          * @return ipv6Prefix
          */
-        public java.util.List < String > getIpv6Prefix() {
+        public java.util.List<String> getIpv6Prefix() {
             return this.ipv6Prefix;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipv6Prefix; 
+            private java.util.List<String> ipv6Prefix; 
 
             /**
              * Ipv6Prefix.
              */
-            public Builder ipv6Prefix(java.util.List < String > ipv6Prefix) {
+            public Builder ipv6Prefix(java.util.List<String> ipv6Prefix) {
                 this.ipv6Prefix = ipv6Prefix;
                 return this;
             }
@@ -172,7 +177,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
      */
     public static class Ipv6Sets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6Address")
-        private java.util.List < String > ipv6Address;
+        private java.util.List<String> ipv6Address;
 
         private Ipv6Sets(Builder builder) {
             this.ipv6Address = builder.ipv6Address;
@@ -189,17 +194,17 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         /**
          * @return ipv6Address
          */
-        public java.util.List < String > getIpv6Address() {
+        public java.util.List<String> getIpv6Address() {
             return this.ipv6Address;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipv6Address; 
+            private java.util.List<String> ipv6Address; 
 
             /**
              * Ipv6Address.
              */
-            public Builder ipv6Address(java.util.List < String > ipv6Address) {
+            public Builder ipv6Address(java.util.List<String> ipv6Address) {
                 this.ipv6Address = ipv6Address;
                 return this;
             }

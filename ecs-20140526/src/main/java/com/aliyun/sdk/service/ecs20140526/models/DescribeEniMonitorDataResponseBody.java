@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -316,7 +321,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
      */
     public static class MonitorData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EniMonitorData")
-        private java.util.List < EniMonitorData> eniMonitorData;
+        private java.util.List<EniMonitorData> eniMonitorData;
 
         private MonitorData(Builder builder) {
             this.eniMonitorData = builder.eniMonitorData;
@@ -333,17 +338,17 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         /**
          * @return eniMonitorData
          */
-        public java.util.List < EniMonitorData> getEniMonitorData() {
+        public java.util.List<EniMonitorData> getEniMonitorData() {
             return this.eniMonitorData;
         }
 
         public static final class Builder {
-            private java.util.List < EniMonitorData> eniMonitorData; 
+            private java.util.List<EniMonitorData> eniMonitorData; 
 
             /**
              * EniMonitorData.
              */
-            public Builder eniMonitorData(java.util.List < EniMonitorData> eniMonitorData) {
+            public Builder eniMonitorData(java.util.List<EniMonitorData> eniMonitorData) {
                 this.eniMonitorData = eniMonitorData;
                 return this;
             }

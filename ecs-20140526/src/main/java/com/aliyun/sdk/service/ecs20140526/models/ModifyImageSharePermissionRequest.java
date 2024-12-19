@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ModifyImageSharePermissionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddAccount")
-    private java.util.List < String > addAccount;
+    private java.util.List<String> addAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
@@ -48,7 +53,7 @@ public class ModifyImageSharePermissionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemoveAccount")
-    private java.util.List < String > removeAccount;
+    private java.util.List<String> removeAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -96,7 +101,7 @@ public class ModifyImageSharePermissionRequest extends Request {
     /**
      * @return addAccount
      */
-    public java.util.List < String > getAddAccount() {
+    public java.util.List<String> getAddAccount() {
         return this.addAccount;
     }
 
@@ -145,7 +150,7 @@ public class ModifyImageSharePermissionRequest extends Request {
     /**
      * @return removeAccount
      */
-    public java.util.List < String > getRemoveAccount() {
+    public java.util.List<String> getRemoveAccount() {
         return this.removeAccount;
     }
 
@@ -165,14 +170,14 @@ public class ModifyImageSharePermissionRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyImageSharePermissionRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < String > addAccount; 
+        private java.util.List<String> addAccount; 
         private String imageId; 
         private Boolean isPublic; 
         private String launchPermission; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < String > removeAccount; 
+        private java.util.List<String> removeAccount; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -210,7 +215,7 @@ public class ModifyImageSharePermissionRequest extends Request {
          * <strong>example:</strong>
          * <p>1234567890</p>
          */
-        public Builder addAccount(java.util.List < String > addAccount) {
+        public Builder addAccount(java.util.List<String> addAccount) {
             this.putQueryParameter("AddAccount", addAccount);
             this.addAccount = addAccount;
             return this;
@@ -297,7 +302,7 @@ public class ModifyImageSharePermissionRequest extends Request {
          * <strong>example:</strong>
          * <p>1234567890</p>
          */
-        public Builder removeAccount(java.util.List < String > removeAccount) {
+        public Builder removeAccount(java.util.List<String> removeAccount) {
             this.putQueryParameter("RemoveAccount", removeAccount);
             this.removeAccount = removeAccount;
             return this;

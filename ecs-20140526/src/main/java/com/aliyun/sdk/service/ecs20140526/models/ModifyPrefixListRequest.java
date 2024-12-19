@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ModifyPrefixListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddEntry")
-    private java.util.List < AddEntry> addEntry;
+    private java.util.List<AddEntry> addEntry;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -48,7 +53,7 @@ public class ModifyPrefixListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemoveEntry")
-    private java.util.List < RemoveEntry> removeEntry;
+    private java.util.List<RemoveEntry> removeEntry;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -96,7 +101,7 @@ public class ModifyPrefixListRequest extends Request {
     /**
      * @return addEntry
      */
-    public java.util.List < AddEntry> getAddEntry() {
+    public java.util.List<AddEntry> getAddEntry() {
         return this.addEntry;
     }
 
@@ -145,7 +150,7 @@ public class ModifyPrefixListRequest extends Request {
     /**
      * @return removeEntry
      */
-    public java.util.List < RemoveEntry> getRemoveEntry() {
+    public java.util.List<RemoveEntry> getRemoveEntry() {
         return this.removeEntry;
     }
 
@@ -165,14 +170,14 @@ public class ModifyPrefixListRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyPrefixListRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < AddEntry> addEntry; 
+        private java.util.List<AddEntry> addEntry; 
         private String description; 
         private String ownerAccount; 
         private Long ownerId; 
         private String prefixListId; 
         private String prefixListName; 
         private String regionId; 
-        private java.util.List < RemoveEntry> removeEntry; 
+        private java.util.List<RemoveEntry> removeEntry; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -207,7 +212,7 @@ public class ModifyPrefixListRequest extends Request {
         /**
          * <p>The entries to be added to the prefix list.</p>
          */
-        public Builder addEntry(java.util.List < AddEntry> addEntry) {
+        public Builder addEntry(java.util.List<AddEntry> addEntry) {
             this.putQueryParameter("AddEntry", addEntry);
             this.addEntry = addEntry;
             return this;
@@ -284,7 +289,7 @@ public class ModifyPrefixListRequest extends Request {
         /**
          * <p>The entries to be deleted from the prefix list.</p>
          */
-        public Builder removeEntry(java.util.List < RemoveEntry> removeEntry) {
+        public Builder removeEntry(java.util.List<RemoveEntry> removeEntry) {
             this.putQueryParameter("RemoveEntry", removeEntry);
             this.removeEntry = removeEntry;
             return this;

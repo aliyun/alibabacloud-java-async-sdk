@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -56,7 +61,7 @@ public class DescribeReservedInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReservedInstanceId")
-    private java.util.List < String > reservedInstanceId;
+    private java.util.List<String> reservedInstanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReservedInstanceName")
@@ -76,11 +81,11 @@ public class DescribeReservedInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
-    private java.util.List < String > status;
+    private java.util.List<String> status;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
@@ -194,7 +199,7 @@ public class DescribeReservedInstancesRequest extends Request {
     /**
      * @return reservedInstanceId
      */
-    public java.util.List < String > getReservedInstanceId() {
+    public java.util.List<String> getReservedInstanceId() {
         return this.reservedInstanceId;
     }
 
@@ -229,14 +234,14 @@ public class DescribeReservedInstancesRequest extends Request {
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -258,13 +263,13 @@ public class DescribeReservedInstancesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
-        private java.util.List < String > reservedInstanceId; 
+        private java.util.List<String> reservedInstanceId; 
         private String reservedInstanceName; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scope; 
-        private java.util.List < String > status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> status; 
+        private java.util.List<Tag> tag; 
         private String zoneId; 
 
         private Builder() {
@@ -294,10 +299,10 @@ public class DescribeReservedInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The allocation type. Valid values:</p>
+         * <p>The allocation type of the reserved instances. Valid values:</p>
          * <ul>
          * <li>Normal: queries all reserved instances that belong to the current account.</li>
-         * <li>Shared: queries reserved instances that are shared between the main account and linked accounts.</li>
+         * <li>Shared: queries the reserved instances that are shared between the current main account and linked accounts.</li>
          * </ul>
          * <p>Default value: Normal.</p>
          * 
@@ -335,10 +340,10 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * <p>The reason why the instance is locked. Valid values:</p>
+         * <p>The reason why the reserved instance is locked. Valid values:</p>
          * <ul>
-         * <li>financial: You have an overdue payment in your account, or the reserved instance has expired.</li>
-         * <li>security: The reserved instance is locked for security reasons.</li>
+         * <li>financial: The reserved instance is locked because the account has overdue payments or the service expires.</li>
+         * <li>security: The reserved instance is locked due to security reasons.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -351,7 +356,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * <p>The payment option of the reserved instances. Valid values:</p>
+         * <p>The payment option of the reserved instance. Valid values:</p>
          * <ul>
          * <li>No Upfront</li>
          * <li>Partial Upfront</li>
@@ -399,7 +404,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -425,12 +430,12 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of reserved instance N. Valid values of N: 1 to 100.</p>
+         * <p>The IDs of reserved instances. You can specify up to 100 IDs of reserved instances.</p>
          * 
          * <strong>example:</strong>
          * <p>ri-bpzhex2ulpzf53****</p>
          */
-        public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
+        public Builder reservedInstanceId(java.util.List<String> reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
             this.reservedInstanceId = reservedInstanceId;
             return this;
@@ -467,10 +472,10 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * <p>The scope of the reserved instances. Valid values:</p>
+         * <p>The scope of the reserved instance. Valid values:</p>
          * <ul>
-         * <li>Region</li>
-         * <li>Zone</li>
+         * <li>Region: regional</li>
+         * <li>Zone: zonal</li>
          * </ul>
          * <p>Default value: Region.</p>
          * 
@@ -484,27 +489,21 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * <p>The status of reserved instance N. Valid values of N: 1 to 100. Valid values:</p>
-         * <ul>
-         * <li>Creating</li>
-         * <li>Active</li>
-         * <li>Expired</li>
-         * <li>Updating</li>
-         * </ul>
+         * <p>The statuses of the reserved instances.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             this.putQueryParameter("Status", status);
             this.status = status;
             return this;
         }
 
         /**
-         * <p>The tags to add to the instances.</p>
+         * <p>The tags of the reserved instance. You can specify up to 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -574,8 +573,10 @@ public class DescribeReservedInstancesRequest extends Request {
             private String value; 
 
             /**
-             * <p>The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag key cannot start with acs: or aliyun.</p>
-             * <p>Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The key of tag N of the reserved instance. The tag key cannot be empty and can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+             * <blockquote>
+             * <p> If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -586,7 +587,7 @@ public class DescribeReservedInstancesRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag value cannot start with acs:.</p>
+             * <p>The value of tag N of the reserved instance. The tag value cannot be empty and can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

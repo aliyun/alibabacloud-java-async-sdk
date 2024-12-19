@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ListPluginStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    private java.util.List < String > instanceId;
+    private java.util.List<String> instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -100,7 +105,7 @@ public class ListPluginStatusRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -176,7 +181,7 @@ public class ListPluginStatusRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListPluginStatusRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
@@ -220,7 +225,7 @@ public class ListPluginStatusRequest extends Request {
         /**
          * <p>The ID of the instance.</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;

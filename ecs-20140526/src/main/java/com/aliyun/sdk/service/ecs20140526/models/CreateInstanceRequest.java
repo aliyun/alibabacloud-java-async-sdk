@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class CreateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Arn")
-    private java.util.List < Arn> arn;
+    private java.util.List<Arn> arn;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoRenew")
@@ -58,7 +63,7 @@ public class CreateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDisk")
-    private java.util.List < DataDisk> dataDisk;
+    private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
@@ -238,7 +243,7 @@ public class CreateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tenancy")
@@ -381,7 +386,7 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return arn
      */
-    public java.util.List < Arn> getArn() {
+    public java.util.List<Arn> getArn() {
         return this.arn;
     }
 
@@ -423,7 +428,7 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return dataDisk
      */
-    public java.util.List < DataDisk> getDataDisk() {
+    public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
     }
 
@@ -731,7 +736,7 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -783,13 +788,13 @@ public class CreateInstanceRequest extends Request {
         private SystemDisk systemDisk; 
         private String sourceRegionId; 
         private String affinity; 
-        private java.util.List < Arn> arn; 
+        private java.util.List<Arn> arn; 
         private Boolean autoRenew; 
         private Integer autoRenewPeriod; 
         private String clientToken; 
         private String clusterId; 
         private String creditSpecification; 
-        private java.util.List < DataDisk> dataDisk; 
+        private java.util.List<DataDisk> dataDisk; 
         private String dedicatedHostId; 
         private Boolean deletionProtection; 
         private Integer deploymentSetGroupNo; 
@@ -833,7 +838,7 @@ public class CreateInstanceRequest extends Request {
         private String spotStrategy; 
         private String storageSetId; 
         private Integer storageSetPartitionNumber; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String tenancy; 
         private Boolean useAdditionalService; 
         private String userData; 
@@ -969,7 +974,7 @@ public class CreateInstanceRequest extends Request {
          * <p> This parameter is in invitational preview and is not publicly available.</p>
          * </blockquote>
          */
-        public Builder arn(java.util.List < Arn> arn) {
+        public Builder arn(java.util.List<Arn> arn) {
             this.putQueryParameter("Arn", arn);
             this.arn = arn;
             return this;
@@ -1050,7 +1055,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The data disks.</p>
          */
-        public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+        public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;
@@ -1673,7 +1678,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The tags to add to the instance.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

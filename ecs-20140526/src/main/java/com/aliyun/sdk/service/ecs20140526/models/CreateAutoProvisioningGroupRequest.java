@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDiskConfig")
-    private java.util.List < DataDiskConfig> dataDiskConfig;
+    private java.util.List<DataDiskConfig> dataDiskConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefaultTargetCapacityType")
@@ -50,7 +55,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LaunchTemplateConfig")
-    private java.util.List < LaunchTemplateConfig> launchTemplateConfig;
+    private java.util.List<LaunchTemplateConfig> launchTemplateConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
@@ -123,11 +128,11 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemDiskConfig")
-    private java.util.List < SystemDiskConfig> systemDiskConfig;
+    private java.util.List<SystemDiskConfig> systemDiskConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TerminateInstances")
@@ -232,7 +237,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     /**
      * @return dataDiskConfig
      */
-    public java.util.List < DataDiskConfig> getDataDiskConfig() {
+    public java.util.List<DataDiskConfig> getDataDiskConfig() {
         return this.dataDiskConfig;
     }
 
@@ -267,7 +272,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     /**
      * @return launchTemplateConfig
      */
-    public java.util.List < LaunchTemplateConfig> getLaunchTemplateConfig() {
+    public java.util.List<LaunchTemplateConfig> getLaunchTemplateConfig() {
         return this.launchTemplateConfig;
     }
 
@@ -393,14 +398,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     /**
      * @return systemDiskConfig
      */
-    public java.util.List < SystemDiskConfig> getSystemDiskConfig() {
+    public java.util.List<SystemDiskConfig> getSystemDiskConfig() {
         return this.systemDiskConfig;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -444,12 +449,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private String autoProvisioningGroupName; 
         private String autoProvisioningGroupType; 
         private String clientToken; 
-        private java.util.List < DataDiskConfig> dataDiskConfig; 
+        private java.util.List<DataDiskConfig> dataDiskConfig; 
         private String defaultTargetCapacityType; 
         private String description; 
         private String excessCapacityTerminationPolicy; 
         private Boolean hibernationOptionsConfigured; 
-        private java.util.List < LaunchTemplateConfig> launchTemplateConfig; 
+        private java.util.List<LaunchTemplateConfig> launchTemplateConfig; 
         private String launchTemplateId; 
         private String launchTemplateVersion; 
         private Float maxSpotPrice; 
@@ -467,8 +472,8 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private String spotInstanceInterruptionBehavior; 
         private Integer spotInstancePoolsToUseCount; 
         private String spotTargetCapacity; 
-        private java.util.List < SystemDiskConfig> systemDiskConfig; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<SystemDiskConfig> systemDiskConfig; 
+        private java.util.List<Tag> tag; 
         private Boolean terminateInstances; 
         private Boolean terminateInstancesWithExpiration; 
         private String totalTargetCapacity; 
@@ -571,7 +576,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * <p>The information of data disks on the instance.</p>
          */
-        public Builder dataDiskConfig(java.util.List < DataDiskConfig> dataDiskConfig) {
+        public Builder dataDiskConfig(java.util.List<DataDiskConfig> dataDiskConfig) {
             this.putQueryParameter("DataDiskConfig", dataDiskConfig);
             this.dataDiskConfig = dataDiskConfig;
             return this;
@@ -640,7 +645,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * <p>The extended configurations of the launch template.</p>
          */
-        public Builder launchTemplateConfig(java.util.List < LaunchTemplateConfig> launchTemplateConfig) {
+        public Builder launchTemplateConfig(java.util.List<LaunchTemplateConfig> launchTemplateConfig) {
             this.putQueryParameter("LaunchTemplateConfig", launchTemplateConfig);
             this.launchTemplateConfig = launchTemplateConfig;
             return this;
@@ -870,7 +875,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * <p>The information of system disks on the instance.</p>
          */
-        public Builder systemDiskConfig(java.util.List < SystemDiskConfig> systemDiskConfig) {
+        public Builder systemDiskConfig(java.util.List<SystemDiskConfig> systemDiskConfig) {
             this.putQueryParameter("SystemDiskConfig", systemDiskConfig);
             this.systemDiskConfig = systemDiskConfig;
             return this;
@@ -879,7 +884,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * <p>The tags to add to the auto provisioning group.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -1711,7 +1716,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
      */
     public static class LaunchConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
-        private java.util.List < Arn> arn;
+        private java.util.List<Arn> arn;
 
         @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
         private String autoReleaseTime;
@@ -1720,7 +1725,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private String creditSpecification;
 
         @com.aliyun.core.annotation.NameInMap("DataDisk")
-        private java.util.List < DataDisk> dataDisk;
+        private java.util.List<DataDisk> dataDisk;
 
         @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
         private String deploymentSetId;
@@ -1729,7 +1734,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private String hostName;
 
         @com.aliyun.core.annotation.NameInMap("HostNames")
-        private java.util.List < String > hostNames;
+        private java.util.List<String> hostNames;
 
         @com.aliyun.core.annotation.NameInMap("ImageFamily")
         private String imageFamily;
@@ -1777,7 +1782,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private String securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-        private java.util.List < String > securityGroupIds;
+        private java.util.List<String> securityGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("SystemDisk")
         private SystemDisk systemDisk;
@@ -1798,7 +1803,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private Integer systemDiskSize;
 
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < LaunchConfigurationTag> tag;
+        private java.util.List<LaunchConfigurationTag> tag;
 
         @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
@@ -1848,7 +1853,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return arn
          */
-        public java.util.List < Arn> getArn() {
+        public java.util.List<Arn> getArn() {
             return this.arn;
         }
 
@@ -1869,7 +1874,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return dataDisk
          */
-        public java.util.List < DataDisk> getDataDisk() {
+        public java.util.List<DataDisk> getDataDisk() {
             return this.dataDisk;
         }
 
@@ -1890,7 +1895,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return hostNames
          */
-        public java.util.List < String > getHostNames() {
+        public java.util.List<String> getHostNames() {
             return this.hostNames;
         }
 
@@ -2002,7 +2007,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return securityGroupIds
          */
-        public java.util.List < String > getSecurityGroupIds() {
+        public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
@@ -2051,7 +2056,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return tag
          */
-        public java.util.List < LaunchConfigurationTag> getTag() {
+        public java.util.List<LaunchConfigurationTag> getTag() {
             return this.tag;
         }
 
@@ -2063,13 +2068,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Arn> arn; 
+            private java.util.List<Arn> arn; 
             private String autoReleaseTime; 
             private String creditSpecification; 
-            private java.util.List < DataDisk> dataDisk; 
+            private java.util.List<DataDisk> dataDisk; 
             private String deploymentSetId; 
             private String hostName; 
-            private java.util.List < String > hostNames; 
+            private java.util.List<String> hostNames; 
             private String imageFamily; 
             private String imageId; 
             private String instanceDescription; 
@@ -2085,14 +2090,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String resourceGroupId; 
             private String securityEnhancementStrategy; 
             private String securityGroupId; 
-            private java.util.List < String > securityGroupIds; 
+            private java.util.List<String> securityGroupIds; 
             private SystemDisk systemDisk; 
             private String systemDiskCategory; 
             private String systemDiskDescription; 
             private String systemDiskName; 
             private String systemDiskPerformanceLevel; 
             private Integer systemDiskSize; 
-            private java.util.List < LaunchConfigurationTag> tag; 
+            private java.util.List<LaunchConfigurationTag> tag; 
             private String userData; 
 
             /**
@@ -2100,7 +2105,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * <p> This parameter is in invitational preview and is not publicly available.</p>
              * </blockquote>
              */
-            public Builder arn(java.util.List < Arn> arn) {
+            public Builder arn(java.util.List<Arn> arn) {
                 this.arn = arn;
                 return this;
             }
@@ -2141,7 +2146,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>The cloud disks in the extended configurations of the launch template.</p>
              */
-            public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+            public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
                 this.dataDisk = dataDisk;
                 return this;
             }
@@ -2190,7 +2195,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * <strong>example:</strong>
              * <p>ecs-host-01</p>
              */
-            public Builder hostNames(java.util.List < String > hostNames) {
+            public Builder hostNames(java.util.List<String> hostNames) {
                 this.hostNames = hostNames;
                 return this;
             }
@@ -2403,7 +2408,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>The IDs of the security groups to which the new ECS instances belong.</p>
              */
-            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
                 return this;
             }
@@ -2495,7 +2500,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>The tag in the extended configurations of the launch template.</p>
              */
-            public Builder tag(java.util.List < LaunchConfigurationTag> tag) {
+            public Builder tag(java.util.List<LaunchConfigurationTag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -2582,16 +2587,16 @@ public class CreateAutoProvisioningGroupRequest extends Request {
      */
     public static class LaunchTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Architectures")
-        private java.util.List < String > architectures;
+        private java.util.List<String> architectures;
 
         @com.aliyun.core.annotation.NameInMap("BurstablePerformance")
         private String burstablePerformance;
 
         @com.aliyun.core.annotation.NameInMap("Cores")
-        private java.util.List < Integer > cores;
+        private java.util.List<Integer> cores;
 
         @com.aliyun.core.annotation.NameInMap("ExcludedInstanceTypes")
-        private java.util.List < String > excludedInstanceTypes;
+        private java.util.List<String> excludedInstanceTypes;
 
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -2609,7 +2614,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         private Integer maxQuantity;
 
         @com.aliyun.core.annotation.NameInMap("Memories")
-        private java.util.List < Float > memories;
+        private java.util.List<Float> memories;
 
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
@@ -2647,7 +2652,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return architectures
          */
-        public java.util.List < String > getArchitectures() {
+        public java.util.List<String> getArchitectures() {
             return this.architectures;
         }
 
@@ -2661,14 +2666,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return cores
          */
-        public java.util.List < Integer > getCores() {
+        public java.util.List<Integer> getCores() {
             return this.cores;
         }
 
         /**
          * @return excludedInstanceTypes
          */
-        public java.util.List < String > getExcludedInstanceTypes() {
+        public java.util.List<String> getExcludedInstanceTypes() {
             return this.excludedInstanceTypes;
         }
 
@@ -2710,7 +2715,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return memories
          */
-        public java.util.List < Float > getMemories() {
+        public java.util.List<Float> getMemories() {
             return this.memories;
         }
 
@@ -2736,16 +2741,16 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > architectures; 
+            private java.util.List<String> architectures; 
             private String burstablePerformance; 
-            private java.util.List < Integer > cores; 
-            private java.util.List < String > excludedInstanceTypes; 
+            private java.util.List<Integer> cores; 
+            private java.util.List<String> excludedInstanceTypes; 
             private String imageId; 
             private String instanceFamilyLevel; 
             private String instanceType; 
             private Double maxPrice; 
             private Integer maxQuantity; 
-            private java.util.List < Float > memories; 
+            private java.util.List<Float> memories; 
             private Integer priority; 
             private String vSwitchId; 
             private Double weightedCapacity; 
@@ -2753,7 +2758,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>The architectures of the instance types.</p>
              */
-            public Builder architectures(java.util.List < String > architectures) {
+            public Builder architectures(java.util.List<String> architectures) {
                 this.architectures = architectures;
                 return this;
             }
@@ -2778,7 +2783,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>The number of vCPU cores of the instance type.</p>
              */
-            public Builder cores(java.util.List < Integer > cores) {
+            public Builder cores(java.util.List<Integer> cores) {
                 this.cores = cores;
                 return this;
             }
@@ -2786,7 +2791,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>The instance types that you want to exclude.</p>
              */
-            public Builder excludedInstanceTypes(java.util.List < String > excludedInstanceTypes) {
+            public Builder excludedInstanceTypes(java.util.List<String> excludedInstanceTypes) {
                 this.excludedInstanceTypes = excludedInstanceTypes;
                 return this;
             }
@@ -2860,7 +2865,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             /**
              * <p>The memory sizes of the instance type.</p>
              */
-            public Builder memories(java.util.List < Float > memories) {
+            public Builder memories(java.util.List<Float> memories) {
                 this.memories = memories;
                 return this;
             }
@@ -2921,7 +2926,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
      */
     public static class ResourcePoolOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivatePoolIds")
-        private java.util.List < String > privatePoolIds;
+        private java.util.List<String> privatePoolIds;
 
         @com.aliyun.core.annotation.NameInMap("Strategy")
         private String strategy;
@@ -2942,7 +2947,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         /**
          * @return privatePoolIds
          */
-        public java.util.List < String > getPrivatePoolIds() {
+        public java.util.List<String> getPrivatePoolIds() {
             return this.privatePoolIds;
         }
 
@@ -2954,13 +2959,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > privatePoolIds; 
+            private java.util.List<String> privatePoolIds; 
             private String strategy; 
 
             /**
              * <p>The IDs of private pools. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation that is associated with the private pool. You can specify the IDs of only targeted private pools for this parameter.</p>
              */
-            public Builder privatePoolIds(java.util.List < String > privatePoolIds) {
+            public Builder privatePoolIds(java.util.List<String> privatePoolIds) {
                 this.privatePoolIds = privatePoolIds;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -246,7 +251,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
      */
     public static class NextHops extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextHop")
-        private java.util.List < NextHop> nextHop;
+        private java.util.List<NextHop> nextHop;
 
         private NextHops(Builder builder) {
             this.nextHop = builder.nextHop;
@@ -263,17 +268,17 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         /**
          * @return nextHop
          */
-        public java.util.List < NextHop> getNextHop() {
+        public java.util.List<NextHop> getNextHop() {
             return this.nextHop;
         }
 
         public static final class Builder {
-            private java.util.List < NextHop> nextHop; 
+            private java.util.List<NextHop> nextHop; 
 
             /**
              * NextHop.
              */
-            public Builder nextHop(java.util.List < NextHop> nextHop) {
+            public Builder nextHop(java.util.List<NextHop> nextHop) {
                 this.nextHop = nextHop;
                 return this;
             }
@@ -460,7 +465,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
      */
     public static class RouteEntrys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteEntry")
-        private java.util.List < RouteEntry> routeEntry;
+        private java.util.List<RouteEntry> routeEntry;
 
         private RouteEntrys(Builder builder) {
             this.routeEntry = builder.routeEntry;
@@ -477,17 +482,17 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         /**
          * @return routeEntry
          */
-        public java.util.List < RouteEntry> getRouteEntry() {
+        public java.util.List<RouteEntry> getRouteEntry() {
             return this.routeEntry;
         }
 
         public static final class Builder {
-            private java.util.List < RouteEntry> routeEntry; 
+            private java.util.List<RouteEntry> routeEntry; 
 
             /**
              * RouteEntry.
              */
-            public Builder routeEntry(java.util.List < RouteEntry> routeEntry) {
+            public Builder routeEntry(java.util.List<RouteEntry> routeEntry) {
                 this.routeEntry = routeEntry;
                 return this;
             }
@@ -654,7 +659,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
      */
     public static class RouteTables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteTable")
-        private java.util.List < RouteTable> routeTable;
+        private java.util.List<RouteTable> routeTable;
 
         private RouteTables(Builder builder) {
             this.routeTable = builder.routeTable;
@@ -671,17 +676,17 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         /**
          * @return routeTable
          */
-        public java.util.List < RouteTable> getRouteTable() {
+        public java.util.List<RouteTable> getRouteTable() {
             return this.routeTable;
         }
 
         public static final class Builder {
-            private java.util.List < RouteTable> routeTable; 
+            private java.util.List<RouteTable> routeTable; 
 
             /**
              * RouteTable.
              */
-            public Builder routeTable(java.util.List < RouteTable> routeTable) {
+            public Builder routeTable(java.util.List<RouteTable> routeTable) {
                 this.routeTable = routeTable;
                 return this;
             }

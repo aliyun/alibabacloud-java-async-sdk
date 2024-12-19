@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -475,7 +480,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
      */
     public static class DataDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataDisk")
-        private java.util.List < DataDisk> dataDisk;
+        private java.util.List<DataDisk> dataDisk;
 
         private DataDisks(Builder builder) {
             this.dataDisk = builder.dataDisk;
@@ -492,17 +497,17 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * @return dataDisk
          */
-        public java.util.List < DataDisk> getDataDisk() {
+        public java.util.List<DataDisk> getDataDisk() {
             return this.dataDisk;
         }
 
         public static final class Builder {
-            private java.util.List < DataDisk> dataDisk; 
+            private java.util.List<DataDisk> dataDisk; 
 
             /**
              * DataDisk.
              */
-            public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+            public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
                 this.dataDisk = dataDisk;
                 return this;
             }
@@ -522,7 +527,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
      */
     public static class SecurityGroupIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
-        private java.util.List < String > securityGroupId;
+        private java.util.List<String> securityGroupId;
 
         private SecurityGroupIds(Builder builder) {
             this.securityGroupId = builder.securityGroupId;
@@ -539,17 +544,17 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * @return securityGroupId
          */
-        public java.util.List < String > getSecurityGroupId() {
+        public java.util.List<String> getSecurityGroupId() {
             return this.securityGroupId;
         }
 
         public static final class Builder {
-            private java.util.List < String > securityGroupId; 
+            private java.util.List<String> securityGroupId; 
 
             /**
              * SecurityGroupId.
              */
-            public Builder securityGroupId(java.util.List < String > securityGroupId) {
+            public Builder securityGroupId(java.util.List<String> securityGroupId) {
                 this.securityGroupId = securityGroupId;
                 return this;
             }
@@ -787,7 +792,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
      */
     public static class NetworkInterfaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkInterface")
-        private java.util.List < NetworkInterface> networkInterface;
+        private java.util.List<NetworkInterface> networkInterface;
 
         private NetworkInterfaces(Builder builder) {
             this.networkInterface = builder.networkInterface;
@@ -804,17 +809,17 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * @return networkInterface
          */
-        public java.util.List < NetworkInterface> getNetworkInterface() {
+        public java.util.List<NetworkInterface> getNetworkInterface() {
             return this.networkInterface;
         }
 
         public static final class Builder {
-            private java.util.List < NetworkInterface> networkInterface; 
+            private java.util.List<NetworkInterface> networkInterface; 
 
             /**
              * NetworkInterface.
              */
-            public Builder networkInterface(java.util.List < NetworkInterface> networkInterface) {
+            public Builder networkInterface(java.util.List<NetworkInterface> networkInterface) {
                 this.networkInterface = networkInterface;
                 return this;
             }
@@ -834,7 +839,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
      */
     public static class LaunchTemplateDataSecurityGroupIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
-        private java.util.List < String > securityGroupId;
+        private java.util.List<String> securityGroupId;
 
         private LaunchTemplateDataSecurityGroupIds(Builder builder) {
             this.securityGroupId = builder.securityGroupId;
@@ -851,12 +856,12 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * @return securityGroupId
          */
-        public java.util.List < String > getSecurityGroupId() {
+        public java.util.List<String> getSecurityGroupId() {
             return this.securityGroupId;
         }
 
         public static final class Builder {
-            private java.util.List < String > securityGroupId; 
+            private java.util.List<String> securityGroupId; 
 
             /**
              * <p>The ID of the security group to which to assign the secondary ENI. The security group and the ENI must belong to the same VPC.</p>
@@ -867,7 +872,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>sg-bp67acfmxazb4p****</p>
              */
-            public Builder securityGroupId(java.util.List < String > securityGroupId) {
+            public Builder securityGroupId(java.util.List<String> securityGroupId) {
                 this.securityGroupId = securityGroupId;
                 return this;
             }
@@ -960,7 +965,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceTag")
-        private java.util.List < InstanceTag> instanceTag;
+        private java.util.List<InstanceTag> instanceTag;
 
         private Tags(Builder builder) {
             this.instanceTag = builder.instanceTag;
@@ -977,17 +982,17 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * @return instanceTag
          */
-        public java.util.List < InstanceTag> getInstanceTag() {
+        public java.util.List<InstanceTag> getInstanceTag() {
             return this.instanceTag;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceTag> instanceTag; 
+            private java.util.List<InstanceTag> instanceTag; 
 
             /**
              * InstanceTag.
              */
-            public Builder instanceTag(java.util.List < InstanceTag> instanceTag) {
+            public Builder instanceTag(java.util.List<InstanceTag> instanceTag) {
                 this.instanceTag = instanceTag;
                 return this;
             }
@@ -2533,7 +2538,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
      */
     public static class LaunchTemplateVersionSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersionSet")
-        private java.util.List < LaunchTemplateVersionSet> launchTemplateVersionSet;
+        private java.util.List<LaunchTemplateVersionSet> launchTemplateVersionSet;
 
         private LaunchTemplateVersionSets(Builder builder) {
             this.launchTemplateVersionSet = builder.launchTemplateVersionSet;
@@ -2550,17 +2555,17 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * @return launchTemplateVersionSet
          */
-        public java.util.List < LaunchTemplateVersionSet> getLaunchTemplateVersionSet() {
+        public java.util.List<LaunchTemplateVersionSet> getLaunchTemplateVersionSet() {
             return this.launchTemplateVersionSet;
         }
 
         public static final class Builder {
-            private java.util.List < LaunchTemplateVersionSet> launchTemplateVersionSet; 
+            private java.util.List<LaunchTemplateVersionSet> launchTemplateVersionSet; 
 
             /**
              * LaunchTemplateVersionSet.
              */
-            public Builder launchTemplateVersionSet(java.util.List < LaunchTemplateVersionSet> launchTemplateVersionSet) {
+            public Builder launchTemplateVersionSet(java.util.List<LaunchTemplateVersionSet> launchTemplateVersionSet) {
                 this.launchTemplateVersionSet = launchTemplateVersionSet;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,7 +275,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
      */
     public static class Capacities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Capacity")
-        private java.util.List < Capacity> capacity;
+        private java.util.List<Capacity> capacity;
 
         private Capacities(Builder builder) {
             this.capacity = builder.capacity;
@@ -287,17 +292,17 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         /**
          * @return capacity
          */
-        public java.util.List < Capacity> getCapacity() {
+        public java.util.List<Capacity> getCapacity() {
             return this.capacity;
         }
 
         public static final class Builder {
-            private java.util.List < Capacity> capacity; 
+            private java.util.List<Capacity> capacity; 
 
             /**
              * Capacity.
              */
-            public Builder capacity(java.util.List < Capacity> capacity) {
+            public Builder capacity(java.util.List<Capacity> capacity) {
                 this.capacity = capacity;
                 return this;
             }
@@ -317,7 +322,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
      */
     public static class InstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
-        private java.util.List < String > instanceId;
+        private java.util.List<String> instanceId;
 
         private InstanceIds(Builder builder) {
             this.instanceId = builder.instanceId;
@@ -334,17 +339,17 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         /**
          * @return instanceId
          */
-        public java.util.List < String > getInstanceId() {
+        public java.util.List<String> getInstanceId() {
             return this.instanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > instanceId; 
+            private java.util.List<String> instanceId; 
 
             /**
              * InstanceId.
              */
-            public Builder instanceId(java.util.List < String > instanceId) {
+            public Builder instanceId(java.util.List<String> instanceId) {
                 this.instanceId = instanceId;
                 return this;
             }
@@ -664,7 +669,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
      */
     public static class DeploymentSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeploymentSet")
-        private java.util.List < DeploymentSet> deploymentSet;
+        private java.util.List<DeploymentSet> deploymentSet;
 
         private DeploymentSets(Builder builder) {
             this.deploymentSet = builder.deploymentSet;
@@ -681,17 +686,17 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         /**
          * @return deploymentSet
          */
-        public java.util.List < DeploymentSet> getDeploymentSet() {
+        public java.util.List<DeploymentSet> getDeploymentSet() {
             return this.deploymentSet;
         }
 
         public static final class Builder {
-            private java.util.List < DeploymentSet> deploymentSet; 
+            private java.util.List<DeploymentSet> deploymentSet; 
 
             /**
              * DeploymentSet.
              */
-            public Builder deploymentSet(java.util.List < DeploymentSet> deploymentSet) {
+            public Builder deploymentSet(java.util.List<DeploymentSet> deploymentSet) {
                 this.deploymentSet = deploymentSet;
                 return this;
             }

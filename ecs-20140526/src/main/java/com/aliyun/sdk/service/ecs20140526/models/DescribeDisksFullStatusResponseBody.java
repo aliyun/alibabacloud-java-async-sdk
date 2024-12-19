@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -369,7 +374,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
      */
     public static class DiskEventSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskEventType")
-        private java.util.List < DiskEventType> diskEventType;
+        private java.util.List<DiskEventType> diskEventType;
 
         private DiskEventSet(Builder builder) {
             this.diskEventType = builder.diskEventType;
@@ -386,17 +391,17 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         /**
          * @return diskEventType
          */
-        public java.util.List < DiskEventType> getDiskEventType() {
+        public java.util.List<DiskEventType> getDiskEventType() {
             return this.diskEventType;
         }
 
         public static final class Builder {
-            private java.util.List < DiskEventType> diskEventType; 
+            private java.util.List<DiskEventType> diskEventType; 
 
             /**
              * DiskEventType.
              */
-            public Builder diskEventType(java.util.List < DiskEventType> diskEventType) {
+            public Builder diskEventType(java.util.List<DiskEventType> diskEventType) {
                 this.diskEventType = diskEventType;
                 return this;
             }
@@ -722,7 +727,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
      */
     public static class DiskFullStatusSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskFullStatusType")
-        private java.util.List < DiskFullStatusType> diskFullStatusType;
+        private java.util.List<DiskFullStatusType> diskFullStatusType;
 
         private DiskFullStatusSet(Builder builder) {
             this.diskFullStatusType = builder.diskFullStatusType;
@@ -739,17 +744,17 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         /**
          * @return diskFullStatusType
          */
-        public java.util.List < DiskFullStatusType> getDiskFullStatusType() {
+        public java.util.List<DiskFullStatusType> getDiskFullStatusType() {
             return this.diskFullStatusType;
         }
 
         public static final class Builder {
-            private java.util.List < DiskFullStatusType> diskFullStatusType; 
+            private java.util.List<DiskFullStatusType> diskFullStatusType; 
 
             /**
              * DiskFullStatusType.
              */
-            public Builder diskFullStatusType(java.util.List < DiskFullStatusType> diskFullStatusType) {
+            public Builder diskFullStatusType(java.util.List<DiskFullStatusType> diskFullStatusType) {
                 this.diskFullStatusType = diskFullStatusType;
                 return this;
             }

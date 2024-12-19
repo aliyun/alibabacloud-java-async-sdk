@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -267,7 +272,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
      */
     public static class SnapshotPackages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SnapshotPackage")
-        private java.util.List < SnapshotPackage> snapshotPackage;
+        private java.util.List<SnapshotPackage> snapshotPackage;
 
         private SnapshotPackages(Builder builder) {
             this.snapshotPackage = builder.snapshotPackage;
@@ -284,17 +289,17 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         /**
          * @return snapshotPackage
          */
-        public java.util.List < SnapshotPackage> getSnapshotPackage() {
+        public java.util.List<SnapshotPackage> getSnapshotPackage() {
             return this.snapshotPackage;
         }
 
         public static final class Builder {
-            private java.util.List < SnapshotPackage> snapshotPackage; 
+            private java.util.List<SnapshotPackage> snapshotPackage; 
 
             /**
              * SnapshotPackage.
              */
-            public Builder snapshotPackage(java.util.List < SnapshotPackage> snapshotPackage) {
+            public Builder snapshotPackage(java.util.List<SnapshotPackage> snapshotPackage) {
                 this.snapshotPackage = snapshotPackage;
                 return this;
             }

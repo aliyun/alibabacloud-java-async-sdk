@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -174,7 +179,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
      */
     public static class PossibleValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PossibleValue")
-        private java.util.List < String > possibleValue;
+        private java.util.List<String> possibleValue;
 
         private PossibleValues(Builder builder) {
             this.possibleValue = builder.possibleValue;
@@ -191,17 +196,17 @@ public class DescribeCommandsResponseBody extends TeaModel {
         /**
          * @return possibleValue
          */
-        public java.util.List < String > getPossibleValue() {
+        public java.util.List<String> getPossibleValue() {
             return this.possibleValue;
         }
 
         public static final class Builder {
-            private java.util.List < String > possibleValue; 
+            private java.util.List<String> possibleValue; 
 
             /**
              * PossibleValue.
              */
-            public Builder possibleValue(java.util.List < String > possibleValue) {
+            public Builder possibleValue(java.util.List<String> possibleValue) {
                 this.possibleValue = possibleValue;
                 return this;
             }
@@ -365,7 +370,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
      */
     public static class ParameterDefinitions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterDefinition")
-        private java.util.List < ParameterDefinition> parameterDefinition;
+        private java.util.List<ParameterDefinition> parameterDefinition;
 
         private ParameterDefinitions(Builder builder) {
             this.parameterDefinition = builder.parameterDefinition;
@@ -382,17 +387,17 @@ public class DescribeCommandsResponseBody extends TeaModel {
         /**
          * @return parameterDefinition
          */
-        public java.util.List < ParameterDefinition> getParameterDefinition() {
+        public java.util.List<ParameterDefinition> getParameterDefinition() {
             return this.parameterDefinition;
         }
 
         public static final class Builder {
-            private java.util.List < ParameterDefinition> parameterDefinition; 
+            private java.util.List<ParameterDefinition> parameterDefinition; 
 
             /**
              * ParameterDefinition.
              */
-            public Builder parameterDefinition(java.util.List < ParameterDefinition> parameterDefinition) {
+            public Builder parameterDefinition(java.util.List<ParameterDefinition> parameterDefinition) {
                 this.parameterDefinition = parameterDefinition;
                 return this;
             }
@@ -412,7 +417,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
      */
     public static class ParameterNames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterName")
-        private java.util.List < String > parameterName;
+        private java.util.List<String> parameterName;
 
         private ParameterNames(Builder builder) {
             this.parameterName = builder.parameterName;
@@ -429,12 +434,12 @@ public class DescribeCommandsResponseBody extends TeaModel {
         /**
          * @return parameterName
          */
-        public java.util.List < String > getParameterName() {
+        public java.util.List<String> getParameterName() {
             return this.parameterName;
         }
 
         public static final class Builder {
-            private java.util.List < String > parameterName; 
+            private java.util.List<String> parameterName; 
 
             /**
              * <p>The name of the custom parameter.</p>
@@ -442,7 +447,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>DownloadUrl</p>
              */
-            public Builder parameterName(java.util.List < String > parameterName) {
+            public Builder parameterName(java.util.List<String> parameterName) {
                 this.parameterName = parameterName;
                 return this;
             }
@@ -535,7 +540,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -552,17 +557,17 @@ public class DescribeCommandsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1044,7 +1049,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
      */
     public static class Commands extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Command")
-        private java.util.List < Command> command;
+        private java.util.List<Command> command;
 
         private Commands(Builder builder) {
             this.command = builder.command;
@@ -1061,17 +1066,17 @@ public class DescribeCommandsResponseBody extends TeaModel {
         /**
          * @return command
          */
-        public java.util.List < Command> getCommand() {
+        public java.util.List<Command> getCommand() {
             return this.command;
         }
 
         public static final class Builder {
-            private java.util.List < Command> command; 
+            private java.util.List<Command> command; 
 
             /**
              * Command.
              */
-            public Builder command(java.util.List < Command> command) {
+            public Builder command(java.util.List<Command> command) {
                 this.command = command;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -482,7 +487,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
      */
     public static class Issues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Issue")
-        private java.util.List < Issue> issue;
+        private java.util.List<Issue> issue;
 
         private Issues(Builder builder) {
             this.issue = builder.issue;
@@ -499,17 +504,17 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         /**
          * @return issue
          */
-        public java.util.List < Issue> getIssue() {
+        public java.util.List<Issue> getIssue() {
             return this.issue;
         }
 
         public static final class Builder {
-            private java.util.List < Issue> issue; 
+            private java.util.List<Issue> issue; 
 
             /**
              * Issue.
              */
-            public Builder issue(java.util.List < Issue> issue) {
+            public Builder issue(java.util.List<Issue> issue) {
                 this.issue = issue;
                 return this;
             }
@@ -681,7 +686,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
      */
     public static class MetricResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MetricResult")
-        private java.util.List < MetricResult> metricResult;
+        private java.util.List<MetricResult> metricResult;
 
         private MetricResults(Builder builder) {
             this.metricResult = builder.metricResult;
@@ -698,17 +703,17 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         /**
          * @return metricResult
          */
-        public java.util.List < MetricResult> getMetricResult() {
+        public java.util.List<MetricResult> getMetricResult() {
             return this.metricResult;
         }
 
         public static final class Builder {
-            private java.util.List < MetricResult> metricResult; 
+            private java.util.List<MetricResult> metricResult; 
 
             /**
              * MetricResult.
              */
-            public Builder metricResult(java.util.List < MetricResult> metricResult) {
+            public Builder metricResult(java.util.List<MetricResult> metricResult) {
                 this.metricResult = metricResult;
                 return this;
             }

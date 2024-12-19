@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -105,7 +110,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
      */
     public static class SupportedTopologyTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedTopologyType")
-        private java.util.List < String > supportedTopologyType;
+        private java.util.List<String> supportedTopologyType;
 
         private SupportedTopologyTypes(Builder builder) {
             this.supportedTopologyType = builder.supportedTopologyType;
@@ -122,17 +127,17 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * @return supportedTopologyType
          */
-        public java.util.List < String > getSupportedTopologyType() {
+        public java.util.List<String> getSupportedTopologyType() {
             return this.supportedTopologyType;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedTopologyType; 
+            private java.util.List<String> supportedTopologyType; 
 
             /**
              * SupportedTopologyType.
              */
-            public Builder supportedTopologyType(java.util.List < String > supportedTopologyType) {
+            public Builder supportedTopologyType(java.util.List<String> supportedTopologyType) {
                 this.supportedTopologyType = supportedTopologyType;
                 return this;
             }
@@ -406,7 +411,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
      */
     public static class NetworkCards extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkCardInfo")
-        private java.util.List < NetworkCardInfo> networkCardInfo;
+        private java.util.List<NetworkCardInfo> networkCardInfo;
 
         private NetworkCards(Builder builder) {
             this.networkCardInfo = builder.networkCardInfo;
@@ -423,17 +428,17 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * @return networkCardInfo
          */
-        public java.util.List < NetworkCardInfo> getNetworkCardInfo() {
+        public java.util.List<NetworkCardInfo> getNetworkCardInfo() {
             return this.networkCardInfo;
         }
 
         public static final class Builder {
-            private java.util.List < NetworkCardInfo> networkCardInfo; 
+            private java.util.List<NetworkCardInfo> networkCardInfo; 
 
             /**
              * NetworkCardInfo.
              */
-            public Builder networkCardInfo(java.util.List < NetworkCardInfo> networkCardInfo) {
+            public Builder networkCardInfo(java.util.List<NetworkCardInfo> networkCardInfo) {
                 this.networkCardInfo = networkCardInfo;
                 return this;
             }
@@ -453,7 +458,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
      */
     public static class SupportedBootModes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedBootMode")
-        private java.util.List < String > supportedBootMode;
+        private java.util.List<String> supportedBootMode;
 
         private SupportedBootModes(Builder builder) {
             this.supportedBootMode = builder.supportedBootMode;
@@ -470,17 +475,17 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * @return supportedBootMode
          */
-        public java.util.List < String > getSupportedBootMode() {
+        public java.util.List<String> getSupportedBootMode() {
             return this.supportedBootMode;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedBootMode; 
+            private java.util.List<String> supportedBootMode; 
 
             /**
              * SupportedBootMode.
              */
-            public Builder supportedBootMode(java.util.List < String > supportedBootMode) {
+            public Builder supportedBootMode(java.util.List<String> supportedBootMode) {
                 this.supportedBootMode = supportedBootMode;
                 return this;
             }
@@ -1528,7 +1533,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
      */
     public static class InstanceTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
-        private java.util.List < InstanceType> instanceType;
+        private java.util.List<InstanceType> instanceType;
 
         private InstanceTypes(Builder builder) {
             this.instanceType = builder.instanceType;
@@ -1545,17 +1550,17 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         /**
          * @return instanceType
          */
-        public java.util.List < InstanceType> getInstanceType() {
+        public java.util.List<InstanceType> getInstanceType() {
             return this.instanceType;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceType> instanceType; 
+            private java.util.List<InstanceType> instanceType; 
 
             /**
              * InstanceType.
              */
-            public Builder instanceType(java.util.List < InstanceType> instanceType) {
+            public Builder instanceType(java.util.List<InstanceType> instanceType) {
                 this.instanceType = instanceType;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -362,7 +367,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
      */
     public static class MonitorData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskMonitorData")
-        private java.util.List < DiskMonitorData> diskMonitorData;
+        private java.util.List<DiskMonitorData> diskMonitorData;
 
         private MonitorData(Builder builder) {
             this.diskMonitorData = builder.diskMonitorData;
@@ -379,17 +384,17 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         /**
          * @return diskMonitorData
          */
-        public java.util.List < DiskMonitorData> getDiskMonitorData() {
+        public java.util.List<DiskMonitorData> getDiskMonitorData() {
             return this.diskMonitorData;
         }
 
         public static final class Builder {
-            private java.util.List < DiskMonitorData> diskMonitorData; 
+            private java.util.List<DiskMonitorData> diskMonitorData; 
 
             /**
              * DiskMonitorData.
              */
-            public Builder diskMonitorData(java.util.List < DiskMonitorData> diskMonitorData) {
+            public Builder diskMonitorData(java.util.List<DiskMonitorData> diskMonitorData) {
                 this.diskMonitorData = diskMonitorData;
                 return this;
             }

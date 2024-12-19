@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -51,7 +56,7 @@ public class RunInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Arn")
-    private java.util.List < Arn> arn;
+    private java.util.List<Arn> arn;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoPay")
@@ -79,7 +84,7 @@ public class RunInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDisk")
-    private java.util.List < DataDisk> dataDisk;
+    private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
@@ -111,7 +116,7 @@ public class RunInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostNames")
-    private java.util.List < String > hostNames;
+    private java.util.List<String> hostNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HpcClusterId")
@@ -171,7 +176,7 @@ public class RunInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6Address")
-    private java.util.List < String > ipv6Address;
+    private java.util.List<String> ipv6Address;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
@@ -204,7 +209,7 @@ public class RunInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterface")
-    private java.util.List < NetworkInterface> networkInterface;
+    private java.util.List<NetworkInterface> networkInterface;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceQueueNumber")
@@ -277,7 +282,7 @@ public class RunInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-    private java.util.List < String > securityGroupIds;
+    private java.util.List<String> securityGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpotDuration")
@@ -307,7 +312,7 @@ public class RunInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tenancy")
@@ -490,7 +495,7 @@ public class RunInstancesRequest extends Request {
     /**
      * @return arn
      */
-    public java.util.List < Arn> getArn() {
+    public java.util.List<Arn> getArn() {
         return this.arn;
     }
 
@@ -539,7 +544,7 @@ public class RunInstancesRequest extends Request {
     /**
      * @return dataDisk
      */
-    public java.util.List < DataDisk> getDataDisk() {
+    public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
     }
 
@@ -595,7 +600,7 @@ public class RunInstancesRequest extends Request {
     /**
      * @return hostNames
      */
-    public java.util.List < String > getHostNames() {
+    public java.util.List<String> getHostNames() {
         return this.hostNames;
     }
 
@@ -700,7 +705,7 @@ public class RunInstancesRequest extends Request {
     /**
      * @return ipv6Address
      */
-    public java.util.List < String > getIpv6Address() {
+    public java.util.List<String> getIpv6Address() {
         return this.ipv6Address;
     }
 
@@ -756,7 +761,7 @@ public class RunInstancesRequest extends Request {
     /**
      * @return networkInterface
      */
-    public java.util.List < NetworkInterface> getNetworkInterface() {
+    public java.util.List<NetworkInterface> getNetworkInterface() {
         return this.networkInterface;
     }
 
@@ -882,7 +887,7 @@ public class RunInstancesRequest extends Request {
     /**
      * @return securityGroupIds
      */
-    public java.util.List < String > getSecurityGroupIds() {
+    public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -931,7 +936,7 @@ public class RunInstancesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -980,14 +985,14 @@ public class RunInstancesRequest extends Request {
         private String sourceRegionId; 
         private String affinity; 
         private Integer amount; 
-        private java.util.List < Arn> arn; 
+        private java.util.List<Arn> arn; 
         private Boolean autoPay; 
         private String autoReleaseTime; 
         private Boolean autoRenew; 
         private Integer autoRenewPeriod; 
         private String clientToken; 
         private String creditSpecification; 
-        private java.util.List < DataDisk> dataDisk; 
+        private java.util.List<DataDisk> dataDisk; 
         private String dedicatedHostId; 
         private Boolean deletionProtection; 
         private Integer deploymentSetGroupNo; 
@@ -995,7 +1000,7 @@ public class RunInstancesRequest extends Request {
         private String description; 
         private Boolean dryRun; 
         private String hostName; 
-        private java.util.List < String > hostNames; 
+        private java.util.List<String> hostNames; 
         private String hpcClusterId; 
         private String httpEndpoint; 
         private Integer httpPutResponseHopLimit; 
@@ -1010,7 +1015,7 @@ public class RunInstancesRequest extends Request {
         private Integer internetMaxBandwidthIn; 
         private Integer internetMaxBandwidthOut; 
         private String ioOptimized; 
-        private java.util.List < String > ipv6Address; 
+        private java.util.List<String> ipv6Address; 
         private Integer ipv6AddressCount; 
         private String isp; 
         private String keyPairName; 
@@ -1018,7 +1023,7 @@ public class RunInstancesRequest extends Request {
         private String launchTemplateName; 
         private Long launchTemplateVersion; 
         private Integer minAmount; 
-        private java.util.List < NetworkInterface> networkInterface; 
+        private java.util.List<NetworkInterface> networkInterface; 
         private Integer networkInterfaceQueueNumber; 
         private NetworkOptions networkOptions; 
         private String ownerAccount; 
@@ -1036,14 +1041,14 @@ public class RunInstancesRequest extends Request {
         private Long resourceOwnerId; 
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
-        private java.util.List < String > securityGroupIds; 
+        private java.util.List<String> securityGroupIds; 
         private Integer spotDuration; 
         private String spotInterruptionBehavior; 
         private Float spotPriceLimit; 
         private String spotStrategy; 
         private String storageSetId; 
         private Integer storageSetPartitionNumber; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String tenancy; 
         private Boolean uniqueSuffix; 
         private String userData; 
@@ -1246,7 +1251,7 @@ public class RunInstancesRequest extends Request {
          * <p> This parameter is not publicly available.</p>
          * </blockquote>
          */
-        public Builder arn(java.util.List < Arn> arn) {
+        public Builder arn(java.util.List<Arn> arn) {
             this.putQueryParameter("Arn", arn);
             this.arn = arn;
             return this;
@@ -1357,7 +1362,7 @@ public class RunInstancesRequest extends Request {
         /**
          * <p>The data disks.</p>
          */
-        public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+        public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;
@@ -1483,7 +1488,7 @@ public class RunInstancesRequest extends Request {
          * <strong>example:</strong>
          * <p>ecs-host-01</p>
          */
-        public Builder hostNames(java.util.List < String > hostNames) {
+        public Builder hostNames(java.util.List<String> hostNames) {
             this.putQueryParameter("HostNames", hostNames);
             this.hostNames = hostNames;
             return this;
@@ -1724,7 +1729,7 @@ public class RunInstancesRequest extends Request {
          * <strong>example:</strong>
          * <p>Ipv6Address.1=2001:db8:1234:1a00::***</p>
          */
-        public Builder ipv6Address(java.util.List < String > ipv6Address) {
+        public Builder ipv6Address(java.util.List<String> ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
             this.ipv6Address = ipv6Address;
             return this;
@@ -1841,7 +1846,7 @@ public class RunInstancesRequest extends Request {
         /**
          * <p>The information of the elastic network interfaces (ENIs).</p>
          */
-        public Builder networkInterface(java.util.List < NetworkInterface> networkInterface) {
+        public Builder networkInterface(java.util.List<NetworkInterface> networkInterface) {
             this.putQueryParameter("NetworkInterface", networkInterface);
             this.networkInterface = networkInterface;
             return this;
@@ -2100,7 +2105,7 @@ public class RunInstancesRequest extends Request {
          * <strong>example:</strong>
          * <p>sg-bp15ed6xe1yxeycg7****</p>
          */
-        public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+        public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
             this.securityGroupIds = securityGroupIds;
             return this;
@@ -2200,7 +2205,7 @@ public class RunInstancesRequest extends Request {
         /**
          * <p>The tags to add to the instance, disks, and primary ENI.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -3711,7 +3716,7 @@ public class RunInstancesRequest extends Request {
         private String instanceType;
 
         @com.aliyun.core.annotation.NameInMap("Ipv6Address")
-        private java.util.List < String > ipv6Address;
+        private java.util.List<String> ipv6Address;
 
         @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
         private Long ipv6AddressCount;
@@ -3744,7 +3749,7 @@ public class RunInstancesRequest extends Request {
         private String securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-        private java.util.List < String > securityGroupIds;
+        private java.util.List<String> securityGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("SourceDestCheck")
         private Boolean sourceDestCheck;
@@ -3808,7 +3813,7 @@ public class RunInstancesRequest extends Request {
         /**
          * @return ipv6Address
          */
-        public java.util.List < String > getIpv6Address() {
+        public java.util.List<String> getIpv6Address() {
             return this.ipv6Address;
         }
 
@@ -3885,7 +3890,7 @@ public class RunInstancesRequest extends Request {
         /**
          * @return securityGroupIds
          */
-        public java.util.List < String > getSecurityGroupIds() {
+        public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
@@ -3914,7 +3919,7 @@ public class RunInstancesRequest extends Request {
             private Boolean deleteOnRelease; 
             private String description; 
             private String instanceType; 
-            private java.util.List < String > ipv6Address; 
+            private java.util.List<String> ipv6Address; 
             private Long ipv6AddressCount; 
             private Integer networkCardIndex; 
             private String networkInterfaceId; 
@@ -3925,7 +3930,7 @@ public class RunInstancesRequest extends Request {
             private Long queuePairNumber; 
             private Integer rxQueueSize; 
             private String securityGroupId; 
-            private java.util.List < String > securityGroupIds; 
+            private java.util.List<String> securityGroupIds; 
             private Boolean sourceDestCheck; 
             private Integer txQueueSize; 
             private String vSwitchId; 
@@ -3992,7 +3997,7 @@ public class RunInstancesRequest extends Request {
              * <li>If you specify this parameter, you must set <code>Amount</code> to 1 and cannot specify <code>Ipv6AddressCount</code>, <code>Ipv6Address.N</code>, or <code>NetworkInterface.N.Ipv6AddressCount</code>.</li>
              * </ul>
              */
-            public Builder ipv6Address(java.util.List < String > ipv6Address) {
+            public Builder ipv6Address(java.util.List<String> ipv6Address) {
                 this.ipv6Address = ipv6Address;
                 return this;
             }
@@ -4185,7 +4190,7 @@ public class RunInstancesRequest extends Request {
              * <strong>example:</strong>
              * <p>sg-bp15ed6xe1yxeycg7****</p>
              */
-            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
                 return this;
             }

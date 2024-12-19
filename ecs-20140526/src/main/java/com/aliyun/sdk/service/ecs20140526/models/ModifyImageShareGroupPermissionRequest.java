@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyImageShareGroupPermissionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddGroup")
-    private java.util.List < String > addGroup;
+    private java.util.List<String> addGroup;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemoveGroup")
-    private java.util.List < String > removeGroup;
+    private java.util.List<String> removeGroup;
 
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("SourceRegionId")
@@ -79,14 +84,14 @@ public class ModifyImageShareGroupPermissionRequest extends Request {
     /**
      * @return addGroup
      */
-    public java.util.List < String > getAddGroup() {
+    public java.util.List<String> getAddGroup() {
         return this.addGroup;
     }
 
     /**
      * @return removeGroup
      */
-    public java.util.List < String > getRemoveGroup() {
+    public java.util.List<String> getRemoveGroup() {
         return this.removeGroup;
     }
 
@@ -140,8 +145,8 @@ public class ModifyImageShareGroupPermissionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyImageShareGroupPermissionRequest, Builder> {
-        private java.util.List < String > addGroup; 
-        private java.util.List < String > removeGroup; 
+        private java.util.List<String> addGroup; 
+        private java.util.List<String> removeGroup; 
         private String sourceRegionId; 
         private String imageId; 
         private String ownerAccount; 
@@ -170,7 +175,7 @@ public class ModifyImageShareGroupPermissionRequest extends Request {
         /**
          * AddGroup.
          */
-        public Builder addGroup(java.util.List < String > addGroup) {
+        public Builder addGroup(java.util.List<String> addGroup) {
             this.putQueryParameter("AddGroup", addGroup);
             this.addGroup = addGroup;
             return this;
@@ -179,7 +184,7 @@ public class ModifyImageShareGroupPermissionRequest extends Request {
         /**
          * RemoveGroup.
          */
-        public Builder removeGroup(java.util.List < String > removeGroup) {
+        public Builder removeGroup(java.util.List<String> removeGroup) {
             this.putQueryParameter("RemoveGroup", removeGroup);
             this.removeGroup = removeGroup;
             return this;

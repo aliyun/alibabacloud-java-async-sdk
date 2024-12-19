@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -294,7 +299,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
      */
     public static class Entries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Entry")
-        private java.util.List < Entry> entry;
+        private java.util.List<Entry> entry;
 
         private Entries(Builder builder) {
             this.entry = builder.entry;
@@ -311,17 +316,17 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         /**
          * @return entry
          */
-        public java.util.List < Entry> getEntry() {
+        public java.util.List<Entry> getEntry() {
             return this.entry;
         }
 
         public static final class Builder {
-            private java.util.List < Entry> entry; 
+            private java.util.List<Entry> entry; 
 
             /**
              * Entry.
              */
-            public Builder entry(java.util.List < Entry> entry) {
+            public Builder entry(java.util.List<Entry> entry) {
                 this.entry = entry;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeInstanceTypesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CpuArchitectures")
-    private java.util.List < String > cpuArchitectures;
+    private java.util.List<String> cpuArchitectures;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GPUSpec")
@@ -30,11 +35,11 @@ public class DescribeInstanceTypesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GpuSpecs")
-    private java.util.List < String > gpuSpecs;
+    private java.util.List<String> gpuSpecs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceCategories")
-    private java.util.List < String > instanceCategories;
+    private java.util.List<String> instanceCategories;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceCategory")
@@ -46,7 +51,7 @@ public class DescribeInstanceTypesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilies")
-    private java.util.List < String > instanceTypeFamilies;
+    private java.util.List<String> instanceTypeFamilies;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
@@ -54,11 +59,11 @@ public class DescribeInstanceTypesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypes")
-    private java.util.List < String > instanceTypes;
+    private java.util.List<String> instanceTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LocalStorageCategories")
-    private java.util.List < String > localStorageCategories;
+    private java.util.List<String> localStorageCategories;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LocalStorageCategory")
@@ -196,7 +201,7 @@ public class DescribeInstanceTypesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PhysicalProcessorModels")
-    private java.util.List < String > physicalProcessorModels;
+    private java.util.List<String> physicalProcessorModels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -288,7 +293,7 @@ public class DescribeInstanceTypesRequest extends Request {
     /**
      * @return cpuArchitectures
      */
-    public java.util.List < String > getCpuArchitectures() {
+    public java.util.List<String> getCpuArchitectures() {
         return this.cpuArchitectures;
     }
 
@@ -302,14 +307,14 @@ public class DescribeInstanceTypesRequest extends Request {
     /**
      * @return gpuSpecs
      */
-    public java.util.List < String > getGpuSpecs() {
+    public java.util.List<String> getGpuSpecs() {
         return this.gpuSpecs;
     }
 
     /**
      * @return instanceCategories
      */
-    public java.util.List < String > getInstanceCategories() {
+    public java.util.List<String> getInstanceCategories() {
         return this.instanceCategories;
     }
 
@@ -330,7 +335,7 @@ public class DescribeInstanceTypesRequest extends Request {
     /**
      * @return instanceTypeFamilies
      */
-    public java.util.List < String > getInstanceTypeFamilies() {
+    public java.util.List<String> getInstanceTypeFamilies() {
         return this.instanceTypeFamilies;
     }
 
@@ -344,14 +349,14 @@ public class DescribeInstanceTypesRequest extends Request {
     /**
      * @return instanceTypes
      */
-    public java.util.List < String > getInstanceTypes() {
+    public java.util.List<String> getInstanceTypes() {
         return this.instanceTypes;
     }
 
     /**
      * @return localStorageCategories
      */
-    public java.util.List < String > getLocalStorageCategories() {
+    public java.util.List<String> getLocalStorageCategories() {
         return this.localStorageCategories;
     }
 
@@ -589,7 +594,7 @@ public class DescribeInstanceTypesRequest extends Request {
     /**
      * @return physicalProcessorModels
      */
-    public java.util.List < String > getPhysicalProcessorModels() {
+    public java.util.List<String> getPhysicalProcessorModels() {
         return this.physicalProcessorModels;
     }
 
@@ -610,16 +615,16 @@ public class DescribeInstanceTypesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeInstanceTypesRequest, Builder> {
         private String sourceRegionId; 
         private String cpuArchitecture; 
-        private java.util.List < String > cpuArchitectures; 
+        private java.util.List<String> cpuArchitectures; 
         private String GPUSpec; 
-        private java.util.List < String > gpuSpecs; 
-        private java.util.List < String > instanceCategories; 
+        private java.util.List<String> gpuSpecs; 
+        private java.util.List<String> instanceCategories; 
         private String instanceCategory; 
         private String instanceFamilyLevel; 
-        private java.util.List < String > instanceTypeFamilies; 
+        private java.util.List<String> instanceTypeFamilies; 
         private String instanceTypeFamily; 
-        private java.util.List < String > instanceTypes; 
-        private java.util.List < String > localStorageCategories; 
+        private java.util.List<String> instanceTypes; 
+        private java.util.List<String> localStorageCategories; 
         private String localStorageCategory; 
         private Long maxResults; 
         private Integer maximumCpuCoreCount; 
@@ -653,7 +658,7 @@ public class DescribeInstanceTypesRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String physicalProcessorModel; 
-        private java.util.List < String > physicalProcessorModels; 
+        private java.util.List<String> physicalProcessorModels; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -748,7 +753,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * <li>ARM</li>
          * </ul>
          */
-        public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
+        public Builder cpuArchitectures(java.util.List<String> cpuArchitectures) {
             this.putQueryParameter("CpuArchitectures", cpuArchitectures);
             this.cpuArchitectures = cpuArchitectures;
             return this;
@@ -772,7 +777,7 @@ public class DescribeInstanceTypesRequest extends Request {
         /**
          * <p>The GPU models of instance types. Valid values of N: 1 to 10.</p>
          */
-        public Builder gpuSpecs(java.util.List < String > gpuSpecs) {
+        public Builder gpuSpecs(java.util.List<String> gpuSpecs) {
             this.putQueryParameter("GpuSpecs", gpuSpecs);
             this.gpuSpecs = gpuSpecs;
             return this;
@@ -802,7 +807,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * <li>High Performance Compute: high-performance computing instance type</li>
          * </ul>
          */
-        public Builder instanceCategories(java.util.List < String > instanceCategories) {
+        public Builder instanceCategories(java.util.List<String> instanceCategories) {
             this.putQueryParameter("InstanceCategories", instanceCategories);
             this.instanceCategories = instanceCategories;
             return this;
@@ -858,7 +863,7 @@ public class DescribeInstanceTypesRequest extends Request {
         /**
          * <p>The instance families of instance types that you want to query. Valid values of N: 1 to 10.</p>
          */
-        public Builder instanceTypeFamilies(java.util.List < String > instanceTypeFamilies) {
+        public Builder instanceTypeFamilies(java.util.List<String> instanceTypeFamilies) {
             this.putQueryParameter("InstanceTypeFamilies", instanceTypeFamilies);
             this.instanceTypeFamilies = instanceTypeFamilies;
             return this;
@@ -883,7 +888,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * <strong>example:</strong>
          * <p>ecs.g6.large</p>
          */
-        public Builder instanceTypes(java.util.List < String > instanceTypes) {
+        public Builder instanceTypes(java.util.List<String> instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
             this.instanceTypes = instanceTypes;
             return this;
@@ -896,7 +901,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * <li>local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances</li>
          * </ul>
          */
-        public Builder localStorageCategories(java.util.List < String > localStorageCategories) {
+        public Builder localStorageCategories(java.util.List<String> localStorageCategories) {
             this.putQueryParameter("LocalStorageCategories", localStorageCategories);
             this.localStorageCategories = localStorageCategories;
             return this;
@@ -1387,7 +1392,7 @@ public class DescribeInstanceTypesRequest extends Request {
         /**
          * <p>The CPU models of instance types. Valid values of N: 1 to 10.</p>
          */
-        public Builder physicalProcessorModels(java.util.List < String > physicalProcessorModels) {
+        public Builder physicalProcessorModels(java.util.List<String> physicalProcessorModels) {
             this.putQueryParameter("PhysicalProcessorModels", physicalProcessorModels);
             this.physicalProcessorModels = physicalProcessorModels;
             return this;

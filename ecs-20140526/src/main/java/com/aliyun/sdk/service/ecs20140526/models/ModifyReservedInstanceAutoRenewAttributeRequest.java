@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReservedInstanceId")
-    private java.util.List < String > reservedInstanceId;
+    private java.util.List<String> reservedInstanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -132,7 +137,7 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
     /**
      * @return reservedInstanceId
      */
-    public java.util.List < String > getReservedInstanceId() {
+    public java.util.List<String> getReservedInstanceId() {
         return this.reservedInstanceId;
     }
 
@@ -158,7 +163,7 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         private String periodUnit; 
         private String regionId; 
         private String renewalStatus; 
-        private java.util.List < String > reservedInstanceId; 
+        private java.util.List<String> reservedInstanceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -265,7 +270,7 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         /**
          * <p>The IDs of the reserved instances.</p>
          */
-        public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
+        public Builder reservedInstanceId(java.util.List<String> reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
             this.reservedInstanceId = reservedInstanceId;
             return this;

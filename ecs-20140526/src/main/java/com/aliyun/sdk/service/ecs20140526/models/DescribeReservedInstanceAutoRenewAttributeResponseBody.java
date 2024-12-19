@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -206,7 +211,7 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
      */
     public static class ReservedInstanceRenewAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReservedInstanceRenewAttribute")
-        private java.util.List < ReservedInstanceRenewAttribute> reservedInstanceRenewAttribute;
+        private java.util.List<ReservedInstanceRenewAttribute> reservedInstanceRenewAttribute;
 
         private ReservedInstanceRenewAttributes(Builder builder) {
             this.reservedInstanceRenewAttribute = builder.reservedInstanceRenewAttribute;
@@ -223,17 +228,17 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
         /**
          * @return reservedInstanceRenewAttribute
          */
-        public java.util.List < ReservedInstanceRenewAttribute> getReservedInstanceRenewAttribute() {
+        public java.util.List<ReservedInstanceRenewAttribute> getReservedInstanceRenewAttribute() {
             return this.reservedInstanceRenewAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < ReservedInstanceRenewAttribute> reservedInstanceRenewAttribute; 
+            private java.util.List<ReservedInstanceRenewAttribute> reservedInstanceRenewAttribute; 
 
             /**
              * ReservedInstanceRenewAttribute.
              */
-            public Builder reservedInstanceRenewAttribute(java.util.List < ReservedInstanceRenewAttribute> reservedInstanceRenewAttribute) {
+            public Builder reservedInstanceRenewAttribute(java.util.List<ReservedInstanceRenewAttribute> reservedInstanceRenewAttribute) {
                 this.reservedInstanceRenewAttribute = reservedInstanceRenewAttribute;
                 return this;
             }

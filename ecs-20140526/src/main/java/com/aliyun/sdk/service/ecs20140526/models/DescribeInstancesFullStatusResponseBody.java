@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -529,7 +534,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
      */
     public static class InactiveDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InactiveDisk")
-        private java.util.List < InactiveDisk> inactiveDisk;
+        private java.util.List<InactiveDisk> inactiveDisk;
 
         private InactiveDisks(Builder builder) {
             this.inactiveDisk = builder.inactiveDisk;
@@ -546,17 +551,17 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         /**
          * @return inactiveDisk
          */
-        public java.util.List < InactiveDisk> getInactiveDisk() {
+        public java.util.List<InactiveDisk> getInactiveDisk() {
             return this.inactiveDisk;
         }
 
         public static final class Builder {
-            private java.util.List < InactiveDisk> inactiveDisk; 
+            private java.util.List<InactiveDisk> inactiveDisk; 
 
             /**
              * InactiveDisk.
              */
-            public Builder inactiveDisk(java.util.List < InactiveDisk> inactiveDisk) {
+            public Builder inactiveDisk(java.util.List<InactiveDisk> inactiveDisk) {
                 this.inactiveDisk = inactiveDisk;
                 return this;
             }
@@ -890,7 +895,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
      */
     public static class ScheduledSystemEventSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScheduledSystemEventType")
-        private java.util.List < ScheduledSystemEventType> scheduledSystemEventType;
+        private java.util.List<ScheduledSystemEventType> scheduledSystemEventType;
 
         private ScheduledSystemEventSet(Builder builder) {
             this.scheduledSystemEventType = builder.scheduledSystemEventType;
@@ -907,17 +912,17 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         /**
          * @return scheduledSystemEventType
          */
-        public java.util.List < ScheduledSystemEventType> getScheduledSystemEventType() {
+        public java.util.List<ScheduledSystemEventType> getScheduledSystemEventType() {
             return this.scheduledSystemEventType;
         }
 
         public static final class Builder {
-            private java.util.List < ScheduledSystemEventType> scheduledSystemEventType; 
+            private java.util.List<ScheduledSystemEventType> scheduledSystemEventType; 
 
             /**
              * ScheduledSystemEventType.
              */
-            public Builder scheduledSystemEventType(java.util.List < ScheduledSystemEventType> scheduledSystemEventType) {
+            public Builder scheduledSystemEventType(java.util.List<ScheduledSystemEventType> scheduledSystemEventType) {
                 this.scheduledSystemEventType = scheduledSystemEventType;
                 return this;
             }
@@ -1120,7 +1125,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
      */
     public static class InstanceFullStatusSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceFullStatusType")
-        private java.util.List < InstanceFullStatusType> instanceFullStatusType;
+        private java.util.List<InstanceFullStatusType> instanceFullStatusType;
 
         private InstanceFullStatusSet(Builder builder) {
             this.instanceFullStatusType = builder.instanceFullStatusType;
@@ -1137,17 +1142,17 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         /**
          * @return instanceFullStatusType
          */
-        public java.util.List < InstanceFullStatusType> getInstanceFullStatusType() {
+        public java.util.List<InstanceFullStatusType> getInstanceFullStatusType() {
             return this.instanceFullStatusType;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceFullStatusType> instanceFullStatusType; 
+            private java.util.List<InstanceFullStatusType> instanceFullStatusType; 
 
             /**
              * InstanceFullStatusType.
              */
-            public Builder instanceFullStatusType(java.util.List < InstanceFullStatusType> instanceFullStatusType) {
+            public Builder instanceFullStatusType(java.util.List<InstanceFullStatusType> instanceFullStatusType) {
                 this.instanceFullStatusType = instanceFullStatusType;
                 return this;
             }

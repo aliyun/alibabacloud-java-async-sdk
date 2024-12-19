@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class StopInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instanceId;
+    private java.util.List<String> instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -117,7 +122,7 @@ public class StopInstancesRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -168,7 +173,7 @@ public class StopInstancesRequest extends Request {
         private String batchOptimization; 
         private Boolean dryRun; 
         private Boolean forceStop; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -267,7 +272,7 @@ public class StopInstancesRequest extends Request {
          * <strong>example:</strong>
          * <p>i-bp67acfmxazb4p****</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;

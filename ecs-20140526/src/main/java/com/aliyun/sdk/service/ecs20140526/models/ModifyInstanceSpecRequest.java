@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class ModifyInstanceSpecRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Disk")
-    private java.util.List < Disk> disk;
+    private java.util.List<Disk> disk;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
@@ -161,7 +166,7 @@ public class ModifyInstanceSpecRequest extends Request {
     /**
      * @return disk
      */
-    public java.util.List < Disk> getDisk() {
+    public java.util.List<Disk> getDisk() {
         return this.disk;
     }
 
@@ -242,7 +247,7 @@ public class ModifyInstanceSpecRequest extends Request {
         private Boolean allowMigrateAcrossZone; 
         private Boolean async; 
         private String clientToken; 
-        private java.util.List < Disk> disk; 
+        private java.util.List<Disk> disk; 
         private Boolean dryRun; 
         private String instanceId; 
         private String instanceType; 
@@ -362,7 +367,7 @@ public class ModifyInstanceSpecRequest extends Request {
         /**
          * Disk.
          */
-        public Builder disk(java.util.List < Disk> disk) {
+        public Builder disk(java.util.List<Disk> disk) {
             this.putQueryParameter("Disk", disk);
             this.disk = disk;
             return this;

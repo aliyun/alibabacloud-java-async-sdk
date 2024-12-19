@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class DescribeImageComponentsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageComponentId")
-    private java.util.List < String > imageComponentId;
+    private java.util.List<String> imageComponentId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -76,7 +81,7 @@ public class DescribeImageComponentsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeImageComponentsRequest(Builder builder) {
         super(builder);
@@ -135,7 +140,7 @@ public class DescribeImageComponentsRequest extends Request {
     /**
      * @return imageComponentId
      */
-    public java.util.List < String > getImageComponentId() {
+    public java.util.List<String> getImageComponentId() {
         return this.imageComponentId;
     }
 
@@ -219,7 +224,7 @@ public class DescribeImageComponentsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -227,7 +232,7 @@ public class DescribeImageComponentsRequest extends Request {
         private String sourceRegionId; 
         private String componentType; 
         private String componentVersion; 
-        private java.util.List < String > imageComponentId; 
+        private java.util.List<String> imageComponentId; 
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
@@ -239,7 +244,7 @@ public class DescribeImageComponentsRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String systemType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -312,7 +317,7 @@ public class DescribeImageComponentsRequest extends Request {
          * <strong>example:</strong>
          * <p>ic-bp67acfmxazb4p****</p>
          */
-        public Builder imageComponentId(java.util.List < String > imageComponentId) {
+        public Builder imageComponentId(java.util.List<String> imageComponentId) {
             this.putQueryParameter("ImageComponentId", imageComponentId);
             this.imageComponentId = imageComponentId;
             return this;
@@ -455,7 +460,7 @@ public class DescribeImageComponentsRequest extends Request {
         /**
          * <p>The tags of the image component.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

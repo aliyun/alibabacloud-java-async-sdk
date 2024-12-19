@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -526,7 +531,7 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
      */
     public static class PhysicalConnectionSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PhysicalConnectionType")
-        private java.util.List < PhysicalConnectionType> physicalConnectionType;
+        private java.util.List<PhysicalConnectionType> physicalConnectionType;
 
         private PhysicalConnectionSet(Builder builder) {
             this.physicalConnectionType = builder.physicalConnectionType;
@@ -543,17 +548,17 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         /**
          * @return physicalConnectionType
          */
-        public java.util.List < PhysicalConnectionType> getPhysicalConnectionType() {
+        public java.util.List<PhysicalConnectionType> getPhysicalConnectionType() {
             return this.physicalConnectionType;
         }
 
         public static final class Builder {
-            private java.util.List < PhysicalConnectionType> physicalConnectionType; 
+            private java.util.List<PhysicalConnectionType> physicalConnectionType; 
 
             /**
              * PhysicalConnectionType.
              */
-            public Builder physicalConnectionType(java.util.List < PhysicalConnectionType> physicalConnectionType) {
+            public Builder physicalConnectionType(java.util.List<PhysicalConnectionType> physicalConnectionType) {
                 this.physicalConnectionType = physicalConnectionType;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LaunchTemplateConfig")
-    private java.util.List < LaunchTemplateConfig> launchTemplateConfig;
+    private java.util.List<LaunchTemplateConfig> launchTemplateConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxSpotPrice")
@@ -136,7 +141,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
     /**
      * @return launchTemplateConfig
      */
-    public java.util.List < LaunchTemplateConfig> getLaunchTemplateConfig() {
+    public java.util.List<LaunchTemplateConfig> getLaunchTemplateConfig() {
         return this.launchTemplateConfig;
     }
 
@@ -215,7 +220,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         private String autoProvisioningGroupName; 
         private String defaultTargetCapacityType; 
         private String excessCapacityTerminationPolicy; 
-        private java.util.List < LaunchTemplateConfig> launchTemplateConfig; 
+        private java.util.List<LaunchTemplateConfig> launchTemplateConfig; 
         private Float maxSpotPrice; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -309,7 +314,7 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
         /**
          * <p>The extended configurations of the launch template.</p>
          */
-        public Builder launchTemplateConfig(java.util.List < LaunchTemplateConfig> launchTemplateConfig) {
+        public Builder launchTemplateConfig(java.util.List<LaunchTemplateConfig> launchTemplateConfig) {
             this.putQueryParameter("LaunchTemplateConfig", launchTemplateConfig);
             this.launchTemplateConfig = launchTemplateConfig;
             return this;

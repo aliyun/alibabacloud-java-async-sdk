@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -56,15 +61,15 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
-    private java.util.List < String > status;
+    private java.util.List<String> status;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageCapacityUnitId")
-    private java.util.List < String > storageCapacityUnitId;
+    private java.util.List<String> storageCapacityUnitId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeStorageCapacityUnitsRequest(Builder builder) {
         super(builder);
@@ -169,21 +174,21 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
     /**
      * @return storageCapacityUnitId
      */
-    public java.util.List < String > getStorageCapacityUnitId() {
+    public java.util.List<String> getStorageCapacityUnitId() {
         return this.storageCapacityUnitId;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -198,9 +203,9 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > status; 
-        private java.util.List < String > storageCapacityUnitId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> status; 
+        private java.util.List<String> storageCapacityUnitId; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -353,7 +358,7 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
          * <strong>example:</strong>
          * <p>Active</p>
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             this.putQueryParameter("Status", status);
             this.status = status;
             return this;
@@ -365,7 +370,7 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
          * <strong>example:</strong>
          * <p>scu-bp67acfmxazb4p****</p>
          */
-        public Builder storageCapacityUnitId(java.util.List < String > storageCapacityUnitId) {
+        public Builder storageCapacityUnitId(java.util.List<String> storageCapacityUnitId) {
             this.putQueryParameter("StorageCapacityUnitId", storageCapacityUnitId);
             this.storageCapacityUnitId = storageCapacityUnitId;
             return this;
@@ -374,7 +379,7 @@ public class DescribeStorageCapacityUnitsRequest extends Request {
         /**
          * <p>The tags of the SCUs.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

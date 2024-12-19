@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -139,7 +144,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      */
     public static class BandwidthPackageIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
-        private java.util.List < String > bandwidthPackageId;
+        private java.util.List<String> bandwidthPackageId;
 
         private BandwidthPackageIds(Builder builder) {
             this.bandwidthPackageId = builder.bandwidthPackageId;
@@ -156,17 +161,17 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         /**
          * @return bandwidthPackageId
          */
-        public java.util.List < String > getBandwidthPackageId() {
+        public java.util.List<String> getBandwidthPackageId() {
             return this.bandwidthPackageId;
         }
 
         public static final class Builder {
-            private java.util.List < String > bandwidthPackageId; 
+            private java.util.List<String> bandwidthPackageId; 
 
             /**
              * BandwidthPackageId.
              */
-            public Builder bandwidthPackageId(java.util.List < String > bandwidthPackageId) {
+            public Builder bandwidthPackageId(java.util.List<String> bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
                 return this;
             }
@@ -186,7 +191,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      */
     public static class ForwardTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardTableId")
-        private java.util.List < String > forwardTableId;
+        private java.util.List<String> forwardTableId;
 
         private ForwardTableIds(Builder builder) {
             this.forwardTableId = builder.forwardTableId;
@@ -203,17 +208,17 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         /**
          * @return forwardTableId
          */
-        public java.util.List < String > getForwardTableId() {
+        public java.util.List<String> getForwardTableId() {
             return this.forwardTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > forwardTableId; 
+            private java.util.List<String> forwardTableId; 
 
             /**
              * ForwardTableId.
              */
-            public Builder forwardTableId(java.util.List < String > forwardTableId) {
+            public Builder forwardTableId(java.util.List<String> forwardTableId) {
                 this.forwardTableId = forwardTableId;
                 return this;
             }
@@ -500,7 +505,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
      */
     public static class NatGateways extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NatGateway")
-        private java.util.List < NatGateway> natGateway;
+        private java.util.List<NatGateway> natGateway;
 
         private NatGateways(Builder builder) {
             this.natGateway = builder.natGateway;
@@ -517,17 +522,17 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         /**
          * @return natGateway
          */
-        public java.util.List < NatGateway> getNatGateway() {
+        public java.util.List<NatGateway> getNatGateway() {
             return this.natGateway;
         }
 
         public static final class Builder {
-            private java.util.List < NatGateway> natGateway; 
+            private java.util.List<NatGateway> natGateway; 
 
             /**
              * NatGateway.
              */
-            public Builder natGateway(java.util.List < NatGateway> natGateway) {
+            public Builder natGateway(java.util.List<NatGateway> natGateway) {
                 this.natGateway = natGateway;
                 return this;
             }

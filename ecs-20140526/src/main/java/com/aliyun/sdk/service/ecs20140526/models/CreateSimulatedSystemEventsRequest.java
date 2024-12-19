@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class CreateSimulatedSystemEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instanceId;
+    private java.util.List<String> instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NotBefore")
@@ -95,7 +100,7 @@ public class CreateSimulatedSystemEventsRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -144,7 +149,7 @@ public class CreateSimulatedSystemEventsRequest extends Request {
     public static final class Builder extends Request.Builder<CreateSimulatedSystemEventsRequest, Builder> {
         private String sourceRegionId; 
         private String eventType; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private String notBefore; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -207,7 +212,7 @@ public class CreateSimulatedSystemEventsRequest extends Request {
          * <strong>example:</strong>
          * <p>i-bp1gtjxuuvwj17zr****</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;

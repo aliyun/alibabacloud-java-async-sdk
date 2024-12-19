@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfacePermissionId")
-    private java.util.List < String > networkInterfacePermissionId;
+    private java.util.List<String> networkInterfacePermissionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -97,7 +102,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
     /**
      * @return networkInterfacePermissionId
      */
-    public java.util.List < String > getNetworkInterfacePermissionId() {
+    public java.util.List<String> getNetworkInterfacePermissionId() {
         return this.networkInterfacePermissionId;
     }
 
@@ -153,7 +158,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeNetworkInterfacePermissionsRequest, Builder> {
         private String sourceRegionId; 
         private String networkInterfaceId; 
-        private java.util.List < String > networkInterfacePermissionId; 
+        private java.util.List<String> networkInterfacePermissionId; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -207,7 +212,7 @@ public class DescribeNetworkInterfacePermissionsRequest extends Request {
          * <strong>example:</strong>
          * <p>eni-perm-bp1cs4lwn56lfb****</p>
          */
-        public Builder networkInterfacePermissionId(java.util.List < String > networkInterfacePermissionId) {
+        public Builder networkInterfacePermissionId(java.util.List<String> networkInterfacePermissionId) {
             this.putQueryParameter("NetworkInterfacePermissionId", networkInterfacePermissionId);
             this.networkInterfacePermissionId = networkInterfacePermissionId;
             return this;

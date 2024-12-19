@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -322,7 +327,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
      */
     public static class NetworkInterfacePermissions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkInterfacePermission")
-        private java.util.List < NetworkInterfacePermission> networkInterfacePermission;
+        private java.util.List<NetworkInterfacePermission> networkInterfacePermission;
 
         private NetworkInterfacePermissions(Builder builder) {
             this.networkInterfacePermission = builder.networkInterfacePermission;
@@ -339,17 +344,17 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
         /**
          * @return networkInterfacePermission
          */
-        public java.util.List < NetworkInterfacePermission> getNetworkInterfacePermission() {
+        public java.util.List<NetworkInterfacePermission> getNetworkInterfacePermission() {
             return this.networkInterfacePermission;
         }
 
         public static final class Builder {
-            private java.util.List < NetworkInterfacePermission> networkInterfacePermission; 
+            private java.util.List<NetworkInterfacePermission> networkInterfacePermission; 
 
             /**
              * NetworkInterfacePermission.
              */
-            public Builder networkInterfacePermission(java.util.List < NetworkInterfacePermission> networkInterfacePermission) {
+            public Builder networkInterfacePermission(java.util.List<NetworkInterfacePermission> networkInterfacePermission) {
                 this.networkInterfacePermission = networkInterfacePermission;
                 return this;
             }

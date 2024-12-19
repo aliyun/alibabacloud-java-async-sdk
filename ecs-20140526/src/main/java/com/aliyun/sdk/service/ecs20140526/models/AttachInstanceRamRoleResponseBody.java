@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,7 +275,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
      */
     public static class AttachInstanceRamRoleResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachInstanceRamRoleResult")
-        private java.util.List < AttachInstanceRamRoleResult> attachInstanceRamRoleResult;
+        private java.util.List<AttachInstanceRamRoleResult> attachInstanceRamRoleResult;
 
         private AttachInstanceRamRoleResults(Builder builder) {
             this.attachInstanceRamRoleResult = builder.attachInstanceRamRoleResult;
@@ -287,17 +292,17 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         /**
          * @return attachInstanceRamRoleResult
          */
-        public java.util.List < AttachInstanceRamRoleResult> getAttachInstanceRamRoleResult() {
+        public java.util.List<AttachInstanceRamRoleResult> getAttachInstanceRamRoleResult() {
             return this.attachInstanceRamRoleResult;
         }
 
         public static final class Builder {
-            private java.util.List < AttachInstanceRamRoleResult> attachInstanceRamRoleResult; 
+            private java.util.List<AttachInstanceRamRoleResult> attachInstanceRamRoleResult; 
 
             /**
              * AttachInstanceRamRoleResult.
              */
-            public Builder attachInstanceRamRoleResult(java.util.List < AttachInstanceRamRoleResult> attachInstanceRamRoleResult) {
+            public Builder attachInstanceRamRoleResult(java.util.List<AttachInstanceRamRoleResult> attachInstanceRamRoleResult) {
                 this.attachInstanceRamRoleResult = attachInstanceRamRoleResult;
                 return this;
             }

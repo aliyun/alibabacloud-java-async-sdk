@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -229,7 +234,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
      */
     public static class Issues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Issue")
-        private java.util.List < Issue> issue;
+        private java.util.List<Issue> issue;
 
         private Issues(Builder builder) {
             this.issue = builder.issue;
@@ -246,17 +251,17 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         /**
          * @return issue
          */
-        public java.util.List < Issue> getIssue() {
+        public java.util.List<Issue> getIssue() {
             return this.issue;
         }
 
         public static final class Builder {
-            private java.util.List < Issue> issue; 
+            private java.util.List<Issue> issue; 
 
             /**
              * Issue.
              */
-            public Builder issue(java.util.List < Issue> issue) {
+            public Builder issue(java.util.List<Issue> issue) {
                 this.issue = issue;
                 return this;
             }
@@ -560,7 +565,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
      */
     public static class Reports extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Report")
-        private java.util.List < Report> report;
+        private java.util.List<Report> report;
 
         private Reports(Builder builder) {
             this.report = builder.report;
@@ -577,17 +582,17 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
         /**
          * @return report
          */
-        public java.util.List < Report> getReport() {
+        public java.util.List<Report> getReport() {
             return this.report;
         }
 
         public static final class Builder {
-            private java.util.List < Report> report; 
+            private java.util.List<Report> report; 
 
             /**
              * Report.
              */
-            public Builder report(java.util.List < Report> report) {
+            public Builder report(java.util.List<Report> report) {
                 this.report = report;
                 return this;
             }

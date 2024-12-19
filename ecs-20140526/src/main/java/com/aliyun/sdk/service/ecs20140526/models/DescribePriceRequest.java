@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribePriceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDisk")
-    private java.util.List < DataDisk> dataDisk;
+    private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SchedulerOptions")
@@ -66,7 +71,7 @@ public class DescribePriceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypeList")
-    private java.util.List < String > instanceTypeList;
+    private java.util.List<String> instanceTypeList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InternetChargeType")
@@ -193,7 +198,7 @@ public class DescribePriceRequest extends Request {
     /**
      * @return dataDisk
      */
-    public java.util.List < DataDisk> getDataDisk() {
+    public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
     }
 
@@ -284,7 +289,7 @@ public class DescribePriceRequest extends Request {
     /**
      * @return instanceTypeList
      */
-    public java.util.List < String > getInstanceTypeList() {
+    public java.util.List<String> getInstanceTypeList() {
         return this.instanceTypeList;
     }
 
@@ -415,7 +420,7 @@ public class DescribePriceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribePriceRequest, Builder> {
-        private java.util.List < DataDisk> dataDisk; 
+        private java.util.List<DataDisk> dataDisk; 
         private SchedulerOptions schedulerOptions; 
         private SystemDisk systemDisk; 
         private String sourceRegionId; 
@@ -428,7 +433,7 @@ public class DescribePriceRequest extends Request {
         private Integer instanceCpuCoreCount; 
         private String instanceNetworkType; 
         private String instanceType; 
-        private java.util.List < String > instanceTypeList; 
+        private java.util.List<String> instanceTypeList; 
         private String internetChargeType; 
         private Integer internetMaxBandwidthOut; 
         private String ioOptimized; 
@@ -491,7 +496,7 @@ public class DescribePriceRequest extends Request {
         /**
          * DataDisk.
          */
-        public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+        public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;
@@ -650,7 +655,7 @@ public class DescribePriceRequest extends Request {
          * <strong>example:</strong>
          * <p>ecs.g6.xlarge</p>
          */
-        public Builder instanceTypeList(java.util.List < String > instanceTypeList) {
+        public Builder instanceTypeList(java.util.List<String> instanceTypeList) {
             this.putQueryParameter("InstanceTypeList", instanceTypeList);
             this.instanceTypeList = instanceTypeList;
             return this;
@@ -956,10 +961,14 @@ public class DescribePriceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
+        private Long provisionedIops;
+
         private DataDisk(Builder builder) {
             this.category = builder.category;
             this.performanceLevel = builder.performanceLevel;
             this.size = builder.size;
+            this.provisionedIops = builder.provisionedIops;
         }
 
         public static Builder builder() {
@@ -991,10 +1000,18 @@ public class DescribePriceRequest extends Request {
             return this.size;
         }
 
+        /**
+         * @return provisionedIops
+         */
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
         public static final class Builder {
             private String category; 
             private String performanceLevel; 
             private Long size; 
+            private Long provisionedIops; 
 
             /**
              * <p>The category of data disk N. Valid values:</p>
@@ -1063,6 +1080,14 @@ public class DescribePriceRequest extends Request {
              */
             public Builder size(Long size) {
                 this.size = size;
+                return this;
+            }
+
+            /**
+             * ProvisionedIops.
+             */
+            public Builder provisionedIops(Long provisionedIops) {
+                this.provisionedIops = provisionedIops;
                 return this;
             }
 

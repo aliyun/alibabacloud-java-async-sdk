@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,7 +275,7 @@ public class DescribeDisksResponseBody extends TeaModel {
      */
     public static class Attachments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attachment")
-        private java.util.List < Attachment> attachment;
+        private java.util.List<Attachment> attachment;
 
         private Attachments(Builder builder) {
             this.attachment = builder.attachment;
@@ -287,17 +292,17 @@ public class DescribeDisksResponseBody extends TeaModel {
         /**
          * @return attachment
          */
-        public java.util.List < Attachment> getAttachment() {
+        public java.util.List<Attachment> getAttachment() {
             return this.attachment;
         }
 
         public static final class Builder {
-            private java.util.List < Attachment> attachment; 
+            private java.util.List<Attachment> attachment; 
 
             /**
              * Attachment.
              */
-            public Builder attachment(java.util.List < Attachment> attachment) {
+            public Builder attachment(java.util.List<Attachment> attachment) {
                 this.attachment = attachment;
                 return this;
             }
@@ -413,7 +418,7 @@ public class DescribeDisksResponseBody extends TeaModel {
      */
     public static class MountInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountInstance")
-        private java.util.List < MountInstance> mountInstance;
+        private java.util.List<MountInstance> mountInstance;
 
         private MountInstances(Builder builder) {
             this.mountInstance = builder.mountInstance;
@@ -430,17 +435,17 @@ public class DescribeDisksResponseBody extends TeaModel {
         /**
          * @return mountInstance
          */
-        public java.util.List < MountInstance> getMountInstance() {
+        public java.util.List<MountInstance> getMountInstance() {
             return this.mountInstance;
         }
 
         public static final class Builder {
-            private java.util.List < MountInstance> mountInstance; 
+            private java.util.List<MountInstance> mountInstance; 
 
             /**
              * MountInstance.
              */
-            public Builder mountInstance(java.util.List < MountInstance> mountInstance) {
+            public Builder mountInstance(java.util.List<MountInstance> mountInstance) {
                 this.mountInstance = mountInstance;
                 return this;
             }
@@ -510,7 +515,7 @@ public class DescribeDisksResponseBody extends TeaModel {
      */
     public static class OperationLocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationLock")
-        private java.util.List < OperationLock> operationLock;
+        private java.util.List<OperationLock> operationLock;
 
         private OperationLocks(Builder builder) {
             this.operationLock = builder.operationLock;
@@ -527,17 +532,17 @@ public class DescribeDisksResponseBody extends TeaModel {
         /**
          * @return operationLock
          */
-        public java.util.List < OperationLock> getOperationLock() {
+        public java.util.List<OperationLock> getOperationLock() {
             return this.operationLock;
         }
 
         public static final class Builder {
-            private java.util.List < OperationLock> operationLock; 
+            private java.util.List<OperationLock> operationLock; 
 
             /**
              * OperationLock.
              */
-            public Builder operationLock(java.util.List < OperationLock> operationLock) {
+            public Builder operationLock(java.util.List<OperationLock> operationLock) {
                 this.operationLock = operationLock;
                 return this;
             }
@@ -681,7 +686,7 @@ public class DescribeDisksResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -698,17 +703,17 @@ public class DescribeDisksResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1934,7 +1939,7 @@ public class DescribeDisksResponseBody extends TeaModel {
      */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disk")
-        private java.util.List < Disk> disk;
+        private java.util.List<Disk> disk;
 
         private Disks(Builder builder) {
             this.disk = builder.disk;
@@ -1951,17 +1956,17 @@ public class DescribeDisksResponseBody extends TeaModel {
         /**
          * @return disk
          */
-        public java.util.List < Disk> getDisk() {
+        public java.util.List<Disk> getDisk() {
             return this.disk;
         }
 
         public static final class Builder {
-            private java.util.List < Disk> disk; 
+            private java.util.List<Disk> disk; 
 
             /**
              * Disk.
              */
-            public Builder disk(java.util.List < Disk> disk) {
+            public Builder disk(java.util.List<Disk> disk) {
                 this.disk = disk;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DescribeHaVipsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -75,7 +80,7 @@ public class DescribeHaVipsRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -129,7 +134,7 @@ public class DescribeHaVipsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeHaVipsRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -157,7 +162,7 @@ public class DescribeHaVipsRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
@@ -244,7 +249,7 @@ public class DescribeHaVipsRequest extends Request {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.key = builder.key;
@@ -269,13 +274,13 @@ public class DescribeHaVipsRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
              * Key.
@@ -288,7 +293,7 @@ public class DescribeHaVipsRequest extends Request {
             /**
              * Value.
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class CreateNetworkInterfaceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv4Prefix")
-    private java.util.List < String > ipv4Prefix;
+    private java.util.List<String> ipv4Prefix;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv4PrefixCount")
@@ -55,7 +60,7 @@ public class CreateNetworkInterfaceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6Address")
-    private java.util.List < String > ipv6Address;
+    private java.util.List<String> ipv6Address;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
@@ -63,7 +68,7 @@ public class CreateNetworkInterfaceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6Prefix")
-    private java.util.List < String > ipv6Prefix;
+    private java.util.List<String> ipv6Prefix;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6PrefixCount")
@@ -96,7 +101,7 @@ public class CreateNetworkInterfaceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
-    private java.util.List < String > privateIpAddress;
+    private java.util.List<String> privateIpAddress;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueueNumber")
@@ -137,7 +142,7 @@ public class CreateNetworkInterfaceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-    private java.util.List < String > securityGroupIds;
+    private java.util.List<String> securityGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceDestCheck")
@@ -145,7 +150,7 @@ public class CreateNetworkInterfaceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TxQueueSize")
@@ -272,7 +277,7 @@ public class CreateNetworkInterfaceRequest extends Request {
     /**
      * @return ipv4Prefix
      */
-    public java.util.List < String > getIpv4Prefix() {
+    public java.util.List<String> getIpv4Prefix() {
         return this.ipv4Prefix;
     }
 
@@ -286,7 +291,7 @@ public class CreateNetworkInterfaceRequest extends Request {
     /**
      * @return ipv6Address
      */
-    public java.util.List < String > getIpv6Address() {
+    public java.util.List<String> getIpv6Address() {
         return this.ipv6Address;
     }
 
@@ -300,7 +305,7 @@ public class CreateNetworkInterfaceRequest extends Request {
     /**
      * @return ipv6Prefix
      */
-    public java.util.List < String > getIpv6Prefix() {
+    public java.util.List<String> getIpv6Prefix() {
         return this.ipv6Prefix;
     }
 
@@ -356,7 +361,7 @@ public class CreateNetworkInterfaceRequest extends Request {
     /**
      * @return privateIpAddress
      */
-    public java.util.List < String > getPrivateIpAddress() {
+    public java.util.List<String> getPrivateIpAddress() {
         return this.privateIpAddress;
     }
 
@@ -426,7 +431,7 @@ public class CreateNetworkInterfaceRequest extends Request {
     /**
      * @return securityGroupIds
      */
-    public java.util.List < String > getSecurityGroupIds() {
+    public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -440,7 +445,7 @@ public class CreateNetworkInterfaceRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -474,11 +479,11 @@ public class CreateNetworkInterfaceRequest extends Request {
         private String description; 
         private EnhancedNetwork enhancedNetwork; 
         private String instanceType; 
-        private java.util.List < String > ipv4Prefix; 
+        private java.util.List<String> ipv4Prefix; 
         private Integer ipv4PrefixCount; 
-        private java.util.List < String > ipv6Address; 
+        private java.util.List<String> ipv6Address; 
         private Integer ipv6AddressCount; 
-        private java.util.List < String > ipv6Prefix; 
+        private java.util.List<String> ipv6Prefix; 
         private Integer ipv6PrefixCount; 
         private String networkInterfaceName; 
         private NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig; 
@@ -486,7 +491,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String primaryIpAddress; 
-        private java.util.List < String > privateIpAddress; 
+        private java.util.List<String> privateIpAddress; 
         private Integer queueNumber; 
         private Integer queuePairNumber; 
         private String regionId; 
@@ -496,9 +501,9 @@ public class CreateNetworkInterfaceRequest extends Request {
         private Integer rxQueueSize; 
         private Integer secondaryPrivateIpAddressCount; 
         private String securityGroupId; 
-        private java.util.List < String > securityGroupIds; 
+        private java.util.List<String> securityGroupIds; 
         private Boolean sourceDestCheck; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private Integer txQueueSize; 
         private String vSwitchId; 
         private Boolean visible; 
@@ -656,7 +661,7 @@ public class CreateNetworkInterfaceRequest extends Request {
          * <p> To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</p>
          * </blockquote>
          */
-        public Builder ipv4Prefix(java.util.List < String > ipv4Prefix) {
+        public Builder ipv4Prefix(java.util.List<String> ipv4Prefix) {
             this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
             this.ipv4Prefix = ipv4Prefix;
             return this;
@@ -687,7 +692,7 @@ public class CreateNetworkInterfaceRequest extends Request {
          * <strong>example:</strong>
          * <p>2001:db8:1234:1a00::****</p>
          */
-        public Builder ipv6Address(java.util.List < String > ipv6Address) {
+        public Builder ipv6Address(java.util.List<String> ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
             this.ipv6Address = ipv6Address;
             return this;
@@ -714,7 +719,7 @@ public class CreateNetworkInterfaceRequest extends Request {
          * <p> To assign IPv6 prefixes to the ENI, you must specify the Ipv6Prefix.N or Ipv6PrefixCount parameter, but not both.</p>
          * </blockquote>
          */
-        public Builder ipv6Prefix(java.util.List < String > ipv6Prefix) {
+        public Builder ipv6Prefix(java.util.List<String> ipv6Prefix) {
             this.putQueryParameter("Ipv6Prefix", ipv6Prefix);
             this.ipv6Prefix = ipv6Prefix;
             return this;
@@ -817,7 +822,7 @@ public class CreateNetworkInterfaceRequest extends Request {
          * <strong>example:</strong>
          * <p><code>172.17.**.**</code></p>
          */
-        public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
+        public Builder privateIpAddress(java.util.List<String> privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
             this.privateIpAddress = privateIpAddress;
             return this;
@@ -947,7 +952,7 @@ public class CreateNetworkInterfaceRequest extends Request {
          * <strong>example:</strong>
          * <p>sg-bp1fg655nh68xyz9i****</p>
          */
-        public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+        public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
             this.securityGroupIds = securityGroupIds;
             return this;
@@ -970,7 +975,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         /**
          * <p>The tags to add to the ENI.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

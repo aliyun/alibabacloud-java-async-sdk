@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -241,17 +246,17 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -552,7 +557,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
      */
     public static class StorageCapacityUnits extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageCapacityUnit")
-        private java.util.List < StorageCapacityUnit> storageCapacityUnit;
+        private java.util.List<StorageCapacityUnit> storageCapacityUnit;
 
         private StorageCapacityUnits(Builder builder) {
             this.storageCapacityUnit = builder.storageCapacityUnit;
@@ -569,17 +574,17 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         /**
          * @return storageCapacityUnit
          */
-        public java.util.List < StorageCapacityUnit> getStorageCapacityUnit() {
+        public java.util.List<StorageCapacityUnit> getStorageCapacityUnit() {
             return this.storageCapacityUnit;
         }
 
         public static final class Builder {
-            private java.util.List < StorageCapacityUnit> storageCapacityUnit; 
+            private java.util.List<StorageCapacityUnit> storageCapacityUnit; 
 
             /**
              * StorageCapacityUnit.
              */
-            public Builder storageCapacityUnit(java.util.List < StorageCapacityUnit> storageCapacityUnit) {
+            public Builder storageCapacityUnit(java.util.List<StorageCapacityUnit> storageCapacityUnit) {
                 this.storageCapacityUnit = storageCapacityUnit;
                 return this;
             }

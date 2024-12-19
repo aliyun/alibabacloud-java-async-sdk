@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
      */
     public static class SupportedValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedValue")
-        private java.util.List < String > supportedValue;
+        private java.util.List<String> supportedValue;
 
         private SupportedValues(Builder builder) {
             this.supportedValue = builder.supportedValue;
@@ -168,17 +173,17 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         /**
          * @return supportedValue
          */
-        public java.util.List < String > getSupportedValue() {
+        public java.util.List<String> getSupportedValue() {
             return this.supportedValue;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedValue; 
+            private java.util.List<String> supportedValue; 
 
             /**
              * SupportedValue.
              */
-            public Builder supportedValue(java.util.List < String > supportedValue) {
+            public Builder supportedValue(java.util.List<String> supportedValue) {
                 this.supportedValue = supportedValue;
                 return this;
             }
@@ -369,7 +374,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
      */
     public static class MaintenanceWindows extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaintenanceWindow")
-        private java.util.List < MaintenanceWindow> maintenanceWindow;
+        private java.util.List<MaintenanceWindow> maintenanceWindow;
 
         private MaintenanceWindows(Builder builder) {
             this.maintenanceWindow = builder.maintenanceWindow;
@@ -386,17 +391,17 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         /**
          * @return maintenanceWindow
          */
-        public java.util.List < MaintenanceWindow> getMaintenanceWindow() {
+        public java.util.List<MaintenanceWindow> getMaintenanceWindow() {
             return this.maintenanceWindow;
         }
 
         public static final class Builder {
-            private java.util.List < MaintenanceWindow> maintenanceWindow; 
+            private java.util.List<MaintenanceWindow> maintenanceWindow; 
 
             /**
              * MaintenanceWindow.
              */
-            public Builder maintenanceWindow(java.util.List < MaintenanceWindow> maintenanceWindow) {
+            public Builder maintenanceWindow(java.util.List<MaintenanceWindow> maintenanceWindow) {
                 this.maintenanceWindow = maintenanceWindow;
                 return this;
             }
@@ -529,7 +534,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
      */
     public static class MaintenanceAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaintenanceAttribute")
-        private java.util.List < MaintenanceAttribute> maintenanceAttribute;
+        private java.util.List<MaintenanceAttribute> maintenanceAttribute;
 
         private MaintenanceAttributes(Builder builder) {
             this.maintenanceAttribute = builder.maintenanceAttribute;
@@ -546,17 +551,17 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         /**
          * @return maintenanceAttribute
          */
-        public java.util.List < MaintenanceAttribute> getMaintenanceAttribute() {
+        public java.util.List<MaintenanceAttribute> getMaintenanceAttribute() {
             return this.maintenanceAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < MaintenanceAttribute> maintenanceAttribute; 
+            private java.util.List<MaintenanceAttribute> maintenanceAttribute; 
 
             /**
              * MaintenanceAttribute.
              */
-            public Builder maintenanceAttribute(java.util.List < MaintenanceAttribute> maintenanceAttribute) {
+            public Builder maintenanceAttribute(java.util.List<MaintenanceAttribute> maintenanceAttribute) {
                 this.maintenanceAttribute = maintenanceAttribute;
                 return this;
             }

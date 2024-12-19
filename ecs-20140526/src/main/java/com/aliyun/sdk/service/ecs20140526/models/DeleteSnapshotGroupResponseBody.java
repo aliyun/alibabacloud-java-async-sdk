@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
      */
     public static class RelatedItemSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RelatedItem")
-        private java.util.List < RelatedItem> relatedItem;
+        private java.util.List<RelatedItem> relatedItem;
 
         private RelatedItemSet(Builder builder) {
             this.relatedItem = builder.relatedItem;
@@ -172,17 +177,17 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
         /**
          * @return relatedItem
          */
-        public java.util.List < RelatedItem> getRelatedItem() {
+        public java.util.List<RelatedItem> getRelatedItem() {
             return this.relatedItem;
         }
 
         public static final class Builder {
-            private java.util.List < RelatedItem> relatedItem; 
+            private java.util.List<RelatedItem> relatedItem; 
 
             /**
              * RelatedItem.
              */
-            public Builder relatedItem(java.util.List < RelatedItem> relatedItem) {
+            public Builder relatedItem(java.util.List<RelatedItem> relatedItem) {
                 this.relatedItem = relatedItem;
                 return this;
             }
@@ -320,7 +325,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
      */
     public static class OperationProgressSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationProgress")
-        private java.util.List < OperationProgress> operationProgress;
+        private java.util.List<OperationProgress> operationProgress;
 
         private OperationProgressSet(Builder builder) {
             this.operationProgress = builder.operationProgress;
@@ -337,17 +342,17 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
         /**
          * @return operationProgress
          */
-        public java.util.List < OperationProgress> getOperationProgress() {
+        public java.util.List<OperationProgress> getOperationProgress() {
             return this.operationProgress;
         }
 
         public static final class Builder {
-            private java.util.List < OperationProgress> operationProgress; 
+            private java.util.List<OperationProgress> operationProgress; 
 
             /**
              * OperationProgress.
              */
-            public Builder operationProgress(java.util.List < OperationProgress> operationProgress) {
+            public Builder operationProgress(java.util.List<OperationProgress> operationProgress) {
                 this.operationProgress = operationProgress;
                 return this;
             }

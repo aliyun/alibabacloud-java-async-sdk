@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6Address")
-    private java.util.List < String > ipv6Address;
+    private java.util.List<String> ipv6Address;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -30,7 +35,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
-    private java.util.List < String > networkInterfaceId;
+    private java.util.List<String> networkInterfaceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceName")
@@ -64,7 +69,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
-    private java.util.List < String > privateIpAddress;
+    private java.util.List<String> privateIpAddress;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -97,7 +102,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -169,7 +174,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
     /**
      * @return ipv6Address
      */
-    public java.util.List < String > getIpv6Address() {
+    public java.util.List<String> getIpv6Address() {
         return this.ipv6Address;
     }
 
@@ -183,7 +188,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
     /**
      * @return networkInterfaceId
      */
-    public java.util.List < String > getNetworkInterfaceId() {
+    public java.util.List<String> getNetworkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -239,7 +244,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
     /**
      * @return privateIpAddress
      */
-    public java.util.List < String > getPrivateIpAddress() {
+    public java.util.List<String> getPrivateIpAddress() {
         return this.privateIpAddress;
     }
 
@@ -295,7 +300,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -323,9 +328,9 @@ public class DescribeNetworkInterfacesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeNetworkInterfacesRequest, Builder> {
         private String sourceRegionId; 
         private String instanceId; 
-        private java.util.List < String > ipv6Address; 
+        private java.util.List<String> ipv6Address; 
         private Integer maxResults; 
-        private java.util.List < String > networkInterfaceId; 
+        private java.util.List<String> networkInterfaceId; 
         private String networkInterfaceName; 
         private String nextToken; 
         private String ownerAccount; 
@@ -333,7 +338,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String primaryIpAddress; 
-        private java.util.List < String > privateIpAddress; 
+        private java.util.List<String> privateIpAddress; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -341,7 +346,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         private String securityGroupId; 
         private Boolean serviceManaged; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String type; 
         private String vSwitchId; 
         private String vpcId; 
@@ -405,7 +410,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
          * <strong>example:</strong>
          * <p>2408:4321:180:1701:94c7:bc38:3bfa:****</p>
          */
-        public Builder ipv6Address(java.util.List < String > ipv6Address) {
+        public Builder ipv6Address(java.util.List<String> ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
             this.ipv6Address = ipv6Address;
             return this;
@@ -434,7 +439,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
          * <strong>example:</strong>
          * <p>eni-bp125p95hhdhn3ot****</p>
          */
-        public Builder networkInterfaceId(java.util.List < String > networkInterfaceId) {
+        public Builder networkInterfaceId(java.util.List<String> networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
             this.networkInterfaceId = networkInterfaceId;
             return this;
@@ -535,7 +540,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
          * <strong>example:</strong>
          * <p><code>192.168.**.**</code></p>
          */
-        public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
+        public Builder privateIpAddress(java.util.List<String> privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
             this.privateIpAddress = privateIpAddress;
             return this;
@@ -638,7 +643,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         /**
          * <p>The tags to use for query.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

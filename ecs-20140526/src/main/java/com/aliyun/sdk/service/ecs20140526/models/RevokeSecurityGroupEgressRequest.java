@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -80,7 +85,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Permissions")
-    private java.util.List < Permissions> permissions;
+    private java.util.List<Permissions> permissions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Policy")
@@ -117,7 +122,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupRuleId")
-    private java.util.List < String > securityGroupRuleId;
+    private java.util.List<String> securityGroupRuleId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
@@ -272,7 +277,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
     /**
      * @return permissions
      */
-    public java.util.List < Permissions> getPermissions() {
+    public java.util.List<Permissions> getPermissions() {
         return this.permissions;
     }
 
@@ -328,7 +333,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
     /**
      * @return securityGroupRuleId
      */
-    public java.util.List < String > getSecurityGroupRuleId() {
+    public java.util.List<String> getSecurityGroupRuleId() {
         return this.securityGroupRuleId;
     }
 
@@ -361,7 +366,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         private String nicType; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < Permissions> permissions; 
+        private java.util.List<Permissions> permissions; 
         private String policy; 
         private String portRange; 
         private String priority; 
@@ -369,7 +374,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityGroupId; 
-        private java.util.List < String > securityGroupRuleId; 
+        private java.util.List<String> securityGroupRuleId; 
         private String sourceCidrIp; 
         private String sourcePortRange; 
 
@@ -568,7 +573,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         /**
          * <p>Security group rule N. Valid values of N: 1 to 100.</p>
          */
-        public Builder permissions(java.util.List < Permissions> permissions) {
+        public Builder permissions(java.util.List<Permissions> permissions) {
             this.putQueryParameter("Permissions", permissions);
             this.permissions = permissions;
             return this;
@@ -657,7 +662,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         /**
          * <p>The ID of security group rule N. Valid values of N: 1 to 100.</p>
          */
-        public Builder securityGroupRuleId(java.util.List < String > securityGroupRuleId) {
+        public Builder securityGroupRuleId(java.util.List<String> securityGroupRuleId) {
             this.putQueryParameter("SecurityGroupRuleId", securityGroupRuleId);
             this.securityGroupRuleId = securityGroupRuleId;
             return this;

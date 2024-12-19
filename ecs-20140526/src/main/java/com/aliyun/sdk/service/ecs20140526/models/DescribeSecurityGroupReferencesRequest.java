@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > securityGroupId;
+    private java.util.List<String> securityGroupId;
 
     private DescribeSecurityGroupReferencesRequest(Builder builder) {
         super(builder);
@@ -111,7 +116,7 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
     /**
      * @return securityGroupId
      */
-    public java.util.List < String > getSecurityGroupId() {
+    public java.util.List<String> getSecurityGroupId() {
         return this.securityGroupId;
     }
 
@@ -122,7 +127,7 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > securityGroupId; 
+        private java.util.List<String> securityGroupId; 
 
         private Builder() {
             super();
@@ -204,7 +209,7 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
          * <strong>example:</strong>
          * <p>sg-bp14vtedjtobkvi****</p>
          */
-        public Builder securityGroupId(java.util.List < String > securityGroupId) {
+        public Builder securityGroupId(java.util.List<String> securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -256,7 +261,7 @@ public class DescribeSavingsPlanPriceResponseBody extends TeaModel {
         private Price price;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private PriceInfo(Builder builder) {
             this.price = builder.price;
@@ -281,13 +286,13 @@ public class DescribeSavingsPlanPriceResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private Price price; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * Price.
@@ -300,7 +305,7 @@ public class DescribeSavingsPlanPriceResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class DescribeImagesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageFamily")
@@ -120,7 +125,7 @@ public class DescribeImagesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Usage")
@@ -202,7 +207,7 @@ public class DescribeImagesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -356,7 +361,7 @@ public class DescribeImagesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -372,7 +377,7 @@ public class DescribeImagesRequest extends Request {
         private String actionType; 
         private String architecture; 
         private Boolean dryRun; 
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private String imageFamily; 
         private String imageId; 
         private String imageName; 
@@ -394,7 +399,7 @@ public class DescribeImagesRequest extends Request {
         private Boolean showExpired; 
         private String snapshotId; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String usage; 
 
         private Builder() {
@@ -493,9 +498,9 @@ public class DescribeImagesRequest extends Request {
         }
 
         /**
-         * <p>The list of filter conditions used to query resources.</p>
+         * <p>The filter conditions used to query resources.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
@@ -792,7 +797,7 @@ public class DescribeImagesRequest extends Request {
         /**
          * <p>The tags list.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -866,10 +871,11 @@ public class DescribeImagesRequest extends Request {
             private String value; 
 
             /**
-             * <p>The key of the filter condition used to query resources. Valid values:</p>
+             * <p>The key of filter N used to query resources. Valid values:</p>
              * <ul>
-             * <li>If you set this parameter to <code>CreationStartTime</code>, you can query the resources that were created after the point in time specified by the <code>Filter.N.Value</code> value.</li>
-             * <li>If you set this parameter to <code>CreationEndTime</code>, you can query the resources that were created before the point in time as specified by the <code>Filter.N.Value</code> value.</li>
+             * <li>If you set this parameter to <code>CreationStartTime</code>, you can query the resources that were created after the point in time specified by <code>Filter.N.Value</code>.</li>
+             * <li>If you set this parameter to <code>CreationEndTime</code>, you can query the resources that were created before the point in time specified by <code>Filter.N.Value</code>.</li>
+             * <li>If you set this parameter to <code>NetworkType</code>, you can query resources of the specified network type.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -881,7 +887,11 @@ public class DescribeImagesRequest extends Request {
             }
 
             /**
-             * <p>The value of filter N used to query resources. When you specify this parameter, you must also specify <code>Filter.N.Key</code>. Make sure the time is in the <code>yyyy-MM-ddTHH:mmZ</code> format and in UTC.</p>
+             * <p>The value of filter N used to query resources. Valid values:</p>
+             * <ul>
+             * <li>When <code>Filter.N.Key</code> is set to <code>CreationStartTime</code> or <code>CreationEndTime</code>, the format is <code>yyyy-MM-ddTHH:mmZ</code> in the UTC+0 time zone.</li>
+             * <li>When <code>Filter.N.Key</code> is set to <code>NetworkType</code>, the valid values can be <code>vpc</code> or <code>classic</code>.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>2017-12-05T22:40Z</p>

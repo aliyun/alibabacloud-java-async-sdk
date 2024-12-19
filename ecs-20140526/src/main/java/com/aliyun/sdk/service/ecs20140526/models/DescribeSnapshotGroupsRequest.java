@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeSnapshotGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AdditionalAttributes")
-    private java.util.List < String > additionalAttributes;
+    private java.util.List<String> additionalAttributes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -60,15 +65,15 @@ public class DescribeSnapshotGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotGroupId")
-    private java.util.List < String > snapshotGroupId;
+    private java.util.List<String> snapshotGroupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
-    private java.util.List < String > status;
+    private java.util.List<String> status;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeSnapshotGroupsRequest(Builder builder) {
         super(builder);
@@ -104,7 +109,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
     /**
      * @return additionalAttributes
      */
-    public java.util.List < String > getAdditionalAttributes() {
+    public java.util.List<String> getAdditionalAttributes() {
         return this.additionalAttributes;
     }
 
@@ -181,26 +186,26 @@ public class DescribeSnapshotGroupsRequest extends Request {
     /**
      * @return snapshotGroupId
      */
-    public java.util.List < String > getSnapshotGroupId() {
+    public java.util.List<String> getSnapshotGroupId() {
         return this.snapshotGroupId;
     }
 
     /**
      * @return status
      */
-    public java.util.List < String > getStatus() {
+    public java.util.List<String> getStatus() {
         return this.status;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeSnapshotGroupsRequest, Builder> {
-        private java.util.List < String > additionalAttributes; 
+        private java.util.List<String> additionalAttributes; 
         private String instanceId; 
         private Integer maxResults; 
         private String name; 
@@ -211,9 +216,9 @@ public class DescribeSnapshotGroupsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > snapshotGroupId; 
-        private java.util.List < String > status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> snapshotGroupId; 
+        private java.util.List<String> status; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -243,7 +248,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
          * <strong>example:</strong>
          * <p>hide</p>
          */
-        public Builder additionalAttributes(java.util.List < String > additionalAttributes) {
+        public Builder additionalAttributes(java.util.List<String> additionalAttributes) {
             this.putQueryParameter("AdditionalAttributes", additionalAttributes);
             this.additionalAttributes = additionalAttributes;
             return this;
@@ -366,7 +371,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
          * <strong>example:</strong>
          * <p>ssg-j6ciyh3k52qp7ovm****</p>
          */
-        public Builder snapshotGroupId(java.util.List < String > snapshotGroupId) {
+        public Builder snapshotGroupId(java.util.List<String> snapshotGroupId) {
             this.putQueryParameter("SnapshotGroupId", snapshotGroupId);
             this.snapshotGroupId = snapshotGroupId;
             return this;
@@ -383,7 +388,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
          * <strong>example:</strong>
          * <p>accomplished</p>
          */
-        public Builder status(java.util.List < String > status) {
+        public Builder status(java.util.List<String> status) {
             this.putQueryParameter("Status", status);
             this.status = status;
             return this;
@@ -392,7 +397,7 @@ public class DescribeSnapshotGroupsRequest extends Request {
         /**
          * <p>The tags of the snapshot-consistent group.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
      */
     public static class CapacityReservationUsages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CapacityReservationUsage")
-        private java.util.List < CapacityReservationUsage> capacityReservationUsage;
+        private java.util.List<CapacityReservationUsage> capacityReservationUsage;
 
         private CapacityReservationUsages(Builder builder) {
             this.capacityReservationUsage = builder.capacityReservationUsage;
@@ -264,17 +269,17 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         /**
          * @return capacityReservationUsage
          */
-        public java.util.List < CapacityReservationUsage> getCapacityReservationUsage() {
+        public java.util.List<CapacityReservationUsage> getCapacityReservationUsage() {
             return this.capacityReservationUsage;
         }
 
         public static final class Builder {
-            private java.util.List < CapacityReservationUsage> capacityReservationUsage; 
+            private java.util.List<CapacityReservationUsage> capacityReservationUsage; 
 
             /**
              * CapacityReservationUsage.
              */
-            public Builder capacityReservationUsage(java.util.List < CapacityReservationUsage> capacityReservationUsage) {
+            public Builder capacityReservationUsage(java.util.List<CapacityReservationUsage> capacityReservationUsage) {
                 this.capacityReservationUsage = capacityReservationUsage;
                 return this;
             }
@@ -456,7 +461,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
      */
     public static class AllocatedResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocatedResource")
-        private java.util.List < AllocatedResource> allocatedResource;
+        private java.util.List<AllocatedResource> allocatedResource;
 
         private AllocatedResources(Builder builder) {
             this.allocatedResource = builder.allocatedResource;
@@ -473,17 +478,17 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         /**
          * @return allocatedResource
          */
-        public java.util.List < AllocatedResource> getAllocatedResource() {
+        public java.util.List<AllocatedResource> getAllocatedResource() {
             return this.allocatedResource;
         }
 
         public static final class Builder {
-            private java.util.List < AllocatedResource> allocatedResource; 
+            private java.util.List<AllocatedResource> allocatedResource; 
 
             /**
              * AllocatedResource.
              */
-            public Builder allocatedResource(java.util.List < AllocatedResource> allocatedResource) {
+            public Builder allocatedResource(java.util.List<AllocatedResource> allocatedResource) {
                 this.allocatedResource = allocatedResource;
                 return this;
             }
@@ -576,7 +581,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -593,17 +598,17 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1110,7 +1115,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
      */
     public static class CapacityReservationSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CapacityReservationItem")
-        private java.util.List < CapacityReservationItem> capacityReservationItem;
+        private java.util.List<CapacityReservationItem> capacityReservationItem;
 
         private CapacityReservationSet(Builder builder) {
             this.capacityReservationItem = builder.capacityReservationItem;
@@ -1127,17 +1132,17 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
         /**
          * @return capacityReservationItem
          */
-        public java.util.List < CapacityReservationItem> getCapacityReservationItem() {
+        public java.util.List<CapacityReservationItem> getCapacityReservationItem() {
             return this.capacityReservationItem;
         }
 
         public static final class Builder {
-            private java.util.List < CapacityReservationItem> capacityReservationItem; 
+            private java.util.List<CapacityReservationItem> capacityReservationItem; 
 
             /**
              * CapacityReservationItem.
              */
-            public Builder capacityReservationItem(java.util.List < CapacityReservationItem> capacityReservationItem) {
+            public Builder capacityReservationItem(java.util.List<CapacityReservationItem> capacityReservationItem) {
                 this.capacityReservationItem = capacityReservationItem;
                 return this;
             }

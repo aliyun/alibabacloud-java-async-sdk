@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -339,7 +344,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
      */
     public static class StorageSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StorageSet")
-        private java.util.List < StorageSet> storageSet;
+        private java.util.List<StorageSet> storageSet;
 
         private StorageSets(Builder builder) {
             this.storageSet = builder.storageSet;
@@ -356,17 +361,17 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         /**
          * @return storageSet
          */
-        public java.util.List < StorageSet> getStorageSet() {
+        public java.util.List<StorageSet> getStorageSet() {
             return this.storageSet;
         }
 
         public static final class Builder {
-            private java.util.List < StorageSet> storageSet; 
+            private java.util.List<StorageSet> storageSet; 
 
             /**
              * StorageSet.
              */
-            public Builder storageSet(java.util.List < StorageSet> storageSet) {
+            public Builder storageSet(java.util.List<StorageSet> storageSet) {
                 this.storageSet = storageSet;
                 return this;
             }

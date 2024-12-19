@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -228,7 +233,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -245,17 +250,17 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -517,7 +522,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
      */
     public static class ImagePipelineExecution extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImagePipelineExecutionSet")
-        private java.util.List < ImagePipelineExecutionSet> imagePipelineExecutionSet;
+        private java.util.List<ImagePipelineExecutionSet> imagePipelineExecutionSet;
 
         private ImagePipelineExecution(Builder builder) {
             this.imagePipelineExecutionSet = builder.imagePipelineExecutionSet;
@@ -534,17 +539,17 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         /**
          * @return imagePipelineExecutionSet
          */
-        public java.util.List < ImagePipelineExecutionSet> getImagePipelineExecutionSet() {
+        public java.util.List<ImagePipelineExecutionSet> getImagePipelineExecutionSet() {
             return this.imagePipelineExecutionSet;
         }
 
         public static final class Builder {
-            private java.util.List < ImagePipelineExecutionSet> imagePipelineExecutionSet; 
+            private java.util.List<ImagePipelineExecutionSet> imagePipelineExecutionSet; 
 
             /**
              * ImagePipelineExecutionSet.
              */
-            public Builder imagePipelineExecutionSet(java.util.List < ImagePipelineExecutionSet> imagePipelineExecutionSet) {
+            public Builder imagePipelineExecutionSet(java.util.List<ImagePipelineExecutionSet> imagePipelineExecutionSet) {
                 this.imagePipelineExecutionSet = imagePipelineExecutionSet;
                 return this;
             }

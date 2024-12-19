@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -316,7 +321,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
      */
     public static class SocketCapacities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SocketCapacity")
-        private java.util.List < SocketCapacity> socketCapacity;
+        private java.util.List<SocketCapacity> socketCapacity;
 
         private SocketCapacities(Builder builder) {
             this.socketCapacity = builder.socketCapacity;
@@ -333,17 +338,17 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         /**
          * @return socketCapacity
          */
-        public java.util.List < SocketCapacity> getSocketCapacity() {
+        public java.util.List<SocketCapacity> getSocketCapacity() {
             return this.socketCapacity;
         }
 
         public static final class Builder {
-            private java.util.List < SocketCapacity> socketCapacity; 
+            private java.util.List<SocketCapacity> socketCapacity; 
 
             /**
              * SocketCapacity.
              */
-            public Builder socketCapacity(java.util.List < SocketCapacity> socketCapacity) {
+            public Builder socketCapacity(java.util.List<SocketCapacity> socketCapacity) {
                 this.socketCapacity = socketCapacity;
                 return this;
             }
@@ -786,7 +791,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
      */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
-        private java.util.List < Instance> instance;
+        private java.util.List<Instance> instance;
 
         private Instances(Builder builder) {
             this.instance = builder.instance;
@@ -803,17 +808,17 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < Instance> instance; 
+            private java.util.List<Instance> instance; 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }
@@ -960,7 +965,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
      */
     public static class OperationLocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationLock")
-        private java.util.List < OperationLock> operationLock;
+        private java.util.List<OperationLock> operationLock;
 
         private OperationLocks(Builder builder) {
             this.operationLock = builder.operationLock;
@@ -977,17 +982,17 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         /**
          * @return operationLock
          */
-        public java.util.List < OperationLock> getOperationLock() {
+        public java.util.List<OperationLock> getOperationLock() {
             return this.operationLock;
         }
 
         public static final class Builder {
-            private java.util.List < OperationLock> operationLock; 
+            private java.util.List<OperationLock> operationLock; 
 
             /**
              * OperationLock.
              */
-            public Builder operationLock(java.util.List < OperationLock> operationLock) {
+            public Builder operationLock(java.util.List<OperationLock> operationLock) {
                 this.operationLock = operationLock;
                 return this;
             }
@@ -1007,7 +1012,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
      */
     public static class SupportedCustomInstanceTypeFamilies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedCustomInstanceTypeFamily")
-        private java.util.List < String > supportedCustomInstanceTypeFamily;
+        private java.util.List<String> supportedCustomInstanceTypeFamily;
 
         private SupportedCustomInstanceTypeFamilies(Builder builder) {
             this.supportedCustomInstanceTypeFamily = builder.supportedCustomInstanceTypeFamily;
@@ -1024,17 +1029,17 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         /**
          * @return supportedCustomInstanceTypeFamily
          */
-        public java.util.List < String > getSupportedCustomInstanceTypeFamily() {
+        public java.util.List<String> getSupportedCustomInstanceTypeFamily() {
             return this.supportedCustomInstanceTypeFamily;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedCustomInstanceTypeFamily; 
+            private java.util.List<String> supportedCustomInstanceTypeFamily; 
 
             /**
              * SupportedCustomInstanceTypeFamily.
              */
-            public Builder supportedCustomInstanceTypeFamily(java.util.List < String > supportedCustomInstanceTypeFamily) {
+            public Builder supportedCustomInstanceTypeFamily(java.util.List<String> supportedCustomInstanceTypeFamily) {
                 this.supportedCustomInstanceTypeFamily = supportedCustomInstanceTypeFamily;
                 return this;
             }
@@ -1054,7 +1059,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
      */
     public static class SupportedInstanceTypeFamilies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypeFamily")
-        private java.util.List < String > supportedInstanceTypeFamily;
+        private java.util.List<String> supportedInstanceTypeFamily;
 
         private SupportedInstanceTypeFamilies(Builder builder) {
             this.supportedInstanceTypeFamily = builder.supportedInstanceTypeFamily;
@@ -1071,17 +1076,17 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         /**
          * @return supportedInstanceTypeFamily
          */
-        public java.util.List < String > getSupportedInstanceTypeFamily() {
+        public java.util.List<String> getSupportedInstanceTypeFamily() {
             return this.supportedInstanceTypeFamily;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedInstanceTypeFamily; 
+            private java.util.List<String> supportedInstanceTypeFamily; 
 
             /**
              * SupportedInstanceTypeFamily.
              */
-            public Builder supportedInstanceTypeFamily(java.util.List < String > supportedInstanceTypeFamily) {
+            public Builder supportedInstanceTypeFamily(java.util.List<String> supportedInstanceTypeFamily) {
                 this.supportedInstanceTypeFamily = supportedInstanceTypeFamily;
                 return this;
             }
@@ -1101,7 +1106,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
      */
     public static class SupportedInstanceTypesList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypesList")
-        private java.util.List < String > supportedInstanceTypesList;
+        private java.util.List<String> supportedInstanceTypesList;
 
         private SupportedInstanceTypesList(Builder builder) {
             this.supportedInstanceTypesList = builder.supportedInstanceTypesList;
@@ -1118,17 +1123,17 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         /**
          * @return supportedInstanceTypesList
          */
-        public java.util.List < String > getSupportedInstanceTypesList() {
+        public java.util.List<String> getSupportedInstanceTypesList() {
             return this.supportedInstanceTypesList;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedInstanceTypesList; 
+            private java.util.List<String> supportedInstanceTypesList; 
 
             /**
              * SupportedInstanceTypesList.
              */
-            public Builder supportedInstanceTypesList(java.util.List < String > supportedInstanceTypesList) {
+            public Builder supportedInstanceTypesList(java.util.List<String> supportedInstanceTypesList) {
                 this.supportedInstanceTypesList = supportedInstanceTypesList;
                 return this;
             }
@@ -1221,7 +1226,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -1238,17 +1243,17 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -2043,7 +2048,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
      */
     public static class DedicatedHosts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DedicatedHost")
-        private java.util.List < DedicatedHost> dedicatedHost;
+        private java.util.List<DedicatedHost> dedicatedHost;
 
         private DedicatedHosts(Builder builder) {
             this.dedicatedHost = builder.dedicatedHost;
@@ -2060,17 +2065,17 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         /**
          * @return dedicatedHost
          */
-        public java.util.List < DedicatedHost> getDedicatedHost() {
+        public java.util.List<DedicatedHost> getDedicatedHost() {
             return this.dedicatedHost;
         }
 
         public static final class Builder {
-            private java.util.List < DedicatedHost> dedicatedHost; 
+            private java.util.List<DedicatedHost> dedicatedHost; 
 
             /**
              * DedicatedHost.
              */
-            public Builder dedicatedHost(java.util.List < DedicatedHost> dedicatedHost) {
+            public Builder dedicatedHost(java.util.List<DedicatedHost> dedicatedHost) {
                 this.dedicatedHost = dedicatedHost;
                 return this;
             }

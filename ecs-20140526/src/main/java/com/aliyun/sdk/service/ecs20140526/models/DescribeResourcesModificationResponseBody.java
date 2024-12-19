@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -133,7 +138,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
      */
     public static class Conditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Condition")
-        private java.util.List < Condition> condition;
+        private java.util.List<Condition> condition;
 
         private Conditions(Builder builder) {
             this.condition = builder.condition;
@@ -150,17 +155,17 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         /**
          * @return condition
          */
-        public java.util.List < Condition> getCondition() {
+        public java.util.List<Condition> getCondition() {
             return this.condition;
         }
 
         public static final class Builder {
-            private java.util.List < Condition> condition; 
+            private java.util.List<Condition> condition; 
 
             /**
              * Condition.
              */
-            public Builder condition(java.util.List < Condition> condition) {
+            public Builder condition(java.util.List<Condition> condition) {
                 this.condition = condition;
                 return this;
             }
@@ -377,7 +382,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
      */
     public static class ConditionSupportedResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionSupportedResource")
-        private java.util.List < ConditionSupportedResource> conditionSupportedResource;
+        private java.util.List<ConditionSupportedResource> conditionSupportedResource;
 
         private ConditionSupportedResources(Builder builder) {
             this.conditionSupportedResource = builder.conditionSupportedResource;
@@ -394,17 +399,17 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         /**
          * @return conditionSupportedResource
          */
-        public java.util.List < ConditionSupportedResource> getConditionSupportedResource() {
+        public java.util.List<ConditionSupportedResource> getConditionSupportedResource() {
             return this.conditionSupportedResource;
         }
 
         public static final class Builder {
-            private java.util.List < ConditionSupportedResource> conditionSupportedResource; 
+            private java.util.List<ConditionSupportedResource> conditionSupportedResource; 
 
             /**
              * ConditionSupportedResource.
              */
-            public Builder conditionSupportedResource(java.util.List < ConditionSupportedResource> conditionSupportedResource) {
+            public Builder conditionSupportedResource(java.util.List<ConditionSupportedResource> conditionSupportedResource) {
                 this.conditionSupportedResource = conditionSupportedResource;
                 return this;
             }
@@ -600,7 +605,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
      */
     public static class SupportedResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedResource")
-        private java.util.List < SupportedResource> supportedResource;
+        private java.util.List<SupportedResource> supportedResource;
 
         private SupportedResources(Builder builder) {
             this.supportedResource = builder.supportedResource;
@@ -617,17 +622,17 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         /**
          * @return supportedResource
          */
-        public java.util.List < SupportedResource> getSupportedResource() {
+        public java.util.List<SupportedResource> getSupportedResource() {
             return this.supportedResource;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedResource> supportedResource; 
+            private java.util.List<SupportedResource> supportedResource; 
 
             /**
              * SupportedResource.
              */
-            public Builder supportedResource(java.util.List < SupportedResource> supportedResource) {
+            public Builder supportedResource(java.util.List<SupportedResource> supportedResource) {
                 this.supportedResource = supportedResource;
                 return this;
             }
@@ -741,7 +746,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
      */
     public static class AvailableResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableResource")
-        private java.util.List < AvailableResource> availableResource;
+        private java.util.List<AvailableResource> availableResource;
 
         private AvailableResources(Builder builder) {
             this.availableResource = builder.availableResource;
@@ -758,17 +763,17 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         /**
          * @return availableResource
          */
-        public java.util.List < AvailableResource> getAvailableResource() {
+        public java.util.List<AvailableResource> getAvailableResource() {
             return this.availableResource;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableResource> availableResource; 
+            private java.util.List<AvailableResource> availableResource; 
 
             /**
              * AvailableResource.
              */
-            public Builder availableResource(java.util.List < AvailableResource> availableResource) {
+            public Builder availableResource(java.util.List<AvailableResource> availableResource) {
                 this.availableResource = availableResource;
                 return this;
             }
@@ -936,7 +941,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
      */
     public static class AvailableZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableZone")
-        private java.util.List < AvailableZone> availableZone;
+        private java.util.List<AvailableZone> availableZone;
 
         private AvailableZones(Builder builder) {
             this.availableZone = builder.availableZone;
@@ -953,17 +958,17 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         /**
          * @return availableZone
          */
-        public java.util.List < AvailableZone> getAvailableZone() {
+        public java.util.List<AvailableZone> getAvailableZone() {
             return this.availableZone;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableZone> availableZone; 
+            private java.util.List<AvailableZone> availableZone; 
 
             /**
              * AvailableZone.
              */
-            public Builder availableZone(java.util.List < AvailableZone> availableZone) {
+            public Builder availableZone(java.util.List<AvailableZone> availableZone) {
                 this.availableZone = availableZone;
                 return this;
             }

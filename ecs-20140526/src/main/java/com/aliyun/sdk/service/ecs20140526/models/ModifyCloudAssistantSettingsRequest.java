@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -301,7 +306,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
      */
     public static class AgentUpgradeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedUpgradeWindow")
-        private java.util.List < String > allowedUpgradeWindow;
+        private java.util.List<String> allowedUpgradeWindow;
 
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -326,7 +331,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         /**
          * @return allowedUpgradeWindow
          */
-        public java.util.List < String > getAllowedUpgradeWindow() {
+        public java.util.List<String> getAllowedUpgradeWindow() {
             return this.allowedUpgradeWindow;
         }
 
@@ -345,7 +350,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > allowedUpgradeWindow; 
+            private java.util.List<String> allowedUpgradeWindow; 
             private Boolean enabled; 
             private String timeZone; 
 
@@ -355,7 +360,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
              * <p>Specify each upgrade window in the following format: &lt;Start time in the HH:mm format&gt;-&lt;End time in the HH:mm format&gt;.</p>
              * <p>For example, [ &quot;02:00-03:00&quot;, &quot;05:00-06:00&quot; ] specifies that Cloud Assistant Agent can be upgraded from 2:00:00 to 3:00:00 and from 5:00:00 to 6:00:00 every day in the UTC time zone.</p>
              */
-            public Builder allowedUpgradeWindow(java.util.List < String > allowedUpgradeWindow) {
+            public Builder allowedUpgradeWindow(java.util.List<String> allowedUpgradeWindow) {
                 this.allowedUpgradeWindow = allowedUpgradeWindow;
                 return this;
             }

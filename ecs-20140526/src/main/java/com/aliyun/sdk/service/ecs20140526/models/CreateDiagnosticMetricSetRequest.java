@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetricIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > metricIds;
+    private java.util.List<String> metricIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetricSetName")
@@ -81,7 +86,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
     /**
      * @return metricIds
      */
-    public java.util.List < String > getMetricIds() {
+    public java.util.List<String> getMetricIds() {
         return this.metricIds;
     }
 
@@ -109,7 +114,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDiagnosticMetricSetRequest, Builder> {
         private String sourceRegionId; 
         private String description; 
-        private java.util.List < String > metricIds; 
+        private java.util.List<String> metricIds; 
         private String metricSetName; 
         private String regionId; 
         private String resourceType; 
@@ -153,7 +158,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
          * <p>The ID of diagnostic metric.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder metricIds(java.util.List < String > metricIds) {
+        public Builder metricIds(java.util.List<String> metricIds) {
             this.putQueryParameter("MetricIds", metricIds);
             this.metricIds = metricIds;
             return this;

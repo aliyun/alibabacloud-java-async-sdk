@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -293,7 +298,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
      */
     public static class LaunchTemplateConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LaunchTemplateConfig")
-        private java.util.List < LaunchTemplateConfig> launchTemplateConfig;
+        private java.util.List<LaunchTemplateConfig> launchTemplateConfig;
 
         private LaunchTemplateConfigs(Builder builder) {
             this.launchTemplateConfig = builder.launchTemplateConfig;
@@ -310,17 +315,17 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         /**
          * @return launchTemplateConfig
          */
-        public java.util.List < LaunchTemplateConfig> getLaunchTemplateConfig() {
+        public java.util.List<LaunchTemplateConfig> getLaunchTemplateConfig() {
             return this.launchTemplateConfig;
         }
 
         public static final class Builder {
-            private java.util.List < LaunchTemplateConfig> launchTemplateConfig; 
+            private java.util.List<LaunchTemplateConfig> launchTemplateConfig; 
 
             /**
              * LaunchTemplateConfig.
              */
-            public Builder launchTemplateConfig(java.util.List < LaunchTemplateConfig> launchTemplateConfig) {
+            public Builder launchTemplateConfig(java.util.List<LaunchTemplateConfig> launchTemplateConfig) {
                 this.launchTemplateConfig = launchTemplateConfig;
                 return this;
             }
@@ -579,7 +584,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -596,17 +601,17 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1282,7 +1287,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
      */
     public static class AutoProvisioningGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroup")
-        private java.util.List < AutoProvisioningGroup> autoProvisioningGroup;
+        private java.util.List<AutoProvisioningGroup> autoProvisioningGroup;
 
         private AutoProvisioningGroups(Builder builder) {
             this.autoProvisioningGroup = builder.autoProvisioningGroup;
@@ -1299,17 +1304,17 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         /**
          * @return autoProvisioningGroup
          */
-        public java.util.List < AutoProvisioningGroup> getAutoProvisioningGroup() {
+        public java.util.List<AutoProvisioningGroup> getAutoProvisioningGroup() {
             return this.autoProvisioningGroup;
         }
 
         public static final class Builder {
-            private java.util.List < AutoProvisioningGroup> autoProvisioningGroup; 
+            private java.util.List<AutoProvisioningGroup> autoProvisioningGroup; 
 
             /**
              * AutoProvisioningGroup.
              */
-            public Builder autoProvisioningGroup(java.util.List < AutoProvisioningGroup> autoProvisioningGroup) {
+            public Builder autoProvisioningGroup(java.util.List<AutoProvisioningGroup> autoProvisioningGroup) {
                 this.autoProvisioningGroup = autoProvisioningGroup;
                 return this;
             }

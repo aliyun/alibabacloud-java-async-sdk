@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DescribeResourcesModificationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Conditions")
-    private java.util.List < String > conditions;
+    private java.util.List<String> conditions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Cores")
@@ -117,7 +122,7 @@ public class DescribeResourcesModificationRequest extends Request {
     /**
      * @return conditions
      */
-    public java.util.List < String > getConditions() {
+    public java.util.List<String> getConditions() {
         return this.conditions;
     }
 
@@ -214,7 +219,7 @@ public class DescribeResourcesModificationRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeResourcesModificationRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < String > conditions; 
+        private java.util.List<String> conditions; 
         private Integer cores; 
         private String destinationResource; 
         private String instanceType; 
@@ -264,7 +269,7 @@ public class DescribeResourcesModificationRequest extends Request {
         /**
          * <p>The conditions.</p>
          */
-        public Builder conditions(java.util.List < String > conditions) {
+        public Builder conditions(java.util.List<String> conditions) {
             this.putQueryParameter("Conditions", conditions);
             this.conditions = conditions;
             return this;

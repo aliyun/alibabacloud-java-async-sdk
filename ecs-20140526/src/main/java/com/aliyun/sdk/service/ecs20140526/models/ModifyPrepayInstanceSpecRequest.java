@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Disk")
-    private java.util.List < Disk> disk;
+    private java.util.List<Disk> disk;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
@@ -153,7 +158,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
     /**
      * @return disk
      */
-    public java.util.List < Disk> getDisk() {
+    public java.util.List<Disk> getDisk() {
         return this.disk;
     }
 
@@ -253,7 +258,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         private String sourceRegionId; 
         private Boolean autoPay; 
         private String clientToken; 
-        private java.util.List < Disk> disk; 
+        private java.util.List<Disk> disk; 
         private String endTime; 
         private String instanceId; 
         private String instanceType; 
@@ -356,7 +361,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
          * <p> This parameter is not publicly available.</p>
          * </blockquote>
          */
-        public Builder disk(java.util.List < Disk> disk) {
+        public Builder disk(java.util.List<Disk> disk) {
             this.putQueryParameter("Disk", disk);
             this.disk = disk;
             return this;

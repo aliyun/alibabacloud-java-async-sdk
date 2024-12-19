@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeRouterInterfacesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -69,7 +74,7 @@ public class DescribeRouterInterfacesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -116,7 +121,7 @@ public class DescribeRouterInterfacesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRouterInterfacesRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -142,7 +147,7 @@ public class DescribeRouterInterfacesRequest extends Request {
         /**
          * Filter.
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
@@ -220,7 +225,7 @@ public class DescribeRouterInterfacesRequest extends Request {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.key = builder.key;
@@ -245,13 +250,13 @@ public class DescribeRouterInterfacesRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
              * Key.
@@ -264,7 +269,7 @@ public class DescribeRouterInterfacesRequest extends Request {
             /**
              * Value.
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

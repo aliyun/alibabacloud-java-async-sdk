@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDisk")
-    private java.util.List < DataDisk> dataDisk;
+    private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -98,7 +103,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
     /**
      * @return dataDisk
      */
-    public java.util.List < DataDisk> getDataDisk() {
+    public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
     }
 
@@ -154,7 +159,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeInstanceModificationPriceRequest, Builder> {
         private SystemDisk systemDisk; 
         private String sourceRegionId; 
-        private java.util.List < DataDisk> dataDisk; 
+        private java.util.List<DataDisk> dataDisk; 
         private String instanceId; 
         private String instanceType; 
         private String ownerAccount; 
@@ -202,7 +207,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         /**
          * <p>The information about data disks.</p>
          */
-        public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+        public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;

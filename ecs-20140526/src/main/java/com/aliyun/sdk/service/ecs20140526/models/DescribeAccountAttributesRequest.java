@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DescribeAccountAttributesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AttributeName")
-    private java.util.List < String > attributeName;
+    private java.util.List<String> attributeName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -75,7 +80,7 @@ public class DescribeAccountAttributesRequest extends Request {
     /**
      * @return attributeName
      */
-    public java.util.List < String > getAttributeName() {
+    public java.util.List<String> getAttributeName() {
         return this.attributeName;
     }
 
@@ -116,7 +121,7 @@ public class DescribeAccountAttributesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeAccountAttributesRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < String > attributeName; 
+        private java.util.List<String> attributeName; 
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -188,7 +193,7 @@ public class DescribeAccountAttributesRequest extends Request {
          * <strong>example:</strong>
          * <p>max-security-groups</p>
          */
-        public Builder attributeName(java.util.List < String > attributeName) {
+        public Builder attributeName(java.util.List<String> attributeName) {
             this.putQueryParameter("AttributeName", attributeName);
             this.attributeName = attributeName;
             return this;

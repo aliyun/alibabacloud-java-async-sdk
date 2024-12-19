@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class DescribePrefixListsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrefixListId")
-    private java.util.List < String > prefixListId;
+    private java.util.List<String> prefixListId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrefixListName")
@@ -131,7 +136,7 @@ public class DescribePrefixListsRequest extends Request {
     /**
      * @return prefixListId
      */
-    public java.util.List < String > getPrefixListId() {
+    public java.util.List<String> getPrefixListId() {
         return this.prefixListId;
     }
 
@@ -170,7 +175,7 @@ public class DescribePrefixListsRequest extends Request {
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.List < String > prefixListId; 
+        private java.util.List<String> prefixListId; 
         private String prefixListName; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -271,7 +276,7 @@ public class DescribePrefixListsRequest extends Request {
          * <strong>example:</strong>
          * <p>pl-x1j1k5ykzqlixdcy****</p>
          */
-        public Builder prefixListId(java.util.List < String > prefixListId) {
+        public Builder prefixListId(java.util.List<String> prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
             this.prefixListId = prefixListId;
             return this;

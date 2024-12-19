@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -241,7 +246,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
      */
     public static class HpcClusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HpcCluster")
-        private java.util.List < HpcCluster> hpcCluster;
+        private java.util.List<HpcCluster> hpcCluster;
 
         private HpcClusters(Builder builder) {
             this.hpcCluster = builder.hpcCluster;
@@ -258,17 +263,17 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         /**
          * @return hpcCluster
          */
-        public java.util.List < HpcCluster> getHpcCluster() {
+        public java.util.List<HpcCluster> getHpcCluster() {
             return this.hpcCluster;
         }
 
         public static final class Builder {
-            private java.util.List < HpcCluster> hpcCluster; 
+            private java.util.List<HpcCluster> hpcCluster; 
 
             /**
              * HpcCluster.
              */
-            public Builder hpcCluster(java.util.List < HpcCluster> hpcCluster) {
+            public Builder hpcCluster(java.util.List<HpcCluster> hpcCluster) {
                 this.hpcCluster = hpcCluster;
                 return this;
             }

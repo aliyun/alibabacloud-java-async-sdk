@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -320,7 +325,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
      */
     public static class SupplyInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupplyInfo")
-        private java.util.List < SupplyInfo> supplyInfo;
+        private java.util.List<SupplyInfo> supplyInfo;
 
         private SupplyInfos(Builder builder) {
             this.supplyInfo = builder.supplyInfo;
@@ -337,17 +342,17 @@ public class DescribeDemandsResponseBody extends TeaModel {
         /**
          * @return supplyInfo
          */
-        public java.util.List < SupplyInfo> getSupplyInfo() {
+        public java.util.List<SupplyInfo> getSupplyInfo() {
             return this.supplyInfo;
         }
 
         public static final class Builder {
-            private java.util.List < SupplyInfo> supplyInfo; 
+            private java.util.List<SupplyInfo> supplyInfo; 
 
             /**
              * SupplyInfo.
              */
-            public Builder supplyInfo(java.util.List < SupplyInfo> supplyInfo) {
+            public Builder supplyInfo(java.util.List<SupplyInfo> supplyInfo) {
                 this.supplyInfo = supplyInfo;
                 return this;
             }
@@ -846,7 +851,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
      */
     public static class Demands extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Demand")
-        private java.util.List < Demand> demand;
+        private java.util.List<Demand> demand;
 
         private Demands(Builder builder) {
             this.demand = builder.demand;
@@ -863,17 +868,17 @@ public class DescribeDemandsResponseBody extends TeaModel {
         /**
          * @return demand
          */
-        public java.util.List < Demand> getDemand() {
+        public java.util.List<Demand> getDemand() {
             return this.demand;
         }
 
         public static final class Builder {
-            private java.util.List < Demand> demand; 
+            private java.util.List<Demand> demand; 
 
             /**
              * Demand.
              */
-            public Builder demand(java.util.List < Demand> demand) {
+            public Builder demand(java.util.List<Demand> demand) {
                 this.demand = demand;
                 return this;
             }

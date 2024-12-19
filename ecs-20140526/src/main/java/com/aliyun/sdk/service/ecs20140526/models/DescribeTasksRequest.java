@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -44,7 +49,7 @@ public class DescribeTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIds")
-    private java.util.List < String > resourceIds;
+    private java.util.List<String> resourceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -153,7 +158,7 @@ public class DescribeTasksRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -207,7 +212,7 @@ public class DescribeTasksRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> resourceIds; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String startTime; 
@@ -325,7 +330,7 @@ public class DescribeTasksRequest extends Request {
          * <li>If TaskAction is set to ModifyDiskSpec, set the resource ID to a disk ID.</li>
          * </ul>
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
             this.resourceIds = resourceIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -318,7 +323,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
      */
     public static class SpotPrices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpotPriceType")
-        private java.util.List < SpotPriceType> spotPriceType;
+        private java.util.List<SpotPriceType> spotPriceType;
 
         private SpotPrices(Builder builder) {
             this.spotPriceType = builder.spotPriceType;
@@ -335,17 +340,17 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         /**
          * @return spotPriceType
          */
-        public java.util.List < SpotPriceType> getSpotPriceType() {
+        public java.util.List<SpotPriceType> getSpotPriceType() {
             return this.spotPriceType;
         }
 
         public static final class Builder {
-            private java.util.List < SpotPriceType> spotPriceType; 
+            private java.util.List<SpotPriceType> spotPriceType; 
 
             /**
              * SpotPriceType.
              */
-            public Builder spotPriceType(java.util.List < SpotPriceType> spotPriceType) {
+            public Builder spotPriceType(java.util.List<SpotPriceType> spotPriceType) {
                 this.spotPriceType = spotPriceType;
                 return this;
             }

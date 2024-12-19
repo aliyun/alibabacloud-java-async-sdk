@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetCopyRegions")
@@ -179,7 +184,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -235,7 +240,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String storageLocationArn; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String targetCopyRegions; 
         private String autoSnapshotPolicyName; 
         private String regionId; 
@@ -374,7 +379,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         /**
          * <p>The tags to add to the automatic snapshot policy.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -581,7 +586,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
      */
     public static class CopyEncryptionConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
-        private java.util.List < Arn> arn;
+        private java.util.List<Arn> arn;
 
         @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
@@ -606,7 +611,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         /**
          * @return arn
          */
-        public java.util.List < Arn> getArn() {
+        public java.util.List<Arn> getArn() {
             return this.arn;
         }
 
@@ -625,14 +630,14 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Arn> arn; 
+            private java.util.List<Arn> arn; 
             private Boolean encrypted; 
             private String KMSKeyId; 
 
             /**
              * <p>This parameter is not publicly available.</p>
              */
-            public Builder arn(java.util.List < Arn> arn) {
+            public Builder arn(java.util.List<Arn> arn) {
                 this.arn = arn;
                 return this;
             }

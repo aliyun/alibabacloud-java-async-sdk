@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -201,7 +206,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
      */
     public static class OperationLocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationLock")
-        private java.util.List < OperationLock> operationLock;
+        private java.util.List<OperationLock> operationLock;
 
         private OperationLocks(Builder builder) {
             this.operationLock = builder.operationLock;
@@ -218,17 +223,17 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         /**
          * @return operationLock
          */
-        public java.util.List < OperationLock> getOperationLock() {
+        public java.util.List<OperationLock> getOperationLock() {
             return this.operationLock;
         }
 
         public static final class Builder {
-            private java.util.List < OperationLock> operationLock; 
+            private java.util.List<OperationLock> operationLock; 
 
             /**
              * OperationLock.
              */
-            public Builder operationLock(java.util.List < OperationLock> operationLock) {
+            public Builder operationLock(java.util.List<OperationLock> operationLock) {
                 this.operationLock = operationLock;
                 return this;
             }
@@ -321,7 +326,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -338,17 +343,17 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -778,7 +783,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the tags of the reserved instance.</p>
+             * <p>The tags of the reserved instance.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -811,7 +816,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
      */
     public static class ReservedInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReservedInstance")
-        private java.util.List < ReservedInstance> reservedInstance;
+        private java.util.List<ReservedInstance> reservedInstance;
 
         private ReservedInstances(Builder builder) {
             this.reservedInstance = builder.reservedInstance;
@@ -828,17 +833,17 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         /**
          * @return reservedInstance
          */
-        public java.util.List < ReservedInstance> getReservedInstance() {
+        public java.util.List<ReservedInstance> getReservedInstance() {
             return this.reservedInstance;
         }
 
         public static final class Builder {
-            private java.util.List < ReservedInstance> reservedInstance; 
+            private java.util.List<ReservedInstance> reservedInstance; 
 
             /**
              * ReservedInstance.
              */
-            public Builder reservedInstance(java.util.List < ReservedInstance> reservedInstance) {
+            public Builder reservedInstance(java.util.List<ReservedInstance> reservedInstance) {
                 this.reservedInstance = reservedInstance;
                 return this;
             }

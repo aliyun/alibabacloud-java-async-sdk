@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -139,7 +144,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
      */
     public static class AssociatedEipAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("associatedEipAddresse")
-        private java.util.List < String > associatedEipAddresse;
+        private java.util.List<String> associatedEipAddresse;
 
         private AssociatedEipAddresses(Builder builder) {
             this.associatedEipAddresse = builder.associatedEipAddresse;
@@ -156,17 +161,17 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         /**
          * @return associatedEipAddresse
          */
-        public java.util.List < String > getAssociatedEipAddresse() {
+        public java.util.List<String> getAssociatedEipAddresse() {
             return this.associatedEipAddresse;
         }
 
         public static final class Builder {
-            private java.util.List < String > associatedEipAddresse; 
+            private java.util.List<String> associatedEipAddresse; 
 
             /**
              * associatedEipAddresse.
              */
-            public Builder associatedEipAddresse(java.util.List < String > associatedEipAddresse) {
+            public Builder associatedEipAddresse(java.util.List<String> associatedEipAddresse) {
                 this.associatedEipAddresse = associatedEipAddresse;
                 return this;
             }
@@ -186,7 +191,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
      */
     public static class AssociatedInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("associatedInstance")
-        private java.util.List < String > associatedInstance;
+        private java.util.List<String> associatedInstance;
 
         private AssociatedInstances(Builder builder) {
             this.associatedInstance = builder.associatedInstance;
@@ -203,17 +208,17 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         /**
          * @return associatedInstance
          */
-        public java.util.List < String > getAssociatedInstance() {
+        public java.util.List<String> getAssociatedInstance() {
             return this.associatedInstance;
         }
 
         public static final class Builder {
-            private java.util.List < String > associatedInstance; 
+            private java.util.List<String> associatedInstance; 
 
             /**
              * associatedInstance.
              */
-            public Builder associatedInstance(java.util.List < String > associatedInstance) {
+            public Builder associatedInstance(java.util.List<String> associatedInstance) {
                 this.associatedInstance = associatedInstance;
                 return this;
             }
@@ -480,7 +485,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
      */
     public static class HaVips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HaVip")
-        private java.util.List < HaVip> haVip;
+        private java.util.List<HaVip> haVip;
 
         private HaVips(Builder builder) {
             this.haVip = builder.haVip;
@@ -497,17 +502,17 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         /**
          * @return haVip
          */
-        public java.util.List < HaVip> getHaVip() {
+        public java.util.List<HaVip> getHaVip() {
             return this.haVip;
         }
 
         public static final class Builder {
-            private java.util.List < HaVip> haVip; 
+            private java.util.List<HaVip> haVip; 
 
             /**
              * HaVip.
              */
-            public Builder haVip(java.util.List < HaVip> haVip) {
+            public Builder haVip(java.util.List<HaVip> haVip) {
                 this.haVip = haVip;
                 return this;
             }

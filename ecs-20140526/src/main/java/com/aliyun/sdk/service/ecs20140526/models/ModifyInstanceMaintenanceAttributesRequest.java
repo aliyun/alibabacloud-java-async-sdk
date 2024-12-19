@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,11 +27,11 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    private java.util.List < String > instanceId;
+    private java.util.List<String> instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaintenanceWindow")
-    private java.util.List < MaintenanceWindow> maintenanceWindow;
+    private java.util.List<MaintenanceWindow> maintenanceWindow;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NotifyOnMaintenance")
@@ -97,14 +102,14 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
     /**
      * @return maintenanceWindow
      */
-    public java.util.List < MaintenanceWindow> getMaintenanceWindow() {
+    public java.util.List<MaintenanceWindow> getMaintenanceWindow() {
         return this.maintenanceWindow;
     }
 
@@ -153,8 +158,8 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyInstanceMaintenanceAttributesRequest, Builder> {
         private String sourceRegionId; 
         private String actionOnMaintenance; 
-        private java.util.List < String > instanceId; 
-        private java.util.List < MaintenanceWindow> maintenanceWindow; 
+        private java.util.List<String> instanceId; 
+        private java.util.List<MaintenanceWindow> maintenanceWindow; 
         private Boolean notifyOnMaintenance; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -212,7 +217,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
          * <strong>example:</strong>
          * <p>i-bp67acfmxazb4ph****</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
@@ -221,7 +226,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         /**
          * <p>The maintenance windows.</p>
          */
-        public Builder maintenanceWindow(java.util.List < MaintenanceWindow> maintenanceWindow) {
+        public Builder maintenanceWindow(java.util.List<MaintenanceWindow> maintenanceWindow) {
             this.putQueryParameter("MaintenanceWindow", maintenanceWindow);
             this.maintenanceWindow = maintenanceWindow;
             return this;

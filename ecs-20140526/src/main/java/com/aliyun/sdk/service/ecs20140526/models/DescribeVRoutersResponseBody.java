@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -139,7 +144,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
      */
     public static class RouteTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteTableId")
-        private java.util.List < String > routeTableId;
+        private java.util.List<String> routeTableId;
 
         private RouteTableIds(Builder builder) {
             this.routeTableId = builder.routeTableId;
@@ -156,17 +161,17 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         /**
          * @return routeTableId
          */
-        public java.util.List < String > getRouteTableId() {
+        public java.util.List<String> getRouteTableId() {
             return this.routeTableId;
         }
 
         public static final class Builder {
-            private java.util.List < String > routeTableId; 
+            private java.util.List<String> routeTableId; 
 
             /**
              * RouteTableId.
              */
-            public Builder routeTableId(java.util.List < String > routeTableId) {
+            public Builder routeTableId(java.util.List<String> routeTableId) {
                 this.routeTableId = routeTableId;
                 return this;
             }
@@ -353,7 +358,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
      */
     public static class VRouters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VRouter")
-        private java.util.List < VRouter> vRouter;
+        private java.util.List<VRouter> vRouter;
 
         private VRouters(Builder builder) {
             this.vRouter = builder.vRouter;
@@ -370,17 +375,17 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         /**
          * @return vRouter
          */
-        public java.util.List < VRouter> getVRouter() {
+        public java.util.List<VRouter> getVRouter() {
             return this.vRouter;
         }
 
         public static final class Builder {
-            private java.util.List < VRouter> vRouter; 
+            private java.util.List<VRouter> vRouter; 
 
             /**
              * VRouter.
              */
-            public Builder vRouter(java.util.List < VRouter> vRouter) {
+            public Builder vRouter(java.util.List<VRouter> vRouter) {
                 this.vRouter = vRouter;
                 return this;
             }

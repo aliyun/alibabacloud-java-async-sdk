@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
      */
     public static class ReferencingSecurityGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReferencingSecurityGroup")
-        private java.util.List < ReferencingSecurityGroup> referencingSecurityGroup;
+        private java.util.List<ReferencingSecurityGroup> referencingSecurityGroup;
 
         private ReferencingSecurityGroups(Builder builder) {
             this.referencingSecurityGroup = builder.referencingSecurityGroup;
@@ -172,17 +177,17 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         /**
          * @return referencingSecurityGroup
          */
-        public java.util.List < ReferencingSecurityGroup> getReferencingSecurityGroup() {
+        public java.util.List<ReferencingSecurityGroup> getReferencingSecurityGroup() {
             return this.referencingSecurityGroup;
         }
 
         public static final class Builder {
-            private java.util.List < ReferencingSecurityGroup> referencingSecurityGroup; 
+            private java.util.List<ReferencingSecurityGroup> referencingSecurityGroup; 
 
             /**
              * ReferencingSecurityGroup.
              */
-            public Builder referencingSecurityGroup(java.util.List < ReferencingSecurityGroup> referencingSecurityGroup) {
+            public Builder referencingSecurityGroup(java.util.List<ReferencingSecurityGroup> referencingSecurityGroup) {
                 this.referencingSecurityGroup = referencingSecurityGroup;
                 return this;
             }
@@ -272,7 +277,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
      */
     public static class SecurityGroupReferences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupReference")
-        private java.util.List < SecurityGroupReference> securityGroupReference;
+        private java.util.List<SecurityGroupReference> securityGroupReference;
 
         private SecurityGroupReferences(Builder builder) {
             this.securityGroupReference = builder.securityGroupReference;
@@ -289,17 +294,17 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         /**
          * @return securityGroupReference
          */
-        public java.util.List < SecurityGroupReference> getSecurityGroupReference() {
+        public java.util.List<SecurityGroupReference> getSecurityGroupReference() {
             return this.securityGroupReference;
         }
 
         public static final class Builder {
-            private java.util.List < SecurityGroupReference> securityGroupReference; 
+            private java.util.List<SecurityGroupReference> securityGroupReference; 
 
             /**
              * SecurityGroupReference.
              */
-            public Builder securityGroupReference(java.util.List < SecurityGroupReference> securityGroupReference) {
+            public Builder securityGroupReference(java.util.List<SecurityGroupReference> securityGroupReference) {
                 this.securityGroupReference = securityGroupReference;
                 return this;
             }

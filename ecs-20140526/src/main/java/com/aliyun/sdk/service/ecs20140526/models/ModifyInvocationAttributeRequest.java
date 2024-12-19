@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class ModifyInvocationAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    private java.util.List < String > instanceId;
+    private java.util.List<String> instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InvokeId")
@@ -51,7 +56,7 @@ public class ModifyInvocationAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -134,7 +139,7 @@ public class ModifyInvocationAttributeRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -162,7 +167,7 @@ public class ModifyInvocationAttributeRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -193,11 +198,11 @@ public class ModifyInvocationAttributeRequest extends Request {
         private String contentEncoding; 
         private Boolean enableParameter; 
         private String frequency; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private String invokeId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -361,7 +366,7 @@ public class ModifyInvocationAttributeRequest extends Request {
         /**
          * <p>The IDs of the ECS instances or managed instances that you want to add to the scheduled command task.</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
@@ -412,7 +417,7 @@ public class ModifyInvocationAttributeRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyvdIqaRY****&quot;}</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putQueryParameter("Parameters", parametersShrink);
             this.parameters = parameters;

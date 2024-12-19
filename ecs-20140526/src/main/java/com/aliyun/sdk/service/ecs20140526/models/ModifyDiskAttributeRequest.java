@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class ModifyDiskAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskIds")
-    private java.util.List < String > diskIds;
+    private java.util.List<String> diskIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskName")
@@ -144,7 +149,7 @@ public class ModifyDiskAttributeRequest extends Request {
     /**
      * @return diskIds
      */
-    public java.util.List < String > getDiskIds() {
+    public java.util.List<String> getDiskIds() {
         return this.diskIds;
     }
 
@@ -204,7 +209,7 @@ public class ModifyDiskAttributeRequest extends Request {
         private Boolean deleteWithInstance; 
         private String description; 
         private String diskId; 
-        private java.util.List < String > diskIds; 
+        private java.util.List<String> diskIds; 
         private String diskName; 
         private Boolean enableAutoSnapshot; 
         private String ownerAccount; 
@@ -325,7 +330,7 @@ public class ModifyDiskAttributeRequest extends Request {
          * <strong>example:</strong>
          * <p>d-bp1famypsnar20bv****</p>
          */
-        public Builder diskIds(java.util.List < String > diskIds) {
+        public Builder diskIds(java.util.List<String> diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
             this.diskIds = diskIds;
             return this;

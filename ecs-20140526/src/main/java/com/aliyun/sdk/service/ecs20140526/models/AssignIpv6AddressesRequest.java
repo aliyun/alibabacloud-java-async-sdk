@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class AssignIpv6AddressesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6Address")
-    private java.util.List < String > ipv6Address;
+    private java.util.List<String> ipv6Address;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
@@ -30,7 +35,7 @@ public class AssignIpv6AddressesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6Prefix")
-    private java.util.List < String > ipv6Prefix;
+    private java.util.List<String> ipv6Prefix;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6PrefixCount")
@@ -109,7 +114,7 @@ public class AssignIpv6AddressesRequest extends Request {
     /**
      * @return ipv6Address
      */
-    public java.util.List < String > getIpv6Address() {
+    public java.util.List<String> getIpv6Address() {
         return this.ipv6Address;
     }
 
@@ -123,7 +128,7 @@ public class AssignIpv6AddressesRequest extends Request {
     /**
      * @return ipv6Prefix
      */
-    public java.util.List < String > getIpv6Prefix() {
+    public java.util.List<String> getIpv6Prefix() {
         return this.ipv6Prefix;
     }
 
@@ -179,9 +184,9 @@ public class AssignIpv6AddressesRequest extends Request {
     public static final class Builder extends Request.Builder<AssignIpv6AddressesRequest, Builder> {
         private String sourceRegionId; 
         private String clientToken; 
-        private java.util.List < String > ipv6Address; 
+        private java.util.List<String> ipv6Address; 
         private Integer ipv6AddressCount; 
-        private java.util.List < String > ipv6Prefix; 
+        private java.util.List<String> ipv6Prefix; 
         private Integer ipv6PrefixCount; 
         private String networkInterfaceId; 
         private String ownerAccount; 
@@ -241,7 +246,7 @@ public class AssignIpv6AddressesRequest extends Request {
          * <strong>example:</strong>
          * <p>2001:db8:1234:1a00::****</p>
          */
-        public Builder ipv6Address(java.util.List < String > ipv6Address) {
+        public Builder ipv6Address(java.util.List<String> ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
             this.ipv6Address = ipv6Address;
             return this;
@@ -268,7 +273,7 @@ public class AssignIpv6AddressesRequest extends Request {
          * <p> To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</p>
          * </blockquote>
          */
-        public Builder ipv6Prefix(java.util.List < String > ipv6Prefix) {
+        public Builder ipv6Prefix(java.util.List<String> ipv6Prefix) {
             this.putQueryParameter("Ipv6Prefix", ipv6Prefix);
             this.ipv6Prefix = ipv6Prefix;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
      */
     public static class AvailableInstanceTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableInstanceType")
-        private java.util.List < AvailableInstanceType> availableInstanceType;
+        private java.util.List<AvailableInstanceType> availableInstanceType;
 
         private AvailableInstanceTypes(Builder builder) {
             this.availableInstanceType = builder.availableInstanceType;
@@ -241,17 +246,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         /**
          * @return availableInstanceType
          */
-        public java.util.List < AvailableInstanceType> getAvailableInstanceType() {
+        public java.util.List<AvailableInstanceType> getAvailableInstanceType() {
             return this.availableInstanceType;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableInstanceType> availableInstanceType; 
+            private java.util.List<AvailableInstanceType> availableInstanceType; 
 
             /**
              * AvailableInstanceType.
              */
-            public Builder availableInstanceType(java.util.List < AvailableInstanceType> availableInstanceType) {
+            public Builder availableInstanceType(java.util.List<AvailableInstanceType> availableInstanceType) {
                 this.availableInstanceType = availableInstanceType;
                 return this;
             }
@@ -374,7 +379,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
      */
     public static class LocalStorageCapacities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalStorageCapacity")
-        private java.util.List < LocalStorageCapacity> localStorageCapacity;
+        private java.util.List<LocalStorageCapacity> localStorageCapacity;
 
         private LocalStorageCapacities(Builder builder) {
             this.localStorageCapacity = builder.localStorageCapacity;
@@ -391,17 +396,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         /**
          * @return localStorageCapacity
          */
-        public java.util.List < LocalStorageCapacity> getLocalStorageCapacity() {
+        public java.util.List<LocalStorageCapacity> getLocalStorageCapacity() {
             return this.localStorageCapacity;
         }
 
         public static final class Builder {
-            private java.util.List < LocalStorageCapacity> localStorageCapacity; 
+            private java.util.List<LocalStorageCapacity> localStorageCapacity; 
 
             /**
              * LocalStorageCapacity.
              */
-            public Builder localStorageCapacity(java.util.List < LocalStorageCapacity> localStorageCapacity) {
+            public Builder localStorageCapacity(java.util.List<LocalStorageCapacity> localStorageCapacity) {
                 this.localStorageCapacity = localStorageCapacity;
                 return this;
             }
@@ -580,7 +585,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
      */
     public static class DedicatedHostIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
-        private java.util.List < String > dedicatedHostId;
+        private java.util.List<String> dedicatedHostId;
 
         private DedicatedHostIds(Builder builder) {
             this.dedicatedHostId = builder.dedicatedHostId;
@@ -597,17 +602,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         /**
          * @return dedicatedHostId
          */
-        public java.util.List < String > getDedicatedHostId() {
+        public java.util.List<String> getDedicatedHostId() {
             return this.dedicatedHostId;
         }
 
         public static final class Builder {
-            private java.util.List < String > dedicatedHostId; 
+            private java.util.List<String> dedicatedHostId; 
 
             /**
              * DedicatedHostId.
              */
-            public Builder dedicatedHostId(java.util.List < String > dedicatedHostId) {
+            public Builder dedicatedHostId(java.util.List<String> dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
                 return this;
             }
@@ -700,7 +705,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -717,17 +722,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -972,7 +977,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
      */
     public static class DedicatedHostClusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DedicatedHostCluster")
-        private java.util.List < DedicatedHostCluster> dedicatedHostCluster;
+        private java.util.List<DedicatedHostCluster> dedicatedHostCluster;
 
         private DedicatedHostClusters(Builder builder) {
             this.dedicatedHostCluster = builder.dedicatedHostCluster;
@@ -989,17 +994,17 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         /**
          * @return dedicatedHostCluster
          */
-        public java.util.List < DedicatedHostCluster> getDedicatedHostCluster() {
+        public java.util.List<DedicatedHostCluster> getDedicatedHostCluster() {
             return this.dedicatedHostCluster;
         }
 
         public static final class Builder {
-            private java.util.List < DedicatedHostCluster> dedicatedHostCluster; 
+            private java.util.List<DedicatedHostCluster> dedicatedHostCluster; 
 
             /**
              * DedicatedHostCluster.
              */
-            public Builder dedicatedHostCluster(java.util.List < DedicatedHostCluster> dedicatedHostCluster) {
+            public Builder dedicatedHostCluster(java.util.List<DedicatedHostCluster> dedicatedHostCluster) {
                 this.dedicatedHostCluster = dedicatedHostCluster;
                 return this;
             }

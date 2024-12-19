@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,11 +27,11 @@ public class CreateSnapshotGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DiskId")
-    private java.util.List < String > diskId;
+    private java.util.List<String> diskId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExcludeDiskId")
-    private java.util.List < String > excludeDiskId;
+    private java.util.List<String> excludeDiskId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -75,7 +80,7 @@ public class CreateSnapshotGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private CreateSnapshotGroupRequest(Builder builder) {
         super(builder);
@@ -127,14 +132,14 @@ public class CreateSnapshotGroupRequest extends Request {
     /**
      * @return diskId
      */
-    public java.util.List < String > getDiskId() {
+    public java.util.List<String> getDiskId() {
         return this.diskId;
     }
 
     /**
      * @return excludeDiskId
      */
-    public java.util.List < String > getExcludeDiskId() {
+    public java.util.List<String> getExcludeDiskId() {
         return this.excludeDiskId;
     }
 
@@ -218,15 +223,15 @@ public class CreateSnapshotGroupRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateSnapshotGroupRequest, Builder> {
         private String clientToken; 
         private String description; 
-        private java.util.List < String > diskId; 
-        private java.util.List < String > excludeDiskId; 
+        private java.util.List<String> diskId; 
+        private java.util.List<String> excludeDiskId; 
         private String instanceId; 
         private Boolean instantAccess; 
         private Integer instantAccessRetentionDays; 
@@ -238,7 +243,7 @@ public class CreateSnapshotGroupRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String storageLocationArn; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -296,7 +301,7 @@ public class CreateSnapshotGroupRequest extends Request {
          * <li>If <code>InstanceId</code> is set, you can use DiskId.N to specify only cloud disks attached to the instance specified by InstanceId, and you cannot use DiskId.N to specify cloud disks attached to multiple instances.</li>
          * </ul>
          */
-        public Builder diskId(java.util.List < String > diskId) {
+        public Builder diskId(java.util.List<String> diskId) {
             this.putQueryParameter("DiskId", diskId);
             this.diskId = diskId;
             return this;
@@ -312,7 +317,7 @@ public class CreateSnapshotGroupRequest extends Request {
          * <strong>example:</strong>
          * <p>d-j6cf7l0ewidb78lq****</p>
          */
-        public Builder excludeDiskId(java.util.List < String > excludeDiskId) {
+        public Builder excludeDiskId(java.util.List<String> excludeDiskId) {
             this.putQueryParameter("ExcludeDiskId", excludeDiskId);
             this.excludeDiskId = excludeDiskId;
             return this;
@@ -457,7 +462,7 @@ public class CreateSnapshotGroupRequest extends Request {
         /**
          * <p>The list of tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

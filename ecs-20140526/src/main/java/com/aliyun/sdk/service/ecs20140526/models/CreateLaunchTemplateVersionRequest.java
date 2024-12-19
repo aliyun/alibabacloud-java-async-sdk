@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDisk")
-    private java.util.List < DataDisk> dataDisk;
+    private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeletionProtection")
@@ -126,7 +131,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterface")
-    private java.util.List < NetworkInterface> networkInterface;
+    private java.util.List<NetworkInterface> networkInterface;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkType")
@@ -187,7 +192,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-    private java.util.List < String > securityGroupIds;
+    private java.util.List<String> securityGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpotDuration")
@@ -204,7 +209,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserData")
@@ -341,7 +346,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
     /**
      * @return dataDisk
      */
-    public java.util.List < DataDisk> getDataDisk() {
+    public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
     }
 
@@ -495,7 +500,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
     /**
      * @return networkInterface
      */
-    public java.util.List < NetworkInterface> getNetworkInterface() {
+    public java.util.List<NetworkInterface> getNetworkInterface() {
         return this.networkInterface;
     }
 
@@ -600,7 +605,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
     /**
      * @return securityGroupIds
      */
-    public java.util.List < String > getSecurityGroupIds() {
+    public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -628,7 +633,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -674,7 +679,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         private Boolean autoRenew; 
         private Integer autoRenewPeriod; 
         private String creditSpecification; 
-        private java.util.List < DataDisk> dataDisk; 
+        private java.util.List<DataDisk> dataDisk; 
         private Boolean deletionProtection; 
         private String deploymentSetId; 
         private String description; 
@@ -696,7 +701,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         private String keyPairName; 
         private String launchTemplateId; 
         private String launchTemplateName; 
-        private java.util.List < NetworkInterface> networkInterface; 
+        private java.util.List<NetworkInterface> networkInterface; 
         private String networkType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -711,11 +716,11 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         private Long resourceOwnerId; 
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
-        private java.util.List < String > securityGroupIds; 
+        private java.util.List<String> securityGroupIds; 
         private Integer spotDuration; 
         private Float spotPriceLimit; 
         private String spotStrategy; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String userData; 
         private String vSwitchId; 
         private String versionDescription; 
@@ -868,7 +873,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         /**
          * <p>The data disks.</p>
          */
-        public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+        public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;
@@ -1187,7 +1192,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         /**
          * <p>The information of the elastic network interfaces (ENIs).</p>
          */
-        public Builder networkInterface(java.util.List < NetworkInterface> networkInterface) {
+        public Builder networkInterface(java.util.List<NetworkInterface> networkInterface) {
             this.putQueryParameter("NetworkInterface", networkInterface);
             this.networkInterface = networkInterface;
             return this;
@@ -1380,7 +1385,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
          * <strong>example:</strong>
          * <p>sg-bp15ed6xe1yxeycg7****</p>
          */
-        public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+        public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
             this.securityGroupIds = securityGroupIds;
             return this;
@@ -1438,7 +1443,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         /**
          * <p>The tags to add to the ECS instance, disks, and primary elastic network interface (ENI) created based on the launch template version.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -2222,7 +2227,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         private String securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-        private java.util.List < String > securityGroupIds;
+        private java.util.List<String> securityGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -2291,7 +2296,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         /**
          * @return securityGroupIds
          */
-        public java.util.List < String > getSecurityGroupIds() {
+        public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
@@ -2309,7 +2314,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             private String networkInterfaceTrafficMode; 
             private String primaryIpAddress; 
             private String securityGroupId; 
-            private java.util.List < String > securityGroupIds; 
+            private java.util.List<String> securityGroupIds; 
             private String vSwitchId; 
 
             /**
@@ -2400,7 +2405,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
              * <strong>example:</strong>
              * <p>sg-bp67acfmxazb4p****</p>
              */
-            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
                 return this;
             }

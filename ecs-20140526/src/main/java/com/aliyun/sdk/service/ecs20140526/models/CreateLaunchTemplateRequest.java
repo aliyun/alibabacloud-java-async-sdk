@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class CreateLaunchTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDisk")
-    private java.util.List < DataDisk> dataDisk;
+    private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeletionProtection")
@@ -123,7 +128,7 @@ public class CreateLaunchTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterface")
-    private java.util.List < NetworkInterface> networkInterface;
+    private java.util.List<NetworkInterface> networkInterface;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkType")
@@ -184,7 +189,7 @@ public class CreateLaunchTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-    private java.util.List < String > securityGroupIds;
+    private java.util.List<String> securityGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpotDuration")
@@ -201,7 +206,7 @@ public class CreateLaunchTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateResourceGroupId")
@@ -209,7 +214,7 @@ public class CreateLaunchTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateTag")
-    private java.util.List < TemplateTag> templateTag;
+    private java.util.List<TemplateTag> templateTag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserData")
@@ -347,7 +352,7 @@ public class CreateLaunchTemplateRequest extends Request {
     /**
      * @return dataDisk
      */
-    public java.util.List < DataDisk> getDataDisk() {
+    public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
     }
 
@@ -494,7 +499,7 @@ public class CreateLaunchTemplateRequest extends Request {
     /**
      * @return networkInterface
      */
-    public java.util.List < NetworkInterface> getNetworkInterface() {
+    public java.util.List<NetworkInterface> getNetworkInterface() {
         return this.networkInterface;
     }
 
@@ -599,7 +604,7 @@ public class CreateLaunchTemplateRequest extends Request {
     /**
      * @return securityGroupIds
      */
-    public java.util.List < String > getSecurityGroupIds() {
+    public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -627,7 +632,7 @@ public class CreateLaunchTemplateRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -641,7 +646,7 @@ public class CreateLaunchTemplateRequest extends Request {
     /**
      * @return templateTag
      */
-    public java.util.List < TemplateTag> getTemplateTag() {
+    public java.util.List<TemplateTag> getTemplateTag() {
         return this.templateTag;
     }
 
@@ -687,7 +692,7 @@ public class CreateLaunchTemplateRequest extends Request {
         private Boolean autoRenew; 
         private Integer autoRenewPeriod; 
         private String creditSpecification; 
-        private java.util.List < DataDisk> dataDisk; 
+        private java.util.List<DataDisk> dataDisk; 
         private Boolean deletionProtection; 
         private String deploymentSetId; 
         private String description; 
@@ -708,7 +713,7 @@ public class CreateLaunchTemplateRequest extends Request {
         private Integer ipv6AddressCount; 
         private String keyPairName; 
         private String launchTemplateName; 
-        private java.util.List < NetworkInterface> networkInterface; 
+        private java.util.List<NetworkInterface> networkInterface; 
         private String networkType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -723,13 +728,13 @@ public class CreateLaunchTemplateRequest extends Request {
         private Long resourceOwnerId; 
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
-        private java.util.List < String > securityGroupIds; 
+        private java.util.List<String> securityGroupIds; 
         private Integer spotDuration; 
         private Float spotPriceLimit; 
         private String spotStrategy; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String templateResourceGroupId; 
-        private java.util.List < TemplateTag> templateTag; 
+        private java.util.List<TemplateTag> templateTag; 
         private String userData; 
         private String vSwitchId; 
         private String versionDescription; 
@@ -886,7 +891,7 @@ public class CreateLaunchTemplateRequest extends Request {
         /**
          * <p>The data disks.</p>
          */
-        public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+        public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;
@@ -1200,7 +1205,7 @@ public class CreateLaunchTemplateRequest extends Request {
         /**
          * <p>The information of the ENIs.</p>
          */
-        public Builder networkInterface(java.util.List < NetworkInterface> networkInterface) {
+        public Builder networkInterface(java.util.List<NetworkInterface> networkInterface) {
             this.putQueryParameter("NetworkInterface", networkInterface);
             this.networkInterface = networkInterface;
             return this;
@@ -1388,7 +1393,7 @@ public class CreateLaunchTemplateRequest extends Request {
          * <strong>example:</strong>
          * <p>sg-bp15ed6xe1yxeycg7****</p>
          */
-        public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+        public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
             this.securityGroupIds = securityGroupIds;
             return this;
@@ -1448,7 +1453,7 @@ public class CreateLaunchTemplateRequest extends Request {
          * <p><strong>Scenario</strong></p>
          * <p>If you created a launch template by calling the CreateLaunchTemplate operation and use the default version that is automatically generated for the launch template to create instances, the specified tags are automatically added to the created instances, disks, and primary ENIs. For more information about the default versions of launch templates, see [xxxx](url).</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -1472,7 +1477,7 @@ public class CreateLaunchTemplateRequest extends Request {
          * <p> You can add tags to or query the tags of launch templates by calling API operations. You cannot add tags to or query the tags of launch templates in the ECS console.</p>
          * </blockquote>
          */
-        public Builder templateTag(java.util.List < TemplateTag> templateTag) {
+        public Builder templateTag(java.util.List<TemplateTag> templateTag) {
             this.putQueryParameter("TemplateTag", templateTag);
             this.templateTag = templateTag;
             return this;
@@ -2258,7 +2263,7 @@ public class CreateLaunchTemplateRequest extends Request {
         private String securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-        private java.util.List < String > securityGroupIds;
+        private java.util.List<String> securityGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -2327,7 +2332,7 @@ public class CreateLaunchTemplateRequest extends Request {
         /**
          * @return securityGroupIds
          */
-        public java.util.List < String > getSecurityGroupIds() {
+        public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
@@ -2345,7 +2350,7 @@ public class CreateLaunchTemplateRequest extends Request {
             private String networkInterfaceTrafficMode; 
             private String primaryIpAddress; 
             private String securityGroupId; 
-            private java.util.List < String > securityGroupIds; 
+            private java.util.List<String> securityGroupIds; 
             private String vSwitchId; 
 
             /**
@@ -2466,7 +2471,7 @@ public class CreateLaunchTemplateRequest extends Request {
              * <strong>example:</strong>
              * <p>sg-bp67acfmxazb4p****</p>
              */
-            public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
                 return this;
             }

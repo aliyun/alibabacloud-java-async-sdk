@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -234,7 +239,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
      */
     public static class AvailableSpotResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableSpotResource")
-        private java.util.List < AvailableSpotResource> availableSpotResource;
+        private java.util.List<AvailableSpotResource> availableSpotResource;
 
         private AvailableSpotResources(Builder builder) {
             this.availableSpotResource = builder.availableSpotResource;
@@ -251,17 +256,17 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         /**
          * @return availableSpotResource
          */
-        public java.util.List < AvailableSpotResource> getAvailableSpotResource() {
+        public java.util.List<AvailableSpotResource> getAvailableSpotResource() {
             return this.availableSpotResource;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableSpotResource> availableSpotResource; 
+            private java.util.List<AvailableSpotResource> availableSpotResource; 
 
             /**
              * AvailableSpotResource.
              */
-            public Builder availableSpotResource(java.util.List < AvailableSpotResource> availableSpotResource) {
+            public Builder availableSpotResource(java.util.List<AvailableSpotResource> availableSpotResource) {
                 this.availableSpotResource = availableSpotResource;
                 return this;
             }
@@ -351,7 +356,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
      */
     public static class AvailableSpotZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableSpotZone")
-        private java.util.List < AvailableSpotZone> availableSpotZone;
+        private java.util.List<AvailableSpotZone> availableSpotZone;
 
         private AvailableSpotZones(Builder builder) {
             this.availableSpotZone = builder.availableSpotZone;
@@ -368,17 +373,17 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         /**
          * @return availableSpotZone
          */
-        public java.util.List < AvailableSpotZone> getAvailableSpotZone() {
+        public java.util.List<AvailableSpotZone> getAvailableSpotZone() {
             return this.availableSpotZone;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableSpotZone> availableSpotZone; 
+            private java.util.List<AvailableSpotZone> availableSpotZone; 
 
             /**
              * AvailableSpotZone.
              */
-            public Builder availableSpotZone(java.util.List < AvailableSpotZone> availableSpotZone) {
+            public Builder availableSpotZone(java.util.List<AvailableSpotZone> availableSpotZone) {
                 this.availableSpotZone = availableSpotZone;
                 return this;
             }

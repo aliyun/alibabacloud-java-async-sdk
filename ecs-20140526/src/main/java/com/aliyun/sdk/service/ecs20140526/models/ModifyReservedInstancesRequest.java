@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyReservedInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Configuration")
-    private java.util.List < Configuration> configuration;
+    private java.util.List<Configuration> configuration;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -32,7 +37,7 @@ public class ModifyReservedInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReservedInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > reservedInstanceId;
+    private java.util.List<String> reservedInstanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -69,7 +74,7 @@ public class ModifyReservedInstancesRequest extends Request {
     /**
      * @return configuration
      */
-    public java.util.List < Configuration> getConfiguration() {
+    public java.util.List<Configuration> getConfiguration() {
         return this.configuration;
     }
 
@@ -97,7 +102,7 @@ public class ModifyReservedInstancesRequest extends Request {
     /**
      * @return reservedInstanceId
      */
-    public java.util.List < String > getReservedInstanceId() {
+    public java.util.List<String> getReservedInstanceId() {
         return this.reservedInstanceId;
     }
 
@@ -116,11 +121,11 @@ public class ModifyReservedInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyReservedInstancesRequest, Builder> {
-        private java.util.List < Configuration> configuration; 
+        private java.util.List<Configuration> configuration; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < String > reservedInstanceId; 
+        private java.util.List<String> reservedInstanceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -140,9 +145,9 @@ public class ModifyReservedInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The configurations of reserved instances.</p>
+         * <p>The configurations of the new reserved instances. You can specify up to 100 new reserved instances.</p>
          */
-        public Builder configuration(java.util.List < Configuration> configuration) {
+        public Builder configuration(java.util.List<Configuration> configuration) {
             this.putQueryParameter("Configuration", configuration);
             this.configuration = configuration;
             return this;
@@ -180,13 +185,13 @@ public class ModifyReservedInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of reserved instance N. Valid values of N: 1 to 20.</p>
+         * <p>The IDs of reserved instances that you want to modify. You can specify up to 20 reserved instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ReservedInstanceId.1=&quot;ecsri-bp1cx3****&quot;,ReservedInstanceId.2=&quot;ecsri-bp15xx2****&quot;......</p>
          */
-        public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
+        public Builder reservedInstanceId(java.util.List<String> reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
             this.reservedInstanceId = reservedInstanceId;
             return this;
@@ -298,7 +303,7 @@ public class ModifyReservedInstancesRequest extends Request {
             private String zoneId; 
 
             /**
-             * <p>The number of pay-as-you-go instances of the same instance type that reserved instance N can match. The value of this parameter must be greater than or equal to 1. Valid values of N: 1 to 100.</p>
+             * <p>The number of pay-as-you-go instances of the specified instance type that the new reserved instance can match. The value of this parameter must be greater than or equal to 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -309,9 +314,9 @@ public class ModifyReservedInstancesRequest extends Request {
             }
 
             /**
-             * <p>The instance type that reserved instance N can match. Valid values of N: 1 to 100.</p>
+             * <p>The instance types that the new reserved instance can match.</p>
              * <blockquote>
-             * <p> The applicable instance types are continuously updated. For more information, see the &quot;Attributes&quot; section in <a href="https://help.aliyun.com/document_detail/100370.html">Overview of reserved instances</a>.</p>
+             * <p> The supported instance types are continuously updated. For information about the instance types supported by reserved instances, see <a href="~~100370#3c1b682051vt4~~">Overview of reserved instances</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -323,8 +328,8 @@ public class ModifyReservedInstancesRequest extends Request {
             }
 
             /**
-             * <p>The name of reserved instance N. Valid values of N: 1 to 100.</p>
-             * <p>The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
+             * <p>The name of the new reserved instance.</p>
+             * <p>The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
              * 
              * <strong>example:</strong>
              * <p>testReservedInstanceName</p>
@@ -335,12 +340,11 @@ public class ModifyReservedInstancesRequest extends Request {
             }
 
             /**
-             * <p>The scope of reserved instance N. Valid values:</p>
+             * <p>The scope level of the new reserved instance. Valid values:</p>
              * <ul>
-             * <li>Region: regional</li>
-             * <li>Zone: zonal</li>
+             * <li>Region</li>
+             * <li>Zone</li>
              * </ul>
-             * <p>Valid values of N: 1 to 100.</p>
              * <p>Default value: Region.</p>
              * 
              * <strong>example:</strong>
@@ -352,8 +356,8 @@ public class ModifyReservedInstancesRequest extends Request {
             }
 
             /**
-             * <p>The zone ID of reserved instance N. Valid values of N: 1 to 100.</p>
-             * <p>This parameter is required when <code>Scope</code> is set to <code>Zone</code>.</p>
+             * <p>The zone ID of the new reserved instance.</p>
+             * <p>This parameter is required when you set <code>Scope</code> to <code>Zone</code>.</p>
              * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeZones</a> operation to query the most recent zone list.</p>
              * 
              * <strong>example:</strong>

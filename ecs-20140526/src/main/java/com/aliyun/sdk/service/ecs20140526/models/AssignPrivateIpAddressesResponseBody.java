@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
      */
     public static class Ipv4PrefixSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv4Prefixes")
-        private java.util.List < String > ipv4Prefixes;
+        private java.util.List<String> ipv4Prefixes;
 
         private Ipv4PrefixSet(Builder builder) {
             this.ipv4Prefixes = builder.ipv4Prefixes;
@@ -99,17 +104,17 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         /**
          * @return ipv4Prefixes
          */
-        public java.util.List < String > getIpv4Prefixes() {
+        public java.util.List<String> getIpv4Prefixes() {
             return this.ipv4Prefixes;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipv4Prefixes; 
+            private java.util.List<String> ipv4Prefixes; 
 
             /**
              * Ipv4Prefixes.
              */
-            public Builder ipv4Prefixes(java.util.List < String > ipv4Prefixes) {
+            public Builder ipv4Prefixes(java.util.List<String> ipv4Prefixes) {
                 this.ipv4Prefixes = ipv4Prefixes;
                 return this;
             }
@@ -129,7 +134,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
      */
     public static class PrivateIpSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
-        private java.util.List < String > privateIpAddress;
+        private java.util.List<String> privateIpAddress;
 
         private PrivateIpSet(Builder builder) {
             this.privateIpAddress = builder.privateIpAddress;
@@ -146,17 +151,17 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         /**
          * @return privateIpAddress
          */
-        public java.util.List < String > getPrivateIpAddress() {
+        public java.util.List<String> getPrivateIpAddress() {
             return this.privateIpAddress;
         }
 
         public static final class Builder {
-            private java.util.List < String > privateIpAddress; 
+            private java.util.List<String> privateIpAddress; 
 
             /**
              * PrivateIpAddress.
              */
-            public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
+            public Builder privateIpAddress(java.util.List<String> privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
                 return this;
             }

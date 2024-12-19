@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -181,7 +186,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -198,17 +203,17 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -454,7 +459,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
      */
     public static class Snapshots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Snapshot")
-        private java.util.List < Snapshot> snapshot;
+        private java.util.List<Snapshot> snapshot;
 
         private Snapshots(Builder builder) {
             this.snapshot = builder.snapshot;
@@ -471,17 +476,17 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         /**
          * @return snapshot
          */
-        public java.util.List < Snapshot> getSnapshot() {
+        public java.util.List<Snapshot> getSnapshot() {
             return this.snapshot;
         }
 
         public static final class Builder {
-            private java.util.List < Snapshot> snapshot; 
+            private java.util.List<Snapshot> snapshot; 
 
             /**
              * Snapshot.
              */
-            public Builder snapshot(java.util.List < Snapshot> snapshot) {
+            public Builder snapshot(java.util.List<Snapshot> snapshot) {
                 this.snapshot = snapshot;
                 return this;
             }
@@ -574,7 +579,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
      */
     public static class SnapshotGroupTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < TagsTag> tag;
+        private java.util.List<TagsTag> tag;
 
         private SnapshotGroupTags(Builder builder) {
             this.tag = builder.tag;
@@ -591,17 +596,17 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < TagsTag> getTag() {
+        public java.util.List<TagsTag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < TagsTag> tag; 
+            private java.util.List<TagsTag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < TagsTag> tag) {
+            public Builder tag(java.util.List<TagsTag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -879,7 +884,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
      */
     public static class SnapshotGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SnapshotGroup")
-        private java.util.List < SnapshotGroup> snapshotGroup;
+        private java.util.List<SnapshotGroup> snapshotGroup;
 
         private SnapshotGroups(Builder builder) {
             this.snapshotGroup = builder.snapshotGroup;
@@ -896,17 +901,17 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         /**
          * @return snapshotGroup
          */
-        public java.util.List < SnapshotGroup> getSnapshotGroup() {
+        public java.util.List<SnapshotGroup> getSnapshotGroup() {
             return this.snapshotGroup;
         }
 
         public static final class Builder {
-            private java.util.List < SnapshotGroup> snapshotGroup; 
+            private java.util.List<SnapshotGroup> snapshotGroup; 
 
             /**
              * SnapshotGroup.
              */
-            public Builder snapshotGroup(java.util.List < SnapshotGroup> snapshotGroup) {
+            public Builder snapshotGroup(java.util.List<SnapshotGroup> snapshotGroup) {
                 this.snapshotGroup = snapshotGroup;
                 return this;
             }

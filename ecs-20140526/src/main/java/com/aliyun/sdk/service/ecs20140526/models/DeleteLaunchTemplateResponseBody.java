@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -106,7 +111,7 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
      */
     public static class LaunchTemplateVersionNumbers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("versionNumbers")
-        private java.util.List < Long > versionNumbers;
+        private java.util.List<Long> versionNumbers;
 
         private LaunchTemplateVersionNumbers(Builder builder) {
             this.versionNumbers = builder.versionNumbers;
@@ -123,17 +128,17 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
         /**
          * @return versionNumbers
          */
-        public java.util.List < Long > getVersionNumbers() {
+        public java.util.List<Long> getVersionNumbers() {
             return this.versionNumbers;
         }
 
         public static final class Builder {
-            private java.util.List < Long > versionNumbers; 
+            private java.util.List<Long> versionNumbers; 
 
             /**
              * versionNumbers.
              */
-            public Builder versionNumbers(java.util.List < Long > versionNumbers) {
+            public Builder versionNumbers(java.util.List<Long> versionNumbers) {
                 this.versionNumbers = versionNumbers;
                 return this;
             }

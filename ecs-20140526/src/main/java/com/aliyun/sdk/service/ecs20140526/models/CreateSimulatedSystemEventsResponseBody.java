@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
      */
     public static class EventIdSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventId")
-        private java.util.List < String > eventId;
+        private java.util.List<String> eventId;
 
         private EventIdSet(Builder builder) {
             this.eventId = builder.eventId;
@@ -99,17 +104,17 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
         /**
          * @return eventId
          */
-        public java.util.List < String > getEventId() {
+        public java.util.List<String> getEventId() {
             return this.eventId;
         }
 
         public static final class Builder {
-            private java.util.List < String > eventId; 
+            private java.util.List<String> eventId; 
 
             /**
              * EventId.
              */
-            public Builder eventId(java.util.List < String > eventId) {
+            public Builder eventId(java.util.List<String> eventId) {
                 this.eventId = eventId;
                 return this;
             }

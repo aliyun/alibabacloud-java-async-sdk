@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,7 +275,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
      */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         private Results(Builder builder) {
             this.result = builder.result;
@@ -287,17 +292,17 @@ public class DetachKeyPairResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
         public static final class Builder {
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
 
             /**
              * Result.
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

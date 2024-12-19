@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -44,7 +49,7 @@ public class SendFileRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instanceId;
+    private java.util.List<String> instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -82,7 +87,7 @@ public class SendFileRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetDir")
@@ -181,7 +186,7 @@ public class SendFileRequest extends Request {
     /**
      * @return instanceId
      */
-    public java.util.List < String > getInstanceId() {
+    public java.util.List<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -244,7 +249,7 @@ public class SendFileRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -270,7 +275,7 @@ public class SendFileRequest extends Request {
         private String fileGroup; 
         private String fileMode; 
         private String fileOwner; 
-        private java.util.List < String > instanceId; 
+        private java.util.List<String> instanceId; 
         private String name; 
         private Boolean overwrite; 
         private String ownerAccount; 
@@ -279,7 +284,7 @@ public class SendFileRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String targetDir; 
         private Long timeout; 
 
@@ -415,7 +420,7 @@ public class SendFileRequest extends Request {
          * <strong>example:</strong>
          * <p>i-bp185dy2o3o6n****</p>
          */
-        public Builder instanceId(java.util.List < String > instanceId) {
+        public Builder instanceId(java.util.List<String> instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
             return this;
@@ -519,7 +524,7 @@ public class SendFileRequest extends Request {
         /**
          * <p>The tags to add to the file sending task.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

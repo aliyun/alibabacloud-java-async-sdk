@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class CreateElasticityAssuranceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceType")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instanceType;
+    private java.util.List<String> instanceType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -80,12 +85,12 @@ public class CreateElasticityAssuranceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > zoneId;
+    private java.util.List<String> zoneId;
 
     private CreateElasticityAssuranceRequest(Builder builder) {
         super(builder);
@@ -167,7 +172,7 @@ public class CreateElasticityAssuranceRequest extends Request {
     /**
      * @return instanceType
      */
-    public java.util.List < String > getInstanceType() {
+    public java.util.List<String> getInstanceType() {
         return this.instanceType;
     }
 
@@ -237,14 +242,14 @@ public class CreateElasticityAssuranceRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     /**
      * @return zoneId
      */
-    public java.util.List < String > getZoneId() {
+    public java.util.List<String> getZoneId() {
         return this.zoneId;
     }
 
@@ -255,7 +260,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         private String description; 
         private Integer instanceAmount; 
         private Integer instanceCpuCoreCount; 
-        private java.util.List < String > instanceType; 
+        private java.util.List<String> instanceType; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer period; 
@@ -265,8 +270,8 @@ public class CreateElasticityAssuranceRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String startTime; 
-        private java.util.List < Tag> tag; 
-        private java.util.List < String > zoneId; 
+        private java.util.List<Tag> tag; 
+        private java.util.List<String> zoneId; 
 
         private Builder() {
             super();
@@ -375,7 +380,7 @@ public class CreateElasticityAssuranceRequest extends Request {
          * <strong>example:</strong>
          * <p>ecs.c6.xlarge</p>
          */
-        public Builder instanceType(java.util.List < String > instanceType) {
+        public Builder instanceType(java.util.List<String> instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
             this.instanceType = instanceType;
             return this;
@@ -491,7 +496,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         /**
          * <p>The tags to add to the elasticity assurance.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -504,7 +509,7 @@ public class CreateElasticityAssuranceRequest extends Request {
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
          */
-        public Builder zoneId(java.util.List < String > zoneId) {
+        public Builder zoneId(java.util.List<String> zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
             this.zoneId = zoneId;
             return this;

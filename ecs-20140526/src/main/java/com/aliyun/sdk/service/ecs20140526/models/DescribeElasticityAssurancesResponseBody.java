@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -253,7 +258,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
      */
     public static class ElasticityAssuranceUsages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ElasticityAssuranceUsage")
-        private java.util.List < ElasticityAssuranceUsage> elasticityAssuranceUsage;
+        private java.util.List<ElasticityAssuranceUsage> elasticityAssuranceUsage;
 
         private ElasticityAssuranceUsages(Builder builder) {
             this.elasticityAssuranceUsage = builder.elasticityAssuranceUsage;
@@ -270,17 +275,17 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         /**
          * @return elasticityAssuranceUsage
          */
-        public java.util.List < ElasticityAssuranceUsage> getElasticityAssuranceUsage() {
+        public java.util.List<ElasticityAssuranceUsage> getElasticityAssuranceUsage() {
             return this.elasticityAssuranceUsage;
         }
 
         public static final class Builder {
-            private java.util.List < ElasticityAssuranceUsage> elasticityAssuranceUsage; 
+            private java.util.List<ElasticityAssuranceUsage> elasticityAssuranceUsage; 
 
             /**
              * ElasticityAssuranceUsage.
              */
-            public Builder elasticityAssuranceUsage(java.util.List < ElasticityAssuranceUsage> elasticityAssuranceUsage) {
+            public Builder elasticityAssuranceUsage(java.util.List<ElasticityAssuranceUsage> elasticityAssuranceUsage) {
                 this.elasticityAssuranceUsage = elasticityAssuranceUsage;
                 return this;
             }
@@ -466,7 +471,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
      */
     public static class AllocatedResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocatedResource")
-        private java.util.List < AllocatedResource> allocatedResource;
+        private java.util.List<AllocatedResource> allocatedResource;
 
         private AllocatedResources(Builder builder) {
             this.allocatedResource = builder.allocatedResource;
@@ -483,17 +488,17 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         /**
          * @return allocatedResource
          */
-        public java.util.List < AllocatedResource> getAllocatedResource() {
+        public java.util.List<AllocatedResource> getAllocatedResource() {
             return this.allocatedResource;
         }
 
         public static final class Builder {
-            private java.util.List < AllocatedResource> allocatedResource; 
+            private java.util.List<AllocatedResource> allocatedResource; 
 
             /**
              * AllocatedResource.
              */
-            public Builder allocatedResource(java.util.List < AllocatedResource> allocatedResource) {
+            public Builder allocatedResource(java.util.List<AllocatedResource> allocatedResource) {
                 this.allocatedResource = allocatedResource;
                 return this;
             }
@@ -586,7 +591,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -603,17 +608,17 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1065,7 +1070,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
      */
     public static class ElasticityAssuranceSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ElasticityAssuranceItem")
-        private java.util.List < ElasticityAssuranceItem> elasticityAssuranceItem;
+        private java.util.List<ElasticityAssuranceItem> elasticityAssuranceItem;
 
         private ElasticityAssuranceSet(Builder builder) {
             this.elasticityAssuranceItem = builder.elasticityAssuranceItem;
@@ -1082,17 +1087,17 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         /**
          * @return elasticityAssuranceItem
          */
-        public java.util.List < ElasticityAssuranceItem> getElasticityAssuranceItem() {
+        public java.util.List<ElasticityAssuranceItem> getElasticityAssuranceItem() {
             return this.elasticityAssuranceItem;
         }
 
         public static final class Builder {
-            private java.util.List < ElasticityAssuranceItem> elasticityAssuranceItem; 
+            private java.util.List<ElasticityAssuranceItem> elasticityAssuranceItem; 
 
             /**
              * ElasticityAssuranceItem.
              */
-            public Builder elasticityAssuranceItem(java.util.List < ElasticityAssuranceItem> elasticityAssuranceItem) {
+            public Builder elasticityAssuranceItem(java.util.List<ElasticityAssuranceItem> elasticityAssuranceItem) {
                 this.elasticityAssuranceItem = elasticityAssuranceItem;
                 return this;
             }

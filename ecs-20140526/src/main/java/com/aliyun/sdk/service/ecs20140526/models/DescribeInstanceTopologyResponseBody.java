@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
      */
     public static class Topologys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Topology")
-        private java.util.List < Topology> topology;
+        private java.util.List<Topology> topology;
 
         private Topologys(Builder builder) {
             this.topology = builder.topology;
@@ -172,17 +177,17 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return topology
          */
-        public java.util.List < Topology> getTopology() {
+        public java.util.List<Topology> getTopology() {
             return this.topology;
         }
 
         public static final class Builder {
-            private java.util.List < Topology> topology; 
+            private java.util.List<Topology> topology; 
 
             /**
              * Topology.
              */
-            public Builder topology(java.util.List < Topology> topology) {
+            public Builder topology(java.util.List<Topology> topology) {
                 this.topology = topology;
                 return this;
             }

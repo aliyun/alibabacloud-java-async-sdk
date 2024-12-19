@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -122,7 +127,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
      */
     public static class AllowedUpgradeWindows extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedUpgradeWindow")
-        private java.util.List < String > allowedUpgradeWindow;
+        private java.util.List<String> allowedUpgradeWindow;
 
         private AllowedUpgradeWindows(Builder builder) {
             this.allowedUpgradeWindow = builder.allowedUpgradeWindow;
@@ -139,17 +144,17 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         /**
          * @return allowedUpgradeWindow
          */
-        public java.util.List < String > getAllowedUpgradeWindow() {
+        public java.util.List<String> getAllowedUpgradeWindow() {
             return this.allowedUpgradeWindow;
         }
 
         public static final class Builder {
-            private java.util.List < String > allowedUpgradeWindow; 
+            private java.util.List<String> allowedUpgradeWindow; 
 
             /**
              * AllowedUpgradeWindow.
              */
-            public Builder allowedUpgradeWindow(java.util.List < String > allowedUpgradeWindow) {
+            public Builder allowedUpgradeWindow(java.util.List<String> allowedUpgradeWindow) {
                 this.allowedUpgradeWindow = allowedUpgradeWindow;
                 return this;
             }
@@ -463,7 +468,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
      */
     public static class OssDeliveryConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OssDeliveryConfig")
-        private java.util.List < OssDeliveryConfig> ossDeliveryConfig;
+        private java.util.List<OssDeliveryConfig> ossDeliveryConfig;
 
         private OssDeliveryConfigs(Builder builder) {
             this.ossDeliveryConfig = builder.ossDeliveryConfig;
@@ -480,17 +485,17 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         /**
          * @return ossDeliveryConfig
          */
-        public java.util.List < OssDeliveryConfig> getOssDeliveryConfig() {
+        public java.util.List<OssDeliveryConfig> getOssDeliveryConfig() {
             return this.ossDeliveryConfig;
         }
 
         public static final class Builder {
-            private java.util.List < OssDeliveryConfig> ossDeliveryConfig; 
+            private java.util.List<OssDeliveryConfig> ossDeliveryConfig; 
 
             /**
              * OssDeliveryConfig.
              */
-            public Builder ossDeliveryConfig(java.util.List < OssDeliveryConfig> ossDeliveryConfig) {
+            public Builder ossDeliveryConfig(java.util.List<OssDeliveryConfig> ossDeliveryConfig) {
                 this.ossDeliveryConfig = ossDeliveryConfig;
                 return this;
             }
@@ -633,7 +638,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
      */
     public static class SlsDeliveryConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlsDeliveryConfig")
-        private java.util.List < SlsDeliveryConfig> slsDeliveryConfig;
+        private java.util.List<SlsDeliveryConfig> slsDeliveryConfig;
 
         private SlsDeliveryConfigs(Builder builder) {
             this.slsDeliveryConfig = builder.slsDeliveryConfig;
@@ -650,17 +655,17 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         /**
          * @return slsDeliveryConfig
          */
-        public java.util.List < SlsDeliveryConfig> getSlsDeliveryConfig() {
+        public java.util.List<SlsDeliveryConfig> getSlsDeliveryConfig() {
             return this.slsDeliveryConfig;
         }
 
         public static final class Builder {
-            private java.util.List < SlsDeliveryConfig> slsDeliveryConfig; 
+            private java.util.List<SlsDeliveryConfig> slsDeliveryConfig; 
 
             /**
              * SlsDeliveryConfig.
              */
-            public Builder slsDeliveryConfig(java.util.List < SlsDeliveryConfig> slsDeliveryConfig) {
+            public Builder slsDeliveryConfig(java.util.List<SlsDeliveryConfig> slsDeliveryConfig) {
                 this.slsDeliveryConfig = slsDeliveryConfig;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class CreateSavingsPlanRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
-    private java.util.List < String > resourceId;
+    private java.util.List<String> resourceId;
 
     private CreateSavingsPlanRequest(Builder builder) {
         super(builder);
@@ -145,7 +150,7 @@ public class CreateSavingsPlanRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -159,7 +164,7 @@ public class CreateSavingsPlanRequest extends Request {
         private String periodUnit; 
         private String planType; 
         private String regionId; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
 
         private Builder() {
             super();
@@ -263,7 +268,7 @@ public class CreateSavingsPlanRequest extends Request {
         /**
          * ResourceId.
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;

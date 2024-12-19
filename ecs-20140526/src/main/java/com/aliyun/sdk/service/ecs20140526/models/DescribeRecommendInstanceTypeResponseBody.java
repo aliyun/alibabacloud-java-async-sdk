@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
      */
     public static class NetworkTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkType")
-        private java.util.List < String > networkType;
+        private java.util.List<String> networkType;
 
         private NetworkTypes(Builder builder) {
             this.networkType = builder.networkType;
@@ -264,17 +269,17 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         /**
          * @return networkType
          */
-        public java.util.List < String > getNetworkType() {
+        public java.util.List<String> getNetworkType() {
             return this.networkType;
         }
 
         public static final class Builder {
-            private java.util.List < String > networkType; 
+            private java.util.List<String> networkType; 
 
             /**
              * NetworkType.
              */
-            public Builder networkType(java.util.List < String > networkType) {
+            public Builder networkType(java.util.List<String> networkType) {
                 this.networkType = networkType;
                 return this;
             }
@@ -364,7 +369,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
      */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("zone")
-        private java.util.List < Zone> zone;
+        private java.util.List<Zone> zone;
 
         private Zones(Builder builder) {
             this.zone = builder.zone;
@@ -381,17 +386,17 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         /**
          * @return zone
          */
-        public java.util.List < Zone> getZone() {
+        public java.util.List<Zone> getZone() {
             return this.zone;
         }
 
         public static final class Builder {
-            private java.util.List < Zone> zone; 
+            private java.util.List<Zone> zone; 
 
             /**
              * zone.
              */
-            public Builder zone(java.util.List < Zone> zone) {
+            public Builder zone(java.util.List<Zone> zone) {
                 this.zone = zone;
                 return this;
             }
@@ -662,7 +667,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecommendInstanceType")
-        private java.util.List < RecommendInstanceType> recommendInstanceType;
+        private java.util.List<RecommendInstanceType> recommendInstanceType;
 
         private Data(Builder builder) {
             this.recommendInstanceType = builder.recommendInstanceType;
@@ -679,17 +684,17 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         /**
          * @return recommendInstanceType
          */
-        public java.util.List < RecommendInstanceType> getRecommendInstanceType() {
+        public java.util.List<RecommendInstanceType> getRecommendInstanceType() {
             return this.recommendInstanceType;
         }
 
         public static final class Builder {
-            private java.util.List < RecommendInstanceType> recommendInstanceType; 
+            private java.util.List<RecommendInstanceType> recommendInstanceType; 
 
             /**
              * RecommendInstanceType.
              */
-            public Builder recommendInstanceType(java.util.List < RecommendInstanceType> recommendInstanceType) {
+            public Builder recommendInstanceType(java.util.List<RecommendInstanceType> recommendInstanceType) {
                 this.recommendInstanceType = recommendInstanceType;
                 return this;
             }

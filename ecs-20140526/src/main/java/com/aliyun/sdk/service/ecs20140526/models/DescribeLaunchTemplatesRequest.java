@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,11 @@ public class DescribeLaunchTemplatesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
-    private java.util.List < String > launchTemplateId;
+    private java.util.List<String> launchTemplateId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LaunchTemplateName")
-    private java.util.List < String > launchTemplateName;
+    private java.util.List<String> launchTemplateName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -59,7 +64,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateTag")
-    private java.util.List < TemplateTag> templateTag;
+    private java.util.List<TemplateTag> templateTag;
 
     private DescribeLaunchTemplatesRequest(Builder builder) {
         super(builder);
@@ -100,14 +105,14 @@ public class DescribeLaunchTemplatesRequest extends Request {
     /**
      * @return launchTemplateId
      */
-    public java.util.List < String > getLaunchTemplateId() {
+    public java.util.List<String> getLaunchTemplateId() {
         return this.launchTemplateId;
     }
 
     /**
      * @return launchTemplateName
      */
-    public java.util.List < String > getLaunchTemplateName() {
+    public java.util.List<String> getLaunchTemplateName() {
         return this.launchTemplateName;
     }
 
@@ -170,14 +175,14 @@ public class DescribeLaunchTemplatesRequest extends Request {
     /**
      * @return templateTag
      */
-    public java.util.List < TemplateTag> getTemplateTag() {
+    public java.util.List<TemplateTag> getTemplateTag() {
         return this.templateTag;
     }
 
     public static final class Builder extends Request.Builder<DescribeLaunchTemplatesRequest, Builder> {
         private String sourceRegionId; 
-        private java.util.List < String > launchTemplateId; 
-        private java.util.List < String > launchTemplateName; 
+        private java.util.List<String> launchTemplateId; 
+        private java.util.List<String> launchTemplateName; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -186,7 +191,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String templateResourceGroupId; 
-        private java.util.List < TemplateTag> templateTag; 
+        private java.util.List<TemplateTag> templateTag; 
 
         private Builder() {
             super();
@@ -227,7 +232,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
          * <strong>example:</strong>
          * <p>lt-m5e3ofjr1zn1aw7q****</p>
          */
-        public Builder launchTemplateId(java.util.List < String > launchTemplateId) {
+        public Builder launchTemplateId(java.util.List<String> launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
             this.launchTemplateId = launchTemplateId;
             return this;
@@ -243,7 +248,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
          * <strong>example:</strong>
          * <p>wd-152630748****</p>
          */
-        public Builder launchTemplateName(java.util.List < String > launchTemplateName) {
+        public Builder launchTemplateName(java.util.List<String> launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);
             this.launchTemplateName = launchTemplateName;
             return this;
@@ -344,7 +349,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
          * <p> You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the Elastic Compute Service (ECS) console.</p>
          * </blockquote>
          */
-        public Builder templateTag(java.util.List < TemplateTag> templateTag) {
+        public Builder templateTag(java.util.List<TemplateTag> templateTag) {
             this.putQueryParameter("TemplateTag", templateTag);
             this.templateTag = templateTag;
             return this;

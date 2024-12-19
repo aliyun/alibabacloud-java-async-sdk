@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class ListTagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
-    private java.util.List < String > resourceId;
+    private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -52,11 +57,11 @@ public class ListTagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagFilter")
-    private java.util.List < TagFilter> tagFilter;
+    private java.util.List<TagFilter> tagFilter;
 
     private ListTagResourcesRequest(Builder builder) {
         super(builder);
@@ -124,7 +129,7 @@ public class ListTagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -152,14 +157,14 @@ public class ListTagResourcesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     /**
      * @return tagFilter
      */
-    public java.util.List < TagFilter> getTagFilter() {
+    public java.util.List<TagFilter> getTagFilter() {
         return this.tagFilter;
     }
 
@@ -169,12 +174,12 @@ public class ListTagResourcesRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
-        private java.util.List < Tag> tag; 
-        private java.util.List < TagFilter> tagFilter; 
+        private java.util.List<Tag> tag; 
+        private java.util.List<TagFilter> tagFilter; 
 
         private Builder() {
             super();
@@ -253,7 +258,7 @@ public class ListTagResourcesRequest extends Request {
          * <strong>example:</strong>
          * <p>i-bp1j6qtvdm8w0z1o****</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
@@ -314,7 +319,7 @@ public class ListTagResourcesRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -323,7 +328,7 @@ public class ListTagResourcesRequest extends Request {
         /**
          * <p>The regular expressions used to filter tags.</p>
          */
-        public Builder tagFilter(java.util.List < TagFilter> tagFilter) {
+        public Builder tagFilter(java.util.List<TagFilter> tagFilter) {
             this.putQueryParameter("TagFilter", tagFilter);
             this.tagFilter = tagFilter;
             return this;
@@ -439,7 +444,7 @@ public class ListTagResourcesRequest extends Request {
         private String tagKey;
 
         @com.aliyun.core.annotation.NameInMap("TagValues")
-        private java.util.List < String > tagValues;
+        private java.util.List<String> tagValues;
 
         private TagFilter(Builder builder) {
             this.tagKey = builder.tagKey;
@@ -464,13 +469,13 @@ public class ListTagResourcesRequest extends Request {
         /**
          * @return tagValues
          */
-        public java.util.List < String > getTagValues() {
+        public java.util.List<String> getTagValues() {
             return this.tagValues;
         }
 
         public static final class Builder {
             private String tagKey; 
-            private java.util.List < String > tagValues; 
+            private java.util.List<String> tagValues; 
 
             /**
              * <p>The key of tag N used for fuzzy search of ECS resources. The tag key must be 1 to 128 characters in length. Valid values of N: 1 to 5.</p>
@@ -499,7 +504,7 @@ public class ListTagResourcesRequest extends Request {
              * <strong>example:</strong>
              * <p>TestTagFilter</p>
              */
-            public Builder tagValues(java.util.List < String > tagValues) {
+            public Builder tagValues(java.util.List<String> tagValues) {
                 this.tagValues = tagValues;
                 return this;
             }

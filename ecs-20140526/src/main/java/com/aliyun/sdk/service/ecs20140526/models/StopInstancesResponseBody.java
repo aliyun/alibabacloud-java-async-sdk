@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class StopInstancesResponseBody extends TeaModel {
      */
     public static class InstanceResponses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceResponse")
-        private java.util.List < InstanceResponse> instanceResponse;
+        private java.util.List<InstanceResponse> instanceResponse;
 
         private InstanceResponses(Builder builder) {
             this.instanceResponse = builder.instanceResponse;
@@ -241,17 +246,17 @@ public class StopInstancesResponseBody extends TeaModel {
         /**
          * @return instanceResponse
          */
-        public java.util.List < InstanceResponse> getInstanceResponse() {
+        public java.util.List<InstanceResponse> getInstanceResponse() {
             return this.instanceResponse;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceResponse> instanceResponse; 
+            private java.util.List<InstanceResponse> instanceResponse; 
 
             /**
              * InstanceResponse.
              */
-            public Builder instanceResponse(java.util.List < InstanceResponse> instanceResponse) {
+            public Builder instanceResponse(java.util.List<InstanceResponse> instanceResponse) {
                 this.instanceResponse = instanceResponse;
                 return this;
             }

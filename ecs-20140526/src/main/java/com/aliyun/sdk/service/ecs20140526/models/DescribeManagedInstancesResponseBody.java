@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeManagedInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -50,7 +55,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -90,7 +95,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private String nextToken; 
         private Long pageNumber; 
         private Long pageSize; 
@@ -100,7 +105,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         /**
          * <p>The queried managed instances.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
@@ -295,7 +300,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Instances(Builder builder) {
             this.activationId = builder.activationId;
@@ -432,7 +437,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -452,7 +457,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             private String osVersion; 
             private String registrationTime; 
             private String resourceGroupId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The ID of the activation code.</p>
@@ -626,7 +631,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             /**
              * <p>The tags of the managed instance.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -265,7 +270,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
      */
     public static class Connections extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Connection")
-        private java.util.List < Connection> connection;
+        private java.util.List<Connection> connection;
 
         private Connections(Builder builder) {
             this.connection = builder.connection;
@@ -282,17 +287,17 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
         /**
          * @return connection
          */
-        public java.util.List < Connection> getConnection() {
+        public java.util.List<Connection> getConnection() {
             return this.connection;
         }
 
         public static final class Builder {
-            private java.util.List < Connection> connection; 
+            private java.util.List<Connection> connection; 
 
             /**
              * Connection.
              */
-            public Builder connection(java.util.List < Connection> connection) {
+            public Builder connection(java.util.List<Connection> connection) {
                 this.connection = connection;
                 return this;
             }
@@ -553,7 +558,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
      */
     public static class Sessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Session")
-        private java.util.List < Session> session;
+        private java.util.List<Session> session;
 
         private Sessions(Builder builder) {
             this.session = builder.session;
@@ -570,17 +575,17 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
         /**
          * @return session
          */
-        public java.util.List < Session> getSession() {
+        public java.util.List<Session> getSession() {
             return this.session;
         }
 
         public static final class Builder {
-            private java.util.List < Session> session; 
+            private java.util.List<Session> session; 
 
             /**
              * Session.
              */
-            public Builder session(java.util.List < Session> session) {
+            public Builder session(java.util.List<Session> session) {
                 this.session = session;
                 return this;
             }

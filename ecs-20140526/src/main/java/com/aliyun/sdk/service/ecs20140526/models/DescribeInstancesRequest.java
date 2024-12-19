@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("SourceRegionId")
@@ -22,7 +27,7 @@ public class DescribeInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AdditionalAttributes")
-    private java.util.List < String > additionalAttributes;
+    private java.util.List<String> additionalAttributes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeviceAvailable")
@@ -94,7 +99,7 @@ public class DescribeInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6Address")
-    private java.util.List < String > ipv6Address;
+    private java.util.List<String> ipv6Address;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPairName")
@@ -173,7 +178,7 @@ public class DescribeInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
@@ -250,7 +255,7 @@ public class DescribeInstancesRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -264,7 +269,7 @@ public class DescribeInstancesRequest extends Request {
     /**
      * @return additionalAttributes
      */
-    public java.util.List < String > getAdditionalAttributes() {
+    public java.util.List<String> getAdditionalAttributes() {
         return this.additionalAttributes;
     }
 
@@ -390,7 +395,7 @@ public class DescribeInstancesRequest extends Request {
     /**
      * @return ipv6Address
      */
-    public java.util.List < String > getIpv6Address() {
+    public java.util.List<String> getIpv6Address() {
         return this.ipv6Address;
     }
 
@@ -523,7 +528,7 @@ public class DescribeInstancesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -549,9 +554,9 @@ public class DescribeInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstancesRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private String sourceRegionId; 
-        private java.util.List < String > additionalAttributes; 
+        private java.util.List<String> additionalAttributes; 
         private Boolean deviceAvailable; 
         private Boolean dryRun; 
         private String eipAddresses; 
@@ -569,7 +574,7 @@ public class DescribeInstancesRequest extends Request {
         private String instanceTypeFamily; 
         private String internetChargeType; 
         private Boolean ioOptimized; 
-        private java.util.List < String > ipv6Address; 
+        private java.util.List<String> ipv6Address; 
         private String keyPairName; 
         private String lockReason; 
         private Integer maxResults; 
@@ -588,7 +593,7 @@ public class DescribeInstancesRequest extends Request {
         private Long resourceOwnerId; 
         private String securityGroupId; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -647,7 +652,7 @@ public class DescribeInstancesRequest extends Request {
         /**
          * Filter.
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
@@ -663,19 +668,12 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The additional attributes. Valid values of N: 1 to 20. Valid values:</p>
-         * <ul>
-         * <li>META_OPTIONS: instance metadata.</li>
-         * <li>DDH_CLUSTER: dedicated host cluster.</li>
-         * <li>NETWORK_PRIMARY_ENI_IP: secondary IP address associated with the primary ENI.</li>
-         * <li>CPU_OPTIONS_TOPOLOGY_TYPE: CPU topology type of the instance.</li>
-         * <li>CURRENT_OS_NVME_SUPPORTED: specifies whether the operating system supports access to disks over the Non-Volatile Memory Express (NVMe) protocol.</li>
-         * </ul>
+         * <p>Additional instance attributes.</p>
          * 
          * <strong>example:</strong>
          * <p>META_OPTIONS</p>
          */
-        public Builder additionalAttributes(java.util.List < String > additionalAttributes) {
+        public Builder additionalAttributes(java.util.List<String> additionalAttributes) {
             this.putQueryParameter("AdditionalAttributes", additionalAttributes);
             this.additionalAttributes = additionalAttributes;
             return this;
@@ -932,7 +930,7 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The IPv6 addresses assigned to elastic network interfaces (ENIs).</p>
          */
-        public Builder ipv6Address(java.util.List < String > ipv6Address) {
+        public Builder ipv6Address(java.util.List<String> ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
             this.ipv6Address = ipv6Address;
             return this;
@@ -1031,9 +1029,9 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1.</p>
-         * <p>Default value: 1.</p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1045,9 +1043,9 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Valid values: 1 to 100.</p>
-         * <p>Default value: 10.</p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1174,7 +1172,7 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The tags of the instance.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

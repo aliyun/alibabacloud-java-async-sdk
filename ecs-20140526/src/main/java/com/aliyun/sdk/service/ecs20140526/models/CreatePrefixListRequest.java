@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class CreatePrefixListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Entry")
-    private java.util.List < Entry> entry;
+    private java.util.List<Entry> entry;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxEntries")
@@ -124,7 +129,7 @@ public class CreatePrefixListRequest extends Request {
     /**
      * @return entry
      */
-    public java.util.List < Entry> getEntry() {
+    public java.util.List<Entry> getEntry() {
         return this.entry;
     }
 
@@ -182,7 +187,7 @@ public class CreatePrefixListRequest extends Request {
         private String addressFamily; 
         private String clientToken; 
         private String description; 
-        private java.util.List < Entry> entry; 
+        private java.util.List<Entry> entry; 
         private Integer maxEntries; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -264,7 +269,7 @@ public class CreatePrefixListRequest extends Request {
         /**
          * <p>The details of entries in the prefix list.</p>
          */
-        public Builder entry(java.util.List < Entry> entry) {
+        public Builder entry(java.util.List<Entry> entry) {
             this.putQueryParameter("Entry", entry);
             this.entry = entry;
             return this;

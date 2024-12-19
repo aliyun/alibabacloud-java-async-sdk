@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -128,7 +133,7 @@ public class RunInstancesResponseBody extends TeaModel {
      */
     public static class InstanceIdSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceIdSet")
-        private java.util.List < String > instanceIdSet;
+        private java.util.List<String> instanceIdSet;
 
         private InstanceIdSets(Builder builder) {
             this.instanceIdSet = builder.instanceIdSet;
@@ -145,17 +150,17 @@ public class RunInstancesResponseBody extends TeaModel {
         /**
          * @return instanceIdSet
          */
-        public java.util.List < String > getInstanceIdSet() {
+        public java.util.List<String> getInstanceIdSet() {
             return this.instanceIdSet;
         }
 
         public static final class Builder {
-            private java.util.List < String > instanceIdSet; 
+            private java.util.List<String> instanceIdSet; 
 
             /**
              * InstanceIdSet.
              */
-            public Builder instanceIdSet(java.util.List < String > instanceIdSet) {
+            public Builder instanceIdSet(java.util.List<String> instanceIdSet) {
                 this.instanceIdSet = instanceIdSet;
                 return this;
             }

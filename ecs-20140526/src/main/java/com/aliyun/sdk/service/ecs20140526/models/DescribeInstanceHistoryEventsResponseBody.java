@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -473,7 +478,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
      */
     public static class InactiveDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InactiveDisk")
-        private java.util.List < InactiveDisk> inactiveDisk;
+        private java.util.List<InactiveDisk> inactiveDisk;
 
         private InactiveDisks(Builder builder) {
             this.inactiveDisk = builder.inactiveDisk;
@@ -490,17 +495,17 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         /**
          * @return inactiveDisk
          */
-        public java.util.List < InactiveDisk> getInactiveDisk() {
+        public java.util.List<InactiveDisk> getInactiveDisk() {
             return this.inactiveDisk;
         }
 
         public static final class Builder {
-            private java.util.List < InactiveDisk> inactiveDisk; 
+            private java.util.List<InactiveDisk> inactiveDisk; 
 
             /**
              * InactiveDisk.
              */
-            public Builder inactiveDisk(java.util.List < InactiveDisk> inactiveDisk) {
+            public Builder inactiveDisk(java.util.List<InactiveDisk> inactiveDisk) {
                 this.inactiveDisk = inactiveDisk;
                 return this;
             }
@@ -520,7 +525,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
      */
     public static class MigrationOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MigrationOption")
-        private java.util.List < String > migrationOption;
+        private java.util.List<String> migrationOption;
 
         private MigrationOptions(Builder builder) {
             this.migrationOption = builder.migrationOption;
@@ -537,17 +542,17 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         /**
          * @return migrationOption
          */
-        public java.util.List < String > getMigrationOption() {
+        public java.util.List<String> getMigrationOption() {
             return this.migrationOption;
         }
 
         public static final class Builder {
-            private java.util.List < String > migrationOption; 
+            private java.util.List<String> migrationOption; 
 
             /**
              * MigrationOption.
              */
-            public Builder migrationOption(java.util.List < String > migrationOption) {
+            public Builder migrationOption(java.util.List<String> migrationOption) {
                 this.migrationOption = migrationOption;
                 return this;
             }
@@ -1217,7 +1222,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
      */
     public static class InstanceSystemEventSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceSystemEventType")
-        private java.util.List < InstanceSystemEventType> instanceSystemEventType;
+        private java.util.List<InstanceSystemEventType> instanceSystemEventType;
 
         private InstanceSystemEventSet(Builder builder) {
             this.instanceSystemEventType = builder.instanceSystemEventType;
@@ -1234,17 +1239,17 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         /**
          * @return instanceSystemEventType
          */
-        public java.util.List < InstanceSystemEventType> getInstanceSystemEventType() {
+        public java.util.List<InstanceSystemEventType> getInstanceSystemEventType() {
             return this.instanceSystemEventType;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceSystemEventType> instanceSystemEventType; 
+            private java.util.List<InstanceSystemEventType> instanceSystemEventType; 
 
             /**
              * InstanceSystemEventType.
              */
-            public Builder instanceSystemEventType(java.util.List < InstanceSystemEventType> instanceSystemEventType) {
+            public Builder instanceSystemEventType(java.util.List<InstanceSystemEventType> instanceSystemEventType) {
                 this.instanceSystemEventType = instanceSystemEventType;
                 return this;
             }

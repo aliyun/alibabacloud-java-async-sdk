@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -87,7 +92,7 @@ public class ModifyInstanceAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-    private java.util.List < String > securityGroupIds;
+    private java.util.List<String> securityGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserData")
@@ -259,7 +264,7 @@ public class ModifyInstanceAttributeRequest extends Request {
     /**
      * @return securityGroupIds
      */
-    public java.util.List < String > getSecurityGroupIds() {
+    public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -289,7 +294,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         private RemoteConnectionOptions remoteConnectionOptions; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > securityGroupIds; 
+        private java.util.List<String> securityGroupIds; 
         private String userData; 
 
         private Builder() {
@@ -561,7 +566,7 @@ public class ModifyInstanceAttributeRequest extends Request {
          * <strong>example:</strong>
          * <p>sg-bp15ed6xe1yxeycg7o****</p>
          */
-        public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+        public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
             this.securityGroupIds = securityGroupIds;
             return this;

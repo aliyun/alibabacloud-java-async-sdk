@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
-    private java.util.List < String > instanceTypeFamily;
+    private java.util.List<String> instanceTypeFamily;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IoOptimized")
@@ -174,7 +179,7 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
     /**
      * @return instanceTypeFamily
      */
-    public java.util.List < String > getInstanceTypeFamily() {
+    public java.util.List<String> getInstanceTypeFamily() {
         return this.instanceTypeFamily;
     }
 
@@ -289,7 +294,7 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
         private String instanceChargeType; 
         private String instanceFamilyLevel; 
         private String instanceType; 
-        private java.util.List < String > instanceTypeFamily; 
+        private java.util.List<String> instanceTypeFamily; 
         private String ioOptimized; 
         private Float maxPrice; 
         private Float memory; 
@@ -414,7 +419,7 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
          * <strong>example:</strong>
          * <p>ecs.hfg6</p>
          */
-        public Builder instanceTypeFamily(java.util.List < String > instanceTypeFamily) {
+        public Builder instanceTypeFamily(java.util.List<String> instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
             this.instanceTypeFamily = instanceTypeFamily;
             return this;

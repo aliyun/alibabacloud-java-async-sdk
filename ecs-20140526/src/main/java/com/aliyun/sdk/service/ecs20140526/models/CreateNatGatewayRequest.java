@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CreateNatGatewayRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BandwidthPackage")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < BandwidthPackage> bandwidthPackage;
+    private java.util.List<BandwidthPackage> bandwidthPackage;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -85,7 +90,7 @@ public class CreateNatGatewayRequest extends Request {
     /**
      * @return bandwidthPackage
      */
-    public java.util.List < BandwidthPackage> getBandwidthPackage() {
+    public java.util.List<BandwidthPackage> getBandwidthPackage() {
         return this.bandwidthPackage;
     }
 
@@ -153,7 +158,7 @@ public class CreateNatGatewayRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateNatGatewayRequest, Builder> {
-        private java.util.List < BandwidthPackage> bandwidthPackage; 
+        private java.util.List<BandwidthPackage> bandwidthPackage; 
         private String clientToken; 
         private String description; 
         private String name; 
@@ -185,7 +190,7 @@ public class CreateNatGatewayRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder bandwidthPackage(java.util.List < BandwidthPackage> bandwidthPackage) {
+        public Builder bandwidthPackage(java.util.List<BandwidthPackage> bandwidthPackage) {
             this.putQueryParameter("BandwidthPackage", bandwidthPackage);
             this.bandwidthPackage = bandwidthPackage;
             return this;

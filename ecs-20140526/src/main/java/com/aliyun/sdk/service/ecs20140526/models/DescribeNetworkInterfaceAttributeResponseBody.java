@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -962,7 +967,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      */
     public static class MemberNetworkInterfaceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemberNetworkInterfaceId")
-        private java.util.List < String > memberNetworkInterfaceId;
+        private java.util.List<String> memberNetworkInterfaceId;
 
         private MemberNetworkInterfaceIds(Builder builder) {
             this.memberNetworkInterfaceId = builder.memberNetworkInterfaceId;
@@ -979,17 +984,17 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         /**
          * @return memberNetworkInterfaceId
          */
-        public java.util.List < String > getMemberNetworkInterfaceId() {
+        public java.util.List<String> getMemberNetworkInterfaceId() {
             return this.memberNetworkInterfaceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > memberNetworkInterfaceId; 
+            private java.util.List<String> memberNetworkInterfaceId; 
 
             /**
              * MemberNetworkInterfaceId.
              */
-            public Builder memberNetworkInterfaceId(java.util.List < String > memberNetworkInterfaceId) {
+            public Builder memberNetworkInterfaceId(java.util.List<String> memberNetworkInterfaceId) {
                 this.memberNetworkInterfaceId = memberNetworkInterfaceId;
                 return this;
             }
@@ -1262,7 +1267,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      */
     public static class BondInterfaceSpecificationSlaveInterfaceSpecification extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlaveInterfaceSpecificationSet")
-        private java.util.List < SlaveInterfaceSpecificationSet> slaveInterfaceSpecificationSet;
+        private java.util.List<SlaveInterfaceSpecificationSet> slaveInterfaceSpecificationSet;
 
         private BondInterfaceSpecificationSlaveInterfaceSpecification(Builder builder) {
             this.slaveInterfaceSpecificationSet = builder.slaveInterfaceSpecificationSet;
@@ -1279,17 +1284,17 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         /**
          * @return slaveInterfaceSpecificationSet
          */
-        public java.util.List < SlaveInterfaceSpecificationSet> getSlaveInterfaceSpecificationSet() {
+        public java.util.List<SlaveInterfaceSpecificationSet> getSlaveInterfaceSpecificationSet() {
             return this.slaveInterfaceSpecificationSet;
         }
 
         public static final class Builder {
-            private java.util.List < SlaveInterfaceSpecificationSet> slaveInterfaceSpecificationSet; 
+            private java.util.List<SlaveInterfaceSpecificationSet> slaveInterfaceSpecificationSet; 
 
             /**
              * SlaveInterfaceSpecificationSet.
              */
-            public Builder slaveInterfaceSpecificationSet(java.util.List < SlaveInterfaceSpecificationSet> slaveInterfaceSpecificationSet) {
+            public Builder slaveInterfaceSpecificationSet(java.util.List<SlaveInterfaceSpecificationSet> slaveInterfaceSpecificationSet) {
                 this.slaveInterfaceSpecificationSet = slaveInterfaceSpecificationSet;
                 return this;
             }
@@ -1585,7 +1590,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      */
     public static class Ipv4PrefixSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv4PrefixSet")
-        private java.util.List < Ipv4PrefixSet> ipv4PrefixSet;
+        private java.util.List<Ipv4PrefixSet> ipv4PrefixSet;
 
         private Ipv4PrefixSets(Builder builder) {
             this.ipv4PrefixSet = builder.ipv4PrefixSet;
@@ -1602,17 +1607,17 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         /**
          * @return ipv4PrefixSet
          */
-        public java.util.List < Ipv4PrefixSet> getIpv4PrefixSet() {
+        public java.util.List<Ipv4PrefixSet> getIpv4PrefixSet() {
             return this.ipv4PrefixSet;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv4PrefixSet> ipv4PrefixSet; 
+            private java.util.List<Ipv4PrefixSet> ipv4PrefixSet; 
 
             /**
              * Ipv4PrefixSet.
              */
-            public Builder ipv4PrefixSet(java.util.List < Ipv4PrefixSet> ipv4PrefixSet) {
+            public Builder ipv4PrefixSet(java.util.List<Ipv4PrefixSet> ipv4PrefixSet) {
                 this.ipv4PrefixSet = ipv4PrefixSet;
                 return this;
             }
@@ -1682,7 +1687,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      */
     public static class Ipv6PrefixSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6PrefixSet")
-        private java.util.List < Ipv6PrefixSet> ipv6PrefixSet;
+        private java.util.List<Ipv6PrefixSet> ipv6PrefixSet;
 
         private Ipv6PrefixSets(Builder builder) {
             this.ipv6PrefixSet = builder.ipv6PrefixSet;
@@ -1699,17 +1704,17 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         /**
          * @return ipv6PrefixSet
          */
-        public java.util.List < Ipv6PrefixSet> getIpv6PrefixSet() {
+        public java.util.List<Ipv6PrefixSet> getIpv6PrefixSet() {
             return this.ipv6PrefixSet;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv6PrefixSet> ipv6PrefixSet; 
+            private java.util.List<Ipv6PrefixSet> ipv6PrefixSet; 
 
             /**
              * Ipv6PrefixSet.
              */
-            public Builder ipv6PrefixSet(java.util.List < Ipv6PrefixSet> ipv6PrefixSet) {
+            public Builder ipv6PrefixSet(java.util.List<Ipv6PrefixSet> ipv6PrefixSet) {
                 this.ipv6PrefixSet = ipv6PrefixSet;
                 return this;
             }
@@ -1779,7 +1784,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      */
     public static class Ipv6Sets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6Set")
-        private java.util.List < Ipv6Set> ipv6Set;
+        private java.util.List<Ipv6Set> ipv6Set;
 
         private Ipv6Sets(Builder builder) {
             this.ipv6Set = builder.ipv6Set;
@@ -1796,17 +1801,17 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         /**
          * @return ipv6Set
          */
-        public java.util.List < Ipv6Set> getIpv6Set() {
+        public java.util.List<Ipv6Set> getIpv6Set() {
             return this.ipv6Set;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv6Set> ipv6Set; 
+            private java.util.List<Ipv6Set> ipv6Set; 
 
             /**
              * Ipv6Set.
              */
-            public Builder ipv6Set(java.util.List < Ipv6Set> ipv6Set) {
+            public Builder ipv6Set(java.util.List<Ipv6Set> ipv6Set) {
                 this.ipv6Set = ipv6Set;
                 return this;
             }
@@ -2094,7 +2099,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      */
     public static class PrivateIpSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateIpSet")
-        private java.util.List < PrivateIpSet> privateIpSet;
+        private java.util.List<PrivateIpSet> privateIpSet;
 
         private PrivateIpSets(Builder builder) {
             this.privateIpSet = builder.privateIpSet;
@@ -2111,17 +2116,17 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         /**
          * @return privateIpSet
          */
-        public java.util.List < PrivateIpSet> getPrivateIpSet() {
+        public java.util.List<PrivateIpSet> getPrivateIpSet() {
             return this.privateIpSet;
         }
 
         public static final class Builder {
-            private java.util.List < PrivateIpSet> privateIpSet; 
+            private java.util.List<PrivateIpSet> privateIpSet; 
 
             /**
              * PrivateIpSet.
              */
-            public Builder privateIpSet(java.util.List < PrivateIpSet> privateIpSet) {
+            public Builder privateIpSet(java.util.List<PrivateIpSet> privateIpSet) {
                 this.privateIpSet = privateIpSet;
                 return this;
             }
@@ -2141,7 +2146,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      */
     public static class SecurityGroupIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
-        private java.util.List < String > securityGroupId;
+        private java.util.List<String> securityGroupId;
 
         private SecurityGroupIds(Builder builder) {
             this.securityGroupId = builder.securityGroupId;
@@ -2158,17 +2163,17 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         /**
          * @return securityGroupId
          */
-        public java.util.List < String > getSecurityGroupId() {
+        public java.util.List<String> getSecurityGroupId() {
             return this.securityGroupId;
         }
 
         public static final class Builder {
-            private java.util.List < String > securityGroupId; 
+            private java.util.List<String> securityGroupId; 
 
             /**
              * SecurityGroupId.
              */
-            public Builder securityGroupId(java.util.List < String > securityGroupId) {
+            public Builder securityGroupId(java.util.List<String> securityGroupId) {
                 this.securityGroupId = securityGroupId;
                 return this;
             }
@@ -2363,7 +2368,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -2380,17 +2385,17 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

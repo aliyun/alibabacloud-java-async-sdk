@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -326,7 +331,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
      */
     public static class VirtualBorderRouterForPhysicalConnectionSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterForPhysicalConnectionType")
-        private java.util.List < VirtualBorderRouterForPhysicalConnectionType> virtualBorderRouterForPhysicalConnectionType;
+        private java.util.List<VirtualBorderRouterForPhysicalConnectionType> virtualBorderRouterForPhysicalConnectionType;
 
         private VirtualBorderRouterForPhysicalConnectionSet(Builder builder) {
             this.virtualBorderRouterForPhysicalConnectionType = builder.virtualBorderRouterForPhysicalConnectionType;
@@ -343,17 +348,17 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         /**
          * @return virtualBorderRouterForPhysicalConnectionType
          */
-        public java.util.List < VirtualBorderRouterForPhysicalConnectionType> getVirtualBorderRouterForPhysicalConnectionType() {
+        public java.util.List<VirtualBorderRouterForPhysicalConnectionType> getVirtualBorderRouterForPhysicalConnectionType() {
             return this.virtualBorderRouterForPhysicalConnectionType;
         }
 
         public static final class Builder {
-            private java.util.List < VirtualBorderRouterForPhysicalConnectionType> virtualBorderRouterForPhysicalConnectionType; 
+            private java.util.List<VirtualBorderRouterForPhysicalConnectionType> virtualBorderRouterForPhysicalConnectionType; 
 
             /**
              * VirtualBorderRouterForPhysicalConnectionType.
              */
-            public Builder virtualBorderRouterForPhysicalConnectionType(java.util.List < VirtualBorderRouterForPhysicalConnectionType> virtualBorderRouterForPhysicalConnectionType) {
+            public Builder virtualBorderRouterForPhysicalConnectionType(java.util.List<VirtualBorderRouterForPhysicalConnectionType> virtualBorderRouterForPhysicalConnectionType) {
                 this.virtualBorderRouterForPhysicalConnectionType = virtualBorderRouterForPhysicalConnectionType;
                 return this;
             }

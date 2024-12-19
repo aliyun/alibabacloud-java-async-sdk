@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventId")
-    private java.util.List < String > eventId;
+    private java.util.List<String> eventId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventType")
@@ -42,11 +47,11 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceEventCycleStatus")
-    private java.util.List < String > instanceEventCycleStatus;
+    private java.util.List<String> instanceEventCycleStatus;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceEventType")
-    private java.util.List < String > instanceEventType;
+    private java.util.List<String> instanceEventType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -87,7 +92,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
-    private java.util.List < String > resourceId;
+    private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -103,7 +108,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeInstanceHistoryEventsRequest(Builder builder) {
         super(builder);
@@ -176,7 +181,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
     /**
      * @return eventId
      */
-    public java.util.List < String > getEventId() {
+    public java.util.List<String> getEventId() {
         return this.eventId;
     }
 
@@ -197,14 +202,14 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
     /**
      * @return instanceEventCycleStatus
      */
-    public java.util.List < String > getInstanceEventCycleStatus() {
+    public java.util.List<String> getInstanceEventCycleStatus() {
         return this.instanceEventCycleStatus;
     }
 
     /**
      * @return instanceEventType
      */
-    public java.util.List < String > getInstanceEventType() {
+    public java.util.List<String> getInstanceEventType() {
         return this.instanceEventType;
     }
 
@@ -274,7 +279,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -302,7 +307,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -311,11 +316,11 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         private NotBefore notBefore; 
         private String sourceRegionId; 
         private String eventCycleStatus; 
-        private java.util.List < String > eventId; 
+        private java.util.List<String> eventId; 
         private String eventType; 
         private String impactLevel; 
-        private java.util.List < String > instanceEventCycleStatus; 
-        private java.util.List < String > instanceEventType; 
+        private java.util.List<String> instanceEventCycleStatus; 
+        private java.util.List<String> instanceEventType; 
         private String instanceId; 
         private Long maxResults; 
         private String nextToken; 
@@ -325,11 +330,11 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         private Integer pageSize; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -416,7 +421,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
          * <strong>example:</strong>
          * <p>e-uf64yvznlao4jl2c****</p>
          */
-        public Builder eventId(java.util.List < String > eventId) {
+        public Builder eventId(java.util.List<String> eventId) {
             this.putQueryParameter("EventId", eventId);
             this.eventId = eventId;
             return this;
@@ -478,7 +483,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
          * <strong>example:</strong>
          * <p>Executed</p>
          */
-        public Builder instanceEventCycleStatus(java.util.List < String > instanceEventCycleStatus) {
+        public Builder instanceEventCycleStatus(java.util.List<String> instanceEventCycleStatus) {
             this.putQueryParameter("InstanceEventCycleStatus", instanceEventCycleStatus);
             this.instanceEventCycleStatus = instanceEventCycleStatus;
             return this;
@@ -505,7 +510,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
          * <strong>example:</strong>
          * <p>SystemMaintenance.Reboot</p>
          */
-        public Builder instanceEventType(java.util.List < String > instanceEventType) {
+        public Builder instanceEventType(java.util.List<String> instanceEventType) {
             this.putQueryParameter("InstanceEventType", instanceEventType);
             this.instanceEventType = instanceEventType;
             return this;
@@ -625,7 +630,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
          * <strong>example:</strong>
          * <p>i-uf678mass4zvr9n1****</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
@@ -670,7 +675,7 @@ public class DescribeInstanceHistoryEventsRequest extends Request {
         /**
          * <p>The list of tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

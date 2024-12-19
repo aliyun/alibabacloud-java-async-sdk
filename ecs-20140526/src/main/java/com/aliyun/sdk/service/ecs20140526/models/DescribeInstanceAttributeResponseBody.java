@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1029,7 +1034,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
      */
     public static class InnerIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
-        private java.util.List < String > ipAddress;
+        private java.util.List<String> ipAddress;
 
         private InnerIpAddress(Builder builder) {
             this.ipAddress = builder.ipAddress;
@@ -1046,12 +1051,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < String > getIpAddress() {
+        public java.util.List<String> getIpAddress() {
             return this.ipAddress;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipAddress; 
+            private java.util.List<String> ipAddress; 
 
             /**
              * <p>The ID of the elastic IP address (EIP).</p>
@@ -1059,7 +1064,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p><code>30.21.**.**</code></p>
              */
-            public Builder ipAddress(java.util.List < String > ipAddress) {
+            public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }
@@ -1136,7 +1141,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
      */
     public static class OperationLocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
-        private java.util.List < LockReason> lockReason;
+        private java.util.List<LockReason> lockReason;
 
         private OperationLocks(Builder builder) {
             this.lockReason = builder.lockReason;
@@ -1153,12 +1158,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return lockReason
          */
-        public java.util.List < LockReason> getLockReason() {
+        public java.util.List<LockReason> getLockReason() {
             return this.lockReason;
         }
 
         public static final class Builder {
-            private java.util.List < LockReason> lockReason; 
+            private java.util.List<LockReason> lockReason; 
 
             /**
              * <p>The reason why the instance was locked. Valid values:</p>
@@ -1173,7 +1178,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>financial</p>
              */
-            public Builder lockReason(java.util.List < LockReason> lockReason) {
+            public Builder lockReason(java.util.List<LockReason> lockReason) {
                 this.lockReason = lockReason;
                 return this;
             }
@@ -1193,7 +1198,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
      */
     public static class PublicIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
-        private java.util.List < String > ipAddress;
+        private java.util.List<String> ipAddress;
 
         private PublicIpAddress(Builder builder) {
             this.ipAddress = builder.ipAddress;
@@ -1210,12 +1215,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < String > getIpAddress() {
+        public java.util.List<String> getIpAddress() {
             return this.ipAddress;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipAddress; 
+            private java.util.List<String> ipAddress; 
 
             /**
              * <p>The ID of the elastic IP address (EIP).</p>
@@ -1223,7 +1228,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p><code>30.21.**.**</code></p>
              */
-            public Builder ipAddress(java.util.List < String > ipAddress) {
+            public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }
@@ -1243,7 +1248,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
      */
     public static class SecurityGroupIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
-        private java.util.List < String > securityGroupId;
+        private java.util.List<String> securityGroupId;
 
         private SecurityGroupIds(Builder builder) {
             this.securityGroupId = builder.securityGroupId;
@@ -1260,17 +1265,17 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return securityGroupId
          */
-        public java.util.List < String > getSecurityGroupId() {
+        public java.util.List<String> getSecurityGroupId() {
             return this.securityGroupId;
         }
 
         public static final class Builder {
-            private java.util.List < String > securityGroupId; 
+            private java.util.List<String> securityGroupId; 
 
             /**
              * SecurityGroupId.
              */
-            public Builder securityGroupId(java.util.List < String > securityGroupId) {
+            public Builder securityGroupId(java.util.List<String> securityGroupId) {
                 this.securityGroupId = securityGroupId;
                 return this;
             }
@@ -1290,7 +1295,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
      */
     public static class PrivateIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
-        private java.util.List < String > ipAddress;
+        private java.util.List<String> ipAddress;
 
         private PrivateIpAddress(Builder builder) {
             this.ipAddress = builder.ipAddress;
@@ -1307,12 +1312,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < String > getIpAddress() {
+        public java.util.List<String> getIpAddress() {
             return this.ipAddress;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipAddress; 
+            private java.util.List<String> ipAddress; 
 
             /**
              * <p>The ID of the elastic IP address (EIP).</p>
@@ -1320,7 +1325,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p><code>30.21.**.**</code></p>
              */
-            public Builder ipAddress(java.util.List < String > ipAddress) {
+            public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }

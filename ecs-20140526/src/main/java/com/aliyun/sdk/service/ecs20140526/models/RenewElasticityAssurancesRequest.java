@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -339,7 +344,7 @@ public class RenewElasticityAssurancesRequest extends Request {
      */
     public static class PrivatePoolOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
-        private java.util.List < String > id;
+        private java.util.List<String> id;
 
         private PrivatePoolOptions(Builder builder) {
             this.id = builder.id;
@@ -356,19 +361,19 @@ public class RenewElasticityAssurancesRequest extends Request {
         /**
          * @return id
          */
-        public java.util.List < String > getId() {
+        public java.util.List<String> getId() {
             return this.id;
         }
 
         public static final class Builder {
-            private java.util.List < String > id; 
+            private java.util.List<String> id; 
 
             /**
              * <p>The IDs of elasticity assurances.</p>
              * <p><strong>Limits</strong>: You can renew up to 20 elasticity assurances at a time.</p>
              * <p>You can call the <a href="https://help.aliyun.com/document_detail/2679748.html">DescribeElasticityAssurances</a> operation to query the elasticity assurances that you purchased.</p>
              */
-            public Builder id(java.util.List < String > id) {
+            public Builder id(java.util.List<String> id) {
                 this.id = id;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -527,7 +532,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
      */
     public static class CopyEncryptionConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
-        private java.util.List < Arn> arn;
+        private java.util.List<Arn> arn;
 
         @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
@@ -552,7 +557,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         /**
          * @return arn
          */
-        public java.util.List < Arn> getArn() {
+        public java.util.List<Arn> getArn() {
             return this.arn;
         }
 
@@ -571,14 +576,14 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Arn> arn; 
+            private java.util.List<Arn> arn; 
             private Boolean encrypted; 
             private String KMSKeyId; 
 
             /**
              * <p>This parameter is not publicly available.</p>
              */
-            public Builder arn(java.util.List < Arn> arn) {
+            public Builder arn(java.util.List<Arn> arn) {
                 this.arn = arn;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
      */
     public static class AddAccounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddAccount")
-        private java.util.List < String > addAccount;
+        private java.util.List<String> addAccount;
 
         private AddAccounts(Builder builder) {
             this.addAccount = builder.addAccount;
@@ -168,17 +173,17 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         /**
          * @return addAccount
          */
-        public java.util.List < String > getAddAccount() {
+        public java.util.List<String> getAddAccount() {
             return this.addAccount;
         }
 
         public static final class Builder {
-            private java.util.List < String > addAccount; 
+            private java.util.List<String> addAccount; 
 
             /**
              * AddAccount.
              */
-            public Builder addAccount(java.util.List < String > addAccount) {
+            public Builder addAccount(java.util.List<String> addAccount) {
                 this.addAccount = addAccount;
                 return this;
             }
@@ -271,7 +276,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -288,17 +293,17 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -318,7 +323,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
      */
     public static class ToRegionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ToRegionId")
-        private java.util.List < String > toRegionId;
+        private java.util.List<String> toRegionId;
 
         private ToRegionIds(Builder builder) {
             this.toRegionId = builder.toRegionId;
@@ -335,17 +340,17 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         /**
          * @return toRegionId
          */
-        public java.util.List < String > getToRegionId() {
+        public java.util.List<String> getToRegionId() {
             return this.toRegionId;
         }
 
         public static final class Builder {
-            private java.util.List < String > toRegionId; 
+            private java.util.List<String> toRegionId; 
 
             /**
              * ToRegionId.
              */
-            public Builder toRegionId(java.util.List < String > toRegionId) {
+            public Builder toRegionId(java.util.List<String> toRegionId) {
                 this.toRegionId = toRegionId;
                 return this;
             }
@@ -855,7 +860,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
      */
     public static class ImagePipeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImagePipelineSet")
-        private java.util.List < ImagePipelineSet> imagePipelineSet;
+        private java.util.List<ImagePipelineSet> imagePipelineSet;
 
         private ImagePipeline(Builder builder) {
             this.imagePipelineSet = builder.imagePipelineSet;
@@ -872,17 +877,17 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         /**
          * @return imagePipelineSet
          */
-        public java.util.List < ImagePipelineSet> getImagePipelineSet() {
+        public java.util.List<ImagePipelineSet> getImagePipelineSet() {
             return this.imagePipelineSet;
         }
 
         public static final class Builder {
-            private java.util.List < ImagePipelineSet> imagePipelineSet; 
+            private java.util.List<ImagePipelineSet> imagePipelineSet; 
 
             /**
              * ImagePipelineSet.
              */
-            public Builder imagePipelineSet(java.util.List < ImagePipelineSet> imagePipelineSet) {
+            public Builder imagePipelineSet(java.util.List<ImagePipelineSet> imagePipelineSet) {
                 this.imagePipelineSet = imagePipelineSet;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeActivationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ActivationList")
-    private java.util.List < ActivationList> activationList;
+    private java.util.List<ActivationList> activationList;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -50,7 +55,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
     /**
      * @return activationList
      */
-    public java.util.List < ActivationList> getActivationList() {
+    public java.util.List<ActivationList> getActivationList() {
         return this.activationList;
     }
 
@@ -90,7 +95,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ActivationList> activationList; 
+        private java.util.List<ActivationList> activationList; 
         private String nextToken; 
         private Long pageNumber; 
         private Long pageSize; 
@@ -100,7 +105,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         /**
          * <p>The activation codes and their usage information.</p>
          */
-        public Builder activationList(java.util.List < ActivationList> activationList) {
+        public Builder activationList(java.util.List<ActivationList> activationList) {
             this.activationList = activationList;
             return this;
         }
@@ -277,7 +282,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TimeToLiveInHours")
         private Long timeToLiveInHours;
@@ -378,7 +383,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -400,7 +405,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             private String ipAddressRange; 
             private Integer registeredCount; 
             private String resourceGroupId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long timeToLiveInHours; 
 
             /**
@@ -516,7 +521,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             /**
              * <p>The tags of the activation code.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

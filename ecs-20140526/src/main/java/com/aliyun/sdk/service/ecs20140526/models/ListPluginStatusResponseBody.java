@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -325,7 +330,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
      */
     public static class PluginStatusSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PluginStatus")
-        private java.util.List < PluginStatus> pluginStatus;
+        private java.util.List<PluginStatus> pluginStatus;
 
         private PluginStatusSet(Builder builder) {
             this.pluginStatus = builder.pluginStatus;
@@ -342,12 +347,12 @@ public class ListPluginStatusResponseBody extends TeaModel {
         /**
          * @return pluginStatus
          */
-        public java.util.List < PluginStatus> getPluginStatus() {
+        public java.util.List<PluginStatus> getPluginStatus() {
             return this.pluginStatus;
         }
 
         public static final class Builder {
-            private java.util.List < PluginStatus> pluginStatus; 
+            private java.util.List<PluginStatus> pluginStatus; 
 
             /**
              * <p>The state of the Cloud Assistant plug-in. Valid values:</p>
@@ -364,7 +369,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>Running</p>
              */
-            public Builder pluginStatus(java.util.List < PluginStatus> pluginStatus) {
+            public Builder pluginStatus(java.util.List<PluginStatus> pluginStatus) {
                 this.pluginStatus = pluginStatus;
                 return this;
             }
@@ -454,7 +459,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
      */
     public static class InstancePluginStatusSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstancePluginStatus")
-        private java.util.List < InstancePluginStatus> instancePluginStatus;
+        private java.util.List<InstancePluginStatus> instancePluginStatus;
 
         private InstancePluginStatusSet(Builder builder) {
             this.instancePluginStatus = builder.instancePluginStatus;
@@ -471,17 +476,17 @@ public class ListPluginStatusResponseBody extends TeaModel {
         /**
          * @return instancePluginStatus
          */
-        public java.util.List < InstancePluginStatus> getInstancePluginStatus() {
+        public java.util.List<InstancePluginStatus> getInstancePluginStatus() {
             return this.instancePluginStatus;
         }
 
         public static final class Builder {
-            private java.util.List < InstancePluginStatus> instancePluginStatus; 
+            private java.util.List<InstancePluginStatus> instancePluginStatus; 
 
             /**
              * InstancePluginStatus.
              */
-            public Builder instancePluginStatus(java.util.List < InstancePluginStatus> instancePluginStatus) {
+            public Builder instancePluginStatus(java.util.List<InstancePluginStatus> instancePluginStatus) {
                 this.instancePluginStatus = instancePluginStatus;
                 return this;
             }
