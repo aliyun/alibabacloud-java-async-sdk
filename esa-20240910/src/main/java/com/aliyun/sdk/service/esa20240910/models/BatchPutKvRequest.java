@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class BatchPutKvRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("KvList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < KvList> kvList;
+    private java.util.List<KvList> kvList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
@@ -44,7 +49,7 @@ public class BatchPutKvRequest extends Request {
     /**
      * @return kvList
      */
-    public java.util.List < KvList> getKvList() {
+    public java.util.List<KvList> getKvList() {
         return this.kvList;
     }
 
@@ -56,7 +61,7 @@ public class BatchPutKvRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchPutKvRequest, Builder> {
-        private java.util.List < KvList> kvList; 
+        private java.util.List<KvList> kvList; 
         private String namespace; 
 
         private Builder() {
@@ -73,7 +78,7 @@ public class BatchPutKvRequest extends Request {
          * <p>The key-value pairs that you want to configure at a time. The total size can be up to 2 MB (2 × 1000 × 1000).</p>
          * <p>This parameter is required.</p>
          */
-        public Builder kvList(java.util.List < KvList> kvList) {
+        public Builder kvList(java.util.List<KvList> kvList) {
             String kvListShrink = shrink(kvList, "KvList", "json");
             this.putBodyParameter("KvList", kvListShrink);
             this.kvList = kvList;

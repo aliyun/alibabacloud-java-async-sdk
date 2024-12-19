@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("PlanInfo")
-    private java.util.List < PlanInfo> planInfo;
+    private java.util.List<PlanInfo> planInfo;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -64,7 +69,7 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
     /**
      * @return planInfo
      */
-    public java.util.List < PlanInfo> getPlanInfo() {
+    public java.util.List<PlanInfo> getPlanInfo() {
         return this.planInfo;
     }
 
@@ -92,7 +97,7 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < PlanInfo> planInfo; 
+        private java.util.List<PlanInfo> planInfo; 
         private String requestId; 
         private Integer totalCount; 
         private Integer totalPage; 
@@ -122,7 +127,7 @@ public class ListEdgeRoutinePlansResponseBody extends TeaModel {
         /**
          * <p>The plans.</p>
          */
-        public Builder planInfo(java.util.List < PlanInfo> planInfo) {
+        public Builder planInfo(java.util.List<PlanInfo> planInfo) {
             this.planInfo = planInfo;
             return this;
         }

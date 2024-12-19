@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -69,7 +74,10 @@ public class GetClientCertificateHostnamesRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baba39055622c008b90285a8838ed09a</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -78,6 +86,7 @@ public class GetClientCertificateHostnamesRequest extends Request {
         }
 
         /**
+         * <p>The website ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

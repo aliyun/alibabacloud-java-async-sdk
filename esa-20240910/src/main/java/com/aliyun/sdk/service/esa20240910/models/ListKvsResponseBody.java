@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListKvsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Keys")
-    private java.util.List < Keys> keys;
+    private java.util.List<Keys> keys;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class ListKvsResponseBody extends TeaModel {
     /**
      * @return keys
      */
-    public java.util.List < Keys> getKeys() {
+    public java.util.List<Keys> getKeys() {
         return this.keys;
     }
 
@@ -79,7 +84,7 @@ public class ListKvsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Keys> keys; 
+        private java.util.List<Keys> keys; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListKvsResponseBody extends TeaModel {
         /**
          * <p>The key-value pairs.</p>
          */
-        public Builder keys(java.util.List < Keys> keys) {
+        public Builder keys(java.util.List<Keys> keys) {
             this.keys = keys;
             return this;
         }

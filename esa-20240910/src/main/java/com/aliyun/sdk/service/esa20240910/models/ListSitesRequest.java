@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -58,7 +63,7 @@ public class ListSitesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagFilter")
-    private java.util.List < TagFilter> tagFilter;
+    private java.util.List<TagFilter> tagFilter;
 
     private ListSitesRequest(Builder builder) {
         super(builder);
@@ -169,7 +174,7 @@ public class ListSitesRequest extends Request {
     /**
      * @return tagFilter
      */
-    public java.util.List < TagFilter> getTagFilter() {
+    public java.util.List<TagFilter> getTagFilter() {
         return this.tagFilter;
     }
 
@@ -185,7 +190,7 @@ public class ListSitesRequest extends Request {
         private String siteName; 
         private String siteSearchType; 
         private String status; 
-        private java.util.List < TagFilter> tagFilter; 
+        private java.util.List<TagFilter> tagFilter; 
 
         private Builder() {
             super();
@@ -360,7 +365,7 @@ public class ListSitesRequest extends Request {
         /**
          * <p>The tag filtering rule.</p>
          */
-        public Builder tagFilter(java.util.List < TagFilter> tagFilter) {
+        public Builder tagFilter(java.util.List<TagFilter> tagFilter) {
             String tagFilterShrink = shrink(tagFilter, "TagFilter", "json");
             this.putQueryParameter("TagFilter", tagFilterShrink);
             this.tagFilter = tagFilter;

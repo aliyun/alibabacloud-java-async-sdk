@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetEdgeContainerDeployRegionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Regions")
-    private java.util.List < String > regions;
+    private java.util.List<String> regions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetEdgeContainerDeployRegionsResponseBody extends TeaModel {
     /**
      * @return regions
      */
-    public java.util.List < String > getRegions() {
+    public java.util.List<String> getRegions() {
         return this.regions;
     }
 
@@ -46,13 +51,13 @@ public class GetEdgeContainerDeployRegionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > regions; 
+        private java.util.List<String> regions; 
         private String requestId; 
 
         /**
          * <p>The regions.</p>
          */
-        public Builder regions(java.util.List < String > regions) {
+        public Builder regions(java.util.List<String> regions) {
             this.regions = regions;
             return this;
         }

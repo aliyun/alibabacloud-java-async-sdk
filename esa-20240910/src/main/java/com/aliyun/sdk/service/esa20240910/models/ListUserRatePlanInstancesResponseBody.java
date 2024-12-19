@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListUserRatePlanInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceInfo")
-    private java.util.List < InstanceInfo> instanceInfo;
+    private java.util.List<InstanceInfo> instanceInfo;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -50,7 +55,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
     /**
      * @return instanceInfo
      */
-    public java.util.List < InstanceInfo> getInstanceInfo() {
+    public java.util.List<InstanceInfo> getInstanceInfo() {
         return this.instanceInfo;
     }
 
@@ -90,7 +95,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceInfo> instanceInfo; 
+        private java.util.List<InstanceInfo> instanceInfo; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -100,7 +105,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         /**
          * <p>The queried plans.</p>
          */
-        public Builder instanceInfo(java.util.List < InstanceInfo> instanceInfo) {
+        public Builder instanceInfo(java.util.List<InstanceInfo> instanceInfo) {
             this.instanceInfo = instanceInfo;
             return this;
         }
@@ -333,7 +338,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         private String siteQuota;
 
         @com.aliyun.core.annotation.NameInMap("Sites")
-        private java.util.List < Sites> sites;
+        private java.util.List<Sites> sites;
 
         @com.aliyun.core.annotation.NameInMap("SmartRoutingRequest")
         private String smartRoutingRequest;
@@ -514,7 +519,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         /**
          * @return sites
          */
-        public java.util.List < Sites> getSites() {
+        public java.util.List<Sites> getSites() {
             return this.sites;
         }
 
@@ -559,7 +564,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             private String planTraffic; 
             private String planType; 
             private String siteQuota; 
-            private java.util.List < Sites> sites; 
+            private java.util.List<Sites> sites; 
             private String smartRoutingRequest; 
             private String staticRequest; 
             private String status; 
@@ -759,7 +764,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             /**
              * <p>The websites that have been associated with the plan.</p>
              */
-            public Builder sites(java.util.List < Sites> sites) {
+            public Builder sites(java.util.List<Sites> sites) {
                 this.sites = sites;
                 return this;
             }

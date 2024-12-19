@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -118,13 +123,13 @@ public class GetSiteResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         @com.aliyun.core.annotation.NameInMap("VanityNSList")
-        private java.util.Map < String, String > vanityNSList;
+        private java.util.Map<String, String> vanityNSList;
 
         @com.aliyun.core.annotation.NameInMap("VerifyCode")
         private String verifyCode;
@@ -247,7 +252,7 @@ public class GetSiteResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -261,7 +266,7 @@ public class GetSiteResponseBody extends TeaModel {
         /**
          * @return vanityNSList
          */
-        public java.util.Map < String, String > getVanityNSList() {
+        public java.util.Map<String, String> getVanityNSList() {
             return this.vanityNSList;
         }
 
@@ -292,9 +297,9 @@ public class GetSiteResponseBody extends TeaModel {
             private Long siteId; 
             private String siteName; 
             private String status; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String updateTime; 
-            private java.util.Map < String, String > vanityNSList; 
+            private java.util.Map<String, String> vanityNSList; 
             private String verifyCode; 
             private Boolean versionManagement; 
 
@@ -451,7 +456,7 @@ public class GetSiteResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;tag1&quot;:&quot;value1&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -470,7 +475,7 @@ public class GetSiteResponseBody extends TeaModel {
             /**
              * <p>The information about custom nameservers of the website domain. The key is a custom nameserver name, and the value is the IP address of the custom nameserver. Multiple IP addresses are separated by commas (,).</p>
              */
-            public Builder vanityNSList(java.util.Map < String, String > vanityNSList) {
+            public Builder vanityNSList(java.util.Map<String, String> vanityNSList) {
                 this.vanityNSList = vanityNSList;
                 return this;
             }

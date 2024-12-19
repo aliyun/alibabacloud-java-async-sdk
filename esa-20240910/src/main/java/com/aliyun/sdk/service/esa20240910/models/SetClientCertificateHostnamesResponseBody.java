@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -74,7 +79,10 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
         private String siteName; 
 
         /**
-         * Id.
+         * <p>The ID of the client CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>babab9db65ee5efcca9f3d41d4b50d66</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -82,7 +90,10 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ET5BF670-09D5-4D0B-BEBY-D96A2A528000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +101,10 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -98,7 +112,10 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * SiteName.
+         * <p>The website name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.siteName = siteName;

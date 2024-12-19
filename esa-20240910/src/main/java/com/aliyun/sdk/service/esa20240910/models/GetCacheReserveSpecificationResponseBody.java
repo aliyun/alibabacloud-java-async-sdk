@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetCacheReserveSpecificationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CacheReserveCapacity")
-    private java.util.List < String > cacheReserveCapacity;
+    private java.util.List<String> cacheReserveCapacity;
 
     @com.aliyun.core.annotation.NameInMap("CacheReserveRegion")
-    private java.util.List < String > cacheReserveRegion;
+    private java.util.List<String> cacheReserveRegion;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,14 +43,14 @@ public class GetCacheReserveSpecificationResponseBody extends TeaModel {
     /**
      * @return cacheReserveCapacity
      */
-    public java.util.List < String > getCacheReserveCapacity() {
+    public java.util.List<String> getCacheReserveCapacity() {
         return this.cacheReserveCapacity;
     }
 
     /**
      * @return cacheReserveRegion
      */
-    public java.util.List < String > getCacheReserveRegion() {
+    public java.util.List<String> getCacheReserveRegion() {
         return this.cacheReserveRegion;
     }
 
@@ -57,14 +62,14 @@ public class GetCacheReserveSpecificationResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > cacheReserveCapacity; 
-        private java.util.List < String > cacheReserveRegion; 
+        private java.util.List<String> cacheReserveCapacity; 
+        private java.util.List<String> cacheReserveRegion; 
         private String requestId; 
 
         /**
          * <p>The capacities of cache reserve instances that can be created.</p>
          */
-        public Builder cacheReserveCapacity(java.util.List < String > cacheReserveCapacity) {
+        public Builder cacheReserveCapacity(java.util.List<String> cacheReserveCapacity) {
             this.cacheReserveCapacity = cacheReserveCapacity;
             return this;
         }
@@ -72,7 +77,7 @@ public class GetCacheReserveSpecificationResponseBody extends TeaModel {
         /**
          * <p>The regions in which cache reserve instances can be created.</p>
          */
-        public Builder cacheReserveRegion(java.util.List < String > cacheReserveRegion) {
+        public Builder cacheReserveRegion(java.util.List<String> cacheReserveRegion) {
             this.cacheReserveRegion = cacheReserveRegion;
             return this;
         }

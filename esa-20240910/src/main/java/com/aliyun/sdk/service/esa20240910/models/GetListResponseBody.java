@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class GetListResponseBody extends TeaModel {
     private Long id;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < String > items;
+    private java.util.List<String> items;
 
     @com.aliyun.core.annotation.NameInMap("Kind")
     private String kind;
@@ -70,7 +75,7 @@ public class GetListResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < String > getItems() {
+    public java.util.List<String> getItems() {
         return this.items;
     }
 
@@ -105,7 +110,7 @@ public class GetListResponseBody extends TeaModel {
     public static final class Builder {
         private String description; 
         private Long id; 
-        private java.util.List < String > items; 
+        private java.util.List<String> items; 
         private String kind; 
         private String name; 
         private String requestId; 
@@ -136,7 +141,7 @@ public class GetListResponseBody extends TeaModel {
         /**
          * <p>The items in the custom list, which are displayed as an array.</p>
          */
-        public Builder items(java.util.List < String > items) {
+        public Builder items(java.util.List<String> items) {
             this.items = items;
             return this;
         }

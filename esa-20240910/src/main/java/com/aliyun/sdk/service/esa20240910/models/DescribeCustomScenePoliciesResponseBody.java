@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DataModule")
-    private java.util.List < DataModule> dataModule;
+    private java.util.List<DataModule> dataModule;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -50,7 +55,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
     /**
      * @return dataModule
      */
-    public java.util.List < DataModule> getDataModule() {
+    public java.util.List<DataModule> getDataModule() {
         return this.dataModule;
     }
 
@@ -90,7 +95,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DataModule> dataModule; 
+        private java.util.List<DataModule> dataModule; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Integer quota; 
@@ -100,7 +105,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         /**
          * <p>The scenario-specific policies.</p>
          */
-        public Builder dataModule(java.util.List < DataModule> dataModule) {
+        public Builder dataModule(java.util.List<DataModule> dataModule) {
             this.dataModule = dataModule;
             return this;
         }
@@ -180,7 +185,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Objects")
-        private java.util.List < String > objects;
+        private java.util.List<String> objects;
 
         @com.aliyun.core.annotation.NameInMap("PolicyId")
         private Long policyId;
@@ -229,7 +234,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         /**
          * @return objects
          */
-        public java.util.List < String > getObjects() {
+        public java.util.List<String> getObjects() {
             return this.objects;
         }
 
@@ -264,7 +269,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         public static final class Builder {
             private String endTime; 
             private String name; 
-            private java.util.List < String > objects; 
+            private java.util.List<String> objects; 
             private Long policyId; 
             private String startTime; 
             private String status; 
@@ -296,7 +301,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             /**
              * <p>The IDs of websites that are associated with the policy.</p>
              */
-            public Builder objects(java.util.List < String > objects) {
+            public Builder objects(java.util.List<String> objects) {
                 this.objects = objects;
                 return this;
             }

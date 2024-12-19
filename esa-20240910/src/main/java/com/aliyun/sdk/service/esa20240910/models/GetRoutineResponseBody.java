@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetRoutineResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CodeVersions")
-    private java.util.List < CodeVersions> codeVersions;
+    private java.util.List<CodeVersions> codeVersions;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -25,13 +30,13 @@ public class GetRoutineResponseBody extends TeaModel {
     private String description;
 
     @com.aliyun.core.annotation.NameInMap("Envs")
-    private java.util.List < Envs> envs;
+    private java.util.List<Envs> envs;
 
     @com.aliyun.core.annotation.NameInMap("RelatedRecords")
-    private java.util.List < RelatedRecords> relatedRecords;
+    private java.util.List<RelatedRecords> relatedRecords;
 
     @com.aliyun.core.annotation.NameInMap("RelatedRoutes")
-    private java.util.List < RelatedRoutes> relatedRoutes;
+    private java.util.List<RelatedRoutes> relatedRoutes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -58,7 +63,7 @@ public class GetRoutineResponseBody extends TeaModel {
     /**
      * @return codeVersions
      */
-    public java.util.List < CodeVersions> getCodeVersions() {
+    public java.util.List<CodeVersions> getCodeVersions() {
         return this.codeVersions;
     }
 
@@ -86,21 +91,21 @@ public class GetRoutineResponseBody extends TeaModel {
     /**
      * @return envs
      */
-    public java.util.List < Envs> getEnvs() {
+    public java.util.List<Envs> getEnvs() {
         return this.envs;
     }
 
     /**
      * @return relatedRecords
      */
-    public java.util.List < RelatedRecords> getRelatedRecords() {
+    public java.util.List<RelatedRecords> getRelatedRecords() {
         return this.relatedRecords;
     }
 
     /**
      * @return relatedRoutes
      */
-    public java.util.List < RelatedRoutes> getRelatedRoutes() {
+    public java.util.List<RelatedRoutes> getRelatedRoutes() {
         return this.relatedRoutes;
     }
 
@@ -112,19 +117,19 @@ public class GetRoutineResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CodeVersions> codeVersions; 
+        private java.util.List<CodeVersions> codeVersions; 
         private String createTime; 
         private String defaultRelatedRecord; 
         private String description; 
-        private java.util.List < Envs> envs; 
-        private java.util.List < RelatedRecords> relatedRecords; 
-        private java.util.List < RelatedRoutes> relatedRoutes; 
+        private java.util.List<Envs> envs; 
+        private java.util.List<RelatedRecords> relatedRecords; 
+        private java.util.List<RelatedRoutes> relatedRoutes; 
         private String requestId; 
 
         /**
          * <p>The code versions.</p>
          */
-        public Builder codeVersions(java.util.List < CodeVersions> codeVersions) {
+        public Builder codeVersions(java.util.List<CodeVersions> codeVersions) {
             this.codeVersions = codeVersions;
             return this;
         }
@@ -165,7 +170,7 @@ public class GetRoutineResponseBody extends TeaModel {
         /**
          * <p>The information about the environments.</p>
          */
-        public Builder envs(java.util.List < Envs> envs) {
+        public Builder envs(java.util.List<Envs> envs) {
             this.envs = envs;
             return this;
         }
@@ -173,7 +178,7 @@ public class GetRoutineResponseBody extends TeaModel {
         /**
          * <p>The records associated with the routine.</p>
          */
-        public Builder relatedRecords(java.util.List < RelatedRecords> relatedRecords) {
+        public Builder relatedRecords(java.util.List<RelatedRecords> relatedRecords) {
             this.relatedRecords = relatedRecords;
             return this;
         }
@@ -181,7 +186,7 @@ public class GetRoutineResponseBody extends TeaModel {
         /**
          * <p>The routes associated with the routine.</p>
          */
-        public Builder relatedRoutes(java.util.List < RelatedRoutes> relatedRoutes) {
+        public Builder relatedRoutes(java.util.List<RelatedRoutes> relatedRoutes) {
             this.relatedRoutes = relatedRoutes;
             return this;
         }
@@ -307,7 +312,7 @@ public class GetRoutineResponseBody extends TeaModel {
      */
     public static class Envs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanaryAreaList")
-        private java.util.List < String > canaryAreaList;
+        private java.util.List<String> canaryAreaList;
 
         @com.aliyun.core.annotation.NameInMap("CanaryCodeVersion")
         private String canaryCodeVersion;
@@ -340,7 +345,7 @@ public class GetRoutineResponseBody extends TeaModel {
         /**
          * @return canaryAreaList
          */
-        public java.util.List < String > getCanaryAreaList() {
+        public java.util.List<String> getCanaryAreaList() {
             return this.canaryAreaList;
         }
 
@@ -373,7 +378,7 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > canaryAreaList; 
+            private java.util.List<String> canaryAreaList; 
             private String canaryCodeVersion; 
             private String codeVersion; 
             private String env; 
@@ -382,7 +387,7 @@ public class GetRoutineResponseBody extends TeaModel {
             /**
              * <p>The regions for canary release.</p>
              */
-            public Builder canaryAreaList(java.util.List < String > canaryAreaList) {
+            public Builder canaryAreaList(java.util.List<String> canaryAreaList) {
                 this.canaryAreaList = canaryAreaList;
                 return this;
             }

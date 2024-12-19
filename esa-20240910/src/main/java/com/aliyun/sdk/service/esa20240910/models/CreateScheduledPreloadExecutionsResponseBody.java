@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FailedExecutions")
-    private java.util.List < FailedExecutions> failedExecutions;
+    private java.util.List<FailedExecutions> failedExecutions;
 
     @com.aliyun.core.annotation.NameInMap("FailedMessages")
-    private java.util.List < String > failedMessages;
+    private java.util.List<String> failedMessages;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -25,7 +30,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
     private Integer successCount;
 
     @com.aliyun.core.annotation.NameInMap("SuccessExecutions")
-    private java.util.List < SuccessExecutions> successExecutions;
+    private java.util.List<SuccessExecutions> successExecutions;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -50,14 +55,14 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
     /**
      * @return failedExecutions
      */
-    public java.util.List < FailedExecutions> getFailedExecutions() {
+    public java.util.List<FailedExecutions> getFailedExecutions() {
         return this.failedExecutions;
     }
 
     /**
      * @return failedMessages
      */
-    public java.util.List < String > getFailedMessages() {
+    public java.util.List<String> getFailedMessages() {
         return this.failedMessages;
     }
 
@@ -78,7 +83,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
     /**
      * @return successExecutions
      */
-    public java.util.List < SuccessExecutions> getSuccessExecutions() {
+    public java.util.List<SuccessExecutions> getSuccessExecutions() {
         return this.successExecutions;
     }
 
@@ -90,17 +95,17 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FailedExecutions> failedExecutions; 
-        private java.util.List < String > failedMessages; 
+        private java.util.List<FailedExecutions> failedExecutions; 
+        private java.util.List<String> failedMessages; 
         private String requestId; 
         private Integer successCount; 
-        private java.util.List < SuccessExecutions> successExecutions; 
+        private java.util.List<SuccessExecutions> successExecutions; 
         private Integer totalCount; 
 
         /**
          * <p>The information about prefetch plans that failed to be created.</p>
          */
-        public Builder failedExecutions(java.util.List < FailedExecutions> failedExecutions) {
+        public Builder failedExecutions(java.util.List<FailedExecutions> failedExecutions) {
             this.failedExecutions = failedExecutions;
             return this;
         }
@@ -108,7 +113,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         /**
          * <p>The information about plan failures.</p>
          */
-        public Builder failedMessages(java.util.List < String > failedMessages) {
+        public Builder failedMessages(java.util.List<String> failedMessages) {
             this.failedMessages = failedMessages;
             return this;
         }
@@ -138,7 +143,7 @@ public class CreateScheduledPreloadExecutionsResponseBody extends TeaModel {
         /**
          * <p>The information about created prefetch plans.</p>
          */
-        public Builder successExecutions(java.util.List < SuccessExecutions> successExecutions) {
+        public Builder successExecutions(java.util.List<SuccessExecutions> successExecutions) {
             this.successExecutions = successExecutions;
             return this;
         }

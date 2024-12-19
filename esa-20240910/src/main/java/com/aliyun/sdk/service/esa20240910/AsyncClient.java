@@ -36,12 +36,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchCreateRecordsResponse> batchCreateRecords(BatchCreateRecordsRequest request);
 
     /**
-     * @param request the request parameters of BatchCreateWafRules  BatchCreateWafRulesRequest
-     * @return BatchCreateWafRulesResponse
-     */
-    CompletableFuture<BatchCreateWafRulesResponse> batchCreateWafRules(BatchCreateWafRulesRequest request);
-
-    /**
      * @param request the request parameters of BatchDeleteKv  BatchDeleteKvRequest
      * @return BatchDeleteKvResponse
      */
@@ -58,12 +52,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return BatchPutKvResponse
      */
     CompletableFuture<BatchPutKvResponse> batchPutKv(BatchPutKvRequest request);
-
-    /**
-     * @param request the request parameters of BatchUpdateWafRules  BatchUpdateWafRulesRequest
-     * @return BatchUpdateWafRulesResponse
-     */
-    CompletableFuture<BatchUpdateWafRulesResponse> batchUpdateWafRules(BatchUpdateWafRulesRequest request);
 
     /**
      * @param request the request parameters of BlockObject  BlockObjectRequest
@@ -244,12 +232,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUserDeliveryTaskResponse> createUserDeliveryTask(CreateUserDeliveryTaskRequest request);
 
     /**
-     * @param request the request parameters of CreateWafRule  CreateWafRuleRequest
-     * @return CreateWafRuleResponse
-     */
-    CompletableFuture<CreateWafRuleResponse> createWafRule(CreateWafRuleRequest request);
-
-    /**
      * @param request the request parameters of CreateWaitingRoom  CreateWaitingRoomRequest
      * @return CreateWaitingRoomResponse
      */
@@ -406,18 +388,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteUserDeliveryTaskResponse
      */
     CompletableFuture<DeleteUserDeliveryTaskResponse> deleteUserDeliveryTask(DeleteUserDeliveryTaskRequest request);
-
-    /**
-     * @param request the request parameters of DeleteWafRule  DeleteWafRuleRequest
-     * @return DeleteWafRuleResponse
-     */
-    CompletableFuture<DeleteWafRuleResponse> deleteWafRule(DeleteWafRuleRequest request);
-
-    /**
-     * @param request the request parameters of DeleteWafRuleset  DeleteWafRulesetRequest
-     * @return DeleteWafRulesetResponse
-     */
-    CompletableFuture<DeleteWafRulesetResponse> deleteWafRuleset(DeleteWafRulesetRequest request);
 
     /**
      * @param request the request parameters of DeleteWaitingRoom  DeleteWaitingRoomRequest
@@ -772,18 +742,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWafQuotaResponse> getWafQuota(GetWafQuotaRequest request);
 
     /**
-     * @param request the request parameters of GetWafRule  GetWafRuleRequest
-     * @return GetWafRuleResponse
-     */
-    CompletableFuture<GetWafRuleResponse> getWafRule(GetWafRuleRequest request);
-
-    /**
-     * @param request the request parameters of GetWafRuleset  GetWafRulesetRequest
-     * @return GetWafRulesetResponse
-     */
-    CompletableFuture<GetWafRulesetResponse> getWafRuleset(GetWafRulesetRequest request);
-
-    /**
      * @param request the request parameters of ListCacheReserveInstances  ListCacheReserveInstancesRequest
      * @return ListCacheReserveInstancesResponse
      */
@@ -976,18 +934,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListWafPhasesResponse
      */
     CompletableFuture<ListWafPhasesResponse> listWafPhases(ListWafPhasesRequest request);
-
-    /**
-     * @param request the request parameters of ListWafRules  ListWafRulesRequest
-     * @return ListWafRulesResponse
-     */
-    CompletableFuture<ListWafRulesResponse> listWafRules(ListWafRulesRequest request);
-
-    /**
-     * @param request the request parameters of ListWafRulesets  ListWafRulesetsRequest
-     * @return ListWafRulesetsResponse
-     */
-    CompletableFuture<ListWafRulesetsResponse> listWafRulesets(ListWafRulesetsRequest request);
 
     /**
      * @param request the request parameters of ListWafTemplateRules  ListWafTemplateRulesRequest
@@ -1241,18 +1187,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateUserDeliveryTaskStatusResponse
      */
     CompletableFuture<UpdateUserDeliveryTaskStatusResponse> updateUserDeliveryTaskStatus(UpdateUserDeliveryTaskStatusRequest request);
-
-    /**
-     * @param request the request parameters of UpdateWafRule  UpdateWafRuleRequest
-     * @return UpdateWafRuleResponse
-     */
-    CompletableFuture<UpdateWafRuleResponse> updateWafRule(UpdateWafRuleRequest request);
-
-    /**
-     * @param request the request parameters of UpdateWafRuleset  UpdateWafRulesetRequest
-     * @return UpdateWafRulesetResponse
-     */
-    CompletableFuture<UpdateWafRulesetResponse> updateWafRuleset(UpdateWafRulesetRequest request);
 
     /**
      * @param request the request parameters of UpdateWaitingRoom  UpdateWaitingRoomRequest

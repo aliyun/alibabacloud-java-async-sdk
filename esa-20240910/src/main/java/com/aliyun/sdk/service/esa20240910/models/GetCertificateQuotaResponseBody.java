@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
     private Long siteCount;
 
     @com.aliyun.core.annotation.NameInMap("SiteUsage")
-    private java.util.List < SiteUsage> siteUsage;
+    private java.util.List<SiteUsage> siteUsage;
 
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
@@ -78,7 +83,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
     /**
      * @return siteUsage
      */
-    public java.util.List < SiteUsage> getSiteUsage() {
+    public java.util.List<SiteUsage> getSiteUsage() {
         return this.siteUsage;
     }
 
@@ -94,7 +99,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         private Long quotaUsage; 
         private String requestId; 
         private Long siteCount; 
-        private java.util.List < SiteUsage> siteUsage; 
+        private java.util.List<SiteUsage> siteUsage; 
         private String type; 
 
         /**
@@ -132,7 +137,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         /**
          * SiteUsage.
          */
-        public Builder siteUsage(java.util.List < SiteUsage> siteUsage) {
+        public Builder siteUsage(java.util.List<SiteUsage> siteUsage) {
             this.siteUsage = siteUsage;
             return this;
         }

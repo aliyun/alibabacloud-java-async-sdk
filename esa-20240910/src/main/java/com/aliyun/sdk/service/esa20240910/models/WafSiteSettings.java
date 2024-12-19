@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -655,7 +660,7 @@ public class WafSiteSettings extends TeaModel {
      */
     public static class ClientIpIdentifier extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Headers")
-        private java.util.List < String > headers;
+        private java.util.List<String> headers;
 
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
@@ -676,7 +681,7 @@ public class WafSiteSettings extends TeaModel {
         /**
          * @return headers
          */
-        public java.util.List < String > getHeaders() {
+        public java.util.List<String> getHeaders() {
             return this.headers;
         }
 
@@ -688,13 +693,13 @@ public class WafSiteSettings extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > headers; 
+            private java.util.List<String> headers; 
             private String mode; 
 
             /**
              * Headers.
              */
-            public Builder headers(java.util.List < String > headers) {
+            public Builder headers(java.util.List<String> headers) {
                 this.headers = headers;
                 return this;
             }

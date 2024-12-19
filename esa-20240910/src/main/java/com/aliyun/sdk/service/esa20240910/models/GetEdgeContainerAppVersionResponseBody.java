@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -916,7 +921,7 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         private String appId;
 
         @com.aliyun.core.annotation.NameInMap("Containers")
-        private java.util.List < Containers> containers;
+        private java.util.List<Containers> containers;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -973,7 +978,7 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
         /**
          * @return containers
          */
-        public java.util.List < Containers> getContainers() {
+        public java.util.List<Containers> getContainers() {
             return this.containers;
         }
 
@@ -1035,7 +1040,7 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appId; 
-            private java.util.List < Containers> containers; 
+            private java.util.List<Containers> containers; 
             private String createTime; 
             private String lastPublishTime; 
             private String name; 
@@ -1059,7 +1064,7 @@ public class GetEdgeContainerAppVersionResponseBody extends TeaModel {
             /**
              * <p>The container images deployed for this version.</p>
              */
-            public Builder containers(java.util.List < Containers> containers) {
+            public Builder containers(java.util.List<Containers> containers) {
                 this.containers = containers;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class CreateWaitingRoomRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostNameAndPath")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < HostNameAndPath> hostNameAndPath;
+    private java.util.List<HostNameAndPath> hostNameAndPath;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JsonResponseEnable")
@@ -163,7 +168,7 @@ public class CreateWaitingRoomRequest extends Request {
     /**
      * @return hostNameAndPath
      */
-    public java.util.List < HostNameAndPath> getHostNameAndPath() {
+    public java.util.List<HostNameAndPath> getHostNameAndPath() {
         return this.hostNameAndPath;
     }
 
@@ -250,7 +255,7 @@ public class CreateWaitingRoomRequest extends Request {
         private String description; 
         private String disableSessionRenewalEnable; 
         private String enable; 
-        private java.util.List < HostNameAndPath> hostNameAndPath; 
+        private java.util.List<HostNameAndPath> hostNameAndPath; 
         private String jsonResponseEnable; 
         private String language; 
         private String name; 
@@ -359,7 +364,7 @@ public class CreateWaitingRoomRequest extends Request {
          * <p>The hostname and path.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder hostNameAndPath(java.util.List < HostNameAndPath> hostNameAndPath) {
+        public Builder hostNameAndPath(java.util.List<HostNameAndPath> hostNameAndPath) {
             String hostNameAndPathShrink = shrink(hostNameAndPath, "HostNameAndPath", "json");
             this.putQueryParameter("HostNameAndPath", hostNameAndPathShrink);
             this.hostNameAndPath = hostNameAndPath;

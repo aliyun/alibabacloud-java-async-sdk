@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Containers")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Containers> containers;
+    private java.util.List<Containers> containers;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -63,7 +68,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
     /**
      * @return containers
      */
-    public java.util.List < Containers> getContainers() {
+    public java.util.List<Containers> getContainers() {
         return this.containers;
     }
 
@@ -83,7 +88,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateEdgeContainerAppVersionRequest, Builder> {
         private String appId; 
-        private java.util.List < Containers> containers; 
+        private java.util.List<Containers> containers; 
         private String name; 
         private String remarks; 
 
@@ -136,7 +141,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
          *       }
          * ]</p>
          */
-        public Builder containers(java.util.List < Containers> containers) {
+        public Builder containers(java.util.List<Containers> containers) {
             String containersShrink = shrink(containers, "Containers", "json");
             this.putBodyParameter("Containers", containersShrink);
             this.containers = containers;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetEdgeContainerLogsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < String > items;
+    private java.util.List<String> items;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetEdgeContainerLogsResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < String > getItems() {
+    public java.util.List<String> getItems() {
         return this.items;
     }
 
@@ -46,13 +51,13 @@ public class GetEdgeContainerLogsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > items; 
+        private java.util.List<String> items; 
         private String requestId; 
 
         /**
          * <p>The logs.</p>
          */
-        public Builder items(java.util.List < String > items) {
+        public Builder items(java.util.List<String> items) {
             this.items = items;
             return this;
         }

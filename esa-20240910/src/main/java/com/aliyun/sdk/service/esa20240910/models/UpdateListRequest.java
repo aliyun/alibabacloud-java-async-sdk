@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class UpdateListRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < String > items;
+    private java.util.List<String> items;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -67,7 +72,7 @@ public class UpdateListRequest extends Request {
     /**
      * @return items
      */
-    public java.util.List < String > getItems() {
+    public java.util.List<String> getItems() {
         return this.items;
     }
 
@@ -81,7 +86,7 @@ public class UpdateListRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateListRequest, Builder> {
         private String description; 
         private Long id; 
-        private java.util.List < String > items; 
+        private java.util.List<String> items; 
         private String name; 
 
         private Builder() {
@@ -127,7 +132,7 @@ public class UpdateListRequest extends Request {
          * <strong>example:</strong>
          * <p>a custom list</p>
          */
-        public Builder items(java.util.List < String > items) {
+        public Builder items(java.util.List<String> items) {
             String itemsShrink = shrink(items, "Items", "json");
             this.putBodyParameter("Items", itemsShrink);
             this.items = items;

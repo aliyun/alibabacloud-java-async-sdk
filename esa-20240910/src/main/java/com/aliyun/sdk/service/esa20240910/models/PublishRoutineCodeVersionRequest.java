@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class PublishRoutineCodeVersionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CanaryAreaList")
-    private java.util.List < String > canaryAreaList;
+    private java.util.List<String> canaryAreaList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CanaryCodeVersion")
@@ -59,7 +64,7 @@ public class PublishRoutineCodeVersionRequest extends Request {
     /**
      * @return canaryAreaList
      */
-    public java.util.List < String > getCanaryAreaList() {
+    public java.util.List<String> getCanaryAreaList() {
         return this.canaryAreaList;
     }
 
@@ -92,7 +97,7 @@ public class PublishRoutineCodeVersionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PublishRoutineCodeVersionRequest, Builder> {
-        private java.util.List < String > canaryAreaList; 
+        private java.util.List<String> canaryAreaList; 
         private String canaryCodeVersion; 
         private String codeVersion; 
         private String env; 
@@ -114,7 +119,7 @@ public class PublishRoutineCodeVersionRequest extends Request {
         /**
          * <p>The regions for canary release.</p>
          */
-        public Builder canaryAreaList(java.util.List < String > canaryAreaList) {
+        public Builder canaryAreaList(java.util.List<String> canaryAreaList) {
             String canaryAreaListShrink = shrink(canaryAreaList, "CanaryAreaList", "json");
             this.putBodyParameter("CanaryAreaList", canaryAreaListShrink);
             this.canaryAreaList = canaryAreaList;

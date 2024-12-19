@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("WaitingRoomEvents")
-    private java.util.List < WaitingRoomEvents> waitingRoomEvents;
+    private java.util.List<WaitingRoomEvents> waitingRoomEvents;
 
     private ListWaitingRoomEventsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
     /**
      * @return waitingRoomEvents
      */
-    public java.util.List < WaitingRoomEvents> getWaitingRoomEvents() {
+    public java.util.List<WaitingRoomEvents> getWaitingRoomEvents() {
         return this.waitingRoomEvents;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < WaitingRoomEvents> waitingRoomEvents; 
+        private java.util.List<WaitingRoomEvents> waitingRoomEvents; 
 
         /**
          * <p>The request ID, which is used to trace a call.</p>
@@ -63,7 +68,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
         /**
          * <p>The details of the waiting room events.</p>
          */
-        public Builder waitingRoomEvents(java.util.List < WaitingRoomEvents> waitingRoomEvents) {
+        public Builder waitingRoomEvents(java.util.List<WaitingRoomEvents> waitingRoomEvents) {
             this.waitingRoomEvents = waitingRoomEvents;
             return this;
         }

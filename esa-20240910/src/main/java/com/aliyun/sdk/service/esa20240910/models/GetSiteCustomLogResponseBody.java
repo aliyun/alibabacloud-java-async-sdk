@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,13 +156,13 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
      */
     public static class LogCustomField extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cookies")
-        private java.util.List < String > cookies;
+        private java.util.List<String> cookies;
 
         @com.aliyun.core.annotation.NameInMap("RequestHeaders")
-        private java.util.List < String > requestHeaders;
+        private java.util.List<String> requestHeaders;
 
         @com.aliyun.core.annotation.NameInMap("ResponseHeaders")
-        private java.util.List < String > responseHeaders;
+        private java.util.List<String> responseHeaders;
 
         private LogCustomField(Builder builder) {
             this.cookies = builder.cookies;
@@ -176,33 +181,33 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
         /**
          * @return cookies
          */
-        public java.util.List < String > getCookies() {
+        public java.util.List<String> getCookies() {
             return this.cookies;
         }
 
         /**
          * @return requestHeaders
          */
-        public java.util.List < String > getRequestHeaders() {
+        public java.util.List<String> getRequestHeaders() {
             return this.requestHeaders;
         }
 
         /**
          * @return responseHeaders
          */
-        public java.util.List < String > getResponseHeaders() {
+        public java.util.List<String> getResponseHeaders() {
             return this.responseHeaders;
         }
 
         public static final class Builder {
-            private java.util.List < String > cookies; 
-            private java.util.List < String > requestHeaders; 
-            private java.util.List < String > responseHeaders; 
+            private java.util.List<String> cookies; 
+            private java.util.List<String> requestHeaders; 
+            private java.util.List<String> responseHeaders; 
 
             /**
              * <p>The cookie fields.</p>
              */
-            public Builder cookies(java.util.List < String > cookies) {
+            public Builder cookies(java.util.List<String> cookies) {
                 this.cookies = cookies;
                 return this;
             }
@@ -210,7 +215,7 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
             /**
              * <p>The request header fields.</p>
              */
-            public Builder requestHeaders(java.util.List < String > requestHeaders) {
+            public Builder requestHeaders(java.util.List<String> requestHeaders) {
                 this.requestHeaders = requestHeaders;
                 return this;
             }
@@ -218,7 +223,7 @@ public class GetSiteCustomLogResponseBody extends TeaModel {
             /**
              * <p>The response header fields.</p>
              */
-            public Builder responseHeaders(java.util.List < String > responseHeaders) {
+            public Builder responseHeaders(java.util.List<String> responseHeaders) {
                 this.responseHeaders = responseHeaders;
                 return this;
             }

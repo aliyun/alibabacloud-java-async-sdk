@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class BatchPutKvResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FailKeys")
-    private java.util.List < String > failKeys;
+    private java.util.List<String> failKeys;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SuccessKeys")
-    private java.util.List < String > successKeys;
+    private java.util.List<String> successKeys;
 
     private BatchPutKvResponseBody(Builder builder) {
         this.failKeys = builder.failKeys;
@@ -38,7 +43,7 @@ public class BatchPutKvResponseBody extends TeaModel {
     /**
      * @return failKeys
      */
-    public java.util.List < String > getFailKeys() {
+    public java.util.List<String> getFailKeys() {
         return this.failKeys;
     }
 
@@ -52,19 +57,19 @@ public class BatchPutKvResponseBody extends TeaModel {
     /**
      * @return successKeys
      */
-    public java.util.List < String > getSuccessKeys() {
+    public java.util.List<String> getSuccessKeys() {
         return this.successKeys;
     }
 
     public static final class Builder {
-        private java.util.List < String > failKeys; 
+        private java.util.List<String> failKeys; 
         private String requestId; 
-        private java.util.List < String > successKeys; 
+        private java.util.List<String> successKeys; 
 
         /**
          * <p>The keys that failed to be written.</p>
          */
-        public Builder failKeys(java.util.List < String > failKeys) {
+        public Builder failKeys(java.util.List<String> failKeys) {
             this.failKeys = failKeys;
             return this;
         }
@@ -83,7 +88,7 @@ public class BatchPutKvResponseBody extends TeaModel {
         /**
          * <p>The keys that were written.</p>
          */
-        public Builder successKeys(java.util.List < String > successKeys) {
+        public Builder successKeys(java.util.List<String> successKeys) {
             this.successKeys = successKeys;
             return this;
         }

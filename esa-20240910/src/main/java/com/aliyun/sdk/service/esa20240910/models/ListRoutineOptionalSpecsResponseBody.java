@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListRoutineOptionalSpecsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Specs")
-    private java.util.List < Specs> specs;
+    private java.util.List<Specs> specs;
 
     private ListRoutineOptionalSpecsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListRoutineOptionalSpecsResponseBody extends TeaModel {
     /**
      * @return specs
      */
-    public java.util.List < Specs> getSpecs() {
+    public java.util.List<Specs> getSpecs() {
         return this.specs;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Specs> specs; 
+        private java.util.List<Specs> specs; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class ListRoutineOptionalSpecsResponseBody extends TeaModel {
         /**
          * <p>The available specifications.</p>
          */
-        public Builder specs(java.util.List < Specs> specs) {
+        public Builder specs(java.util.List<Specs> specs) {
             this.specs = specs;
             return this;
         }

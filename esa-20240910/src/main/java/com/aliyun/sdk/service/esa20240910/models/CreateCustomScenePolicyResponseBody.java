@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("Objects")
-    private java.util.List < String > objects;
+    private java.util.List<String> objects;
 
     @com.aliyun.core.annotation.NameInMap("PolicyId")
     private Long policyId;
@@ -68,7 +73,7 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
     /**
      * @return objects
      */
-    public java.util.List < String > getObjects() {
+    public java.util.List<String> getObjects() {
         return this.objects;
     }
 
@@ -103,7 +108,7 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String endTime; 
         private String name; 
-        private java.util.List < String > objects; 
+        private java.util.List<String> objects; 
         private Long policyId; 
         private String requestId; 
         private String startTime; 
@@ -135,7 +140,7 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         /**
          * <p>The IDs of websites associated.</p>
          */
-        public Builder objects(java.util.List < String > objects) {
+        public Builder objects(java.util.List<String> objects) {
             this.objects = objects;
             return this;
         }

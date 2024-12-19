@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
     private String scheduled;
 
     @com.aliyun.core.annotation.NameInMap("VIPs")
-    private java.util.List < String > VIPs;
+    private java.util.List<String> VIPs;
 
     private GetEdgeContainerStagingDeployStatusResponseBody(Builder builder) {
         this.containersReady = builder.containersReady;
@@ -118,7 +123,7 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
     /**
      * @return VIPs
      */
-    public java.util.List < String > getVIPs() {
+    public java.util.List<String> getVIPs() {
         return this.VIPs;
     }
 
@@ -131,7 +136,7 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         private String ready; 
         private String requestId; 
         private String scheduled; 
-        private java.util.List < String > VIPs; 
+        private java.util.List<String> VIPs; 
 
         /**
          * <p>Indicates whether the container is ready.</p>
@@ -242,7 +247,7 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         /**
          * <p>The virtual IP addresses.</p>
          */
-        public Builder VIPs(java.util.List < String > VIPs) {
+        public Builder VIPs(java.util.List<String> VIPs) {
             this.VIPs = VIPs;
             return this;
         }

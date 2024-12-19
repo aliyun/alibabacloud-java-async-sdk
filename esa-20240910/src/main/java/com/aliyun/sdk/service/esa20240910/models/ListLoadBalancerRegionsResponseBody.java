@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Regions")
-    private java.util.List < Regions> regions;
+    private java.util.List<Regions> regions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -64,7 +69,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
     /**
      * @return regions
      */
-    public java.util.List < Regions> getRegions() {
+    public java.util.List<Regions> getRegions() {
         return this.regions;
     }
 
@@ -92,7 +97,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < Regions> regions; 
+        private java.util.List<Regions> regions; 
         private String requestId; 
         private Integer totalCount; 
         private Integer totalPage; 
@@ -122,7 +127,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
         /**
          * <p>The regions.</p>
          */
-        public Builder regions(java.util.List < Regions> regions) {
+        public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
             return this;
         }
@@ -276,7 +281,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
         private String regionEnName;
 
         @com.aliyun.core.annotation.NameInMap("SubRegions")
-        private java.util.List < SubRegions> subRegions;
+        private java.util.List<SubRegions> subRegions;
 
         private Regions(Builder builder) {
             this.regionCnName = builder.regionCnName;
@@ -317,7 +322,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
         /**
          * @return subRegions
          */
-        public java.util.List < SubRegions> getSubRegions() {
+        public java.util.List<SubRegions> getSubRegions() {
             return this.subRegions;
         }
 
@@ -325,7 +330,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
             private String regionCnName; 
             private String regionCode; 
             private String regionEnName; 
-            private java.util.List < SubRegions> subRegions; 
+            private java.util.List<SubRegions> subRegions; 
 
             /**
              * <p>The Chinese name of the region.</p>
@@ -360,7 +365,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
             /**
              * <p>The subregions of the region.</p>
              */
-            public Builder subRegions(java.util.List < SubRegions> subRegions) {
+            public Builder subRegions(java.util.List<SubRegions> subRegions) {
                 this.subRegions = subRegions;
                 return this;
             }

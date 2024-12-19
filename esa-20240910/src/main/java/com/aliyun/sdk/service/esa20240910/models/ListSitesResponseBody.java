@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListSitesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Sites")
-    private java.util.List < Sites> sites;
+    private java.util.List<Sites> sites;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class ListSitesResponseBody extends TeaModel {
     /**
      * @return sites
      */
-    public java.util.List < Sites> getSites() {
+    public java.util.List<Sites> getSites() {
         return this.sites;
     }
 
@@ -82,7 +87,7 @@ public class ListSitesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Sites> sites; 
+        private java.util.List<Sites> sites; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class ListSitesResponseBody extends TeaModel {
         /**
          * <p>The queried websites.</p>
          */
-        public Builder sites(java.util.List < Sites> sites) {
+        public Builder sites(java.util.List<Sites> sites) {
             this.sites = sites;
             return this;
         }
@@ -187,7 +192,7 @@ public class ListSitesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
@@ -312,7 +317,7 @@ public class ListSitesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -350,7 +355,7 @@ public class ListSitesResponseBody extends TeaModel {
             private Long siteId; 
             private String siteName; 
             private String status; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String updateTime; 
             private String verifyCode; 
             private String visitTime; 
@@ -508,7 +513,7 @@ public class ListSitesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;tag1&quot;:&quot;value1&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -226,10 +231,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
      */
     public static class CurrentIPWhitelist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPv4")
-        private java.util.List < String > iPv4;
+        private java.util.List<String> iPv4;
 
         @com.aliyun.core.annotation.NameInMap("IPv6")
-        private java.util.List < String > iPv6;
+        private java.util.List<String> iPv6;
 
         private CurrentIPWhitelist(Builder builder) {
             this.iPv4 = builder.iPv4;
@@ -247,25 +252,25 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         /**
          * @return iPv4
          */
-        public java.util.List < String > getIPv4() {
+        public java.util.List<String> getIPv4() {
             return this.iPv4;
         }
 
         /**
          * @return iPv6
          */
-        public java.util.List < String > getIPv6() {
+        public java.util.List<String> getIPv6() {
             return this.iPv6;
         }
 
         public static final class Builder {
-            private java.util.List < String > iPv4; 
-            private java.util.List < String > iPv6; 
+            private java.util.List<String> iPv4; 
+            private java.util.List<String> iPv6; 
 
             /**
              * <p>The IP whitelist for origin protection used by the website, specified as IPv4 addresses or CIDR blocks.</p>
              */
-            public Builder iPv4(java.util.List < String > iPv4) {
+            public Builder iPv4(java.util.List<String> iPv4) {
                 this.iPv4 = iPv4;
                 return this;
             }
@@ -273,7 +278,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             /**
              * <p>The IP whitelist for origin protection used by the website, specified as IPv6 addresses or CIDR blocks.</p>
              */
-            public Builder iPv6(java.util.List < String > iPv6) {
+            public Builder iPv6(java.util.List<String> iPv6) {
                 this.iPv6 = iPv6;
                 return this;
             }
@@ -293,10 +298,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
      */
     public static class AddedIPWhitelist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPv4")
-        private java.util.List < String > iPv4;
+        private java.util.List<String> iPv4;
 
         @com.aliyun.core.annotation.NameInMap("IPv6")
-        private java.util.List < String > iPv6;
+        private java.util.List<String> iPv6;
 
         private AddedIPWhitelist(Builder builder) {
             this.iPv4 = builder.iPv4;
@@ -314,25 +319,25 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         /**
          * @return iPv4
          */
-        public java.util.List < String > getIPv4() {
+        public java.util.List<String> getIPv4() {
             return this.iPv4;
         }
 
         /**
          * @return iPv6
          */
-        public java.util.List < String > getIPv6() {
+        public java.util.List<String> getIPv6() {
             return this.iPv6;
         }
 
         public static final class Builder {
-            private java.util.List < String > iPv4; 
-            private java.util.List < String > iPv6; 
+            private java.util.List<String> iPv4; 
+            private java.util.List<String> iPv6; 
 
             /**
              * <p>The IP whitelist for origin protection, specified as IPv4 addresses or CIDR blocks.</p>
              */
-            public Builder iPv4(java.util.List < String > iPv4) {
+            public Builder iPv4(java.util.List<String> iPv4) {
                 this.iPv4 = iPv4;
                 return this;
             }
@@ -340,7 +345,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             /**
              * <p>The IP whitelist for origin protection, specified as IPv6 addresses or CIDR blocks.</p>
              */
-            public Builder iPv6(java.util.List < String > iPv6) {
+            public Builder iPv6(java.util.List<String> iPv6) {
                 this.iPv6 = iPv6;
                 return this;
             }
@@ -360,10 +365,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
      */
     public static class NoChangeIpWhitelist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPv4")
-        private java.util.List < String > iPv4;
+        private java.util.List<String> iPv4;
 
         @com.aliyun.core.annotation.NameInMap("IPv6")
-        private java.util.List < String > iPv6;
+        private java.util.List<String> iPv6;
 
         private NoChangeIpWhitelist(Builder builder) {
             this.iPv4 = builder.iPv4;
@@ -381,25 +386,25 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         /**
          * @return iPv4
          */
-        public java.util.List < String > getIPv4() {
+        public java.util.List<String> getIPv4() {
             return this.iPv4;
         }
 
         /**
          * @return iPv6
          */
-        public java.util.List < String > getIPv6() {
+        public java.util.List<String> getIPv6() {
             return this.iPv6;
         }
 
         public static final class Builder {
-            private java.util.List < String > iPv4; 
-            private java.util.List < String > iPv6; 
+            private java.util.List<String> iPv4; 
+            private java.util.List<String> iPv6; 
 
             /**
              * <p>The IP whitelist for origin protection, specified as IPv4 addresses or CIDR blocks.</p>
              */
-            public Builder iPv4(java.util.List < String > iPv4) {
+            public Builder iPv4(java.util.List<String> iPv4) {
                 this.iPv4 = iPv4;
                 return this;
             }
@@ -407,7 +412,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             /**
              * <p>The IP whitelist for origin protection, specified as IPv6 addresses or CIDR blocks.</p>
              */
-            public Builder iPv6(java.util.List < String > iPv6) {
+            public Builder iPv6(java.util.List<String> iPv6) {
                 this.iPv6 = iPv6;
                 return this;
             }
@@ -427,10 +432,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
      */
     public static class RemovedIPWhitelist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPv4")
-        private java.util.List < String > iPv4;
+        private java.util.List<String> iPv4;
 
         @com.aliyun.core.annotation.NameInMap("IPv6")
-        private java.util.List < String > iPv6;
+        private java.util.List<String> iPv6;
 
         private RemovedIPWhitelist(Builder builder) {
             this.iPv4 = builder.iPv4;
@@ -448,25 +453,25 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         /**
          * @return iPv4
          */
-        public java.util.List < String > getIPv4() {
+        public java.util.List<String> getIPv4() {
             return this.iPv4;
         }
 
         /**
          * @return iPv6
          */
-        public java.util.List < String > getIPv6() {
+        public java.util.List<String> getIPv6() {
             return this.iPv6;
         }
 
         public static final class Builder {
-            private java.util.List < String > iPv4; 
-            private java.util.List < String > iPv6; 
+            private java.util.List<String> iPv4; 
+            private java.util.List<String> iPv6; 
 
             /**
              * <p>The IP whitelist for origin protection, specified as IPv4 addresses or CIDR blocks.</p>
              */
-            public Builder iPv4(java.util.List < String > iPv4) {
+            public Builder iPv4(java.util.List<String> iPv4) {
                 this.iPv4 = iPv4;
                 return this;
             }
@@ -474,7 +479,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             /**
              * <p>The IP whitelist for origin protection, specified as IPv6 addresses or CIDR blocks.</p>
              */
-            public Builder iPv6(java.util.List < String > iPv6) {
+            public Builder iPv6(java.util.List<String> iPv6) {
                 this.iPv6 = iPv6;
                 return this;
             }
@@ -581,10 +586,10 @@ public class GetOriginProtectionResponseBody extends TeaModel {
      */
     public static class LatestIPWhitelist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IPv4")
-        private java.util.List < String > iPv4;
+        private java.util.List<String> iPv4;
 
         @com.aliyun.core.annotation.NameInMap("IPv6")
-        private java.util.List < String > iPv6;
+        private java.util.List<String> iPv6;
 
         private LatestIPWhitelist(Builder builder) {
             this.iPv4 = builder.iPv4;
@@ -602,25 +607,25 @@ public class GetOriginProtectionResponseBody extends TeaModel {
         /**
          * @return iPv4
          */
-        public java.util.List < String > getIPv4() {
+        public java.util.List<String> getIPv4() {
             return this.iPv4;
         }
 
         /**
          * @return iPv6
          */
-        public java.util.List < String > getIPv6() {
+        public java.util.List<String> getIPv6() {
             return this.iPv6;
         }
 
         public static final class Builder {
-            private java.util.List < String > iPv4; 
-            private java.util.List < String > iPv6; 
+            private java.util.List<String> iPv4; 
+            private java.util.List<String> iPv6; 
 
             /**
              * <p>The latest IP whitelist for origin protection, specified as IPv4 addresses or CIDR blocks.</p>
              */
-            public Builder iPv4(java.util.List < String > iPv4) {
+            public Builder iPv4(java.util.List<String> iPv4) {
                 this.iPv4 = iPv4;
                 return this;
             }
@@ -628,7 +633,7 @@ public class GetOriginProtectionResponseBody extends TeaModel {
             /**
              * <p>The latest IP whitelist for origin protection, specified as IPv6 addresses or CIDR blocks.</p>
              */
-            public Builder iPv6(java.util.List < String > iPv6) {
+            public Builder iPv6(java.util.List<String> iPv6) {
                 this.iPv6 = iPv6;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -180,7 +185,7 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the WAF rule, which can be obtained by calling the <a href="~~ListWafRules~~">ListWafRules</a> operation.</p>
+         * <p>The ID of the WAF rule, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850237.html">ListWafRules</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,7 +257,7 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +290,7 @@ public class ListWafManagedRulesRequest extends Request {
         private String idNameLike;
 
         @com.aliyun.core.annotation.NameInMap("ProtectionLevels")
-        private java.util.List < Integer > protectionLevels;
+        private java.util.List<Integer> protectionLevels;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -322,7 +327,7 @@ public class ListWafManagedRulesRequest extends Request {
         /**
          * @return protectionLevels
          */
-        public java.util.List < Integer > getProtectionLevels() {
+        public java.util.List<Integer> getProtectionLevels() {
             return this.protectionLevels;
         }
 
@@ -336,7 +341,7 @@ public class ListWafManagedRulesRequest extends Request {
         public static final class Builder {
             private String action; 
             private String idNameLike; 
-            private java.util.List < Integer > protectionLevels; 
+            private java.util.List<Integer> protectionLevels; 
             private String status; 
 
             /**
@@ -364,13 +369,13 @@ public class ListWafManagedRulesRequest extends Request {
             /**
              * <p>The protection levels of the rules.</p>
              */
-            public Builder protectionLevels(java.util.List < Integer > protectionLevels) {
+            public Builder protectionLevels(java.util.List<Integer> protectionLevels) {
                 this.protectionLevels = protectionLevels;
                 return this;
             }
 
             /**
-             * <p>The status.</p>
+             * <p>The status of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>

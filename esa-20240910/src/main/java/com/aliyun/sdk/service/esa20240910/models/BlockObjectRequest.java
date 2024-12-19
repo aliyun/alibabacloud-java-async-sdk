@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class BlockObjectRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Content")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > content;
+    private java.util.List<String> content;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Extension")
@@ -61,7 +66,7 @@ public class BlockObjectRequest extends Request {
     /**
      * @return content
      */
-    public java.util.List < String > getContent() {
+    public java.util.List<String> getContent() {
         return this.content;
     }
 
@@ -94,7 +99,7 @@ public class BlockObjectRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BlockObjectRequest, Builder> {
-        private java.util.List < String > content; 
+        private java.util.List<String> content; 
         private String extension; 
         private Integer maxage; 
         private Long siteId; 
@@ -117,7 +122,7 @@ public class BlockObjectRequest extends Request {
          * <p>The content to block.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder content(java.util.List < String > content) {
+        public Builder content(java.util.List<String> content) {
             String contentShrink = shrink(content, "Content", "json");
             this.putQueryParameter("Content", contentShrink);
             this.content = content;

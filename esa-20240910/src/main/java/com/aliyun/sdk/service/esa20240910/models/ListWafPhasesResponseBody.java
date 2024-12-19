@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListWafPhasesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Phases")
-    private java.util.List < Phases> phases;
+    private java.util.List<Phases> phases;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
     /**
      * @return phases
      */
-    public java.util.List < Phases> getPhases() {
+    public java.util.List<Phases> getPhases() {
         return this.phases;
     }
 
@@ -46,13 +51,13 @@ public class ListWafPhasesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Phases> phases; 
+        private java.util.List<Phases> phases; 
         private String requestId; 
 
         /**
          * <p>The WAF rule categories.</p>
          */
-        public Builder phases(java.util.List < Phases> phases) {
+        public Builder phases(java.util.List<Phases> phases) {
             this.phases = phases;
             return this;
         }
@@ -88,7 +93,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < WafRuleConfig > rules;
+        private java.util.List<WafRuleConfig> rules;
 
         @com.aliyun.core.annotation.NameInMap("Shared")
         private WafBatchRuleShared shared;
@@ -125,7 +130,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < WafRuleConfig > getRules() {
+        public java.util.List<WafRuleConfig> getRules() {
             return this.rules;
         }
 
@@ -139,7 +144,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String name; 
-            private java.util.List < WafRuleConfig > rules; 
+            private java.util.List<WafRuleConfig> rules; 
             private WafBatchRuleShared shared; 
 
             /**
@@ -167,7 +172,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
             /**
              * <p>The rule configurations in the WAF ruleset.</p>
              */
-            public Builder rules(java.util.List < WafRuleConfig > rules) {
+            public Builder rules(java.util.List<WafRuleConfig> rules) {
                 this.rules = rules;
                 return this;
             }
@@ -198,7 +203,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
         private String phase;
 
         @com.aliyun.core.annotation.NameInMap("Rulesets")
-        private java.util.List < Rulesets> rulesets;
+        private java.util.List<Rulesets> rulesets;
 
         private Phases(Builder builder) {
             this.phase = builder.phase;
@@ -223,13 +228,13 @@ public class ListWafPhasesResponseBody extends TeaModel {
         /**
          * @return rulesets
          */
-        public java.util.List < Rulesets> getRulesets() {
+        public java.util.List<Rulesets> getRulesets() {
             return this.rulesets;
         }
 
         public static final class Builder {
             private String phase; 
-            private java.util.List < Rulesets> rulesets; 
+            private java.util.List<Rulesets> rulesets; 
 
             /**
              * <p>The name of the WAF rule category.</p>
@@ -245,7 +250,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
             /**
              * <p>The WAF rulesets.</p>
              */
-            public Builder rulesets(java.util.List < Rulesets> rulesets) {
+            public Builder rulesets(java.util.List<Rulesets> rulesets) {
                 this.rulesets = rulesets;
                 return this;
             }

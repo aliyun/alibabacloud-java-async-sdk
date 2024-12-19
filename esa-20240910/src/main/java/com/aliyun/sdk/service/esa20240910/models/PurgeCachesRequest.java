@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -201,19 +206,19 @@ public class PurgeCachesRequest extends Request {
      */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CacheTags")
-        private java.util.List < String > cacheTags;
+        private java.util.List<String> cacheTags;
 
         @com.aliyun.core.annotation.NameInMap("Directories")
-        private java.util.List < String > directories;
+        private java.util.List<String> directories;
 
         @com.aliyun.core.annotation.NameInMap("Files")
-        private java.util.List < ? > files;
+        private java.util.List<?> files;
 
         @com.aliyun.core.annotation.NameInMap("Hostnames")
-        private java.util.List < String > hostnames;
+        private java.util.List<String> hostnames;
 
         @com.aliyun.core.annotation.NameInMap("IgnoreParams")
-        private java.util.List < String > ignoreParams;
+        private java.util.List<String> ignoreParams;
 
         @com.aliyun.core.annotation.NameInMap("PurgeAll")
         private Boolean purgeAll;
@@ -238,35 +243,35 @@ public class PurgeCachesRequest extends Request {
         /**
          * @return cacheTags
          */
-        public java.util.List < String > getCacheTags() {
+        public java.util.List<String> getCacheTags() {
             return this.cacheTags;
         }
 
         /**
          * @return directories
          */
-        public java.util.List < String > getDirectories() {
+        public java.util.List<String> getDirectories() {
             return this.directories;
         }
 
         /**
          * @return files
          */
-        public java.util.List < ? > getFiles() {
+        public java.util.List<?> getFiles() {
             return this.files;
         }
 
         /**
          * @return hostnames
          */
-        public java.util.List < String > getHostnames() {
+        public java.util.List<String> getHostnames() {
             return this.hostnames;
         }
 
         /**
          * @return ignoreParams
          */
-        public java.util.List < String > getIgnoreParams() {
+        public java.util.List<String> getIgnoreParams() {
             return this.ignoreParams;
         }
 
@@ -278,17 +283,17 @@ public class PurgeCachesRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > cacheTags; 
-            private java.util.List < String > directories; 
-            private java.util.List < ? > files; 
-            private java.util.List < String > hostnames; 
-            private java.util.List < String > ignoreParams; 
+            private java.util.List<String> cacheTags; 
+            private java.util.List<String> directories; 
+            private java.util.List<?> files; 
+            private java.util.List<String> hostnames; 
+            private java.util.List<String> ignoreParams; 
             private Boolean purgeAll; 
 
             /**
              * <p>The cache tags that are used to purge the cache. This parameter is required if Type is set to cachetag.</p>
              */
-            public Builder cacheTags(java.util.List < String > cacheTags) {
+            public Builder cacheTags(java.util.List<String> cacheTags) {
                 this.cacheTags = cacheTags;
                 return this;
             }
@@ -296,7 +301,7 @@ public class PurgeCachesRequest extends Request {
             /**
              * <p>The directories that are used to purge the cache. This parameter is required if Type is set to directory.</p>
              */
-            public Builder directories(java.util.List < String > directories) {
+            public Builder directories(java.util.List<String> directories) {
                 this.directories = directories;
                 return this;
             }
@@ -304,7 +309,7 @@ public class PurgeCachesRequest extends Request {
             /**
              * <p>The files to purge. This parameter is required if Type is set to file.</p>
              */
-            public Builder files(java.util.List < ? > files) {
+            public Builder files(java.util.List<?> files) {
                 this.files = files;
                 return this;
             }
@@ -312,7 +317,7 @@ public class PurgeCachesRequest extends Request {
             /**
              * <p>The hostnames that are used to purge the cache. This parameter is required if Type is set to hostname.</p>
              */
-            public Builder hostnames(java.util.List < String > hostnames) {
+            public Builder hostnames(java.util.List<String> hostnames) {
                 this.hostnames = hostnames;
                 return this;
             }
@@ -320,7 +325,7 @@ public class PurgeCachesRequest extends Request {
             /**
              * <p>The file URLs with parameters ignored that are used to purge the cache. This parameter is required if Type is set to ignoreParams.</p>
              */
-            public Builder ignoreParams(java.util.List < String > ignoreParams) {
+            public Builder ignoreParams(java.util.List<String> ignoreParams) {
                 this.ignoreParams = ignoreParams;
                 return this;
             }

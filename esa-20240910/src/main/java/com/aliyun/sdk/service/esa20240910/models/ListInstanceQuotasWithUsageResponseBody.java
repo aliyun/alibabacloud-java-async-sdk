@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
     private String instanceId;
 
     @com.aliyun.core.annotation.NameInMap("Quotas")
-    private java.util.List < Quotas> quotas;
+    private java.util.List<Quotas> quotas;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -49,7 +54,7 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
     /**
      * @return quotas
      */
-    public java.util.List < Quotas> getQuotas() {
+    public java.util.List<Quotas> getQuotas() {
         return this.quotas;
     }
 
@@ -69,7 +74,7 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
 
     public static final class Builder {
         private String instanceId; 
-        private java.util.List < Quotas> quotas; 
+        private java.util.List<Quotas> quotas; 
         private String requestId; 
         private String status; 
 
@@ -87,7 +92,7 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
         /**
          * <p>The quotas and their actual usage in the plan.</p>
          */
-        public Builder quotas(java.util.List < Quotas> quotas) {
+        public Builder quotas(java.util.List<Quotas> quotas) {
             this.quotas = quotas;
             return this;
         }
@@ -235,7 +240,7 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
         private String quotaValue;
 
         @com.aliyun.core.annotation.NameInMap("SiteUsage")
-        private java.util.List < SiteUsage> siteUsage;
+        private java.util.List<SiteUsage> siteUsage;
 
         @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
@@ -272,7 +277,7 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
         /**
          * @return siteUsage
          */
-        public java.util.List < SiteUsage> getSiteUsage() {
+        public java.util.List<SiteUsage> getSiteUsage() {
             return this.siteUsage;
         }
 
@@ -286,7 +291,7 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
         public static final class Builder {
             private String quotaName; 
             private String quotaValue; 
-            private java.util.List < SiteUsage> siteUsage; 
+            private java.util.List<SiteUsage> siteUsage; 
             private String usage; 
 
             /**
@@ -314,7 +319,7 @@ public class ListInstanceQuotasWithUsageResponseBody extends TeaModel {
             /**
              * <p>The usage of the quota in each website associated with the plan.</p>
              */
-            public Builder siteUsage(java.util.List < SiteUsage> siteUsage) {
+            public Builder siteUsage(java.util.List<SiteUsage> siteUsage) {
                 this.siteUsage = siteUsage;
                 return this;
             }

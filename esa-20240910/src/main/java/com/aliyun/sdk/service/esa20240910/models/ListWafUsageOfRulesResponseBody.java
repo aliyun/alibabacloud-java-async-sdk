@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Sites")
-    private java.util.List < Sites> sites;
+    private java.util.List<Sites> sites;
 
     private ListWafUsageOfRulesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
     /**
      * @return sites
      */
-    public java.util.List < Sites> getSites() {
+    public java.util.List<Sites> getSites() {
         return this.sites;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Sites> sites; 
+        private java.util.List<Sites> sites; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
         /**
          * <p>The usage details of WAF rules of the website.</p>
          */
-        public Builder sites(java.util.List < Sites> sites) {
+        public Builder sites(java.util.List<Sites> sites) {
             this.sites = sites;
             return this;
         }

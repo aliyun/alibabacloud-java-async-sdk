@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListListsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Lists")
-    private java.util.List < Lists> lists;
+    private java.util.List<Lists> lists;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -50,7 +55,7 @@ public class ListListsResponseBody extends TeaModel {
     /**
      * @return lists
      */
-    public java.util.List < Lists> getLists() {
+    public java.util.List<Lists> getLists() {
         return this.lists;
     }
 
@@ -90,7 +95,7 @@ public class ListListsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Lists> lists; 
+        private java.util.List<Lists> lists; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -100,7 +105,7 @@ public class ListListsResponseBody extends TeaModel {
         /**
          * <p>The array that contains list information, including list data after paging.</p>
          */
-        public Builder lists(java.util.List < Lists> lists) {
+        public Builder lists(java.util.List<Lists> lists) {
             this.lists = lists;
             return this;
         }

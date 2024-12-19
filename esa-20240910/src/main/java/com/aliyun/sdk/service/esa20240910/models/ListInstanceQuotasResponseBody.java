@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
     private String instanceId;
 
     @com.aliyun.core.annotation.NameInMap("Quotas")
-    private java.util.List < Quotas> quotas;
+    private java.util.List<Quotas> quotas;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -49,7 +54,7 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
     /**
      * @return quotas
      */
-    public java.util.List < Quotas> getQuotas() {
+    public java.util.List<Quotas> getQuotas() {
         return this.quotas;
     }
 
@@ -69,7 +74,7 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
 
     public static final class Builder {
         private String instanceId; 
-        private java.util.List < Quotas> quotas; 
+        private java.util.List<Quotas> quotas; 
         private String requestId; 
         private String status; 
 
@@ -87,7 +92,7 @@ public class ListInstanceQuotasResponseBody extends TeaModel {
         /**
          * <p>The quotas in the plan.</p>
          */
-        public Builder quotas(java.util.List < Quotas> quotas) {
+        public Builder quotas(java.util.List<Quotas> quotas) {
             this.quotas = quotas;
             return this;
         }

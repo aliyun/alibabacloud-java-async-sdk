@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("Versions")
-    private java.util.List < Versions> versions;
+    private java.util.List<Versions> versions;
 
     private ListEdgeContainerAppVersionsResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -74,7 +79,7 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
     /**
      * @return versions
      */
-    public java.util.List < Versions> getVersions() {
+    public java.util.List<Versions> getVersions() {
         return this.versions;
     }
 
@@ -83,7 +88,7 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < Versions> versions; 
+        private java.util.List<Versions> versions; 
 
         /**
          * <p>The page number.</p>
@@ -132,7 +137,7 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         /**
          * <p>The versions.</p>
          */
-        public Builder versions(java.util.List < Versions> versions) {
+        public Builder versions(java.util.List<Versions> versions) {
             this.versions = versions;
             return this;
         }
@@ -689,7 +694,7 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         private String appId;
 
         @com.aliyun.core.annotation.NameInMap("Containers")
-        private java.util.List < Containers> containers;
+        private java.util.List<Containers> containers;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -746,7 +751,7 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
         /**
          * @return containers
          */
-        public java.util.List < Containers> getContainers() {
+        public java.util.List<Containers> getContainers() {
             return this.containers;
         }
 
@@ -808,7 +813,7 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appId; 
-            private java.util.List < Containers> containers; 
+            private java.util.List<Containers> containers; 
             private String createTime; 
             private String lastPublishTime; 
             private String name; 
@@ -832,7 +837,7 @@ public class ListEdgeContainerAppVersionsResponseBody extends TeaModel {
             /**
              * <p>The containers in the version.</p>
              */
-            public Builder containers(java.util.List < Containers> containers) {
+            public Builder containers(java.util.List<Containers> containers) {
                 this.containers = containers;
                 return this;
             }

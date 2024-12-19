@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,10 +42,7 @@ public class WafRuleConfig extends TeaModel {
     private String managedList;
 
     @com.aliyun.core.annotation.NameInMap("ManagedRulesets")
-    private java.util.List < ManagedRulesets> managedRulesets;
-
-    @com.aliyun.core.annotation.NameInMap("Match")
-    private WafRuleMatch match;
+    private java.util.List<ManagedRulesets> managedRulesets;
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
@@ -52,7 +54,7 @@ public class WafRuleConfig extends TeaModel {
     private RateLimit rateLimit;
 
     @com.aliyun.core.annotation.NameInMap("Sigchl")
-    private java.util.List < String > sigchl;
+    private java.util.List<String> sigchl;
 
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
@@ -76,7 +78,6 @@ public class WafRuleConfig extends TeaModel {
         this.managedGroupId = builder.managedGroupId;
         this.managedList = builder.managedList;
         this.managedRulesets = builder.managedRulesets;
-        this.match = builder.match;
         this.name = builder.name;
         this.notes = builder.notes;
         this.rateLimit = builder.rateLimit;
@@ -154,15 +155,8 @@ public class WafRuleConfig extends TeaModel {
     /**
      * @return managedRulesets
      */
-    public java.util.List < ManagedRulesets> getManagedRulesets() {
+    public java.util.List<ManagedRulesets> getManagedRulesets() {
         return this.managedRulesets;
-    }
-
-    /**
-     * @return match
-     */
-    public WafRuleMatch getMatch() {
-        return this.match;
     }
 
     /**
@@ -189,7 +183,7 @@ public class WafRuleConfig extends TeaModel {
     /**
      * @return sigchl
      */
-    public java.util.List < String > getSigchl() {
+    public java.util.List<String> getSigchl() {
         return this.sigchl;
     }
 
@@ -230,12 +224,11 @@ public class WafRuleConfig extends TeaModel {
         private Long id; 
         private Long managedGroupId; 
         private String managedList; 
-        private java.util.List < ManagedRulesets> managedRulesets; 
-        private WafRuleMatch match; 
+        private java.util.List<ManagedRulesets> managedRulesets; 
         private String name; 
         private String notes; 
         private RateLimit rateLimit; 
-        private java.util.List < String > sigchl; 
+        private java.util.List<String> sigchl; 
         private String status; 
         private WafTimer timer; 
         private String type; 
@@ -308,16 +301,8 @@ public class WafRuleConfig extends TeaModel {
         /**
          * ManagedRulesets.
          */
-        public Builder managedRulesets(java.util.List < ManagedRulesets> managedRulesets) {
+        public Builder managedRulesets(java.util.List<ManagedRulesets> managedRulesets) {
             this.managedRulesets = managedRulesets;
-            return this;
-        }
-
-        /**
-         * Match.
-         */
-        public Builder match(WafRuleMatch match) {
-            this.match = match;
             return this;
         }
 
@@ -348,7 +333,7 @@ public class WafRuleConfig extends TeaModel {
         /**
          * Sigchl.
          */
-        public Builder sigchl(java.util.List < String > sigchl) {
+        public Builder sigchl(java.util.List<String> sigchl) {
             this.sigchl = sigchl;
             return this;
         }
@@ -399,19 +384,19 @@ public class WafRuleConfig extends TeaModel {
      */
     public static class Bypass extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomRules")
-        private java.util.List < Long > customRules;
+        private java.util.List<Long> customRules;
 
         @com.aliyun.core.annotation.NameInMap("RegularRules")
-        private java.util.List < Long > regularRules;
+        private java.util.List<Long> regularRules;
 
         @com.aliyun.core.annotation.NameInMap("RegularTypes")
-        private java.util.List < String > regularTypes;
+        private java.util.List<String> regularTypes;
 
         @com.aliyun.core.annotation.NameInMap("Skip")
         private String skip;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < String > tags;
+        private java.util.List<String> tags;
 
         private Bypass(Builder builder) {
             this.customRules = builder.customRules;
@@ -432,21 +417,21 @@ public class WafRuleConfig extends TeaModel {
         /**
          * @return customRules
          */
-        public java.util.List < Long > getCustomRules() {
+        public java.util.List<Long> getCustomRules() {
             return this.customRules;
         }
 
         /**
          * @return regularRules
          */
-        public java.util.List < Long > getRegularRules() {
+        public java.util.List<Long> getRegularRules() {
             return this.regularRules;
         }
 
         /**
          * @return regularTypes
          */
-        public java.util.List < String > getRegularTypes() {
+        public java.util.List<String> getRegularTypes() {
             return this.regularTypes;
         }
 
@@ -460,21 +445,21 @@ public class WafRuleConfig extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.List < Long > customRules; 
-            private java.util.List < Long > regularRules; 
-            private java.util.List < String > regularTypes; 
+            private java.util.List<Long> customRules; 
+            private java.util.List<Long> regularRules; 
+            private java.util.List<String> regularTypes; 
             private String skip; 
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
 
             /**
              * CustomRules.
              */
-            public Builder customRules(java.util.List < Long > customRules) {
+            public Builder customRules(java.util.List<Long> customRules) {
                 this.customRules = customRules;
                 return this;
             }
@@ -482,7 +467,7 @@ public class WafRuleConfig extends TeaModel {
             /**
              * RegularRules.
              */
-            public Builder regularRules(java.util.List < Long > regularRules) {
+            public Builder regularRules(java.util.List<Long> regularRules) {
                 this.regularRules = regularRules;
                 return this;
             }
@@ -490,7 +475,7 @@ public class WafRuleConfig extends TeaModel {
             /**
              * RegularTypes.
              */
-            public Builder regularTypes(java.util.List < String > regularTypes) {
+            public Builder regularTypes(java.util.List<String> regularTypes) {
                 this.regularTypes = regularTypes;
                 return this;
             }
@@ -506,7 +491,7 @@ public class WafRuleConfig extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -727,7 +712,7 @@ public class WafRuleConfig extends TeaModel {
      */
     public static class AppPackage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PackageSigns")
-        private java.util.List < PackageSigns> packageSigns;
+        private java.util.List<PackageSigns> packageSigns;
 
         private AppPackage(Builder builder) {
             this.packageSigns = builder.packageSigns;
@@ -744,17 +729,17 @@ public class WafRuleConfig extends TeaModel {
         /**
          * @return packageSigns
          */
-        public java.util.List < PackageSigns> getPackageSigns() {
+        public java.util.List<PackageSigns> getPackageSigns() {
             return this.packageSigns;
         }
 
         public static final class Builder {
-            private java.util.List < PackageSigns> packageSigns; 
+            private java.util.List<PackageSigns> packageSigns; 
 
             /**
              * PackageSigns.
              */
-            public Builder packageSigns(java.util.List < PackageSigns> packageSigns) {
+            public Builder packageSigns(java.util.List<PackageSigns> packageSigns) {
                 this.packageSigns = packageSigns;
                 return this;
             }
@@ -847,7 +832,7 @@ public class WafRuleConfig extends TeaModel {
         private String customSignStatus;
 
         @com.aliyun.core.annotation.NameInMap("FeatureAbnormal")
-        private java.util.List < String > featureAbnormal;
+        private java.util.List<String> featureAbnormal;
 
         private AppSdk(Builder builder) {
             this.customSign = builder.customSign;
@@ -880,14 +865,14 @@ public class WafRuleConfig extends TeaModel {
         /**
          * @return featureAbnormal
          */
-        public java.util.List < String > getFeatureAbnormal() {
+        public java.util.List<String> getFeatureAbnormal() {
             return this.featureAbnormal;
         }
 
         public static final class Builder {
             private CustomSign customSign; 
             private String customSignStatus; 
-            private java.util.List < String > featureAbnormal; 
+            private java.util.List<String> featureAbnormal; 
 
             /**
              * CustomSign.
@@ -908,7 +893,7 @@ public class WafRuleConfig extends TeaModel {
             /**
              * FeatureAbnormal.
              */
-            public Builder featureAbnormal(java.util.List < String > featureAbnormal) {
+            public Builder featureAbnormal(java.util.List<String> featureAbnormal) {
                 this.featureAbnormal = featureAbnormal;
                 return this;
             }
@@ -1021,7 +1006,7 @@ public class WafRuleConfig extends TeaModel {
         private Integer attackType;
 
         @com.aliyun.core.annotation.NameInMap("ManagedRules")
-        private java.util.List < ManagedRules> managedRules;
+        private java.util.List<ManagedRules> managedRules;
 
         @com.aliyun.core.annotation.NameInMap("NumberEnabled")
         private Integer numberEnabled;
@@ -1066,7 +1051,7 @@ public class WafRuleConfig extends TeaModel {
         /**
          * @return managedRules
          */
-        public java.util.List < ManagedRules> getManagedRules() {
+        public java.util.List<ManagedRules> getManagedRules() {
             return this.managedRules;
         }
 
@@ -1094,7 +1079,7 @@ public class WafRuleConfig extends TeaModel {
         public static final class Builder {
             private String action; 
             private Integer attackType; 
-            private java.util.List < ManagedRules> managedRules; 
+            private java.util.List<ManagedRules> managedRules; 
             private Integer numberEnabled; 
             private Integer numberTotal; 
             private Integer protectionLevel; 
@@ -1118,7 +1103,7 @@ public class WafRuleConfig extends TeaModel {
             /**
              * ManagedRules.
              */
-            public Builder managedRules(java.util.List < ManagedRules> managedRules) {
+            public Builder managedRules(java.util.List<ManagedRules> managedRules) {
                 this.managedRules = managedRules;
                 return this;
             }

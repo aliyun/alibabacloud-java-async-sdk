@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class GetKvAccountResponseBody extends TeaModel {
     private String capacityUsedString;
 
     @com.aliyun.core.annotation.NameInMap("NamespaceList")
-    private java.util.List < NamespaceList> namespaceList;
+    private java.util.List<NamespaceList> namespaceList;
 
     @com.aliyun.core.annotation.NameInMap("NamespaceQuota")
     private Integer namespaceQuota;
@@ -90,7 +95,7 @@ public class GetKvAccountResponseBody extends TeaModel {
     /**
      * @return namespaceList
      */
-    public java.util.List < NamespaceList> getNamespaceList() {
+    public java.util.List<NamespaceList> getNamespaceList() {
         return this.namespaceList;
     }
 
@@ -127,7 +132,7 @@ public class GetKvAccountResponseBody extends TeaModel {
         private String capacityString; 
         private Long capacityUsed; 
         private String capacityUsedString; 
-        private java.util.List < NamespaceList> namespaceList; 
+        private java.util.List<NamespaceList> namespaceList; 
         private Integer namespaceQuota; 
         private Integer namespaceUsed; 
         private String requestId; 
@@ -180,7 +185,7 @@ public class GetKvAccountResponseBody extends TeaModel {
         /**
          * <p>The namespaces in the account.</p>
          */
-        public Builder namespaceList(java.util.List < NamespaceList> namespaceList) {
+        public Builder namespaceList(java.util.List<NamespaceList> namespaceList) {
             this.namespaceList = namespaceList;
             return this;
         }

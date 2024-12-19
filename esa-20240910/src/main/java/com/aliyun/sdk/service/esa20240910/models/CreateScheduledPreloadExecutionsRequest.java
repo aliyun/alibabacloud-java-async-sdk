@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CreateScheduledPreloadExecutionsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Executions")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Executions> executions;
+    private java.util.List<Executions> executions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
@@ -43,7 +48,7 @@ public class CreateScheduledPreloadExecutionsRequest extends Request {
     /**
      * @return executions
      */
-    public java.util.List < Executions> getExecutions() {
+    public java.util.List<Executions> getExecutions() {
         return this.executions;
     }
 
@@ -55,7 +60,7 @@ public class CreateScheduledPreloadExecutionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateScheduledPreloadExecutionsRequest, Builder> {
-        private java.util.List < Executions> executions; 
+        private java.util.List<Executions> executions; 
         private String id; 
 
         private Builder() {
@@ -72,7 +77,7 @@ public class CreateScheduledPreloadExecutionsRequest extends Request {
          * <p>The scheduled prefetch plans to create.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder executions(java.util.List < Executions> executions) {
+        public Builder executions(java.util.List<Executions> executions) {
             String executionsShrink = shrink(executions, "Executions", "json");
             this.putBodyParameter("Executions", executionsShrink);
             this.executions = executions;

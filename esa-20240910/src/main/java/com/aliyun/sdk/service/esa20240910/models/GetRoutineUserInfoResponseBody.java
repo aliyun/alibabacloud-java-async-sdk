@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,10 +21,10 @@ public class GetRoutineUserInfoResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Routines")
-    private java.util.List < Routines> routines;
+    private java.util.List<Routines> routines;
 
     @com.aliyun.core.annotation.NameInMap("Subdomains")
-    private java.util.List < String > subdomains;
+    private java.util.List<String> subdomains;
 
     private GetRoutineUserInfoResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -45,21 +50,21 @@ public class GetRoutineUserInfoResponseBody extends TeaModel {
     /**
      * @return routines
      */
-    public java.util.List < Routines> getRoutines() {
+    public java.util.List<Routines> getRoutines() {
         return this.routines;
     }
 
     /**
      * @return subdomains
      */
-    public java.util.List < String > getSubdomains() {
+    public java.util.List<String> getSubdomains() {
         return this.subdomains;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Routines> routines; 
-        private java.util.List < String > subdomains; 
+        private java.util.List<Routines> routines; 
+        private java.util.List<String> subdomains; 
 
         /**
          * <p>The request ID.</p>
@@ -75,7 +80,7 @@ public class GetRoutineUserInfoResponseBody extends TeaModel {
         /**
          * <p>The routines.</p>
          */
-        public Builder routines(java.util.List < Routines> routines) {
+        public Builder routines(java.util.List<Routines> routines) {
             this.routines = routines;
             return this;
         }
@@ -83,7 +88,7 @@ public class GetRoutineUserInfoResponseBody extends TeaModel {
         /**
          * <p>The subdomains.</p>
          */
-        public Builder subdomains(java.util.List < String > subdomains) {
+        public Builder subdomains(java.util.List<String> subdomains) {
             this.subdomains = subdomains;
             return this;
         }

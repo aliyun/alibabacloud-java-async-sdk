@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -485,7 +490,7 @@ public class GetWafFilterResponseBody extends TeaModel {
      */
     public static class Selector extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         @com.aliyun.core.annotation.NameInMap("Kind")
         private String kind;
@@ -506,7 +511,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -518,13 +523,13 @@ public class GetWafFilterResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private String kind; 
 
             /**
              * <p>The data. This parameter is available only when the value of the Kind parameter is data.</p>
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }
@@ -561,7 +566,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         private String label;
 
         @com.aliyun.core.annotation.NameInMap("Logics")
-        private java.util.List < Logics> logics;
+        private java.util.List<Logics> logics;
 
         @com.aliyun.core.annotation.NameInMap("Selector")
         private Selector selector;
@@ -606,7 +611,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         /**
          * @return logics
          */
-        public java.util.List < Logics> getLogics() {
+        public java.util.List<Logics> getLogics() {
             return this.logics;
         }
 
@@ -634,7 +639,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String label; 
-            private java.util.List < Logics> logics; 
+            private java.util.List<Logics> logics; 
             private Selector selector; 
             private Boolean sub; 
             private String subTip; 
@@ -664,7 +669,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             /**
              * <p>The logical conditions.</p>
              */
-            public Builder logics(java.util.List < Logics> logics) {
+            public Builder logics(java.util.List<Logics> logics) {
                 this.logics = logics;
                 return this;
             }
@@ -714,7 +719,7 @@ public class GetWafFilterResponseBody extends TeaModel {
      */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Fields")
-        private java.util.List < Fields> fields;
+        private java.util.List<Fields> fields;
 
         @com.aliyun.core.annotation.NameInMap("Phase")
         private String phase;
@@ -743,7 +748,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         /**
          * @return fields
          */
-        public java.util.List < Fields> getFields() {
+        public java.util.List<Fields> getFields() {
             return this.fields;
         }
 
@@ -769,7 +774,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Fields> fields; 
+            private java.util.List<Fields> fields; 
             private String phase; 
             private String target; 
             private String type; 
@@ -777,7 +782,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             /**
              * <p>The matched objects and related properties.</p>
              */
-            public Builder fields(java.util.List < Fields> fields) {
+            public Builder fields(java.util.List<Fields> fields) {
                 this.fields = fields;
                 return this;
             }

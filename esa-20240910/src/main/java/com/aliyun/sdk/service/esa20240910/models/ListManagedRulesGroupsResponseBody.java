@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListManagedRulesGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ManagedRulesGroups")
-    private java.util.List < ManagedRulesGroups> managedRulesGroups;
+    private java.util.List<ManagedRulesGroups> managedRulesGroups;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
     /**
      * @return managedRulesGroups
      */
-    public java.util.List < ManagedRulesGroups> getManagedRulesGroups() {
+    public java.util.List<ManagedRulesGroups> getManagedRulesGroups() {
         return this.managedRulesGroups;
     }
 
@@ -79,7 +84,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ManagedRulesGroups> managedRulesGroups; 
+        private java.util.List<ManagedRulesGroups> managedRulesGroups; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
         /**
          * <p>The information about the managed rule groups.</p>
          */
-        public Builder managedRulesGroups(java.util.List < ManagedRulesGroups> managedRulesGroups) {
+        public Builder managedRulesGroups(java.util.List<ManagedRulesGroups> managedRulesGroups) {
             this.managedRulesGroups = managedRulesGroups;
             return this;
         }

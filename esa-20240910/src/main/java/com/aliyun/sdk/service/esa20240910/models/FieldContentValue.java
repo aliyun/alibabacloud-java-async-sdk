@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class FieldContentValue extends TeaModel {
     private Long sortOrder;
 
     @com.aliyun.core.annotation.NameInMap("FieldList")
-    private java.util.List < FieldList> fieldList;
+    private java.util.List<FieldList> fieldList;
 
     private FieldContentValue(Builder builder) {
         this.sortOrder = builder.sortOrder;
@@ -41,13 +46,13 @@ public class FieldContentValue extends TeaModel {
     /**
      * @return fieldList
      */
-    public java.util.List < FieldList> getFieldList() {
+    public java.util.List<FieldList> getFieldList() {
         return this.fieldList;
     }
 
     public static final class Builder {
         private Long sortOrder; 
-        private java.util.List < FieldList> fieldList; 
+        private java.util.List<FieldList> fieldList; 
 
         /**
          * <p>The sequence number of the fields.</p>
@@ -63,7 +68,7 @@ public class FieldContentValue extends TeaModel {
         /**
          * <p>The fields.</p>
          */
-        public Builder fieldList(java.util.List < FieldList> fieldList) {
+        public Builder fieldList(java.util.List<FieldList> fieldList) {
             this.fieldList = fieldList;
             return this;
         }

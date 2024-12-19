@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -491,7 +496,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         private String destUrl;
 
         @com.aliyun.core.annotation.NameInMap("HeaderParam")
-        private java.util.Map < String, HttpDeliveryHeaderParamValue > headerParam;
+        private java.util.Map<String, HttpDeliveryHeaderParamValue> headerParam;
 
         @com.aliyun.core.annotation.NameInMap("LogBodyPrefix")
         private String logBodyPrefix;
@@ -509,7 +514,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         private Long maxRetry;
 
         @com.aliyun.core.annotation.NameInMap("QueryParam")
-        private java.util.Map < String, HttpDeliveryQueryParamValue > queryParam;
+        private java.util.Map<String, HttpDeliveryQueryParamValue> queryParam;
 
         @com.aliyun.core.annotation.NameInMap("StandardAuthOn")
         private Boolean standardAuthOn;
@@ -560,7 +565,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         /**
          * @return headerParam
          */
-        public java.util.Map < String, HttpDeliveryHeaderParamValue > getHeaderParam() {
+        public java.util.Map<String, HttpDeliveryHeaderParamValue> getHeaderParam() {
             return this.headerParam;
         }
 
@@ -602,7 +607,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         /**
          * @return queryParam
          */
-        public java.util.Map < String, HttpDeliveryQueryParamValue > getQueryParam() {
+        public java.util.Map<String, HttpDeliveryQueryParamValue> getQueryParam() {
             return this.queryParam;
         }
 
@@ -630,13 +635,13 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         public static final class Builder {
             private String compress; 
             private String destUrl; 
-            private java.util.Map < String, HttpDeliveryHeaderParamValue > headerParam; 
+            private java.util.Map<String, HttpDeliveryHeaderParamValue> headerParam; 
             private String logBodyPrefix; 
             private String logBodySuffix; 
             private Long maxBatchMB; 
             private Long maxBatchSize; 
             private Long maxRetry; 
-            private java.util.Map < String, HttpDeliveryQueryParamValue > queryParam; 
+            private java.util.Map<String, HttpDeliveryQueryParamValue> queryParam; 
             private Boolean standardAuthOn; 
             private StandardAuthParam standardAuthParam; 
             private Long transformTimeout; 
@@ -666,7 +671,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             /**
              * <p>The custom headers.</p>
              */
-            public Builder headerParam(java.util.Map < String, HttpDeliveryHeaderParamValue > headerParam) {
+            public Builder headerParam(java.util.Map<String, HttpDeliveryHeaderParamValue> headerParam) {
                 this.headerParam = headerParam;
                 return this;
             }
@@ -729,7 +734,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             /**
              * <p>The custom query parameters.</p>
              */
-            public Builder queryParam(java.util.Map < String, HttpDeliveryQueryParamValue > queryParam) {
+            public Builder queryParam(java.util.Map<String, HttpDeliveryQueryParamValue> queryParam) {
                 this.queryParam = queryParam;
                 return this;
             }
@@ -782,7 +787,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         private String balancer;
 
         @com.aliyun.core.annotation.NameInMap("Brokers")
-        private java.util.List < String > brokers;
+        private java.util.List<String> brokers;
 
         @com.aliyun.core.annotation.NameInMap("Compress")
         private String compress;
@@ -831,7 +836,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         /**
          * @return brokers
          */
-        public java.util.List < String > getBrokers() {
+        public java.util.List<String> getBrokers() {
             return this.brokers;
         }
 
@@ -879,7 +884,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
 
         public static final class Builder {
             private String balancer; 
-            private java.util.List < String > brokers; 
+            private java.util.List<String> brokers; 
             private String compress; 
             private String machanismType; 
             private String password; 
@@ -901,7 +906,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             /**
              * <p>The brokers.</p>
              */
-            public Builder brokers(java.util.List < String > brokers) {
+            public Builder brokers(java.util.List<String> brokers) {
                 this.brokers = brokers;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListScheduledPreloadExecutionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Executions")
-    private java.util.List < Executions> executions;
+    private java.util.List<Executions> executions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListScheduledPreloadExecutionsResponseBody extends TeaModel {
     /**
      * @return executions
      */
-    public java.util.List < Executions> getExecutions() {
+    public java.util.List<Executions> getExecutions() {
         return this.executions;
     }
 
@@ -57,14 +62,14 @@ public class ListScheduledPreloadExecutionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Executions> executions; 
+        private java.util.List<Executions> executions; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
          * <p>The information about prefetch plans returned.</p>
          */
-        public Builder executions(java.util.List < Executions> executions) {
+        public Builder executions(java.util.List<Executions> executions) {
             this.executions = executions;
             return this;
         }

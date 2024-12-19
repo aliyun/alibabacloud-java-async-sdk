@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class WafTimer extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Periods")
-    private java.util.List < Periods> periods;
+    private java.util.List<Periods> periods;
 
     @com.aliyun.core.annotation.NameInMap("Scopes")
     private String scopes;
 
     @com.aliyun.core.annotation.NameInMap("WeeklyPeriods")
-    private java.util.List < WeeklyPeriods> weeklyPeriods;
+    private java.util.List<WeeklyPeriods> weeklyPeriods;
 
     @com.aliyun.core.annotation.NameInMap("Zone")
     private Integer zone;
@@ -42,7 +47,7 @@ public class WafTimer extends TeaModel {
     /**
      * @return periods
      */
-    public java.util.List < Periods> getPeriods() {
+    public java.util.List<Periods> getPeriods() {
         return this.periods;
     }
 
@@ -56,7 +61,7 @@ public class WafTimer extends TeaModel {
     /**
      * @return weeklyPeriods
      */
-    public java.util.List < WeeklyPeriods> getWeeklyPeriods() {
+    public java.util.List<WeeklyPeriods> getWeeklyPeriods() {
         return this.weeklyPeriods;
     }
 
@@ -68,15 +73,15 @@ public class WafTimer extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Periods> periods; 
+        private java.util.List<Periods> periods; 
         private String scopes; 
-        private java.util.List < WeeklyPeriods> weeklyPeriods; 
+        private java.util.List<WeeklyPeriods> weeklyPeriods; 
         private Integer zone; 
 
         /**
          * Periods.
          */
-        public Builder periods(java.util.List < Periods> periods) {
+        public Builder periods(java.util.List<Periods> periods) {
             this.periods = periods;
             return this;
         }
@@ -92,7 +97,7 @@ public class WafTimer extends TeaModel {
         /**
          * WeeklyPeriods.
          */
-        public Builder weeklyPeriods(java.util.List < WeeklyPeriods> weeklyPeriods) {
+        public Builder weeklyPeriods(java.util.List<WeeklyPeriods> weeklyPeriods) {
             this.weeklyPeriods = weeklyPeriods;
             return this;
         }
@@ -253,7 +258,7 @@ public class WafTimer extends TeaModel {
      */
     public static class WeeklyPeriods extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DailyPeriods")
-        private java.util.List < DailyPeriods> dailyPeriods;
+        private java.util.List<DailyPeriods> dailyPeriods;
 
         @com.aliyun.core.annotation.NameInMap("Days")
         private String days;
@@ -274,7 +279,7 @@ public class WafTimer extends TeaModel {
         /**
          * @return dailyPeriods
          */
-        public java.util.List < DailyPeriods> getDailyPeriods() {
+        public java.util.List<DailyPeriods> getDailyPeriods() {
             return this.dailyPeriods;
         }
 
@@ -286,13 +291,13 @@ public class WafTimer extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DailyPeriods> dailyPeriods; 
+            private java.util.List<DailyPeriods> dailyPeriods; 
             private String days; 
 
             /**
              * DailyPeriods.
              */
-            public Builder dailyPeriods(java.util.List < DailyPeriods> dailyPeriods) {
+            public Builder dailyPeriods(java.util.List<DailyPeriods> dailyPeriods) {
                 this.dailyPeriods = dailyPeriods;
                 return this;
             }

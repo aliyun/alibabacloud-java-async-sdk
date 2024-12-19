@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class WafRuleMatch extends TeaModel {
     private Boolean convertToLower;
 
     @com.aliyun.core.annotation.NameInMap("Criteria")
-    private java.util.List < WafRuleMatch > criteria;
+    private java.util.List<WafRuleMatch> criteria;
 
     @com.aliyun.core.annotation.NameInMap("Logic")
     private String logic;
@@ -61,7 +66,7 @@ public class WafRuleMatch extends TeaModel {
     /**
      * @return criteria
      */
-    public java.util.List < WafRuleMatch > getCriteria() {
+    public java.util.List<WafRuleMatch> getCriteria() {
         return this.criteria;
     }
 
@@ -102,7 +107,7 @@ public class WafRuleMatch extends TeaModel {
 
     public static final class Builder {
         private Boolean convertToLower; 
-        private java.util.List < WafRuleMatch > criteria; 
+        private java.util.List<WafRuleMatch> criteria; 
         private String logic; 
         private String matchOperator; 
         private String matchType; 
@@ -120,7 +125,7 @@ public class WafRuleMatch extends TeaModel {
         /**
          * Criteria.
          */
-        public Builder criteria(java.util.List < WafRuleMatch > criteria) {
+        public Builder criteria(java.util.List<WafRuleMatch> criteria) {
             this.criteria = criteria;
             return this;
         }

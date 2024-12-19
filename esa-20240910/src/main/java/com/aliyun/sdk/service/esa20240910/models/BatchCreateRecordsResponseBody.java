@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1297,10 +1302,10 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
      */
     public static class RecordResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Failed")
-        private java.util.List < Failed> failed;
+        private java.util.List<Failed> failed;
 
         @com.aliyun.core.annotation.NameInMap("Success")
-        private java.util.List < Success> success;
+        private java.util.List<Success> success;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -1322,14 +1327,14 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         /**
          * @return failed
          */
-        public java.util.List < Failed> getFailed() {
+        public java.util.List<Failed> getFailed() {
             return this.failed;
         }
 
         /**
          * @return success
          */
-        public java.util.List < Success> getSuccess() {
+        public java.util.List<Success> getSuccess() {
             return this.success;
         }
 
@@ -1341,14 +1346,14 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Failed> failed; 
-            private java.util.List < Success> success; 
+            private java.util.List<Failed> failed; 
+            private java.util.List<Success> success; 
             private Integer totalCount; 
 
             /**
              * <p>The records that failed to be created.</p>
              */
-            public Builder failed(java.util.List < Failed> failed) {
+            public Builder failed(java.util.List<Failed> failed) {
                 this.failed = failed;
                 return this;
             }
@@ -1356,7 +1361,7 @@ public class BatchCreateRecordsResponseBody extends TeaModel {
             /**
              * <p>The records that have been created.</p>
              */
-            public Builder success(java.util.List < Success> success) {
+            public Builder success(java.util.List<Success> success) {
                 this.success = success;
                 return this;
             }

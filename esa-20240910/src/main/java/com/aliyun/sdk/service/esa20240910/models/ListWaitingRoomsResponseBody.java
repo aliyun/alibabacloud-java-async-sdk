@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("WaitingRooms")
-    private java.util.List < WaitingRooms> waitingRooms;
+    private java.util.List<WaitingRooms> waitingRooms;
 
     private ListWaitingRoomsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
     /**
      * @return waitingRooms
      */
-    public java.util.List < WaitingRooms> getWaitingRooms() {
+    public java.util.List<WaitingRooms> getWaitingRooms() {
         return this.waitingRooms;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < WaitingRooms> waitingRooms; 
+        private java.util.List<WaitingRooms> waitingRooms; 
 
         /**
          * <p>The request ID, which is used to trace a call.</p>
@@ -63,7 +68,7 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
         /**
          * <p>The waiting rooms.</p>
          */
-        public Builder waitingRooms(java.util.List < WaitingRooms> waitingRooms) {
+        public Builder waitingRooms(java.util.List<WaitingRooms> waitingRooms) {
             this.waitingRooms = waitingRooms;
             return this;
         }
@@ -193,7 +198,7 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
         private String enable;
 
         @com.aliyun.core.annotation.NameInMap("HostNameAndPath")
-        private java.util.List < HostNameAndPath> hostNameAndPath;
+        private java.util.List<HostNameAndPath> hostNameAndPath;
 
         @com.aliyun.core.annotation.NameInMap("JsonResponseEnable")
         private String jsonResponseEnable;
@@ -294,7 +299,7 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
         /**
          * @return hostNameAndPath
          */
-        public java.util.List < HostNameAndPath> getHostNameAndPath() {
+        public java.util.List<HostNameAndPath> getHostNameAndPath() {
             return this.hostNameAndPath;
         }
 
@@ -381,7 +386,7 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
             private String description; 
             private String disableSessionRenewalEnable; 
             private String enable; 
-            private java.util.List < HostNameAndPath> hostNameAndPath; 
+            private java.util.List<HostNameAndPath> hostNameAndPath; 
             private String jsonResponseEnable; 
             private String language; 
             private String name; 
@@ -454,7 +459,7 @@ public class ListWaitingRoomsResponseBody extends TeaModel {
             /**
              * <p>The hostname and path.</p>
              */
-            public Builder hostNameAndPath(java.util.List < HostNameAndPath> hostNameAndPath) {
+            public Builder hostNameAndPath(java.util.List<HostNameAndPath> hostNameAndPath) {
                 this.hostNameAndPath = hostNameAndPath;
                 return this;
             }

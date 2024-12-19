@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class BatchGetExpressionFieldsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Expressions")
-    private java.util.List < Expressions> expressions;
+    private java.util.List<Expressions> expressions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Phase")
@@ -47,7 +52,7 @@ public class BatchGetExpressionFieldsRequest extends Request {
     /**
      * @return expressions
      */
-    public java.util.List < Expressions> getExpressions() {
+    public java.util.List<Expressions> getExpressions() {
         return this.expressions;
     }
 
@@ -66,7 +71,7 @@ public class BatchGetExpressionFieldsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchGetExpressionFieldsRequest, Builder> {
-        private java.util.List < Expressions> expressions; 
+        private java.util.List<Expressions> expressions; 
         private String phase; 
         private Long siteId; 
 
@@ -87,7 +92,7 @@ public class BatchGetExpressionFieldsRequest extends Request {
          * <strong>example:</strong>
          * <p>http_bot</p>
          */
-        public Builder expressions(java.util.List < Expressions> expressions) {
+        public Builder expressions(java.util.List<Expressions> expressions) {
             String expressionsShrink = shrink(expressions, "Expressions", "json");
             this.putBodyParameter("Expressions", expressionsShrink);
             this.expressions = expressions;

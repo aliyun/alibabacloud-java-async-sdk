@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class BatchGetExpressionFieldsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Fields")
-    private java.util.List < Fields> fields;
+    private java.util.List<Fields> fields;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -46,13 +51,13 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
         private String requestId; 
 
         /**
          * <p>The fields that match the regular expressions.</p>
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
             return this;
         }
@@ -82,7 +87,7 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
      */
     public static class Fields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Fields")
-        private java.util.List < String > fields;
+        private java.util.List<String> fields;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -103,7 +108,7 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
         /**
          * @return fields
          */
-        public java.util.List < String > getFields() {
+        public java.util.List<String> getFields() {
             return this.fields;
         }
 
@@ -115,13 +120,13 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > fields; 
+            private java.util.List<String> fields; 
             private String id; 
 
             /**
              * <p>The fields that match the regular expression.</p>
              */
-            public Builder fields(java.util.List < String > fields) {
+            public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
                 return this;
             }

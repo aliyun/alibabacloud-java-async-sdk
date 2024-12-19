@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("WaitingRoomRules")
-    private java.util.List < WaitingRoomRules> waitingRoomRules;
+    private java.util.List<WaitingRoomRules> waitingRoomRules;
 
     private ListWaitingRoomRulesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
     /**
      * @return waitingRoomRules
      */
-    public java.util.List < WaitingRoomRules> getWaitingRoomRules() {
+    public java.util.List<WaitingRoomRules> getWaitingRoomRules() {
         return this.waitingRoomRules;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < WaitingRoomRules> waitingRoomRules; 
+        private java.util.List<WaitingRoomRules> waitingRoomRules; 
 
         /**
          * <p>The request ID, which is used to trace a call.</p>
@@ -63,7 +68,7 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
         /**
          * <p>The waiting room bypass rules.</p>
          */
-        public Builder waitingRoomRules(java.util.List < WaitingRoomRules> waitingRoomRules) {
+        public Builder waitingRoomRules(java.util.List<WaitingRoomRules> waitingRoomRules) {
             this.waitingRoomRules = waitingRoomRules;
             return this;
         }

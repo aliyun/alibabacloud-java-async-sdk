@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetRoutineStagingCodeUploadInfoResponseBody extends TeaModel {
     private String codeVersion;
 
     @com.aliyun.core.annotation.NameInMap("OssPostConfig")
-    private java.util.Map < String, ? > ossPostConfig;
+    private java.util.Map<String, ?> ossPostConfig;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class GetRoutineStagingCodeUploadInfoResponseBody extends TeaModel {
     /**
      * @return ossPostConfig
      */
-    public java.util.Map < String, ? > getOssPostConfig() {
+    public java.util.Map<String, ?> getOssPostConfig() {
         return this.ossPostConfig;
     }
 
@@ -58,7 +63,7 @@ public class GetRoutineStagingCodeUploadInfoResponseBody extends TeaModel {
 
     public static final class Builder {
         private String codeVersion; 
-        private java.util.Map < String, ? > ossPostConfig; 
+        private java.util.Map<String, ?> ossPostConfig; 
         private String requestId; 
 
         /**
@@ -86,7 +91,7 @@ public class GetRoutineStagingCodeUploadInfoResponseBody extends TeaModel {
          *             &quot;Signature&quot;: &quot;xxx=&quot;
          * }</p>
          */
-        public Builder ossPostConfig(java.util.Map < String, ? > ossPostConfig) {
+        public Builder ossPostConfig(java.util.Map<String, ?> ossPostConfig) {
             this.ossPostConfig = ossPostConfig;
             return this;
         }

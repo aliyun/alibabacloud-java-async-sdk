@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class BatchCreateRecordsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecordList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < RecordList> recordList;
+    private java.util.List<RecordList> recordList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
@@ -44,7 +49,7 @@ public class BatchCreateRecordsRequest extends Request {
     /**
      * @return recordList
      */
-    public java.util.List < RecordList> getRecordList() {
+    public java.util.List<RecordList> getRecordList() {
         return this.recordList;
     }
 
@@ -56,7 +61,7 @@ public class BatchCreateRecordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BatchCreateRecordsRequest, Builder> {
-        private java.util.List < RecordList> recordList; 
+        private java.util.List<RecordList> recordList; 
         private Long siteId; 
 
         private Builder() {
@@ -73,7 +78,7 @@ public class BatchCreateRecordsRequest extends Request {
          * <p>The list of DNS records to be created.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder recordList(java.util.List < RecordList> recordList) {
+        public Builder recordList(java.util.List<RecordList> recordList) {
             String recordListShrink = shrink(recordList, "RecordList", "json");
             this.putQueryParameter("RecordList", recordListShrink);
             this.recordList = recordList;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListScheduledPreloadJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Jobs")
-    private java.util.List < Jobs> jobs;
+    private java.util.List<Jobs> jobs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,7 +43,7 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
     /**
      * @return jobs
      */
-    public java.util.List < Jobs> getJobs() {
+    public java.util.List<Jobs> getJobs() {
         return this.jobs;
     }
 
@@ -57,14 +62,14 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Jobs> jobs; 
+        private java.util.List<Jobs> jobs; 
         private String requestId; 
         private String totalCount; 
 
         /**
          * <p>The list of the prefetch tasks.</p>
          */
-        public Builder jobs(java.util.List < Jobs> jobs) {
+        public Builder jobs(java.util.List<Jobs> jobs) {
             this.jobs = jobs;
             return this;
         }

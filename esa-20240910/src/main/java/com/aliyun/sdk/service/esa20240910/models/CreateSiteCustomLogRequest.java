@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,15 +19,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateSiteCustomLogRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Cookies")
-    private java.util.List < String > cookies;
+    private java.util.List<String> cookies;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RequestHeaders")
-    private java.util.List < String > requestHeaders;
+    private java.util.List<String> requestHeaders;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResponseHeaders")
-    private java.util.List < String > responseHeaders;
+    private java.util.List<String> responseHeaders;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SiteId")
@@ -52,21 +57,21 @@ public class CreateSiteCustomLogRequest extends Request {
     /**
      * @return cookies
      */
-    public java.util.List < String > getCookies() {
+    public java.util.List<String> getCookies() {
         return this.cookies;
     }
 
     /**
      * @return requestHeaders
      */
-    public java.util.List < String > getRequestHeaders() {
+    public java.util.List<String> getRequestHeaders() {
         return this.requestHeaders;
     }
 
     /**
      * @return responseHeaders
      */
-    public java.util.List < String > getResponseHeaders() {
+    public java.util.List<String> getResponseHeaders() {
         return this.responseHeaders;
     }
 
@@ -78,9 +83,9 @@ public class CreateSiteCustomLogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSiteCustomLogRequest, Builder> {
-        private java.util.List < String > cookies; 
-        private java.util.List < String > requestHeaders; 
-        private java.util.List < String > responseHeaders; 
+        private java.util.List<String> cookies; 
+        private java.util.List<String> requestHeaders; 
+        private java.util.List<String> responseHeaders; 
         private Long siteId; 
 
         private Builder() {
@@ -98,7 +103,7 @@ public class CreateSiteCustomLogRequest extends Request {
         /**
          * <p>The cookie fields.</p>
          */
-        public Builder cookies(java.util.List < String > cookies) {
+        public Builder cookies(java.util.List<String> cookies) {
             String cookiesShrink = shrink(cookies, "Cookies", "json");
             this.putBodyParameter("Cookies", cookiesShrink);
             this.cookies = cookies;
@@ -108,7 +113,7 @@ public class CreateSiteCustomLogRequest extends Request {
         /**
          * <p>The request header fields.</p>
          */
-        public Builder requestHeaders(java.util.List < String > requestHeaders) {
+        public Builder requestHeaders(java.util.List<String> requestHeaders) {
             String requestHeadersShrink = shrink(requestHeaders, "RequestHeaders", "json");
             this.putBodyParameter("RequestHeaders", requestHeadersShrink);
             this.requestHeaders = requestHeaders;
@@ -118,7 +123,7 @@ public class CreateSiteCustomLogRequest extends Request {
         /**
          * <p>The response header fields.</p>
          */
-        public Builder responseHeaders(java.util.List < String > responseHeaders) {
+        public Builder responseHeaders(java.util.List<String> responseHeaders) {
             String responseHeadersShrink = shrink(responseHeaders, "ResponseHeaders", "json");
             this.putBodyParameter("ResponseHeaders", responseHeadersShrink);
             this.responseHeaders = responseHeaders;

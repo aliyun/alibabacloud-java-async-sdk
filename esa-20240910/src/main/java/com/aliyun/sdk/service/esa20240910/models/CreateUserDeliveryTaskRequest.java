@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -460,7 +465,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
         private String destUrl;
 
         @com.aliyun.core.annotation.NameInMap("HeaderParam")
-        private java.util.Map < String, HttpDeliveryHeaderParamValue > headerParam;
+        private java.util.Map<String, HttpDeliveryHeaderParamValue> headerParam;
 
         @com.aliyun.core.annotation.NameInMap("LastLogSplit")
         private String lastLogSplit;
@@ -493,7 +498,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
         private Long minBackoffMS;
 
         @com.aliyun.core.annotation.NameInMap("QueryParam")
-        private java.util.Map < String, HttpDeliveryQueryParamValue > queryParam;
+        private java.util.Map<String, HttpDeliveryQueryParamValue> queryParam;
 
         @com.aliyun.core.annotation.NameInMap("ResponseBodyKey")
         private String responseBodyKey;
@@ -557,7 +562,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
         /**
          * @return headerParam
          */
-        public java.util.Map < String, HttpDeliveryHeaderParamValue > getHeaderParam() {
+        public java.util.Map<String, HttpDeliveryHeaderParamValue> getHeaderParam() {
             return this.headerParam;
         }
 
@@ -634,7 +639,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
         /**
          * @return queryParam
          */
-        public java.util.Map < String, HttpDeliveryQueryParamValue > getQueryParam() {
+        public java.util.Map<String, HttpDeliveryQueryParamValue> getQueryParam() {
             return this.queryParam;
         }
 
@@ -676,7 +681,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
         public static final class Builder {
             private String compress; 
             private String destUrl; 
-            private java.util.Map < String, HttpDeliveryHeaderParamValue > headerParam; 
+            private java.util.Map<String, HttpDeliveryHeaderParamValue> headerParam; 
             private String lastLogSplit; 
             private String logBodyPrefix; 
             private String logBodySuffix; 
@@ -687,7 +692,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
             private Long maxBatchSize; 
             private Long maxRetry; 
             private Long minBackoffMS; 
-            private java.util.Map < String, HttpDeliveryQueryParamValue > queryParam; 
+            private java.util.Map<String, HttpDeliveryQueryParamValue> queryParam; 
             private String responseBodyKey; 
             private Boolean standardAuthOn; 
             private StandardAuthParam standardAuthParam; 
@@ -719,7 +724,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
             /**
              * <p>The custom headers.</p>
              */
-            public Builder headerParam(java.util.Map < String, HttpDeliveryHeaderParamValue > headerParam) {
+            public Builder headerParam(java.util.Map<String, HttpDeliveryHeaderParamValue> headerParam) {
                 this.headerParam = headerParam;
                 return this;
             }
@@ -837,7 +842,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
             /**
              * <p>The custom query parameters.</p>
              */
-            public Builder queryParam(java.util.Map < String, HttpDeliveryQueryParamValue > queryParam) {
+            public Builder queryParam(java.util.Map<String, HttpDeliveryQueryParamValue> queryParam) {
                 this.queryParam = queryParam;
                 return this;
             }
@@ -912,7 +917,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
         private String balancer;
 
         @com.aliyun.core.annotation.NameInMap("Brokers")
-        private java.util.List < String > brokers;
+        private java.util.List<String> brokers;
 
         @com.aliyun.core.annotation.NameInMap("Compress")
         private String compress;
@@ -961,7 +966,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
         /**
          * @return brokers
          */
-        public java.util.List < String > getBrokers() {
+        public java.util.List<String> getBrokers() {
             return this.brokers;
         }
 
@@ -1009,7 +1014,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
 
         public static final class Builder {
             private String balancer; 
-            private java.util.List < String > brokers; 
+            private java.util.List<String> brokers; 
             private String compress; 
             private String machanismType; 
             private String password; 
@@ -1031,7 +1036,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
             /**
              * <p>The brokers.</p>
              */
-            public Builder brokers(java.util.List < String > brokers) {
+            public Builder brokers(java.util.List<String> brokers) {
                 this.brokers = brokers;
                 return this;
             }

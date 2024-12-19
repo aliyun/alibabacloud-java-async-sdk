@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetClientCertificateHostnamesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Hostnames")
-    private java.util.List < String > hostnames;
+    private java.util.List<String> hostnames;
 
     @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
@@ -46,7 +51,7 @@ public class GetClientCertificateHostnamesResponseBody extends TeaModel {
     /**
      * @return hostnames
      */
-    public java.util.List < String > getHostnames() {
+    public java.util.List<String> getHostnames() {
         return this.hostnames;
     }
 
@@ -79,22 +84,25 @@ public class GetClientCertificateHostnamesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > hostnames; 
+        private java.util.List<String> hostnames; 
         private String id; 
         private String requestId; 
         private Long siteId; 
         private String siteName; 
 
         /**
-         * Hostnames.
+         * <p>The domain names with which the certificate is associated.</p>
          */
-        public Builder hostnames(java.util.List < String > hostnames) {
+        public Builder hostnames(java.util.List<String> hostnames) {
             this.hostnames = hostnames;
             return this;
         }
 
         /**
-         * Id.
+         * <p>The ID of the client CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>baba39055622c008b90285a8838ed09a</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -102,7 +110,10 @@ public class GetClientCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +121,10 @@ public class GetClientCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -118,7 +132,10 @@ public class GetClientCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * SiteName.
+         * <p>The website name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.siteName = siteName;

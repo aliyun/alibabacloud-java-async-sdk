@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListPagesResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Pages")
-    private java.util.List < Pages> pages;
+    private java.util.List<Pages> pages;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -64,7 +69,7 @@ public class ListPagesResponseBody extends TeaModel {
     /**
      * @return pages
      */
-    public java.util.List < Pages> getPages() {
+    public java.util.List<Pages> getPages() {
         return this.pages;
     }
 
@@ -92,7 +97,7 @@ public class ListPagesResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < Pages> pages; 
+        private java.util.List<Pages> pages; 
         private String requestId; 
         private Integer totalCount; 
         private Long usage; 
@@ -122,7 +127,7 @@ public class ListPagesResponseBody extends TeaModel {
         /**
          * <p>The custom error pages. Each element in the array contains error page-specific information.</p>
          */
-        public Builder pages(java.util.List < Pages> pages) {
+        public Builder pages(java.util.List<Pages> pages) {
             this.pages = pages;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class WafRuleMatch2 extends TeaModel {
     private Boolean convertToLower;
 
     @com.aliyun.core.annotation.NameInMap("Criteria")
-    private java.util.List < Criteria> criteria;
+    private java.util.List<Criteria> criteria;
 
     @com.aliyun.core.annotation.NameInMap("Logic")
     private String logic;
@@ -61,7 +66,7 @@ public class WafRuleMatch2 extends TeaModel {
     /**
      * @return criteria
      */
-    public java.util.List < Criteria> getCriteria() {
+    public java.util.List<Criteria> getCriteria() {
         return this.criteria;
     }
 
@@ -102,7 +107,7 @@ public class WafRuleMatch2 extends TeaModel {
 
     public static final class Builder {
         private Boolean convertToLower; 
-        private java.util.List < Criteria> criteria; 
+        private java.util.List<Criteria> criteria; 
         private String logic; 
         private String matchOperator; 
         private String matchType; 
@@ -120,7 +125,7 @@ public class WafRuleMatch2 extends TeaModel {
         /**
          * Criteria.
          */
-        public Builder criteria(java.util.List < Criteria> criteria) {
+        public Builder criteria(java.util.List<Criteria> criteria) {
             this.criteria = criteria;
             return this;
         }
@@ -309,7 +314,7 @@ public class WafRuleMatch2 extends TeaModel {
         private Boolean convertToLower;
 
         @com.aliyun.core.annotation.NameInMap("Criteria")
-        private java.util.List < CriteriaCriteria> criteria;
+        private java.util.List<CriteriaCriteria> criteria;
 
         @com.aliyun.core.annotation.NameInMap("Logic")
         private String logic;
@@ -354,7 +359,7 @@ public class WafRuleMatch2 extends TeaModel {
         /**
          * @return criteria
          */
-        public java.util.List < CriteriaCriteria> getCriteria() {
+        public java.util.List<CriteriaCriteria> getCriteria() {
             return this.criteria;
         }
 
@@ -395,7 +400,7 @@ public class WafRuleMatch2 extends TeaModel {
 
         public static final class Builder {
             private Boolean convertToLower; 
-            private java.util.List < CriteriaCriteria> criteria; 
+            private java.util.List<CriteriaCriteria> criteria; 
             private String logic; 
             private String matchOperator; 
             private String matchType; 
@@ -413,7 +418,7 @@ public class WafRuleMatch2 extends TeaModel {
             /**
              * Criteria.
              */
-            public Builder criteria(java.util.List < CriteriaCriteria> criteria) {
+            public Builder criteria(java.util.List<CriteriaCriteria> criteria) {
                 this.criteria = criteria;
                 return this;
             }
@@ -476,7 +481,7 @@ public class WafRuleMatch2 extends TeaModel {
         private Boolean convertToLower;
 
         @com.aliyun.core.annotation.NameInMap("Criteria")
-        private java.util.List < WafRuleMatch2CriteriaCriteria> criteria;
+        private java.util.List<WafRuleMatch2CriteriaCriteria> criteria;
 
         @com.aliyun.core.annotation.NameInMap("Logic")
         private String logic;
@@ -521,7 +526,7 @@ public class WafRuleMatch2 extends TeaModel {
         /**
          * @return criteria
          */
-        public java.util.List < WafRuleMatch2CriteriaCriteria> getCriteria() {
+        public java.util.List<WafRuleMatch2CriteriaCriteria> getCriteria() {
             return this.criteria;
         }
 
@@ -562,7 +567,7 @@ public class WafRuleMatch2 extends TeaModel {
 
         public static final class Builder {
             private Boolean convertToLower; 
-            private java.util.List < WafRuleMatch2CriteriaCriteria> criteria; 
+            private java.util.List<WafRuleMatch2CriteriaCriteria> criteria; 
             private String logic; 
             private String matchOperator; 
             private String matchType; 
@@ -580,7 +585,7 @@ public class WafRuleMatch2 extends TeaModel {
             /**
              * Criteria.
              */
-            public Builder criteria(java.util.List < WafRuleMatch2CriteriaCriteria> criteria) {
+            public Builder criteria(java.util.List<WafRuleMatch2CriteriaCriteria> criteria) {
                 this.criteria = criteria;
                 return this;
             }

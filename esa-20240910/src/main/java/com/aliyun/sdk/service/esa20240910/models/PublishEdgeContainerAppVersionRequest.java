@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Regions")
-    private java.util.List < String > regions;
+    private java.util.List<String> regions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Remarks")
@@ -117,7 +122,7 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
     /**
      * @return regions
      */
-    public java.util.List < String > getRegions() {
+    public java.util.List<String> getRegions() {
         return this.regions;
     }
 
@@ -148,7 +153,7 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         private Integer percentage; 
         private String publishEnv; 
         private String publishType; 
-        private java.util.List < String > regions; 
+        private java.util.List<String> regions; 
         private String remarks; 
         private String startTime; 
         private String versionId; 
@@ -244,7 +249,7 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         /**
          * <p>The regions to which the version is released.</p>
          */
-        public Builder regions(java.util.List < String > regions) {
+        public Builder regions(java.util.List<String> regions) {
             String regionsShrink = shrink(regions, "Regions", "json");
             this.putQueryParameter("Regions", regionsShrink);
             this.regions = regions;

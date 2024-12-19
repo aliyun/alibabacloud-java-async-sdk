@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.esa20240910.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -85,7 +90,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
         private Boolean enable;
 
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.Map < String, QuotaListItemsValue > items;
+        private java.util.Map<String, QuotaListItemsValue> items;
 
         @com.aliyun.core.annotation.NameInMap("NumberItemsPerList")
         private WafQuotaInteger numberItemsPerList;
@@ -122,7 +127,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.Map < String, QuotaListItemsValue > getItems() {
+        public java.util.Map<String, QuotaListItemsValue> getItems() {
             return this.items;
         }
 
@@ -149,7 +154,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean enable; 
-            private java.util.Map < String, QuotaListItemsValue > items; 
+            private java.util.Map<String, QuotaListItemsValue> items; 
             private WafQuotaInteger numberItemsPerList; 
             private WafQuotaInteger numberItemsTotal; 
             private WafQuotaInteger numberTotal; 
@@ -165,7 +170,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             /**
              * <p>The quota information about all item types in the custom lists.</p>
              */
-            public Builder items(java.util.Map < String, QuotaListItemsValue > items) {
+            public Builder items(java.util.Map<String, QuotaListItemsValue> items) {
                 this.items = items;
                 return this;
             }
@@ -276,7 +281,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
      */
     public static class Page extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContentTypes")
-        private java.util.Map < String, QuotaPageContentTypesValue > contentTypes;
+        private java.util.Map<String, QuotaPageContentTypesValue> contentTypes;
 
         @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
@@ -301,7 +306,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
         /**
          * @return contentTypes
          */
-        public java.util.Map < String, QuotaPageContentTypesValue > getContentTypes() {
+        public java.util.Map<String, QuotaPageContentTypesValue> getContentTypes() {
             return this.contentTypes;
         }
 
@@ -320,14 +325,14 @@ public class GetWafQuotaResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, QuotaPageContentTypesValue > contentTypes; 
+            private java.util.Map<String, QuotaPageContentTypesValue> contentTypes; 
             private Boolean enable; 
             private WafQuotaInteger numberTotal; 
 
             /**
              * <p>The quota information about custom error pages of all Content-Types.</p>
              */
-            public Builder contentTypes(java.util.Map < String, QuotaPageContentTypesValue > contentTypes) {
+            public Builder contentTypes(java.util.Map<String, QuotaPageContentTypesValue> contentTypes) {
                 this.contentTypes = contentTypes;
                 return this;
             }
