@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ImageModifiedRecords")
-    private java.util.List < ImageModifiedRecords> imageModifiedRecords;
+    private java.util.List<ImageModifiedRecords> imageModifiedRecords;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -42,7 +47,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
     /**
      * @return imageModifiedRecords
      */
-    public java.util.List < ImageModifiedRecords> getImageModifiedRecords() {
+    public java.util.List<ImageModifiedRecords> getImageModifiedRecords() {
         return this.imageModifiedRecords;
     }
 
@@ -68,7 +73,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ImageModifiedRecords> imageModifiedRecords; 
+        private java.util.List<ImageModifiedRecords> imageModifiedRecords; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
@@ -76,7 +81,7 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         /**
          * <p>Details about the image modification record.</p>
          */
-        public Builder imageModifiedRecords(java.util.List < ImageModifiedRecords> imageModifiedRecords) {
+        public Builder imageModifiedRecords(java.util.List<ImageModifiedRecords> imageModifiedRecords) {
             this.imageModifiedRecords = imageModifiedRecords;
             return this;
         }

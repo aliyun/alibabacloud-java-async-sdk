@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNetworkPackagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NetworkPackages")
-    private java.util.List < NetworkPackages> networkPackages;
+    private java.util.List<NetworkPackages> networkPackages;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
     /**
      * @return networkPackages
      */
-    public java.util.List < NetworkPackages> getNetworkPackages() {
+    public java.util.List<NetworkPackages> getNetworkPackages() {
         return this.networkPackages;
     }
 
@@ -57,14 +62,14 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NetworkPackages> networkPackages; 
+        private java.util.List<NetworkPackages> networkPackages; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>The premium bandwidth plans.</p>
          */
-        public Builder networkPackages(java.util.List < NetworkPackages> networkPackages) {
+        public Builder networkPackages(java.util.List<NetworkPackages> networkPackages) {
             this.networkPackages = networkPackages;
             return this;
         }
@@ -114,7 +119,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("EipAddresses")
-        private java.util.List < String > eipAddresses;
+        private java.util.List<String> eipAddresses;
 
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
@@ -199,7 +204,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         /**
          * @return eipAddresses
          */
-        public java.util.List < String > getEipAddresses() {
+        public java.util.List<String> getEipAddresses() {
             return this.eipAddresses;
         }
 
@@ -284,7 +289,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             private Integer bandwidth; 
             private String businessStatus; 
             private String createTime; 
-            private java.util.List < String > eipAddresses; 
+            private java.util.List<String> eipAddresses; 
             private String expiredTime; 
             private String internetChargeType; 
             private String networkPackageId; 
@@ -349,7 +354,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
             /**
              * <p>The public egress IP address of the premium bandwidth plan.</p>
              */
-            public Builder eipAddresses(java.util.List < String > eipAddresses) {
+            public Builder eipAddresses(java.util.List<String> eipAddresses) {
                 this.eipAddresses = eipAddresses;
                 return this;
             }

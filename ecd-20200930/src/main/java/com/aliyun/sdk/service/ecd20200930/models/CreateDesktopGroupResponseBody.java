@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
     private String desktopGroupId;
 
     @com.aliyun.core.annotation.NameInMap("OrderIds")
-    private java.util.List < String > orderIds;
+    private java.util.List<String> orderIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
     /**
      * @return orderIds
      */
-    public java.util.List < String > getOrderIds() {
+    public java.util.List<String> getOrderIds() {
         return this.orderIds;
     }
 
@@ -58,7 +63,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private String desktopGroupId; 
-        private java.util.List < String > orderIds; 
+        private java.util.List<String> orderIds; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
         /**
          * <p>The IDs of the orders.</p>
          */
-        public Builder orderIds(java.util.List < String > orderIds) {
+        public Builder orderIds(java.util.List<String> orderIds) {
             this.orderIds = orderIds;
             return this;
         }

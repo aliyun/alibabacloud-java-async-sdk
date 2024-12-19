@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DeleteCloudDriveUsersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserId")
-    private java.util.List < String > endUserId;
+    private java.util.List<String> endUserId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -56,7 +61,7 @@ public class DeleteCloudDriveUsersRequest extends Request {
     /**
      * @return endUserId
      */
-    public java.util.List < String > getEndUserId() {
+    public java.util.List<String> getEndUserId() {
         return this.endUserId;
     }
 
@@ -69,7 +74,7 @@ public class DeleteCloudDriveUsersRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteCloudDriveUsersRequest, Builder> {
         private String cdsId; 
-        private java.util.List < String > endUserId; 
+        private java.util.List<String> endUserId; 
         private String regionId; 
 
         private Builder() {
@@ -98,7 +103,7 @@ public class DeleteCloudDriveUsersRequest extends Request {
         /**
          * EndUserId.
          */
-        public Builder endUserId(java.util.List < String > endUserId) {
+        public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
             return this;

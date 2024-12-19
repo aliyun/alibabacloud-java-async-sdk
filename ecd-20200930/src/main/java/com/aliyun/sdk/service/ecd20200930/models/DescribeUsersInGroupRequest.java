@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class DescribeUsersInGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserIds")
-    private java.util.List < String > endUserIds;
+    private java.util.List<String> endUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
@@ -105,7 +110,7 @@ public class DescribeUsersInGroupRequest extends Request {
     /**
      * @return endUserIds
      */
-    public java.util.List < String > getEndUserIds() {
+    public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
     }
 
@@ -155,7 +160,7 @@ public class DescribeUsersInGroupRequest extends Request {
         private Integer connectState; 
         private String desktopGroupId; 
         private String endUserId; 
-        private java.util.List < String > endUserIds; 
+        private java.util.List<String> endUserIds; 
         private String filter; 
         private Integer maxResults; 
         private String nextToken; 
@@ -226,7 +231,7 @@ public class DescribeUsersInGroupRequest extends Request {
         /**
          * <p>The IDs of the authorized users.</p>
          */
-        public Builder endUserIds(java.util.List < String > endUserIds) {
+        public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
             this.endUserIds = endUserIds;
             return this;

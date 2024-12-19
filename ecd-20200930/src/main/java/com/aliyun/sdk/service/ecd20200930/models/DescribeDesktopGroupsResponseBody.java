@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDesktopGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DesktopGroups")
-    private java.util.List < DesktopGroups> desktopGroups;
+    private java.util.List<DesktopGroups> desktopGroups;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
     /**
      * @return desktopGroups
      */
-    public java.util.List < DesktopGroups> getDesktopGroups() {
+    public java.util.List<DesktopGroups> getDesktopGroups() {
         return this.desktopGroups;
     }
 
@@ -57,14 +62,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DesktopGroups> desktopGroups; 
+        private java.util.List<DesktopGroups> desktopGroups; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>The cloud computer pools.</p>
          */
-        public Builder desktopGroups(java.util.List < DesktopGroups> desktopGroups) {
+        public Builder desktopGroups(java.util.List<DesktopGroups> desktopGroups) {
             this.desktopGroups = desktopGroups;
             return this;
         }
@@ -321,7 +326,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         private Long connectDuration;
 
         @com.aliyun.core.annotation.NameInMap("CountPerStatus")
-        private java.util.List < CountPerStatus> countPerStatus;
+        private java.util.List<CountPerStatus> countPerStatus;
 
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -441,7 +446,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         private Integer systemDiskSize;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Version")
         private Integer version;
@@ -542,7 +547,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         /**
          * @return countPerStatus
          */
-        public java.util.List < CountPerStatus> getCountPerStatus() {
+        public java.util.List<CountPerStatus> getCountPerStatus() {
             return this.countPerStatus;
         }
 
@@ -822,7 +827,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -852,7 +857,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private Integer buyDesktopsCount; 
             private String comments; 
             private Long connectDuration; 
-            private java.util.List < CountPerStatus> countPerStatus; 
+            private java.util.List<CountPerStatus> countPerStatus; 
             private Integer cpu; 
             private String createTime; 
             private String creator; 
@@ -892,7 +897,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String subnetId; 
             private String systemDiskCategory; 
             private Integer systemDiskSize; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Integer version; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
@@ -947,7 +952,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             /**
              * <p>The number of cloud computers in each state.</p>
              */
-            public Builder countPerStatus(java.util.List < CountPerStatus> countPerStatus) {
+            public Builder countPerStatus(java.util.List<CountPerStatus> countPerStatus) {
                 this.countPerStatus = countPerStatus;
                 return this;
             }
@@ -1466,7 +1471,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             /**
              * <p>The tags attached to the cloud computer pool.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

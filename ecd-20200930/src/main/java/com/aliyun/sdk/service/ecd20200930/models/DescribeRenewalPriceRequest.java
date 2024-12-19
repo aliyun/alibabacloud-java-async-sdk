@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DescribeRenewalPriceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
@@ -70,7 +75,7 @@ public class DescribeRenewalPriceRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -104,7 +109,7 @@ public class DescribeRenewalPriceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeRenewalPriceRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private Integer period; 
         private String periodUnit; 
         private String regionId; 
@@ -136,7 +141,7 @@ public class DescribeRenewalPriceRequest extends Request {
         /**
          * InstanceIds.
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;

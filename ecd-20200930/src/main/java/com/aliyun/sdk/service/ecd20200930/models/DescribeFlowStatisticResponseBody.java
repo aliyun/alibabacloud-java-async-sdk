@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
     private Integer desktopCount;
 
     @com.aliyun.core.annotation.NameInMap("DesktopFlowStatistic")
-    private java.util.List < DesktopFlowStatistic> desktopFlowStatistic;
+    private java.util.List<DesktopFlowStatistic> desktopFlowStatistic;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
     /**
      * @return desktopFlowStatistic
      */
-    public java.util.List < DesktopFlowStatistic> getDesktopFlowStatistic() {
+    public java.util.List<DesktopFlowStatistic> getDesktopFlowStatistic() {
         return this.desktopFlowStatistic;
     }
 
@@ -58,7 +63,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer desktopCount; 
-        private java.util.List < DesktopFlowStatistic> desktopFlowStatistic; 
+        private java.util.List<DesktopFlowStatistic> desktopFlowStatistic; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
         /**
          * <p>The traffic statistics.</p>
          */
-        public Builder desktopFlowStatistic(java.util.List < DesktopFlowStatistic> desktopFlowStatistic) {
+        public Builder desktopFlowStatistic(java.util.List<DesktopFlowStatistic> desktopFlowStatistic) {
             this.desktopFlowStatistic = desktopFlowStatistic;
             return this;
         }

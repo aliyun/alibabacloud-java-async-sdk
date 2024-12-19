@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePolicyGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DescribePolicyGroups")
-    private java.util.List < DescribePolicyGroups> describePolicyGroups;
+    private java.util.List<DescribePolicyGroups> describePolicyGroups;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     /**
      * @return describePolicyGroups
      */
-    public java.util.List < DescribePolicyGroups> getDescribePolicyGroups() {
+    public java.util.List<DescribePolicyGroups> getDescribePolicyGroups() {
         return this.describePolicyGroups;
     }
 
@@ -57,14 +62,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DescribePolicyGroups> describePolicyGroups; 
+        private java.util.List<DescribePolicyGroups> describePolicyGroups; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>The details of the policies.</p>
          */
-        public Builder describePolicyGroups(java.util.List < DescribePolicyGroups> describePolicyGroups) {
+        public Builder describePolicyGroups(java.util.List<DescribePolicyGroups> describePolicyGroups) {
             this.describePolicyGroups = describePolicyGroups;
             return this;
         }
@@ -1095,16 +1100,16 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private String appContentProtection;
 
         @com.aliyun.core.annotation.NameInMap("AuthorizeAccessPolicyRules")
-        private java.util.List < AuthorizeAccessPolicyRules> authorizeAccessPolicyRules;
+        private java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules;
 
         @com.aliyun.core.annotation.NameInMap("AuthorizeSecurityPolicyRules")
-        private java.util.List < AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules;
+        private java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules;
 
         @com.aliyun.core.annotation.NameInMap("CameraRedirect")
         private String cameraRedirect;
 
         @com.aliyun.core.annotation.NameInMap("ClientTypes")
-        private java.util.List < ClientTypes> clientTypes;
+        private java.util.List<ClientTypes> clientTypes;
 
         @com.aliyun.core.annotation.NameInMap("Clipboard")
         private String clipboard;
@@ -1116,7 +1121,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private Integer cpuDownGradeDuration;
 
         @com.aliyun.core.annotation.NameInMap("CpuProcessors")
-        private java.util.List < String > cpuProcessors;
+        private java.util.List<String> cpuProcessors;
 
         @com.aliyun.core.annotation.NameInMap("CpuProtectedMode")
         private String cpuProtectedMode;
@@ -1130,11 +1135,17 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuSingleRateLimit")
         private Integer cpuSingleRateLimit;
 
+        @com.aliyun.core.annotation.NameInMap("DesktopCount")
+        private Integer desktopCount;
+
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupCount")
+        private Integer desktopGroupCount;
+
         @com.aliyun.core.annotation.NameInMap("DeviceRedirects")
-        private java.util.List < DeviceRedirects> deviceRedirects;
+        private java.util.List<DeviceRedirects> deviceRedirects;
 
         @com.aliyun.core.annotation.NameInMap("DeviceRules")
-        private java.util.List < DeviceRules> deviceRules;
+        private java.util.List<DeviceRules> deviceRules;
 
         @com.aliyun.core.annotation.NameInMap("DisplayMode")
         private String displayMode;
@@ -1143,7 +1154,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private String domainList;
 
         @com.aliyun.core.annotation.NameInMap("DomainResolveRule")
-        private java.util.List < DomainResolveRule> domainResolveRule;
+        private java.util.List<DomainResolveRule> domainResolveRule;
 
         @com.aliyun.core.annotation.NameInMap("DomainResolveRuleType")
         private String domainResolveRuleType;
@@ -1179,7 +1190,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private Integer memoryDownGradeDuration;
 
         @com.aliyun.core.annotation.NameInMap("MemoryProcessors")
-        private java.util.List < String > memoryProcessors;
+        private java.util.List<String> memoryProcessors;
 
         @com.aliyun.core.annotation.NameInMap("MemoryProtectedMode")
         private String memoryProtectedMode;
@@ -1193,6 +1204,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemorySingleRateLimit")
         private Integer memorySingleRateLimit;
 
+        @com.aliyun.core.annotation.NameInMap("MobileRestart")
+        private String mobileRestart;
+
+        @com.aliyun.core.annotation.NameInMap("MobileShutdown")
+        private String mobileShutdown;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -1200,7 +1217,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private String netRedirect;
 
         @com.aliyun.core.annotation.NameInMap("NetRedirectRule")
-        private java.util.List < NetRedirectRule> netRedirectRule;
+        private java.util.List<NetRedirectRule> netRedirectRule;
 
         @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
         private String policyGroupId;
@@ -1215,7 +1232,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private String preemptLogin;
 
         @com.aliyun.core.annotation.NameInMap("PreemptLoginUsers")
-        private java.util.List < String > preemptLoginUsers;
+        private java.util.List<String> preemptLoginUsers;
 
         @com.aliyun.core.annotation.NameInMap("PrinterRedirection")
         private String printerRedirection;
@@ -1259,6 +1276,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RemoteCoordinate")
         private String remoteCoordinate;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupCount")
+        private Integer resourceGroupCount;
+
         @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
         private String resourceRegionId;
 
@@ -1266,10 +1286,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private String scope;
 
         @com.aliyun.core.annotation.NameInMap("ScopeValue")
-        private java.util.List < String > scopeValue;
+        private java.util.List<String> scopeValue;
 
         @com.aliyun.core.annotation.NameInMap("SmoothEnhancement")
         private String smoothEnhancement;
+
+        @com.aliyun.core.annotation.NameInMap("StatusMonitor")
+        private String statusMonitor;
 
         @com.aliyun.core.annotation.NameInMap("StreamingMode")
         private String streamingMode;
@@ -1281,7 +1304,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         private String usbRedirect;
 
         @com.aliyun.core.annotation.NameInMap("UsbSupplyRedirectRule")
-        private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule;
+        private java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule;
 
         @com.aliyun.core.annotation.NameInMap("VideoEncAvgKbps")
         private Integer videoEncAvgKbps;
@@ -1361,6 +1384,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.cpuRateLimit = builder.cpuRateLimit;
             this.cpuSampleDuration = builder.cpuSampleDuration;
             this.cpuSingleRateLimit = builder.cpuSingleRateLimit;
+            this.desktopCount = builder.desktopCount;
+            this.desktopGroupCount = builder.desktopGroupCount;
             this.deviceRedirects = builder.deviceRedirects;
             this.deviceRules = builder.deviceRules;
             this.displayMode = builder.displayMode;
@@ -1382,6 +1407,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.memoryRateLimit = builder.memoryRateLimit;
             this.memorySampleDuration = builder.memorySampleDuration;
             this.memorySingleRateLimit = builder.memorySingleRateLimit;
+            this.mobileRestart = builder.mobileRestart;
+            this.mobileShutdown = builder.mobileShutdown;
             this.name = builder.name;
             this.netRedirect = builder.netRedirect;
             this.netRedirectRule = builder.netRedirectRule;
@@ -1404,10 +1431,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.recordingUserNotify = builder.recordingUserNotify;
             this.recordingUserNotifyMessage = builder.recordingUserNotifyMessage;
             this.remoteCoordinate = builder.remoteCoordinate;
+            this.resourceGroupCount = builder.resourceGroupCount;
             this.resourceRegionId = builder.resourceRegionId;
             this.scope = builder.scope;
             this.scopeValue = builder.scopeValue;
             this.smoothEnhancement = builder.smoothEnhancement;
+            this.statusMonitor = builder.statusMonitor;
             this.streamingMode = builder.streamingMode;
             this.targetFps = builder.targetFps;
             this.usbRedirect = builder.usbRedirect;
@@ -1460,14 +1489,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         /**
          * @return authorizeAccessPolicyRules
          */
-        public java.util.List < AuthorizeAccessPolicyRules> getAuthorizeAccessPolicyRules() {
+        public java.util.List<AuthorizeAccessPolicyRules> getAuthorizeAccessPolicyRules() {
             return this.authorizeAccessPolicyRules;
         }
 
         /**
          * @return authorizeSecurityPolicyRules
          */
-        public java.util.List < AuthorizeSecurityPolicyRules> getAuthorizeSecurityPolicyRules() {
+        public java.util.List<AuthorizeSecurityPolicyRules> getAuthorizeSecurityPolicyRules() {
             return this.authorizeSecurityPolicyRules;
         }
 
@@ -1481,7 +1510,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         /**
          * @return clientTypes
          */
-        public java.util.List < ClientTypes> getClientTypes() {
+        public java.util.List<ClientTypes> getClientTypes() {
             return this.clientTypes;
         }
 
@@ -1509,7 +1538,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         /**
          * @return cpuProcessors
          */
-        public java.util.List < String > getCpuProcessors() {
+        public java.util.List<String> getCpuProcessors() {
             return this.cpuProcessors;
         }
 
@@ -1542,16 +1571,30 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return desktopCount
+         */
+        public Integer getDesktopCount() {
+            return this.desktopCount;
+        }
+
+        /**
+         * @return desktopGroupCount
+         */
+        public Integer getDesktopGroupCount() {
+            return this.desktopGroupCount;
+        }
+
+        /**
          * @return deviceRedirects
          */
-        public java.util.List < DeviceRedirects> getDeviceRedirects() {
+        public java.util.List<DeviceRedirects> getDeviceRedirects() {
             return this.deviceRedirects;
         }
 
         /**
          * @return deviceRules
          */
-        public java.util.List < DeviceRules> getDeviceRules() {
+        public java.util.List<DeviceRules> getDeviceRules() {
             return this.deviceRules;
         }
 
@@ -1572,7 +1615,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         /**
          * @return domainResolveRule
          */
-        public java.util.List < DomainResolveRule> getDomainResolveRule() {
+        public java.util.List<DomainResolveRule> getDomainResolveRule() {
             return this.domainResolveRule;
         }
 
@@ -1656,7 +1699,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         /**
          * @return memoryProcessors
          */
-        public java.util.List < String > getMemoryProcessors() {
+        public java.util.List<String> getMemoryProcessors() {
             return this.memoryProcessors;
         }
 
@@ -1689,6 +1732,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return mobileRestart
+         */
+        public String getMobileRestart() {
+            return this.mobileRestart;
+        }
+
+        /**
+         * @return mobileShutdown
+         */
+        public String getMobileShutdown() {
+            return this.mobileShutdown;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -1705,7 +1762,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         /**
          * @return netRedirectRule
          */
-        public java.util.List < NetRedirectRule> getNetRedirectRule() {
+        public java.util.List<NetRedirectRule> getNetRedirectRule() {
             return this.netRedirectRule;
         }
 
@@ -1740,7 +1797,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         /**
          * @return preemptLoginUsers
          */
-        public java.util.List < String > getPreemptLoginUsers() {
+        public java.util.List<String> getPreemptLoginUsers() {
             return this.preemptLoginUsers;
         }
 
@@ -1843,6 +1900,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupCount
+         */
+        public Integer getResourceGroupCount() {
+            return this.resourceGroupCount;
+        }
+
+        /**
          * @return resourceRegionId
          */
         public String getResourceRegionId() {
@@ -1859,7 +1923,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         /**
          * @return scopeValue
          */
-        public java.util.List < String > getScopeValue() {
+        public java.util.List<String> getScopeValue() {
             return this.scopeValue;
         }
 
@@ -1868,6 +1932,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getSmoothEnhancement() {
             return this.smoothEnhancement;
+        }
+
+        /**
+         * @return statusMonitor
+         */
+        public String getStatusMonitor() {
+            return this.statusMonitor;
         }
 
         /**
@@ -1894,7 +1965,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         /**
          * @return usbSupplyRedirectRule
          */
-        public java.util.List < UsbSupplyRedirectRule> getUsbSupplyRedirectRule() {
+        public java.util.List<UsbSupplyRedirectRule> getUsbSupplyRedirectRule() {
             return this.usbSupplyRedirectRule;
         }
 
@@ -2048,23 +2119,25 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String adminAccess; 
             private String appContentProtection; 
-            private java.util.List < AuthorizeAccessPolicyRules> authorizeAccessPolicyRules; 
-            private java.util.List < AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules; 
+            private java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules; 
+            private java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules; 
             private String cameraRedirect; 
-            private java.util.List < ClientTypes> clientTypes; 
+            private java.util.List<ClientTypes> clientTypes; 
             private String clipboard; 
             private String colorEnhancement; 
             private Integer cpuDownGradeDuration; 
-            private java.util.List < String > cpuProcessors; 
+            private java.util.List<String> cpuProcessors; 
             private String cpuProtectedMode; 
             private Integer cpuRateLimit; 
             private Integer cpuSampleDuration; 
             private Integer cpuSingleRateLimit; 
-            private java.util.List < DeviceRedirects> deviceRedirects; 
-            private java.util.List < DeviceRules> deviceRules; 
+            private Integer desktopCount; 
+            private Integer desktopGroupCount; 
+            private java.util.List<DeviceRedirects> deviceRedirects; 
+            private java.util.List<DeviceRules> deviceRules; 
             private String displayMode; 
             private String domainList; 
-            private java.util.List < DomainResolveRule> domainResolveRule; 
+            private java.util.List<DomainResolveRule> domainResolveRule; 
             private String domainResolveRuleType; 
             private Integer edsCount; 
             private String endUserApplyAdminCoordinate; 
@@ -2076,19 +2149,21 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String localDrive; 
             private Integer maxReconnectTime; 
             private Integer memoryDownGradeDuration; 
-            private java.util.List < String > memoryProcessors; 
+            private java.util.List<String> memoryProcessors; 
             private String memoryProtectedMode; 
             private Integer memoryRateLimit; 
             private Integer memorySampleDuration; 
             private Integer memorySingleRateLimit; 
+            private String mobileRestart; 
+            private String mobileShutdown; 
             private String name; 
             private String netRedirect; 
-            private java.util.List < NetRedirectRule> netRedirectRule; 
+            private java.util.List<NetRedirectRule> netRedirectRule; 
             private String policyGroupId; 
             private String policyGroupType; 
             private String policyStatus; 
             private String preemptLogin; 
-            private java.util.List < String > preemptLoginUsers; 
+            private java.util.List<String> preemptLoginUsers; 
             private String printerRedirection; 
             private String qualityEnhancement; 
             private String recordContent; 
@@ -2103,14 +2178,16 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String recordingUserNotify; 
             private String recordingUserNotifyMessage; 
             private String remoteCoordinate; 
+            private Integer resourceGroupCount; 
             private String resourceRegionId; 
             private String scope; 
-            private java.util.List < String > scopeValue; 
+            private java.util.List<String> scopeValue; 
             private String smoothEnhancement; 
+            private String statusMonitor; 
             private String streamingMode; 
             private Integer targetFps; 
             private String usbRedirect; 
-            private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule; 
+            private java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule; 
             private Integer videoEncAvgKbps; 
             private Integer videoEncMaxQP; 
             private Integer videoEncMinQP; 
@@ -2166,7 +2243,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             /**
              * <p>The client CIDR blocks in a whitelist.</p>
              */
-            public Builder authorizeAccessPolicyRules(java.util.List < AuthorizeAccessPolicyRules> authorizeAccessPolicyRules) {
+            public Builder authorizeAccessPolicyRules(java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules) {
                 this.authorizeAccessPolicyRules = authorizeAccessPolicyRules;
                 return this;
             }
@@ -2174,7 +2251,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             /**
              * <p>The security group rules.</p>
              */
-            public Builder authorizeSecurityPolicyRules(java.util.List < AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules) {
+            public Builder authorizeSecurityPolicyRules(java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules) {
                 this.authorizeSecurityPolicyRules = authorizeSecurityPolicyRules;
                 return this;
             }
@@ -2198,7 +2275,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             /**
              * <p>The logon methods.</p>
              */
-            public Builder clientTypes(java.util.List < ClientTypes> clientTypes) {
+            public Builder clientTypes(java.util.List<ClientTypes> clientTypes) {
                 this.clientTypes = clientTypes;
                 return this;
             }
@@ -2242,7 +2319,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             /**
              * <p>The process whitelist that is not restricted by the CPU usage limit.</p>
              */
-            public Builder cpuProcessors(java.util.List < String > cpuProcessors) {
+            public Builder cpuProcessors(java.util.List<String> cpuProcessors) {
                 this.cpuProcessors = cpuProcessors;
                 return this;
             }
@@ -2292,9 +2369,25 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * DesktopCount.
+             */
+            public Builder desktopCount(Integer desktopCount) {
+                this.desktopCount = desktopCount;
+                return this;
+            }
+
+            /**
+             * DesktopGroupCount.
+             */
+            public Builder desktopGroupCount(Integer desktopGroupCount) {
+                this.desktopGroupCount = desktopGroupCount;
+                return this;
+            }
+
+            /**
              * DeviceRedirects.
              */
-            public Builder deviceRedirects(java.util.List < DeviceRedirects> deviceRedirects) {
+            public Builder deviceRedirects(java.util.List<DeviceRedirects> deviceRedirects) {
                 this.deviceRedirects = deviceRedirects;
                 return this;
             }
@@ -2302,7 +2395,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             /**
              * DeviceRules.
              */
-            public Builder deviceRules(java.util.List < DeviceRules> deviceRules) {
+            public Builder deviceRules(java.util.List<DeviceRules> deviceRules) {
                 this.deviceRules = deviceRules;
                 return this;
             }
@@ -2333,7 +2426,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             /**
              * <p>The rule of domain name resolution.</p>
              */
-            public Builder domainResolveRule(java.util.List < DomainResolveRule> domainResolveRule) {
+            public Builder domainResolveRule(java.util.List<DomainResolveRule> domainResolveRule) {
                 this.domainResolveRule = domainResolveRule;
                 return this;
             }
@@ -2492,7 +2585,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             /**
              * <p>The whitelist of processes that are not restricted by the memory usage limit.</p>
              */
-            public Builder memoryProcessors(java.util.List < String > memoryProcessors) {
+            public Builder memoryProcessors(java.util.List<String> memoryProcessors) {
                 this.memoryProcessors = memoryProcessors;
                 return this;
             }
@@ -2542,6 +2635,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * MobileRestart.
+             */
+            public Builder mobileRestart(String mobileRestart) {
+                this.mobileRestart = mobileRestart;
+                return this;
+            }
+
+            /**
+             * MobileShutdown.
+             */
+            public Builder mobileShutdown(String mobileShutdown) {
+                this.mobileShutdown = mobileShutdown;
+                return this;
+            }
+
+            /**
              * <p>The policy name.</p>
              * 
              * <strong>example:</strong>
@@ -2577,7 +2686,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              * <p> This parameter is in invitational preview and not available to the public.</p>
              * </blockquote>
              */
-            public Builder netRedirectRule(java.util.List < NetRedirectRule> netRedirectRule) {
+            public Builder netRedirectRule(java.util.List<NetRedirectRule> netRedirectRule) {
                 this.netRedirectRule = netRedirectRule;
                 return this;
             }
@@ -2639,7 +2748,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             /**
              * <p>The names of the users that are allowed to connect to the cloud desktop to which another user is logged on.</p>
              */
-            public Builder preemptLoginUsers(java.util.List < String > preemptLoginUsers) {
+            public Builder preemptLoginUsers(java.util.List<String> preemptLoginUsers) {
                 this.preemptLoginUsers = preemptLoginUsers;
                 return this;
             }
@@ -2827,6 +2936,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceGroupCount.
+             */
+            public Builder resourceGroupCount(Integer resourceGroupCount) {
+                this.resourceGroupCount = resourceGroupCount;
+                return this;
+            }
+
+            /**
              * ResourceRegionId.
              */
             public Builder resourceRegionId(String resourceRegionId) {
@@ -2852,7 +2969,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             /**
              * <p>This parameter is required when Scope is set to IP. This parameter takes effect when Scope is set to IP.</p>
              */
-            public Builder scopeValue(java.util.List < String > scopeValue) {
+            public Builder scopeValue(java.util.List<String> scopeValue) {
                 this.scopeValue = scopeValue;
                 return this;
             }
@@ -2862,6 +2979,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder smoothEnhancement(String smoothEnhancement) {
                 this.smoothEnhancement = smoothEnhancement;
+                return this;
+            }
+
+            /**
+             * StatusMonitor.
+             */
+            public Builder statusMonitor(String statusMonitor) {
+                this.statusMonitor = statusMonitor;
                 return this;
             }
 
@@ -2900,7 +3025,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             /**
              * <p>The USB redirection rule.</p>
              */
-            public Builder usbSupplyRedirectRule(java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule) {
+            public Builder usbSupplyRedirectRule(java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule) {
                 this.usbSupplyRedirectRule = usbSupplyRedirectRule;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UnbindUserDesktopRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopAgentIds")
-    private java.util.List < String > desktopAgentIds;
+    private java.util.List<String> desktopAgentIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
@@ -22,7 +27,7 @@ public class UnbindUserDesktopRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopIds")
-    private java.util.List < String > desktopIds;
+    private java.util.List<String> desktopIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Force")
@@ -34,7 +39,7 @@ public class UnbindUserDesktopRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserDesktopIds")
-    private java.util.List < String > userDesktopIds;
+    private java.util.List<String> userDesktopIds;
 
     private UnbindUserDesktopRequest(Builder builder) {
         super(builder);
@@ -62,7 +67,7 @@ public class UnbindUserDesktopRequest extends Request {
     /**
      * @return desktopAgentIds
      */
-    public java.util.List < String > getDesktopAgentIds() {
+    public java.util.List<String> getDesktopAgentIds() {
         return this.desktopAgentIds;
     }
 
@@ -76,7 +81,7 @@ public class UnbindUserDesktopRequest extends Request {
     /**
      * @return desktopIds
      */
-    public java.util.List < String > getDesktopIds() {
+    public java.util.List<String> getDesktopIds() {
         return this.desktopIds;
     }
 
@@ -97,17 +102,17 @@ public class UnbindUserDesktopRequest extends Request {
     /**
      * @return userDesktopIds
      */
-    public java.util.List < String > getUserDesktopIds() {
+    public java.util.List<String> getUserDesktopIds() {
         return this.userDesktopIds;
     }
 
     public static final class Builder extends Request.Builder<UnbindUserDesktopRequest, Builder> {
-        private java.util.List < String > desktopAgentIds; 
+        private java.util.List<String> desktopAgentIds; 
         private String desktopGroupId; 
-        private java.util.List < String > desktopIds; 
+        private java.util.List<String> desktopIds; 
         private Boolean force; 
         private String reason; 
-        private java.util.List < String > userDesktopIds; 
+        private java.util.List<String> userDesktopIds; 
 
         private Builder() {
             super();
@@ -126,7 +131,7 @@ public class UnbindUserDesktopRequest extends Request {
         /**
          * DesktopAgentIds.
          */
-        public Builder desktopAgentIds(java.util.List < String > desktopAgentIds) {
+        public Builder desktopAgentIds(java.util.List<String> desktopAgentIds) {
             this.putQueryParameter("DesktopAgentIds", desktopAgentIds);
             this.desktopAgentIds = desktopAgentIds;
             return this;
@@ -144,7 +149,7 @@ public class UnbindUserDesktopRequest extends Request {
         /**
          * DesktopIds.
          */
-        public Builder desktopIds(java.util.List < String > desktopIds) {
+        public Builder desktopIds(java.util.List<String> desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
             this.desktopIds = desktopIds;
             return this;
@@ -171,7 +176,7 @@ public class UnbindUserDesktopRequest extends Request {
         /**
          * UserDesktopIds.
          */
-        public Builder userDesktopIds(java.util.List < String > userDesktopIds) {
+        public Builder userDesktopIds(java.util.List<String> userDesktopIds) {
             this.putQueryParameter("UserDesktopIds", userDesktopIds);
             this.userDesktopIds = userDesktopIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeImagePermissionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AliUids")
-    private java.util.List < String > aliUids;
+    private java.util.List<String> aliUids;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeImagePermissionResponseBody extends TeaModel {
     /**
      * @return aliUids
      */
-    public java.util.List < String > getAliUids() {
+    public java.util.List<String> getAliUids() {
         return this.aliUids;
     }
 
@@ -46,13 +51,13 @@ public class DescribeImagePermissionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > aliUids; 
+        private java.util.List<String> aliUids; 
         private String requestId; 
 
         /**
          * <p>The IDs of the Alibaba Cloud accounts with which the image is shared.</p>
          */
-        public Builder aliUids(java.util.List < String > aliUids) {
+        public Builder aliUids(java.util.List<String> aliUids) {
             this.aliUids = aliUids;
             return this;
         }

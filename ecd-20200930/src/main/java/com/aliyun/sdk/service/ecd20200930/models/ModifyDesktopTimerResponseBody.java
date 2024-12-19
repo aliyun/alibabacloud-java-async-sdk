@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDesktopTimerResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DesktopIds")
-    private java.util.List < String > desktopIds;
+    private java.util.List<String> desktopIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ModifyDesktopTimerResponseBody extends TeaModel {
     /**
      * @return desktopIds
      */
-    public java.util.List < String > getDesktopIds() {
+    public java.util.List<String> getDesktopIds() {
         return this.desktopIds;
     }
 
@@ -46,13 +51,13 @@ public class ModifyDesktopTimerResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > desktopIds; 
+        private java.util.List<String> desktopIds; 
         private String requestId; 
 
         /**
          * <p>The IDs of the cloud computers for which you successfully configure the scheduled task.</p>
          */
-        public Builder desktopIds(java.util.List < String > desktopIds) {
+        public Builder desktopIds(java.util.List<String> desktopIds) {
             this.desktopIds = desktopIds;
             return this;
         }

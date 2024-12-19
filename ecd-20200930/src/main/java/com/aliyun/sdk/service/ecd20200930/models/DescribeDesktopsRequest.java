@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeDesktopsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
-    private java.util.List < String > desktopId;
+    private java.util.List<String> desktopId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopName")
@@ -34,7 +39,7 @@ public class DescribeDesktopsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopStatusList")
-    private java.util.List < String > desktopStatusList;
+    private java.util.List<String> desktopStatusList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopType")
@@ -46,11 +51,11 @@ public class DescribeDesktopsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserId")
-    private java.util.List < String > endUserId;
+    private java.util.List<String> endUserId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExcludedEndUserId")
-    private java.util.List < String > excludedEndUserId;
+    private java.util.List<String> excludedEndUserId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExpiredTime")
@@ -74,7 +79,7 @@ public class DescribeDesktopsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
-    private java.util.List < String > imageId;
+    private java.util.List<String> imageId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ManagementFlag")
@@ -103,7 +108,7 @@ public class DescribeDesktopsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OsTypes")
-    private java.util.List < String > osTypes;
+    private java.util.List<String> osTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -148,7 +153,7 @@ public class DescribeDesktopsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserName")
@@ -223,7 +228,7 @@ public class DescribeDesktopsRequest extends Request {
     /**
      * @return desktopId
      */
-    public java.util.List < String > getDesktopId() {
+    public java.util.List<String> getDesktopId() {
         return this.desktopId;
     }
 
@@ -244,7 +249,7 @@ public class DescribeDesktopsRequest extends Request {
     /**
      * @return desktopStatusList
      */
-    public java.util.List < String > getDesktopStatusList() {
+    public java.util.List<String> getDesktopStatusList() {
         return this.desktopStatusList;
     }
 
@@ -265,14 +270,14 @@ public class DescribeDesktopsRequest extends Request {
     /**
      * @return endUserId
      */
-    public java.util.List < String > getEndUserId() {
+    public java.util.List<String> getEndUserId() {
         return this.endUserId;
     }
 
     /**
      * @return excludedEndUserId
      */
-    public java.util.List < String > getExcludedEndUserId() {
+    public java.util.List<String> getExcludedEndUserId() {
         return this.excludedEndUserId;
     }
 
@@ -314,7 +319,7 @@ public class DescribeDesktopsRequest extends Request {
     /**
      * @return imageId
      */
-    public java.util.List < String > getImageId() {
+    public java.util.List<String> getImageId() {
         return this.imageId;
     }
 
@@ -363,7 +368,7 @@ public class DescribeDesktopsRequest extends Request {
     /**
      * @return osTypes
      */
-    public java.util.List < String > getOsTypes() {
+    public java.util.List<String> getOsTypes() {
         return this.osTypes;
     }
 
@@ -440,7 +445,7 @@ public class DescribeDesktopsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -454,27 +459,27 @@ public class DescribeDesktopsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDesktopsRequest, Builder> {
         private String chargeType; 
         private String desktopGroupId; 
-        private java.util.List < String > desktopId; 
+        private java.util.List<String> desktopId; 
         private String desktopName; 
         private String desktopStatus; 
-        private java.util.List < String > desktopStatusList; 
+        private java.util.List<String> desktopStatusList; 
         private String desktopType; 
         private String directoryId; 
-        private java.util.List < String > endUserId; 
-        private java.util.List < String > excludedEndUserId; 
+        private java.util.List<String> endUserId; 
+        private java.util.List<String> excludedEndUserId; 
         private String expiredTime; 
         private Boolean fillResourceGroup; 
         private Boolean filterDesktopGroup; 
         private String gpuInstanceGroupId; 
         private String groupId; 
-        private java.util.List < String > imageId; 
+        private java.util.List<String> imageId; 
         private String managementFlag; 
         private Integer maxResults; 
         private String nextToken; 
         private String officeSiteId; 
         private String officeSiteName; 
         private Boolean onlyDesktopGroup; 
-        private java.util.List < String > osTypes; 
+        private java.util.List<String> osTypes; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String policyGroupId; 
@@ -485,7 +490,7 @@ public class DescribeDesktopsRequest extends Request {
         private String resourceGroupId; 
         private String snapshotPolicyId; 
         private String subPayType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String userName; 
 
         private Builder() {
@@ -561,7 +566,7 @@ public class DescribeDesktopsRequest extends Request {
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
          */
-        public Builder desktopId(java.util.List < String > desktopId) {
+        public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
             return this;
@@ -594,7 +599,7 @@ public class DescribeDesktopsRequest extends Request {
         /**
          * <p>The list of desktop status.</p>
          */
-        public Builder desktopStatusList(java.util.List < String > desktopStatusList) {
+        public Builder desktopStatusList(java.util.List<String> desktopStatusList) {
             this.putQueryParameter("DesktopStatusList", desktopStatusList);
             this.desktopStatusList = desktopStatusList;
             return this;
@@ -633,7 +638,7 @@ public class DescribeDesktopsRequest extends Request {
          * <strong>example:</strong>
          * <p>alice</p>
          */
-        public Builder endUserId(java.util.List < String > endUserId) {
+        public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
             return this;
@@ -645,7 +650,7 @@ public class DescribeDesktopsRequest extends Request {
          * <strong>example:</strong>
          * <p>andy</p>
          */
-        public Builder excludedEndUserId(java.util.List < String > excludedEndUserId) {
+        public Builder excludedEndUserId(java.util.List<String> excludedEndUserId) {
             this.putQueryParameter("ExcludedEndUserId", excludedEndUserId);
             this.excludedEndUserId = excludedEndUserId;
             return this;
@@ -711,7 +716,7 @@ public class DescribeDesktopsRequest extends Request {
         /**
          * <p>The IDs of the images.</p>
          */
-        public Builder imageId(java.util.List < String > imageId) {
+        public Builder imageId(java.util.List<String> imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
             return this;
@@ -796,7 +801,7 @@ public class DescribeDesktopsRequest extends Request {
         /**
          * <p>The types of the OSs.</p>
          */
-        public Builder osTypes(java.util.List < String > osTypes) {
+        public Builder osTypes(java.util.List<String> osTypes) {
             this.putQueryParameter("OsTypes", osTypes);
             this.osTypes = osTypes;
             return this;
@@ -911,7 +916,7 @@ public class DescribeDesktopsRequest extends Request {
         /**
          * <p>The tags. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud desktops by group for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud desktops</a>.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

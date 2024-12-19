@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyImagePermissionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddAccount")
-    private java.util.List < Long > addAccount;
+    private java.util.List<Long> addAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
@@ -28,7 +33,7 @@ public class ModifyImagePermissionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemoveAccount")
-    private java.util.List < Long > removeAccount;
+    private java.util.List<Long> removeAccount;
 
     private ModifyImagePermissionRequest(Builder builder) {
         super(builder);
@@ -54,7 +59,7 @@ public class ModifyImagePermissionRequest extends Request {
     /**
      * @return addAccount
      */
-    public java.util.List < Long > getAddAccount() {
+    public java.util.List<Long> getAddAccount() {
         return this.addAccount;
     }
 
@@ -75,15 +80,15 @@ public class ModifyImagePermissionRequest extends Request {
     /**
      * @return removeAccount
      */
-    public java.util.List < Long > getRemoveAccount() {
+    public java.util.List<Long> getRemoveAccount() {
         return this.removeAccount;
     }
 
     public static final class Builder extends Request.Builder<ModifyImagePermissionRequest, Builder> {
-        private java.util.List < Long > addAccount; 
+        private java.util.List<Long> addAccount; 
         private String imageId; 
         private String regionId; 
-        private java.util.List < Long > removeAccount; 
+        private java.util.List<Long> removeAccount; 
 
         private Builder() {
             super();
@@ -100,7 +105,7 @@ public class ModifyImagePermissionRequest extends Request {
         /**
          * <p>The IDs of Alibaba Cloud accounts to which to share the image that will be created based on the image template. You can specify up to 20 account IDs.</p>
          */
-        public Builder addAccount(java.util.List < Long > addAccount) {
+        public Builder addAccount(java.util.List<Long> addAccount) {
             this.putQueryParameter("AddAccount", addAccount);
             this.addAccount = addAccount;
             return this;
@@ -135,7 +140,7 @@ public class ModifyImagePermissionRequest extends Request {
         /**
          * <p>The ID of Alibaba Cloud account N from which you want to unshare the custom image. Valid values of N: 1 to 10. If the value of N is greater than 10, this parameter is ignored.</p>
          */
-        public Builder removeAccount(java.util.List < Long > removeAccount) {
+        public Builder removeAccount(java.util.List<Long> removeAccount) {
             this.putQueryParameter("RemoveAccount", removeAccount);
             this.removeAccount = removeAccount;
             return this;

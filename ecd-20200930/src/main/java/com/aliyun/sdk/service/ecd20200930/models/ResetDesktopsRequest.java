@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,11 @@ public class ResetDesktopsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopGroupIds")
-    private java.util.List < String > desktopGroupIds;
+    private java.util.List<String> desktopGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
-    private java.util.List < String > desktopId;
+    private java.util.List<String> desktopId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
@@ -81,14 +86,14 @@ public class ResetDesktopsRequest extends Request {
     /**
      * @return desktopGroupIds
      */
-    public java.util.List < String > getDesktopGroupIds() {
+    public java.util.List<String> getDesktopGroupIds() {
         return this.desktopGroupIds;
     }
 
     /**
      * @return desktopId
      */
-    public java.util.List < String > getDesktopId() {
+    public java.util.List<String> getDesktopId() {
         return this.desktopId;
     }
 
@@ -129,8 +134,8 @@ public class ResetDesktopsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ResetDesktopsRequest, Builder> {
         private String desktopGroupId; 
-        private java.util.List < String > desktopGroupIds; 
-        private java.util.List < String > desktopId; 
+        private java.util.List<String> desktopGroupIds; 
+        private java.util.List<String> desktopId; 
         private String imageId; 
         private String payType; 
         private String regionId; 
@@ -168,7 +173,7 @@ public class ResetDesktopsRequest extends Request {
         /**
          * <p>The IDs of the cloud computer pools.</p>
          */
-        public Builder desktopGroupIds(java.util.List < String > desktopGroupIds) {
+        public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
             this.desktopGroupIds = desktopGroupIds;
             return this;
@@ -177,7 +182,7 @@ public class ResetDesktopsRequest extends Request {
         /**
          * <p>The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.</p>
          */
-        public Builder desktopId(java.util.List < String > desktopId) {
+        public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
             return this;

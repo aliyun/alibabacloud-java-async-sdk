@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class RenewNetworkPackagesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkPackageId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > networkPackageId;
+    private java.util.List<String> networkPackageId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
@@ -71,7 +76,7 @@ public class RenewNetworkPackagesRequest extends Request {
     /**
      * @return networkPackageId
      */
-    public java.util.List < String > getNetworkPackageId() {
+    public java.util.List<String> getNetworkPackageId() {
         return this.networkPackageId;
     }
 
@@ -105,7 +110,7 @@ public class RenewNetworkPackagesRequest extends Request {
 
     public static final class Builder extends Request.Builder<RenewNetworkPackagesRequest, Builder> {
         private Boolean autoPay; 
-        private java.util.List < String > networkPackageId; 
+        private java.util.List<String> networkPackageId; 
         private Integer period; 
         private String periodUnit; 
         private String promotionId; 
@@ -159,7 +164,7 @@ public class RenewNetworkPackagesRequest extends Request {
          * <p>The IDs of premium bandwidth plans. You can specify up to 100 IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder networkPackageId(java.util.List < String > networkPackageId) {
+        public Builder networkPackageId(java.util.List<String> networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
             this.networkPackageId = networkPackageId;
             return this;

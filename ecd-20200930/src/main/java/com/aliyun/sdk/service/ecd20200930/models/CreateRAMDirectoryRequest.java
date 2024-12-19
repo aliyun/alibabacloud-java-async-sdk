@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class CreateRAMDirectoryRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > vSwitchId;
+    private java.util.List<String> vSwitchId;
 
     private CreateRAMDirectoryRequest(Builder builder) {
         super(builder);
@@ -100,7 +105,7 @@ public class CreateRAMDirectoryRequest extends Request {
     /**
      * @return vSwitchId
      */
-    public java.util.List < String > getVSwitchId() {
+    public java.util.List<String> getVSwitchId() {
         return this.vSwitchId;
     }
 
@@ -110,7 +115,7 @@ public class CreateRAMDirectoryRequest extends Request {
         private Boolean enableAdminAccess; 
         private Boolean enableInternetAccess; 
         private String regionId; 
-        private java.util.List < String > vSwitchId; 
+        private java.util.List<String> vSwitchId; 
 
         private Builder() {
             super();
@@ -248,7 +253,7 @@ public class CreateRAMDirectoryRequest extends Request {
          * <p>The vSwitch IDs. You can configure only one vSwitch.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder vSwitchId(java.util.List < String > vSwitchId) {
+        public Builder vSwitchId(java.util.List<String> vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
             return this;

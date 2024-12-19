@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class DisconnectDesktopSessionsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Sessions")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Sessions> sessions;
+    private java.util.List<Sessions> sessions;
 
     private DisconnectDesktopSessionsRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class DisconnectDesktopSessionsRequest extends Request {
     /**
      * @return sessions
      */
-    public java.util.List < Sessions> getSessions() {
+    public java.util.List<Sessions> getSessions() {
         return this.sessions;
     }
 
     public static final class Builder extends Request.Builder<DisconnectDesktopSessionsRequest, Builder> {
         private Boolean preCheck; 
         private String regionId; 
-        private java.util.List < Sessions> sessions; 
+        private java.util.List<Sessions> sessions; 
 
         private Builder() {
             super();
@@ -112,7 +117,7 @@ public class DisconnectDesktopSessionsRequest extends Request {
          * <p>The session details.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder sessions(java.util.List < Sessions> sessions) {
+        public Builder sessions(java.util.List<Sessions> sessions) {
             this.putQueryParameter("Sessions", sessions);
             this.sessions = sessions;
             return this;

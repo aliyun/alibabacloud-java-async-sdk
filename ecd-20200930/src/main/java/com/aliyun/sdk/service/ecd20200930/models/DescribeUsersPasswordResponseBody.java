@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeUsersPasswordResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DesktopUsers")
-    private java.util.List < DesktopUsers> desktopUsers;
+    private java.util.List<DesktopUsers> desktopUsers;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
     /**
      * @return desktopUsers
      */
-    public java.util.List < DesktopUsers> getDesktopUsers() {
+    public java.util.List<DesktopUsers> getDesktopUsers() {
         return this.desktopUsers;
     }
 
@@ -46,13 +51,13 @@ public class DescribeUsersPasswordResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DesktopUsers> desktopUsers; 
+        private java.util.List<DesktopUsers> desktopUsers; 
         private String requestId; 
 
         /**
          * <p>The authorized users of the cloud computer.</p>
          */
-        public Builder desktopUsers(java.util.List < DesktopUsers> desktopUsers) {
+        public Builder desktopUsers(java.util.List<DesktopUsers> desktopUsers) {
             this.desktopUsers = desktopUsers;
             return this;
         }

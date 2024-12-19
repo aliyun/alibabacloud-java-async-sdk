@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class DescribeDesktopOversoldUserRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserDesktopIds")
-    private java.util.List < String > userDesktopIds;
+    private java.util.List<String> userDesktopIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserGroupId")
@@ -102,7 +107,7 @@ public class DescribeDesktopOversoldUserRequest extends Request {
     /**
      * @return userDesktopIds
      */
-    public java.util.List < String > getUserDesktopIds() {
+    public java.util.List<String> getUserDesktopIds() {
         return this.userDesktopIds;
     }
 
@@ -119,7 +124,7 @@ public class DescribeDesktopOversoldUserRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String oversoldGroupId; 
-        private java.util.List < String > userDesktopIds; 
+        private java.util.List<String> userDesktopIds; 
         private String userGroupId; 
 
         private Builder() {
@@ -185,7 +190,7 @@ public class DescribeDesktopOversoldUserRequest extends Request {
         /**
          * UserDesktopIds.
          */
-        public Builder userDesktopIds(java.util.List < String > userDesktopIds) {
+        public Builder userDesktopIds(java.util.List<String> userDesktopIds) {
             this.putQueryParameter("UserDesktopIds", userDesktopIds);
             this.userDesktopIds = userDesktopIds;
             return this;

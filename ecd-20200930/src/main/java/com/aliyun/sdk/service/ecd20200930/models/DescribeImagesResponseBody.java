@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeImagesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Images")
-    private java.util.List < Images> images;
+    private java.util.List<Images> images;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class DescribeImagesResponseBody extends TeaModel {
     /**
      * @return images
      */
-    public java.util.List < Images> getImages() {
+    public java.util.List<Images> getImages() {
         return this.images;
     }
 
@@ -57,14 +62,14 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Images> images; 
+        private java.util.List<Images> images; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>The details of the images.</p>
          */
-        public Builder images(java.util.List < Images> images) {
+        public Builder images(java.util.List<Images> images) {
             this.images = images;
             return this;
         }
@@ -156,7 +161,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("SupportedLanguages")
-        private java.util.List < String > supportedLanguages;
+        private java.util.List<String> supportedLanguages;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
@@ -321,7 +326,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         /**
          * @return supportedLanguages
          */
-        public java.util.List < String > getSupportedLanguages() {
+        public java.util.List<String> getSupportedLanguages() {
             return this.supportedLanguages;
         }
 
@@ -364,7 +369,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             private Integer sharedCount; 
             private Integer size; 
             private String status; 
-            private java.util.List < String > supportedLanguages; 
+            private java.util.List<String> supportedLanguages; 
             private String updateTime; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
@@ -661,7 +666,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             /**
              * <p>The languages of the operating system.</p>
              */
-            public Builder supportedLanguages(java.util.List < String > supportedLanguages) {
+            public Builder supportedLanguages(java.util.List<String> supportedLanguages) {
                 this.supportedLanguages = supportedLanguages;
                 return this;
             }

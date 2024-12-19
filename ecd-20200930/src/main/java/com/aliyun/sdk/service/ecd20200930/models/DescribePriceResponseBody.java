@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -230,13 +235,13 @@ public class DescribePriceResponseBody extends TeaModel {
         private Float discountPrice;
 
         @com.aliyun.core.annotation.NameInMap("OrderLines")
-        private java.util.Map < String, String > orderLines;
+        private java.util.Map<String, String> orderLines;
 
         @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Float originalPrice;
 
         @com.aliyun.core.annotation.NameInMap("Promotions")
-        private java.util.List < Promotions> promotions;
+        private java.util.List<Promotions> promotions;
 
         @com.aliyun.core.annotation.NameInMap("SpPrice")
         private Long spPrice;
@@ -279,7 +284,7 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return orderLines
          */
-        public java.util.Map < String, String > getOrderLines() {
+        public java.util.Map<String, String> getOrderLines() {
             return this.orderLines;
         }
 
@@ -293,7 +298,7 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return promotions
          */
-        public java.util.List < Promotions> getPromotions() {
+        public java.util.List<Promotions> getPromotions() {
             return this.promotions;
         }
 
@@ -314,9 +319,9 @@ public class DescribePriceResponseBody extends TeaModel {
         public static final class Builder {
             private String currency; 
             private Float discountPrice; 
-            private java.util.Map < String, String > orderLines; 
+            private java.util.Map<String, String> orderLines; 
             private Float originalPrice; 
-            private java.util.List < Promotions> promotions; 
+            private java.util.List<Promotions> promotions; 
             private Long spPrice; 
             private Float tradePrice; 
 
@@ -345,7 +350,7 @@ public class DescribePriceResponseBody extends TeaModel {
             /**
              * OrderLines.
              */
-            public Builder orderLines(java.util.Map < String, String > orderLines) {
+            public Builder orderLines(java.util.Map<String, String> orderLines) {
                 this.orderLines = orderLines;
                 return this;
             }
@@ -364,7 +369,7 @@ public class DescribePriceResponseBody extends TeaModel {
             /**
              * <p>The details of the promotion.</p>
              */
-            public Builder promotions(java.util.List < Promotions> promotions) {
+            public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
                 return this;
             }
@@ -485,7 +490,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private Price price;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private PriceInfo(Builder builder) {
             this.freeCdsQuota = builder.freeCdsQuota;
@@ -526,7 +531,7 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -534,7 +539,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private Boolean freeCdsQuota; 
             private Long freeCdsSize; 
             private Price price; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * FreeCdsQuota.
@@ -563,7 +568,7 @@ public class DescribePriceResponseBody extends TeaModel {
             /**
              * <p>The details of the promotion rules.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

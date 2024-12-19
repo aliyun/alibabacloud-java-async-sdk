@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DisconnectDesktopSessionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InvalidSessions")
-    private java.util.List < InvalidSessions> invalidSessions;
+    private java.util.List<InvalidSessions> invalidSessions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
     /**
      * @return invalidSessions
      */
-    public java.util.List < InvalidSessions> getInvalidSessions() {
+    public java.util.List<InvalidSessions> getInvalidSessions() {
         return this.invalidSessions;
     }
 
@@ -46,13 +51,13 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InvalidSessions> invalidSessions; 
+        private java.util.List<InvalidSessions> invalidSessions; 
         private String requestId; 
 
         /**
          * <p>The list of invalid sessions.</p>
          */
-        public Builder invalidSessions(java.util.List < InvalidSessions> invalidSessions) {
+        public Builder invalidSessions(java.util.List<InvalidSessions> invalidSessions) {
             this.invalidSessions = invalidSessions;
             return this;
         }

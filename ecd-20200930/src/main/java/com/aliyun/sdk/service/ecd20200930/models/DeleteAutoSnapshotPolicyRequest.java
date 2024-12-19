@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > policyId;
+    private java.util.List<String> policyId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -44,7 +49,7 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
     /**
      * @return policyId
      */
-    public java.util.List < String > getPolicyId() {
+    public java.util.List<String> getPolicyId() {
         return this.policyId;
     }
 
@@ -56,7 +61,7 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteAutoSnapshotPolicyRequest, Builder> {
-        private java.util.List < String > policyId; 
+        private java.util.List<String> policyId; 
         private String regionId; 
 
         private Builder() {
@@ -73,7 +78,7 @@ public class DeleteAutoSnapshotPolicyRequest extends Request {
          * <p>The IDs of the automatic snapshot policies that you want to delete.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder policyId(java.util.List < String > policyId) {
+        public Builder policyId(java.util.List<String> policyId) {
             this.putQueryParameter("PolicyId", policyId);
             this.policyId = policyId;
             return this;

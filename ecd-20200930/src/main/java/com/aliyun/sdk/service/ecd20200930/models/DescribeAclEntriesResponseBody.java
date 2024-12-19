@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAclEntriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AclEntries")
-    private java.util.List < AclEntries> aclEntries;
+    private java.util.List<AclEntries> aclEntries;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
     /**
      * @return aclEntries
      */
-    public java.util.List < AclEntries> getAclEntries() {
+    public java.util.List<AclEntries> getAclEntries() {
         return this.aclEntries;
     }
 
@@ -57,14 +62,14 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AclEntries> aclEntries; 
+        private java.util.List<AclEntries> aclEntries; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>The ACL entries.</p>
          */
-        public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
+        public Builder aclEntries(java.util.List<AclEntries> aclEntries) {
             this.aclEntries = aclEntries;
             return this;
         }

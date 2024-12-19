@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDesktopTypesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DesktopTypes")
-    private java.util.List < DesktopTypes> desktopTypes;
+    private java.util.List<DesktopTypes> desktopTypes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
     /**
      * @return desktopTypes
      */
-    public java.util.List < DesktopTypes> getDesktopTypes() {
+    public java.util.List<DesktopTypes> getDesktopTypes() {
         return this.desktopTypes;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DesktopTypes> desktopTypes; 
+        private java.util.List<DesktopTypes> desktopTypes; 
         private String requestId; 
 
         /**
          * <p>Details of cloud desktop types.</p>
          */
-        public Builder desktopTypes(java.util.List < DesktopTypes> desktopTypes) {
+        public Builder desktopTypes(java.util.List<DesktopTypes> desktopTypes) {
             this.desktopTypes = desktopTypes;
             return this;
         }
@@ -109,7 +114,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         private String memorySize;
 
         @com.aliyun.core.annotation.NameInMap("Scopes")
-        private java.util.List < String > scopes;
+        private java.util.List<String> scopes;
 
         @com.aliyun.core.annotation.NameInMap("StockState")
         private String stockState;
@@ -206,7 +211,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         /**
          * @return scopes
          */
-        public java.util.List < String > getScopes() {
+        public java.util.List<String> getScopes() {
             return this.scopes;
         }
 
@@ -234,7 +239,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             private String gpuSpec; 
             private String instanceTypeFamily; 
             private String memorySize; 
-            private java.util.List < String > scopes; 
+            private java.util.List<String> scopes; 
             private String stockState; 
             private String systemDiskSize; 
 
@@ -337,7 +342,7 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
             /**
              * Scopes.
              */
-            public Builder scopes(java.util.List < String > scopes) {
+            public Builder scopes(java.util.List<String> scopes) {
                 this.scopes = scopes;
                 return this;
             }

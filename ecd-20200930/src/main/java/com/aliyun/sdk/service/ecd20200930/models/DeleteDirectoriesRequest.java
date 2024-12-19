@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteDirectoriesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DirectoryId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > directoryId;
+    private java.util.List<String> directoryId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -44,7 +49,7 @@ public class DeleteDirectoriesRequest extends Request {
     /**
      * @return directoryId
      */
-    public java.util.List < String > getDirectoryId() {
+    public java.util.List<String> getDirectoryId() {
         return this.directoryId;
     }
 
@@ -56,7 +61,7 @@ public class DeleteDirectoriesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteDirectoriesRequest, Builder> {
-        private java.util.List < String > directoryId; 
+        private java.util.List<String> directoryId; 
         private String regionId; 
 
         private Builder() {
@@ -76,7 +81,7 @@ public class DeleteDirectoriesRequest extends Request {
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-gx2x1dhsmu52rd****</p>
          */
-        public Builder directoryId(java.util.List < String > directoryId) {
+        public Builder directoryId(java.util.List<String> directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
             this.directoryId = directoryId;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class DescribeClientEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventTypes")
-    private java.util.List < String > eventTypes;
+    private java.util.List<String> eventTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -152,7 +157,7 @@ public class DescribeClientEventsRequest extends Request {
     /**
      * @return eventTypes
      */
-    public java.util.List < String > getEventTypes() {
+    public java.util.List<String> getEventTypes() {
         return this.eventTypes;
     }
 
@@ -206,7 +211,7 @@ public class DescribeClientEventsRequest extends Request {
         private String endTime; 
         private String endUserId; 
         private String eventType; 
-        private java.util.List < String > eventTypes; 
+        private java.util.List<String> eventTypes; 
         private Integer maxResults; 
         private String nextToken; 
         private String officeSiteId; 
@@ -381,7 +386,7 @@ public class DescribeClientEventsRequest extends Request {
         /**
          * <p>The array of event types that you want to query. You can specify multiple event types. The response contains all or specified types of events.</p>
          */
-        public Builder eventTypes(java.util.List < String > eventTypes) {
+        public Builder eventTypes(java.util.List<String> eventTypes) {
             this.putQueryParameter("EventTypes", eventTypes);
             this.eventTypes = eventTypes;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ExportDesktopListInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
-    private java.util.List < String > desktopId;
+    private java.util.List<String> desktopId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopName")
@@ -30,7 +35,7 @@ public class ExportDesktopListInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserId")
-    private java.util.List < String > endUserId;
+    private java.util.List<String> endUserId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExpiredTime")
@@ -68,7 +73,7 @@ public class ExportDesktopListInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserName")
@@ -116,7 +121,7 @@ public class ExportDesktopListInfoRequest extends Request {
     /**
      * @return desktopId
      */
-    public java.util.List < String > getDesktopId() {
+    public java.util.List<String> getDesktopId() {
         return this.desktopId;
     }
 
@@ -137,7 +142,7 @@ public class ExportDesktopListInfoRequest extends Request {
     /**
      * @return endUserId
      */
-    public java.util.List < String > getEndUserId() {
+    public java.util.List<String> getEndUserId() {
         return this.endUserId;
     }
 
@@ -200,7 +205,7 @@ public class ExportDesktopListInfoRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -213,10 +218,10 @@ public class ExportDesktopListInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<ExportDesktopListInfoRequest, Builder> {
         private String chargeType; 
-        private java.util.List < String > desktopId; 
+        private java.util.List<String> desktopId; 
         private String desktopName; 
         private String desktopStatus; 
-        private java.util.List < String > endUserId; 
+        private java.util.List<String> endUserId; 
         private String expiredTime; 
         private String groupId; 
         private String langType; 
@@ -225,7 +230,7 @@ public class ExportDesktopListInfoRequest extends Request {
         private String officeSiteId; 
         private String policyGroupId; 
         private String regionId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String userName; 
 
         private Builder() {
@@ -282,7 +287,7 @@ public class ExportDesktopListInfoRequest extends Request {
         /**
          * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
          */
-        public Builder desktopId(java.util.List < String > desktopId) {
+        public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
             return this;
@@ -376,7 +381,7 @@ public class ExportDesktopListInfoRequest extends Request {
          * <p> During a specific period of time, only one user can connect to and use the cloud computer.</p>
          * </blockquote>
          */
-        public Builder endUserId(java.util.List < String > endUserId) {
+        public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
             return this;
@@ -500,7 +505,7 @@ public class ExportDesktopListInfoRequest extends Request {
         /**
          * <p>The tags that are added to the cloud computer. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud computers by group. This facilitates search and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

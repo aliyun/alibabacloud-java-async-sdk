@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ListCdsFilesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileIds")
-    private java.util.List < String > fileIds;
+    private java.util.List<String> fileIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
@@ -97,7 +102,7 @@ public class ListCdsFilesRequest extends Request {
     /**
      * @return fileIds
      */
-    public java.util.List < String > getFileIds() {
+    public java.util.List<String> getFileIds() {
         return this.fileIds;
     }
 
@@ -153,7 +158,7 @@ public class ListCdsFilesRequest extends Request {
     public static final class Builder extends Request.Builder<ListCdsFilesRequest, Builder> {
         private String cdsId; 
         private String endUserId; 
-        private java.util.List < String > fileIds; 
+        private java.util.List<String> fileIds; 
         private String groupId; 
         private Integer maxResults; 
         private String nextToken; 
@@ -208,7 +213,7 @@ public class ListCdsFilesRequest extends Request {
         /**
          * <p>The IDs of the files to be queried.</p>
          */
-        public Builder fileIds(java.util.List < String > fileIds) {
+        public Builder fileIds(java.util.List<String> fileIds) {
             String fileIdsShrink = shrink(fileIds, "FileIds", "json");
             this.putQueryParameter("FileIds", fileIdsShrink);
             this.fileIds = fileIds;

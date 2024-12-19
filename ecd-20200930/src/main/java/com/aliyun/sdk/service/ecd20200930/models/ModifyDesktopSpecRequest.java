@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,7 +41,7 @@ public class ModifyDesktopSpecRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceSpecs")
-    private java.util.List < ResourceSpecs> resourceSpecs;
+    private java.util.List<ResourceSpecs> resourceSpecs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -121,7 +126,7 @@ public class ModifyDesktopSpecRequest extends Request {
     /**
      * @return resourceSpecs
      */
-    public java.util.List < ResourceSpecs> getResourceSpecs() {
+    public java.util.List<ResourceSpecs> getResourceSpecs() {
         return this.resourceSpecs;
     }
 
@@ -159,7 +164,7 @@ public class ModifyDesktopSpecRequest extends Request {
         private String desktopType; 
         private String promotionId; 
         private String regionId; 
-        private java.util.List < ResourceSpecs> resourceSpecs; 
+        private java.util.List<ResourceSpecs> resourceSpecs; 
         private String resourceType; 
         private Integer rootDiskSizeGib; 
         private String userDiskPerformanceLevel; 
@@ -266,7 +271,7 @@ public class ModifyDesktopSpecRequest extends Request {
         /**
          * ResourceSpecs.
          */
-        public Builder resourceSpecs(java.util.List < ResourceSpecs> resourceSpecs) {
+        public Builder resourceSpecs(java.util.List<ResourceSpecs> resourceSpecs) {
             this.putQueryParameter("ResourceSpecs", resourceSpecs);
             this.resourceSpecs = resourceSpecs;
             return this;

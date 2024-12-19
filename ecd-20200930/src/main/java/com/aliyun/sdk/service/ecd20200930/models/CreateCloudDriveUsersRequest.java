@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class CreateCloudDriveUsersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > endUserId;
+    private java.util.List<String> endUserId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -63,7 +68,7 @@ public class CreateCloudDriveUsersRequest extends Request {
     /**
      * @return endUserId
      */
-    public java.util.List < String > getEndUserId() {
+    public java.util.List<String> getEndUserId() {
         return this.endUserId;
     }
 
@@ -83,7 +88,7 @@ public class CreateCloudDriveUsersRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCloudDriveUsersRequest, Builder> {
         private String cdsId; 
-        private java.util.List < String > endUserId; 
+        private java.util.List<String> endUserId; 
         private String regionId; 
         private Long userMaxSize; 
 
@@ -116,7 +121,7 @@ public class CreateCloudDriveUsersRequest extends Request {
          * <p>The IDs of the end users.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder endUserId(java.util.List < String > endUserId) {
+        public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
             return this;

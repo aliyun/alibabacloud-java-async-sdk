@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNASFileSystemsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FileSystems")
-    private java.util.List < FileSystems> fileSystems;
+    private java.util.List<FileSystems> fileSystems;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
     /**
      * @return fileSystems
      */
-    public java.util.List < FileSystems> getFileSystems() {
+    public java.util.List<FileSystems> getFileSystems() {
         return this.fileSystems;
     }
 
@@ -57,14 +62,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FileSystems> fileSystems; 
+        private java.util.List<FileSystems> fileSystems; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>Details about the NAS file systems.</p>
          */
-        public Builder fileSystems(java.util.List < FileSystems> fileSystems) {
+        public Builder fileSystems(java.util.List<FileSystems> fileSystems) {
             this.fileSystems = fileSystems;
             return this;
         }
@@ -97,6 +102,73 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNASFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNASFileSystemsResponseBody</p>
+     */
+    public static class AppInstanceGroups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
+        private String appInstanceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("AppInstanceGroupName")
+        private String appInstanceGroupName;
+
+        private AppInstanceGroups(Builder builder) {
+            this.appInstanceGroupId = builder.appInstanceGroupId;
+            this.appInstanceGroupName = builder.appInstanceGroupName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AppInstanceGroups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return appInstanceGroupId
+         */
+        public String getAppInstanceGroupId() {
+            return this.appInstanceGroupId;
+        }
+
+        /**
+         * @return appInstanceGroupName
+         */
+        public String getAppInstanceGroupName() {
+            return this.appInstanceGroupName;
+        }
+
+        public static final class Builder {
+            private String appInstanceGroupId; 
+            private String appInstanceGroupName; 
+
+            /**
+             * AppInstanceGroupId.
+             */
+            public Builder appInstanceGroupId(String appInstanceGroupId) {
+                this.appInstanceGroupId = appInstanceGroupId;
+                return this;
+            }
+
+            /**
+             * AppInstanceGroupName.
+             */
+            public Builder appInstanceGroupName(String appInstanceGroupName) {
+                this.appInstanceGroupName = appInstanceGroupName;
+                return this;
+            }
+
+            public AppInstanceGroups build() {
+                return new AppInstanceGroups(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeNASFileSystemsResponseBody} extends {@link TeaModel}
@@ -176,7 +248,80 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
      *
      * <p>DescribeNASFileSystemsResponseBody</p>
      */
+    public static class OfficeSites extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+        private String officeSiteId;
+
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
+        private String officeSiteName;
+
+        private OfficeSites(Builder builder) {
+            this.officeSiteId = builder.officeSiteId;
+            this.officeSiteName = builder.officeSiteName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OfficeSites create() {
+            return builder().build();
+        }
+
+        /**
+         * @return officeSiteId
+         */
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
+        }
+
+        /**
+         * @return officeSiteName
+         */
+        public String getOfficeSiteName() {
+            return this.officeSiteName;
+        }
+
+        public static final class Builder {
+            private String officeSiteId; 
+            private String officeSiteName; 
+
+            /**
+             * OfficeSiteId.
+             */
+            public Builder officeSiteId(String officeSiteId) {
+                this.officeSiteId = officeSiteId;
+                return this;
+            }
+
+            /**
+             * OfficeSiteName.
+             */
+            public Builder officeSiteName(String officeSiteName) {
+                this.officeSiteName = officeSiteName;
+                return this;
+            }
+
+            public OfficeSites build() {
+                return new OfficeSites(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeNASFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNASFileSystemsResponseBody</p>
+     */
     public static class FileSystems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowOperateUserDrive")
+        private Boolean allowOperateUserDrive;
+
+        @com.aliyun.core.annotation.NameInMap("AppInstanceGroups")
+        private java.util.List<AppInstanceGroups> appInstanceGroups;
+
         @com.aliyun.core.annotation.NameInMap("Capacity")
         private Long capacity;
 
@@ -187,7 +332,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("DesktopGroups")
-        private java.util.List < DesktopGroups> desktopGroups;
+        private java.util.List<DesktopGroups> desktopGroups;
 
         @com.aliyun.core.annotation.NameInMap("EncryptionEnabled")
         private Boolean encryptionEnabled;
@@ -219,11 +364,17 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
         private String officeSiteName;
 
+        @com.aliyun.core.annotation.NameInMap("OfficeSites")
+        private java.util.List<OfficeSites> officeSites;
+
         @com.aliyun.core.annotation.NameInMap("ProfileCompatible")
         private Boolean profileCompatible;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("Scene")
+        private String scene;
 
         @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
@@ -235,6 +386,8 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         private String zoneId;
 
         private FileSystems(Builder builder) {
+            this.allowOperateUserDrive = builder.allowOperateUserDrive;
+            this.appInstanceGroups = builder.appInstanceGroups;
             this.capacity = builder.capacity;
             this.createTime = builder.createTime;
             this.description = builder.description;
@@ -249,8 +402,10 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             this.mountTargetStatus = builder.mountTargetStatus;
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteName = builder.officeSiteName;
+            this.officeSites = builder.officeSites;
             this.profileCompatible = builder.profileCompatible;
             this.regionId = builder.regionId;
+            this.scene = builder.scene;
             this.storageType = builder.storageType;
             this.supportAcl = builder.supportAcl;
             this.zoneId = builder.zoneId;
@@ -262,6 +417,20 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
         public static FileSystems create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowOperateUserDrive
+         */
+        public Boolean getAllowOperateUserDrive() {
+            return this.allowOperateUserDrive;
+        }
+
+        /**
+         * @return appInstanceGroups
+         */
+        public java.util.List<AppInstanceGroups> getAppInstanceGroups() {
+            return this.appInstanceGroups;
         }
 
         /**
@@ -288,7 +457,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         /**
          * @return desktopGroups
          */
-        public java.util.List < DesktopGroups> getDesktopGroups() {
+        public java.util.List<DesktopGroups> getDesktopGroups() {
             return this.desktopGroups;
         }
 
@@ -363,6 +532,13 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return officeSites
+         */
+        public java.util.List<OfficeSites> getOfficeSites() {
+            return this.officeSites;
+        }
+
+        /**
          * @return profileCompatible
          */
         public Boolean getProfileCompatible() {
@@ -374,6 +550,13 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return scene
+         */
+        public String getScene() {
+            return this.scene;
         }
 
         /**
@@ -398,10 +581,12 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean allowOperateUserDrive; 
+            private java.util.List<AppInstanceGroups> appInstanceGroups; 
             private Long capacity; 
             private String createTime; 
             private String description; 
-            private java.util.List < DesktopGroups> desktopGroups; 
+            private java.util.List<DesktopGroups> desktopGroups; 
             private Boolean encryptionEnabled; 
             private String fileSystemId; 
             private String fileSystemName; 
@@ -412,11 +597,29 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             private String mountTargetStatus; 
             private String officeSiteId; 
             private String officeSiteName; 
+            private java.util.List<OfficeSites> officeSites; 
             private Boolean profileCompatible; 
             private String regionId; 
+            private String scene; 
             private String storageType; 
             private Boolean supportAcl; 
             private String zoneId; 
+
+            /**
+             * AllowOperateUserDrive.
+             */
+            public Builder allowOperateUserDrive(Boolean allowOperateUserDrive) {
+                this.allowOperateUserDrive = allowOperateUserDrive;
+                return this;
+            }
+
+            /**
+             * AppInstanceGroups.
+             */
+            public Builder appInstanceGroups(java.util.List<AppInstanceGroups> appInstanceGroups) {
+                this.appInstanceGroups = appInstanceGroups;
+                return this;
+            }
 
             /**
              * <p>The total capacity of the NAS file system. Unit: GiB.</p>
@@ -458,7 +661,7 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             /**
              * <p>The desktop groups that are associated with the NAS file systems that support the UPM feature.</p>
              */
-            public Builder desktopGroups(java.util.List < DesktopGroups> desktopGroups) {
+            public Builder desktopGroups(java.util.List<DesktopGroups> desktopGroups) {
                 this.desktopGroups = desktopGroups;
                 return this;
             }
@@ -589,6 +792,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
             }
 
             /**
+             * OfficeSites.
+             */
+            public Builder officeSites(java.util.List<OfficeSites> officeSites) {
+                this.officeSites = officeSites;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether the User Profile Management (UPM) feature is supported.</p>
              * 
              * <strong>example:</strong>
@@ -607,6 +818,14 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * Scene.
+             */
+            public Builder scene(String scene) {
+                this.scene = scene;
                 return this;
             }
 

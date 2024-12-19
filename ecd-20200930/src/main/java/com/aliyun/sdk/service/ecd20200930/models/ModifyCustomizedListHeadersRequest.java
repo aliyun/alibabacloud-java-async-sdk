@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyCustomizedListHeadersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Headers")
-    private java.util.List < Headers> headers;
+    private java.util.List<Headers> headers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ListType")
@@ -48,7 +53,7 @@ public class ModifyCustomizedListHeadersRequest extends Request {
     /**
      * @return headers
      */
-    public java.util.List < Headers> getHeaders() {
+    public java.util.List<Headers> getHeaders() {
         return this.headers;
     }
 
@@ -67,7 +72,7 @@ public class ModifyCustomizedListHeadersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyCustomizedListHeadersRequest, Builder> {
-        private java.util.List < Headers> headers; 
+        private java.util.List<Headers> headers; 
         private String listType; 
         private String regionId; 
 
@@ -85,7 +90,7 @@ public class ModifyCustomizedListHeadersRequest extends Request {
         /**
          * <p>The headers.</p>
          */
-        public Builder headers(java.util.List < Headers> headers) {
+        public Builder headers(java.util.List<Headers> headers) {
             this.putQueryParameter("Headers", headers);
             this.headers = headers;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeBundlesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Bundles")
-    private java.util.List < Bundles> bundles;
+    private java.util.List<Bundles> bundles;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
     /**
      * @return bundles
      */
-    public java.util.List < Bundles> getBundles() {
+    public java.util.List<Bundles> getBundles() {
         return this.bundles;
     }
 
@@ -57,14 +62,14 @@ public class DescribeBundlesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Bundles> bundles; 
+        private java.util.List<Bundles> bundles; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>The details of the queried cloud computer templates.</p>
          */
-        public Builder bundles(java.util.List < Bundles> bundles) {
+        public Builder bundles(java.util.List<Bundles> bundles) {
             this.bundles = bundles;
             return this;
         }
@@ -390,7 +395,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         private String desktopTypeFamily;
 
         @com.aliyun.core.annotation.NameInMap("Disks")
-        private java.util.List < Disks> disks;
+        private java.util.List<Disks> disks;
 
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -515,7 +520,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
         /**
          * @return disks
          */
-        public java.util.List < Disks> getDisks() {
+        public java.util.List<Disks> getDisks() {
             return this.disks;
         }
 
@@ -605,7 +610,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             private String desktopType; 
             private DesktopTypeAttribute desktopTypeAttribute; 
             private String desktopTypeFamily; 
-            private java.util.List < Disks> disks; 
+            private java.util.List<Disks> disks; 
             private String imageId; 
             private String imageName; 
             private String imageStatus; 
@@ -728,7 +733,7 @@ public class DescribeBundlesResponseBody extends TeaModel {
             /**
              * <p>Details of the disks.</p>
              */
-            public Builder disks(java.util.List < Disks> disks) {
+            public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -59,7 +64,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
-    private java.util.List < String > vSwitchId;
+    private java.util.List<String> vSwitchId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VerifyCode")
@@ -180,7 +185,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
     /**
      * @return vSwitchId
      */
-    public java.util.List < String > getVSwitchId() {
+    public java.util.List<String> getVSwitchId() {
         return this.vSwitchId;
     }
 
@@ -210,7 +215,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         private Boolean needVerifyZeroDevice; 
         private String officeSiteName; 
         private String regionId; 
-        private java.util.List < String > vSwitchId; 
+        private java.util.List<String> vSwitchId; 
         private String verifyCode; 
         private String vpcType; 
 
@@ -424,7 +429,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         /**
          * <p>The IDs of the vSwitches that you want to specify in VPCs. This parameter is required only when you create CloudBox-based office networks.</p>
          */
-        public Builder vSwitchId(java.util.List < String > vSwitchId) {
+        public Builder vSwitchId(java.util.List<String> vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
             return this;

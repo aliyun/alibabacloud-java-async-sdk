@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class DeleteSnapshotRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > snapshotId;
+    private java.util.List<String> snapshotId;
 
     private DeleteSnapshotRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class DeleteSnapshotRequest extends Request {
     /**
      * @return snapshotId
      */
-    public java.util.List < String > getSnapshotId() {
+    public java.util.List<String> getSnapshotId() {
         return this.snapshotId;
     }
 
     public static final class Builder extends Request.Builder<DeleteSnapshotRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > snapshotId; 
+        private java.util.List<String> snapshotId; 
 
         private Builder() {
             super();
@@ -89,7 +94,7 @@ public class DeleteSnapshotRequest extends Request {
          * <strong>example:</strong>
          * <p>s-2ze81owrnv9pity4****</p>
          */
-        public Builder snapshotId(java.util.List < String > snapshotId) {
+        public Builder snapshotId(java.util.List<String> snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
             this.snapshotId = snapshotId;
             return this;

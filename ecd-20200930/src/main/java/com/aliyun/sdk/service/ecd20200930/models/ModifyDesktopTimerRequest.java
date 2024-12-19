@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,11 +20,11 @@ public class ModifyDesktopTimerRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > desktopId;
+    private java.util.List<String> desktopId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopTimers")
-    private java.util.List < DesktopTimers> desktopTimers;
+    private java.util.List<DesktopTimers> desktopTimers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -54,14 +59,14 @@ public class ModifyDesktopTimerRequest extends Request {
     /**
      * @return desktopId
      */
-    public java.util.List < String > getDesktopId() {
+    public java.util.List<String> getDesktopId() {
         return this.desktopId;
     }
 
     /**
      * @return desktopTimers
      */
-    public java.util.List < DesktopTimers> getDesktopTimers() {
+    public java.util.List<DesktopTimers> getDesktopTimers() {
         return this.desktopTimers;
     }
 
@@ -80,8 +85,8 @@ public class ModifyDesktopTimerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDesktopTimerRequest, Builder> {
-        private java.util.List < String > desktopId; 
-        private java.util.List < DesktopTimers> desktopTimers; 
+        private java.util.List<String> desktopId; 
+        private java.util.List<DesktopTimers> desktopTimers; 
         private String regionId; 
         private Boolean useDesktopTimers; 
 
@@ -101,7 +106,7 @@ public class ModifyDesktopTimerRequest extends Request {
          * <p>The IDs of the cloud computers.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder desktopId(java.util.List < String > desktopId) {
+        public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
             return this;
@@ -110,7 +115,7 @@ public class ModifyDesktopTimerRequest extends Request {
         /**
          * <p>The details of the scheduled task on cloud computers.</p>
          */
-        public Builder desktopTimers(java.util.List < DesktopTimers> desktopTimers) {
+        public Builder desktopTimers(java.util.List<DesktopTimers> desktopTimers) {
             this.putQueryParameter("DesktopTimers", desktopTimers);
             this.desktopTimers = desktopTimers;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
     private String count;
 
     @com.aliyun.core.annotation.NameInMap("FileModels")
-    private java.util.List < FileModels> fileModels;
+    private java.util.List<FileModels> fileModels;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -68,7 +73,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
     /**
      * @return fileModels
      */
-    public java.util.List < FileModels> getFileModels() {
+    public java.util.List<FileModels> getFileModels() {
         return this.fileModels;
     }
 
@@ -103,7 +108,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String count; 
-        private java.util.List < FileModels> fileModels; 
+        private java.util.List<FileModels> fileModels; 
         private String message; 
         private String nextToken; 
         private String requestId; 
@@ -134,7 +139,7 @@ public class ListCdsFilesResponseBody extends TeaModel {
         /**
          * <p>The files.</p>
          */
-        public Builder fileModels(java.util.List < FileModels> fileModels) {
+        public Builder fileModels(java.util.List<FileModels> fileModels) {
             this.fileModels = fileModels;
             return this;
         }

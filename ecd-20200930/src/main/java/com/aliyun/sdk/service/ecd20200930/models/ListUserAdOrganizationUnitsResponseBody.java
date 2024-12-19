@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("OUNames")
-    private java.util.List < OUNames> OUNames;
+    private java.util.List<OUNames> OUNames;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
     /**
      * @return OUNames
      */
-    public java.util.List < OUNames> getOUNames() {
+    public java.util.List<OUNames> getOUNames() {
         return this.OUNames;
     }
 
@@ -58,7 +63,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < OUNames> OUNames; 
+        private java.util.List<OUNames> OUNames; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
         /**
          * <p>The OUs of the AD domain.</p>
          */
-        public Builder OUNames(java.util.List < OUNames> OUNames) {
+        public Builder OUNames(java.util.List<OUNames> OUNames) {
             this.OUNames = OUNames;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
-    private java.util.List < String > officeSiteId;
+    private java.util.List<String> officeSiteId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueryRange")
@@ -85,7 +90,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
     /**
      * @return officeSiteId
      */
-    public java.util.List < String > getOfficeSiteId() {
+    public java.util.List<String> getOfficeSiteId() {
         return this.officeSiteId;
     }
 
@@ -107,7 +112,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
         private Boolean forceRefresh; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > officeSiteId; 
+        private java.util.List<String> officeSiteId; 
         private Integer queryRange; 
         private String regionId; 
 
@@ -171,7 +176,7 @@ public class ListOfficeSiteOverviewRequest extends Request {
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
          */
-        public Builder officeSiteId(java.util.List < String > officeSiteId) {
+        public Builder officeSiteId(java.util.List<String> officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
             this.officeSiteId = officeSiteId;
             return this;

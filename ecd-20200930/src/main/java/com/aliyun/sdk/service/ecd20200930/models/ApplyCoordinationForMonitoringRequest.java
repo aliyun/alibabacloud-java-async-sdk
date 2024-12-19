@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceCandidates")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ResourceCandidates> resourceCandidates;
+    private java.util.List<ResourceCandidates> resourceCandidates;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuid")
@@ -94,7 +99,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
     /**
      * @return resourceCandidates
      */
-    public java.util.List < ResourceCandidates> getResourceCandidates() {
+    public java.util.List<ResourceCandidates> getResourceCandidates() {
         return this.resourceCandidates;
     }
 
@@ -110,7 +115,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
         private String endUserId; 
         private String initiatorType; 
         private String regionId; 
-        private java.util.List < ResourceCandidates> resourceCandidates; 
+        private java.util.List<ResourceCandidates> resourceCandidates; 
         private String uuid; 
 
         private Builder() {
@@ -199,7 +204,7 @@ public class ApplyCoordinationForMonitoringRequest extends Request {
          * <p>The list of cloud desktops that run the collaboration task at the same time.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder resourceCandidates(java.util.List < ResourceCandidates> resourceCandidates) {
+        public Builder resourceCandidates(java.util.List<ResourceCandidates> resourceCandidates) {
             this.putQueryParameter("ResourceCandidates", resourceCandidates);
             this.resourceCandidates = resourceCandidates;
             return this;

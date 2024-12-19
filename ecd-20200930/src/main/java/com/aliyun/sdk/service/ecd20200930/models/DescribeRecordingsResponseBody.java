@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("Recordings")
-    private java.util.List < Recordings> recordings;
+    private java.util.List<Recordings> recordings;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
     /**
      * @return recordings
      */
-    public java.util.List < Recordings> getRecordings() {
+    public java.util.List<Recordings> getRecordings() {
         return this.recordings;
     }
 
@@ -58,7 +63,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < Recordings> recordings; 
+        private java.util.List<Recordings> recordings; 
         private String requestId; 
 
         /**
@@ -72,7 +77,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         /**
          * Recordings.
          */
-        public Builder recordings(java.util.List < Recordings> recordings) {
+        public Builder recordings(java.util.List<Recordings> recordings) {
             this.recordings = recordings;
             return this;
         }
@@ -108,7 +113,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         private String endTime;
 
         @com.aliyun.core.annotation.NameInMap("EndUserIds")
-        private java.util.List < String > endUserIds;
+        private java.util.List<String> endUserIds;
 
         @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
@@ -173,7 +178,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         /**
          * @return endUserIds
          */
-        public java.util.List < String > getEndUserIds() {
+        public java.util.List<String> getEndUserIds() {
             return this.endUserIds;
         }
 
@@ -223,7 +228,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             private String desktopId; 
             private String desktopName; 
             private String endTime; 
-            private java.util.List < String > endUserIds; 
+            private java.util.List<String> endUserIds; 
             private String filePath; 
             private String policyGroupId; 
             private Integer recordingSize; 
@@ -258,7 +263,7 @@ public class DescribeRecordingsResponseBody extends TeaModel {
             /**
              * EndUserIds.
              */
-            public Builder endUserIds(java.util.List < String > endUserIds) {
+            public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
                 return this;
             }

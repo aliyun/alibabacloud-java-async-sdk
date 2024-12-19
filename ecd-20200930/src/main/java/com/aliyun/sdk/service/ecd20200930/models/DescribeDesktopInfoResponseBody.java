@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDesktopInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Desktops")
-    private java.util.List < Desktops> desktops;
+    private java.util.List<Desktops> desktops;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
     /**
      * @return desktops
      */
-    public java.util.List < Desktops> getDesktops() {
+    public java.util.List<Desktops> getDesktops() {
         return this.desktops;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Desktops> desktops; 
+        private java.util.List<Desktops> desktops; 
         private String requestId; 
 
         /**
          * <p>The basic information about cloud computers.</p>
          */
-        public Builder desktops(java.util.List < Desktops> desktops) {
+        public Builder desktops(java.util.List<Desktops> desktops) {
             this.desktops = desktops;
             return this;
         }
@@ -97,7 +102,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         private String desktopStatus;
 
         @com.aliyun.core.annotation.NameInMap("ManagementFlag")
-        private java.util.List < String > managementFlag;
+        private java.util.List<String> managementFlag;
 
         @com.aliyun.core.annotation.NameInMap("NewAppSize")
         private Long newAppSize;
@@ -170,7 +175,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         /**
          * @return managementFlag
          */
-        public java.util.List < String > getManagementFlag() {
+        public java.util.List<String> getManagementFlag() {
             return this.managementFlag;
         }
 
@@ -208,7 +213,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             private String desktopGroupId; 
             private String desktopId; 
             private String desktopStatus; 
-            private java.util.List < String > managementFlag; 
+            private java.util.List<String> managementFlag; 
             private Long newAppSize; 
             private String newAppVersion; 
             private String releaseNote; 
@@ -288,7 +293,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             /**
              * <p>The information about flags that are used to manage cloud computers.</p>
              */
-            public Builder managementFlag(java.util.List < String > managementFlag) {
+            public Builder managementFlag(java.util.List<String> managementFlag) {
                 this.managementFlag = managementFlag;
                 return this;
             }

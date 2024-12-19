@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > desktopId;
+    private java.util.List<String> desktopId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
@@ -23,7 +28,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyGroupIds")
-    private java.util.List < String > policyGroupIds;
+    private java.util.List<String> policyGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -54,7 +59,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
     /**
      * @return desktopId
      */
-    public java.util.List < String > getDesktopId() {
+    public java.util.List<String> getDesktopId() {
         return this.desktopId;
     }
 
@@ -68,7 +73,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
     /**
      * @return policyGroupIds
      */
-    public java.util.List < String > getPolicyGroupIds() {
+    public java.util.List<String> getPolicyGroupIds() {
         return this.policyGroupIds;
     }
 
@@ -80,9 +85,9 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDesktopsPolicyGroupRequest, Builder> {
-        private java.util.List < String > desktopId; 
+        private java.util.List<String> desktopId; 
         private String policyGroupId; 
-        private java.util.List < String > policyGroupIds; 
+        private java.util.List<String> policyGroupIds; 
         private String regionId; 
 
         private Builder() {
@@ -104,7 +109,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
          * <strong>example:</strong>
          * <p>ecd-ia2zw38bi6cm7****</p>
          */
-        public Builder desktopId(java.util.List < String > desktopId) {
+        public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
             return this;
@@ -125,7 +130,7 @@ public class ModifyDesktopsPolicyGroupRequest extends Request {
         /**
          * <p>策略ID列表。</p>
          */
-        public Builder policyGroupIds(java.util.List < String > policyGroupIds) {
+        public Builder policyGroupIds(java.util.List<String> policyGroupIds) {
             this.putQueryParameter("PolicyGroupIds", policyGroupIds);
             this.policyGroupIds = policyGroupIds;
             return this;

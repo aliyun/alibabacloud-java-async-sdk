@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeCdsFileShareLinksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Creators")
-    private java.util.List < String > creators;
+    private java.util.List<String> creators;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -76,7 +81,7 @@ public class DescribeCdsFileShareLinksRequest extends Request {
     /**
      * @return creators
      */
-    public java.util.List < String > getCreators() {
+    public java.util.List<String> getCreators() {
         return this.creators;
     }
 
@@ -117,7 +122,7 @@ public class DescribeCdsFileShareLinksRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCdsFileShareLinksRequest, Builder> {
         private String cdsId; 
-        private java.util.List < String > creators; 
+        private java.util.List<String> creators; 
         private Integer maxResults; 
         private String nextToken; 
         private String shareId; 
@@ -155,7 +160,7 @@ public class DescribeCdsFileShareLinksRequest extends Request {
         /**
          * <p>The users that create the file sharing links.</p>
          */
-        public Builder creators(java.util.List < String > creators) {
+        public Builder creators(java.util.List<String> creators) {
             this.putQueryParameter("Creators", creators);
             this.creators = creators;
             return this;

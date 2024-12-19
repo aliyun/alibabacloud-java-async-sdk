@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Sessions")
-    private java.util.List < Sessions> sessions;
+    private java.util.List<Sessions> sessions;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -45,7 +50,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
     /**
      * @return sessions
      */
-    public java.util.List < Sessions> getSessions() {
+    public java.util.List<Sessions> getSessions() {
         return this.sessions;
     }
 
@@ -58,7 +63,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Sessions> sessions; 
+        private java.util.List<Sessions> sessions; 
         private Integer totalCount; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         /**
          * <p>Details of the session.</p>
          */
-        public Builder sessions(java.util.List < Sessions> sessions) {
+        public Builder sessions(java.util.List<Sessions> sessions) {
             this.sessions = sessions;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeDesktopGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BundleId")
-    private java.util.List < String > bundleId;
+    private java.util.List<String> bundleId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
@@ -26,15 +31,15 @@ public class DescribeDesktopGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserIds")
-    private java.util.List < String > endUserIds;
+    private java.util.List<String> endUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExcludedEndUserIds")
-    private java.util.List < String > excludedEndUserIds;
+    private java.util.List<String> excludedEndUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
-    private java.util.List < String > imageId;
+    private java.util.List<String> imageId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -79,7 +84,7 @@ public class DescribeDesktopGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeDesktopGroupsRequest(Builder builder) {
         super(builder);
@@ -118,7 +123,7 @@ public class DescribeDesktopGroupsRequest extends Request {
     /**
      * @return bundleId
      */
-    public java.util.List < String > getBundleId() {
+    public java.util.List<String> getBundleId() {
         return this.bundleId;
     }
 
@@ -139,21 +144,21 @@ public class DescribeDesktopGroupsRequest extends Request {
     /**
      * @return endUserIds
      */
-    public java.util.List < String > getEndUserIds() {
+    public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
     }
 
     /**
      * @return excludedEndUserIds
      */
-    public java.util.List < String > getExcludedEndUserIds() {
+    public java.util.List<String> getExcludedEndUserIds() {
         return this.excludedEndUserIds;
     }
 
     /**
      * @return imageId
      */
-    public java.util.List < String > getImageId() {
+    public java.util.List<String> getImageId() {
         return this.imageId;
     }
 
@@ -230,17 +235,17 @@ public class DescribeDesktopGroupsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeDesktopGroupsRequest, Builder> {
-        private java.util.List < String > bundleId; 
+        private java.util.List<String> bundleId; 
         private String desktopGroupId; 
         private String desktopGroupName; 
-        private java.util.List < String > endUserIds; 
-        private java.util.List < String > excludedEndUserIds; 
-        private java.util.List < String > imageId; 
+        private java.util.List<String> endUserIds; 
+        private java.util.List<String> excludedEndUserIds; 
+        private java.util.List<String> imageId; 
         private Integer maxResults; 
         private String nextToken; 
         private String officeSiteId; 
@@ -251,7 +256,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         private String protocolType; 
         private String regionId; 
         private Integer status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -281,7 +286,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         /**
          * <p>The IDs of the cloud computer templates.</p>
          */
-        public Builder bundleId(java.util.List < String > bundleId) {
+        public Builder bundleId(java.util.List<String> bundleId) {
             this.putQueryParameter("BundleId", bundleId);
             this.bundleId = bundleId;
             return this;
@@ -314,7 +319,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         /**
          * <p>The authorized user IDs of cloud computer pools.</p>
          */
-        public Builder endUserIds(java.util.List < String > endUserIds) {
+        public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
             this.endUserIds = endUserIds;
             return this;
@@ -323,7 +328,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         /**
          * <p>The authorized users that you want to exclude.</p>
          */
-        public Builder excludedEndUserIds(java.util.List < String > excludedEndUserIds) {
+        public Builder excludedEndUserIds(java.util.List<String> excludedEndUserIds) {
             this.putQueryParameter("ExcludedEndUserIds", excludedEndUserIds);
             this.excludedEndUserIds = excludedEndUserIds;
             return this;
@@ -332,7 +337,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         /**
          * <p>The IDs of the images.</p>
          */
-        public Builder imageId(java.util.List < String > imageId) {
+        public Builder imageId(java.util.List<String> imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
             return this;
@@ -511,7 +516,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         /**
          * <p>The tags attached to the cloud computer pool. You can specify 1 to 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

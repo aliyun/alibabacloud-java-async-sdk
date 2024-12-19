@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateADConnectorDirectoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AdConnectors")
-    private java.util.List < AdConnectors> adConnectors;
+    private java.util.List<AdConnectors> adConnectors;
 
     @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
@@ -42,7 +47,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
     /**
      * @return adConnectors
      */
-    public java.util.List < AdConnectors> getAdConnectors() {
+    public java.util.List<AdConnectors> getAdConnectors() {
         return this.adConnectors;
     }
 
@@ -68,7 +73,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AdConnectors> adConnectors; 
+        private java.util.List<AdConnectors> adConnectors; 
         private String directoryId; 
         private String requestId; 
         private String trustPassword; 
@@ -76,7 +81,7 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
         /**
          * <p>The details of AD connectors.</p>
          */
-        public Builder adConnectors(java.util.List < AdConnectors> adConnectors) {
+        public Builder adConnectors(java.util.List<AdConnectors> adConnectors) {
             this.adConnectors = adConnectors;
             return this;
         }

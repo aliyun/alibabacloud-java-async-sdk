@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteNASFileSystemsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileSystemId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > fileSystemId;
+    private java.util.List<String> fileSystemId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -44,7 +49,7 @@ public class DeleteNASFileSystemsRequest extends Request {
     /**
      * @return fileSystemId
      */
-    public java.util.List < String > getFileSystemId() {
+    public java.util.List<String> getFileSystemId() {
         return this.fileSystemId;
     }
 
@@ -56,7 +61,7 @@ public class DeleteNASFileSystemsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteNASFileSystemsRequest, Builder> {
-        private java.util.List < String > fileSystemId; 
+        private java.util.List<String> fileSystemId; 
         private String regionId; 
 
         private Builder() {
@@ -76,7 +81,7 @@ public class DeleteNASFileSystemsRequest extends Request {
          * <strong>example:</strong>
          * <p>04f314****</p>
          */
-        public Builder fileSystemId(java.util.List < String > fileSystemId) {
+        public Builder fileSystemId(java.util.List<String> fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
             this.fileSystemId = fileSystemId;
             return this;

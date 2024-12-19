@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeGuestApplicationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Applications")
-    private java.util.List < Applications> applications;
+    private java.util.List<Applications> applications;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
     /**
      * @return applications
      */
-    public java.util.List < Applications> getApplications() {
+    public java.util.List<Applications> getApplications() {
         return this.applications;
     }
 
@@ -46,13 +51,13 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Applications> applications; 
+        private java.util.List<Applications> applications; 
         private String requestId; 
 
         /**
          * <p>The details of the applications.</p>
          */
-        public Builder applications(java.util.List < Applications> applications) {
+        public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
             return this;
         }
@@ -317,7 +322,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         private Integer pid;
 
         @com.aliyun.core.annotation.NameInMap("ProcessData")
-        private java.util.List < ProcessData> processData;
+        private java.util.List<ProcessData> processData;
 
         @com.aliyun.core.annotation.NameInMap("ProcessPath")
         private String processPath;
@@ -406,7 +411,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         /**
          * @return processData
          */
-        public java.util.List < ProcessData> getProcessData() {
+        public java.util.List<ProcessData> getProcessData() {
             return this.processData;
         }
 
@@ -433,7 +438,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             private Double ioSpeed; 
             private Double memPercent; 
             private Integer pid; 
-            private java.util.List < ProcessData> processData; 
+            private java.util.List<ProcessData> processData; 
             private String processPath; 
             private String status; 
 
@@ -528,7 +533,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
             /**
              * <p>The process information.</p>
              */
-            public Builder processData(java.util.List < ProcessData> processData) {
+            public Builder processData(java.util.List<ProcessData> processData) {
                 this.processData = processData;
                 return this;
             }

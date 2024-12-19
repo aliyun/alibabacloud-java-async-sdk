@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,7 +52,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DnsAddress")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > dnsAddress;
+    private java.util.List<String> dnsAddress;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainName")
@@ -93,7 +98,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubDomainDnsAddress")
-    private java.util.List < String > subDomainDnsAddress;
+    private java.util.List<String> subDomainDnsAddress;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubDomainName")
@@ -101,7 +106,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
-    private java.util.List < String > vSwitchId;
+    private java.util.List<String> vSwitchId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VerifyCode")
@@ -206,7 +211,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
     /**
      * @return dnsAddress
      */
-    public java.util.List < String > getDnsAddress() {
+    public java.util.List<String> getDnsAddress() {
         return this.dnsAddress;
     }
 
@@ -283,7 +288,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
     /**
      * @return subDomainDnsAddress
      */
-    public java.util.List < String > getSubDomainDnsAddress() {
+    public java.util.List<String> getSubDomainDnsAddress() {
         return this.subDomainDnsAddress;
     }
 
@@ -297,7 +302,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
     /**
      * @return vSwitchId
      */
-    public java.util.List < String > getVSwitchId() {
+    public java.util.List<String> getVSwitchId() {
         return this.vSwitchId;
     }
 
@@ -317,7 +322,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         private Long cenOwnerId; 
         private String cidrBlock; 
         private String desktopAccessType; 
-        private java.util.List < String > dnsAddress; 
+        private java.util.List<String> dnsAddress; 
         private String domainName; 
         private String domainPassword; 
         private String domainUserName; 
@@ -328,9 +333,9 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         private String protocolType; 
         private String regionId; 
         private Long specification; 
-        private java.util.List < String > subDomainDnsAddress; 
+        private java.util.List<String> subDomainDnsAddress; 
         private String subDomainName; 
-        private java.util.List < String > vSwitchId; 
+        private java.util.List<String> vSwitchId; 
         private String verifyCode; 
 
         private Builder() {
@@ -479,7 +484,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
          */
-        public Builder dnsAddress(java.util.List < String > dnsAddress) {
+        public Builder dnsAddress(java.util.List<String> dnsAddress) {
             this.putQueryParameter("DnsAddress", dnsAddress);
             this.dnsAddress = dnsAddress;
             return this;
@@ -658,7 +663,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
          */
-        public Builder subDomainDnsAddress(java.util.List < String > subDomainDnsAddress) {
+        public Builder subDomainDnsAddress(java.util.List<String> subDomainDnsAddress) {
             this.putQueryParameter("SubDomainDnsAddress", subDomainDnsAddress);
             this.subDomainDnsAddress = subDomainDnsAddress;
             return this;
@@ -679,7 +684,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         /**
          * VSwitchId.
          */
-        public Builder vSwitchId(java.util.List < String > vSwitchId) {
+        public Builder vSwitchId(java.util.List<String> vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
             return this;

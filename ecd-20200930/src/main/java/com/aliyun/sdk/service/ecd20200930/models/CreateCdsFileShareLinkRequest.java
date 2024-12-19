@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,7 +54,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileIds")
-    private java.util.List < String > fileIds;
+    private java.util.List<String> fileIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
@@ -165,7 +170,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
     /**
      * @return fileIds
      */
-    public java.util.List < String > getFileIds() {
+    public java.util.List<String> getFileIds() {
         return this.fileIds;
     }
 
@@ -213,7 +218,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
         private Long downloadLimit; 
         private String endUserId; 
         private String expiration; 
-        private java.util.List < String > fileIds; 
+        private java.util.List<String> fileIds; 
         private String groupId; 
         private Long previewLimit; 
         private Long saveLimit; 
@@ -414,7 +419,7 @@ public class CreateCdsFileShareLinkRequest extends Request {
         /**
          * <p>The file IDs.</p>
          */
-        public Builder fileIds(java.util.List < String > fileIds) {
+        public Builder fileIds(java.util.List<String> fileIds) {
             this.putQueryParameter("FileIds", fileIds);
             this.fileIds = fileIds;
             return this;

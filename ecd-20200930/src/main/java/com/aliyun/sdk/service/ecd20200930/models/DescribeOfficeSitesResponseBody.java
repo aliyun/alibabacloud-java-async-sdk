@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("OfficeSites")
-    private java.util.List < OfficeSites> officeSites;
+    private java.util.List<OfficeSites> officeSites;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -49,7 +54,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     /**
      * @return officeSites
      */
-    public java.util.List < OfficeSites> getOfficeSites() {
+    public java.util.List<OfficeSites> getOfficeSites() {
         return this.officeSites;
     }
 
@@ -69,7 +74,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < OfficeSites> officeSites; 
+        private java.util.List<OfficeSites> officeSites; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -87,7 +92,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         /**
          * <p>The information about office networks.</p>
          */
-        public Builder officeSites(java.util.List < OfficeSites> officeSites) {
+        public Builder officeSites(java.util.List<OfficeSites> officeSites) {
             this.officeSites = officeSites;
             return this;
         }
@@ -498,7 +503,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
      */
     public static class OfficeSites extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ADConnectors")
-        private java.util.List < ADConnectors> ADConnectors;
+        private java.util.List<ADConnectors> ADConnectors;
 
         @com.aliyun.core.annotation.NameInMap("AdHostname")
         private String adHostname;
@@ -531,7 +536,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         private String customAccessPoint;
 
         @com.aliyun.core.annotation.NameInMap("CustomDnsAddress")
-        private java.util.List < String > customDnsAddress;
+        private java.util.List<String> customDnsAddress;
 
         @com.aliyun.core.annotation.NameInMap("CustomSecurityGroupId")
         private String customSecurityGroupId;
@@ -546,7 +551,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         private String desktopVpcEndpoint;
 
         @com.aliyun.core.annotation.NameInMap("DnsAddress")
-        private java.util.List < String > dnsAddress;
+        private java.util.List<String> dnsAddress;
 
         @com.aliyun.core.annotation.NameInMap("DnsUserName")
         private String dnsUserName;
@@ -573,10 +578,10 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         private Boolean enableServiceRoute;
 
         @com.aliyun.core.annotation.NameInMap("FileSystemIds")
-        private java.util.List < String > fileSystemIds;
+        private java.util.List<String> fileSystemIds;
 
         @com.aliyun.core.annotation.NameInMap("Logs")
-        private java.util.List < Logs> logs;
+        private java.util.List<Logs> logs;
 
         @com.aliyun.core.annotation.NameInMap("MfaEnabled")
         private Boolean mfaEnabled;
@@ -618,7 +623,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         private String rdsLicenseStatus;
 
         @com.aliyun.core.annotation.NameInMap("ResourceAmounts")
-        private java.util.List < ResourceAmounts> resourceAmounts;
+        private java.util.List<ResourceAmounts> resourceAmounts;
 
         @com.aliyun.core.annotation.NameInMap("SecurityProtection")
         private String securityProtection;
@@ -633,7 +638,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("SubDnsAddress")
-        private java.util.List < String > subDnsAddress;
+        private java.util.List<String> subDnsAddress;
 
         @com.aliyun.core.annotation.NameInMap("SubDomainName")
         private String subDomainName;
@@ -654,7 +659,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         private String trustPassword;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        private java.util.List<String> vSwitchIds;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -731,7 +736,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         /**
          * @return ADConnectors
          */
-        public java.util.List < ADConnectors> getADConnectors() {
+        public java.util.List<ADConnectors> getADConnectors() {
             return this.ADConnectors;
         }
 
@@ -808,7 +813,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         /**
          * @return customDnsAddress
          */
-        public java.util.List < String > getCustomDnsAddress() {
+        public java.util.List<String> getCustomDnsAddress() {
             return this.customDnsAddress;
         }
 
@@ -843,7 +848,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         /**
          * @return dnsAddress
          */
-        public java.util.List < String > getDnsAddress() {
+        public java.util.List<String> getDnsAddress() {
             return this.dnsAddress;
         }
 
@@ -906,14 +911,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         /**
          * @return fileSystemIds
          */
-        public java.util.List < String > getFileSystemIds() {
+        public java.util.List<String> getFileSystemIds() {
             return this.fileSystemIds;
         }
 
         /**
          * @return logs
          */
-        public java.util.List < Logs> getLogs() {
+        public java.util.List<Logs> getLogs() {
             return this.logs;
         }
 
@@ -1011,7 +1016,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         /**
          * @return resourceAmounts
          */
-        public java.util.List < ResourceAmounts> getResourceAmounts() {
+        public java.util.List<ResourceAmounts> getResourceAmounts() {
             return this.resourceAmounts;
         }
 
@@ -1046,7 +1051,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         /**
          * @return subDnsAddress
          */
-        public java.util.List < String > getSubDnsAddress() {
+        public java.util.List<String> getSubDnsAddress() {
             return this.subDnsAddress;
         }
 
@@ -1095,7 +1100,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -1114,7 +1119,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ADConnectors> ADConnectors; 
+            private java.util.List<ADConnectors> ADConnectors; 
             private String adHostname; 
             private String backupDCHostname; 
             private String backupDns; 
@@ -1125,12 +1130,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private Boolean cloudBoxOfficeSite; 
             private String creationTime; 
             private String customAccessPoint; 
-            private java.util.List < String > customDnsAddress; 
+            private java.util.List<String> customDnsAddress; 
             private String customSecurityGroupId; 
             private String desktopAccessType; 
             private Long desktopCount; 
             private String desktopVpcEndpoint; 
-            private java.util.List < String > dnsAddress; 
+            private java.util.List<String> dnsAddress; 
             private String dnsUserName; 
             private String domainName; 
             private String domainPassword; 
@@ -1139,8 +1144,8 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private Boolean enableCrossDesktopAccess; 
             private Boolean enableInternetAccess; 
             private Boolean enableServiceRoute; 
-            private java.util.List < String > fileSystemIds; 
-            private java.util.List < Logs> logs; 
+            private java.util.List<String> fileSystemIds; 
+            private java.util.List<Logs> logs; 
             private Boolean mfaEnabled; 
             private String name; 
             private Boolean needVerifyLoginRisk; 
@@ -1154,26 +1159,26 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String rdsLicenseAddress; 
             private String rdsLicenseDomainName; 
             private String rdsLicenseStatus; 
-            private java.util.List < ResourceAmounts> resourceAmounts; 
+            private java.util.List<ResourceAmounts> resourceAmounts; 
             private String securityProtection; 
             private Boolean ssoEnabled; 
             private String ssoType; 
             private String status; 
-            private java.util.List < String > subDnsAddress; 
+            private java.util.List<String> subDnsAddress; 
             private String subDomainName; 
             private String subnetMode; 
             private Long totalEdsCount; 
             private Long totalEdsCountForGroup; 
             private Long totalResourceAmount; 
             private String trustPassword; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
             private String vpcId; 
             private String vpcType; 
 
             /**
              * <p>Details of AD connectors.</p>
              */
-            public Builder ADConnectors(java.util.List < ADConnectors> ADConnectors) {
+            public Builder ADConnectors(java.util.List<ADConnectors> ADConnectors) {
                 this.ADConnectors = ADConnectors;
                 return this;
             }
@@ -1293,7 +1298,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             /**
              * CustomDnsAddress.
              */
-            public Builder customDnsAddress(java.util.List < String > customDnsAddress) {
+            public Builder customDnsAddress(java.util.List<String> customDnsAddress) {
                 this.customDnsAddress = customDnsAddress;
                 return this;
             }
@@ -1354,7 +1359,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             /**
              * <p>The array of DNS addresses in the AD domains.</p>
              */
-            public Builder dnsAddress(java.util.List < String > dnsAddress) {
+            public Builder dnsAddress(java.util.List<String> dnsAddress) {
                 this.dnsAddress = dnsAddress;
                 return this;
             }
@@ -1455,7 +1460,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             /**
              * <p>An array of File Storage NAS (NAS) file system IDs.</p>
              */
-            public Builder fileSystemIds(java.util.List < String > fileSystemIds) {
+            public Builder fileSystemIds(java.util.List<String> fileSystemIds) {
                 this.fileSystemIds = fileSystemIds;
                 return this;
             }
@@ -1463,7 +1468,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             /**
              * <p>Details about registration logs.</p>
              */
-            public Builder logs(java.util.List < Logs> logs) {
+            public Builder logs(java.util.List<Logs> logs) {
                 this.logs = logs;
                 return this;
             }
@@ -1626,7 +1631,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             /**
              * ResourceAmounts.
              */
-            public Builder resourceAmounts(java.util.List < ResourceAmounts> resourceAmounts) {
+            public Builder resourceAmounts(java.util.List<ResourceAmounts> resourceAmounts) {
                 this.resourceAmounts = resourceAmounts;
                 return this;
             }
@@ -1699,7 +1704,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             /**
              * <p>An array of DNS addresses for AD subdomains.</p>
              */
-            public Builder subDnsAddress(java.util.List < String > subDnsAddress) {
+            public Builder subDnsAddress(java.util.List<String> subDnsAddress) {
                 this.subDnsAddress = subDnsAddress;
                 return this;
             }
@@ -1777,7 +1782,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             /**
              * <p>An array of VSwitch IDs.</p>
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
-    private java.util.List < String > groupId;
+    private java.util.List<String> groupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupName")
@@ -130,7 +135,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
     /**
      * @return groupId
      */
-    public java.util.List < String > getGroupId() {
+    public java.util.List<String> getGroupId() {
         return this.groupId;
     }
 
@@ -182,7 +187,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         private String directoryName; 
         private String driveStatus; 
         private String driveType; 
-        private java.util.List < String > groupId; 
+        private java.util.List<String> groupId; 
         private String groupName; 
         private String groupType; 
         private Integer maxResults; 
@@ -284,7 +289,7 @@ public class DescribeCloudDriveGroupsRequest extends Request {
         /**
          * <p>The team ID.</p>
          */
-        public Builder groupId(java.util.List < String > groupId) {
+        public Builder groupId(java.util.List<String> groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
             return this;

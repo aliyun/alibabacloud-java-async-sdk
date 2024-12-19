@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("VirtualMFADevices")
-    private java.util.List < VirtualMFADevices> virtualMFADevices;
+    private java.util.List<VirtualMFADevices> virtualMFADevices;
 
     private DescribeVirtualMFADevicesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
     /**
      * @return virtualMFADevices
      */
-    public java.util.List < VirtualMFADevices> getVirtualMFADevices() {
+    public java.util.List<VirtualMFADevices> getVirtualMFADevices() {
         return this.virtualMFADevices;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < VirtualMFADevices> virtualMFADevices; 
+        private java.util.List<VirtualMFADevices> virtualMFADevices; 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</p>
@@ -86,7 +91,7 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         /**
          * <p>Details of the virtual MFA devices.</p>
          */
-        public Builder virtualMFADevices(java.util.List < VirtualMFADevices> virtualMFADevices) {
+        public Builder virtualMFADevices(java.util.List<VirtualMFADevices> virtualMFADevices) {
             this.virtualMFADevices = virtualMFADevices;
             return this;
         }

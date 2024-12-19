@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("FotaPendingDesktops")
-    private java.util.List < FotaPendingDesktops> fotaPendingDesktops;
+    private java.util.List<FotaPendingDesktops> fotaPendingDesktops;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -53,7 +58,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
     /**
      * @return fotaPendingDesktops
      */
-    public java.util.List < FotaPendingDesktops> getFotaPendingDesktops() {
+    public java.util.List<FotaPendingDesktops> getFotaPendingDesktops() {
         return this.fotaPendingDesktops;
     }
 
@@ -80,7 +85,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < FotaPendingDesktops> fotaPendingDesktops; 
+        private java.util.List<FotaPendingDesktops> fotaPendingDesktops; 
         private String message; 
         private String nextToken; 
         private String requestId; 
@@ -99,7 +104,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         /**
          * <p>The cloud computers whose images can be and are pending to be updated to the version specified in <code>TaskUid</code>.</p>
          */
-        public Builder fotaPendingDesktops(java.util.List < FotaPendingDesktops> fotaPendingDesktops) {
+        public Builder fotaPendingDesktops(java.util.List<FotaPendingDesktops> fotaPendingDesktops) {
             this.fotaPendingDesktops = fotaPendingDesktops;
             return this;
         }
@@ -216,7 +221,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         private String officeSiteId;
 
         @com.aliyun.core.annotation.NameInMap("Sessions")
-        private java.util.List < Sessions> sessions;
+        private java.util.List<Sessions> sessions;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
@@ -277,7 +282,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         /**
          * @return sessions
          */
-        public java.util.List < Sessions> getSessions() {
+        public java.util.List<Sessions> getSessions() {
             return this.sessions;
         }
 
@@ -294,7 +299,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             private String desktopName; 
             private String fotaProject; 
             private String officeSiteId; 
-            private java.util.List < Sessions> sessions; 
+            private java.util.List<Sessions> sessions; 
             private Long status; 
 
             /**
@@ -357,7 +362,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
             /**
              * <p>The connected sessions.</p>
              */
-            public Builder sessions(java.util.List < Sessions> sessions) {
+            public Builder sessions(java.util.List<Sessions> sessions) {
                 this.sessions = sessions;
                 return this;
             }

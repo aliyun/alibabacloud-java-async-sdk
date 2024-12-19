@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class DescribeDesktopTypesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopTypeIdList")
-    private java.util.List < String > desktopTypeIdList;
+    private java.util.List<String> desktopTypeIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GpuCount")
@@ -143,7 +148,7 @@ public class DescribeDesktopTypesRequest extends Request {
     /**
      * @return desktopTypeIdList
      */
-    public java.util.List < String > getDesktopTypeIdList() {
+    public java.util.List<String> getDesktopTypeIdList() {
         return this.desktopTypeIdList;
     }
 
@@ -216,7 +221,7 @@ public class DescribeDesktopTypesRequest extends Request {
         private String desktopGroupIdForModify; 
         private String desktopIdForModify; 
         private String desktopTypeId; 
-        private java.util.List < String > desktopTypeIdList; 
+        private java.util.List<String> desktopTypeIdList; 
         private Float gpuCount; 
         private String gpuDriverType; 
         private String instanceTypeFamily; 
@@ -458,7 +463,7 @@ public class DescribeDesktopTypesRequest extends Request {
         /**
          * DesktopTypeIdList.
          */
-        public Builder desktopTypeIdList(java.util.List < String > desktopTypeIdList) {
+        public Builder desktopTypeIdList(java.util.List<String> desktopTypeIdList) {
             this.putQueryParameter("DesktopTypeIdList", desktopTypeIdList);
             this.desktopTypeIdList = desktopTypeIdList;
             return this;

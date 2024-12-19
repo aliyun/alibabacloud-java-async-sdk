@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class SetUserProfilePathRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserProfilePathRule")
-    private java.util.List < UserProfilePathRule> userProfilePathRule;
+    private java.util.List<UserProfilePathRule> userProfilePathRule;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserProfileRuleType")
@@ -67,7 +72,7 @@ public class SetUserProfilePathRulesRequest extends Request {
     /**
      * @return userProfilePathRule
      */
-    public java.util.List < UserProfilePathRule> getUserProfilePathRule() {
+    public java.util.List<UserProfilePathRule> getUserProfilePathRule() {
         return this.userProfilePathRule;
     }
 
@@ -81,7 +86,7 @@ public class SetUserProfilePathRulesRequest extends Request {
     public static final class Builder extends Request.Builder<SetUserProfilePathRulesRequest, Builder> {
         private String desktopGroupId; 
         private String regionId; 
-        private java.util.List < UserProfilePathRule> userProfilePathRule; 
+        private java.util.List<UserProfilePathRule> userProfilePathRule; 
         private String userProfileRuleType; 
 
         private Builder() {
@@ -124,7 +129,7 @@ public class SetUserProfilePathRulesRequest extends Request {
         /**
          * <p>The directories that you want to configure in the blacklist and whitelist.</p>
          */
-        public Builder userProfilePathRule(java.util.List < UserProfilePathRule> userProfilePathRule) {
+        public Builder userProfilePathRule(java.util.List<UserProfilePathRule> userProfilePathRule) {
             String userProfilePathRuleShrink = shrink(userProfilePathRule, "UserProfilePathRule", "json");
             this.putQueryParameter("UserProfilePathRule", userProfilePathRuleShrink);
             this.userProfilePathRule = userProfilePathRule;
@@ -364,7 +369,7 @@ public class SetUserProfilePathRulesRequest extends Request {
         private BlackPath blackPath;
 
         @com.aliyun.core.annotation.NameInMap("WhitePaths")
-        private java.util.List < WhitePaths> whitePaths;
+        private java.util.List<WhitePaths> whitePaths;
 
         private UserProfilePathRule(Builder builder) {
             this.blackPath = builder.blackPath;
@@ -389,13 +394,13 @@ public class SetUserProfilePathRulesRequest extends Request {
         /**
          * @return whitePaths
          */
-        public java.util.List < WhitePaths> getWhitePaths() {
+        public java.util.List<WhitePaths> getWhitePaths() {
             return this.whitePaths;
         }
 
         public static final class Builder {
             private BlackPath blackPath; 
-            private java.util.List < WhitePaths> whitePaths; 
+            private java.util.List<WhitePaths> whitePaths; 
 
             /**
              * <p>The directory in the blacklist.</p>
@@ -408,7 +413,7 @@ public class SetUserProfilePathRulesRequest extends Request {
             /**
              * <p>The directories that you want to configure in the whitelist.</p>
              */
-            public Builder whitePaths(java.util.List < WhitePaths> whitePaths) {
+            public Builder whitePaths(java.util.List<WhitePaths> whitePaths) {
                 this.whitePaths = whitePaths;
                 return this;
             }

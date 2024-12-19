@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeUsersInGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EndUsers")
-    private java.util.List < EndUsers> endUsers;
+    private java.util.List<EndUsers> endUsers;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -46,7 +51,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     /**
      * @return endUsers
      */
-    public java.util.List < EndUsers> getEndUsers() {
+    public java.util.List<EndUsers> getEndUsers() {
         return this.endUsers;
     }
 
@@ -79,7 +84,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < EndUsers> endUsers; 
+        private java.util.List<EndUsers> endUsers; 
         private String nextToken; 
         private Integer onlineUsersCount; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         /**
          * <p>The list of authorized users.</p>
          */
-        public Builder endUsers(java.util.List < EndUsers> endUsers) {
+        public Builder endUsers(java.util.List<EndUsers> endUsers) {
             this.endUsers = endUsers;
             return this;
         }
@@ -306,7 +311,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         private Integer propertyType;
 
         @com.aliyun.core.annotation.NameInMap("PropertyValues")
-        private java.util.List < PropertyValues> propertyValues;
+        private java.util.List<PropertyValues> propertyValues;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
@@ -355,7 +360,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         /**
          * @return propertyValues
          */
-        public java.util.List < PropertyValues> getPropertyValues() {
+        public java.util.List<PropertyValues> getPropertyValues() {
             return this.propertyValues;
         }
 
@@ -377,7 +382,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private Long propertyId; 
             private String propertyKey; 
             private Integer propertyType; 
-            private java.util.List < PropertyValues> propertyValues; 
+            private java.util.List<PropertyValues> propertyValues; 
             private Long userId; 
             private String userName; 
 
@@ -422,7 +427,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             /**
              * <p>Details about property values.</p>
              */
-            public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
+            public Builder propertyValues(java.util.List<PropertyValues> propertyValues) {
                 this.propertyValues = propertyValues;
                 return this;
             }
@@ -500,7 +505,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         private String userDesktopId;
 
         @com.aliyun.core.annotation.NameInMap("UserSetPropertiesModels")
-        private java.util.List < UserSetPropertiesModels> userSetPropertiesModels;
+        private java.util.List<UserSetPropertiesModels> userSetPropertiesModels;
 
         private EndUsers(Builder builder) {
             this.connectionStatus = builder.connectionStatus;
@@ -613,7 +618,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         /**
          * @return userSetPropertiesModels
          */
-        public java.util.List < UserSetPropertiesModels> getUserSetPropertiesModels() {
+        public java.util.List<UserSetPropertiesModels> getUserSetPropertiesModels() {
             return this.userSetPropertiesModels;
         }
 
@@ -630,7 +635,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             private String endUserType; 
             private ExternalInfo externalInfo; 
             private String userDesktopId; 
-            private java.util.List < UserSetPropertiesModels> userSetPropertiesModels; 
+            private java.util.List<UserSetPropertiesModels> userSetPropertiesModels; 
 
             /**
              * <p>The connection status.</p>
@@ -774,7 +779,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             /**
              * <p>Details about the seats of users.</p>
              */
-            public Builder userSetPropertiesModels(java.util.List < UserSetPropertiesModels> userSetPropertiesModels) {
+            public Builder userSetPropertiesModels(java.util.List<UserSetPropertiesModels> userSetPropertiesModels) {
                 this.userSetPropertiesModels = userSetPropertiesModels;
                 return this;
             }

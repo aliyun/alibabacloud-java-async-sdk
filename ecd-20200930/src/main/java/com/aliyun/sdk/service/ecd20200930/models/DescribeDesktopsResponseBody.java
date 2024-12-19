@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDesktopsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Desktops")
-    private java.util.List < Desktops> desktops;
+    private java.util.List<Desktops> desktops;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -50,7 +55,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     /**
      * @return desktops
      */
-    public java.util.List < Desktops> getDesktops() {
+    public java.util.List<Desktops> getDesktops() {
         return this.desktops;
     }
 
@@ -90,7 +95,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Desktops> desktops; 
+        private java.util.List<Desktops> desktops; 
         private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -100,7 +105,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         /**
          * <p>The details about the cloud desktops.</p>
          */
-        public Builder desktops(java.util.List < Desktops> desktops) {
+        public Builder desktops(java.util.List<Desktops> desktops) {
             this.desktops = desktops;
             return this;
         }
@@ -779,7 +784,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         private String directoryType;
 
         @com.aliyun.core.annotation.NameInMap("Disks")
-        private java.util.List < Disks> disks;
+        private java.util.List<Disks> disks;
 
         @com.aliyun.core.annotation.NameInMap("DowngradeQuota")
         private Long downgradeQuota;
@@ -788,7 +793,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         private Long downgradedTimes;
 
         @com.aliyun.core.annotation.NameInMap("EndUserIds")
-        private java.util.List < String > endUserIds;
+        private java.util.List<String> endUserIds;
 
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
@@ -824,7 +829,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         private String managementFlag;
 
         @com.aliyun.core.annotation.NameInMap("ManagementFlags")
-        private java.util.List < String > managementFlags;
+        private java.util.List<String> managementFlags;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
@@ -857,13 +862,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         private String policyGroupId;
 
         @com.aliyun.core.annotation.NameInMap("PolicyGroupIdList")
-        private java.util.List < String > policyGroupIdList;
+        private java.util.List<String> policyGroupIdList;
 
         @com.aliyun.core.annotation.NameInMap("PolicyGroupName")
         private String policyGroupName;
 
         @com.aliyun.core.annotation.NameInMap("PolicyGroupNameList")
-        private java.util.List < String > policyGroupNameList;
+        private java.util.List<String> policyGroupNameList;
 
         @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
@@ -872,13 +877,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         private String protocolType;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroups")
-        private java.util.List < ResourceGroups> resourceGroups;
+        private java.util.List<ResourceGroups> resourceGroups;
 
         @com.aliyun.core.annotation.NameInMap("SessionType")
         private String sessionType;
 
         @com.aliyun.core.annotation.NameInMap("Sessions")
-        private java.util.List < Sessions> sessions;
+        private java.util.List<Sessions> sessions;
 
         @com.aliyun.core.annotation.NameInMap("SnapshotPolicyId")
         private String snapshotPolicyId;
@@ -899,7 +904,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         private Integer systemDiskSize;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
         private Boolean volumeEncryptionEnabled;
@@ -1096,7 +1101,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         /**
          * @return disks
          */
-        public java.util.List < Disks> getDisks() {
+        public java.util.List<Disks> getDisks() {
             return this.disks;
         }
 
@@ -1117,7 +1122,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         /**
          * @return endUserIds
          */
-        public java.util.List < String > getEndUserIds() {
+        public java.util.List<String> getEndUserIds() {
             return this.endUserIds;
         }
 
@@ -1201,7 +1206,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         /**
          * @return managementFlags
          */
-        public java.util.List < String > getManagementFlags() {
+        public java.util.List<String> getManagementFlags() {
             return this.managementFlags;
         }
 
@@ -1278,7 +1283,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         /**
          * @return policyGroupIdList
          */
-        public java.util.List < String > getPolicyGroupIdList() {
+        public java.util.List<String> getPolicyGroupIdList() {
             return this.policyGroupIdList;
         }
 
@@ -1292,7 +1297,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         /**
          * @return policyGroupNameList
          */
-        public java.util.List < String > getPolicyGroupNameList() {
+        public java.util.List<String> getPolicyGroupNameList() {
             return this.policyGroupNameList;
         }
 
@@ -1313,7 +1318,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         /**
          * @return resourceGroups
          */
-        public java.util.List < ResourceGroups> getResourceGroups() {
+        public java.util.List<ResourceGroups> getResourceGroups() {
             return this.resourceGroups;
         }
 
@@ -1327,7 +1332,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         /**
          * @return sessions
          */
-        public java.util.List < Sessions> getSessions() {
+        public java.util.List<Sessions> getSessions() {
             return this.sessions;
         }
 
@@ -1376,7 +1381,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1418,10 +1423,10 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String desktopType; 
             private String directoryId; 
             private String directoryType; 
-            private java.util.List < Disks> disks; 
+            private java.util.List<Disks> disks; 
             private Long downgradeQuota; 
             private Long downgradedTimes; 
-            private java.util.List < String > endUserIds; 
+            private java.util.List<String> endUserIds; 
             private String expiredTime; 
             private FotaUpdate fotaUpdate; 
             private Long gpuCategory; 
@@ -1433,7 +1438,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String hostName; 
             private String imageId; 
             private String managementFlag; 
-            private java.util.List < String > managementFlags; 
+            private java.util.List<String> managementFlags; 
             private Long memory; 
             private String networkInterfaceId; 
             private String networkInterfaceIp; 
@@ -1444,21 +1449,21 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String osType; 
             private String platform; 
             private String policyGroupId; 
-            private java.util.List < String > policyGroupIdList; 
+            private java.util.List<String> policyGroupIdList; 
             private String policyGroupName; 
-            private java.util.List < String > policyGroupNameList; 
+            private java.util.List<String> policyGroupNameList; 
             private String progress; 
             private String protocolType; 
-            private java.util.List < ResourceGroups> resourceGroups; 
+            private java.util.List<ResourceGroups> resourceGroups; 
             private String sessionType; 
-            private java.util.List < Sessions> sessions; 
+            private java.util.List<Sessions> sessions; 
             private String snapshotPolicyId; 
             private String snapshotPolicyName; 
             private String startTime; 
             private Boolean supportHibernation; 
             private String systemDiskCategory; 
             private Integer systemDiskSize; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
             private String zoneType; 
@@ -1687,7 +1692,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             /**
              * <p>Details of the disks.</p>
              */
-            public Builder disks(java.util.List < Disks> disks) {
+            public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
                 return this;
             }
@@ -1717,7 +1722,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             /**
              * <p>The IDs of the end users who are authorized to connect to the cloud desktop.</p>
              */
-            public Builder endUserIds(java.util.List < String > endUserIds) {
+            public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
                 return this;
             }
@@ -1863,7 +1868,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             /**
              * <p>The flags that are used to manage the cloud desktops.</p>
              */
-            public Builder managementFlags(java.util.List < String > managementFlags) {
+            public Builder managementFlags(java.util.List<String> managementFlags) {
                 this.managementFlags = managementFlags;
                 return this;
             }
@@ -2027,7 +2032,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             /**
              * <p>The policy IDs.</p>
              */
-            public Builder policyGroupIdList(java.util.List < String > policyGroupIdList) {
+            public Builder policyGroupIdList(java.util.List<String> policyGroupIdList) {
                 this.policyGroupIdList = policyGroupIdList;
                 return this;
             }
@@ -2046,7 +2051,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             /**
              * <p>The policy names.</p>
              */
-            public Builder policyGroupNameList(java.util.List < String > policyGroupNameList) {
+            public Builder policyGroupNameList(java.util.List<String> policyGroupNameList) {
                 this.policyGroupNameList = policyGroupNameList;
                 return this;
             }
@@ -2092,7 +2097,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             /**
              * ResourceGroups.
              */
-            public Builder resourceGroups(java.util.List < ResourceGroups> resourceGroups) {
+            public Builder resourceGroups(java.util.List<ResourceGroups> resourceGroups) {
                 this.resourceGroups = resourceGroups;
                 return this;
             }
@@ -2127,7 +2132,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             /**
              * <p>The information about the desktop sessions of end users.</p>
              */
-            public Builder sessions(java.util.List < Sessions> sessions) {
+            public Builder sessions(java.util.List<Sessions> sessions) {
                 this.sessions = sessions;
                 return this;
             }
@@ -2205,7 +2210,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             /**
              * <p>Details about the tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

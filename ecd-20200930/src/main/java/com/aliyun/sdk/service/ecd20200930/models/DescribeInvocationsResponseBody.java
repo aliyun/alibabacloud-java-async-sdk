@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInvocationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Invocations")
-    private java.util.List < Invocations> invocations;
+    private java.util.List<Invocations> invocations;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     /**
      * @return invocations
      */
-    public java.util.List < Invocations> getInvocations() {
+    public java.util.List<Invocations> getInvocations() {
         return this.invocations;
     }
 
@@ -57,14 +62,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Invocations> invocations; 
+        private java.util.List<Invocations> invocations; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>Details about execution records of the command.</p>
          */
-        public Builder invocations(java.util.List < Invocations> invocations) {
+        public Builder invocations(java.util.List<Invocations> invocations) {
             this.invocations = invocations;
             return this;
         }
@@ -511,7 +516,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         private Integer invokeDesktopSucceedCount;
 
         @com.aliyun.core.annotation.NameInMap("InvokeDesktops")
-        private java.util.List < InvokeDesktops> invokeDesktops;
+        private java.util.List<InvokeDesktops> invokeDesktops;
 
         @com.aliyun.core.annotation.NameInMap("InvokeId")
         private String invokeId;
@@ -588,7 +593,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         /**
          * @return invokeDesktops
          */
-        public java.util.List < InvokeDesktops> getInvokeDesktops() {
+        public java.util.List<InvokeDesktops> getInvokeDesktops() {
             return this.invokeDesktops;
         }
 
@@ -607,7 +612,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String invocationStatus; 
             private Integer invokeDesktopCount; 
             private Integer invokeDesktopSucceedCount; 
-            private java.util.List < InvokeDesktops> invokeDesktops; 
+            private java.util.List<InvokeDesktops> invokeDesktops; 
             private String invokeId; 
 
             /**
@@ -711,7 +716,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             /**
              * <p>The cloud desktops on which the command is executed.</p>
              */
-            public Builder invokeDesktops(java.util.List < InvokeDesktops> invokeDesktops) {
+            public Builder invokeDesktops(java.util.List<InvokeDesktops> invokeDesktops) {
                 this.invokeDesktops = invokeDesktops;
                 return this;
             }

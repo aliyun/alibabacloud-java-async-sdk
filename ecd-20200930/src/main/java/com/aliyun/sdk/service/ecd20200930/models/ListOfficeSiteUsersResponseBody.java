@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Users")
-    private java.util.List < Users> users;
+    private java.util.List<Users> users;
 
     private ListOfficeSiteUsersResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
     /**
      * @return users
      */
-    public java.util.List < Users> getUsers() {
+    public java.util.List<Users> getUsers() {
         return this.users;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Users> users; 
+        private java.util.List<Users> users; 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -86,7 +91,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         /**
          * <p>The usernames of AD users.<br>If the only Administrator and Guest users exist in the enterprise AD, an empty User array is returned.</p>
          */
-        public Builder users(java.util.List < Users> users) {
+        public Builder users(java.util.List<Users> users) {
             this.users = users;
             return this;
         }

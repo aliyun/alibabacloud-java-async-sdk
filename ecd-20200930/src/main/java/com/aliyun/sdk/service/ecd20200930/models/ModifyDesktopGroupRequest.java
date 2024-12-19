@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -95,7 +100,7 @@ public class ModifyDesktopGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyGroupIds")
-    private java.util.List < String > policyGroupIds;
+    private java.util.List<String> policyGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProfileFollowSwitch")
@@ -301,7 +306,7 @@ public class ModifyDesktopGroupRequest extends Request {
     /**
      * @return policyGroupIds
      */
-    public java.util.List < String > getPolicyGroupIds() {
+    public java.util.List<String> getPolicyGroupIds() {
         return this.policyGroupIds;
     }
 
@@ -367,7 +372,7 @@ public class ModifyDesktopGroupRequest extends Request {
         private Integer minDesktopsCount; 
         private String ownBundleId; 
         private String policyGroupId; 
-        private java.util.List < String > policyGroupIds; 
+        private java.util.List<String> policyGroupIds; 
         private Boolean profileFollowSwitch; 
         private Float ratioThreshold; 
         private String regionId; 
@@ -694,7 +699,7 @@ public class ModifyDesktopGroupRequest extends Request {
         /**
          * <p>The IDs of policy groups.</p>
          */
-        public Builder policyGroupIds(java.util.List < String > policyGroupIds) {
+        public Builder policyGroupIds(java.util.List<String> policyGroupIds) {
             this.putQueryParameter("PolicyGroupIds", policyGroupIds);
             this.policyGroupIds = policyGroupIds;
             return this;

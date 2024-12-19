@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class AddDevicesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeviceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > deviceIds;
+    private java.util.List<String> deviceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -56,7 +61,7 @@ public class AddDevicesRequest extends Request {
     /**
      * @return deviceIds
      */
-    public java.util.List < String > getDeviceIds() {
+    public java.util.List<String> getDeviceIds() {
         return this.deviceIds;
     }
 
@@ -69,7 +74,7 @@ public class AddDevicesRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddDevicesRequest, Builder> {
         private Integer clientType; 
-        private java.util.List < String > deviceIds; 
+        private java.util.List<String> deviceIds; 
         private String regionId; 
 
         private Builder() {
@@ -105,7 +110,7 @@ public class AddDevicesRequest extends Request {
          * <p>The IDs of the devices. You can specify up to 200 IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder deviceIds(java.util.List < String > deviceIds) {
+        public Builder deviceIds(java.util.List<String> deviceIds) {
             this.putQueryParameter("DeviceIds", deviceIds);
             this.deviceIds = deviceIds;
             return this;

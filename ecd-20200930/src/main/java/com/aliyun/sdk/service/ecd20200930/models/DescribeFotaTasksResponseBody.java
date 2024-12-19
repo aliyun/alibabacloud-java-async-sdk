@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("FotaTasks")
-    private java.util.List < FotaTasks> fotaTasks;
+    private java.util.List<FotaTasks> fotaTasks;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -53,7 +58,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
     /**
      * @return fotaTasks
      */
-    public java.util.List < FotaTasks> getFotaTasks() {
+    public java.util.List<FotaTasks> getFotaTasks() {
         return this.fotaTasks;
     }
 
@@ -80,7 +85,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < FotaTasks> fotaTasks; 
+        private java.util.List<FotaTasks> fotaTasks; 
         private String message; 
         private String nextToken; 
         private String requestId; 
@@ -99,7 +104,7 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
         /**
          * <p>Details about the image update task.</p>
          */
-        public Builder fotaTasks(java.util.List < FotaTasks> fotaTasks) {
+        public Builder fotaTasks(java.util.List<FotaTasks> fotaTasks) {
             this.fotaTasks = fotaTasks;
             return this;
         }

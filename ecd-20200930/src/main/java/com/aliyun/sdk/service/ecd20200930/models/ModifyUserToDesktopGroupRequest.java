@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,12 +25,12 @@ public class ModifyUserToDesktopGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NewEndUserIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > newEndUserIds;
+    private java.util.List<String> newEndUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OldEndUserIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > oldEndUserIds;
+    private java.util.List<String> oldEndUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -63,14 +68,14 @@ public class ModifyUserToDesktopGroupRequest extends Request {
     /**
      * @return newEndUserIds
      */
-    public java.util.List < String > getNewEndUserIds() {
+    public java.util.List<String> getNewEndUserIds() {
         return this.newEndUserIds;
     }
 
     /**
      * @return oldEndUserIds
      */
-    public java.util.List < String > getOldEndUserIds() {
+    public java.util.List<String> getOldEndUserIds() {
         return this.oldEndUserIds;
     }
 
@@ -83,8 +88,8 @@ public class ModifyUserToDesktopGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyUserToDesktopGroupRequest, Builder> {
         private String desktopGroupId; 
-        private java.util.List < String > newEndUserIds; 
-        private java.util.List < String > oldEndUserIds; 
+        private java.util.List<String> newEndUserIds; 
+        private java.util.List<String> oldEndUserIds; 
         private String regionId; 
 
         private Builder() {
@@ -116,7 +121,7 @@ public class ModifyUserToDesktopGroupRequest extends Request {
          * <p>The IDs of the end users that you want to add. You can configure 1 to 500 IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder newEndUserIds(java.util.List < String > newEndUserIds) {
+        public Builder newEndUserIds(java.util.List<String> newEndUserIds) {
             this.putQueryParameter("NewEndUserIds", newEndUserIds);
             this.newEndUserIds = newEndUserIds;
             return this;
@@ -126,7 +131,7 @@ public class ModifyUserToDesktopGroupRequest extends Request {
          * <p>The IDs of the end users that you want to remove. You can configure 1 to 500 IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder oldEndUserIds(java.util.List < String > oldEndUserIds) {
+        public Builder oldEndUserIds(java.util.List<String> oldEndUserIds) {
             this.putQueryParameter("OldEndUserIds", oldEndUserIds);
             this.oldEndUserIds = oldEndUserIds;
             return this;

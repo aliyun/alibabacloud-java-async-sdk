@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFilePermissionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FilePermissions")
-    private java.util.List < FilePermissionMember > filePermissions;
+    private java.util.List<FilePermissionMember> filePermissions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListFilePermissionResponseBody extends TeaModel {
     /**
      * @return filePermissions
      */
-    public java.util.List < FilePermissionMember > getFilePermissions() {
+    public java.util.List<FilePermissionMember> getFilePermissions() {
         return this.filePermissions;
     }
 
@@ -46,13 +51,13 @@ public class ListFilePermissionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FilePermissionMember > filePermissions; 
+        private java.util.List<FilePermissionMember> filePermissions; 
         private String requestId; 
 
         /**
          * <p>The permissions on the shared file.</p>
          */
-        public Builder filePermissions(java.util.List < FilePermissionMember > filePermissions) {
+        public Builder filePermissions(java.util.List<FilePermissionMember> filePermissions) {
             this.filePermissions = filePermissions;
             return this;
         }

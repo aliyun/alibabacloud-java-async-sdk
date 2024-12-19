@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class AddFilePermissionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MemberList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < MemberList> memberList;
+    private java.util.List<MemberList> memberList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -94,7 +99,7 @@ public class AddFilePermissionRequest extends Request {
     /**
      * @return memberList
      */
-    public java.util.List < MemberList> getMemberList() {
+    public java.util.List<MemberList> getMemberList() {
         return this.memberList;
     }
 
@@ -110,7 +115,7 @@ public class AddFilePermissionRequest extends Request {
         private String endUserId; 
         private String fileId; 
         private String groupId; 
-        private java.util.List < MemberList> memberList; 
+        private java.util.List<MemberList> memberList; 
         private String regionId; 
 
         private Builder() {
@@ -181,7 +186,7 @@ public class AddFilePermissionRequest extends Request {
          * <p>The members who are granted the folder permissions.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder memberList(java.util.List < MemberList> memberList) {
+        public Builder memberList(java.util.List<MemberList> memberList) {
             String memberListShrink = shrink(memberList, "MemberList", "json");
             this.putQueryParameter("MemberList", memberListShrink);
             this.memberList = memberList;

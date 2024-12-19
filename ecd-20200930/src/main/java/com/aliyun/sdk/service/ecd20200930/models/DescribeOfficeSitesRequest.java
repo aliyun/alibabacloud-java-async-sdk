@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class DescribeOfficeSitesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
-    private java.util.List < String > officeSiteId;
+    private java.util.List<String> officeSiteId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OfficeSiteType")
@@ -83,7 +88,7 @@ public class DescribeOfficeSitesRequest extends Request {
     /**
      * @return officeSiteId
      */
-    public java.util.List < String > getOfficeSiteId() {
+    public java.util.List<String> getOfficeSiteId() {
         return this.officeSiteId;
     }
 
@@ -118,7 +123,7 @@ public class DescribeOfficeSitesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeOfficeSitesRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > officeSiteId; 
+        private java.util.List<String> officeSiteId; 
         private String officeSiteType; 
         private String regionId; 
         private String securityProtection; 
@@ -173,7 +178,7 @@ public class DescribeOfficeSitesRequest extends Request {
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
          */
-        public Builder officeSiteId(java.util.List < String > officeSiteId) {
+        public Builder officeSiteId(java.util.List<String> officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
             this.officeSiteId = officeSiteId;
             return this;

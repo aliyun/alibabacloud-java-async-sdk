@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCensResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Cens")
-    private java.util.List < Cens> cens;
+    private java.util.List<Cens> cens;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeCensResponseBody extends TeaModel {
     /**
      * @return cens
      */
-    public java.util.List < Cens> getCens() {
+    public java.util.List<Cens> getCens() {
         return this.cens;
     }
 
@@ -79,7 +84,7 @@ public class DescribeCensResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Cens> cens; 
+        private java.util.List<Cens> cens; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeCensResponseBody extends TeaModel {
         /**
          * <p>Details of the CEN instances.</p>
          */
-        public Builder cens(java.util.List < Cens> cens) {
+        public Builder cens(java.util.List<Cens> cens) {
             this.cens = cens;
             return this;
         }
@@ -289,7 +294,7 @@ public class DescribeCensResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("PackageIds")
-        private java.util.List < PackageIds> packageIds;
+        private java.util.List<PackageIds> packageIds;
 
         @com.aliyun.core.annotation.NameInMap("ProtectionLevel")
         private String protectionLevel;
@@ -298,7 +303,7 @@ public class DescribeCensResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Cens(Builder builder) {
             this.cenId = builder.cenId;
@@ -358,7 +363,7 @@ public class DescribeCensResponseBody extends TeaModel {
         /**
          * @return packageIds
          */
-        public java.util.List < PackageIds> getPackageIds() {
+        public java.util.List<PackageIds> getPackageIds() {
             return this.packageIds;
         }
 
@@ -379,7 +384,7 @@ public class DescribeCensResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -389,10 +394,10 @@ public class DescribeCensResponseBody extends TeaModel {
             private String description; 
             private String ipv6Level; 
             private String name; 
-            private java.util.List < PackageIds> packageIds; 
+            private java.util.List<PackageIds> packageIds; 
             private String protectionLevel; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The ID of the CEN instance.</p>
@@ -464,7 +469,7 @@ public class DescribeCensResponseBody extends TeaModel {
             /**
              * <p>The bandwidth plans that are bound to the CEN instance.</p>
              */
-            public Builder packageIds(java.util.List < PackageIds> packageIds) {
+            public Builder packageIds(java.util.List<PackageIds> packageIds) {
                 this.packageIds = packageIds;
                 return this;
             }
@@ -521,7 +526,7 @@ public class DescribeCensResponseBody extends TeaModel {
             /**
              * <p>The tags of the CEN instance.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

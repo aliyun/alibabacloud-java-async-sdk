@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteDesktopsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > desktopId;
+    private java.util.List<String> desktopId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -44,7 +49,7 @@ public class DeleteDesktopsRequest extends Request {
     /**
      * @return desktopId
      */
-    public java.util.List < String > getDesktopId() {
+    public java.util.List<String> getDesktopId() {
         return this.desktopId;
     }
 
@@ -56,7 +61,7 @@ public class DeleteDesktopsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteDesktopsRequest, Builder> {
-        private java.util.List < String > desktopId; 
+        private java.util.List<String> desktopId; 
         private String regionId; 
 
         private Builder() {
@@ -73,7 +78,7 @@ public class DeleteDesktopsRequest extends Request {
          * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder desktopId(java.util.List < String > desktopId) {
+        public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
             return this;

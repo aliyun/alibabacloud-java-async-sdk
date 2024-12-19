@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ModifyDesktopChargeTypeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > desktopId;
+    private java.util.List<String> desktopId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
@@ -88,7 +93,7 @@ public class ModifyDesktopChargeTypeRequest extends Request {
     /**
      * @return desktopId
      */
-    public java.util.List < String > getDesktopId() {
+    public java.util.List<String> getDesktopId() {
         return this.desktopId;
     }
 
@@ -130,7 +135,7 @@ public class ModifyDesktopChargeTypeRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDesktopChargeTypeRequest, Builder> {
         private Boolean autoPay; 
         private String chargeType; 
-        private java.util.List < String > desktopId; 
+        private java.util.List<String> desktopId; 
         private Integer period; 
         private String periodUnit; 
         private String promotionId; 
@@ -200,7 +205,7 @@ public class ModifyDesktopChargeTypeRequest extends Request {
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
          */
-        public Builder desktopId(java.util.List < String > desktopId) {
+        public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
             return this;

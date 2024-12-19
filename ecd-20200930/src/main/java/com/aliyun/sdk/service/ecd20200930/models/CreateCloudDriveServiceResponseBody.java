@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -411,10 +416,10 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
      */
     public static class ConflictCdsAndOrder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConflictCds")
-        private java.util.List < ConflictCds> conflictCds;
+        private java.util.List<ConflictCds> conflictCds;
 
         @com.aliyun.core.annotation.NameInMap("ConflictOrder")
-        private java.util.List < ConflictOrder> conflictOrder;
+        private java.util.List<ConflictOrder> conflictOrder;
 
         private ConflictCdsAndOrder(Builder builder) {
             this.conflictCds = builder.conflictCds;
@@ -432,25 +437,25 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
         /**
          * @return conflictCds
          */
-        public java.util.List < ConflictCds> getConflictCds() {
+        public java.util.List<ConflictCds> getConflictCds() {
             return this.conflictCds;
         }
 
         /**
          * @return conflictOrder
          */
-        public java.util.List < ConflictOrder> getConflictOrder() {
+        public java.util.List<ConflictOrder> getConflictOrder() {
             return this.conflictOrder;
         }
 
         public static final class Builder {
-            private java.util.List < ConflictCds> conflictCds; 
-            private java.util.List < ConflictOrder> conflictOrder; 
+            private java.util.List<ConflictCds> conflictCds; 
+            private java.util.List<ConflictOrder> conflictOrder; 
 
             /**
              * ConflictCds.
              */
-            public Builder conflictCds(java.util.List < ConflictCds> conflictCds) {
+            public Builder conflictCds(java.util.List<ConflictCds> conflictCds) {
                 this.conflictCds = conflictCds;
                 return this;
             }
@@ -458,7 +463,7 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
             /**
              * ConflictOrder.
              */
-            public Builder conflictOrder(java.util.List < ConflictOrder> conflictOrder) {
+            public Builder conflictOrder(java.util.List<ConflictOrder> conflictOrder) {
                 this.conflictOrder = conflictOrder;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class DisableDesktopsInGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > desktopIds;
+    private java.util.List<String> desktopIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -57,7 +62,7 @@ public class DisableDesktopsInGroupRequest extends Request {
     /**
      * @return desktopIds
      */
-    public java.util.List < String > getDesktopIds() {
+    public java.util.List<String> getDesktopIds() {
         return this.desktopIds;
     }
 
@@ -70,7 +75,7 @@ public class DisableDesktopsInGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<DisableDesktopsInGroupRequest, Builder> {
         private String desktopGroupId; 
-        private java.util.List < String > desktopIds; 
+        private java.util.List<String> desktopIds; 
         private String regionId; 
 
         private Builder() {
@@ -101,7 +106,7 @@ public class DisableDesktopsInGroupRequest extends Request {
          * <p>The IDs of cloud desktops.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder desktopIds(java.util.List < String > desktopIds) {
+        public Builder desktopIds(java.util.List<String> desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
             this.desktopIds = desktopIds;
             return this;

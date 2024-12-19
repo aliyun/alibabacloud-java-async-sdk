@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeBundlesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BundleId")
-    private java.util.List < String > bundleId;
+    private java.util.List<String> bundleId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BundleType")
@@ -50,7 +55,7 @@ public class DescribeBundlesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
-    private java.util.List < String > imageId;
+    private java.util.List<String> imageId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -139,7 +144,7 @@ public class DescribeBundlesRequest extends Request {
     /**
      * @return bundleId
      */
-    public java.util.List < String > getBundleId() {
+    public java.util.List<String> getBundleId() {
         return this.bundleId;
     }
 
@@ -202,7 +207,7 @@ public class DescribeBundlesRequest extends Request {
     /**
      * @return imageId
      */
-    public java.util.List < String > getImageId() {
+    public java.util.List<String> getImageId() {
         return this.imageId;
     }
 
@@ -284,7 +289,7 @@ public class DescribeBundlesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeBundlesRequest, Builder> {
-        private java.util.List < String > bundleId; 
+        private java.util.List<String> bundleId; 
         private String bundleType; 
         private Boolean checkStock; 
         private Integer cpuCount; 
@@ -293,7 +298,7 @@ public class DescribeBundlesRequest extends Request {
         private Boolean fromDesktopGroup; 
         private Float gpuCount; 
         private String gpuDriverType; 
-        private java.util.List < String > imageId; 
+        private java.util.List<String> imageId; 
         private Integer maxResults; 
         private Integer memorySize; 
         private String nextToken; 
@@ -341,7 +346,7 @@ public class DescribeBundlesRequest extends Request {
          * <strong>example:</strong>
          * <p>bundle_ecd_graphics.2xlarge_s15d15_win2019</p>
          */
-        public Builder bundleId(java.util.List < String > bundleId) {
+        public Builder bundleId(java.util.List<String> bundleId) {
             this.putQueryParameter("BundleId", bundleId);
             this.bundleId = bundleId;
             return this;
@@ -481,7 +486,7 @@ public class DescribeBundlesRequest extends Request {
         /**
          * <p>The image ID.</p>
          */
-        public Builder imageId(java.util.List < String > imageId) {
+        public Builder imageId(java.util.List<String> imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
             return this;

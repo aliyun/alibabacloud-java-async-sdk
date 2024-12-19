@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeNASFileSystemsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileSystemId")
-    private java.util.List < String > fileSystemId;
+    private java.util.List<String> fileSystemId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MatchCompatibleProfile")
@@ -64,7 +69,7 @@ public class DescribeNASFileSystemsRequest extends Request {
     /**
      * @return fileSystemId
      */
-    public java.util.List < String > getFileSystemId() {
+    public java.util.List<String> getFileSystemId() {
         return this.fileSystemId;
     }
 
@@ -104,7 +109,7 @@ public class DescribeNASFileSystemsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeNASFileSystemsRequest, Builder> {
-        private java.util.List < String > fileSystemId; 
+        private java.util.List<String> fileSystemId; 
         private Boolean matchCompatibleProfile; 
         private Integer maxResults; 
         private String nextToken; 
@@ -131,7 +136,7 @@ public class DescribeNASFileSystemsRequest extends Request {
          * <strong>example:</strong>
          * <p>04f314****</p>
          */
-        public Builder fileSystemId(java.util.List < String > fileSystemId) {
+        public Builder fileSystemId(java.util.List<String> fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
             this.fileSystemId = fileSystemId;
             return this;

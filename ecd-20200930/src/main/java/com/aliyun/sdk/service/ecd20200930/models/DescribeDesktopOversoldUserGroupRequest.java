@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class DescribeDesktopOversoldUserGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserGroupIds")
-    private java.util.List < String > userGroupIds;
+    private java.util.List<String> userGroupIds;
 
     private DescribeDesktopOversoldUserGroupRequest(Builder builder) {
         super(builder);
@@ -73,7 +78,7 @@ public class DescribeDesktopOversoldUserGroupRequest extends Request {
     /**
      * @return userGroupIds
      */
-    public java.util.List < String > getUserGroupIds() {
+    public java.util.List<String> getUserGroupIds() {
         return this.userGroupIds;
     }
 
@@ -81,7 +86,7 @@ public class DescribeDesktopOversoldUserGroupRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String oversoldGroupId; 
-        private java.util.List < String > userGroupIds; 
+        private java.util.List<String> userGroupIds; 
 
         private Builder() {
             super();
@@ -125,7 +130,7 @@ public class DescribeDesktopOversoldUserGroupRequest extends Request {
         /**
          * UserGroupIds.
          */
-        public Builder userGroupIds(java.util.List < String > userGroupIds) {
+        public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);
             this.userGroupIds = userGroupIds;
             return this;

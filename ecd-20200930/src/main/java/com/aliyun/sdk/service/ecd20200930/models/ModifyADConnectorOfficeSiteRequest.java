@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DnsAddress")
-    private java.util.List < String > dnsAddress;
+    private java.util.List<String> dnsAddress;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainName")
@@ -64,7 +69,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubDomainDnsAddress")
-    private java.util.List < String > subDomainDnsAddress;
+    private java.util.List<String> subDomainDnsAddress;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubDomainName")
@@ -125,7 +130,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
     /**
      * @return dnsAddress
      */
-    public java.util.List < String > getDnsAddress() {
+    public java.util.List<String> getDnsAddress() {
         return this.dnsAddress;
     }
 
@@ -188,7 +193,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
     /**
      * @return subDomainDnsAddress
      */
-    public java.util.List < String > getSubDomainDnsAddress() {
+    public java.util.List<String> getSubDomainDnsAddress() {
         return this.subDomainDnsAddress;
     }
 
@@ -203,7 +208,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         private String adHostname; 
         private String backupDCHostname; 
         private String backupDns; 
-        private java.util.List < String > dnsAddress; 
+        private java.util.List<String> dnsAddress; 
         private String domainName; 
         private String domainPassword; 
         private String domainUserName; 
@@ -212,7 +217,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         private String officeSiteId; 
         private String officeSiteName; 
         private String regionId; 
-        private java.util.List < String > subDomainDnsAddress; 
+        private java.util.List<String> subDomainDnsAddress; 
         private String subDomainName; 
 
         private Builder() {
@@ -273,7 +278,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
          * <strong>example:</strong>
          * <p>127.0.<em>.</em></p>
          */
-        public Builder dnsAddress(java.util.List < String > dnsAddress) {
+        public Builder dnsAddress(java.util.List<String> dnsAddress) {
             this.putQueryParameter("DnsAddress", dnsAddress);
             this.dnsAddress = dnsAddress;
             return this;
@@ -402,7 +407,7 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
          * <strong>example:</strong>
          * <p>127.0.<em>.</em></p>
          */
-        public Builder subDomainDnsAddress(java.util.List < String > subDomainDnsAddress) {
+        public Builder subDomainDnsAddress(java.util.List<String> subDomainDnsAddress) {
             this.putQueryParameter("SubDomainDnsAddress", subDomainDnsAddress);
             this.subDomainDnsAddress = subDomainDnsAddress;
             return this;

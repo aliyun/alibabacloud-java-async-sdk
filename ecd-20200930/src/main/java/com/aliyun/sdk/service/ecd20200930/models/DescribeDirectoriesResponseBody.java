@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     private String adHostname;
 
     @com.aliyun.core.annotation.NameInMap("Directories")
-    private java.util.List < Directories> directories;
+    private java.util.List<Directories> directories;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -49,7 +54,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     /**
      * @return directories
      */
-    public java.util.List < Directories> getDirectories() {
+    public java.util.List<Directories> getDirectories() {
         return this.directories;
     }
 
@@ -69,7 +74,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String adHostname; 
-        private java.util.List < Directories> directories; 
+        private java.util.List<Directories> directories; 
         private String nextToken; 
         private String requestId; 
 
@@ -87,7 +92,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         /**
          * <p>The directories.</p>
          */
-        public Builder directories(java.util.List < Directories> directories) {
+        public Builder directories(java.util.List<Directories> directories) {
             this.directories = directories;
             return this;
         }
@@ -458,7 +463,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
      */
     public static class Directories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ADConnectors")
-        private java.util.List < ADConnectors> ADConnectors;
+        private java.util.List<ADConnectors> ADConnectors;
 
         @com.aliyun.core.annotation.NameInMap("AdHostname")
         private String adHostname;
@@ -488,7 +493,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         private String directoryType;
 
         @com.aliyun.core.annotation.NameInMap("DnsAddress")
-        private java.util.List < String > dnsAddress;
+        private java.util.List<String> dnsAddress;
 
         @com.aliyun.core.annotation.NameInMap("DnsUserName")
         private String dnsUserName;
@@ -512,10 +517,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         private Boolean enableInternetAccess;
 
         @com.aliyun.core.annotation.NameInMap("FileSystemIds")
-        private java.util.List < String > fileSystemIds;
+        private java.util.List<String> fileSystemIds;
 
         @com.aliyun.core.annotation.NameInMap("Logs")
-        private java.util.List < Logs> logs;
+        private java.util.List<Logs> logs;
 
         @com.aliyun.core.annotation.NameInMap("MfaEnabled")
         private Boolean mfaEnabled;
@@ -536,7 +541,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("SubDnsAddress")
-        private java.util.List < String > subDnsAddress;
+        private java.util.List<String> subDnsAddress;
 
         @com.aliyun.core.annotation.NameInMap("SubDomainName")
         private String subDomainName;
@@ -545,7 +550,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         private String trustPassword;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        private java.util.List<String> vSwitchIds;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -595,7 +600,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         /**
          * @return ADConnectors
          */
-        public java.util.List < ADConnectors> getADConnectors() {
+        public java.util.List<ADConnectors> getADConnectors() {
             return this.ADConnectors;
         }
 
@@ -665,7 +670,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         /**
          * @return dnsAddress
          */
-        public java.util.List < String > getDnsAddress() {
+        public java.util.List<String> getDnsAddress() {
             return this.dnsAddress;
         }
 
@@ -721,14 +726,14 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         /**
          * @return fileSystemIds
          */
-        public java.util.List < String > getFileSystemIds() {
+        public java.util.List<String> getFileSystemIds() {
             return this.fileSystemIds;
         }
 
         /**
          * @return logs
          */
-        public java.util.List < Logs> getLogs() {
+        public java.util.List<Logs> getLogs() {
             return this.logs;
         }
 
@@ -777,7 +782,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         /**
          * @return subDnsAddress
          */
-        public java.util.List < String > getSubDnsAddress() {
+        public java.util.List<String> getSubDnsAddress() {
             return this.subDnsAddress;
         }
 
@@ -798,7 +803,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -810,7 +815,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ADConnectors> ADConnectors; 
+            private java.util.List<ADConnectors> ADConnectors; 
             private String adHostname; 
             private String backupDCHostname; 
             private String backupDns; 
@@ -820,7 +825,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             private String desktopVpcEndpoint; 
             private String directoryId; 
             private String directoryType; 
-            private java.util.List < String > dnsAddress; 
+            private java.util.List<String> dnsAddress; 
             private String dnsUserName; 
             private String domainName; 
             private String domainPassword; 
@@ -828,24 +833,24 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             private Boolean enableAdminAccess; 
             private Boolean enableCrossDesktopAccess; 
             private Boolean enableInternetAccess; 
-            private java.util.List < String > fileSystemIds; 
-            private java.util.List < Logs> logs; 
+            private java.util.List<String> fileSystemIds; 
+            private java.util.List<Logs> logs; 
             private Boolean mfaEnabled; 
             private String name; 
             private Boolean needVerifyLoginRisk; 
             private String ouName; 
             private Boolean ssoEnabled; 
             private String status; 
-            private java.util.List < String > subDnsAddress; 
+            private java.util.List<String> subDnsAddress; 
             private String subDomainName; 
             private String trustPassword; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
             private String vpcId; 
 
             /**
              * <p>Details of the AD connector.</p>
              */
-            public Builder ADConnectors(java.util.List < ADConnectors> ADConnectors) {
+            public Builder ADConnectors(java.util.List<ADConnectors> ADConnectors) {
                 this.ADConnectors = ADConnectors;
                 return this;
             }
@@ -985,7 +990,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             /**
              * <p>The DNS address of the directory.</p>
              */
-            public Builder dnsAddress(java.util.List < String > dnsAddress) {
+            public Builder dnsAddress(java.util.List<String> dnsAddress) {
                 this.dnsAddress = dnsAddress;
                 return this;
             }
@@ -1073,7 +1078,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             /**
              * <p>The IDs of File Storage NAS (NAS) file systems.</p>
              */
-            public Builder fileSystemIds(java.util.List < String > fileSystemIds) {
+            public Builder fileSystemIds(java.util.List<String> fileSystemIds) {
                 this.fileSystemIds = fileSystemIds;
                 return this;
             }
@@ -1081,7 +1086,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             /**
              * <p>The registration logs. This parameter is returned only when the directory type is AD office network.</p>
              */
-            public Builder logs(java.util.List < Logs> logs) {
+            public Builder logs(java.util.List<Logs> logs) {
                 this.logs = logs;
                 return this;
             }
@@ -1171,7 +1176,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             /**
              * <p>The DNS address of the enterprise AD subdomain.</p>
              */
-            public Builder subDnsAddress(java.util.List < String > subDnsAddress) {
+            public Builder subDnsAddress(java.util.List<String> subDnsAddress) {
                 this.subDnsAddress = subDnsAddress;
                 return this;
             }
@@ -1201,7 +1206,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             /**
              * <p>The IDs of the vSwitches specified when the directory was created.</p>
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }

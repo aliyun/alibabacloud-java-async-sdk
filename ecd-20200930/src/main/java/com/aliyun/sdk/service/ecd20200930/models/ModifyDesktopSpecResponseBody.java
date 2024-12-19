@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
     private String orderId;
 
     @com.aliyun.core.annotation.NameInMap("OrderIds")
-    private java.util.List < Long > orderIds;
+    private java.util.List<Long> orderIds;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
     /**
      * @return orderIds
      */
-    public java.util.List < Long > getOrderIds() {
+    public java.util.List<Long> getOrderIds() {
         return this.orderIds;
     }
 
@@ -58,7 +63,7 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
 
     public static final class Builder {
         private String orderId; 
-        private java.util.List < Long > orderIds; 
+        private java.util.List<Long> orderIds; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
         /**
          * OrderIds.
          */
-        public Builder orderIds(java.util.List < Long > orderIds) {
+        public Builder orderIds(java.util.List<Long> orderIds) {
             this.orderIds = orderIds;
             return this;
         }

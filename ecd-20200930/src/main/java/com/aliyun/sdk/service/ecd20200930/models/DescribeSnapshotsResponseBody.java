@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Snapshots")
-    private java.util.List < Snapshots> snapshots;
+    private java.util.List<Snapshots> snapshots;
 
     private DescribeSnapshotsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
      * @return snapshots
      */
-    public java.util.List < Snapshots> getSnapshots() {
+    public java.util.List<Snapshots> getSnapshots() {
         return this.snapshots;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Snapshots> snapshots; 
+        private java.util.List<Snapshots> snapshots; 
 
         /**
          * <p>If the NextToken parameter is empty, no next page exists.</p>
@@ -86,7 +91,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>Details of the queried snapshots.</p>
          */
-        public Builder snapshots(java.util.List < Snapshots> snapshots) {
+        public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
             return this;
         }

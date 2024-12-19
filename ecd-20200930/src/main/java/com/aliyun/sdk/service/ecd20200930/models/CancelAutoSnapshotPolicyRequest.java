@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > desktopId;
+    private java.util.List<String> desktopId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyId")
@@ -49,7 +54,7 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
     /**
      * @return desktopId
      */
-    public java.util.List < String > getDesktopId() {
+    public java.util.List<String> getDesktopId() {
         return this.desktopId;
     }
 
@@ -68,7 +73,7 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CancelAutoSnapshotPolicyRequest, Builder> {
-        private java.util.List < String > desktopId; 
+        private java.util.List<String> desktopId; 
         private String policyId; 
         private String regionId; 
 
@@ -87,7 +92,7 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
          * <p>The IDs of the cloud computers. You can specify 1 to 50 IDs. The IDs cannot be an empty string. The IDs can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The IDs cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder desktopId(java.util.List < String > desktopId) {
+        public Builder desktopId(java.util.List<String> desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
             this.desktopId = desktopId;
             return this;

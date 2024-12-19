@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -55,7 +60,7 @@ public class CreateBundleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserDiskSizeGib")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Integer > userDiskSizeGib;
+    private java.util.List<Integer> userDiskSizeGib;
 
     private CreateBundleRequest(Builder builder) {
         super(builder);
@@ -150,7 +155,7 @@ public class CreateBundleRequest extends Request {
     /**
      * @return userDiskSizeGib
      */
-    public java.util.List < Integer > getUserDiskSizeGib() {
+    public java.util.List<Integer> getUserDiskSizeGib() {
         return this.userDiskSizeGib;
     }
 
@@ -164,7 +169,7 @@ public class CreateBundleRequest extends Request {
         private String rootDiskPerformanceLevel; 
         private Integer rootDiskSizeGib; 
         private String userDiskPerformanceLevel; 
-        private java.util.List < Integer > userDiskSizeGib; 
+        private java.util.List<Integer> userDiskSizeGib; 
 
         private Builder() {
             super();
@@ -372,7 +377,7 @@ public class CreateBundleRequest extends Request {
          * <strong>example:</strong>
          * <p>70</p>
          */
-        public Builder userDiskSizeGib(java.util.List < Integer > userDiskSizeGib) {
+        public Builder userDiskSizeGib(java.util.List<Integer> userDiskSizeGib) {
             this.putQueryParameter("UserDiskSizeGib", userDiskSizeGib);
             this.userDiskSizeGib = userDiskSizeGib;
             return this;

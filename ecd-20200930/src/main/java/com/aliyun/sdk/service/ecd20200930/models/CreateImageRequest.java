@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,7 +52,7 @@ public class CreateImageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotIds")
-    private java.util.List < String > snapshotIds;
+    private java.util.List<String> snapshotIds;
 
     private CreateImageRequest(Builder builder) {
         super(builder);
@@ -134,7 +139,7 @@ public class CreateImageRequest extends Request {
     /**
      * @return snapshotIds
      */
-    public java.util.List < String > getSnapshotIds() {
+    public java.util.List<String> getSnapshotIds() {
         return this.snapshotIds;
     }
 
@@ -147,7 +152,7 @@ public class CreateImageRequest extends Request {
         private String imageResourceType; 
         private String regionId; 
         private String snapshotId; 
-        private java.util.List < String > snapshotIds; 
+        private java.util.List<String> snapshotIds; 
 
         private Builder() {
             super();
@@ -271,7 +276,7 @@ public class CreateImageRequest extends Request {
         /**
          * <p>The IDs of the snapshots.</p>
          */
-        public Builder snapshotIds(java.util.List < String > snapshotIds) {
+        public Builder snapshotIds(java.util.List<String> snapshotIds) {
             this.putQueryParameter("SnapshotIds", snapshotIds);
             this.snapshotIds = snapshotIds;
             return this;

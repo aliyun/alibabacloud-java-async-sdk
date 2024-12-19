@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicies")
-    private java.util.List < AutoSnapshotPolicies> autoSnapshotPolicies;
+    private java.util.List<AutoSnapshotPolicies> autoSnapshotPolicies;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
     /**
      * @return autoSnapshotPolicies
      */
-    public java.util.List < AutoSnapshotPolicies> getAutoSnapshotPolicies() {
+    public java.util.List<AutoSnapshotPolicies> getAutoSnapshotPolicies() {
         return this.autoSnapshotPolicies;
     }
 
@@ -57,14 +62,14 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AutoSnapshotPolicies> autoSnapshotPolicies; 
+        private java.util.List<AutoSnapshotPolicies> autoSnapshotPolicies; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>The details of the queried automatic snapshot policies.</p>
          */
-        public Builder autoSnapshotPolicies(java.util.List < AutoSnapshotPolicies> autoSnapshotPolicies) {
+        public Builder autoSnapshotPolicies(java.util.List<AutoSnapshotPolicies> autoSnapshotPolicies) {
             this.autoSnapshotPolicies = autoSnapshotPolicies;
             return this;
         }

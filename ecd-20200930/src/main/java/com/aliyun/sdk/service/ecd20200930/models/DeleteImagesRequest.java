@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DeleteImagesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > imageId;
+    private java.util.List<String> imageId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -56,7 +61,7 @@ public class DeleteImagesRequest extends Request {
     /**
      * @return imageId
      */
-    public java.util.List < String > getImageId() {
+    public java.util.List<String> getImageId() {
         return this.imageId;
     }
 
@@ -69,7 +74,7 @@ public class DeleteImagesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteImagesRequest, Builder> {
         private Boolean deleteCascadedBundle; 
-        private java.util.List < String > imageId; 
+        private java.util.List<String> imageId; 
         private String regionId; 
 
         private Builder() {
@@ -99,7 +104,7 @@ public class DeleteImagesRequest extends Request {
          * <p>The image IDs. You can specify 1 to 100 image IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder imageId(java.util.List < String > imageId) {
+        public Builder imageId(java.util.List<String> imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
             return this;

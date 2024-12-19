@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Headers")
-    private java.util.List < Headers> headers;
+    private java.util.List<Headers> headers;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
     /**
      * @return headers
      */
-    public java.util.List < Headers> getHeaders() {
+    public java.util.List<Headers> getHeaders() {
         return this.headers;
     }
 
@@ -46,13 +51,13 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Headers> headers; 
+        private java.util.List<Headers> headers; 
         private String requestId; 
 
         /**
          * Headers.
          */
-        public Builder headers(java.util.List < Headers> headers) {
+        public Builder headers(java.util.List<Headers> headers) {
             this.headers = headers;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,11 +27,11 @@ public class CreatePolicyGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthorizeAccessPolicyRule")
-    private java.util.List < AuthorizeAccessPolicyRule> authorizeAccessPolicyRule;
+    private java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthorizeSecurityPolicyRule")
-    private java.util.List < AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule;
+    private java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CameraRedirect")
@@ -34,7 +39,7 @@ public class CreatePolicyGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientType")
-    private java.util.List < ClientType> clientType;
+    private java.util.List<ClientType> clientType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Clipboard")
@@ -42,11 +47,11 @@ public class CreatePolicyGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeviceRedirects")
-    private java.util.List < DeviceRedirects> deviceRedirects;
+    private java.util.List<DeviceRedirects> deviceRedirects;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeviceRules")
-    private java.util.List < DeviceRules> deviceRules;
+    private java.util.List<DeviceRules> deviceRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainList")
@@ -54,7 +59,7 @@ public class CreatePolicyGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainResolveRule")
-    private java.util.List < DomainResolveRule> domainResolveRule;
+    private java.util.List<DomainResolveRule> domainResolveRule;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainResolveRuleType")
@@ -106,7 +111,7 @@ public class CreatePolicyGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PreemptLoginUser")
-    private java.util.List < String > preemptLoginUser;
+    private java.util.List<String> preemptLoginUser;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrinterRedirection")
@@ -171,7 +176,7 @@ public class CreatePolicyGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScopeValue")
-    private java.util.List < String > scopeValue;
+    private java.util.List<String> scopeValue;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UsbRedirect")
@@ -179,7 +184,7 @@ public class CreatePolicyGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UsbSupplyRedirectRule")
-    private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule;
+    private java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VideoRedirect")
@@ -332,14 +337,14 @@ public class CreatePolicyGroupRequest extends Request {
     /**
      * @return authorizeAccessPolicyRule
      */
-    public java.util.List < AuthorizeAccessPolicyRule> getAuthorizeAccessPolicyRule() {
+    public java.util.List<AuthorizeAccessPolicyRule> getAuthorizeAccessPolicyRule() {
         return this.authorizeAccessPolicyRule;
     }
 
     /**
      * @return authorizeSecurityPolicyRule
      */
-    public java.util.List < AuthorizeSecurityPolicyRule> getAuthorizeSecurityPolicyRule() {
+    public java.util.List<AuthorizeSecurityPolicyRule> getAuthorizeSecurityPolicyRule() {
         return this.authorizeSecurityPolicyRule;
     }
 
@@ -353,7 +358,7 @@ public class CreatePolicyGroupRequest extends Request {
     /**
      * @return clientType
      */
-    public java.util.List < ClientType> getClientType() {
+    public java.util.List<ClientType> getClientType() {
         return this.clientType;
     }
 
@@ -367,14 +372,14 @@ public class CreatePolicyGroupRequest extends Request {
     /**
      * @return deviceRedirects
      */
-    public java.util.List < DeviceRedirects> getDeviceRedirects() {
+    public java.util.List<DeviceRedirects> getDeviceRedirects() {
         return this.deviceRedirects;
     }
 
     /**
      * @return deviceRules
      */
-    public java.util.List < DeviceRules> getDeviceRules() {
+    public java.util.List<DeviceRules> getDeviceRules() {
         return this.deviceRules;
     }
 
@@ -388,7 +393,7 @@ public class CreatePolicyGroupRequest extends Request {
     /**
      * @return domainResolveRule
      */
-    public java.util.List < DomainResolveRule> getDomainResolveRule() {
+    public java.util.List<DomainResolveRule> getDomainResolveRule() {
         return this.domainResolveRule;
     }
 
@@ -479,7 +484,7 @@ public class CreatePolicyGroupRequest extends Request {
     /**
      * @return preemptLoginUser
      */
-    public java.util.List < String > getPreemptLoginUser() {
+    public java.util.List<String> getPreemptLoginUser() {
         return this.preemptLoginUser;
     }
 
@@ -591,7 +596,7 @@ public class CreatePolicyGroupRequest extends Request {
     /**
      * @return scopeValue
      */
-    public java.util.List < String > getScopeValue() {
+    public java.util.List<String> getScopeValue() {
         return this.scopeValue;
     }
 
@@ -605,7 +610,7 @@ public class CreatePolicyGroupRequest extends Request {
     /**
      * @return usbSupplyRedirectRule
      */
-    public java.util.List < UsbSupplyRedirectRule> getUsbSupplyRedirectRule() {
+    public java.util.List<UsbSupplyRedirectRule> getUsbSupplyRedirectRule() {
         return this.usbSupplyRedirectRule;
     }
 
@@ -717,15 +722,15 @@ public class CreatePolicyGroupRequest extends Request {
     public static final class Builder extends Request.Builder<CreatePolicyGroupRequest, Builder> {
         private String adminAccess; 
         private String appContentProtection; 
-        private java.util.List < AuthorizeAccessPolicyRule> authorizeAccessPolicyRule; 
-        private java.util.List < AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule; 
+        private java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule; 
+        private java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule; 
         private String cameraRedirect; 
-        private java.util.List < ClientType> clientType; 
+        private java.util.List<ClientType> clientType; 
         private String clipboard; 
-        private java.util.List < DeviceRedirects> deviceRedirects; 
-        private java.util.List < DeviceRules> deviceRules; 
+        private java.util.List<DeviceRedirects> deviceRedirects; 
+        private java.util.List<DeviceRules> deviceRules; 
         private String domainList; 
-        private java.util.List < DomainResolveRule> domainResolveRule; 
+        private java.util.List<DomainResolveRule> domainResolveRule; 
         private String domainResolveRuleType; 
         private String endUserApplyAdminCoordinate; 
         private String endUserGroupCoordinate; 
@@ -738,7 +743,7 @@ public class CreatePolicyGroupRequest extends Request {
         private String name; 
         private String netRedirect; 
         private String preemptLogin; 
-        private java.util.List < String > preemptLoginUser; 
+        private java.util.List<String> preemptLoginUser; 
         private String printerRedirection; 
         private String recordContent; 
         private Long recordContentExpires; 
@@ -754,9 +759,9 @@ public class CreatePolicyGroupRequest extends Request {
         private String regionId; 
         private String remoteCoordinate; 
         private String scope; 
-        private java.util.List < String > scopeValue; 
+        private java.util.List<String> scopeValue; 
         private String usbRedirect; 
-        private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule; 
+        private java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule; 
         private String videoRedirect; 
         private String visualQuality; 
         private String watermark; 
@@ -884,7 +889,7 @@ public class CreatePolicyGroupRequest extends Request {
         /**
          * <p>The client IP address whitelists. Only the client IP addresses in whitelists can access the cloud desktop.</p>
          */
-        public Builder authorizeAccessPolicyRule(java.util.List < AuthorizeAccessPolicyRule> authorizeAccessPolicyRule) {
+        public Builder authorizeAccessPolicyRule(java.util.List<AuthorizeAccessPolicyRule> authorizeAccessPolicyRule) {
             this.putQueryParameter("AuthorizeAccessPolicyRule", authorizeAccessPolicyRule);
             this.authorizeAccessPolicyRule = authorizeAccessPolicyRule;
             return this;
@@ -893,7 +898,7 @@ public class CreatePolicyGroupRequest extends Request {
         /**
          * <p>The security group rules.</p>
          */
-        public Builder authorizeSecurityPolicyRule(java.util.List < AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule) {
+        public Builder authorizeSecurityPolicyRule(java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule) {
             this.putQueryParameter("AuthorizeSecurityPolicyRule", authorizeSecurityPolicyRule);
             this.authorizeSecurityPolicyRule = authorizeSecurityPolicyRule;
             return this;
@@ -930,7 +935,7 @@ public class CreatePolicyGroupRequest extends Request {
         /**
          * <p>The logon methods. You can use this parameter to determine which clients can be used to connect to the cloud desktop.</p>
          */
-        public Builder clientType(java.util.List < ClientType> clientType) {
+        public Builder clientType(java.util.List<ClientType> clientType) {
             this.putQueryParameter("ClientType", clientType);
             this.clientType = clientType;
             return this;
@@ -977,7 +982,7 @@ public class CreatePolicyGroupRequest extends Request {
         /**
          * DeviceRedirects.
          */
-        public Builder deviceRedirects(java.util.List < DeviceRedirects> deviceRedirects) {
+        public Builder deviceRedirects(java.util.List<DeviceRedirects> deviceRedirects) {
             this.putQueryParameter("DeviceRedirects", deviceRedirects);
             this.deviceRedirects = deviceRedirects;
             return this;
@@ -986,7 +991,7 @@ public class CreatePolicyGroupRequest extends Request {
         /**
          * DeviceRules.
          */
-        public Builder deviceRules(java.util.List < DeviceRules> deviceRules) {
+        public Builder deviceRules(java.util.List<DeviceRules> deviceRules) {
             this.putQueryParameter("DeviceRules", deviceRules);
             this.deviceRules = deviceRules;
             return this;
@@ -1011,7 +1016,7 @@ public class CreatePolicyGroupRequest extends Request {
         /**
          * <p>The details of the domain name resolution policy.</p>
          */
-        public Builder domainResolveRule(java.util.List < DomainResolveRule> domainResolveRule) {
+        public Builder domainResolveRule(java.util.List<DomainResolveRule> domainResolveRule) {
             this.putQueryParameter("DomainResolveRule", domainResolveRule);
             this.domainResolveRule = domainResolveRule;
             return this;
@@ -1296,7 +1301,7 @@ public class CreatePolicyGroupRequest extends Request {
          * <strong>example:</strong>
          * <p>Alice</p>
          */
-        public Builder preemptLoginUser(java.util.List < String > preemptLoginUser) {
+        public Builder preemptLoginUser(java.util.List<String> preemptLoginUser) {
             this.putQueryParameter("PreemptLoginUser", preemptLoginUser);
             this.preemptLoginUser = preemptLoginUser;
             return this;
@@ -1578,7 +1583,7 @@ public class CreatePolicyGroupRequest extends Request {
         /**
          * <p>The effective CIDR block ranges. If you set the Scope parameter to IP, you must specify this parameter.</p>
          */
-        public Builder scopeValue(java.util.List < String > scopeValue) {
+        public Builder scopeValue(java.util.List<String> scopeValue) {
             this.putQueryParameter("ScopeValue", scopeValue);
             this.scopeValue = scopeValue;
             return this;
@@ -1615,7 +1620,7 @@ public class CreatePolicyGroupRequest extends Request {
         /**
          * <p>The USB redirection rules.</p>
          */
-        public Builder usbSupplyRedirectRule(java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule) {
+        public Builder usbSupplyRedirectRule(java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule) {
             this.putQueryParameter("UsbSupplyRedirectRule", usbSupplyRedirectRule);
             this.usbSupplyRedirectRule = usbSupplyRedirectRule;
             return this;

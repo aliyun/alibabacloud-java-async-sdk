@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class DescribeImagesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
-    private java.util.List < String > imageId;
+    private java.util.List<String> imageId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageName")
@@ -137,7 +142,7 @@ public class DescribeImagesRequest extends Request {
     /**
      * @return imageId
      */
-    public java.util.List < String > getImageId() {
+    public java.util.List<String> getImageId() {
         return this.imageId;
     }
 
@@ -216,7 +221,7 @@ public class DescribeImagesRequest extends Request {
         private String fotaVersion; 
         private Boolean gpuCategory; 
         private String gpuDriverVersion; 
-        private java.util.List < String > imageId; 
+        private java.util.List<String> imageId; 
         private String imageName; 
         private String imageStatus; 
         private String imageType; 
@@ -321,7 +326,7 @@ public class DescribeImagesRequest extends Request {
          * <strong>example:</strong>
          * <p>m-gx2x1dhsmusr2****</p>
          */
-        public Builder imageId(java.util.List < String > imageId) {
+        public Builder imageId(java.util.List<String> imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,12 +23,12 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopGroupIds")
-    private java.util.List < String > desktopGroupIds;
+    private java.util.List<String> desktopGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > endUserIds;
+    private java.util.List<String> endUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -61,14 +66,14 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
     /**
      * @return desktopGroupIds
      */
-    public java.util.List < String > getDesktopGroupIds() {
+    public java.util.List<String> getDesktopGroupIds() {
         return this.desktopGroupIds;
     }
 
     /**
      * @return endUserIds
      */
-    public java.util.List < String > getEndUserIds() {
+    public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
     }
 
@@ -81,8 +86,8 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<RemoveUserFromDesktopGroupRequest, Builder> {
         private String desktopGroupId; 
-        private java.util.List < String > desktopGroupIds; 
-        private java.util.List < String > endUserIds; 
+        private java.util.List<String> desktopGroupIds; 
+        private java.util.List<String> endUserIds; 
         private String regionId; 
 
         private Builder() {
@@ -112,7 +117,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         /**
          * <p>The IDs of cloud computer pools.</p>
          */
-        public Builder desktopGroupIds(java.util.List < String > desktopGroupIds) {
+        public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
             this.desktopGroupIds = desktopGroupIds;
             return this;
@@ -122,7 +127,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
          * <p>The IDs of the authorized users that you want to remove.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder endUserIds(java.util.List < String > endUserIds) {
+        public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
             this.endUserIds = endUserIds;
             return this;

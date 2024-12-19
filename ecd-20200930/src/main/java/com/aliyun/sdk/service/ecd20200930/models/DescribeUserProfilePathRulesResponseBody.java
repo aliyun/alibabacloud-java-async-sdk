@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -263,7 +268,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         private BlackPath blackPath;
 
         @com.aliyun.core.annotation.NameInMap("WhitePaths")
-        private java.util.List < WhitePaths> whitePaths;
+        private java.util.List<WhitePaths> whitePaths;
 
         private Rules(Builder builder) {
             this.blackPath = builder.blackPath;
@@ -288,13 +293,13 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         /**
          * @return whitePaths
          */
-        public java.util.List < WhitePaths> getWhitePaths() {
+        public java.util.List<WhitePaths> getWhitePaths() {
             return this.whitePaths;
         }
 
         public static final class Builder {
             private BlackPath blackPath; 
-            private java.util.List < WhitePaths> whitePaths; 
+            private java.util.List<WhitePaths> whitePaths; 
 
             /**
              * <p>The blacklist that is configured.</p>
@@ -307,7 +312,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             /**
              * <p>The directories in the whitelist.</p>
              */
-            public Builder whitePaths(java.util.List < WhitePaths> whitePaths) {
+            public Builder whitePaths(java.util.List<WhitePaths> whitePaths) {
                 this.whitePaths = whitePaths;
                 return this;
             }
@@ -330,7 +335,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         private String desktopGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         @com.aliyun.core.annotation.NameInMap("UserProfileRuleType")
         private String userProfileRuleType;
@@ -359,7 +364,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -372,7 +377,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String desktopGroupId; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
             private String userProfileRuleType; 
 
             /**
@@ -389,7 +394,7 @@ public class DescribeUserProfilePathRulesResponseBody extends TeaModel {
             /**
              * <p>The directory rules.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RebuildDesktopsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RebuildResults")
-    private java.util.List < RebuildResults> rebuildResults;
+    private java.util.List<RebuildResults> rebuildResults;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class RebuildDesktopsResponseBody extends TeaModel {
     /**
      * @return rebuildResults
      */
-    public java.util.List < RebuildResults> getRebuildResults() {
+    public java.util.List<RebuildResults> getRebuildResults() {
         return this.rebuildResults;
     }
 
@@ -46,13 +51,13 @@ public class RebuildDesktopsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RebuildResults> rebuildResults; 
+        private java.util.List<RebuildResults> rebuildResults; 
         private String requestId; 
 
         /**
          * <p>The recreation results.</p>
          */
-        public Builder rebuildResults(java.util.List < RebuildResults> rebuildResults) {
+        public Builder rebuildResults(java.util.List<RebuildResults> rebuildResults) {
             this.rebuildResults = rebuildResults;
             return this;
         }

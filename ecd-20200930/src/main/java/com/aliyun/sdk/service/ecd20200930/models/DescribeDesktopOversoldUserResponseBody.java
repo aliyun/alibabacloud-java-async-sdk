@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDesktopOversoldUserResponseBody extends TeaModel {
     private Integer count;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -49,7 +54,7 @@ public class DescribeDesktopOversoldUserResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -69,7 +74,7 @@ public class DescribeDesktopOversoldUserResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String nextToken; 
         private String requestId; 
 
@@ -84,7 +89,7 @@ public class DescribeDesktopOversoldUserResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }

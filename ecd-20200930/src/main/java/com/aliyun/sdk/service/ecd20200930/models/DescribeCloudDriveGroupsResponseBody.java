@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CloudDriveGroups")
-    private java.util.List < CloudDriveGroups> cloudDriveGroups;
+    private java.util.List<CloudDriveGroups> cloudDriveGroups;
 
     @com.aliyun.core.annotation.NameInMap("Count")
     private Long count;
@@ -46,7 +51,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     /**
      * @return cloudDriveGroups
      */
-    public java.util.List < CloudDriveGroups> getCloudDriveGroups() {
+    public java.util.List<CloudDriveGroups> getCloudDriveGroups() {
         return this.cloudDriveGroups;
     }
 
@@ -79,7 +84,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CloudDriveGroups> cloudDriveGroups; 
+        private java.util.List<CloudDriveGroups> cloudDriveGroups; 
         private Long count; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         /**
          * <p>The list of team spaces.</p>
          */
-        public Builder cloudDriveGroups(java.util.List < CloudDriveGroups> cloudDriveGroups) {
+        public Builder cloudDriveGroups(java.util.List<CloudDriveGroups> cloudDriveGroups) {
             this.cloudDriveGroups = cloudDriveGroups;
             return this;
         }
@@ -321,7 +326,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         private String adminUserIds;
 
         @com.aliyun.core.annotation.NameInMap("AdminUserInfos")
-        private java.util.List < AdminUserInfos> adminUserInfos;
+        private java.util.List<AdminUserInfos> adminUserInfos;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -386,7 +391,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         /**
          * @return adminUserInfos
          */
-        public java.util.List < AdminUserInfos> getAdminUserInfos() {
+        public java.util.List<AdminUserInfos> getAdminUserInfos() {
             return this.adminUserInfos;
         }
 
@@ -462,7 +467,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String adminUserIds; 
-            private java.util.List < AdminUserInfos> adminUserInfos; 
+            private java.util.List<AdminUserInfos> adminUserInfos; 
             private String createTime; 
             private String directoryId; 
             private String driveId; 
@@ -485,7 +490,7 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             /**
              * AdminUserInfos.
              */
-            public Builder adminUserInfos(java.util.List < AdminUserInfos> adminUserInfos) {
+            public Builder adminUserInfos(java.util.List<AdminUserInfos> adminUserInfos) {
                 this.adminUserInfos = adminUserInfos;
                 return this;
             }

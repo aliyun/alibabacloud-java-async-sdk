@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
-    private java.util.List < String > desktopGroupId;
+    private java.util.List<String> desktopGroupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopGroupName")
@@ -26,7 +31,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserId")
-    private java.util.List < String > endUserId;
+    private java.util.List<String> endUserId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExpiredTime")
@@ -59,7 +64,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ExportDesktopGroupInfoRequest(Builder builder) {
         super(builder);
@@ -100,7 +105,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
     /**
      * @return desktopGroupId
      */
-    public java.util.List < String > getDesktopGroupId() {
+    public java.util.List<String> getDesktopGroupId() {
         return this.desktopGroupId;
     }
 
@@ -114,7 +119,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
     /**
      * @return endUserId
      */
-    public java.util.List < String > getEndUserId() {
+    public java.util.List<String> getEndUserId() {
         return this.endUserId;
     }
 
@@ -170,15 +175,15 @@ public class ExportDesktopGroupInfoRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ExportDesktopGroupInfoRequest, Builder> {
         private String chargeType; 
-        private java.util.List < String > desktopGroupId; 
+        private java.util.List<String> desktopGroupId; 
         private String desktopGroupName; 
-        private java.util.List < String > endUserId; 
+        private java.util.List<String> endUserId; 
         private String expiredTime; 
         private String langType; 
         private Integer maxResults; 
@@ -186,7 +191,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         private String officeSiteId; 
         private String policyGroupId; 
         private String regionId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -230,7 +235,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         /**
          * <p>The IDs of the cloud computer pools.</p>
          */
-        public Builder desktopGroupId(java.util.List < String > desktopGroupId) {
+        public Builder desktopGroupId(java.util.List<String> desktopGroupId) {
             this.putQueryParameter("DesktopGroupId", desktopGroupId);
             this.desktopGroupId = desktopGroupId;
             return this;
@@ -251,7 +256,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         /**
          * <p>The authorized user IDs of cloud computer pools.</p>
          */
-        public Builder endUserId(java.util.List < String > endUserId) {
+        public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
             return this;
@@ -347,7 +352,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         /**
          * <p>The tags attached to the cloud computer pool. You can specify 1 to 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

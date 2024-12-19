@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDevicesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Devices")
-    private java.util.List < Devices> devices;
+    private java.util.List<Devices> devices;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
     /**
      * @return devices
      */
-    public java.util.List < Devices> getDevices() {
+    public java.util.List<Devices> getDevices() {
         return this.devices;
     }
 
@@ -46,13 +51,13 @@ public class DescribeDevicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Devices> devices; 
+        private java.util.List<Devices> devices; 
         private String requestId; 
 
         /**
          * <p>The information about devices that you queried.</p>
          */
-        public Builder devices(java.util.List < Devices> devices) {
+        public Builder devices(java.util.List<Devices> devices) {
             this.devices = devices;
             return this;
         }
@@ -209,7 +214,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         private String deviceId;
 
         @com.aliyun.core.annotation.NameInMap("EndUserList")
-        private java.util.List < EndUserList> endUserList;
+        private java.util.List<EndUserList> endUserList;
 
         private Devices(Builder builder) {
             this.deviceId = builder.deviceId;
@@ -234,13 +239,13 @@ public class DescribeDevicesResponseBody extends TeaModel {
         /**
          * @return endUserList
          */
-        public java.util.List < EndUserList> getEndUserList() {
+        public java.util.List<EndUserList> getEndUserList() {
             return this.endUserList;
         }
 
         public static final class Builder {
             private String deviceId; 
-            private java.util.List < EndUserList> endUserList; 
+            private java.util.List<EndUserList> endUserList; 
 
             /**
              * <p>The ID of the device. The serial number (SN) of the hardware client or the UUID of the software client.</p>
@@ -256,7 +261,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
             /**
              * <p>The users who are bound to the device.</p>
              */
-            public Builder endUserList(java.util.List < EndUserList> endUserList) {
+            public Builder endUserList(java.util.List<EndUserList> endUserList) {
                 this.endUserList = endUserList;
                 return this;
             }

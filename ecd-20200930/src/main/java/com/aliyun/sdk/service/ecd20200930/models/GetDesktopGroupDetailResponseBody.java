@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -545,13 +550,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         private String policyGroupId;
 
         @com.aliyun.core.annotation.NameInMap("PolicyGroupIds")
-        private java.util.List < String > policyGroupIds;
+        private java.util.List<String> policyGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("PolicyGroupName")
         private String policyGroupName;
 
         @com.aliyun.core.annotation.NameInMap("PolicyGroupNames")
-        private java.util.List < String > policyGroupNames;
+        private java.util.List<String> policyGroupNames;
 
         @com.aliyun.core.annotation.NameInMap("ProfileFollowSwitch")
         private Boolean profileFollowSwitch;
@@ -566,7 +571,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         private Integer resetType;
 
         @com.aliyun.core.annotation.NameInMap("ScaleTimerInfos")
-        private java.util.List < ScaleTimerInfos> scaleTimerInfos;
+        private java.util.List<ScaleTimerInfos> scaleTimerInfos;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
@@ -581,7 +586,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         private Integer systemDiskSize;
 
         @com.aliyun.core.annotation.NameInMap("TimerInfos")
-        private java.util.List < TimerInfos> timerInfos;
+        private java.util.List<TimerInfos> timerInfos;
 
         @com.aliyun.core.annotation.NameInMap("TimingStrategyInfo")
         private String timingStrategyInfo;
@@ -898,7 +903,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         /**
          * @return policyGroupIds
          */
-        public java.util.List < String > getPolicyGroupIds() {
+        public java.util.List<String> getPolicyGroupIds() {
             return this.policyGroupIds;
         }
 
@@ -912,7 +917,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         /**
          * @return policyGroupNames
          */
-        public java.util.List < String > getPolicyGroupNames() {
+        public java.util.List<String> getPolicyGroupNames() {
             return this.policyGroupNames;
         }
 
@@ -947,7 +952,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         /**
          * @return scaleTimerInfos
          */
-        public java.util.List < ScaleTimerInfos> getScaleTimerInfos() {
+        public java.util.List<ScaleTimerInfos> getScaleTimerInfos() {
             return this.scaleTimerInfos;
         }
 
@@ -982,7 +987,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         /**
          * @return timerInfos
          */
-        public java.util.List < TimerInfos> getTimerInfos() {
+        public java.util.List<TimerInfos> getTimerInfos() {
             return this.timerInfos;
         }
 
@@ -1036,19 +1041,19 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             private Integer ownType; 
             private String payType; 
             private String policyGroupId; 
-            private java.util.List < String > policyGroupIds; 
+            private java.util.List<String> policyGroupIds; 
             private String policyGroupName; 
-            private java.util.List < String > policyGroupNames; 
+            private java.util.List<String> policyGroupNames; 
             private Boolean profileFollowSwitch; 
             private Float ratioThreshold; 
             private Integer resType; 
             private Integer resetType; 
-            private java.util.List < ScaleTimerInfos> scaleTimerInfos; 
+            private java.util.List<ScaleTimerInfos> scaleTimerInfos; 
             private Integer status; 
             private Long stopDuration; 
             private String systemDiskCategory; 
             private Integer systemDiskSize; 
-            private java.util.List < TimerInfos> timerInfos; 
+            private java.util.List<TimerInfos> timerInfos; 
             private String timingStrategyInfo; 
             private Long version; 
 
@@ -1477,7 +1482,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             /**
              * <p>The IDs of policies that are associated with the cloud computer pool.</p>
              */
-            public Builder policyGroupIds(java.util.List < String > policyGroupIds) {
+            public Builder policyGroupIds(java.util.List<String> policyGroupIds) {
                 this.policyGroupIds = policyGroupIds;
                 return this;
             }
@@ -1496,7 +1501,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             /**
              * <p>The names of policies that are associated with the cloud computer pool.</p>
              */
-            public Builder policyGroupNames(java.util.List < String > policyGroupNames) {
+            public Builder policyGroupNames(java.util.List<String> policyGroupNames) {
                 this.policyGroupNames = policyGroupNames;
                 return this;
             }
@@ -1561,7 +1566,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             /**
              * <p>Details of the scheduled tasks.</p>
              */
-            public Builder scaleTimerInfos(java.util.List < ScaleTimerInfos> scaleTimerInfos) {
+            public Builder scaleTimerInfos(java.util.List<ScaleTimerInfos> scaleTimerInfos) {
                 this.scaleTimerInfos = scaleTimerInfos;
                 return this;
             }
@@ -1619,7 +1624,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             /**
              * <p>The list of scheduled points in time for desktop group tasks.</p>
              */
-            public Builder timerInfos(java.util.List < TimerInfos> timerInfos) {
+            public Builder timerInfos(java.util.List<TimerInfos> timerInfos) {
                 this.timerInfos = timerInfos;
                 return this;
             }

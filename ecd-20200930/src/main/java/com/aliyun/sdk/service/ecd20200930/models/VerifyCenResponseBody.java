@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class VerifyCenResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CidrBlocks")
-    private java.util.List < String > cidrBlocks;
+    private java.util.List<String> cidrBlocks;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RouteEntries")
-    private java.util.List < RouteEntries> routeEntries;
+    private java.util.List<RouteEntries> routeEntries;
 
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
@@ -42,7 +47,7 @@ public class VerifyCenResponseBody extends TeaModel {
     /**
      * @return cidrBlocks
      */
-    public java.util.List < String > getCidrBlocks() {
+    public java.util.List<String> getCidrBlocks() {
         return this.cidrBlocks;
     }
 
@@ -56,7 +61,7 @@ public class VerifyCenResponseBody extends TeaModel {
     /**
      * @return routeEntries
      */
-    public java.util.List < RouteEntries> getRouteEntries() {
+    public java.util.List<RouteEntries> getRouteEntries() {
         return this.routeEntries;
     }
 
@@ -68,15 +73,15 @@ public class VerifyCenResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > cidrBlocks; 
+        private java.util.List<String> cidrBlocks; 
         private String requestId; 
-        private java.util.List < RouteEntries> routeEntries; 
+        private java.util.List<RouteEntries> routeEntries; 
         private String status; 
 
         /**
          * <p>The recommended IPv4 CIDR blocks. Three CIDR blocks are randomly recommended. This parameter is returned when the <code>Status</code> value is <code>Conflict</code>.</p>
          */
-        public Builder cidrBlocks(java.util.List < String > cidrBlocks) {
+        public Builder cidrBlocks(java.util.List<String> cidrBlocks) {
             this.cidrBlocks = cidrBlocks;
             return this;
         }
@@ -95,7 +100,7 @@ public class VerifyCenResponseBody extends TeaModel {
         /**
          * <p>The routes provided by the CEN instance.</p>
          */
-        public Builder routeEntries(java.util.List < RouteEntries> routeEntries) {
+        public Builder routeEntries(java.util.List<RouteEntries> routeEntries) {
             this.routeEntries = routeEntries;
             return this;
         }

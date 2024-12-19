@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteBundlesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BundleId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > bundleId;
+    private java.util.List<String> bundleId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -44,7 +49,7 @@ public class DeleteBundlesRequest extends Request {
     /**
      * @return bundleId
      */
-    public java.util.List < String > getBundleId() {
+    public java.util.List<String> getBundleId() {
         return this.bundleId;
     }
 
@@ -56,7 +61,7 @@ public class DeleteBundlesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteBundlesRequest, Builder> {
-        private java.util.List < String > bundleId; 
+        private java.util.List<String> bundleId; 
         private String regionId; 
 
         private Builder() {
@@ -76,7 +81,7 @@ public class DeleteBundlesRequest extends Request {
          * <strong>example:</strong>
          * <p>b-cezrnfgecbich****</p>
          */
-        public Builder bundleId(java.util.List < String > bundleId) {
+        public Builder bundleId(java.util.List<String> bundleId) {
             this.putQueryParameter("BundleId", bundleId);
             this.bundleId = bundleId;
             return this;

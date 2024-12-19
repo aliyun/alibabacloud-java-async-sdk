@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConnectionRecords")
-    private java.util.List < ConnectionRecords> connectionRecords;
+    private java.util.List<ConnectionRecords> connectionRecords;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     /**
      * @return connectionRecords
      */
-    public java.util.List < ConnectionRecords> getConnectionRecords() {
+    public java.util.List<ConnectionRecords> getConnectionRecords() {
         return this.connectionRecords;
     }
 
@@ -57,14 +62,14 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConnectionRecords> connectionRecords; 
+        private java.util.List<ConnectionRecords> connectionRecords; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>Details about connection records of the end user.</p>
          */
-        public Builder connectionRecords(java.util.List < ConnectionRecords> connectionRecords) {
+        public Builder connectionRecords(java.util.List<ConnectionRecords> connectionRecords) {
             this.connectionRecords = connectionRecords;
             return this;
         }

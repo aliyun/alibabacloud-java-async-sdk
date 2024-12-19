@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,7 +41,7 @@ public class DescribeFotaTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskUid")
-    private java.util.List < String > taskUid;
+    private java.util.List<String> taskUid;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserStatus")
@@ -104,7 +109,7 @@ public class DescribeFotaTasksRequest extends Request {
     /**
      * @return taskUid
      */
-    public java.util.List < String > getTaskUid() {
+    public java.util.List<String> getTaskUid() {
         return this.taskUid;
     }
 
@@ -121,7 +126,7 @@ public class DescribeFotaTasksRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
-        private java.util.List < String > taskUid; 
+        private java.util.List<String> taskUid; 
         private String userStatus; 
 
         private Builder() {
@@ -214,7 +219,7 @@ public class DescribeFotaTasksRequest extends Request {
         /**
          * <p>The IDs of the image update tasks.</p>
          */
-        public Builder taskUid(java.util.List < String > taskUid) {
+        public Builder taskUid(java.util.List<String> taskUid) {
             this.putQueryParameter("TaskUid", taskUid);
             this.taskUid = taskUid;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class CreateDesktopsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BundleModels")
-    private java.util.List < BundleModels> bundleModels;
+    private java.util.List<BundleModels> bundleModels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChargeType")
@@ -55,7 +60,7 @@ public class CreateDesktopsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopTimers")
-    private java.util.List < DesktopTimers> desktopTimers;
+    private java.util.List<DesktopTimers> desktopTimers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DirectoryId")
@@ -63,7 +68,7 @@ public class CreateDesktopsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserId")
-    private java.util.List < String > endUserId;
+    private java.util.List<String> endUserId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
@@ -113,7 +118,7 @@ public class CreateDesktopsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TimerGroupId")
@@ -125,7 +130,7 @@ public class CreateDesktopsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserCommands")
-    private java.util.List < UserCommands> userCommands;
+    private java.util.List<UserCommands> userCommands;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserName")
@@ -223,7 +228,7 @@ public class CreateDesktopsRequest extends Request {
     /**
      * @return bundleModels
      */
-    public java.util.List < BundleModels> getBundleModels() {
+    public java.util.List<BundleModels> getBundleModels() {
         return this.bundleModels;
     }
 
@@ -265,7 +270,7 @@ public class CreateDesktopsRequest extends Request {
     /**
      * @return desktopTimers
      */
-    public java.util.List < DesktopTimers> getDesktopTimers() {
+    public java.util.List<DesktopTimers> getDesktopTimers() {
         return this.desktopTimers;
     }
 
@@ -279,7 +284,7 @@ public class CreateDesktopsRequest extends Request {
     /**
      * @return endUserId
      */
-    public java.util.List < String > getEndUserId() {
+    public java.util.List<String> getEndUserId() {
         return this.endUserId;
     }
 
@@ -363,7 +368,7 @@ public class CreateDesktopsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -384,7 +389,7 @@ public class CreateDesktopsRequest extends Request {
     /**
      * @return userCommands
      */
-    public java.util.List < UserCommands> getUserCommands() {
+    public java.util.List<UserCommands> getUserCommands() {
         return this.userCommands;
     }
 
@@ -421,15 +426,15 @@ public class CreateDesktopsRequest extends Request {
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private String bundleId; 
-        private java.util.List < BundleModels> bundleModels; 
+        private java.util.List<BundleModels> bundleModels; 
         private String chargeType; 
         private DesktopAttachment desktopAttachment; 
         private String desktopMemberIp; 
         private String desktopName; 
         private Boolean desktopNameSuffix; 
-        private java.util.List < DesktopTimers> desktopTimers; 
+        private java.util.List<DesktopTimers> desktopTimers; 
         private String directoryId; 
-        private java.util.List < String > endUserId; 
+        private java.util.List<String> endUserId; 
         private String groupId; 
         private String hostname; 
         private MonthDesktopSetting monthDesktopSetting; 
@@ -441,10 +446,10 @@ public class CreateDesktopsRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String snapshotPolicyId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String timerGroupId; 
         private String userAssignMode; 
-        private java.util.List < UserCommands> userCommands; 
+        private java.util.List<UserCommands> userCommands; 
         private String userName; 
         private Boolean volumeEncryptionEnabled; 
         private String volumeEncryptionKey; 
@@ -541,7 +546,7 @@ public class CreateDesktopsRequest extends Request {
         /**
          * <p>The cloud computer templates.</p>
          */
-        public Builder bundleModels(java.util.List < BundleModels> bundleModels) {
+        public Builder bundleModels(java.util.List<BundleModels> bundleModels) {
             this.putQueryParameter("BundleModels", bundleModels);
             this.bundleModels = bundleModels;
             return this;
@@ -645,7 +650,7 @@ public class CreateDesktopsRequest extends Request {
         /**
          * <p>The details of the scheduled task on cloud computers.</p>
          */
-        public Builder desktopTimers(java.util.List < DesktopTimers> desktopTimers) {
+        public Builder desktopTimers(java.util.List<DesktopTimers> desktopTimers) {
             this.putQueryParameter("DesktopTimers", desktopTimers);
             this.desktopTimers = desktopTimers;
             return this;
@@ -671,7 +676,7 @@ public class CreateDesktopsRequest extends Request {
          * <strong>example:</strong>
          * <p>123456789</p>
          */
-        public Builder endUserId(java.util.List < String > endUserId) {
+        public Builder endUserId(java.util.List<String> endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
             return this;
@@ -837,7 +842,7 @@ public class CreateDesktopsRequest extends Request {
         /**
          * <p>The tags that you want to add to the cloud desktop.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -887,7 +892,7 @@ public class CreateDesktopsRequest extends Request {
         /**
          * <p>Details about the custom command scripts.</p>
          */
-        public Builder userCommands(java.util.List < UserCommands> userCommands) {
+        public Builder userCommands(java.util.List<UserCommands> userCommands) {
             this.putQueryParameter("UserCommands", userCommands);
             this.userCommands = userCommands;
             return this;
@@ -970,7 +975,7 @@ public class CreateDesktopsRequest extends Request {
         private String desktopName;
 
         @com.aliyun.core.annotation.NameInMap("EndUserIds")
-        private java.util.List < String > endUserIds;
+        private java.util.List<String> endUserIds;
 
         @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
@@ -1023,7 +1028,7 @@ public class CreateDesktopsRequest extends Request {
         /**
          * @return endUserIds
          */
-        public java.util.List < String > getEndUserIds() {
+        public java.util.List<String> getEndUserIds() {
             return this.endUserIds;
         }
 
@@ -1052,7 +1057,7 @@ public class CreateDesktopsRequest extends Request {
             private Integer amount; 
             private String bundleId; 
             private String desktopName; 
-            private java.util.List < String > endUserIds; 
+            private java.util.List<String> endUserIds; 
             private String hostname; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
@@ -1098,7 +1103,7 @@ public class CreateDesktopsRequest extends Request {
             /**
              * <p>The IDs of the end users to whom the cloud computer are assigned.</p>
              */
-            public Builder endUserIds(java.util.List < String > endUserIds) {
+            public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
                 return this;
             }

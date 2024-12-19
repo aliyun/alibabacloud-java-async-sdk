@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCloudDriveUsersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CloudDriveUsers")
-    private java.util.List < CloudDriveUsers> cloudDriveUsers;
+    private java.util.List<CloudDriveUsers> cloudDriveUsers;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
     /**
      * @return cloudDriveUsers
      */
-    public java.util.List < CloudDriveUsers> getCloudDriveUsers() {
+    public java.util.List<CloudDriveUsers> getCloudDriveUsers() {
         return this.cloudDriveUsers;
     }
 
@@ -57,14 +62,14 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CloudDriveUsers> cloudDriveUsers; 
+        private java.util.List<CloudDriveUsers> cloudDriveUsers; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * CloudDriveUsers.
          */
-        public Builder cloudDriveUsers(java.util.List < CloudDriveUsers> cloudDriveUsers) {
+        public Builder cloudDriveUsers(java.util.List<CloudDriveUsers> cloudDriveUsers) {
             this.cloudDriveUsers = cloudDriveUsers;
             return this;
         }

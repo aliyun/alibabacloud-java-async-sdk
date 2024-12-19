@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,12 +27,12 @@ public class AddUserToDesktopGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopGroupIds")
-    private java.util.List < String > desktopGroupIds;
+    private java.util.List<String> desktopGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > endUserIds;
+    private java.util.List<String> endUserIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -73,14 +78,14 @@ public class AddUserToDesktopGroupRequest extends Request {
     /**
      * @return desktopGroupIds
      */
-    public java.util.List < String > getDesktopGroupIds() {
+    public java.util.List<String> getDesktopGroupIds() {
         return this.desktopGroupIds;
     }
 
     /**
      * @return endUserIds
      */
-    public java.util.List < String > getEndUserIds() {
+    public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
     }
 
@@ -94,8 +99,8 @@ public class AddUserToDesktopGroupRequest extends Request {
     public static final class Builder extends Request.Builder<AddUserToDesktopGroupRequest, Builder> {
         private String clientToken; 
         private String desktopGroupId; 
-        private java.util.List < String > desktopGroupIds; 
-        private java.util.List < String > endUserIds; 
+        private java.util.List<String> desktopGroupIds; 
+        private java.util.List<String> endUserIds; 
         private String regionId; 
 
         private Builder() {
@@ -138,7 +143,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         /**
          * <p>The IDs of the desktop groups.</p>
          */
-        public Builder desktopGroupIds(java.util.List < String > desktopGroupIds) {
+        public Builder desktopGroupIds(java.util.List<String> desktopGroupIds) {
             this.putQueryParameter("DesktopGroupIds", desktopGroupIds);
             this.desktopGroupIds = desktopGroupIds;
             return this;
@@ -148,7 +153,7 @@ public class AddUserToDesktopGroupRequest extends Request {
          * <p>The regular users to whom you want to assign the desktop group.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder endUserIds(java.util.List < String > endUserIds) {
+        public Builder endUserIds(java.util.List<String> endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
             this.endUserIds = endUserIds;
             return this;

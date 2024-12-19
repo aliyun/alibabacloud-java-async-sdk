@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CancelCoordinationForMonitoringRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CoIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > coIds;
+    private java.util.List<String> coIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserId")
@@ -54,7 +59,7 @@ public class CancelCoordinationForMonitoringRequest extends Request {
     /**
      * @return coIds
      */
-    public java.util.List < String > getCoIds() {
+    public java.util.List<String> getCoIds() {
         return this.coIds;
     }
 
@@ -80,7 +85,7 @@ public class CancelCoordinationForMonitoringRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CancelCoordinationForMonitoringRequest, Builder> {
-        private java.util.List < String > coIds; 
+        private java.util.List<String> coIds; 
         private String endUserId; 
         private String regionId; 
         private String userType; 
@@ -101,7 +106,7 @@ public class CancelCoordinationForMonitoringRequest extends Request {
          * <p>The IDs of stream collaboration tasks.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder coIds(java.util.List < String > coIds) {
+        public Builder coIds(java.util.List<String> coIds) {
             this.putQueryParameter("CoIds", coIds);
             this.coIds = coIds;
             return this;

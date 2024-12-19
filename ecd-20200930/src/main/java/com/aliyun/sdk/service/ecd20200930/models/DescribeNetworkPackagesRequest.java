@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class DescribeNetworkPackagesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkPackageId")
-    private java.util.List < String > networkPackageId;
+    private java.util.List<String> networkPackageId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
@@ -73,7 +78,7 @@ public class DescribeNetworkPackagesRequest extends Request {
     /**
      * @return networkPackageId
      */
-    public java.util.List < String > getNetworkPackageId() {
+    public java.util.List<String> getNetworkPackageId() {
         return this.networkPackageId;
     }
 
@@ -94,7 +99,7 @@ public class DescribeNetworkPackagesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeNetworkPackagesRequest, Builder> {
         private String internetChargeType; 
         private Integer maxResults; 
-        private java.util.List < String > networkPackageId; 
+        private java.util.List<String> networkPackageId; 
         private String nextToken; 
         private String regionId; 
 
@@ -152,7 +157,7 @@ public class DescribeNetworkPackagesRequest extends Request {
          * <strong>example:</strong>
          * <p>np-amtp8e8q1o9e4****</p>
          */
-        public Builder networkPackageId(java.util.List < String > networkPackageId) {
+        public Builder networkPackageId(java.util.List<String> networkPackageId) {
             this.putQueryParameter("NetworkPackageId", networkPackageId);
             this.networkPackageId = networkPackageId;
             return this;

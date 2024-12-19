@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,13 +24,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     private Integer onlinePrePaidDesktopsCount;
 
     @com.aliyun.core.annotation.NameInMap("PaidDesktops")
-    private java.util.List < PaidDesktops> paidDesktops;
+    private java.util.List<PaidDesktops> paidDesktops;
 
     @com.aliyun.core.annotation.NameInMap("PaidDesktopsCount")
     private Integer paidDesktopsCount;
 
     @com.aliyun.core.annotation.NameInMap("PostPaidDesktops")
-    private java.util.List < PostPaidDesktops> postPaidDesktops;
+    private java.util.List<PostPaidDesktops> postPaidDesktops;
 
     @com.aliyun.core.annotation.NameInMap("PostPaidDesktopsCount")
     private Integer postPaidDesktopsCount;
@@ -84,7 +89,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     /**
      * @return paidDesktops
      */
-    public java.util.List < PaidDesktops> getPaidDesktops() {
+    public java.util.List<PaidDesktops> getPaidDesktops() {
         return this.paidDesktops;
     }
 
@@ -98,7 +103,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     /**
      * @return postPaidDesktops
      */
-    public java.util.List < PostPaidDesktops> getPostPaidDesktops() {
+    public java.util.List<PostPaidDesktops> getPostPaidDesktops() {
         return this.postPaidDesktops;
     }
 
@@ -147,9 +152,9 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String nextToken; 
         private Integer onlinePrePaidDesktopsCount; 
-        private java.util.List < PaidDesktops> paidDesktops; 
+        private java.util.List<PaidDesktops> paidDesktops; 
         private Integer paidDesktopsCount; 
-        private java.util.List < PostPaidDesktops> postPaidDesktops; 
+        private java.util.List<PostPaidDesktops> postPaidDesktops; 
         private Integer postPaidDesktopsCount; 
         private Integer postPaidDesktopsTotalAmount; 
         private String requestId; 
@@ -182,7 +187,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         /**
          * <p>The details about subscription cloud computers.</p>
          */
-        public Builder paidDesktops(java.util.List < PaidDesktops> paidDesktops) {
+        public Builder paidDesktops(java.util.List<PaidDesktops> paidDesktops) {
             this.paidDesktops = paidDesktops;
             return this;
         }
@@ -201,7 +206,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         /**
          * <p>The details about pay-as-you-go cloud computers.</p>
          */
-        public Builder postPaidDesktops(java.util.List < PostPaidDesktops> postPaidDesktops) {
+        public Builder postPaidDesktops(java.util.List<PostPaidDesktops> postPaidDesktops) {
             this.postPaidDesktops = postPaidDesktops;
             return this;
         }
@@ -304,13 +309,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         private String endUserId;
 
         @com.aliyun.core.annotation.NameInMap("EndUserIds")
-        private java.util.List < String > endUserIds;
+        private java.util.List<String> endUserIds;
 
         @com.aliyun.core.annotation.NameInMap("EndUserName")
         private String endUserName;
 
         @com.aliyun.core.annotation.NameInMap("EndUserNames")
-        private java.util.List < String > endUserNames;
+        private java.util.List<String> endUserNames;
 
         @com.aliyun.core.annotation.NameInMap("FotaVersion")
         private String fotaVersion;
@@ -328,7 +333,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         private String managementFlag;
 
         @com.aliyun.core.annotation.NameInMap("ManagementFlags")
-        private java.util.List < String > managementFlags;
+        private java.util.List<String> managementFlags;
 
         @com.aliyun.core.annotation.NameInMap("MemberEniIp")
         private String memberEniIp;
@@ -425,7 +430,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         /**
          * @return endUserIds
          */
-        public java.util.List < String > getEndUserIds() {
+        public java.util.List<String> getEndUserIds() {
             return this.endUserIds;
         }
 
@@ -439,7 +444,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         /**
          * @return endUserNames
          */
-        public java.util.List < String > getEndUserNames() {
+        public java.util.List<String> getEndUserNames() {
             return this.endUserNames;
         }
 
@@ -481,7 +486,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         /**
          * @return managementFlags
          */
-        public java.util.List < String > getManagementFlags() {
+        public java.util.List<String> getManagementFlags() {
             return this.managementFlags;
         }
 
@@ -534,15 +539,15 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private String desktopStatus; 
             private String diskType; 
             private String endUserId; 
-            private java.util.List < String > endUserIds; 
+            private java.util.List<String> endUserIds; 
             private String endUserName; 
-            private java.util.List < String > endUserNames; 
+            private java.util.List<String> endUserNames; 
             private String fotaVersion; 
             private String gpuDriverVersion; 
             private String imageId; 
             private String imageName; 
             private String managementFlag; 
-            private java.util.List < String > managementFlags; 
+            private java.util.List<String> managementFlags; 
             private String memberEniIp; 
             private String osType; 
             private String primaryEniIp; 
@@ -716,7 +721,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             /**
              * <p>The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</p>
              */
-            public Builder endUserIds(java.util.List < String > endUserIds) {
+            public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
                 return this;
             }
@@ -735,7 +740,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             /**
              * <p>The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</p>
              */
-            public Builder endUserNames(java.util.List < String > endUserNames) {
+            public Builder endUserNames(java.util.List<String> endUserNames) {
                 this.endUserNames = endUserNames;
                 return this;
             }
@@ -814,7 +819,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             /**
              * <p>The flags that are used to manage the cloud computers.</p>
              */
-            public Builder managementFlags(java.util.List < String > managementFlags) {
+            public Builder managementFlags(java.util.List<String> managementFlags) {
                 this.managementFlags = managementFlags;
                 return this;
             }
@@ -956,13 +961,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         private String endUserId;
 
         @com.aliyun.core.annotation.NameInMap("EndUserIds")
-        private java.util.List < String > endUserIds;
+        private java.util.List<String> endUserIds;
 
         @com.aliyun.core.annotation.NameInMap("EndUserName")
         private String endUserName;
 
         @com.aliyun.core.annotation.NameInMap("EndUserNames")
-        private java.util.List < String > endUserNames;
+        private java.util.List<String> endUserNames;
 
         @com.aliyun.core.annotation.NameInMap("FotaVersion")
         private String fotaVersion;
@@ -980,7 +985,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         private String managementFlag;
 
         @com.aliyun.core.annotation.NameInMap("ManagementFlags")
-        private java.util.List < String > managementFlags;
+        private java.util.List<String> managementFlags;
 
         @com.aliyun.core.annotation.NameInMap("MemberEniIp")
         private String memberEniIp;
@@ -1097,7 +1102,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         /**
          * @return endUserIds
          */
-        public java.util.List < String > getEndUserIds() {
+        public java.util.List<String> getEndUserIds() {
             return this.endUserIds;
         }
 
@@ -1111,7 +1116,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         /**
          * @return endUserNames
          */
-        public java.util.List < String > getEndUserNames() {
+        public java.util.List<String> getEndUserNames() {
             return this.endUserNames;
         }
 
@@ -1153,7 +1158,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         /**
          * @return managementFlags
          */
-        public java.util.List < String > getManagementFlags() {
+        public java.util.List<String> getManagementFlags() {
             return this.managementFlags;
         }
 
@@ -1215,15 +1220,15 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private String desktopStatus; 
             private String diskType; 
             private String endUserId; 
-            private java.util.List < String > endUserIds; 
+            private java.util.List<String> endUserIds; 
             private String endUserName; 
-            private java.util.List < String > endUserNames; 
+            private java.util.List<String> endUserNames; 
             private String fotaVersion; 
             private String gpuDriverVersion; 
             private String imageId; 
             private String imageName; 
             private String managementFlag; 
-            private java.util.List < String > managementFlags; 
+            private java.util.List<String> managementFlags; 
             private String memberEniIp; 
             private String osType; 
             private String primaryEniIp; 
@@ -1420,7 +1425,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             /**
              * <p>The IDs of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</p>
              */
-            public Builder endUserIds(java.util.List < String > endUserIds) {
+            public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
                 return this;
             }
@@ -1439,7 +1444,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             /**
              * <p>The usernames of the end users who are connected to the cloud computers in the cloud computer pool. If no end users are connected, no values are returned for this parameter.</p>
              */
-            public Builder endUserNames(java.util.List < String > endUserNames) {
+            public Builder endUserNames(java.util.List<String> endUserNames) {
                 this.endUserNames = endUserNames;
                 return this;
             }
@@ -1518,7 +1523,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             /**
              * <p>The flags that are used to manage the cloud computers.</p>
              */
-            public Builder managementFlags(java.util.List < String > managementFlags) {
+            public Builder managementFlags(java.util.List<String> managementFlags) {
                 this.managementFlags = managementFlags;
                 return this;
             }

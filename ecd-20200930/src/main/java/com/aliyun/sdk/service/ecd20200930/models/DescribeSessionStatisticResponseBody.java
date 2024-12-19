@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Statistic")
-    private java.util.List < Statistic> statistic;
+    private java.util.List<Statistic> statistic;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
@@ -45,7 +50,7 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
     /**
      * @return statistic
      */
-    public java.util.List < Statistic> getStatistic() {
+    public java.util.List<Statistic> getStatistic() {
         return this.statistic;
     }
 
@@ -58,7 +63,7 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Statistic> statistic; 
+        private java.util.List<Statistic> statistic; 
         private String totalCount; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
         /**
          * <p>The statistics.</p>
          */
-        public Builder statistic(java.util.List < Statistic> statistic) {
+        public Builder statistic(java.util.List<Statistic> statistic) {
             this.statistic = statistic;
             return this;
         }

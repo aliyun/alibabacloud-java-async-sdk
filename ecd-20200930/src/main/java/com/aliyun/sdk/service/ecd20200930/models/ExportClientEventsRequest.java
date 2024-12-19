@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class ExportClientEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventTypes")
-    private java.util.List < String > eventTypes;
+    private java.util.List<String> eventTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LangType")
@@ -128,7 +133,7 @@ public class ExportClientEventsRequest extends Request {
     /**
      * @return eventTypes
      */
-    public java.util.List < String > getEventTypes() {
+    public java.util.List<String> getEventTypes() {
         return this.eventTypes;
     }
 
@@ -180,7 +185,7 @@ public class ExportClientEventsRequest extends Request {
         private String endTime; 
         private String endUserId; 
         private String eventType; 
-        private java.util.List < String > eventTypes; 
+        private java.util.List<String> eventTypes; 
         private String langType; 
         private Integer maxResults; 
         private String officeSiteId; 
@@ -282,7 +287,7 @@ public class ExportClientEventsRequest extends Request {
         /**
          * <p>The types of event.</p>
          */
-        public Builder eventTypes(java.util.List < String > eventTypes) {
+        public Builder eventTypes(java.util.List<String> eventTypes) {
             this.putQueryParameter("EventTypes", eventTypes);
             this.eventTypes = eventTypes;
             return this;

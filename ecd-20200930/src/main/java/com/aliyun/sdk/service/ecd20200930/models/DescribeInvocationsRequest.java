@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class DescribeInvocationsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopIds")
-    private java.util.List < String > desktopIds;
+    private java.util.List<String> desktopIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserId")
@@ -115,7 +120,7 @@ public class DescribeInvocationsRequest extends Request {
     /**
      * @return desktopIds
      */
-    public java.util.List < String > getDesktopIds() {
+    public java.util.List<String> getDesktopIds() {
         return this.desktopIds;
     }
 
@@ -179,7 +184,7 @@ public class DescribeInvocationsRequest extends Request {
         private String commandType; 
         private String contentEncoding; 
         private String desktopId; 
-        private java.util.List < String > desktopIds; 
+        private java.util.List<String> desktopIds; 
         private String endUserId; 
         private Boolean includeInvokeDesktops; 
         private Boolean includeOutput; 
@@ -257,7 +262,7 @@ public class DescribeInvocationsRequest extends Request {
         /**
          * <p>The IDs of the cloud desktops.</p>
          */
-        public Builder desktopIds(java.util.List < String > desktopIds) {
+        public Builder desktopIds(java.util.List<String> desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
             this.desktopIds = desktopIds;
             return this;
