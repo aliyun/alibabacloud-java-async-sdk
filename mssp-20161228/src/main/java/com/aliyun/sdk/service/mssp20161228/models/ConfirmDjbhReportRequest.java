@@ -12,17 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDetailByIdRequest} extends {@link RequestModel}
+ * {@link ConfirmDjbhReportRequest} extends {@link RequestModel}
  *
- * <p>GetDetailByIdRequest</p>
+ * <p>ConfirmDjbhReportRequest</p>
  */
-public class GetDetailByIdRequest extends Request {
+public class ConfirmDjbhReportRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    private GetDetailByIdRequest(Builder builder) {
+    private ConfirmDjbhReportRequest(Builder builder) {
         super(builder);
         this.id = builder.id;
     }
@@ -31,7 +30,7 @@ public class GetDetailByIdRequest extends Request {
         return new Builder();
     }
 
-    public static GetDetailByIdRequest create() {
+    public static ConfirmDjbhReportRequest create() {
         return builder().build();
     }
 
@@ -47,24 +46,23 @@ public class GetDetailByIdRequest extends Request {
         return this.id;
     }
 
-    public static final class Builder extends Request.Builder<GetDetailByIdRequest, Builder> {
+    public static final class Builder extends Request.Builder<ConfirmDjbhReportRequest, Builder> {
         private Long id; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDetailByIdRequest request) {
+        private Builder(ConfirmDjbhReportRequest request) {
             super(request);
             this.id = request.id;
         } 
 
         /**
-         * <p>Primary key ID.</p>
-         * <p>This parameter is required.</p>
+         * <p>Primary key ID of the report.</p>
          * 
          * <strong>example:</strong>
-         * <p>22</p>
+         * <p>24563</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -73,8 +71,8 @@ public class GetDetailByIdRequest extends Request {
         }
 
         @Override
-        public GetDetailByIdRequest build() {
-            return new GetDetailByIdRequest(this);
+        public ConfirmDjbhReportRequest build() {
+            return new ConfirmDjbhReportRequest(this);
         } 
 
     } 

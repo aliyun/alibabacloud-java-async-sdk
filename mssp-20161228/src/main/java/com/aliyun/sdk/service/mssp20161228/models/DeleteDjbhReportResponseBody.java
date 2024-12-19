@@ -12,33 +12,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDocumentDownloadUrlResponseBody} extends {@link TeaModel}
+ * {@link DeleteDjbhReportResponseBody} extends {@link TeaModel}
  *
- * <p>GetDocumentDownloadUrlResponseBody</p>
+ * <p>DeleteDjbhReportResponseBody</p>
  */
-public class GetDocumentDownloadUrlResponseBody extends TeaModel {
+public class DeleteDjbhReportResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @com.aliyun.core.annotation.NameInMap("Data")
-    private String data;
-
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
-    private Integer httpStatusCode;
+    private String httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Success")
-    private Boolean success;
+    private String success;
 
-    private GetDocumentDownloadUrlResponseBody(Builder builder) {
+    private DeleteDjbhReportResponseBody(Builder builder) {
         this.code = builder.code;
-        this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -49,7 +44,7 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetDocumentDownloadUrlResponseBody create() {
+    public static DeleteDjbhReportResponseBody create() {
         return builder().build();
     }
 
@@ -61,16 +56,9 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
     }
 
     /**
-     * @return data
-     */
-    public String getData() {
-        return this.data;
-    }
-
-    /**
      * @return httpStatusCode
      */
-    public Integer getHttpStatusCode() {
+    public String getHttpStatusCode() {
         return this.httpStatusCode;
     }
 
@@ -91,37 +79,25 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
     /**
      * @return success
      */
-    public Boolean getSuccess() {
+    public String getSuccess() {
         return this.success;
     }
 
     public static final class Builder {
         private String code; 
-        private String data; 
-        private Integer httpStatusCode; 
+        private String httpStatusCode; 
         private String message; 
         private String requestId; 
-        private Boolean success; 
+        private String success; 
 
         /**
-         * <p>API status code.</p>
+         * <p>API response code.</p>
          * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>successful</p>
          */
         public Builder code(String code) {
             this.code = code;
-            return this;
-        }
-
-        /**
-         * <p>OSS file access URL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://oos-cn.ctyunapi.cn/example-bucket/test/1.jpg">https://oos-cn.ctyunapi.cn/example-bucket/test/1.jpg</a></p>
-         */
-        public Builder data(String data) {
-            this.data = data;
             return this;
         }
 
@@ -131,16 +107,16 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>200</p>
          */
-        public Builder httpStatusCode(Integer httpStatusCode) {
+        public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
             return this;
         }
 
         /**
-         * <p>Message of the returned result.</p>
+         * <p>Prompt message for the returned result.</p>
          * 
          * <strong>example:</strong>
-         * <p>successful</p>
+         * <p>Successful!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,10 +125,9 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
 
         /**
          * <p>Request ID.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>C7BE80B4-7692-54FA-AB22-2A7DF08C4754</p>
+         * <p>86786E4C-6416-55CF-9AB6-5E275B68801D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -160,18 +135,18 @@ public class GetDocumentDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the call was successful: - <strong>true</strong>: The call was successful. - <strong>false</strong>: The call failed.</p>
+         * <p>Whether the call was successful. - <strong>true</strong>: The call was successful. - <strong>false</strong>: The call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
          */
-        public Builder success(Boolean success) {
+        public Builder success(String success) {
             this.success = success;
             return this;
         }
 
-        public GetDocumentDownloadUrlResponseBody build() {
-            return new GetDocumentDownloadUrlResponseBody(this);
+        public DeleteDjbhReportResponseBody build() {
+            return new DeleteDjbhReportResponseBody(this);
         } 
 
     } 

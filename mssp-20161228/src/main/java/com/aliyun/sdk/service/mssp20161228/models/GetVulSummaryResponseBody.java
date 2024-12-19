@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mssp20161228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -278,7 +283,7 @@ public class GetVulSummaryResponseBody extends TeaModel {
         private String dealRate;
 
         @com.aliyun.core.annotation.NameInMap("TrendList")
-        private java.util.List < TrendList> trendList;
+        private java.util.List<TrendList> trendList;
 
         @com.aliyun.core.annotation.NameInMap("WaitHandleCount")
         private Long waitHandleCount;
@@ -315,7 +320,7 @@ public class GetVulSummaryResponseBody extends TeaModel {
         /**
          * @return trendList
          */
-        public java.util.List < TrendList> getTrendList() {
+        public java.util.List<TrendList> getTrendList() {
             return this.trendList;
         }
 
@@ -329,7 +334,7 @@ public class GetVulSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Long completedCount; 
             private String dealRate; 
-            private java.util.List < TrendList> trendList; 
+            private java.util.List<TrendList> trendList; 
             private Long waitHandleCount; 
 
             /**
@@ -357,7 +362,7 @@ public class GetVulSummaryResponseBody extends TeaModel {
             /**
              * <p>Collection of vulnerability trend nodes.</p>
              */
-            public Builder trendList(java.util.List < TrendList> trendList) {
+            public Builder trendList(java.util.List<TrendList> trendList) {
                 this.trendList = trendList;
                 return this;
             }

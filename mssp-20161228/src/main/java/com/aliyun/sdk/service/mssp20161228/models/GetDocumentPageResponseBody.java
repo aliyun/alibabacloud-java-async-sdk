@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mssp20161228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -62,7 +67,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -103,7 +108,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private PageInfo pageInfo; 
@@ -124,7 +129,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
         /**
          * <p>Response data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -207,6 +212,9 @@ public class GetDocumentPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("ReportStatus")
+        private String reportStatus;
+
         @com.aliyun.core.annotation.NameInMap("UploadTime")
         private String uploadTime;
 
@@ -215,6 +223,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
             this.documentName = builder.documentName;
             this.documentType = builder.documentType;
             this.id = builder.id;
+            this.reportStatus = builder.reportStatus;
             this.uploadTime = builder.uploadTime;
         }
 
@@ -255,6 +264,13 @@ public class GetDocumentPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return reportStatus
+         */
+        public String getReportStatus() {
+            return this.reportStatus;
+        }
+
+        /**
          * @return uploadTime
          */
         public String getUploadTime() {
@@ -266,6 +282,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
             private String documentName; 
             private String documentType; 
             private Long id; 
+            private String reportStatus; 
             private String uploadTime; 
 
             /**
@@ -309,6 +326,14 @@ public class GetDocumentPageResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * ReportStatus.
+             */
+            public Builder reportStatus(String reportStatus) {
+                this.reportStatus = reportStatus;
                 return this;
             }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mssp20161228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -325,7 +330,7 @@ public class GetAlarmDetailByIdResponseBody extends TeaModel {
         private String desc;
 
         @com.aliyun.core.annotation.NameInMap("EventDetails")
-        private java.util.List < EventDetails> eventDetails;
+        private java.util.List<EventDetails> eventDetails;
 
         @com.aliyun.core.annotation.NameInMap("EventLevel")
         private String eventLevel;
@@ -462,7 +467,7 @@ public class GetAlarmDetailByIdResponseBody extends TeaModel {
         /**
          * @return eventDetails
          */
-        public java.util.List < EventDetails> getEventDetails() {
+        public java.util.List<EventDetails> getEventDetails() {
             return this.eventDetails;
         }
 
@@ -547,7 +552,7 @@ public class GetAlarmDetailByIdResponseBody extends TeaModel {
             private Boolean containHwMode; 
             private String dealTime; 
             private String desc; 
-            private java.util.List < EventDetails> eventDetails; 
+            private java.util.List<EventDetails> eventDetails; 
             private String eventLevel; 
             private Long id; 
             private String instanceName; 
@@ -672,7 +677,7 @@ public class GetAlarmDetailByIdResponseBody extends TeaModel {
             /**
              * <p>Event details information.</p>
              */
-            public Builder eventDetails(java.util.List < EventDetails> eventDetails) {
+            public Builder eventDetails(java.util.List<EventDetails> eventDetails) {
                 this.eventDetails = eventDetails;
                 return this;
             }

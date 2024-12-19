@@ -20,10 +20,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ConfirmDjbhReport  ConfirmDjbhReportRequest
+     * @return ConfirmDjbhReportResponse
+     */
+    CompletableFuture<ConfirmDjbhReportResponse> confirmDjbhReport(ConfirmDjbhReportRequest request);
+
+    /**
+     * @param request the request parameters of CreateServiceLinkedRole  CreateServiceLinkedRoleRequest
+     * @return CreateServiceLinkedRoleResponse
+     */
+    CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
+
+    /**
      * @param request the request parameters of CreateServiceWorkOrder  CreateServiceWorkOrderRequest
      * @return CreateServiceWorkOrderResponse
      */
     CompletableFuture<CreateServiceWorkOrderResponse> createServiceWorkOrder(CreateServiceWorkOrderRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDjbhReport  DeleteDjbhReportRequest
+     * @return DeleteDjbhReportResponse
+     */
+    CompletableFuture<DeleteDjbhReportResponse> deleteDjbhReport(DeleteDjbhReportRequest request);
+
+    /**
+     * @param request the request parameters of DescribeServiceLinkedRole  DescribeServiceLinkedRoleRequest
+     * @return DescribeServiceLinkedRoleResponse
+     */
+    CompletableFuture<DescribeServiceLinkedRoleResponse> describeServiceLinkedRole(DescribeServiceLinkedRoleRequest request);
 
     /**
      * @param request the request parameters of DisposeServiceWorkOrder  DisposeServiceWorkOrderRequest

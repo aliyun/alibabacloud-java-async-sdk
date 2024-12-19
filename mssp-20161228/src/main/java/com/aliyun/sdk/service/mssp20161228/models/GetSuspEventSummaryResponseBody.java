@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mssp20161228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -299,7 +304,7 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
      */
     public static class NetworkAttackTrendDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrendList")
-        private java.util.List < TrendList> trendList;
+        private java.util.List<TrendList> trendList;
 
         private NetworkAttackTrendDTO(Builder builder) {
             this.trendList = builder.trendList;
@@ -316,17 +321,17 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
         /**
          * @return trendList
          */
-        public java.util.List < TrendList> getTrendList() {
+        public java.util.List<TrendList> getTrendList() {
             return this.trendList;
         }
 
         public static final class Builder {
-            private java.util.List < TrendList> trendList; 
+            private java.util.List<TrendList> trendList; 
 
             /**
              * <p>Collection of trend nodes for each attack item.</p>
              */
-            public Builder trendList(java.util.List < TrendList> trendList) {
+            public Builder trendList(java.util.List<TrendList> trendList) {
                 this.trendList = trendList;
                 return this;
             }
@@ -584,7 +589,7 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
      */
     public static class SuspEventTopDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SuspEventList")
-        private java.util.List < SuspEventList> suspEventList;
+        private java.util.List<SuspEventList> suspEventList;
 
         private SuspEventTopDTO(Builder builder) {
             this.suspEventList = builder.suspEventList;
@@ -601,17 +606,17 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
         /**
          * @return suspEventList
          */
-        public java.util.List < SuspEventList> getSuspEventList() {
+        public java.util.List<SuspEventList> getSuspEventList() {
             return this.suspEventList;
         }
 
         public static final class Builder {
-            private java.util.List < SuspEventList> suspEventList; 
+            private java.util.List<SuspEventList> suspEventList; 
 
             /**
              * <p>Top 10 before handling alarms</p>
              */
-            public Builder suspEventList(java.util.List < SuspEventList> suspEventList) {
+            public Builder suspEventList(java.util.List<SuspEventList> suspEventList) {
                 this.suspEventList = suspEventList;
                 return this;
             }
@@ -727,7 +732,7 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
      */
     public static class SuspEventTrendDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrendList")
-        private java.util.List < SuspEventTrendDTOTrendList> trendList;
+        private java.util.List<SuspEventTrendDTOTrendList> trendList;
 
         private SuspEventTrendDTO(Builder builder) {
             this.trendList = builder.trendList;
@@ -744,17 +749,17 @@ public class GetSuspEventSummaryResponseBody extends TeaModel {
         /**
          * @return trendList
          */
-        public java.util.List < SuspEventTrendDTOTrendList> getTrendList() {
+        public java.util.List<SuspEventTrendDTOTrendList> getTrendList() {
             return this.trendList;
         }
 
         public static final class Builder {
-            private java.util.List < SuspEventTrendDTOTrendList> trendList; 
+            private java.util.List<SuspEventTrendDTOTrendList> trendList; 
 
             /**
              * <p>Trend of alerts.</p>
              */
-            public Builder trendList(java.util.List < SuspEventTrendDTOTrendList> trendList) {
+            public Builder trendList(java.util.List<SuspEventTrendDTOTrendList> trendList) {
                 this.trendList = trendList;
                 return this;
             }

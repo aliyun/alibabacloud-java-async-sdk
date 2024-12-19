@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mssp20161228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetVulListByIdResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -62,7 +67,7 @@ public class GetVulListByIdResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -103,7 +108,7 @@ public class GetVulListByIdResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private PageInfo pageInfo; 
@@ -124,7 +129,7 @@ public class GetVulListByIdResponseBody extends TeaModel {
         /**
          * <p>Data returned by the interface.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -295,7 +300,7 @@ public class GetVulListByIdResponseBody extends TeaModel {
         private String aliasName;
 
         @com.aliyun.core.annotation.NameInMap("EffectMsgDTOS")
-        private java.util.List < EffectMsgDTOS> effectMsgDTOS;
+        private java.util.List<EffectMsgDTOS> effectMsgDTOS;
 
         @com.aliyun.core.annotation.NameInMap("FirstTs")
         private String firstTs;
@@ -372,7 +377,7 @@ public class GetVulListByIdResponseBody extends TeaModel {
         /**
          * @return effectMsgDTOS
          */
-        public java.util.List < EffectMsgDTOS> getEffectMsgDTOS() {
+        public java.util.List<EffectMsgDTOS> getEffectMsgDTOS() {
             return this.effectMsgDTOS;
         }
 
@@ -469,7 +474,7 @@ public class GetVulListByIdResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliasName; 
-            private java.util.List < EffectMsgDTOS> effectMsgDTOS; 
+            private java.util.List<EffectMsgDTOS> effectMsgDTOS; 
             private String firstTs; 
             private String instanceName; 
             private String internetIp; 
@@ -498,7 +503,7 @@ public class GetVulListByIdResponseBody extends TeaModel {
             /**
              * <p>Impact description</p>
              */
-            public Builder effectMsgDTOS(java.util.List < EffectMsgDTOS> effectMsgDTOS) {
+            public Builder effectMsgDTOS(java.util.List<EffectMsgDTOS> effectMsgDTOS) {
                 this.effectMsgDTOS = effectMsgDTOS;
                 return this;
             }

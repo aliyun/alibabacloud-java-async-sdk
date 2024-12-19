@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mssp20161228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -272,7 +277,7 @@ public class GetBaselineSummaryResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TrendDTOList")
-        private java.util.List < TrendDTOList> trendDTOList;
+        private java.util.List<TrendDTOList> trendDTOList;
 
         private Data(Builder builder) {
             this.trendDTOList = builder.trendDTOList;
@@ -289,17 +294,17 @@ public class GetBaselineSummaryResponseBody extends TeaModel {
         /**
          * @return trendDTOList
          */
-        public java.util.List < TrendDTOList> getTrendDTOList() {
+        public java.util.List<TrendDTOList> getTrendDTOList() {
             return this.trendDTOList;
         }
 
         public static final class Builder {
-            private java.util.List < TrendDTOList> trendDTOList; 
+            private java.util.List<TrendDTOList> trendDTOList; 
 
             /**
              * <p>Collection of baseline statistical data.</p>
              */
-            public Builder trendDTOList(java.util.List < TrendDTOList> trendDTOList) {
+            public Builder trendDTOList(java.util.List<TrendDTOList> trendDTOList) {
                 this.trendDTOList = trendDTOList;
                 return this;
             }

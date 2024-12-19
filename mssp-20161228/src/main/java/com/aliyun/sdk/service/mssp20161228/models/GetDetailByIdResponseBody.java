@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mssp20161228.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -295,7 +300,7 @@ public class GetDetailByIdResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VulDetails")
-        private java.util.List < VulDetails> vulDetails;
+        private java.util.List<VulDetails> vulDetails;
 
         private Data(Builder builder) {
             this.vulDetails = builder.vulDetails;
@@ -312,17 +317,17 @@ public class GetDetailByIdResponseBody extends TeaModel {
         /**
          * @return vulDetails
          */
-        public java.util.List < VulDetails> getVulDetails() {
+        public java.util.List<VulDetails> getVulDetails() {
             return this.vulDetails;
         }
 
         public static final class Builder {
-            private java.util.List < VulDetails> vulDetails; 
+            private java.util.List<VulDetails> vulDetails; 
 
             /**
              * <p>Vulnerability details.</p>
              */
-            public Builder vulDetails(java.util.List < VulDetails> vulDetails) {
+            public Builder vulDetails(java.util.List<VulDetails> vulDetails) {
                 this.vulDetails = vulDetails;
                 return this;
             }

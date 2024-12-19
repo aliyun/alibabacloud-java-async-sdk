@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetSafetyCoverResponse} extends {@link TeaModel}
+ * {@link DeleteDjbhReportResponse} extends {@link TeaModel}
  *
- * <p>GetSafetyCoverResponse</p>
+ * <p>DeleteDjbhReportResponse</p>
  */
-public class GetSafetyCoverResponse extends Response {
+public class DeleteDjbhReportResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GetSafetyCoverResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetSafetyCoverResponseBody body;
+    private DeleteDjbhReportResponseBody body;
 
-    private GetSafetyCoverResponse(BuilderImpl builder) {
+    private DeleteDjbhReportResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetSafetyCoverResponse create() {
+    public static DeleteDjbhReportResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GetSafetyCoverResponse extends Response {
     /**
      * @return body
      */
-    public GetSafetyCoverResponseBody getBody() {
+    public DeleteDjbhReportResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetSafetyCoverResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteDjbhReportResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetSafetyCoverResponseBody body);
+        Builder body(DeleteDjbhReportResponseBody body);
 
         @Override
-        GetSafetyCoverResponse build();
+        DeleteDjbhReportResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetSafetyCoverResponse, Builder>
+            extends Response.BuilderImpl<DeleteDjbhReportResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetSafetyCoverResponseBody body; 
+        private DeleteDjbhReportResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetSafetyCoverResponse response) {
+        private BuilderImpl(DeleteDjbhReportResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetSafetyCoverResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetSafetyCoverResponseBody body) {
+        public Builder body(DeleteDjbhReportResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetSafetyCoverResponse build() {
-            return new GetSafetyCoverResponse(this);
+        public DeleteDjbhReportResponse build() {
+            return new DeleteDjbhReportResponse(this);
         } 
 
     } 

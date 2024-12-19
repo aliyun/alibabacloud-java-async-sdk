@@ -12,31 +12,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDocumentDownloadUrlRequest} extends {@link RequestModel}
+ * {@link DeleteDjbhReportRequest} extends {@link RequestModel}
  *
- * <p>GetDocumentDownloadUrlRequest</p>
+ * <p>DeleteDjbhReportRequest</p>
  */
-public class GetDocumentDownloadUrlRequest extends Request {
+public class DeleteDjbhReportRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ReportType")
-    private String reportType;
-
-    private GetDocumentDownloadUrlRequest(Builder builder) {
+    private DeleteDjbhReportRequest(Builder builder) {
         super(builder);
         this.id = builder.id;
-        this.reportType = builder.reportType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetDocumentDownloadUrlRequest create() {
+    public static DeleteDjbhReportRequest create() {
         return builder().build();
     }
 
@@ -52,33 +47,24 @@ public class GetDocumentDownloadUrlRequest extends Request {
         return this.id;
     }
 
-    /**
-     * @return reportType
-     */
-    public String getReportType() {
-        return this.reportType;
-    }
-
-    public static final class Builder extends Request.Builder<GetDocumentDownloadUrlRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteDjbhReportRequest, Builder> {
         private Long id; 
-        private String reportType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDocumentDownloadUrlRequest request) {
+        private Builder(DeleteDjbhReportRequest request) {
             super(request);
             this.id = request.id;
-            this.reportType = request.reportType;
         } 
 
         /**
-         * <p>Document management ID.</p>
+         * <p>Primary key ID of the report.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>175815</p>
+         * <p>26579</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -86,18 +72,9 @@ public class GetDocumentDownloadUrlRequest extends Request {
             return this;
         }
 
-        /**
-         * ReportType.
-         */
-        public Builder reportType(String reportType) {
-            this.putBodyParameter("ReportType", reportType);
-            this.reportType = reportType;
-            return this;
-        }
-
         @Override
-        public GetDocumentDownloadUrlRequest build() {
-            return new GetDocumentDownloadUrlRequest(this);
+        public DeleteDjbhReportRequest build() {
+            return new DeleteDjbhReportRequest(this);
         } 
 
     } 
