@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -64,7 +69,7 @@ public class CreateDataFlowTaskResponseBody extends TeaModel {
          * <p>The ID of the dataflow task.</p>
          * 
          * <strong>example:</strong>
-         * <p>taskId-12345678</p>
+         * <p>task-38aa8e890f45****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

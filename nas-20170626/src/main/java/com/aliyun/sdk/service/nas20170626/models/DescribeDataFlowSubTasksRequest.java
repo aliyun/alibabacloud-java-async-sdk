@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDataFlowSubTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    private java.util.List<Filters> filters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -61,7 +66,7 @@ public class DescribeDataFlowSubTasksRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -81,7 +86,7 @@ public class DescribeDataFlowSubTasksRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDataFlowSubTasksRequest, Builder> {
         private String fileSystemId; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Long maxResults; 
         private String nextToken; 
 
@@ -113,7 +118,7 @@ public class DescribeDataFlowSubTasksRequest extends Request {
         /**
          * <p>The filter that is used to query data streaming tasks.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDirQuotasResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DirQuotaInfos")
-    private java.util.List < DirQuotaInfos> dirQuotaInfos;
+    private java.util.List<DirQuotaInfos> dirQuotaInfos;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
     /**
      * @return dirQuotaInfos
      */
-    public java.util.List < DirQuotaInfos> getDirQuotaInfos() {
+    public java.util.List<DirQuotaInfos> getDirQuotaInfos() {
         return this.dirQuotaInfos;
     }
 
@@ -79,7 +84,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DirQuotaInfos> dirQuotaInfos; 
+        private java.util.List<DirQuotaInfos> dirQuotaInfos; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         /**
          * <p>The queried directory quotas.</p>
          */
-        public Builder dirQuotaInfos(java.util.List < DirQuotaInfos> dirQuotaInfos) {
+        public Builder dirQuotaInfos(java.util.List<DirQuotaInfos> dirQuotaInfos) {
             this.dirQuotaInfos = dirQuotaInfos;
             return this;
         }
@@ -375,7 +380,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("UserQuotaInfos")
-        private java.util.List < UserQuotaInfos> userQuotaInfos;
+        private java.util.List<UserQuotaInfos> userQuotaInfos;
 
         private DirQuotaInfos(Builder builder) {
             this.dirInode = builder.dirInode;
@@ -416,7 +421,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         /**
          * @return userQuotaInfos
          */
-        public java.util.List < UserQuotaInfos> getUserQuotaInfos() {
+        public java.util.List<UserQuotaInfos> getUserQuotaInfos() {
             return this.userQuotaInfos;
         }
 
@@ -424,7 +429,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             private String dirInode; 
             private String path; 
             private String status; 
-            private java.util.List < UserQuotaInfos> userQuotaInfos; 
+            private java.util.List<UserQuotaInfos> userQuotaInfos; 
 
             /**
              * <p>The inode number of the directory.</p>
@@ -462,7 +467,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             /**
              * <p>The information about quotas for all users.</p>
              */
-            public Builder userQuotaInfos(java.util.List < UserQuotaInfos> userQuotaInfos) {
+            public Builder userQuotaInfos(java.util.List<UserQuotaInfos> userQuotaInfos) {
                 this.userQuotaInfos = userQuotaInfos;
                 return this;
             }

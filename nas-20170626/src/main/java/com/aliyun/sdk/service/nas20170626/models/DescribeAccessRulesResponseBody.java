@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -297,7 +302,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
              * <p>The type of the file system.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>standard: General-purpose Apsara File Storage NAS (NAS) file system</li>
+             * <li>standard: General-purpose File Storage NAS (NAS) file system</li>
              * <li>extreme: Extreme NAS file system</li>
              * </ul>
              * 
@@ -401,7 +406,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
      */
     public static class AccessRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessRule")
-        private java.util.List < AccessRule> accessRule;
+        private java.util.List<AccessRule> accessRule;
 
         private AccessRules(Builder builder) {
             this.accessRule = builder.accessRule;
@@ -418,17 +423,17 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         /**
          * @return accessRule
          */
-        public java.util.List < AccessRule> getAccessRule() {
+        public java.util.List<AccessRule> getAccessRule() {
             return this.accessRule;
         }
 
         public static final class Builder {
-            private java.util.List < AccessRule> accessRule; 
+            private java.util.List<AccessRule> accessRule; 
 
             /**
              * AccessRule.
              */
-            public Builder accessRule(java.util.List < AccessRule> accessRule) {
+            public Builder accessRule(java.util.List<AccessRule> accessRule) {
                 this.accessRule = accessRule;
                 return this;
             }

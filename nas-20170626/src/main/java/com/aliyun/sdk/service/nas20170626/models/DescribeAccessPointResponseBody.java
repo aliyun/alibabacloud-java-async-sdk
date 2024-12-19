@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -87,7 +92,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         private Integer posixGroupId;
 
         @com.aliyun.core.annotation.NameInMap("PosixSecondaryGroupIds")
-        private java.util.List < Integer > posixSecondaryGroupIds;
+        private java.util.List<Integer> posixSecondaryGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("PosixUserId")
         private Integer posixUserId;
@@ -116,7 +121,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
         /**
          * @return posixSecondaryGroupIds
          */
-        public java.util.List < Integer > getPosixSecondaryGroupIds() {
+        public java.util.List<Integer> getPosixSecondaryGroupIds() {
             return this.posixSecondaryGroupIds;
         }
 
@@ -129,7 +134,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer posixGroupId; 
-            private java.util.List < Integer > posixSecondaryGroupIds; 
+            private java.util.List<Integer> posixSecondaryGroupIds; 
             private Integer posixUserId; 
 
             /**
@@ -146,7 +151,7 @@ public class DescribeAccessPointResponseBody extends TeaModel {
             /**
              * <p>The IDs of the secondary user groups.</p>
              */
-            public Builder posixSecondaryGroupIds(java.util.List < Integer > posixSecondaryGroupIds) {
+            public Builder posixSecondaryGroupIds(java.util.List<Integer> posixSecondaryGroupIds) {
                 this.posixSecondaryGroupIds = posixSecondaryGroupIds;
                 return this;
             }

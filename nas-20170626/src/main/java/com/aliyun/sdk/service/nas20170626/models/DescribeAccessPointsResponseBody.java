@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAccessPointsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessPoints")
-    private java.util.List < AccessPoints> accessPoints;
+    private java.util.List<AccessPoints> accessPoints;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -43,7 +48,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
     /**
      * @return accessPoints
      */
-    public java.util.List < AccessPoints> getAccessPoints() {
+    public java.util.List<AccessPoints> getAccessPoints() {
         return this.accessPoints;
     }
 
@@ -69,7 +74,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AccessPoints> accessPoints; 
+        private java.util.List<AccessPoints> accessPoints; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
@@ -77,7 +82,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         /**
          * <p>The information about the access point.</p>
          */
-        public Builder accessPoints(java.util.List < AccessPoints> accessPoints) {
+        public Builder accessPoints(java.util.List<AccessPoints> accessPoints) {
             this.accessPoints = accessPoints;
             return this;
         }
@@ -133,7 +138,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         private Integer posixGroupId;
 
         @com.aliyun.core.annotation.NameInMap("PosixSecondaryGroupIds")
-        private java.util.List < Integer > posixSecondaryGroupIds;
+        private java.util.List<Integer> posixSecondaryGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("PosixUserId")
         private Integer posixUserId;
@@ -162,7 +167,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         /**
          * @return posixSecondaryGroupIds
          */
-        public java.util.List < Integer > getPosixSecondaryGroupIds() {
+        public java.util.List<Integer> getPosixSecondaryGroupIds() {
             return this.posixSecondaryGroupIds;
         }
 
@@ -175,7 +180,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer posixGroupId; 
-            private java.util.List < Integer > posixSecondaryGroupIds; 
+            private java.util.List<Integer> posixSecondaryGroupIds; 
             private Integer posixUserId; 
 
             /**
@@ -192,7 +197,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             /**
              * <p>The IDs of the secondary user groups.</p>
              */
-            public Builder posixSecondaryGroupIds(java.util.List < Integer > posixSecondaryGroupIds) {
+            public Builder posixSecondaryGroupIds(java.util.List<Integer> posixSecondaryGroupIds) {
                 this.posixSecondaryGroupIds = posixSecondaryGroupIds;
                 return this;
             }

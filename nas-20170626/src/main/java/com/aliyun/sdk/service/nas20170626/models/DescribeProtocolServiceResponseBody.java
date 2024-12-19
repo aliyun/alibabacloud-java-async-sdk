@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("ProtocolServices")
-    private java.util.List < ProtocolServices> protocolServices;
+    private java.util.List<ProtocolServices> protocolServices;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
     /**
      * @return protocolServices
      */
-    public java.util.List < ProtocolServices> getProtocolServices() {
+    public java.util.List<ProtocolServices> getProtocolServices() {
         return this.protocolServices;
     }
 
@@ -58,7 +63,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < ProtocolServices> protocolServices; 
+        private java.util.List<ProtocolServices> protocolServices; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         /**
          * <p>The information about protocol services.</p>
          */
-        public Builder protocolServices(java.util.List < ProtocolServices> protocolServices) {
+        public Builder protocolServices(java.util.List<ProtocolServices> protocolServices) {
             this.protocolServices = protocolServices;
             return this;
         }

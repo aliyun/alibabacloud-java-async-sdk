@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -343,7 +348,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
      */
     public static class ClientMasterNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientMasterNode")
-        private java.util.List < ClientMasterNode> clientMasterNode;
+        private java.util.List<ClientMasterNode> clientMasterNode;
 
         private ClientMasterNodes(Builder builder) {
             this.clientMasterNode = builder.clientMasterNode;
@@ -360,17 +365,17 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * @return clientMasterNode
          */
-        public java.util.List < ClientMasterNode> getClientMasterNode() {
+        public java.util.List<ClientMasterNode> getClientMasterNode() {
             return this.clientMasterNode;
         }
 
         public static final class Builder {
-            private java.util.List < ClientMasterNode> clientMasterNode; 
+            private java.util.List<ClientMasterNode> clientMasterNode; 
 
             /**
              * ClientMasterNode.
              */
-            public Builder clientMasterNode(java.util.List < ClientMasterNode> clientMasterNode) {
+            public Builder clientMasterNode(java.util.List<ClientMasterNode> clientMasterNode) {
                 this.clientMasterNode = clientMasterNode;
                 return this;
             }
@@ -463,7 +468,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -480,17 +485,17 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -751,7 +756,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
      */
     public static class MountTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountTarget")
-        private java.util.List < MountTarget> mountTarget;
+        private java.util.List<MountTarget> mountTarget;
 
         private MountTargets(Builder builder) {
             this.mountTarget = builder.mountTarget;
@@ -768,17 +773,17 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * @return mountTarget
          */
-        public java.util.List < MountTarget> getMountTarget() {
+        public java.util.List<MountTarget> getMountTarget() {
             return this.mountTarget;
         }
 
         public static final class Builder {
-            private java.util.List < MountTarget> mountTarget; 
+            private java.util.List<MountTarget> mountTarget; 
 
             /**
              * MountTarget.
              */
-            public Builder mountTarget(java.util.List < MountTarget> mountTarget) {
+            public Builder mountTarget(java.util.List<MountTarget> mountTarget) {
                 this.mountTarget = mountTarget;
                 return this;
             }
@@ -1002,7 +1007,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
      */
     public static class Packages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Package")
-        private java.util.List < Package> _package;
+        private java.util.List<Package> _package;
 
         private Packages(Builder builder) {
             this._package = builder._package;
@@ -1019,17 +1024,17 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * @return _package
          */
-        public java.util.List < Package> get_package() {
+        public java.util.List<Package> get_package() {
             return this._package;
         }
 
         public static final class Builder {
-            private java.util.List < Package> _package; 
+            private java.util.List<Package> _package; 
 
             /**
              * Package.
              */
-            public Builder _package(java.util.List < Package> _package) {
+            public Builder _package(java.util.List<Package> _package) {
                 this._package = _package;
                 return this;
             }
@@ -1049,7 +1054,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
      */
     public static class SupportedFeatures extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedFeature")
-        private java.util.List < String > supportedFeature;
+        private java.util.List<String> supportedFeature;
 
         private SupportedFeatures(Builder builder) {
             this.supportedFeature = builder.supportedFeature;
@@ -1066,17 +1071,17 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * @return supportedFeature
          */
-        public java.util.List < String > getSupportedFeature() {
+        public java.util.List<String> getSupportedFeature() {
             return this.supportedFeature;
         }
 
         public static final class Builder {
-            private java.util.List < String > supportedFeature; 
+            private java.util.List<String> supportedFeature; 
 
             /**
              * SupportedFeature.
              */
-            public Builder supportedFeature(java.util.List < String > supportedFeature) {
+            public Builder supportedFeature(java.util.List<String> supportedFeature) {
                 this.supportedFeature = supportedFeature;
                 return this;
             }
@@ -1169,7 +1174,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
      */
     public static class FileSystemTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < TagsTag> tag;
+        private java.util.List<TagsTag> tag;
 
         private FileSystemTags(Builder builder) {
             this.tag = builder.tag;
@@ -1186,17 +1191,17 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < TagsTag> getTag() {
+        public java.util.List<TagsTag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < TagsTag> tag; 
+            private java.util.List<TagsTag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < TagsTag> tag) {
+            public Builder tag(java.util.List<TagsTag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1216,7 +1221,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
      */
     public static class VswIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VswId")
-        private java.util.List < String > vswId;
+        private java.util.List<String> vswId;
 
         private VswIds(Builder builder) {
             this.vswId = builder.vswId;
@@ -1233,12 +1238,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * @return vswId
          */
-        public java.util.List < String > getVswId() {
+        public java.util.List<String> getVswId() {
             return this.vswId;
         }
 
         public static final class Builder {
-            private java.util.List < String > vswId; 
+            private java.util.List<String> vswId; 
 
             /**
              * <p>The ID of the vSwitch.</p>
@@ -1246,7 +1251,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>vsw-bp1omfzsszekkvaxn****</p>
              */
-            public Builder vswId(java.util.List < String > vswId) {
+            public Builder vswId(java.util.List<String> vswId) {
                 this.vswId = vswId;
                 return this;
             }
@@ -1662,7 +1667,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * AutoSnapshotPolicyId.
+             * <p>The ID of the automatic snapshot policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-extreme-233e6****</p>
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -1892,7 +1900,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * QuorumVswId.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2ze37k6jh8ums2fw2****</p>
              */
             public Builder quorumVswId(String quorumVswId) {
                 this.quorumVswId = quorumVswId;
@@ -1990,10 +2001,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
+             * <p>The ID of the virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
-             * <p>vpc-bp1sevsgtqvk5gxbl****</p>
+             * <p>vpc-bp1cbv1ljve4j5hlw****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -2001,7 +2012,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * VswIds.
+             * <p>A collection of vSwitch IDs.</p>
              */
             public Builder vswIds(VswIds vswIds) {
                 this.vswIds = vswIds;
@@ -2034,7 +2045,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
      */
     public static class FileSystems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileSystem")
-        private java.util.List < FileSystem> fileSystem;
+        private java.util.List<FileSystem> fileSystem;
 
         private FileSystems(Builder builder) {
             this.fileSystem = builder.fileSystem;
@@ -2051,17 +2062,17 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * @return fileSystem
          */
-        public java.util.List < FileSystem> getFileSystem() {
+        public java.util.List<FileSystem> getFileSystem() {
             return this.fileSystem;
         }
 
         public static final class Builder {
-            private java.util.List < FileSystem> fileSystem; 
+            private java.util.List<FileSystem> fileSystem; 
 
             /**
              * FileSystem.
              */
-            public Builder fileSystem(java.util.List < FileSystem> fileSystem) {
+            public Builder fileSystem(java.util.List<FileSystem> fileSystem) {
                 this.fileSystem = fileSystem;
                 return this;
             }

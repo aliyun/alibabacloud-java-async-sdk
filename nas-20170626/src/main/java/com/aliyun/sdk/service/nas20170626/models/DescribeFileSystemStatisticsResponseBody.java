@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -316,7 +321,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
      */
     public static class FileSystemStatistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileSystemStatistic")
-        private java.util.List < FileSystemStatistic> fileSystemStatistic;
+        private java.util.List<FileSystemStatistic> fileSystemStatistic;
 
         private FileSystemStatistics(Builder builder) {
             this.fileSystemStatistic = builder.fileSystemStatistic;
@@ -333,17 +338,17 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
         /**
          * @return fileSystemStatistic
          */
-        public java.util.List < FileSystemStatistic> getFileSystemStatistic() {
+        public java.util.List<FileSystemStatistic> getFileSystemStatistic() {
             return this.fileSystemStatistic;
         }
 
         public static final class Builder {
-            private java.util.List < FileSystemStatistic> fileSystemStatistic; 
+            private java.util.List<FileSystemStatistic> fileSystemStatistic; 
 
             /**
              * FileSystemStatistic.
              */
-            public Builder fileSystemStatistic(java.util.List < FileSystemStatistic> fileSystemStatistic) {
+            public Builder fileSystemStatistic(java.util.List<FileSystemStatistic> fileSystemStatistic) {
                 this.fileSystemStatistic = fileSystemStatistic;
                 return this;
             }
@@ -482,7 +487,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
      */
     public static class Packages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Package")
-        private java.util.List < Package> _package;
+        private java.util.List<Package> _package;
 
         private Packages(Builder builder) {
             this._package = builder._package;
@@ -499,17 +504,17 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
         /**
          * @return _package
          */
-        public java.util.List < Package> get_package() {
+        public java.util.List<Package> get_package() {
             return this._package;
         }
 
         public static final class Builder {
-            private java.util.List < Package> _package; 
+            private java.util.List<Package> _package; 
 
             /**
              * Package.
              */
-            public Builder _package(java.util.List < Package> _package) {
+            public Builder _package(java.util.List<Package> _package) {
                 this._package = _package;
                 return this;
             }
@@ -934,7 +939,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
      */
     public static class FileSystems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileSystem")
-        private java.util.List < FileSystem> fileSystem;
+        private java.util.List<FileSystem> fileSystem;
 
         private FileSystems(Builder builder) {
             this.fileSystem = builder.fileSystem;
@@ -951,17 +956,17 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
         /**
          * @return fileSystem
          */
-        public java.util.List < FileSystem> getFileSystem() {
+        public java.util.List<FileSystem> getFileSystem() {
             return this.fileSystem;
         }
 
         public static final class Builder {
-            private java.util.List < FileSystem> fileSystem; 
+            private java.util.List<FileSystem> fileSystem; 
 
             /**
              * FileSystem.
              */
-            public Builder fileSystem(java.util.List < FileSystem> fileSystem) {
+            public Builder fileSystem(java.util.List<FileSystem> fileSystem) {
                 this.fileSystem = fileSystem;
                 return this;
             }

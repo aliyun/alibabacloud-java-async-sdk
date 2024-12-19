@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -114,12 +119,12 @@ public class DeleteFilesetRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request.</p>
+         * <p>Specifies whether to perform a dry run.</p>
          * <p>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no fileset is deleted.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>true: performs only a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned.</li>
-         * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, a fileset is deleted.</li>
+         * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, the fileset is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,6 +138,13 @@ public class DeleteFilesetRequest extends Request {
 
         /**
          * <p>The ID of the file system.</p>
+         * <ul>
+         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c****.</li>
+         * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya****.</li>
+         * </ul>
+         * <blockquote>
+         * <p> CPFS is not supported on the international site.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

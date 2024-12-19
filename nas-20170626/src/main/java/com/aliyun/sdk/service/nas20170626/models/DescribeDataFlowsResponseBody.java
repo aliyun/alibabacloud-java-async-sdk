@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -164,7 +169,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
      */
     public static class DataFlowAutoRefresh extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoRefresh")
-        private java.util.List < AutoRefresh> autoRefresh;
+        private java.util.List<AutoRefresh> autoRefresh;
 
         private DataFlowAutoRefresh(Builder builder) {
             this.autoRefresh = builder.autoRefresh;
@@ -181,17 +186,17 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         /**
          * @return autoRefresh
          */
-        public java.util.List < AutoRefresh> getAutoRefresh() {
+        public java.util.List<AutoRefresh> getAutoRefresh() {
             return this.autoRefresh;
         }
 
         public static final class Builder {
-            private java.util.List < AutoRefresh> autoRefresh; 
+            private java.util.List<AutoRefresh> autoRefresh; 
 
             /**
              * AutoRefresh.
              */
-            public Builder autoRefresh(java.util.List < AutoRefresh> autoRefresh) {
+            public Builder autoRefresh(java.util.List<AutoRefresh> autoRefresh) {
                 this.autoRefresh = autoRefresh;
                 return this;
             }
@@ -488,7 +493,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
              * <p>The dataflow ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>dfid-123456</p>
+             * <p>df-194433a5be31****</p>
              */
             public Builder dataFlowId(String dataFlowId) {
                 this.dataFlowId = dataFlowId;
@@ -532,7 +537,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
              * <p>The ID of the file system.</p>
              * 
              * <strong>example:</strong>
-             * <p>cpfs-12345678</p>
+             * <p>cpfs-099394bd928c****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -578,7 +583,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
              * <p>The fileset ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>fset-123456</p>
+             * <p>fset-1902718ea0ae****</p>
              */
             public Builder fsetId(String fsetId) {
                 this.fsetId = fsetId;
@@ -707,7 +712,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
      */
     public static class DataFlowInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataFlow")
-        private java.util.List < DataFlow> dataFlow;
+        private java.util.List<DataFlow> dataFlow;
 
         private DataFlowInfo(Builder builder) {
             this.dataFlow = builder.dataFlow;
@@ -724,17 +729,17 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         /**
          * @return dataFlow
          */
-        public java.util.List < DataFlow> getDataFlow() {
+        public java.util.List<DataFlow> getDataFlow() {
             return this.dataFlow;
         }
 
         public static final class Builder {
-            private java.util.List < DataFlow> dataFlow; 
+            private java.util.List<DataFlow> dataFlow; 
 
             /**
              * DataFlow.
              */
-            public Builder dataFlow(java.util.List < DataFlow> dataFlow) {
+            public Builder dataFlow(java.util.List<DataFlow> dataFlow) {
                 this.dataFlow = dataFlow;
                 return this;
             }

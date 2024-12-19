@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("ProtocolMountTargets")
-    private java.util.List < ProtocolMountTargets> protocolMountTargets;
+    private java.util.List<ProtocolMountTargets> protocolMountTargets;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
     /**
      * @return protocolMountTargets
      */
-    public java.util.List < ProtocolMountTargets> getProtocolMountTargets() {
+    public java.util.List<ProtocolMountTargets> getProtocolMountTargets() {
         return this.protocolMountTargets;
     }
 
@@ -58,7 +63,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < ProtocolMountTargets> protocolMountTargets; 
+        private java.util.List<ProtocolMountTargets> protocolMountTargets; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         /**
          * <p>The export directories of the protocol service.</p>
          */
-        public Builder protocolMountTargets(java.util.List < ProtocolMountTargets> protocolMountTargets) {
+        public Builder protocolMountTargets(java.util.List<ProtocolMountTargets> protocolMountTargets) {
             this.protocolMountTargets = protocolMountTargets;
             return this;
         }

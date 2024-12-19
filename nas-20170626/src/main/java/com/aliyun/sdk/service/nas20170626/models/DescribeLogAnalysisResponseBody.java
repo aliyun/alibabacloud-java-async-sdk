@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -363,7 +368,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
      */
     public static class Analyses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Analysis")
-        private java.util.List < Analysis> analysis;
+        private java.util.List<Analysis> analysis;
 
         private Analyses(Builder builder) {
             this.analysis = builder.analysis;
@@ -380,17 +385,17 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         /**
          * @return analysis
          */
-        public java.util.List < Analysis> getAnalysis() {
+        public java.util.List<Analysis> getAnalysis() {
             return this.analysis;
         }
 
         public static final class Builder {
-            private java.util.List < Analysis> analysis; 
+            private java.util.List<Analysis> analysis; 
 
             /**
              * Analysis.
              */
-            public Builder analysis(java.util.List < Analysis> analysis) {
+            public Builder analysis(java.util.List<Analysis> analysis) {
                 this.analysis = analysis;
                 return this;
             }

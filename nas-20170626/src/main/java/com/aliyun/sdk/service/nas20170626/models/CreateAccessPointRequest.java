@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -227,7 +232,7 @@ public class CreateAccessPointRequest extends Request {
 
         /**
          * <p>The name of the permission group.</p>
-         * <p>This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.</p>
+         * <p>This parameter is required for a General-purpose File Storage NAS (NAS) file system.</p>
          * <p>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</p>
          * <p>This parameter is required.</p>
          * 
@@ -259,7 +264,7 @@ public class CreateAccessPointRequest extends Request {
          * <li>false (default): The RAM policy is disabled.</li>
          * </ul>
          * <blockquote>
-         * <p> After the RAM policy is enabled for access points, no RAM user is allowed to use access points to mount and access data by default. To use access points to mount and access data as a RAM user, you must grant the related access permissions to the RAM user. If the RAM policy is disabled, access points can be anonymously mounted.</p>
+         * <p> After the RAM policy is enabled for access points, no RAM user is allowed to use access points to mount and access data by default. To use access points to mount and access data as a RAM user, you must grant the related access permissions to the RAM user. If the RAM policy is disabled, access points can be anonymously mounted. For more information about how to configure permissions on access points, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure a policy for the access point</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

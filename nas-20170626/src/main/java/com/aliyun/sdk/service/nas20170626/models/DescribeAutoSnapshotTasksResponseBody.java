@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
      */
     public static class AutoSnapshotTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoSnapshotTask")
-        private java.util.List < AutoSnapshotTask> autoSnapshotTask;
+        private java.util.List<AutoSnapshotTask> autoSnapshotTask;
 
         private AutoSnapshotTasks(Builder builder) {
             this.autoSnapshotTask = builder.autoSnapshotTask;
@@ -241,17 +246,17 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         /**
          * @return autoSnapshotTask
          */
-        public java.util.List < AutoSnapshotTask> getAutoSnapshotTask() {
+        public java.util.List<AutoSnapshotTask> getAutoSnapshotTask() {
             return this.autoSnapshotTask;
         }
 
         public static final class Builder {
-            private java.util.List < AutoSnapshotTask> autoSnapshotTask; 
+            private java.util.List<AutoSnapshotTask> autoSnapshotTask; 
 
             /**
              * AutoSnapshotTask.
              */
-            public Builder autoSnapshotTask(java.util.List < AutoSnapshotTask> autoSnapshotTask) {
+            public Builder autoSnapshotTask(java.util.List<AutoSnapshotTask> autoSnapshotTask) {
                 this.autoSnapshotTask = autoSnapshotTask;
                 return this;
             }

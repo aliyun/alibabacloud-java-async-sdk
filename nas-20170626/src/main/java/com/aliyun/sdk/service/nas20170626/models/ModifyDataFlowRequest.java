@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -147,7 +152,7 @@ public class ModifyDataFlowRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dfid-194433a5be31****</p>
+         * <p>df-194433a5be31****</p>
          */
         public Builder dataFlowId(String dataFlowId) {
             this.putQueryParameter("DataFlowId", dataFlowId);
@@ -193,6 +198,13 @@ public class ModifyDataFlowRequest extends Request {
 
         /**
          * <p>The ID of the file system.</p>
+         * <ul>
+         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487****.</li>
+         * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-0015****.</li>
+         * </ul>
+         * <blockquote>
+         * <p> CPFS is not supported on the international site.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +224,7 @@ public class ModifyDataFlowRequest extends Request {
          * <li>1500</li>
          * </ul>
          * <blockquote>
-         * <p> The data flow throughput must be less than the I/O throughput of the file system.</p>
+         * <p> The data flow throughput must be less than the I/O throughput of the file system. This parameter is required for CPFS file systems.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

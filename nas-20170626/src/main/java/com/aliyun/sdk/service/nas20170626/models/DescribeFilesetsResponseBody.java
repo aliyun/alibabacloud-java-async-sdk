@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -84,9 +89,16 @@ public class DescribeFilesetsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the file system.</p>
+         * <ul>
+         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c****.</li>
+         * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya****.</li>
+         * </ul>
+         * <blockquote>
+         * <p> CPFS is not supported on the international site.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>cpfs-099394bd928c****</p>
+         * <p>bmcpfs-290w65p03ok64ya****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -166,7 +178,12 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             private Long sizeLimit; 
 
             /**
-             * FileCountLimit.
+             * <p>The limit of the file quantity of the quota. Valid values:</p>
+             * <p>Minimum value: 10000.</p>
+             * <p>Maximum value: 10000000000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder fileCountLimit(Long fileCountLimit) {
                 this.fileCountLimit = fileCountLimit;
@@ -174,7 +191,13 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * SizeLimit.
+             * <p>The limit of the quota capacity. Unit: bytes.</p>
+             * <p>Minimum value: 10737418240 (10 GiB).</p>
+             * <p>Maximum value: 1073741824000 (1024000 GiB).</p>
+             * <p>Step size: 1073741824 (1 GiB).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10737418240</p>
              */
             public Builder sizeLimit(Long sizeLimit) {
                 this.sizeLimit = sizeLimit;
@@ -353,7 +376,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation. Valid values:</p>
+             * <p>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2838077.html">DeleteFileset</a> operation. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>
@@ -382,7 +405,13 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * FileCountUsage.
+             * <p>The usage of the file quantity.</p>
+             * <blockquote>
+             * <p> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder fileCountUsage(Long fileCountUsage) {
                 this.fileCountUsage = fileCountUsage;
@@ -391,9 +420,16 @@ public class DescribeFilesetsResponseBody extends TeaModel {
 
             /**
              * <p>The ID of the file system.</p>
+             * <ul>
+             * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c****.</li>
+             * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya****.</li>
+             * </ul>
+             * <blockquote>
+             * <p> CPFS is not supported on the international site.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>cpfs-099394bd928c****</p>
+             * <p>bmcpfs-290w65p03ok64ya****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -423,7 +459,10 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Quota.
+             * <p>The quota information.</p>
+             * <blockquote>
+             * <p> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</p>
+             * </blockquote>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -431,7 +470,13 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * SpaceUsage.
+             * <p>The capacity usage. Unit: bytes.</p>
+             * <blockquote>
+             * <p> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder spaceUsage(Long spaceUsage) {
                 this.spaceUsage = spaceUsage;
@@ -482,7 +527,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
      */
     public static class Entries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Entrie")
-        private java.util.List < Entrie> entrie;
+        private java.util.List<Entrie> entrie;
 
         private Entries(Builder builder) {
             this.entrie = builder.entrie;
@@ -499,17 +544,17 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         /**
          * @return entrie
          */
-        public java.util.List < Entrie> getEntrie() {
+        public java.util.List<Entrie> getEntrie() {
             return this.entrie;
         }
 
         public static final class Builder {
-            private java.util.List < Entrie> entrie; 
+            private java.util.List<Entrie> entrie; 
 
             /**
              * Entrie.
              */
-            public Builder entrie(java.util.List < Entrie> entrie) {
+            public Builder entrie(java.util.List<Entrie> entrie) {
                 this.entrie = entrie;
                 return this;
             }

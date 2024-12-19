@@ -94,7 +94,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
      * <li>Only advanced Extreme NAS file systems support this feature.</li>
      * <li>You can apply only one automatic snapshot policy to each file system.</li>
@@ -126,10 +126,11 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</li>
      * <li>You can add AutoRefresh configurations only to the dataflows that are in the <code>Running</code> state.</li>
      * <li>You can add a maximum of five AutoRefresh configurations to a dataflow.</li>
-     * <li>It generally takes 2 to 5 minutes to create an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the dataflow status.</li>
-     * <li>AutoRefresh depends on the object modification events collected by EventBridge from the source Object Storage Service (OSS) bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.
-     * **
-     * <strong>Note</strong> The event buses and event rules created for CPFS in the EventBridge console contain the <code>Create for cpfs auto refresh</code> description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.</li>
+     * <li>It generally takes 2 to 5 minutes to create an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/2838084.html">DescribeDataFlows</a> operation to query the dataflow status.</li>
+     * <li>AutoRefresh depends on the object modification events collected by EventBridge from the source Object Storage Service (OSS) bucket. You must first <a href="https://help.aliyun.com/document_detail/182246.html">activate EventBridge</a>.<blockquote>
+     * <p>The event buses and event rules created for CPFS in the EventBridge console contain the <code>Create for cpfs auto refresh</code> description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.</p>
+     * </blockquote>
+     * </li>
      * <li>The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. When you add an AutoRefresh configuration to the prefix for a CPFS dataflow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS dataflow.</li>
      * <li>After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a dataflow task to load the updated data.</li>
      * <li>AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS dataflow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the dataflow status becomes Misconfigured. To resolve these issues, you can increase the dataflow specifications or reduce the frequency of triggering the object modification event.</li>
@@ -154,7 +155,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
      * <li>Only advanced Extreme NAS file systems support this feature.</li>
      * </ul>
@@ -182,7 +183,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ul>
      * <li>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</li>
      * <li>You can cancel AutoRefresh configurations only for the dataflows that are in the <code>Running</code> or <code>Stopped</code> state.</li>
-     * <li>It generally takes 2 to 5 minutes to cancel the AutoRefresh configurations. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the status of the AutoRefresh tasks.</li>
+     * <li>It generally takes 2 to 5 minutes to cancel the AutoRefresh configurations. You can call the <a href="https://help.aliyun.com/document_detail/2838084.html">DescribeDataFlows</a> operation to query the status of the AutoRefresh tasks.</li>
      * </ul>
      * 
      * @param request the request parameters of CancelDataFlowAutoRefresh  CancelDataFlowAutoRefreshRequest
@@ -232,7 +233,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.4.0 and later support data flow tasks. You can view the version information on the file system details page in the console.</p>
      * <ul>
      * <li>You can cancel only the data flow tasks that are in the <code>Pending</code> and <code>Executing</code> states.</li>
-     * <li>It generally takes 5 to 10 minutes to cancel a data flow task. You can query the task execution status by calling the <a href="https://help.aliyun.com/document_detail/2402275.html">DescribeDataFlowTasks</a> operation.</li>
+     * <li>It generally takes 5 to 10 minutes to cancel a data flow task. You can query the task execution status by calling the <a href="https://help.aliyun.com/document_detail/2838089.html">DescribeDataFlowTasks</a> operation.</li>
      * </ul>
      * 
      * @param request the request parameters of CancelDataFlowTask  CancelDataFlowTaskRequest
@@ -274,6 +275,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.7.0 and later support this operation.</p>
+     * 
      * @param request the request parameters of CancelFilesetQuota  CancelFilesetQuotaRequest
      * @return CancelFilesetQuotaResponse
      */
@@ -376,10 +380,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  After you call the CreateAccessPoint operation, an access point is not immediately created. Therefore, after you perform the CreateAccessPoint operation successfully, call the DescribeAccessPoints or DescribeAccessPoint operation to query the status of the access point. If the status is <strong>Active</strong>, mount the file system. Otherwise, the file system may fail to be mounted.</p>
+     * <p>  After you call the CreateAccessPoint operation, an access point is not immediately created. Therefore, after you call the CreateAccessPoint operation successfully, call the <a href="https://help.aliyun.com/document_detail/2712239.html">DescribeAccessPoints</a> or <a href="https://help.aliyun.com/document_detail/2712240.html">DescribeAccessPoint</a> operation to query the status of the access point. If the status is <strong>Active</strong>, mount the file system. Otherwise, the file system may fail to be mounted.</p>
      * <ul>
-     * <li>Only General-purpose Network File System (NFS) file systems support this operation.</li>
-     * <li>If you want to perform the EnabledRam operation to enable a Resource Access Management (RAM) policy, you must configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage endpoints</a>.</li>
+     * <li>Only General-purpose Network File System (NFS) file systems support access points.</li>
+     * <li>If you want to call the EnabledRam operation to enable a Resource Access Management (RAM) policy, you must configure the corresponding RAM permissions. For more information, see <a href="https://help.aliyun.com/document_detail/2545998.html">Manage endpoints</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateAccessPoint  CreateAccessPointRequest
@@ -419,7 +423,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
      * <li>Only advanced Extreme NAS file systems support the snapshot feature.</li>
      * <li>You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.</li>
@@ -458,18 +462,19 @@ public final class DefaultAsyncClient implements AsyncClient {
      *     *   It generally takes 2 to 5 minutes to create a data flow. You can call the DescribeDataFlows operation to check whether the data flow has been created.</p>
      * <ul>
      * <li>Permissions
-     * When you create a data flow, CPFS for LINGJUN obtains the following two service-linked roles: <code>AliyunServiceRoleForNasOssDataflow</code> and <code>AliyunServiceRoleForNasEventNotification</code>. For more information, see <a href="https://help.aliyun.com/document_detail/185138.html">CPFS service-linked roles</a>.</li>
+     * When you create a data flow, CPFS for LINGJUN obtains the following two service-linked roles: <code>AliyunServiceRoleForNasOssDataflow</code> and <code>AliyunServiceRoleForNasEventNotification</code>. For more information, see <a href="https://help.aliyun.com/document_detail/2837688.html">CPFS service-linked roles</a>.</li>
      * <li>CPFS for LINGJUN usage notes<ul>
      * <li>Source storage<ul>
      * <li>The source storage is an Object Storage Service (OSS) bucket. SourceStorage for a data flow must be an OSS bucket.</li>
      * <li>CPFS for LINGJUN data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.</li>
      * <li>If data flows for multiple CPFS for LINGJUN file systems or multiple data flows for the same CPFS for LINGJUN file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS for LINGJUN file systems to one OSS bucket.</li>
      * <li>Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.</li>
-     * <li>CPFS for LINGJUN V2.6.0 and later allows you to create data flows for OSS buckets across accounts.</li>
+     * <li>CPFS for LINGJUN V2.6.0 and later allow you to create data flows for OSS buckets across accounts.</li>
      * <li>The account id parameter is required only when you use OSS buckets across accounts.</li>
-     * <li>To use OSS buckets across accounts, you must first grant permissions to the related accounts. For more information, see <a href="https://help.aliyun.com/document_detail/182246.html">Cross-account authorization on data flows</a>.
-     * **
-     * <strong>Note</strong> Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.</li>
+     * <li>To use OSS buckets across accounts, you must first grant permissions to the related accounts. For more information, see <a href="https://help.aliyun.com/document_detail/2713462.html">Cross-account authorization on data flows</a>.<blockquote>
+     * <p> Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * </li>
      * <li>Limits of data flows on file systems<ul>
@@ -513,6 +518,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.6.0 and later support this operation. You can view the version information on the file system details page in the console.</p>
+     * <ul>
+     * <li>You can create subtasks only for a data streaming subtask in the Executing state.</li>
+     * <li>Data streaming tasks are executed asynchronously. You can call the DescribeDataFlowSubTasks operation to query the task execution status.</li>
+     * <li>When the type of data flow task is streaming, the running status only indicates that a streaming import or export task can be created. It does not indicate that the import or export task is running.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateDataFlowSubTask  CreateDataFlowSubTaskRequest
      * @return CreateDataFlowSubTaskResponse
      */
@@ -532,12 +545,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.3.4 and later support data flows. You can view the version information on the file system details page in the console.</p>
+     * <p>  Only Cloud Parallel File Storage CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</p>
      * <ul>
      * <li>You can create a data flow task only for a data flow that is in the Running state.</li>
-     * <li>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/336914.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</li>
+     * <li>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2838089.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</li>
      * <li>When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.</li>
      * <li>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.</li>
+     * <li>CPFS for LINGJUN supports two types of tasks: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDataFlowTask  CreateDataFlowTaskRequest
@@ -604,7 +618,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, you must understand the billing and pricing of Apsara File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.alibabacloud.com/product/nas/pricing">Pricing</a>.</p>
+     * <p>  Before you call this operation, you must understand the billing and pricing of File Storage NAS. For more information, see <a href="https://help.aliyun.com/document_detail/178365.html">Billing</a> and <a href="https://www.alibabacloud.com/product/nas/pricing">Pricing</a>.</p>
      * <ul>
      * <li>Before you create a file system, you must complete real-name verification.</li>
      * <li>When you call this operation, a service-linked role of NAS is automatically created. For more information, see <a href="https://help.aliyun.com/document_detail/208530.html">Manage the service-linked roles of NAS</a>.</li>
@@ -629,13 +643,17 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</p>
+     * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.7.0 and later support this operation. You can view the version information on the file system details page in the console.</p>
      * <ul>
-     * <li>Only CPFS V2.2.0 and later support fileset creation. You can view the version information on the file system details page in the console.</li>
-     * <li>A maximum of 10 filesets can be created for a CPFS file system.</li>
-     * <li>The maximum depth supported by a fileset is eight levels. The depth of the root directory / is 0 levels. For example, the /test/aaa/ccc/ fileset has three levels.</li>
-     * <li>Nested filesets are not supported. If a fileset is specified as a parent directory, its subdirectory cannot be a fileset.</li>
-     * <li>A fileset supports a maximum of one million files. If the number of files exceeds the upper limit, the <code>no space</code> error message is returned when you add new files.</li>
+     * <li>A maximum of 500 filesets can be created for a CPFS file system.</li>
+     * <li>The fileset path must be a new path and cannot be an existing path. Fileset paths cannot be renamed and cannot be symbolic links.</li>
+     * <li>The maximum depth supported by a fileset path is eight levels. The depth of the root directory / is 0 levels. For example, the fileset path /test/aaa/ccc/ has three levels.</li>
+     * <li>If the fileset path is a multi-level path, the parent directory must be an existing directory.</li>
+     * <li>Nested filesets are not supported. If a fileset is specified as a parent directory, its subdirectory cannot be a fileset. A fileset path supports only one quota.</li>
+     * <li>The minimum capacity quota of a fileset is 10 GiB. The scaling step size is 1 GiB. The maximum capacity quota is 1,000 TiB. The capacity quota cannot exceed the total capacity of the file system.</li>
+     * <li>A fileset supports a minimum of 10,000 files or directories and a maximum of 10 billion files or directories. The scaling step size is 1.</li>
+     * <li>When you modify a directory quota, you must set the quota capacity or the number of files to be greater than the capacity or file quantity that has been used.</li>
+     * <li>The quota statistics have a 5-minute latency. The actual usage takes effect after 5 minutes.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateFileset  CreateFilesetRequest
@@ -656,9 +674,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreateLDAPConfig  CreateLDAPConfigRequest
+     * @deprecated OpenAPI CreateLDAPConfig is deprecated  * @param request  the request parameters of CreateLDAPConfig  CreateLDAPConfigRequest
      * @return CreateLDAPConfigResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreateLDAPConfigResponse> createLDAPConfig(CreateLDAPConfigRequest request) {
         try {
@@ -889,7 +908,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
      * <li>Only advanced Extreme NAS file systems support the snapshot feature.</li>
      * <li>You can create a maximum of 128 snapshots for a file system.</li>
@@ -986,7 +1005,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
      * <li>Only advanced Extreme NAS file systems support the snapshot feature.</li>
      * <li>If you delete an automatic snapshot policy that is applied to a file system, snapshots for the file system are no longer created based on the policy.</li>
@@ -1061,9 +1080,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</p>
+     * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.7.0 and later support this operation. After you delete a fileset, all data in the fileset is deleted and cannot be restored. Proceed with caution.</p>
      * <ul>
-     * <li>Only CPFS V2.2.0 and later support fileset deletion. After you delete a fileset, all data in the fileset is deleted and cannot be restored. Proceed with caution.</li>
+     * <li>If deletion protection is enabled for the fileset, you must disable deletion protection before you delete the fileset.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteFileset  DeleteFilesetRequest
@@ -1084,9 +1103,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeleteLDAPConfig  DeleteLDAPConfigRequest
+     * @deprecated OpenAPI DeleteLDAPConfig is deprecated  * @param request  the request parameters of DeleteLDAPConfig  DeleteLDAPConfigRequest
      * @return DeleteLDAPConfigResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteLDAPConfigResponse> deleteLDAPConfig(DeleteLDAPConfigRequest request) {
         try {
@@ -1208,7 +1228,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
      * <li>Only advanced Extreme NAS file systems support this feature.</li>
      * </ul>
@@ -1310,7 +1330,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
      * <li>Only advanced Extreme NAS file systems support this feature.</li>
      * </ul>
@@ -1334,7 +1354,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
      * <li>Only advanced Extreme NAS file systems support the snapshot feature.</li>
      * </ul>
@@ -1400,11 +1420,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3></h3>
-     * <ul>
-     * <li></li>
-     * <li></li>
-     * </ul>
+     * <p>Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.4.0 and later support query of data flow tasks. You can view the version information on the file system details page in the console.</p>
      * 
      * @param request the request parameters of DescribeDataFlowTasks  DescribeDataFlowTasksRequest
      * @return DescribeDataFlowTasksResponse
@@ -1425,7 +1441,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</p>
+     * <p>  Only CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</p>
      * <ul>
      * <li>In Filters, FsetIds, DataFlowlds, SourceStorage, ThroughputList, and Status support exact match only. FileSystemPath, Description, and SourceStoragePath support fuzzy match.</li>
      * <li>Combined query is supported.</li>
@@ -1470,9 +1486,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DescribeFileSystemStatistics  DescribeFileSystemStatisticsRequest
+     * @deprecated OpenAPI DescribeFileSystemStatistics is deprecated, please use NAS::2017-06-26::DescribeResourceStatistics instead.  * @param request  the request parameters of DescribeFileSystemStatistics  DescribeFileSystemStatisticsRequest
      * @return DescribeFileSystemStatisticsResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeFileSystemStatisticsResponse> describeFileSystemStatistics(DescribeFileSystemStatisticsRequest request) {
         try {
@@ -1507,9 +1524,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</p>
+     * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.7.0 and later support this operation. You can view the version information on the file system details page in the console.</p>
      * <ul>
-     * <li>Only CPFS V2.2.0 and later support filesets. You can view the version information on the file system details page in the console.</li>
      * <li>In Filters, FsetIds supports exact match only. FileSystemPath and Description support fuzzy match.</li>
      * <li>Combined query is supported.</li>
      * </ul>
@@ -1710,7 +1726,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
      * <li>Only advanced Extreme NAS file systems support this feature.</li>
      * </ul>
@@ -1909,7 +1925,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose Apsara File Storage NAS (NAS) file systems support this operation.</p>
+     * <p>Only General-purpose File Storage NAS (NAS) file systems support this operation.</p>
      * 
      * @param request the request parameters of GetRecycleBinAttribute  GetRecycleBinAttributeRequest
      * @return GetRecycleBinAttributeResponse
@@ -2119,7 +2135,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
      * <li>Only advanced Extreme NAS file systems support this feature.</li>
      * </ul>
@@ -2143,18 +2159,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</p>
+     * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.4.0 and later support data flows.</p>
      * <ul>
-     * <li>Only CPFS V2.2.0 and later support dataflows.</li>
-     * <li>You can modify the attributes only of the dataflows that are in the <code>Running</code> state.</li>
-     * <li>It generally takes 2 to 5 minutes to modify the attributes of a dataflow. You can call the <a href="https://help.aliyun.com/document_detail/336901.html">DescribeDataFlows</a> operation to query the status of the dataflow to be modified.</li>
-     * <li>Data flow specifications:<ul>
-     * <li>The dataflow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The dataflow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a dataflow.</li>
-     * <li>Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the dataflow whose throughput is changed meet the requirements.</li>
-     * </ul>
-     * </li>
-     * <li>Billing
-     * Changing the dataflow throughput involves the billing of dataflow bandwidth. We recommend that you understand CPFS billing methods in advance. For more information, see <a href="https://help.aliyun.com/document_detail/111858.html">Billing methods and billable items of CPFS</a>.</li>
+     * <li>You can modify the attributes only of the data flows that are in the <code>Running</code> state.</li>
+     * <li>It generally takes 2 to 5 minutes to modify the attributes of a data flow. You can call the <a href="https://help.aliyun.com/document_detail/2838084.html">DescribeDataFlows</a> operation to query the status of the data flow to be modified.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDataFlow  ModifyDataFlowRequest
@@ -2180,7 +2188,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ul>
      * <li>Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.</li>
      * <li>You can modify the AutoRefresh configurations only for the dataflows that are in the <code>Running</code> or <code>Stopped</code> state.</li>
-     * <li>It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/2402270.html">DescribeDataFlows</a> operation to query the task of modifying an AutoRefresh configuration.</li>
+     * <li>It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the <a href="https://help.aliyun.com/document_detail/2838084.html">DescribeDataFlows</a> operation to query the task of modifying an AutoRefresh configuration.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDataFlowAutoRefresh  ModifyDataFlowAutoRefreshRequest
@@ -2220,10 +2228,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).</p>
-     * <ul>
-     * <li>Only CPFS V2.2.0 and later support fileset modification.</li>
-     * </ul>
+     * <p>Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.7.0 and later support this operation.</p>
      * 
      * @param request the request parameters of ModifyFileset  ModifyFilesetRequest
      * @return ModifyFilesetResponse
@@ -2243,12 +2248,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The API operation is available only for Cloud Parallel File Storage (CPFS) file systems.</p>
+     * @deprecated OpenAPI ModifyLDAPConfig is deprecated  * @description The API operation is available only for Cloud Parallel File Storage (CPFS) file systems.
      * 
      * @param request the request parameters of ModifyLDAPConfig  ModifyLDAPConfigRequest
      * @return ModifyLDAPConfigResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ModifyLDAPConfigResponse> modifyLDAPConfig(ModifyLDAPConfigRequest request) {
         try {
@@ -2425,7 +2430,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">Apsara File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
+     * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
      * <li>Only advanced Extreme NAS file systems support this feature.</li>
      * <li>The file system must be in the Running state.</li>
@@ -2472,7 +2477,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.</p>
+     * <p>Only General-purpose File Storage NAS (NAS) file systems support the directory quota feature.</p>
      * 
      * @param request the request parameters of SetDirQuota  SetDirQuotaRequest
      * @return SetDirQuotaResponse
@@ -2492,6 +2497,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.7.0 and later support this operation.</p>
+     * <ul>
+     * <li>The minimum capacity quota of a fileset is 10 GiB, and the maximum capacity quota is 1,000 TiB. The scaling step size is 1 GiB. The capacity quota cannot exceed the total capacity of the file system.</li>
+     * <li>A fileset supports a minimum of 10,000 files or directories and a maximum of 10 billion files or directories. The scaling step size is 1.</li>
+     * <li>When you modify a directory quota, you must set the quota capacity or the file quantity to be greater than the capacity or file quantity that has been used.</li>
+     * <li>The quota statistics have a 5-minute latency. The actual usage takes effect after 5 minutes.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SetFilesetQuota  SetFilesetQuotaRequest
      * @return SetFilesetQuotaResponse
      */

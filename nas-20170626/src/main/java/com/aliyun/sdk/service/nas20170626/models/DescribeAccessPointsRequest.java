@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -97,7 +102,7 @@ public class DescribeAccessPointsRequest extends Request {
 
         /**
          * <p>The name of the permission group.</p>
-         * <p>This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.</p>
+         * <p>This parameter is required for a General-purpose File Storage NAS (NAS) file system.</p>
          * <p>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</p>
          * 
          * <strong>example:</strong>

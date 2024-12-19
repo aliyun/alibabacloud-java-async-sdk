@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class CreateDataFlowRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoRefreshs")
-    private java.util.List < AutoRefreshs> autoRefreshs;
+    private java.util.List<AutoRefreshs> autoRefreshs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -117,7 +122,7 @@ public class CreateDataFlowRequest extends Request {
     /**
      * @return autoRefreshs
      */
-    public java.util.List < AutoRefreshs> getAutoRefreshs() {
+    public java.util.List<AutoRefreshs> getAutoRefreshs() {
         return this.autoRefreshs;
     }
 
@@ -194,7 +199,7 @@ public class CreateDataFlowRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDataFlowRequest, Builder> {
         private Long autoRefreshInterval; 
         private String autoRefreshPolicy; 
-        private java.util.List < AutoRefreshs> autoRefreshs; 
+        private java.util.List<AutoRefreshs> autoRefreshs; 
         private String clientToken; 
         private String description; 
         private Boolean dryRun; 
@@ -268,7 +273,7 @@ public class CreateDataFlowRequest extends Request {
          * <p> This parameter takes effect only for CPFS file systems.</p>
          * </blockquote>
          */
-        public Builder autoRefreshs(java.util.List < AutoRefreshs> autoRefreshs) {
+        public Builder autoRefreshs(java.util.List<AutoRefreshs> autoRefreshs) {
             this.putQueryParameter("AutoRefreshs", autoRefreshs);
             this.autoRefreshs = autoRefreshs;
             return this;
@@ -404,7 +409,7 @@ public class CreateDataFlowRequest extends Request {
          * <ul>
          * <li><p>storage type: Only OSS is supported.</p>
          * </li>
-         * <li><p>account id (optional): the UID of the account of the source storage.</p>
+         * <li><p>account id (optional): the UID of the account of the source storage. This parameter is required when you use OSS buckets across accounts.</p>
          * </li>
          * <li><p>path: the name of the OSS bucket. Limits:</p>
          * <ul>
@@ -415,15 +420,11 @@ public class CreateDataFlowRequest extends Request {
          * </li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The OSS bucket must be an existing bucket in the region.</p>
-         * </li>
-         * <li><p>Only CPFS for LINGJUN V2.6.0 and later support the account id parameter.</p>
-         * </li>
-         * <li><p>The account id parameter is optional. This parameter is required when you use OSS buckets across accounts.</p>
-         * </li>
+         * <li>The OSS bucket must be an existing bucket in the region.</li>
+         * <li>Only CPFS for LINGJUN V2.6.0 and later support the account id parameter.</li>
          * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

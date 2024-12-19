@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -157,7 +162,7 @@ public class CreateFilesetRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation.</p>
+         * <p>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2838077.html">DeleteFileset</a> operation.</p>
          * <ul>
          * <li>true: enables release protection.</li>
          * <li>false (default): disables release protection.</li>
@@ -212,10 +217,17 @@ public class CreateFilesetRequest extends Request {
 
         /**
          * <p>The ID of the file system.</p>
+         * <ul>
+         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c****.</li>
+         * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya****.</li>
+         * </ul>
+         * <blockquote>
+         * <p> CPFS is not supported on the international site.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cpfs-099394bd928c****</p>
+         * <p>bmcpfs-290w65p03ok64ya****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -226,9 +238,12 @@ public class CreateFilesetRequest extends Request {
         /**
          * <p>The absolute path of the fileset.</p>
          * <ul>
-         * <li>The parent directory of the path that you specify must be an existing directory in the file system.</li>
-         * <li>The path must be 2 to 1,024 characters in length.</li>
+         * <li>The path must be 2 to 1024 characters in length.</li>
          * <li>The path must start and end with a forward slash (/).</li>
+         * <li>The fileset path must be a new path and cannot be an existing path. Fileset paths cannot be renamed and cannot be symbolic links.</li>
+         * <li>The maximum depth supported by a fileset path is eight levels. The depth of the root directory / is 0 levels. For example, the fileset path /test/aaa/ccc/ has three levels.</li>
+         * <li>If the fileset path is a multi-level path, the parent directory must be an existing directory.</li>
+         * <li>Nested filesets are not supported. If a fileset is specified as a parent directory, its subdirectory cannot be a fileset. A fileset path supports only one quota.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -242,7 +257,10 @@ public class CreateFilesetRequest extends Request {
         }
 
         /**
-         * Quota.
+         * <p>The quota information.</p>
+         * <blockquote>
+         * <p> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</p>
+         * </blockquote>
          */
         public Builder quota(Quota quota) {
             this.putQueryParameter("Quota", quota);
@@ -302,7 +320,14 @@ public class CreateFilesetRequest extends Request {
             private Long sizeLimit; 
 
             /**
-             * FileCountLimit.
+             * <p>The number of files of the quota. Valid values:</p>
+             * <ul>
+             * <li>Minimum value: 100000.</li>
+             * <li>Maximum value: 10000000000.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder fileCountLimit(Long fileCountLimit) {
                 this.fileCountLimit = fileCountLimit;
@@ -310,7 +335,16 @@ public class CreateFilesetRequest extends Request {
             }
 
             /**
-             * SizeLimit.
+             * <p>The total capacity of the quota. Unit: bytes.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Minimum value: 10737418240 (10 GiB).</li>
+             * <li>Maximum value: 1073741824000 (1024000 GiB).</li>
+             * <li>Step size: 1073741824 (1 GiB).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10737418240</p>
              */
             public Builder sizeLimit(Long sizeLimit) {
                 this.sizeLimit = sizeLimit;

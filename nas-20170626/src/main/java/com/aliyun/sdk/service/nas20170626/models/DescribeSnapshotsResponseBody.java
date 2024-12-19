@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -150,6 +155,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
      * <p>DescribeSnapshotsResponseBody</p>
      */
     public static class Snapshot extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CompletedTime")
+        private String completedTime;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -193,6 +201,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private String status;
 
         private Snapshot(Builder builder) {
+            this.completedTime = builder.completedTime;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.encryptType = builder.encryptType;
@@ -215,6 +224,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
         public static Snapshot create() {
             return builder().build();
+        }
+
+        /**
+         * @return completedTime
+         */
+        public String getCompletedTime() {
+            return this.completedTime;
         }
 
         /**
@@ -316,6 +332,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String completedTime; 
             private String createTime; 
             private String description; 
             private Integer encryptType; 
@@ -330,6 +347,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private Long sourceFileSystemSize; 
             private String sourceFileSystemVersion; 
             private String status; 
+
+            /**
+             * CompletedTime.
+             */
+            public Builder completedTime(String completedTime) {
+                this.completedTime = completedTime;
+                return this;
+            }
 
             /**
              * <p>The time when the snapshot was created.</p>
@@ -526,7 +551,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
      */
     public static class Snapshots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Snapshot")
-        private java.util.List < Snapshot> snapshot;
+        private java.util.List<Snapshot> snapshot;
 
         private Snapshots(Builder builder) {
             this.snapshot = builder.snapshot;
@@ -543,17 +568,17 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * @return snapshot
          */
-        public java.util.List < Snapshot> getSnapshot() {
+        public java.util.List<Snapshot> getSnapshot() {
             return this.snapshot;
         }
 
         public static final class Builder {
-            private java.util.List < Snapshot> snapshot; 
+            private java.util.List<Snapshot> snapshot; 
 
             /**
              * Snapshot.
              */
-            public Builder snapshot(java.util.List < Snapshot> snapshot) {
+            public Builder snapshot(java.util.List<Snapshot> snapshot) {
                 this.snapshot = snapshot;
                 return this;
             }

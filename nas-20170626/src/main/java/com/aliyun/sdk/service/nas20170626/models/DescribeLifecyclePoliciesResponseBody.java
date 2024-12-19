@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LifecyclePolicies")
-    private java.util.List < LifecyclePolicies> lifecyclePolicies;
+    private java.util.List<LifecyclePolicies> lifecyclePolicies;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
     /**
      * @return lifecyclePolicies
      */
-    public java.util.List < LifecyclePolicies> getLifecyclePolicies() {
+    public java.util.List<LifecyclePolicies> getLifecyclePolicies() {
         return this.lifecyclePolicies;
     }
 
@@ -79,7 +84,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LifecyclePolicies> lifecyclePolicies; 
+        private java.util.List<LifecyclePolicies> lifecyclePolicies; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         /**
          * <p>The queried lifecycle policies.</p>
          */
-        public Builder lifecyclePolicies(java.util.List < LifecyclePolicies> lifecyclePolicies) {
+        public Builder lifecyclePolicies(java.util.List<LifecyclePolicies> lifecyclePolicies) {
             this.lifecyclePolicies = lifecyclePolicies;
             return this;
         }
@@ -166,7 +171,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         private String path;
 
         @com.aliyun.core.annotation.NameInMap("Paths")
-        private java.util.List < String > paths;
+        private java.util.List<String> paths;
 
         @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
@@ -227,7 +232,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
@@ -244,7 +249,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             private String lifecyclePolicyName; 
             private String lifecycleRuleName; 
             private String path; 
-            private java.util.List < String > paths; 
+            private java.util.List<String> paths; 
             private String storageType; 
 
             /**
@@ -313,7 +318,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             /**
              * <p>The absolute paths to multiple directories associated with the lifecycle policy.</p>
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }

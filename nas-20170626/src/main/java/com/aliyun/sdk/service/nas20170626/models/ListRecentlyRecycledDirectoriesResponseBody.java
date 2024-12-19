@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Entries")
-    private java.util.List < Entries> entries;
+    private java.util.List<Entries> entries;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
     /**
      * @return entries
      */
-    public java.util.List < Entries> getEntries() {
+    public java.util.List<Entries> getEntries() {
         return this.entries;
     }
 
@@ -57,14 +62,14 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Entries> entries; 
+        private java.util.List<Entries> entries; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>The information about the directories that are recently deleted.</p>
          */
-        public Builder entries(java.util.List < Entries> entries) {
+        public Builder entries(java.util.List<Entries> entries) {
             this.entries = entries;
             return this;
         }

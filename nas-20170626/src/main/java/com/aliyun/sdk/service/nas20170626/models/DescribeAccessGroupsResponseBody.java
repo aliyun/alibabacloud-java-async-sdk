@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -307,7 +312,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
              * <p>The type of the file system.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>standard: General-purpose Apsara File Storage NAS (NAS) file system</li>
+             * <li>standard: General-purpose File Storage NAS (NAS) file system</li>
              * <li>extreme: Extreme NAS file system</li>
              * <li>cpfs: Cloud Parallel File Storage (CPFS) file system</li>
              * </ul>
@@ -371,7 +376,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
      */
     public static class AccessGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessGroup")
-        private java.util.List < AccessGroup> accessGroup;
+        private java.util.List<AccessGroup> accessGroup;
 
         private AccessGroups(Builder builder) {
             this.accessGroup = builder.accessGroup;
@@ -388,17 +393,17 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         /**
          * @return accessGroup
          */
-        public java.util.List < AccessGroup> getAccessGroup() {
+        public java.util.List<AccessGroup> getAccessGroup() {
             return this.accessGroup;
         }
 
         public static final class Builder {
-            private java.util.List < AccessGroup> accessGroup; 
+            private java.util.List<AccessGroup> accessGroup; 
 
             /**
              * AccessGroup.
              */
-            public Builder accessGroup(java.util.List < AccessGroup> accessGroup) {
+            public Builder accessGroup(java.util.List<AccessGroup> accessGroup) {
                 this.accessGroup = accessGroup;
                 return this;
             }

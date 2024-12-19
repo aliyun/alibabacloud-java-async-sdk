@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
      */
     public static class ClientMasterNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientMasterNode")
-        private java.util.List < ClientMasterNode> clientMasterNode;
+        private java.util.List<ClientMasterNode> clientMasterNode;
 
         private ClientMasterNodes(Builder builder) {
             this.clientMasterNode = builder.clientMasterNode;
@@ -264,17 +269,17 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         /**
          * @return clientMasterNode
          */
-        public java.util.List < ClientMasterNode> getClientMasterNode() {
+        public java.util.List<ClientMasterNode> getClientMasterNode() {
             return this.clientMasterNode;
         }
 
         public static final class Builder {
-            private java.util.List < ClientMasterNode> clientMasterNode; 
+            private java.util.List<ClientMasterNode> clientMasterNode; 
 
             /**
              * ClientMasterNode.
              */
-            public Builder clientMasterNode(java.util.List < ClientMasterNode> clientMasterNode) {
+            public Builder clientMasterNode(java.util.List<ClientMasterNode> clientMasterNode) {
                 this.clientMasterNode = clientMasterNode;
                 return this;
             }
@@ -541,7 +546,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
      */
     public static class MountTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountTarget")
-        private java.util.List < MountTarget> mountTarget;
+        private java.util.List<MountTarget> mountTarget;
 
         private MountTargets(Builder builder) {
             this.mountTarget = builder.mountTarget;
@@ -558,17 +563,17 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         /**
          * @return mountTarget
          */
-        public java.util.List < MountTarget> getMountTarget() {
+        public java.util.List<MountTarget> getMountTarget() {
             return this.mountTarget;
         }
 
         public static final class Builder {
-            private java.util.List < MountTarget> mountTarget; 
+            private java.util.List<MountTarget> mountTarget; 
 
             /**
              * MountTarget.
              */
-            public Builder mountTarget(java.util.List < MountTarget> mountTarget) {
+            public Builder mountTarget(java.util.List<MountTarget> mountTarget) {
                 this.mountTarget = mountTarget;
                 return this;
             }

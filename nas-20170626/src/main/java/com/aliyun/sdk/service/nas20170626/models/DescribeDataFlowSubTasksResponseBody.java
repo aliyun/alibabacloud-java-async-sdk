@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -681,7 +686,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
      */
     public static class DataFlowSubTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataFlowSubTask")
-        private java.util.List < DataFlowSubTaskDataFlowSubTask> dataFlowSubTask;
+        private java.util.List<DataFlowSubTaskDataFlowSubTask> dataFlowSubTask;
 
         private DataFlowSubTask(Builder builder) {
             this.dataFlowSubTask = builder.dataFlowSubTask;
@@ -698,17 +703,17 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         /**
          * @return dataFlowSubTask
          */
-        public java.util.List < DataFlowSubTaskDataFlowSubTask> getDataFlowSubTask() {
+        public java.util.List<DataFlowSubTaskDataFlowSubTask> getDataFlowSubTask() {
             return this.dataFlowSubTask;
         }
 
         public static final class Builder {
-            private java.util.List < DataFlowSubTaskDataFlowSubTask> dataFlowSubTask; 
+            private java.util.List<DataFlowSubTaskDataFlowSubTask> dataFlowSubTask; 
 
             /**
              * <p>The details about data streaming tasks.</p>
              */
-            public Builder dataFlowSubTask(java.util.List < DataFlowSubTaskDataFlowSubTask> dataFlowSubTask) {
+            public Builder dataFlowSubTask(java.util.List<DataFlowSubTaskDataFlowSubTask> dataFlowSubTask) {
                 this.dataFlowSubTask = dataFlowSubTask;
                 return this;
             }

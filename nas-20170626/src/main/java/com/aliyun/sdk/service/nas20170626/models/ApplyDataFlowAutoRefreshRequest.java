@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoRefreshs")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AutoRefreshs> autoRefreshs;
+    private java.util.List<AutoRefreshs> autoRefreshs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -86,7 +91,7 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
     /**
      * @return autoRefreshs
      */
-    public java.util.List < AutoRefreshs> getAutoRefreshs() {
+    public java.util.List<AutoRefreshs> getAutoRefreshs() {
         return this.autoRefreshs;
     }
 
@@ -121,7 +126,7 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
     public static final class Builder extends Request.Builder<ApplyDataFlowAutoRefreshRequest, Builder> {
         private Long autoRefreshInterval; 
         private String autoRefreshPolicy; 
-        private java.util.List < AutoRefreshs> autoRefreshs; 
+        private java.util.List<AutoRefreshs> autoRefreshs; 
         private String clientToken; 
         private String dataFlowId; 
         private Boolean dryRun; 
@@ -175,7 +180,7 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
          * <p>The automatic update configurations.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder autoRefreshs(java.util.List < AutoRefreshs> autoRefreshs) {
+        public Builder autoRefreshs(java.util.List<AutoRefreshs> autoRefreshs) {
             this.putQueryParameter("AutoRefreshs", autoRefreshs);
             this.autoRefreshs = autoRefreshs;
             return this;
@@ -202,7 +207,7 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dfid-194433a5be31****</p>
+         * <p>df-194433a5be31****</p>
          */
         public Builder dataFlowId(String dataFlowId) {
             this.putQueryParameter("DataFlowId", dataFlowId);

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -166,7 +171,7 @@ public class DescribeSnapshotsRequest extends Request {
 
         /**
          * <p>The type of the file system.</p>
-         * <p>Valid value: extreme, which indicates Extreme Apsara File Storage NAS (NAS) file systems.</p>
+         * <p>Valid value: extreme, which indicates Extreme File Storage NAS (NAS) file systems.</p>
          * 
          * <strong>example:</strong>
          * <p>extreme</p>

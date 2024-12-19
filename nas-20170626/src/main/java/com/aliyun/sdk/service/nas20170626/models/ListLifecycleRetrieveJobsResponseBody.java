@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LifecycleRetrieveJobs")
-    private java.util.List < LifecycleRetrieveJobs> lifecycleRetrieveJobs;
+    private java.util.List<LifecycleRetrieveJobs> lifecycleRetrieveJobs;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
     /**
      * @return lifecycleRetrieveJobs
      */
-    public java.util.List < LifecycleRetrieveJobs> getLifecycleRetrieveJobs() {
+    public java.util.List<LifecycleRetrieveJobs> getLifecycleRetrieveJobs() {
         return this.lifecycleRetrieveJobs;
     }
 
@@ -79,7 +84,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LifecycleRetrieveJobs> lifecycleRetrieveJobs; 
+        private java.util.List<LifecycleRetrieveJobs> lifecycleRetrieveJobs; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         /**
          * <p>The details about the data retrieval tasks.</p>
          */
-        public Builder lifecycleRetrieveJobs(java.util.List < LifecycleRetrieveJobs> lifecycleRetrieveJobs) {
+        public Builder lifecycleRetrieveJobs(java.util.List<LifecycleRetrieveJobs> lifecycleRetrieveJobs) {
             this.lifecycleRetrieveJobs = lifecycleRetrieveJobs;
             return this;
         }
@@ -163,7 +168,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         private String jobId;
 
         @com.aliyun.core.annotation.NameInMap("Paths")
-        private java.util.List < String > paths;
+        private java.util.List<String> paths;
 
         @com.aliyun.core.annotation.NameInMap("RetrievedFileCount")
         private Long retrievedFileCount;
@@ -228,7 +233,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
@@ -265,7 +270,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             private Long discoveredFileCount; 
             private String fileSystemId; 
             private String jobId; 
-            private java.util.List < String > paths; 
+            private java.util.List<String> paths; 
             private Long retrievedFileCount; 
             private String status; 
             private String storageType; 
@@ -319,7 +324,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             /**
              * <p>The execution path of the data retrieval task.</p>
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class CreateLifecyclePolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Paths")
-    private java.util.List < String > paths;
+    private java.util.List<String> paths;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageType")
@@ -94,7 +99,7 @@ public class CreateLifecyclePolicyRequest extends Request {
     /**
      * @return paths
      */
-    public java.util.List < String > getPaths() {
+    public java.util.List<String> getPaths() {
         return this.paths;
     }
 
@@ -110,7 +115,7 @@ public class CreateLifecyclePolicyRequest extends Request {
         private String lifecyclePolicyName; 
         private String lifecycleRuleName; 
         private String path; 
-        private java.util.List < String > paths; 
+        private java.util.List<String> paths; 
         private String storageType; 
 
         private Builder() {
@@ -196,7 +201,7 @@ public class CreateLifecyclePolicyRequest extends Request {
          * <strong>example:</strong>
          * <p>&quot;/path1&quot;, &quot;/path2&quot;</p>
          */
-        public Builder paths(java.util.List < String > paths) {
+        public Builder paths(java.util.List<String> paths) {
             this.putQueryParameter("Paths", paths);
             this.paths = paths;
             return this;

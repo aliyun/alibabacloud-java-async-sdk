@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Paths")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > paths;
+    private java.util.List<String> paths;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageType")
@@ -56,7 +61,7 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
     /**
      * @return paths
      */
-    public java.util.List < String > getPaths() {
+    public java.util.List<String> getPaths() {
         return this.paths;
     }
 
@@ -69,7 +74,7 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateLifecycleRetrieveJobRequest, Builder> {
         private String fileSystemId; 
-        private java.util.List < String > paths; 
+        private java.util.List<String> paths; 
         private String storageType; 
 
         private Builder() {
@@ -103,7 +108,7 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
          * <strong>example:</strong>
          * <p>Paths.1=/pathway/doc1,Paths.2=/pathway/doc2</p>
          */
-        public Builder paths(java.util.List < String > paths) {
+        public Builder paths(java.util.List<String> paths) {
             this.putQueryParameter("Paths", paths);
             this.paths = paths;
             return this;
