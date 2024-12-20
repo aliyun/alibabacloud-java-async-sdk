@@ -1083,12 +1083,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateKvNamespaceResponse> updateKvNamespace(UpdateKvNamespaceRequest request);
 
     /**
-     * @param request the request parameters of UpdateList  UpdateListRequest
-     * @return UpdateListResponse
-     */
-    CompletableFuture<UpdateListResponse> updateList(UpdateListRequest request);
-
-    /**
      * @param request the request parameters of UpdateOriginProtection  UpdateOriginProtectionRequest
      * @return UpdateOriginProtectionResponse
      */
