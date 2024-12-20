@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -241,17 +246,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -999,7 +1004,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstance")
-        private java.util.List < DBInstance> DBInstance;
+        private java.util.List<DBInstance> DBInstance;
 
         private Items(Builder builder) {
             this.DBInstance = builder.DBInstance;
@@ -1016,17 +1021,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * @return DBInstance
          */
-        public java.util.List < DBInstance> getDBInstance() {
+        public java.util.List<DBInstance> getDBInstance() {
             return this.DBInstance;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstance> DBInstance; 
+            private java.util.List<DBInstance> DBInstance; 
 
             /**
              * DBInstance.
              */
-            public Builder DBInstance(java.util.List < DBInstance> DBInstance) {
+            public Builder DBInstance(java.util.List<DBInstance> DBInstance) {
                 this.DBInstance = DBInstance;
                 return this;
             }

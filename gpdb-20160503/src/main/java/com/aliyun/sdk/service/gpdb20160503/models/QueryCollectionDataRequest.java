@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class QueryCollectionDataRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HybridSearchArgs")
-    private java.util.Map < String, java.util.Map<String, ?>> hybridSearchArgs;
+    private java.util.Map<String, java.util.Map<String, ?>> hybridSearchArgs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncludeMetadataFields")
@@ -86,7 +91,7 @@ public class QueryCollectionDataRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vector")
-    private java.util.List < Double > vector;
+    private java.util.List<Double> vector;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -166,7 +171,7 @@ public class QueryCollectionDataRequest extends Request {
     /**
      * @return hybridSearchArgs
      */
-    public java.util.Map < String, java.util.Map<String, ?>> getHybridSearchArgs() {
+    public java.util.Map<String, java.util.Map<String, ?>> getHybridSearchArgs() {
         return this.hybridSearchArgs;
     }
 
@@ -250,7 +255,7 @@ public class QueryCollectionDataRequest extends Request {
     /**
      * @return vector
      */
-    public java.util.List < Double > getVector() {
+    public java.util.List<Double> getVector() {
         return this.vector;
     }
 
@@ -267,7 +272,7 @@ public class QueryCollectionDataRequest extends Request {
         private String DBInstanceId; 
         private String filter; 
         private String hybridSearch; 
-        private java.util.Map < String, java.util.Map<String, ?>> hybridSearchArgs; 
+        private java.util.Map<String, java.util.Map<String, ?>> hybridSearchArgs; 
         private String includeMetadataFields; 
         private Boolean includeValues; 
         private String metrics; 
@@ -279,7 +284,7 @@ public class QueryCollectionDataRequest extends Request {
         private String regionId; 
         private RelationalTableFilter relationalTableFilter; 
         private Long topK; 
-        private java.util.List < Double > vector; 
+        private java.util.List<Double> vector; 
         private String workspaceId; 
 
         private Builder() {
@@ -415,7 +420,7 @@ public class QueryCollectionDataRequest extends Request {
          * }
          * </code></pre>
          */
-        public Builder hybridSearchArgs(java.util.Map < String, java.util.Map<String, ?>> hybridSearchArgs) {
+        public Builder hybridSearchArgs(java.util.Map<String, java.util.Map<String, ?>> hybridSearchArgs) {
             String hybridSearchArgsShrink = shrink(hybridSearchArgs, "HybridSearchArgs", "json");
             this.putQueryParameter("HybridSearchArgs", hybridSearchArgsShrink);
             this.hybridSearchArgs = hybridSearchArgs;
@@ -588,7 +593,7 @@ public class QueryCollectionDataRequest extends Request {
          * <p>When the vector is empty, only full-text search results are returned.</p>
          * </blockquote>
          */
-        public Builder vector(java.util.List < Double > vector) {
+        public Builder vector(java.util.List<Double> vector) {
             String vectorShrink = shrink(vector, "Vector", "json");
             this.putQueryParameter("Vector", vectorShrink);
             this.vector = vector;

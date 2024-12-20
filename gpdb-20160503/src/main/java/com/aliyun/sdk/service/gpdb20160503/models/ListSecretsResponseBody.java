@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -343,7 +348,7 @@ public class ListSecretsResponseBody extends TeaModel {
      */
     public static class Secrets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Secrets")
-        private java.util.List < SecretsSecrets> secrets;
+        private java.util.List<SecretsSecrets> secrets;
 
         private Secrets(Builder builder) {
             this.secrets = builder.secrets;
@@ -360,17 +365,17 @@ public class ListSecretsResponseBody extends TeaModel {
         /**
          * @return secrets
          */
-        public java.util.List < SecretsSecrets> getSecrets() {
+        public java.util.List<SecretsSecrets> getSecrets() {
             return this.secrets;
         }
 
         public static final class Builder {
-            private java.util.List < SecretsSecrets> secrets; 
+            private java.util.List<SecretsSecrets> secrets; 
 
             /**
              * <p>The queried access credentials.</p>
              */
-            public Builder secrets(java.util.List < SecretsSecrets> secrets) {
+            public Builder secrets(java.util.List<SecretsSecrets> secrets) {
                 this.secrets = secrets;
                 return this;
             }

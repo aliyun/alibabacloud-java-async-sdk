@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class ModifyDBResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupItems")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ResourceGroupItems> resourceGroupItems;
+    private java.util.List<ResourceGroupItems> resourceGroupItems;
 
     private ModifyDBResourceGroupRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class ModifyDBResourceGroupRequest extends Request {
     /**
      * @return resourceGroupItems
      */
-    public java.util.List < ResourceGroupItems> getResourceGroupItems() {
+    public java.util.List<ResourceGroupItems> getResourceGroupItems() {
         return this.resourceGroupItems;
     }
 
     public static final class Builder extends Request.Builder<ModifyDBResourceGroupRequest, Builder> {
         private String DBInstanceId; 
         private Long ownerId; 
-        private java.util.List < ResourceGroupItems> resourceGroupItems; 
+        private java.util.List<ResourceGroupItems> resourceGroupItems; 
 
         private Builder() {
             super();
@@ -112,7 +117,7 @@ public class ModifyDBResourceGroupRequest extends Request {
          * <p>The information about the resource group.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder resourceGroupItems(java.util.List < ResourceGroupItems> resourceGroupItems) {
+        public Builder resourceGroupItems(java.util.List<ResourceGroupItems> resourceGroupItems) {
             String resourceGroupItemsShrink = shrink(resourceGroupItems, "ResourceGroupItems", "json");
             this.putQueryParameter("ResourceGroupItems", resourceGroupItemsShrink);
             this.resourceGroupItems = resourceGroupItems;

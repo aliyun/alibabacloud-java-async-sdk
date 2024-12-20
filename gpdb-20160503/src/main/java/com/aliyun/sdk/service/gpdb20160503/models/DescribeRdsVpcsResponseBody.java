@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -321,7 +326,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchs")
-        private java.util.List < VSwitchs> vSwitchs;
+        private java.util.List<VSwitchs> vSwitchs;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -410,7 +415,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         /**
          * @return vSwitchs
          */
-        public java.util.List < VSwitchs> getVSwitchs() {
+        public java.util.List<VSwitchs> getVSwitchs() {
             return this.vSwitchs;
         }
 
@@ -437,7 +442,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             private Boolean isDefault; 
             private String regionNo; 
             private String status; 
-            private java.util.List < VSwitchs> vSwitchs; 
+            private java.util.List<VSwitchs> vSwitchs; 
             private String vpcId; 
             private String vpcName; 
 
@@ -536,7 +541,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             /**
              * <p>The queried vSwitches.</p>
              */
-            public Builder vSwitchs(java.util.List < VSwitchs> vSwitchs) {
+            public Builder vSwitchs(java.util.List<VSwitchs> vSwitchs) {
                 this.vSwitchs = vSwitchs;
                 return this;
             }
@@ -578,7 +583,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
      */
     public static class Vpcs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Vpc")
-        private java.util.List < Vpc> vpc;
+        private java.util.List<Vpc> vpc;
 
         private Vpcs(Builder builder) {
             this.vpc = builder.vpc;
@@ -595,17 +600,17 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         /**
          * @return vpc
          */
-        public java.util.List < Vpc> getVpc() {
+        public java.util.List<Vpc> getVpc() {
             return this.vpc;
         }
 
         public static final class Builder {
-            private java.util.List < Vpc> vpc; 
+            private java.util.List<Vpc> vpc; 
 
             /**
              * <p>The queried VPC.</p>
              */
-            public Builder vpc(java.util.List < Vpc> vpc) {
+            public Builder vpc(java.util.List<Vpc> vpc) {
                 this.vpc = vpc;
                 return this;
             }

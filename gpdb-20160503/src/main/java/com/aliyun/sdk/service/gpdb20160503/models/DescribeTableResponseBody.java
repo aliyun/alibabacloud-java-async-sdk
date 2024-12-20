@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -132,7 +137,7 @@ public class DescribeTableResponseBody extends TeaModel {
      */
     public static class ColumnList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnList")
-        private java.util.List < ColumnMetadata > columnList;
+        private java.util.List<ColumnMetadata> columnList;
 
         private ColumnList(Builder builder) {
             this.columnList = builder.columnList;
@@ -149,17 +154,17 @@ public class DescribeTableResponseBody extends TeaModel {
         /**
          * @return columnList
          */
-        public java.util.List < ColumnMetadata > getColumnList() {
+        public java.util.List<ColumnMetadata> getColumnList() {
             return this.columnList;
         }
 
         public static final class Builder {
-            private java.util.List < ColumnMetadata > columnList; 
+            private java.util.List<ColumnMetadata> columnList; 
 
             /**
              * <p>The columns of the table.</p>
              */
-            public Builder columnList(java.util.List < ColumnMetadata > columnList) {
+            public Builder columnList(java.util.List<ColumnMetadata> columnList) {
                 this.columnList = columnList;
                 return this;
             }

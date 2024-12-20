@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.NameInMap("ImvInfos")
-    private java.util.List < ImvInfos> imvInfos;
+    private java.util.List<ImvInfos> imvInfos;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
     /**
      * @return imvInfos
      */
-    public java.util.List < ImvInfos> getImvInfos() {
+    public java.util.List<ImvInfos> getImvInfos() {
         return this.imvInfos;
     }
 
@@ -58,7 +63,7 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBInstanceId; 
-        private java.util.List < ImvInfos> imvInfos; 
+        private java.util.List<ImvInfos> imvInfos; 
         private String requestId; 
 
         /**
@@ -78,7 +83,7 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
         /**
          * <p>The queried materialized views.</p>
          */
-        public Builder imvInfos(java.util.List < ImvInfos> imvInfos) {
+        public Builder imvInfos(java.util.List<ImvInfos> imvInfos) {
             this.imvInfos = imvInfos;
             return this;
         }

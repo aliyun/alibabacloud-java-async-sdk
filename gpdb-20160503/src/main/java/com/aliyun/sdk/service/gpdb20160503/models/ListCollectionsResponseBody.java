@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class ListCollectionsResponseBody extends TeaModel {
      */
     public static class Collections extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Collection")
-        private java.util.List < String > collection;
+        private java.util.List<String> collection;
 
         private Collections(Builder builder) {
             this.collection = builder.collection;
@@ -241,17 +246,17 @@ public class ListCollectionsResponseBody extends TeaModel {
         /**
          * @return collection
          */
-        public java.util.List < String > getCollection() {
+        public java.util.List<String> getCollection() {
             return this.collection;
         }
 
         public static final class Builder {
-            private java.util.List < String > collection; 
+            private java.util.List<String> collection; 
 
             /**
              * Collection.
              */
-            public Builder collection(java.util.List < String > collection) {
+            public Builder collection(java.util.List<String> collection) {
                 this.collection = collection;
                 return this;
             }

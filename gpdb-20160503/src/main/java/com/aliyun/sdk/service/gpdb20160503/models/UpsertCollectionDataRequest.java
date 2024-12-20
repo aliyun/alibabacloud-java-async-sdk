@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -41,7 +46,7 @@ public class UpsertCollectionDataRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Rows")
-    private java.util.List < Rows> rows;
+    private java.util.List<Rows> rows;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -117,7 +122,7 @@ public class UpsertCollectionDataRequest extends Request {
     /**
      * @return rows
      */
-    public java.util.List < Rows> getRows() {
+    public java.util.List<Rows> getRows() {
         return this.rows;
     }
 
@@ -135,7 +140,7 @@ public class UpsertCollectionDataRequest extends Request {
         private String namespacePassword; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < Rows> rows; 
+        private java.util.List<Rows> rows; 
         private String workspaceId; 
 
         private Builder() {
@@ -238,7 +243,7 @@ public class UpsertCollectionDataRequest extends Request {
         /**
          * Rows.
          */
-        public Builder rows(java.util.List < Rows> rows) {
+        public Builder rows(java.util.List<Rows> rows) {
             String rowsShrink = shrink(rows, "Rows", "json");
             this.putBodyParameter("Rows", rowsShrink);
             this.rows = rows;
@@ -275,11 +280,11 @@ public class UpsertCollectionDataRequest extends Request {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("Metadata")
-        private java.util.Map < String, String > metadata;
+        private java.util.Map<String, String> metadata;
 
         @com.aliyun.core.annotation.NameInMap("Vector")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < Double > vector;
+        private java.util.List<Double> vector;
 
         private Rows(Builder builder) {
             this.id = builder.id;
@@ -305,21 +310,21 @@ public class UpsertCollectionDataRequest extends Request {
         /**
          * @return metadata
          */
-        public java.util.Map < String, String > getMetadata() {
+        public java.util.Map<String, String> getMetadata() {
             return this.metadata;
         }
 
         /**
          * @return vector
          */
-        public java.util.List < Double > getVector() {
+        public java.util.List<Double> getVector() {
             return this.vector;
         }
 
         public static final class Builder {
             private String id; 
-            private java.util.Map < String, String > metadata; 
-            private java.util.List < Double > vector; 
+            private java.util.Map<String, String> metadata; 
+            private java.util.List<Double> vector; 
 
             /**
              * Id.
@@ -332,7 +337,7 @@ public class UpsertCollectionDataRequest extends Request {
             /**
              * Metadata.
              */
-            public Builder metadata(java.util.Map < String, String > metadata) {
+            public Builder metadata(java.util.Map<String, String> metadata) {
                 this.metadata = metadata;
                 return this;
             }
@@ -340,7 +345,7 @@ public class UpsertCollectionDataRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder vector(java.util.List < Double > vector) {
+            public Builder vector(java.util.List<Double> vector) {
                 this.vector = vector;
                 return this;
             }

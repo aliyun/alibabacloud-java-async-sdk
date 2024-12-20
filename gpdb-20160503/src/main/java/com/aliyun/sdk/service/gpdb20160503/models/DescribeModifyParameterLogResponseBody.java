@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeModifyParameterLogResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Changelogs")
-    private java.util.List < Changelogs> changelogs;
+    private java.util.List<Changelogs> changelogs;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     /**
      * @return changelogs
      */
-    public java.util.List < Changelogs> getChangelogs() {
+    public java.util.List<Changelogs> getChangelogs() {
         return this.changelogs;
     }
 
@@ -46,13 +51,13 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Changelogs> changelogs; 
+        private java.util.List<Changelogs> changelogs; 
         private String requestId; 
 
         /**
          * <p>The queried parameter modification logs.</p>
          */
-        public Builder changelogs(java.util.List < Changelogs> changelogs) {
+        public Builder changelogs(java.util.List<Changelogs> changelogs) {
             this.changelogs = changelogs;
             return this;
         }

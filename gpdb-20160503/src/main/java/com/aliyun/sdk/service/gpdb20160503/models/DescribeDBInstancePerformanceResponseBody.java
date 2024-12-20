@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     private String engine;
 
     @com.aliyun.core.annotation.NameInMap("PerformanceKeys")
-    private java.util.List < String > performanceKeys;
+    private java.util.List<String> performanceKeys;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     /**
      * @return performanceKeys
      */
-    public java.util.List < String > getPerformanceKeys() {
+    public java.util.List<String> getPerformanceKeys() {
         return this.performanceKeys;
     }
 
@@ -93,7 +98,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         private String DBInstanceId; 
         private String endTime; 
         private String engine; 
-        private java.util.List < String > performanceKeys; 
+        private java.util.List<String> performanceKeys; 
         private String requestId; 
         private String startTime; 
 
@@ -133,7 +138,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         /**
          * <p>The queried performance metrics.</p>
          */
-        public Builder performanceKeys(java.util.List < String > performanceKeys) {
+        public Builder performanceKeys(java.util.List<String> performanceKeys) {
             this.performanceKeys = performanceKeys;
             return this;
         }

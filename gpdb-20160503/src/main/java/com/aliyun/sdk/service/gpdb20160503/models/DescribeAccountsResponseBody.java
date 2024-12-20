@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -229,7 +234,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
      */
     public static class Accounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceAccount")
-        private java.util.List < DBInstanceAccount> DBInstanceAccount;
+        private java.util.List<DBInstanceAccount> DBInstanceAccount;
 
         private Accounts(Builder builder) {
             this.DBInstanceAccount = builder.DBInstanceAccount;
@@ -246,17 +251,17 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * @return DBInstanceAccount
          */
-        public java.util.List < DBInstanceAccount> getDBInstanceAccount() {
+        public java.util.List<DBInstanceAccount> getDBInstanceAccount() {
             return this.DBInstanceAccount;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceAccount> DBInstanceAccount; 
+            private java.util.List<DBInstanceAccount> DBInstanceAccount; 
 
             /**
              * DBInstanceAccount.
              */
-            public Builder DBInstanceAccount(java.util.List < DBInstanceAccount> DBInstanceAccount) {
+            public Builder DBInstanceAccount(java.util.List<DBInstanceAccount> DBInstanceAccount) {
                 this.DBInstanceAccount = DBInstanceAccount;
                 return this;
             }

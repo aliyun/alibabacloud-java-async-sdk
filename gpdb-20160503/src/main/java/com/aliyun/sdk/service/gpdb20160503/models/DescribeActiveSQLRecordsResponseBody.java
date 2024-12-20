@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.NameInMap("Queries")
-    private java.util.List < Queries> queries;
+    private java.util.List<Queries> queries;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
     /**
      * @return queries
      */
-    public java.util.List < Queries> getQueries() {
+    public java.util.List<Queries> getQueries() {
         return this.queries;
     }
 
@@ -58,7 +63,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBInstanceId; 
-        private java.util.List < Queries> queries; 
+        private java.util.List<Queries> queries; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
         /**
          * <p>The queried SQL records.</p>
          */
-        public Builder queries(java.util.List < Queries> queries) {
+        public Builder queries(java.util.List<Queries> queries) {
             this.queries = queries;
             return this;
         }

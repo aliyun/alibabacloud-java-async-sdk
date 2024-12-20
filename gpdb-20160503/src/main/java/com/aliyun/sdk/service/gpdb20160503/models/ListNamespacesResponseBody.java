@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -201,7 +206,7 @@ public class ListNamespacesResponseBody extends TeaModel {
      */
     public static class Namespaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Namespace")
-        private java.util.List < String > namespace;
+        private java.util.List<String> namespace;
 
         private Namespaces(Builder builder) {
             this.namespace = builder.namespace;
@@ -218,17 +223,17 @@ public class ListNamespacesResponseBody extends TeaModel {
         /**
          * @return namespace
          */
-        public java.util.List < String > getNamespace() {
+        public java.util.List<String> getNamespace() {
             return this.namespace;
         }
 
         public static final class Builder {
-            private java.util.List < String > namespace; 
+            private java.util.List<String> namespace; 
 
             /**
              * Namespace.
              */
-            public Builder namespace(java.util.List < String > namespace) {
+            public Builder namespace(java.util.List<String> namespace) {
                 this.namespace = namespace;
                 return this;
             }

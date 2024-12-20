@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListStreamingDataSourcesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DataSourceItems")
-    private java.util.List < DataSourceItems> dataSourceItems;
+    private java.util.List<DataSourceItems> dataSourceItems;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -42,7 +47,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
     /**
      * @return dataSourceItems
      */
-    public java.util.List < DataSourceItems> getDataSourceItems() {
+    public java.util.List<DataSourceItems> getDataSourceItems() {
         return this.dataSourceItems;
     }
 
@@ -68,7 +73,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DataSourceItems> dataSourceItems; 
+        private java.util.List<DataSourceItems> dataSourceItems; 
         private Integer pageNumber; 
         private String requestId; 
         private Integer totalRecordCount; 
@@ -76,7 +81,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
         /**
          * <p>The queried data sources.</p>
          */
-        public Builder dataSourceItems(java.util.List < DataSourceItems> dataSourceItems) {
+        public Builder dataSourceItems(java.util.List<DataSourceItems> dataSourceItems) {
             this.dataSourceItems = dataSourceItems;
             return this;
         }

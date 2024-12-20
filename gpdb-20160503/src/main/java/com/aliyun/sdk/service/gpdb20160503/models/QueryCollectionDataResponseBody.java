@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
      */
     public static class Values extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("value")
-        private java.util.List < Double > value;
+        private java.util.List<Double> value;
 
         private Values(Builder builder) {
             this.value = builder.value;
@@ -172,17 +177,17 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         /**
          * @return value
          */
-        public java.util.List < Double > getValue() {
+        public java.util.List<Double> getValue() {
             return this.value;
         }
 
         public static final class Builder {
-            private java.util.List < Double > value; 
+            private java.util.List<Double> value; 
 
             /**
              * value.
              */
-            public Builder value(java.util.List < Double > value) {
+            public Builder value(java.util.List<Double> value) {
                 this.value = value;
                 return this;
             }
@@ -205,7 +210,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("Metadata")
-        private java.util.Map < String, String > metadata;
+        private java.util.Map<String, String> metadata;
 
         @com.aliyun.core.annotation.NameInMap("Score")
         private Double score;
@@ -238,7 +243,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         /**
          * @return metadata
          */
-        public java.util.Map < String, String > getMetadata() {
+        public java.util.Map<String, String> getMetadata() {
             return this.metadata;
         }
 
@@ -258,7 +263,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private String id; 
-            private java.util.Map < String, String > metadata; 
+            private java.util.Map<String, String> metadata; 
             private Double score; 
             private Values values; 
 
@@ -276,7 +281,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             /**
              * <p>Metadata.</p>
              */
-            public Builder metadata(java.util.Map < String, String > metadata) {
+            public Builder metadata(java.util.Map<String, String> metadata) {
                 this.metadata = metadata;
                 return this;
             }
@@ -315,7 +320,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
      */
     public static class Matches extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("match")
-        private java.util.List < Match> match;
+        private java.util.List<Match> match;
 
         private Matches(Builder builder) {
             this.match = builder.match;
@@ -332,17 +337,17 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         /**
          * @return match
          */
-        public java.util.List < Match> getMatch() {
+        public java.util.List<Match> getMatch() {
             return this.match;
         }
 
         public static final class Builder {
-            private java.util.List < Match> match; 
+            private java.util.List<Match> match; 
 
             /**
              * match.
              */
-            public Builder match(java.util.List < Match> match) {
+            public Builder match(java.util.List<Match> match) {
                 this.match = match;
                 return this;
             }

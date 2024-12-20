@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeHadoopClustersInSameNetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Clusters")
-    private java.util.List < String > clusters;
+    private java.util.List<String> clusters;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeHadoopClustersInSameNetResponseBody extends TeaModel {
     /**
      * @return clusters
      */
-    public java.util.List < String > getClusters() {
+    public java.util.List<String> getClusters() {
         return this.clusters;
     }
 
@@ -46,13 +51,13 @@ public class DescribeHadoopClustersInSameNetResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > clusters; 
+        private java.util.List<String> clusters; 
         private String requestId; 
 
         /**
          * Clusters.
          */
-        public Builder clusters(java.util.List < String > clusters) {
+        public Builder clusters(java.util.List<String> clusters) {
             this.clusters = clusters;
             return this;
         }

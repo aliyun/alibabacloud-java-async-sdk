@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class ListDatabasesResponseBody extends TeaModel {
      */
     public static class Databases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Databases")
-        private java.util.List < String > databases;
+        private java.util.List<String> databases;
 
         private Databases(Builder builder) {
             this.databases = builder.databases;
@@ -172,17 +177,17 @@ public class ListDatabasesResponseBody extends TeaModel {
         /**
          * @return databases
          */
-        public java.util.List < String > getDatabases() {
+        public java.util.List<String> getDatabases() {
             return this.databases;
         }
 
         public static final class Builder {
-            private java.util.List < String > databases; 
+            private java.util.List<String> databases; 
 
             /**
              * <p>The queried databases.</p>
              */
-            public Builder databases(java.util.List < String > databases) {
+            public Builder databases(java.util.List<String> databases) {
                 this.databases = databases;
                 return this;
             }

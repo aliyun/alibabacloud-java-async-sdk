@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ExecuteStatementRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < ? > parameters;
+    private java.util.List<?> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -50,7 +55,7 @@ public class ExecuteStatementRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Sqls")
-    private java.util.List < String > sqls;
+    private java.util.List<String> sqls;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatementName")
@@ -107,7 +112,7 @@ public class ExecuteStatementRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.List < ? > getParameters() {
+    public java.util.List<?> getParameters() {
         return this.parameters;
     }
 
@@ -142,7 +147,7 @@ public class ExecuteStatementRequest extends Request {
     /**
      * @return sqls
      */
-    public java.util.List < String > getSqls() {
+    public java.util.List<String> getSqls() {
         return this.sqls;
     }
 
@@ -157,12 +162,12 @@ public class ExecuteStatementRequest extends Request {
         private String DBInstanceId; 
         private String database; 
         private Long ownerId; 
-        private java.util.List < ? > parameters; 
+        private java.util.List<?> parameters; 
         private String regionId; 
         private String runType; 
         private String secretArn; 
         private String sql; 
-        private java.util.List < String > sqls; 
+        private java.util.List<String> sqls; 
         private String statementName; 
 
         private Builder() {
@@ -224,7 +229,7 @@ public class ExecuteStatementRequest extends Request {
         /**
          * <p>The configuration parameters.</p>
          */
-        public Builder parameters(java.util.List < ? > parameters) {
+        public Builder parameters(java.util.List<?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putBodyParameter("Parameters", parametersShrink);
             this.parameters = parameters;
@@ -291,7 +296,7 @@ public class ExecuteStatementRequest extends Request {
         /**
          * <p>The SQL statements.</p>
          */
-        public Builder sqls(java.util.List < String > sqls) {
+        public Builder sqls(java.util.List<String> sqls) {
             String sqlsShrink = shrink(sqls, "Sqls", "json");
             this.putBodyParameter("Sqls", sqlsShrink);
             this.sqls = sqls;

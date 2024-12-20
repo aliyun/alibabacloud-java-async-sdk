@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class RerankRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Documents")
-    private java.util.List < String > documents;
+    private java.util.List<String> documents;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxChunksPerDoc")
@@ -86,7 +91,7 @@ public class RerankRequest extends Request {
     /**
      * @return documents
      */
-    public java.util.List < String > getDocuments() {
+    public java.util.List<String> getDocuments() {
         return this.documents;
     }
 
@@ -141,7 +146,7 @@ public class RerankRequest extends Request {
 
     public static final class Builder extends Request.Builder<RerankRequest, Builder> {
         private String DBInstanceId; 
-        private java.util.List < String > documents; 
+        private java.util.List<String> documents; 
         private Integer maxChunksPerDoc; 
         private String model; 
         private Long ownerId; 
@@ -186,7 +191,7 @@ public class RerankRequest extends Request {
         /**
          * <p>List of documents to be re-ordered.</p>
          */
-        public Builder documents(java.util.List < String > documents) {
+        public Builder documents(java.util.List<String> documents) {
             String documentsShrink = shrink(documents, "Documents", "json");
             this.putBodyParameter("Documents", documentsShrink);
             this.documents = documents;

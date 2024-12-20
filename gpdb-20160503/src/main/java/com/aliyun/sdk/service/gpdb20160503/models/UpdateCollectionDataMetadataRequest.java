@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,12 +32,12 @@ public class UpdateCollectionDataMetadataRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ids")
-    private java.util.List < String > ids;
+    private java.util.List<String> ids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Metadata")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map < String, ? > metadata;
+    private java.util.Map<String, ?> metadata;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
@@ -107,14 +112,14 @@ public class UpdateCollectionDataMetadataRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < String > getIds() {
+    public java.util.List<String> getIds() {
         return this.ids;
     }
 
     /**
      * @return metadata
      */
-    public java.util.Map < String, ? > getMetadata() {
+    public java.util.Map<String, ?> getMetadata() {
         return this.metadata;
     }
 
@@ -157,8 +162,8 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         private String collection; 
         private String DBInstanceId; 
         private String filter; 
-        private java.util.List < String > ids; 
-        private java.util.Map < String, ? > metadata; 
+        private java.util.List<String> ids; 
+        private java.util.Map<String, ?> metadata; 
         private String namespace; 
         private String namespacePassword; 
         private Long ownerId; 
@@ -229,7 +234,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         /**
          * <p>ID list of the data to be updated, i.e., the Row.Id specified when uploading the data. This field cannot be empty at the same time as the Filter field.</p>
          */
-        public Builder ids(java.util.List < String > ids) {
+        public Builder ids(java.util.List<String> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
             this.putQueryParameter("Ids", idsShrink);
             this.ids = ids;
@@ -246,7 +251,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
          *       &quot;content&quot;: &quot;new content&quot;
          * }</p>
          */
-        public Builder metadata(java.util.Map < String, ? > metadata) {
+        public Builder metadata(java.util.Map<String, ?> metadata) {
             String metadataShrink = shrink(metadata, "Metadata", "json");
             this.putQueryParameter("Metadata", metadataShrink);
             this.metadata = metadata;

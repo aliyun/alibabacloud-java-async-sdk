@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     private DescribeAvailableResourcesResponseBody(Builder builder) {
         this.regionId = builder.regionId;
@@ -52,14 +57,14 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
     public static final class Builder {
         private String regionId; 
         private String requestId; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
 
         /**
          * <p>The region ID.</p>
@@ -86,7 +91,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         /**
          * <p>The zone ID.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
             return this;
         }
@@ -495,7 +500,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         private String supportedEngineVersion;
 
         @com.aliyun.core.annotation.NameInMap("SupportedInstanceClasses")
-        private java.util.List < SupportedInstanceClasses> supportedInstanceClasses;
+        private java.util.List<SupportedInstanceClasses> supportedInstanceClasses;
 
         private SupportedEngines(Builder builder) {
             this.mode = builder.mode;
@@ -528,14 +533,14 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         /**
          * @return supportedInstanceClasses
          */
-        public java.util.List < SupportedInstanceClasses> getSupportedInstanceClasses() {
+        public java.util.List<SupportedInstanceClasses> getSupportedInstanceClasses() {
             return this.supportedInstanceClasses;
         }
 
         public static final class Builder {
             private String mode; 
             private String supportedEngineVersion; 
-            private java.util.List < SupportedInstanceClasses> supportedInstanceClasses; 
+            private java.util.List<SupportedInstanceClasses> supportedInstanceClasses; 
 
             /**
              * <p>The instance resource type. Valid values:</p>
@@ -566,7 +571,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             /**
              * <p>The available specifications.</p>
              */
-            public Builder supportedInstanceClasses(java.util.List < SupportedInstanceClasses> supportedInstanceClasses) {
+            public Builder supportedInstanceClasses(java.util.List<SupportedInstanceClasses> supportedInstanceClasses) {
                 this.supportedInstanceClasses = supportedInstanceClasses;
                 return this;
             }
@@ -586,7 +591,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
      */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedEngines")
-        private java.util.List < SupportedEngines> supportedEngines;
+        private java.util.List<SupportedEngines> supportedEngines;
 
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
@@ -607,7 +612,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         /**
          * @return supportedEngines
          */
-        public java.util.List < SupportedEngines> getSupportedEngines() {
+        public java.util.List<SupportedEngines> getSupportedEngines() {
             return this.supportedEngines;
         }
 
@@ -619,13 +624,13 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SupportedEngines> supportedEngines; 
+            private java.util.List<SupportedEngines> supportedEngines; 
             private String zoneId; 
 
             /**
              * <p>The available engine version and specifications.</p>
              */
-            public Builder supportedEngines(java.util.List < SupportedEngines> supportedEngines) {
+            public Builder supportedEngines(java.util.List<SupportedEngines> supportedEngines) {
                 this.supportedEngines = supportedEngines;
                 return this;
             }

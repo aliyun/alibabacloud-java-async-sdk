@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -139,7 +144,7 @@ public class TextEmbeddingResponseBody extends TeaModel {
      */
     public static class Embedding extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Embedding")
-        private java.util.List < Double > embedding;
+        private java.util.List<Double> embedding;
 
         private Embedding(Builder builder) {
             this.embedding = builder.embedding;
@@ -156,17 +161,17 @@ public class TextEmbeddingResponseBody extends TeaModel {
         /**
          * @return embedding
          */
-        public java.util.List < Double > getEmbedding() {
+        public java.util.List<Double> getEmbedding() {
             return this.embedding;
         }
 
         public static final class Builder {
-            private java.util.List < Double > embedding; 
+            private java.util.List<Double> embedding; 
 
             /**
              * Embedding.
              */
-            public Builder embedding(java.util.List < Double > embedding) {
+            public Builder embedding(java.util.List<Double> embedding) {
                 this.embedding = embedding;
                 return this;
             }
@@ -253,7 +258,7 @@ public class TextEmbeddingResponseBody extends TeaModel {
      */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Results")
-        private java.util.List < ResultsResults> results;
+        private java.util.List<ResultsResults> results;
 
         private Results(Builder builder) {
             this.results = builder.results;
@@ -270,17 +275,17 @@ public class TextEmbeddingResponseBody extends TeaModel {
         /**
          * @return results
          */
-        public java.util.List < ResultsResults> getResults() {
+        public java.util.List<ResultsResults> getResults() {
             return this.results;
         }
 
         public static final class Builder {
-            private java.util.List < ResultsResults> results; 
+            private java.util.List<ResultsResults> results; 
 
             /**
              * Results.
              */
-            public Builder results(java.util.List < ResultsResults> results) {
+            public Builder results(java.util.List<ResultsResults> results) {
                 this.results = results;
                 return this;
             }

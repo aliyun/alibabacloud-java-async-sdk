@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -486,7 +491,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PlanList")
-        private java.util.List < PlanList> planList;
+        private java.util.List<PlanList> planList;
 
         private Items(Builder builder) {
             this.planList = builder.planList;
@@ -503,17 +508,17 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         /**
          * @return planList
          */
-        public java.util.List < PlanList> getPlanList() {
+        public java.util.List<PlanList> getPlanList() {
             return this.planList;
         }
 
         public static final class Builder {
-            private java.util.List < PlanList> planList; 
+            private java.util.List<PlanList> planList; 
 
             /**
              * PlanList.
              */
-            public Builder planList(java.util.List < PlanList> planList) {
+            public Builder planList(java.util.List<PlanList> planList) {
                 this.planList = planList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -251,7 +256,7 @@ public class RerankResponseBody extends TeaModel {
      */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Results")
-        private java.util.List < ResultsResults> results;
+        private java.util.List<ResultsResults> results;
 
         private Results(Builder builder) {
             this.results = builder.results;
@@ -268,17 +273,17 @@ public class RerankResponseBody extends TeaModel {
         /**
          * @return results
          */
-        public java.util.List < ResultsResults> getResults() {
+        public java.util.List<ResultsResults> getResults() {
             return this.results;
         }
 
         public static final class Builder {
-            private java.util.List < ResultsResults> results; 
+            private java.util.List<ResultsResults> results; 
 
             /**
              * <p>Rerank results.</p>
              */
-            public Builder results(java.util.List < ResultsResults> results) {
+            public Builder results(java.util.List<ResultsResults> results) {
                 this.results = results;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class UpsertChunksRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TextChunks")
-    private java.util.List < TextChunks> textChunks;
+    private java.util.List<TextChunks> textChunks;
 
     private UpsertChunksRequest(Builder builder) {
         super(builder);
@@ -125,7 +130,7 @@ public class UpsertChunksRequest extends Request {
     /**
      * @return textChunks
      */
-    public java.util.List < TextChunks> getTextChunks() {
+    public java.util.List<TextChunks> getTextChunks() {
         return this.textChunks;
     }
 
@@ -137,7 +142,7 @@ public class UpsertChunksRequest extends Request {
         private String namespacePassword; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < TextChunks> textChunks; 
+        private java.util.List<TextChunks> textChunks; 
 
         private Builder() {
             super();
@@ -258,7 +263,7 @@ public class UpsertChunksRequest extends Request {
         /**
          * <p>List of split documents.</p>
          */
-        public Builder textChunks(java.util.List < TextChunks> textChunks) {
+        public Builder textChunks(java.util.List<TextChunks> textChunks) {
             String textChunksShrink = shrink(textChunks, "TextChunks", "json");
             this.putBodyParameter("TextChunks", textChunksShrink);
             this.textChunks = textChunks;
@@ -284,7 +289,7 @@ public class UpsertChunksRequest extends Request {
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("Metadata")
-        private java.util.Map < String, ? > metadata;
+        private java.util.Map<String, ?> metadata;
 
         private TextChunks(Builder builder) {
             this.content = builder.content;
@@ -309,13 +314,13 @@ public class UpsertChunksRequest extends Request {
         /**
          * @return metadata
          */
-        public java.util.Map < String, ? > getMetadata() {
+        public java.util.Map<String, ?> getMetadata() {
             return this.metadata;
         }
 
         public static final class Builder {
             private String content; 
-            private java.util.Map < String, ? > metadata; 
+            private java.util.Map<String, ?> metadata; 
 
             /**
              * <p>Document content.</p>
@@ -335,7 +340,7 @@ public class UpsertChunksRequest extends Request {
              * <strong>example:</strong>
              * <p>{&quot;title&quot;:&quot;test&quot;}</p>
              */
-            public Builder metadata(java.util.Map < String, ? > metadata) {
+            public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
                 return this;
             }

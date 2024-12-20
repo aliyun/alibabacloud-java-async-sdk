@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeDBInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceCategories")
-    private java.util.List < String > DBInstanceCategories;
+    private java.util.List<String> DBInstanceCategories;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
@@ -26,15 +31,15 @@ public class DescribeDBInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceModes")
-    private java.util.List < String > DBInstanceModes;
+    private java.util.List<String> DBInstanceModes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceStatuses")
-    private java.util.List < String > DBInstanceStatuses;
+    private java.util.List<String> DBInstanceStatuses;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceDeployTypes")
-    private java.util.List < String > instanceDeployTypes;
+    private java.util.List<String> instanceDeployTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
@@ -63,7 +68,7 @@ public class DescribeDBInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
@@ -103,7 +108,7 @@ public class DescribeDBInstancesRequest extends Request {
     /**
      * @return DBInstanceCategories
      */
-    public java.util.List < String > getDBInstanceCategories() {
+    public java.util.List<String> getDBInstanceCategories() {
         return this.DBInstanceCategories;
     }
 
@@ -124,21 +129,21 @@ public class DescribeDBInstancesRequest extends Request {
     /**
      * @return DBInstanceModes
      */
-    public java.util.List < String > getDBInstanceModes() {
+    public java.util.List<String> getDBInstanceModes() {
         return this.DBInstanceModes;
     }
 
     /**
      * @return DBInstanceStatuses
      */
-    public java.util.List < String > getDBInstanceStatuses() {
+    public java.util.List<String> getDBInstanceStatuses() {
         return this.DBInstanceStatuses;
     }
 
     /**
      * @return instanceDeployTypes
      */
-    public java.util.List < String > getInstanceDeployTypes() {
+    public java.util.List<String> getInstanceDeployTypes() {
         return this.instanceDeployTypes;
     }
 
@@ -187,7 +192,7 @@ public class DescribeDBInstancesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -199,19 +204,19 @@ public class DescribeDBInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDBInstancesRequest, Builder> {
-        private java.util.List < String > DBInstanceCategories; 
+        private java.util.List<String> DBInstanceCategories; 
         private String DBInstanceDescription; 
         private String DBInstanceIds; 
-        private java.util.List < String > DBInstanceModes; 
-        private java.util.List < String > DBInstanceStatuses; 
-        private java.util.List < String > instanceDeployTypes; 
+        private java.util.List<String> DBInstanceModes; 
+        private java.util.List<String> DBInstanceStatuses; 
+        private java.util.List<String> instanceDeployTypes; 
         private String instanceNetworkType; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vpcId; 
 
         private Builder() {
@@ -239,7 +244,7 @@ public class DescribeDBInstancesRequest extends Request {
         /**
          * <p>The edition of the instance. Separate multiple values with commas (,).</p>
          */
-        public Builder DBInstanceCategories(java.util.List < String > DBInstanceCategories) {
+        public Builder DBInstanceCategories(java.util.List<String> DBInstanceCategories) {
             String DBInstanceCategoriesShrink = shrink(DBInstanceCategories, "DBInstanceCategories", "simple");
             this.putQueryParameter("DBInstanceCategories", DBInstanceCategoriesShrink);
             this.DBInstanceCategories = DBInstanceCategories;
@@ -273,7 +278,7 @@ public class DescribeDBInstancesRequest extends Request {
         /**
          * <p>The resource type of the instance. Separate multiple values with commas (,).</p>
          */
-        public Builder DBInstanceModes(java.util.List < String > DBInstanceModes) {
+        public Builder DBInstanceModes(java.util.List<String> DBInstanceModes) {
             String DBInstanceModesShrink = shrink(DBInstanceModes, "DBInstanceModes", "simple");
             this.putQueryParameter("DBInstanceModes", DBInstanceModesShrink);
             this.DBInstanceModes = DBInstanceModes;
@@ -283,7 +288,7 @@ public class DescribeDBInstancesRequest extends Request {
         /**
          * <p>The state of the instance.</p>
          */
-        public Builder DBInstanceStatuses(java.util.List < String > DBInstanceStatuses) {
+        public Builder DBInstanceStatuses(java.util.List<String> DBInstanceStatuses) {
             String DBInstanceStatusesShrink = shrink(DBInstanceStatuses, "DBInstanceStatuses", "simple");
             this.putQueryParameter("DBInstanceStatuses", DBInstanceStatusesShrink);
             this.DBInstanceStatuses = DBInstanceStatuses;
@@ -293,7 +298,7 @@ public class DescribeDBInstancesRequest extends Request {
         /**
          * <p>This parameter is no longer used.</p>
          */
-        public Builder instanceDeployTypes(java.util.List < String > instanceDeployTypes) {
+        public Builder instanceDeployTypes(java.util.List<String> instanceDeployTypes) {
             String instanceDeployTypesShrink = shrink(instanceDeployTypes, "InstanceDeployTypes", "simple");
             this.putQueryParameter("InstanceDeployTypes", instanceDeployTypesShrink);
             this.instanceDeployTypes = instanceDeployTypes;
@@ -389,7 +394,7 @@ public class DescribeDBInstancesRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

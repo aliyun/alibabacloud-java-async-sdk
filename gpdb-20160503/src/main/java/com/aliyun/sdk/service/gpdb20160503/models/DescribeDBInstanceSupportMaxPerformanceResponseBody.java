@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
      */
     public static class Performances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Performance")
-        private java.util.List < Performance> performance;
+        private java.util.List<Performance> performance;
 
         private Performances(Builder builder) {
             this.performance = builder.performance;
@@ -241,17 +246,17 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         /**
          * @return performance
          */
-        public java.util.List < Performance> getPerformance() {
+        public java.util.List<Performance> getPerformance() {
             return this.performance;
         }
 
         public static final class Builder {
-            private java.util.List < Performance> performance; 
+            private java.util.List<Performance> performance; 
 
             /**
              * Performance.
              */
-            public Builder performance(java.util.List < Performance> performance) {
+            public Builder performance(java.util.List<Performance> performance) {
                 this.performance = performance;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ServiceItems")
-    private java.util.List < ServiceItems> serviceItems;
+    private java.util.List<ServiceItems> serviceItems;
 
     @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
@@ -45,7 +50,7 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
     /**
      * @return serviceItems
      */
-    public java.util.List < ServiceItems> getServiceItems() {
+    public java.util.List<ServiceItems> getServiceItems() {
         return this.serviceItems;
     }
 
@@ -58,7 +63,7 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ServiceItems> serviceItems; 
+        private java.util.List<ServiceItems> serviceItems; 
         private Integer totalRecordCount; 
 
         /**
@@ -75,7 +80,7 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
         /**
          * <p>Returns real-time data service items</p>
          */
-        public Builder serviceItems(java.util.List < ServiceItems> serviceItems) {
+        public Builder serviceItems(java.util.List<ServiceItems> serviceItems) {
             this.serviceItems = serviceItems;
             return this;
         }

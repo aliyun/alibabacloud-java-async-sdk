@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
     private String endTime;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -81,7 +86,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
     public static final class Builder {
         private String DBClusterId; 
         private String endTime; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String requestId; 
         private String startTime; 
 
@@ -110,7 +115,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         /**
          * <p>The name of the instance.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -151,7 +156,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
      */
     public static class Values extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Point")
-        private java.util.List < String > point;
+        private java.util.List<String> point;
 
         private Values(Builder builder) {
             this.point = builder.point;
@@ -168,17 +173,17 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         /**
          * @return point
          */
-        public java.util.List < String > getPoint() {
+        public java.util.List<String> getPoint() {
             return this.point;
         }
 
         public static final class Builder {
-            private java.util.List < String > point; 
+            private java.util.List<String> point; 
 
             /**
              * <p>The time when the audit logs were generated and the number of the audit logs.</p>
              */
-            public Builder point(java.util.List < String > point) {
+            public Builder point(java.util.List<String> point) {
                 this.point = point;
                 return this;
             }
@@ -198,7 +203,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
      */
     public static class Series extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < Values> values;
+        private java.util.List<Values> values;
 
         private Series(Builder builder) {
             this.values = builder.values;
@@ -215,17 +220,17 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < Values> getValues() {
+        public java.util.List<Values> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < Values> values; 
+            private java.util.List<Values> values; 
 
             /**
              * <p>Details of the audit logs.</p>
              */
-            public Builder values(java.util.List < Values> values) {
+            public Builder values(java.util.List<Values> values) {
                 this.values = values;
                 return this;
             }
@@ -248,7 +253,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Series")
-        private java.util.List < Series> series;
+        private java.util.List<Series> series;
 
         private Items(Builder builder) {
             this.name = builder.name;
@@ -273,13 +278,13 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         /**
          * @return series
          */
-        public java.util.List < Series> getSeries() {
+        public java.util.List<Series> getSeries() {
             return this.series;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < Series> series; 
+            private java.util.List<Series> series; 
 
             /**
              * <p>The name of the table.</p>
@@ -295,7 +300,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
             /**
              * <p>Details of the audit logs.</p>
              */
-            public Builder series(java.util.List < Series> series) {
+            public Builder series(java.util.List<Series> series) {
                 this.series = series;
                 return this;
             }

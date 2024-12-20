@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListStreamingJobsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("JobItems")
-    private java.util.List < JobItems> jobItems;
+    private java.util.List<JobItems> jobItems;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
     /**
      * @return jobItems
      */
-    public java.util.List < JobItems> getJobItems() {
+    public java.util.List<JobItems> getJobItems() {
         return this.jobItems;
     }
 
@@ -79,7 +84,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < JobItems> jobItems; 
+        private java.util.List<JobItems> jobItems; 
         private Integer pageNumber; 
         private Integer pageRecordCount; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
         /**
          * <p>The queried jobs.</p>
          */
-        public Builder jobItems(java.util.List < JobItems> jobItems) {
+        public Builder jobItems(java.util.List<JobItems> jobItems) {
             this.jobItems = jobItems;
             return this;
         }
@@ -166,7 +171,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
         private String dataSourceName;
 
         @com.aliyun.core.annotation.NameInMap("DestColumns")
-        private java.util.List < String > destColumns;
+        private java.util.List<String> destColumns;
 
         @com.aliyun.core.annotation.NameInMap("DestDatabase")
         private String destDatabase;
@@ -193,7 +198,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
         private String jobName;
 
         @com.aliyun.core.annotation.NameInMap("MatchColumns")
-        private java.util.List < String > matchColumns;
+        private java.util.List<String> matchColumns;
 
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
@@ -205,13 +210,13 @@ public class ListStreamingJobsResponseBody extends TeaModel {
         private String password;
 
         @com.aliyun.core.annotation.NameInMap("SrcColumns")
-        private java.util.List < String > srcColumns;
+        private java.util.List<String> srcColumns;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("UpdateColumns")
-        private java.util.List < String > updateColumns;
+        private java.util.List<String> updateColumns;
 
         @com.aliyun.core.annotation.NameInMap("WriteMode")
         private String writeMode;
@@ -287,7 +292,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
         /**
          * @return destColumns
          */
-        public java.util.List < String > getDestColumns() {
+        public java.util.List<String> getDestColumns() {
             return this.destColumns;
         }
 
@@ -350,7 +355,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
         /**
          * @return matchColumns
          */
-        public java.util.List < String > getMatchColumns() {
+        public java.util.List<String> getMatchColumns() {
             return this.matchColumns;
         }
 
@@ -378,7 +383,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
         /**
          * @return srcColumns
          */
-        public java.util.List < String > getSrcColumns() {
+        public java.util.List<String> getSrcColumns() {
             return this.srcColumns;
         }
 
@@ -392,7 +397,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
         /**
          * @return updateColumns
          */
-        public java.util.List < String > getUpdateColumns() {
+        public java.util.List<String> getUpdateColumns() {
             return this.updateColumns;
         }
 
@@ -409,7 +414,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             private String createTime; 
             private String dataSourceId; 
             private String dataSourceName; 
-            private java.util.List < String > destColumns; 
+            private java.util.List<String> destColumns; 
             private String destDatabase; 
             private String destSchema; 
             private String destTable; 
@@ -418,13 +423,13 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             private String jobDescription; 
             private String jobId; 
             private String jobName; 
-            private java.util.List < String > matchColumns; 
+            private java.util.List<String> matchColumns; 
             private String mode; 
             private String modifyTime; 
             private String password; 
-            private java.util.List < String > srcColumns; 
+            private java.util.List<String> srcColumns; 
             private String status; 
-            private java.util.List < String > updateColumns; 
+            private java.util.List<String> updateColumns; 
             private String writeMode; 
 
             /**
@@ -485,7 +490,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             /**
              * <p>The mapped fields in the destination table.</p>
              */
-            public Builder destColumns(java.util.List < String > destColumns) {
+            public Builder destColumns(java.util.List<String> destColumns) {
                 this.destColumns = destColumns;
                 return this;
             }
@@ -585,7 +590,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             /**
              * <p>The update condition columns that are used to join the source data and the destination table. Typically, the columns are all the primary key columns of the destination table. If the values of all columns specified by this parameter in different rows are the same, the rows are considered duplicates.</p>
              */
-            public Builder matchColumns(java.util.List < String > matchColumns) {
+            public Builder matchColumns(java.util.List<String> matchColumns) {
                 this.matchColumns = matchColumns;
                 return this;
             }
@@ -630,7 +635,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             /**
              * <p>The source fields.</p>
              */
-            public Builder srcColumns(java.util.List < String > srcColumns) {
+            public Builder srcColumns(java.util.List<String> srcColumns) {
                 this.srcColumns = srcColumns;
                 return this;
             }
@@ -655,7 +660,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             /**
              * <p>The columns to be updated if a row of data meets the update condition. Typically, the columns are all non-primary key columns of the destination table. When the columns specified by the MatchColumns parameter are used as conditions to join the source data and the destination table, data in columns of the UpdateColumns type is updated if data is matched.</p>
              */
-            public Builder updateColumns(java.util.List < String > updateColumns) {
+            public Builder updateColumns(java.util.List<String> updateColumns) {
                 this.updateColumns = updateColumns;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class CreateStreamingJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestColumns")
-    private java.util.List < String > destColumns;
+    private java.util.List<String> destColumns;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestDatabase")
@@ -73,7 +78,7 @@ public class CreateStreamingJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MatchColumns")
-    private java.util.List < String > matchColumns;
+    private java.util.List<String> matchColumns;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Mode")
@@ -89,7 +94,7 @@ public class CreateStreamingJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SrcColumns")
-    private java.util.List < String > srcColumns;
+    private java.util.List<String> srcColumns;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TryRun")
@@ -97,7 +102,7 @@ public class CreateStreamingJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UpdateColumns")
-    private java.util.List < String > updateColumns;
+    private java.util.List<String> updateColumns;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WriteMode")
@@ -173,7 +178,7 @@ public class CreateStreamingJobRequest extends Request {
     /**
      * @return destColumns
      */
-    public java.util.List < String > getDestColumns() {
+    public java.util.List<String> getDestColumns() {
         return this.destColumns;
     }
 
@@ -243,7 +248,7 @@ public class CreateStreamingJobRequest extends Request {
     /**
      * @return matchColumns
      */
-    public java.util.List < String > getMatchColumns() {
+    public java.util.List<String> getMatchColumns() {
         return this.matchColumns;
     }
 
@@ -271,7 +276,7 @@ public class CreateStreamingJobRequest extends Request {
     /**
      * @return srcColumns
      */
-    public java.util.List < String > getSrcColumns() {
+    public java.util.List<String> getSrcColumns() {
         return this.srcColumns;
     }
 
@@ -285,7 +290,7 @@ public class CreateStreamingJobRequest extends Request {
     /**
      * @return updateColumns
      */
-    public java.util.List < String > getUpdateColumns() {
+    public java.util.List<String> getUpdateColumns() {
         return this.updateColumns;
     }
 
@@ -301,7 +306,7 @@ public class CreateStreamingJobRequest extends Request {
         private String consistency; 
         private String DBInstanceId; 
         private String dataSourceId; 
-        private java.util.List < String > destColumns; 
+        private java.util.List<String> destColumns; 
         private String destDatabase; 
         private String destSchema; 
         private String destTable; 
@@ -311,13 +316,13 @@ public class CreateStreamingJobRequest extends Request {
         private String jobConfig; 
         private String jobDescription; 
         private String jobName; 
-        private java.util.List < String > matchColumns; 
+        private java.util.List<String> matchColumns; 
         private String mode; 
         private String password; 
         private String regionId; 
-        private java.util.List < String > srcColumns; 
+        private java.util.List<String> srcColumns; 
         private Boolean tryRun; 
-        private java.util.List < String > updateColumns; 
+        private java.util.List<String> updateColumns; 
         private String writeMode; 
 
         private Builder() {
@@ -403,7 +408,7 @@ public class CreateStreamingJobRequest extends Request {
         /**
          * <p>Target data table mapping field list.</p>
          */
-        public Builder destColumns(java.util.List < String > destColumns) {
+        public Builder destColumns(java.util.List<String> destColumns) {
             String destColumnsShrink = shrink(destColumns, "DestColumns", "json");
             this.putQueryParameter("DestColumns", destColumnsShrink);
             this.destColumns = destColumns;
@@ -644,7 +649,7 @@ public class CreateStreamingJobRequest extends Request {
         /**
          * <p>Match columns, usually all primary key columns of the target table. If all column values in this configuration are the same, the two rows of data are considered duplicates.</p>
          */
-        public Builder matchColumns(java.util.List < String > matchColumns) {
+        public Builder matchColumns(java.util.List<String> matchColumns) {
             String matchColumnsShrink = shrink(matchColumns, "MatchColumns", "json");
             this.putQueryParameter("MatchColumns", matchColumnsShrink);
             this.matchColumns = matchColumns;
@@ -697,7 +702,7 @@ public class CreateStreamingJobRequest extends Request {
         /**
          * <p>Source data field list.</p>
          */
-        public Builder srcColumns(java.util.List < String > srcColumns) {
+        public Builder srcColumns(java.util.List<String> srcColumns) {
             String srcColumnsShrink = shrink(srcColumns, "SrcColumns", "json");
             this.putQueryParameter("SrcColumns", srcColumnsShrink);
             this.srcColumns = srcColumns;
@@ -726,7 +731,7 @@ public class CreateStreamingJobRequest extends Request {
         /**
          * <p>Update columns, usually all non-primary key columns of the target table. When data is determined to be duplicate through MatchColumns, updating the UpdateColumns column values will result in new data overwriting old data.</p>
          */
-        public Builder updateColumns(java.util.List < String > updateColumns) {
+        public Builder updateColumns(java.util.List<String> updateColumns) {
             String updateColumnsShrink = shrink(updateColumns, "UpdateColumns", "json");
             this.putQueryParameter("UpdateColumns", updateColumnsShrink);
             this.updateColumns = updateColumns;

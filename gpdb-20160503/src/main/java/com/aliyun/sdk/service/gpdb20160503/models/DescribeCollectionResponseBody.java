@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Metadata")
-    private java.util.Map < String, String > metadata;
+    private java.util.Map<String, String> metadata;
 
     @com.aliyun.core.annotation.NameInMap("Metrics")
     private String metrics;
@@ -98,7 +103,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
     /**
      * @return metadata
      */
-    public java.util.Map < String, String > getMetadata() {
+    public java.util.Map<String, String> getMetadata() {
         return this.metadata;
     }
 
@@ -149,7 +154,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
         private Integer dimension; 
         private String fullTextRetrievalFields; 
         private String message; 
-        private java.util.Map < String, String > metadata; 
+        private java.util.Map<String, String> metadata; 
         private String metrics; 
         private String namespace; 
         private String parser; 
@@ -206,7 +211,7 @@ public class DescribeCollectionResponseBody extends TeaModel {
          * <p>**</p>
          * <p><strong>Warning</strong> Reserved fields such as id, vector, and to_tsvector cannot be used.</p>
          */
-        public Builder metadata(java.util.Map < String, String > metadata) {
+        public Builder metadata(java.util.Map<String, String> metadata) {
             this.metadata = metadata;
             return this;
         }

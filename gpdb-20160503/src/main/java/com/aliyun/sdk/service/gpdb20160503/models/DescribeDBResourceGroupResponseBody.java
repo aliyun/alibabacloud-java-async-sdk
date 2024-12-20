@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
      */
     public static class RoleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Role")
-        private java.util.List < String > role;
+        private java.util.List<String> role;
 
         private RoleList(Builder builder) {
             this.role = builder.role;
@@ -99,17 +104,17 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         /**
          * @return role
          */
-        public java.util.List < String > getRole() {
+        public java.util.List<String> getRole() {
             return this.role;
         }
 
         public static final class Builder {
-            private java.util.List < String > role; 
+            private java.util.List<String> role; 
 
             /**
              * Role.
              */
-            public Builder role(java.util.List < String > role) {
+            public Builder role(java.util.List<String> role) {
                 this.role = role;
                 return this;
             }
@@ -236,7 +241,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
      */
     public static class ResourceGroupItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupItem")
-        private java.util.List < ResourceGroupItem> resourceGroupItem;
+        private java.util.List<ResourceGroupItem> resourceGroupItem;
 
         private ResourceGroupItems(Builder builder) {
             this.resourceGroupItem = builder.resourceGroupItem;
@@ -253,17 +258,17 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         /**
          * @return resourceGroupItem
          */
-        public java.util.List < ResourceGroupItem> getResourceGroupItem() {
+        public java.util.List<ResourceGroupItem> getResourceGroupItem() {
             return this.resourceGroupItem;
         }
 
         public static final class Builder {
-            private java.util.List < ResourceGroupItem> resourceGroupItem; 
+            private java.util.List<ResourceGroupItem> resourceGroupItem; 
 
             /**
              * ResourceGroupItem.
              */
-            public Builder resourceGroupItem(java.util.List < ResourceGroupItem> resourceGroupItem) {
+            public Builder resourceGroupItem(java.util.List<ResourceGroupItem> resourceGroupItem) {
                 this.resourceGroupItem = resourceGroupItem;
                 return this;
             }

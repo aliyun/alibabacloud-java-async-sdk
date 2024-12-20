@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Performances")
-    private java.util.List < Performances> performances;
+    private java.util.List<Performances> performances;
 
     @com.aliyun.core.annotation.NameInMap("PerformancesThreshold")
     private Integer performancesThreshold;
@@ -42,7 +47,7 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
     /**
      * @return performances
      */
-    public java.util.List < Performances> getPerformances() {
+    public java.util.List<Performances> getPerformances() {
         return this.performances;
     }
 
@@ -68,7 +73,7 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Performances> performances; 
+        private java.util.List<Performances> performances; 
         private Integer performancesThreshold; 
         private Boolean performancesTruncated; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
         /**
          * <p>Details of query execution.</p>
          */
-        public Builder performances(java.util.List < Performances> performances) {
+        public Builder performances(java.util.List<Performances> performances) {
             this.performances = performances;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
      */
     public static class ColumnMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnMetadata")
-        private java.util.List < ColumnMetadata > columnMetadata;
+        private java.util.List<ColumnMetadata> columnMetadata;
 
         private ColumnMetadata(Builder builder) {
             this.columnMetadata = builder.columnMetadata;
@@ -264,17 +269,17 @@ public class ExecuteStatementResponseBody extends TeaModel {
         /**
          * @return columnMetadata
          */
-        public java.util.List < ColumnMetadata > getColumnMetadata() {
+        public java.util.List<ColumnMetadata> getColumnMetadata() {
             return this.columnMetadata;
         }
 
         public static final class Builder {
-            private java.util.List < ColumnMetadata > columnMetadata; 
+            private java.util.List<ColumnMetadata> columnMetadata; 
 
             /**
              * ColumnMetadata.
              */
-            public Builder columnMetadata(java.util.List < ColumnMetadata > columnMetadata) {
+            public Builder columnMetadata(java.util.List<ColumnMetadata> columnMetadata) {
                 this.columnMetadata = columnMetadata;
                 return this;
             }
@@ -294,7 +299,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
      */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Record")
-        private java.util.List < Field > record;
+        private java.util.List<Field> record;
 
         private Records(Builder builder) {
             this.record = builder.record;
@@ -311,17 +316,17 @@ public class ExecuteStatementResponseBody extends TeaModel {
         /**
          * @return record
          */
-        public java.util.List < Field > getRecord() {
+        public java.util.List<Field> getRecord() {
             return this.record;
         }
 
         public static final class Builder {
-            private java.util.List < Field > record; 
+            private java.util.List<Field> record; 
 
             /**
              * Record.
              */
-            public Builder record(java.util.List < Field > record) {
+            public Builder record(java.util.List<Field> record) {
                 this.record = record;
                 return this;
             }
@@ -341,7 +346,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
      */
     public static class DataRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Records")
-        private java.util.List < Records> records;
+        private java.util.List<Records> records;
 
         private DataRecords(Builder builder) {
             this.records = builder.records;
@@ -358,17 +363,17 @@ public class ExecuteStatementResponseBody extends TeaModel {
         /**
          * @return records
          */
-        public java.util.List < Records> getRecords() {
+        public java.util.List<Records> getRecords() {
             return this.records;
         }
 
         public static final class Builder {
-            private java.util.List < Records> records; 
+            private java.util.List<Records> records; 
 
             /**
              * Records.
              */
-            public Builder records(java.util.List < Records> records) {
+            public Builder records(java.util.List<Records> records) {
                 this.records = records;
                 return this;
             }

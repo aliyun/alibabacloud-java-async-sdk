@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class TextEmbeddingRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Input")
-    private java.util.List < String > input;
+    private java.util.List<String> input;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Model")
@@ -66,7 +71,7 @@ public class TextEmbeddingRequest extends Request {
     /**
      * @return input
      */
-    public java.util.List < String > getInput() {
+    public java.util.List<String> getInput() {
         return this.input;
     }
 
@@ -93,7 +98,7 @@ public class TextEmbeddingRequest extends Request {
 
     public static final class Builder extends Request.Builder<TextEmbeddingRequest, Builder> {
         private String DBInstanceId; 
-        private java.util.List < String > input; 
+        private java.util.List<String> input; 
         private String model; 
         private Long ownerId; 
         private String regionId; 
@@ -126,7 +131,7 @@ public class TextEmbeddingRequest extends Request {
         /**
          * Input.
          */
-        public Builder input(java.util.List < String > input) {
+        public Builder input(java.util.List<String> input) {
             String inputShrink = shrink(input, "Input", "json");
             this.putBodyParameter("Input", inputShrink);
             this.input = input;

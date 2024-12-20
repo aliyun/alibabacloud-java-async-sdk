@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     private String endTime;
 
     @com.aliyun.core.annotation.NameInMap("PerformanceKeys")
-    private java.util.List < PerformanceKeys> performanceKeys;
+    private java.util.List<PerformanceKeys> performanceKeys;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     /**
      * @return performanceKeys
      */
-    public java.util.List < PerformanceKeys> getPerformanceKeys() {
+    public java.util.List<PerformanceKeys> getPerformanceKeys() {
         return this.performanceKeys;
     }
 
@@ -81,7 +86,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public static final class Builder {
         private String DBClusterId; 
         private String endTime; 
-        private java.util.List < PerformanceKeys> performanceKeys; 
+        private java.util.List<PerformanceKeys> performanceKeys; 
         private String requestId; 
         private String startTime; 
 
@@ -110,7 +115,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         /**
          * <p>The name of the performance metric. For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>
          */
-        public Builder performanceKeys(java.util.List < PerformanceKeys> performanceKeys) {
+        public Builder performanceKeys(java.util.List<PerformanceKeys> performanceKeys) {
             this.performanceKeys = performanceKeys;
             return this;
         }
@@ -151,7 +156,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
      */
     public static class Values extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Point")
-        private java.util.List < String > point;
+        private java.util.List<String> point;
 
         private Values(Builder builder) {
             this.point = builder.point;
@@ -168,17 +173,17 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         /**
          * @return point
          */
-        public java.util.List < String > getPoint() {
+        public java.util.List<String> getPoint() {
             return this.point;
         }
 
         public static final class Builder {
-            private java.util.List < String > point; 
+            private java.util.List<String> point; 
 
             /**
              * <p>The value of the performance metric and the time when the metric value was collected.</p>
              */
-            public Builder point(java.util.List < String > point) {
+            public Builder point(java.util.List<String> point) {
                 this.point = point;
                 return this;
             }
@@ -204,7 +209,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         private String role;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < Values> values;
+        private java.util.List<Values> values;
 
         private Series(Builder builder) {
             this.name = builder.name;
@@ -237,14 +242,14 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < Values> getValues() {
+        public java.util.List<Values> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String name; 
             private String role; 
-            private java.util.List < Values> values; 
+            private java.util.List<Values> values; 
 
             /**
              * <p>The name of the compute node or compute group.</p>
@@ -276,7 +281,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             /**
              * <p>The value of the performance metric collected at a point in time.</p>
              */
-            public Builder values(java.util.List < Values> values) {
+            public Builder values(java.util.List<Values> values) {
                 this.values = values;
                 return this;
             }
@@ -299,7 +304,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Series")
-        private java.util.List < Series> series;
+        private java.util.List<Series> series;
 
         @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
@@ -328,7 +333,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         /**
          * @return series
          */
-        public java.util.List < Series> getSeries() {
+        public java.util.List<Series> getSeries() {
             return this.series;
         }
 
@@ -341,7 +346,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
-            private java.util.List < Series> series; 
+            private java.util.List<Series> series; 
             private String unit; 
 
             /**
@@ -358,7 +363,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             /**
              * <p>Details of the performance metric of a node.</p>
              */
-            public Builder series(java.util.List < Series> series) {
+            public Builder series(java.util.List<Series> series) {
                 this.series = series;
                 return this;
             }

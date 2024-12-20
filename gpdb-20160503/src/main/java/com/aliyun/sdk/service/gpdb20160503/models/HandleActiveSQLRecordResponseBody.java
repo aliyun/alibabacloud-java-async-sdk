@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Results")
-    private java.util.List < Results> results;
+    private java.util.List<Results> results;
 
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
@@ -56,7 +61,7 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
     /**
      * @return results
      */
-    public java.util.List < Results> getResults() {
+    public java.util.List<Results> getResults() {
         return this.results;
     }
 
@@ -70,7 +75,7 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
     public static final class Builder {
         private String DBInstanceId; 
         private String requestId; 
-        private java.util.List < Results> results; 
+        private java.util.List<Results> results; 
         private String status; 
 
         /**
@@ -98,7 +103,7 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         /**
          * <p>The processing result of the active query.</p>
          */
-        public Builder results(java.util.List < Results> results) {
+        public Builder results(java.util.List<Results> results) {
             this.results = results;
             return this;
         }

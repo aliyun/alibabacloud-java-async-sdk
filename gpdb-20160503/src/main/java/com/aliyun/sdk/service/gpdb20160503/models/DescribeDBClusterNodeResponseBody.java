@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.NameInMap("Nodes")
-    private java.util.List < Nodes> nodes;
+    private java.util.List<Nodes> nodes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
     /**
      * @return nodes
      */
-    public java.util.List < Nodes> getNodes() {
+    public java.util.List<Nodes> getNodes() {
         return this.nodes;
     }
 
@@ -58,7 +63,7 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
 
     public static final class Builder {
         private String DBClusterId; 
-        private java.util.List < Nodes> nodes; 
+        private java.util.List<Nodes> nodes; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
         /**
          * <p>The name of the node.</p>
          */
-        public Builder nodes(java.util.List < Nodes> nodes) {
+        public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
             return this;
         }

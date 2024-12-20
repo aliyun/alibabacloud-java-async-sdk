@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class StatementData extends TeaModel {
     private String id;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < String > parameters;
+    private java.util.List<String> parameters;
 
     @com.aliyun.core.annotation.NameInMap("SecretArn")
     private String secretArn;
@@ -31,7 +36,7 @@ public class StatementData extends TeaModel {
     private String sql;
 
     @com.aliyun.core.annotation.NameInMap("Sqls")
-    private java.util.List < String > sqls;
+    private java.util.List<String> sqls;
 
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
@@ -83,7 +88,7 @@ public class StatementData extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.List < String > getParameters() {
+    public java.util.List<String> getParameters() {
         return this.parameters;
     }
 
@@ -104,7 +109,7 @@ public class StatementData extends TeaModel {
     /**
      * @return sqls
      */
-    public java.util.List < String > getSqls() {
+    public java.util.List<String> getSqls() {
         return this.sqls;
     }
 
@@ -126,10 +131,10 @@ public class StatementData extends TeaModel {
         private String createdAt; 
         private String database; 
         private String id; 
-        private java.util.List < String > parameters; 
+        private java.util.List<String> parameters; 
         private String secretArn; 
         private String sql; 
-        private java.util.List < String > sqls; 
+        private java.util.List<String> sqls; 
         private String status; 
         private String updatedAt; 
 
@@ -160,7 +165,7 @@ public class StatementData extends TeaModel {
         /**
          * Parameters.
          */
-        public Builder parameters(java.util.List < String > parameters) {
+        public Builder parameters(java.util.List<String> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -184,7 +189,7 @@ public class StatementData extends TeaModel {
         /**
          * Sqls.
          */
-        public Builder sqls(java.util.List < String > sqls) {
+        public Builder sqls(java.util.List<String> sqls) {
             this.sqls = sqls;
             return this;
         }

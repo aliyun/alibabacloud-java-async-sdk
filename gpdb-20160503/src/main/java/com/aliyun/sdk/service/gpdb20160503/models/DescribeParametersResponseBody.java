@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeParametersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeParametersResponseBody extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -46,13 +51,13 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String requestId; 
 
         /**
          * <p>The queried configuration parameters.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.parameters = parameters;
             return this;
         }

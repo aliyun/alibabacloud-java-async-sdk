@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class SetDataShareInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > instanceList;
+    private java.util.List<String> instanceList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationType")
@@ -55,7 +60,7 @@ public class SetDataShareInstanceRequest extends Request {
     /**
      * @return instanceList
      */
-    public java.util.List < String > getInstanceList() {
+    public java.util.List<String> getInstanceList() {
         return this.instanceList;
     }
 
@@ -81,7 +86,7 @@ public class SetDataShareInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetDataShareInstanceRequest, Builder> {
-        private java.util.List < String > instanceList; 
+        private java.util.List<String> instanceList; 
         private String operationType; 
         private Long ownerId; 
         private String regionId; 
@@ -105,7 +110,7 @@ public class SetDataShareInstanceRequest extends Request {
          * </blockquote>
          * <p>This parameter is required.</p>
          */
-        public Builder instanceList(java.util.List < String > instanceList) {
+        public Builder instanceList(java.util.List<String> instanceList) {
             String instanceListShrink = shrink(instanceList, "InstanceList", "json");
             this.putQueryParameter("InstanceList", instanceListShrink);
             this.instanceList = instanceList;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -324,7 +329,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
      */
     public static class DBInstanceNetInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceNetInfo")
-        private java.util.List < DBInstanceNetInfo> DBInstanceNetInfo;
+        private java.util.List<DBInstanceNetInfo> DBInstanceNetInfo;
 
         private DBInstanceNetInfos(Builder builder) {
             this.DBInstanceNetInfo = builder.DBInstanceNetInfo;
@@ -341,17 +346,17 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         /**
          * @return DBInstanceNetInfo
          */
-        public java.util.List < DBInstanceNetInfo> getDBInstanceNetInfo() {
+        public java.util.List<DBInstanceNetInfo> getDBInstanceNetInfo() {
             return this.DBInstanceNetInfo;
         }
 
         public static final class Builder {
-            private java.util.List < DBInstanceNetInfo> DBInstanceNetInfo; 
+            private java.util.List<DBInstanceNetInfo> DBInstanceNetInfo; 
 
             /**
              * DBInstanceNetInfo.
              */
-            public Builder DBInstanceNetInfo(java.util.List < DBInstanceNetInfo> DBInstanceNetInfo) {
+            public Builder DBInstanceNetInfo(java.util.List<DBInstanceNetInfo> DBInstanceNetInfo) {
                 this.DBInstanceNetInfo = DBInstanceNetInfo;
                 return this;
             }

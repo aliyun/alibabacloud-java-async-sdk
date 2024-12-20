@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -388,7 +393,7 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
      */
     public static class DataSourceItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RemoteDataSources")
-        private java.util.List < RemoteDataSources> remoteDataSources;
+        private java.util.List<RemoteDataSources> remoteDataSources;
 
         private DataSourceItems(Builder builder) {
             this.remoteDataSources = builder.remoteDataSources;
@@ -405,17 +410,17 @@ public class ListRemoteADBDataSourcesResponseBody extends TeaModel {
         /**
          * @return remoteDataSources
          */
-        public java.util.List < RemoteDataSources> getRemoteDataSources() {
+        public java.util.List<RemoteDataSources> getRemoteDataSources() {
             return this.remoteDataSources;
         }
 
         public static final class Builder {
-            private java.util.List < RemoteDataSources> remoteDataSources; 
+            private java.util.List<RemoteDataSources> remoteDataSources; 
 
             /**
              * RemoteDataSources.
              */
-            public Builder remoteDataSources(java.util.List < RemoteDataSources> remoteDataSources) {
+            public Builder remoteDataSources(java.util.List<RemoteDataSources> remoteDataSources) {
                 this.remoteDataSources = remoteDataSources;
                 return this;
             }

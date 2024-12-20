@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
     private String namespace;
 
     @com.aliyun.core.annotation.NameInMap("NamespaceInfo")
-    private java.util.Map < String, String > namespaceInfo;
+    private java.util.Map<String, String> namespaceInfo;
 
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -75,7 +80,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
     /**
      * @return namespaceInfo
      */
-    public java.util.Map < String, String > getNamespaceInfo() {
+    public java.util.Map<String, String> getNamespaceInfo() {
         return this.namespaceInfo;
     }
 
@@ -104,7 +109,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         private String DBInstanceId; 
         private String message; 
         private String namespace; 
-        private java.util.Map < String, String > namespaceInfo; 
+        private java.util.Map<String, String> namespaceInfo; 
         private String regionId; 
         private String requestId; 
         private String status; 
@@ -145,7 +150,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         /**
          * <p>The queried namespace.</p>
          */
-        public Builder namespaceInfo(java.util.Map < String, String > namespaceInfo) {
+        public Builder namespaceInfo(java.util.Map<String, String> namespaceInfo) {
             this.namespaceInfo = namespaceInfo;
             return this;
         }
