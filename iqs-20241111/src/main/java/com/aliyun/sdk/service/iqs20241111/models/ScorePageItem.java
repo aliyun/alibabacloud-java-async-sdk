@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iqs20241111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class ScorePageItem extends TeaModel {
     private String htmlTitle;
 
     @com.aliyun.core.annotation.NameInMap("images")
-    private java.util.List < IncludeImage > images;
+    private java.util.List<IncludeImage> images;
 
     @com.aliyun.core.annotation.NameInMap("link")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -48,7 +53,7 @@ public class ScorePageItem extends TeaModel {
     private String mime;
 
     @com.aliyun.core.annotation.NameInMap("pageMap")
-    private java.util.Map < String, String > pageMap;
+    private java.util.Map<String, String> pageMap;
 
     @com.aliyun.core.annotation.NameInMap("publishTime")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -135,7 +140,7 @@ public class ScorePageItem extends TeaModel {
     /**
      * @return images
      */
-    public java.util.List < IncludeImage > getImages() {
+    public java.util.List<IncludeImage> getImages() {
         return this.images;
     }
 
@@ -163,7 +168,7 @@ public class ScorePageItem extends TeaModel {
     /**
      * @return pageMap
      */
-    public java.util.Map < String, String > getPageMap() {
+    public java.util.Map<String, String> getPageMap() {
         return this.pageMap;
     }
 
@@ -202,11 +207,11 @@ public class ScorePageItem extends TeaModel {
         private String hostname; 
         private String htmlSnippet; 
         private String htmlTitle; 
-        private java.util.List < IncludeImage > images; 
+        private java.util.List<IncludeImage> images; 
         private String link; 
         private String mainText; 
         private String mime; 
-        private java.util.Map < String, String > pageMap; 
+        private java.util.Map<String, String> pageMap; 
         private Long publishTime; 
         private Double score; 
         private String siteLabel; 
@@ -275,7 +280,7 @@ public class ScorePageItem extends TeaModel {
         /**
          * images.
          */
-        public Builder images(java.util.List < IncludeImage > images) {
+        public Builder images(java.util.List<IncludeImage> images) {
             this.images = images;
             return this;
         }
@@ -310,7 +315,7 @@ public class ScorePageItem extends TeaModel {
         /**
          * pageMap.
          */
-        public Builder pageMap(java.util.Map < String, String > pageMap) {
+        public Builder pageMap(java.util.Map<String, String> pageMap) {
             this.pageMap = pageMap;
             return this;
         }

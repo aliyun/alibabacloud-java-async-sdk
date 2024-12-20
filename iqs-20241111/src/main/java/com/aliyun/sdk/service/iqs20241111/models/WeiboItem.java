@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.iqs20241111.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class WeiboItem extends TeaModel {
     private String htmlSnippet;
 
     @com.aliyun.core.annotation.NameInMap("images")
-    private java.util.List < String > images;
+    private java.util.List<String> images;
 
     @com.aliyun.core.annotation.NameInMap("link")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -79,7 +84,7 @@ public class WeiboItem extends TeaModel {
     /**
      * @return images
      */
-    public java.util.List < String > getImages() {
+    public java.util.List<String> getImages() {
         return this.images;
     }
 
@@ -108,7 +113,7 @@ public class WeiboItem extends TeaModel {
         private String cardType; 
         private String homepageLink; 
         private String htmlSnippet; 
-        private java.util.List < String > images; 
+        private java.util.List<String> images; 
         private String link; 
         private String publishDisplayTime; 
         private String username; 
@@ -146,7 +151,7 @@ public class WeiboItem extends TeaModel {
         /**
          * images.
          */
-        public Builder images(java.util.List < String > images) {
+        public Builder images(java.util.List<String> images) {
             this.images = images;
             return this;
         }
