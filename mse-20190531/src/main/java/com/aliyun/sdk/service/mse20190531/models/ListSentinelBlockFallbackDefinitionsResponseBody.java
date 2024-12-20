@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -46,7 +51,7 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,7 +84,7 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -142,7 +147,7 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         private String appName;
 
         @com.aliyun.core.annotation.NameInMap("FallbackBehavior")
-        private java.util.Map < String, ? > fallbackBehavior;
+        private java.util.Map<String, ?> fallbackBehavior;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -157,7 +162,7 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         private String resourceClassification;
 
         @com.aliyun.core.annotation.NameInMap("TargetMap")
-        private java.util.Map < String, ? > targetMap;
+        private java.util.Map<String, ?> targetMap;
 
         private Data(Builder builder) {
             this.appName = builder.appName;
@@ -187,7 +192,7 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         /**
          * @return fallbackBehavior
          */
-        public java.util.Map < String, ? > getFallbackBehavior() {
+        public java.util.Map<String, ?> getFallbackBehavior() {
             return this.fallbackBehavior;
         }
 
@@ -222,18 +227,18 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         /**
          * @return targetMap
          */
-        public java.util.Map < String, ? > getTargetMap() {
+        public java.util.Map<String, ?> getTargetMap() {
             return this.targetMap;
         }
 
         public static final class Builder {
             private String appName; 
-            private java.util.Map < String, ? > fallbackBehavior; 
+            private java.util.Map<String, ?> fallbackBehavior; 
             private String id; 
             private String name; 
             private String namespace; 
             private String resourceClassification; 
-            private java.util.Map < String, ? > targetMap; 
+            private java.util.Map<String, ?> targetMap; 
 
             /**
              * AppName.
@@ -246,7 +251,7 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
             /**
              * FallbackBehavior.
              */
-            public Builder fallbackBehavior(java.util.Map < String, ? > fallbackBehavior) {
+            public Builder fallbackBehavior(java.util.Map<String, ?> fallbackBehavior) {
                 this.fallbackBehavior = fallbackBehavior;
                 return this;
             }
@@ -286,7 +291,7 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
             /**
              * TargetMap.
              */
-            public Builder targetMap(java.util.Map < String, ? > targetMap) {
+            public Builder targetMap(java.util.Map<String, ?> targetMap) {
                 this.targetMap = targetMap;
                 return this;
             }

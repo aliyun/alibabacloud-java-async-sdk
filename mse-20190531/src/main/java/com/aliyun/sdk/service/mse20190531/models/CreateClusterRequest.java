@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -98,7 +103,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
@@ -283,7 +288,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -321,7 +326,7 @@ public class CreateClusterRequest extends Request {
         private String requestPars; 
         private String resourceGroupId; 
         private String securityGroupType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
 
@@ -478,22 +483,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable Internet access (Elastic IP Address) if ConnectionType is set to <code>single_eni</code>.</p>
+         * <p>Specifies whether to enable elastic IP addresses. This parameter is valid only if the ConnectionType parameter is set to <code>single_eni</code>.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>false</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          */
         public Builder eipEnabled(Boolean eipEnabled) {
@@ -653,11 +647,6 @@ public class CreateClusterRequest extends Request {
 
         /**
          * <p>The type of the security group to which the instance belongs. This parameter is valid only if the ConnectionType parameter is set to <code>single_eni</code>.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>enterprise</li>
-         * <li>normal</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>enterprise</p>
@@ -671,7 +660,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The tags to add to the resource. You can specify up to 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

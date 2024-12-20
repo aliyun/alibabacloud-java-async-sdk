@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetMseFeatureSwitchResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.Map < String, ? > result;
+    private java.util.Map<String, ?> result;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -67,7 +72,7 @@ public class GetMseFeatureSwitchResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.Map < String, ? > getResult() {
+    public java.util.Map<String, ?> getResult() {
         return this.result;
     }
 
@@ -82,7 +87,7 @@ public class GetMseFeatureSwitchResponseBody extends TeaModel {
         private String errorCode; 
         private String message; 
         private String requestId; 
-        private java.util.Map < String, ? > result; 
+        private java.util.Map<String, ?> result; 
         private Boolean success; 
 
         /**
@@ -124,7 +129,7 @@ public class GetMseFeatureSwitchResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{&quot;nacos_config_encrypt&quot;: False}</p>
          */
-        public Builder result(java.util.Map < String, ? > result) {
+        public Builder result(java.util.Map<String, ?> result) {
             this.result = result;
             return this;
         }

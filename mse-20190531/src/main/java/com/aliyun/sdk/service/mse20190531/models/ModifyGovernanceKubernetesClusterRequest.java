@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NamespaceInfos")
-    private java.util.List < NamespaceInfos> namespaceInfos;
+    private java.util.List<NamespaceInfos> namespaceInfos;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -68,7 +73,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
     /**
      * @return namespaceInfos
      */
-    public java.util.List < NamespaceInfos> getNamespaceInfos() {
+    public java.util.List<NamespaceInfos> getNamespaceInfos() {
         return this.namespaceInfos;
     }
 
@@ -82,7 +87,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyGovernanceKubernetesClusterRequest, Builder> {
         private String acceptLanguage; 
         private String clusterId; 
-        private java.util.List < NamespaceInfos> namespaceInfos; 
+        private java.util.List<NamespaceInfos> namespaceInfos; 
         private String regionId; 
 
         private Builder() {
@@ -129,7 +134,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         /**
          * <p>The information about the namespace for which Microservices Engine(MSE) Microservices Governance is enabled.</p>
          */
-        public Builder namespaceInfos(java.util.List < NamespaceInfos> namespaceInfos) {
+        public Builder namespaceInfos(java.util.List<NamespaceInfos> namespaceInfos) {
             String namespaceInfosShrink = shrink(namespaceInfos, "NamespaceInfos", "json");
             this.putBodyParameter("NamespaceInfos", namespaceInfosShrink);
             this.namespaceInfos = namespaceInfos;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class AddGatewayAuthRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthResourceList")
-    private java.util.List < AuthResourceList> authResourceList;
+    private java.util.List<AuthResourceList> authResourceList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthResourceMode")
@@ -74,7 +79,7 @@ public class AddGatewayAuthRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScopesList")
-    private java.util.List < String > scopesList;
+    private java.util.List<String> scopesList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -161,7 +166,7 @@ public class AddGatewayAuthRequest extends Request {
     /**
      * @return authResourceList
      */
-    public java.util.List < AuthResourceList> getAuthResourceList() {
+    public java.util.List<AuthResourceList> getAuthResourceList() {
         return this.authResourceList;
     }
 
@@ -252,7 +257,7 @@ public class AddGatewayAuthRequest extends Request {
     /**
      * @return scopesList
      */
-    public java.util.List < String > getScopesList() {
+    public java.util.List<String> getScopesList() {
         return this.scopesList;
     }
 
@@ -308,7 +313,7 @@ public class AddGatewayAuthRequest extends Request {
     public static final class Builder extends Request.Builder<AddGatewayAuthRequest, Builder> {
         private String acceptLanguage; 
         private String authResourceConfig; 
-        private java.util.List < AuthResourceList> authResourceList; 
+        private java.util.List<AuthResourceList> authResourceList; 
         private Integer authResourceMode; 
         private String clientId; 
         private String clientSecret; 
@@ -321,7 +326,7 @@ public class AddGatewayAuthRequest extends Request {
         private String loginUrl; 
         private String name; 
         private String redirectUrl; 
-        private java.util.List < String > scopesList; 
+        private java.util.List<String> scopesList; 
         private Boolean status; 
         private String sub; 
         private String tokenName; 
@@ -382,7 +387,7 @@ public class AddGatewayAuthRequest extends Request {
         /**
          * <p>The information about the resource to be authorized.</p>
          */
-        public Builder authResourceList(java.util.List < AuthResourceList> authResourceList) {
+        public Builder authResourceList(java.util.List<AuthResourceList> authResourceList) {
             String authResourceListShrink = shrink(authResourceList, "AuthResourceList", "json");
             this.putQueryParameter("AuthResourceList", authResourceListShrink);
             this.authResourceList = authResourceList;
@@ -531,7 +536,7 @@ public class AddGatewayAuthRequest extends Request {
         /**
          * <p>The OIDC scope.</p>
          */
-        public Builder scopesList(java.util.List < String > scopesList) {
+        public Builder scopesList(java.util.List<String> scopesList) {
             String scopesListShrink = shrink(scopesList, "ScopesList", "json");
             this.putQueryParameter("ScopesList", scopesListShrink);
             this.scopesList = scopesList;
@@ -724,7 +729,7 @@ public class AddGatewayAuthRequest extends Request {
      */
     public static class AuthResourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthResourceHeaderList")
-        private java.util.List < AuthResourceHeaderList> authResourceHeaderList;
+        private java.util.List<AuthResourceHeaderList> authResourceHeaderList;
 
         @com.aliyun.core.annotation.NameInMap("DomainId")
         private Long domainId;
@@ -757,7 +762,7 @@ public class AddGatewayAuthRequest extends Request {
         /**
          * @return authResourceHeaderList
          */
-        public java.util.List < AuthResourceHeaderList> getAuthResourceHeaderList() {
+        public java.util.List<AuthResourceHeaderList> getAuthResourceHeaderList() {
             return this.authResourceHeaderList;
         }
 
@@ -790,7 +795,7 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < AuthResourceHeaderList> authResourceHeaderList; 
+            private java.util.List<AuthResourceHeaderList> authResourceHeaderList; 
             private Long domainId; 
             private Boolean ignoreCase; 
             private String matchType; 
@@ -799,7 +804,7 @@ public class AddGatewayAuthRequest extends Request {
             /**
              * AuthResourceHeaderList.
              */
-            public Builder authResourceHeaderList(java.util.List < AuthResourceHeaderList> authResourceHeaderList) {
+            public Builder authResourceHeaderList(java.util.List<AuthResourceHeaderList> authResourceHeaderList) {
                 this.authResourceHeaderList = authResourceHeaderList;
                 return this;
             }
@@ -857,10 +862,10 @@ public class AddGatewayAuthRequest extends Request {
      */
     public static class ExternalAuthZJSON extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowRequestHeaders")
-        private java.util.List < String > allowRequestHeaders;
+        private java.util.List<String> allowRequestHeaders;
 
         @com.aliyun.core.annotation.NameInMap("AllowUpstreamHeaders")
-        private java.util.List < String > allowUpstreamHeaders;
+        private java.util.List<String> allowUpstreamHeaders;
 
         @com.aliyun.core.annotation.NameInMap("BodyMaxBytes")
         private Integer bodyMaxBytes;
@@ -910,14 +915,14 @@ public class AddGatewayAuthRequest extends Request {
         /**
          * @return allowRequestHeaders
          */
-        public java.util.List < String > getAllowRequestHeaders() {
+        public java.util.List<String> getAllowRequestHeaders() {
             return this.allowRequestHeaders;
         }
 
         /**
          * @return allowUpstreamHeaders
          */
-        public java.util.List < String > getAllowUpstreamHeaders() {
+        public java.util.List<String> getAllowUpstreamHeaders() {
             return this.allowUpstreamHeaders;
         }
 
@@ -978,8 +983,8 @@ public class AddGatewayAuthRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > allowRequestHeaders; 
-            private java.util.List < String > allowUpstreamHeaders; 
+            private java.util.List<String> allowRequestHeaders; 
+            private java.util.List<String> allowUpstreamHeaders; 
             private Integer bodyMaxBytes; 
             private Boolean isRestrict; 
             private String prefixPath; 
@@ -992,7 +997,7 @@ public class AddGatewayAuthRequest extends Request {
             /**
              * <p>The header that can be carried in an authentication request.</p>
              */
-            public Builder allowRequestHeaders(java.util.List < String > allowRequestHeaders) {
+            public Builder allowRequestHeaders(java.util.List<String> allowRequestHeaders) {
                 this.allowRequestHeaders = allowRequestHeaders;
                 return this;
             }
@@ -1000,7 +1005,7 @@ public class AddGatewayAuthRequest extends Request {
             /**
              * <p>The header that can be retained in an authentication response.</p>
              */
-            public Builder allowUpstreamHeaders(java.util.List < String > allowUpstreamHeaders) {
+            public Builder allowUpstreamHeaders(java.util.List<String> allowUpstreamHeaders) {
                 this.allowUpstreamHeaders = allowUpstreamHeaders;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Configurations")
-    private java.util.List < Configurations> configurations;
+    private java.util.List<Configurations> configurations;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -73,7 +78,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
     /**
      * @return configurations
      */
-    public java.util.List < Configurations> getConfigurations() {
+    public java.util.List<Configurations> getConfigurations() {
         return this.configurations;
     }
 
@@ -135,7 +140,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Configurations> configurations; 
+        private java.util.List<Configurations> configurations; 
         private String errorCode; 
         private String httpCode; 
         private String message; 
@@ -159,7 +164,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         /**
          * <p>The configurations.</p>
          */
-        public Builder configurations(java.util.List < Configurations> configurations) {
+        public Builder configurations(java.util.List<Configurations> configurations) {
             this.configurations = configurations;
             return this;
         }

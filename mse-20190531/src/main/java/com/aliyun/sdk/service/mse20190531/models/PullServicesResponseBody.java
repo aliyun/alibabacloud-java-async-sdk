@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class PullServicesResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -57,7 +62,7 @@ public class PullServicesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class PullServicesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -111,7 +116,7 @@ public class PullServicesResponseBody extends TeaModel {
         /**
          * <p>The returned data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -189,6 +194,9 @@ public class PullServicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceId")
         private String sourceId;
 
+        @com.aliyun.core.annotation.NameInMap("SourceIdList")
+        private java.util.List<Long> sourceIdList;
+
         @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
@@ -197,6 +205,7 @@ public class PullServicesResponseBody extends TeaModel {
             this.name = builder.name;
             this.namespace = builder.namespace;
             this.sourceId = builder.sourceId;
+            this.sourceIdList = builder.sourceIdList;
             this.sourceType = builder.sourceType;
         }
 
@@ -237,6 +246,13 @@ public class PullServicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceIdList
+         */
+        public java.util.List<Long> getSourceIdList() {
+            return this.sourceIdList;
+        }
+
+        /**
          * @return sourceType
          */
         public String getSourceType() {
@@ -248,6 +264,7 @@ public class PullServicesResponseBody extends TeaModel {
             private String name; 
             private String namespace; 
             private String sourceId; 
+            private java.util.List<Long> sourceIdList; 
             private String sourceType; 
 
             /**
@@ -295,6 +312,14 @@ public class PullServicesResponseBody extends TeaModel {
             }
 
             /**
+             * SourceIdList.
+             */
+            public Builder sourceIdList(java.util.List<Long> sourceIdList) {
+                this.sourceIdList = sourceIdList;
+                return this;
+            }
+
+            /**
              * <p>The type of the service source.</p>
              * 
              * <strong>example:</strong>
@@ -329,7 +354,7 @@ public class PullServicesResponseBody extends TeaModel {
         private String namespaceShowName;
 
         @com.aliyun.core.annotation.NameInMap("Services")
-        private java.util.List < Services> services;
+        private java.util.List<Services> services;
 
         private Data(Builder builder) {
             this.groupName = builder.groupName;
@@ -370,7 +395,7 @@ public class PullServicesResponseBody extends TeaModel {
         /**
          * @return services
          */
-        public java.util.List < Services> getServices() {
+        public java.util.List<Services> getServices() {
             return this.services;
         }
 
@@ -378,7 +403,7 @@ public class PullServicesResponseBody extends TeaModel {
             private String groupName; 
             private String namespace; 
             private String namespaceShowName; 
-            private java.util.List < Services> services; 
+            private java.util.List<Services> services; 
 
             /**
              * <p>The name of the group.</p>
@@ -416,7 +441,7 @@ public class PullServicesResponseBody extends TeaModel {
             /**
              * <p>The information about services.</p>
              */
-            public Builder services(java.util.List < Services> services) {
+            public Builder services(java.util.List<Services> services) {
                 this.services = services;
                 return this;
             }

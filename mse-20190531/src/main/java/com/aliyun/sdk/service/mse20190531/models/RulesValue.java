@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -205,7 +210,7 @@ public class RulesValue extends TeaModel {
         private String operator;
 
         @com.aliyun.core.annotation.NameInMap("nameList")
-        private java.util.List < String > nameList;
+        private java.util.List<String> nameList;
 
         @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
@@ -266,7 +271,7 @@ public class RulesValue extends TeaModel {
         /**
          * @return nameList
          */
-        public java.util.List < String > getNameList() {
+        public java.util.List<String> getNameList() {
             return this.nameList;
         }
 
@@ -322,7 +327,7 @@ public class RulesValue extends TeaModel {
         public static final class Builder {
             private String datum; 
             private String operator; 
-            private java.util.List < String > nameList; 
+            private java.util.List<String> nameList; 
             private String cond; 
             private Integer divisor; 
             private Integer remainder; 
@@ -350,7 +355,7 @@ public class RulesValue extends TeaModel {
             /**
              * nameList.
              */
-            public Builder nameList(java.util.List < String > nameList) {
+            public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
                 return this;
             }
@@ -429,7 +434,7 @@ public class RulesValue extends TeaModel {
         private String condition;
 
         @com.aliyun.core.annotation.NameInMap("restItems")
-        private java.util.List < RestItems> restItems;
+        private java.util.List<RestItems> restItems;
 
         @com.aliyun.core.annotation.NameInMap("triggerPolicy")
         private String triggerPolicy;
@@ -444,10 +449,10 @@ public class RulesValue extends TeaModel {
         private Integer priority;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < String > tags;
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("paths")
-        private java.util.List < String > paths;
+        private java.util.List<String> paths;
 
         @com.aliyun.core.annotation.NameInMap("path")
         private String path;
@@ -482,7 +487,7 @@ public class RulesValue extends TeaModel {
         /**
          * @return restItems
          */
-        public java.util.List < RestItems> getRestItems() {
+        public java.util.List<RestItems> getRestItems() {
             return this.restItems;
         }
 
@@ -517,14 +522,14 @@ public class RulesValue extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
@@ -537,13 +542,13 @@ public class RulesValue extends TeaModel {
 
         public static final class Builder {
             private String condition; 
-            private java.util.List < RestItems> restItems; 
+            private java.util.List<RestItems> restItems; 
             private String triggerPolicy; 
             private Boolean enable; 
             private String appId; 
             private Integer priority; 
-            private java.util.List < String > tags; 
-            private java.util.List < String > paths; 
+            private java.util.List<String> tags; 
+            private java.util.List<String> paths; 
             private String path; 
 
             /**
@@ -557,7 +562,7 @@ public class RulesValue extends TeaModel {
             /**
              * restItems.
              */
-            public Builder restItems(java.util.List < RestItems> restItems) {
+            public Builder restItems(java.util.List<RestItems> restItems) {
                 this.restItems = restItems;
                 return this;
             }
@@ -597,7 +602,7 @@ public class RulesValue extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -605,7 +610,7 @@ public class RulesValue extends TeaModel {
             /**
              * paths.
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }
@@ -636,7 +641,7 @@ public class RulesValue extends TeaModel {
         private String operator;
 
         @com.aliyun.core.annotation.NameInMap("nameList")
-        private java.util.List < String > nameList;
+        private java.util.List<String> nameList;
 
         @com.aliyun.core.annotation.NameInMap("datum")
         private String datum;
@@ -693,7 +698,7 @@ public class RulesValue extends TeaModel {
         /**
          * @return nameList
          */
-        public java.util.List < String > getNameList() {
+        public java.util.List<String> getNameList() {
             return this.nameList;
         }
 
@@ -755,7 +760,7 @@ public class RulesValue extends TeaModel {
 
         public static final class Builder {
             private String operator; 
-            private java.util.List < String > nameList; 
+            private java.util.List<String> nameList; 
             private String datum; 
             private String cond; 
             private Integer divisor; 
@@ -776,7 +781,7 @@ public class RulesValue extends TeaModel {
             /**
              * nameList.
              */
-            public Builder nameList(java.util.List < String > nameList) {
+            public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
                 return this;
             }
@@ -863,7 +868,7 @@ public class RulesValue extends TeaModel {
         private String appId;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < String > tags;
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("triggerPolicy")
         private String triggerPolicy;
@@ -881,13 +886,13 @@ public class RulesValue extends TeaModel {
         private String methodName;
 
         @com.aliyun.core.annotation.NameInMap("paramTypes")
-        private java.util.List < String > paramTypes;
+        private java.util.List<String> paramTypes;
 
         @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
 
         @com.aliyun.core.annotation.NameInMap("argumentItems")
-        private java.util.List < ArgumentItems> argumentItems;
+        private java.util.List<ArgumentItems> argumentItems;
 
         private Dubbo(Builder builder) {
             this.appId = builder.appId;
@@ -920,7 +925,7 @@ public class RulesValue extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
@@ -962,7 +967,7 @@ public class RulesValue extends TeaModel {
         /**
          * @return paramTypes
          */
-        public java.util.List < String > getParamTypes() {
+        public java.util.List<String> getParamTypes() {
             return this.paramTypes;
         }
 
@@ -976,21 +981,21 @@ public class RulesValue extends TeaModel {
         /**
          * @return argumentItems
          */
-        public java.util.List < ArgumentItems> getArgumentItems() {
+        public java.util.List<ArgumentItems> getArgumentItems() {
             return this.argumentItems;
         }
 
         public static final class Builder {
             private String appId; 
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
             private String triggerPolicy; 
             private String serviceName; 
             private String group; 
             private String version; 
             private String methodName; 
-            private java.util.List < String > paramTypes; 
+            private java.util.List<String> paramTypes; 
             private String condition; 
-            private java.util.List < ArgumentItems> argumentItems; 
+            private java.util.List<ArgumentItems> argumentItems; 
 
             /**
              * appId.
@@ -1003,7 +1008,7 @@ public class RulesValue extends TeaModel {
             /**
              * tags.
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -1051,7 +1056,7 @@ public class RulesValue extends TeaModel {
             /**
              * paramTypes.
              */
-            public Builder paramTypes(java.util.List < String > paramTypes) {
+            public Builder paramTypes(java.util.List<String> paramTypes) {
                 this.paramTypes = paramTypes;
                 return this;
             }
@@ -1067,7 +1072,7 @@ public class RulesValue extends TeaModel {
             /**
              * argumentItems.
              */
-            public Builder argumentItems(java.util.List < ArgumentItems> argumentItems) {
+            public Builder argumentItems(java.util.List<ArgumentItems> argumentItems) {
                 this.argumentItems = argumentItems;
                 return this;
             }
@@ -1087,10 +1092,10 @@ public class RulesValue extends TeaModel {
      */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("springcloud")
-        private java.util.List < Springcloud> springcloud;
+        private java.util.List<Springcloud> springcloud;
 
         @com.aliyun.core.annotation.NameInMap("dubbo")
-        private java.util.List < Dubbo> dubbo;
+        private java.util.List<Dubbo> dubbo;
 
         private Rules(Builder builder) {
             this.springcloud = builder.springcloud;
@@ -1108,25 +1113,25 @@ public class RulesValue extends TeaModel {
         /**
          * @return springcloud
          */
-        public java.util.List < Springcloud> getSpringcloud() {
+        public java.util.List<Springcloud> getSpringcloud() {
             return this.springcloud;
         }
 
         /**
          * @return dubbo
          */
-        public java.util.List < Dubbo> getDubbo() {
+        public java.util.List<Dubbo> getDubbo() {
             return this.dubbo;
         }
 
         public static final class Builder {
-            private java.util.List < Springcloud> springcloud; 
-            private java.util.List < Dubbo> dubbo; 
+            private java.util.List<Springcloud> springcloud; 
+            private java.util.List<Dubbo> dubbo; 
 
             /**
              * springcloud.
              */
-            public Builder springcloud(java.util.List < Springcloud> springcloud) {
+            public Builder springcloud(java.util.List<Springcloud> springcloud) {
                 this.springcloud = springcloud;
                 return this;
             }
@@ -1134,7 +1139,7 @@ public class RulesValue extends TeaModel {
             /**
              * dubbo.
              */
-            public Builder dubbo(java.util.List < Dubbo> dubbo) {
+            public Builder dubbo(java.util.List<Dubbo> dubbo) {
                 this.dubbo = dubbo;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -280,7 +285,7 @@ public class GetGatewayResponseBody extends TeaModel {
         private Integer maxReplica;
 
         @com.aliyun.core.annotation.NameInMap("TimePolicyList")
-        private java.util.List < TimePolicyList> timePolicyList;
+        private java.util.List<TimePolicyList> timePolicyList;
 
         private ElasticPolicy(Builder builder) {
             this.elasticType = builder.elasticType;
@@ -313,14 +318,14 @@ public class GetGatewayResponseBody extends TeaModel {
         /**
          * @return timePolicyList
          */
-        public java.util.List < TimePolicyList> getTimePolicyList() {
+        public java.util.List<TimePolicyList> getTimePolicyList() {
             return this.timePolicyList;
         }
 
         public static final class Builder {
             private String elasticType; 
             private Integer maxReplica; 
-            private java.util.List < TimePolicyList> timePolicyList; 
+            private java.util.List<TimePolicyList> timePolicyList; 
 
             /**
              * <p>The type of auto scale-out. Valid value:</p>
@@ -350,7 +355,7 @@ public class GetGatewayResponseBody extends TeaModel {
             /**
              * <p>The policy of scale-out by time.</p>
              */
-            public Builder timePolicyList(java.util.List < TimePolicyList> timePolicyList) {
+            public Builder timePolicyList(java.util.List<TimePolicyList> timePolicyList) {
                 this.timePolicyList = timePolicyList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetServiceListResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -57,7 +62,7 @@ public class GetServiceListResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class GetServiceListResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -111,7 +116,7 @@ public class GetServiceListResponseBody extends TeaModel {
         /**
          * <p>The data entries returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -180,13 +185,13 @@ public class GetServiceListResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("ParameterTypes")
-        private java.util.List < String > parameterTypes;
+        private java.util.List<String> parameterTypes;
 
         @com.aliyun.core.annotation.NameInMap("Paths")
-        private java.util.List < String > paths;
+        private java.util.List<String> paths;
 
         @com.aliyun.core.annotation.NameInMap("RequestMethods")
-        private java.util.List < String > requestMethods;
+        private java.util.List<String> requestMethods;
 
         @com.aliyun.core.annotation.NameInMap("ReturnType")
         private String returnType;
@@ -225,21 +230,21 @@ public class GetServiceListResponseBody extends TeaModel {
         /**
          * @return parameterTypes
          */
-        public java.util.List < String > getParameterTypes() {
+        public java.util.List<String> getParameterTypes() {
             return this.parameterTypes;
         }
 
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
         /**
          * @return requestMethods
          */
-        public java.util.List < String > getRequestMethods() {
+        public java.util.List<String> getRequestMethods() {
             return this.requestMethods;
         }
 
@@ -253,9 +258,9 @@ public class GetServiceListResponseBody extends TeaModel {
         public static final class Builder {
             private String methodController; 
             private String name; 
-            private java.util.List < String > parameterTypes; 
-            private java.util.List < String > paths; 
-            private java.util.List < String > requestMethods; 
+            private java.util.List<String> parameterTypes; 
+            private java.util.List<String> paths; 
+            private java.util.List<String> requestMethods; 
             private String returnType; 
 
             /**
@@ -283,7 +288,7 @@ public class GetServiceListResponseBody extends TeaModel {
             /**
              * <p>The data types of the parameters.</p>
              */
-            public Builder parameterTypes(java.util.List < String > parameterTypes) {
+            public Builder parameterTypes(java.util.List<String> parameterTypes) {
                 this.parameterTypes = parameterTypes;
                 return this;
             }
@@ -291,7 +296,7 @@ public class GetServiceListResponseBody extends TeaModel {
             /**
              * <p>The paths.</p>
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }
@@ -299,7 +304,7 @@ public class GetServiceListResponseBody extends TeaModel {
             /**
              * <p>The methods.</p>
              */
-            public Builder requestMethods(java.util.List < String > requestMethods) {
+            public Builder requestMethods(java.util.List<String> requestMethods) {
                 this.requestMethods = requestMethods;
                 return this;
             }
@@ -339,10 +344,10 @@ public class GetServiceListResponseBody extends TeaModel {
         private String group;
 
         @com.aliyun.core.annotation.NameInMap("Metadata")
-        private java.util.Map < String, ? > metadata;
+        private java.util.Map<String, ?> metadata;
 
         @com.aliyun.core.annotation.NameInMap("Methods")
-        private java.util.List < Methods> methods;
+        private java.util.List<Methods> methods;
 
         @com.aliyun.core.annotation.NameInMap("RegistryType")
         private String registryType;
@@ -404,14 +409,14 @@ public class GetServiceListResponseBody extends TeaModel {
         /**
          * @return metadata
          */
-        public java.util.Map < String, ? > getMetadata() {
+        public java.util.Map<String, ?> getMetadata() {
             return this.metadata;
         }
 
         /**
          * @return methods
          */
-        public java.util.List < Methods> getMethods() {
+        public java.util.List<Methods> getMethods() {
             return this.methods;
         }
 
@@ -454,8 +459,8 @@ public class GetServiceListResponseBody extends TeaModel {
             private String dubboApplicationName; 
             private String edasAppName; 
             private String group; 
-            private java.util.Map < String, ? > metadata; 
-            private java.util.List < Methods> methods; 
+            private java.util.Map<String, ?> metadata; 
+            private java.util.List<Methods> methods; 
             private String registryType; 
             private String serviceName; 
             private String serviceType; 
@@ -501,7 +506,7 @@ public class GetServiceListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{}</p>
              */
-            public Builder metadata(java.util.Map < String, ? > metadata) {
+            public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
                 return this;
             }
@@ -509,7 +514,7 @@ public class GetServiceListResponseBody extends TeaModel {
             /**
              * <p>The methods.</p>
              */
-            public Builder methods(java.util.List < Methods> methods) {
+            public Builder methods(java.util.List<Methods> methods) {
                 this.methods = methods;
                 return this;
             }

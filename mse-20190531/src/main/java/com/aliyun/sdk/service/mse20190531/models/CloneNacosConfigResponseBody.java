@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -393,13 +398,13 @@ public class CloneNacosConfigResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailData")
-        private java.util.List < FailData> failData;
+        private java.util.List<FailData> failData;
 
         @com.aliyun.core.annotation.NameInMap("SkipCount")
         private Integer skipCount;
 
         @com.aliyun.core.annotation.NameInMap("SkipData")
-        private java.util.List < SkipData> skipData;
+        private java.util.List<SkipData> skipData;
 
         @com.aliyun.core.annotation.NameInMap("SuccCount")
         private Integer succCount;
@@ -422,7 +427,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         /**
          * @return failData
          */
-        public java.util.List < FailData> getFailData() {
+        public java.util.List<FailData> getFailData() {
             return this.failData;
         }
 
@@ -436,7 +441,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         /**
          * @return skipData
          */
-        public java.util.List < SkipData> getSkipData() {
+        public java.util.List<SkipData> getSkipData() {
             return this.skipData;
         }
 
@@ -448,15 +453,15 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FailData> failData; 
+            private java.util.List<FailData> failData; 
             private Integer skipCount; 
-            private java.util.List < SkipData> skipData; 
+            private java.util.List<SkipData> skipData; 
             private Integer succCount; 
 
             /**
              * <p>The details of the failed configurations.</p>
              */
-            public Builder failData(java.util.List < FailData> failData) {
+            public Builder failData(java.util.List<FailData> failData) {
                 this.failData = failData;
                 return this;
             }
@@ -475,7 +480,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
             /**
              * <p>The ID of the data.</p>
              */
-            public Builder skipData(java.util.List < SkipData> skipData) {
+            public Builder skipData(java.util.List<SkipData> skipData) {
                 this.skipData = skipData;
                 return this;
             }

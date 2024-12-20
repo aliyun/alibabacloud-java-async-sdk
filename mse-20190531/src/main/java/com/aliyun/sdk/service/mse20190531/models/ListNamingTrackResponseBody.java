@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
     private Long totalCount;
 
     @com.aliyun.core.annotation.NameInMap("Traces")
-    private java.util.List < Traces> traces;
+    private java.util.List<Traces> traces;
 
     private ListNamingTrackResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
@@ -118,7 +123,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
     /**
      * @return traces
      */
-    public java.util.List < Traces> getTraces() {
+    public java.util.List<Traces> getTraces() {
         return this.traces;
     }
 
@@ -131,7 +136,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
-        private java.util.List < Traces> traces; 
+        private java.util.List<Traces> traces; 
 
         /**
          * <p>The error code returned if the request failed.</p>
@@ -228,7 +233,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         /**
          * <p>The data information.</p>
          */
-        public Builder traces(java.util.List < Traces> traces) {
+        public Builder traces(java.util.List<Traces> traces) {
             this.traces = traces;
             return this;
         }

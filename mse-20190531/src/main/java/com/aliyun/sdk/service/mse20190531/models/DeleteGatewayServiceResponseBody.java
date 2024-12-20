@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -196,7 +201,7 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         @com.aliyun.core.annotation.NameInMap("MetaInfo")
         private String metaInfo;
@@ -285,7 +290,7 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
@@ -338,7 +343,7 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             private String gmtModified; 
             private String groupName; 
             private Long id; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
             private String metaInfo; 
             private String name; 
             private String namespace; 
@@ -415,7 +420,7 @@ public class DeleteGatewayServiceResponseBody extends TeaModel {
             /**
              * <p>IP</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }

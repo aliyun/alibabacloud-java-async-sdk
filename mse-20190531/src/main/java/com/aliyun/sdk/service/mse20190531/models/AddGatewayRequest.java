@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -83,7 +88,7 @@ public class AddGatewayRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
@@ -104,7 +109,7 @@ public class AddGatewayRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneInfo")
-    private java.util.List < ZoneInfo> zoneInfo;
+    private java.util.List<ZoneInfo> zoneInfo;
 
     private AddGatewayRequest(Builder builder) {
         super(builder);
@@ -268,7 +273,7 @@ public class AddGatewayRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -303,7 +308,7 @@ public class AddGatewayRequest extends Request {
     /**
      * @return zoneInfo
      */
-    public java.util.List < ZoneInfo> getZoneInfo() {
+    public java.util.List<ZoneInfo> getZoneInfo() {
         return this.zoneInfo;
     }
 
@@ -325,12 +330,12 @@ public class AddGatewayRequest extends Request {
         private String resourceGroupId; 
         private String slbSpec; 
         private String spec; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String vSwitchId2; 
         private String vpc; 
         private String xtraceRatio; 
-        private java.util.List < ZoneInfo> zoneInfo; 
+        private java.util.List<ZoneInfo> zoneInfo; 
 
         private Builder() {
             super();
@@ -628,7 +633,7 @@ public class AddGatewayRequest extends Request {
         /**
          * <p>The tag object.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -686,7 +691,7 @@ public class AddGatewayRequest extends Request {
         /**
          * <p>The details of the zone.</p>
          */
-        public Builder zoneInfo(java.util.List < ZoneInfo> zoneInfo) {
+        public Builder zoneInfo(java.util.List<ZoneInfo> zoneInfo) {
             String zoneInfoShrink = shrink(zoneInfo, "ZoneInfo", "json");
             this.putQueryParameter("ZoneInfo", zoneInfoShrink);
             this.zoneInfo = zoneInfo;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -752,7 +757,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
      */
     public static class HeaderOp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderOpItems")
-        private java.util.List < HeaderOpItems> headerOpItems;
+        private java.util.List<HeaderOpItems> headerOpItems;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -773,7 +778,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         /**
          * @return headerOpItems
          */
-        public java.util.List < HeaderOpItems> getHeaderOpItems() {
+        public java.util.List<HeaderOpItems> getHeaderOpItems() {
             return this.headerOpItems;
         }
 
@@ -785,13 +790,13 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HeaderOpItems> headerOpItems; 
+            private java.util.List<HeaderOpItems> headerOpItems; 
             private String status; 
 
             /**
              * <p>The policy.</p>
              */
-            public Builder headerOpItems(java.util.List < HeaderOpItems> headerOpItems) {
+            public Builder headerOpItems(java.util.List<HeaderOpItems> headerOpItems) {
                 this.headerOpItems = headerOpItems;
                 return this;
             }
@@ -921,10 +926,10 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         private Integer attempts;
 
         @com.aliyun.core.annotation.NameInMap("HttpCodes")
-        private java.util.List < String > httpCodes;
+        private java.util.List<String> httpCodes;
 
         @com.aliyun.core.annotation.NameInMap("RetryOn")
-        private java.util.List < String > retryOn;
+        private java.util.List<String> retryOn;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -954,14 +959,14 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         /**
          * @return httpCodes
          */
-        public java.util.List < String > getHttpCodes() {
+        public java.util.List<String> getHttpCodes() {
             return this.httpCodes;
         }
 
         /**
          * @return retryOn
          */
-        public java.util.List < String > getRetryOn() {
+        public java.util.List<String> getRetryOn() {
             return this.retryOn;
         }
 
@@ -974,8 +979,8 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer attempts; 
-            private java.util.List < String > httpCodes; 
-            private java.util.List < String > retryOn; 
+            private java.util.List<String> httpCodes; 
+            private java.util.List<String> retryOn; 
             private String status; 
 
             /**
@@ -992,7 +997,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             /**
              * <p>The HTTP status code.</p>
              */
-            public Builder httpCodes(java.util.List < String > httpCodes) {
+            public Builder httpCodes(java.util.List<String> httpCodes) {
                 this.httpCodes = httpCodes;
                 return this;
             }
@@ -1000,7 +1005,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             /**
              * <p>The retry condition.</p>
              */
-            public Builder retryOn(java.util.List < String > retryOn) {
+            public Builder retryOn(java.util.List<String> retryOn) {
                 this.retryOn = retryOn;
                 return this;
             }
@@ -1319,16 +1324,16 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
      */
     public static class RoutePredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderPredicates")
-        private java.util.List < HeaderPredicates> headerPredicates;
+        private java.util.List<HeaderPredicates> headerPredicates;
 
         @com.aliyun.core.annotation.NameInMap("MethodPredicates")
-        private java.util.List < String > methodPredicates;
+        private java.util.List<String> methodPredicates;
 
         @com.aliyun.core.annotation.NameInMap("PathPredicates")
         private PathPredicates pathPredicates;
 
         @com.aliyun.core.annotation.NameInMap("QueryPredicates")
-        private java.util.List < QueryPredicates> queryPredicates;
+        private java.util.List<QueryPredicates> queryPredicates;
 
         private RoutePredicates(Builder builder) {
             this.headerPredicates = builder.headerPredicates;
@@ -1348,14 +1353,14 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         /**
          * @return headerPredicates
          */
-        public java.util.List < HeaderPredicates> getHeaderPredicates() {
+        public java.util.List<HeaderPredicates> getHeaderPredicates() {
             return this.headerPredicates;
         }
 
         /**
          * @return methodPredicates
          */
-        public java.util.List < String > getMethodPredicates() {
+        public java.util.List<String> getMethodPredicates() {
             return this.methodPredicates;
         }
 
@@ -1369,20 +1374,20 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         /**
          * @return queryPredicates
          */
-        public java.util.List < QueryPredicates> getQueryPredicates() {
+        public java.util.List<QueryPredicates> getQueryPredicates() {
             return this.queryPredicates;
         }
 
         public static final class Builder {
-            private java.util.List < HeaderPredicates> headerPredicates; 
-            private java.util.List < String > methodPredicates; 
+            private java.util.List<HeaderPredicates> headerPredicates; 
+            private java.util.List<String> methodPredicates; 
             private PathPredicates pathPredicates; 
-            private java.util.List < QueryPredicates> queryPredicates; 
+            private java.util.List<QueryPredicates> queryPredicates; 
 
             /**
              * <p>The information about matching based on request headers.</p>
              */
-            public Builder headerPredicates(java.util.List < HeaderPredicates> headerPredicates) {
+            public Builder headerPredicates(java.util.List<HeaderPredicates> headerPredicates) {
                 this.headerPredicates = headerPredicates;
                 return this;
             }
@@ -1390,7 +1395,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             /**
              * <p>The information about method matching.</p>
              */
-            public Builder methodPredicates(java.util.List < String > methodPredicates) {
+            public Builder methodPredicates(java.util.List<String> methodPredicates) {
                 this.methodPredicates = methodPredicates;
                 return this;
             }
@@ -1406,7 +1411,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             /**
              * <p>The parameter matching rules.</p>
              */
-            public Builder queryPredicates(java.util.List < QueryPredicates> queryPredicates) {
+            public Builder queryPredicates(java.util.List<QueryPredicates> queryPredicates) {
                 this.queryPredicates = queryPredicates;
                 return this;
             }
@@ -1751,13 +1756,13 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         private Long domainId;
 
         @com.aliyun.core.annotation.NameInMap("DomainIdList")
-        private java.util.List < Long > domainIdList;
+        private java.util.List<Long> domainIdList;
 
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
         @com.aliyun.core.annotation.NameInMap("DomainNameList")
-        private java.util.List < String > domainNameList;
+        private java.util.List<String> domainNameList;
 
         @com.aliyun.core.annotation.NameInMap("EnableWaf")
         private Boolean enableWaf;
@@ -1802,7 +1807,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         private RoutePredicates routePredicates;
 
         @com.aliyun.core.annotation.NameInMap("RouteServices")
-        private java.util.List < RouteServices> routeServices;
+        private java.util.List<RouteServices> routeServices;
 
         @com.aliyun.core.annotation.NameInMap("Services")
         private String services;
@@ -1896,7 +1901,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         /**
          * @return domainIdList
          */
-        public java.util.List < Long > getDomainIdList() {
+        public java.util.List<Long> getDomainIdList() {
             return this.domainIdList;
         }
 
@@ -1910,7 +1915,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         /**
          * @return domainNameList
          */
-        public java.util.List < String > getDomainNameList() {
+        public java.util.List<String> getDomainNameList() {
             return this.domainNameList;
         }
 
@@ -2015,7 +2020,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
         /**
          * @return routeServices
          */
-        public java.util.List < RouteServices> getRouteServices() {
+        public java.util.List<RouteServices> getRouteServices() {
             return this.routeServices;
         }
 
@@ -2047,9 +2052,9 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private String destinationType; 
             private DirectResponse directResponse; 
             private Long domainId; 
-            private java.util.List < Long > domainIdList; 
+            private java.util.List<Long> domainIdList; 
             private String domainName; 
-            private java.util.List < String > domainNameList; 
+            private java.util.List<String> domainNameList; 
             private Boolean enableWaf; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
@@ -2064,7 +2069,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             private Retry retry; 
             private Integer routeOrder; 
             private RoutePredicates routePredicates; 
-            private java.util.List < RouteServices> routeServices; 
+            private java.util.List<RouteServices> routeServices; 
             private String services; 
             private Integer status; 
             private Timeout timeout; 
@@ -2132,7 +2137,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             /**
              * <p>The list of domain IDs.</p>
              */
-            public Builder domainIdList(java.util.List < Long > domainIdList) {
+            public Builder domainIdList(java.util.List<Long> domainIdList) {
                 this.domainIdList = domainIdList;
                 return this;
             }
@@ -2151,7 +2156,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             /**
              * <p>The domain names.</p>
              */
-            public Builder domainNameList(java.util.List < String > domainNameList) {
+            public Builder domainNameList(java.util.List<String> domainNameList) {
                 this.domainNameList = domainNameList;
                 return this;
             }
@@ -2298,7 +2303,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             /**
              * <p>The information about services.</p>
              */
-            public Builder routeServices(java.util.List < RouteServices> routeServices) {
+            public Builder routeServices(java.util.List<RouteServices> routeServices) {
                 this.routeServices = routeServices;
                 return this;
             }

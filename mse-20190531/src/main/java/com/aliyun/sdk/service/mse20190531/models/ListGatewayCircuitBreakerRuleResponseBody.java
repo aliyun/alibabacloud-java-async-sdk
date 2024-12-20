@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -97,7 +102,7 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("IdList")
-        private java.util.List < Long > idList;
+        private java.util.List<Long> idList;
 
         @com.aliyun.core.annotation.NameInMap("LimitMode")
         private Integer limitMode;
@@ -214,7 +219,7 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         /**
          * @return idList
          */
-        public java.util.List < Long > getIdList() {
+        public java.util.List<Long> getIdList() {
             return this.idList;
         }
 
@@ -316,7 +321,7 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             private Long gatewayId; 
             private String gatewayUniqueId; 
             private Long id; 
-            private java.util.List < Long > idList; 
+            private java.util.List<Long> idList; 
             private Integer limitMode; 
             private Integer maxAllowedMs; 
             private Integer minRequestAmount; 
@@ -382,7 +387,7 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             /**
              * IdList.
              */
-            public Builder idList(java.util.List < Long > idList) {
+            public Builder idList(java.util.List<Long> idList) {
                 this.idList = idList;
                 return this;
             }
@@ -524,7 +529,7 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("IdList")
-        private java.util.List < Long > idList;
+        private java.util.List<Long> idList;
 
         @com.aliyun.core.annotation.NameInMap("LimitMode")
         private Integer limitMode;
@@ -641,7 +646,7 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         /**
          * @return idList
          */
-        public java.util.List < Long > getIdList() {
+        public java.util.List<Long> getIdList() {
             return this.idList;
         }
 
@@ -743,7 +748,7 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             private Long gatewayId; 
             private String gatewayUniqueId; 
             private Long id; 
-            private java.util.List < Long > idList; 
+            private java.util.List<Long> idList; 
             private Integer limitMode; 
             private Integer maxAllowedMs; 
             private Integer minRequestAmount; 
@@ -809,7 +814,7 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             /**
              * IdList.
              */
-            public Builder idList(java.util.List < Long > idList) {
+            public Builder idList(java.util.List<Long> idList) {
                 this.idList = idList;
                 return this;
             }
@@ -939,10 +944,10 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("Results")
-        private java.util.List < Results> results;
+        private java.util.List<Results> results;
 
         @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
@@ -980,14 +985,14 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
         /**
          * @return results
          */
-        public java.util.List < Results> getResults() {
+        public java.util.List<Results> getResults() {
             return this.results;
         }
 
@@ -1001,8 +1006,8 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Result> result; 
-            private java.util.List < Results> results; 
+            private java.util.List<Result> result; 
+            private java.util.List<Results> results; 
             private Integer totalSize; 
 
             /**
@@ -1024,7 +1029,7 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             /**
              * Result.
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }
@@ -1032,7 +1037,7 @@ public class ListGatewayCircuitBreakerRuleResponseBody extends TeaModel {
             /**
              * Results.
              */
-            public Builder results(java.util.List < Results> results) {
+            public Builder results(java.util.List<Results> results) {
                 this.results = results;
                 return this;
             }

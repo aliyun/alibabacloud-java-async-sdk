@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class AddAuthResourceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthResourceHeaderList")
-    private java.util.List < AuthResourceHeaderList> authResourceHeaderList;
+    private java.util.List<AuthResourceHeaderList> authResourceHeaderList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DomainId")
@@ -86,7 +91,7 @@ public class AddAuthResourceRequest extends Request {
     /**
      * @return authResourceHeaderList
      */
-    public java.util.List < AuthResourceHeaderList> getAuthResourceHeaderList() {
+    public java.util.List<AuthResourceHeaderList> getAuthResourceHeaderList() {
         return this.authResourceHeaderList;
     }
 
@@ -128,7 +133,7 @@ public class AddAuthResourceRequest extends Request {
     public static final class Builder extends Request.Builder<AddAuthResourceRequest, Builder> {
         private String acceptLanguage; 
         private Long authId; 
-        private java.util.List < AuthResourceHeaderList> authResourceHeaderList; 
+        private java.util.List<AuthResourceHeaderList> authResourceHeaderList; 
         private Long domainId; 
         private String gatewayUniqueId; 
         private Boolean ignoreCase; 
@@ -182,7 +187,7 @@ public class AddAuthResourceRequest extends Request {
         /**
          * <p>The authentication resource headers.</p>
          */
-        public Builder authResourceHeaderList(java.util.List < AuthResourceHeaderList> authResourceHeaderList) {
+        public Builder authResourceHeaderList(java.util.List<AuthResourceHeaderList> authResourceHeaderList) {
             String authResourceHeaderListShrink = shrink(authResourceHeaderList, "AuthResourceHeaderList", "json");
             this.putQueryParameter("AuthResourceHeaderList", authResourceHeaderListShrink);
             this.authResourceHeaderList = authResourceHeaderList;

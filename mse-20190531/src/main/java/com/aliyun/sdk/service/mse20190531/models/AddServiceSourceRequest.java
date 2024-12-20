@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class AddServiceSourceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupList")
-    private java.util.List < String > groupList;
+    private java.util.List<String> groupList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IngressOptionsRequest")
@@ -38,7 +43,7 @@ public class AddServiceSourceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PathList")
-    private java.util.List < String > pathList;
+    private java.util.List<String> pathList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Source")
@@ -46,7 +51,7 @@ public class AddServiceSourceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ToAuthorizeSecurityGroups")
-    private java.util.List < ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups;
+    private java.util.List<ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
@@ -103,7 +108,7 @@ public class AddServiceSourceRequest extends Request {
     /**
      * @return groupList
      */
-    public java.util.List < String > getGroupList() {
+    public java.util.List<String> getGroupList() {
         return this.groupList;
     }
 
@@ -124,7 +129,7 @@ public class AddServiceSourceRequest extends Request {
     /**
      * @return pathList
      */
-    public java.util.List < String > getPathList() {
+    public java.util.List<String> getPathList() {
         return this.pathList;
     }
 
@@ -138,7 +143,7 @@ public class AddServiceSourceRequest extends Request {
     /**
      * @return toAuthorizeSecurityGroups
      */
-    public java.util.List < ToAuthorizeSecurityGroups> getToAuthorizeSecurityGroups() {
+    public java.util.List<ToAuthorizeSecurityGroups> getToAuthorizeSecurityGroups() {
         return this.toAuthorizeSecurityGroups;
     }
 
@@ -153,12 +158,12 @@ public class AddServiceSourceRequest extends Request {
         private String acceptLanguage; 
         private String address; 
         private String gatewayUniqueId; 
-        private java.util.List < String > groupList; 
+        private java.util.List<String> groupList; 
         private IngressOptionsRequest ingressOptionsRequest; 
         private String name; 
-        private java.util.List < String > pathList; 
+        private java.util.List<String> pathList; 
         private String source; 
-        private java.util.List < ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups; 
+        private java.util.List<ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups; 
         private String type; 
 
         private Builder() {
@@ -223,7 +228,7 @@ public class AddServiceSourceRequest extends Request {
         /**
          * <p>The data structure.</p>
          */
-        public Builder groupList(java.util.List < String > groupList) {
+        public Builder groupList(java.util.List<String> groupList) {
             String groupListShrink = shrink(groupList, "GroupList", "json");
             this.putQueryParameter("GroupList", groupListShrink);
             this.groupList = groupList;
@@ -255,7 +260,7 @@ public class AddServiceSourceRequest extends Request {
         /**
          * <p>The HTTP status code returned.</p>
          */
-        public Builder pathList(java.util.List < String > pathList) {
+        public Builder pathList(java.util.List<String> pathList) {
             String pathListShrink = shrink(pathList, "PathList", "json");
             this.putQueryParameter("PathList", pathListShrink);
             this.pathList = pathList;
@@ -281,7 +286,7 @@ public class AddServiceSourceRequest extends Request {
         /**
          * <p>The list of security groups to be authorized. You can specify security groups to allow backend services to access data sources that you create.</p>
          */
-        public Builder toAuthorizeSecurityGroups(java.util.List < ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups) {
+        public Builder toAuthorizeSecurityGroups(java.util.List<ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups) {
             String toAuthorizeSecurityGroupsShrink = shrink(toAuthorizeSecurityGroups, "ToAuthorizeSecurityGroups", "json");
             this.putQueryParameter("ToAuthorizeSecurityGroups", toAuthorizeSecurityGroupsShrink);
             this.toAuthorizeSecurityGroups = toAuthorizeSecurityGroups;

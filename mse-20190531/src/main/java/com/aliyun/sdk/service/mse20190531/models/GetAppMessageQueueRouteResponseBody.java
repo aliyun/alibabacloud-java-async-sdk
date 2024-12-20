@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -190,7 +195,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         private String region;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < String > tags;
+        private java.util.List<String> tags;
 
         private Data(Builder builder) {
             this.appId = builder.appId;
@@ -239,7 +244,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
@@ -248,7 +253,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             private Boolean enable; 
             private String filterSide; 
             private String region; 
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
 
             /**
              * <p>The ID of the application.</p>
@@ -301,7 +306,7 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
             /**
              * <p>The tags used to ignore message consumption for nodes in untagged environments.</p>
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }

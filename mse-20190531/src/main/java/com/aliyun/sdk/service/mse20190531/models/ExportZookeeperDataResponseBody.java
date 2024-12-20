@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -208,7 +213,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContentMap")
-        private java.util.Map < String, ? > contentMap;
+        private java.util.Map<String, ?> contentMap;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -257,7 +262,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         /**
          * @return contentMap
          */
-        public java.util.Map < String, ? > getContentMap() {
+        public java.util.Map<String, ?> getContentMap() {
             return this.contentMap;
         }
 
@@ -318,7 +323,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > contentMap; 
+            private java.util.Map<String, ?> contentMap; 
             private Long createTime; 
             private String exportType; 
             private String extend; 
@@ -331,7 +336,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             /**
              * <p>The content of a task.</p>
              */
-            public Builder contentMap(java.util.Map < String, ? > contentMap) {
+            public Builder contentMap(java.util.Map<String, ?> contentMap) {
                 this.contentMap = contentMap;
                 return this;
             }

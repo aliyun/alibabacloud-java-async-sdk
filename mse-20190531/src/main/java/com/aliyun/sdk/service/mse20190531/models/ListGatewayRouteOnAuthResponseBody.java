@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -57,7 +62,7 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -111,7 +116,7 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
         /**
          * <p>The details of the data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -301,13 +306,13 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
         private Long domainId;
 
         @com.aliyun.core.annotation.NameInMap("DomainIdList")
-        private java.util.List < Long > domainIdList;
+        private java.util.List<Long> domainIdList;
 
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
         @com.aliyun.core.annotation.NameInMap("DomainNameList")
-        private java.util.List < String > domainNameList;
+        private java.util.List<String> domainNameList;
 
         @com.aliyun.core.annotation.NameInMap("GatewayId")
         private String gatewayId;
@@ -354,7 +359,7 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
         /**
          * @return domainIdList
          */
-        public java.util.List < Long > getDomainIdList() {
+        public java.util.List<Long> getDomainIdList() {
             return this.domainIdList;
         }
 
@@ -368,7 +373,7 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
         /**
          * @return domainNameList
          */
-        public java.util.List < String > getDomainNameList() {
+        public java.util.List<String> getDomainNameList() {
             return this.domainNameList;
         }
 
@@ -409,9 +414,9 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long domainId; 
-            private java.util.List < Long > domainIdList; 
+            private java.util.List<Long> domainIdList; 
             private String domainName; 
-            private java.util.List < String > domainNameList; 
+            private java.util.List<String> domainNameList; 
             private String gatewayId; 
             private String gatewayUniqueId; 
             private Integer id; 
@@ -432,7 +437,7 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             /**
              * <p>The domain IDs.</p>
              */
-            public Builder domainIdList(java.util.List < Long > domainIdList) {
+            public Builder domainIdList(java.util.List<Long> domainIdList) {
                 this.domainIdList = domainIdList;
                 return this;
             }
@@ -451,7 +456,7 @@ public class ListGatewayRouteOnAuthResponseBody extends TeaModel {
             /**
              * <p>The domain names.</p>
              */
-            public Builder domainNameList(java.util.List < String > domainNameList) {
+            public Builder domainNameList(java.util.List<String> domainNameList) {
                 this.domainNameList = domainNameList;
                 return this;
             }

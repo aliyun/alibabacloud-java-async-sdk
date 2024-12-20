@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryAllSwimmingLaneResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -46,7 +51,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,7 +84,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String message; 
         private String requestId; 
@@ -91,7 +96,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>[{id:100,name:&quot;test&quot;}]</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -170,7 +175,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("nameList")
-        private java.util.List < String > nameList;
+        private java.util.List<String> nameList;
 
         @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
@@ -239,7 +244,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         /**
          * @return nameList
          */
-        public java.util.List < String > getNameList() {
+        public java.util.List<String> getNameList() {
             return this.nameList;
         }
 
@@ -283,7 +288,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             private String datum; 
             private Integer divisor; 
             private String name; 
-            private java.util.List < String > nameList; 
+            private java.util.List<String> nameList; 
             private String operator; 
             private Integer rate; 
             private Integer remainder; 
@@ -325,7 +330,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             /**
              * nameList.
              */
-            public Builder nameList(java.util.List < String > nameList) {
+            public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
                 return this;
             }
@@ -391,10 +396,10 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         private String path;
 
         @com.aliyun.core.annotation.NameInMap("paths")
-        private java.util.List < String > paths;
+        private java.util.List<String> paths;
 
         @com.aliyun.core.annotation.NameInMap("restItems")
-        private java.util.List < RestItems> restItems;
+        private java.util.List<RestItems> restItems;
 
         private EntryRules(Builder builder) {
             this.condition = builder.condition;
@@ -428,22 +433,22 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
         /**
          * @return restItems
          */
-        public java.util.List < RestItems> getRestItems() {
+        public java.util.List<RestItems> getRestItems() {
             return this.restItems;
         }
 
         public static final class Builder {
             private String condition; 
             private String path; 
-            private java.util.List < String > paths; 
-            private java.util.List < RestItems> restItems; 
+            private java.util.List<String> paths; 
+            private java.util.List<RestItems> restItems; 
 
             /**
              * condition.
@@ -464,7 +469,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             /**
              * paths.
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }
@@ -472,7 +477,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             /**
              * restItems.
              */
-            public Builder restItems(java.util.List < RestItems> restItems) {
+            public Builder restItems(java.util.List<RestItems> restItems) {
                 this.restItems = restItems;
                 return this;
             }
@@ -498,7 +503,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("NameList")
-        private java.util.List < String > nameList;
+        private java.util.List<String> nameList;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -539,7 +544,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         /**
          * @return nameList
          */
-        public java.util.List < String > getNameList() {
+        public java.util.List<String> getNameList() {
             return this.nameList;
         }
 
@@ -560,7 +565,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         public static final class Builder {
             private String cond; 
             private String name; 
-            private java.util.List < String > nameList; 
+            private java.util.List<String> nameList; 
             private String type; 
             private String value; 
 
@@ -583,7 +588,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             /**
              * NameList.
              */
-            public Builder nameList(java.util.List < String > nameList) {
+            public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
                 return this;
             }
@@ -689,7 +694,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         private Integer canaryModel;
 
         @com.aliyun.core.annotation.NameInMap("Conditions")
-        private java.util.List < Conditions> conditions;
+        private java.util.List<Conditions> conditions;
 
         @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
@@ -701,13 +706,13 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         private Integer percentage;
 
         @com.aliyun.core.annotation.NameInMap("RouteIdList")
-        private java.util.List < Long > routeIdList;
+        private java.util.List<Long> routeIdList;
 
         @com.aliyun.core.annotation.NameInMap("RouteIndependentPercentageEnable")
         private String routeIndependentPercentageEnable;
 
         @com.aliyun.core.annotation.NameInMap("RouteIndependentPercentageList")
-        private java.util.List < RouteIndependentPercentageList> routeIndependentPercentageList;
+        private java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList;
 
         private GatewaySwimmingLaneRoute(Builder builder) {
             this.canaryModel = builder.canaryModel;
@@ -738,7 +743,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         /**
          * @return conditions
          */
-        public java.util.List < Conditions> getConditions() {
+        public java.util.List<Conditions> getConditions() {
             return this.conditions;
         }
 
@@ -766,7 +771,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         /**
          * @return routeIdList
          */
-        public java.util.List < Long > getRouteIdList() {
+        public java.util.List<Long> getRouteIdList() {
             return this.routeIdList;
         }
 
@@ -780,19 +785,19 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         /**
          * @return routeIndependentPercentageList
          */
-        public java.util.List < RouteIndependentPercentageList> getRouteIndependentPercentageList() {
+        public java.util.List<RouteIndependentPercentageList> getRouteIndependentPercentageList() {
             return this.routeIndependentPercentageList;
         }
 
         public static final class Builder {
             private Integer canaryModel; 
-            private java.util.List < Conditions> conditions; 
+            private java.util.List<Conditions> conditions; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
             private Integer percentage; 
-            private java.util.List < Long > routeIdList; 
+            private java.util.List<Long> routeIdList; 
             private String routeIndependentPercentageEnable; 
-            private java.util.List < RouteIndependentPercentageList> routeIndependentPercentageList; 
+            private java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList; 
 
             /**
              * CanaryModel.
@@ -805,7 +810,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             /**
              * Conditions.
              */
-            public Builder conditions(java.util.List < Conditions> conditions) {
+            public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
                 return this;
             }
@@ -837,7 +842,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             /**
              * RouteIdList.
              */
-            public Builder routeIdList(java.util.List < Long > routeIdList) {
+            public Builder routeIdList(java.util.List<Long> routeIdList) {
                 this.routeIdList = routeIdList;
                 return this;
             }
@@ -853,7 +858,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             /**
              * RouteIndependentPercentageList.
              */
-            public Builder routeIndependentPercentageList(java.util.List < RouteIndependentPercentageList> routeIndependentPercentageList) {
+            public Builder routeIndependentPercentageList(java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList) {
                 this.routeIndependentPercentageList = routeIndependentPercentageList;
                 return this;
             }
@@ -873,7 +878,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntryRules")
-        private java.util.List < EntryRules> entryRules;
+        private java.util.List<EntryRules> entryRules;
 
         @com.aliyun.core.annotation.NameInMap("GatewaySwimmingLaneRoute")
         private GatewaySwimmingLaneRoute gatewaySwimmingLaneRoute;
@@ -950,7 +955,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         /**
          * @return entryRules
          */
-        public java.util.List < EntryRules> getEntryRules() {
+        public java.util.List<EntryRules> getEntryRules() {
             return this.entryRules;
         }
 
@@ -1060,7 +1065,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EntryRules> entryRules; 
+            private java.util.List<EntryRules> entryRules; 
             private GatewaySwimmingLaneRoute gatewaySwimmingLaneRoute; 
             private String groupId; 
             private Long id; 
@@ -1080,7 +1085,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             /**
              * EntryRules.
              */
-            public Builder entryRules(java.util.List < EntryRules> entryRules) {
+            public Builder entryRules(java.util.List<EntryRules> entryRules) {
                 this.entryRules = entryRules;
                 return this;
             }

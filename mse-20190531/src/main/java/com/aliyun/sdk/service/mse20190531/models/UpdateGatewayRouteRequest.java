@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class UpdateGatewayRouteRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FallbackServices")
-    private java.util.List < FallbackServices> fallbackServices;
+    private java.util.List<FallbackServices> fallbackServices;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GatewayId")
@@ -75,7 +80,7 @@ public class UpdateGatewayRouteRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Services")
-    private java.util.List < Services> services;
+    private java.util.List<Services> services;
 
     private UpdateGatewayRouteRequest(Builder builder) {
         super(builder);
@@ -162,7 +167,7 @@ public class UpdateGatewayRouteRequest extends Request {
     /**
      * @return fallbackServices
      */
-    public java.util.List < FallbackServices> getFallbackServices() {
+    public java.util.List<FallbackServices> getFallbackServices() {
         return this.fallbackServices;
     }
 
@@ -218,7 +223,7 @@ public class UpdateGatewayRouteRequest extends Request {
     /**
      * @return services
      */
-    public java.util.List < Services> getServices() {
+    public java.util.List<Services> getServices() {
         return this.services;
     }
 
@@ -230,7 +235,7 @@ public class UpdateGatewayRouteRequest extends Request {
         private String domainIdListJSON; 
         private Boolean enableWaf; 
         private Boolean fallback; 
-        private java.util.List < FallbackServices> fallbackServices; 
+        private java.util.List<FallbackServices> fallbackServices; 
         private Long gatewayId; 
         private String gatewayUniqueId; 
         private Long id; 
@@ -238,7 +243,7 @@ public class UpdateGatewayRouteRequest extends Request {
         private Predicates predicates; 
         private RedirectJSON redirectJSON; 
         private Integer routeOrder; 
-        private java.util.List < Services> services; 
+        private java.util.List<Services> services; 
 
         private Builder() {
             super();
@@ -350,7 +355,7 @@ public class UpdateGatewayRouteRequest extends Request {
         /**
          * <p>The information about the Fallback service.</p>
          */
-        public Builder fallbackServices(java.util.List < FallbackServices> fallbackServices) {
+        public Builder fallbackServices(java.util.List<FallbackServices> fallbackServices) {
             String fallbackServicesShrink = shrink(fallbackServices, "FallbackServices", "json");
             this.putQueryParameter("FallbackServices", fallbackServicesShrink);
             this.fallbackServices = fallbackServices;
@@ -440,7 +445,7 @@ public class UpdateGatewayRouteRequest extends Request {
         /**
          * <p>The information about destination services.</p>
          */
-        public Builder services(java.util.List < Services> services) {
+        public Builder services(java.util.List<Services> services) {
             String servicesShrink = shrink(services, "Services", "json");
             this.putQueryParameter("Services", servicesShrink);
             this.services = services;
@@ -1057,16 +1062,16 @@ public class UpdateGatewayRouteRequest extends Request {
      */
     public static class Predicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderPredicates")
-        private java.util.List < HeaderPredicates> headerPredicates;
+        private java.util.List<HeaderPredicates> headerPredicates;
 
         @com.aliyun.core.annotation.NameInMap("MethodPredicates")
-        private java.util.List < String > methodPredicates;
+        private java.util.List<String> methodPredicates;
 
         @com.aliyun.core.annotation.NameInMap("PathPredicates")
         private PathPredicates pathPredicates;
 
         @com.aliyun.core.annotation.NameInMap("QueryPredicates")
-        private java.util.List < QueryPredicates> queryPredicates;
+        private java.util.List<QueryPredicates> queryPredicates;
 
         private Predicates(Builder builder) {
             this.headerPredicates = builder.headerPredicates;
@@ -1086,14 +1091,14 @@ public class UpdateGatewayRouteRequest extends Request {
         /**
          * @return headerPredicates
          */
-        public java.util.List < HeaderPredicates> getHeaderPredicates() {
+        public java.util.List<HeaderPredicates> getHeaderPredicates() {
             return this.headerPredicates;
         }
 
         /**
          * @return methodPredicates
          */
-        public java.util.List < String > getMethodPredicates() {
+        public java.util.List<String> getMethodPredicates() {
             return this.methodPredicates;
         }
 
@@ -1107,20 +1112,20 @@ public class UpdateGatewayRouteRequest extends Request {
         /**
          * @return queryPredicates
          */
-        public java.util.List < QueryPredicates> getQueryPredicates() {
+        public java.util.List<QueryPredicates> getQueryPredicates() {
             return this.queryPredicates;
         }
 
         public static final class Builder {
-            private java.util.List < HeaderPredicates> headerPredicates; 
-            private java.util.List < String > methodPredicates; 
+            private java.util.List<HeaderPredicates> headerPredicates; 
+            private java.util.List<String> methodPredicates; 
             private PathPredicates pathPredicates; 
-            private java.util.List < QueryPredicates> queryPredicates; 
+            private java.util.List<QueryPredicates> queryPredicates; 
 
             /**
              * <p>The information about header matching.</p>
              */
-            public Builder headerPredicates(java.util.List < HeaderPredicates> headerPredicates) {
+            public Builder headerPredicates(java.util.List<HeaderPredicates> headerPredicates) {
                 this.headerPredicates = headerPredicates;
                 return this;
             }
@@ -1128,7 +1133,7 @@ public class UpdateGatewayRouteRequest extends Request {
             /**
              * <p>The information about method matching.</p>
              */
-            public Builder methodPredicates(java.util.List < String > methodPredicates) {
+            public Builder methodPredicates(java.util.List<String> methodPredicates) {
                 this.methodPredicates = methodPredicates;
                 return this;
             }
@@ -1144,7 +1149,7 @@ public class UpdateGatewayRouteRequest extends Request {
             /**
              * <p>The information about parameter matching.</p>
              */
-            public Builder queryPredicates(java.util.List < QueryPredicates> queryPredicates) {
+            public Builder queryPredicates(java.util.List<QueryPredicates> queryPredicates) {
                 this.queryPredicates = queryPredicates;
                 return this;
             }
@@ -1378,13 +1383,13 @@ public class UpdateGatewayRouteRequest extends Request {
         private String mothedpath;
 
         @com.aliyun.core.annotation.NameInMap("ParamMapsList")
-        private java.util.List < ParamMapsList> paramMapsList;
+        private java.util.List<ParamMapsList> paramMapsList;
 
         @com.aliyun.core.annotation.NameInMap("PassThroughAllHeaders")
         private String passThroughAllHeaders;
 
         @com.aliyun.core.annotation.NameInMap("PassThroughList")
-        private java.util.List < String > passThroughList;
+        private java.util.List<String> passThroughList;
 
         private MothedMapList(Builder builder) {
             this.dubboMothedName = builder.dubboMothedName;
@@ -1427,7 +1432,7 @@ public class UpdateGatewayRouteRequest extends Request {
         /**
          * @return paramMapsList
          */
-        public java.util.List < ParamMapsList> getParamMapsList() {
+        public java.util.List<ParamMapsList> getParamMapsList() {
             return this.paramMapsList;
         }
 
@@ -1441,7 +1446,7 @@ public class UpdateGatewayRouteRequest extends Request {
         /**
          * @return passThroughList
          */
-        public java.util.List < String > getPassThroughList() {
+        public java.util.List<String> getPassThroughList() {
             return this.passThroughList;
         }
 
@@ -1449,9 +1454,9 @@ public class UpdateGatewayRouteRequest extends Request {
             private String dubboMothedName; 
             private String httpMothed; 
             private String mothedpath; 
-            private java.util.List < ParamMapsList> paramMapsList; 
+            private java.util.List<ParamMapsList> paramMapsList; 
             private String passThroughAllHeaders; 
-            private java.util.List < String > passThroughList; 
+            private java.util.List<String> passThroughList; 
 
             /**
              * <p>The method name of the Dubbo service.</p>
@@ -1504,7 +1509,7 @@ public class UpdateGatewayRouteRequest extends Request {
             /**
              * <p>The information of parameter mappings.</p>
              */
-            public Builder paramMapsList(java.util.List < ParamMapsList> paramMapsList) {
+            public Builder paramMapsList(java.util.List<ParamMapsList> paramMapsList) {
                 this.paramMapsList = paramMapsList;
                 return this;
             }
@@ -1534,7 +1539,7 @@ public class UpdateGatewayRouteRequest extends Request {
             /**
              * <p>The list of headers to be passed through.</p>
              */
-            public Builder passThroughList(java.util.List < String > passThroughList) {
+            public Builder passThroughList(java.util.List<String> passThroughList) {
                 this.passThroughList = passThroughList;
                 return this;
             }
@@ -1563,7 +1568,7 @@ public class UpdateGatewayRouteRequest extends Request {
         private String dubboServiceVersion;
 
         @com.aliyun.core.annotation.NameInMap("MothedMapList")
-        private java.util.List < MothedMapList> mothedMapList;
+        private java.util.List<MothedMapList> mothedMapList;
 
         private HttpDubboTranscoder(Builder builder) {
             this.dubboServiceGroup = builder.dubboServiceGroup;
@@ -1604,7 +1609,7 @@ public class UpdateGatewayRouteRequest extends Request {
         /**
          * @return mothedMapList
          */
-        public java.util.List < MothedMapList> getMothedMapList() {
+        public java.util.List<MothedMapList> getMothedMapList() {
             return this.mothedMapList;
         }
 
@@ -1612,7 +1617,7 @@ public class UpdateGatewayRouteRequest extends Request {
             private String dubboServiceGroup; 
             private String dubboServiceName; 
             private String dubboServiceVersion; 
-            private java.util.List < MothedMapList> mothedMapList; 
+            private java.util.List<MothedMapList> mothedMapList; 
 
             /**
              * <p>The Dubbo service group.</p>
@@ -1650,7 +1655,7 @@ public class UpdateGatewayRouteRequest extends Request {
             /**
              * <p>The forwarding rules of the Dubbo service.</p>
              */
-            public Builder mothedMapList(java.util.List < MothedMapList> mothedMapList) {
+            public Builder mothedMapList(java.util.List<MothedMapList> mothedMapList) {
                 this.mothedMapList = mothedMapList;
                 return this;
             }

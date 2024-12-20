@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -181,7 +186,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private LabelDetails(Builder builder) {
             this.key = builder.key;
@@ -206,13 +211,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String key; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
              * <p>The tag.</p>
@@ -228,7 +233,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             /**
              * <p>The tag value.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -506,7 +511,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
      */
     public static class ServiceVersion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -527,7 +532,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -539,13 +544,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private String name; 
 
             /**
              * <p>The tag.</p>
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -764,6 +769,9 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
      * <p>GetGatewayServiceDetailResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DnsServerList")
+        private java.util.List<String> dnsServerList;
+
         @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
 
@@ -792,10 +800,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         @com.aliyun.core.annotation.NameInMap("LabelDetails")
-        private java.util.List < LabelDetails> labelDetails;
+        private java.util.List<LabelDetails> labelDetails;
 
         @com.aliyun.core.annotation.NameInMap("MetaInfo")
         private String metaInfo;
@@ -807,10 +815,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         private String namespace;
 
         @com.aliyun.core.annotation.NameInMap("PortTrafficPolicyList")
-        private java.util.List < PortTrafficPolicyList> portTrafficPolicyList;
+        private java.util.List<PortTrafficPolicyList> portTrafficPolicyList;
 
         @com.aliyun.core.annotation.NameInMap("Ports")
-        private java.util.List < Integer > ports;
+        private java.util.List<Integer> ports;
 
         @com.aliyun.core.annotation.NameInMap("ServiceFQDN")
         private String serviceFQDN;
@@ -831,12 +839,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         private String sourceType;
 
         @com.aliyun.core.annotation.NameInMap("VersionDetails")
-        private java.util.List < VersionDetails> versionDetails;
+        private java.util.List<VersionDetails> versionDetails;
 
         @com.aliyun.core.annotation.NameInMap("Versions")
-        private java.util.List < Versions> versions;
+        private java.util.List<Versions> versions;
 
         private Data(Builder builder) {
+            this.dnsServerList = builder.dnsServerList;
             this.gatewayId = builder.gatewayId;
             this.gatewayTrafficPolicy = builder.gatewayTrafficPolicy;
             this.gatewayUniqueId = builder.gatewayUniqueId;
@@ -869,6 +878,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return dnsServerList
+         */
+        public java.util.List<String> getDnsServerList() {
+            return this.dnsServerList;
         }
 
         /**
@@ -937,14 +953,14 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
         /**
          * @return labelDetails
          */
-        public java.util.List < LabelDetails> getLabelDetails() {
+        public java.util.List<LabelDetails> getLabelDetails() {
             return this.labelDetails;
         }
 
@@ -972,14 +988,14 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         /**
          * @return portTrafficPolicyList
          */
-        public java.util.List < PortTrafficPolicyList> getPortTrafficPolicyList() {
+        public java.util.List<PortTrafficPolicyList> getPortTrafficPolicyList() {
             return this.portTrafficPolicyList;
         }
 
         /**
          * @return ports
          */
-        public java.util.List < Integer > getPorts() {
+        public java.util.List<Integer> getPorts() {
             return this.ports;
         }
 
@@ -1028,18 +1044,19 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         /**
          * @return versionDetails
          */
-        public java.util.List < VersionDetails> getVersionDetails() {
+        public java.util.List<VersionDetails> getVersionDetails() {
             return this.versionDetails;
         }
 
         /**
          * @return versions
          */
-        public java.util.List < Versions> getVersions() {
+        public java.util.List<Versions> getVersions() {
             return this.versions;
         }
 
         public static final class Builder {
+            private java.util.List<String> dnsServerList; 
             private Long gatewayId; 
             private TrafficPolicy gatewayTrafficPolicy; 
             private String gatewayUniqueId; 
@@ -1049,21 +1066,29 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private String healthCheck; 
             private String healthStatus; 
             private Long id; 
-            private java.util.List < String > ips; 
-            private java.util.List < LabelDetails> labelDetails; 
+            private java.util.List<String> ips; 
+            private java.util.List<LabelDetails> labelDetails; 
             private String metaInfo; 
             private String name; 
             private String namespace; 
-            private java.util.List < PortTrafficPolicyList> portTrafficPolicyList; 
-            private java.util.List < Integer > ports; 
+            private java.util.List<PortTrafficPolicyList> portTrafficPolicyList; 
+            private java.util.List<Integer> ports; 
             private String serviceFQDN; 
             private String serviceNameInRegistry; 
             private Integer servicePort; 
             private String serviceProtocol; 
             private Long sourceId; 
             private String sourceType; 
-            private java.util.List < VersionDetails> versionDetails; 
-            private java.util.List < Versions> versions; 
+            private java.util.List<VersionDetails> versionDetails; 
+            private java.util.List<Versions> versions; 
+
+            /**
+             * DnsServerList.
+             */
+            public Builder dnsServerList(java.util.List<String> dnsServerList) {
+                this.dnsServerList = dnsServerList;
+                return this;
+            }
 
             /**
              * <p>The ID of the gateway.</p>
@@ -1167,7 +1192,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             /**
              * <p>The IP address of the service.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
@@ -1175,7 +1200,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             /**
              * <p>The details of the tag.</p>
              */
-            public Builder labelDetails(java.util.List < LabelDetails> labelDetails) {
+            public Builder labelDetails(java.util.List<LabelDetails> labelDetails) {
                 this.labelDetails = labelDetails;
                 return this;
             }
@@ -1216,7 +1241,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             /**
              * <p>The traffic policy of service ports.</p>
              */
-            public Builder portTrafficPolicyList(java.util.List < PortTrafficPolicyList> portTrafficPolicyList) {
+            public Builder portTrafficPolicyList(java.util.List<PortTrafficPolicyList> portTrafficPolicyList) {
                 this.portTrafficPolicyList = portTrafficPolicyList;
                 return this;
             }
@@ -1224,7 +1249,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             /**
              * <p>The array of service ports.</p>
              */
-            public Builder ports(java.util.List < Integer > ports) {
+            public Builder ports(java.util.List<Integer> ports) {
                 this.ports = ports;
                 return this;
             }
@@ -1295,7 +1320,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             /**
              * <p>The details of versions.</p>
              */
-            public Builder versionDetails(java.util.List < VersionDetails> versionDetails) {
+            public Builder versionDetails(java.util.List<VersionDetails> versionDetails) {
                 this.versionDetails = versionDetails;
                 return this;
             }
@@ -1303,7 +1328,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             /**
              * <p>The service version. This parameter is deprecated.</p>
              */
-            public Builder versions(java.util.List < Versions> versions) {
+            public Builder versions(java.util.List<Versions> versions) {
                 this.versions = versions;
                 return this;
             }

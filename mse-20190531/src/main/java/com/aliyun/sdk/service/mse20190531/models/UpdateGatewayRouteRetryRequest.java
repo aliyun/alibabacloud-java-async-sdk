@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -189,10 +194,10 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         private Integer attempts;
 
         @com.aliyun.core.annotation.NameInMap("HttpCodes")
-        private java.util.List < String > httpCodes;
+        private java.util.List<String> httpCodes;
 
         @com.aliyun.core.annotation.NameInMap("RetryOn")
-        private java.util.List < String > retryOn;
+        private java.util.List<String> retryOn;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -222,14 +227,14 @@ public class UpdateGatewayRouteRetryRequest extends Request {
         /**
          * @return httpCodes
          */
-        public java.util.List < String > getHttpCodes() {
+        public java.util.List<String> getHttpCodes() {
             return this.httpCodes;
         }
 
         /**
          * @return retryOn
          */
-        public java.util.List < String > getRetryOn() {
+        public java.util.List<String> getRetryOn() {
             return this.retryOn;
         }
 
@@ -242,8 +247,8 @@ public class UpdateGatewayRouteRetryRequest extends Request {
 
         public static final class Builder {
             private Integer attempts; 
-            private java.util.List < String > httpCodes; 
-            private java.util.List < String > retryOn; 
+            private java.util.List<String> httpCodes; 
+            private java.util.List<String> retryOn; 
             private String status; 
 
             /**
@@ -260,7 +265,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             /**
              * <p>The HTTP status codes.</p>
              */
-            public Builder httpCodes(java.util.List < String > httpCodes) {
+            public Builder httpCodes(java.util.List<String> httpCodes) {
                 this.httpCodes = httpCodes;
                 return this;
             }
@@ -268,7 +273,7 @@ public class UpdateGatewayRouteRetryRequest extends Request {
             /**
              * <p>The retry conditions.</p>
              */
-            public Builder retryOn(java.util.List < String > retryOn) {
+            public Builder retryOn(java.util.List<String> retryOn) {
                 this.retryOn = retryOn;
                 return this;
             }

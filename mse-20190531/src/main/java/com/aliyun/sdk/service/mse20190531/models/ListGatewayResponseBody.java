@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -347,7 +352,7 @@ public class ListGatewayResponseBody extends TeaModel {
         private String elasticType;
 
         @com.aliyun.core.annotation.NameInMap("EnableScaleTimePolicyList")
-        private java.util.List < EnableScaleTimePolicyList> enableScaleTimePolicyList;
+        private java.util.List<EnableScaleTimePolicyList> enableScaleTimePolicyList;
 
         @com.aliyun.core.annotation.NameInMap("LoadWarningThreshold")
         private Boolean loadWarningThreshold;
@@ -356,7 +361,7 @@ public class ListGatewayResponseBody extends TeaModel {
         private Integer maxReplica;
 
         @com.aliyun.core.annotation.NameInMap("TimePolicyList")
-        private java.util.List < TimePolicyList> timePolicyList;
+        private java.util.List<TimePolicyList> timePolicyList;
 
         private ElasticPolicy(Builder builder) {
             this.elastic = builder.elastic;
@@ -392,7 +397,7 @@ public class ListGatewayResponseBody extends TeaModel {
         /**
          * @return enableScaleTimePolicyList
          */
-        public java.util.List < EnableScaleTimePolicyList> getEnableScaleTimePolicyList() {
+        public java.util.List<EnableScaleTimePolicyList> getEnableScaleTimePolicyList() {
             return this.enableScaleTimePolicyList;
         }
 
@@ -413,17 +418,17 @@ public class ListGatewayResponseBody extends TeaModel {
         /**
          * @return timePolicyList
          */
-        public java.util.List < TimePolicyList> getTimePolicyList() {
+        public java.util.List<TimePolicyList> getTimePolicyList() {
             return this.timePolicyList;
         }
 
         public static final class Builder {
             private Boolean elastic; 
             private String elasticType; 
-            private java.util.List < EnableScaleTimePolicyList> enableScaleTimePolicyList; 
+            private java.util.List<EnableScaleTimePolicyList> enableScaleTimePolicyList; 
             private Boolean loadWarningThreshold; 
             private Integer maxReplica; 
-            private java.util.List < TimePolicyList> timePolicyList; 
+            private java.util.List<TimePolicyList> timePolicyList; 
 
             /**
              * <p>Indicates whether auto scale-out is enabled.</p>
@@ -453,7 +458,7 @@ public class ListGatewayResponseBody extends TeaModel {
             /**
              * EnableScaleTimePolicyList.
              */
-            public Builder enableScaleTimePolicyList(java.util.List < EnableScaleTimePolicyList> enableScaleTimePolicyList) {
+            public Builder enableScaleTimePolicyList(java.util.List<EnableScaleTimePolicyList> enableScaleTimePolicyList) {
                 this.enableScaleTimePolicyList = enableScaleTimePolicyList;
                 return this;
             }
@@ -480,7 +485,7 @@ public class ListGatewayResponseBody extends TeaModel {
             /**
              * <p>The time policy list for auto scale-out.</p>
              */
-            public Builder timePolicyList(java.util.List < TimePolicyList> timePolicyList) {
+            public Builder timePolicyList(java.util.List<TimePolicyList> timePolicyList) {
                 this.timePolicyList = timePolicyList;
                 return this;
             }
@@ -1172,7 +1177,7 @@ public class ListGatewayResponseBody extends TeaModel {
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("InternetSlb")
-        private java.util.List < InternetSlb> internetSlb;
+        private java.util.List<InternetSlb> internetSlb;
 
         @com.aliyun.core.annotation.NameInMap("LatestVersion")
         private String latestVersion;
@@ -1208,7 +1213,7 @@ public class ListGatewayResponseBody extends TeaModel {
         private Boolean rollBack;
 
         @com.aliyun.core.annotation.NameInMap("Slb")
-        private java.util.List < Slb> slb;
+        private java.util.List<Slb> slb;
 
         @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
@@ -1425,7 +1430,7 @@ public class ListGatewayResponseBody extends TeaModel {
         /**
          * @return internetSlb
          */
-        public java.util.List < InternetSlb> getInternetSlb() {
+        public java.util.List<InternetSlb> getInternetSlb() {
             return this.internetSlb;
         }
 
@@ -1509,7 +1514,7 @@ public class ListGatewayResponseBody extends TeaModel {
         /**
          * @return slb
          */
-        public java.util.List < Slb> getSlb() {
+        public java.util.List<Slb> getSlb() {
             return this.slb;
         }
 
@@ -1596,7 +1601,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private Long id; 
             private InitConfig initConfig; 
             private String instanceId; 
-            private java.util.List < InternetSlb> internetSlb; 
+            private java.util.List<InternetSlb> internetSlb; 
             private String latestVersion; 
             private MaintenancePeriod maintenancePeriod; 
             private String mseTag; 
@@ -1608,7 +1613,7 @@ public class ListGatewayResponseBody extends TeaModel {
             private Integer replica; 
             private String resourceGroupId; 
             private Boolean rollBack; 
-            private java.util.List < Slb> slb; 
+            private java.util.List<Slb> slb; 
             private String spec; 
             private Integer status; 
             private String statusDesc; 
@@ -1828,7 +1833,7 @@ public class ListGatewayResponseBody extends TeaModel {
             /**
              * <p>The details of the Internet-facing SLB instances.</p>
              */
-            public Builder internetSlb(java.util.List < InternetSlb> internetSlb) {
+            public Builder internetSlb(java.util.List<InternetSlb> internetSlb) {
                 this.internetSlb = internetSlb;
                 return this;
             }
@@ -1951,7 +1956,7 @@ public class ListGatewayResponseBody extends TeaModel {
             /**
              * <p>The details of Server Load Balancer (SLB) instances.</p>
              */
-            public Builder slb(java.util.List < Slb> slb) {
+            public Builder slb(java.util.List<Slb> slb) {
                 this.slb = slb;
                 return this;
             }
@@ -2090,7 +2095,7 @@ public class ListGatewayResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
@@ -2127,7 +2132,7 @@ public class ListGatewayResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -2141,7 +2146,7 @@ public class ListGatewayResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private Long totalSize; 
 
             /**
@@ -2169,7 +2174,7 @@ public class ListGatewayResponseBody extends TeaModel {
             /**
              * <p>The data returned.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

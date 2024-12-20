@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < String > data;
+    private java.util.List<String> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -57,7 +62,7 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < String > getData() {
+    public java.util.List<String> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < String > data; 
+        private java.util.List<String> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -111,7 +116,7 @@ public class QueryGatewayTypeResponseBody extends TeaModel {
         /**
          * <p>The information about the gateway type. The data type of this parameter is List.</p>
          */
-        public Builder data(java.util.List < String > data) {
+        public Builder data(java.util.List<String> data) {
             this.data = data;
             return this;
         }

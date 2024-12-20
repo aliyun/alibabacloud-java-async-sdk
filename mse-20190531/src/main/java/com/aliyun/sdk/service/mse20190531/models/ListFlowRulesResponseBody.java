@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -230,7 +235,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         private Float threshold;
 
         @com.aliyun.core.annotation.NameInMap("TrafficTags")
-        private java.util.Map < String, ? > trafficTags;
+        private java.util.Map<String, ?> trafficTags;
 
         private Result(Builder builder) {
             this.appId = builder.appId;
@@ -351,7 +356,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         /**
          * @return trafficTags
          */
-        public java.util.Map < String, ? > getTrafficTags() {
+        public java.util.Map<String, ?> getTrafficTags() {
             return this.trafficTags;
         }
 
@@ -369,7 +374,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             private Integer resourceType; 
             private Long ruleId; 
             private Float threshold; 
-            private java.util.Map < String, ? > trafficTags; 
+            private java.util.Map<String, ?> trafficTags; 
 
             /**
              * <p>The ID of the application.</p>
@@ -553,7 +558,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;origin&quot;:&quot;default&quot;}</p>
              */
-            public Builder trafficTags(java.util.Map < String, ? > trafficTags) {
+            public Builder trafficTags(java.util.Map<String, ?> trafficTags) {
                 this.trafficTags = trafficTags;
                 return this;
             }
@@ -579,7 +584,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
@@ -616,7 +621,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -630,7 +635,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private Integer totalSize; 
 
             /**
@@ -658,7 +663,7 @@ public class ListFlowRulesResponseBody extends TeaModel {
             /**
              * <p>The data returned.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

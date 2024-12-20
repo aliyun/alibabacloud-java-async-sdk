@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -494,7 +499,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         private String endDate;
 
         @com.aliyun.core.annotation.NameInMap("ExpectZones")
-        private java.util.List < String > expectZones;
+        private java.util.List<String> expectZones;
 
         @com.aliyun.core.annotation.NameInMap("HealthStatus")
         private String healthStatus;
@@ -512,7 +517,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("InstanceModels")
-        private java.util.List < InstanceModels> instanceModels;
+        private java.util.List<InstanceModels> instanceModels;
 
         @com.aliyun.core.annotation.NameInMap("InternetAddress")
         private String internetAddress;
@@ -560,7 +565,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         private String securityGroupType;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -747,7 +752,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         /**
          * @return expectZones
          */
-        public java.util.List < String > getExpectZones() {
+        public java.util.List<String> getExpectZones() {
             return this.expectZones;
         }
 
@@ -789,7 +794,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         /**
          * @return instanceModels
          */
-        public java.util.List < InstanceModels> getInstanceModels() {
+        public java.util.List<InstanceModels> getInstanceModels() {
             return this.instanceModels;
         }
 
@@ -901,7 +906,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -944,13 +949,13 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             private String diskType; 
             private String eipInstanceId; 
             private String endDate; 
-            private java.util.List < String > expectZones; 
+            private java.util.List<String> expectZones; 
             private String healthStatus; 
             private Long initCostTime; 
             private String initStatus; 
             private Integer instanceCount; 
             private String instanceId; 
-            private java.util.List < InstanceModels> instanceModels; 
+            private java.util.List<InstanceModels> instanceModels; 
             private String internetAddress; 
             private String internetDomain; 
             private String internetPort; 
@@ -966,7 +971,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             private String regionId; 
             private String securityGroupId; 
             private String securityGroupType; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String vSwitchId; 
             private String versionCode; 
             private String vpcId; 
@@ -1158,7 +1163,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             /**
              * <p>The zones to which the current cluster can be distributed.</p>
              */
-            public Builder expectZones(java.util.List < String > expectZones) {
+            public Builder expectZones(java.util.List<String> expectZones) {
                 this.expectZones = expectZones;
                 return this;
             }
@@ -1221,7 +1226,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             /**
              * <p>The reserved structure.</p>
              */
-            public Builder instanceModels(java.util.List < InstanceModels> instanceModels) {
+            public Builder instanceModels(java.util.List<InstanceModels> instanceModels) {
                 this.instanceModels = instanceModels;
                 return this;
             }
@@ -1391,7 +1396,7 @@ public class QueryClusterInfoResponseBody extends TeaModel {
             /**
              * <p>The tag.</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }

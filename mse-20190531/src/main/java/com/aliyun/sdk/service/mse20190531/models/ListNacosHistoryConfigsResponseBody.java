@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
     private String errorCode;
 
     @com.aliyun.core.annotation.NameInMap("HistoryItems")
-    private java.util.List < HistoryItems> historyItems;
+    private java.util.List<HistoryItems> historyItems;
 
     @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
@@ -69,7 +74,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
     /**
      * @return historyItems
      */
-    public java.util.List < HistoryItems> getHistoryItems() {
+    public java.util.List<HistoryItems> getHistoryItems() {
         return this.historyItems;
     }
 
@@ -124,7 +129,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String errorCode; 
-        private java.util.List < HistoryItems> historyItems; 
+        private java.util.List<HistoryItems> historyItems; 
         private String httpCode; 
         private String message; 
         private Integer pageNumber; 
@@ -147,7 +152,7 @@ public class ListNacosHistoryConfigsResponseBody extends TeaModel {
         /**
          * <p>The configuration items.</p>
          */
-        public Builder historyItems(java.util.List < HistoryItems> historyItems) {
+        public Builder historyItems(java.util.List<HistoryItems> historyItems) {
             this.historyItems = historyItems;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -97,7 +102,7 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("IdList")
-        private java.util.List < Long > idList;
+        private java.util.List<Long> idList;
 
         @com.aliyun.core.annotation.NameInMap("LimitMode")
         private Integer limitMode;
@@ -198,7 +203,7 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
         /**
          * @return idList
          */
-        public java.util.List < Long > getIdList() {
+        public java.util.List<Long> getIdList() {
             return this.idList;
         }
 
@@ -272,7 +277,7 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             private Long gatewayId; 
             private String gatewayUniqueId; 
             private Long id; 
-            private java.util.List < Long > idList; 
+            private java.util.List<Long> idList; 
             private Integer limitMode; 
             private String responseAdditionalHeaders; 
             private String responseContentBody; 
@@ -334,7 +339,7 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
             /**
              * IdList.
              */
-            public Builder idList(java.util.List < Long > idList) {
+            public Builder idList(java.util.List<Long> idList) {
                 this.idList = idList;
                 return this;
             }

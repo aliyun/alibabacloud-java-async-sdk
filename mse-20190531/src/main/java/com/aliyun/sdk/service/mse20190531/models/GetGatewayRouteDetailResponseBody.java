@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1155,7 +1160,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
      */
     public static class HeaderOp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderOpItems")
-        private java.util.List < HeaderOpItems> headerOpItems;
+        private java.util.List<HeaderOpItems> headerOpItems;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -1176,7 +1181,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return headerOpItems
          */
-        public java.util.List < HeaderOpItems> getHeaderOpItems() {
+        public java.util.List<HeaderOpItems> getHeaderOpItems() {
             return this.headerOpItems;
         }
 
@@ -1188,13 +1193,13 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HeaderOpItems> headerOpItems; 
+            private java.util.List<HeaderOpItems> headerOpItems; 
             private String status; 
 
             /**
              * <p>The information about headers.</p>
              */
-            public Builder headerOpItems(java.util.List < HeaderOpItems> headerOpItems) {
+            public Builder headerOpItems(java.util.List<HeaderOpItems> headerOpItems) {
                 this.headerOpItems = headerOpItems;
                 return this;
             }
@@ -1324,10 +1329,10 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         private Integer attempts;
 
         @com.aliyun.core.annotation.NameInMap("HttpCodes")
-        private java.util.List < String > httpCodes;
+        private java.util.List<String> httpCodes;
 
         @com.aliyun.core.annotation.NameInMap("RetryOn")
-        private java.util.List < String > retryOn;
+        private java.util.List<String> retryOn;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -1357,14 +1362,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return httpCodes
          */
-        public java.util.List < String > getHttpCodes() {
+        public java.util.List<String> getHttpCodes() {
             return this.httpCodes;
         }
 
         /**
          * @return retryOn
          */
-        public java.util.List < String > getRetryOn() {
+        public java.util.List<String> getRetryOn() {
             return this.retryOn;
         }
 
@@ -1377,8 +1382,8 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer attempts; 
-            private java.util.List < String > httpCodes; 
-            private java.util.List < String > retryOn; 
+            private java.util.List<String> httpCodes; 
+            private java.util.List<String> retryOn; 
             private String status; 
 
             /**
@@ -1395,7 +1400,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             /**
              * <p>The HTTP status codes.</p>
              */
-            public Builder httpCodes(java.util.List < String > httpCodes) {
+            public Builder httpCodes(java.util.List<String> httpCodes) {
                 this.httpCodes = httpCodes;
                 return this;
             }
@@ -1403,7 +1408,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             /**
              * <p>The retry condition.</p>
              */
-            public Builder retryOn(java.util.List < String > retryOn) {
+            public Builder retryOn(java.util.List<String> retryOn) {
                 this.retryOn = retryOn;
                 return this;
             }
@@ -1722,16 +1727,16 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
      */
     public static class RoutePredicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderPredicates")
-        private java.util.List < HeaderPredicates> headerPredicates;
+        private java.util.List<HeaderPredicates> headerPredicates;
 
         @com.aliyun.core.annotation.NameInMap("MethodPredicates")
-        private java.util.List < String > methodPredicates;
+        private java.util.List<String> methodPredicates;
 
         @com.aliyun.core.annotation.NameInMap("PathPredicates")
         private PathPredicates pathPredicates;
 
         @com.aliyun.core.annotation.NameInMap("QueryPredicates")
-        private java.util.List < QueryPredicates> queryPredicates;
+        private java.util.List<QueryPredicates> queryPredicates;
 
         private RoutePredicates(Builder builder) {
             this.headerPredicates = builder.headerPredicates;
@@ -1751,14 +1756,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return headerPredicates
          */
-        public java.util.List < HeaderPredicates> getHeaderPredicates() {
+        public java.util.List<HeaderPredicates> getHeaderPredicates() {
             return this.headerPredicates;
         }
 
         /**
          * @return methodPredicates
          */
-        public java.util.List < String > getMethodPredicates() {
+        public java.util.List<String> getMethodPredicates() {
             return this.methodPredicates;
         }
 
@@ -1772,20 +1777,20 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return queryPredicates
          */
-        public java.util.List < QueryPredicates> getQueryPredicates() {
+        public java.util.List<QueryPredicates> getQueryPredicates() {
             return this.queryPredicates;
         }
 
         public static final class Builder {
-            private java.util.List < HeaderPredicates> headerPredicates; 
-            private java.util.List < String > methodPredicates; 
+            private java.util.List<HeaderPredicates> headerPredicates; 
+            private java.util.List<String> methodPredicates; 
             private PathPredicates pathPredicates; 
-            private java.util.List < QueryPredicates> queryPredicates; 
+            private java.util.List<QueryPredicates> queryPredicates; 
 
             /**
              * <p>The information about header matching.</p>
              */
-            public Builder headerPredicates(java.util.List < HeaderPredicates> headerPredicates) {
+            public Builder headerPredicates(java.util.List<HeaderPredicates> headerPredicates) {
                 this.headerPredicates = headerPredicates;
                 return this;
             }
@@ -1793,7 +1798,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             /**
              * <p>The information about method matching.</p>
              */
-            public Builder methodPredicates(java.util.List < String > methodPredicates) {
+            public Builder methodPredicates(java.util.List<String> methodPredicates) {
                 this.methodPredicates = methodPredicates;
                 return this;
             }
@@ -1809,7 +1814,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             /**
              * <p>The information about parameter matching.</p>
              */
-            public Builder queryPredicates(java.util.List < QueryPredicates> queryPredicates) {
+            public Builder queryPredicates(java.util.List<QueryPredicates> queryPredicates) {
                 this.queryPredicates = queryPredicates;
                 return this;
             }
@@ -1925,13 +1930,13 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         private String mothedpath;
 
         @com.aliyun.core.annotation.NameInMap("ParamMapsList")
-        private java.util.List < ParamMapsList> paramMapsList;
+        private java.util.List<ParamMapsList> paramMapsList;
 
         @com.aliyun.core.annotation.NameInMap("PassThroughAllHeaders")
         private String passThroughAllHeaders;
 
         @com.aliyun.core.annotation.NameInMap("PassThroughList")
-        private java.util.List < String > passThroughList;
+        private java.util.List<String> passThroughList;
 
         private MothedMapList(Builder builder) {
             this.dubboMothedName = builder.dubboMothedName;
@@ -1974,7 +1979,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return paramMapsList
          */
-        public java.util.List < ParamMapsList> getParamMapsList() {
+        public java.util.List<ParamMapsList> getParamMapsList() {
             return this.paramMapsList;
         }
 
@@ -1988,7 +1993,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return passThroughList
          */
-        public java.util.List < String > getPassThroughList() {
+        public java.util.List<String> getPassThroughList() {
             return this.passThroughList;
         }
 
@@ -1996,9 +2001,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String dubboMothedName; 
             private String httpMothed; 
             private String mothedpath; 
-            private java.util.List < ParamMapsList> paramMapsList; 
+            private java.util.List<ParamMapsList> paramMapsList; 
             private String passThroughAllHeaders; 
-            private java.util.List < String > passThroughList; 
+            private java.util.List<String> passThroughList; 
 
             /**
              * DubboMothedName.
@@ -2027,7 +2032,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             /**
              * ParamMapsList.
              */
-            public Builder paramMapsList(java.util.List < ParamMapsList> paramMapsList) {
+            public Builder paramMapsList(java.util.List<ParamMapsList> paramMapsList) {
                 this.paramMapsList = paramMapsList;
                 return this;
             }
@@ -2043,7 +2048,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             /**
              * PassThroughList.
              */
-            public Builder passThroughList(java.util.List < String > passThroughList) {
+            public Builder passThroughList(java.util.List<String> passThroughList) {
                 this.passThroughList = passThroughList;
                 return this;
             }
@@ -2072,7 +2077,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         private String dubboServiceVersion;
 
         @com.aliyun.core.annotation.NameInMap("MothedMapList")
-        private java.util.List < MothedMapList> mothedMapList;
+        private java.util.List<MothedMapList> mothedMapList;
 
         private HttpDubboTranscoder(Builder builder) {
             this.dubboServiceGroup = builder.dubboServiceGroup;
@@ -2113,7 +2118,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return mothedMapList
          */
-        public java.util.List < MothedMapList> getMothedMapList() {
+        public java.util.List<MothedMapList> getMothedMapList() {
             return this.mothedMapList;
         }
 
@@ -2121,7 +2126,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String dubboServiceGroup; 
             private String dubboServiceName; 
             private String dubboServiceVersion; 
-            private java.util.List < MothedMapList> mothedMapList; 
+            private java.util.List<MothedMapList> mothedMapList; 
 
             /**
              * DubboServiceGroup.
@@ -2150,7 +2155,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             /**
              * MothedMapList.
              */
-            public Builder mothedMapList(java.util.List < MothedMapList> mothedMapList) {
+            public Builder mothedMapList(java.util.List<MothedMapList> mothedMapList) {
                 this.mothedMapList = mothedMapList;
                 return this;
             }
@@ -2203,7 +2208,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         private String sourceType;
 
         @com.aliyun.core.annotation.NameInMap("UnhealthyEndpoints")
-        private java.util.List < String > unhealthyEndpoints;
+        private java.util.List<String> unhealthyEndpoints;
 
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
@@ -2312,7 +2317,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return unhealthyEndpoints
          */
-        public java.util.List < String > getUnhealthyEndpoints() {
+        public java.util.List<String> getUnhealthyEndpoints() {
             return this.unhealthyEndpoints;
         }
 
@@ -2335,7 +2340,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String serviceName; 
             private Integer servicePort; 
             private String sourceType; 
-            private java.util.List < String > unhealthyEndpoints; 
+            private java.util.List<String> unhealthyEndpoints; 
             private String version; 
 
             /**
@@ -2456,7 +2461,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             /**
              * UnhealthyEndpoints.
              */
-            public Builder unhealthyEndpoints(java.util.List < String > unhealthyEndpoints) {
+            public Builder unhealthyEndpoints(java.util.List<String> unhealthyEndpoints) {
                 this.unhealthyEndpoints = unhealthyEndpoints;
                 return this;
             }
@@ -2607,13 +2612,13 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         private Long domainId;
 
         @com.aliyun.core.annotation.NameInMap("DomainIdList")
-        private java.util.List < Long > domainIdList;
+        private java.util.List<Long> domainIdList;
 
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
         @com.aliyun.core.annotation.NameInMap("DomainNameList")
-        private java.util.List < String > domainNameList;
+        private java.util.List<String> domainNameList;
 
         @com.aliyun.core.annotation.NameInMap("EnableWaf")
         private Boolean enableWaf;
@@ -2622,7 +2627,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         private Boolean fallback;
 
         @com.aliyun.core.annotation.NameInMap("FallbackServices")
-        private java.util.List < FallbackServices> fallbackServices;
+        private java.util.List<FallbackServices> fallbackServices;
 
         @com.aliyun.core.annotation.NameInMap("FlowMirror")
         private FlowMirror flowMirror;
@@ -2670,7 +2675,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         private RoutePredicates routePredicates;
 
         @com.aliyun.core.annotation.NameInMap("RouteServices")
-        private java.util.List < RouteServices> routeServices;
+        private java.util.List<RouteServices> routeServices;
 
         @com.aliyun.core.annotation.NameInMap("Services")
         private String services;
@@ -2784,7 +2789,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return domainIdList
          */
-        public java.util.List < Long > getDomainIdList() {
+        public java.util.List<Long> getDomainIdList() {
             return this.domainIdList;
         }
 
@@ -2798,7 +2803,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return domainNameList
          */
-        public java.util.List < String > getDomainNameList() {
+        public java.util.List<String> getDomainNameList() {
             return this.domainNameList;
         }
 
@@ -2819,7 +2824,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return fallbackServices
          */
-        public java.util.List < FallbackServices> getFallbackServices() {
+        public java.util.List<FallbackServices> getFallbackServices() {
             return this.fallbackServices;
         }
 
@@ -2931,7 +2936,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         /**
          * @return routeServices
          */
-        public java.util.List < RouteServices> getRouteServices() {
+        public java.util.List<RouteServices> getRouteServices() {
             return this.routeServices;
         }
 
@@ -2965,12 +2970,12 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private String destinationType; 
             private DirectResponse directResponse; 
             private Long domainId; 
-            private java.util.List < Long > domainIdList; 
+            private java.util.List<Long> domainIdList; 
             private String domainName; 
-            private java.util.List < String > domainNameList; 
+            private java.util.List<String> domainNameList; 
             private Boolean enableWaf; 
             private Boolean fallback; 
-            private java.util.List < FallbackServices> fallbackServices; 
+            private java.util.List<FallbackServices> fallbackServices; 
             private FlowMirror flowMirror; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
@@ -2986,7 +2991,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             private Retry retry; 
             private Integer routeOrder; 
             private RoutePredicates routePredicates; 
-            private java.util.List < RouteServices> routeServices; 
+            private java.util.List<RouteServices> routeServices; 
             private String services; 
             private Integer status; 
             private Timeout timeout; 
@@ -3073,7 +3078,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             /**
              * <p>The IDs of domains.</p>
              */
-            public Builder domainIdList(java.util.List < Long > domainIdList) {
+            public Builder domainIdList(java.util.List<Long> domainIdList) {
                 this.domainIdList = domainIdList;
                 return this;
             }
@@ -3092,7 +3097,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             /**
              * <p>The list of domain names.</p>
              */
-            public Builder domainNameList(java.util.List < String > domainNameList) {
+            public Builder domainNameList(java.util.List<String> domainNameList) {
                 this.domainNameList = domainNameList;
                 return this;
             }
@@ -3122,7 +3127,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             /**
              * <p>The information of the Fallback service.</p>
              */
-            public Builder fallbackServices(java.util.List < FallbackServices> fallbackServices) {
+            public Builder fallbackServices(java.util.List<FallbackServices> fallbackServices) {
                 this.fallbackServices = fallbackServices;
                 return this;
             }
@@ -3284,7 +3289,7 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
             /**
              * <p>The services.</p>
              */
-            public Builder routeServices(java.util.List < RouteServices> routeServices) {
+            public Builder routeServices(java.util.List<RouteServices> routeServices) {
                 this.routeServices = routeServices;
                 return this;
             }

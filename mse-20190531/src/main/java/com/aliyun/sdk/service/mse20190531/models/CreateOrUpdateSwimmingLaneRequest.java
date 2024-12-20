@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EntryRules")
-    private java.util.List < EntryRules> entryRules;
+    private java.util.List<EntryRules> entryRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GatewaySwimmingLaneRouteJson")
@@ -129,7 +134,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     /**
      * @return entryRules
      */
-    public java.util.List < EntryRules> getEntryRules() {
+    public java.util.List<EntryRules> getEntryRules() {
         return this.entryRules;
     }
 
@@ -194,7 +199,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         private Boolean enable; 
         private Boolean enableRules; 
         private String entryRule; 
-        private java.util.List < EntryRules> entryRules; 
+        private java.util.List<EntryRules> entryRules; 
         private GatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson; 
         private Long groupId; 
         private Long id; 
@@ -276,7 +281,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         /**
          * EntryRules.
          */
-        public Builder entryRules(java.util.List < EntryRules> entryRules) {
+        public Builder entryRules(java.util.List<EntryRules> entryRules) {
             this.putBodyParameter("EntryRules", entryRules);
             this.entryRules = entryRules;
             return this;
@@ -405,7 +410,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("NameList")
-        private java.util.List < String > nameList;
+        private java.util.List<String> nameList;
 
         @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
@@ -474,7 +479,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         /**
          * @return nameList
          */
-        public java.util.List < String > getNameList() {
+        public java.util.List<String> getNameList() {
             return this.nameList;
         }
 
@@ -518,7 +523,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private String datum; 
             private Integer divisor; 
             private String name; 
-            private java.util.List < String > nameList; 
+            private java.util.List<String> nameList; 
             private String operator; 
             private Integer rate; 
             private Integer remainder; 
@@ -564,7 +569,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             /**
              * NameList.
              */
-            public Builder nameList(java.util.List < String > nameList) {
+            public Builder nameList(java.util.List<String> nameList) {
                 this.nameList = nameList;
                 return this;
             }
@@ -627,13 +632,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         private String condition;
 
         @com.aliyun.core.annotation.NameInMap("Paths")
-        private java.util.List < String > paths;
+        private java.util.List<String> paths;
 
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
         @com.aliyun.core.annotation.NameInMap("RestItems")
-        private java.util.List < RestItems> restItems;
+        private java.util.List<RestItems> restItems;
 
         private EntryRules(Builder builder) {
             this.condition = builder.condition;
@@ -660,7 +665,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
@@ -674,15 +679,15 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         /**
          * @return restItems
          */
-        public java.util.List < RestItems> getRestItems() {
+        public java.util.List<RestItems> getRestItems() {
             return this.restItems;
         }
 
         public static final class Builder {
             private String condition; 
-            private java.util.List < String > paths; 
+            private java.util.List<String> paths; 
             private Integer priority; 
-            private java.util.List < RestItems> restItems; 
+            private java.util.List<RestItems> restItems; 
 
             /**
              * Condition.
@@ -695,7 +700,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             /**
              * Paths.
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }
@@ -711,7 +716,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             /**
              * RestItems.
              */
-            public Builder restItems(java.util.List < RestItems> restItems) {
+            public Builder restItems(java.util.List<RestItems> restItems) {
                 this.restItems = restItems;
                 return this;
             }
@@ -932,7 +937,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         private String condition;
 
         @com.aliyun.core.annotation.NameInMap("Conditions")
-        private java.util.List < Conditions> conditions;
+        private java.util.List<Conditions> conditions;
 
         @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
@@ -944,13 +949,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         private Integer percentage;
 
         @com.aliyun.core.annotation.NameInMap("RouteIdList")
-        private java.util.List < Long > routeIdList;
+        private java.util.List<Long> routeIdList;
 
         @com.aliyun.core.annotation.NameInMap("RouteIndependentPercentageEnable")
         private Boolean routeIndependentPercentageEnable;
 
         @com.aliyun.core.annotation.NameInMap("RouteIndependentPercentageList")
-        private java.util.List < RouteIndependentPercentageList> routeIndependentPercentageList;
+        private java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList;
 
         private GatewaySwimmingLaneRouteJson(Builder builder) {
             this.canaryModel = builder.canaryModel;
@@ -989,7 +994,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         /**
          * @return conditions
          */
-        public java.util.List < Conditions> getConditions() {
+        public java.util.List<Conditions> getConditions() {
             return this.conditions;
         }
 
@@ -1017,7 +1022,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         /**
          * @return routeIdList
          */
-        public java.util.List < Long > getRouteIdList() {
+        public java.util.List<Long> getRouteIdList() {
             return this.routeIdList;
         }
 
@@ -1031,20 +1036,20 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         /**
          * @return routeIndependentPercentageList
          */
-        public java.util.List < RouteIndependentPercentageList> getRouteIndependentPercentageList() {
+        public java.util.List<RouteIndependentPercentageList> getRouteIndependentPercentageList() {
             return this.routeIndependentPercentageList;
         }
 
         public static final class Builder {
             private Integer canaryModel; 
             private String condition; 
-            private java.util.List < Conditions> conditions; 
+            private java.util.List<Conditions> conditions; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
             private Integer percentage; 
-            private java.util.List < Long > routeIdList; 
+            private java.util.List<Long> routeIdList; 
             private Boolean routeIndependentPercentageEnable; 
-            private java.util.List < RouteIndependentPercentageList> routeIndependentPercentageList; 
+            private java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList; 
 
             /**
              * CanaryModel.
@@ -1065,7 +1070,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             /**
              * <p>The matching conditions.</p>
              */
-            public Builder conditions(java.util.List < Conditions> conditions) {
+            public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
                 return this;
             }
@@ -1103,7 +1108,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             /**
              * <p>The route IDs.</p>
              */
-            public Builder routeIdList(java.util.List < Long > routeIdList) {
+            public Builder routeIdList(java.util.List<Long> routeIdList) {
                 this.routeIdList = routeIdList;
                 return this;
             }
@@ -1119,7 +1124,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             /**
              * RouteIndependentPercentageList.
              */
-            public Builder routeIndependentPercentageList(java.util.List < RouteIndependentPercentageList> routeIndependentPercentageList) {
+            public Builder routeIndependentPercentageList(java.util.List<RouteIndependentPercentageList> routeIndependentPercentageList) {
                 this.routeIndependentPercentageList = routeIndependentPercentageList;
                 return this;
             }

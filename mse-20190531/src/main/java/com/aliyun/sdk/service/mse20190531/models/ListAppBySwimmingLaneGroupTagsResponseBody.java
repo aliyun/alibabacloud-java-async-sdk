@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.Map < String, java.util.List<DataValue>> data;
+    private java.util.Map<String, java.util.List<DataValue>> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -46,7 +51,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.Map < String, java.util.List<DataValue>> getData() {
+    public java.util.Map<String, java.util.List<DataValue>> getData() {
         return this.data;
     }
 
@@ -79,7 +84,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, java.util.List<DataValue>> data; 
+        private java.util.Map<String, java.util.List<DataValue>> data; 
         private String errorCode; 
         private String message; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
         /**
          * <p>The returned data.</p>
          */
-        public Builder data(java.util.Map < String, java.util.List<DataValue>> data) {
+        public Builder data(java.util.Map<String, java.util.List<DataValue>> data) {
             this.data = data;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -423,7 +428,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("InstanceModels")
-        private java.util.List < InstanceModels> instanceModels;
+        private java.util.List<InstanceModels> instanceModels;
 
         @com.aliyun.core.annotation.NameInMap("InternetAddress")
         private String internetAddress;
@@ -468,7 +473,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -660,7 +665,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         /**
          * @return instanceModels
          */
-        public java.util.List < InstanceModels> getInstanceModels() {
+        public java.util.List<InstanceModels> getInstanceModels() {
             return this.instanceModels;
         }
 
@@ -765,7 +770,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -803,7 +808,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             private String initStatus; 
             private Integer instanceCount; 
             private String instanceId; 
-            private java.util.List < InstanceModels> instanceModels; 
+            private java.util.List<InstanceModels> instanceModels; 
             private String internetAddress; 
             private String internetDomain; 
             private String internetPort; 
@@ -818,7 +823,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             private String pubNetworkFlow; 
             private String regionId; 
             private String resourceGroupId; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String vSwitchId; 
             private String vpcId; 
 
@@ -1038,7 +1043,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             /**
              * <p>The list of instance nodes.</p>
              */
-            public Builder instanceModels(java.util.List < InstanceModels> instanceModels) {
+            public Builder instanceModels(java.util.List<InstanceModels> instanceModels) {
                 this.instanceModels = instanceModels;
                 return this;
             }
@@ -1204,7 +1209,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
             /**
              * <p>The tags that are attached to the instance.</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }

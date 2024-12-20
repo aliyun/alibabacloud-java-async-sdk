@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -501,7 +506,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         private String primaryUser;
 
         @com.aliyun.core.annotation.NameInMap("ResourceList")
-        private java.util.List < ResourceList> resourceList;
+        private java.util.List<ResourceList> resourceList;
 
         @com.aliyun.core.annotation.NameInMap("TokenName")
         private String tokenName;
@@ -634,7 +639,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         /**
          * @return resourceList
          */
-        public java.util.List < ResourceList> getResourceList() {
+        public java.util.List<ResourceList> getResourceList() {
             return this.resourceList;
         }
 
@@ -686,7 +691,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             private String keyValue; 
             private String name; 
             private String primaryUser; 
-            private java.util.List < ResourceList> resourceList; 
+            private java.util.List<ResourceList> resourceList; 
             private String tokenName; 
             private Boolean tokenPass; 
             private String tokenPosition; 
@@ -845,7 +850,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             /**
              * <p>The resource list.</p>
              */
-            public Builder resourceList(java.util.List < ResourceList> resourceList) {
+            public Builder resourceList(java.util.List<ResourceList> resourceList) {
                 this.resourceList = resourceList;
                 return this;
             }

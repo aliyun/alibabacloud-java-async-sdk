@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CloneSentinelRuleFromAhasResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.Map < String, java.util.List<String>> data;
+    private java.util.Map<String, java.util.List<String>> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class CloneSentinelRuleFromAhasResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.Map < String, java.util.List<String>> getData() {
+    public java.util.Map<String, java.util.List<String>> getData() {
         return this.data;
     }
 
@@ -46,13 +51,13 @@ public class CloneSentinelRuleFromAhasResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, java.util.List<String>> data; 
+        private java.util.Map<String, java.util.List<String>> data; 
         private String requestId; 
 
         /**
          * <p>The returned data.</p>
          */
-        public Builder data(java.util.Map < String, java.util.List<String>> data) {
+        public Builder data(java.util.Map<String, java.util.List<String>> data) {
             this.data = data;
             return this;
         }

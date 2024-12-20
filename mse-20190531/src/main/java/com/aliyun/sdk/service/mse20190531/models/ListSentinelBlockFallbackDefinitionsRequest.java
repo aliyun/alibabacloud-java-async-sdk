@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ListSentinelBlockFallbackDefinitionsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClassificationSet")
-    private java.util.List < Integer > classificationSet;
+    private java.util.List<Integer> classificationSet;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
@@ -68,7 +73,7 @@ public class ListSentinelBlockFallbackDefinitionsRequest extends Request {
     /**
      * @return classificationSet
      */
-    public java.util.List < Integer > getClassificationSet() {
+    public java.util.List<Integer> getClassificationSet() {
         return this.classificationSet;
     }
 
@@ -82,7 +87,7 @@ public class ListSentinelBlockFallbackDefinitionsRequest extends Request {
     public static final class Builder extends Request.Builder<ListSentinelBlockFallbackDefinitionsRequest, Builder> {
         private String acceptLanguage; 
         private String appName; 
-        private java.util.List < Integer > classificationSet; 
+        private java.util.List<Integer> classificationSet; 
         private String namespace; 
 
         private Builder() {
@@ -121,7 +126,7 @@ public class ListSentinelBlockFallbackDefinitionsRequest extends Request {
         /**
          * ClassificationSet.
          */
-        public Builder classificationSet(java.util.List < Integer > classificationSet) {
+        public Builder classificationSet(java.util.List<Integer> classificationSet) {
             String classificationSetShrink = shrink(classificationSet, "ClassificationSet", "json");
             this.putQueryParameter("ClassificationSet", classificationSetShrink);
             this.classificationSet = classificationSet;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -52,7 +57,7 @@ public class AddGatewaySlbRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VServiceList")
-    private java.util.List < VServiceList> vServiceList;
+    private java.util.List<VServiceList> vServiceList;
 
     private AddGatewaySlbRequest(Builder builder) {
         super(builder);
@@ -147,7 +152,7 @@ public class AddGatewaySlbRequest extends Request {
     /**
      * @return vServiceList
      */
-    public java.util.List < VServiceList> getVServiceList() {
+    public java.util.List<VServiceList> getVServiceList() {
         return this.vServiceList;
     }
 
@@ -161,7 +166,7 @@ public class AddGatewaySlbRequest extends Request {
         private String slbId; 
         private String type; 
         private String vServerGroupId; 
-        private java.util.List < VServiceList> vServiceList; 
+        private java.util.List<VServiceList> vServiceList; 
 
         private Builder() {
             super();
@@ -302,7 +307,7 @@ public class AddGatewaySlbRequest extends Request {
         /**
          * <p>The SLB monitoring information.</p>
          */
-        public Builder vServiceList(java.util.List < VServiceList> vServiceList) {
+        public Builder vServiceList(java.util.List<VServiceList> vServiceList) {
             String vServiceListShrink = shrink(vServiceList, "VServiceList", "json");
             this.putQueryParameter("VServiceList", vServiceListShrink);
             this.vServiceList = vServiceList;

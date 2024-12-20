@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class DeleteFlowRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ids")
-    private java.util.List < Long > ids;
+    private java.util.List<Long> ids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
@@ -80,7 +85,7 @@ public class DeleteFlowRulesRequest extends Request {
     /**
      * @return ids
      */
-    public java.util.List < Long > getIds() {
+    public java.util.List<Long> getIds() {
         return this.ids;
     }
 
@@ -95,7 +100,7 @@ public class DeleteFlowRulesRequest extends Request {
         private String regionId; 
         private String acceptLanguage; 
         private String appName; 
-        private java.util.List < Long > ids; 
+        private java.util.List<Long> ids; 
         private String namespace; 
 
         private Builder() {
@@ -155,7 +160,7 @@ public class DeleteFlowRulesRequest extends Request {
          * <strong>example:</strong>
          * <p>[1,2]</p>
          */
-        public Builder ids(java.util.List < Long > ids) {
+        public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
             this.putQueryParameter("Ids", idsShrink);
             this.ids = ids;

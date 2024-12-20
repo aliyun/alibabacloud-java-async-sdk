@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -485,7 +490,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Results")
-        private java.util.List < Results> results;
+        private java.util.List<Results> results;
 
         @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
@@ -522,7 +527,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         /**
          * @return results
          */
-        public java.util.List < Results> getResults() {
+        public java.util.List<Results> getResults() {
             return this.results;
         }
 
@@ -536,7 +541,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Results> results; 
+            private java.util.List<Results> results; 
             private Integer totalSize; 
 
             /**
@@ -564,7 +569,7 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
             /**
              * <p>The returned data.</p>
              */
-            public Builder results(java.util.List < Results> results) {
+            public Builder results(java.util.List<Results> results) {
                 this.results = results;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListEurekaServicesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -62,7 +67,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -123,7 +128,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String httpCode; 
         private String message; 
@@ -136,7 +141,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         /**
          * <p>The details of the data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -247,7 +252,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstancesId")
-        private java.util.List < String > instancesId;
+        private java.util.List<String> instancesId;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -272,7 +277,7 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         /**
          * @return instancesId
          */
-        public java.util.List < String > getInstancesId() {
+        public java.util.List<String> getInstancesId() {
             return this.instancesId;
         }
 
@@ -291,14 +296,14 @@ public class ListEurekaServicesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > instancesId; 
+            private java.util.List<String> instancesId; 
             private String name; 
             private String upStatus; 
 
             /**
              * <p>The details of the instance.</p>
              */
-            public Builder instancesId(java.util.List < String > instancesId) {
+            public Builder instancesId(java.util.List<String> instancesId) {
                 this.instancesId = instancesId;
                 return this;
             }

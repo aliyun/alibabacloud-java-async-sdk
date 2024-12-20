@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceList")
-    private java.util.List < ResourceList> resourceList;
+    private java.util.List<ResourceList> resourceList;
 
     private UpdateGatewayAuthConsumerResourceRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
     /**
      * @return resourceList
      */
-    public java.util.List < ResourceList> getResourceList() {
+    public java.util.List<ResourceList> getResourceList() {
         return this.resourceList;
     }
 
@@ -83,7 +88,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         private String acceptLanguage; 
         private Long consumerId; 
         private String gatewayUniqueId; 
-        private java.util.List < ResourceList> resourceList; 
+        private java.util.List<ResourceList> resourceList; 
 
         private Builder() {
             super();
@@ -142,7 +147,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         /**
          * <p>The gateway authentication consumer ID.</p>
          */
-        public Builder resourceList(java.util.List < ResourceList> resourceList) {
+        public Builder resourceList(java.util.List<ResourceList> resourceList) {
             String resourceListShrink = shrink(resourceList, "ResourceList", "json");
             this.putQueryParameter("ResourceList", resourceListShrink);
             this.resourceList = resourceList;

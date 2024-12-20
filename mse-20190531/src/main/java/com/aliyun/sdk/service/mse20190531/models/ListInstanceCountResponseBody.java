@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListInstanceCountResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Integer > data;
+    private java.util.List<Integer> data;
 
     @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
@@ -69,7 +74,7 @@ public class ListInstanceCountResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Integer > getData() {
+    public java.util.List<Integer> getData() {
         return this.data;
     }
 
@@ -124,7 +129,7 @@ public class ListInstanceCountResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Integer > data; 
+        private java.util.List<Integer> data; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private String errorCode; 
@@ -147,7 +152,7 @@ public class ListInstanceCountResponseBody extends TeaModel {
         /**
          * <p>The data entries returned.</p>
          */
-        public Builder data(java.util.List < Integer > data) {
+        public Builder data(java.util.List<Integer> data) {
             this.data = data;
             return this;
         }

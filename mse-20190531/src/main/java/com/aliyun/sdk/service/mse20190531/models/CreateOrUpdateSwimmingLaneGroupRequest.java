@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -56,7 +61,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Paths")
-    private java.util.List < String > paths;
+    private java.util.List<String> paths;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecordCanaryDetail")
@@ -68,7 +73,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteIds")
-    private java.util.List < Long > routeIds;
+    private java.util.List<Long> routeIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -184,7 +189,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     /**
      * @return paths
      */
-    public java.util.List < String > getPaths() {
+    public java.util.List<String> getPaths() {
         return this.paths;
     }
 
@@ -205,7 +210,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     /**
      * @return routeIds
      */
-    public java.util.List < Long > getRouteIds() {
+    public java.util.List<Long> getRouteIds() {
         return this.routeIds;
     }
 
@@ -234,10 +239,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         private Boolean messageQueueGrayEnable; 
         private String name; 
         private String namespace; 
-        private java.util.List < String > paths; 
+        private java.util.List<String> paths; 
         private Boolean recordCanaryDetail; 
         private String region; 
-        private java.util.List < Long > routeIds; 
+        private java.util.List<Long> routeIds; 
         private Integer status; 
         private Integer swimVersion; 
 
@@ -390,7 +395,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         /**
          * Paths.
          */
-        public Builder paths(java.util.List < String > paths) {
+        public Builder paths(java.util.List<String> paths) {
             String pathsShrink = shrink(paths, "Paths", "json");
             this.putQueryParameter("Paths", pathsShrink);
             this.paths = paths;
@@ -421,7 +426,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         /**
          * RouteIds.
          */
-        public Builder routeIds(java.util.List < Long > routeIds) {
+        public Builder routeIds(java.util.List<Long> routeIds) {
             String routeIdsShrink = shrink(routeIds, "RouteIds", "json");
             this.putQueryParameter("RouteIds", routeIdsShrink);
             this.routeIds = routeIds;

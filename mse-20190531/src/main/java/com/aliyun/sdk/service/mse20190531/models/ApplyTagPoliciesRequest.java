@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class ApplyTagPoliciesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Rules")
-    private java.util.Map < String, RulesValue > rules;
+    private java.util.Map<String, RulesValue> rules;
 
     private ApplyTagPoliciesRequest(Builder builder) {
         super(builder);
@@ -125,7 +130,7 @@ public class ApplyTagPoliciesRequest extends Request {
     /**
      * @return rules
      */
-    public java.util.Map < String, RulesValue > getRules() {
+    public java.util.Map<String, RulesValue> getRules() {
         return this.rules;
     }
 
@@ -137,7 +142,7 @@ public class ApplyTagPoliciesRequest extends Request {
         private String namespace; 
         private String namespaceId; 
         private String region; 
-        private java.util.Map < String, RulesValue > rules; 
+        private java.util.Map<String, RulesValue> rules; 
 
         private Builder() {
             super();
@@ -250,7 +255,7 @@ public class ApplyTagPoliciesRequest extends Request {
          * <strong>example:</strong>
          * <p>{ &quot;blue&quot;: { # Tag key. &quot;rate&quot;: 20, # Rate. A value of 20 indicates that 20% of the traffic is routed to the node identified by the tag. &quot;name&quot;: &quot;luoye-route-test&quot;, # Routing rule name. &quot;carryData&quot;: false, # Specifies whether to enable pass-through. This parameter is applicable to end-to-end canary release. &quot;rules&quot;: { # Rule information. &quot;dubbo&quot;: [{ # Dubbo rule. The system also supports Spring Cloud and Istio rule. &quot;serviceName&quot;: &quot;com.taobao.hsf.common.DemoService&quot;, # Service name (operation name). &quot;group&quot;: &quot;&quot;, # Group name. &quot;version&quot;: &quot;&quot;, # Service version. &quot;methodName&quot;: &quot;sayHello&quot;, # Method name. &quot;condition&quot;: &quot;AND&quot;, # Logical operator used by the following items. Valid values: AND and OR. &quot;argumentItems&quot;: [{ # Array of rule details. &quot;index&quot;: 0, # Index field. &quot;expr&quot;: &quot;&quot;, # Expression. Its details is described below. &quot;operator&quot;: &quot;rawvalue&quot;, # The comparison mode. A value of rawvalue indicates direct comparison. A value of mode indicates the modulo operation. A value of list indicates using a whitelist. &quot;value&quot;: &quot;jim&quot;, # Base value. The value obtained by the expression will be compared with this value. If operator is set to list, separate the items specified for this parameter with commas (,). Example: 1,2,3. &quot;cond&quot;: &quot;==&quot; # Comparison operator. Valid values: &gt;=, &lt;=, &gt;, &lt;, and ==. }] }] } }, &quot;_base&quot;: { # Another tag key. &quot;rate&quot;: 80 # Rate. A value of 20 indicates that 20% of the traffic is routed to the node identified by the tag. } }</p>
          */
-        public Builder rules(java.util.Map < String, RulesValue > rules) {
+        public Builder rules(java.util.Map<String, RulesValue> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");
             this.putQueryParameter("Rules", rulesShrink);
             this.rules = rules;

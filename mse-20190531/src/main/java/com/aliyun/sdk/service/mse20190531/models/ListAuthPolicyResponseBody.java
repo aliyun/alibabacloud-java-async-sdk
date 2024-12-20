@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -181,7 +186,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("ParameterTypes")
-        private java.util.List < String > parameterTypes;
+        private java.util.List<String> parameterTypes;
 
         @com.aliyun.core.annotation.NameInMap("ReturnType")
         private String returnType;
@@ -226,7 +231,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         /**
          * @return parameterTypes
          */
-        public java.util.List < String > getParameterTypes() {
+        public java.util.List<String> getParameterTypes() {
             return this.parameterTypes;
         }
 
@@ -254,7 +259,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String group; 
             private String name; 
-            private java.util.List < String > parameterTypes; 
+            private java.util.List<String> parameterTypes; 
             private String returnType; 
             private String serviceName; 
             private String version; 
@@ -284,7 +289,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             /**
              * <p>The types of request parameters.</p>
              */
-            public Builder parameterTypes(java.util.List < String > parameterTypes) {
+            public Builder parameterTypes(java.util.List<String> parameterTypes) {
                 this.parameterTypes = parameterTypes;
                 return this;
             }
@@ -337,7 +342,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
      */
     public static class AuthRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppIds")
-        private java.util.List < String > appIds;
+        private java.util.List<String> appIds;
 
         @com.aliyun.core.annotation.NameInMap("AuthType")
         private Integer authType;
@@ -346,7 +351,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         private Boolean black;
 
         @com.aliyun.core.annotation.NameInMap("K8sNamespaces")
-        private java.util.List < String > k8sNamespaces;
+        private java.util.List<String> k8sNamespaces;
 
         @com.aliyun.core.annotation.NameInMap("Method")
         private Method method;
@@ -374,7 +379,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         /**
          * @return appIds
          */
-        public java.util.List < String > getAppIds() {
+        public java.util.List<String> getAppIds() {
             return this.appIds;
         }
 
@@ -395,7 +400,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         /**
          * @return k8sNamespaces
          */
-        public java.util.List < String > getK8sNamespaces() {
+        public java.util.List<String> getK8sNamespaces() {
             return this.k8sNamespaces;
         }
 
@@ -414,17 +419,17 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > appIds; 
+            private java.util.List<String> appIds; 
             private Integer authType; 
             private Boolean black; 
-            private java.util.List < String > k8sNamespaces; 
+            private java.util.List<String> k8sNamespaces; 
             private Method method; 
             private String path; 
 
             /**
              * <p>The IDs of applications.</p>
              */
-            public Builder appIds(java.util.List < String > appIds) {
+            public Builder appIds(java.util.List<String> appIds) {
                 this.appIds = appIds;
                 return this;
             }
@@ -458,7 +463,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             /**
              * <p>The queried namespaces.</p>
              */
-            public Builder k8sNamespaces(java.util.List < String > k8sNamespaces) {
+            public Builder k8sNamespaces(java.util.List<String> k8sNamespaces) {
                 this.k8sNamespaces = k8sNamespaces;
                 return this;
             }
@@ -506,7 +511,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         private String appName;
 
         @com.aliyun.core.annotation.NameInMap("AuthRule")
-        private java.util.List < AuthRule> authRule;
+        private java.util.List<AuthRule> authRule;
 
         @com.aliyun.core.annotation.NameInMap("AuthType")
         private Integer authType;
@@ -587,7 +592,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         /**
          * @return authRule
          */
-        public java.util.List < AuthRule> getAuthRule() {
+        public java.util.List<AuthRule> getAuthRule() {
             return this.authRule;
         }
 
@@ -665,7 +670,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             private String accountId; 
             private String appId; 
             private String appName; 
-            private java.util.List < AuthRule> authRule; 
+            private java.util.List<AuthRule> authRule; 
             private Integer authType; 
             private Boolean enable; 
             private Integer id; 
@@ -713,7 +718,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             /**
              * <p>The content of the service authentication rule.</p>
              */
-            public Builder authRule(java.util.List < AuthRule> authRule) {
+            public Builder authRule(java.util.List<AuthRule> authRule) {
                 this.authRule = authRule;
                 return this;
             }
@@ -862,7 +867,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
@@ -899,7 +904,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -913,7 +918,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private Integer totalSize; 
 
             /**
@@ -941,7 +946,7 @@ public class ListAuthPolicyResponseBody extends TeaModel {
             /**
              * <p>The data returned.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

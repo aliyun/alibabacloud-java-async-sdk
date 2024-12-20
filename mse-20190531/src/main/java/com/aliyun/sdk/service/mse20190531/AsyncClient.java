@@ -248,6 +248,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNacosServiceResponse> createNacosService(CreateNacosServiceRequest request);
 
     /**
+     * @param request the request parameters of CreateNamespace  CreateNamespaceRequest
+     * @return CreateNamespaceResponse
+     */
+    CompletableFuture<CreateNamespaceResponse> createNamespace(CreateNamespaceRequest request);
+
+    /**
      * @param request the request parameters of CreateOrUpdateSwimmingLane  CreateOrUpdateSwimmingLaneRequest
      * @return CreateOrUpdateSwimmingLaneResponse
      */
@@ -1016,6 +1022,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListNacosHistoryConfigsResponse
      */
     CompletableFuture<ListNacosHistoryConfigsResponse> listNacosHistoryConfigs(ListNacosHistoryConfigsRequest request);
+
+    /**
+     * @param request the request parameters of ListNamespaces  ListNamespacesRequest
+     * @return ListNamespacesResponse
+     */
+    CompletableFuture<ListNamespacesResponse> listNamespaces(ListNamespacesRequest request);
 
     /**
      * @param request the request parameters of ListNamingTrack  ListNamingTrackRequest

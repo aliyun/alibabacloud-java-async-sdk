@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -17,6 +22,10 @@ public class UpdateGatewayServiceRequest extends Request {
     private String acceptLanguage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsServerList")
+    private java.util.List<String> dnsServerList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
@@ -30,7 +39,7 @@ public class UpdateGatewayServiceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IpList")
-    private java.util.List < String > ipList;
+    private java.util.List<String> ipList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -51,6 +60,7 @@ public class UpdateGatewayServiceRequest extends Request {
     private UpdateGatewayServiceRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.dnsServerList = builder.dnsServerList;
         this.gatewayId = builder.gatewayId;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.id = builder.id;
@@ -82,6 +92,13 @@ public class UpdateGatewayServiceRequest extends Request {
     }
 
     /**
+     * @return dnsServerList
+     */
+    public java.util.List<String> getDnsServerList() {
+        return this.dnsServerList;
+    }
+
+    /**
      * @return gatewayId
      */
     public Long getGatewayId() {
@@ -105,7 +122,7 @@ public class UpdateGatewayServiceRequest extends Request {
     /**
      * @return ipList
      */
-    public java.util.List < String > getIpList() {
+    public java.util.List<String> getIpList() {
         return this.ipList;
     }
 
@@ -139,10 +156,11 @@ public class UpdateGatewayServiceRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateGatewayServiceRequest, Builder> {
         private String acceptLanguage; 
+        private java.util.List<String> dnsServerList; 
         private Long gatewayId; 
         private String gatewayUniqueId; 
         private String id; 
-        private java.util.List < String > ipList; 
+        private java.util.List<String> ipList; 
         private String name; 
         private String servicePort; 
         private String serviceProtocol; 
@@ -155,6 +173,7 @@ public class UpdateGatewayServiceRequest extends Request {
         private Builder(UpdateGatewayServiceRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.dnsServerList = request.dnsServerList;
             this.gatewayId = request.gatewayId;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.id = request.id;
@@ -171,6 +190,16 @@ public class UpdateGatewayServiceRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * DnsServerList.
+         */
+        public Builder dnsServerList(java.util.List<String> dnsServerList) {
+            String dnsServerListShrink = shrink(dnsServerList, "DnsServerList", "json");
+            this.putQueryParameter("DnsServerList", dnsServerListShrink);
+            this.dnsServerList = dnsServerList;
             return this;
         }
 
@@ -204,7 +233,7 @@ public class UpdateGatewayServiceRequest extends Request {
         /**
          * IpList.
          */
-        public Builder ipList(java.util.List < String > ipList) {
+        public Builder ipList(java.util.List<String> ipList) {
             String ipListShrink = shrink(ipList, "IpList", "json");
             this.putQueryParameter("IpList", ipListShrink);
             this.ipList = ipList;

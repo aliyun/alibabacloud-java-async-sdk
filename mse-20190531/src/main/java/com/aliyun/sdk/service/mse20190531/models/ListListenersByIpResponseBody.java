@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
     private String httpCode;
 
     @com.aliyun.core.annotation.NameInMap("Listeners")
-    private java.util.List < Listeners> listeners;
+    private java.util.List<Listeners> listeners;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -76,7 +81,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
     /**
      * @return listeners
      */
-    public java.util.List < Listeners> getListeners() {
+    public java.util.List<Listeners> getListeners() {
         return this.listeners;
     }
 
@@ -125,7 +130,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String httpCode; 
-        private java.util.List < Listeners> listeners; 
+        private java.util.List<Listeners> listeners; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -158,7 +163,7 @@ public class ListListenersByIpResponseBody extends TeaModel {
         /**
          * <p>The information about listeners.</p>
          */
-        public Builder listeners(java.util.List < Listeners> listeners) {
+        public Builder listeners(java.util.List<Listeners> listeners) {
             this.listeners = listeners;
             return this;
         }

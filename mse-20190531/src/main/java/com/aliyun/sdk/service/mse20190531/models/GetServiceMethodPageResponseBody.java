@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -215,19 +220,19 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         private String nameDetail;
 
         @com.aliyun.core.annotation.NameInMap("ParameterDefinitions")
-        private java.util.List < ParameterDefinitions> parameterDefinitions;
+        private java.util.List<ParameterDefinitions> parameterDefinitions;
 
         @com.aliyun.core.annotation.NameInMap("ParameterDetails")
-        private java.util.List < String > parameterDetails;
+        private java.util.List<String> parameterDetails;
 
         @com.aliyun.core.annotation.NameInMap("ParameterTypes")
-        private java.util.List < String > parameterTypes;
+        private java.util.List<String> parameterTypes;
 
         @com.aliyun.core.annotation.NameInMap("Paths")
-        private java.util.List < String > paths;
+        private java.util.List<String> paths;
 
         @com.aliyun.core.annotation.NameInMap("RequestMethods")
-        private java.util.List < String > requestMethods;
+        private java.util.List<String> requestMethods;
 
         @com.aliyun.core.annotation.NameInMap("ReturnDetails")
         private String returnDetails;
@@ -280,35 +285,35 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         /**
          * @return parameterDefinitions
          */
-        public java.util.List < ParameterDefinitions> getParameterDefinitions() {
+        public java.util.List<ParameterDefinitions> getParameterDefinitions() {
             return this.parameterDefinitions;
         }
 
         /**
          * @return parameterDetails
          */
-        public java.util.List < String > getParameterDetails() {
+        public java.util.List<String> getParameterDetails() {
             return this.parameterDetails;
         }
 
         /**
          * @return parameterTypes
          */
-        public java.util.List < String > getParameterTypes() {
+        public java.util.List<String> getParameterTypes() {
             return this.parameterTypes;
         }
 
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
         /**
          * @return requestMethods
          */
-        public java.util.List < String > getRequestMethods() {
+        public java.util.List<String> getRequestMethods() {
             return this.requestMethods;
         }
 
@@ -330,11 +335,11 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             private String methodController; 
             private String name; 
             private String nameDetail; 
-            private java.util.List < ParameterDefinitions> parameterDefinitions; 
-            private java.util.List < String > parameterDetails; 
-            private java.util.List < String > parameterTypes; 
-            private java.util.List < String > paths; 
-            private java.util.List < String > requestMethods; 
+            private java.util.List<ParameterDefinitions> parameterDefinitions; 
+            private java.util.List<String> parameterDetails; 
+            private java.util.List<String> parameterTypes; 
+            private java.util.List<String> paths; 
+            private java.util.List<String> requestMethods; 
             private String returnDetails; 
             private String returnType; 
 
@@ -365,7 +370,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             /**
              * ParameterDefinitions.
              */
-            public Builder parameterDefinitions(java.util.List < ParameterDefinitions> parameterDefinitions) {
+            public Builder parameterDefinitions(java.util.List<ParameterDefinitions> parameterDefinitions) {
                 this.parameterDefinitions = parameterDefinitions;
                 return this;
             }
@@ -373,7 +378,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             /**
              * ParameterDetails.
              */
-            public Builder parameterDetails(java.util.List < String > parameterDetails) {
+            public Builder parameterDetails(java.util.List<String> parameterDetails) {
                 this.parameterDetails = parameterDetails;
                 return this;
             }
@@ -381,7 +386,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             /**
              * ParameterTypes.
              */
-            public Builder parameterTypes(java.util.List < String > parameterTypes) {
+            public Builder parameterTypes(java.util.List<String> parameterTypes) {
                 this.parameterTypes = parameterTypes;
                 return this;
             }
@@ -389,7 +394,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             /**
              * Paths.
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }
@@ -397,7 +402,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             /**
              * RequestMethods.
              */
-            public Builder requestMethods(java.util.List < String > requestMethods) {
+            public Builder requestMethods(java.util.List<String> requestMethods) {
                 this.requestMethods = requestMethods;
                 return this;
             }
@@ -439,7 +444,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
@@ -476,7 +481,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -490,7 +495,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private Integer totalSize; 
 
             /**
@@ -512,7 +517,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             /**
              * Result.
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

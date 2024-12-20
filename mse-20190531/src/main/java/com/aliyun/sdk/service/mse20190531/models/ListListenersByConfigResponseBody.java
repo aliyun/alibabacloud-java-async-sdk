@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
     private String httpCode;
 
     @com.aliyun.core.annotation.NameInMap("Listeners")
-    private java.util.List < Listeners> listeners;
+    private java.util.List<Listeners> listeners;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -76,7 +81,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
     /**
      * @return listeners
      */
-    public java.util.List < Listeners> getListeners() {
+    public java.util.List<Listeners> getListeners() {
         return this.listeners;
     }
 
@@ -125,7 +130,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String errorCode; 
         private String httpCode; 
-        private java.util.List < Listeners> listeners; 
+        private java.util.List<Listeners> listeners; 
         private String message; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -158,7 +163,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         /**
          * <p>The information about listeners.</p>
          */
-        public Builder listeners(java.util.List < Listeners> listeners) {
+        public Builder listeners(java.util.List<Listeners> listeners) {
             this.listeners = listeners;
             return this;
         }
@@ -250,7 +255,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         private String ip;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.Map < String, String > labels;
+        private java.util.Map<String, String> labels;
 
         @com.aliyun.core.annotation.NameInMap("MatchRuleName")
         private String matchRuleName;
@@ -295,7 +300,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.Map < String, String > getLabels() {
+        public java.util.Map<String, String> getLabels() {
             return this.labels;
         }
 
@@ -336,7 +341,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private String ip; 
-            private java.util.Map < String, String > labels; 
+            private java.util.Map<String, String> labels; 
             private String matchRuleName; 
             private String matchRuleType; 
             private String md5; 
@@ -357,7 +362,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             /**
              * <p>The label of the listener.</p>
              */
-            public Builder labels(java.util.Map < String, String > labels) {
+            public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
                 return this;
             }

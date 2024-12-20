@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -266,10 +271,10 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
      */
     public static class ExternalAuthZ extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowRequestHeaders")
-        private java.util.List < String > allowRequestHeaders;
+        private java.util.List<String> allowRequestHeaders;
 
         @com.aliyun.core.annotation.NameInMap("AllowUpstreamHeaders")
-        private java.util.List < String > allowUpstreamHeaders;
+        private java.util.List<String> allowUpstreamHeaders;
 
         @com.aliyun.core.annotation.NameInMap("BodyMaxBytes")
         private Integer bodyMaxBytes;
@@ -323,14 +328,14 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         /**
          * @return allowRequestHeaders
          */
-        public java.util.List < String > getAllowRequestHeaders() {
+        public java.util.List<String> getAllowRequestHeaders() {
             return this.allowRequestHeaders;
         }
 
         /**
          * @return allowUpstreamHeaders
          */
-        public java.util.List < String > getAllowUpstreamHeaders() {
+        public java.util.List<String> getAllowUpstreamHeaders() {
             return this.allowUpstreamHeaders;
         }
 
@@ -398,8 +403,8 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > allowRequestHeaders; 
-            private java.util.List < String > allowUpstreamHeaders; 
+            private java.util.List<String> allowRequestHeaders; 
+            private java.util.List<String> allowUpstreamHeaders; 
             private Integer bodyMaxBytes; 
             private Boolean isRestrict; 
             private String prefixPath; 
@@ -413,7 +418,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             /**
              * AllowRequestHeaders.
              */
-            public Builder allowRequestHeaders(java.util.List < String > allowRequestHeaders) {
+            public Builder allowRequestHeaders(java.util.List<String> allowRequestHeaders) {
                 this.allowRequestHeaders = allowRequestHeaders;
                 return this;
             }
@@ -421,7 +426,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             /**
              * AllowUpstreamHeaders.
              */
-            public Builder allowUpstreamHeaders(java.util.List < String > allowUpstreamHeaders) {
+            public Builder allowUpstreamHeaders(java.util.List<String> allowUpstreamHeaders) {
                 this.allowUpstreamHeaders = allowUpstreamHeaders;
                 return this;
             }
@@ -603,7 +608,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         private Long authId;
 
         @com.aliyun.core.annotation.NameInMap("AuthResourceHeaderList")
-        private java.util.List < AuthResourceHeaderList> authResourceHeaderList;
+        private java.util.List<AuthResourceHeaderList> authResourceHeaderList;
 
         @com.aliyun.core.annotation.NameInMap("DomainId")
         private Long domainId;
@@ -672,7 +677,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         /**
          * @return authResourceHeaderList
          */
-        public java.util.List < AuthResourceHeaderList> getAuthResourceHeaderList() {
+        public java.util.List<AuthResourceHeaderList> getAuthResourceHeaderList() {
             return this.authResourceHeaderList;
         }
 
@@ -755,7 +760,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long authId; 
-            private java.util.List < AuthResourceHeaderList> authResourceHeaderList; 
+            private java.util.List<AuthResourceHeaderList> authResourceHeaderList; 
             private Long domainId; 
             private String domainName; 
             private Long gatewayId; 
@@ -779,7 +784,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             /**
              * AuthResourceHeaderList.
              */
-            public Builder authResourceHeaderList(java.util.List < AuthResourceHeaderList> authResourceHeaderList) {
+            public Builder authResourceHeaderList(java.util.List<AuthResourceHeaderList> authResourceHeaderList) {
                 this.authResourceHeaderList = authResourceHeaderList;
                 return this;
             }
@@ -938,7 +943,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         private String redirectUrl;
 
         @com.aliyun.core.annotation.NameInMap("ResourceList")
-        private java.util.List < ResourceList> resourceList;
+        private java.util.List<ResourceList> resourceList;
 
         @com.aliyun.core.annotation.NameInMap("ScopesList")
         private String scopesList;
@@ -1123,7 +1128,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
         /**
          * @return resourceList
          */
-        public java.util.List < ResourceList> getResourceList() {
+        public java.util.List<ResourceList> getResourceList() {
             return this.resourceList;
         }
 
@@ -1201,7 +1206,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             private String loginUrl; 
             private String name; 
             private String redirectUrl; 
-            private java.util.List < ResourceList> resourceList; 
+            private java.util.List<ResourceList> resourceList; 
             private String scopesList; 
             private Boolean status; 
             private String sub; 
@@ -1350,7 +1355,7 @@ public class GetGatewayAuthDetailResponseBody extends TeaModel {
             /**
              * ResourceList.
              */
-            public Builder resourceList(java.util.List < ResourceList> resourceList) {
+            public Builder resourceList(java.util.List<ResourceList> resourceList) {
                 this.resourceList = resourceList;
                 return this;
             }

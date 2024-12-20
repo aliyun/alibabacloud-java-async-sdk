@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DeleteFlowRulesResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Long > data;
+    private java.util.List<Long> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -57,7 +62,7 @@ public class DeleteFlowRulesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Long > getData() {
+    public java.util.List<Long> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class DeleteFlowRulesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Long > data; 
+        private java.util.List<Long> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -111,7 +116,7 @@ public class DeleteFlowRulesResponseBody extends TeaModel {
         /**
          * <p>The IDs of the rules that were deleted.</p>
          */
-        public Builder data(java.util.List < Long > data) {
+        public Builder data(java.util.List<Long> data) {
             this.data = data;
             return this;
         }

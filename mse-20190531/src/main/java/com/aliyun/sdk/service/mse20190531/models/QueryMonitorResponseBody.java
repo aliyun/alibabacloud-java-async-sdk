@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryMonitorResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -46,7 +51,7 @@ public class QueryMonitorResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,7 +84,7 @@ public class QueryMonitorResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String message; 
         private String requestId; 
@@ -91,7 +96,7 @@ public class QueryMonitorResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>6</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -164,7 +169,7 @@ public class QueryMonitorResponseBody extends TeaModel {
         private String podName;
 
         @com.aliyun.core.annotation.NameInMap("values")
-        private java.util.List < java.util.Map<String, ?>> values;
+        private java.util.List<java.util.Map<String, ?>> values;
 
         private Data(Builder builder) {
             this.clusterNamePrefix = builder.clusterNamePrefix;
@@ -197,14 +202,14 @@ public class QueryMonitorResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < java.util.Map<String, ?>> getValues() {
+        public java.util.List<java.util.Map<String, ?>> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String clusterNamePrefix; 
             private String podName; 
-            private java.util.List < java.util.Map<String, ?>> values; 
+            private java.util.List<java.util.Map<String, ?>> values; 
 
             /**
              * <p>The prefix of the name.</p>
@@ -231,7 +236,7 @@ public class QueryMonitorResponseBody extends TeaModel {
             /**
              * <p>The details of the data.</p>
              */
-            public Builder values(java.util.List < java.util.Map<String, ?>> values) {
+            public Builder values(java.util.List<java.util.Map<String, ?>> values) {
                 this.values = values;
                 return this;
             }

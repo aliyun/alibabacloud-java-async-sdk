@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,11 @@ public class ImportServicesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceList")
-    private java.util.List < ServiceList> serviceList;
+    private java.util.List<ServiceList> serviceList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceId")
+    private Long sourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceType")
@@ -52,6 +61,7 @@ public class ImportServicesRequest extends Request {
         this.fcVersion = builder.fcVersion;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.serviceList = builder.serviceList;
+        this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
         this.tlsSetting = builder.tlsSetting;
     }
@@ -107,8 +117,15 @@ public class ImportServicesRequest extends Request {
     /**
      * @return serviceList
      */
-    public java.util.List < ServiceList> getServiceList() {
+    public java.util.List<ServiceList> getServiceList() {
         return this.serviceList;
+    }
+
+    /**
+     * @return sourceId
+     */
+    public Long getSourceId() {
+        return this.sourceId;
     }
 
     /**
@@ -131,7 +148,8 @@ public class ImportServicesRequest extends Request {
         private String fcServiceName; 
         private String fcVersion; 
         private String gatewayUniqueId; 
-        private java.util.List < ServiceList> serviceList; 
+        private java.util.List<ServiceList> serviceList; 
+        private Long sourceId; 
         private String sourceType; 
         private String tlsSetting; 
 
@@ -147,6 +165,7 @@ public class ImportServicesRequest extends Request {
             this.fcVersion = request.fcVersion;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.serviceList = request.serviceList;
+            this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
             this.tlsSetting = request.tlsSetting;
         } 
@@ -212,10 +231,19 @@ public class ImportServicesRequest extends Request {
          * <strong>example:</strong>
          * <p>DNS</p>
          */
-        public Builder serviceList(java.util.List < ServiceList> serviceList) {
+        public Builder serviceList(java.util.List<ServiceList> serviceList) {
             String serviceListShrink = shrink(serviceList, "ServiceList", "json");
             this.putQueryParameter("ServiceList", serviceListShrink);
             this.serviceList = serviceList;
+            return this;
+        }
+
+        /**
+         * SourceId.
+         */
+        public Builder sourceId(Long sourceId) {
+            this.putQueryParameter("SourceId", sourceId);
+            this.sourceId = sourceId;
             return this;
         }
 
@@ -275,11 +303,14 @@ public class ImportServicesRequest extends Request {
      * <p>ImportServicesRequest</p>
      */
     public static class ServiceList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DnsServerList")
+        private java.util.List<String> dnsServerList;
+
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         @com.aliyun.core.annotation.NameInMap("Ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -294,6 +325,7 @@ public class ImportServicesRequest extends Request {
         private String serviceProtocol;
 
         private ServiceList(Builder builder) {
+            this.dnsServerList = builder.dnsServerList;
             this.groupName = builder.groupName;
             this.ips = builder.ips;
             this.name = builder.name;
@@ -311,6 +343,13 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
+         * @return dnsServerList
+         */
+        public java.util.List<String> getDnsServerList() {
+            return this.dnsServerList;
+        }
+
+        /**
          * @return groupName
          */
         public String getGroupName() {
@@ -320,7 +359,7 @@ public class ImportServicesRequest extends Request {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
@@ -353,12 +392,21 @@ public class ImportServicesRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<String> dnsServerList; 
             private String groupName; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
             private String name; 
             private String namespace; 
             private Long servicePort; 
             private String serviceProtocol; 
+
+            /**
+             * DnsServerList.
+             */
+            public Builder dnsServerList(java.util.List<String> dnsServerList) {
+                this.dnsServerList = dnsServerList;
+                return this;
+            }
 
             /**
              * <p>The group.</p>
@@ -374,7 +422,7 @@ public class ImportServicesRequest extends Request {
             /**
              * <p>The IP addresses of the service.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }

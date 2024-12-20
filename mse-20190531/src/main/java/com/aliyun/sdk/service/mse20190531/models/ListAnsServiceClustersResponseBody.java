@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -426,7 +431,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         private String healthCheckerType;
 
         @com.aliyun.core.annotation.NameInMap("Metadata")
-        private java.util.Map < String, ? > metadata;
+        private java.util.Map<String, ?> metadata;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -479,7 +484,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         /**
          * @return metadata
          */
-        public java.util.Map < String, ? > getMetadata() {
+        public java.util.Map<String, ?> getMetadata() {
             return this.metadata;
         }
 
@@ -508,7 +513,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private Integer defaultCheckPort; 
             private Integer defaultPort; 
             private String healthCheckerType; 
-            private java.util.Map < String, ? > metadata; 
+            private java.util.Map<String, ?> metadata; 
             private String name; 
             private String serviceName; 
             private Boolean useIPPort4Check; 
@@ -552,7 +557,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>111</p>
              */
-            public Builder metadata(java.util.Map < String, ? > metadata) {
+            public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
                 return this;
             }
@@ -608,7 +613,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         private AppDetail appDetail;
 
         @com.aliyun.core.annotation.NameInMap("Clusters")
-        private java.util.List < Clusters> clusters;
+        private java.util.List<Clusters> clusters;
 
         @com.aliyun.core.annotation.NameInMap("Ephemeral")
         private Boolean ephemeral;
@@ -617,7 +622,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         private String groupName;
 
         @com.aliyun.core.annotation.NameInMap("Metadata")
-        private java.util.Map < String, ? > metadata;
+        private java.util.Map<String, ?> metadata;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -661,7 +666,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         /**
          * @return clusters
          */
-        public java.util.List < Clusters> getClusters() {
+        public java.util.List<Clusters> getClusters() {
             return this.clusters;
         }
 
@@ -682,7 +687,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         /**
          * @return metadata
          */
-        public java.util.Map < String, ? > getMetadata() {
+        public java.util.Map<String, ?> getMetadata() {
             return this.metadata;
         }
 
@@ -716,10 +721,10 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
 
         public static final class Builder {
             private AppDetail appDetail; 
-            private java.util.List < Clusters> clusters; 
+            private java.util.List<Clusters> clusters; 
             private Boolean ephemeral; 
             private String groupName; 
-            private java.util.Map < String, ? > metadata; 
+            private java.util.Map<String, ?> metadata; 
             private String name; 
             private Float protectThreshold; 
             private String selectorType; 
@@ -736,7 +741,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             /**
              * <p>The cluster information.</p>
              */
-            public Builder clusters(java.util.List < Clusters> clusters) {
+            public Builder clusters(java.util.List<Clusters> clusters) {
                 this.clusters = clusters;
                 return this;
             }
@@ -773,7 +778,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>111</p>
              */
-            public Builder metadata(java.util.Map < String, ? > metadata) {
+            public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
                 return this;
             }

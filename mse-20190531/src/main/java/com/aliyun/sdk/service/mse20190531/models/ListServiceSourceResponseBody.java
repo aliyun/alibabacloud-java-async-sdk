@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -57,7 +62,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -111,7 +116,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         /**
          * <p>The returned data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -315,7 +320,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         private String gmtModified;
 
         @com.aliyun.core.annotation.NameInMap("GroupList")
-        private java.util.List < String > groupList;
+        private java.util.List<String> groupList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -330,7 +335,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("PathList")
-        private java.util.List < String > pathList;
+        private java.util.List<String> pathList;
 
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
@@ -412,7 +417,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         /**
          * @return groupList
          */
-        public java.util.List < String > getGroupList() {
+        public java.util.List<String> getGroupList() {
             return this.groupList;
         }
 
@@ -447,7 +452,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
         /**
          * @return pathList
          */
-        public java.util.List < String > getPathList() {
+        public java.util.List<String> getPathList() {
             return this.pathList;
         }
 
@@ -479,12 +484,12 @@ public class ListServiceSourceResponseBody extends TeaModel {
             private String gatewayUniqueId; 
             private String gmtCreate; 
             private String gmtModified; 
-            private java.util.List < String > groupList; 
+            private java.util.List<String> groupList; 
             private Long id; 
             private IngressOptions ingressOptions; 
             private Boolean invalid; 
             private String name; 
-            private java.util.List < String > pathList; 
+            private java.util.List<String> pathList; 
             private String source; 
             private String sourceUniqueId; 
             private String type; 
@@ -558,7 +563,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             /**
              * <p>The array of service groups.</p>
              */
-            public Builder groupList(java.util.List < String > groupList) {
+            public Builder groupList(java.util.List<String> groupList) {
                 this.groupList = groupList;
                 return this;
             }
@@ -604,7 +609,7 @@ public class ListServiceSourceResponseBody extends TeaModel {
             /**
              * <p>The array of root paths of service lists.</p>
              */
-            public Builder pathList(java.util.List < String > pathList) {
+            public Builder pathList(java.util.List<String> pathList) {
                 this.pathList = pathList;
                 return this;
             }

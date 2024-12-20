@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -217,7 +222,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         private String namespaceInfos;
 
         @com.aliyun.core.annotation.NameInMap("Namespaces")
-        private java.util.List < Namespaces> namespaces;
+        private java.util.List<Namespaces> namespaces;
 
         @com.aliyun.core.annotation.NameInMap("PilotStartTime")
         private String pilotStartTime;
@@ -278,7 +283,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         /**
          * @return namespaces
          */
-        public java.util.List < Namespaces> getNamespaces() {
+        public java.util.List<Namespaces> getNamespaces() {
             return this.namespaces;
         }
 
@@ -308,7 +313,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String clusterName; 
             private String k8sVersion; 
             private String namespaceInfos; 
-            private java.util.List < Namespaces> namespaces; 
+            private java.util.List<Namespaces> namespaces; 
             private String pilotStartTime; 
             private String region; 
             private String updateTime; 
@@ -360,7 +365,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             /**
              * <p>The queried namespaces.</p>
              */
-            public Builder namespaces(java.util.List < Namespaces> namespaces) {
+            public Builder namespaces(java.util.List<Namespaces> namespaces) {
                 this.namespaces = namespaces;
                 return this;
             }

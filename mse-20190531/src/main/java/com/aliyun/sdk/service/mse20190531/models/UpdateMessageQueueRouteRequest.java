@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < String > tags;
+    private java.util.List<String> tags;
 
     private UpdateMessageQueueRouteRequest(Builder builder) {
         super(builder);
@@ -125,7 +130,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -137,7 +142,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         private String filterSide; 
         private String namespace; 
         private String region; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
 
         private Builder() {
             super();
@@ -246,7 +251,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         /**
          * <p>The tag that is negligible for the untagged environment of the application.</p>
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

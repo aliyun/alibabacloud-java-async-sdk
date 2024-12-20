@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ListListenersByConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExtGrayRules")
-    private java.util.List < ExtGrayRules> extGrayRules;
+    private java.util.List<ExtGrayRules> extGrayRules;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Group")
@@ -84,7 +89,7 @@ public class ListListenersByConfigRequest extends Request {
     /**
      * @return extGrayRules
      */
-    public java.util.List < ExtGrayRules> getExtGrayRules() {
+    public java.util.List<ExtGrayRules> getExtGrayRules() {
         return this.extGrayRules;
     }
 
@@ -119,7 +124,7 @@ public class ListListenersByConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ListListenersByConfigRequest, Builder> {
         private String acceptLanguage; 
         private String dataId; 
-        private java.util.List < ExtGrayRules> extGrayRules; 
+        private java.util.List<ExtGrayRules> extGrayRules; 
         private String group; 
         private String instanceId; 
         private String namespaceId; 
@@ -172,7 +177,7 @@ public class ListListenersByConfigRequest extends Request {
         /**
          * ExtGrayRules.
          */
-        public Builder extGrayRules(java.util.List < ExtGrayRules> extGrayRules) {
+        public Builder extGrayRules(java.util.List<ExtGrayRules> extGrayRules) {
             String extGrayRulesShrink = shrink(extGrayRules, "ExtGrayRules", "json");
             this.putQueryParameter("ExtGrayRules", extGrayRulesShrink);
             this.extGrayRules = extGrayRules;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,6 +30,10 @@ public class PullServicesRequest extends Request {
     private String namespace;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceId")
+    private Long sourceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
@@ -33,6 +42,7 @@ public class PullServicesRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.namespace = builder.namespace;
+        this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
     }
 
@@ -71,6 +81,13 @@ public class PullServicesRequest extends Request {
     }
 
     /**
+     * @return sourceId
+     */
+    public Long getSourceId() {
+        return this.sourceId;
+    }
+
+    /**
      * @return sourceType
      */
     public String getSourceType() {
@@ -81,6 +98,7 @@ public class PullServicesRequest extends Request {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
         private String namespace; 
+        private Long sourceId; 
         private String sourceType; 
 
         private Builder() {
@@ -92,6 +110,7 @@ public class PullServicesRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.namespace = request.namespace;
+            this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
         } 
 
@@ -132,6 +151,15 @@ public class PullServicesRequest extends Request {
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * SourceId.
+         */
+        public Builder sourceId(Long sourceId) {
+            this.putQueryParameter("SourceId", sourceId);
+            this.sourceId = sourceId;
             return this;
         }
 

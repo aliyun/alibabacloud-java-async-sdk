@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class CreatePluginConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIdList")
-    private java.util.List < Long > resourceIdList;
+    private java.util.List<Long> resourceIdList;
 
     private CreatePluginConfigRequest(Builder builder) {
         super(builder);
@@ -113,7 +118,7 @@ public class CreatePluginConfigRequest extends Request {
     /**
      * @return resourceIdList
      */
-    public java.util.List < Long > getResourceIdList() {
+    public java.util.List<Long> getResourceIdList() {
         return this.resourceIdList;
     }
 
@@ -124,7 +129,7 @@ public class CreatePluginConfigRequest extends Request {
         private Boolean enable; 
         private String gatewayUniqueId; 
         private Long pluginId; 
-        private java.util.List < Long > resourceIdList; 
+        private java.util.List<Long> resourceIdList; 
 
         private Builder() {
             super();
@@ -230,7 +235,7 @@ public class CreatePluginConfigRequest extends Request {
         /**
          * <p>The domain IDs or route IDs. They are distinguished based on ConfigLevel.</p>
          */
-        public Builder resourceIdList(java.util.List < Long > resourceIdList) {
+        public Builder resourceIdList(java.util.List<Long> resourceIdList) {
             String resourceIdListShrink = shrink(resourceIdList, "ResourceIdList", "json");
             this.putQueryParameter("ResourceIdList", resourceIdListShrink);
             this.resourceIdList = resourceIdList;

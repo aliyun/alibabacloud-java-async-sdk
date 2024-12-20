@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAnsInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -62,7 +67,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -123,7 +128,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String httpCode; 
         private String message; 
@@ -136,7 +141,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         /**
          * <p>The details of the data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -292,7 +297,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         private Boolean marked;
 
         @com.aliyun.core.annotation.NameInMap("Metadata")
-        private java.util.Map < String, ? > metadata;
+        private java.util.Map<String, ?> metadata;
 
         @com.aliyun.core.annotation.NameInMap("OkCount")
         private Integer okCount;
@@ -445,7 +450,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
         /**
          * @return metadata
          */
-        public java.util.Map < String, ? > getMetadata() {
+        public java.util.Map<String, ?> getMetadata() {
             return this.metadata;
         }
 
@@ -493,7 +498,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
             private Integer ipDeleteTimeout; 
             private Long lastBeat; 
             private Boolean marked; 
-            private java.util.Map < String, ? > metadata; 
+            private java.util.Map<String, ?> metadata; 
             private Integer okCount; 
             private Integer port; 
             private String serviceName; 
@@ -686,7 +691,7 @@ public class ListAnsInstancesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>[int]</p>
              */
-            public Builder metadata(java.util.Map < String, ? > metadata) {
+            public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
                 return this;
             }

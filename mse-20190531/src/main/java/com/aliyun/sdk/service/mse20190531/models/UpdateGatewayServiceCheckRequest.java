@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExpectedStatuses")
-    private java.util.List < Integer > expectedStatuses;
+    private java.util.List<Integer> expectedStatuses;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
@@ -106,7 +111,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
     /**
      * @return expectedStatuses
      */
-    public java.util.List < Integer > getExpectedStatuses() {
+    public java.util.List<Integer> getExpectedStatuses() {
         return this.expectedStatuses;
     }
 
@@ -176,7 +181,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateGatewayServiceCheckRequest, Builder> {
         private String acceptLanguage; 
         private Boolean check; 
-        private java.util.List < Integer > expectedStatuses; 
+        private java.util.List<Integer> expectedStatuses; 
         private String gatewayUniqueId; 
         private Integer healthyThreshold; 
         private String httpHost; 
@@ -234,7 +239,7 @@ public class UpdateGatewayServiceCheckRequest extends Request {
         /**
          * <p>The expected status code, which is required if the health check protocol is HTTP.</p>
          */
-        public Builder expectedStatuses(java.util.List < Integer > expectedStatuses) {
+        public Builder expectedStatuses(java.util.List<Integer> expectedStatuses) {
             String expectedStatusesShrink = shrink(expectedStatuses, "ExpectedStatuses", "json");
             this.putQueryParameter("ExpectedStatuses", expectedStatusesShrink);
             this.expectedStatuses = expectedStatuses;

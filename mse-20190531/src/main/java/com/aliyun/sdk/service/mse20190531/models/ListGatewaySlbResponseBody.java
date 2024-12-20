@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -57,7 +62,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -111,7 +116,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         /**
          * <p>The data entries returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -336,7 +341,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         private String vServerGroupId;
 
         @com.aliyun.core.annotation.NameInMap("VServiceList")
-        private java.util.List < VServiceList> vServiceList;
+        private java.util.List<VServiceList> vServiceList;
 
         @com.aliyun.core.annotation.NameInMap("VsMetaInfo")
         private String vsMetaInfo;
@@ -493,7 +498,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         /**
          * @return vServiceList
          */
-        public java.util.List < VServiceList> getVServiceList() {
+        public java.util.List<VServiceList> getVServiceList() {
             return this.vServiceList;
         }
 
@@ -522,7 +527,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             private String statusDesc; 
             private String type; 
             private String vServerGroupId; 
-            private java.util.List < VServiceList> vServiceList; 
+            private java.util.List<VServiceList> vServiceList; 
             private String vsMetaInfo; 
 
             /**
@@ -712,7 +717,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             /**
              * VServiceList.
              */
-            public Builder vServiceList(java.util.List < VServiceList> vServiceList) {
+            public Builder vServiceList(java.util.List<VServiceList> vServiceList) {
                 this.vServiceList = vServiceList;
                 return this;
             }

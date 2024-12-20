@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetPluginsResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
@@ -69,7 +74,7 @@ public class GetPluginsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -124,7 +129,7 @@ public class GetPluginsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private String errorCode; 
@@ -147,7 +152,7 @@ public class GetPluginsResponseBody extends TeaModel {
         /**
          * <p>The data entries returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -281,6 +286,9 @@ public class GetPluginsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
+        @com.aliyun.core.annotation.NameInMap("SummaryEn")
+        private String summaryEn;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
@@ -304,6 +312,7 @@ public class GetPluginsResponseBody extends TeaModel {
             this.publishState = builder.publishState;
             this.status = builder.status;
             this.summary = builder.summary;
+            this.summaryEn = builder.summaryEn;
             this.version = builder.version;
             this.wasmFile = builder.wasmFile;
             this.wasmLang = builder.wasmLang;
@@ -409,6 +418,13 @@ public class GetPluginsResponseBody extends TeaModel {
         }
 
         /**
+         * @return summaryEn
+         */
+        public String getSummaryEn() {
+            return this.summaryEn;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -443,6 +459,7 @@ public class GetPluginsResponseBody extends TeaModel {
             private Integer publishState; 
             private String status; 
             private String summary; 
+            private String summaryEn; 
             private String version; 
             private String wasmFile; 
             private Integer wasmLang; 
@@ -594,6 +611,14 @@ public class GetPluginsResponseBody extends TeaModel {
              */
             public Builder summary(String summary) {
                 this.summary = summary;
+                return this;
+            }
+
+            /**
+             * SummaryEn.
+             */
+            public Builder summaryEn(String summaryEn) {
+                this.summaryEn = summaryEn;
                 return this;
             }
 

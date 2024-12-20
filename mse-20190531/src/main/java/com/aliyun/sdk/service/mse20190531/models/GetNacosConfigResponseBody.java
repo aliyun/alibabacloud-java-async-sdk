@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -280,7 +285,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         private String encryptedDataKey;
 
         @com.aliyun.core.annotation.NameInMap("GrayVersions")
-        private java.util.List < GrayVersions> grayVersions;
+        private java.util.List<GrayVersions> grayVersions;
 
         @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
@@ -361,7 +366,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         /**
          * @return grayVersions
          */
-        public java.util.List < GrayVersions> getGrayVersions() {
+        public java.util.List<GrayVersions> getGrayVersions() {
             return this.grayVersions;
         }
 
@@ -400,7 +405,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             private String dataId; 
             private String desc; 
             private String encryptedDataKey; 
-            private java.util.List < GrayVersions> grayVersions; 
+            private java.util.List<GrayVersions> grayVersions; 
             private String group; 
             private String md5; 
             private String tags; 
@@ -475,7 +480,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
             /**
              * GrayVersions.
              */
-            public Builder grayVersions(java.util.List < GrayVersions> grayVersions) {
+            public Builder grayVersions(java.util.List<GrayVersions> grayVersions) {
                 this.grayVersions = grayVersions;
                 return this;
             }

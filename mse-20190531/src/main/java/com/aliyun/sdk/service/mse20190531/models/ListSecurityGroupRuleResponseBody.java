@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -57,7 +62,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -111,7 +116,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         /**
          * <p>The returned result.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -178,7 +183,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthCidrs")
-        private java.util.List < String > authCidrs;
+        private java.util.List<String> authCidrs;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -231,7 +236,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         /**
          * @return authCidrs
          */
-        public java.util.List < String > getAuthCidrs() {
+        public java.util.List<String> getAuthCidrs() {
             return this.authCidrs;
         }
 
@@ -299,7 +304,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > authCidrs; 
+            private java.util.List<String> authCidrs; 
             private String description; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
@@ -313,7 +318,7 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
             /**
              * AuthCidrs.
              */
-            public Builder authCidrs(java.util.List < String > authCidrs) {
+            public Builder authCidrs(java.util.List<String> authCidrs) {
                 this.authCidrs = authCidrs;
                 return this;
             }
