@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAndroidInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceModel")
-    private java.util.List < InstanceModel> instanceModel;
+    private java.util.List<InstanceModel> instanceModel;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -42,7 +47,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
     /**
      * @return instanceModel
      */
-    public java.util.List < InstanceModel> getInstanceModel() {
+    public java.util.List<InstanceModel> getInstanceModel() {
         return this.instanceModel;
     }
 
@@ -68,7 +73,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceModel> instanceModel; 
+        private java.util.List<InstanceModel> instanceModel; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
@@ -76,7 +81,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         /**
          * InstanceModel.
          */
-        public Builder instanceModel(java.util.List < InstanceModel> instanceModel) {
+        public Builder instanceModel(java.util.List<InstanceModel> instanceModel) {
             this.instanceModel = instanceModel;
             return this;
         }
@@ -184,6 +189,73 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeAndroidInstancesResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAndroidInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAndroidInstancesResponseBody</p>
+     */
     public static class InstanceModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AndroidInstanceGroupId")
         private String androidInstanceGroupId;
@@ -219,7 +291,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         private String cpu;
 
         @com.aliyun.core.annotation.NameInMap("Disks")
-        private java.util.List < Disks> disks;
+        private java.util.List<Disks> disks;
 
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -263,6 +335,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RenderingType")
         private String renderingType;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         private InstanceModel(Builder builder) {
             this.androidInstanceGroupId = builder.androidInstanceGroupId;
             this.androidInstanceGroupName = builder.androidInstanceGroupName;
@@ -290,6 +365,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.rate = builder.rate;
             this.regionId = builder.regionId;
             this.renderingType = builder.renderingType;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -380,7 +456,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         /**
          * @return disks
          */
-        public java.util.List < Disks> getDisks() {
+        public java.util.List<Disks> getDisks() {
             return this.disks;
         }
 
@@ -482,6 +558,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             return this.renderingType;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String androidInstanceGroupId; 
             private String androidInstanceGroupName; 
@@ -494,7 +577,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String bindUserId; 
             private String chargeType; 
             private String cpu; 
-            private java.util.List < Disks> disks; 
+            private java.util.List<Disks> disks; 
             private String errorCode; 
             private String gmtCreate; 
             private String gmtExpired; 
@@ -509,6 +592,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private Integer rate; 
             private String regionId; 
             private String renderingType; 
+            private java.util.List<Tags> tags; 
 
             /**
              * AndroidInstanceGroupId.
@@ -601,7 +685,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             /**
              * Disks.
              */
-            public Builder disks(java.util.List < Disks> disks) {
+            public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
                 return this;
             }
@@ -715,6 +799,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder renderingType(String renderingType) {
                 this.renderingType = renderingType;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

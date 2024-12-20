@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeBackupFilesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
@@ -46,7 +51,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,7 +84,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -175,10 +180,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("SourceAppInfoList")
-        private java.util.List < String > sourceAppInfoList;
+        private java.util.List<String> sourceAppInfoList;
 
         @com.aliyun.core.annotation.NameInMap("SourceFilePathList")
-        private java.util.List < String > sourceFilePathList;
+        private java.util.List<String> sourceFilePathList;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -308,14 +313,14 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         /**
          * @return sourceAppInfoList
          */
-        public java.util.List < String > getSourceAppInfoList() {
+        public java.util.List<String> getSourceAppInfoList() {
             return this.sourceAppInfoList;
         }
 
         /**
          * @return sourceFilePathList
          */
-        public java.util.List < String > getSourceFilePathList() {
+        public java.util.List<String> getSourceFilePathList() {
             return this.sourceFilePathList;
         }
 
@@ -360,8 +365,8 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             private String gmtModified; 
             private String instanceGroupId; 
             private String regionId; 
-            private java.util.List < String > sourceAppInfoList; 
-            private java.util.List < String > sourceFilePathList; 
+            private java.util.List<String> sourceAppInfoList; 
+            private java.util.List<String> sourceFilePathList; 
             private String status; 
             private String taskId; 
             private String uploadEndpoint; 
@@ -466,7 +471,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             /**
              * SourceAppInfoList.
              */
-            public Builder sourceAppInfoList(java.util.List < String > sourceAppInfoList) {
+            public Builder sourceAppInfoList(java.util.List<String> sourceAppInfoList) {
                 this.sourceAppInfoList = sourceAppInfoList;
                 return this;
             }
@@ -474,7 +479,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             /**
              * SourceFilePathList.
              */
-            public Builder sourceFilePathList(java.util.List < String > sourceFilePathList) {
+            public Builder sourceFilePathList(java.util.List<String> sourceFilePathList) {
                 this.sourceFilePathList = sourceFilePathList;
                 return this;
             }

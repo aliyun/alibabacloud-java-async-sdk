@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceGroupModel")
-    private java.util.List < InstanceGroupModel> instanceGroupModel;
+    private java.util.List<InstanceGroupModel> instanceGroupModel;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -42,7 +47,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
     /**
      * @return instanceGroupModel
      */
-    public java.util.List < InstanceGroupModel> getInstanceGroupModel() {
+    public java.util.List<InstanceGroupModel> getInstanceGroupModel() {
         return this.instanceGroupModel;
     }
 
@@ -68,7 +73,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceGroupModel> instanceGroupModel; 
+        private java.util.List<InstanceGroupModel> instanceGroupModel; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
@@ -76,7 +81,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         /**
          * InstanceGroupModel.
          */
-        public Builder instanceGroupModel(java.util.List < InstanceGroupModel> instanceGroupModel) {
+        public Builder instanceGroupModel(java.util.List<InstanceGroupModel> instanceGroupModel) {
             this.instanceGroupModel = instanceGroupModel;
             return this;
         }
@@ -201,7 +206,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         private String cpu;
 
         @com.aliyun.core.annotation.NameInMap("Disks")
-        private java.util.List < Disks> disks;
+        private java.util.List<Disks> disks;
 
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -346,7 +351,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         /**
          * @return disks
          */
-        public java.util.List < Disks> getDisks() {
+        public java.util.List<Disks> getDisks() {
             return this.disks;
         }
 
@@ -510,7 +515,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             private Integer availableInstanceAmount; 
             private String chargeType; 
             private String cpu; 
-            private java.util.List < Disks> disks; 
+            private java.util.List<Disks> disks; 
             private String errorCode; 
             private String gmtCreate; 
             private String gmtExpired; 
@@ -577,7 +582,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             /**
              * Disks.
              */
-            public Builder disks(java.util.List < Disks> disks) {
+            public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
                 return this;
             }

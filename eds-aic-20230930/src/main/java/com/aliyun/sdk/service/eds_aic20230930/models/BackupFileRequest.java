@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class BackupFileRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidInstanceIdList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > androidInstanceIdList;
+    private java.util.List<String> androidInstanceIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupFileName")
@@ -32,11 +37,11 @@ public class BackupFileRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceAppList")
-    private java.util.List < String > sourceAppList;
+    private java.util.List<String> sourceAppList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceFilePathList")
-    private java.util.List < String > sourceFilePathList;
+    private java.util.List<String> sourceFilePathList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UploadEndpoint")
@@ -74,7 +79,7 @@ public class BackupFileRequest extends Request {
     /**
      * @return androidInstanceIdList
      */
-    public java.util.List < String > getAndroidInstanceIdList() {
+    public java.util.List<String> getAndroidInstanceIdList() {
         return this.androidInstanceIdList;
     }
 
@@ -102,14 +107,14 @@ public class BackupFileRequest extends Request {
     /**
      * @return sourceAppList
      */
-    public java.util.List < String > getSourceAppList() {
+    public java.util.List<String> getSourceAppList() {
         return this.sourceAppList;
     }
 
     /**
      * @return sourceFilePathList
      */
-    public java.util.List < String > getSourceFilePathList() {
+    public java.util.List<String> getSourceFilePathList() {
         return this.sourceFilePathList;
     }
 
@@ -128,12 +133,12 @@ public class BackupFileRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BackupFileRequest, Builder> {
-        private java.util.List < String > androidInstanceIdList; 
+        private java.util.List<String> androidInstanceIdList; 
         private String backupFileName; 
         private String backupFilePath; 
         private String description; 
-        private java.util.List < String > sourceAppList; 
-        private java.util.List < String > sourceFilePathList; 
+        private java.util.List<String> sourceAppList; 
+        private java.util.List<String> sourceFilePathList; 
         private String uploadEndpoint; 
         private String uploadType; 
 
@@ -156,7 +161,7 @@ public class BackupFileRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder androidInstanceIdList(java.util.List < String > androidInstanceIdList) {
+        public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
             this.putQueryParameter("AndroidInstanceIdList", androidInstanceIdList);
             this.androidInstanceIdList = androidInstanceIdList;
             return this;
@@ -192,7 +197,7 @@ public class BackupFileRequest extends Request {
         /**
          * SourceAppList.
          */
-        public Builder sourceAppList(java.util.List < String > sourceAppList) {
+        public Builder sourceAppList(java.util.List<String> sourceAppList) {
             this.putQueryParameter("SourceAppList", sourceAppList);
             this.sourceAppList = sourceAppList;
             return this;
@@ -201,7 +206,7 @@ public class BackupFileRequest extends Request {
         /**
          * SourceFilePathList.
          */
-        public Builder sourceFilePathList(java.util.List < String > sourceFilePathList) {
+        public Builder sourceFilePathList(java.util.List<String> sourceFilePathList) {
             this.putQueryParameter("SourceFilePathList", sourceFilePathList);
             this.sourceFilePathList = sourceFilePathList;
             return this;

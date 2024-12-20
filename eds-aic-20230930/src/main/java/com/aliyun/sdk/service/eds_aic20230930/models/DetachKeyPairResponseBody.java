@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -79,7 +84,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DetachedInstanceIds")
-        private java.util.List < String > detachedInstanceIds;
+        private java.util.List<String> detachedInstanceIds;
 
         @com.aliyun.core.annotation.NameInMap("FailCount")
         private Integer failCount;
@@ -108,7 +113,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         /**
          * @return detachedInstanceIds
          */
-        public java.util.List < String > getDetachedInstanceIds() {
+        public java.util.List<String> getDetachedInstanceIds() {
             return this.detachedInstanceIds;
         }
 
@@ -134,7 +139,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > detachedInstanceIds; 
+            private java.util.List<String> detachedInstanceIds; 
             private Integer failCount; 
             private String keyPairId; 
             private Integer totalCount; 
@@ -142,7 +147,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
             /**
              * DetachedInstanceIds.
              */
-            public Builder detachedInstanceIds(java.util.List < String > detachedInstanceIds) {
+            public Builder detachedInstanceIds(java.util.List<String> detachedInstanceIds) {
                 this.detachedInstanceIds = detachedInstanceIds;
                 return this;
             }

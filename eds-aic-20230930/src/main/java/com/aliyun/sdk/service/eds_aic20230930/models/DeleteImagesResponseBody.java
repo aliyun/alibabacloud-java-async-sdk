@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -79,10 +84,10 @@ public class DeleteImagesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailDeleteImageIds")
-        private java.util.List < String > failDeleteImageIds;
+        private java.util.List<String> failDeleteImageIds;
 
         @com.aliyun.core.annotation.NameInMap("SuccessDeleteImageIds")
-        private java.util.List < String > successDeleteImageIds;
+        private java.util.List<String> successDeleteImageIds;
 
         private Data(Builder builder) {
             this.failDeleteImageIds = builder.failDeleteImageIds;
@@ -100,25 +105,25 @@ public class DeleteImagesResponseBody extends TeaModel {
         /**
          * @return failDeleteImageIds
          */
-        public java.util.List < String > getFailDeleteImageIds() {
+        public java.util.List<String> getFailDeleteImageIds() {
             return this.failDeleteImageIds;
         }
 
         /**
          * @return successDeleteImageIds
          */
-        public java.util.List < String > getSuccessDeleteImageIds() {
+        public java.util.List<String> getSuccessDeleteImageIds() {
             return this.successDeleteImageIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > failDeleteImageIds; 
-            private java.util.List < String > successDeleteImageIds; 
+            private java.util.List<String> failDeleteImageIds; 
+            private java.util.List<String> successDeleteImageIds; 
 
             /**
              * FailDeleteImageIds.
              */
-            public Builder failDeleteImageIds(java.util.List < String > failDeleteImageIds) {
+            public Builder failDeleteImageIds(java.util.List<String> failDeleteImageIds) {
                 this.failDeleteImageIds = failDeleteImageIds;
                 return this;
             }
@@ -126,7 +131,7 @@ public class DeleteImagesResponseBody extends TeaModel {
             /**
              * SuccessDeleteImageIds.
              */
-            public Builder successDeleteImageIds(java.util.List < String > successDeleteImageIds) {
+            public Builder successDeleteImageIds(java.util.List<String> successDeleteImageIds) {
                 this.successDeleteImageIds = successDeleteImageIds;
                 return this;
             }

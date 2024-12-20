@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,11 +52,11 @@ public class DescribeTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIds")
-    private java.util.List < String > resourceIds;
+    private java.util.List<String> resourceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskIds")
-    private java.util.List < String > taskIds;
+    private java.util.List<String> taskIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskStatus")
@@ -59,7 +64,7 @@ public class DescribeTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskStatuses")
-    private java.util.List < String > taskStatuses;
+    private java.util.List<String> taskStatuses;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskType")
@@ -67,7 +72,7 @@ public class DescribeTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskTypes")
-    private java.util.List < String > taskTypes;
+    private java.util.List<String> taskTypes;
 
     private DescribeTasksRequest(Builder builder) {
         super(builder);
@@ -159,14 +164,14 @@ public class DescribeTasksRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
     /**
      * @return taskIds
      */
-    public java.util.List < String > getTaskIds() {
+    public java.util.List<String> getTaskIds() {
         return this.taskIds;
     }
 
@@ -180,7 +185,7 @@ public class DescribeTasksRequest extends Request {
     /**
      * @return taskStatuses
      */
-    public java.util.List < String > getTaskStatuses() {
+    public java.util.List<String> getTaskStatuses() {
         return this.taskStatuses;
     }
 
@@ -194,7 +199,7 @@ public class DescribeTasksRequest extends Request {
     /**
      * @return taskTypes
      */
-    public java.util.List < String > getTaskTypes() {
+    public java.util.List<String> getTaskTypes() {
         return this.taskTypes;
     }
 
@@ -207,12 +212,12 @@ public class DescribeTasksRequest extends Request {
         private String nextToken; 
         private String param; 
         private String parentTaskId; 
-        private java.util.List < String > resourceIds; 
-        private java.util.List < String > taskIds; 
+        private java.util.List<String> resourceIds; 
+        private java.util.List<String> taskIds; 
         private String taskStatus; 
-        private java.util.List < String > taskStatuses; 
+        private java.util.List<String> taskStatuses; 
         private String taskType; 
-        private java.util.List < String > taskTypes; 
+        private java.util.List<String> taskTypes; 
 
         private Builder() {
             super();
@@ -311,7 +316,7 @@ public class DescribeTasksRequest extends Request {
         /**
          * ResourceIds.
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
             this.resourceIds = resourceIds;
             return this;
@@ -320,7 +325,7 @@ public class DescribeTasksRequest extends Request {
         /**
          * TaskIds.
          */
-        public Builder taskIds(java.util.List < String > taskIds) {
+        public Builder taskIds(java.util.List<String> taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
             this.taskIds = taskIds;
             return this;
@@ -338,7 +343,7 @@ public class DescribeTasksRequest extends Request {
         /**
          * TaskStatuses.
          */
-        public Builder taskStatuses(java.util.List < String > taskStatuses) {
+        public Builder taskStatuses(java.util.List<String> taskStatuses) {
             this.putQueryParameter("TaskStatuses", taskStatuses);
             this.taskStatuses = taskStatuses;
             return this;
@@ -356,7 +361,7 @@ public class DescribeTasksRequest extends Request {
         /**
          * TaskTypes.
          */
-        public Builder taskTypes(java.util.List < String > taskTypes) {
+        public Builder taskTypes(java.util.List<String> taskTypes) {
             this.putQueryParameter("TaskTypes", taskTypes);
             this.taskTypes = taskTypes;
             return this;

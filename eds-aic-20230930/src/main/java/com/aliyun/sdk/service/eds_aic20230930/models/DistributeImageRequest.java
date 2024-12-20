@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DistributeImageRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DistributeRegionList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > distributeRegionList;
+    private java.util.List<String> distributeRegionList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImageId")
@@ -44,7 +49,7 @@ public class DistributeImageRequest extends Request {
     /**
      * @return distributeRegionList
      */
-    public java.util.List < String > getDistributeRegionList() {
+    public java.util.List<String> getDistributeRegionList() {
         return this.distributeRegionList;
     }
 
@@ -56,7 +61,7 @@ public class DistributeImageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DistributeImageRequest, Builder> {
-        private java.util.List < String > distributeRegionList; 
+        private java.util.List<String> distributeRegionList; 
         private String imageId; 
 
         private Builder() {
@@ -72,7 +77,7 @@ public class DistributeImageRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder distributeRegionList(java.util.List < String > distributeRegionList) {
+        public Builder distributeRegionList(java.util.List<String> distributeRegionList) {
             this.putBodyParameter("DistributeRegionList", distributeRegionList);
             this.distributeRegionList = distributeRegionList;
             return this;

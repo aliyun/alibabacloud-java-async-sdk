@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AttachKeyPairRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPairId")
@@ -43,7 +48,7 @@ public class AttachKeyPairRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -55,7 +60,7 @@ public class AttachKeyPairRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AttachKeyPairRequest, Builder> {
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String keyPairId; 
 
         private Builder() {
@@ -71,7 +76,7 @@ public class AttachKeyPairRequest extends Request {
         /**
          * InstanceIds.
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;

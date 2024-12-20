@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeAndroidInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidInstanceIds")
-    private java.util.List < String > androidInstanceIds;
+    private java.util.List<String> androidInstanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidInstanceName")
     private String androidInstanceName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
+    private String bizRegionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChargeType")
@@ -30,7 +39,7 @@ public class DescribeAndroidInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceGroupIds")
-    private java.util.List < String > instanceGroupIds;
+    private java.util.List<String> instanceGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceGroupName")
@@ -56,10 +65,15 @@ public class DescribeAndroidInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     private DescribeAndroidInstancesRequest(Builder builder) {
         super(builder);
         this.androidInstanceIds = builder.androidInstanceIds;
         this.androidInstanceName = builder.androidInstanceName;
+        this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
         this.instanceGroupId = builder.instanceGroupId;
         this.instanceGroupIds = builder.instanceGroupIds;
@@ -69,6 +83,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         this.nextToken = builder.nextToken;
         this.saleMode = builder.saleMode;
         this.status = builder.status;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -87,7 +102,7 @@ public class DescribeAndroidInstancesRequest extends Request {
     /**
      * @return androidInstanceIds
      */
-    public java.util.List < String > getAndroidInstanceIds() {
+    public java.util.List<String> getAndroidInstanceIds() {
         return this.androidInstanceIds;
     }
 
@@ -96,6 +111,13 @@ public class DescribeAndroidInstancesRequest extends Request {
      */
     public String getAndroidInstanceName() {
         return this.androidInstanceName;
+    }
+
+    /**
+     * @return bizRegionId
+     */
+    public String getBizRegionId() {
+        return this.bizRegionId;
     }
 
     /**
@@ -115,7 +137,7 @@ public class DescribeAndroidInstancesRequest extends Request {
     /**
      * @return instanceGroupIds
      */
-    public java.util.List < String > getInstanceGroupIds() {
+    public java.util.List<String> getInstanceGroupIds() {
         return this.instanceGroupIds;
     }
 
@@ -161,18 +183,27 @@ public class DescribeAndroidInstancesRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAndroidInstancesRequest, Builder> {
-        private java.util.List < String > androidInstanceIds; 
+        private java.util.List<String> androidInstanceIds; 
         private String androidInstanceName; 
+        private String bizRegionId; 
         private String chargeType; 
         private String instanceGroupId; 
-        private java.util.List < String > instanceGroupIds; 
+        private java.util.List<String> instanceGroupIds; 
         private String instanceGroupName; 
         private String keyPairId; 
         private Integer maxResults; 
         private String nextToken; 
         private String saleMode; 
         private String status; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -182,6 +213,7 @@ public class DescribeAndroidInstancesRequest extends Request {
             super(request);
             this.androidInstanceIds = request.androidInstanceIds;
             this.androidInstanceName = request.androidInstanceName;
+            this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
             this.instanceGroupId = request.instanceGroupId;
             this.instanceGroupIds = request.instanceGroupIds;
@@ -191,12 +223,13 @@ public class DescribeAndroidInstancesRequest extends Request {
             this.nextToken = request.nextToken;
             this.saleMode = request.saleMode;
             this.status = request.status;
+            this.tag = request.tag;
         } 
 
         /**
          * AndroidInstanceIds.
          */
-        public Builder androidInstanceIds(java.util.List < String > androidInstanceIds) {
+        public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
             this.androidInstanceIds = androidInstanceIds;
             return this;
@@ -208,6 +241,15 @@ public class DescribeAndroidInstancesRequest extends Request {
         public Builder androidInstanceName(String androidInstanceName) {
             this.putQueryParameter("AndroidInstanceName", androidInstanceName);
             this.androidInstanceName = androidInstanceName;
+            return this;
+        }
+
+        /**
+         * BizRegionId.
+         */
+        public Builder bizRegionId(String bizRegionId) {
+            this.putQueryParameter("BizRegionId", bizRegionId);
+            this.bizRegionId = bizRegionId;
             return this;
         }
 
@@ -232,7 +274,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         /**
          * InstanceGroupIds.
          */
-        public Builder instanceGroupIds(java.util.List < String > instanceGroupIds) {
+        public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.putQueryParameter("InstanceGroupIds", instanceGroupIds);
             this.instanceGroupIds = instanceGroupIds;
             return this;
@@ -292,6 +334,15 @@ public class DescribeAndroidInstancesRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public DescribeAndroidInstancesRequest build() {
             return new DescribeAndroidInstancesRequest(this);
@@ -299,4 +350,71 @@ public class DescribeAndroidInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAndroidInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeAndroidInstancesRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

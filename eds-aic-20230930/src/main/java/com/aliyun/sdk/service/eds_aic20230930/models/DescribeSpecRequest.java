@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class DescribeSpecRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpecIds")
-    private java.util.List < String > specIds;
+    private java.util.List<String> specIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpecStatus")
@@ -84,7 +89,7 @@ public class DescribeSpecRequest extends Request {
     /**
      * @return specIds
      */
-    public java.util.List < String > getSpecIds() {
+    public java.util.List<String> getSpecIds() {
         return this.specIds;
     }
 
@@ -106,7 +111,7 @@ public class DescribeSpecRequest extends Request {
         private String bizRegionId; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > specIds; 
+        private java.util.List<String> specIds; 
         private String specStatus; 
         private String specType; 
 
@@ -154,7 +159,7 @@ public class DescribeSpecRequest extends Request {
         /**
          * SpecIds.
          */
-        public Builder specIds(java.util.List < String > specIds) {
+        public Builder specIds(java.util.List<String> specIds) {
             this.putQueryParameter("SpecIds", specIds);
             this.specIds = specIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteKeyPairsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPairIds")
-    private java.util.List < String > keyPairIds;
+    private java.util.List<String> keyPairIds;
 
     private DeleteKeyPairsRequest(Builder builder) {
         super(builder);
@@ -37,12 +42,12 @@ public class DeleteKeyPairsRequest extends Request {
     /**
      * @return keyPairIds
      */
-    public java.util.List < String > getKeyPairIds() {
+    public java.util.List<String> getKeyPairIds() {
         return this.keyPairIds;
     }
 
     public static final class Builder extends Request.Builder<DeleteKeyPairsRequest, Builder> {
-        private java.util.List < String > keyPairIds; 
+        private java.util.List<String> keyPairIds; 
 
         private Builder() {
             super();
@@ -56,7 +61,7 @@ public class DeleteKeyPairsRequest extends Request {
         /**
          * KeyPairIds.
          */
-        public Builder keyPairIds(java.util.List < String > keyPairIds) {
+        public Builder keyPairIds(java.util.List<String> keyPairIds) {
             this.putQueryParameter("KeyPairIds", keyPairIds);
             this.keyPairIds = keyPairIds;
             return this;

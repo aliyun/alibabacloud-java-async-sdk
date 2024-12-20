@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeAppsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -42,7 +47,7 @@ public class DescribeAppsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -68,7 +73,7 @@ public class DescribeAppsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
@@ -76,7 +81,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -149,7 +154,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         private String installationStatus;
 
         @com.aliyun.core.annotation.NameInMap("InstanceGroupList")
-        private java.util.List < String > instanceGroupList;
+        private java.util.List<String> instanceGroupList;
 
         @com.aliyun.core.annotation.NameInMap("MD5")
         private String mD5;
@@ -258,7 +263,7 @@ public class DescribeAppsResponseBody extends TeaModel {
         /**
          * @return instanceGroupList
          */
-        public java.util.List < String > getInstanceGroupList() {
+        public java.util.List<String> getInstanceGroupList() {
             return this.instanceGroupList;
         }
 
@@ -294,7 +299,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             private String gmtModified; 
             private String iconUrl; 
             private String installationStatus; 
-            private java.util.List < String > instanceGroupList; 
+            private java.util.List<String> instanceGroupList; 
             private String mD5; 
             private String packageName; 
             private String status; 
@@ -382,7 +387,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             /**
              * InstanceGroupList.
              */
-            public Builder instanceGroupList(java.util.List < String > instanceGroupList) {
+            public Builder instanceGroupList(java.util.List<String> instanceGroupList) {
                 this.instanceGroupList = instanceGroupList;
                 return this;
             }

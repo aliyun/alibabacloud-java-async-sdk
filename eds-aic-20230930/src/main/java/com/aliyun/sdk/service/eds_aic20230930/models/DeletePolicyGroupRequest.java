@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeletePolicyGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyGroupIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > policyGroupIds;
+    private java.util.List<String> policyGroupIds;
 
     private DeletePolicyGroupRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class DeletePolicyGroupRequest extends Request {
     /**
      * @return policyGroupIds
      */
-    public java.util.List < String > getPolicyGroupIds() {
+    public java.util.List<String> getPolicyGroupIds() {
         return this.policyGroupIds;
     }
 
     public static final class Builder extends Request.Builder<DeletePolicyGroupRequest, Builder> {
-        private java.util.List < String > policyGroupIds; 
+        private java.util.List<String> policyGroupIds; 
 
         private Builder() {
             super();
@@ -57,7 +62,7 @@ public class DeletePolicyGroupRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder policyGroupIds(java.util.List < String > policyGroupIds) {
+        public Builder policyGroupIds(java.util.List<String> policyGroupIds) {
             this.putQueryParameter("PolicyGroupIds", policyGroupIds);
             this.policyGroupIds = policyGroupIds;
             return this;

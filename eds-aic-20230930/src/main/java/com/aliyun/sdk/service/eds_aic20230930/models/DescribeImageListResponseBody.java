@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeImageListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -42,7 +47,7 @@ public class DescribeImageListResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -68,7 +73,7 @@ public class DescribeImageListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
@@ -76,7 +81,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -137,10 +142,10 @@ public class DescribeImageListResponseBody extends TeaModel {
         private String imageName;
 
         @com.aliyun.core.annotation.NameInMap("ImageRegionDistributeMap")
-        private java.util.Map < String, DataImageRegionDistributeMapValue > imageRegionDistributeMap;
+        private java.util.Map<String, DataImageRegionDistributeMapValue> imageRegionDistributeMap;
 
         @com.aliyun.core.annotation.NameInMap("ImageRegionList")
-        private java.util.List < String > imageRegionList;
+        private java.util.List<String> imageRegionList;
 
         @com.aliyun.core.annotation.NameInMap("ImageType")
         private String imageType;
@@ -230,14 +235,14 @@ public class DescribeImageListResponseBody extends TeaModel {
         /**
          * @return imageRegionDistributeMap
          */
-        public java.util.Map < String, DataImageRegionDistributeMapValue > getImageRegionDistributeMap() {
+        public java.util.Map<String, DataImageRegionDistributeMapValue> getImageRegionDistributeMap() {
             return this.imageRegionDistributeMap;
         }
 
         /**
          * @return imageRegionList
          */
-        public java.util.List < String > getImageRegionList() {
+        public java.util.List<String> getImageRegionList() {
             return this.imageRegionList;
         }
 
@@ -290,8 +295,8 @@ public class DescribeImageListResponseBody extends TeaModel {
             private String gmtModified; 
             private String imageId; 
             private String imageName; 
-            private java.util.Map < String, DataImageRegionDistributeMapValue > imageRegionDistributeMap; 
-            private java.util.List < String > imageRegionList; 
+            private java.util.Map<String, DataImageRegionDistributeMapValue> imageRegionDistributeMap; 
+            private java.util.List<String> imageRegionList; 
             private String imageType; 
             private String language; 
             private String releaseTime; 
@@ -350,7 +355,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             /**
              * ImageRegionDistributeMap.
              */
-            public Builder imageRegionDistributeMap(java.util.Map < String, DataImageRegionDistributeMapValue > imageRegionDistributeMap) {
+            public Builder imageRegionDistributeMap(java.util.Map<String, DataImageRegionDistributeMapValue> imageRegionDistributeMap) {
                 this.imageRegionDistributeMap = imageRegionDistributeMap;
                 return this;
             }
@@ -358,7 +363,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             /**
              * ImageRegionList.
              */
-            public Builder imageRegionList(java.util.List < String > imageRegionList) {
+            public Builder imageRegionList(java.util.List<String> imageRegionList) {
                 this.imageRegionList = imageRegionList;
                 return this;
             }

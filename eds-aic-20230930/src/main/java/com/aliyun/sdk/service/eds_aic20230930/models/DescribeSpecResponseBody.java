@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeSpecResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SpecInfoModel")
-    private java.util.List < SpecInfoModel> specInfoModel;
+    private java.util.List<SpecInfoModel> specInfoModel;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -56,7 +61,7 @@ public class DescribeSpecResponseBody extends TeaModel {
     /**
      * @return specInfoModel
      */
-    public java.util.List < SpecInfoModel> getSpecInfoModel() {
+    public java.util.List<SpecInfoModel> getSpecInfoModel() {
         return this.specInfoModel;
     }
 
@@ -70,7 +75,7 @@ public class DescribeSpecResponseBody extends TeaModel {
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < SpecInfoModel> specInfoModel; 
+        private java.util.List<SpecInfoModel> specInfoModel; 
         private Integer totalCount; 
 
         /**
@@ -92,7 +97,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         /**
          * SpecInfoModel.
          */
-        public Builder specInfoModel(java.util.List < SpecInfoModel> specInfoModel) {
+        public Builder specInfoModel(java.util.List<SpecInfoModel> specInfoModel) {
             this.specInfoModel = specInfoModel;
             return this;
         }

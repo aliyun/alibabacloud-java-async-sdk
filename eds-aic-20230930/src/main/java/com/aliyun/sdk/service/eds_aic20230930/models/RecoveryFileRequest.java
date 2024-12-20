@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class RecoveryFileRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidInstanceIdList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > androidInstanceIdList;
+    private java.util.List<String> androidInstanceIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupFileId")
@@ -58,7 +63,7 @@ public class RecoveryFileRequest extends Request {
     /**
      * @return androidInstanceIdList
      */
-    public java.util.List < String > getAndroidInstanceIdList() {
+    public java.util.List<String> getAndroidInstanceIdList() {
         return this.androidInstanceIdList;
     }
 
@@ -91,7 +96,7 @@ public class RecoveryFileRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RecoveryFileRequest, Builder> {
-        private java.util.List < String > androidInstanceIdList; 
+        private java.util.List<String> androidInstanceIdList; 
         private String backupFileId; 
         private String backupFilePath; 
         private String uploadEndpoint; 
@@ -113,7 +118,7 @@ public class RecoveryFileRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder androidInstanceIdList(java.util.List < String > androidInstanceIdList) {
+        public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
             this.putQueryParameter("AndroidInstanceIdList", androidInstanceIdList);
             this.androidInstanceIdList = androidInstanceIdList;
             return this;

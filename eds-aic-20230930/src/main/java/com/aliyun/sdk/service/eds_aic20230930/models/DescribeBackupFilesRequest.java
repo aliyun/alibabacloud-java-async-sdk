@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -59,7 +64,7 @@ public class DescribeBackupFilesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatusList")
-    private java.util.List < String > statusList;
+    private java.util.List<String> statusList;
 
     private DescribeBackupFilesRequest(Builder builder) {
         super(builder);
@@ -170,7 +175,7 @@ public class DescribeBackupFilesRequest extends Request {
     /**
      * @return statusList
      */
-    public java.util.List < String > getStatusList() {
+    public java.util.List<String> getStatusList() {
         return this.statusList;
     }
 
@@ -186,7 +191,7 @@ public class DescribeBackupFilesRequest extends Request {
         private Long maxResults; 
         private String nextToken; 
         private String startTime; 
-        private java.util.List < String > statusList; 
+        private java.util.List<String> statusList; 
 
         private Builder() {
             super();
@@ -310,7 +315,7 @@ public class DescribeBackupFilesRequest extends Request {
         /**
          * StatusList.
          */
-        public Builder statusList(java.util.List < String > statusList) {
+        public Builder statusList(java.util.List<String> statusList) {
             this.putQueryParameter("StatusList", statusList);
             this.statusList = statusList;
             return this;

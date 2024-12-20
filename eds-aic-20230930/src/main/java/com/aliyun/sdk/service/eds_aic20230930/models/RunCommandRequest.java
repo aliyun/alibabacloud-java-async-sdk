@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class RunCommandRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Timeout")
@@ -66,7 +71,7 @@ public class RunCommandRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -80,7 +85,7 @@ public class RunCommandRequest extends Request {
     public static final class Builder extends Request.Builder<RunCommandRequest, Builder> {
         private String commandContent; 
         private String contentEncoding; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private Long timeout; 
 
         private Builder() {
@@ -116,7 +121,7 @@ public class RunCommandRequest extends Request {
         /**
          * InstanceIds.
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeKeyPairsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPairIds")
-    private java.util.List < String > keyPairIds;
+    private java.util.List<String> keyPairIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPairName")
@@ -53,7 +58,7 @@ public class DescribeKeyPairsRequest extends Request {
     /**
      * @return keyPairIds
      */
-    public java.util.List < String > getKeyPairIds() {
+    public java.util.List<String> getKeyPairIds() {
         return this.keyPairIds;
     }
 
@@ -79,7 +84,7 @@ public class DescribeKeyPairsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeKeyPairsRequest, Builder> {
-        private java.util.List < String > keyPairIds; 
+        private java.util.List<String> keyPairIds; 
         private String keyPairName; 
         private Integer maxResults; 
         private String nextToken; 
@@ -99,7 +104,7 @@ public class DescribeKeyPairsRequest extends Request {
         /**
          * KeyPairIds.
          */
-        public Builder keyPairIds(java.util.List < String > keyPairIds) {
+        public Builder keyPairIds(java.util.List<String> keyPairIds) {
             this.putQueryParameter("KeyPairIds", keyPairIds);
             this.keyPairIds = keyPairIds;
             return this;

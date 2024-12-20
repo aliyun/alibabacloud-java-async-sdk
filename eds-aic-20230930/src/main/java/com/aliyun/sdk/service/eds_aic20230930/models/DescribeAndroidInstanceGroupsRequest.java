@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceGroupIds")
-    private java.util.List < String > instanceGroupIds;
+    private java.util.List<String> instanceGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceGroupName")
@@ -97,7 +102,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
     /**
      * @return instanceGroupIds
      */
-    public java.util.List < String > getInstanceGroupIds() {
+    public java.util.List<String> getInstanceGroupIds() {
         return this.instanceGroupIds;
     }
 
@@ -153,7 +158,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAndroidInstanceGroupsRequest, Builder> {
         private String bizRegionId; 
         private String chargeType; 
-        private java.util.List < String > instanceGroupIds; 
+        private java.util.List<String> instanceGroupIds; 
         private String instanceGroupName; 
         private String keyPairId; 
         private Integer maxResults; 
@@ -201,7 +206,7 @@ public class DescribeAndroidInstanceGroupsRequest extends Request {
         /**
          * InstanceGroupIds.
          */
-        public Builder instanceGroupIds(java.util.List < String > instanceGroupIds) {
+        public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.putQueryParameter("InstanceGroupIds", instanceGroupIds);
             this.instanceGroupIds = instanceGroupIds;
             return this;

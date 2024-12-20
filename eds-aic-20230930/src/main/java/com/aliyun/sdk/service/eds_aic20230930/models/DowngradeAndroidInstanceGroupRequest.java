@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DowngradeAndroidInstanceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidInstanceIds")
-    private java.util.List < String > androidInstanceIds;
+    private java.util.List<String> androidInstanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoPay")
@@ -48,7 +53,7 @@ public class DowngradeAndroidInstanceGroupRequest extends Request {
     /**
      * @return androidInstanceIds
      */
-    public java.util.List < String > getAndroidInstanceIds() {
+    public java.util.List<String> getAndroidInstanceIds() {
         return this.androidInstanceIds;
     }
 
@@ -67,7 +72,7 @@ public class DowngradeAndroidInstanceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DowngradeAndroidInstanceGroupRequest, Builder> {
-        private java.util.List < String > androidInstanceIds; 
+        private java.util.List<String> androidInstanceIds; 
         private Boolean autoPay; 
         private String instanceGroupId; 
 
@@ -85,7 +90,7 @@ public class DowngradeAndroidInstanceGroupRequest extends Request {
         /**
          * AndroidInstanceIds.
          */
-        public Builder androidInstanceIds(java.util.List < String > androidInstanceIds) {
+        public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
             this.androidInstanceIds = androidInstanceIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_aic20230930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceGroupIds")
-    private java.util.List < String > instanceGroupIds;
+    private java.util.List<String> instanceGroupIds;
 
     @com.aliyun.core.annotation.NameInMap("InstanceGroupInfos")
-    private java.util.List < InstanceGroupInfos> instanceGroupInfos;
+    private java.util.List<InstanceGroupInfos> instanceGroupInfos;
 
     @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
@@ -42,14 +47,14 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     /**
      * @return instanceGroupIds
      */
-    public java.util.List < String > getInstanceGroupIds() {
+    public java.util.List<String> getInstanceGroupIds() {
         return this.instanceGroupIds;
     }
 
     /**
      * @return instanceGroupInfos
      */
-    public java.util.List < InstanceGroupInfos> getInstanceGroupInfos() {
+    public java.util.List<InstanceGroupInfos> getInstanceGroupInfos() {
         return this.instanceGroupInfos;
     }
 
@@ -68,15 +73,15 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > instanceGroupIds; 
-        private java.util.List < InstanceGroupInfos> instanceGroupInfos; 
+        private java.util.List<String> instanceGroupIds; 
+        private java.util.List<InstanceGroupInfos> instanceGroupInfos; 
         private String orderId; 
         private String requestId; 
 
         /**
          * InstanceGroupIds.
          */
-        public Builder instanceGroupIds(java.util.List < String > instanceGroupIds) {
+        public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.instanceGroupIds = instanceGroupIds;
             return this;
         }
@@ -84,7 +89,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         /**
          * InstanceGroupInfos.
          */
-        public Builder instanceGroupInfos(java.util.List < InstanceGroupInfos> instanceGroupInfos) {
+        public Builder instanceGroupInfos(java.util.List<InstanceGroupInfos> instanceGroupInfos) {
             this.instanceGroupInfos = instanceGroupInfos;
             return this;
         }
@@ -122,7 +127,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         private String instanceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("InstanceIds")
-        private java.util.List < String > instanceIds;
+        private java.util.List<String> instanceIds;
 
         private InstanceGroupInfos(Builder builder) {
             this.instanceGroupId = builder.instanceGroupId;
@@ -147,13 +152,13 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         /**
          * @return instanceIds
          */
-        public java.util.List < String > getInstanceIds() {
+        public java.util.List<String> getInstanceIds() {
             return this.instanceIds;
         }
 
         public static final class Builder {
             private String instanceGroupId; 
-            private java.util.List < String > instanceIds; 
+            private java.util.List<String> instanceIds; 
 
             /**
              * InstanceGroupId.
@@ -166,7 +171,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
             /**
              * InstanceIds.
              */
-            public Builder instanceIds(java.util.List < String > instanceIds) {
+            public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
                 return this;
             }
