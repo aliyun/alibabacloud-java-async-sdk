@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.contactcenterai20240603.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,11 +31,11 @@ public class AnalyzeImageRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("imageUrls")
-    private java.util.List < String > imageUrls;
+    private java.util.List<String> imageUrls;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resultTypes")
-    private java.util.List < String > resultTypes;
+    private java.util.List<String> resultTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("stream")
@@ -84,14 +89,14 @@ public class AnalyzeImageRequest extends Request {
     /**
      * @return imageUrls
      */
-    public java.util.List < String > getImageUrls() {
+    public java.util.List<String> getImageUrls() {
         return this.imageUrls;
     }
 
     /**
      * @return resultTypes
      */
-    public java.util.List < String > getResultTypes() {
+    public java.util.List<String> getResultTypes() {
         return this.resultTypes;
     }
 
@@ -106,8 +111,8 @@ public class AnalyzeImageRequest extends Request {
         private String regionId; 
         private String workspaceId; 
         private String appId; 
-        private java.util.List < String > imageUrls; 
-        private java.util.List < String > resultTypes; 
+        private java.util.List<String> imageUrls; 
+        private java.util.List<String> resultTypes; 
         private Boolean stream; 
 
         private Builder() {
@@ -154,7 +159,7 @@ public class AnalyzeImageRequest extends Request {
         /**
          * imageUrls.
          */
-        public Builder imageUrls(java.util.List < String > imageUrls) {
+        public Builder imageUrls(java.util.List<String> imageUrls) {
             this.putBodyParameter("imageUrls", imageUrls);
             this.imageUrls = imageUrls;
             return this;
@@ -163,7 +168,7 @@ public class AnalyzeImageRequest extends Request {
         /**
          * resultTypes.
          */
-        public Builder resultTypes(java.util.List < String > resultTypes) {
+        public Builder resultTypes(java.util.List<String> resultTypes) {
             this.putBodyParameter("resultTypes", resultTypes);
             this.resultTypes = resultTypes;
             return this;

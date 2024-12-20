@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.contactcenterai20240603.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class GetTaskResultRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("requiredFieldList")
-    private java.util.List < String > requiredFieldList;
+    private java.util.List<String> requiredFieldList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("taskId")
@@ -54,7 +59,7 @@ public class GetTaskResultRequest extends Request {
     /**
      * @return requiredFieldList
      */
-    public java.util.List < String > getRequiredFieldList() {
+    public java.util.List<String> getRequiredFieldList() {
         return this.requiredFieldList;
     }
 
@@ -67,7 +72,7 @@ public class GetTaskResultRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetTaskResultRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > requiredFieldList; 
+        private java.util.List<String> requiredFieldList; 
         private String taskId; 
 
         private Builder() {
@@ -93,7 +98,7 @@ public class GetTaskResultRequest extends Request {
         /**
          * requiredFieldList.
          */
-        public Builder requiredFieldList(java.util.List < String > requiredFieldList) {
+        public Builder requiredFieldList(java.util.List<String> requiredFieldList) {
             String requiredFieldListShrink = shrink(requiredFieldList, "requiredFieldList", "simple");
             this.putQueryParameter("requiredFieldList", requiredFieldListShrink);
             this.requiredFieldList = requiredFieldList;

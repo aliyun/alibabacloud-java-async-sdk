@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.contactcenterai20240603.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class RunCompletionMessageRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Messages")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Messages> messages;
+    private java.util.List<Messages> messages;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ModelCode")
@@ -86,7 +91,7 @@ public class RunCompletionMessageRequest extends Request {
     /**
      * @return messages
      */
-    public java.util.List < Messages> getMessages() {
+    public java.util.List<Messages> getMessages() {
         return this.messages;
     }
 
@@ -108,7 +113,7 @@ public class RunCompletionMessageRequest extends Request {
         private String workspaceId; 
         private String appId; 
         private String regionId; 
-        private java.util.List < Messages> messages; 
+        private java.util.List<Messages> messages; 
         private String modelCode; 
         private Boolean stream; 
 
@@ -162,7 +167,7 @@ public class RunCompletionMessageRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder messages(java.util.List < Messages> messages) {
+        public Builder messages(java.util.List<Messages> messages) {
             this.putBodyParameter("Messages", messages);
             this.messages = messages;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.contactcenterai20240603.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class CreateTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("fields")
-    private java.util.List < Fields> fields;
+    private java.util.List<Fields> fields;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("modelCode")
@@ -43,7 +48,7 @@ public class CreateTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resultTypes")
-    private java.util.List < String > resultTypes;
+    private java.util.List<String> resultTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("serviceInspection")
@@ -56,7 +61,7 @@ public class CreateTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("templateIds")
-    private java.util.List < String > templateIds;
+    private java.util.List<String> templateIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("transcription")
@@ -129,7 +134,7 @@ public class CreateTaskRequest extends Request {
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -143,7 +148,7 @@ public class CreateTaskRequest extends Request {
     /**
      * @return resultTypes
      */
-    public java.util.List < String > getResultTypes() {
+    public java.util.List<String> getResultTypes() {
         return this.resultTypes;
     }
 
@@ -164,7 +169,7 @@ public class CreateTaskRequest extends Request {
     /**
      * @return templateIds
      */
-    public java.util.List < String > getTemplateIds() {
+    public java.util.List<String> getTemplateIds() {
         return this.templateIds;
     }
 
@@ -181,12 +186,12 @@ public class CreateTaskRequest extends Request {
         private String regionId; 
         private Dialogue dialogue; 
         private Examples examples; 
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
         private String modelCode; 
-        private java.util.List < String > resultTypes; 
+        private java.util.List<String> resultTypes; 
         private ServiceInspection serviceInspection; 
         private String taskType; 
-        private java.util.List < String > templateIds; 
+        private java.util.List<String> templateIds; 
         private Transcription transcription; 
 
         private Builder() {
@@ -257,7 +262,7 @@ public class CreateTaskRequest extends Request {
         /**
          * fields.
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.putBodyParameter("fields", fields);
             this.fields = fields;
             return this;
@@ -278,7 +283,7 @@ public class CreateTaskRequest extends Request {
         /**
          * resultTypes.
          */
-        public Builder resultTypes(java.util.List < String > resultTypes) {
+        public Builder resultTypes(java.util.List<String> resultTypes) {
             this.putBodyParameter("resultTypes", resultTypes);
             this.resultTypes = resultTypes;
             return this;
@@ -308,7 +313,7 @@ public class CreateTaskRequest extends Request {
         /**
          * templateIds.
          */
-        public Builder templateIds(java.util.List < String > templateIds) {
+        public Builder templateIds(java.util.List<String> templateIds) {
             this.putBodyParameter("templateIds", templateIds);
             this.templateIds = templateIds;
             return this;
@@ -411,7 +416,7 @@ public class CreateTaskRequest extends Request {
     public static class Dialogue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sentences")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < Sentences> sentences;
+        private java.util.List<Sentences> sentences;
 
         @com.aliyun.core.annotation.NameInMap("sessionId")
         private String sessionId;
@@ -432,7 +437,7 @@ public class CreateTaskRequest extends Request {
         /**
          * @return sentences
          */
-        public java.util.List < Sentences> getSentences() {
+        public java.util.List<Sentences> getSentences() {
             return this.sentences;
         }
 
@@ -444,13 +449,13 @@ public class CreateTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Sentences> sentences; 
+            private java.util.List<Sentences> sentences; 
             private String sessionId; 
 
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder sentences(java.util.List < Sentences> sentences) {
+            public Builder sentences(java.util.List<Sentences> sentences) {
                 this.sentences = sentences;
                 return this;
             }
@@ -554,7 +559,7 @@ public class CreateTaskRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("sentences")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < ExamplesSentences> sentences;
+        private java.util.List<ExamplesSentences> sentences;
 
         private Examples(Builder builder) {
             this.output = builder.output;
@@ -579,13 +584,13 @@ public class CreateTaskRequest extends Request {
         /**
          * @return sentences
          */
-        public java.util.List < ExamplesSentences> getSentences() {
+        public java.util.List<ExamplesSentences> getSentences() {
             return this.sentences;
         }
 
         public static final class Builder {
             private String output; 
-            private java.util.List < ExamplesSentences> sentences; 
+            private java.util.List<ExamplesSentences> sentences; 
 
             /**
              * output.
@@ -598,7 +603,7 @@ public class CreateTaskRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder sentences(java.util.List < ExamplesSentences> sentences) {
+            public Builder sentences(java.util.List<ExamplesSentences> sentences) {
                 this.sentences = sentences;
                 return this;
             }
@@ -695,7 +700,7 @@ public class CreateTaskRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("enumValues")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < EnumValues> enumValues;
+        private java.util.List<EnumValues> enumValues;
 
         @com.aliyun.core.annotation.NameInMap("name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -733,7 +738,7 @@ public class CreateTaskRequest extends Request {
         /**
          * @return enumValues
          */
-        public java.util.List < EnumValues> getEnumValues() {
+        public java.util.List<EnumValues> getEnumValues() {
             return this.enumValues;
         }
 
@@ -747,7 +752,7 @@ public class CreateTaskRequest extends Request {
         public static final class Builder {
             private String code; 
             private String desc; 
-            private java.util.List < EnumValues> enumValues; 
+            private java.util.List<EnumValues> enumValues; 
             private String name; 
 
             /**
@@ -769,7 +774,7 @@ public class CreateTaskRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder enumValues(java.util.List < EnumValues> enumValues) {
+            public Builder enumValues(java.util.List<EnumValues> enumValues) {
                 this.enumValues = enumValues;
                 return this;
             }
@@ -867,7 +872,7 @@ public class CreateTaskRequest extends Request {
     public static class ServiceInspection extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inspectionContents")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < InspectionContents> inspectionContents;
+        private java.util.List<InspectionContents> inspectionContents;
 
         @com.aliyun.core.annotation.NameInMap("inspectionIntroduction")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -894,7 +899,7 @@ public class CreateTaskRequest extends Request {
         /**
          * @return inspectionContents
          */
-        public java.util.List < InspectionContents> getInspectionContents() {
+        public java.util.List<InspectionContents> getInspectionContents() {
             return this.inspectionContents;
         }
 
@@ -913,14 +918,14 @@ public class CreateTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < InspectionContents> inspectionContents; 
+            private java.util.List<InspectionContents> inspectionContents; 
             private String inspectionIntroduction; 
             private String sceneIntroduction; 
 
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder inspectionContents(java.util.List < InspectionContents> inspectionContents) {
+            public Builder inspectionContents(java.util.List<InspectionContents> inspectionContents) {
                 this.inspectionContents = inspectionContents;
                 return this;
             }
@@ -969,7 +974,7 @@ public class CreateTaskRequest extends Request {
         private Integer serviceChannel;
 
         @com.aliyun.core.annotation.NameInMap("serviceChannelKeywords")
-        private java.util.List < String > serviceChannelKeywords;
+        private java.util.List<String> serviceChannelKeywords;
 
         @com.aliyun.core.annotation.NameInMap("voiceFileUrl")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1023,7 +1028,7 @@ public class CreateTaskRequest extends Request {
         /**
          * @return serviceChannelKeywords
          */
-        public java.util.List < String > getServiceChannelKeywords() {
+        public java.util.List<String> getServiceChannelKeywords() {
             return this.serviceChannelKeywords;
         }
 
@@ -1039,7 +1044,7 @@ public class CreateTaskRequest extends Request {
             private Integer clientChannel; 
             private String fileName; 
             private Integer serviceChannel; 
-            private java.util.List < String > serviceChannelKeywords; 
+            private java.util.List<String> serviceChannelKeywords; 
             private String voiceFileUrl; 
 
             /**
@@ -1080,7 +1085,7 @@ public class CreateTaskRequest extends Request {
             /**
              * serviceChannelKeywords.
              */
-            public Builder serviceChannelKeywords(java.util.List < String > serviceChannelKeywords) {
+            public Builder serviceChannelKeywords(java.util.List<String> serviceChannelKeywords) {
                 this.serviceChannelKeywords = serviceChannelKeywords;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.contactcenterai20240603.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class RunCompletionRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Fields")
-    private java.util.List < Fields> fields;
+    private java.util.List<Fields> fields;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ModelCode")
@@ -50,7 +55,7 @@ public class RunCompletionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplateIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > templateIds;
+    private java.util.List<Long> templateIds;
 
     private RunCompletionRequest(Builder builder) {
         super(builder);
@@ -109,7 +114,7 @@ public class RunCompletionRequest extends Request {
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -137,7 +142,7 @@ public class RunCompletionRequest extends Request {
     /**
      * @return templateIds
      */
-    public java.util.List < Long > getTemplateIds() {
+    public java.util.List<Long> getTemplateIds() {
         return this.templateIds;
     }
 
@@ -146,11 +151,11 @@ public class RunCompletionRequest extends Request {
         private String appId; 
         private String regionId; 
         private Dialogue dialogue; 
-        private java.util.List < Fields> fields; 
+        private java.util.List<Fields> fields; 
         private String modelCode; 
         private ServiceInspection serviceInspection; 
         private Boolean stream; 
-        private java.util.List < Long > templateIds; 
+        private java.util.List<Long> templateIds; 
 
         private Builder() {
             super();
@@ -214,7 +219,7 @@ public class RunCompletionRequest extends Request {
         /**
          * Fields.
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.putBodyParameter("Fields", fields);
             this.fields = fields;
             return this;
@@ -250,7 +255,7 @@ public class RunCompletionRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder templateIds(java.util.List < Long > templateIds) {
+        public Builder templateIds(java.util.List<Long> templateIds) {
             this.putBodyParameter("TemplateIds", templateIds);
             this.templateIds = templateIds;
             return this;
@@ -363,7 +368,7 @@ public class RunCompletionRequest extends Request {
      */
     public static class Dialogue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sentences")
-        private java.util.List < Sentences> sentences;
+        private java.util.List<Sentences> sentences;
 
         @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
@@ -384,7 +389,7 @@ public class RunCompletionRequest extends Request {
         /**
          * @return sentences
          */
-        public java.util.List < Sentences> getSentences() {
+        public java.util.List<Sentences> getSentences() {
             return this.sentences;
         }
 
@@ -396,13 +401,13 @@ public class RunCompletionRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Sentences> sentences; 
+            private java.util.List<Sentences> sentences; 
             private String sessionId; 
 
             /**
              * Sentences.
              */
-            public Builder sentences(java.util.List < Sentences> sentences) {
+            public Builder sentences(java.util.List<Sentences> sentences) {
                 this.sentences = sentences;
                 return this;
             }
@@ -504,7 +509,7 @@ public class RunCompletionRequest extends Request {
         private String desc;
 
         @com.aliyun.core.annotation.NameInMap("EnumValues")
-        private java.util.List < EnumValues> enumValues;
+        private java.util.List<EnumValues> enumValues;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -542,7 +547,7 @@ public class RunCompletionRequest extends Request {
         /**
          * @return enumValues
          */
-        public java.util.List < EnumValues> getEnumValues() {
+        public java.util.List<EnumValues> getEnumValues() {
             return this.enumValues;
         }
 
@@ -556,7 +561,7 @@ public class RunCompletionRequest extends Request {
         public static final class Builder {
             private String code; 
             private String desc; 
-            private java.util.List < EnumValues> enumValues; 
+            private java.util.List<EnumValues> enumValues; 
             private String name; 
 
             /**
@@ -578,7 +583,7 @@ public class RunCompletionRequest extends Request {
             /**
              * EnumValues.
              */
-            public Builder enumValues(java.util.List < EnumValues> enumValues) {
+            public Builder enumValues(java.util.List<EnumValues> enumValues) {
                 this.enumValues = enumValues;
                 return this;
             }
@@ -674,7 +679,7 @@ public class RunCompletionRequest extends Request {
      */
     public static class ServiceInspection extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InspectionContents")
-        private java.util.List < InspectionContents> inspectionContents;
+        private java.util.List<InspectionContents> inspectionContents;
 
         @com.aliyun.core.annotation.NameInMap("InspectionIntroduction")
         private String inspectionIntroduction;
@@ -699,7 +704,7 @@ public class RunCompletionRequest extends Request {
         /**
          * @return inspectionContents
          */
-        public java.util.List < InspectionContents> getInspectionContents() {
+        public java.util.List<InspectionContents> getInspectionContents() {
             return this.inspectionContents;
         }
 
@@ -718,14 +723,14 @@ public class RunCompletionRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < InspectionContents> inspectionContents; 
+            private java.util.List<InspectionContents> inspectionContents; 
             private String inspectionIntroduction; 
             private String sceneIntroduction; 
 
             /**
              * InspectionContents.
              */
-            public Builder inspectionContents(java.util.List < InspectionContents> inspectionContents) {
+            public Builder inspectionContents(java.util.List<InspectionContents> inspectionContents) {
                 this.inspectionContents = inspectionContents;
                 return this;
             }

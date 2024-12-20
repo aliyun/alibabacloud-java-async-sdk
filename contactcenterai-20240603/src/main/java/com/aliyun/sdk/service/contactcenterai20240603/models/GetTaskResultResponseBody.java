@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.contactcenterai20240603.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -246,7 +251,7 @@ public class GetTaskResultResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("asrResult")
-        private java.util.List < AsrResult> asrResult;
+        private java.util.List<AsrResult> asrResult;
 
         @com.aliyun.core.annotation.NameInMap("taskErrorMessage")
         private String taskErrorMessage;
@@ -279,7 +284,7 @@ public class GetTaskResultResponseBody extends TeaModel {
         /**
          * @return asrResult
          */
-        public java.util.List < AsrResult> getAsrResult() {
+        public java.util.List<AsrResult> getAsrResult() {
             return this.asrResult;
         }
 
@@ -312,7 +317,7 @@ public class GetTaskResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AsrResult> asrResult; 
+            private java.util.List<AsrResult> asrResult; 
             private String taskErrorMessage; 
             private String taskId; 
             private String taskStatus; 
@@ -321,7 +326,7 @@ public class GetTaskResultResponseBody extends TeaModel {
             /**
              * asrResult.
              */
-            public Builder asrResult(java.util.List < AsrResult> asrResult) {
+            public Builder asrResult(java.util.List<AsrResult> asrResult) {
                 this.asrResult = asrResult;
                 return this;
             }

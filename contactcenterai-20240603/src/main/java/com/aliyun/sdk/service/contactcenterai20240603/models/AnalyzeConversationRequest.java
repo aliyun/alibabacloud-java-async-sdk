@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.contactcenterai20240603.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,20 +33,23 @@ public class AnalyzeConversationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("categoryTags")
-    private java.util.List < CategoryTags> categoryTags;
+    private java.util.List<CategoryTags> categoryTags;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("customPrompt")
+    private String customPrompt;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dialogue")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Dialogue dialogue;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("examples")
-    private java.util.List < Examples> examples;
+    private java.util.List<Examples> examples;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("fields")
-    private java.util.List < Fields> fields;
+    private java.util.List<Fields> fields;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("modelCode")
@@ -50,7 +58,7 @@ public class AnalyzeConversationRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resultTypes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resultTypes;
+    private java.util.List<String> resultTypes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sceneName")
@@ -71,11 +79,11 @@ public class AnalyzeConversationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("timeConstraintList")
-    private java.util.List < String > timeConstraintList;
+    private java.util.List<String> timeConstraintList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("userProfiles")
-    private java.util.List < UserProfiles> userProfiles;
+    private java.util.List<UserProfiles> userProfiles;
 
     private AnalyzeConversationRequest(Builder builder) {
         super(builder);
@@ -83,6 +91,7 @@ public class AnalyzeConversationRequest extends Request {
         this.appId = builder.appId;
         this.regionId = builder.regionId;
         this.categoryTags = builder.categoryTags;
+        this.customPrompt = builder.customPrompt;
         this.dialogue = builder.dialogue;
         this.examples = builder.examples;
         this.fields = builder.fields;
@@ -133,8 +142,15 @@ public class AnalyzeConversationRequest extends Request {
     /**
      * @return categoryTags
      */
-    public java.util.List < CategoryTags> getCategoryTags() {
+    public java.util.List<CategoryTags> getCategoryTags() {
         return this.categoryTags;
+    }
+
+    /**
+     * @return customPrompt
+     */
+    public String getCustomPrompt() {
+        return this.customPrompt;
     }
 
     /**
@@ -147,14 +163,14 @@ public class AnalyzeConversationRequest extends Request {
     /**
      * @return examples
      */
-    public java.util.List < Examples> getExamples() {
+    public java.util.List<Examples> getExamples() {
         return this.examples;
     }
 
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -168,7 +184,7 @@ public class AnalyzeConversationRequest extends Request {
     /**
      * @return resultTypes
      */
-    public java.util.List < String > getResultTypes() {
+    public java.util.List<String> getResultTypes() {
         return this.resultTypes;
     }
 
@@ -203,14 +219,14 @@ public class AnalyzeConversationRequest extends Request {
     /**
      * @return timeConstraintList
      */
-    public java.util.List < String > getTimeConstraintList() {
+    public java.util.List<String> getTimeConstraintList() {
         return this.timeConstraintList;
     }
 
     /**
      * @return userProfiles
      */
-    public java.util.List < UserProfiles> getUserProfiles() {
+    public java.util.List<UserProfiles> getUserProfiles() {
         return this.userProfiles;
     }
 
@@ -218,18 +234,19 @@ public class AnalyzeConversationRequest extends Request {
         private String workspaceId; 
         private String appId; 
         private String regionId; 
-        private java.util.List < CategoryTags> categoryTags; 
+        private java.util.List<CategoryTags> categoryTags; 
+        private String customPrompt; 
         private Dialogue dialogue; 
-        private java.util.List < Examples> examples; 
-        private java.util.List < Fields> fields; 
+        private java.util.List<Examples> examples; 
+        private java.util.List<Fields> fields; 
         private String modelCode; 
-        private java.util.List < String > resultTypes; 
+        private java.util.List<String> resultTypes; 
         private String sceneName; 
         private ServiceInspection serviceInspection; 
         private String sourceCallerUid; 
         private Boolean stream; 
-        private java.util.List < String > timeConstraintList; 
-        private java.util.List < UserProfiles> userProfiles; 
+        private java.util.List<String> timeConstraintList; 
+        private java.util.List<UserProfiles> userProfiles; 
 
         private Builder() {
             super();
@@ -241,6 +258,7 @@ public class AnalyzeConversationRequest extends Request {
             this.appId = request.appId;
             this.regionId = request.regionId;
             this.categoryTags = request.categoryTags;
+            this.customPrompt = request.customPrompt;
             this.dialogue = request.dialogue;
             this.examples = request.examples;
             this.fields = request.fields;
@@ -290,14 +308,23 @@ public class AnalyzeConversationRequest extends Request {
         /**
          * categoryTags.
          */
-        public Builder categoryTags(java.util.List < CategoryTags> categoryTags) {
+        public Builder categoryTags(java.util.List<CategoryTags> categoryTags) {
             this.putBodyParameter("categoryTags", categoryTags);
             this.categoryTags = categoryTags;
             return this;
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * customPrompt.
+         */
+        public Builder customPrompt(String customPrompt) {
+            this.putBodyParameter("customPrompt", customPrompt);
+            this.customPrompt = customPrompt;
+            return this;
+        }
+
+        /**
+         * dialogue.
          */
         public Builder dialogue(Dialogue dialogue) {
             this.putBodyParameter("dialogue", dialogue);
@@ -308,7 +335,7 @@ public class AnalyzeConversationRequest extends Request {
         /**
          * examples.
          */
-        public Builder examples(java.util.List < Examples> examples) {
+        public Builder examples(java.util.List<Examples> examples) {
             this.putBodyParameter("examples", examples);
             this.examples = examples;
             return this;
@@ -317,7 +344,7 @@ public class AnalyzeConversationRequest extends Request {
         /**
          * fields.
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.putBodyParameter("fields", fields);
             this.fields = fields;
             return this;
@@ -335,7 +362,7 @@ public class AnalyzeConversationRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder resultTypes(java.util.List < String > resultTypes) {
+        public Builder resultTypes(java.util.List<String> resultTypes) {
             this.putBodyParameter("resultTypes", resultTypes);
             this.resultTypes = resultTypes;
             return this;
@@ -383,7 +410,7 @@ public class AnalyzeConversationRequest extends Request {
         /**
          * timeConstraintList.
          */
-        public Builder timeConstraintList(java.util.List < String > timeConstraintList) {
+        public Builder timeConstraintList(java.util.List<String> timeConstraintList) {
             this.putBodyParameter("timeConstraintList", timeConstraintList);
             this.timeConstraintList = timeConstraintList;
             return this;
@@ -392,7 +419,7 @@ public class AnalyzeConversationRequest extends Request {
         /**
          * userProfiles.
          */
-        public Builder userProfiles(java.util.List < UserProfiles> userProfiles) {
+        public Builder userProfiles(java.util.List<UserProfiles> userProfiles) {
             this.putBodyParameter("userProfiles", userProfiles);
             this.userProfiles = userProfiles;
             return this;
@@ -553,7 +580,7 @@ public class AnalyzeConversationRequest extends Request {
     public static class Dialogue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sentences")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < Sentences> sentences;
+        private java.util.List<Sentences> sentences;
 
         @com.aliyun.core.annotation.NameInMap("sessionId")
         private String sessionId;
@@ -574,7 +601,7 @@ public class AnalyzeConversationRequest extends Request {
         /**
          * @return sentences
          */
-        public java.util.List < Sentences> getSentences() {
+        public java.util.List<Sentences> getSentences() {
             return this.sentences;
         }
 
@@ -586,13 +613,13 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Sentences> sentences; 
+            private java.util.List<Sentences> sentences; 
             private String sessionId; 
 
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder sentences(java.util.List < Sentences> sentences) {
+            public Builder sentences(java.util.List<Sentences> sentences) {
                 this.sentences = sentences;
                 return this;
             }
@@ -714,7 +741,7 @@ public class AnalyzeConversationRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("sentences")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < ExamplesSentences> sentences;
+        private java.util.List<ExamplesSentences> sentences;
 
         private Examples(Builder builder) {
             this.output = builder.output;
@@ -739,13 +766,13 @@ public class AnalyzeConversationRequest extends Request {
         /**
          * @return sentences
          */
-        public java.util.List < ExamplesSentences> getSentences() {
+        public java.util.List<ExamplesSentences> getSentences() {
             return this.sentences;
         }
 
         public static final class Builder {
             private String output; 
-            private java.util.List < ExamplesSentences> sentences; 
+            private java.util.List<ExamplesSentences> sentences; 
 
             /**
              * <p>This parameter is required.</p>
@@ -758,7 +785,7 @@ public class AnalyzeConversationRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder sentences(java.util.List < ExamplesSentences> sentences) {
+            public Builder sentences(java.util.List<ExamplesSentences> sentences) {
                 this.sentences = sentences;
                 return this;
             }
@@ -854,7 +881,7 @@ public class AnalyzeConversationRequest extends Request {
         private String desc;
 
         @com.aliyun.core.annotation.NameInMap("enumValues")
-        private java.util.List < EnumValues> enumValues;
+        private java.util.List<EnumValues> enumValues;
 
         @com.aliyun.core.annotation.NameInMap("name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -892,7 +919,7 @@ public class AnalyzeConversationRequest extends Request {
         /**
          * @return enumValues
          */
-        public java.util.List < EnumValues> getEnumValues() {
+        public java.util.List<EnumValues> getEnumValues() {
             return this.enumValues;
         }
 
@@ -906,7 +933,7 @@ public class AnalyzeConversationRequest extends Request {
         public static final class Builder {
             private String code; 
             private String desc; 
-            private java.util.List < EnumValues> enumValues; 
+            private java.util.List<EnumValues> enumValues; 
             private String name; 
 
             /**
@@ -928,7 +955,7 @@ public class AnalyzeConversationRequest extends Request {
             /**
              * enumValues.
              */
-            public Builder enumValues(java.util.List < EnumValues> enumValues) {
+            public Builder enumValues(java.util.List<EnumValues> enumValues) {
                 this.enumValues = enumValues;
                 return this;
             }
@@ -1026,7 +1053,7 @@ public class AnalyzeConversationRequest extends Request {
     public static class ServiceInspection extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inspectionContents")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < InspectionContents> inspectionContents;
+        private java.util.List<InspectionContents> inspectionContents;
 
         @com.aliyun.core.annotation.NameInMap("inspectionIntroduction")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -1053,7 +1080,7 @@ public class AnalyzeConversationRequest extends Request {
         /**
          * @return inspectionContents
          */
-        public java.util.List < InspectionContents> getInspectionContents() {
+        public java.util.List<InspectionContents> getInspectionContents() {
             return this.inspectionContents;
         }
 
@@ -1072,14 +1099,14 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < InspectionContents> inspectionContents; 
+            private java.util.List<InspectionContents> inspectionContents; 
             private String inspectionIntroduction; 
             private String sceneIntroduction; 
 
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder inspectionContents(java.util.List < InspectionContents> inspectionContents) {
+            public Builder inspectionContents(java.util.List<InspectionContents> inspectionContents) {
                 this.inspectionContents = inspectionContents;
                 return this;
             }
