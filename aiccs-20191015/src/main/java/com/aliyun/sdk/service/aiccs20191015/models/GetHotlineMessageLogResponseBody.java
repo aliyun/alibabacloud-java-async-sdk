@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotlineMessageLogResponseBody} extends {@link TeaModel}
  *
  * <p>GetHotlineMessageLogResponseBody</p>
  */
 public class GetHotlineMessageLogResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetHotlineMessageLogResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,13 +85,13 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * 错误码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,13 +101,13 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * 错误信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +115,7 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +123,7 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
         }
 
         /**
-         * 调用是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,23 +136,29 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHotlineMessageLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotlineMessageLogResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Acid")
+        @com.aliyun.core.annotation.NameInMap("Acid")
         private String acid;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Mid")
+        @com.aliyun.core.annotation.NameInMap("Mid")
         private String mid;
 
-        @NameInMap("SenderType")
+        @com.aliyun.core.annotation.NameInMap("SenderType")
         private Integer senderType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Data(Builder builder) {
@@ -218,7 +229,7 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * 会话ID
+             * Acid.
              */
             public Builder acid(String acid) {
                 this.acid = acid;
@@ -226,7 +237,7 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
             }
 
             /**
-             * 会话内容
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -234,7 +245,7 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
             }
 
             /**
-             * 结束时间
+             * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -242,7 +253,7 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
             }
 
             /**
-             * 记录id
+             * Mid.
              */
             public Builder mid(String mid) {
                 this.mid = mid;
@@ -250,7 +261,7 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
             }
 
             /**
-             * 发送方类型（1：会员，2：坐席）
+             * SenderType.
              */
             public Builder senderType(Integer senderType) {
                 this.senderType = senderType;
@@ -258,7 +269,7 @@ public class GetHotlineMessageLogResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * StartTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

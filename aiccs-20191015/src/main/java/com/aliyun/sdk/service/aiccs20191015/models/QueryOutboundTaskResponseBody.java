@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOutboundTaskResponseBody} extends {@link TeaModel}
  *
  * <p>QueryOutboundTaskResponseBody</p>
  */
 public class QueryOutboundTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private QueryOutboundTaskResponseBody(Builder builder) {
@@ -151,71 +156,77 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryOutboundTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOutboundTaskResponseBody</p>
+     */
     public static class List extends TeaModel {
-        @NameInMap("BuId")
+        @com.aliyun.core.annotation.NameInMap("BuId")
         private Long buId;
 
-        @NameInMap("CallerNum")
+        @com.aliyun.core.annotation.NameInMap("CallerNum")
         private String callerNum;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("DepartmentId")
+        @com.aliyun.core.annotation.NameInMap("DepartmentId")
         private Long departmentId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ExtAttrs")
+        @com.aliyun.core.annotation.NameInMap("ExtAttrs")
         private String extAttrs;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Model")
+        @com.aliyun.core.annotation.NameInMap("Model")
         private Integer model;
 
-        @NameInMap("Modifier")
+        @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RetryInterval")
+        @com.aliyun.core.annotation.NameInMap("RetryInterval")
         private Integer retryInterval;
 
-        @NameInMap("RetryTime")
+        @com.aliyun.core.annotation.NameInMap("RetryTime")
         private Integer retryTime;
 
-        @NameInMap("SkillGroup")
+        @com.aliyun.core.annotation.NameInMap("SkillGroup")
         private Long skillGroup;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private List(Builder builder) {
@@ -612,17 +623,23 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryOutboundTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryOutboundTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private String currentPage;
 
-        @NameInMap("List")
-        private java.util.List < List> list;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private String pageSize;
 
-        @NameInMap("TotalResults")
+        @com.aliyun.core.annotation.NameInMap("TotalResults")
         private String totalResults;
 
         private Data(Builder builder) {
@@ -650,7 +667,7 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -670,7 +687,7 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String currentPage; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private String pageSize; 
             private String totalResults; 
 
@@ -685,7 +702,7 @@ public class QueryOutboundTaskResponseBody extends TeaModel {
             /**
              * List.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

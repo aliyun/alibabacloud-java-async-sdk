@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotlineSessionQueryResponseBody} extends {@link TeaModel}
  *
  * <p>HotlineSessionQueryResponseBody</p>
  */
 public class HotlineSessionQueryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private HotlineSessionQueryResponseBody(Builder builder) {
@@ -131,92 +136,98 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HotlineSessionQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotlineSessionQueryResponseBody</p>
+     */
     public static class CallDetailRecord extends TeaModel {
-        @NameInMap("Acid")
+        @com.aliyun.core.annotation.NameInMap("Acid")
         private String acid;
 
-        @NameInMap("ActiveTransferId")
+        @com.aliyun.core.annotation.NameInMap("ActiveTransferId")
         private String activeTransferId;
 
-        @NameInMap("CallContinueTime")
+        @com.aliyun.core.annotation.NameInMap("CallContinueTime")
         private Integer callContinueTime;
 
-        @NameInMap("CallResult")
+        @com.aliyun.core.annotation.NameInMap("CallResult")
         private String callResult;
 
-        @NameInMap("CallType")
+        @com.aliyun.core.annotation.NameInMap("CallType")
         private Integer callType;
 
-        @NameInMap("CalledNumber")
+        @com.aliyun.core.annotation.NameInMap("CalledNumber")
         private String calledNumber;
 
-        @NameInMap("CallingNumber")
+        @com.aliyun.core.annotation.NameInMap("CallingNumber")
         private String callingNumber;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EvaluationLevel")
+        @com.aliyun.core.annotation.NameInMap("EvaluationLevel")
         private Integer evaluationLevel;
 
-        @NameInMap("EvaluationScore")
+        @com.aliyun.core.annotation.NameInMap("EvaluationScore")
         private Integer evaluationScore;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("HangUpRole")
+        @com.aliyun.core.annotation.NameInMap("HangUpRole")
         private String hangUpRole;
 
-        @NameInMap("HangUpTime")
+        @com.aliyun.core.annotation.NameInMap("HangUpTime")
         private String hangUpTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("InQueueTime")
+        @com.aliyun.core.annotation.NameInMap("InQueueTime")
         private String inQueueTime;
 
-        @NameInMap("MemberId")
+        @com.aliyun.core.annotation.NameInMap("MemberId")
         private String memberId;
 
-        @NameInMap("MemberName")
+        @com.aliyun.core.annotation.NameInMap("MemberName")
         private String memberName;
 
-        @NameInMap("OutQueueTime")
+        @com.aliyun.core.annotation.NameInMap("OutQueueTime")
         private String outQueueTime;
 
-        @NameInMap("PassiveTransferId")
+        @com.aliyun.core.annotation.NameInMap("PassiveTransferId")
         private String passiveTransferId;
 
-        @NameInMap("PassiveTransferIdType")
+        @com.aliyun.core.annotation.NameInMap("PassiveTransferIdType")
         private String passiveTransferIdType;
 
-        @NameInMap("PickUpTime")
+        @com.aliyun.core.annotation.NameInMap("PickUpTime")
         private String pickUpTime;
 
-        @NameInMap("QueueUpContinueTime")
+        @com.aliyun.core.annotation.NameInMap("QueueUpContinueTime")
         private Integer queueUpContinueTime;
 
-        @NameInMap("RingContinueTime")
+        @com.aliyun.core.annotation.NameInMap("RingContinueTime")
         private Integer ringContinueTime;
 
-        @NameInMap("RingEndTime")
+        @com.aliyun.core.annotation.NameInMap("RingEndTime")
         private String ringEndTime;
 
-        @NameInMap("RingStartTime")
+        @com.aliyun.core.annotation.NameInMap("RingStartTime")
         private String ringStartTime;
 
-        @NameInMap("ServicerId")
+        @com.aliyun.core.annotation.NameInMap("ServicerId")
         private String servicerId;
 
-        @NameInMap("ServicerName")
+        @com.aliyun.core.annotation.NameInMap("ServicerName")
         private String servicerName;
 
-        @NameInMap("TrunkCall")
+        @com.aliyun.core.annotation.NameInMap("TrunkCall")
         private String trunkCall;
 
         private CallDetailRecord(Builder builder) {
@@ -732,17 +743,23 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link HotlineSessionQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>HotlineSessionQueryResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CallDetailRecord")
-        private java.util.List < CallDetailRecord> callDetailRecord;
+        @com.aliyun.core.annotation.NameInMap("CallDetailRecord")
+        private java.util.List<CallDetailRecord> callDetailRecord;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -763,7 +780,7 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         /**
          * @return callDetailRecord
          */
-        public java.util.List < CallDetailRecord> getCallDetailRecord() {
+        public java.util.List<CallDetailRecord> getCallDetailRecord() {
             return this.callDetailRecord;
         }
 
@@ -789,7 +806,7 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CallDetailRecord> callDetailRecord; 
+            private java.util.List<CallDetailRecord> callDetailRecord; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -797,7 +814,7 @@ public class HotlineSessionQueryResponseBody extends TeaModel {
             /**
              * CallDetailRecord.
              */
-            public Builder callDetailRecord(java.util.List < CallDetailRecord> callDetailRecord) {
+            public Builder callDetailRecord(java.util.List<CallDetailRecord> callDetailRecord) {
                 this.callDetailRecord = callDetailRecord;
                 return this;
             }

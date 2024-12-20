@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RobotCallRequest} extends {@link RequestModel}
  *
  * <p>RobotCallRequest</p>
  */
 public class RobotCallRequest extends Request {
-    @Query
-    @NameInMap("CalledNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledNumber;
 
-    @Query
-    @NameInMap("CalledShowNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledShowNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledShowNumber;
 
-    @Query
-    @NameInMap("EarlyMediaAsr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EarlyMediaAsr")
     private Boolean earlyMediaAsr;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Params")
     private String params;
 
-    @Query
-    @NameInMap("RecordFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordFlag")
     private Boolean recordFlag;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RobotId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RobotId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long robotId;
 
     private RobotCallRequest(Builder builder) {
@@ -183,7 +188,10 @@ public class RobotCallRequest extends Request {
         } 
 
         /**
-         * CalledNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131****2204</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -192,7 +200,10 @@ public class RobotCallRequest extends Request {
         }
 
         /**
-         * CalledShowNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0571****5678</p>
          */
         public Builder calledShowNumber(String calledShowNumber) {
             this.putQueryParameter("CalledShowNumber", calledShowNumber);
@@ -264,7 +275,10 @@ public class RobotCallRequest extends Request {
         }
 
         /**
-         * RobotId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>350000****</p>
          */
         public Builder robotId(Long robotId) {
             this.putQueryParameter("RobotId", robotId);

@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySkillGroupsRequest} extends {@link RequestModel}
  *
  * <p>QuerySkillGroupsRequest</p>
  */
 public class QuerySkillGroupsRequest extends Request {
-    @Query
-    @NameInMap("ChannelType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelType")
     private Integer channelType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DepartmentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepartmentId")
     private Long departmentId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(required = true, maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000, minimum = 1)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000, minimum = 1)
     private Integer pageSize;
 
     private QuerySkillGroupsRequest(Builder builder) {
@@ -127,7 +132,7 @@ public class QuerySkillGroupsRequest extends Request {
         } 
 
         /**
-         * 技能组类型（1：热线，2：在线，4：工单）
+         * ChannelType.
          */
         public Builder channelType(Integer channelType) {
             this.putQueryParameter("ChannelType", channelType);
@@ -145,7 +150,7 @@ public class QuerySkillGroupsRequest extends Request {
         }
 
         /**
-         * 部门ID
+         * DepartmentId.
          */
         public Builder departmentId(Long departmentId) {
             this.putQueryParameter("DepartmentId", departmentId);
@@ -154,7 +159,10 @@ public class QuerySkillGroupsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -163,7 +171,10 @@ public class QuerySkillGroupsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -172,7 +183,10 @@ public class QuerySkillGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

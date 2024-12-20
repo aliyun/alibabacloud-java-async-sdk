@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotlineGroupDetailReportRequest} extends {@link RequestModel}
  *
  * <p>GetHotlineGroupDetailReportRequest</p>
  */
 public class GetHotlineGroupDetailReportRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("DepIds")
-    private java.util.List < Long > depIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepIds")
+    private java.util.List<Long> depIds;
 
-    @Query
-    @NameInMap("EndDate")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long endDate;
 
-    @Query
-    @NameInMap("GroupIds")
-    private java.util.List < Long > groupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIds")
+    private java.util.List<Long> groupIds;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartDate")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long startDate;
 
     private GetHotlineGroupDetailReportRequest(Builder builder) {
@@ -79,7 +84,7 @@ public class GetHotlineGroupDetailReportRequest extends Request {
     /**
      * @return depIds
      */
-    public java.util.List < Long > getDepIds() {
+    public java.util.List<Long> getDepIds() {
         return this.depIds;
     }
 
@@ -93,7 +98,7 @@ public class GetHotlineGroupDetailReportRequest extends Request {
     /**
      * @return groupIds
      */
-    public java.util.List < Long > getGroupIds() {
+    public java.util.List<Long> getGroupIds() {
         return this.groupIds;
     }
 
@@ -120,9 +125,9 @@ public class GetHotlineGroupDetailReportRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetHotlineGroupDetailReportRequest, Builder> {
         private Integer currentPage; 
-        private java.util.List < Long > depIds; 
+        private java.util.List<Long> depIds; 
         private Long endDate; 
-        private java.util.List < Long > groupIds; 
+        private java.util.List<Long> groupIds; 
         private String instanceId; 
         private Integer pageSize; 
         private Long startDate; 
@@ -154,14 +159,17 @@ public class GetHotlineGroupDetailReportRequest extends Request {
         /**
          * DepIds.
          */
-        public Builder depIds(java.util.List < Long > depIds) {
+        public Builder depIds(java.util.List<Long> depIds) {
             this.putQueryParameter("DepIds", depIds);
             this.depIds = depIds;
             return this;
         }
 
         /**
-         * EndDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614824972</p>
          */
         public Builder endDate(Long endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -172,14 +180,17 @@ public class GetHotlineGroupDetailReportRequest extends Request {
         /**
          * GroupIds.
          */
-        public Builder groupIds(java.util.List < Long > groupIds) {
+        public Builder groupIds(java.util.List<Long> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
             this.groupIds = groupIds;
             return this;
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -197,7 +208,10 @@ public class GetHotlineGroupDetailReportRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1614824872</p>
          */
         public Builder startDate(Long startDate) {
             this.putQueryParameter("StartDate", startDate);

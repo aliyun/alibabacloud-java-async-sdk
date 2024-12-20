@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDepartmentRequest} extends {@link RequestModel}
  *
  * <p>CreateDepartmentRequest</p>
  */
 public class CreateDepartmentRequest extends Request {
-    @Query
-    @NameInMap("DepartmentName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepartmentName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String departmentName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private CreateDepartmentRequest(Builder builder) {
@@ -70,7 +75,7 @@ public class CreateDepartmentRequest extends Request {
         } 
 
         /**
-         * 部门名称
+         * <p>This parameter is required.</p>
          */
         public Builder departmentName(String departmentName) {
             this.putQueryParameter("DepartmentName", departmentName);
@@ -79,7 +84,10 @@ public class CreateDepartmentRequest extends Request {
         }
 
         /**
-         * 实例id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

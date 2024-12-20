@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotlineAgentDetailReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetHotlineAgentDetailReportResponseBody</p>
  */
 public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Long httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetHotlineAgentDetailReportResponseBody(Builder builder) {
@@ -151,11 +156,17 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHotlineAgentDetailReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotlineAgentDetailReportResponseBody</p>
+     */
     public static class Columns extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Columns(Builder builder) {
@@ -212,20 +223,26 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHotlineAgentDetailReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotlineAgentDetailReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Columns")
-        private java.util.List < Columns> columns;
+        @com.aliyun.core.annotation.NameInMap("Columns")
+        private java.util.List<Columns> columns;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Rows")
-        private java.util.List < java.util.Map<String, ?>> rows;
+        @com.aliyun.core.annotation.NameInMap("Rows")
+        private java.util.List<java.util.Map<String, ?>> rows;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
@@ -247,7 +264,7 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < Columns> getColumns() {
+        public java.util.List<Columns> getColumns() {
             return this.columns;
         }
 
@@ -268,7 +285,7 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
         /**
          * @return rows
          */
-        public java.util.List < java.util.Map<String, ?>> getRows() {
+        public java.util.List<java.util.Map<String, ?>> getRows() {
             return this.rows;
         }
 
@@ -280,16 +297,16 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Columns> columns; 
+            private java.util.List<Columns> columns; 
             private Integer page; 
             private Integer pageSize; 
-            private java.util.List < java.util.Map<String, ?>> rows; 
+            private java.util.List<java.util.Map<String, ?>> rows; 
             private Integer total; 
 
             /**
              * Columns.
              */
-            public Builder columns(java.util.List < Columns> columns) {
+            public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
                 return this;
             }
@@ -313,7 +330,7 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
             /**
              * Rows.
              */
-            public Builder rows(java.util.List < java.util.Map<String, ?>> rows) {
+            public Builder rows(java.util.List<java.util.Map<String, ?>> rows) {
                 this.rows = rows;
                 return this;
             }

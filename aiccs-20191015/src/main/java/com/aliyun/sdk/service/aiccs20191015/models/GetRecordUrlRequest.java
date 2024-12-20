@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRecordUrlRequest} extends {@link RequestModel}
  *
  * <p>GetRecordUrlRequest</p>
  */
 public class GetRecordUrlRequest extends Request {
-    @Query
-    @NameInMap("Acid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Acid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acid;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RecordType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordType;
 
     private GetRecordUrlRequest(Builder builder) {
@@ -85,7 +90,10 @@ public class GetRecordUrlRequest extends Request {
         } 
 
         /**
-         * Acid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001067****</p>
          */
         public Builder acid(String acid) {
             this.putQueryParameter("Acid", acid);
@@ -94,7 +102,10 @@ public class GetRecordUrlRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -103,7 +114,10 @@ public class GetRecordUrlRequest extends Request {
         }
 
         /**
-         * RecordType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DUP_CALL</p>
          */
         public Builder recordType(String recordType) {
             this.putQueryParameter("RecordType", recordType);

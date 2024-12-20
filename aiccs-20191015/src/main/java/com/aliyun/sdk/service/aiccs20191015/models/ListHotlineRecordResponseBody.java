@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotlineRecordResponseBody} extends {@link TeaModel}
  *
  * <p>ListHotlineRecordResponseBody</p>
  */
 public class ListHotlineRecordResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListHotlineRecordResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class ListHotlineRecordResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class ListHotlineRecordResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -96,7 +101,7 @@ public class ListHotlineRecordResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -131,20 +136,26 @@ public class ListHotlineRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotlineRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotlineRecordResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CallId")
+        @com.aliyun.core.annotation.NameInMap("CallId")
         private String callId;
 
-        @NameInMap("ConnectionId")
+        @com.aliyun.core.annotation.NameInMap("ConnectionId")
         private String connectionId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Data(Builder builder) {

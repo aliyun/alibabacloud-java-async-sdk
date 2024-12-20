@@ -1,126 +1,131 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotlineSessionQueryRequest} extends {@link RequestModel}
  *
  * <p>HotlineSessionQueryRequest</p>
  */
 public class HotlineSessionQueryRequest extends Request {
-    @Query
-    @NameInMap("Acid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Acid")
     private String acid;
 
-    @Query
-    @NameInMap("AcidList")
-    private java.util.List < String > acidList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcidList")
+    private java.util.List<String> acidList;
 
-    @Query
-    @NameInMap("CallResult")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallResult")
     private String callResult;
 
-    @Query
-    @NameInMap("CallResultList")
-    private java.util.List < String > callResultList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallResultList")
+    private java.util.List<String> callResultList;
 
-    @Query
-    @NameInMap("CallType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallType")
     private Integer callType;
 
-    @Query
-    @NameInMap("CallTypeList")
-    private java.util.List < Integer > callTypeList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallTypeList")
+    private java.util.List<Integer> callTypeList;
 
-    @Query
-    @NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
     private String calledNumber;
 
-    @Query
-    @NameInMap("CalledNumberList")
-    private java.util.List < String > calledNumberList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumberList")
+    private java.util.List<String> calledNumberList;
 
-    @Query
-    @NameInMap("CallingNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
     private String callingNumber;
 
-    @Query
-    @NameInMap("CallingNumberList")
-    private java.util.List < String > callingNumberList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumberList")
+    private java.util.List<String> callingNumberList;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Long groupId;
 
-    @Query
-    @NameInMap("GroupIdList")
-    private java.util.List < Long > groupIdList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIdList")
+    private java.util.List<Long> groupIdList;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MemberId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberId")
     private String memberId;
 
-    @Query
-    @NameInMap("MemberIdList")
-    private java.util.List < String > memberIdList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberIdList")
+    private java.util.List<String> memberIdList;
 
-    @Query
-    @NameInMap("MemberName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberName")
     private String memberName;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Params")
     private String params;
 
-    @Query
-    @NameInMap("QueryEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryEndTime")
     private Long queryEndTime;
 
-    @Query
-    @NameInMap("QueryStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryStartTime")
     private Long queryStartTime;
 
-    @Query
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @Query
-    @NameInMap("ServicerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServicerId")
     private String servicerId;
 
-    @Query
-    @NameInMap("ServicerIdList")
-    private java.util.List < String > servicerIdList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServicerIdList")
+    private java.util.List<String> servicerIdList;
 
-    @Query
-    @NameInMap("ServicerName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServicerName")
     private String servicerName;
 
     private HotlineSessionQueryRequest(Builder builder) {
@@ -177,7 +182,7 @@ public class HotlineSessionQueryRequest extends Request {
     /**
      * @return acidList
      */
-    public java.util.List < String > getAcidList() {
+    public java.util.List<String> getAcidList() {
         return this.acidList;
     }
 
@@ -191,7 +196,7 @@ public class HotlineSessionQueryRequest extends Request {
     /**
      * @return callResultList
      */
-    public java.util.List < String > getCallResultList() {
+    public java.util.List<String> getCallResultList() {
         return this.callResultList;
     }
 
@@ -205,7 +210,7 @@ public class HotlineSessionQueryRequest extends Request {
     /**
      * @return callTypeList
      */
-    public java.util.List < Integer > getCallTypeList() {
+    public java.util.List<Integer> getCallTypeList() {
         return this.callTypeList;
     }
 
@@ -219,7 +224,7 @@ public class HotlineSessionQueryRequest extends Request {
     /**
      * @return calledNumberList
      */
-    public java.util.List < String > getCalledNumberList() {
+    public java.util.List<String> getCalledNumberList() {
         return this.calledNumberList;
     }
 
@@ -233,7 +238,7 @@ public class HotlineSessionQueryRequest extends Request {
     /**
      * @return callingNumberList
      */
-    public java.util.List < String > getCallingNumberList() {
+    public java.util.List<String> getCallingNumberList() {
         return this.callingNumberList;
     }
 
@@ -247,7 +252,7 @@ public class HotlineSessionQueryRequest extends Request {
     /**
      * @return groupIdList
      */
-    public java.util.List < Long > getGroupIdList() {
+    public java.util.List<Long> getGroupIdList() {
         return this.groupIdList;
     }
 
@@ -282,7 +287,7 @@ public class HotlineSessionQueryRequest extends Request {
     /**
      * @return memberIdList
      */
-    public java.util.List < String > getMemberIdList() {
+    public java.util.List<String> getMemberIdList() {
         return this.memberIdList;
     }
 
@@ -345,7 +350,7 @@ public class HotlineSessionQueryRequest extends Request {
     /**
      * @return servicerIdList
      */
-    public java.util.List < String > getServicerIdList() {
+    public java.util.List<String> getServicerIdList() {
         return this.servicerIdList;
     }
 
@@ -358,22 +363,22 @@ public class HotlineSessionQueryRequest extends Request {
 
     public static final class Builder extends Request.Builder<HotlineSessionQueryRequest, Builder> {
         private String acid; 
-        private java.util.List < String > acidList; 
+        private java.util.List<String> acidList; 
         private String callResult; 
-        private java.util.List < String > callResultList; 
+        private java.util.List<String> callResultList; 
         private Integer callType; 
-        private java.util.List < Integer > callTypeList; 
+        private java.util.List<Integer> callTypeList; 
         private String calledNumber; 
-        private java.util.List < String > calledNumberList; 
+        private java.util.List<String> calledNumberList; 
         private String callingNumber; 
-        private java.util.List < String > callingNumberList; 
+        private java.util.List<String> callingNumberList; 
         private Long groupId; 
-        private java.util.List < Long > groupIdList; 
+        private java.util.List<Long> groupIdList; 
         private String groupName; 
         private String id; 
         private String instanceId; 
         private String memberId; 
-        private java.util.List < String > memberIdList; 
+        private java.util.List<String> memberIdList; 
         private String memberName; 
         private Integer pageNo; 
         private Integer pageSize; 
@@ -382,7 +387,7 @@ public class HotlineSessionQueryRequest extends Request {
         private Long queryStartTime; 
         private String requestId; 
         private String servicerId; 
-        private java.util.List < String > servicerIdList; 
+        private java.util.List<String> servicerIdList; 
         private String servicerName; 
 
         private Builder() {
@@ -432,7 +437,7 @@ public class HotlineSessionQueryRequest extends Request {
         /**
          * AcidList.
          */
-        public Builder acidList(java.util.List < String > acidList) {
+        public Builder acidList(java.util.List<String> acidList) {
             this.putQueryParameter("AcidList", acidList);
             this.acidList = acidList;
             return this;
@@ -450,7 +455,7 @@ public class HotlineSessionQueryRequest extends Request {
         /**
          * CallResultList.
          */
-        public Builder callResultList(java.util.List < String > callResultList) {
+        public Builder callResultList(java.util.List<String> callResultList) {
             this.putQueryParameter("CallResultList", callResultList);
             this.callResultList = callResultList;
             return this;
@@ -468,7 +473,7 @@ public class HotlineSessionQueryRequest extends Request {
         /**
          * CallTypeList.
          */
-        public Builder callTypeList(java.util.List < Integer > callTypeList) {
+        public Builder callTypeList(java.util.List<Integer> callTypeList) {
             this.putQueryParameter("CallTypeList", callTypeList);
             this.callTypeList = callTypeList;
             return this;
@@ -486,7 +491,7 @@ public class HotlineSessionQueryRequest extends Request {
         /**
          * CalledNumberList.
          */
-        public Builder calledNumberList(java.util.List < String > calledNumberList) {
+        public Builder calledNumberList(java.util.List<String> calledNumberList) {
             this.putQueryParameter("CalledNumberList", calledNumberList);
             this.calledNumberList = calledNumberList;
             return this;
@@ -504,7 +509,7 @@ public class HotlineSessionQueryRequest extends Request {
         /**
          * CallingNumberList.
          */
-        public Builder callingNumberList(java.util.List < String > callingNumberList) {
+        public Builder callingNumberList(java.util.List<String> callingNumberList) {
             this.putQueryParameter("CallingNumberList", callingNumberList);
             this.callingNumberList = callingNumberList;
             return this;
@@ -522,7 +527,7 @@ public class HotlineSessionQueryRequest extends Request {
         /**
          * GroupIdList.
          */
-        public Builder groupIdList(java.util.List < Long > groupIdList) {
+        public Builder groupIdList(java.util.List<Long> groupIdList) {
             this.putQueryParameter("GroupIdList", groupIdList);
             this.groupIdList = groupIdList;
             return this;
@@ -547,7 +552,10 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -567,7 +575,7 @@ public class HotlineSessionQueryRequest extends Request {
         /**
          * MemberIdList.
          */
-        public Builder memberIdList(java.util.List < String > memberIdList) {
+        public Builder memberIdList(java.util.List<String> memberIdList) {
             this.putQueryParameter("MemberIdList", memberIdList);
             this.memberIdList = memberIdList;
             return this;
@@ -648,7 +656,7 @@ public class HotlineSessionQueryRequest extends Request {
         /**
          * ServicerIdList.
          */
-        public Builder servicerIdList(java.util.List < String > servicerIdList) {
+        public Builder servicerIdList(java.util.List<String> servicerIdList) {
             this.putQueryParameter("ServicerIdList", servicerIdList);
             this.servicerIdList = servicerIdList;
             return this;

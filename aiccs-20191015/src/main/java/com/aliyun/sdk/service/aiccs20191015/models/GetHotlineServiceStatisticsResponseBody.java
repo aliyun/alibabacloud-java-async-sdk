@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotlineServiceStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>GetHotlineServiceStatisticsResponseBody</p>
  */
 public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetHotlineServiceStatisticsResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * 错误编码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +99,7 @@ public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +107,7 @@ public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * 错误描述
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +115,7 @@ public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID，用于跟踪错误原因
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +123,7 @@ public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * 调用接口是否成功
+         * Success.
          */
         public Builder success(String success) {
             this.success = success;
@@ -131,17 +136,23 @@ public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHotlineServiceStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotlineServiceStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Rows")
+        @com.aliyun.core.annotation.NameInMap("Rows")
         private String rows;
 
-        @NameInMap("TotalNum")
+        @com.aliyun.core.annotation.NameInMap("TotalNum")
         private Integer totalNum;
 
         private Data(Builder builder) {
@@ -194,7 +205,7 @@ public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
             private Integer totalNum; 
 
             /**
-             * 当前页数
+             * PageNum.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -202,7 +213,7 @@ public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 页大小
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -210,7 +221,7 @@ public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 信息为list<map>类型的json字符串
+             * Rows.
              */
             public Builder rows(String rows) {
                 this.rows = rows;
@@ -218,7 +229,7 @@ public class GetHotlineServiceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 总记录数
+             * TotalNum.
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;

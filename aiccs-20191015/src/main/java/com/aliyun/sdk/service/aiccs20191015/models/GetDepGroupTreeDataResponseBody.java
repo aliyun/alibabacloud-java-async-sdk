@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDepGroupTreeDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetDepGroupTreeDataResponseBody</p>
  */
 public class GetDepGroupTreeDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetDepGroupTreeDataResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,13 +85,13 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private String success; 
 
         /**
-         * Code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,15 +99,15 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
         }
 
         /**
-         * Data
+         * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +115,7 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +123,7 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success
+         * Success.
          */
         public Builder success(String success) {
             this.success = success;
@@ -131,11 +136,17 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDepGroupTreeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDepGroupTreeDataResponseBody</p>
+     */
     public static class GroupDTOS extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private Long skillGroupId;
 
         private GroupDTOS(Builder builder) {
@@ -170,7 +181,7 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
             private Long skillGroupId; 
 
             /**
-             * name
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +189,7 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
             }
 
             /**
-             * skillGroupId
+             * SkillGroupId.
              */
             public Builder skillGroupId(Long skillGroupId) {
                 this.skillGroupId = skillGroupId;
@@ -192,15 +203,21 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDepGroupTreeDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDepGroupTreeDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("DepGroupId")
+        @com.aliyun.core.annotation.NameInMap("DepGroupId")
         private String depGroupId;
 
-        @NameInMap("DepGroupName")
+        @com.aliyun.core.annotation.NameInMap("DepGroupName")
         private String depGroupName;
 
-        @NameInMap("GroupDTOS")
-        private java.util.List < GroupDTOS> groupDTOS;
+        @com.aliyun.core.annotation.NameInMap("GroupDTOS")
+        private java.util.List<GroupDTOS> groupDTOS;
 
         private Data(Builder builder) {
             this.depGroupId = builder.depGroupId;
@@ -233,17 +250,17 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
         /**
          * @return groupDTOS
          */
-        public java.util.List < GroupDTOS> getGroupDTOS() {
+        public java.util.List<GroupDTOS> getGroupDTOS() {
             return this.groupDTOS;
         }
 
         public static final class Builder {
             private String depGroupId; 
             private String depGroupName; 
-            private java.util.List < GroupDTOS> groupDTOS; 
+            private java.util.List<GroupDTOS> groupDTOS; 
 
             /**
-             * depGroupId
+             * DepGroupId.
              */
             public Builder depGroupId(String depGroupId) {
                 this.depGroupId = depGroupId;
@@ -251,7 +268,7 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
             }
 
             /**
-             * depGroupName
+             * DepGroupName.
              */
             public Builder depGroupName(String depGroupName) {
                 this.depGroupName = depGroupName;
@@ -259,9 +276,9 @@ public class GetDepGroupTreeDataResponseBody extends TeaModel {
             }
 
             /**
-             * groupDTOS
+             * GroupDTOS.
              */
-            public Builder groupDTOS(java.util.List < GroupDTOS> groupDTOS) {
+            public Builder groupDTOS(java.util.List<GroupDTOS> groupDTOS) {
                 this.groupDTOS = groupDTOS;
                 return this;
             }

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryHotlineInQueueRequest} extends {@link RequestModel}
  *
  * <p>QueryHotlineInQueueRequest</p>
  */
 public class QueryHotlineInQueueRequest extends Request {
-    @Query
-    @NameInMap("OuterGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerGroupId;
 
-    @Query
-    @NameInMap("OuterGroupType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterGroupType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerGroupType;
 
     private QueryHotlineInQueueRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class QueryHotlineInQueueRequest extends Request {
         } 
 
         /**
-         * OuterGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder outerGroupId(String outerGroupId) {
             this.putQueryParameter("OuterGroupId", outerGroupId);
@@ -79,7 +87,10 @@ public class QueryHotlineInQueueRequest extends Request {
         }
 
         /**
-         * OuterGroupType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mybank</p>
          */
         public Builder outerGroupType(String outerGroupType) {
             this.putQueryParameter("OuterGroupType", outerGroupType);

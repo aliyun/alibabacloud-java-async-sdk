@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotlineRuntimeInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetHotlineRuntimeInfoResponseBody</p>
  */
 public class GetHotlineRuntimeInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.Map < String, ? > data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.Map<String, ?> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetHotlineRuntimeInfoResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class GetHotlineRuntimeInfoResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.Map < String, ? > getData() {
+    public java.util.Map<String, ?> getData() {
         return this.data;
     }
 
@@ -80,13 +85,13 @@ public class GetHotlineRuntimeInfoResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.Map < String, ? > data; 
+        private java.util.Map<String, ?> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * 错误码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,15 +99,15 @@ public class GetHotlineRuntimeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 数据结果
+         * Data.
          */
-        public Builder data(java.util.Map < String, ? > data) {
+        public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * 错误信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +115,7 @@ public class GetHotlineRuntimeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +123,7 @@ public class GetHotlineRuntimeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 接口调用是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

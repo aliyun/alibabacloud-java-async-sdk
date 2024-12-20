@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAgentByIdResponseBody} extends {@link TeaModel}
  *
  * <p>GetAgentByIdResponseBody</p>
  */
 public class GetAgentByIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAgentByIdResponseBody(Builder builder) {
@@ -131,26 +136,32 @@ public class GetAgentByIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAgentByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentByIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private Integer agentId;
 
-        @NameInMap("CreateUserName")
+        @com.aliyun.core.annotation.NameInMap("CreateUserName")
         private String createUserName;
 
-        @NameInMap("ForeignKey")
+        @com.aliyun.core.annotation.NameInMap("ForeignKey")
         private String foreignKey;
 
-        @NameInMap("ForeignNick")
+        @com.aliyun.core.annotation.NameInMap("ForeignNick")
         private String foreignNick;
 
-        @NameInMap("RealName")
+        @com.aliyun.core.annotation.NameInMap("RealName")
         private String realName;
 
-        @NameInMap("ServicerType")
+        @com.aliyun.core.annotation.NameInMap("ServicerType")
         private Integer servicerType;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
         private Data(Builder builder) {

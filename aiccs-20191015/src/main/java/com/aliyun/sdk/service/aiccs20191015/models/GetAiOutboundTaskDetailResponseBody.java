@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAiOutboundTaskDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetAiOutboundTaskDetailResponseBody</p>
  */
 public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAiOutboundTaskDetailResponseBody(Builder builder) {
@@ -94,7 +99,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * 任务详情
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,7 +115,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,11 +136,17 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAiOutboundTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAiOutboundTaskDetailResponseBody</p>
+     */
     public static class RecallRule extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
         private RecallRule(Builder builder) {
@@ -170,7 +181,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             private Integer interval; 
 
             /**
-             * 重呼次数
+             * Count.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -178,7 +189,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 重呼间隔时间（分钟）
+             * Interval.
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -192,47 +203,53 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAiOutboundTaskDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAiOutboundTaskDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ConcurrentRate")
+        @com.aliyun.core.annotation.NameInMap("ConcurrentRate")
         private Integer concurrentRate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("ExecutionTime")
         private String executionTime;
 
-        @NameInMap("ForecastCallRate")
+        @com.aliyun.core.annotation.NameInMap("ForecastCallRate")
         private Float forecastCallRate;
 
-        @NameInMap("HandlerId")
+        @com.aliyun.core.annotation.NameInMap("HandlerId")
         private Long handlerId;
 
-        @NameInMap("HandlerName")
+        @com.aliyun.core.annotation.NameInMap("HandlerName")
         private String handlerName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NumRepeated")
+        @com.aliyun.core.annotation.NameInMap("NumRepeated")
         private Integer numRepeated;
 
-        @NameInMap("OutboundNums")
-        private java.util.List < String > outboundNums;
+        @com.aliyun.core.annotation.NameInMap("OutboundNums")
+        private java.util.List<String> outboundNums;
 
-        @NameInMap("RecallRule")
+        @com.aliyun.core.annotation.NameInMap("RecallRule")
         private RecallRule recallRule;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Data(Builder builder) {
@@ -319,7 +336,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         /**
          * @return outboundNums
          */
-        public java.util.List < String > getOutboundNums() {
+        public java.util.List<String> getOutboundNums() {
             return this.outboundNums;
         }
 
@@ -367,7 +384,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             private String handlerName; 
             private String name; 
             private Integer numRepeated; 
-            private java.util.List < String > outboundNums; 
+            private java.util.List<String> outboundNums; 
             private RecallRule recallRule; 
             private Integer status; 
             private String statusDesc; 
@@ -375,7 +392,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * 自动外呼的并发
+             * ConcurrentRate.
              */
             public Builder concurrentRate(Integer concurrentRate) {
                 this.concurrentRate = concurrentRate;
@@ -383,7 +400,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务描述
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -391,7 +408,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务执行时间
+             * ExecutionTime.
              */
             public Builder executionTime(String executionTime) {
                 this.executionTime = executionTime;
@@ -399,7 +416,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 预测式外呼固定外呼比例
+             * ForecastCallRate.
              */
             public Builder forecastCallRate(Float forecastCallRate) {
                 this.forecastCallRate = forecastCallRate;
@@ -407,7 +424,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 技能组id（预测式外呼）或者ivr id（自动外呼）
+             * HandlerId.
              */
             public Builder handlerId(Long handlerId) {
                 this.handlerId = handlerId;
@@ -415,7 +432,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 技能组名称或ivr名称
+             * HandlerName.
              */
             public Builder handlerName(String handlerName) {
                 this.handlerName = handlerName;
@@ -423,7 +440,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务名
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -431,7 +448,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 被叫号码重复策略（0去重，1不去重）
+             * NumRepeated.
              */
             public Builder numRepeated(Integer numRepeated) {
                 this.numRepeated = numRepeated;
@@ -439,15 +456,15 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼主叫号码
+             * OutboundNums.
              */
-            public Builder outboundNums(java.util.List < String > outboundNums) {
+            public Builder outboundNums(java.util.List<String> outboundNums) {
                 this.outboundNums = outboundNums;
                 return this;
             }
 
             /**
-             * 失败重呼策略
+             * RecallRule.
              */
             public Builder recallRule(RecallRule recallRule) {
                 this.recallRule = recallRule;
@@ -455,7 +472,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务状态（0:未开始,1:进行中,2:系统暂停,3:手动暂停,4:已完成,5:已终止）
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -463,7 +480,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务状态描述
+             * StatusDesc.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -471,7 +488,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务id
+             * TaskId.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -479,7 +496,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务类型(2:预测式外呼，3:自动外呼)
+             * Type.
              */
             public Builder type(Integer type) {
                 this.type = type;

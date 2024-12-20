@@ -1,72 +1,77 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSkillGroupServiceStatusRequest} extends {@link RequestModel}
  *
  * <p>GetSkillGroupServiceStatusRequest</p>
  */
 public class GetSkillGroupServiceStatusRequest extends Request {
-    @Query
-    @NameInMap("AgentIds")
-    private java.util.List < Long > agentIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentIds")
+    private java.util.List<Long> agentIds;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("DepIds")
-    private java.util.List < Long > depIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepIds")
+    private java.util.List<Long> depIds;
 
-    @Query
-    @NameInMap("EndDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
     private Long endDate;
 
-    @Query
-    @NameInMap("ExistAgentGrouping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExistAgentGrouping")
     private Boolean existAgentGrouping;
 
-    @Query
-    @NameInMap("ExistChannelInstanceGrouping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExistChannelInstanceGrouping")
     private Boolean existChannelInstanceGrouping;
 
-    @Query
-    @NameInMap("ExistDepartmentGrouping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExistDepartmentGrouping")
     private Boolean existDepartmentGrouping;
 
-    @Query
-    @NameInMap("ExistRobotInstanceGrouping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExistRobotInstanceGrouping")
     private Boolean existRobotInstanceGrouping;
 
-    @Query
-    @NameInMap("ExistSkillGroupGrouping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExistSkillGroupGrouping")
     private Boolean existSkillGroupGrouping;
 
-    @Query
-    @NameInMap("GroupIds")
-    private java.util.List < Long > groupIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIds")
+    private java.util.List<Long> groupIds;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
     private Long startDate;
 
-    @Query
-    @NameInMap("TimeLatitudeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeLatitudeType")
     private String timeLatitudeType;
 
     private GetSkillGroupServiceStatusRequest(Builder builder) {
@@ -103,7 +108,7 @@ public class GetSkillGroupServiceStatusRequest extends Request {
     /**
      * @return agentIds
      */
-    public java.util.List < Long > getAgentIds() {
+    public java.util.List<Long> getAgentIds() {
         return this.agentIds;
     }
 
@@ -117,7 +122,7 @@ public class GetSkillGroupServiceStatusRequest extends Request {
     /**
      * @return depIds
      */
-    public java.util.List < Long > getDepIds() {
+    public java.util.List<Long> getDepIds() {
         return this.depIds;
     }
 
@@ -166,7 +171,7 @@ public class GetSkillGroupServiceStatusRequest extends Request {
     /**
      * @return groupIds
      */
-    public java.util.List < Long > getGroupIds() {
+    public java.util.List<Long> getGroupIds() {
         return this.groupIds;
     }
 
@@ -199,16 +204,16 @@ public class GetSkillGroupServiceStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetSkillGroupServiceStatusRequest, Builder> {
-        private java.util.List < Long > agentIds; 
+        private java.util.List<Long> agentIds; 
         private Integer currentPage; 
-        private java.util.List < Long > depIds; 
+        private java.util.List<Long> depIds; 
         private Long endDate; 
         private Boolean existAgentGrouping; 
         private Boolean existChannelInstanceGrouping; 
         private Boolean existDepartmentGrouping; 
         private Boolean existRobotInstanceGrouping; 
         private Boolean existSkillGroupGrouping; 
-        private java.util.List < Long > groupIds; 
+        private java.util.List<Long> groupIds; 
         private String instanceId; 
         private Integer pageSize; 
         private Long startDate; 
@@ -237,9 +242,9 @@ public class GetSkillGroupServiceStatusRequest extends Request {
         } 
 
         /**
-         * 技能组id列表
+         * AgentIds.
          */
-        public Builder agentIds(java.util.List < Long > agentIds) {
+        public Builder agentIds(java.util.List<Long> agentIds) {
             String agentIdsShrink = shrink(agentIds, "AgentIds", "simple");
             this.putQueryParameter("AgentIds", agentIdsShrink);
             this.agentIds = agentIds;
@@ -247,7 +252,7 @@ public class GetSkillGroupServiceStatusRequest extends Request {
         }
 
         /**
-         * 当前页（默认为1）
+         * CurrentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -256,9 +261,9 @@ public class GetSkillGroupServiceStatusRequest extends Request {
         }
 
         /**
-         * 部门id列表
+         * DepIds.
          */
-        public Builder depIds(java.util.List < Long > depIds) {
+        public Builder depIds(java.util.List<Long> depIds) {
             String depIdsShrink = shrink(depIds, "DepIds", "simple");
             this.putQueryParameter("DepIds", depIdsShrink);
             this.depIds = depIds;
@@ -266,7 +271,7 @@ public class GetSkillGroupServiceStatusRequest extends Request {
         }
 
         /**
-         * 结束日期时间戳（毫秒）
+         * EndDate.
          */
         public Builder endDate(Long endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -275,7 +280,7 @@ public class GetSkillGroupServiceStatusRequest extends Request {
         }
 
         /**
-         * 是否根据技能组分组
+         * ExistAgentGrouping.
          */
         public Builder existAgentGrouping(Boolean existAgentGrouping) {
             this.putQueryParameter("ExistAgentGrouping", existAgentGrouping);
@@ -284,7 +289,7 @@ public class GetSkillGroupServiceStatusRequest extends Request {
         }
 
         /**
-         * 是否根据渠道实例分组
+         * ExistChannelInstanceGrouping.
          */
         public Builder existChannelInstanceGrouping(Boolean existChannelInstanceGrouping) {
             this.putQueryParameter("ExistChannelInstanceGrouping", existChannelInstanceGrouping);
@@ -293,7 +298,7 @@ public class GetSkillGroupServiceStatusRequest extends Request {
         }
 
         /**
-         * 是否根据部门分组
+         * ExistDepartmentGrouping.
          */
         public Builder existDepartmentGrouping(Boolean existDepartmentGrouping) {
             this.putQueryParameter("ExistDepartmentGrouping", existDepartmentGrouping);
@@ -302,7 +307,7 @@ public class GetSkillGroupServiceStatusRequest extends Request {
         }
 
         /**
-         * 是否根据机器实例分组
+         * ExistRobotInstanceGrouping.
          */
         public Builder existRobotInstanceGrouping(Boolean existRobotInstanceGrouping) {
             this.putQueryParameter("ExistRobotInstanceGrouping", existRobotInstanceGrouping);
@@ -311,7 +316,7 @@ public class GetSkillGroupServiceStatusRequest extends Request {
         }
 
         /**
-         * 是否根据技能组分组
+         * ExistSkillGroupGrouping.
          */
         public Builder existSkillGroupGrouping(Boolean existSkillGroupGrouping) {
             this.putQueryParameter("ExistSkillGroupGrouping", existSkillGroupGrouping);
@@ -320,9 +325,9 @@ public class GetSkillGroupServiceStatusRequest extends Request {
         }
 
         /**
-         * 技能组id列表
+         * GroupIds.
          */
-        public Builder groupIds(java.util.List < Long > groupIds) {
+        public Builder groupIds(java.util.List<Long> groupIds) {
             String groupIdsShrink = shrink(groupIds, "GroupIds", "simple");
             this.putQueryParameter("GroupIds", groupIdsShrink);
             this.groupIds = groupIds;
@@ -330,7 +335,10 @@ public class GetSkillGroupServiceStatusRequest extends Request {
         }
 
         /**
-         * AICCS实例ID，在智能联络中心控制台上可以看到
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -339,7 +347,7 @@ public class GetSkillGroupServiceStatusRequest extends Request {
         }
 
         /**
-         * 每页大小（默认为10)
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -348,7 +356,7 @@ public class GetSkillGroupServiceStatusRequest extends Request {
         }
 
         /**
-         * 开始日期时间戳（毫秒）
+         * StartDate.
          */
         public Builder startDate(Long startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -357,7 +365,7 @@ public class GetSkillGroupServiceStatusRequest extends Request {
         }
 
         /**
-         * 时间纬度类型
+         * TimeLatitudeType.
          */
         public Builder timeLatitudeType(String timeLatitudeType) {
             this.putQueryParameter("TimeLatitudeType", timeLatitudeType);

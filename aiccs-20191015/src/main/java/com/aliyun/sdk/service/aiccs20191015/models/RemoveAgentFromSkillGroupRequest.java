@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveAgentFromSkillGroupRequest} extends {@link RequestModel}
  *
  * <p>RemoveAgentFromSkillGroupRequest</p>
  */
 public class RemoveAgentFromSkillGroupRequest extends Request {
-    @Query
-    @NameInMap("AgentIds")
-    @Validation(required = true)
-    private java.util.List < Long > agentIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Long> agentIds;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("SkillGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long skillGroupId;
 
     private RemoveAgentFromSkillGroupRequest(Builder builder) {
@@ -50,7 +55,7 @@ public class RemoveAgentFromSkillGroupRequest extends Request {
     /**
      * @return agentIds
      */
-    public java.util.List < Long > getAgentIds() {
+    public java.util.List<Long> getAgentIds() {
         return this.agentIds;
     }
 
@@ -69,7 +74,7 @@ public class RemoveAgentFromSkillGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveAgentFromSkillGroupRequest, Builder> {
-        private java.util.List < Long > agentIds; 
+        private java.util.List<Long> agentIds; 
         private String instanceId; 
         private Long skillGroupId; 
 
@@ -85,9 +90,9 @@ public class RemoveAgentFromSkillGroupRequest extends Request {
         } 
 
         /**
-         * 坐席列表
+         * <p>This parameter is required.</p>
          */
-        public Builder agentIds(java.util.List < Long > agentIds) {
+        public Builder agentIds(java.util.List<Long> agentIds) {
             String agentIdsShrink = shrink(agentIds, "AgentIds", "json");
             this.putQueryParameter("AgentIds", agentIdsShrink);
             this.agentIds = agentIds;
@@ -95,7 +100,10 @@ public class RemoveAgentFromSkillGroupRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -104,7 +112,10 @@ public class RemoveAgentFromSkillGroupRequest extends Request {
         }
 
         /**
-         * 技能组id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1146****</p>
          */
         public Builder skillGroupId(Long skillGroupId) {
             this.putQueryParameter("SkillGroupId", skillGroupId);

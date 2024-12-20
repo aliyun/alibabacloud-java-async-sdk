@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartCallV2Request} extends {@link RequestModel}
  *
  * <p>StartCallV2Request</p>
  */
 public class StartCallV2Request extends Request {
-    @Body
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Body
-    @NameInMap("Callee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Callee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callee;
 
-    @Body
-    @NameInMap("Caller")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Caller")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String caller;
 
-    @Body
-    @NameInMap("CallerType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallerType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer callerType;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private StartCallV2Request(Builder builder) {
@@ -129,7 +134,10 @@ public class StartCallV2Request extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@123.com">123@123.com</a></p>
          */
         public Builder accountName(String accountName) {
             this.putBodyParameter("AccountName", accountName);
@@ -138,7 +146,10 @@ public class StartCallV2Request extends Request {
         }
 
         /**
-         * Callee.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>136****1111</p>
          */
         public Builder callee(String callee) {
             this.putBodyParameter("Callee", callee);
@@ -147,7 +158,10 @@ public class StartCallV2Request extends Request {
         }
 
         /**
-         * Caller.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9065****</p>
          */
         public Builder caller(String caller) {
             this.putBodyParameter("Caller", caller);
@@ -156,7 +170,10 @@ public class StartCallV2Request extends Request {
         }
 
         /**
-         * CallerType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder callerType(Integer callerType) {
             this.putBodyParameter("CallerType", callerType);
@@ -174,7 +191,10 @@ public class StartCallV2Request extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

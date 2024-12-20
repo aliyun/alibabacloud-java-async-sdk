@@ -1,52 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateThirdSsoAgentRequest} extends {@link RequestModel}
  *
  * <p>CreateThirdSsoAgentRequest</p>
  */
 public class CreateThirdSsoAgentRequest extends Request {
-    @Body
-    @NameInMap("AccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
-    @Body
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Body
-    @NameInMap("ClientId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("RoleIds")
-    private java.util.List < Long > roleIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleIds")
+    private java.util.List<Long> roleIds;
 
-    @Body
-    @NameInMap("SkillGroupIds")
-    private java.util.List < Long > skillGroupIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SkillGroupIds")
+    private java.util.List<Long> skillGroupIds;
 
     private CreateThirdSsoAgentRequest(Builder builder) {
         super(builder);
@@ -118,14 +123,14 @@ public class CreateThirdSsoAgentRequest extends Request {
     /**
      * @return roleIds
      */
-    public java.util.List < Long > getRoleIds() {
+    public java.util.List<Long> getRoleIds() {
         return this.roleIds;
     }
 
     /**
      * @return skillGroupIds
      */
-    public java.util.List < Long > getSkillGroupIds() {
+    public java.util.List<Long> getSkillGroupIds() {
         return this.skillGroupIds;
     }
 
@@ -136,8 +141,8 @@ public class CreateThirdSsoAgentRequest extends Request {
         private String clientToken; 
         private String displayName; 
         private String instanceId; 
-        private java.util.List < Long > roleIds; 
-        private java.util.List < Long > skillGroupIds; 
+        private java.util.List<Long> roleIds; 
+        private java.util.List<Long> skillGroupIds; 
 
         private Builder() {
             super();
@@ -156,7 +161,10 @@ public class CreateThirdSsoAgentRequest extends Request {
         } 
 
         /**
-         * param3
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accountId1</p>
          */
         public Builder accountId(String accountId) {
             this.putBodyParameter("AccountId", accountId);
@@ -165,7 +173,10 @@ public class CreateThirdSsoAgentRequest extends Request {
         }
 
         /**
-         * param4
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accountName1</p>
          */
         public Builder accountName(String accountName) {
             this.putBodyParameter("AccountName", accountName);
@@ -174,7 +185,10 @@ public class CreateThirdSsoAgentRequest extends Request {
         }
 
         /**
-         * param2
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46c1341e-2648-447a-9b11-70b6a298d94d</p>
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("ClientId", clientId);
@@ -183,7 +197,7 @@ public class CreateThirdSsoAgentRequest extends Request {
         }
 
         /**
-         * clientToken
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -192,7 +206,7 @@ public class CreateThirdSsoAgentRequest extends Request {
         }
 
         /**
-         * param5
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -201,7 +215,10 @@ public class CreateThirdSsoAgentRequest extends Request {
         }
 
         /**
-         * param1
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -210,18 +227,18 @@ public class CreateThirdSsoAgentRequest extends Request {
         }
 
         /**
-         * param7
+         * RoleIds.
          */
-        public Builder roleIds(java.util.List < Long > roleIds) {
+        public Builder roleIds(java.util.List<Long> roleIds) {
             this.putBodyParameter("RoleIds", roleIds);
             this.roleIds = roleIds;
             return this;
         }
 
         /**
-         * param6
+         * SkillGroupIds.
          */
-        public Builder skillGroupIds(java.util.List < Long > skillGroupIds) {
+        public Builder skillGroupIds(java.util.List<Long> skillGroupIds) {
             this.putBodyParameter("SkillGroupIds", skillGroupIds);
             this.skillGroupIds = skillGroupIds;
             return this;

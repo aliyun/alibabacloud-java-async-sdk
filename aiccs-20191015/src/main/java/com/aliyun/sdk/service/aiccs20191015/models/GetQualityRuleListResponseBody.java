@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityRuleListResponseBody} extends {@link TeaModel}
  *
  * <p>GetQualityRuleListResponseBody</p>
  */
 public class GetQualityRuleListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetQualityRuleListResponseBody(Builder builder) {
@@ -131,23 +136,29 @@ public class GetQualityRuleListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQualityRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQualityRuleListResponseBody</p>
+     */
     public static class QualityRuleList extends TeaModel {
-        @NameInMap("KeyWords")
-        private java.util.List < String > keyWords;
+        @com.aliyun.core.annotation.NameInMap("KeyWords")
+        private java.util.List<String> keyWords;
 
-        @NameInMap("MatchType")
+        @com.aliyun.core.annotation.NameInMap("MatchType")
         private Integer matchType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RuleCreateTime")
+        @com.aliyun.core.annotation.NameInMap("RuleCreateTime")
         private String ruleCreateTime;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleTag")
+        @com.aliyun.core.annotation.NameInMap("RuleTag")
         private Integer ruleTag;
 
         private QualityRuleList(Builder builder) {
@@ -170,7 +181,7 @@ public class GetQualityRuleListResponseBody extends TeaModel {
         /**
          * @return keyWords
          */
-        public java.util.List < String > getKeyWords() {
+        public java.util.List<String> getKeyWords() {
             return this.keyWords;
         }
 
@@ -210,7 +221,7 @@ public class GetQualityRuleListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > keyWords; 
+            private java.util.List<String> keyWords; 
             private Integer matchType; 
             private String name; 
             private String ruleCreateTime; 
@@ -220,7 +231,7 @@ public class GetQualityRuleListResponseBody extends TeaModel {
             /**
              * KeyWords.
              */
-            public Builder keyWords(java.util.List < String > keyWords) {
+            public Builder keyWords(java.util.List<String> keyWords) {
                 this.keyWords = keyWords;
                 return this;
             }
@@ -272,17 +283,23 @@ public class GetQualityRuleListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetQualityRuleListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQualityRuleListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("QualityRuleList")
-        private java.util.List < QualityRuleList> qualityRuleList;
+        @com.aliyun.core.annotation.NameInMap("QualityRuleList")
+        private java.util.List<QualityRuleList> qualityRuleList;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -317,7 +334,7 @@ public class GetQualityRuleListResponseBody extends TeaModel {
         /**
          * @return qualityRuleList
          */
-        public java.util.List < QualityRuleList> getQualityRuleList() {
+        public java.util.List<QualityRuleList> getQualityRuleList() {
             return this.qualityRuleList;
         }
 
@@ -331,7 +348,7 @@ public class GetQualityRuleListResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNo; 
             private Integer pageSize; 
-            private java.util.List < QualityRuleList> qualityRuleList; 
+            private java.util.List<QualityRuleList> qualityRuleList; 
             private Long total; 
 
             /**
@@ -353,7 +370,7 @@ public class GetQualityRuleListResponseBody extends TeaModel {
             /**
              * QualityRuleList.
              */
-            public Builder qualityRuleList(java.util.List < QualityRuleList> qualityRuleList) {
+            public Builder qualityRuleList(java.util.List<QualityRuleList> qualityRuleList) {
                 this.qualityRuleList = qualityRuleList;
                 return this;
             }

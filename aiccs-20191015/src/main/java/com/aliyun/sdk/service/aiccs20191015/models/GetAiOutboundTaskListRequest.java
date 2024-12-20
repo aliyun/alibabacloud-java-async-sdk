@@ -1,51 +1,56 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAiOutboundTaskListRequest} extends {@link RequestModel}
  *
  * <p>GetAiOutboundTaskListRequest</p>
  */
 public class GetAiOutboundTaskListRequest extends Request {
-    @Query
-    @NameInMap("CreateTimeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimeEnd")
     private Long createTimeEnd;
 
-    @Query
-    @NameInMap("CreateTimeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimeStart")
     private Long createTimeStart;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SearchKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchKey")
     private String searchKey;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer type;
 
     private GetAiOutboundTaskListRequest(Builder builder) {
@@ -156,7 +161,7 @@ public class GetAiOutboundTaskListRequest extends Request {
         } 
 
         /**
-         * 任务创建截止时间戳（毫秒）
+         * CreateTimeEnd.
          */
         public Builder createTimeEnd(Long createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -165,7 +170,7 @@ public class GetAiOutboundTaskListRequest extends Request {
         }
 
         /**
-         * 任务创建起始时间戳（毫秒）
+         * CreateTimeStart.
          */
         public Builder createTimeStart(Long createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -174,7 +179,10 @@ public class GetAiOutboundTaskListRequest extends Request {
         }
 
         /**
-         * 查询第几页
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -183,7 +191,10 @@ public class GetAiOutboundTaskListRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent_****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -192,7 +203,10 @@ public class GetAiOutboundTaskListRequest extends Request {
         }
 
         /**
-         * 分页大小(<=50)
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -201,7 +215,7 @@ public class GetAiOutboundTaskListRequest extends Request {
         }
 
         /**
-         * 过滤条件：匹配任务ID或者模糊匹配任务名
+         * SearchKey.
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -210,7 +224,7 @@ public class GetAiOutboundTaskListRequest extends Request {
         }
 
         /**
-         * 任务状态（0:未开始,1:进行中,2:系统暂停,3:手动暂停,4:已完成,5:已终止）
+         * Status.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -219,7 +233,10 @@ public class GetAiOutboundTaskListRequest extends Request {
         }
 
         /**
-         * 任务类型(2:预测式外呼，3:自动外呼)
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

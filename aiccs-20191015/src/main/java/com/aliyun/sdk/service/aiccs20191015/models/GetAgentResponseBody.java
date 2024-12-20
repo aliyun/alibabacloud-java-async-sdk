@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAgentResponseBody} extends {@link TeaModel}
  *
  * <p>GetAgentResponseBody</p>
  */
 public class GetAgentResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Long httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAgentResponseBody(Builder builder) {
@@ -131,20 +136,26 @@ public class GetAgentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentResponseBody</p>
+     */
     public static class GroupList extends TeaModel {
-        @NameInMap("ChannelType")
+        @com.aliyun.core.annotation.NameInMap("ChannelType")
         private Integer channelType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private Long skillGroupId;
 
         private GroupList(Builder builder) {
@@ -252,23 +263,29 @@ public class GetAgentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private Long agentId;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("GroupList")
-        private java.util.List < GroupList> groupList;
+        @com.aliyun.core.annotation.NameInMap("GroupList")
+        private java.util.List<GroupList> groupList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
         private Data(Builder builder) {
@@ -312,7 +329,7 @@ public class GetAgentResponseBody extends TeaModel {
         /**
          * @return groupList
          */
-        public java.util.List < GroupList> getGroupList() {
+        public java.util.List<GroupList> getGroupList() {
             return this.groupList;
         }
 
@@ -334,7 +351,7 @@ public class GetAgentResponseBody extends TeaModel {
             private String accountName; 
             private Long agentId; 
             private String displayName; 
-            private java.util.List < GroupList> groupList; 
+            private java.util.List<GroupList> groupList; 
             private Integer status; 
             private Long tenantId; 
 
@@ -365,7 +382,7 @@ public class GetAgentResponseBody extends TeaModel {
             /**
              * GroupList.
              */
-            public Builder groupList(java.util.List < GroupList> groupList) {
+            public Builder groupList(java.util.List<GroupList> groupList) {
                 this.groupList = groupList;
                 return this;
             }

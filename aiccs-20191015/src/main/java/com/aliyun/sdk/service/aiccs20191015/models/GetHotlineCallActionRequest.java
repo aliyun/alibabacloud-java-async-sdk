@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotlineCallActionRequest} extends {@link RequestModel}
  *
  * <p>GetHotlineCallActionRequest</p>
  */
 public class GetHotlineCallActionRequest extends Request {
-    @Body
-    @NameInMap("Acc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Acc")
     private String acc;
 
-    @Body
-    @NameInMap("AccountName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountName")
     private String accountName;
 
-    @Body
-    @NameInMap("Act")
-    @Validation(maximum = 2147483647)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Act")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647)
     private Integer act;
 
-    @Body
-    @NameInMap("Biz")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Biz")
     private String biz;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("FromSource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FromSource")
     private String fromSource;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private GetHotlineCallActionRequest(Builder builder) {
@@ -140,7 +145,7 @@ public class GetHotlineCallActionRequest extends Request {
         } 
 
         /**
-         * 热线自定义参数
+         * Acc.
          */
         public Builder acc(String acc) {
             this.putBodyParameter("Acc", acc);
@@ -167,7 +172,7 @@ public class GetHotlineCallActionRequest extends Request {
         }
 
         /**
-         * 业务自定义参数
+         * Biz.
          */
         public Builder biz(String biz) {
             this.putBodyParameter("Biz", biz);
@@ -194,7 +199,10 @@ public class GetHotlineCallActionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

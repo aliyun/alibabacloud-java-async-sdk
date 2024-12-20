@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HangUpDoubleCallResponseBody} extends {@link TeaModel}
  *
  * <p>HangUpDoubleCallResponseBody</p>
  */
 public class HangUpDoubleCallResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private HangUpDoubleCallResponseBody(Builder builder) {
@@ -74,7 +79,7 @@ public class HangUpDoubleCallResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +87,7 @@ public class HangUpDoubleCallResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +95,7 @@ public class HangUpDoubleCallResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +103,7 @@ public class HangUpDoubleCallResponseBody extends TeaModel {
         }
 
         /**
-         * 是否调用成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

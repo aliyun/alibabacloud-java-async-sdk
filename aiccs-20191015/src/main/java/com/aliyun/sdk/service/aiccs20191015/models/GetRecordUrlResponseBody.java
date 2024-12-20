@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRecordUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetRecordUrlResponseBody</p>
  */
 public class GetRecordUrlResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetRecordUrlResponseBody(Builder builder) {
@@ -90,7 +95,7 @@ public class GetRecordUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +116,17 @@ public class GetRecordUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRecordUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRecordUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("Acid")
+        @com.aliyun.core.annotation.NameInMap("Acid")
         private String acid;
 
-        @NameInMap("OssLink")
+        @com.aliyun.core.annotation.NameInMap("OssLink")
         private String ossLink;
 
         private Data(Builder builder) {
@@ -150,7 +161,7 @@ public class GetRecordUrlResponseBody extends TeaModel {
             private String ossLink; 
 
             /**
-             * 会话id
+             * Acid.
              */
             public Builder acid(String acid) {
                 this.acid = acid;
@@ -158,7 +169,7 @@ public class GetRecordUrlResponseBody extends TeaModel {
             }
 
             /**
-             * 录音链接
+             * OssLink.
              */
             public Builder ossLink(String ossLink) {
                 this.ossLink = ossLink;

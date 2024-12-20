@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertAiOutboundPhoneNumsResponseBody} extends {@link TeaModel}
  *
  * <p>InsertAiOutboundPhoneNumsResponseBody</p>
  */
 public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private InsertAiOutboundPhoneNumsResponseBody(Builder builder) {
@@ -94,7 +99,7 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
         }
 
         /**
-         * 导入结果
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,7 +115,7 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,14 +136,20 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InsertAiOutboundPhoneNumsResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsertAiOutboundPhoneNumsResponseBody</p>
+     */
     public static class FailInfo extends TeaModel {
-        @NameInMap("BizData")
+        @com.aliyun.core.annotation.NameInMap("BizData")
         private String bizData;
 
-        @NameInMap("Msg")
+        @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
 
-        @NameInMap("PhoneNum")
+        @com.aliyun.core.annotation.NameInMap("PhoneNum")
         private String phoneNum;
 
         private FailInfo(Builder builder) {
@@ -182,7 +193,7 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
             private String phoneNum; 
 
             /**
-             * 自定义信息
+             * BizData.
              */
             public Builder bizData(String bizData) {
                 this.bizData = bizData;
@@ -190,7 +201,7 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
             }
 
             /**
-             * 失败原因描述
+             * Msg.
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -198,7 +209,7 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼被叫号码
+             * PhoneNum.
              */
             public Builder phoneNum(String phoneNum) {
                 this.phoneNum = phoneNum;
@@ -212,14 +223,20 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InsertAiOutboundPhoneNumsResponseBody} extends {@link TeaModel}
+     *
+     * <p>InsertAiOutboundPhoneNumsResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("FailInfo")
-        private java.util.List < FailInfo> failInfo;
+        @com.aliyun.core.annotation.NameInMap("FailInfo")
+        private java.util.List<FailInfo> failInfo;
 
-        @NameInMap("SuccessCount")
+        @com.aliyun.core.annotation.NameInMap("SuccessCount")
         private Integer successCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -239,7 +256,7 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
         /**
          * @return failInfo
          */
-        public java.util.List < FailInfo> getFailInfo() {
+        public java.util.List<FailInfo> getFailInfo() {
             return this.failInfo;
         }
 
@@ -258,20 +275,20 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FailInfo> failInfo; 
+            private java.util.List<FailInfo> failInfo; 
             private Integer successCount; 
             private Integer totalCount; 
 
             /**
-             * 失败号码详情
+             * FailInfo.
              */
-            public Builder failInfo(java.util.List < FailInfo> failInfo) {
+            public Builder failInfo(java.util.List<FailInfo> failInfo) {
                 this.failInfo = failInfo;
                 return this;
             }
 
             /**
-             * 导入成功数量
+             * SuccessCount.
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -279,7 +296,7 @@ public class InsertAiOutboundPhoneNumsResponseBody extends TeaModel {
             }
 
             /**
-             * 导入总数
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

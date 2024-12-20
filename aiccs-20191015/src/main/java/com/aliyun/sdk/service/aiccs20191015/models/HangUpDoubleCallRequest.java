@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HangUpDoubleCallRequest} extends {@link RequestModel}
  *
  * <p>HangUpDoubleCallRequest</p>
  */
 public class HangUpDoubleCallRequest extends Request {
-    @Query
-    @NameInMap("Acid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Acid")
     private String acid;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
     private HangUpDoubleCallRequest(Builder builder) {
@@ -68,7 +73,7 @@ public class HangUpDoubleCallRequest extends Request {
         } 
 
         /**
-         * 会话ID
+         * Acid.
          */
         public Builder acid(String acid) {
             this.putQueryParameter("Acid", acid);
@@ -77,7 +82,7 @@ public class HangUpDoubleCallRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

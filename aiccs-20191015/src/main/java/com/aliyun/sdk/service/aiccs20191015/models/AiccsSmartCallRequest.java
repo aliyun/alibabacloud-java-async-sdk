@@ -1,147 +1,152 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AiccsSmartCallRequest} extends {@link RequestModel}
  *
  * <p>AiccsSmartCallRequest</p>
  */
 public class AiccsSmartCallRequest extends Request {
-    @Query
-    @NameInMap("ActionCodeBreak")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionCodeBreak")
     private Boolean actionCodeBreak;
 
-    @Query
-    @NameInMap("ActionCodeTimeBreak")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionCodeTimeBreak")
     private Integer actionCodeTimeBreak;
 
-    @Query
-    @NameInMap("AsrAlsAmId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsrAlsAmId")
     private String asrAlsAmId;
 
-    @Query
-    @NameInMap("AsrBaseId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsrBaseId")
     private String asrBaseId;
 
-    @Query
-    @NameInMap("AsrModelId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsrModelId")
     private String asrModelId;
 
-    @Query
-    @NameInMap("AsrVocabularyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsrVocabularyId")
     private String asrVocabularyId;
 
-    @Query
-    @NameInMap("BackgroundFileCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackgroundFileCode")
     private String backgroundFileCode;
 
-    @Query
-    @NameInMap("BackgroundSpeed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackgroundSpeed")
     private Integer backgroundSpeed;
 
-    @Query
-    @NameInMap("BackgroundVolume")
-    @Validation(maximum = 4)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackgroundVolume")
+    @com.aliyun.core.annotation.Validation(maximum = 4)
     private Integer backgroundVolume;
 
-    @Query
-    @NameInMap("CalledNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledNumber;
 
-    @Query
-    @NameInMap("CalledShowNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledShowNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledShowNumber;
 
-    @Query
-    @NameInMap("DynamicId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DynamicId")
     private String dynamicId;
 
-    @Query
-    @NameInMap("EarlyMediaAsr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EarlyMediaAsr")
     private Boolean earlyMediaAsr;
 
-    @Query
-    @NameInMap("EnableITN")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableITN")
     private Boolean enableITN;
 
-    @Query
-    @NameInMap("MuteTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MuteTime")
     private Integer muteTime;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PauseTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PauseTime")
     private Integer pauseTime;
 
-    @Query
-    @NameInMap("PlayTimes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlayTimes")
     private Integer playTimes;
 
-    @Query
-    @NameInMap("ProdCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProdCode")
     private String prodCode;
 
-    @Query
-    @NameInMap("RecordFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordFlag")
     private Boolean recordFlag;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SessionTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionTimeout")
     private Integer sessionTimeout;
 
-    @Query
-    @NameInMap("Speed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Speed")
     private Integer speed;
 
-    @Query
-    @NameInMap("TtsConf")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsConf")
     private Boolean ttsConf;
 
-    @Query
-    @NameInMap("TtsSpeed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsSpeed")
     private Integer ttsSpeed;
 
-    @Query
-    @NameInMap("TtsStyle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsStyle")
     private String ttsStyle;
 
-    @Query
-    @NameInMap("TtsVolume")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsVolume")
     private Integer ttsVolume;
 
-    @Query
-    @NameInMap("VoiceCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String voiceCode;
 
-    @Query
-    @NameInMap("VoiceCodeParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceCodeParam")
     private String voiceCodeParam;
 
-    @Query
-    @NameInMap("Volume")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Volume")
     private Integer volume;
 
     private AiccsSmartCallRequest(Builder builder) {
@@ -573,7 +578,10 @@ public class AiccsSmartCallRequest extends Request {
         }
 
         /**
-         * CalledNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1862222****</p>
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -582,7 +590,10 @@ public class AiccsSmartCallRequest extends Request {
         }
 
         /**
-         * CalledShowNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0571000****</p>
          */
         public Builder calledShowNumber(String calledShowNumber) {
             this.putQueryParameter("CalledShowNumber", calledShowNumber);
@@ -753,7 +764,10 @@ public class AiccsSmartCallRequest extends Request {
         }
 
         /**
-         * VoiceCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2d4c-4e78-8d2a-afbb06cf****.wav,$name$</p>
          */
         public Builder voiceCode(String voiceCode) {
             this.putQueryParameter("VoiceCode", voiceCode);

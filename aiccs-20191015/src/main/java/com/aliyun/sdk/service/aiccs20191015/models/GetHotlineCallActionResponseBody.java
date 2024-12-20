@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotlineCallActionResponseBody} extends {@link TeaModel}
  *
  * <p>GetHotlineCallActionResponseBody</p>
  */
 public class GetHotlineCallActionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetHotlineCallActionResponseBody(Builder builder) {
@@ -131,56 +136,62 @@ public class GetHotlineCallActionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHotlineCallActionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHotlineCallActionResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ActionId")
+        @com.aliyun.core.annotation.NameInMap("ActionId")
         private Long actionId;
 
-        @NameInMap("BuId")
+        @com.aliyun.core.annotation.NameInMap("BuId")
         private Long buId;
 
-        @NameInMap("CalloutId")
+        @com.aliyun.core.annotation.NameInMap("CalloutId")
         private Long calloutId;
 
-        @NameInMap("CalloutName")
+        @com.aliyun.core.annotation.NameInMap("CalloutName")
         private String calloutName;
 
-        @NameInMap("CaseId")
+        @com.aliyun.core.annotation.NameInMap("CaseId")
         private Long caseId;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("ChannelType")
+        @com.aliyun.core.annotation.NameInMap("ChannelType")
         private Long channelType;
 
-        @NameInMap("DepId")
+        @com.aliyun.core.annotation.NameInMap("DepId")
         private Long depId;
 
-        @NameInMap("IsTransfer")
+        @com.aliyun.core.annotation.NameInMap("IsTransfer")
         private String isTransfer;
 
-        @NameInMap("MemberId")
+        @com.aliyun.core.annotation.NameInMap("MemberId")
         private Long memberId;
 
-        @NameInMap("MemberList")
+        @com.aliyun.core.annotation.NameInMap("MemberList")
         private String memberList;
 
-        @NameInMap("MemberName")
+        @com.aliyun.core.annotation.NameInMap("MemberName")
         private String memberName;
 
-        @NameInMap("ServicerId")
+        @com.aliyun.core.annotation.NameInMap("ServicerId")
         private Long servicerId;
 
-        @NameInMap("ServicerName")
+        @com.aliyun.core.annotation.NameInMap("ServicerName")
         private String servicerName;
 
-        @NameInMap("SubTouchId")
+        @com.aliyun.core.annotation.NameInMap("SubTouchId")
         private Long subTouchId;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
-        @NameInMap("TouchId")
+        @com.aliyun.core.annotation.NameInMap("TouchId")
         private Long touchId;
 
         private Data(Builder builder) {

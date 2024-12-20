@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDepartmentalLatitudeAgentStatusRequest} extends {@link RequestModel}
  *
  * <p>GetDepartmentalLatitudeAgentStatusRequest</p>
  */
 public class GetDepartmentalLatitudeAgentStatusRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Long currentPage;
 
-    @Query
-    @NameInMap("DepIds")
-    private java.util.List < Long > depIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepIds")
+    private java.util.List<Long> depIds;
 
-    @Query
-    @NameInMap("EndDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
     private Long endDate;
 
-    @Query
-    @NameInMap("ExistDepartmentGrouping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExistDepartmentGrouping")
     private Boolean existDepartmentGrouping;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("StartDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
     private Long startDate;
 
     private GetDepartmentalLatitudeAgentStatusRequest(Builder builder) {
@@ -75,7 +80,7 @@ public class GetDepartmentalLatitudeAgentStatusRequest extends Request {
     /**
      * @return depIds
      */
-    public java.util.List < Long > getDepIds() {
+    public java.util.List<Long> getDepIds() {
         return this.depIds;
     }
 
@@ -116,7 +121,7 @@ public class GetDepartmentalLatitudeAgentStatusRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetDepartmentalLatitudeAgentStatusRequest, Builder> {
         private Long currentPage; 
-        private java.util.List < Long > depIds; 
+        private java.util.List<Long> depIds; 
         private Long endDate; 
         private Boolean existDepartmentGrouping; 
         private String instanceId; 
@@ -139,7 +144,7 @@ public class GetDepartmentalLatitudeAgentStatusRequest extends Request {
         } 
 
         /**
-         * 当前页（默认为1）
+         * CurrentPage.
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -148,9 +153,9 @@ public class GetDepartmentalLatitudeAgentStatusRequest extends Request {
         }
 
         /**
-         * 技能组分组id列表
+         * DepIds.
          */
-        public Builder depIds(java.util.List < Long > depIds) {
+        public Builder depIds(java.util.List<Long> depIds) {
             String depIdsShrink = shrink(depIds, "DepIds", "simple");
             this.putQueryParameter("DepIds", depIdsShrink);
             this.depIds = depIds;
@@ -158,7 +163,7 @@ public class GetDepartmentalLatitudeAgentStatusRequest extends Request {
         }
 
         /**
-         * 结束日期时间戳（毫秒）
+         * EndDate.
          */
         public Builder endDate(Long endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -167,7 +172,7 @@ public class GetDepartmentalLatitudeAgentStatusRequest extends Request {
         }
 
         /**
-         * 是否根据技能组分组id分组显示
+         * ExistDepartmentGrouping.
          */
         public Builder existDepartmentGrouping(Boolean existDepartmentGrouping) {
             this.putQueryParameter("ExistDepartmentGrouping", existDepartmentGrouping);
@@ -176,7 +181,10 @@ public class GetDepartmentalLatitudeAgentStatusRequest extends Request {
         }
 
         /**
-         * AICCS实例ID，在智能联络中心控制台上可以看到
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -185,7 +193,7 @@ public class GetDepartmentalLatitudeAgentStatusRequest extends Request {
         }
 
         /**
-         * 每页大小（默认为10)
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -194,7 +202,7 @@ public class GetDepartmentalLatitudeAgentStatusRequest extends Request {
         }
 
         /**
-         * 开始日期时间戳（毫秒）
+         * StartDate.
          */
         public Builder startDate(Long startDate) {
             this.putQueryParameter("StartDate", startDate);

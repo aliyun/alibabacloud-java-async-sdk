@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditQualityRuleTagRequest} extends {@link RequestModel}
  *
  * <p>EditQualityRuleTagRequest</p>
  */
 public class EditQualityRuleTagRequest extends Request {
-    @Query
-    @NameInMap("AnalysisTypes")
-    @Validation(required = true)
-    private java.util.List < AnalysisTypes> analysisTypes;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnalysisTypes")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<AnalysisTypes> analysisTypes;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private EditQualityRuleTagRequest(Builder builder) {
@@ -44,7 +49,7 @@ public class EditQualityRuleTagRequest extends Request {
     /**
      * @return analysisTypes
      */
-    public java.util.List < AnalysisTypes> getAnalysisTypes() {
+    public java.util.List<AnalysisTypes> getAnalysisTypes() {
         return this.analysisTypes;
     }
 
@@ -56,7 +61,7 @@ public class EditQualityRuleTagRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<EditQualityRuleTagRequest, Builder> {
-        private java.util.List < AnalysisTypes> analysisTypes; 
+        private java.util.List<AnalysisTypes> analysisTypes; 
         private String instanceId; 
 
         private Builder() {
@@ -70,16 +75,16 @@ public class EditQualityRuleTagRequest extends Request {
         } 
 
         /**
-         * AnalysisTypes.
+         * <p>This parameter is required.</p>
          */
-        public Builder analysisTypes(java.util.List < AnalysisTypes> analysisTypes) {
+        public Builder analysisTypes(java.util.List<AnalysisTypes> analysisTypes) {
             this.putQueryParameter("AnalysisTypes", analysisTypes);
             this.analysisTypes = analysisTypes;
             return this;
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,11 +99,17 @@ public class EditQualityRuleTagRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link EditQualityRuleTagRequest} extends {@link TeaModel}
+     *
+     * <p>EditQualityRuleTagRequest</p>
+     */
     public static class AnalysisTypes extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private AnalysisTypes(Builder builder) {

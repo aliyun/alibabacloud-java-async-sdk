@@ -1,86 +1,91 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateTaskRequest</p>
  */
 public class CreateTaskRequest extends Request {
-    @Query
-    @NameInMap("CallString")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallString")
     private String callString;
 
-    @Query
-    @NameInMap("CallStringType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallStringType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callStringType;
 
-    @Query
-    @NameInMap("Caller")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Caller")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String caller;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RetryCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetryCount")
     private Integer retryCount;
 
-    @Query
-    @NameInMap("RetryFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetryFlag")
     private Integer retryFlag;
 
-    @Query
-    @NameInMap("RetryInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetryInterval")
     private Integer retryInterval;
 
-    @Query
-    @NameInMap("RetryStatusCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetryStatusCode")
     private String retryStatusCode;
 
-    @Query
-    @NameInMap("RobotId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RobotId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String robotId;
 
-    @Query
-    @NameInMap("SeatCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SeatCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String seatCount;
 
-    @Query
-    @NameInMap("StartNow")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartNow")
     private Boolean startNow;
 
-    @Query
-    @NameInMap("TaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
 
-    @Query
-    @NameInMap("WorkDay")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkDay")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workDay;
 
-    @Query
-    @NameInMap("WorkTimeList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkTimeList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workTimeList;
 
     private CreateTaskRequest(Builder builder) {
@@ -280,7 +285,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * CallStringType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSON</p>
          */
         public Builder callStringType(String callStringType) {
             this.putQueryParameter("CallStringType", callStringType);
@@ -289,7 +297,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * Caller.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0571<strong><strong>5678,0571</strong></strong>5679</p>
          */
         public Builder caller(String caller) {
             this.putQueryParameter("Caller", caller);
@@ -361,7 +372,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * RobotId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder robotId(String robotId) {
             this.putQueryParameter("RobotId", robotId);
@@ -370,7 +384,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * SeatCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder seatCount(String seatCount) {
             this.putQueryParameter("SeatCount", seatCount);
@@ -388,7 +405,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>This parameter is required.</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -397,7 +414,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * WorkDay.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder workDay(String workDay) {
             this.putQueryParameter("WorkDay", workDay);
@@ -406,7 +426,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * WorkTimeList.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10:00-12:00,13:00-14:00</p>
          */
         public Builder workTimeList(String workTimeList) {
             this.putQueryParameter("WorkTimeList", workTimeList);

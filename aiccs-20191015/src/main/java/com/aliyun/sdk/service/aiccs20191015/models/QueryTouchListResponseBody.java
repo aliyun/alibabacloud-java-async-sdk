@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTouchListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTouchListResponseBody</p>
  */
 public class QueryTouchListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultData")
+    @com.aliyun.core.annotation.NameInMap("ResultData")
     private ResultData resultData;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryTouchListResponseBody(Builder builder) {
@@ -131,32 +136,38 @@ public class QueryTouchListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTouchListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTouchListResponseBody</p>
+     */
     public static class ExtAttrs extends TeaModel {
-        @NameInMap("Ani")
+        @com.aliyun.core.annotation.NameInMap("Ani")
         private String ani;
 
-        @NameInMap("Dnis")
+        @com.aliyun.core.annotation.NameInMap("Dnis")
         private String dnis;
 
-        @NameInMap("EvaluationLevel")
+        @com.aliyun.core.annotation.NameInMap("EvaluationLevel")
         private Integer evaluationLevel;
 
-        @NameInMap("EvaluationScore")
+        @com.aliyun.core.annotation.NameInMap("EvaluationScore")
         private Integer evaluationScore;
 
-        @NameInMap("EvaluationSolution")
+        @com.aliyun.core.annotation.NameInMap("EvaluationSolution")
         private Integer evaluationSolution;
 
-        @NameInMap("EvaluationStatus")
+        @com.aliyun.core.annotation.NameInMap("EvaluationStatus")
         private Integer evaluationStatus;
 
-        @NameInMap("OnlineJoinRespInterval")
+        @com.aliyun.core.annotation.NameInMap("OnlineJoinRespInterval")
         private Integer onlineJoinRespInterval;
 
-        @NameInMap("OnlineSessionSource")
+        @com.aliyun.core.annotation.NameInMap("OnlineSessionSource")
         private Integer onlineSessionSource;
 
-        @NameInMap("OutCallRouteNumber")
+        @com.aliyun.core.annotation.NameInMap("OutCallRouteNumber")
         private String outCallRouteNumber;
 
         private ExtAttrs(Builder builder) {
@@ -332,89 +343,95 @@ public class QueryTouchListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTouchListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTouchListResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BuId")
+        @com.aliyun.core.annotation.NameInMap("BuId")
         private Long buId;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("ChannelType")
+        @com.aliyun.core.annotation.NameInMap("ChannelType")
         private Integer channelType;
 
-        @NameInMap("CloseTime")
+        @com.aliyun.core.annotation.NameInMap("CloseTime")
         private Long closeTime;
 
-        @NameInMap("CommonQueueName")
+        @com.aliyun.core.annotation.NameInMap("CommonQueueName")
         private String commonQueueName;
 
-        @NameInMap("DepId")
+        @com.aliyun.core.annotation.NameInMap("DepId")
         private Long depId;
 
-        @NameInMap("ExtAttrs")
+        @com.aliyun.core.annotation.NameInMap("ExtAttrs")
         private ExtAttrs extAttrs;
 
-        @NameInMap("ExtAttrsString")
-        private java.util.Map < String, ? > extAttrsString;
+        @com.aliyun.core.annotation.NameInMap("ExtAttrsString")
+        private java.util.Map<String, ?> extAttrsString;
 
-        @NameInMap("Feedback")
+        @com.aliyun.core.annotation.NameInMap("Feedback")
         private String feedback;
 
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
-        @NameInMap("FromId")
+        @com.aliyun.core.annotation.NameInMap("FromId")
         private Long fromId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("MemberId")
+        @com.aliyun.core.annotation.NameInMap("MemberId")
         private Long memberId;
 
-        @NameInMap("MemberName")
+        @com.aliyun.core.annotation.NameInMap("MemberName")
         private String memberName;
 
-        @NameInMap("ParentTouchId")
+        @com.aliyun.core.annotation.NameInMap("ParentTouchId")
         private Long parentTouchId;
 
-        @NameInMap("QueueId")
+        @com.aliyun.core.annotation.NameInMap("QueueId")
         private Long queueId;
 
-        @NameInMap("ServicerId")
+        @com.aliyun.core.annotation.NameInMap("ServicerId")
         private Long servicerId;
 
-        @NameInMap("ServicerName")
+        @com.aliyun.core.annotation.NameInMap("ServicerName")
         private String servicerName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SwitchUser")
+        @com.aliyun.core.annotation.NameInMap("SwitchUser")
         private String switchUser;
 
-        @NameInMap("ToId")
+        @com.aliyun.core.annotation.NameInMap("ToId")
         private Long toId;
 
-        @NameInMap("TouchContent")
+        @com.aliyun.core.annotation.NameInMap("TouchContent")
         private String touchContent;
 
-        @NameInMap("TouchEndReason")
+        @com.aliyun.core.annotation.NameInMap("TouchEndReason")
         private Integer touchEndReason;
 
-        @NameInMap("TouchId")
+        @com.aliyun.core.annotation.NameInMap("TouchId")
         private String touchId;
 
-        @NameInMap("TouchTime")
+        @com.aliyun.core.annotation.NameInMap("TouchTime")
         private String touchTime;
 
-        @NameInMap("TouchType")
+        @com.aliyun.core.annotation.NameInMap("TouchType")
         private Integer touchType;
 
-        @NameInMap("UserTouchId")
+        @com.aliyun.core.annotation.NameInMap("UserTouchId")
         private Long userTouchId;
 
         private Data(Builder builder) {
@@ -508,7 +525,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         /**
          * @return extAttrsString
          */
-        public java.util.Map < String, ? > getExtAttrsString() {
+        public java.util.Map<String, ?> getExtAttrsString() {
             return this.extAttrsString;
         }
 
@@ -660,7 +677,7 @@ public class QueryTouchListResponseBody extends TeaModel {
             private String commonQueueName; 
             private Long depId; 
             private ExtAttrs extAttrs; 
-            private java.util.Map < String, ? > extAttrsString; 
+            private java.util.Map<String, ?> extAttrsString; 
             private String feedback; 
             private Long firstTime; 
             private Long fromId; 
@@ -741,7 +758,7 @@ public class QueryTouchListResponseBody extends TeaModel {
             /**
              * ExtAttrsString.
              */
-            public Builder extAttrsString(java.util.Map < String, ? > extAttrsString) {
+            public Builder extAttrsString(java.util.Map<String, ?> extAttrsString) {
                 this.extAttrsString = extAttrsString;
                 return this;
             }
@@ -913,29 +930,35 @@ public class QueryTouchListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryTouchListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTouchListResponseBody</p>
+     */
     public static class ResultData extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("Data")
-        private java.util.List < Data> data;
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<Data> data;
 
-        @NameInMap("Empty")
+        @com.aliyun.core.annotation.NameInMap("Empty")
         private Boolean empty;
 
-        @NameInMap("NextPage")
+        @com.aliyun.core.annotation.NameInMap("NextPage")
         private Integer nextPage;
 
-        @NameInMap("OnePageSize")
+        @com.aliyun.core.annotation.NameInMap("OnePageSize")
         private Integer onePageSize;
 
-        @NameInMap("PreviousPage")
+        @com.aliyun.core.annotation.NameInMap("PreviousPage")
         private Integer previousPage;
 
-        @NameInMap("TotalPage")
+        @com.aliyun.core.annotation.NameInMap("TotalPage")
         private Integer totalPage;
 
-        @NameInMap("TotalResults")
+        @com.aliyun.core.annotation.NameInMap("TotalResults")
         private Integer totalResults;
 
         private ResultData(Builder builder) {
@@ -967,7 +990,7 @@ public class QueryTouchListResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -1015,7 +1038,7 @@ public class QueryTouchListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer currentPage; 
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private Boolean empty; 
             private Integer nextPage; 
             private Integer onePageSize; 
@@ -1034,7 +1057,7 @@ public class QueryTouchListResponseBody extends TeaModel {
             /**
              * Data.
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

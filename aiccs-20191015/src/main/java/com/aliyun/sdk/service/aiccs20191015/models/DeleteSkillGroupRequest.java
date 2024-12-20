@@ -1,23 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSkillGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteSkillGroupRequest</p>
  */
 public class DeleteSkillGroupRequest extends Request {
-    @Query
-    @NameInMap("OuterGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterGroupId")
     private String outerGroupId;
 
-    @Query
-    @NameInMap("OuterGroupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterGroupType")
     private String outerGroupType;
 
     private DeleteSkillGroupRequest(Builder builder) {

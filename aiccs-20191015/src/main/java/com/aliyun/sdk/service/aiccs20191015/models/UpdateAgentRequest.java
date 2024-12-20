@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAgentRequest} extends {@link RequestModel}
  *
  * <p>UpdateAgentRequest</p>
  */
 public class UpdateAgentRequest extends Request {
-    @Body
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("SkillGroupId")
-    private java.util.List < Long > skillGroupId;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+    private java.util.List<Long> skillGroupId;
 
-    @Body
-    @NameInMap("SkillGroupIdList")
-    private java.util.List < Long > skillGroupIdList;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SkillGroupIdList")
+    private java.util.List<Long> skillGroupIdList;
 
     private UpdateAgentRequest(Builder builder) {
         super(builder);
@@ -93,14 +98,14 @@ public class UpdateAgentRequest extends Request {
     /**
      * @return skillGroupId
      */
-    public java.util.List < Long > getSkillGroupId() {
+    public java.util.List<Long> getSkillGroupId() {
         return this.skillGroupId;
     }
 
     /**
      * @return skillGroupIdList
      */
-    public java.util.List < Long > getSkillGroupIdList() {
+    public java.util.List<Long> getSkillGroupIdList() {
         return this.skillGroupIdList;
     }
 
@@ -109,8 +114,8 @@ public class UpdateAgentRequest extends Request {
         private String clientToken; 
         private String displayName; 
         private String instanceId; 
-        private java.util.List < Long > skillGroupId; 
-        private java.util.List < Long > skillGroupIdList; 
+        private java.util.List<Long> skillGroupId; 
+        private java.util.List<Long> skillGroupIdList; 
 
         private Builder() {
             super();
@@ -127,7 +132,10 @@ public class UpdateAgentRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@123.com">123@123.com</a></p>
          */
         public Builder accountName(String accountName) {
             this.putBodyParameter("AccountName", accountName);
@@ -145,7 +153,7 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>This parameter is required.</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -154,7 +162,10 @@ public class UpdateAgentRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -165,7 +176,7 @@ public class UpdateAgentRequest extends Request {
         /**
          * SkillGroupId.
          */
-        public Builder skillGroupId(java.util.List < Long > skillGroupId) {
+        public Builder skillGroupId(java.util.List<Long> skillGroupId) {
             this.putBodyParameter("SkillGroupId", skillGroupId);
             this.skillGroupId = skillGroupId;
             return this;
@@ -174,7 +185,7 @@ public class UpdateAgentRequest extends Request {
         /**
          * SkillGroupIdList.
          */
-        public Builder skillGroupIdList(java.util.List < Long > skillGroupIdList) {
+        public Builder skillGroupIdList(java.util.List<Long> skillGroupIdList) {
             this.putBodyParameter("SkillGroupIdList", skillGroupIdList);
             this.skillGroupIdList = skillGroupIdList;
             return this;

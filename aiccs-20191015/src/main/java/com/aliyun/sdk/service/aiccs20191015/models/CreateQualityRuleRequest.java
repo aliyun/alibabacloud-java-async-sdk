@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateQualityRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateQualityRuleRequest</p>
  */
 public class CreateQualityRuleRequest extends Request {
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("KeyWords")
-    @Validation(required = true)
-    private java.util.List < String > keyWords;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KeyWords")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> keyWords;
 
-    @Body
-    @NameInMap("MatchType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MatchType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer matchType;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("RuleTag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleTag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer ruleTag;
 
     private CreateQualityRuleRequest(Builder builder) {
@@ -69,7 +74,7 @@ public class CreateQualityRuleRequest extends Request {
     /**
      * @return keyWords
      */
-    public java.util.List < String > getKeyWords() {
+    public java.util.List<String> getKeyWords() {
         return this.keyWords;
     }
 
@@ -96,7 +101,7 @@ public class CreateQualityRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateQualityRuleRequest, Builder> {
         private String instanceId; 
-        private java.util.List < String > keyWords; 
+        private java.util.List<String> keyWords; 
         private Integer matchType; 
         private String name; 
         private Integer ruleTag; 
@@ -115,7 +120,7 @@ public class CreateQualityRuleRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -124,16 +129,16 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * KeyWords.
+         * <p>This parameter is required.</p>
          */
-        public Builder keyWords(java.util.List < String > keyWords) {
+        public Builder keyWords(java.util.List<String> keyWords) {
             this.putBodyParameter("KeyWords", keyWords);
             this.keyWords = keyWords;
             return this;
         }
 
         /**
-         * MatchType.
+         * <p>This parameter is required.</p>
          */
         public Builder matchType(Integer matchType) {
             this.putBodyParameter("MatchType", matchType);
@@ -142,7 +147,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -151,7 +156,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * RuleTag.
+         * <p>This parameter is required.</p>
          */
         public Builder ruleTag(Integer ruleTag) {
             this.putBodyParameter("RuleTag", ruleTag);

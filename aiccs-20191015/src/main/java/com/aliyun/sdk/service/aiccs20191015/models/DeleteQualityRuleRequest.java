@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteQualityRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteQualityRuleRequest</p>
  */
 public class DeleteQualityRuleRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private DeleteQualityRuleRequest(Builder builder) {
@@ -70,7 +75,7 @@ public class DeleteQualityRuleRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -79,7 +84,7 @@ public class DeleteQualityRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

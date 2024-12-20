@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteOuterAccountRequest} extends {@link RequestModel}
  *
  * <p>DeleteOuterAccountRequest</p>
  */
 public class DeleteOuterAccountRequest extends Request {
-    @Query
-    @NameInMap("OuterAccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterAccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerAccountId;
 
-    @Query
-    @NameInMap("OuterAccountType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterAccountType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerAccountType;
 
     private DeleteOuterAccountRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class DeleteOuterAccountRequest extends Request {
         } 
 
         /**
-         * OuterAccountId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder outerAccountId(String outerAccountId) {
             this.putQueryParameter("OuterAccountId", outerAccountId);
@@ -79,7 +87,10 @@ public class DeleteOuterAccountRequest extends Request {
         }
 
         /**
-         * OuterAccountType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder outerAccountType(String outerAccountType) {
             this.putQueryParameter("OuterAccountType", outerAccountType);

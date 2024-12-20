@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetQualityProjectLogResponseBody} extends {@link TeaModel}
  *
  * <p>GetQualityProjectLogResponseBody</p>
  */
 public class GetQualityProjectLogResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetQualityProjectLogResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class GetQualityProjectLogResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class GetQualityProjectLogResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -96,7 +101,7 @@ public class GetQualityProjectLogResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -131,20 +136,26 @@ public class GetQualityProjectLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetQualityProjectLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetQualityProjectLogResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("ActionData")
+        @com.aliyun.core.annotation.NameInMap("ActionData")
         private String actionData;
 
-        @NameInMap("ActionTime")
+        @com.aliyun.core.annotation.NameInMap("ActionTime")
         private String actionTime;
 
-        @NameInMap("ActionType")
+        @com.aliyun.core.annotation.NameInMap("ActionType")
         private String actionType;
 
-        @NameInMap("ProjectCreateTime")
+        @com.aliyun.core.annotation.NameInMap("ProjectCreateTime")
         private String projectCreateTime;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
         private Data(Builder builder) {

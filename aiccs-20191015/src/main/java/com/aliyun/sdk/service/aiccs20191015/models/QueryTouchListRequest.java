@@ -1,94 +1,99 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTouchListRequest} extends {@link RequestModel}
  *
  * <p>QueryTouchListRequest</p>
  */
 public class QueryTouchListRequest extends Request {
-    @Body
-    @NameInMap("ChannelId")
-    private java.util.List < String > channelId;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    private java.util.List<String> channelId;
 
-    @Body
-    @NameInMap("ChannelType")
-    private java.util.List < Integer > channelType;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelType")
+    private java.util.List<Integer> channelType;
 
-    @Body
-    @NameInMap("CloseTimeEnd")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloseTimeEnd")
     private Long closeTimeEnd;
 
-    @Body
-    @NameInMap("CloseTimeStart")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloseTimeStart")
     private Long closeTimeStart;
 
-    @Body
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Body
-    @NameInMap("EvaluationLevel")
-    private java.util.List < Integer > evaluationLevel;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EvaluationLevel")
+    private java.util.List<Integer> evaluationLevel;
 
-    @Body
-    @NameInMap("EvaluationScore")
-    private java.util.List < Integer > evaluationScore;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EvaluationScore")
+    private java.util.List<Integer> evaluationScore;
 
-    @Body
-    @NameInMap("EvaluationStatus")
-    private java.util.List < Integer > evaluationStatus;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EvaluationStatus")
+    private java.util.List<Integer> evaluationStatus;
 
-    @Body
-    @NameInMap("FirstTimeEnd")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FirstTimeEnd")
     private Long firstTimeEnd;
 
-    @Body
-    @NameInMap("FirstTimeStart")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FirstTimeStart")
     private Long firstTimeStart;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("MemberId")
-    private java.util.List < Long > memberId;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MemberId")
+    private java.util.List<Long> memberId;
 
-    @Body
-    @NameInMap("MemberName")
-    private java.util.List < String > memberName;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MemberName")
+    private java.util.List<String> memberName;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("QueueId")
-    private java.util.List < Long > queueId;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QueueId")
+    private java.util.List<Long> queueId;
 
-    @Body
-    @NameInMap("ServicerId")
-    private java.util.List < Long > servicerId;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServicerId")
+    private java.util.List<Long> servicerId;
 
-    @Body
-    @NameInMap("ServicerName")
-    private java.util.List < String > servicerName;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServicerName")
+    private java.util.List<String> servicerName;
 
-    @Body
-    @NameInMap("TouchId")
-    private java.util.List < Long > touchId;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TouchId")
+    private java.util.List<Long> touchId;
 
-    @Body
-    @NameInMap("TouchType")
-    private java.util.List < Integer > touchType;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TouchType")
+    private java.util.List<Integer> touchType;
 
     private QueryTouchListRequest(Builder builder) {
         super(builder);
@@ -129,14 +134,14 @@ public class QueryTouchListRequest extends Request {
     /**
      * @return channelId
      */
-    public java.util.List < String > getChannelId() {
+    public java.util.List<String> getChannelId() {
         return this.channelId;
     }
 
     /**
      * @return channelType
      */
-    public java.util.List < Integer > getChannelType() {
+    public java.util.List<Integer> getChannelType() {
         return this.channelType;
     }
 
@@ -164,21 +169,21 @@ public class QueryTouchListRequest extends Request {
     /**
      * @return evaluationLevel
      */
-    public java.util.List < Integer > getEvaluationLevel() {
+    public java.util.List<Integer> getEvaluationLevel() {
         return this.evaluationLevel;
     }
 
     /**
      * @return evaluationScore
      */
-    public java.util.List < Integer > getEvaluationScore() {
+    public java.util.List<Integer> getEvaluationScore() {
         return this.evaluationScore;
     }
 
     /**
      * @return evaluationStatus
      */
-    public java.util.List < Integer > getEvaluationStatus() {
+    public java.util.List<Integer> getEvaluationStatus() {
         return this.evaluationStatus;
     }
 
@@ -206,14 +211,14 @@ public class QueryTouchListRequest extends Request {
     /**
      * @return memberId
      */
-    public java.util.List < Long > getMemberId() {
+    public java.util.List<Long> getMemberId() {
         return this.memberId;
     }
 
     /**
      * @return memberName
      */
-    public java.util.List < String > getMemberName() {
+    public java.util.List<String> getMemberName() {
         return this.memberName;
     }
 
@@ -227,58 +232,58 @@ public class QueryTouchListRequest extends Request {
     /**
      * @return queueId
      */
-    public java.util.List < Long > getQueueId() {
+    public java.util.List<Long> getQueueId() {
         return this.queueId;
     }
 
     /**
      * @return servicerId
      */
-    public java.util.List < Long > getServicerId() {
+    public java.util.List<Long> getServicerId() {
         return this.servicerId;
     }
 
     /**
      * @return servicerName
      */
-    public java.util.List < String > getServicerName() {
+    public java.util.List<String> getServicerName() {
         return this.servicerName;
     }
 
     /**
      * @return touchId
      */
-    public java.util.List < Long > getTouchId() {
+    public java.util.List<Long> getTouchId() {
         return this.touchId;
     }
 
     /**
      * @return touchType
      */
-    public java.util.List < Integer > getTouchType() {
+    public java.util.List<Integer> getTouchType() {
         return this.touchType;
     }
 
     public static final class Builder extends Request.Builder<QueryTouchListRequest, Builder> {
-        private java.util.List < String > channelId; 
-        private java.util.List < Integer > channelType; 
+        private java.util.List<String> channelId; 
+        private java.util.List<Integer> channelType; 
         private Long closeTimeEnd; 
         private Long closeTimeStart; 
         private Integer currentPage; 
-        private java.util.List < Integer > evaluationLevel; 
-        private java.util.List < Integer > evaluationScore; 
-        private java.util.List < Integer > evaluationStatus; 
+        private java.util.List<Integer> evaluationLevel; 
+        private java.util.List<Integer> evaluationScore; 
+        private java.util.List<Integer> evaluationStatus; 
         private Long firstTimeEnd; 
         private Long firstTimeStart; 
         private String instanceId; 
-        private java.util.List < Long > memberId; 
-        private java.util.List < String > memberName; 
+        private java.util.List<Long> memberId; 
+        private java.util.List<String> memberName; 
         private Integer pageSize; 
-        private java.util.List < Long > queueId; 
-        private java.util.List < Long > servicerId; 
-        private java.util.List < String > servicerName; 
-        private java.util.List < Long > touchId; 
-        private java.util.List < Integer > touchType; 
+        private java.util.List<Long> queueId; 
+        private java.util.List<Long> servicerId; 
+        private java.util.List<String> servicerName; 
+        private java.util.List<Long> touchId; 
+        private java.util.List<Integer> touchType; 
 
         private Builder() {
             super();
@@ -310,7 +315,7 @@ public class QueryTouchListRequest extends Request {
         /**
          * ChannelId.
          */
-        public Builder channelId(java.util.List < String > channelId) {
+        public Builder channelId(java.util.List<String> channelId) {
             this.putBodyParameter("ChannelId", channelId);
             this.channelId = channelId;
             return this;
@@ -319,7 +324,7 @@ public class QueryTouchListRequest extends Request {
         /**
          * ChannelType.
          */
-        public Builder channelType(java.util.List < Integer > channelType) {
+        public Builder channelType(java.util.List<Integer> channelType) {
             this.putBodyParameter("ChannelType", channelType);
             this.channelType = channelType;
             return this;
@@ -355,7 +360,7 @@ public class QueryTouchListRequest extends Request {
         /**
          * EvaluationLevel.
          */
-        public Builder evaluationLevel(java.util.List < Integer > evaluationLevel) {
+        public Builder evaluationLevel(java.util.List<Integer> evaluationLevel) {
             this.putBodyParameter("EvaluationLevel", evaluationLevel);
             this.evaluationLevel = evaluationLevel;
             return this;
@@ -364,7 +369,7 @@ public class QueryTouchListRequest extends Request {
         /**
          * EvaluationScore.
          */
-        public Builder evaluationScore(java.util.List < Integer > evaluationScore) {
+        public Builder evaluationScore(java.util.List<Integer> evaluationScore) {
             this.putBodyParameter("EvaluationScore", evaluationScore);
             this.evaluationScore = evaluationScore;
             return this;
@@ -373,7 +378,7 @@ public class QueryTouchListRequest extends Request {
         /**
          * EvaluationStatus.
          */
-        public Builder evaluationStatus(java.util.List < Integer > evaluationStatus) {
+        public Builder evaluationStatus(java.util.List<Integer> evaluationStatus) {
             this.putBodyParameter("EvaluationStatus", evaluationStatus);
             this.evaluationStatus = evaluationStatus;
             return this;
@@ -398,7 +403,10 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -409,7 +417,7 @@ public class QueryTouchListRequest extends Request {
         /**
          * MemberId.
          */
-        public Builder memberId(java.util.List < Long > memberId) {
+        public Builder memberId(java.util.List<Long> memberId) {
             this.putBodyParameter("MemberId", memberId);
             this.memberId = memberId;
             return this;
@@ -418,7 +426,7 @@ public class QueryTouchListRequest extends Request {
         /**
          * MemberName.
          */
-        public Builder memberName(java.util.List < String > memberName) {
+        public Builder memberName(java.util.List<String> memberName) {
             this.putBodyParameter("MemberName", memberName);
             this.memberName = memberName;
             return this;
@@ -436,7 +444,7 @@ public class QueryTouchListRequest extends Request {
         /**
          * QueueId.
          */
-        public Builder queueId(java.util.List < Long > queueId) {
+        public Builder queueId(java.util.List<Long> queueId) {
             this.putBodyParameter("QueueId", queueId);
             this.queueId = queueId;
             return this;
@@ -445,7 +453,7 @@ public class QueryTouchListRequest extends Request {
         /**
          * ServicerId.
          */
-        public Builder servicerId(java.util.List < Long > servicerId) {
+        public Builder servicerId(java.util.List<Long> servicerId) {
             this.putBodyParameter("ServicerId", servicerId);
             this.servicerId = servicerId;
             return this;
@@ -454,7 +462,7 @@ public class QueryTouchListRequest extends Request {
         /**
          * ServicerName.
          */
-        public Builder servicerName(java.util.List < String > servicerName) {
+        public Builder servicerName(java.util.List<String> servicerName) {
             this.putBodyParameter("ServicerName", servicerName);
             this.servicerName = servicerName;
             return this;
@@ -463,7 +471,7 @@ public class QueryTouchListRequest extends Request {
         /**
          * TouchId.
          */
-        public Builder touchId(java.util.List < Long > touchId) {
+        public Builder touchId(java.util.List<Long> touchId) {
             this.putBodyParameter("TouchId", touchId);
             this.touchId = touchId;
             return this;
@@ -472,7 +480,7 @@ public class QueryTouchListRequest extends Request {
         /**
          * TouchType.
          */
-        public Builder touchType(java.util.List < Integer > touchType) {
+        public Builder touchType(java.util.List<Integer> touchType) {
             this.putBodyParameter("TouchType", touchType);
             this.touchType = touchType;
             return this;

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAiOutboundTaskProgressResponseBody} extends {@link TeaModel}
  *
  * <p>GetAiOutboundTaskProgressResponseBody</p>
  */
 public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAiOutboundTaskProgressResponseBody(Builder builder) {
@@ -94,7 +99,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * 任务进展
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,7 +115,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,32 +136,38 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAiOutboundTaskProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAiOutboundTaskProgressResponseBody</p>
+     */
     public static class CalloutProgress extends TeaModel {
-        @NameInMap("CallLossCount")
+        @com.aliyun.core.annotation.NameInMap("CallLossCount")
         private Integer callLossCount;
 
-        @NameInMap("CallLossRate")
+        @com.aliyun.core.annotation.NameInMap("CallLossRate")
         private Float callLossRate;
 
-        @NameInMap("CallOutConnectCount")
+        @com.aliyun.core.annotation.NameInMap("CallOutConnectCount")
         private Integer callOutConnectCount;
 
-        @NameInMap("CallOutConnectRate")
+        @com.aliyun.core.annotation.NameInMap("CallOutConnectRate")
         private Float callOutConnectRate;
 
-        @NameInMap("CallOutCount")
+        @com.aliyun.core.annotation.NameInMap("CallOutCount")
         private Integer callOutCount;
 
-        @NameInMap("CallOutServicerPickupCount")
+        @com.aliyun.core.annotation.NameInMap("CallOutServicerPickupCount")
         private Integer callOutServicerPickupCount;
 
-        @NameInMap("CallOutServicerPickupRate")
+        @com.aliyun.core.annotation.NameInMap("CallOutServicerPickupRate")
         private Float callOutServicerPickupRate;
 
-        @NameInMap("CallOutUserPickupCount")
+        @com.aliyun.core.annotation.NameInMap("CallOutUserPickupCount")
         private Integer callOutUserPickupCount;
 
-        @NameInMap("CallOutUserPickupRate")
+        @com.aliyun.core.annotation.NameInMap("CallOutUserPickupRate")
         private Float callOutUserPickupRate;
 
         private CalloutProgress(Builder builder) {
@@ -254,7 +265,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             private Float callOutUserPickupRate; 
 
             /**
-             * 呼损量（预测式外呼特有）
+             * CallLossCount.
              */
             public Builder callLossCount(Integer callLossCount) {
                 this.callLossCount = callLossCount;
@@ -262,7 +273,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 呼损率（预测式外呼特有）
+             * CallLossRate.
              */
             public Builder callLossRate(Float callLossRate) {
                 this.callLossRate = callLossRate;
@@ -270,7 +281,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼接通次数（自动外呼特有）
+             * CallOutConnectCount.
              */
             public Builder callOutConnectCount(Integer callOutConnectCount) {
                 this.callOutConnectCount = callOutConnectCount;
@@ -278,7 +289,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼接通次率（自动外呼特有）
+             * CallOutConnectRate.
              */
             public Builder callOutConnectRate(Float callOutConnectRate) {
                 this.callOutConnectRate = callOutConnectRate;
@@ -286,7 +297,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼次数
+             * CallOutCount.
              */
             public Builder callOutCount(Integer callOutCount) {
                 this.callOutCount = callOutCount;
@@ -294,7 +305,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 坐席接通量（预测式外呼特有）
+             * CallOutServicerPickupCount.
              */
             public Builder callOutServicerPickupCount(Integer callOutServicerPickupCount) {
                 this.callOutServicerPickupCount = callOutServicerPickupCount;
@@ -302,7 +313,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 坐席接通率（预测式外呼特有）
+             * CallOutServicerPickupRate.
              */
             public Builder callOutServicerPickupRate(Float callOutServicerPickupRate) {
                 this.callOutServicerPickupRate = callOutServicerPickupRate;
@@ -310,7 +321,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 客户接起量（预测式外呼特有）
+             * CallOutUserPickupCount.
              */
             public Builder callOutUserPickupCount(Integer callOutUserPickupCount) {
                 this.callOutUserPickupCount = callOutUserPickupCount;
@@ -318,7 +329,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 客户接起率（预测式外呼特有）
+             * CallOutUserPickupRate.
              */
             public Builder callOutUserPickupRate(Float callOutUserPickupRate) {
                 this.callOutUserPickupRate = callOutUserPickupRate;
@@ -332,44 +343,50 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAiOutboundTaskProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAiOutboundTaskProgressResponseBody</p>
+     */
     public static class TaskProgress extends TeaModel {
-        @NameInMap("CallingCount")
+        @com.aliyun.core.annotation.NameInMap("CallingCount")
         private Integer callingCount;
 
-        @NameInMap("ConnectCount")
+        @com.aliyun.core.annotation.NameInMap("ConnectCount")
         private Integer connectCount;
 
-        @NameInMap("ConnectRate")
+        @com.aliyun.core.annotation.NameInMap("ConnectRate")
         private Float connectRate;
 
-        @NameInMap("FinishCount")
+        @com.aliyun.core.annotation.NameInMap("FinishCount")
         private Integer finishCount;
 
-        @NameInMap("FinishRate")
+        @com.aliyun.core.annotation.NameInMap("FinishRate")
         private Float finishRate;
 
-        @NameInMap("ServicerPickupCount")
+        @com.aliyun.core.annotation.NameInMap("ServicerPickupCount")
         private Integer servicerPickupCount;
 
-        @NameInMap("ServicerPickupRate")
+        @com.aliyun.core.annotation.NameInMap("ServicerPickupRate")
         private Float servicerPickupRate;
 
-        @NameInMap("TerminateCount")
+        @com.aliyun.core.annotation.NameInMap("TerminateCount")
         private Integer terminateCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("UserPickupCount")
+        @com.aliyun.core.annotation.NameInMap("UserPickupCount")
         private Integer userPickupCount;
 
-        @NameInMap("UserPickupRate")
+        @com.aliyun.core.annotation.NameInMap("UserPickupRate")
         private Float userPickupRate;
 
-        @NameInMap("WaitingCallCount")
+        @com.aliyun.core.annotation.NameInMap("WaitingCallCount")
         private Integer waitingCallCount;
 
-        @NameInMap("WaitingRecallCount")
+        @com.aliyun.core.annotation.NameInMap("WaitingRecallCount")
         private Integer waitingRecallCount;
 
         private TaskProgress(Builder builder) {
@@ -503,7 +520,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             private Integer waitingRecallCount; 
 
             /**
-             * 呼叫中任务数
+             * CallingCount.
              */
             public Builder callingCount(Integer callingCount) {
                 this.callingCount = callingCount;
@@ -511,7 +528,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 任务接通量（自动外呼特有）
+             * ConnectCount.
              */
             public Builder connectCount(Integer connectCount) {
                 this.connectCount = connectCount;
@@ -519,7 +536,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 任务接通率（自动外呼特有）
+             * ConnectRate.
              */
             public Builder connectRate(Float connectRate) {
                 this.connectRate = connectRate;
@@ -527,7 +544,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 任务完成数
+             * FinishCount.
              */
             public Builder finishCount(Integer finishCount) {
                 this.finishCount = finishCount;
@@ -535,7 +552,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 任务完成率
+             * FinishRate.
              */
             public Builder finishRate(Float finishRate) {
                 this.finishRate = finishRate;
@@ -543,7 +560,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 坐席接通数（预测式外呼特有）
+             * ServicerPickupCount.
              */
             public Builder servicerPickupCount(Integer servicerPickupCount) {
                 this.servicerPickupCount = servicerPickupCount;
@@ -551,7 +568,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 坐席接通率(预测式外呼特有）
+             * ServicerPickupRate.
              */
             public Builder servicerPickupRate(Float servicerPickupRate) {
                 this.servicerPickupRate = servicerPickupRate;
@@ -559,7 +576,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 已终止任务数
+             * TerminateCount.
              */
             public Builder terminateCount(Integer terminateCount) {
                 this.terminateCount = terminateCount;
@@ -567,7 +584,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 总任务数
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -575,7 +592,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 客户接起数（预测式外呼特有）
+             * UserPickupCount.
              */
             public Builder userPickupCount(Integer userPickupCount) {
                 this.userPickupCount = userPickupCount;
@@ -583,7 +600,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 客户接起率（预测式外呼特有）
+             * UserPickupRate.
              */
             public Builder userPickupRate(Float userPickupRate) {
                 this.userPickupRate = userPickupRate;
@@ -591,7 +608,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 待呼叫任务数
+             * WaitingCallCount.
              */
             public Builder waitingCallCount(Integer waitingCallCount) {
                 this.waitingCallCount = waitingCallCount;
@@ -599,7 +616,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 待重呼任务数
+             * WaitingRecallCount.
              */
             public Builder waitingRecallCount(Integer waitingRecallCount) {
                 this.waitingRecallCount = waitingRecallCount;
@@ -613,17 +630,23 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAiOutboundTaskProgressResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAiOutboundTaskProgressResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CalloutProgress")
+        @com.aliyun.core.annotation.NameInMap("CalloutProgress")
         private CalloutProgress calloutProgress;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
-        @NameInMap("TaskProgress")
+        @com.aliyun.core.annotation.NameInMap("TaskProgress")
         private TaskProgress taskProgress;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Data(Builder builder) {
@@ -676,7 +699,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * 外呼维度进展
+             * CalloutProgress.
              */
             public Builder calloutProgress(CalloutProgress calloutProgress) {
                 this.calloutProgress = calloutProgress;
@@ -684,7 +707,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 任务id
+             * TaskId.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -692,7 +715,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 任务维度进展
+             * TaskProgress.
              */
             public Builder taskProgress(TaskProgress taskProgress) {
                 this.taskProgress = taskProgress;
@@ -700,7 +723,7 @@ public class GetAiOutboundTaskProgressResponseBody extends TeaModel {
             }
 
             /**
-             * 任务类型（2:预测式3:自动）
+             * Type.
              */
             public Builder type(Integer type) {
                 this.type = type;

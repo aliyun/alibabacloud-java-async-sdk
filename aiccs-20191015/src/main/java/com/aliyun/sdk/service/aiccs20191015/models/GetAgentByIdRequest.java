@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAgentByIdRequest} extends {@link RequestModel}
  *
  * <p>GetAgentByIdRequest</p>
  */
 public class GetAgentByIdRequest extends Request {
-    @Body
-    @NameInMap("AgentId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AgentId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long agentId;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private GetAgentByIdRequest(Builder builder) {
@@ -70,7 +75,7 @@ public class GetAgentByIdRequest extends Request {
         } 
 
         /**
-         * AgentId.
+         * <p>This parameter is required.</p>
          */
         public Builder agentId(Long agentId) {
             this.putBodyParameter("AgentId", agentId);
@@ -79,7 +84,7 @@ public class GetAgentByIdRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

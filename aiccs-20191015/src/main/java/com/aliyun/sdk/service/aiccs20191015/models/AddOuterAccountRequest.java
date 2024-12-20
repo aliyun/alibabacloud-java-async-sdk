@@ -1,57 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddOuterAccountRequest} extends {@link RequestModel}
  *
  * <p>AddOuterAccountRequest</p>
  */
 public class AddOuterAccountRequest extends Request {
-    @Query
-    @NameInMap("Avatar")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Avatar")
     private String avatar;
 
-    @Query
-    @NameInMap("Ext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ext")
     private String ext;
 
-    @Query
-    @NameInMap("OuterAccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterAccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerAccountId;
 
-    @Query
-    @NameInMap("OuterAccountName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterAccountName")
     private String outerAccountName;
 
-    @Query
-    @NameInMap("OuterAccountType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterAccountType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerAccountType;
 
-    @Query
-    @NameInMap("OuterDepartmentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterDepartmentId")
     private String outerDepartmentId;
 
-    @Query
-    @NameInMap("OuterDepartmentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterDepartmentType")
     private String outerDepartmentType;
 
-    @Query
-    @NameInMap("OuterGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterGroupIds")
     private String outerGroupIds;
 
-    @Query
-    @NameInMap("OuterGroupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterGroupType")
     private String outerGroupType;
 
-    @Query
-    @NameInMap("RealName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealName")
     private String realName;
 
     private AddOuterAccountRequest(Builder builder) {
@@ -200,7 +205,10 @@ public class AddOuterAccountRequest extends Request {
         }
 
         /**
-         * OuterAccountId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1212</p>
          */
         public Builder outerAccountId(String outerAccountId) {
             this.putQueryParameter("OuterAccountId", outerAccountId);
@@ -218,7 +226,10 @@ public class AddOuterAccountRequest extends Request {
         }
 
         /**
-         * OuterAccountType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alipay</p>
          */
         public Builder outerAccountType(String outerAccountType) {
             this.putQueryParameter("OuterAccountType", outerAccountType);

@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InsertTaskDetailRequest} extends {@link RequestModel}
  *
  * <p>InsertTaskDetailRequest</p>
  */
 public class InsertTaskDetailRequest extends Request {
-    @Query
-    @NameInMap("CallInfos")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallInfos")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callInfos;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OutboundTaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutboundTaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long outboundTaskId;
 
     private InsertTaskDetailRequest(Builder builder) {
@@ -85,7 +90,7 @@ public class InsertTaskDetailRequest extends Request {
         } 
 
         /**
-         * CallInfos.
+         * <p>This parameter is required.</p>
          */
         public Builder callInfos(String callInfos) {
             this.putQueryParameter("CallInfos", callInfos);
@@ -94,7 +99,7 @@ public class InsertTaskDetailRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -103,7 +108,7 @@ public class InsertTaskDetailRequest extends Request {
         }
 
         /**
-         * OutboundTaskId.
+         * <p>This parameter is required.</p>
          */
         public Builder outboundTaskId(Long outboundTaskId) {
             this.putQueryParameter("OutboundTaskId", outboundTaskId);

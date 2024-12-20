@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAiOutboundTaskBizDataResponseBody} extends {@link TeaModel}
  *
  * <p>GetAiOutboundTaskBizDataResponseBody</p>
  */
 public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAiOutboundTaskBizDataResponseBody(Builder builder) {
@@ -94,7 +99,7 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
         }
 
         /**
-         * 本次呼叫关联的业务信息
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,7 +115,7 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,17 +136,23 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAiOutboundTaskBizDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAiOutboundTaskBizDataResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("BizData")
+        @com.aliyun.core.annotation.NameInMap("BizData")
         private String bizData;
 
-        @NameInMap("CaseId")
+        @com.aliyun.core.annotation.NameInMap("CaseId")
         private Long caseId;
 
-        @NameInMap("PhoneNum")
+        @com.aliyun.core.annotation.NameInMap("PhoneNum")
         private String phoneNum;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
         private Data(Builder builder) {
@@ -194,7 +205,7 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
             private Long taskId; 
 
             /**
-             * 业务自定义信息
+             * BizData.
              */
             public Builder bizData(String bizData) {
                 this.bizData = bizData;
@@ -202,7 +213,7 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * CaseId.
              */
             public Builder caseId(Long caseId) {
                 this.caseId = caseId;
@@ -210,7 +221,7 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼号码
+             * PhoneNum.
              */
             public Builder phoneNum(String phoneNum) {
                 this.phoneNum = phoneNum;
@@ -218,7 +229,7 @@ public class GetAiOutboundTaskBizDataResponseBody extends TeaModel {
             }
 
             /**
-             * 任务ID
+             * TaskId.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;

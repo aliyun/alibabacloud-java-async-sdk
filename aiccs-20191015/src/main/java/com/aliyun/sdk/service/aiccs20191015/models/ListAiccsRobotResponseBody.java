@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAiccsRobotResponseBody} extends {@link TeaModel}
  *
  * <p>ListAiccsRobotResponseBody</p>
  */
 public class ListAiccsRobotResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private java.util.List < Data> data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAiccsRobotResponseBody(Builder builder) {
@@ -53,7 +58,7 @@ public class ListAiccsRobotResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class ListAiccsRobotResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -96,7 +101,7 @@ public class ListAiccsRobotResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -110,7 +115,7 @@ public class ListAiccsRobotResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,20 +136,26 @@ public class ListAiccsRobotResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAiccsRobotResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAiccsRobotResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AtProfession")
+        @com.aliyun.core.annotation.NameInMap("AtProfession")
         private String atProfession;
 
-        @NameInMap("AtSence")
+        @com.aliyun.core.annotation.NameInMap("AtSence")
         private String atSence;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RobotName")
+        @com.aliyun.core.annotation.NameInMap("RobotName")
         private String robotName;
 
-        @NameInMap("RobotType")
+        @com.aliyun.core.annotation.NameInMap("RobotType")
         private String robotType;
 
         private Data(Builder builder) {

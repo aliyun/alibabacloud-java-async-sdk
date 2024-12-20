@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChatRecordDetailResponseBody} extends {@link TeaModel}
  *
  * <p>ListChatRecordDetailResponseBody</p>
  */
 public class ListChatRecordDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultData")
+    @com.aliyun.core.annotation.NameInMap("ResultData")
     private ResultData resultData;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListChatRecordDetailResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +111,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -114,7 +119,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +127,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +135,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * ResultData.
          */
         public Builder resultData(ResultData resultData) {
             this.resultData = resultData;
@@ -138,7 +143,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * success
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,20 +156,26 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListChatRecordDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListChatRecordDetailResponseBody</p>
+     */
     public static class MessageList extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("MsgType")
+        @com.aliyun.core.annotation.NameInMap("MsgType")
         private String msgType;
 
-        @NameInMap("SenderName")
+        @com.aliyun.core.annotation.NameInMap("SenderName")
         private String senderName;
 
-        @NameInMap("SenderType")
+        @com.aliyun.core.annotation.NameInMap("SenderType")
         private Long senderType;
 
         private MessageList(Builder builder) {
@@ -272,17 +283,23 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListChatRecordDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListChatRecordDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("MessageList")
-        private java.util.List < MessageList> messageList;
+        @com.aliyun.core.annotation.NameInMap("MessageList")
+        private java.util.List<MessageList> messageList;
 
-        @NameInMap("ServicerName")
+        @com.aliyun.core.annotation.NameInMap("ServicerName")
         private String servicerName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Data(Builder builder) {
@@ -310,7 +327,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         /**
          * @return messageList
          */
-        public java.util.List < MessageList> getMessageList() {
+        public java.util.List<MessageList> getMessageList() {
             return this.messageList;
         }
 
@@ -330,12 +347,12 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long endTime; 
-            private java.util.List < MessageList> messageList; 
+            private java.util.List<MessageList> messageList; 
             private String servicerName; 
             private Long startTime; 
 
             /**
-             * 在线结束时间
+             * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -343,9 +360,9 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 在线会话详细信息
+             * MessageList.
              */
-            public Builder messageList(java.util.List < MessageList> messageList) {
+            public Builder messageList(java.util.List<MessageList> messageList) {
                 this.messageList = messageList;
                 return this;
             }
@@ -359,7 +376,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 在线开始时间
+             * StartTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -373,20 +390,26 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListChatRecordDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListChatRecordDetailResponseBody</p>
+     */
     public static class ResultData extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Long currentPage;
 
-        @NameInMap("Data")
-        private java.util.List < Data> data;
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<Data> data;
 
-        @NameInMap("OnePageSize")
+        @com.aliyun.core.annotation.NameInMap("OnePageSize")
         private Long onePageSize;
 
-        @NameInMap("TotalPage")
+        @com.aliyun.core.annotation.NameInMap("TotalPage")
         private Long totalPage;
 
-        @NameInMap("TotalResults")
+        @com.aliyun.core.annotation.NameInMap("TotalResults")
         private Long totalResults;
 
         private ResultData(Builder builder) {
@@ -415,7 +438,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -442,7 +465,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long currentPage; 
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private Long onePageSize; 
             private Long totalPage; 
             private Long totalResults; 
@@ -458,7 +481,7 @@ public class ListChatRecordDetailResponseBody extends TeaModel {
             /**
              * Data.
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

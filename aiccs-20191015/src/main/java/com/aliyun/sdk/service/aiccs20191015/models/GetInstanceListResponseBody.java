@@ -1,42 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceListResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceListResponseBody</p>
  */
 public class GetInstanceListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CommodityInstances")
-    private java.util.List < CommodityInstances> commodityInstances;
+    @com.aliyun.core.annotation.NameInMap("CommodityInstances")
+    private java.util.List<CommodityInstances> commodityInstances;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private GetInstanceListResponseBody(Builder builder) {
@@ -69,7 +74,7 @@ public class GetInstanceListResponseBody extends TeaModel {
     /**
      * @return commodityInstances
      */
-    public java.util.List < CommodityInstances> getCommodityInstances() {
+    public java.util.List<CommodityInstances> getCommodityInstances() {
         return this.commodityInstances;
     }
 
@@ -124,7 +129,7 @@ public class GetInstanceListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < CommodityInstances> commodityInstances; 
+        private java.util.List<CommodityInstances> commodityInstances; 
         private Integer httpStatusCode; 
         private String message; 
         private Integer pageNumber; 
@@ -144,7 +149,7 @@ public class GetInstanceListResponseBody extends TeaModel {
         /**
          * CommodityInstances.
          */
-        public Builder commodityInstances(java.util.List < CommodityInstances> commodityInstances) {
+        public Builder commodityInstances(java.util.List<CommodityInstances> commodityInstances) {
             this.commodityInstances = commodityInstances;
             return this;
         }
@@ -211,11 +216,17 @@ public class GetInstanceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceListResponseBody</p>
+     */
     public static class CommodityInstances extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private CommodityInstances(Builder builder) {

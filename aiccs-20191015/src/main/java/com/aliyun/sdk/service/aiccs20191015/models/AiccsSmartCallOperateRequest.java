@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AiccsSmartCallOperateRequest} extends {@link RequestModel}
  *
  * <p>AiccsSmartCallOperateRequest</p>
  */
 public class AiccsSmartCallOperateRequest extends Request {
-    @Query
-    @NameInMap("CallId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
     private String callId;
 
-    @Query
-    @NameInMap("Command")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Command")
     private String command;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Param")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Param")
     private String param;
 
-    @Query
-    @NameInMap("ProdCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProdCode")
     private String prodCode;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private AiccsSmartCallOperateRequest(Builder builder) {

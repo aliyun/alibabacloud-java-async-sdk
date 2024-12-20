@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHotlineRecordDetailResponseBody} extends {@link TeaModel}
  *
  * <p>ListHotlineRecordDetailResponseBody</p>
  */
 public class ListHotlineRecordDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultData")
+    @com.aliyun.core.annotation.NameInMap("ResultData")
     private ResultData resultData;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListHotlineRecordDetailResponseBody(Builder builder) {
@@ -98,7 +103,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +111,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -114,7 +119,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +127,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +135,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * ResultData.
          */
         public Builder resultData(ResultData resultData) {
             this.resultData = resultData;
@@ -138,7 +143,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * success
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -151,17 +156,23 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHotlineRecordDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotlineRecordDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("OssUrl")
+        @com.aliyun.core.annotation.NameInMap("OssUrl")
         private String ossUrl;
 
-        @NameInMap("ServicerName")
+        @com.aliyun.core.annotation.NameInMap("ServicerName")
         private String servicerName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Data(Builder builder) {
@@ -214,7 +225,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * 热线结束时间
+             * EndTime.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -222,7 +233,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 热线通话录音地址
+             * OssUrl.
              */
             public Builder ossUrl(String ossUrl) {
                 this.ossUrl = ossUrl;
@@ -238,7 +249,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 热线开始时间
+             * StartTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -252,20 +263,26 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHotlineRecordDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHotlineRecordDetailResponseBody</p>
+     */
     public static class ResultData extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Long currentPage;
 
-        @NameInMap("Data")
-        private java.util.List < Data> data;
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<Data> data;
 
-        @NameInMap("OnePageSize")
+        @com.aliyun.core.annotation.NameInMap("OnePageSize")
         private Long onePageSize;
 
-        @NameInMap("TotalPage")
+        @com.aliyun.core.annotation.NameInMap("TotalPage")
         private Long totalPage;
 
-        @NameInMap("TotalResults")
+        @com.aliyun.core.annotation.NameInMap("TotalResults")
         private Long totalResults;
 
         private ResultData(Builder builder) {
@@ -294,7 +311,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -321,7 +338,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long currentPage; 
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private Long onePageSize; 
             private Long totalPage; 
             private Long totalResults; 
@@ -337,7 +354,7 @@ public class ListHotlineRecordDetailResponseBody extends TeaModel {
             /**
              * Data.
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteHotlineNumberRequest} extends {@link RequestModel}
  *
  * <p>DeleteHotlineNumberRequest</p>
  */
 public class DeleteHotlineNumberRequest extends Request {
-    @Body
-    @NameInMap("HotlineNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HotlineNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotlineNumber;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private DeleteHotlineNumberRequest(Builder builder) {
@@ -70,7 +75,10 @@ public class DeleteHotlineNumberRequest extends Request {
         } 
 
         /**
-         * 号码
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05710000****</p>
          */
         public Builder hotlineNumber(String hotlineNumber) {
             this.putBodyParameter("HotlineNumber", hotlineNumber);
@@ -79,7 +87,10 @@ public class DeleteHotlineNumberRequest extends Request {
         }
 
         /**
-         * 实例id
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

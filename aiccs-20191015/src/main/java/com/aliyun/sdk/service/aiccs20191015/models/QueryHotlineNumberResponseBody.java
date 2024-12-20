@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryHotlineNumberResponseBody} extends {@link TeaModel}
  *
  * <p>QueryHotlineNumberResponseBody</p>
  */
 public class QueryHotlineNumberResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryHotlineNumberResponseBody(Builder builder) {
@@ -86,7 +91,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 错误码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +99,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果数据
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +107,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +115,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +123,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,11 +136,17 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryHotlineNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryHotlineNumberResponseBody</p>
+     */
     public static class GroupDOList extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private GroupDOList(Builder builder) {
@@ -170,7 +181,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * 技能组id
+             * GroupId.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -178,7 +189,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 技能组名称
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -192,15 +203,21 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryHotlineNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryHotlineNumberResponseBody</p>
+     */
     public static class CalloutRangeList extends TeaModel {
-        @NameInMap("DepartmentId")
+        @com.aliyun.core.annotation.NameInMap("DepartmentId")
         private Long departmentId;
 
-        @NameInMap("DepartmentName")
+        @com.aliyun.core.annotation.NameInMap("DepartmentName")
         private String departmentName;
 
-        @NameInMap("GroupDOList")
-        private java.util.List < GroupDOList> groupDOList;
+        @com.aliyun.core.annotation.NameInMap("GroupDOList")
+        private java.util.List<GroupDOList> groupDOList;
 
         private CalloutRangeList(Builder builder) {
             this.departmentId = builder.departmentId;
@@ -233,17 +250,17 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         /**
          * @return groupDOList
          */
-        public java.util.List < GroupDOList> getGroupDOList() {
+        public java.util.List<GroupDOList> getGroupDOList() {
             return this.groupDOList;
         }
 
         public static final class Builder {
             private Long departmentId; 
             private String departmentName; 
-            private java.util.List < GroupDOList> groupDOList; 
+            private java.util.List<GroupDOList> groupDOList; 
 
             /**
-             * 部门id
+             * DepartmentId.
              */
             public Builder departmentId(Long departmentId) {
                 this.departmentId = departmentId;
@@ -251,7 +268,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 部门名称
+             * DepartmentName.
              */
             public Builder departmentName(String departmentName) {
                 this.departmentName = departmentName;
@@ -259,9 +276,9 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 技能组列表
+             * GroupDOList.
              */
-            public Builder groupDOList(java.util.List < GroupDOList> groupDOList) {
+            public Builder groupDOList(java.util.List<GroupDOList> groupDOList) {
                 this.groupDOList = groupDOList;
                 return this;
             }
@@ -273,38 +290,44 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryHotlineNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryHotlineNumberResponseBody</p>
+     */
     public static class HotlineNumList extends TeaModel {
-        @NameInMap("CalloutAllDepartment")
+        @com.aliyun.core.annotation.NameInMap("CalloutAllDepartment")
         private Boolean calloutAllDepartment;
 
-        @NameInMap("CalloutRangeList")
-        private java.util.List < CalloutRangeList> calloutRangeList;
+        @com.aliyun.core.annotation.NameInMap("CalloutRangeList")
+        private java.util.List<CalloutRangeList> calloutRangeList;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EvaluationStatus")
+        @com.aliyun.core.annotation.NameInMap("EvaluationStatus")
         private Integer evaluationStatus;
 
-        @NameInMap("FlowId")
+        @com.aliyun.core.annotation.NameInMap("FlowId")
         private Long flowId;
 
-        @NameInMap("FlowName")
+        @com.aliyun.core.annotation.NameInMap("FlowName")
         private String flowName;
 
-        @NameInMap("HotlineNumber")
+        @com.aliyun.core.annotation.NameInMap("HotlineNumber")
         private String hotlineNumber;
 
-        @NameInMap("InBoundEnabled")
+        @com.aliyun.core.annotation.NameInMap("InBoundEnabled")
         private Boolean inBoundEnabled;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("OutboundEnabled")
+        @com.aliyun.core.annotation.NameInMap("OutboundEnabled")
         private Boolean outboundEnabled;
 
-        @NameInMap("Sp")
+        @com.aliyun.core.annotation.NameInMap("Sp")
         private String sp;
 
         private HotlineNumList(Builder builder) {
@@ -339,7 +362,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         /**
          * @return calloutRangeList
          */
-        public java.util.List < CalloutRangeList> getCalloutRangeList() {
+        public java.util.List<CalloutRangeList> getCalloutRangeList() {
             return this.calloutRangeList;
         }
 
@@ -408,7 +431,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean calloutAllDepartment; 
-            private java.util.List < CalloutRangeList> calloutRangeList; 
+            private java.util.List<CalloutRangeList> calloutRangeList; 
             private String description; 
             private Integer evaluationStatus; 
             private Long flowId; 
@@ -420,7 +443,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             private String sp; 
 
             /**
-             * 外呼针对所有部门生效
+             * CalloutAllDepartment.
              */
             public Builder calloutAllDepartment(Boolean calloutAllDepartment) {
                 this.calloutAllDepartment = calloutAllDepartment;
@@ -428,15 +451,15 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 外呼生效列表
+             * CalloutRangeList.
              */
-            public Builder calloutRangeList(java.util.List < CalloutRangeList> calloutRangeList) {
+            public Builder calloutRangeList(java.util.List<CalloutRangeList> calloutRangeList) {
                 this.calloutRangeList = calloutRangeList;
                 return this;
             }
 
             /**
-             * 号码描述
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -444,7 +467,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 满意度状态
+             * EvaluationStatus.
              */
             public Builder evaluationStatus(Integer evaluationStatus) {
                 this.evaluationStatus = evaluationStatus;
@@ -452,7 +475,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 入呼流程id
+             * FlowId.
              */
             public Builder flowId(Long flowId) {
                 this.flowId = flowId;
@@ -460,7 +483,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 入呼流程名称
+             * FlowName.
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
@@ -468,7 +491,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 号码
+             * HotlineNumber.
              */
             public Builder hotlineNumber(String hotlineNumber) {
                 this.hotlineNumber = hotlineNumber;
@@ -476,7 +499,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 是否用于入呼
+             * InBoundEnabled.
              */
             public Builder inBoundEnabled(Boolean inBoundEnabled) {
                 this.inBoundEnabled = inBoundEnabled;
@@ -484,7 +507,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 归属地
+             * Location.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -492,7 +515,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 是否用于外呼
+             * OutboundEnabled.
              */
             public Builder outboundEnabled(Boolean outboundEnabled) {
                 this.outboundEnabled = outboundEnabled;
@@ -500,7 +523,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 运营商
+             * Sp.
              */
             public Builder sp(String sp) {
                 this.sp = sp;
@@ -514,17 +537,23 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryHotlineNumberResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryHotlineNumberResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Long currentPage;
 
-        @NameInMap("HotlineNumList")
-        private java.util.List < HotlineNumList> hotlineNumList;
+        @com.aliyun.core.annotation.NameInMap("HotlineNumList")
+        private java.util.List<HotlineNumList> hotlineNumList;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {
@@ -552,7 +581,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
         /**
          * @return hotlineNumList
          */
-        public java.util.List < HotlineNumList> getHotlineNumList() {
+        public java.util.List<HotlineNumList> getHotlineNumList() {
             return this.hotlineNumList;
         }
 
@@ -572,12 +601,12 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long currentPage; 
-            private java.util.List < HotlineNumList> hotlineNumList; 
+            private java.util.List<HotlineNumList> hotlineNumList; 
             private Long pageSize; 
             private Long totalCount; 
 
             /**
-             * 当前页面
+             * CurrentPage.
              */
             public Builder currentPage(Long currentPage) {
                 this.currentPage = currentPage;
@@ -585,15 +614,15 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 号码列表
+             * HotlineNumList.
              */
-            public Builder hotlineNumList(java.util.List < HotlineNumList> hotlineNumList) {
+            public Builder hotlineNumList(java.util.List<HotlineNumList> hotlineNumList) {
                 this.hotlineNumList = hotlineNumList;
                 return this;
             }
 
             /**
-             * 每页大小
+             * PageSize.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -601,7 +630,7 @@ public class QueryHotlineNumberResponseBody extends TeaModel {
             }
 
             /**
-             * 数据总量
+             * TotalCount.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

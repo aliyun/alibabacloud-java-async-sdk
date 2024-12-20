@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiccs20191015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSeatInformationRequest} extends {@link RequestModel}
  *
  * <p>GetSeatInformationRequest</p>
  */
 public class GetSeatInformationRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("currentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("currentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("depIds")
-    private java.util.List < Long > depIds;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("depIds")
+    private java.util.List<Long> depIds;
 
-    @Query
-    @NameInMap("endDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endDate")
     private Long endDate;
 
-    @Query
-    @NameInMap("existDepartmentGrouping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("existDepartmentGrouping")
     private Boolean existDepartmentGrouping;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("startDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startDate")
     private Long startDate;
 
     private GetSeatInformationRequest(Builder builder) {
@@ -82,7 +87,7 @@ public class GetSeatInformationRequest extends Request {
     /**
      * @return depIds
      */
-    public java.util.List < Long > getDepIds() {
+    public java.util.List<Long> getDepIds() {
         return this.depIds;
     }
 
@@ -117,7 +122,7 @@ public class GetSeatInformationRequest extends Request {
     public static final class Builder extends Request.Builder<GetSeatInformationRequest, Builder> {
         private String instanceId; 
         private Integer currentPage; 
-        private java.util.List < Long > depIds; 
+        private java.util.List<Long> depIds; 
         private Long endDate; 
         private Boolean existDepartmentGrouping; 
         private Integer pageSize; 
@@ -139,7 +144,10 @@ public class GetSeatInformationRequest extends Request {
         } 
 
         /**
-         * AICCS实例ID，在智能联络中心控制台上可以看到
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccc_xp_pre-cn-***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -148,7 +156,7 @@ public class GetSeatInformationRequest extends Request {
         }
 
         /**
-         * 当前页（默认为1）
+         * currentPage.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("currentPage", currentPage);
@@ -157,9 +165,9 @@ public class GetSeatInformationRequest extends Request {
         }
 
         /**
-         * 部门id列表
+         * depIds.
          */
-        public Builder depIds(java.util.List < Long > depIds) {
+        public Builder depIds(java.util.List<Long> depIds) {
             String depIdsShrink = shrink(depIds, "depIds", "simple");
             this.putQueryParameter("depIds", depIdsShrink);
             this.depIds = depIds;
@@ -167,7 +175,7 @@ public class GetSeatInformationRequest extends Request {
         }
 
         /**
-         * 结束日期时间戳（毫秒）
+         * endDate.
          */
         public Builder endDate(Long endDate) {
             this.putQueryParameter("endDate", endDate);
@@ -176,7 +184,7 @@ public class GetSeatInformationRequest extends Request {
         }
 
         /**
-         * 是否根据部门分组
+         * existDepartmentGrouping.
          */
         public Builder existDepartmentGrouping(Boolean existDepartmentGrouping) {
             this.putQueryParameter("existDepartmentGrouping", existDepartmentGrouping);
@@ -185,7 +193,7 @@ public class GetSeatInformationRequest extends Request {
         }
 
         /**
-         * 每页大小（默认为10)
+         * pageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -194,7 +202,7 @@ public class GetSeatInformationRequest extends Request {
         }
 
         /**
-         * 开始日期时间戳（毫秒）
+         * startDate.
          */
         public Builder startDate(Long startDate) {
             this.putQueryParameter("startDate", startDate);
