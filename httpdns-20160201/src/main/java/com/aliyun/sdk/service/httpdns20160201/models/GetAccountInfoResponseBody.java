@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccountInfoResponseBody</p>
@@ -70,9 +76,24 @@ public class GetAccountInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccountInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountInfoResponseBody</p>
+     */
     public static class AccountInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
+
+        @com.aliyun.core.annotation.NameInMap("DohEnabled")
+        private Boolean dohEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("DohResolveAllEnabled")
+        private Boolean dohResolveAllEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("MonthDohResolveCount")
+        private Long monthDohResolveCount;
 
         @com.aliyun.core.annotation.NameInMap("MonthFreeCount")
         private Integer monthFreeCount;
@@ -103,6 +124,9 @@ public class GetAccountInfoResponseBody extends TeaModel {
 
         private AccountInfo(Builder builder) {
             this.accountId = builder.accountId;
+            this.dohEnabled = builder.dohEnabled;
+            this.dohResolveAllEnabled = builder.dohResolveAllEnabled;
+            this.monthDohResolveCount = builder.monthDohResolveCount;
             this.monthFreeCount = builder.monthFreeCount;
             this.monthHttpsResolveCount = builder.monthHttpsResolveCount;
             this.monthResolveCount = builder.monthResolveCount;
@@ -127,6 +151,27 @@ public class GetAccountInfoResponseBody extends TeaModel {
          */
         public String getAccountId() {
             return this.accountId;
+        }
+
+        /**
+         * @return dohEnabled
+         */
+        public Boolean getDohEnabled() {
+            return this.dohEnabled;
+        }
+
+        /**
+         * @return dohResolveAllEnabled
+         */
+        public Boolean getDohResolveAllEnabled() {
+            return this.dohResolveAllEnabled;
+        }
+
+        /**
+         * @return monthDohResolveCount
+         */
+        public Long getMonthDohResolveCount() {
+            return this.monthDohResolveCount;
         }
 
         /**
@@ -194,6 +239,9 @@ public class GetAccountInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountId; 
+            private Boolean dohEnabled; 
+            private Boolean dohResolveAllEnabled; 
+            private Long monthDohResolveCount; 
             private Integer monthFreeCount; 
             private Integer monthHttpsResolveCount; 
             private Integer monthResolveCount; 
@@ -209,6 +257,30 @@ public class GetAccountInfoResponseBody extends TeaModel {
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
+                return this;
+            }
+
+            /**
+             * DohEnabled.
+             */
+            public Builder dohEnabled(Boolean dohEnabled) {
+                this.dohEnabled = dohEnabled;
+                return this;
+            }
+
+            /**
+             * DohResolveAllEnabled.
+             */
+            public Builder dohResolveAllEnabled(Boolean dohResolveAllEnabled) {
+                this.dohResolveAllEnabled = dohResolveAllEnabled;
+                return this;
+            }
+
+            /**
+             * MonthDohResolveCount.
+             */
+            public Builder monthDohResolveCount(Long monthDohResolveCount) {
+                this.monthDohResolveCount = monthDohResolveCount;
                 return this;
             }
 

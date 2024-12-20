@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResolveCountSummaryRequest} extends {@link RequestModel}
  *
  * <p>GetResolveCountSummaryRequest</p>
@@ -69,7 +75,10 @@ public class GetResolveCountSummaryRequest extends Request {
         } 
 
         /**
-         * Granularity.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -78,7 +87,10 @@ public class GetResolveCountSummaryRequest extends Request {
         }
 
         /**
-         * TimeSpan.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder timeSpan(Integer timeSpan) {
             this.putQueryParameter("TimeSpan", timeSpan);

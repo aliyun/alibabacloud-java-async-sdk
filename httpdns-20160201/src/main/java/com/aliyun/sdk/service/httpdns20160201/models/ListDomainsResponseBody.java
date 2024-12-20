@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDomainsResponseBody</p>
@@ -130,6 +136,12 @@ public class ListDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDomainsResponseBody</p>
+     */
     public static class DomainInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
@@ -139,6 +151,9 @@ public class ListDomainsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Resolved6")
         private Long resolved6;
+
+        @com.aliyun.core.annotation.NameInMap("ResolvedDoh")
+        private Long resolvedDoh;
 
         @com.aliyun.core.annotation.NameInMap("ResolvedHttps")
         private Long resolvedHttps;
@@ -153,6 +168,7 @@ public class ListDomainsResponseBody extends TeaModel {
             this.domainName = builder.domainName;
             this.resolved = builder.resolved;
             this.resolved6 = builder.resolved6;
+            this.resolvedDoh = builder.resolvedDoh;
             this.resolvedHttps = builder.resolvedHttps;
             this.resolvedHttps6 = builder.resolvedHttps6;
             this.timeModified = builder.timeModified;
@@ -188,6 +204,13 @@ public class ListDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resolvedDoh
+         */
+        public Long getResolvedDoh() {
+            return this.resolvedDoh;
+        }
+
+        /**
          * @return resolvedHttps
          */
         public Long getResolvedHttps() {
@@ -212,6 +235,7 @@ public class ListDomainsResponseBody extends TeaModel {
             private String domainName; 
             private Long resolved; 
             private Long resolved6; 
+            private Long resolvedDoh; 
             private Long resolvedHttps; 
             private Long resolvedHttps6; 
             private Long timeModified; 
@@ -237,6 +261,14 @@ public class ListDomainsResponseBody extends TeaModel {
              */
             public Builder resolved6(Long resolved6) {
                 this.resolved6 = resolved6;
+                return this;
+            }
+
+            /**
+             * ResolvedDoh.
+             */
+            public Builder resolvedDoh(Long resolvedDoh) {
+                this.resolvedDoh = resolvedDoh;
                 return this;
             }
 
@@ -271,9 +303,15 @@ public class ListDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDomainsResponseBody</p>
+     */
     public static class DomainInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainInfo")
-        private java.util.List < DomainInfo> domainInfo;
+        private java.util.List<DomainInfo> domainInfo;
 
         private DomainInfos(Builder builder) {
             this.domainInfo = builder.domainInfo;
@@ -290,17 +328,17 @@ public class ListDomainsResponseBody extends TeaModel {
         /**
          * @return domainInfo
          */
-        public java.util.List < DomainInfo> getDomainInfo() {
+        public java.util.List<DomainInfo> getDomainInfo() {
             return this.domainInfo;
         }
 
         public static final class Builder {
-            private java.util.List < DomainInfo> domainInfo; 
+            private java.util.List<DomainInfo> domainInfo; 
 
             /**
              * DomainInfo.
              */
-            public Builder domainInfo(java.util.List < DomainInfo> domainInfo) {
+            public Builder domainInfo(java.util.List<DomainInfo> domainInfo) {
                 this.domainInfo = domainInfo;
                 return this;
             }

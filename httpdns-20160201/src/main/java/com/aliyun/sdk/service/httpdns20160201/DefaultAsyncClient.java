@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddDomain  AddDomainRequest
+     * @return AddDomainResponse
+     */
     @Override
     public CompletableFuture<AddDomainResponse> addDomain(AddDomainRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDomain  DeleteDomainRequest
+     * @return DeleteDomainResponse
+     */
     @Override
     public CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomains  DescribeDomainsRequest
+     * @return DescribeDomainsResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainsResponse> describeDomains(DescribeDomainsRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAccountInfo  GetAccountInfoRequest
+     * @return GetAccountInfoResponse
+     */
     @Override
     public CompletableFuture<GetAccountInfoResponse> getAccountInfo(GetAccountInfoRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResolveCountSummary  GetResolveCountSummaryRequest
+     * @return GetResolveCountSummaryResponse
+     */
     @Override
     public CompletableFuture<GetResolveCountSummaryResponse> getResolveCountSummary(GetResolveCountSummaryRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResolveStatistics  GetResolveStatisticsRequest
+     * @return GetResolveStatisticsResponse
+     */
     @Override
     public CompletableFuture<GetResolveStatisticsResponse> getResolveStatistics(GetResolveStatisticsRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDomains  ListDomainsRequest
+     * @return ListDomainsResponse
+     */
     @Override
     public CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request) {
         try {
