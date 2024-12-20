@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aicontent20240611.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("errCode")
     private String errCode;
@@ -50,7 +55,7 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errCode; 
         private String errMessage; 
         private Integer httpStatusCode; 
@@ -100,7 +105,7 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
         /**
          * data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }

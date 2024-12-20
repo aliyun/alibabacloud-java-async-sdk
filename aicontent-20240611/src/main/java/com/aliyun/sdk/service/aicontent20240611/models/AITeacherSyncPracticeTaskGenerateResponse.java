@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse} extends {@link TeaModel}
+ * {@link AITeacherSyncPracticeTaskGenerateResponse} extends {@link TeaModel}
  *
- * <p>AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse</p>
+ * <p>AITeacherSyncPracticeTaskGenerateResponse</p>
  */
-public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse extends Response {
+public class AITeacherSyncPracticeTaskGenerateResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse extends R
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody body;
+    private AITeacherSyncPracticeTaskGenerateResponseBody body;
 
-    private AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse(BuilderImpl builder) {
+    private AITeacherSyncPracticeTaskGenerateResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse create() {
+    public static AITeacherSyncPracticeTaskGenerateResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse extends R
     /**
      * @return body
      */
-    public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody getBody() {
+    public AITeacherSyncPracticeTaskGenerateResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse, Builder> {
+    public interface Builder extends Response.Builder<AITeacherSyncPracticeTaskGenerateResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody body);
+        Builder body(AITeacherSyncPracticeTaskGenerateResponseBody body);
 
         @Override
-        AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse build();
+        AITeacherSyncPracticeTaskGenerateResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse, Builder>
+            extends Response.BuilderImpl<AITeacherSyncPracticeTaskGenerateResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody body; 
+        private AITeacherSyncPracticeTaskGenerateResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse response) {
+        private BuilderImpl(AITeacherSyncPracticeTaskGenerateResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse extends R
          * body.
          */
         @Override
-        public Builder body(AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody body) {
+        public Builder body(AITeacherSyncPracticeTaskGenerateResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse build() {
-            return new AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse(this);
+        public AITeacherSyncPracticeTaskGenerateResponse build() {
+            return new AITeacherSyncPracticeTaskGenerateResponse(this);
         } 
 
     } 

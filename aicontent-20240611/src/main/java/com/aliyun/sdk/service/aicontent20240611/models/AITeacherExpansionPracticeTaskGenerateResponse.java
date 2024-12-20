@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse} extends {@link TeaModel}
+ * {@link AITeacherExpansionPracticeTaskGenerateResponse} extends {@link TeaModel}
  *
- * <p>AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse</p>
+ * <p>AITeacherExpansionPracticeTaskGenerateResponse</p>
  */
-public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse extends Response {
+public class AITeacherExpansionPracticeTaskGenerateResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse extends R
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody body;
+    private AITeacherExpansionPracticeTaskGenerateResponseBody body;
 
-    private AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse(BuilderImpl builder) {
+    private AITeacherExpansionPracticeTaskGenerateResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse create() {
+    public static AITeacherExpansionPracticeTaskGenerateResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse extends R
     /**
      * @return body
      */
-    public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody getBody() {
+    public AITeacherExpansionPracticeTaskGenerateResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse, Builder> {
+    public interface Builder extends Response.Builder<AITeacherExpansionPracticeTaskGenerateResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody body);
+        Builder body(AITeacherExpansionPracticeTaskGenerateResponseBody body);
 
         @Override
-        AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse build();
+        AITeacherExpansionPracticeTaskGenerateResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse, Builder>
+            extends Response.BuilderImpl<AITeacherExpansionPracticeTaskGenerateResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody body; 
+        private AITeacherExpansionPracticeTaskGenerateResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse response) {
+        private BuilderImpl(AITeacherExpansionPracticeTaskGenerateResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse extends R
          * body.
          */
         @Override
-        public Builder body(AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody body) {
+        public Builder body(AITeacherExpansionPracticeTaskGenerateResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse build() {
-            return new AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse(this);
+        public AITeacherExpansionPracticeTaskGenerateResponse build() {
+            return new AITeacherExpansionPracticeTaskGenerateResponse(this);
         } 
 
     } 

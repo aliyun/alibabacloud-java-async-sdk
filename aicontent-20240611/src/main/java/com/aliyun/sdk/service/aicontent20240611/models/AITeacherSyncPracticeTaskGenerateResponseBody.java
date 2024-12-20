@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link OpenApiSingleResponse} extends {@link TeaModel}
+ * {@link AITeacherSyncPracticeTaskGenerateResponseBody} extends {@link TeaModel}
  *
- * <p>OpenApiSingleResponse</p>
+ * <p>AITeacherSyncPracticeTaskGenerateResponseBody</p>
  */
-public class OpenApiSingleResponse extends Response {
+public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
@@ -35,8 +35,7 @@ public class OpenApiSingleResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private OpenApiSingleResponse(BuilderImpl builder) {
-        super(builder);
+    private AITeacherSyncPracticeTaskGenerateResponseBody(Builder builder) {
         this.data = builder.data;
         this.errCode = builder.errCode;
         this.errMessage = builder.errMessage;
@@ -45,13 +44,12 @@ public class OpenApiSingleResponse extends Response {
         this.success = builder.success;
     }
 
-    public static OpenApiSingleResponse create() {
-        return new BuilderImpl().build();
+    public static Builder builder() {
+        return new Builder();
     }
 
-    @Override
-    public Builder toBuilder() {
-        return new BuilderImpl(this);
+    public static AITeacherSyncPracticeTaskGenerateResponseBody create() {
+        return builder().build();
     }
 
     /**
@@ -96,28 +94,7 @@ public class OpenApiSingleResponse extends Response {
         return this.success;
     }
 
-    public interface Builder extends Response.Builder<OpenApiSingleResponse, Builder> {
-
-        Builder data(Data data);
-
-        Builder errCode(String errCode);
-
-        Builder errMessage(String errMessage);
-
-        Builder httpStatusCode(Integer httpStatusCode);
-
-        Builder requestId(String requestId);
-
-        Builder success(Boolean success);
-
-        @Override
-        OpenApiSingleResponse build();
-
-    } 
-
-    private static final class BuilderImpl
-            extends Response.BuilderImpl<OpenApiSingleResponse, Builder>
-            implements Builder {
+    public static final class Builder {
         private Data data; 
         private String errCode; 
         private String errMessage; 
@@ -125,24 +102,9 @@ public class OpenApiSingleResponse extends Response {
         private String requestId; 
         private Boolean success; 
 
-        private BuilderImpl() {
-            super();
-        } 
-
-        private BuilderImpl(OpenApiSingleResponse response) {
-            super(response);
-            this.data = response.data;
-            this.errCode = response.errCode;
-            this.errMessage = response.errMessage;
-            this.httpStatusCode = response.httpStatusCode;
-            this.requestId = response.requestId;
-            this.success = response.success;
-        } 
-
         /**
          * data.
          */
-        @Override
         public Builder data(Data data) {
             this.data = data;
             return this;
@@ -151,7 +113,6 @@ public class OpenApiSingleResponse extends Response {
         /**
          * errCode.
          */
-        @Override
         public Builder errCode(String errCode) {
             this.errCode = errCode;
             return this;
@@ -160,7 +121,6 @@ public class OpenApiSingleResponse extends Response {
         /**
          * errMessage.
          */
-        @Override
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
             return this;
@@ -169,7 +129,6 @@ public class OpenApiSingleResponse extends Response {
         /**
          * httpStatusCode.
          */
-        @Override
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
             return this;
@@ -178,7 +137,6 @@ public class OpenApiSingleResponse extends Response {
         /**
          * requestId.
          */
-        @Override
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
@@ -187,31 +145,100 @@ public class OpenApiSingleResponse extends Response {
         /**
          * success.
          */
-        @Override
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        @Override
-        public OpenApiSingleResponse build() {
-            return new OpenApiSingleResponse(this);
+        public AITeacherSyncPracticeTaskGenerateResponseBody build() {
+            return new AITeacherSyncPracticeTaskGenerateResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link OpenApiSingleResponse} extends {@link TeaModel}
+     * {@link AITeacherSyncPracticeTaskGenerateResponseBody} extends {@link TeaModel}
      *
-     * <p>OpenApiSingleResponse</p>
+     * <p>AITeacherSyncPracticeTaskGenerateResponseBody</p>
+     */
+    public static class TaskContent extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("assistant")
+        private String assistant;
+
+        @com.aliyun.core.annotation.NameInMap("user")
+        private String user;
+
+        private TaskContent(Builder builder) {
+            this.assistant = builder.assistant;
+            this.user = builder.user;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TaskContent create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assistant
+         */
+        public String getAssistant() {
+            return this.assistant;
+        }
+
+        /**
+         * @return user
+         */
+        public String getUser() {
+            return this.user;
+        }
+
+        public static final class Builder {
+            private String assistant; 
+            private String user; 
+
+            /**
+             * assistant.
+             */
+            public Builder assistant(String assistant) {
+                this.assistant = assistant;
+                return this;
+            }
+
+            /**
+             * user.
+             */
+            public Builder user(String user) {
+                this.user = user;
+                return this;
+            }
+
+            public TaskContent build() {
+                return new TaskContent(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AITeacherSyncPracticeTaskGenerateResponseBody} extends {@link TeaModel}
+     *
+     * <p>AITeacherSyncPracticeTaskGenerateResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("modelTrainStatus")
-        private String modelTrainStatus;
+        @com.aliyun.core.annotation.NameInMap("taskContent")
+        private java.util.List<TaskContent> taskContent;
+
+        @com.aliyun.core.annotation.NameInMap("taskType")
+        private String taskType;
 
         private Data(Builder builder) {
-            this.modelTrainStatus = builder.modelTrainStatus;
+            this.taskContent = builder.taskContent;
+            this.taskType = builder.taskType;
         }
 
         public static Builder builder() {
@@ -223,20 +250,36 @@ public class OpenApiSingleResponse extends Response {
         }
 
         /**
-         * @return modelTrainStatus
+         * @return taskContent
          */
-        public String getModelTrainStatus() {
-            return this.modelTrainStatus;
+        public java.util.List<TaskContent> getTaskContent() {
+            return this.taskContent;
+        }
+
+        /**
+         * @return taskType
+         */
+        public String getTaskType() {
+            return this.taskType;
         }
 
         public static final class Builder {
-            private String modelTrainStatus; 
+            private java.util.List<TaskContent> taskContent; 
+            private String taskType; 
 
             /**
-             * modelTrainStatus.
+             * taskContent.
              */
-            public Builder modelTrainStatus(String modelTrainStatus) {
-                this.modelTrainStatus = modelTrainStatus;
+            public Builder taskContent(java.util.List<TaskContent> taskContent) {
+                this.taskContent = taskContent;
+                return this;
+            }
+
+            /**
+             * taskType.
+             */
+            public Builder taskType(String taskType) {
+                this.taskType = taskType;
                 return this;
             }
 

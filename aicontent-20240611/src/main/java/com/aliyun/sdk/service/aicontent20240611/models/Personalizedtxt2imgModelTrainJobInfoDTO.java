@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aicontent20240611.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,10 +24,10 @@ public class Personalizedtxt2imgModelTrainJobInfoDTO extends TeaModel {
     private String createUserId;
 
     @com.aliyun.core.annotation.NameInMap("ImageUrl")
-    private java.util.List < String > imageUrl;
+    private java.util.List<String> imageUrl;
 
     @com.aliyun.core.annotation.NameInMap("InferenceJobList")
-    private java.util.List < Personalizedtxt2imgInferenceJobInfoDTO > inferenceJobList;
+    private java.util.List<Personalizedtxt2imgInferenceJobInfoDTO> inferenceJobList;
 
     @com.aliyun.core.annotation.NameInMap("JobStatus")
     private String jobStatus;
@@ -72,14 +77,14 @@ public class Personalizedtxt2imgModelTrainJobInfoDTO extends TeaModel {
     /**
      * @return imageUrl
      */
-    public java.util.List < String > getImageUrl() {
+    public java.util.List<String> getImageUrl() {
         return this.imageUrl;
     }
 
     /**
      * @return inferenceJobList
      */
-    public java.util.List < Personalizedtxt2imgInferenceJobInfoDTO > getInferenceJobList() {
+    public java.util.List<Personalizedtxt2imgInferenceJobInfoDTO> getInferenceJobList() {
         return this.inferenceJobList;
     }
 
@@ -114,8 +119,8 @@ public class Personalizedtxt2imgModelTrainJobInfoDTO extends TeaModel {
     public static final class Builder {
         private String createTime; 
         private String createUserId; 
-        private java.util.List < String > imageUrl; 
-        private java.util.List < Personalizedtxt2imgInferenceJobInfoDTO > inferenceJobList; 
+        private java.util.List<String> imageUrl; 
+        private java.util.List<Personalizedtxt2imgInferenceJobInfoDTO> inferenceJobList; 
         private String jobStatus; 
         private String name; 
         private String objectType; 
@@ -140,7 +145,7 @@ public class Personalizedtxt2imgModelTrainJobInfoDTO extends TeaModel {
         /**
          * ImageUrl.
          */
-        public Builder imageUrl(java.util.List < String > imageUrl) {
+        public Builder imageUrl(java.util.List<String> imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
@@ -148,7 +153,7 @@ public class Personalizedtxt2imgModelTrainJobInfoDTO extends TeaModel {
         /**
          * InferenceJobList.
          */
-        public Builder inferenceJobList(java.util.List < Personalizedtxt2imgInferenceJobInfoDTO > inferenceJobList) {
+        public Builder inferenceJobList(java.util.List<Personalizedtxt2imgInferenceJobInfoDTO> inferenceJobList) {
             this.inferenceJobList = inferenceJobList;
             return this;
         }

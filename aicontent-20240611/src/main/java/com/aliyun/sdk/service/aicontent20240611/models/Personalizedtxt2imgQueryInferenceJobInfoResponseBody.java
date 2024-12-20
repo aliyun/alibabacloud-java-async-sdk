@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aicontent20240611.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -177,7 +182,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
         private String promptId;
 
         @com.aliyun.core.annotation.NameInMap("resultImageUrl")
-        private java.util.List < String > resultImageUrl;
+        private java.util.List<String> resultImageUrl;
 
         private Data(Builder builder) {
             this.createTime = builder.createTime;
@@ -242,7 +247,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
         /**
          * @return resultImageUrl
          */
-        public java.util.List < String > getResultImageUrl() {
+        public java.util.List<String> getResultImageUrl() {
             return this.resultImageUrl;
         }
 
@@ -253,7 +258,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             private Double jobTrainProgress; 
             private String modelId; 
             private String promptId; 
-            private java.util.List < String > resultImageUrl; 
+            private java.util.List<String> resultImageUrl; 
 
             /**
              * createTime.
@@ -306,7 +311,7 @@ public class Personalizedtxt2imgQueryInferenceJobInfoResponseBody extends TeaMod
             /**
              * resultImageUrl.
              */
-            public Builder resultImageUrl(java.util.List < String > resultImageUrl) {
+            public Builder resultImageUrl(java.util.List<String> resultImageUrl) {
                 this.resultImageUrl = resultImageUrl;
                 return this;
             }

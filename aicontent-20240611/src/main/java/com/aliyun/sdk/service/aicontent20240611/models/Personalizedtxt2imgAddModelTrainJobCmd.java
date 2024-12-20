@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aicontent20240611.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class Personalizedtxt2imgAddModelTrainJobCmd extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("imageUrl")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > imageUrl;
+    private java.util.List<String> imageUrl;
 
     @com.aliyun.core.annotation.NameInMap("name")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -41,7 +46,7 @@ public class Personalizedtxt2imgAddModelTrainJobCmd extends TeaModel {
     /**
      * @return imageUrl
      */
-    public java.util.List < String > getImageUrl() {
+    public java.util.List<String> getImageUrl() {
         return this.imageUrl;
     }
 
@@ -60,14 +65,14 @@ public class Personalizedtxt2imgAddModelTrainJobCmd extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > imageUrl; 
+        private java.util.List<String> imageUrl; 
         private String name; 
         private String objectType; 
 
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder imageUrl(java.util.List < String > imageUrl) {
+        public Builder imageUrl(java.util.List<String> imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }

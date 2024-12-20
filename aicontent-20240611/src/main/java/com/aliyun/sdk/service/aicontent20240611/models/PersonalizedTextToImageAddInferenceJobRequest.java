@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aicontent20240611.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class PersonalizedTextToImageAddInferenceJobRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("imageUrl")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > imageUrl;
+    private java.util.List<String> imageUrl;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("prompt")
@@ -71,7 +76,7 @@ public class PersonalizedTextToImageAddInferenceJobRequest extends Request {
     /**
      * @return imageUrl
      */
-    public java.util.List < String > getImageUrl() {
+    public java.util.List<String> getImageUrl() {
         return this.imageUrl;
     }
 
@@ -105,7 +110,7 @@ public class PersonalizedTextToImageAddInferenceJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<PersonalizedTextToImageAddInferenceJobRequest, Builder> {
         private Integer imageNumber; 
-        private java.util.List < String > imageUrl; 
+        private java.util.List<String> imageUrl; 
         private String prompt; 
         private Long seed; 
         private Double strength; 
@@ -137,7 +142,7 @@ public class PersonalizedTextToImageAddInferenceJobRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder imageUrl(java.util.List < String > imageUrl) {
+        public Builder imageUrl(java.util.List<String> imageUrl) {
             this.putBodyParameter("imageUrl", imageUrl);
             this.imageUrl = imageUrl;
             return this;

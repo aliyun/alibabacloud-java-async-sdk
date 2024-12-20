@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aicontent20240611.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Personalizedtxt2imgQueryModelTrainJobListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("errCode")
     private String errCode;
@@ -50,7 +55,7 @@ public class Personalizedtxt2imgQueryModelTrainJobListResponseBody extends TeaMo
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class Personalizedtxt2imgQueryModelTrainJobListResponseBody extends TeaMo
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errCode; 
         private String errMessage; 
         private Integer httpStatusCode; 
@@ -100,7 +105,7 @@ public class Personalizedtxt2imgQueryModelTrainJobListResponseBody extends TeaMo
         /**
          * data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -177,7 +182,7 @@ public class Personalizedtxt2imgQueryModelTrainJobListResponseBody extends TeaMo
         private String promptId;
 
         @com.aliyun.core.annotation.NameInMap("resultImageUrl")
-        private java.util.List < String > resultImageUrl;
+        private java.util.List<String> resultImageUrl;
 
         private InferenceJobList(Builder builder) {
             this.createTime = builder.createTime;
@@ -242,7 +247,7 @@ public class Personalizedtxt2imgQueryModelTrainJobListResponseBody extends TeaMo
         /**
          * @return resultImageUrl
          */
-        public java.util.List < String > getResultImageUrl() {
+        public java.util.List<String> getResultImageUrl() {
             return this.resultImageUrl;
         }
 
@@ -253,7 +258,7 @@ public class Personalizedtxt2imgQueryModelTrainJobListResponseBody extends TeaMo
             private Double jobTrainProgress; 
             private String modelId; 
             private String promptId; 
-            private java.util.List < String > resultImageUrl; 
+            private java.util.List<String> resultImageUrl; 
 
             /**
              * createTime.
@@ -306,7 +311,7 @@ public class Personalizedtxt2imgQueryModelTrainJobListResponseBody extends TeaMo
             /**
              * resultImageUrl.
              */
-            public Builder resultImageUrl(java.util.List < String > resultImageUrl) {
+            public Builder resultImageUrl(java.util.List<String> resultImageUrl) {
                 this.resultImageUrl = resultImageUrl;
                 return this;
             }
@@ -332,13 +337,13 @@ public class Personalizedtxt2imgQueryModelTrainJobListResponseBody extends TeaMo
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("imageUrl")
-        private java.util.List < String > imageUrl;
+        private java.util.List<String> imageUrl;
 
         @com.aliyun.core.annotation.NameInMap("inferenceImageCount")
         private Integer inferenceImageCount;
 
         @com.aliyun.core.annotation.NameInMap("inferenceJobList")
-        private java.util.List < InferenceJobList> inferenceJobList;
+        private java.util.List<InferenceJobList> inferenceJobList;
 
         @com.aliyun.core.annotation.NameInMap("jobStatus")
         private String jobStatus;
@@ -393,7 +398,7 @@ public class Personalizedtxt2imgQueryModelTrainJobListResponseBody extends TeaMo
         /**
          * @return imageUrl
          */
-        public java.util.List < String > getImageUrl() {
+        public java.util.List<String> getImageUrl() {
             return this.imageUrl;
         }
 
@@ -407,7 +412,7 @@ public class Personalizedtxt2imgQueryModelTrainJobListResponseBody extends TeaMo
         /**
          * @return inferenceJobList
          */
-        public java.util.List < InferenceJobList> getInferenceJobList() {
+        public java.util.List<InferenceJobList> getInferenceJobList() {
             return this.inferenceJobList;
         }
 
@@ -449,9 +454,9 @@ public class Personalizedtxt2imgQueryModelTrainJobListResponseBody extends TeaMo
         public static final class Builder {
             private String createTime; 
             private String id; 
-            private java.util.List < String > imageUrl; 
+            private java.util.List<String> imageUrl; 
             private Integer inferenceImageCount; 
-            private java.util.List < InferenceJobList> inferenceJobList; 
+            private java.util.List<InferenceJobList> inferenceJobList; 
             private String jobStatus; 
             private Double jobTrainProgress; 
             private String modelId; 
@@ -477,7 +482,7 @@ public class Personalizedtxt2imgQueryModelTrainJobListResponseBody extends TeaMo
             /**
              * imageUrl.
              */
-            public Builder imageUrl(java.util.List < String > imageUrl) {
+            public Builder imageUrl(java.util.List<String> imageUrl) {
                 this.imageUrl = imageUrl;
                 return this;
             }
@@ -493,7 +498,7 @@ public class Personalizedtxt2imgQueryModelTrainJobListResponseBody extends TeaMo
             /**
              * inferenceJobList.
              */
-            public Builder inferenceJobList(java.util.List < InferenceJobList> inferenceJobList) {
+            public Builder inferenceJobList(java.util.List<InferenceJobList> inferenceJobList) {
                 this.inferenceJobList = inferenceJobList;
                 return this;
             }
