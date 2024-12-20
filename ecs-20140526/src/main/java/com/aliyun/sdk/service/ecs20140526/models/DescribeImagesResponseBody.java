@@ -724,14 +724,30 @@ public class DescribeImagesResponseBody extends TeaModel {
      * <p>DescribeImagesResponseBody</p>
      */
     public static class Features extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CpuOnlineDowngrade")
+        private String cpuOnlineDowngrade;
+
+        @com.aliyun.core.annotation.NameInMap("CpuOnlineUpgrade")
+        private String cpuOnlineUpgrade;
+
         @com.aliyun.core.annotation.NameInMap("ImdsSupport")
         private String imdsSupport;
+
+        @com.aliyun.core.annotation.NameInMap("MemoryOnlineDowngrade")
+        private String memoryOnlineDowngrade;
+
+        @com.aliyun.core.annotation.NameInMap("MemoryOnlineUpgrade")
+        private String memoryOnlineUpgrade;
 
         @com.aliyun.core.annotation.NameInMap("NvmeSupport")
         private String nvmeSupport;
 
         private Features(Builder builder) {
+            this.cpuOnlineDowngrade = builder.cpuOnlineDowngrade;
+            this.cpuOnlineUpgrade = builder.cpuOnlineUpgrade;
             this.imdsSupport = builder.imdsSupport;
+            this.memoryOnlineDowngrade = builder.memoryOnlineDowngrade;
+            this.memoryOnlineUpgrade = builder.memoryOnlineUpgrade;
             this.nvmeSupport = builder.nvmeSupport;
         }
 
@@ -744,10 +760,38 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return cpuOnlineDowngrade
+         */
+        public String getCpuOnlineDowngrade() {
+            return this.cpuOnlineDowngrade;
+        }
+
+        /**
+         * @return cpuOnlineUpgrade
+         */
+        public String getCpuOnlineUpgrade() {
+            return this.cpuOnlineUpgrade;
+        }
+
+        /**
          * @return imdsSupport
          */
         public String getImdsSupport() {
             return this.imdsSupport;
+        }
+
+        /**
+         * @return memoryOnlineDowngrade
+         */
+        public String getMemoryOnlineDowngrade() {
+            return this.memoryOnlineDowngrade;
+        }
+
+        /**
+         * @return memoryOnlineUpgrade
+         */
+        public String getMemoryOnlineUpgrade() {
+            return this.memoryOnlineUpgrade;
         }
 
         /**
@@ -758,14 +802,50 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String cpuOnlineDowngrade; 
+            private String cpuOnlineUpgrade; 
             private String imdsSupport; 
+            private String memoryOnlineDowngrade; 
+            private String memoryOnlineUpgrade; 
             private String nvmeSupport; 
+
+            /**
+             * CpuOnlineDowngrade.
+             */
+            public Builder cpuOnlineDowngrade(String cpuOnlineDowngrade) {
+                this.cpuOnlineDowngrade = cpuOnlineDowngrade;
+                return this;
+            }
+
+            /**
+             * CpuOnlineUpgrade.
+             */
+            public Builder cpuOnlineUpgrade(String cpuOnlineUpgrade) {
+                this.cpuOnlineUpgrade = cpuOnlineUpgrade;
+                return this;
+            }
 
             /**
              * ImdsSupport.
              */
             public Builder imdsSupport(String imdsSupport) {
                 this.imdsSupport = imdsSupport;
+                return this;
+            }
+
+            /**
+             * MemoryOnlineDowngrade.
+             */
+            public Builder memoryOnlineDowngrade(String memoryOnlineDowngrade) {
+                this.memoryOnlineDowngrade = memoryOnlineDowngrade;
+                return this;
+            }
+
+            /**
+             * MemoryOnlineUpgrade.
+             */
+            public Builder memoryOnlineUpgrade(String memoryOnlineUpgrade) {
+                this.memoryOnlineUpgrade = memoryOnlineUpgrade;
                 return this;
             }
 
