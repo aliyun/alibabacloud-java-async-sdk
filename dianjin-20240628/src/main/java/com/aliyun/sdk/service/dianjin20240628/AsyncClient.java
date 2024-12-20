@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAnnualDocSummaryTaskResponse> createAnnualDocSummaryTask(CreateAnnualDocSummaryTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateDialog  CreateDialogRequest
+     * @return CreateDialogResponse
+     */
+    CompletableFuture<CreateDialogResponse> createDialog(CreateDialogRequest request);
+
+    /**
      * @param request the request parameters of CreateDocsSummaryTask  CreateDocsSummaryTaskRequest
      * @return CreateDocsSummaryTaskResponse
      */
@@ -80,10 +86,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EvictTaskResponse> evictTask(EvictTaskRequest request);
 
     /**
+     * @param request the request parameters of GenDocQaResult  GenDocQaResultRequest
+     * @return GenDocQaResultResponse
+     */
+    CompletableFuture<GenDocQaResultResponse> genDocQaResult(GenDocQaResultRequest request);
+
+    /**
      * @param request the request parameters of GetAppConfig  GetAppConfigRequest
      * @return GetAppConfigResponse
      */
     CompletableFuture<GetAppConfigResponse> getAppConfig(GetAppConfigRequest request);
+
+    /**
+     * @param request the request parameters of GetChatQuestionResp  GetChatQuestionRespRequest
+     * @return GetChatQuestionRespResponse
+     */
+    CompletableFuture<GetChatQuestionRespResponse> getChatQuestionResp(GetChatQuestionRespRequest request);
 
     /**
      * @param request the request parameters of GetDocumentChunkList  GetDocumentChunkListRequest
@@ -210,6 +228,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunLibraryChatGenerationResponseBody> runLibraryChatGenerationWithResponseIterable(RunLibraryChatGenerationRequest request);
 
     /**
+     * @param request the request parameters of SubmitChatQuestion  SubmitChatQuestionRequest
+     * @return SubmitChatQuestionResponse
+     */
+    CompletableFuture<SubmitChatQuestionResponse> submitChatQuestion(SubmitChatQuestionRequest request);
+
+    /**
      * @param request the request parameters of UpdateDocument  UpdateDocumentRequest
      * @return UpdateDocumentResponse
      */
@@ -220,5 +244,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateLibraryResponse
      */
     CompletableFuture<UpdateLibraryResponse> updateLibrary(UpdateLibraryRequest request);
+
+    /**
+     * @param request the request parameters of UpdateQaLibrary  UpdateQaLibraryRequest
+     * @return UpdateQaLibraryResponse
+     */
+    CompletableFuture<UpdateQaLibraryResponse> updateQaLibrary(UpdateQaLibraryRequest request);
 
 }

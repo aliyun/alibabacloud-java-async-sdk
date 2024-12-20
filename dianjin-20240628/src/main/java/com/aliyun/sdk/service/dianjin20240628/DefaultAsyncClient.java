@@ -59,6 +59,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateDialog  CreateDialogRequest
+     * @return CreateDialogResponse
+     */
+    @Override
+    public CompletableFuture<CreateDialogResponse> createDialog(CreateDialogRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateDialog").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/virtualHuman/dialog/create").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDialogResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDialogResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateDocsSummaryTask  CreateDocsSummaryTaskRequest
      * @return CreateDocsSummaryTaskResponse
      */
@@ -221,6 +239,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GenDocQaResult  GenDocQaResultRequest
+     * @return GenDocQaResultResponse
+     */
+    @Override
+    public CompletableFuture<GenDocQaResultResponse> genDocQaResult(GenDocQaResultRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GenDocQaResult").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/virtualHuman/qa/parse").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenDocQaResultResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenDocQaResultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAppConfig  GetAppConfigRequest
      * @return GetAppConfigResponse
      */
@@ -233,6 +269,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAppConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetChatQuestionResp  GetChatQuestionRespRequest
+     * @return GetChatQuestionRespResponse
+     */
+    @Override
+    public CompletableFuture<GetChatQuestionRespResponse> getChatQuestionResp(GetChatQuestionRespRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetChatQuestionResp").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/virtualHuman/chat/query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetChatQuestionRespResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetChatQuestionRespResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -619,6 +673,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of SubmitChatQuestion  SubmitChatQuestionRequest
+     * @return SubmitChatQuestionResponse
+     */
+    @Override
+    public CompletableFuture<SubmitChatQuestionResponse> submitChatQuestion(SubmitChatQuestionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SubmitChatQuestion").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/virtualHuman/chat/submit").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitChatQuestionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitChatQuestionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateDocument  UpdateDocumentRequest
      * @return UpdateDocumentResponse
      */
@@ -649,6 +721,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateLibraryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateQaLibrary  UpdateQaLibraryRequest
+     * @return UpdateQaLibraryResponse
+     */
+    @Override
+    public CompletableFuture<UpdateQaLibraryResponse> updateQaLibrary(UpdateQaLibraryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateQaLibrary").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/virtualHuman/qa/upload").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateQaLibraryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateQaLibraryResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
