@@ -32,10 +32,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateJobResponse> createJob(CreateJobRequest request);
 
     /**
+     * @param request the request parameters of CreatePool  CreatePoolRequest
+     * @return CreatePoolResponse
+     */
+    CompletableFuture<CreatePoolResponse> createPool(CreatePoolRequest request);
+
+    /**
      * @param request the request parameters of DeleteJobs  DeleteJobsRequest
      * @return DeleteJobsResponse
      */
     CompletableFuture<DeleteJobsResponse> deleteJobs(DeleteJobsRequest request);
+
+    /**
+     * @param request the request parameters of DeletePool  DeletePoolRequest
+     * @return DeletePoolResponse
+     */
+    CompletableFuture<DeletePoolResponse> deletePool(DeletePoolRequest request);
 
     /**
      * @param request the request parameters of DescribeJobMetricData  DescribeJobMetricDataRequest
@@ -68,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetJobResponse> getJob(GetJobRequest request);
 
     /**
+     * @param request the request parameters of GetPool  GetPoolRequest
+     * @return GetPoolResponse
+     */
+    CompletableFuture<GetPoolResponse> getPool(GetPoolRequest request);
+
+    /**
      * @param request the request parameters of ListExecutors  ListExecutorsRequest
      * @return ListExecutorsResponse
      */
@@ -92,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request);
 
     /**
+     * @param request the request parameters of ListPools  ListPoolsRequest
+     * @return ListPoolsResponse
+     */
+    CompletableFuture<ListPoolsResponse> listPools(ListPoolsRequest request);
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -114,5 +138,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnTagResourcesResponse
      */
     CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of UpdatePool  UpdatePoolRequest
+     * @return UpdatePoolResponse
+     */
+    CompletableFuture<UpdatePoolResponse> updatePool(UpdatePoolRequest request);
 
 }

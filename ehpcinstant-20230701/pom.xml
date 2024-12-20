@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-ehpcinstant20230701</artifactId>
-  <version>1.0.7</version>
+  <version>1.0.8</version>
   <packaging>jar</packaging>
   <name>alibabacloud-ehpcinstant20230701</name>
   <description>Alibaba Cloud EhpcInstant (20230701) Async SDK for Java
