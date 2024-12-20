@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class Container extends TeaModel {
     private String command;
 
     @com.aliyun.core.annotation.NameInMap("EnvironmentVariables")
-    private java.util.Map < String, String > environmentVariables;
+    private java.util.Map<String, String> environmentVariables;
 
     @com.aliyun.core.annotation.NameInMap("Image")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -98,7 +103,7 @@ public class Container extends TeaModel {
     /**
      * @return environmentVariables
      */
-    public java.util.Map < String, String > getEnvironmentVariables() {
+    public java.util.Map<String, String> getEnvironmentVariables() {
         return this.environmentVariables;
     }
 
@@ -182,7 +187,7 @@ public class Container extends TeaModel {
     public static final class Builder {
         private String args; 
         private String command; 
-        private java.util.Map < String, String > environmentVariables; 
+        private java.util.Map<String, String> environmentVariables; 
         private String image; 
         private ImageRegistryConfig imageRegistryConfig; 
         private MetricsCollectConfig metricsCollectConfig; 
@@ -214,7 +219,7 @@ public class Container extends TeaModel {
         /**
          * EnvironmentVariables.
          */
-        public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
+        public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }

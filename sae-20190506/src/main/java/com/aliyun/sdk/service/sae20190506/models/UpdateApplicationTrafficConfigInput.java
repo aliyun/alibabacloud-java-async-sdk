@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateApplicationTrafficConfigInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("additionalVersionWeight")
-    private java.util.Map < String, Float > additionalVersionWeight;
+    private java.util.Map<String, Float> additionalVersionWeight;
 
     @com.aliyun.core.annotation.NameInMap("resolvePolicy")
     private String resolvePolicy;
@@ -43,7 +48,7 @@ public class UpdateApplicationTrafficConfigInput extends TeaModel {
     /**
      * @return additionalVersionWeight
      */
-    public java.util.Map < String, Float > getAdditionalVersionWeight() {
+    public java.util.Map<String, Float> getAdditionalVersionWeight() {
         return this.additionalVersionWeight;
     }
 
@@ -69,7 +74,7 @@ public class UpdateApplicationTrafficConfigInput extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, Float > additionalVersionWeight; 
+        private java.util.Map<String, Float> additionalVersionWeight; 
         private String resolvePolicy; 
         private RoutePolicy routePolicy; 
         private String versionId; 
@@ -77,7 +82,7 @@ public class UpdateApplicationTrafficConfigInput extends TeaModel {
         /**
          * additionalVersionWeight.
          */
-        public Builder additionalVersionWeight(java.util.Map < String, Float > additionalVersionWeight) {
+        public Builder additionalVersionWeight(java.util.Map<String, Float> additionalVersionWeight) {
             this.additionalVersionWeight = additionalVersionWeight;
             return this;
         }

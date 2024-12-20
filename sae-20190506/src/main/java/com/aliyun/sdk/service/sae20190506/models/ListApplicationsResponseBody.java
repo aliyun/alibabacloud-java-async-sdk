@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -355,7 +360,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private String scaleRuleType;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Children(Builder builder) {
             this.appDeletingStatus = builder.appDeletingStatus;
@@ -492,7 +497,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -512,7 +517,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private Integer runningInstances; 
             private Boolean scaleRuleEnabled; 
             private String scaleRuleType; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * AppDeletingStatus.
@@ -637,7 +642,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -745,7 +750,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private String baseAppId;
 
         @com.aliyun.core.annotation.NameInMap("Children")
-        private java.util.List < Children> children;
+        private java.util.List<Children> children;
 
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -781,7 +786,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private Integer runningInstances;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < ApplicationsTags> tags;
+        private java.util.List<ApplicationsTags> tags;
 
         private Applications(Builder builder) {
             this.appDeletingStatus = builder.appDeletingStatus;
@@ -850,7 +855,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         /**
          * @return children
          */
-        public java.util.List < Children> getChildren() {
+        public java.util.List<Children> getChildren() {
             return this.children;
         }
 
@@ -934,7 +939,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < ApplicationsTags> getTags() {
+        public java.util.List<ApplicationsTags> getTags() {
             return this.tags;
         }
 
@@ -944,7 +949,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
             private String baseAppId; 
-            private java.util.List < Children> children; 
+            private java.util.List<Children> children; 
             private Integer cpu; 
             private String imageUrl; 
             private Integer instances; 
@@ -956,7 +961,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String programmingLanguage; 
             private String regionId; 
             private Integer runningInstances; 
-            private java.util.List < ApplicationsTags> tags; 
+            private java.util.List<ApplicationsTags> tags; 
 
             /**
              * <p>Indicates whether the application is being deleted. Valid values:</p>
@@ -1017,7 +1022,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             /**
              * Children.
              */
-            public Builder children(java.util.List < Children> children) {
+            public Builder children(java.util.List<Children> children) {
                 this.children = children;
                 return this;
             }
@@ -1152,7 +1157,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             /**
              * <p>The tags of the application.</p>
              */
-            public Builder tags(java.util.List < ApplicationsTags> tags) {
+            public Builder tags(java.util.List<ApplicationsTags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -1172,7 +1177,7 @@ public class ListApplicationsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Applications")
-        private java.util.List < Applications> applications;
+        private java.util.List<Applications> applications;
 
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -1201,7 +1206,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         /**
          * @return applications
          */
-        public java.util.List < Applications> getApplications() {
+        public java.util.List<Applications> getApplications() {
             return this.applications;
         }
 
@@ -1227,7 +1232,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Applications> applications; 
+            private java.util.List<Applications> applications; 
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalSize; 
@@ -1235,7 +1240,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             /**
              * <p>The applications.</p>
              */
-            public Builder applications(java.util.List < Applications> applications) {
+            public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
                 return this;
             }

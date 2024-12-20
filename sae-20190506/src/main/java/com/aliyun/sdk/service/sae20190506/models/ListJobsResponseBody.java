@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -378,7 +383,7 @@ public class ListJobsResponseBody extends TeaModel {
         private Boolean suspend;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TriggerConfig")
         private String triggerConfig;
@@ -527,7 +532,7 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -555,7 +560,7 @@ public class ListJobsResponseBody extends TeaModel {
             private String regionId; 
             private Long succeeded; 
             private Boolean suspend; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String triggerConfig; 
 
             /**
@@ -741,7 +746,7 @@ public class ListJobsResponseBody extends TeaModel {
             /**
              * <p>The tag of the job template.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -769,7 +774,7 @@ public class ListJobsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Applications")
-        private java.util.List < Applications> applications;
+        private java.util.List<Applications> applications;
 
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -798,7 +803,7 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * @return applications
          */
-        public java.util.List < Applications> getApplications() {
+        public java.util.List<Applications> getApplications() {
             return this.applications;
         }
 
@@ -824,7 +829,7 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Applications> applications; 
+            private java.util.List<Applications> applications; 
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalSize; 
@@ -832,7 +837,7 @@ public class ListJobsResponseBody extends TeaModel {
             /**
              * <p>The job templates.</p>
              */
-            public Builder applications(java.util.List < Applications> applications) {
+            public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
                 return this;
             }

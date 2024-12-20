@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -70,7 +75,7 @@ public class Application extends TeaModel {
     private Boolean enableArmsAdvanced;
 
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
-    private java.util.Map < String, String > environmentVariables;
+    private java.util.Map<String, String> environmentVariables;
 
     @com.aliyun.core.annotation.NameInMap("gpuMemorySize")
     private Integer gpuMemorySize;
@@ -109,10 +114,10 @@ public class Application extends TeaModel {
     private String lastModifiedTime;
 
     @com.aliyun.core.annotation.NameInMap("layers")
-    private java.util.List < String > layers;
+    private java.util.List<String> layers;
 
     @com.aliyun.core.annotation.NameInMap("layersArnV2")
-    private java.util.List < String > layersArnV2;
+    private java.util.List<String> layersArnV2;
 
     @com.aliyun.core.annotation.NameInMap("livenessProbe")
     private Probe livenessProbe;
@@ -371,7 +376,7 @@ public class Application extends TeaModel {
     /**
      * @return environmentVariables
      */
-    public java.util.Map < String, String > getEnvironmentVariables() {
+    public java.util.Map<String, String> getEnvironmentVariables() {
         return this.environmentVariables;
     }
 
@@ -462,14 +467,14 @@ public class Application extends TeaModel {
     /**
      * @return layers
      */
-    public java.util.List < String > getLayers() {
+    public java.util.List<String> getLayers() {
         return this.layers;
     }
 
     /**
      * @return layersArnV2
      */
-    public java.util.List < String > getLayersArnV2() {
+    public java.util.List<String> getLayersArnV2() {
         return this.layersArnV2;
     }
 
@@ -626,7 +631,7 @@ public class Application extends TeaModel {
         private Integer diskSize; 
         private Boolean enableAppMetric; 
         private Boolean enableArmsAdvanced; 
-        private java.util.Map < String, String > environmentVariables; 
+        private java.util.Map<String, String> environmentVariables; 
         private Integer gpuMemorySize; 
         private String handler; 
         private HTTPTriggerConfig httpTriggerConfig; 
@@ -639,8 +644,8 @@ public class Application extends TeaModel {
         private String instanceType; 
         private Boolean internetAccess; 
         private String lastModifiedTime; 
-        private java.util.List < String > layers; 
-        private java.util.List < String > layersArnV2; 
+        private java.util.List<String> layers; 
+        private java.util.List<String> layersArnV2; 
         private Probe livenessProbe; 
         private LogConfig logConfig; 
         private Integer memorySize; 
@@ -816,7 +821,7 @@ public class Application extends TeaModel {
         /**
          * environmentVariables.
          */
-        public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
+        public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
@@ -920,7 +925,7 @@ public class Application extends TeaModel {
         /**
          * layers.
          */
-        public Builder layers(java.util.List < String > layers) {
+        public Builder layers(java.util.List<String> layers) {
             this.layers = layers;
             return this;
         }
@@ -928,7 +933,7 @@ public class Application extends TeaModel {
         /**
          * layersArnV2.
          */
-        public Builder layersArnV2(java.util.List < String > layersArnV2) {
+        public Builder layersArnV2(java.util.List<String> layersArnV2) {
             this.layersArnV2 = layersArnV2;
             return this;
         }

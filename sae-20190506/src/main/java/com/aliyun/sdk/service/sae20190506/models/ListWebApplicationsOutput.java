@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListWebApplicationsOutput extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("WebApplicationWithInstanceCount")
-    private java.util.List < WebApplicationWithInstanceCount > webApplicationWithInstanceCount;
+    private java.util.List<WebApplicationWithInstanceCount> webApplicationWithInstanceCount;
 
     private ListWebApplicationsOutput(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -41,13 +46,13 @@ public class ListWebApplicationsOutput extends TeaModel {
     /**
      * @return webApplicationWithInstanceCount
      */
-    public java.util.List < WebApplicationWithInstanceCount > getWebApplicationWithInstanceCount() {
+    public java.util.List<WebApplicationWithInstanceCount> getWebApplicationWithInstanceCount() {
         return this.webApplicationWithInstanceCount;
     }
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < WebApplicationWithInstanceCount > webApplicationWithInstanceCount; 
+        private java.util.List<WebApplicationWithInstanceCount> webApplicationWithInstanceCount; 
 
         /**
          * NextToken.
@@ -60,7 +65,7 @@ public class ListWebApplicationsOutput extends TeaModel {
         /**
          * WebApplicationWithInstanceCount.
          */
-        public Builder webApplicationWithInstanceCount(java.util.List < WebApplicationWithInstanceCount > webApplicationWithInstanceCount) {
+        public Builder webApplicationWithInstanceCount(java.util.List<WebApplicationWithInstanceCount> webApplicationWithInstanceCount) {
             this.webApplicationWithInstanceCount = webApplicationWithInstanceCount;
             return this;
         }

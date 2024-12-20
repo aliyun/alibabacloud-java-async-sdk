@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListApplicationVersionsOutput extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("versions")
-    private java.util.List < Version > versions;
+    private java.util.List<Version> versions;
 
     private ListApplicationVersionsOutput(Builder builder) {
         this.direction = builder.direction;
@@ -63,7 +68,7 @@ public class ListApplicationVersionsOutput extends TeaModel {
     /**
      * @return versions
      */
-    public java.util.List < Version > getVersions() {
+    public java.util.List<Version> getVersions() {
         return this.versions;
     }
 
@@ -71,7 +76,7 @@ public class ListApplicationVersionsOutput extends TeaModel {
         private String direction; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Version > versions; 
+        private java.util.List<Version> versions; 
 
         /**
          * direction.
@@ -100,7 +105,7 @@ public class ListApplicationVersionsOutput extends TeaModel {
         /**
          * versions.
          */
-        public Builder versions(java.util.List < Version > versions) {
+        public Builder versions(java.util.List<Version> versions) {
             this.versions = versions;
             return this;
         }

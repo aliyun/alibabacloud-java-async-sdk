@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListInstancesMetricsOutput extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("metricsList")
-    private java.util.List < InstanceMetricInfo > metricsList;
+    private java.util.List<InstanceMetricInfo> metricsList;
 
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
@@ -53,7 +58,7 @@ public class ListInstancesMetricsOutput extends TeaModel {
     /**
      * @return metricsList
      */
-    public java.util.List < InstanceMetricInfo > getMetricsList() {
+    public java.util.List<InstanceMetricInfo> getMetricsList() {
         return this.metricsList;
     }
 
@@ -80,7 +85,7 @@ public class ListInstancesMetricsOutput extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < InstanceMetricInfo > metricsList; 
+        private java.util.List<InstanceMetricInfo> metricsList; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Integer totalCount; 
@@ -96,7 +101,7 @@ public class ListInstancesMetricsOutput extends TeaModel {
         /**
          * metricsList.
          */
-        public Builder metricsList(java.util.List < InstanceMetricInfo > metricsList) {
+        public Builder metricsList(java.util.List<InstanceMetricInfo> metricsList) {
             this.metricsList = metricsList;
             return this;
         }

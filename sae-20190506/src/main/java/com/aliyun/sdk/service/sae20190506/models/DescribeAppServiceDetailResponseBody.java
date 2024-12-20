@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -313,19 +318,19 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         private String nameDetail;
 
         @com.aliyun.core.annotation.NameInMap("ParameterDefinitions")
-        private java.util.List < ParameterDefinitions> parameterDefinitions;
+        private java.util.List<ParameterDefinitions> parameterDefinitions;
 
         @com.aliyun.core.annotation.NameInMap("ParameterDetails")
-        private java.util.List < String > parameterDetails;
+        private java.util.List<String> parameterDetails;
 
         @com.aliyun.core.annotation.NameInMap("ParameterTypes")
-        private java.util.List < String > parameterTypes;
+        private java.util.List<String> parameterTypes;
 
         @com.aliyun.core.annotation.NameInMap("Paths")
-        private java.util.List < String > paths;
+        private java.util.List<String> paths;
 
         @com.aliyun.core.annotation.NameInMap("RequestMethods")
-        private java.util.List < String > requestMethods;
+        private java.util.List<String> requestMethods;
 
         @com.aliyun.core.annotation.NameInMap("ReturnDetails")
         private String returnDetails;
@@ -378,35 +383,35 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         /**
          * @return parameterDefinitions
          */
-        public java.util.List < ParameterDefinitions> getParameterDefinitions() {
+        public java.util.List<ParameterDefinitions> getParameterDefinitions() {
             return this.parameterDefinitions;
         }
 
         /**
          * @return parameterDetails
          */
-        public java.util.List < String > getParameterDetails() {
+        public java.util.List<String> getParameterDetails() {
             return this.parameterDetails;
         }
 
         /**
          * @return parameterTypes
          */
-        public java.util.List < String > getParameterTypes() {
+        public java.util.List<String> getParameterTypes() {
             return this.parameterTypes;
         }
 
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
         /**
          * @return requestMethods
          */
-        public java.util.List < String > getRequestMethods() {
+        public java.util.List<String> getRequestMethods() {
             return this.requestMethods;
         }
 
@@ -428,11 +433,11 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             private String methodController; 
             private String name; 
             private String nameDetail; 
-            private java.util.List < ParameterDefinitions> parameterDefinitions; 
-            private java.util.List < String > parameterDetails; 
-            private java.util.List < String > parameterTypes; 
-            private java.util.List < String > paths; 
-            private java.util.List < String > requestMethods; 
+            private java.util.List<ParameterDefinitions> parameterDefinitions; 
+            private java.util.List<String> parameterDetails; 
+            private java.util.List<String> parameterTypes; 
+            private java.util.List<String> paths; 
+            private java.util.List<String> requestMethods; 
             private String returnDetails; 
             private String returnType; 
 
@@ -472,7 +477,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             /**
              * <p>The definition of the parameter.</p>
              */
-            public Builder parameterDefinitions(java.util.List < ParameterDefinitions> parameterDefinitions) {
+            public Builder parameterDefinitions(java.util.List<ParameterDefinitions> parameterDefinitions) {
                 this.parameterDefinitions = parameterDefinitions;
                 return this;
             }
@@ -480,7 +485,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             /**
              * <p>The details of the parameters.</p>
              */
-            public Builder parameterDetails(java.util.List < String > parameterDetails) {
+            public Builder parameterDetails(java.util.List<String> parameterDetails) {
                 this.parameterDetails = parameterDetails;
                 return this;
             }
@@ -488,7 +493,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             /**
              * <p>The types of the parameters.</p>
              */
-            public Builder parameterTypes(java.util.List < String > parameterTypes) {
+            public Builder parameterTypes(java.util.List<String> parameterTypes) {
                 this.parameterTypes = parameterTypes;
                 return this;
             }
@@ -497,7 +502,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
              * <p>The request paths. Format:</p>
              * <p><code>/path</code></p>
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }
@@ -509,7 +514,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
              * <li><strong>ALL</strong></li>
              * </ul>
              */
-            public Builder requestMethods(java.util.List < String > requestMethods) {
+            public Builder requestMethods(java.util.List<String> requestMethods) {
                 this.requestMethods = requestMethods;
                 return this;
             }
@@ -560,22 +565,22 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         private String group;
 
         @com.aliyun.core.annotation.NameInMap("Metadata")
-        private java.util.Map < String, ? > metadata;
+        private java.util.Map<String, ?> metadata;
 
         @com.aliyun.core.annotation.NameInMap("Methods")
-        private java.util.List < Methods> methods;
+        private java.util.List<Methods> methods;
 
         @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         @com.aliyun.core.annotation.NameInMap("ServicePorts")
-        private java.util.List < Long > servicePorts;
+        private java.util.List<Long> servicePorts;
 
         @com.aliyun.core.annotation.NameInMap("ServiceProtocol")
         private String serviceProtocol;
 
         @com.aliyun.core.annotation.NameInMap("ServiceTags")
-        private java.util.List < String > serviceTags;
+        private java.util.List<String> serviceTags;
 
         @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
@@ -633,14 +638,14 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         /**
          * @return metadata
          */
-        public java.util.Map < String, ? > getMetadata() {
+        public java.util.Map<String, ?> getMetadata() {
             return this.metadata;
         }
 
         /**
          * @return methods
          */
-        public java.util.List < Methods> getMethods() {
+        public java.util.List<Methods> getMethods() {
             return this.methods;
         }
 
@@ -654,7 +659,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         /**
          * @return servicePorts
          */
-        public java.util.List < Long > getServicePorts() {
+        public java.util.List<Long> getServicePorts() {
             return this.servicePorts;
         }
 
@@ -668,7 +673,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         /**
          * @return serviceTags
          */
-        public java.util.List < String > getServiceTags() {
+        public java.util.List<String> getServiceTags() {
             return this.serviceTags;
         }
 
@@ -697,12 +702,12 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             private String dubboApplicationName; 
             private String edasAppName; 
             private String group; 
-            private java.util.Map < String, ? > metadata; 
-            private java.util.List < Methods> methods; 
+            private java.util.Map<String, ?> metadata; 
+            private java.util.List<Methods> methods; 
             private String serviceName; 
-            private java.util.List < Long > servicePorts; 
+            private java.util.List<Long> servicePorts; 
             private String serviceProtocol; 
-            private java.util.List < String > serviceTags; 
+            private java.util.List<String> serviceTags; 
             private String serviceType; 
             private String springApplicationName; 
             private String version; 
@@ -746,7 +751,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{side: &quot;provider&quot;, port: &quot;18081&quot;, preserved: {register: {source: &quot;SPRING_CLOUD&quot;}},…}</p>
              */
-            public Builder metadata(java.util.Map < String, ? > metadata) {
+            public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
                 return this;
             }
@@ -754,7 +759,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             /**
              * <p>The methods.</p>
              */
-            public Builder methods(java.util.List < Methods> methods) {
+            public Builder methods(java.util.List<Methods> methods) {
                 this.methods = methods;
                 return this;
             }
@@ -773,7 +778,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             /**
              * ServicePorts.
              */
-            public Builder servicePorts(java.util.List < Long > servicePorts) {
+            public Builder servicePorts(java.util.List<Long> servicePorts) {
                 this.servicePorts = servicePorts;
                 return this;
             }
@@ -789,7 +794,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             /**
              * ServiceTags.
              */
-            public Builder serviceTags(java.util.List < String > serviceTags) {
+            public Builder serviceTags(java.util.List<String> serviceTags) {
                 this.serviceTags = serviceTags;
                 return this;
             }

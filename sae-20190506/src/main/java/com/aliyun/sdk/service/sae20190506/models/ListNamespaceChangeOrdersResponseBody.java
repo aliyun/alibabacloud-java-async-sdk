@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -590,7 +595,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeOrderList")
-        private java.util.List < ChangeOrderList> changeOrderList;
+        private java.util.List<ChangeOrderList> changeOrderList;
 
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -619,7 +624,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         /**
          * @return changeOrderList
          */
-        public java.util.List < ChangeOrderList> getChangeOrderList() {
+        public java.util.List<ChangeOrderList> getChangeOrderList() {
             return this.changeOrderList;
         }
 
@@ -645,7 +650,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ChangeOrderList> changeOrderList; 
+            private java.util.List<ChangeOrderList> changeOrderList; 
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalSize; 
@@ -653,7 +658,7 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
             /**
              * <p>The list of change orders.</p>
              */
-            public Builder changeOrderList(java.util.List < ChangeOrderList> changeOrderList) {
+            public Builder changeOrderList(java.util.List<ChangeOrderList> changeOrderList) {
                 this.changeOrderList = changeOrderList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class InstanceExecAuthorizationInputOptions extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("command")
-    private java.util.List < String > command;
+    private java.util.List<String> command;
 
     @com.aliyun.core.annotation.NameInMap("stderr")
     private Boolean stderr;
@@ -46,7 +51,7 @@ public class InstanceExecAuthorizationInputOptions extends TeaModel {
     /**
      * @return command
      */
-    public java.util.List < String > getCommand() {
+    public java.util.List<String> getCommand() {
         return this.command;
     }
 
@@ -79,7 +84,7 @@ public class InstanceExecAuthorizationInputOptions extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > command; 
+        private java.util.List<String> command; 
         private Boolean stderr; 
         private Boolean stdin; 
         private Boolean stdout; 
@@ -88,7 +93,7 @@ public class InstanceExecAuthorizationInputOptions extends TeaModel {
         /**
          * command.
          */
-        public Builder command(java.util.List < String > command) {
+        public Builder command(java.util.List<String> command) {
             this.command = command;
             return this;
         }

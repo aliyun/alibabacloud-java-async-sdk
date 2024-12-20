@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PriceEstimateOutput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Apps")
-    private java.util.List < Apps> apps;
+    private java.util.List<Apps> apps;
 
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("PostPayItems")
-    private java.util.List < PostPayItems> postPayItems;
+    private java.util.List<PostPayItems> postPayItems;
 
     @com.aliyun.core.annotation.NameInMap("PostPayTotalPrice")
     private Float postPayTotalPrice;
@@ -46,21 +51,21 @@ public class PriceEstimateOutput extends TeaModel {
     /**
      * @return apps
      */
-    public java.util.List < Apps> getApps() {
+    public java.util.List<Apps> getApps() {
         return this.apps;
     }
 
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
     /**
      * @return postPayItems
      */
-    public java.util.List < PostPayItems> getPostPayItems() {
+    public java.util.List<PostPayItems> getPostPayItems() {
         return this.postPayItems;
     }
 
@@ -79,16 +84,16 @@ public class PriceEstimateOutput extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Apps> apps; 
-        private java.util.List < Items> items; 
-        private java.util.List < PostPayItems> postPayItems; 
+        private java.util.List<Apps> apps; 
+        private java.util.List<Items> items; 
+        private java.util.List<PostPayItems> postPayItems; 
         private Float postPayTotalPrice; 
         private Float totalPrice; 
 
         /**
          * Apps.
          */
-        public Builder apps(java.util.List < Apps> apps) {
+        public Builder apps(java.util.List<Apps> apps) {
             this.apps = apps;
             return this;
         }
@@ -96,7 +101,7 @@ public class PriceEstimateOutput extends TeaModel {
         /**
          * Items.
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -104,7 +109,7 @@ public class PriceEstimateOutput extends TeaModel {
         /**
          * PostPayItems.
          */
-        public Builder postPayItems(java.util.List < PostPayItems> postPayItems) {
+        public Builder postPayItems(java.util.List<PostPayItems> postPayItems) {
             this.postPayItems = postPayItems;
             return this;
         }
@@ -232,7 +237,7 @@ public class PriceEstimateOutput extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Usages")
-        private java.util.List < Usages> usages;
+        private java.util.List<Usages> usages;
 
         private Apps(Builder builder) {
             this.feature = builder.feature;
@@ -265,14 +270,14 @@ public class PriceEstimateOutput extends TeaModel {
         /**
          * @return usages
          */
-        public java.util.List < Usages> getUsages() {
+        public java.util.List<Usages> getUsages() {
             return this.usages;
         }
 
         public static final class Builder {
             private PriceEstimateFeature feature; 
             private Long id; 
-            private java.util.List < Usages> usages; 
+            private java.util.List<Usages> usages; 
 
             /**
              * Feature.
@@ -293,7 +298,7 @@ public class PriceEstimateOutput extends TeaModel {
             /**
              * Usages.
              */
-            public Builder usages(java.util.List < Usages> usages) {
+            public Builder usages(java.util.List<Usages> usages) {
                 this.usages = usages;
                 return this;
             }
@@ -322,7 +327,7 @@ public class PriceEstimateOutput extends TeaModel {
         private Float price;
 
         @com.aliyun.core.annotation.NameInMap("RegionIds")
-        private java.util.List < String > regionIds;
+        private java.util.List<String> regionIds;
 
         @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
@@ -367,7 +372,7 @@ public class PriceEstimateOutput extends TeaModel {
         /**
          * @return regionIds
          */
-        public java.util.List < String > getRegionIds() {
+        public java.util.List<String> getRegionIds() {
             return this.regionIds;
         }
 
@@ -382,7 +387,7 @@ public class PriceEstimateOutput extends TeaModel {
             private Long begin; 
             private Long end; 
             private Float price; 
-            private java.util.List < String > regionIds; 
+            private java.util.List<String> regionIds; 
             private String unit; 
 
             /**
@@ -412,7 +417,7 @@ public class PriceEstimateOutput extends TeaModel {
             /**
              * RegionIds.
              */
-            public Builder regionIds(java.util.List < String > regionIds) {
+            public Builder regionIds(java.util.List<String> regionIds) {
                 this.regionIds = regionIds;
                 return this;
             }
@@ -452,7 +457,7 @@ public class PriceEstimateOutput extends TeaModel {
         private Float price;
 
         @com.aliyun.core.annotation.NameInMap("Steps")
-        private java.util.List < Steps> steps;
+        private java.util.List<Steps> steps;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -509,7 +514,7 @@ public class PriceEstimateOutput extends TeaModel {
         /**
          * @return steps
          */
-        public java.util.List < Steps> getSteps() {
+        public java.util.List<Steps> getSteps() {
             return this.steps;
         }
 
@@ -532,7 +537,7 @@ public class PriceEstimateOutput extends TeaModel {
             private Long count; 
             private String id; 
             private Float price; 
-            private java.util.List < Steps> steps; 
+            private java.util.List<Steps> steps; 
             private String type; 
             private String unit; 
 
@@ -571,7 +576,7 @@ public class PriceEstimateOutput extends TeaModel {
             /**
              * Steps.
              */
-            public Builder steps(java.util.List < Steps> steps) {
+            public Builder steps(java.util.List<Steps> steps) {
                 this.steps = steps;
                 return this;
             }
@@ -616,7 +621,7 @@ public class PriceEstimateOutput extends TeaModel {
         private Float price;
 
         @com.aliyun.core.annotation.NameInMap("RegionIds")
-        private java.util.List < String > regionIds;
+        private java.util.List<String> regionIds;
 
         @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
@@ -661,7 +666,7 @@ public class PriceEstimateOutput extends TeaModel {
         /**
          * @return regionIds
          */
-        public java.util.List < String > getRegionIds() {
+        public java.util.List<String> getRegionIds() {
             return this.regionIds;
         }
 
@@ -676,7 +681,7 @@ public class PriceEstimateOutput extends TeaModel {
             private Long begin; 
             private Long end; 
             private Float price; 
-            private java.util.List < String > regionIds; 
+            private java.util.List<String> regionIds; 
             private String unit; 
 
             /**
@@ -706,7 +711,7 @@ public class PriceEstimateOutput extends TeaModel {
             /**
              * RegionIds.
              */
-            public Builder regionIds(java.util.List < String > regionIds) {
+            public Builder regionIds(java.util.List<String> regionIds) {
                 this.regionIds = regionIds;
                 return this;
             }
@@ -746,7 +751,7 @@ public class PriceEstimateOutput extends TeaModel {
         private Float price;
 
         @com.aliyun.core.annotation.NameInMap("Steps")
-        private java.util.List < PostPayItemsSteps> steps;
+        private java.util.List<PostPayItemsSteps> steps;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -803,7 +808,7 @@ public class PriceEstimateOutput extends TeaModel {
         /**
          * @return steps
          */
-        public java.util.List < PostPayItemsSteps> getSteps() {
+        public java.util.List<PostPayItemsSteps> getSteps() {
             return this.steps;
         }
 
@@ -826,7 +831,7 @@ public class PriceEstimateOutput extends TeaModel {
             private Long count; 
             private String id; 
             private Float price; 
-            private java.util.List < PostPayItemsSteps> steps; 
+            private java.util.List<PostPayItemsSteps> steps; 
             private String type; 
             private String unit; 
 
@@ -865,7 +870,7 @@ public class PriceEstimateOutput extends TeaModel {
             /**
              * Steps.
              */
-            public Builder steps(java.util.List < PostPayItemsSteps> steps) {
+            public Builder steps(java.util.List<PostPayItemsSteps> steps) {
                 this.steps = steps;
                 return this;
             }

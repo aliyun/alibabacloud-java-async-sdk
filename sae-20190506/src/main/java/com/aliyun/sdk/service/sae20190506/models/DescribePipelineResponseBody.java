@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -473,7 +478,7 @@ public class DescribePipelineResponseBody extends TeaModel {
         private Integer status;
 
         @com.aliyun.core.annotation.NameInMap("TaskList")
-        private java.util.List < TaskList> taskList;
+        private java.util.List<TaskList> taskList;
 
         private StageList(Builder builder) {
             this.executorType = builder.executorType;
@@ -522,7 +527,7 @@ public class DescribePipelineResponseBody extends TeaModel {
         /**
          * @return taskList
          */
-        public java.util.List < TaskList> getTaskList() {
+        public java.util.List<TaskList> getTaskList() {
             return this.taskList;
         }
 
@@ -531,7 +536,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             private String stageId; 
             private String stageName; 
             private Integer status; 
-            private java.util.List < TaskList> taskList; 
+            private java.util.List<TaskList> taskList; 
 
             /**
              * <p>The execution type of the stage. Valid values:</p>
@@ -591,7 +596,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             /**
              * <p>The list of task statuses.</p>
              */
-            public Builder taskList(java.util.List < TaskList> taskList) {
+            public Builder taskList(java.util.List<TaskList> taskList) {
                 this.taskList = taskList;
                 return this;
             }
@@ -632,7 +637,7 @@ public class DescribePipelineResponseBody extends TeaModel {
         private Boolean showBatch;
 
         @com.aliyun.core.annotation.NameInMap("StageList")
-        private java.util.List < StageList> stageList;
+        private java.util.List<StageList> stageList;
 
         private Data(Builder builder) {
             this.coStatus = builder.coStatus;
@@ -705,7 +710,7 @@ public class DescribePipelineResponseBody extends TeaModel {
         /**
          * @return stageList
          */
-        public java.util.List < StageList> getStageList() {
+        public java.util.List<StageList> getStageList() {
             return this.stageList;
         }
 
@@ -717,7 +722,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             private String pipelineName; 
             private Integer pipelineStatus; 
             private Boolean showBatch; 
-            private java.util.List < StageList> stageList; 
+            private java.util.List<StageList> stageList; 
 
             /**
              * <p>The status of the change order for the batch.</p>
@@ -811,7 +816,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             /**
              * <p>The list of batch processing stages.</p>
              */
-            public Builder stageList(java.util.List < StageList> stageList) {
+            public Builder stageList(java.util.List<StageList> stageList) {
                 this.stageList = stageList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SidecarContainerConfig</p>
  */
 public class SidecarContainerConfig extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AcrInstanceId")
+    private String acrInstanceId;
+
     @com.aliyun.core.annotation.NameInMap("Command")
     private String command;
 
@@ -40,6 +48,7 @@ public class SidecarContainerConfig extends TeaModel {
     private String name;
 
     private SidecarContainerConfig(Builder builder) {
+        this.acrInstanceId = builder.acrInstanceId;
         this.command = builder.command;
         this.commandArgs = builder.commandArgs;
         this.configMapMountDesc = builder.configMapMountDesc;
@@ -57,6 +66,13 @@ public class SidecarContainerConfig extends TeaModel {
 
     public static SidecarContainerConfig create() {
         return builder().build();
+    }
+
+    /**
+     * @return acrInstanceId
+     */
+    public String getAcrInstanceId() {
+        return this.acrInstanceId;
     }
 
     /**
@@ -123,6 +139,7 @@ public class SidecarContainerConfig extends TeaModel {
     }
 
     public static final class Builder {
+        private String acrInstanceId; 
         private String command; 
         private String commandArgs; 
         private String configMapMountDesc; 
@@ -132,6 +149,14 @@ public class SidecarContainerConfig extends TeaModel {
         private String imageUrl; 
         private Integer memory; 
         private String name; 
+
+        /**
+         * AcrInstanceId.
+         */
+        public Builder acrInstanceId(String acrInstanceId) {
+            this.acrInstanceId = acrInstanceId;
+            return this;
+        }
 
         /**
          * Command.

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListWebApplicationRevisionsOutput extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("Revisions")
-    private java.util.List < Revision > revisions;
+    private java.util.List<Revision> revisions;
 
     private ListWebApplicationRevisionsOutput(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -41,13 +46,13 @@ public class ListWebApplicationRevisionsOutput extends TeaModel {
     /**
      * @return revisions
      */
-    public java.util.List < Revision > getRevisions() {
+    public java.util.List<Revision> getRevisions() {
         return this.revisions;
     }
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < Revision > revisions; 
+        private java.util.List<Revision> revisions; 
 
         /**
          * NextToken.
@@ -60,7 +65,7 @@ public class ListWebApplicationRevisionsOutput extends TeaModel {
         /**
          * Revisions.
          */
-        public Builder revisions(java.util.List < Revision > revisions) {
+        public Builder revisions(java.util.List<Revision> revisions) {
             this.revisions = revisions;
             return this;
         }

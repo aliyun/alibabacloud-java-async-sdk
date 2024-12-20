@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -443,7 +448,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         private Integer currentPage;
 
         @com.aliyun.core.annotation.NameInMap("Namespaces")
-        private java.util.List < Namespaces> namespaces;
+        private java.util.List<Namespaces> namespaces;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
@@ -476,7 +481,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         /**
          * @return namespaces
          */
-        public java.util.List < Namespaces> getNamespaces() {
+        public java.util.List<Namespaces> getNamespaces() {
             return this.namespaces;
         }
 
@@ -496,7 +501,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer currentPage; 
-            private java.util.List < Namespaces> namespaces; 
+            private java.util.List<Namespaces> namespaces; 
             private Integer pageSize; 
             private Integer totalSize; 
 
@@ -514,7 +519,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             /**
              * <p>The list of namespaces.</p>
              */
-            public Builder namespaces(java.util.List < Namespaces> namespaces) {
+            public Builder namespaces(java.util.List<Namespaces> namespaces) {
                 this.namespaces = namespaces;
                 return this;
             }

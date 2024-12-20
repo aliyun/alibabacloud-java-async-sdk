@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -61,7 +66,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -102,7 +107,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String message; 
         private String requestId; 
@@ -127,7 +132,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         /**
          * <p>The type of the published service.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -211,10 +216,10 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         private String group2Ip;
 
         @com.aliyun.core.annotation.NameInMap("Groups")
-        private java.util.List < String > groups;
+        private java.util.List<String> groups;
 
         @com.aliyun.core.annotation.NameInMap("Ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -260,14 +265,14 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         /**
          * @return groups
          */
-        public java.util.List < String > getGroups() {
+        public java.util.List<String> getGroups() {
             return this.groups;
         }
 
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
@@ -295,8 +300,8 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private String group2Ip; 
-            private java.util.List < String > groups; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> groups; 
+            private java.util.List<String> ips; 
             private String name; 
             private String type; 
             private String version; 
@@ -326,7 +331,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             /**
              * <p>The version of the published service</p>
              */
-            public Builder groups(java.util.List < String > groups) {
+            public Builder groups(java.util.List<String> groups) {
                 this.groups = groups;
                 return this;
             }
@@ -334,7 +339,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             /**
              * <p>The name of the published service.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }

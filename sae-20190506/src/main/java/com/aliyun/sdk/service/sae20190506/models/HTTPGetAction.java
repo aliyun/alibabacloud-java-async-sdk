@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class HTTPGetAction extends TeaModel {
     private String host;
 
     @com.aliyun.core.annotation.NameInMap("HttpHeaders")
-    private java.util.List < HTTPHeader > httpHeaders;
+    private java.util.List<HTTPHeader> httpHeaders;
 
     @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
@@ -53,7 +58,7 @@ public class HTTPGetAction extends TeaModel {
     /**
      * @return httpHeaders
      */
-    public java.util.List < HTTPHeader > getHttpHeaders() {
+    public java.util.List<HTTPHeader> getHttpHeaders() {
         return this.httpHeaders;
     }
 
@@ -80,7 +85,7 @@ public class HTTPGetAction extends TeaModel {
 
     public static final class Builder {
         private String host; 
-        private java.util.List < HTTPHeader > httpHeaders; 
+        private java.util.List<HTTPHeader> httpHeaders; 
         private String path; 
         private Integer port; 
         private String scheme; 
@@ -96,7 +101,7 @@ public class HTTPGetAction extends TeaModel {
         /**
          * HttpHeaders.
          */
-        public Builder httpHeaders(java.util.List < HTTPHeader > httpHeaders) {
+        public Builder httpHeaders(java.util.List<HTTPHeader> httpHeaders) {
             this.httpHeaders = httpHeaders;
             return this;
         }

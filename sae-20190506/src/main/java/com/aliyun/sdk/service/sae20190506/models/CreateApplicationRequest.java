@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -88,6 +93,10 @@ public class CreateApplicationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableNewArms")
     private Boolean enableNewArms;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableSidecarResourceIsolated")
+    private Boolean enableSidecarResourceIsolated;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Envs")
@@ -247,6 +256,10 @@ public class CreateApplicationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ServiceTags")
     private String serviceTags;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SidecarContainersConfig")
+    private java.util.List<SidecarContainerConfig> sidecarContainersConfig;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SlsConfigs")
     private String slsConfigs;
@@ -301,6 +314,7 @@ public class CreateApplicationRequest extends Request {
         this.enableCpuBurst = builder.enableCpuBurst;
         this.enableEbpf = builder.enableEbpf;
         this.enableNewArms = builder.enableNewArms;
+        this.enableSidecarResourceIsolated = builder.enableSidecarResourceIsolated;
         this.envs = builder.envs;
         this.imagePullSecrets = builder.imagePullSecrets;
         this.imageUrl = builder.imageUrl;
@@ -340,6 +354,7 @@ public class CreateApplicationRequest extends Request {
         this.secretMountDesc = builder.secretMountDesc;
         this.securityGroupId = builder.securityGroupId;
         this.serviceTags = builder.serviceTags;
+        this.sidecarContainersConfig = builder.sidecarContainersConfig;
         this.slsConfigs = builder.slsConfigs;
         this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
         this.timezone = builder.timezone;
@@ -494,6 +509,13 @@ public class CreateApplicationRequest extends Request {
      */
     public Boolean getEnableNewArms() {
         return this.enableNewArms;
+    }
+
+    /**
+     * @return enableSidecarResourceIsolated
+     */
+    public Boolean getEnableSidecarResourceIsolated() {
+        return this.enableSidecarResourceIsolated;
     }
 
     /**
@@ -770,6 +792,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return sidecarContainersConfig
+     */
+    public java.util.List<SidecarContainerConfig> getSidecarContainersConfig() {
+        return this.sidecarContainersConfig;
+    }
+
+    /**
      * @return slsConfigs
      */
     public String getSlsConfigs() {
@@ -845,6 +874,7 @@ public class CreateApplicationRequest extends Request {
         private Boolean enableCpuBurst; 
         private String enableEbpf; 
         private Boolean enableNewArms; 
+        private Boolean enableSidecarResourceIsolated; 
         private String envs; 
         private String imagePullSecrets; 
         private String imageUrl; 
@@ -884,6 +914,7 @@ public class CreateApplicationRequest extends Request {
         private String secretMountDesc; 
         private String securityGroupId; 
         private String serviceTags; 
+        private java.util.List<SidecarContainerConfig> sidecarContainersConfig; 
         private String slsConfigs; 
         private Integer terminationGracePeriodSeconds; 
         private String timezone; 
@@ -918,6 +949,7 @@ public class CreateApplicationRequest extends Request {
             this.enableCpuBurst = request.enableCpuBurst;
             this.enableEbpf = request.enableEbpf;
             this.enableNewArms = request.enableNewArms;
+            this.enableSidecarResourceIsolated = request.enableSidecarResourceIsolated;
             this.envs = request.envs;
             this.imagePullSecrets = request.imagePullSecrets;
             this.imageUrl = request.imageUrl;
@@ -957,6 +989,7 @@ public class CreateApplicationRequest extends Request {
             this.secretMountDesc = request.secretMountDesc;
             this.securityGroupId = request.securityGroupId;
             this.serviceTags = request.serviceTags;
+            this.sidecarContainersConfig = request.sidecarContainersConfig;
             this.slsConfigs = request.slsConfigs;
             this.terminationGracePeriodSeconds = request.terminationGracePeriodSeconds;
             this.timezone = request.timezone;
@@ -1175,6 +1208,15 @@ public class CreateApplicationRequest extends Request {
         public Builder enableNewArms(Boolean enableNewArms) {
             this.putQueryParameter("EnableNewArms", enableNewArms);
             this.enableNewArms = enableNewArms;
+            return this;
+        }
+
+        /**
+         * EnableSidecarResourceIsolated.
+         */
+        public Builder enableSidecarResourceIsolated(Boolean enableSidecarResourceIsolated) {
+            this.putBodyParameter("EnableSidecarResourceIsolated", enableSidecarResourceIsolated);
+            this.enableSidecarResourceIsolated = enableSidecarResourceIsolated;
             return this;
         }
 
@@ -1603,6 +1645,16 @@ public class CreateApplicationRequest extends Request {
         public Builder serviceTags(String serviceTags) {
             this.putBodyParameter("ServiceTags", serviceTags);
             this.serviceTags = serviceTags;
+            return this;
+        }
+
+        /**
+         * SidecarContainersConfig.
+         */
+        public Builder sidecarContainersConfig(java.util.List<SidecarContainerConfig> sidecarContainersConfig) {
+            String sidecarContainersConfigShrink = shrink(sidecarContainersConfig, "SidecarContainersConfig", "json");
+            this.putBodyParameter("SidecarContainersConfig", sidecarContainersConfigShrink);
+            this.sidecarContainersConfig = sidecarContainersConfig;
             return this;
         }
 

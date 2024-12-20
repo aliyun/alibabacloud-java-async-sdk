@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -419,7 +424,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         private Integer currentPage;
 
         @com.aliyun.core.annotation.NameInMap("LogConfigs")
-        private java.util.List < LogConfigs> logConfigs;
+        private java.util.List<LogConfigs> logConfigs;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
@@ -452,7 +457,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         /**
          * @return logConfigs
          */
-        public java.util.List < LogConfigs> getLogConfigs() {
+        public java.util.List<LogConfigs> getLogConfigs() {
             return this.logConfigs;
         }
 
@@ -472,7 +477,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer currentPage; 
-            private java.util.List < LogConfigs> logConfigs; 
+            private java.util.List<LogConfigs> logConfigs; 
             private Integer pageSize; 
             private Integer totalSize; 
 
@@ -490,7 +495,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             /**
              * <p>The name of the Log Service configuration.</p>
              */
-            public Builder logConfigs(java.util.List < LogConfigs> logConfigs) {
+            public Builder logConfigs(java.util.List<LogConfigs> logConfigs) {
                 this.logConfigs = logConfigs;
                 return this;
             }

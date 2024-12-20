@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -385,7 +390,7 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
         private Integer maxReplicas;
 
         @com.aliyun.core.annotation.NameInMap("Metrics")
-        private java.util.List < Metrics> metrics;
+        private java.util.List<Metrics> metrics;
 
         @com.aliyun.core.annotation.NameInMap("MinReplicas")
         private Integer minReplicas;
@@ -414,7 +419,7 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
         /**
          * @return metrics
          */
-        public java.util.List < Metrics> getMetrics() {
+        public java.util.List<Metrics> getMetrics() {
             return this.metrics;
         }
 
@@ -427,7 +432,7 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer maxReplicas; 
-            private java.util.List < Metrics> metrics; 
+            private java.util.List<Metrics> metrics; 
             private Integer minReplicas; 
 
             /**
@@ -444,7 +449,7 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
             /**
              * <p>The metrics that are used to trigger the auto scaling policy.</p>
              */
-            public Builder metrics(java.util.List < Metrics> metrics) {
+            public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
                 return this;
             }
@@ -603,7 +608,7 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
         private String period;
 
         @com.aliyun.core.annotation.NameInMap("Schedules")
-        private java.util.List < Schedules> schedules;
+        private java.util.List<Schedules> schedules;
 
         private Timer(Builder builder) {
             this.beginDate = builder.beginDate;
@@ -644,7 +649,7 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
         /**
          * @return schedules
          */
-        public java.util.List < Schedules> getSchedules() {
+        public java.util.List<Schedules> getSchedules() {
             return this.schedules;
         }
 
@@ -652,7 +657,7 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
             private String beginDate; 
             private String endDate; 
             private String period; 
-            private java.util.List < Schedules> schedules; 
+            private java.util.List<Schedules> schedules; 
 
             /**
              * <p>The start date of the validity period of the scheduled auto scaling policy. Parameter description:</p>
@@ -715,7 +720,7 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
             /**
              * <p>The points in time at which the auto scaling policy is triggered within one day.</p>
              */
-            public Builder schedules(java.util.List < Schedules> schedules) {
+            public Builder schedules(java.util.List<Schedules> schedules) {
                 this.schedules = schedules;
                 return this;
             }

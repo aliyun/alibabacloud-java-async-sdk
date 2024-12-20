@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -330,7 +335,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private String nextToken;
 
         @com.aliyun.core.annotation.NameInMap("TagResources")
-        private java.util.List < TagResources> tagResources;
+        private java.util.List<TagResources> tagResources;
 
         private Data(Builder builder) {
             this.nextToken = builder.nextToken;
@@ -355,13 +360,13 @@ public class ListTagResourcesResponseBody extends TeaModel {
         /**
          * @return tagResources
          */
-        public java.util.List < TagResources> getTagResources() {
+        public java.util.List<TagResources> getTagResources() {
             return this.tagResources;
         }
 
         public static final class Builder {
             private String nextToken; 
-            private java.util.List < TagResources> tagResources; 
+            private java.util.List<TagResources> tagResources; 
 
             /**
              * <p>A maximum of 50 entries can be returned for a query. If a query generates more than 50 entries, the NextToken parameter is returned with the first 50 entries. You can use the NextToken parameter value to retrieve the subsequent entries that are not returned in the current query result.</p>
@@ -377,7 +382,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             /**
              * <p>The mapping relationships between applications and tags.</p>
              */
-            public Builder tagResources(java.util.List < TagResources> tagResources) {
+            public Builder tagResources(java.util.List<TagResources> tagResources) {
                 this.tagResources = tagResources;
                 return this;
             }

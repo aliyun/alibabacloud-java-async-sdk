@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -52,7 +57,7 @@ public class BuildPipelineRun extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("Steps")
-    private java.util.List < Steps> steps;
+    private java.util.List<Steps> steps;
 
     @com.aliyun.core.annotation.NameInMap("TriggerConfig")
     private TriggerConfig triggerConfig;
@@ -185,7 +190,7 @@ public class BuildPipelineRun extends TeaModel {
     /**
      * @return steps
      */
-    public java.util.List < Steps> getSteps() {
+    public java.util.List<Steps> getSteps() {
         return this.steps;
     }
 
@@ -224,7 +229,7 @@ public class BuildPipelineRun extends TeaModel {
         private String pipelineRunId; 
         private Long startTime; 
         private String status; 
-        private java.util.List < Steps> steps; 
+        private java.util.List<Steps> steps; 
         private TriggerConfig triggerConfig; 
         private String versionId; 
         private Long waitDuration; 
@@ -336,7 +341,7 @@ public class BuildPipelineRun extends TeaModel {
         /**
          * Steps.
          */
-        public Builder steps(java.util.List < Steps> steps) {
+        public Builder steps(java.util.List<Steps> steps) {
             this.steps = steps;
             return this;
         }

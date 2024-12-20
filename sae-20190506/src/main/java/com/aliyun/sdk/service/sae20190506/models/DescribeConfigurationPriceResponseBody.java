@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -272,7 +277,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         private Float originalAmount;
 
         @com.aliyun.core.annotation.NameInMap("RuleIds")
-        private java.util.List < String > ruleIds;
+        private java.util.List<String> ruleIds;
 
         @com.aliyun.core.annotation.NameInMap("TradeAmount")
         private Float tradeAmount;
@@ -309,7 +314,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         /**
          * @return ruleIds
          */
-        public java.util.List < String > getRuleIds() {
+        public java.util.List<String> getRuleIds() {
             return this.ruleIds;
         }
 
@@ -323,7 +328,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         public static final class Builder {
             private Float discountAmount; 
             private Float originalAmount; 
-            private java.util.List < String > ruleIds; 
+            private java.util.List<String> ruleIds; 
             private Float tradeAmount; 
 
             /**
@@ -345,7 +350,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             /**
              * RuleIds.
              */
-            public Builder ruleIds(java.util.List < String > ruleIds) {
+            public Builder ruleIds(java.util.List<String> ruleIds) {
                 this.ruleIds = ruleIds;
                 return this;
             }
@@ -443,7 +448,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         private Order order;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private CpuMemPrice(Builder builder) {
             this.order = builder.order;
@@ -468,13 +473,13 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private Order order; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * Order.
@@ -487,7 +492,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }
@@ -513,7 +518,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         private Float originalAmount;
 
         @com.aliyun.core.annotation.NameInMap("RuleIds")
-        private java.util.List < String > ruleIds;
+        private java.util.List<String> ruleIds;
 
         @com.aliyun.core.annotation.NameInMap("TradeAmount")
         private Float tradeAmount;
@@ -550,7 +555,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         /**
          * @return ruleIds
          */
-        public java.util.List < String > getRuleIds() {
+        public java.util.List<String> getRuleIds() {
             return this.ruleIds;
         }
 
@@ -564,7 +569,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         public static final class Builder {
             private Float discountAmount; 
             private Float originalAmount; 
-            private java.util.List < String > ruleIds; 
+            private java.util.List<String> ruleIds; 
             private Float tradeAmount; 
 
             /**
@@ -586,7 +591,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             /**
              * RuleIds.
              */
-            public Builder ruleIds(java.util.List < String > ruleIds) {
+            public Builder ruleIds(java.util.List<String> ruleIds) {
                 this.ruleIds = ruleIds;
                 return this;
             }
@@ -620,7 +625,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         private Float originalAmount;
 
         @com.aliyun.core.annotation.NameInMap("RuleIds")
-        private java.util.List < String > ruleIds;
+        private java.util.List<String> ruleIds;
 
         @com.aliyun.core.annotation.NameInMap("TradeAmount")
         private Float tradeAmount;
@@ -657,7 +662,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         /**
          * @return ruleIds
          */
-        public java.util.List < String > getRuleIds() {
+        public java.util.List<String> getRuleIds() {
             return this.ruleIds;
         }
 
@@ -671,7 +676,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         public static final class Builder {
             private Float discountAmount; 
             private Float originalAmount; 
-            private java.util.List < String > ruleIds; 
+            private java.util.List<String> ruleIds; 
             private Float tradeAmount; 
 
             /**
@@ -693,7 +698,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             /**
              * RuleIds.
              */
-            public Builder ruleIds(java.util.List < String > ruleIds) {
+            public Builder ruleIds(java.util.List<String> ruleIds) {
                 this.ruleIds = ruleIds;
                 return this;
             }
@@ -791,7 +796,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         private RequestPriceOrder order;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < RequestPriceRules> rules;
+        private java.util.List<RequestPriceRules> rules;
 
         private RequestPrice(Builder builder) {
             this.order = builder.order;
@@ -816,13 +821,13 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < RequestPriceRules> getRules() {
+        public java.util.List<RequestPriceRules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private RequestPriceOrder order; 
-            private java.util.List < RequestPriceRules> rules; 
+            private java.util.List<RequestPriceRules> rules; 
 
             /**
              * Order.
@@ -835,7 +840,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < RequestPriceRules> rules) {
+            public Builder rules(java.util.List<RequestPriceRules> rules) {
                 this.rules = rules;
                 return this;
             }
@@ -928,7 +933,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         private Float originalAmount;
 
         @com.aliyun.core.annotation.NameInMap("RuleIds")
-        private java.util.List < String > ruleIds;
+        private java.util.List<String> ruleIds;
 
         @com.aliyun.core.annotation.NameInMap("TradeAmount")
         private Float tradeAmount;
@@ -965,7 +970,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         /**
          * @return ruleIds
          */
-        public java.util.List < String > getRuleIds() {
+        public java.util.List<String> getRuleIds() {
             return this.ruleIds;
         }
 
@@ -979,7 +984,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         public static final class Builder {
             private Float discountAmount; 
             private Float originalAmount; 
-            private java.util.List < String > ruleIds; 
+            private java.util.List<String> ruleIds; 
             private Float tradeAmount; 
 
             /**
@@ -1001,7 +1006,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             /**
              * RuleIds.
              */
-            public Builder ruleIds(java.util.List < String > ruleIds) {
+            public Builder ruleIds(java.util.List<String> ruleIds) {
                 this.ruleIds = ruleIds;
                 return this;
             }
@@ -1099,7 +1104,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         private TrafficPriceOrder order;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < TrafficPriceRules> rules;
+        private java.util.List<TrafficPriceRules> rules;
 
         private TrafficPrice(Builder builder) {
             this.order = builder.order;
@@ -1124,13 +1129,13 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < TrafficPriceRules> getRules() {
+        public java.util.List<TrafficPriceRules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private TrafficPriceOrder order; 
-            private java.util.List < TrafficPriceRules> rules; 
+            private java.util.List<TrafficPriceRules> rules; 
 
             /**
              * Order.
@@ -1143,7 +1148,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < TrafficPriceRules> rules) {
+            public Builder rules(java.util.List<TrafficPriceRules> rules) {
                 this.rules = rules;
                 return this;
             }
@@ -1175,7 +1180,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         private RequestPrice requestPrice;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < DataRules> rules;
+        private java.util.List<DataRules> rules;
 
         @com.aliyun.core.annotation.NameInMap("TrafficPrice")
         private TrafficPrice trafficPrice;
@@ -1228,7 +1233,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < DataRules> getRules() {
+        public java.util.List<DataRules> getRules() {
             return this.rules;
         }
 
@@ -1244,7 +1249,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             private CpuMemPrice cpuMemPrice; 
             private DataOrder order; 
             private RequestPrice requestPrice; 
-            private java.util.List < DataRules> rules; 
+            private java.util.List<DataRules> rules; 
             private TrafficPrice trafficPrice; 
 
             /**
@@ -1282,7 +1287,7 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
             /**
              * Rules.
              */
-            public Builder rules(java.util.List < DataRules> rules) {
+            public Builder rules(java.util.List<DataRules> rules) {
                 this.rules = rules;
                 return this;
             }

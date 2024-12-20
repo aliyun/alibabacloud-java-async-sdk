@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class AppStackInstance extends TeaModel {
     private Long createTime;
 
     @com.aliyun.core.annotation.NameInMap("Endpoints")
-    private java.util.List < Endpoints> endpoints;
+    private java.util.List<Endpoints> endpoints;
 
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
@@ -25,7 +30,7 @@ public class AppStackInstance extends TeaModel {
     private String instanceName;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
@@ -65,7 +70,7 @@ public class AppStackInstance extends TeaModel {
     /**
      * @return endpoints
      */
-    public java.util.List < Endpoints> getEndpoints() {
+    public java.util.List<Endpoints> getEndpoints() {
         return this.endpoints;
     }
 
@@ -86,7 +91,7 @@ public class AppStackInstance extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -113,10 +118,10 @@ public class AppStackInstance extends TeaModel {
 
     public static final class Builder {
         private Long createTime; 
-        private java.util.List < Endpoints> endpoints; 
+        private java.util.List<Endpoints> endpoints; 
         private String instanceId; 
         private String instanceName; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String stackId; 
         private String status; 
         private Long updateTime; 
@@ -132,7 +137,7 @@ public class AppStackInstance extends TeaModel {
         /**
          * Endpoints.
          */
-        public Builder endpoints(java.util.List < Endpoints> endpoints) {
+        public Builder endpoints(java.util.List<Endpoints> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
@@ -156,7 +161,7 @@ public class AppStackInstance extends TeaModel {
         /**
          * Parameters.
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.parameters = parameters;
             return this;
         }

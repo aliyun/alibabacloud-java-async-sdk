@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class WebTrafficConfig extends TeaModel {
     private Boolean disableInternetURL;
 
     @com.aliyun.core.annotation.NameInMap("RevisionsTrafficWeight")
-    private java.util.Map < String, Float > revisionsTrafficWeight;
+    private java.util.Map<String, Float> revisionsTrafficWeight;
 
     @com.aliyun.core.annotation.NameInMap("WebAclConfig")
     private WebAclConfig webAclConfig;
@@ -56,7 +61,7 @@ public class WebTrafficConfig extends TeaModel {
     /**
      * @return revisionsTrafficWeight
      */
-    public java.util.Map < String, Float > getRevisionsTrafficWeight() {
+    public java.util.Map<String, Float> getRevisionsTrafficWeight() {
         return this.revisionsTrafficWeight;
     }
 
@@ -70,7 +75,7 @@ public class WebTrafficConfig extends TeaModel {
     public static final class Builder {
         private String authType; 
         private Boolean disableInternetURL; 
-        private java.util.Map < String, Float > revisionsTrafficWeight; 
+        private java.util.Map<String, Float> revisionsTrafficWeight; 
         private WebAclConfig webAclConfig; 
 
         /**
@@ -92,7 +97,7 @@ public class WebTrafficConfig extends TeaModel {
         /**
          * RevisionsTrafficWeight.
          */
-        public Builder revisionsTrafficWeight(java.util.Map < String, Float > revisionsTrafficWeight) {
+        public Builder revisionsTrafficWeight(java.util.Map<String, Float> revisionsTrafficWeight) {
             this.revisionsTrafficWeight = revisionsTrafficWeight;
             return this;
         }

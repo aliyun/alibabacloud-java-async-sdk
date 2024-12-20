@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Submenu extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     @com.aliyun.core.annotation.NameInMap("SubmenuDesc")
     private String submenuDesc;
@@ -22,7 +27,7 @@ public class Submenu extends TeaModel {
     private String submenuType;
 
     @com.aliyun.core.annotation.NameInMap("Submenus")
-    private java.util.List < Submenu > submenus;
+    private java.util.List<Submenu> submenus;
 
     private Submenu(Builder builder) {
         this.items = builder.items;
@@ -42,7 +47,7 @@ public class Submenu extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
@@ -63,20 +68,20 @@ public class Submenu extends TeaModel {
     /**
      * @return submenus
      */
-    public java.util.List < Submenu > getSubmenus() {
+    public java.util.List<Submenu> getSubmenus() {
         return this.submenus;
     }
 
     public static final class Builder {
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
         private String submenuDesc; 
         private String submenuType; 
-        private java.util.List < Submenu > submenus; 
+        private java.util.List<Submenu> submenus; 
 
         /**
          * Items.
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -100,7 +105,7 @@ public class Submenu extends TeaModel {
         /**
          * Submenus.
          */
-        public Builder submenus(java.util.List < Submenu > submenus) {
+        public Builder submenus(java.util.List<Submenu> submenus) {
             this.submenus = submenus;
             return this;
         }
@@ -128,7 +133,7 @@ public class Submenu extends TeaModel {
         private String itemType;
 
         @com.aliyun.core.annotation.NameInMap("RelatingItems")
-        private java.util.List < String > relatingItems;
+        private java.util.List<String> relatingItems;
 
         private Items(Builder builder) {
             this.defaultSelected = builder.defaultSelected;
@@ -169,7 +174,7 @@ public class Submenu extends TeaModel {
         /**
          * @return relatingItems
          */
-        public java.util.List < String > getRelatingItems() {
+        public java.util.List<String> getRelatingItems() {
             return this.relatingItems;
         }
 
@@ -177,7 +182,7 @@ public class Submenu extends TeaModel {
             private Boolean defaultSelected; 
             private String itemDesc; 
             private String itemType; 
-            private java.util.List < String > relatingItems; 
+            private java.util.List<String> relatingItems; 
 
             /**
              * DefaultSelected.
@@ -206,7 +211,7 @@ public class Submenu extends TeaModel {
             /**
              * RelatingItems.
              */
-            public Builder relatingItems(java.util.List < String > relatingItems) {
+            public Builder relatingItems(java.util.List<String> relatingItems) {
                 this.relatingItems = relatingItems;
                 return this;
             }

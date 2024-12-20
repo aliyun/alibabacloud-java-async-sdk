@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -407,7 +412,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         private String ingressId;
 
         @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("serviceId")
         private String serviceId;
@@ -444,7 +449,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -458,7 +463,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         public static final class Builder {
             private String condition; 
             private String ingressId; 
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private String serviceId; 
 
             /**
@@ -486,7 +491,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             /**
              * items.
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }
@@ -725,7 +730,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         private String group;
 
         @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List < DubboRulesItems> items;
+        private java.util.List<DubboRulesItems> items;
 
         @com.aliyun.core.annotation.NameInMap("methodName")
         private String methodName;
@@ -770,7 +775,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < DubboRulesItems> getItems() {
+        public java.util.List<DubboRulesItems> getItems() {
             return this.items;
         }
 
@@ -798,7 +803,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         public static final class Builder {
             private String condition; 
             private String group; 
-            private java.util.List < DubboRulesItems> items; 
+            private java.util.List<DubboRulesItems> items; 
             private String methodName; 
             private String serviceName; 
             private String version; 
@@ -832,7 +837,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             /**
              * <p>The conditions.</p>
              */
-            public Builder items(java.util.List < DubboRulesItems> items) {
+            public Builder items(java.util.List<DubboRulesItems> items) {
                 this.items = items;
                 return this;
             }
@@ -1087,7 +1092,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         private String condition;
 
         @com.aliyun.core.annotation.NameInMap("items")
-        private java.util.List < ScRulesItems> items;
+        private java.util.List<ScRulesItems> items;
 
         @com.aliyun.core.annotation.NameInMap("path")
         private String path;
@@ -1116,7 +1121,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < ScRulesItems> getItems() {
+        public java.util.List<ScRulesItems> getItems() {
             return this.items;
         }
 
@@ -1129,7 +1134,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
 
         public static final class Builder {
             private String condition; 
-            private java.util.List < ScRulesItems> items; 
+            private java.util.List<ScRulesItems> items; 
             private String path; 
 
             /**
@@ -1150,7 +1155,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             /**
              * <p>The conditions.</p>
              */
-            public Builder items(java.util.List < ScRulesItems> items) {
+            public Builder items(java.util.List<ScRulesItems> items) {
                 this.items = items;
                 return this;
             }
@@ -1181,7 +1186,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlbRules")
-        private java.util.List < AlbRules> albRules;
+        private java.util.List<AlbRules> albRules;
 
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -1193,7 +1198,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("DubboRules")
-        private java.util.List < DubboRules> dubboRules;
+        private java.util.List<DubboRules> dubboRules;
 
         @com.aliyun.core.annotation.NameInMap("GreyTagRouteId")
         private Long greyTagRouteId;
@@ -1202,7 +1207,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("ScRules")
-        private java.util.List < ScRules> scRules;
+        private java.util.List<ScRules> scRules;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
@@ -1230,7 +1235,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         /**
          * @return albRules
          */
-        public java.util.List < AlbRules> getAlbRules() {
+        public java.util.List<AlbRules> getAlbRules() {
             return this.albRules;
         }
 
@@ -1258,7 +1263,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         /**
          * @return dubboRules
          */
-        public java.util.List < DubboRules> getDubboRules() {
+        public java.util.List<DubboRules> getDubboRules() {
             return this.dubboRules;
         }
 
@@ -1279,7 +1284,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         /**
          * @return scRules
          */
-        public java.util.List < ScRules> getScRules() {
+        public java.util.List<ScRules> getScRules() {
             return this.scRules;
         }
 
@@ -1291,20 +1296,20 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AlbRules> albRules; 
+            private java.util.List<AlbRules> albRules; 
             private String appId; 
             private Long createTime; 
             private String description; 
-            private java.util.List < DubboRules> dubboRules; 
+            private java.util.List<DubboRules> dubboRules; 
             private Long greyTagRouteId; 
             private String name; 
-            private java.util.List < ScRules> scRules; 
+            private java.util.List<ScRules> scRules; 
             private Long updateTime; 
 
             /**
              * AlbRules.
              */
-            public Builder albRules(java.util.List < AlbRules> albRules) {
+            public Builder albRules(java.util.List<AlbRules> albRules) {
                 this.albRules = albRules;
                 return this;
             }
@@ -1345,7 +1350,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             /**
              * <p>The canary release rule of the Dubbo service.</p>
              */
-            public Builder dubboRules(java.util.List < DubboRules> dubboRules) {
+            public Builder dubboRules(java.util.List<DubboRules> dubboRules) {
                 this.dubboRules = dubboRules;
                 return this;
             }
@@ -1375,7 +1380,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             /**
              * <p>The canary release rule of the Spring Cloud application.</p>
              */
-            public Builder scRules(java.util.List < ScRules> scRules) {
+            public Builder scRules(java.util.List<ScRules> scRules) {
                 this.scRules = scRules;
                 return this;
             }

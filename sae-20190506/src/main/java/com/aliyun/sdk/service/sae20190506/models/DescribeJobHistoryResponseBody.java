@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -435,7 +440,7 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
         private Long currentPage;
 
         @com.aliyun.core.annotation.NameInMap("Jobs")
-        private java.util.List < Jobs> jobs;
+        private java.util.List<Jobs> jobs;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
@@ -468,7 +473,7 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
         /**
          * @return jobs
          */
-        public java.util.List < Jobs> getJobs() {
+        public java.util.List<Jobs> getJobs() {
             return this.jobs;
         }
 
@@ -488,7 +493,7 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long currentPage; 
-            private java.util.List < Jobs> jobs; 
+            private java.util.List<Jobs> jobs; 
             private Long pageSize; 
             private Long totalSize; 
 
@@ -506,7 +511,7 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
             /**
              * <p>The jobs.</p>
              */
-            public Builder jobs(java.util.List < Jobs> jobs) {
+            public Builder jobs(java.util.List<Jobs> jobs) {
                 this.jobs = jobs;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -206,7 +211,7 @@ public class Probe extends TeaModel {
      */
     public static class HttpGet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("httpHeaders")
-        private java.util.List < HttpHeaders> httpHeaders;
+        private java.util.List<HttpHeaders> httpHeaders;
 
         @com.aliyun.core.annotation.NameInMap("path")
         private String path;
@@ -231,7 +236,7 @@ public class Probe extends TeaModel {
         /**
          * @return httpHeaders
          */
-        public java.util.List < HttpHeaders> getHttpHeaders() {
+        public java.util.List<HttpHeaders> getHttpHeaders() {
             return this.httpHeaders;
         }
 
@@ -250,14 +255,14 @@ public class Probe extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < HttpHeaders> httpHeaders; 
+            private java.util.List<HttpHeaders> httpHeaders; 
             private String path; 
             private Integer port; 
 
             /**
              * httpHeaders.
              */
-            public Builder httpHeaders(java.util.List < HttpHeaders> httpHeaders) {
+            public Builder httpHeaders(java.util.List<HttpHeaders> httpHeaders) {
                 this.httpHeaders = httpHeaders;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetApplicationLogsOutput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("logEntrys")
-    private java.util.List < LogEntry > logEntrys;
+    private java.util.List<LogEntry> logEntrys;
 
     @com.aliyun.core.annotation.NameInMap("nextOffset")
     private Long nextOffset;
@@ -38,7 +43,7 @@ public class GetApplicationLogsOutput extends TeaModel {
     /**
      * @return logEntrys
      */
-    public java.util.List < LogEntry > getLogEntrys() {
+    public java.util.List<LogEntry> getLogEntrys() {
         return this.logEntrys;
     }
 
@@ -57,14 +62,14 @@ public class GetApplicationLogsOutput extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LogEntry > logEntrys; 
+        private java.util.List<LogEntry> logEntrys; 
         private Long nextOffset; 
         private String requestId; 
 
         /**
          * logEntrys.
          */
-        public Builder logEntrys(java.util.List < LogEntry > logEntrys) {
+        public Builder logEntrys(java.util.List<LogEntry> logEntrys) {
             this.logEntrys = logEntrys;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceLogRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerId")
+    private String containerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private DescribeInstanceLogRequest(Builder builder) {
         super(builder);
+        this.containerId = builder.containerId;
         this.instanceId = builder.instanceId;
     }
 
@@ -36,6 +46,13 @@ public class DescribeInstanceLogRequest extends Request {
     }
 
     /**
+     * @return containerId
+     */
+    public String getContainerId() {
+        return this.containerId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -43,6 +60,7 @@ public class DescribeInstanceLogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInstanceLogRequest, Builder> {
+        private String containerId; 
         private String instanceId; 
 
         private Builder() {
@@ -51,8 +69,18 @@ public class DescribeInstanceLogRequest extends Request {
 
         private Builder(DescribeInstanceLogRequest request) {
             super(request);
+            this.containerId = request.containerId;
             this.instanceId = request.instanceId;
         } 
+
+        /**
+         * ContainerId.
+         */
+        public Builder containerId(String containerId) {
+            this.putQueryParameter("ContainerId", containerId);
+            this.containerId = containerId;
+            return this;
+        }
 
         /**
          * <p>The ID of the request.</p>

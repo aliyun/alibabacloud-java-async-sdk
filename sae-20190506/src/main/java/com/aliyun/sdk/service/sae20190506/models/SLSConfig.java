@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SLSConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("collectConfigs")
-    private java.util.List < CollectConfigs> collectConfigs;
+    private java.util.List<CollectConfigs> collectConfigs;
 
     private SLSConfig(Builder builder) {
         this.collectConfigs = builder.collectConfigs;
@@ -30,17 +35,17 @@ public class SLSConfig extends TeaModel {
     /**
      * @return collectConfigs
      */
-    public java.util.List < CollectConfigs> getCollectConfigs() {
+    public java.util.List<CollectConfigs> getCollectConfigs() {
         return this.collectConfigs;
     }
 
     public static final class Builder {
-        private java.util.List < CollectConfigs> collectConfigs; 
+        private java.util.List<CollectConfigs> collectConfigs; 
 
         /**
          * collectConfigs.
          */
-        public Builder collectConfigs(java.util.List < CollectConfigs> collectConfigs) {
+        public Builder collectConfigs(java.util.List<CollectConfigs> collectConfigs) {
             this.collectConfigs = collectConfigs;
             return this;
         }

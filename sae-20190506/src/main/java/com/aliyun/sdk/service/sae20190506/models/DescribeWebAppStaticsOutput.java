@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeWebAppStaticsOutput extends TeaModel {
     private Integer length;
 
     @com.aliyun.core.annotation.NameInMap("WebAppStatics")
-    private java.util.List < WebStaticsInfo > webAppStatics;
+    private java.util.List<WebStaticsInfo> webAppStatics;
 
     private DescribeWebAppStaticsOutput(Builder builder) {
         this.length = builder.length;
@@ -41,13 +46,13 @@ public class DescribeWebAppStaticsOutput extends TeaModel {
     /**
      * @return webAppStatics
      */
-    public java.util.List < WebStaticsInfo > getWebAppStatics() {
+    public java.util.List<WebStaticsInfo> getWebAppStatics() {
         return this.webAppStatics;
     }
 
     public static final class Builder {
         private Integer length; 
-        private java.util.List < WebStaticsInfo > webAppStatics; 
+        private java.util.List<WebStaticsInfo> webAppStatics; 
 
         /**
          * Length.
@@ -60,7 +65,7 @@ public class DescribeWebAppStaticsOutput extends TeaModel {
         /**
          * WebAppStatics.
          */
-        public Builder webAppStatics(java.util.List < WebStaticsInfo > webAppStatics) {
+        public Builder webAppStatics(java.util.List<WebStaticsInfo> webAppStatics) {
             this.webAppStatics = webAppStatics;
             return this;
         }

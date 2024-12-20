@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceLogsOutput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("WebLogEntrys")
-    private java.util.List < WebLogEntry > webLogEntrys;
+    private java.util.List<WebLogEntry> webLogEntrys;
 
     private DescribeInstanceLogsOutput(Builder builder) {
         this.webLogEntrys = builder.webLogEntrys;
@@ -30,17 +35,17 @@ public class DescribeInstanceLogsOutput extends TeaModel {
     /**
      * @return webLogEntrys
      */
-    public java.util.List < WebLogEntry > getWebLogEntrys() {
+    public java.util.List<WebLogEntry> getWebLogEntrys() {
         return this.webLogEntrys;
     }
 
     public static final class Builder {
-        private java.util.List < WebLogEntry > webLogEntrys; 
+        private java.util.List<WebLogEntry> webLogEntrys; 
 
         /**
          * WebLogEntrys.
          */
-        public Builder webLogEntrys(java.util.List < WebLogEntry > webLogEntrys) {
+        public Builder webLogEntrys(java.util.List<WebLogEntry> webLogEntrys) {
             this.webLogEntrys = webLogEntrys;
             return this;
         }

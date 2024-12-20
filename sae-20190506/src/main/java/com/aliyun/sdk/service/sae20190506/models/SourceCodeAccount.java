@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class SourceCodeAccount extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("Organizations")
-    private java.util.List < Organizations> organizations;
+    private java.util.List<Organizations> organizations;
 
     private SourceCodeAccount(Builder builder) {
         this.avatarUrl = builder.avatarUrl;
@@ -63,7 +68,7 @@ public class SourceCodeAccount extends TeaModel {
     /**
      * @return organizations
      */
-    public java.util.List < Organizations> getOrganizations() {
+    public java.util.List<Organizations> getOrganizations() {
         return this.organizations;
     }
 
@@ -71,7 +76,7 @@ public class SourceCodeAccount extends TeaModel {
         private String avatarUrl; 
         private String id; 
         private String name; 
-        private java.util.List < Organizations> organizations; 
+        private java.util.List<Organizations> organizations; 
 
         /**
          * AvatarUrl.
@@ -100,7 +105,7 @@ public class SourceCodeAccount extends TeaModel {
         /**
          * Organizations.
          */
-        public Builder organizations(java.util.List < Organizations> organizations) {
+        public Builder organizations(java.util.List<Organizations> organizations) {
             this.organizations = organizations;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class WebOSSConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MountPoints")
-    private java.util.List < WebOSSMountPoint > mountPoints;
+    private java.util.List<WebOSSMountPoint> mountPoints;
 
     private WebOSSConfig(Builder builder) {
         this.mountPoints = builder.mountPoints;
@@ -30,17 +35,17 @@ public class WebOSSConfig extends TeaModel {
     /**
      * @return mountPoints
      */
-    public java.util.List < WebOSSMountPoint > getMountPoints() {
+    public java.util.List<WebOSSMountPoint> getMountPoints() {
         return this.mountPoints;
     }
 
     public static final class Builder {
-        private java.util.List < WebOSSMountPoint > mountPoints; 
+        private java.util.List<WebOSSMountPoint> mountPoints; 
 
         /**
          * MountPoints.
          */
-        public Builder mountPoints(java.util.List < WebOSSMountPoint > mountPoints) {
+        public Builder mountPoints(java.util.List<WebOSSMountPoint> mountPoints) {
             this.mountPoints = mountPoints;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,13 +21,13 @@ public class ListInstancesOutput extends TeaModel {
     private String currentError;
 
     @com.aliyun.core.annotation.NameInMap("instances")
-    private java.util.List < InstanceInfo > instances;
+    private java.util.List<InstanceInfo> instances;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("versionStatus")
-    private java.util.Map < String, VersionStatus > versionStatus;
+    private java.util.Map<String, VersionStatus> versionStatus;
 
     private ListInstancesOutput(Builder builder) {
         this.currentError = builder.currentError;
@@ -49,7 +54,7 @@ public class ListInstancesOutput extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < InstanceInfo > getInstances() {
+    public java.util.List<InstanceInfo> getInstances() {
         return this.instances;
     }
 
@@ -63,15 +68,15 @@ public class ListInstancesOutput extends TeaModel {
     /**
      * @return versionStatus
      */
-    public java.util.Map < String, VersionStatus > getVersionStatus() {
+    public java.util.Map<String, VersionStatus> getVersionStatus() {
         return this.versionStatus;
     }
 
     public static final class Builder {
         private String currentError; 
-        private java.util.List < InstanceInfo > instances; 
+        private java.util.List<InstanceInfo> instances; 
         private String requestId; 
-        private java.util.Map < String, VersionStatus > versionStatus; 
+        private java.util.Map<String, VersionStatus> versionStatus; 
 
         /**
          * currentError.
@@ -84,7 +89,7 @@ public class ListInstancesOutput extends TeaModel {
         /**
          * instances.
          */
-        public Builder instances(java.util.List < InstanceInfo > instances) {
+        public Builder instances(java.util.List<InstanceInfo> instances) {
             this.instances = instances;
             return this;
         }
@@ -100,7 +105,7 @@ public class ListInstancesOutput extends TeaModel {
         /**
          * versionStatus.
          */
-        public Builder versionStatus(java.util.Map < String, VersionStatus > versionStatus) {
+        public Builder versionStatus(java.util.Map<String, VersionStatus> versionStatus) {
             this.versionStatus = versionStatus;
             return this;
         }

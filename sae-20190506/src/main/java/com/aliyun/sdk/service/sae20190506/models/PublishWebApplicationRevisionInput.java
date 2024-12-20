@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class PublishWebApplicationRevisionInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Containers")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Container > containers;
+    private java.util.List<Container> containers;
 
     @com.aliyun.core.annotation.NameInMap("Description")
     @com.aliyun.core.annotation.Validation(maxLength = 256)
@@ -44,7 +49,7 @@ public class PublishWebApplicationRevisionInput extends TeaModel {
     /**
      * @return containers
      */
-    public java.util.List < Container > getContainers() {
+    public java.util.List<Container> getContainers() {
         return this.containers;
     }
 
@@ -70,7 +75,7 @@ public class PublishWebApplicationRevisionInput extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Container > containers; 
+        private java.util.List<Container> containers; 
         private String description; 
         private Boolean enableArmsMetrics; 
         private Boolean takeEffect; 
@@ -78,7 +83,7 @@ public class PublishWebApplicationRevisionInput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder containers(java.util.List < Container > containers) {
+        public Builder containers(java.util.List<Container> containers) {
             this.containers = containers;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class HttpApiRoute extends TeaModel {
     private String destinationType;
 
     @com.aliyun.core.annotation.NameInMap("Domains")
-    private java.util.List < Domains> domains;
+    private java.util.List<Domains> domains;
 
     @com.aliyun.core.annotation.NameInMap("EnvironmentId")
     private String environmentId;
@@ -64,7 +69,7 @@ public class HttpApiRoute extends TeaModel {
     private String routeId;
 
     @com.aliyun.core.annotation.NameInMap("Services")
-    private java.util.List < Services> services;
+    private java.util.List<Services> services;
 
     @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
@@ -123,7 +128,7 @@ public class HttpApiRoute extends TeaModel {
     /**
      * @return domains
      */
-    public java.util.List < Domains> getDomains() {
+    public java.util.List<Domains> getDomains() {
         return this.domains;
     }
 
@@ -221,7 +226,7 @@ public class HttpApiRoute extends TeaModel {
     /**
      * @return services
      */
-    public java.util.List < Services> getServices() {
+    public java.util.List<Services> getServices() {
         return this.services;
     }
 
@@ -236,7 +241,7 @@ public class HttpApiRoute extends TeaModel {
         private String addressType; 
         private String deployStatus; 
         private String destinationType; 
-        private java.util.List < Domains> domains; 
+        private java.util.List<Domains> domains; 
         private String environmentId; 
         private String gatewayId; 
         private String httpApiId; 
@@ -250,7 +255,7 @@ public class HttpApiRoute extends TeaModel {
         private Policies policies; 
         private Predicates predicates; 
         private String routeId; 
-        private java.util.List < Services> services; 
+        private java.util.List<Services> services; 
         private String sourceType; 
 
         /**
@@ -280,7 +285,7 @@ public class HttpApiRoute extends TeaModel {
         /**
          * Domains.
          */
-        public Builder domains(java.util.List < Domains> domains) {
+        public Builder domains(java.util.List<Domains> domains) {
             this.domains = domains;
             return this;
         }
@@ -392,7 +397,7 @@ public class HttpApiRoute extends TeaModel {
         /**
          * Services.
          */
-        public Builder services(java.util.List < Services> services) {
+        public Builder services(java.util.List<Services> services) {
             this.services = services;
             return this;
         }
@@ -633,7 +638,7 @@ public class HttpApiRoute extends TeaModel {
      */
     public static class Fallback extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Destinations")
-        private java.util.List < Destinations> destinations;
+        private java.util.List<Destinations> destinations;
 
         @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
@@ -654,7 +659,7 @@ public class HttpApiRoute extends TeaModel {
         /**
          * @return destinations
          */
-        public java.util.List < Destinations> getDestinations() {
+        public java.util.List<Destinations> getDestinations() {
             return this.destinations;
         }
 
@@ -666,13 +671,13 @@ public class HttpApiRoute extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Destinations> destinations; 
+            private java.util.List<Destinations> destinations; 
             private Boolean enable; 
 
             /**
              * Destinations.
              */
-            public Builder destinations(java.util.List < Destinations> destinations) {
+            public Builder destinations(java.util.List<Destinations> destinations) {
                 this.destinations = destinations;
                 return this;
             }
@@ -706,10 +711,10 @@ public class HttpApiRoute extends TeaModel {
         private Boolean enable;
 
         @com.aliyun.core.annotation.NameInMap("HttpCodes")
-        private java.util.List < String > httpCodes;
+        private java.util.List<String> httpCodes;
 
         @com.aliyun.core.annotation.NameInMap("RetryOn")
-        private java.util.List < String > retryOn;
+        private java.util.List<String> retryOn;
 
         private Retry(Builder builder) {
             this.attempts = builder.attempts;
@@ -743,22 +748,22 @@ public class HttpApiRoute extends TeaModel {
         /**
          * @return httpCodes
          */
-        public java.util.List < String > getHttpCodes() {
+        public java.util.List<String> getHttpCodes() {
             return this.httpCodes;
         }
 
         /**
          * @return retryOn
          */
-        public java.util.List < String > getRetryOn() {
+        public java.util.List<String> getRetryOn() {
             return this.retryOn;
         }
 
         public static final class Builder {
             private Long attempts; 
             private Boolean enable; 
-            private java.util.List < String > httpCodes; 
-            private java.util.List < String > retryOn; 
+            private java.util.List<String> httpCodes; 
+            private java.util.List<String> retryOn; 
 
             /**
              * Attempts.
@@ -779,7 +784,7 @@ public class HttpApiRoute extends TeaModel {
             /**
              * HttpCodes.
              */
-            public Builder httpCodes(java.util.List < String > httpCodes) {
+            public Builder httpCodes(java.util.List<String> httpCodes) {
                 this.httpCodes = httpCodes;
                 return this;
             }
@@ -787,7 +792,7 @@ public class HttpApiRoute extends TeaModel {
             /**
              * RetryOn.
              */
-            public Builder retryOn(java.util.List < String > retryOn) {
+            public Builder retryOn(java.util.List<String> retryOn) {
                 this.retryOn = retryOn;
                 return this;
             }
@@ -1242,16 +1247,16 @@ public class HttpApiRoute extends TeaModel {
      */
     public static class Predicates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HeaderPredicates")
-        private java.util.List < HeaderPredicates> headerPredicates;
+        private java.util.List<HeaderPredicates> headerPredicates;
 
         @com.aliyun.core.annotation.NameInMap("MethodPredicates")
-        private java.util.List < String > methodPredicates;
+        private java.util.List<String> methodPredicates;
 
         @com.aliyun.core.annotation.NameInMap("PathPredicates")
         private PathPredicates pathPredicates;
 
         @com.aliyun.core.annotation.NameInMap("QueryPredicates")
-        private java.util.List < QueryPredicates> queryPredicates;
+        private java.util.List<QueryPredicates> queryPredicates;
 
         private Predicates(Builder builder) {
             this.headerPredicates = builder.headerPredicates;
@@ -1271,14 +1276,14 @@ public class HttpApiRoute extends TeaModel {
         /**
          * @return headerPredicates
          */
-        public java.util.List < HeaderPredicates> getHeaderPredicates() {
+        public java.util.List<HeaderPredicates> getHeaderPredicates() {
             return this.headerPredicates;
         }
 
         /**
          * @return methodPredicates
          */
-        public java.util.List < String > getMethodPredicates() {
+        public java.util.List<String> getMethodPredicates() {
             return this.methodPredicates;
         }
 
@@ -1292,20 +1297,20 @@ public class HttpApiRoute extends TeaModel {
         /**
          * @return queryPredicates
          */
-        public java.util.List < QueryPredicates> getQueryPredicates() {
+        public java.util.List<QueryPredicates> getQueryPredicates() {
             return this.queryPredicates;
         }
 
         public static final class Builder {
-            private java.util.List < HeaderPredicates> headerPredicates; 
-            private java.util.List < String > methodPredicates; 
+            private java.util.List<HeaderPredicates> headerPredicates; 
+            private java.util.List<String> methodPredicates; 
             private PathPredicates pathPredicates; 
-            private java.util.List < QueryPredicates> queryPredicates; 
+            private java.util.List<QueryPredicates> queryPredicates; 
 
             /**
              * HeaderPredicates.
              */
-            public Builder headerPredicates(java.util.List < HeaderPredicates> headerPredicates) {
+            public Builder headerPredicates(java.util.List<HeaderPredicates> headerPredicates) {
                 this.headerPredicates = headerPredicates;
                 return this;
             }
@@ -1313,7 +1318,7 @@ public class HttpApiRoute extends TeaModel {
             /**
              * MethodPredicates.
              */
-            public Builder methodPredicates(java.util.List < String > methodPredicates) {
+            public Builder methodPredicates(java.util.List<String> methodPredicates) {
                 this.methodPredicates = methodPredicates;
                 return this;
             }
@@ -1329,7 +1334,7 @@ public class HttpApiRoute extends TeaModel {
             /**
              * QueryPredicates.
              */
-            public Builder queryPredicates(java.util.List < QueryPredicates> queryPredicates) {
+            public Builder queryPredicates(java.util.List<QueryPredicates> queryPredicates) {
                 this.queryPredicates = queryPredicates;
                 return this;
             }

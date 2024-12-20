@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -206,6 +211,93 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationInstancesResponseBody</p>
      */
+    public static class SidecarContainersStatus extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
+        private String containerId;
+
+        @com.aliyun.core.annotation.NameInMap("ContainerStatus")
+        private String containerStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
+        private String imageUrl;
+
+        private SidecarContainersStatus(Builder builder) {
+            this.containerId = builder.containerId;
+            this.containerStatus = builder.containerStatus;
+            this.imageUrl = builder.imageUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SidecarContainersStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return containerId
+         */
+        public String getContainerId() {
+            return this.containerId;
+        }
+
+        /**
+         * @return containerStatus
+         */
+        public String getContainerStatus() {
+            return this.containerStatus;
+        }
+
+        /**
+         * @return imageUrl
+         */
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        public static final class Builder {
+            private String containerId; 
+            private String containerStatus; 
+            private String imageUrl; 
+
+            /**
+             * ContainerId.
+             */
+            public Builder containerId(String containerId) {
+                this.containerId = containerId;
+                return this;
+            }
+
+            /**
+             * ContainerStatus.
+             */
+            public Builder containerStatus(String containerStatus) {
+                this.containerStatus = containerStatus;
+                return this;
+            }
+
+            /**
+             * ImageUrl.
+             */
+            public Builder imageUrl(String imageUrl) {
+                this.imageUrl = imageUrl;
+                return this;
+            }
+
+            public SidecarContainersStatus build() {
+                return new SidecarContainersStatus(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
         private Long createTimeStamp;
@@ -243,6 +335,9 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PackageVersion")
         private String packageVersion;
 
+        @com.aliyun.core.annotation.NameInMap("SidecarContainersStatus")
+        private java.util.List<SidecarContainersStatus> sidecarContainersStatus;
+
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
@@ -259,6 +354,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             this.instanceHealthStatus = builder.instanceHealthStatus;
             this.instanceId = builder.instanceId;
             this.packageVersion = builder.packageVersion;
+            this.sidecarContainersStatus = builder.sidecarContainersStatus;
             this.vSwitchId = builder.vSwitchId;
         }
 
@@ -355,6 +451,13 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return sidecarContainersStatus
+         */
+        public java.util.List<SidecarContainersStatus> getSidecarContainersStatus() {
+            return this.sidecarContainersStatus;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -374,6 +477,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             private String instanceHealthStatus; 
             private String instanceId; 
             private String packageVersion; 
+            private java.util.List<SidecarContainersStatus> sidecarContainersStatus; 
             private String vSwitchId; 
 
             /**
@@ -532,6 +636,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * SidecarContainersStatus.
+             */
+            public Builder sidecarContainersStatus(java.util.List<SidecarContainersStatus> sidecarContainersStatus) {
+                this.sidecarContainersStatus = sidecarContainersStatus;
+                return this;
+            }
+
+            /**
              * <p>The ID of the zone where the instance is deployed.</p>
              * 
              * <strong>example:</strong>
@@ -560,7 +672,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         private Integer currentPage;
 
         @com.aliyun.core.annotation.NameInMap("Instances")
-        private java.util.List < Instances> instances;
+        private java.util.List<Instances> instances;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
@@ -593,7 +705,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         /**
          * @return instances
          */
-        public java.util.List < Instances> getInstances() {
+        public java.util.List<Instances> getInstances() {
             return this.instances;
         }
 
@@ -613,7 +725,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer currentPage; 
-            private java.util.List < Instances> instances; 
+            private java.util.List<Instances> instances; 
             private Integer pageSize; 
             private Integer totalSize; 
 
@@ -631,7 +743,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             /**
              * <p>The list of application instances.</p>
              */
-            public Builder instances(java.util.List < Instances> instances) {
+            public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
                 return this;
             }

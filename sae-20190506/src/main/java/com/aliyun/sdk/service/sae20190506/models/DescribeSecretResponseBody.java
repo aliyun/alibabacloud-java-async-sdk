@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -294,10 +299,10 @@ public class DescribeSecretResponseBody extends TeaModel {
         private String namespaceId;
 
         @com.aliyun.core.annotation.NameInMap("RelateApps")
-        private java.util.List < RelateApps> relateApps;
+        private java.util.List<RelateApps> relateApps;
 
         @com.aliyun.core.annotation.NameInMap("SecretData")
-        private java.util.Map < String, String > secretData;
+        private java.util.Map<String, String> secretData;
 
         @com.aliyun.core.annotation.NameInMap("SecretId")
         private Long secretId;
@@ -347,14 +352,14 @@ public class DescribeSecretResponseBody extends TeaModel {
         /**
          * @return relateApps
          */
-        public java.util.List < RelateApps> getRelateApps() {
+        public java.util.List<RelateApps> getRelateApps() {
             return this.relateApps;
         }
 
         /**
          * @return secretData
          */
-        public java.util.Map < String, String > getSecretData() {
+        public java.util.Map<String, String> getSecretData() {
             return this.secretData;
         }
 
@@ -389,8 +394,8 @@ public class DescribeSecretResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTime; 
             private String namespaceId; 
-            private java.util.List < RelateApps> relateApps; 
-            private java.util.Map < String, String > secretData; 
+            private java.util.List<RelateApps> relateApps; 
+            private java.util.Map<String, String> secretData; 
             private Long secretId; 
             private String secretName; 
             private String secretType; 
@@ -421,7 +426,7 @@ public class DescribeSecretResponseBody extends TeaModel {
             /**
              * <p>The associated application.</p>
              */
-            public Builder relateApps(java.util.List < RelateApps> relateApps) {
+            public Builder relateApps(java.util.List<RelateApps> relateApps) {
                 this.relateApps = relateApps;
                 return this;
             }
@@ -429,7 +434,7 @@ public class DescribeSecretResponseBody extends TeaModel {
             /**
              * <p>Secret key-value pair data.</p>
              */
-            public Builder secretData(java.util.Map < String, String > secretData) {
+            public Builder secretData(java.util.Map<String, String> secretData) {
                 this.secretData = secretData;
                 return this;
             }

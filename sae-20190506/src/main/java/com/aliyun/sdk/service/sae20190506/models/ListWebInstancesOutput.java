@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,10 +21,10 @@ public class ListWebInstancesOutput extends TeaModel {
     private String currentError;
 
     @com.aliyun.core.annotation.NameInMap("WebInstances")
-    private java.util.List < WebInstanceInfo > webInstances;
+    private java.util.List<WebInstanceInfo> webInstances;
 
     @com.aliyun.core.annotation.NameInMap("WebVersionStatus")
-    private java.util.Map < String, WebVersionStatus > webVersionStatus;
+    private java.util.Map<String, WebVersionStatus> webVersionStatus;
 
     private ListWebInstancesOutput(Builder builder) {
         this.currentError = builder.currentError;
@@ -45,21 +50,21 @@ public class ListWebInstancesOutput extends TeaModel {
     /**
      * @return webInstances
      */
-    public java.util.List < WebInstanceInfo > getWebInstances() {
+    public java.util.List<WebInstanceInfo> getWebInstances() {
         return this.webInstances;
     }
 
     /**
      * @return webVersionStatus
      */
-    public java.util.Map < String, WebVersionStatus > getWebVersionStatus() {
+    public java.util.Map<String, WebVersionStatus> getWebVersionStatus() {
         return this.webVersionStatus;
     }
 
     public static final class Builder {
         private String currentError; 
-        private java.util.List < WebInstanceInfo > webInstances; 
-        private java.util.Map < String, WebVersionStatus > webVersionStatus; 
+        private java.util.List<WebInstanceInfo> webInstances; 
+        private java.util.Map<String, WebVersionStatus> webVersionStatus; 
 
         /**
          * CurrentError.
@@ -72,7 +77,7 @@ public class ListWebInstancesOutput extends TeaModel {
         /**
          * WebInstances.
          */
-        public Builder webInstances(java.util.List < WebInstanceInfo > webInstances) {
+        public Builder webInstances(java.util.List<WebInstanceInfo> webInstances) {
             this.webInstances = webInstances;
             return this;
         }
@@ -80,7 +85,7 @@ public class ListWebInstancesOutput extends TeaModel {
         /**
          * WebVersionStatus.
          */
-        public Builder webVersionStatus(java.util.Map < String, WebVersionStatus > webVersionStatus) {
+        public Builder webVersionStatus(java.util.Map<String, WebVersionStatus> webVersionStatus) {
             this.webVersionStatus = webVersionStatus;
             return this;
         }

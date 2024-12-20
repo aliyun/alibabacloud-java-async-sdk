@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -329,7 +334,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         private Integer maxReplicas;
 
         @com.aliyun.core.annotation.NameInMap("Metrics")
-        private java.util.List < Metrics> metrics;
+        private java.util.List<Metrics> metrics;
 
         @com.aliyun.core.annotation.NameInMap("MinReplicas")
         private Integer minReplicas;
@@ -358,7 +363,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         /**
          * @return metrics
          */
-        public java.util.List < Metrics> getMetrics() {
+        public java.util.List<Metrics> getMetrics() {
             return this.metrics;
         }
 
@@ -371,7 +376,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer maxReplicas; 
-            private java.util.List < Metrics> metrics; 
+            private java.util.List<Metrics> metrics; 
             private Integer minReplicas; 
 
             /**
@@ -385,7 +390,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
             /**
              * Metrics.
              */
-            public Builder metrics(java.util.List < Metrics> metrics) {
+            public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
                 return this;
             }
@@ -529,7 +534,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         private String period;
 
         @com.aliyun.core.annotation.NameInMap("Schedules")
-        private java.util.List < Schedules> schedules;
+        private java.util.List<Schedules> schedules;
 
         private Timer(Builder builder) {
             this.beginDate = builder.beginDate;
@@ -570,7 +575,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         /**
          * @return schedules
          */
-        public java.util.List < Schedules> getSchedules() {
+        public java.util.List<Schedules> getSchedules() {
             return this.schedules;
         }
 
@@ -578,7 +583,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
             private String beginDate; 
             private String endDate; 
             private String period; 
-            private java.util.List < Schedules> schedules; 
+            private java.util.List<Schedules> schedules; 
 
             /**
              * BeginDate.
@@ -607,7 +612,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
             /**
              * Schedules.
              */
-            public Builder schedules(java.util.List < Schedules> schedules) {
+            public Builder schedules(java.util.List<Schedules> schedules) {
                 this.schedules = schedules;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -541,7 +546,7 @@ public class ListIngressesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IngressList")
-        private java.util.List < IngressList> ingressList;
+        private java.util.List<IngressList> ingressList;
 
         private Data(Builder builder) {
             this.ingressList = builder.ingressList;
@@ -558,12 +563,12 @@ public class ListIngressesResponseBody extends TeaModel {
         /**
          * @return ingressList
          */
-        public java.util.List < IngressList> getIngressList() {
+        public java.util.List<IngressList> getIngressList() {
             return this.ingressList;
         }
 
         public static final class Builder {
-            private java.util.List < IngressList> ingressList; 
+            private java.util.List<IngressList> ingressList; 
 
             /**
              * <p>The type of the SLB instance based on the IP address. Valid values:</p>
@@ -572,7 +577,7 @@ public class ListIngressesResponseBody extends TeaModel {
              * <li><strong>intranet</strong>: the internal-facing SLB instance.</li>
              * </ul>
              */
-            public Builder ingressList(java.util.List < IngressList> ingressList) {
+            public Builder ingressList(java.util.List<IngressList> ingressList) {
                 this.ingressList = ingressList;
                 return this;
             }

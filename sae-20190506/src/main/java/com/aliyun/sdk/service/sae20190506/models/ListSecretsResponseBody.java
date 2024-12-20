@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -294,7 +299,7 @@ public class ListSecretsResponseBody extends TeaModel {
         private String namespaceId;
 
         @com.aliyun.core.annotation.NameInMap("RelateApps")
-        private java.util.List < RelateApps> relateApps;
+        private java.util.List<RelateApps> relateApps;
 
         @com.aliyun.core.annotation.NameInMap("SecretId")
         private Long secretId;
@@ -343,7 +348,7 @@ public class ListSecretsResponseBody extends TeaModel {
         /**
          * @return relateApps
          */
-        public java.util.List < RelateApps> getRelateApps() {
+        public java.util.List<RelateApps> getRelateApps() {
             return this.relateApps;
         }
 
@@ -378,7 +383,7 @@ public class ListSecretsResponseBody extends TeaModel {
         public static final class Builder {
             private Long createTime; 
             private String namespaceId; 
-            private java.util.List < RelateApps> relateApps; 
+            private java.util.List<RelateApps> relateApps; 
             private Long secretId; 
             private String secretName; 
             private String secretType; 
@@ -409,7 +414,7 @@ public class ListSecretsResponseBody extends TeaModel {
             /**
              * <p>The associated applications.</p>
              */
-            public Builder relateApps(java.util.List < RelateApps> relateApps) {
+            public Builder relateApps(java.util.List<RelateApps> relateApps) {
                 this.relateApps = relateApps;
                 return this;
             }
@@ -474,7 +479,7 @@ public class ListSecretsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Secrets")
-        private java.util.List < Secrets> secrets;
+        private java.util.List<Secrets> secrets;
 
         private Data(Builder builder) {
             this.secrets = builder.secrets;
@@ -491,17 +496,17 @@ public class ListSecretsResponseBody extends TeaModel {
         /**
          * @return secrets
          */
-        public java.util.List < Secrets> getSecrets() {
+        public java.util.List<Secrets> getSecrets() {
             return this.secrets;
         }
 
         public static final class Builder {
-            private java.util.List < Secrets> secrets; 
+            private java.util.List<Secrets> secrets; 
 
             /**
              * <p>The Secrets.</p>
              */
-            public Builder secrets(java.util.List < Secrets> secrets) {
+            public Builder secrets(java.util.List<Secrets> secrets) {
                 this.secrets = secrets;
                 return this;
             }

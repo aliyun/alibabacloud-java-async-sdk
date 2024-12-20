@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
@@ -61,7 +66,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -102,7 +107,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errorCode; 
         private String message; 
         private String requestId; 
@@ -120,7 +125,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         /**
          * <p>The total number of pages returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -376,7 +381,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         private String pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("TotalSize")
         private String totalSize;
@@ -421,7 +426,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -436,7 +441,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
             private String currentPage; 
             private String pageNumber; 
             private String pageSize; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private String totalSize; 
 
             /**
@@ -475,7 +480,7 @@ public class ListAppServicesPageResponseBody extends TeaModel {
             /**
              * <p>The version of the service. You can create a custom version.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

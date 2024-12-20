@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -373,7 +378,7 @@ public class ListAppEventsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppEventEntity")
-        private java.util.List < AppEventEntity> appEventEntity;
+        private java.util.List<AppEventEntity> appEventEntity;
 
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -402,7 +407,7 @@ public class ListAppEventsResponseBody extends TeaModel {
         /**
          * @return appEventEntity
          */
-        public java.util.List < AppEventEntity> getAppEventEntity() {
+        public java.util.List<AppEventEntity> getAppEventEntity() {
             return this.appEventEntity;
         }
 
@@ -428,7 +433,7 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AppEventEntity> appEventEntity; 
+            private java.util.List<AppEventEntity> appEventEntity; 
             private Integer currentPage; 
             private Integer pageSize; 
             private Integer totalSize; 
@@ -436,7 +441,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             /**
              * <p>The events.</p>
              */
-            public Builder appEventEntity(java.util.List < AppEventEntity> appEventEntity) {
+            public Builder appEventEntity(java.util.List<AppEventEntity> appEventEntity) {
                 this.appEventEntity = appEventEntity;
                 return this;
             }

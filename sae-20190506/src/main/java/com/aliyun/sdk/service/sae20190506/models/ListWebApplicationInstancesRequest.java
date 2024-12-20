@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ListWebApplicationInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Limit")
@@ -40,11 +45,11 @@ public class ListWebApplicationInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Statuses")
-    private java.util.List < String > statuses;
+    private java.util.List<String> statuses;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VersionIds")
-    private java.util.List < String > versionIds;
+    private java.util.List<String> versionIds;
 
     private ListWebApplicationInstancesRequest(Builder builder) {
         super(builder);
@@ -88,7 +93,7 @@ public class ListWebApplicationInstancesRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -116,26 +121,26 @@ public class ListWebApplicationInstancesRequest extends Request {
     /**
      * @return statuses
      */
-    public java.util.List < String > getStatuses() {
+    public java.util.List<String> getStatuses() {
         return this.statuses;
     }
 
     /**
      * @return versionIds
      */
-    public java.util.List < String > getVersionIds() {
+    public java.util.List<String> getVersionIds() {
         return this.versionIds;
     }
 
     public static final class Builder extends Request.Builder<ListWebApplicationInstancesRequest, Builder> {
         private String applicationId; 
         private Long endTime; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private String limit; 
         private String namespaceId; 
         private Long startTime; 
-        private java.util.List < String > statuses; 
-        private java.util.List < String > versionIds; 
+        private java.util.List<String> statuses; 
+        private java.util.List<String> versionIds; 
 
         private Builder() {
             super();
@@ -177,7 +182,7 @@ public class ListWebApplicationInstancesRequest extends Request {
         /**
          * InstanceIds.
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
             this.putQueryParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;
@@ -217,7 +222,7 @@ public class ListWebApplicationInstancesRequest extends Request {
         /**
          * Statuses.
          */
-        public Builder statuses(java.util.List < String > statuses) {
+        public Builder statuses(java.util.List<String> statuses) {
             String statusesShrink = shrink(statuses, "Statuses", "json");
             this.putQueryParameter("Statuses", statusesShrink);
             this.statuses = statuses;
@@ -227,7 +232,7 @@ public class ListWebApplicationInstancesRequest extends Request {
         /**
          * VersionIds.
          */
-        public Builder versionIds(java.util.List < String > versionIds) {
+        public Builder versionIds(java.util.List<String> versionIds) {
             String versionIdsShrink = shrink(versionIds, "VersionIds", "json");
             this.putQueryParameter("VersionIds", versionIdsShrink);
             this.versionIds = versionIds;

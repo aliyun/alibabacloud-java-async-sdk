@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -284,7 +289,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         private Long createTime;
 
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.Map < String, ? > data;
+        private java.util.Map<String, ?> data;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -296,7 +301,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         private String namespaceId;
 
         @com.aliyun.core.annotation.NameInMap("RelateApps")
-        private java.util.List < RelateApps> relateApps;
+        private java.util.List<RelateApps> relateApps;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
@@ -337,7 +342,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.Map < String, ? > getData() {
+        public java.util.Map<String, ?> getData() {
             return this.data;
         }
 
@@ -365,7 +370,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         /**
          * @return relateApps
          */
-        public java.util.List < RelateApps> getRelateApps() {
+        public java.util.List<RelateApps> getRelateApps() {
             return this.relateApps;
         }
 
@@ -379,11 +384,11 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         public static final class Builder {
             private Long configMapId; 
             private Long createTime; 
-            private java.util.Map < String, ? > data; 
+            private java.util.Map<String, ?> data; 
             private String description; 
             private String name; 
             private String namespaceId; 
-            private java.util.List < RelateApps> relateApps; 
+            private java.util.List<RelateApps> relateApps; 
             private Long updateTime; 
 
             /**
@@ -414,7 +419,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
              */
-            public Builder data(java.util.Map < String, ? > data) {
+            public Builder data(java.util.Map<String, ?> data) {
                 this.data = data;
                 return this;
             }
@@ -459,7 +464,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             /**
              * <p>The name of the application.</p>
              */
-            public Builder relateApps(java.util.List < RelateApps> relateApps) {
+            public Builder relateApps(java.util.List<RelateApps> relateApps) {
                 this.relateApps = relateApps;
                 return this;
             }

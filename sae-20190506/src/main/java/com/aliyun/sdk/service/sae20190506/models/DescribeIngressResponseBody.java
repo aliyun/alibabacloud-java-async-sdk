@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -392,7 +397,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         private String rewritePath;
 
         @com.aliyun.core.annotation.NameInMap("RuleActions")
-        private java.util.List < RuleActions> ruleActions;
+        private java.util.List<RuleActions> ruleActions;
 
         private Rules(Builder builder) {
             this.appId = builder.appId;
@@ -465,7 +470,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         /**
          * @return ruleActions
          */
-        public java.util.List < RuleActions> getRuleActions() {
+        public java.util.List<RuleActions> getRuleActions() {
             return this.ruleActions;
         }
 
@@ -477,7 +482,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             private String domain; 
             private String path; 
             private String rewritePath; 
-            private java.util.List < RuleActions> ruleActions; 
+            private java.util.List<RuleActions> ruleActions; 
 
             /**
              * <p>The protocol used to forward requests. Valid values:</p>
@@ -565,7 +570,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             /**
              * RuleActions.
              */
-            public Builder ruleActions(java.util.List < RuleActions> ruleActions) {
+            public Builder ruleActions(java.util.List<RuleActions> ruleActions) {
                 this.ruleActions = ruleActions;
                 return this;
             }
@@ -636,7 +641,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         private Integer requestTimeout;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
         private String securityPolicyId;
@@ -801,7 +806,7 @@ public class DescribeIngressResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -844,7 +849,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             private String name; 
             private String namespaceId; 
             private Integer requestTimeout; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
             private String securityPolicyId; 
             private String slbId; 
             private String slbType; 
@@ -1019,7 +1024,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             /**
              * <p>The ID of the application specified in the forwarding rule.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

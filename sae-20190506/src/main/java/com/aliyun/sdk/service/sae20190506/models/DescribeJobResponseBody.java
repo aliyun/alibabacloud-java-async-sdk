@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -626,7 +631,7 @@ public class DescribeJobResponseBody extends TeaModel {
         private String concurrencyPolicy;
 
         @com.aliyun.core.annotation.NameInMap("ConfigMapMountDesc")
-        private java.util.List < ConfigMapMountDesc> configMapMountDesc;
+        private java.util.List<ConfigMapMountDesc> configMapMountDesc;
 
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -659,7 +664,7 @@ public class DescribeJobResponseBody extends TeaModel {
         private Integer memory;
 
         @com.aliyun.core.annotation.NameInMap("MountDesc")
-        private java.util.List < MountDesc> mountDesc;
+        private java.util.List<MountDesc> mountDesc;
 
         @com.aliyun.core.annotation.NameInMap("MountHost")
         private String mountHost;
@@ -680,7 +685,7 @@ public class DescribeJobResponseBody extends TeaModel {
         private String ossAkSecret;
 
         @com.aliyun.core.annotation.NameInMap("OssMountDescs")
-        private java.util.List < OssMountDescs> ossMountDescs;
+        private java.util.List<OssMountDescs> ossMountDescs;
 
         @com.aliyun.core.annotation.NameInMap("PackageType")
         private String packageType;
@@ -707,7 +712,7 @@ public class DescribeJobResponseBody extends TeaModel {
         private String programmingLanguage;
 
         @com.aliyun.core.annotation.NameInMap("PublicWebHookUrls")
-        private java.util.List < String > publicWebHookUrls;
+        private java.util.List<String> publicWebHookUrls;
 
         @com.aliyun.core.annotation.NameInMap("Python")
         private String python;
@@ -719,7 +724,7 @@ public class DescribeJobResponseBody extends TeaModel {
         private String refAppId;
 
         @com.aliyun.core.annotation.NameInMap("RefedAppIds")
-        private java.util.List < String > refedAppIds;
+        private java.util.List<String> refedAppIds;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -743,7 +748,7 @@ public class DescribeJobResponseBody extends TeaModel {
         private Boolean suspend;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TerminationGracePeriodSeconds")
         private Integer terminationGracePeriodSeconds;
@@ -767,7 +772,7 @@ public class DescribeJobResponseBody extends TeaModel {
         private String vpcId;
 
         @com.aliyun.core.annotation.NameInMap("VpcWebHookUrls")
-        private java.util.List < String > vpcWebHookUrls;
+        private java.util.List<String> vpcWebHookUrls;
 
         @com.aliyun.core.annotation.NameInMap("WarStartOptions")
         private String warStartOptions;
@@ -911,7 +916,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return configMapMountDesc
          */
-        public java.util.List < ConfigMapMountDesc> getConfigMapMountDesc() {
+        public java.util.List<ConfigMapMountDesc> getConfigMapMountDesc() {
             return this.configMapMountDesc;
         }
 
@@ -988,7 +993,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return mountDesc
          */
-        public java.util.List < MountDesc> getMountDesc() {
+        public java.util.List<MountDesc> getMountDesc() {
             return this.mountDesc;
         }
 
@@ -1037,7 +1042,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return ossMountDescs
          */
-        public java.util.List < OssMountDescs> getOssMountDescs() {
+        public java.util.List<OssMountDescs> getOssMountDescs() {
             return this.ossMountDescs;
         }
 
@@ -1100,7 +1105,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return publicWebHookUrls
          */
-        public java.util.List < String > getPublicWebHookUrls() {
+        public java.util.List<String> getPublicWebHookUrls() {
             return this.publicWebHookUrls;
         }
 
@@ -1128,7 +1133,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return refedAppIds
          */
-        public java.util.List < String > getRefedAppIds() {
+        public java.util.List<String> getRefedAppIds() {
             return this.refedAppIds;
         }
 
@@ -1184,7 +1189,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1240,7 +1245,7 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * @return vpcWebHookUrls
          */
-        public java.util.List < String > getVpcWebHookUrls() {
+        public java.util.List<String> getVpcWebHookUrls() {
             return this.vpcWebHookUrls;
         }
 
@@ -1268,7 +1273,7 @@ public class DescribeJobResponseBody extends TeaModel {
             private String command; 
             private String commandArgs; 
             private String concurrencyPolicy; 
-            private java.util.List < ConfigMapMountDesc> configMapMountDesc; 
+            private java.util.List<ConfigMapMountDesc> configMapMountDesc; 
             private Integer cpu; 
             private String customHostAlias; 
             private String edasContainerVersion; 
@@ -1279,14 +1284,14 @@ public class DescribeJobResponseBody extends TeaModel {
             private String jarStartOptions; 
             private String jdk; 
             private Integer memory; 
-            private java.util.List < MountDesc> mountDesc; 
+            private java.util.List<MountDesc> mountDesc; 
             private String mountHost; 
             private String namespaceId; 
             private String nasConfigs; 
             private String nasId; 
             private String ossAkId; 
             private String ossAkSecret; 
-            private java.util.List < OssMountDescs> ossMountDescs; 
+            private java.util.List<OssMountDescs> ossMountDescs; 
             private String packageType; 
             private String packageUrl; 
             private String packageVersion; 
@@ -1295,11 +1300,11 @@ public class DescribeJobResponseBody extends TeaModel {
             private String postStart; 
             private String preStop; 
             private String programmingLanguage; 
-            private java.util.List < String > publicWebHookUrls; 
+            private java.util.List<String> publicWebHookUrls; 
             private String python; 
             private String pythonModules; 
             private String refAppId; 
-            private java.util.List < String > refedAppIds; 
+            private java.util.List<String> refedAppIds; 
             private String regionId; 
             private Integer replicas; 
             private String securityGroupId; 
@@ -1307,7 +1312,7 @@ public class DescribeJobResponseBody extends TeaModel {
             private String sliceEnvs; 
             private String slsConfigs; 
             private Boolean suspend; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Integer terminationGracePeriodSeconds; 
             private Long timeout; 
             private String timezone; 
@@ -1315,7 +1320,7 @@ public class DescribeJobResponseBody extends TeaModel {
             private String triggerConfig; 
             private String vSwitchId; 
             private String vpcId; 
-            private java.util.List < String > vpcWebHookUrls; 
+            private java.util.List<String> vpcWebHookUrls; 
             private String warStartOptions; 
             private String webContainer; 
 
@@ -1435,7 +1440,7 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * <p>The details of the ConfigMap.</p>
              */
-            public Builder configMapMountDesc(java.util.List < ConfigMapMountDesc> configMapMountDesc) {
+            public Builder configMapMountDesc(java.util.List<ConfigMapMountDesc> configMapMountDesc) {
                 this.configMapMountDesc = configMapMountDesc;
                 return this;
             }
@@ -1603,7 +1608,7 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * <p>The details of the mounted NAS file system.</p>
              */
-            public Builder mountDesc(java.util.List < MountDesc> mountDesc) {
+            public Builder mountDesc(java.util.List<MountDesc> mountDesc) {
                 this.mountDesc = mountDesc;
                 return this;
             }
@@ -1677,7 +1682,7 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * <p>The description of mounted OSS buckets.</p>
              */
-            public Builder ossMountDescs(java.util.List < OssMountDescs> ossMountDescs) {
+            public Builder ossMountDescs(java.util.List<OssMountDescs> ossMountDescs) {
                 this.ossMountDescs = ossMountDescs;
                 return this;
             }
@@ -1801,7 +1806,7 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * <p>The Internet request URLs of one-time jobs.</p>
              */
-            public Builder publicWebHookUrls(java.util.List < String > publicWebHookUrls) {
+            public Builder publicWebHookUrls(java.util.List<String> publicWebHookUrls) {
                 this.publicWebHookUrls = publicWebHookUrls;
                 return this;
             }
@@ -1842,7 +1847,7 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * <p>The IDs of the referenced job templates.</p>
              */
-            public Builder refedAppIds(java.util.List < String > refedAppIds) {
+            public Builder refedAppIds(java.util.List<String> refedAppIds) {
                 this.refedAppIds = refedAppIds;
                 return this;
             }
@@ -1940,7 +1945,7 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -2029,7 +2034,7 @@ public class DescribeJobResponseBody extends TeaModel {
             /**
              * <p>The internal request URLs for one-time jobs.</p>
              */
-            public Builder vpcWebHookUrls(java.util.List < String > vpcWebHookUrls) {
+            public Builder vpcWebHookUrls(java.util.List<String> vpcWebHookUrls) {
                 this.vpcWebHookUrls = vpcWebHookUrls;
                 return this;
             }

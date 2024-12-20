@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -450,7 +455,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         private String errorMessage;
 
         @com.aliyun.core.annotation.NameInMap("Pipelines")
-        private java.util.List < Pipelines> pipelines;
+        private java.util.List<Pipelines> pipelines;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
@@ -591,7 +596,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         /**
          * @return pipelines
          */
-        public java.util.List < Pipelines> getPipelines() {
+        public java.util.List<Pipelines> getPipelines() {
             return this.pipelines;
         }
 
@@ -631,7 +636,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             private String currentPipelineId; 
             private String description; 
             private String errorMessage; 
-            private java.util.List < Pipelines> pipelines; 
+            private java.util.List<Pipelines> pipelines; 
             private Integer status; 
             private Integer subStatus; 
             private Boolean supportRollback; 
@@ -820,7 +825,7 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
             /**
              * <p>The batch information.</p>
              */
-            public Builder pipelines(java.util.List < Pipelines> pipelines) {
+            public Builder pipelines(java.util.List<Pipelines> pipelines) {
                 this.pipelines = pipelines;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -291,7 +296,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         private Long createTime;
 
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.Map < String, ? > data;
+        private java.util.Map<String, ?> data;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -303,7 +308,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         private String namespaceId;
 
         @com.aliyun.core.annotation.NameInMap("RelateApps")
-        private java.util.List < RelateApps> relateApps;
+        private java.util.List<RelateApps> relateApps;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
@@ -344,7 +349,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.Map < String, ? > getData() {
+        public java.util.Map<String, ?> getData() {
             return this.data;
         }
 
@@ -372,7 +377,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         /**
          * @return relateApps
          */
-        public java.util.List < RelateApps> getRelateApps() {
+        public java.util.List<RelateApps> getRelateApps() {
             return this.relateApps;
         }
 
@@ -386,11 +391,11 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         public static final class Builder {
             private Long configMapId; 
             private Long createTime; 
-            private java.util.Map < String, ? > data; 
+            private java.util.Map<String, ?> data; 
             private String description; 
             private String name; 
             private String namespaceId; 
-            private java.util.List < RelateApps> relateApps; 
+            private java.util.List<RelateApps> relateApps; 
             private Long updateTime; 
 
             /**
@@ -423,7 +428,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
              */
-            public Builder data(java.util.Map < String, ? > data) {
+            public Builder data(java.util.Map<String, ?> data) {
                 this.data = data;
                 return this;
             }
@@ -464,7 +469,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
             /**
              * <p>The application that is associated with the instance.</p>
              */
-            public Builder relateApps(java.util.List < RelateApps> relateApps) {
+            public Builder relateApps(java.util.List<RelateApps> relateApps) {
                 this.relateApps = relateApps;
                 return this;
             }
@@ -495,7 +500,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigMaps")
-        private java.util.List < ConfigMaps> configMaps;
+        private java.util.List<ConfigMaps> configMaps;
 
         private Data(Builder builder) {
             this.configMaps = builder.configMaps;
@@ -512,17 +517,17 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         /**
          * @return configMaps
          */
-        public java.util.List < ConfigMaps> getConfigMaps() {
+        public java.util.List<ConfigMaps> getConfigMaps() {
             return this.configMaps;
         }
 
         public static final class Builder {
-            private java.util.List < ConfigMaps> configMaps; 
+            private java.util.List<ConfigMaps> configMaps; 
 
             /**
              * <p>The ConfigMap instances.</p>
              */
-            public Builder configMaps(java.util.List < ConfigMaps> configMaps) {
+            public Builder configMaps(java.util.List<ConfigMaps> configMaps) {
                 this.configMaps = configMaps;
                 return this;
             }

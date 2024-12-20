@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -634,6 +639,422 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
      *
      * <p>DescribeApplicationConfigResponseBody</p>
      */
+    public static class SidecarContainersConfigConfigMapMountDesc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConfigMapId")
+        private Long configMapId;
+
+        @com.aliyun.core.annotation.NameInMap("ConfigMapName")
+        private String configMapName;
+
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("MountPath")
+        private String mountPath;
+
+        private SidecarContainersConfigConfigMapMountDesc(Builder builder) {
+            this.configMapId = builder.configMapId;
+            this.configMapName = builder.configMapName;
+            this.key = builder.key;
+            this.mountPath = builder.mountPath;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SidecarContainersConfigConfigMapMountDesc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return configMapId
+         */
+        public Long getConfigMapId() {
+            return this.configMapId;
+        }
+
+        /**
+         * @return configMapName
+         */
+        public String getConfigMapName() {
+            return this.configMapName;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public static final class Builder {
+            private Long configMapId; 
+            private String configMapName; 
+            private String key; 
+            private String mountPath; 
+
+            /**
+             * <p>The ID of the ConfigMap.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder configMapId(Long configMapId) {
+                this.configMapId = configMapId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the ConfigMap.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
+             */
+            public Builder configMapName(String configMapName) {
+                this.configMapName = configMapName;
+                return this;
+            }
+
+            /**
+             * <p>The key-value pair that is stored in the ConfigMap.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The path on which the NAS file system is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp</p>
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            public SidecarContainersConfigConfigMapMountDesc build() {
+                return new SidecarContainersConfigConfigMapMountDesc(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationConfigResponseBody</p>
+     */
+    public static class EmptyDirDesc extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MountPath")
+        private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private EmptyDirDesc(Builder builder) {
+            this.mountPath = builder.mountPath;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EmptyDirDesc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String mountPath; 
+            private String name; 
+
+            /**
+             * <p>The path on which the NAS file system is mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp</p>
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public EmptyDirDesc build() {
+                return new EmptyDirDesc(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationConfigResponseBody</p>
+     */
+    public static class SidecarContainersConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AcrInstanceId")
+        private String acrInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("Command")
+        private String command;
+
+        @com.aliyun.core.annotation.NameInMap("CommandArgs")
+        private String commandArgs;
+
+        @com.aliyun.core.annotation.NameInMap("ConfigMapMountDesc")
+        private java.util.List<SidecarContainersConfigConfigMapMountDesc> configMapMountDesc;
+
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        private Integer cpu;
+
+        @com.aliyun.core.annotation.NameInMap("EmptyDirDesc")
+        private java.util.List<EmptyDirDesc> emptyDirDesc;
+
+        @com.aliyun.core.annotation.NameInMap("Envs")
+        private String envs;
+
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
+        private String imageUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Memory")
+        private Integer memory;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private SidecarContainersConfig(Builder builder) {
+            this.acrInstanceId = builder.acrInstanceId;
+            this.command = builder.command;
+            this.commandArgs = builder.commandArgs;
+            this.configMapMountDesc = builder.configMapMountDesc;
+            this.cpu = builder.cpu;
+            this.emptyDirDesc = builder.emptyDirDesc;
+            this.envs = builder.envs;
+            this.imageUrl = builder.imageUrl;
+            this.memory = builder.memory;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SidecarContainersConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return acrInstanceId
+         */
+        public String getAcrInstanceId() {
+            return this.acrInstanceId;
+        }
+
+        /**
+         * @return command
+         */
+        public String getCommand() {
+            return this.command;
+        }
+
+        /**
+         * @return commandArgs
+         */
+        public String getCommandArgs() {
+            return this.commandArgs;
+        }
+
+        /**
+         * @return configMapMountDesc
+         */
+        public java.util.List<SidecarContainersConfigConfigMapMountDesc> getConfigMapMountDesc() {
+            return this.configMapMountDesc;
+        }
+
+        /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return emptyDirDesc
+         */
+        public java.util.List<EmptyDirDesc> getEmptyDirDesc() {
+            return this.emptyDirDesc;
+        }
+
+        /**
+         * @return envs
+         */
+        public String getEnvs() {
+            return this.envs;
+        }
+
+        /**
+         * @return imageUrl
+         */
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        /**
+         * @return memory
+         */
+        public Integer getMemory() {
+            return this.memory;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String acrInstanceId; 
+            private String command; 
+            private String commandArgs; 
+            private java.util.List<SidecarContainersConfigConfigMapMountDesc> configMapMountDesc; 
+            private Integer cpu; 
+            private java.util.List<EmptyDirDesc> emptyDirDesc; 
+            private String envs; 
+            private String imageUrl; 
+            private Integer memory; 
+            private String name; 
+
+            /**
+             * AcrInstanceId.
+             */
+            public Builder acrInstanceId(String acrInstanceId) {
+                this.acrInstanceId = acrInstanceId;
+                return this;
+            }
+
+            /**
+             * Command.
+             */
+            public Builder command(String command) {
+                this.command = command;
+                return this;
+            }
+
+            /**
+             * CommandArgs.
+             */
+            public Builder commandArgs(String commandArgs) {
+                this.commandArgs = commandArgs;
+                return this;
+            }
+
+            /**
+             * ConfigMapMountDesc.
+             */
+            public Builder configMapMountDesc(java.util.List<SidecarContainersConfigConfigMapMountDesc> configMapMountDesc) {
+                this.configMapMountDesc = configMapMountDesc;
+                return this;
+            }
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * EmptyDirDesc.
+             */
+            public Builder emptyDirDesc(java.util.List<EmptyDirDesc> emptyDirDesc) {
+                this.emptyDirDesc = emptyDirDesc;
+                return this;
+            }
+
+            /**
+             * Envs.
+             */
+            public Builder envs(String envs) {
+                this.envs = envs;
+                return this;
+            }
+
+            /**
+             * ImageUrl.
+             */
+            public Builder imageUrl(String imageUrl) {
+                this.imageUrl = imageUrl;
+                return this;
+            }
+
+            /**
+             * Memory.
+             */
+            public Builder memory(Integer memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public SidecarContainersConfig build() {
+                return new SidecarContainersConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeApplicationConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationConfigResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -739,7 +1160,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         private String commandArgs;
 
         @com.aliyun.core.annotation.NameInMap("ConfigMapMountDesc")
-        private java.util.List < ConfigMapMountDesc> configMapMountDesc;
+        private java.util.List<ConfigMapMountDesc> configMapMountDesc;
 
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -808,7 +1229,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         private Integer minReadyInstances;
 
         @com.aliyun.core.annotation.NameInMap("MountDesc")
-        private java.util.List < MountDesc> mountDesc;
+        private java.util.List<MountDesc> mountDesc;
 
         @com.aliyun.core.annotation.NameInMap("MountHost")
         private String mountHost;
@@ -838,7 +1259,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         private String ossAkSecret;
 
         @com.aliyun.core.annotation.NameInMap("OssMountDescs")
-        private java.util.List < OssMountDescs> ossMountDescs;
+        private java.util.List<OssMountDescs> ossMountDescs;
 
         @com.aliyun.core.annotation.NameInMap("PackageType")
         private String packageType;
@@ -889,19 +1310,22 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         private Integer replicas;
 
         @com.aliyun.core.annotation.NameInMap("SecretMountDesc")
-        private java.util.List < SecretMountDesc> secretMountDesc;
+        private java.util.List<SecretMountDesc> secretMountDesc;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("ServiceTags")
-        private java.util.Map < String, String > serviceTags;
+        private java.util.Map<String, String> serviceTags;
+
+        @com.aliyun.core.annotation.NameInMap("SidecarContainersConfig")
+        private java.util.List<SidecarContainersConfig> sidecarContainersConfig;
 
         @com.aliyun.core.annotation.NameInMap("SlsConfigs")
         private String slsConfigs;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TerminationGracePeriodSeconds")
         private Integer terminationGracePeriodSeconds;
@@ -991,6 +1415,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.secretMountDesc = builder.secretMountDesc;
             this.securityGroupId = builder.securityGroupId;
             this.serviceTags = builder.serviceTags;
+            this.sidecarContainersConfig = builder.sidecarContainersConfig;
             this.slsConfigs = builder.slsConfigs;
             this.tags = builder.tags;
             this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
@@ -1084,7 +1509,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         /**
          * @return configMapMountDesc
          */
-        public java.util.List < ConfigMapMountDesc> getConfigMapMountDesc() {
+        public java.util.List<ConfigMapMountDesc> getConfigMapMountDesc() {
             return this.configMapMountDesc;
         }
 
@@ -1245,7 +1670,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         /**
          * @return mountDesc
          */
-        public java.util.List < MountDesc> getMountDesc() {
+        public java.util.List<MountDesc> getMountDesc() {
             return this.mountDesc;
         }
 
@@ -1315,7 +1740,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         /**
          * @return ossMountDescs
          */
-        public java.util.List < OssMountDescs> getOssMountDescs() {
+        public java.util.List<OssMountDescs> getOssMountDescs() {
             return this.ossMountDescs;
         }
 
@@ -1434,7 +1859,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         /**
          * @return secretMountDesc
          */
-        public java.util.List < SecretMountDesc> getSecretMountDesc() {
+        public java.util.List<SecretMountDesc> getSecretMountDesc() {
             return this.secretMountDesc;
         }
 
@@ -1448,8 +1873,15 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         /**
          * @return serviceTags
          */
-        public java.util.Map < String, String > getServiceTags() {
+        public java.util.Map<String, String> getServiceTags() {
             return this.serviceTags;
+        }
+
+        /**
+         * @return sidecarContainersConfig
+         */
+        public java.util.List<SidecarContainersConfig> getSidecarContainersConfig() {
+            return this.sidecarContainersConfig;
         }
 
         /**
@@ -1462,7 +1894,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1533,7 +1965,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private Integer batchWaitTime; 
             private String command; 
             private String commandArgs; 
-            private java.util.List < ConfigMapMountDesc> configMapMountDesc; 
+            private java.util.List<ConfigMapMountDesc> configMapMountDesc; 
             private Integer cpu; 
             private String customHostAlias; 
             private String dotnet; 
@@ -1556,7 +1988,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String microRegistrationConfig; 
             private Integer minReadyInstanceRatio; 
             private Integer minReadyInstances; 
-            private java.util.List < MountDesc> mountDesc; 
+            private java.util.List<MountDesc> mountDesc; 
             private String mountHost; 
             private String mseApplicationId; 
             private String mseApplicationName; 
@@ -1566,7 +1998,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String oidcRoleName; 
             private String ossAkId; 
             private String ossAkSecret; 
-            private java.util.List < OssMountDescs> ossMountDescs; 
+            private java.util.List<OssMountDescs> ossMountDescs; 
             private String packageType; 
             private String packageUrl; 
             private String packageVersion; 
@@ -1583,11 +2015,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String readiness; 
             private String regionId; 
             private Integer replicas; 
-            private java.util.List < SecretMountDesc> secretMountDesc; 
+            private java.util.List<SecretMountDesc> secretMountDesc; 
             private String securityGroupId; 
-            private java.util.Map < String, String > serviceTags; 
+            private java.util.Map<String, String> serviceTags; 
+            private java.util.List<SidecarContainersConfig> sidecarContainersConfig; 
             private String slsConfigs; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Integer terminationGracePeriodSeconds; 
             private String timezone; 
             private String tomcatConfig; 
@@ -1721,7 +2154,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             /**
              * <p>The details of the ConfigMap.</p>
              */
-            public Builder configMapMountDesc(java.util.List < ConfigMapMountDesc> configMapMountDesc) {
+            public Builder configMapMountDesc(java.util.List<ConfigMapMountDesc> configMapMountDesc) {
                 this.configMapMountDesc = configMapMountDesc;
                 return this;
             }
@@ -2049,7 +2482,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             /**
              * <p>The details of the mounted NAS file system.</p>
              */
-            public Builder mountDesc(java.util.List < MountDesc> mountDesc) {
+            public Builder mountDesc(java.util.List<MountDesc> mountDesc) {
                 this.mountDesc = mountDesc;
                 return this;
             }
@@ -2147,7 +2580,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             /**
              * <p>The description of the mounted OSS bucket.</p>
              */
-            public Builder ossMountDescs(java.util.List < OssMountDescs> ossMountDescs) {
+            public Builder ossMountDescs(java.util.List<OssMountDescs> ossMountDescs) {
                 this.ossMountDescs = ossMountDescs;
                 return this;
             }
@@ -2348,7 +2781,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             /**
              * SecretMountDesc.
              */
-            public Builder secretMountDesc(java.util.List < SecretMountDesc> secretMountDesc) {
+            public Builder secretMountDesc(java.util.List<SecretMountDesc> secretMountDesc) {
                 this.secretMountDesc = secretMountDesc;
                 return this;
             }
@@ -2367,8 +2800,16 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             /**
              * ServiceTags.
              */
-            public Builder serviceTags(java.util.Map < String, String > serviceTags) {
+            public Builder serviceTags(java.util.Map<String, String> serviceTags) {
                 this.serviceTags = serviceTags;
+                return this;
+            }
+
+            /**
+             * SidecarContainersConfig.
+             */
+            public Builder sidecarContainersConfig(java.util.List<SidecarContainersConfig> sidecarContainersConfig) {
+                this.sidecarContainersConfig = sidecarContainersConfig;
                 return this;
             }
 
@@ -2399,7 +2840,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             /**
              * <p>The details of the tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListWebCustomDomainOutput extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("WebCustomDomains")
-    private java.util.List < WebCustomDomain > webCustomDomains;
+    private java.util.List<WebCustomDomain> webCustomDomains;
 
     private ListWebCustomDomainOutput(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -41,13 +46,13 @@ public class ListWebCustomDomainOutput extends TeaModel {
     /**
      * @return webCustomDomains
      */
-    public java.util.List < WebCustomDomain > getWebCustomDomains() {
+    public java.util.List<WebCustomDomain> getWebCustomDomains() {
         return this.webCustomDomains;
     }
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < WebCustomDomain > webCustomDomains; 
+        private java.util.List<WebCustomDomain> webCustomDomains; 
 
         /**
          * NextToken.
@@ -60,7 +65,7 @@ public class ListWebCustomDomainOutput extends TeaModel {
         /**
          * WebCustomDomains.
          */
-        public Builder webCustomDomains(java.util.List < WebCustomDomain > webCustomDomains) {
+        public Builder webCustomDomains(java.util.List<WebCustomDomain> webCustomDomains) {
             this.webCustomDomains = webCustomDomains;
             return this;
         }
