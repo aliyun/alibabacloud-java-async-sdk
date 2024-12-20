@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class AddEntriesToAclRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclEntries")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AclEntries> aclEntries;
+    private java.util.List<AclEntries> aclEntries;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclId")
@@ -54,7 +59,7 @@ public class AddEntriesToAclRequest extends Request {
     /**
      * @return aclEntries
      */
-    public java.util.List < AclEntries> getAclEntries() {
+    public java.util.List<AclEntries> getAclEntries() {
         return this.aclEntries;
     }
 
@@ -80,7 +85,7 @@ public class AddEntriesToAclRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddEntriesToAclRequest, Builder> {
-        private java.util.List < AclEntries> aclEntries; 
+        private java.util.List<AclEntries> aclEntries; 
         private String aclId; 
         private String clientToken; 
         private Boolean dryRun; 
@@ -101,7 +106,7 @@ public class AddEntriesToAclRequest extends Request {
          * <p>The ACL entries that you want to add. You can add at most 20 entries in each call.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
+        public Builder aclEntries(java.util.List<AclEntries> aclEntries) {
             this.putQueryParameter("AclEntries", aclEntries);
             this.aclEntries = aclEntries;
             return this;

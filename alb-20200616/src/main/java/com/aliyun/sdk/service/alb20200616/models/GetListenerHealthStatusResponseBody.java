@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetListenerHealthStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ListenerHealthStatus")
-    private java.util.List < ListenerHealthStatus> listenerHealthStatus;
+    private java.util.List<ListenerHealthStatus> listenerHealthStatus;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -22,7 +27,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RuleHealthStatus")
-    private java.util.List < RuleHealthStatus> ruleHealthStatus;
+    private java.util.List<RuleHealthStatus> ruleHealthStatus;
 
     private GetListenerHealthStatusResponseBody(Builder builder) {
         this.listenerHealthStatus = builder.listenerHealthStatus;
@@ -42,7 +47,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     /**
      * @return listenerHealthStatus
      */
-    public java.util.List < ListenerHealthStatus> getListenerHealthStatus() {
+    public java.util.List<ListenerHealthStatus> getListenerHealthStatus() {
         return this.listenerHealthStatus;
     }
 
@@ -63,20 +68,20 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     /**
      * @return ruleHealthStatus
      */
-    public java.util.List < RuleHealthStatus> getRuleHealthStatus() {
+    public java.util.List<RuleHealthStatus> getRuleHealthStatus() {
         return this.ruleHealthStatus;
     }
 
     public static final class Builder {
-        private java.util.List < ListenerHealthStatus> listenerHealthStatus; 
+        private java.util.List<ListenerHealthStatus> listenerHealthStatus; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < RuleHealthStatus> ruleHealthStatus; 
+        private java.util.List<RuleHealthStatus> ruleHealthStatus; 
 
         /**
          * <p>The health check status of the server groups that are associated with the listener.</p>
          */
-        public Builder listenerHealthStatus(java.util.List < ListenerHealthStatus> listenerHealthStatus) {
+        public Builder listenerHealthStatus(java.util.List<ListenerHealthStatus> listenerHealthStatus) {
             this.listenerHealthStatus = listenerHealthStatus;
             return this;
         }
@@ -110,7 +115,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         /**
          * <p>The health check status of the forwarding rules.</p>
          */
-        public Builder ruleHealthStatus(java.util.List < RuleHealthStatus> ruleHealthStatus) {
+        public Builder ruleHealthStatus(java.util.List<RuleHealthStatus> ruleHealthStatus) {
             this.ruleHealthStatus = ruleHealthStatus;
             return this;
         }
@@ -393,7 +398,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         private String healthCheckEnabled;
 
         @com.aliyun.core.annotation.NameInMap("NonNormalServers")
-        private java.util.List < NonNormalServers> nonNormalServers;
+        private java.util.List<NonNormalServers> nonNormalServers;
 
         @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
@@ -430,7 +435,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         /**
          * @return nonNormalServers
          */
-        public java.util.List < NonNormalServers> getNonNormalServers() {
+        public java.util.List<NonNormalServers> getNonNormalServers() {
             return this.nonNormalServers;
         }
 
@@ -444,7 +449,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String actionType; 
             private String healthCheckEnabled; 
-            private java.util.List < NonNormalServers> nonNormalServers; 
+            private java.util.List<NonNormalServers> nonNormalServers; 
             private String serverGroupId; 
 
             /**
@@ -476,7 +481,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             /**
              * <p>A list of unhealthy backend servers.</p>
              */
-            public Builder nonNormalServers(java.util.List < NonNormalServers> nonNormalServers) {
+            public Builder nonNormalServers(java.util.List<NonNormalServers> nonNormalServers) {
                 this.nonNormalServers = nonNormalServers;
                 return this;
             }
@@ -516,7 +521,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         private String listenerProtocol;
 
         @com.aliyun.core.annotation.NameInMap("ServerGroupInfos")
-        private java.util.List < ServerGroupInfos> serverGroupInfos;
+        private java.util.List<ServerGroupInfos> serverGroupInfos;
 
         private ListenerHealthStatus(Builder builder) {
             this.listenerId = builder.listenerId;
@@ -557,7 +562,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         /**
          * @return serverGroupInfos
          */
-        public java.util.List < ServerGroupInfos> getServerGroupInfos() {
+        public java.util.List<ServerGroupInfos> getServerGroupInfos() {
             return this.serverGroupInfos;
         }
 
@@ -565,7 +570,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String listenerId; 
             private Integer listenerPort; 
             private String listenerProtocol; 
-            private java.util.List < ServerGroupInfos> serverGroupInfos; 
+            private java.util.List<ServerGroupInfos> serverGroupInfos; 
 
             /**
              * <p>The listener ID.</p>
@@ -603,7 +608,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             /**
              * <p>The information about the server group.</p>
              */
-            public Builder serverGroupInfos(java.util.List < ServerGroupInfos> serverGroupInfos) {
+            public Builder serverGroupInfos(java.util.List<ServerGroupInfos> serverGroupInfos) {
                 this.serverGroupInfos = serverGroupInfos;
                 return this;
             }
@@ -887,7 +892,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         private String healthCheckEnabled;
 
         @com.aliyun.core.annotation.NameInMap("NonNormalServers")
-        private java.util.List < ServerGroupInfosNonNormalServers> nonNormalServers;
+        private java.util.List<ServerGroupInfosNonNormalServers> nonNormalServers;
 
         @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
@@ -924,7 +929,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         /**
          * @return nonNormalServers
          */
-        public java.util.List < ServerGroupInfosNonNormalServers> getNonNormalServers() {
+        public java.util.List<ServerGroupInfosNonNormalServers> getNonNormalServers() {
             return this.nonNormalServers;
         }
 
@@ -938,7 +943,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String actionType; 
             private String healthCheckEnabled; 
-            private java.util.List < ServerGroupInfosNonNormalServers> nonNormalServers; 
+            private java.util.List<ServerGroupInfosNonNormalServers> nonNormalServers; 
             private String serverGroupId; 
 
             /**
@@ -966,7 +971,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             /**
              * <p>A list of unhealthy backend servers.</p>
              */
-            public Builder nonNormalServers(java.util.List < ServerGroupInfosNonNormalServers> nonNormalServers) {
+            public Builder nonNormalServers(java.util.List<ServerGroupInfosNonNormalServers> nonNormalServers) {
                 this.nonNormalServers = nonNormalServers;
                 return this;
             }
@@ -1000,7 +1005,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         private String ruleId;
 
         @com.aliyun.core.annotation.NameInMap("ServerGroupInfos")
-        private java.util.List < RuleHealthStatusServerGroupInfos> serverGroupInfos;
+        private java.util.List<RuleHealthStatusServerGroupInfos> serverGroupInfos;
 
         private RuleHealthStatus(Builder builder) {
             this.ruleId = builder.ruleId;
@@ -1025,13 +1030,13 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         /**
          * @return serverGroupInfos
          */
-        public java.util.List < RuleHealthStatusServerGroupInfos> getServerGroupInfos() {
+        public java.util.List<RuleHealthStatusServerGroupInfos> getServerGroupInfos() {
             return this.serverGroupInfos;
         }
 
         public static final class Builder {
             private String ruleId; 
-            private java.util.List < RuleHealthStatusServerGroupInfos> serverGroupInfos; 
+            private java.util.List<RuleHealthStatusServerGroupInfos> serverGroupInfos; 
 
             /**
              * <p>The ID of the forwarding rule.</p>
@@ -1047,7 +1052,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             /**
              * <p>The server groups.</p>
              */
-            public Builder serverGroupInfos(java.util.List < RuleHealthStatusServerGroupInfos> serverGroupInfos) {
+            public Builder serverGroupInfos(java.util.List<RuleHealthStatusServerGroupInfos> serverGroupInfos) {
                 this.serverGroupInfos = serverGroupInfos;
                 return this;
             }

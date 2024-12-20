@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,11 +32,11 @@ public class ListServerGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServerGroupIds")
-    private java.util.List < String > serverGroupIds;
+    private java.util.List<String> serverGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServerGroupNames")
-    private java.util.List < String > serverGroupNames;
+    private java.util.List<String> serverGroupNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServerGroupType")
@@ -39,7 +44,7 @@ public class ListServerGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
@@ -94,14 +99,14 @@ public class ListServerGroupsRequest extends Request {
     /**
      * @return serverGroupIds
      */
-    public java.util.List < String > getServerGroupIds() {
+    public java.util.List<String> getServerGroupIds() {
         return this.serverGroupIds;
     }
 
     /**
      * @return serverGroupNames
      */
-    public java.util.List < String > getServerGroupNames() {
+    public java.util.List<String> getServerGroupNames() {
         return this.serverGroupNames;
     }
 
@@ -115,7 +120,7 @@ public class ListServerGroupsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -130,10 +135,10 @@ public class ListServerGroupsRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String resourceGroupId; 
-        private java.util.List < String > serverGroupIds; 
-        private java.util.List < String > serverGroupNames; 
+        private java.util.List<String> serverGroupIds; 
+        private java.util.List<String> serverGroupNames; 
         private String serverGroupType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vpcId; 
 
         private Builder() {
@@ -195,7 +200,7 @@ public class ListServerGroupsRequest extends Request {
         /**
          * <p>The server group IDs.</p>
          */
-        public Builder serverGroupIds(java.util.List < String > serverGroupIds) {
+        public Builder serverGroupIds(java.util.List<String> serverGroupIds) {
             this.putQueryParameter("ServerGroupIds", serverGroupIds);
             this.serverGroupIds = serverGroupIds;
             return this;
@@ -204,7 +209,7 @@ public class ListServerGroupsRequest extends Request {
         /**
          * <p>The names of the server groups to be queried. You can specify at most 10 server group names.</p>
          */
-        public Builder serverGroupNames(java.util.List < String > serverGroupNames) {
+        public Builder serverGroupNames(java.util.List<String> serverGroupNames) {
             this.putQueryParameter("ServerGroupNames", serverGroupNames);
             this.serverGroupNames = serverGroupNames;
             return this;
@@ -233,7 +238,7 @@ public class ListServerGroupsRequest extends Request {
          * <strong>example:</strong>
          * <p>Instance</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -55,7 +60,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     private String loadBalancerName;
 
     @com.aliyun.core.annotation.NameInMap("LoadBalancerOperationLocks")
-    private java.util.List < LoadBalancerOperationLocks> loadBalancerOperationLocks;
+    private java.util.List<LoadBalancerOperationLocks> loadBalancerOperationLocks;
 
     @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
     private String loadBalancerStatus;
@@ -73,16 +78,16 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
-    private java.util.List < String > securityGroupIds;
+    private java.util.List<String> securityGroupIds;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     @com.aliyun.core.annotation.NameInMap("ZoneMappings")
-    private java.util.List < ZoneMappings> zoneMappings;
+    private java.util.List<ZoneMappings> zoneMappings;
 
     private GetLoadBalancerAttributeResponseBody(Builder builder) {
         this.accessLogConfig = builder.accessLogConfig;
@@ -220,7 +225,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     /**
      * @return loadBalancerOperationLocks
      */
-    public java.util.List < LoadBalancerOperationLocks> getLoadBalancerOperationLocks() {
+    public java.util.List<LoadBalancerOperationLocks> getLoadBalancerOperationLocks() {
         return this.loadBalancerOperationLocks;
     }
 
@@ -262,14 +267,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     /**
      * @return securityGroupIds
      */
-    public java.util.List < String > getSecurityGroupIds() {
+    public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -283,7 +288,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     /**
      * @return zoneMappings
      */
-    public java.util.List < ZoneMappings> getZoneMappings() {
+    public java.util.List<ZoneMappings> getZoneMappings() {
         return this.zoneMappings;
     }
 
@@ -302,16 +307,16 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         private String loadBalancerEdition; 
         private String loadBalancerId; 
         private String loadBalancerName; 
-        private java.util.List < LoadBalancerOperationLocks> loadBalancerOperationLocks; 
+        private java.util.List<LoadBalancerOperationLocks> loadBalancerOperationLocks; 
         private String loadBalancerStatus; 
         private ModificationProtectionConfig modificationProtectionConfig; 
         private String regionId; 
         private String requestId; 
         private String resourceGroupId; 
-        private java.util.List < String > securityGroupIds; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<String> securityGroupIds; 
+        private java.util.List<Tags> tags; 
         private String vpcId; 
-        private java.util.List < ZoneMappings> zoneMappings; 
+        private java.util.List<ZoneMappings> zoneMappings; 
 
         /**
          * <p>The configuration of the access log feature.</p>
@@ -493,7 +498,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
          * <li><strong>ResidualLocked</strong>: The ALB instance is locked because the associated resources have overdue payments and the resources are released.</li>
          * </ul>
          */
-        public Builder loadBalancerOperationLocks(java.util.List < LoadBalancerOperationLocks> loadBalancerOperationLocks) {
+        public Builder loadBalancerOperationLocks(java.util.List<LoadBalancerOperationLocks> loadBalancerOperationLocks) {
             this.loadBalancerOperationLocks = loadBalancerOperationLocks;
             return this;
         }
@@ -560,7 +565,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         /**
          * <p>The IDs of the security groups to which the ALB instance is added.</p>
          */
-        public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+        public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
@@ -569,7 +574,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
          * <p>The tag value.</p>
          * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -588,7 +593,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         /**
          * <p>The mappings between zones and vSwitches. At most 10 zones are returned. If the current region supports two or more zones, at least two zones are returned.</p>
          */
-        public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
+        public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
             this.zoneMappings = zoneMappings;
             return this;
         }
@@ -1058,7 +1063,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         private String intranetAddressHcStatus;
 
         @com.aliyun.core.annotation.NameInMap("Ipv4LocalAddresses")
-        private java.util.List < String > ipv4LocalAddresses;
+        private java.util.List<String> ipv4LocalAddresses;
 
         @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private String ipv6Address;
@@ -1067,7 +1072,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         private String ipv6AddressHcStatus;
 
         @com.aliyun.core.annotation.NameInMap("Ipv6LocalAddresses")
-        private java.util.List < String > ipv6LocalAddresses;
+        private java.util.List<String> ipv6LocalAddresses;
 
         private LoadBalancerAddresses(Builder builder) {
             this.address = builder.address;
@@ -1127,7 +1132,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         /**
          * @return ipv4LocalAddresses
          */
-        public java.util.List < String > getIpv4LocalAddresses() {
+        public java.util.List<String> getIpv4LocalAddresses() {
             return this.ipv4LocalAddresses;
         }
 
@@ -1148,7 +1153,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         /**
          * @return ipv6LocalAddresses
          */
-        public java.util.List < String > getIpv6LocalAddresses() {
+        public java.util.List<String> getIpv6LocalAddresses() {
             return this.ipv6LocalAddresses;
         }
 
@@ -1158,10 +1163,10 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             private String eipType; 
             private String intranetAddress; 
             private String intranetAddressHcStatus; 
-            private java.util.List < String > ipv4LocalAddresses; 
+            private java.util.List<String> ipv4LocalAddresses; 
             private String ipv6Address; 
             private String ipv6AddressHcStatus; 
-            private java.util.List < String > ipv6LocalAddresses; 
+            private java.util.List<String> ipv6LocalAddresses; 
 
             /**
              * <p>An IPv4 address.</p>
@@ -1236,7 +1241,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             /**
              * <p>The IPv4 link-local addresses. The IP addresses that the ALB instance uses to communicate with the backend servers.</p>
              */
-            public Builder ipv4LocalAddresses(java.util.List < String > ipv4LocalAddresses) {
+            public Builder ipv4LocalAddresses(java.util.List<String> ipv4LocalAddresses) {
                 this.ipv4LocalAddresses = ipv4LocalAddresses;
                 return this;
             }
@@ -1274,7 +1279,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             /**
              * <p>The IPv6 link-local addresses. The IP addresses that the ALB instance uses to communicate with the backend servers.</p>
              */
-            public Builder ipv6LocalAddresses(java.util.List < String > ipv6LocalAddresses) {
+            public Builder ipv6LocalAddresses(java.util.List<String> ipv6LocalAddresses) {
                 this.ipv6LocalAddresses = ipv6LocalAddresses;
                 return this;
             }
@@ -1294,7 +1299,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
      */
     public static class ZoneMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LoadBalancerAddresses")
-        private java.util.List < LoadBalancerAddresses> loadBalancerAddresses;
+        private java.util.List<LoadBalancerAddresses> loadBalancerAddresses;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -1323,7 +1328,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         /**
          * @return loadBalancerAddresses
          */
-        public java.util.List < LoadBalancerAddresses> getLoadBalancerAddresses() {
+        public java.util.List<LoadBalancerAddresses> getLoadBalancerAddresses() {
             return this.loadBalancerAddresses;
         }
 
@@ -1349,7 +1354,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < LoadBalancerAddresses> loadBalancerAddresses; 
+            private java.util.List<LoadBalancerAddresses> loadBalancerAddresses; 
             private String status; 
             private String vSwitchId; 
             private String zoneId; 
@@ -1357,7 +1362,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             /**
              * <p>The address of the ALB instance.</p>
              */
-            public Builder loadBalancerAddresses(java.util.List < LoadBalancerAddresses> loadBalancerAddresses) {
+            public Builder loadBalancerAddresses(java.util.List<LoadBalancerAddresses> loadBalancerAddresses) {
                 this.loadBalancerAddresses = loadBalancerAddresses;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateAScriptsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AScripts")
-    private java.util.List < AScripts> aScripts;
+    private java.util.List<AScripts> aScripts;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -47,7 +52,7 @@ public class UpdateAScriptsRequest extends Request {
     /**
      * @return aScripts
      */
-    public java.util.List < AScripts> getAScripts() {
+    public java.util.List<AScripts> getAScripts() {
         return this.aScripts;
     }
 
@@ -66,7 +71,7 @@ public class UpdateAScriptsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateAScriptsRequest, Builder> {
-        private java.util.List < AScripts> aScripts; 
+        private java.util.List<AScripts> aScripts; 
         private String clientToken; 
         private Boolean dryRun; 
 
@@ -84,7 +89,7 @@ public class UpdateAScriptsRequest extends Request {
         /**
          * <p>The information about the AScript rule.</p>
          */
-        public Builder aScripts(java.util.List < AScripts> aScripts) {
+        public Builder aScripts(java.util.List<AScripts> aScripts) {
             this.putQueryParameter("AScripts", aScripts);
             this.aScripts = aScripts;
             return this;
@@ -228,7 +233,7 @@ public class UpdateAScriptsRequest extends Request {
         private Boolean extAttributeEnabled;
 
         @com.aliyun.core.annotation.NameInMap("ExtAttributes")
-        private java.util.List < ExtAttributes> extAttributes;
+        private java.util.List<ExtAttributes> extAttributes;
 
         @com.aliyun.core.annotation.NameInMap("ScriptContent")
         private String scriptContent;
@@ -281,7 +286,7 @@ public class UpdateAScriptsRequest extends Request {
         /**
          * @return extAttributes
          */
-        public java.util.List < ExtAttributes> getExtAttributes() {
+        public java.util.List<ExtAttributes> getExtAttributes() {
             return this.extAttributes;
         }
 
@@ -297,7 +302,7 @@ public class UpdateAScriptsRequest extends Request {
             private String aScriptName; 
             private Boolean enabled; 
             private Boolean extAttributeEnabled; 
-            private java.util.List < ExtAttributes> extAttributes; 
+            private java.util.List<ExtAttributes> extAttributes; 
             private String scriptContent; 
 
             /**
@@ -357,7 +362,7 @@ public class UpdateAScriptsRequest extends Request {
             /**
              * <p>The extended attribute.</p>
              */
-            public Builder extAttributes(java.util.List < ExtAttributes> extAttributes) {
+            public Builder extAttributes(java.util.List<ExtAttributes> extAttributes) {
                 this.extAttributes = extAttributes;
                 return this;
             }

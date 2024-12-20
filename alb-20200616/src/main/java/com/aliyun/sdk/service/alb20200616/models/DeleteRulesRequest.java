@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class DeleteRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > ruleIds;
+    private java.util.List<String> ruleIds;
 
     private DeleteRulesRequest(Builder builder) {
         super(builder);
@@ -62,14 +67,14 @@ public class DeleteRulesRequest extends Request {
     /**
      * @return ruleIds
      */
-    public java.util.List < String > getRuleIds() {
+    public java.util.List<String> getRuleIds() {
         return this.ruleIds;
     }
 
     public static final class Builder extends Request.Builder<DeleteRulesRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < String > ruleIds; 
+        private java.util.List<String> ruleIds; 
 
         private Builder() {
             super();
@@ -115,10 +120,10 @@ public class DeleteRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the forwarding rule. Valid values of N: <strong>1</strong> to <strong>5</strong>.</p>
+         * <p>The forwarding rules.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder ruleIds(java.util.List < String > ruleIds) {
+        public Builder ruleIds(java.util.List<String> ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
             this.ruleIds = ruleIds;
             return this;

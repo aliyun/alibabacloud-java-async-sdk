@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAclEntriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AclEntries")
-    private java.util.List < AclEntries> aclEntries;
+    private java.util.List<AclEntries> aclEntries;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class ListAclEntriesResponseBody extends TeaModel {
     /**
      * @return aclEntries
      */
-    public java.util.List < AclEntries> getAclEntries() {
+    public java.util.List<AclEntries> getAclEntries() {
         return this.aclEntries;
     }
 
@@ -79,7 +84,7 @@ public class ListAclEntriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AclEntries> aclEntries; 
+        private java.util.List<AclEntries> aclEntries; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListAclEntriesResponseBody extends TeaModel {
         /**
          * <p>The ACL entries.</p>
          */
-        public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
+        public Builder aclEntries(java.util.List<AclEntries> aclEntries) {
             this.aclEntries = aclEntries;
             return this;
         }

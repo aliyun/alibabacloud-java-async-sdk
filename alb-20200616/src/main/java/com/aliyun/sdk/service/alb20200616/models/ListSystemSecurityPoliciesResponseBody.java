@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SecurityPolicies")
-    private java.util.List < SecurityPolicies> securityPolicies;
+    private java.util.List<SecurityPolicies> securityPolicies;
 
     private ListSystemSecurityPoliciesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
     /**
      * @return securityPolicies
      */
-    public java.util.List < SecurityPolicies> getSecurityPolicies() {
+    public java.util.List<SecurityPolicies> getSecurityPolicies() {
         return this.securityPolicies;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SecurityPolicies> securityPolicies; 
+        private java.util.List<SecurityPolicies> securityPolicies; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         /**
          * <p>The security policies.</p>
          */
-        public Builder securityPolicies(java.util.List < SecurityPolicies> securityPolicies) {
+        public Builder securityPolicies(java.util.List<SecurityPolicies> securityPolicies) {
             this.securityPolicies = securityPolicies;
             return this;
         }
@@ -82,13 +87,13 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
      */
     public static class SecurityPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ciphers")
-        private java.util.List < String > ciphers;
+        private java.util.List<String> ciphers;
 
         @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
         private String securityPolicyId;
 
         @com.aliyun.core.annotation.NameInMap("TLSVersions")
-        private java.util.List < String > TLSVersions;
+        private java.util.List<String> TLSVersions;
 
         private SecurityPolicies(Builder builder) {
             this.ciphers = builder.ciphers;
@@ -107,7 +112,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         /**
          * @return ciphers
          */
-        public java.util.List < String > getCiphers() {
+        public java.util.List<String> getCiphers() {
             return this.ciphers;
         }
 
@@ -121,19 +126,19 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
         /**
          * @return TLSVersions
          */
-        public java.util.List < String > getTLSVersions() {
+        public java.util.List<String> getTLSVersions() {
             return this.TLSVersions;
         }
 
         public static final class Builder {
-            private java.util.List < String > ciphers; 
+            private java.util.List<String> ciphers; 
             private String securityPolicyId; 
-            private java.util.List < String > TLSVersions; 
+            private java.util.List<String> TLSVersions; 
 
             /**
              * <p>The supported cipher suite.</p>
              */
-            public Builder ciphers(java.util.List < String > ciphers) {
+            public Builder ciphers(java.util.List<String> ciphers) {
                 this.ciphers = ciphers;
                 return this;
             }
@@ -152,7 +157,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             /**
              * <p>The supported TLS protocol versions.</p>
              */
-            public Builder TLSVersions(java.util.List < String > TLSVersions) {
+            public Builder TLSVersions(java.util.List<String> TLSVersions) {
                 this.TLSVersions = TLSVersions;
                 return this;
             }

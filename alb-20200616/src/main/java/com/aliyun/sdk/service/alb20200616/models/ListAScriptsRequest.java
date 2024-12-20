@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,15 +19,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListAScriptsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AScriptIds")
-    private java.util.List < String > aScriptIds;
+    private java.util.List<String> aScriptIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AScriptNames")
-    private java.util.List < String > aScriptNames;
+    private java.util.List<String> aScriptNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ListenerIds")
-    private java.util.List < String > listenerIds;
+    private java.util.List<String> listenerIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -57,21 +62,21 @@ public class ListAScriptsRequest extends Request {
     /**
      * @return aScriptIds
      */
-    public java.util.List < String > getAScriptIds() {
+    public java.util.List<String> getAScriptIds() {
         return this.aScriptIds;
     }
 
     /**
      * @return aScriptNames
      */
-    public java.util.List < String > getAScriptNames() {
+    public java.util.List<String> getAScriptNames() {
         return this.aScriptNames;
     }
 
     /**
      * @return listenerIds
      */
-    public java.util.List < String > getListenerIds() {
+    public java.util.List<String> getListenerIds() {
         return this.listenerIds;
     }
 
@@ -90,9 +95,9 @@ public class ListAScriptsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAScriptsRequest, Builder> {
-        private java.util.List < String > aScriptIds; 
-        private java.util.List < String > aScriptNames; 
-        private java.util.List < String > listenerIds; 
+        private java.util.List<String> aScriptIds; 
+        private java.util.List<String> aScriptNames; 
+        private java.util.List<String> listenerIds; 
         private Integer maxResults; 
         private String nextToken; 
 
@@ -112,7 +117,7 @@ public class ListAScriptsRequest extends Request {
         /**
          * <p>The AScript rule IDs. You can specify at most 20 IDs in each call.</p>
          */
-        public Builder aScriptIds(java.util.List < String > aScriptIds) {
+        public Builder aScriptIds(java.util.List<String> aScriptIds) {
             this.putQueryParameter("AScriptIds", aScriptIds);
             this.aScriptIds = aScriptIds;
             return this;
@@ -121,7 +126,7 @@ public class ListAScriptsRequest extends Request {
         /**
          * <p>The AScript rule names. You can specify at most 10 names in each call.</p>
          */
-        public Builder aScriptNames(java.util.List < String > aScriptNames) {
+        public Builder aScriptNames(java.util.List<String> aScriptNames) {
             this.putQueryParameter("AScriptNames", aScriptNames);
             this.aScriptNames = aScriptNames;
             return this;
@@ -130,7 +135,7 @@ public class ListAScriptsRequest extends Request {
         /**
          * <p>The listener IDs. You can specify at most 20 listener IDs in each call.</p>
          */
-        public Builder listenerIds(java.util.List < String > listenerIds) {
+        public Builder listenerIds(java.util.List<String> listenerIds) {
             this.putQueryParameter("ListenerIds", listenerIds);
             this.listenerIds = listenerIds;
             return this;

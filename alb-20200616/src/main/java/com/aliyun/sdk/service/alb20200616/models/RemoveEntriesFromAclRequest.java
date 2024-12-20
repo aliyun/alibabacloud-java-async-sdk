@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class RemoveEntriesFromAclRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Entries")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > entries;
+    private java.util.List<String> entries;
 
     private RemoveEntriesFromAclRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class RemoveEntriesFromAclRequest extends Request {
     /**
      * @return entries
      */
-    public java.util.List < String > getEntries() {
+    public java.util.List<String> getEntries() {
         return this.entries;
     }
 
@@ -83,7 +88,7 @@ public class RemoveEntriesFromAclRequest extends Request {
         private String aclId; 
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < String > entries; 
+        private java.util.List<String> entries; 
 
         private Builder() {
             super();
@@ -146,7 +151,7 @@ public class RemoveEntriesFromAclRequest extends Request {
          * <p>The entries that you want to remove. You can remove up to 20 entries in each call.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder entries(java.util.List < String > entries) {
+        public Builder entries(java.util.List<String> entries) {
             this.putQueryParameter("Entries", entries);
             this.entries = entries;
             return this;

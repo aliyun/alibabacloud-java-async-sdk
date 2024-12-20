@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListHealthCheckTemplatesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheckTemplateIds")
-    private java.util.List < String > healthCheckTemplateIds;
+    private java.util.List<String> healthCheckTemplateIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheckTemplateNames")
-    private java.util.List < String > healthCheckTemplateNames;
+    private java.util.List<String> healthCheckTemplateNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -31,7 +36,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListHealthCheckTemplatesRequest(Builder builder) {
         super(builder);
@@ -58,14 +63,14 @@ public class ListHealthCheckTemplatesRequest extends Request {
     /**
      * @return healthCheckTemplateIds
      */
-    public java.util.List < String > getHealthCheckTemplateIds() {
+    public java.util.List<String> getHealthCheckTemplateIds() {
         return this.healthCheckTemplateIds;
     }
 
     /**
      * @return healthCheckTemplateNames
      */
-    public java.util.List < String > getHealthCheckTemplateNames() {
+    public java.util.List<String> getHealthCheckTemplateNames() {
         return this.healthCheckTemplateNames;
     }
 
@@ -86,16 +91,16 @@ public class ListHealthCheckTemplatesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListHealthCheckTemplatesRequest, Builder> {
-        private java.util.List < String > healthCheckTemplateIds; 
-        private java.util.List < String > healthCheckTemplateNames; 
+        private java.util.List<String> healthCheckTemplateIds; 
+        private java.util.List<String> healthCheckTemplateNames; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -113,7 +118,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
         /**
          * <p>The IDs of health check templates.</p>
          */
-        public Builder healthCheckTemplateIds(java.util.List < String > healthCheckTemplateIds) {
+        public Builder healthCheckTemplateIds(java.util.List<String> healthCheckTemplateIds) {
             this.putQueryParameter("HealthCheckTemplateIds", healthCheckTemplateIds);
             this.healthCheckTemplateIds = healthCheckTemplateIds;
             return this;
@@ -122,7 +127,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
         /**
          * <p>The health check templates.</p>
          */
-        public Builder healthCheckTemplateNames(java.util.List < String > healthCheckTemplateNames) {
+        public Builder healthCheckTemplateNames(java.util.List<String> healthCheckTemplateNames) {
             this.putQueryParameter("HealthCheckTemplateNames", healthCheckTemplateNames);
             this.healthCheckTemplateNames = healthCheckTemplateNames;
             return this;
@@ -159,7 +164,7 @@ public class ListHealthCheckTemplatesRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

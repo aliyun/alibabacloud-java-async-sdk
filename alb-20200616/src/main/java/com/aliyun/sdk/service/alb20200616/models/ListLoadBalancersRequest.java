@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,11 +39,11 @@ public class ListLoadBalancersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
-    private java.util.List < String > loadBalancerIds;
+    private java.util.List<String> loadBalancerIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerNames")
-    private java.util.List < String > loadBalancerNames;
+    private java.util.List<String> loadBalancerNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
@@ -62,11 +67,11 @@ public class ListLoadBalancersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcIds")
-    private java.util.List < String > vpcIds;
+    private java.util.List<String> vpcIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
@@ -142,14 +147,14 @@ public class ListLoadBalancersRequest extends Request {
     /**
      * @return loadBalancerIds
      */
-    public java.util.List < String > getLoadBalancerIds() {
+    public java.util.List<String> getLoadBalancerIds() {
         return this.loadBalancerIds;
     }
 
     /**
      * @return loadBalancerNames
      */
-    public java.util.List < String > getLoadBalancerNames() {
+    public java.util.List<String> getLoadBalancerNames() {
         return this.loadBalancerNames;
     }
 
@@ -191,14 +196,14 @@ public class ListLoadBalancersRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     /**
      * @return vpcIds
      */
-    public java.util.List < String > getVpcIds() {
+    public java.util.List<String> getVpcIds() {
         return this.vpcIds;
     }
 
@@ -215,15 +220,15 @@ public class ListLoadBalancersRequest extends Request {
         private String DNSName; 
         private String ipv6AddressType; 
         private String loadBalancerBussinessStatus; 
-        private java.util.List < String > loadBalancerIds; 
-        private java.util.List < String > loadBalancerNames; 
+        private java.util.List<String> loadBalancerIds; 
+        private java.util.List<String> loadBalancerNames; 
         private String loadBalancerStatus; 
         private Integer maxResults; 
         private String nextToken; 
         private String payType; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
-        private java.util.List < String > vpcIds; 
+        private java.util.List<Tag> tag; 
+        private java.util.List<String> vpcIds; 
         private String zoneId; 
 
         private Builder() {
@@ -328,7 +333,7 @@ public class ListLoadBalancersRequest extends Request {
         /**
          * <p>The instance IDs. You can specify at most 20 ALB instance IDs.</p>
          */
-        public Builder loadBalancerIds(java.util.List < String > loadBalancerIds) {
+        public Builder loadBalancerIds(java.util.List<String> loadBalancerIds) {
             this.putQueryParameter("LoadBalancerIds", loadBalancerIds);
             this.loadBalancerIds = loadBalancerIds;
             return this;
@@ -337,7 +342,7 @@ public class ListLoadBalancersRequest extends Request {
         /**
          * <p>The instance names. You can specify at most 10 instance names.</p>
          */
-        public Builder loadBalancerNames(java.util.List < String > loadBalancerNames) {
+        public Builder loadBalancerNames(java.util.List<String> loadBalancerNames) {
             this.putQueryParameter("LoadBalancerNames", loadBalancerNames);
             this.loadBalancerNames = loadBalancerNames;
             return this;
@@ -418,7 +423,7 @@ public class ListLoadBalancersRequest extends Request {
         /**
          * <p>The tags added to the ALB instance.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -427,7 +432,7 @@ public class ListLoadBalancersRequest extends Request {
         /**
          * <p>The ID of the VPC to which the ALB instance belongs. You can specify at most 10 VPC IDs.</p>
          */
-        public Builder vpcIds(java.util.List < String > vpcIds) {
+        public Builder vpcIds(java.util.List<String> vpcIds) {
             this.putQueryParameter("VpcIds", vpcIds);
             this.vpcIds = vpcIds;
             return this;

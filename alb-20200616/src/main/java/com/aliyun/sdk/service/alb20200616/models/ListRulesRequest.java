@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,11 @@ public class ListRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ListenerIds")
-    private java.util.List < String > listenerIds;
+    private java.util.List<String> listenerIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
-    private java.util.List < String > loadBalancerIds;
+    private java.util.List<String> loadBalancerIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -34,11 +39,11 @@ public class ListRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleIds")
-    private java.util.List < String > ruleIds;
+    private java.util.List<String> ruleIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListRulesRequest(Builder builder) {
         super(builder);
@@ -74,14 +79,14 @@ public class ListRulesRequest extends Request {
     /**
      * @return listenerIds
      */
-    public java.util.List < String > getListenerIds() {
+    public java.util.List<String> getListenerIds() {
         return this.listenerIds;
     }
 
     /**
      * @return loadBalancerIds
      */
-    public java.util.List < String > getLoadBalancerIds() {
+    public java.util.List<String> getLoadBalancerIds() {
         return this.loadBalancerIds;
     }
 
@@ -102,25 +107,25 @@ public class ListRulesRequest extends Request {
     /**
      * @return ruleIds
      */
-    public java.util.List < String > getRuleIds() {
+    public java.util.List<String> getRuleIds() {
         return this.ruleIds;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListRulesRequest, Builder> {
         private String direction; 
-        private java.util.List < String > listenerIds; 
-        private java.util.List < String > loadBalancerIds; 
+        private java.util.List<String> listenerIds; 
+        private java.util.List<String> loadBalancerIds; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > ruleIds; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> ruleIds; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -159,7 +164,7 @@ public class ListRulesRequest extends Request {
         /**
          * <p>The listener IDs.</p>
          */
-        public Builder listenerIds(java.util.List < String > listenerIds) {
+        public Builder listenerIds(java.util.List<String> listenerIds) {
             this.putQueryParameter("ListenerIds", listenerIds);
             this.listenerIds = listenerIds;
             return this;
@@ -168,7 +173,7 @@ public class ListRulesRequest extends Request {
         /**
          * <p>The Application Load Balancer (ALB) instance IDs.</p>
          */
-        public Builder loadBalancerIds(java.util.List < String > loadBalancerIds) {
+        public Builder loadBalancerIds(java.util.List<String> loadBalancerIds) {
             this.putQueryParameter("LoadBalancerIds", loadBalancerIds);
             this.loadBalancerIds = loadBalancerIds;
             return this;
@@ -206,7 +211,7 @@ public class ListRulesRequest extends Request {
         /**
          * <p>The forwarding rules.</p>
          */
-        public Builder ruleIds(java.util.List < String > ruleIds) {
+        public Builder ruleIds(java.util.List<String> ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
             this.ruleIds = ruleIds;
             return this;
@@ -215,7 +220,7 @@ public class ListRulesRequest extends Request {
         /**
          * <p>The tag.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

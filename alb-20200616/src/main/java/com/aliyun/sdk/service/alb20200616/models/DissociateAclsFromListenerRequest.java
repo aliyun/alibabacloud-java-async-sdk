@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DissociateAclsFromListenerRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > aclIds;
+    private java.util.List<String> aclIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -54,7 +59,7 @@ public class DissociateAclsFromListenerRequest extends Request {
     /**
      * @return aclIds
      */
-    public java.util.List < String > getAclIds() {
+    public java.util.List<String> getAclIds() {
         return this.aclIds;
     }
 
@@ -80,7 +85,7 @@ public class DissociateAclsFromListenerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DissociateAclsFromListenerRequest, Builder> {
-        private java.util.List < String > aclIds; 
+        private java.util.List<String> aclIds; 
         private String clientToken; 
         private Boolean dryRun; 
         private String listenerId; 
@@ -101,7 +106,7 @@ public class DissociateAclsFromListenerRequest extends Request {
          * <p>The access control list (ACL) IDs. You can disassociate at most three ACLs from a listener in each call.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder aclIds(java.util.List < String > aclIds) {
+        public Builder aclIds(java.util.List<String> aclIds) {
             this.putQueryParameter("AclIds", aclIds);
             this.aclIds = aclIds;
             return this;

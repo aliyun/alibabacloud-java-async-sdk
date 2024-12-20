@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListHealthCheckTemplatesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HealthCheckTemplates")
-    private java.util.List < HealthCheckTemplates> healthCheckTemplates;
+    private java.util.List<HealthCheckTemplates> healthCheckTemplates;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
     /**
      * @return healthCheckTemplates
      */
-    public java.util.List < HealthCheckTemplates> getHealthCheckTemplates() {
+    public java.util.List<HealthCheckTemplates> getHealthCheckTemplates() {
         return this.healthCheckTemplates;
     }
 
@@ -79,7 +84,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < HealthCheckTemplates> healthCheckTemplates; 
+        private java.util.List<HealthCheckTemplates> healthCheckTemplates; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         /**
          * <p>The health check templates.</p>
          */
-        public Builder healthCheckTemplates(java.util.List < HealthCheckTemplates> healthCheckTemplates) {
+        public Builder healthCheckTemplates(java.util.List<HealthCheckTemplates> healthCheckTemplates) {
             this.healthCheckTemplates = healthCheckTemplates;
             return this;
         }
@@ -228,7 +233,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
      */
     public static class HealthCheckTemplates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthCheckCodes")
-        private java.util.List < String > healthCheckCodes;
+        private java.util.List<String> healthCheckCodes;
 
         @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
         private Integer healthCheckConnectPort;
@@ -264,7 +269,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         private Integer healthyThreshold;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
         private Integer unhealthyThreshold;
@@ -297,7 +302,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         /**
          * @return healthCheckCodes
          */
-        public java.util.List < String > getHealthCheckCodes() {
+        public java.util.List<String> getHealthCheckCodes() {
             return this.healthCheckCodes;
         }
 
@@ -381,7 +386,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -393,7 +398,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > healthCheckCodes; 
+            private java.util.List<String> healthCheckCodes; 
             private Integer healthCheckConnectPort; 
             private String healthCheckHost; 
             private String healthCheckHttpVersion; 
@@ -405,13 +410,13 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             private String healthCheckTemplateName; 
             private Integer healthCheckTimeout; 
             private Integer healthyThreshold; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Integer unhealthyThreshold; 
 
             /**
              * <p>The HTTP status codes that indicate healthy backend servers.</p>
              */
-            public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
+            public Builder healthCheckCodes(java.util.List<String> healthCheckCodes) {
                 this.healthCheckCodes = healthCheckCodes;
                 return this;
             }
@@ -574,7 +579,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

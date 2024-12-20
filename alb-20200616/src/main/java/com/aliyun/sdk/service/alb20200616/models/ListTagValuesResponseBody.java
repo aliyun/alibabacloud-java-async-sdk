@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListTagValuesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TagValues")
-    private java.util.List < String > tagValues;
+    private java.util.List<String> tagValues;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class ListTagValuesResponseBody extends TeaModel {
     /**
      * @return tagValues
      */
-    public java.util.List < String > getTagValues() {
+    public java.util.List<String> getTagValues() {
         return this.tagValues;
     }
 
@@ -82,7 +87,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < String > tagValues; 
+        private java.util.List<String> tagValues; 
         private Integer totalCount; 
 
         /**
@@ -125,7 +130,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         /**
          * <p>The tag values.</p>
          */
-        public Builder tagValues(java.util.List < String > tagValues) {
+        public Builder tagValues(java.util.List<String> tagValues) {
             this.tagValues = tagValues;
             return this;
         }

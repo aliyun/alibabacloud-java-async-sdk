@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,11 +32,11 @@ public class ListServerGroupServersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServerIds")
-    private java.util.List < String > serverIds;
+    private java.util.List<String> serverIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListServerGroupServersRequest(Builder builder) {
         super(builder);
@@ -79,14 +84,14 @@ public class ListServerGroupServersRequest extends Request {
     /**
      * @return serverIds
      */
-    public java.util.List < String > getServerIds() {
+    public java.util.List<String> getServerIds() {
         return this.serverIds;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -94,8 +99,8 @@ public class ListServerGroupServersRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String serverGroupId; 
-        private java.util.List < String > serverIds; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> serverIds; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -153,7 +158,7 @@ public class ListServerGroupServersRequest extends Request {
         /**
          * <p>The IDs of the servers.</p>
          */
-        public Builder serverIds(java.util.List < String > serverIds) {
+        public Builder serverIds(java.util.List<String> serverIds) {
             this.putQueryParameter("ServerIds", serverIds);
             this.serverIds = serverIds;
             return this;
@@ -162,7 +167,7 @@ public class ListServerGroupServersRequest extends Request {
         /**
          * <p>The tags that are added to the server group. You can specify up to 10 tags in each call.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

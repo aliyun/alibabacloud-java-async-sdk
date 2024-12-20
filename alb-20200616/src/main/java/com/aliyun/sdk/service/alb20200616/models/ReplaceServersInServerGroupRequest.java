@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AddedServers")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AddedServers> addedServers;
+    private java.util.List<AddedServers> addedServers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -28,7 +33,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemovedServers")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < RemovedServers> removedServers;
+    private java.util.List<RemovedServers> removedServers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServerGroupId")
@@ -60,7 +65,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
     /**
      * @return addedServers
      */
-    public java.util.List < AddedServers> getAddedServers() {
+    public java.util.List<AddedServers> getAddedServers() {
         return this.addedServers;
     }
 
@@ -81,7 +86,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
     /**
      * @return removedServers
      */
-    public java.util.List < RemovedServers> getRemovedServers() {
+    public java.util.List<RemovedServers> getRemovedServers() {
         return this.removedServers;
     }
 
@@ -93,10 +98,10 @@ public class ReplaceServersInServerGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ReplaceServersInServerGroupRequest, Builder> {
-        private java.util.List < AddedServers> addedServers; 
+        private java.util.List<AddedServers> addedServers; 
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < RemovedServers> removedServers; 
+        private java.util.List<RemovedServers> removedServers; 
         private String serverGroupId; 
 
         private Builder() {
@@ -116,7 +121,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
          * <p>The backend servers. You can specify at most 200 servers in each call.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder addedServers(java.util.List < AddedServers> addedServers) {
+        public Builder addedServers(java.util.List<AddedServers> addedServers) {
             this.putQueryParameter("AddedServers", addedServers);
             this.addedServers = addedServers;
             return this;
@@ -158,7 +163,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
          * <p>The backend servers that you want to remove.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder removedServers(java.util.List < RemovedServers> removedServers) {
+        public Builder removedServers(java.util.List<RemovedServers> removedServers) {
             this.putQueryParameter("RemovedServers", removedServers);
             this.removedServers = removedServers;
             return this;

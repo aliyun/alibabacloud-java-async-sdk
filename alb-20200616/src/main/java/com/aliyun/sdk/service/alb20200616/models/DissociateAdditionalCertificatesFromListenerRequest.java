@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Certificates")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Certificates> certificates;
+    private java.util.List<Certificates> certificates;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -54,7 +59,7 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
     /**
      * @return certificates
      */
-    public java.util.List < Certificates> getCertificates() {
+    public java.util.List<Certificates> getCertificates() {
         return this.certificates;
     }
 
@@ -80,7 +85,7 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
     }
 
     public static final class Builder extends Request.Builder<DissociateAdditionalCertificatesFromListenerRequest, Builder> {
-        private java.util.List < Certificates> certificates; 
+        private java.util.List<Certificates> certificates; 
         private String clientToken; 
         private Boolean dryRun; 
         private String listenerId; 
@@ -101,7 +106,7 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
          * <p>The additional certificates. Only server certificates are supported. You can specify at most 20 certificates.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder certificates(java.util.List < Certificates> certificates) {
+        public Builder certificates(java.util.List<Certificates> certificates) {
             this.putQueryParameter("Certificates", certificates);
             this.certificates = certificates;
             return this;

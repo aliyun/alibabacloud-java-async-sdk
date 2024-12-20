@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateListenerRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CaCertificates")
-    private java.util.List < CaCertificates> caCertificates;
+    private java.util.List<CaCertificates> caCertificates;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CaEnabled")
@@ -22,7 +27,7 @@ public class CreateListenerRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Certificates")
-    private java.util.List < Certificates> certificates;
+    private java.util.List<Certificates> certificates;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -31,7 +36,7 @@ public class CreateListenerRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefaultActions")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DefaultActions> defaultActions;
+    private java.util.List<DefaultActions> defaultActions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
@@ -82,7 +87,7 @@ public class CreateListenerRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("XForwardedForConfig")
@@ -126,7 +131,7 @@ public class CreateListenerRequest extends Request {
     /**
      * @return caCertificates
      */
-    public java.util.List < CaCertificates> getCaCertificates() {
+    public java.util.List<CaCertificates> getCaCertificates() {
         return this.caCertificates;
     }
 
@@ -140,7 +145,7 @@ public class CreateListenerRequest extends Request {
     /**
      * @return certificates
      */
-    public java.util.List < Certificates> getCertificates() {
+    public java.util.List<Certificates> getCertificates() {
         return this.certificates;
     }
 
@@ -154,7 +159,7 @@ public class CreateListenerRequest extends Request {
     /**
      * @return defaultActions
      */
-    public java.util.List < DefaultActions> getDefaultActions() {
+    public java.util.List<DefaultActions> getDefaultActions() {
         return this.defaultActions;
     }
 
@@ -238,7 +243,7 @@ public class CreateListenerRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -250,11 +255,11 @@ public class CreateListenerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateListenerRequest, Builder> {
-        private java.util.List < CaCertificates> caCertificates; 
+        private java.util.List<CaCertificates> caCertificates; 
         private Boolean caEnabled; 
-        private java.util.List < Certificates> certificates; 
+        private java.util.List<Certificates> certificates; 
         private String clientToken; 
-        private java.util.List < DefaultActions> defaultActions; 
+        private java.util.List<DefaultActions> defaultActions; 
         private Boolean dryRun; 
         private Boolean gzipEnabled; 
         private Boolean http2Enabled; 
@@ -266,7 +271,7 @@ public class CreateListenerRequest extends Request {
         private QuicConfig quicConfig; 
         private Integer requestTimeout; 
         private String securityPolicyId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private XForwardedForConfig xForwardedForConfig; 
 
         private Builder() {
@@ -298,7 +303,7 @@ public class CreateListenerRequest extends Request {
         /**
          * <p>The certificate authority (CA) certificates. You can specify only one CA certificate.</p>
          */
-        public Builder caCertificates(java.util.List < CaCertificates> caCertificates) {
+        public Builder caCertificates(java.util.List<CaCertificates> caCertificates) {
             this.putQueryParameter("CaCertificates", caCertificates);
             this.caCertificates = caCertificates;
             return this;
@@ -323,7 +328,7 @@ public class CreateListenerRequest extends Request {
         /**
          * <p>The details about each certificate.</p>
          */
-        public Builder certificates(java.util.List < Certificates> certificates) {
+        public Builder certificates(java.util.List<Certificates> certificates) {
             this.putQueryParameter("Certificates", certificates);
             this.certificates = certificates;
             return this;
@@ -349,7 +354,7 @@ public class CreateListenerRequest extends Request {
          * <p>The actions of the forwarding rule.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder defaultActions(java.util.List < DefaultActions> defaultActions) {
+        public Builder defaultActions(java.util.List<DefaultActions> defaultActions) {
             this.putQueryParameter("DefaultActions", defaultActions);
             this.defaultActions = defaultActions;
             return this;
@@ -518,7 +523,7 @@ public class CreateListenerRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -707,7 +712,7 @@ public class CreateListenerRequest extends Request {
     public static class ForwardGroupConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < ServerGroupTuples> serverGroupTuples;
+        private java.util.List<ServerGroupTuples> serverGroupTuples;
 
         private ForwardGroupConfig(Builder builder) {
             this.serverGroupTuples = builder.serverGroupTuples;
@@ -724,18 +729,18 @@ public class CreateListenerRequest extends Request {
         /**
          * @return serverGroupTuples
          */
-        public java.util.List < ServerGroupTuples> getServerGroupTuples() {
+        public java.util.List<ServerGroupTuples> getServerGroupTuples() {
             return this.serverGroupTuples;
         }
 
         public static final class Builder {
-            private java.util.List < ServerGroupTuples> serverGroupTuples; 
+            private java.util.List<ServerGroupTuples> serverGroupTuples; 
 
             /**
              * <p>The destination server group to which requests are forwarded.</p>
              * <p>This parameter is required.</p>
              */
-            public Builder serverGroupTuples(java.util.List < ServerGroupTuples> serverGroupTuples) {
+            public Builder serverGroupTuples(java.util.List<ServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
                 return this;
             }
@@ -1021,6 +1026,12 @@ public class CreateListenerRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("XForwardedForEnabled")
         private Boolean xForwardedForEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("XForwardedForHostEnabled")
+        private Boolean xForwardedForHostEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("XForwardedForProcessingMode")
+        private String xForwardedForProcessingMode;
+
         @com.aliyun.core.annotation.NameInMap("XForwardedForProtoEnabled")
         private Boolean xForwardedForProtoEnabled;
 
@@ -1043,6 +1054,8 @@ public class CreateListenerRequest extends Request {
             this.xForwardedForClientSourceIpsTrusted = builder.xForwardedForClientSourceIpsTrusted;
             this.xForwardedForClientSrcPortEnabled = builder.xForwardedForClientSrcPortEnabled;
             this.xForwardedForEnabled = builder.xForwardedForEnabled;
+            this.xForwardedForHostEnabled = builder.xForwardedForHostEnabled;
+            this.xForwardedForProcessingMode = builder.xForwardedForProcessingMode;
             this.xForwardedForProtoEnabled = builder.xForwardedForProtoEnabled;
             this.xForwardedForSLBIdEnabled = builder.xForwardedForSLBIdEnabled;
             this.xForwardedForSLBPortEnabled = builder.xForwardedForSLBPortEnabled;
@@ -1141,6 +1154,20 @@ public class CreateListenerRequest extends Request {
         }
 
         /**
+         * @return xForwardedForHostEnabled
+         */
+        public Boolean getXForwardedForHostEnabled() {
+            return this.xForwardedForHostEnabled;
+        }
+
+        /**
+         * @return xForwardedForProcessingMode
+         */
+        public String getXForwardedForProcessingMode() {
+            return this.xForwardedForProcessingMode;
+        }
+
+        /**
          * @return xForwardedForProtoEnabled
          */
         public Boolean getXForwardedForProtoEnabled() {
@@ -1174,6 +1201,8 @@ public class CreateListenerRequest extends Request {
             private String xForwardedForClientSourceIpsTrusted; 
             private Boolean xForwardedForClientSrcPortEnabled; 
             private Boolean xForwardedForEnabled; 
+            private Boolean xForwardedForHostEnabled; 
+            private String xForwardedForProcessingMode; 
             private Boolean xForwardedForProtoEnabled; 
             private Boolean xForwardedForSLBIdEnabled; 
             private Boolean xForwardedForSLBPortEnabled; 
@@ -1373,6 +1402,22 @@ public class CreateListenerRequest extends Request {
              */
             public Builder xForwardedForEnabled(Boolean xForwardedForEnabled) {
                 this.xForwardedForEnabled = xForwardedForEnabled;
+                return this;
+            }
+
+            /**
+             * XForwardedForHostEnabled.
+             */
+            public Builder xForwardedForHostEnabled(Boolean xForwardedForHostEnabled) {
+                this.xForwardedForHostEnabled = xForwardedForHostEnabled;
+                return this;
+            }
+
+            /**
+             * XForwardedForProcessingMode.
+             */
+            public Builder xForwardedForProcessingMode(String xForwardedForProcessingMode) {
+                this.xForwardedForProcessingMode = xForwardedForProcessingMode;
                 return this;
             }
 

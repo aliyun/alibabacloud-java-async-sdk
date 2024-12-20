@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneMappings")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ZoneMappings> zoneMappings;
+    private java.util.List<ZoneMappings> zoneMappings;
 
     private CancelShiftLoadBalancerZonesRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
     /**
      * @return zoneMappings
      */
-    public java.util.List < ZoneMappings> getZoneMappings() {
+    public java.util.List<ZoneMappings> getZoneMappings() {
         return this.zoneMappings;
     }
 
@@ -83,7 +88,7 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
         private String clientToken; 
         private Boolean dryRun; 
         private String loadBalancerId; 
-        private java.util.List < ZoneMappings> zoneMappings; 
+        private java.util.List<ZoneMappings> zoneMappings; 
 
         private Builder() {
             super();
@@ -149,7 +154,7 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
          * </blockquote>
          * <p>This parameter is required.</p>
          */
-        public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
+        public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
             this.putQueryParameter("ZoneMappings", zoneMappings);
             this.zoneMappings = zoneMappings;
             return this;

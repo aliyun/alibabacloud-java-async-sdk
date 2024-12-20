@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAclsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Acls")
-    private java.util.List < Acls> acls;
+    private java.util.List<Acls> acls;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class ListAclsResponseBody extends TeaModel {
     /**
      * @return acls
      */
-    public java.util.List < Acls> getAcls() {
+    public java.util.List<Acls> getAcls() {
         return this.acls;
     }
 
@@ -79,7 +84,7 @@ public class ListAclsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Acls> acls; 
+        private java.util.List<Acls> acls; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListAclsResponseBody extends TeaModel {
         /**
          * <p>A list of ACLs.</p>
          */
-        public Builder acls(java.util.List < Acls> acls) {
+        public Builder acls(java.util.List<Acls> acls) {
             this.acls = acls;
             return this;
         }
@@ -249,7 +254,7 @@ public class ListAclsResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private Acls(Builder builder) {
             this.aclId = builder.aclId;
@@ -322,7 +327,7 @@ public class ListAclsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -334,7 +339,7 @@ public class ListAclsResponseBody extends TeaModel {
             private Boolean configManagedEnabled; 
             private String createTime; 
             private String resourceGroupId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The ACL ID.</p>
@@ -425,7 +430,7 @@ public class ListAclsResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

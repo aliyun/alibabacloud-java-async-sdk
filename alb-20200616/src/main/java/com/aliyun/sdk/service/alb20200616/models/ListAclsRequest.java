@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListAclsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclIds")
-    private java.util.List < String > aclIds;
+    private java.util.List<String> aclIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclNames")
-    private java.util.List < String > aclNames;
+    private java.util.List<String> aclNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -35,7 +40,7 @@ public class ListAclsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListAclsRequest(Builder builder) {
         super(builder);
@@ -63,14 +68,14 @@ public class ListAclsRequest extends Request {
     /**
      * @return aclIds
      */
-    public java.util.List < String > getAclIds() {
+    public java.util.List<String> getAclIds() {
         return this.aclIds;
     }
 
     /**
      * @return aclNames
      */
-    public java.util.List < String > getAclNames() {
+    public java.util.List<String> getAclNames() {
         return this.aclNames;
     }
 
@@ -98,17 +103,17 @@ public class ListAclsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListAclsRequest, Builder> {
-        private java.util.List < String > aclIds; 
-        private java.util.List < String > aclNames; 
+        private java.util.List<String> aclIds; 
+        private java.util.List<String> aclNames; 
         private Integer maxResults; 
         private String nextToken; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -127,7 +132,7 @@ public class ListAclsRequest extends Request {
         /**
          * <p>Filter access control lists (ACLs) by ACL ID. You can specify at most 20 ACL IDs in each call.</p>
          */
-        public Builder aclIds(java.util.List < String > aclIds) {
+        public Builder aclIds(java.util.List<String> aclIds) {
             this.putQueryParameter("AclIds", aclIds);
             this.aclIds = aclIds;
             return this;
@@ -136,7 +141,7 @@ public class ListAclsRequest extends Request {
         /**
          * <p>The ACL names. You can specify up to 10 ACL names in each call.</p>
          */
-        public Builder aclNames(java.util.List < String > aclNames) {
+        public Builder aclNames(java.util.List<String> aclNames) {
             this.putQueryParameter("AclNames", aclNames);
             this.aclNames = aclNames;
             return this;
@@ -185,7 +190,7 @@ public class ListAclsRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

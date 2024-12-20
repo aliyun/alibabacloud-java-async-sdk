@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAclRelationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AclRelations")
-    private java.util.List < AclRelations> aclRelations;
+    private java.util.List<AclRelations> aclRelations;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
     /**
      * @return aclRelations
      */
-    public java.util.List < AclRelations> getAclRelations() {
+    public java.util.List<AclRelations> getAclRelations() {
         return this.aclRelations;
     }
 
@@ -46,13 +51,13 @@ public class ListAclRelationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AclRelations> aclRelations; 
+        private java.util.List<AclRelations> aclRelations; 
         private String requestId; 
 
         /**
          * <p>The relations between the specified ACL and the listeners.</p>
          */
-        public Builder aclRelations(java.util.List < AclRelations> aclRelations) {
+        public Builder aclRelations(java.util.List<AclRelations> aclRelations) {
             this.aclRelations = aclRelations;
             return this;
         }
@@ -232,7 +237,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
         private String aclId;
 
         @com.aliyun.core.annotation.NameInMap("RelatedListeners")
-        private java.util.List < RelatedListeners> relatedListeners;
+        private java.util.List<RelatedListeners> relatedListeners;
 
         private AclRelations(Builder builder) {
             this.aclId = builder.aclId;
@@ -257,13 +262,13 @@ public class ListAclRelationsResponseBody extends TeaModel {
         /**
          * @return relatedListeners
          */
-        public java.util.List < RelatedListeners> getRelatedListeners() {
+        public java.util.List<RelatedListeners> getRelatedListeners() {
             return this.relatedListeners;
         }
 
         public static final class Builder {
             private String aclId; 
-            private java.util.List < RelatedListeners> relatedListeners; 
+            private java.util.List<RelatedListeners> relatedListeners; 
 
             /**
              * <p>ACL ID</p>
@@ -279,7 +284,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
             /**
              * <p>The listeners that are associated with the ACL.</p>
              */
-            public Builder relatedListeners(java.util.List < RelatedListeners> relatedListeners) {
+            public Builder relatedListeners(java.util.List<RelatedListeners> relatedListeners) {
                 this.relatedListeners = relatedListeners;
                 return this;
             }

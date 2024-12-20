@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,16 +21,16 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     private AclConfig aclConfig;
 
     @com.aliyun.core.annotation.NameInMap("CaCertificates")
-    private java.util.List < CaCertificates> caCertificates;
+    private java.util.List<CaCertificates> caCertificates;
 
     @com.aliyun.core.annotation.NameInMap("CaEnabled")
     private Boolean caEnabled;
 
     @com.aliyun.core.annotation.NameInMap("Certificates")
-    private java.util.List < Certificates> certificates;
+    private java.util.List<Certificates> certificates;
 
     @com.aliyun.core.annotation.NameInMap("DefaultActions")
-    private java.util.List < DefaultActions> defaultActions;
+    private java.util.List<DefaultActions> defaultActions;
 
     @com.aliyun.core.annotation.NameInMap("GzipEnabled")
     private Boolean gzipEnabled;
@@ -70,7 +75,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     private String securityPolicyId;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("XForwardedForConfig")
     private XForwardedForConfig xForwardedForConfig;
@@ -117,7 +122,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     /**
      * @return caCertificates
      */
-    public java.util.List < CaCertificates> getCaCertificates() {
+    public java.util.List<CaCertificates> getCaCertificates() {
         return this.caCertificates;
     }
 
@@ -131,14 +136,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     /**
      * @return certificates
      */
-    public java.util.List < Certificates> getCertificates() {
+    public java.util.List<Certificates> getCertificates() {
         return this.certificates;
     }
 
     /**
      * @return defaultActions
      */
-    public java.util.List < DefaultActions> getDefaultActions() {
+    public java.util.List<DefaultActions> getDefaultActions() {
         return this.defaultActions;
     }
 
@@ -243,7 +248,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -256,10 +261,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     public static final class Builder {
         private AclConfig aclConfig; 
-        private java.util.List < CaCertificates> caCertificates; 
+        private java.util.List<CaCertificates> caCertificates; 
         private Boolean caEnabled; 
-        private java.util.List < Certificates> certificates; 
-        private java.util.List < DefaultActions> defaultActions; 
+        private java.util.List<Certificates> certificates; 
+        private java.util.List<DefaultActions> defaultActions; 
         private Boolean gzipEnabled; 
         private Boolean http2Enabled; 
         private Integer idleTimeout; 
@@ -274,7 +279,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         private String requestId; 
         private Integer requestTimeout; 
         private String securityPolicyId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private XForwardedForConfig xForwardedForConfig; 
 
         /**
@@ -288,7 +293,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         /**
          * <p>A list of default CA certificates.</p>
          */
-        public Builder caCertificates(java.util.List < CaCertificates> caCertificates) {
+        public Builder caCertificates(java.util.List<CaCertificates> caCertificates) {
             this.caCertificates = caCertificates;
             return this;
         }
@@ -311,7 +316,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         /**
          * <p>A list of certificates.</p>
          */
-        public Builder certificates(java.util.List < Certificates> certificates) {
+        public Builder certificates(java.util.List<Certificates> certificates) {
             this.certificates = certificates;
             return this;
         }
@@ -319,7 +324,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         /**
          * <p>The actions of the default forwarding rule.</p>
          */
-        public Builder defaultActions(java.util.List < DefaultActions> defaultActions) {
+        public Builder defaultActions(java.util.List<DefaultActions> defaultActions) {
             this.defaultActions = defaultActions;
             return this;
         }
@@ -497,7 +502,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         /**
          * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -602,7 +607,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
      */
     public static class AclConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclRelations")
-        private java.util.List < AclRelations> aclRelations;
+        private java.util.List<AclRelations> aclRelations;
 
         @com.aliyun.core.annotation.NameInMap("AclType")
         private String aclType;
@@ -623,7 +628,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         /**
          * @return aclRelations
          */
-        public java.util.List < AclRelations> getAclRelations() {
+        public java.util.List<AclRelations> getAclRelations() {
             return this.aclRelations;
         }
 
@@ -635,13 +640,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AclRelations> aclRelations; 
+            private java.util.List<AclRelations> aclRelations; 
             private String aclType; 
 
             /**
              * <p>The IDs of the ACLs that are associated with the listener.</p>
              */
-            public Builder aclRelations(java.util.List < AclRelations> aclRelations) {
+            public Builder aclRelations(java.util.List<AclRelations> aclRelations) {
                 this.aclRelations = aclRelations;
                 return this;
             }
@@ -880,7 +885,7 @@ public class GetListenerAttributeResponseBody extends TeaModel {
      */
     public static class ForwardGroupConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
-        private java.util.List < ServerGroupTuples> serverGroupTuples;
+        private java.util.List<ServerGroupTuples> serverGroupTuples;
 
         private ForwardGroupConfig(Builder builder) {
             this.serverGroupTuples = builder.serverGroupTuples;
@@ -897,17 +902,17 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         /**
          * @return serverGroupTuples
          */
-        public java.util.List < ServerGroupTuples> getServerGroupTuples() {
+        public java.util.List<ServerGroupTuples> getServerGroupTuples() {
             return this.serverGroupTuples;
         }
 
         public static final class Builder {
-            private java.util.List < ServerGroupTuples> serverGroupTuples; 
+            private java.util.List<ServerGroupTuples> serverGroupTuples; 
 
             /**
              * <p>The server group to which requests are forwarded.</p>
              */
-            public Builder serverGroupTuples(java.util.List < ServerGroupTuples> serverGroupTuples) {
+            public Builder serverGroupTuples(java.util.List<ServerGroupTuples> serverGroupTuples) {
                 this.serverGroupTuples = serverGroupTuples;
                 return this;
             }
@@ -1372,6 +1377,12 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("XForwardedForEnabled")
         private Boolean xForwardedForEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("XForwardedForHostEnabled")
+        private Boolean xForwardedForHostEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("XForwardedForProcessingMode")
+        private String xForwardedForProcessingMode;
+
         @com.aliyun.core.annotation.NameInMap("XForwardedForProtoEnabled")
         private Boolean xForwardedForProtoEnabled;
 
@@ -1394,6 +1405,8 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             this.xForwardedForClientSourceIpsTrusted = builder.xForwardedForClientSourceIpsTrusted;
             this.xForwardedForClientSrcPortEnabled = builder.xForwardedForClientSrcPortEnabled;
             this.xForwardedForEnabled = builder.xForwardedForEnabled;
+            this.xForwardedForHostEnabled = builder.xForwardedForHostEnabled;
+            this.xForwardedForProcessingMode = builder.xForwardedForProcessingMode;
             this.xForwardedForProtoEnabled = builder.xForwardedForProtoEnabled;
             this.xForwardedForSLBIdEnabled = builder.xForwardedForSLBIdEnabled;
             this.xForwardedForSLBPortEnabled = builder.xForwardedForSLBPortEnabled;
@@ -1492,6 +1505,20 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return xForwardedForHostEnabled
+         */
+        public Boolean getXForwardedForHostEnabled() {
+            return this.xForwardedForHostEnabled;
+        }
+
+        /**
+         * @return xForwardedForProcessingMode
+         */
+        public String getXForwardedForProcessingMode() {
+            return this.xForwardedForProcessingMode;
+        }
+
+        /**
          * @return xForwardedForProtoEnabled
          */
         public Boolean getXForwardedForProtoEnabled() {
@@ -1525,6 +1552,8 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private String xForwardedForClientSourceIpsTrusted; 
             private Boolean xForwardedForClientSrcPortEnabled; 
             private Boolean xForwardedForEnabled; 
+            private Boolean xForwardedForHostEnabled; 
+            private String xForwardedForProcessingMode; 
             private Boolean xForwardedForProtoEnabled; 
             private Boolean xForwardedForSLBIdEnabled; 
             private Boolean xForwardedForSLBPortEnabled; 
@@ -1724,6 +1753,22 @@ public class GetListenerAttributeResponseBody extends TeaModel {
              */
             public Builder xForwardedForEnabled(Boolean xForwardedForEnabled) {
                 this.xForwardedForEnabled = xForwardedForEnabled;
+                return this;
+            }
+
+            /**
+             * XForwardedForHostEnabled.
+             */
+            public Builder xForwardedForHostEnabled(Boolean xForwardedForHostEnabled) {
+                this.xForwardedForHostEnabled = xForwardedForHostEnabled;
+                return this;
+            }
+
+            /**
+             * XForwardedForProcessingMode.
+             */
+            public Builder xForwardedForProcessingMode(String xForwardedForProcessingMode) {
+                this.xForwardedForProcessingMode = xForwardedForProcessingMode;
                 return this;
             }
 

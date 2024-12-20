@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListListenersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ListenerIds")
-    private java.util.List < String > listenerIds;
+    private java.util.List<String> listenerIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
@@ -22,7 +27,7 @@ public class ListListenersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
-    private java.util.List < String > loadBalancerIds;
+    private java.util.List<String> loadBalancerIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -34,7 +39,7 @@ public class ListListenersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListListenersRequest(Builder builder) {
         super(builder);
@@ -62,7 +67,7 @@ public class ListListenersRequest extends Request {
     /**
      * @return listenerIds
      */
-    public java.util.List < String > getListenerIds() {
+    public java.util.List<String> getListenerIds() {
         return this.listenerIds;
     }
 
@@ -76,7 +81,7 @@ public class ListListenersRequest extends Request {
     /**
      * @return loadBalancerIds
      */
-    public java.util.List < String > getLoadBalancerIds() {
+    public java.util.List<String> getLoadBalancerIds() {
         return this.loadBalancerIds;
     }
 
@@ -97,17 +102,17 @@ public class ListListenersRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListListenersRequest, Builder> {
-        private java.util.List < String > listenerIds; 
+        private java.util.List<String> listenerIds; 
         private String listenerProtocol; 
-        private java.util.List < String > loadBalancerIds; 
+        private java.util.List<String> loadBalancerIds; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -126,7 +131,7 @@ public class ListListenersRequest extends Request {
         /**
          * <p>The listener IDs. You can specify at most 20 listener IDs.</p>
          */
-        public Builder listenerIds(java.util.List < String > listenerIds) {
+        public Builder listenerIds(java.util.List<String> listenerIds) {
             this.putQueryParameter("ListenerIds", listenerIds);
             this.listenerIds = listenerIds;
             return this;
@@ -152,7 +157,7 @@ public class ListListenersRequest extends Request {
         /**
          * <p>The ALB instance ID. You can specify at most 20 instance IDs.</p>
          */
-        public Builder loadBalancerIds(java.util.List < String > loadBalancerIds) {
+        public Builder loadBalancerIds(java.util.List<String> loadBalancerIds) {
             this.putQueryParameter("LoadBalancerIds", loadBalancerIds);
             this.loadBalancerIds = loadBalancerIds;
             return this;
@@ -189,7 +194,7 @@ public class ListListenersRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

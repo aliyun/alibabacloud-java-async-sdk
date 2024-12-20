@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteAScriptsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AScriptIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > aScriptIds;
+    private java.util.List<String> aScriptIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -48,7 +53,7 @@ public class DeleteAScriptsRequest extends Request {
     /**
      * @return aScriptIds
      */
-    public java.util.List < String > getAScriptIds() {
+    public java.util.List<String> getAScriptIds() {
         return this.aScriptIds;
     }
 
@@ -67,7 +72,7 @@ public class DeleteAScriptsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteAScriptsRequest, Builder> {
-        private java.util.List < String > aScriptIds; 
+        private java.util.List<String> aScriptIds; 
         private String clientToken; 
         private Boolean dryRun; 
 
@@ -86,7 +91,7 @@ public class DeleteAScriptsRequest extends Request {
          * <p>The AScript rule IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder aScriptIds(java.util.List < String > aScriptIds) {
+        public Builder aScriptIds(java.util.List<String> aScriptIds) {
             this.putQueryParameter("AScriptIds", aScriptIds);
             this.aScriptIds = aScriptIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class AssociateAclsWithListenerRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > aclIds;
+    private java.util.List<String> aclIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclType")
@@ -60,7 +65,7 @@ public class AssociateAclsWithListenerRequest extends Request {
     /**
      * @return aclIds
      */
-    public java.util.List < String > getAclIds() {
+    public java.util.List<String> getAclIds() {
         return this.aclIds;
     }
 
@@ -93,7 +98,7 @@ public class AssociateAclsWithListenerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AssociateAclsWithListenerRequest, Builder> {
-        private java.util.List < String > aclIds; 
+        private java.util.List<String> aclIds; 
         private String aclType; 
         private String clientToken; 
         private Boolean dryRun; 
@@ -116,7 +121,7 @@ public class AssociateAclsWithListenerRequest extends Request {
          * <p>The IDs of the ACLs. You can specify up to three IDs in each call.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder aclIds(java.util.List < String > aclIds) {
+        public Builder aclIds(java.util.List<String> aclIds) {
             this.putQueryParameter("AclIds", aclIds);
             this.aclIds = aclIds;
             return this;

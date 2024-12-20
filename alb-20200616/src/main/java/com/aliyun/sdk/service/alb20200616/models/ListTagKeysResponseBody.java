@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListTagKeysResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TagKeys")
-    private java.util.List < TagKeys> tagKeys;
+    private java.util.List<TagKeys> tagKeys;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class ListTagKeysResponseBody extends TeaModel {
     /**
      * @return tagKeys
      */
-    public java.util.List < TagKeys> getTagKeys() {
+    public java.util.List<TagKeys> getTagKeys() {
         return this.tagKeys;
     }
 
@@ -82,7 +87,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < TagKeys> tagKeys; 
+        private java.util.List<TagKeys> tagKeys; 
         private Integer totalCount; 
 
         /**
@@ -125,7 +130,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         /**
          * <p>The tag keys.</p>
          */
-        public Builder tagKeys(java.util.List < TagKeys> tagKeys) {
+        public Builder tagKeys(java.util.List<TagKeys> tagKeys) {
             this.tagKeys = tagKeys;
             return this;
         }

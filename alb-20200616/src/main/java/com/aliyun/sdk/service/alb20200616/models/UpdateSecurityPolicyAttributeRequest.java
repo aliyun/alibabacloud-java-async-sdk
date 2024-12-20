@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateSecurityPolicyAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ciphers")
-    private java.util.List < String > ciphers;
+    private java.util.List<String> ciphers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -35,7 +40,7 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TLSVersions")
-    private java.util.List < String > TLSVersions;
+    private java.util.List<String> TLSVersions;
 
     private UpdateSecurityPolicyAttributeRequest(Builder builder) {
         super(builder);
@@ -63,7 +68,7 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
     /**
      * @return ciphers
      */
-    public java.util.List < String > getCiphers() {
+    public java.util.List<String> getCiphers() {
         return this.ciphers;
     }
 
@@ -98,17 +103,17 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
     /**
      * @return TLSVersions
      */
-    public java.util.List < String > getTLSVersions() {
+    public java.util.List<String> getTLSVersions() {
         return this.TLSVersions;
     }
 
     public static final class Builder extends Request.Builder<UpdateSecurityPolicyAttributeRequest, Builder> {
-        private java.util.List < String > ciphers; 
+        private java.util.List<String> ciphers; 
         private String clientToken; 
         private Boolean dryRun; 
         private String securityPolicyId; 
         private String securityPolicyName; 
-        private java.util.List < String > TLSVersions; 
+        private java.util.List<String> TLSVersions; 
 
         private Builder() {
             super();
@@ -127,7 +132,7 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
         /**
          * <p>The supported cipher suites.</p>
          */
-        public Builder ciphers(java.util.List < String > ciphers) {
+        public Builder ciphers(java.util.List<String> ciphers) {
             this.putQueryParameter("Ciphers", ciphers);
             this.ciphers = ciphers;
             return this;
@@ -194,7 +199,7 @@ public class UpdateSecurityPolicyAttributeRequest extends Request {
         /**
          * <p>The supported TLS protocol versions.</p>
          */
-        public Builder TLSVersions(java.util.List < String > TLSVersions) {
+        public Builder TLSVersions(java.util.List<String> TLSVersions) {
             this.putQueryParameter("TLSVersions", TLSVersions);
             this.TLSVersions = TLSVersions;
             return this;

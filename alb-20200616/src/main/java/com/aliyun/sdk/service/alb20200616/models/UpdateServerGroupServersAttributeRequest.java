@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Servers")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Servers> servers;
+    private java.util.List<Servers> servers;
 
     private UpdateServerGroupServersAttributeRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
     /**
      * @return servers
      */
-    public java.util.List < Servers> getServers() {
+    public java.util.List<Servers> getServers() {
         return this.servers;
     }
 
@@ -83,7 +88,7 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
         private String clientToken; 
         private Boolean dryRun; 
         private String serverGroupId; 
-        private java.util.List < Servers> servers; 
+        private java.util.List<Servers> servers; 
 
         private Builder() {
             super();
@@ -146,7 +151,7 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
          * <p>The server groups. You can specify at most 40 server groups in each call.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder servers(java.util.List < Servers> servers) {
+        public Builder servers(java.util.List<Servers> servers) {
             this.putQueryParameter("Servers", servers);
             this.servers = servers;
             return this;

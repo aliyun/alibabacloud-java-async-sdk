@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheckCodes")
-    private java.util.List < String > healthCheckCodes;
+    private java.util.List<String> healthCheckCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
@@ -67,7 +72,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
@@ -122,7 +127,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
     /**
      * @return healthCheckCodes
      */
-    public java.util.List < String > getHealthCheckCodes() {
+    public java.util.List<String> getHealthCheckCodes() {
         return this.healthCheckCodes;
     }
 
@@ -199,7 +204,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -213,7 +218,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
     public static final class Builder extends Request.Builder<CreateHealthCheckTemplateRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < String > healthCheckCodes; 
+        private java.util.List<String> healthCheckCodes; 
         private Integer healthCheckConnectPort; 
         private String healthCheckHost; 
         private String healthCheckHttpVersion; 
@@ -224,7 +229,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
         private String healthCheckTemplateName; 
         private Integer healthCheckTimeout; 
         private Integer healthyThreshold; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private Integer unhealthyThreshold; 
 
         private Builder() {
@@ -288,7 +293,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
          * <strong>example:</strong>
          * <p>5</p>
          */
-        public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
+        public Builder healthCheckCodes(java.util.List<String> healthCheckCodes) {
             this.putQueryParameter("HealthCheckCodes", healthCheckCodes);
             this.healthCheckCodes = healthCheckCodes;
             return this;
@@ -457,7 +462,7 @@ public class CreateHealthCheckTemplateRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

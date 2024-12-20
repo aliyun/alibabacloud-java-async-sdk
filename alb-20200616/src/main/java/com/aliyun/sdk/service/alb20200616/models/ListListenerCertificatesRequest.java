@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListListenerCertificatesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CertificateIds")
-    private java.util.List < String > certificateIds;
+    private java.util.List<String> certificateIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CertificateType")
@@ -59,7 +64,7 @@ public class ListListenerCertificatesRequest extends Request {
     /**
      * @return certificateIds
      */
-    public java.util.List < String > getCertificateIds() {
+    public java.util.List<String> getCertificateIds() {
         return this.certificateIds;
     }
 
@@ -92,7 +97,7 @@ public class ListListenerCertificatesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListListenerCertificatesRequest, Builder> {
-        private java.util.List < String > certificateIds; 
+        private java.util.List<String> certificateIds; 
         private String certificateType; 
         private String listenerId; 
         private Integer maxResults; 
@@ -114,7 +119,7 @@ public class ListListenerCertificatesRequest extends Request {
         /**
          * <p>The certificate IDs.</p>
          */
-        public Builder certificateIds(java.util.List < String > certificateIds) {
+        public Builder certificateIds(java.util.List<String> certificateIds) {
             this.putQueryParameter("CertificateIds", certificateIds);
             this.certificateIds = certificateIds;
             return this;

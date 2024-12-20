@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class LoadBalancerLeaveSecurityGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > securityGroupIds;
+    private java.util.List<String> securityGroupIds;
 
     private LoadBalancerLeaveSecurityGroupRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class LoadBalancerLeaveSecurityGroupRequest extends Request {
     /**
      * @return securityGroupIds
      */
-    public java.util.List < String > getSecurityGroupIds() {
+    public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -83,7 +88,7 @@ public class LoadBalancerLeaveSecurityGroupRequest extends Request {
         private String clientToken; 
         private Boolean dryRun; 
         private String loadBalancerId; 
-        private java.util.List < String > securityGroupIds; 
+        private java.util.List<String> securityGroupIds; 
 
         private Builder() {
             super();
@@ -142,7 +147,7 @@ public class LoadBalancerLeaveSecurityGroupRequest extends Request {
          * <p>The security IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+        public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
             this.securityGroupIds = securityGroupIds;
             return this;

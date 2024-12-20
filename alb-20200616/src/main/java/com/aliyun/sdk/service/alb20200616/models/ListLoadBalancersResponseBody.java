@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListLoadBalancersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LoadBalancers")
-    private java.util.List < LoadBalancers> loadBalancers;
+    private java.util.List<LoadBalancers> loadBalancers;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     /**
      * @return loadBalancers
      */
-    public java.util.List < LoadBalancers> getLoadBalancers() {
+    public java.util.List<LoadBalancers> getLoadBalancers() {
         return this.loadBalancers;
     }
 
@@ -79,7 +84,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LoadBalancers> loadBalancers; 
+        private java.util.List<LoadBalancers> loadBalancers; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         /**
          * <p>A list of ALB instances.</p>
          */
-        public Builder loadBalancers(java.util.List < LoadBalancers> loadBalancers) {
+        public Builder loadBalancers(java.util.List<LoadBalancers> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
@@ -632,7 +637,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         private String loadBalancerName;
 
         @com.aliyun.core.annotation.NameInMap("LoadBalancerOperationLocks")
-        private java.util.List < LoadBalancerOperationLocks> loadBalancerOperationLocks;
+        private java.util.List<LoadBalancerOperationLocks> loadBalancerOperationLocks;
 
         @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
         private String loadBalancerStatus;
@@ -644,7 +649,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -781,7 +786,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         /**
          * @return loadBalancerOperationLocks
          */
-        public java.util.List < LoadBalancerOperationLocks> getLoadBalancerOperationLocks() {
+        public java.util.List<LoadBalancerOperationLocks> getLoadBalancerOperationLocks() {
             return this.loadBalancerOperationLocks;
         }
 
@@ -809,7 +814,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -835,11 +840,11 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String loadBalancerEdition; 
             private String loadBalancerId; 
             private String loadBalancerName; 
-            private java.util.List < LoadBalancerOperationLocks> loadBalancerOperationLocks; 
+            private java.util.List<LoadBalancerOperationLocks> loadBalancerOperationLocks; 
             private String loadBalancerStatus; 
             private ModificationProtectionConfig modificationProtectionConfig; 
             private String resourceGroupId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String vpcId; 
 
             /**
@@ -1015,7 +1020,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             /**
              * <p>The configuration of the operation lock.</p>
              */
-            public Builder loadBalancerOperationLocks(java.util.List < LoadBalancerOperationLocks> loadBalancerOperationLocks) {
+            public Builder loadBalancerOperationLocks(java.util.List<LoadBalancerOperationLocks> loadBalancerOperationLocks) {
                 this.loadBalancerOperationLocks = loadBalancerOperationLocks;
                 return this;
             }
@@ -1060,7 +1065,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             /**
              * <p>The information about the tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

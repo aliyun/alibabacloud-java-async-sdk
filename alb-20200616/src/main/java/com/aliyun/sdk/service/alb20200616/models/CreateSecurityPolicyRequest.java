@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CreateSecurityPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ciphers")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > ciphers;
+    private java.util.List<String> ciphers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -37,11 +42,11 @@ public class CreateSecurityPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TLSVersions")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > TLSVersions;
+    private java.util.List<String> TLSVersions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private CreateSecurityPolicyRequest(Builder builder) {
         super(builder);
@@ -70,7 +75,7 @@ public class CreateSecurityPolicyRequest extends Request {
     /**
      * @return ciphers
      */
-    public java.util.List < String > getCiphers() {
+    public java.util.List<String> getCiphers() {
         return this.ciphers;
     }
 
@@ -105,25 +110,25 @@ public class CreateSecurityPolicyRequest extends Request {
     /**
      * @return TLSVersions
      */
-    public java.util.List < String > getTLSVersions() {
+    public java.util.List<String> getTLSVersions() {
         return this.TLSVersions;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateSecurityPolicyRequest, Builder> {
-        private java.util.List < String > ciphers; 
+        private java.util.List<String> ciphers; 
         private String clientToken; 
         private Boolean dryRun; 
         private String resourceGroupId; 
         private String securityPolicyName; 
-        private java.util.List < String > TLSVersions; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> TLSVersions; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -144,7 +149,7 @@ public class CreateSecurityPolicyRequest extends Request {
          * <p>The supported cipher suites.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder ciphers(java.util.List < String > ciphers) {
+        public Builder ciphers(java.util.List<String> ciphers) {
             this.putQueryParameter("Ciphers", ciphers);
             this.ciphers = ciphers;
             return this;
@@ -211,7 +216,7 @@ public class CreateSecurityPolicyRequest extends Request {
          * <p>The supported Transport Layer Security (TLS) protocol versions.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder TLSVersions(java.util.List < String > TLSVersions) {
+        public Builder TLSVersions(java.util.List<String> TLSVersions) {
             this.putQueryParameter("TLSVersions", TLSVersions);
             this.TLSVersions = TLSVersions;
             return this;
@@ -220,7 +225,7 @@ public class CreateSecurityPolicyRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

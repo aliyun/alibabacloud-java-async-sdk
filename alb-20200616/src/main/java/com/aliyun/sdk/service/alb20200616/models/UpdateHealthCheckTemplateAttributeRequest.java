@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheckCodes")
-    private java.util.List < String > healthCheckCodes;
+    private java.util.List<String> healthCheckCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
@@ -123,7 +128,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends Request {
     /**
      * @return healthCheckCodes
      */
-    public java.util.List < String > getHealthCheckCodes() {
+    public java.util.List<String> getHealthCheckCodes() {
         return this.healthCheckCodes;
     }
 
@@ -214,7 +219,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateHealthCheckTemplateAttributeRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < String > healthCheckCodes; 
+        private java.util.List<String> healthCheckCodes; 
         private Integer healthCheckConnectPort; 
         private String healthCheckHost; 
         private String healthCheckHttpVersion; 
@@ -289,7 +294,7 @@ public class UpdateHealthCheckTemplateAttributeRequest extends Request {
          * <strong>example:</strong>
          * <p>5</p>
          */
-        public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
+        public Builder healthCheckCodes(java.util.List<String> healthCheckCodes) {
             this.putQueryParameter("HealthCheckCodes", healthCheckCodes);
             this.healthCheckCodes = healthCheckCodes;
             return this;

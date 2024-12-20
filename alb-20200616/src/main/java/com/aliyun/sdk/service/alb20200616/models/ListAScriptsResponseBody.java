@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAScriptsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AScripts")
-    private java.util.List < AScripts> aScripts;
+    private java.util.List<AScripts> aScripts;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -47,7 +52,7 @@ public class ListAScriptsResponseBody extends TeaModel {
     /**
      * @return aScripts
      */
-    public java.util.List < AScripts> getAScripts() {
+    public java.util.List<AScripts> getAScripts() {
         return this.aScripts;
     }
 
@@ -80,7 +85,7 @@ public class ListAScriptsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AScripts> aScripts; 
+        private java.util.List<AScripts> aScripts; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -89,7 +94,7 @@ public class ListAScriptsResponseBody extends TeaModel {
         /**
          * <p>The AScript rules.</p>
          */
-        public Builder aScripts(java.util.List < AScripts> aScripts) {
+        public Builder aScripts(java.util.List<AScripts> aScripts) {
             this.aScripts = aScripts;
             return this;
         }

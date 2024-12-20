@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ServerGroups")
-    private java.util.List < ServerGroups> serverGroups;
+    private java.util.List<ServerGroups> serverGroups;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
     /**
      * @return serverGroups
      */
-    public java.util.List < ServerGroups> getServerGroups() {
+    public java.util.List<ServerGroups> getServerGroups() {
         return this.serverGroups;
     }
 
@@ -82,7 +87,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ServerGroups> serverGroups; 
+        private java.util.List<ServerGroups> serverGroups; 
         private Integer totalCount; 
 
         /**
@@ -125,7 +130,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>The server groups.</p>
          */
-        public Builder serverGroups(java.util.List < ServerGroups> serverGroups) {
+        public Builder serverGroups(java.util.List<ServerGroups> serverGroups) {
             this.serverGroups = serverGroups;
             return this;
         }
@@ -232,7 +237,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
      */
     public static class HealthCheckConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthCheckCodes")
-        private java.util.List < String > healthCheckCodes;
+        private java.util.List<String> healthCheckCodes;
 
         @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
         private Integer healthCheckConnectPort;
@@ -293,7 +298,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * @return healthCheckCodes
          */
-        public java.util.List < String > getHealthCheckCodes() {
+        public java.util.List<String> getHealthCheckCodes() {
             return this.healthCheckCodes;
         }
 
@@ -375,7 +380,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > healthCheckCodes; 
+            private java.util.List<String> healthCheckCodes; 
             private Integer healthCheckConnectPort; 
             private Boolean healthCheckEnabled; 
             private String healthCheckHost; 
@@ -391,7 +396,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             /**
              * <p>The HTTP status codes that indicate healthy backend servers.</p>
              */
-            public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
+            public Builder healthCheckCodes(java.util.List<String> healthCheckCodes) {
                 this.healthCheckCodes = healthCheckCodes;
                 return this;
             }
@@ -948,7 +953,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         private String protocol;
 
         @com.aliyun.core.annotation.NameInMap("RelatedLoadBalancerIds")
-        private java.util.List < String > relatedLoadBalancerIds;
+        private java.util.List<String> relatedLoadBalancerIds;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -981,7 +986,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         private StickySessionConfig stickySessionConfig;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UchConfig")
         private UchConfig uchConfig;
@@ -1077,7 +1082,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * @return relatedLoadBalancerIds
          */
-        public java.util.List < String > getRelatedLoadBalancerIds() {
+        public java.util.List<String> getRelatedLoadBalancerIds() {
             return this.relatedLoadBalancerIds;
         }
 
@@ -1154,7 +1159,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1187,7 +1192,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private HealthCheckConfig healthCheckConfig; 
             private Boolean ipv6Enabled; 
             private String protocol; 
-            private java.util.List < String > relatedLoadBalancerIds; 
+            private java.util.List<String> relatedLoadBalancerIds; 
             private String resourceGroupId; 
             private String scheduler; 
             private Integer serverCount; 
@@ -1198,7 +1203,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private String serviceName; 
             private SlowStartConfig slowStartConfig; 
             private StickySessionConfig stickySessionConfig; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private UchConfig uchConfig; 
             private Boolean upstreamKeepaliveEnabled; 
             private String vpcId; 
@@ -1245,7 +1250,11 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否开启跨可用区转发。（默认开启）</p>
+             * <p>Indicates whether cross-zone load balancing is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong> (default)</li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1297,7 +1306,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             /**
              * <p>The ID of the ALB instance associated with the server group.</p>
              */
-            public Builder relatedLoadBalancerIds(java.util.List < String > relatedLoadBalancerIds) {
+            public Builder relatedLoadBalancerIds(java.util.List<String> relatedLoadBalancerIds) {
                 this.relatedLoadBalancerIds = relatedLoadBalancerIds;
                 return this;
             }
@@ -1432,7 +1441,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             /**
              * <p>The tags that are added to the server group.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

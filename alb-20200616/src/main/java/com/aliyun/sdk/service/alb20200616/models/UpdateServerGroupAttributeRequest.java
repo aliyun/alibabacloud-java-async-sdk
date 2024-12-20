@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -257,7 +262,24 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * CrossZoneEnabled.
+         * <p>Indicates whether cross-zone load balancing is enabled for the server group. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default)</li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Basic ALB instances do not support server groups that have cross-zone load balancing disabled. Only Standard and WAF-enabled ALB instances support server groups that have cross-zone load balancing.</p>
+         * </li>
+         * <li><p>Cross-zone load balancing can be disabled for server groups of the server and IP type, but not for server groups of the Function Compute type.</p>
+         * </li>
+         * <li><p>When cross-zone load balancing is disabled, session persistence cannot be enabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder crossZoneEnabled(Boolean crossZoneEnabled) {
             this.putQueryParameter("CrossZoneEnabled", crossZoneEnabled);
@@ -482,7 +504,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
      */
     public static class HealthCheckConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthCheckCodes")
-        private java.util.List < String > healthCheckCodes;
+        private java.util.List<String> healthCheckCodes;
 
         @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
         @com.aliyun.core.annotation.Validation(maximum = 65535)
@@ -548,7 +570,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         /**
          * @return healthCheckCodes
          */
-        public java.util.List < String > getHealthCheckCodes() {
+        public java.util.List<String> getHealthCheckCodes() {
             return this.healthCheckCodes;
         }
 
@@ -630,7 +652,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > healthCheckCodes; 
+            private java.util.List<String> healthCheckCodes; 
             private Integer healthCheckConnectPort; 
             private Boolean healthCheckEnabled; 
             private String healthCheckHost; 
@@ -646,7 +668,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
             /**
              * <p>The HTTP status codes that indicate healthy backend servers.</p>
              */
-            public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
+            public Builder healthCheckCodes(java.util.List<String> healthCheckCodes) {
                 this.healthCheckCodes = healthCheckCodes;
                 return this;
             }

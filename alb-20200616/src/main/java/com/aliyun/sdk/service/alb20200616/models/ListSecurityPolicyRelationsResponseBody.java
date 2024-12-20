@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SecrityPolicyRelations")
-    private java.util.List < SecrityPolicyRelations> secrityPolicyRelations;
+    private java.util.List<SecrityPolicyRelations> secrityPolicyRelations;
 
     private ListSecurityPolicyRelationsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
     /**
      * @return secrityPolicyRelations
      */
-    public java.util.List < SecrityPolicyRelations> getSecrityPolicyRelations() {
+    public java.util.List<SecrityPolicyRelations> getSecrityPolicyRelations() {
         return this.secrityPolicyRelations;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SecrityPolicyRelations> secrityPolicyRelations; 
+        private java.util.List<SecrityPolicyRelations> secrityPolicyRelations; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
         /**
          * <p>The security policies and the listeners that are associated with the security policies.</p>
          */
-        public Builder secrityPolicyRelations(java.util.List < SecrityPolicyRelations> secrityPolicyRelations) {
+        public Builder secrityPolicyRelations(java.util.List<SecrityPolicyRelations> secrityPolicyRelations) {
             this.secrityPolicyRelations = secrityPolicyRelations;
             return this;
         }
@@ -201,7 +206,7 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
      */
     public static class SecrityPolicyRelations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RelatedListeners")
-        private java.util.List < RelatedListeners> relatedListeners;
+        private java.util.List<RelatedListeners> relatedListeners;
 
         @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
         private String securityPolicyId;
@@ -222,7 +227,7 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
         /**
          * @return relatedListeners
          */
-        public java.util.List < RelatedListeners> getRelatedListeners() {
+        public java.util.List<RelatedListeners> getRelatedListeners() {
             return this.relatedListeners;
         }
 
@@ -234,13 +239,13 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < RelatedListeners> relatedListeners; 
+            private java.util.List<RelatedListeners> relatedListeners; 
             private String securityPolicyId; 
 
             /**
              * <p>The listeners that are associated with the security policy.</p>
              */
-            public Builder relatedListeners(java.util.List < RelatedListeners> relatedListeners) {
+            public Builder relatedListeners(java.util.List<RelatedListeners> relatedListeners) {
                 this.relatedListeners = relatedListeners;
                 return this;
             }

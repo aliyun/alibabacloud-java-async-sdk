@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class DeleteHealthCheckTemplatesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheckTemplateIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > healthCheckTemplateIds;
+    private java.util.List<String> healthCheckTemplateIds;
 
     private DeleteHealthCheckTemplatesRequest(Builder builder) {
         super(builder);
@@ -62,14 +67,14 @@ public class DeleteHealthCheckTemplatesRequest extends Request {
     /**
      * @return healthCheckTemplateIds
      */
-    public java.util.List < String > getHealthCheckTemplateIds() {
+    public java.util.List<String> getHealthCheckTemplateIds() {
         return this.healthCheckTemplateIds;
     }
 
     public static final class Builder extends Request.Builder<DeleteHealthCheckTemplatesRequest, Builder> {
         private String clientToken; 
         private Boolean dryRun; 
-        private java.util.List < String > healthCheckTemplateIds; 
+        private java.util.List<String> healthCheckTemplateIds; 
 
         private Builder() {
             super();
@@ -117,7 +122,7 @@ public class DeleteHealthCheckTemplatesRequest extends Request {
          * <strong>example:</strong>
          * <p>acl-123</p>
          */
-        public Builder healthCheckTemplateIds(java.util.List < String > healthCheckTemplateIds) {
+        public Builder healthCheckTemplateIds(java.util.List<String> healthCheckTemplateIds) {
             this.putQueryParameter("HealthCheckTemplateIds", healthCheckTemplateIds);
             this.healthCheckTemplateIds = healthCheckTemplateIds;
             return this;

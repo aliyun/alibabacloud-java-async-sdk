@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -61,7 +66,7 @@ public class CreateLoadBalancerRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
@@ -71,7 +76,7 @@ public class CreateLoadBalancerRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneMappings")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ZoneMappings> zoneMappings;
+    private java.util.List<ZoneMappings> zoneMappings;
 
     private CreateLoadBalancerRequest(Builder builder) {
         super(builder);
@@ -184,7 +189,7 @@ public class CreateLoadBalancerRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -198,7 +203,7 @@ public class CreateLoadBalancerRequest extends Request {
     /**
      * @return zoneMappings
      */
-    public java.util.List < ZoneMappings> getZoneMappings() {
+    public java.util.List<ZoneMappings> getZoneMappings() {
         return this.zoneMappings;
     }
 
@@ -214,9 +219,9 @@ public class CreateLoadBalancerRequest extends Request {
         private String loadBalancerName; 
         private ModificationProtectionConfig modificationProtectionConfig; 
         private String resourceGroupId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vpcId; 
-        private java.util.List < ZoneMappings> zoneMappings; 
+        private java.util.List<ZoneMappings> zoneMappings; 
 
         private Builder() {
             super();
@@ -402,7 +407,7 @@ public class CreateLoadBalancerRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -425,7 +430,7 @@ public class CreateLoadBalancerRequest extends Request {
          * <p>The mappings between zones an vSwitches. You can specify at most 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
+        public Builder zoneMappings(java.util.List<ZoneMappings> zoneMappings) {
             this.putQueryParameter("ZoneMappings", zoneMappings);
             this.zoneMappings = zoneMappings;
             return this;

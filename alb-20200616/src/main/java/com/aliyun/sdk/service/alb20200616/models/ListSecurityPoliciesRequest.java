@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,15 +32,15 @@ public class ListSecurityPoliciesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityPolicyIds")
-    private java.util.List < String > securityPolicyIds;
+    private java.util.List<String> securityPolicyIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityPolicyNames")
-    private java.util.List < String > securityPolicyNames;
+    private java.util.List<String> securityPolicyNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private ListSecurityPoliciesRequest(Builder builder) {
         super(builder);
@@ -84,21 +89,21 @@ public class ListSecurityPoliciesRequest extends Request {
     /**
      * @return securityPolicyIds
      */
-    public java.util.List < String > getSecurityPolicyIds() {
+    public java.util.List<String> getSecurityPolicyIds() {
         return this.securityPolicyIds;
     }
 
     /**
      * @return securityPolicyNames
      */
-    public java.util.List < String > getSecurityPolicyNames() {
+    public java.util.List<String> getSecurityPolicyNames() {
         return this.securityPolicyNames;
     }
 
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -106,9 +111,9 @@ public class ListSecurityPoliciesRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String resourceGroupId; 
-        private java.util.List < String > securityPolicyIds; 
-        private java.util.List < String > securityPolicyNames; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<String> securityPolicyIds; 
+        private java.util.List<String> securityPolicyNames; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -167,7 +172,7 @@ public class ListSecurityPoliciesRequest extends Request {
         /**
          * <p>The security policy IDs. You can specify at most 20 security policies.</p>
          */
-        public Builder securityPolicyIds(java.util.List < String > securityPolicyIds) {
+        public Builder securityPolicyIds(java.util.List<String> securityPolicyIds) {
             this.putQueryParameter("SecurityPolicyIds", securityPolicyIds);
             this.securityPolicyIds = securityPolicyIds;
             return this;
@@ -176,7 +181,7 @@ public class ListSecurityPoliciesRequest extends Request {
         /**
          * <p>The names of the security policies. You can specify up to 10 names.</p>
          */
-        public Builder securityPolicyNames(java.util.List < String > securityPolicyNames) {
+        public Builder securityPolicyNames(java.util.List<String> securityPolicyNames) {
             this.putQueryParameter("SecurityPolicyNames", securityPolicyNames);
             this.securityPolicyNames = securityPolicyNames;
             return this;
@@ -185,7 +190,7 @@ public class ListSecurityPoliciesRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

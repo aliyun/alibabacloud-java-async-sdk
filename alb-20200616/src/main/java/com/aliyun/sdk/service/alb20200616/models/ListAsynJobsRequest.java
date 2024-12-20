@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class ListAsynJobsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobIds")
-    private java.util.List < String > jobIds;
+    private java.util.List<String> jobIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -38,7 +43,7 @@ public class ListAsynJobsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIds")
-    private java.util.List < String > resourceIds;
+    private java.util.List<String> resourceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -93,7 +98,7 @@ public class ListAsynJobsRequest extends Request {
     /**
      * @return jobIds
      */
-    public java.util.List < String > getJobIds() {
+    public java.util.List<String> getJobIds() {
         return this.jobIds;
     }
 
@@ -114,7 +119,7 @@ public class ListAsynJobsRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -129,10 +134,10 @@ public class ListAsynJobsRequest extends Request {
         private String apiName; 
         private Long beginTime; 
         private Long endTime; 
-        private java.util.List < String > jobIds; 
+        private java.util.List<String> jobIds; 
         private Long maxResults; 
         private String nextToken; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> resourceIds; 
         private String resourceType; 
 
         private Builder() {
@@ -192,7 +197,7 @@ public class ListAsynJobsRequest extends Request {
         /**
          * <p>The asynchronous task IDs.</p>
          */
-        public Builder jobIds(java.util.List < String > jobIds) {
+        public Builder jobIds(java.util.List<String> jobIds) {
             this.putQueryParameter("JobIds", jobIds);
             this.jobIds = jobIds;
             return this;
@@ -229,7 +234,7 @@ public class ListAsynJobsRequest extends Request {
         /**
          * <p>The resource IDs.</p>
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
             this.resourceIds = resourceIds;
             return this;

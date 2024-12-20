@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Servers")
-    private java.util.List < Servers> servers;
+    private java.util.List<Servers> servers;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
     /**
      * @return servers
      */
-    public java.util.List < Servers> getServers() {
+    public java.util.List<Servers> getServers() {
         return this.servers;
     }
 
@@ -82,7 +87,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Servers> servers; 
+        private java.util.List<Servers> servers; 
         private Integer totalCount; 
 
         /**
@@ -125,7 +130,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         /**
          * <p>A list of backend servers.</p>
          */
-        public Builder servers(java.util.List < Servers> servers) {
+        public Builder servers(java.util.List<Servers> servers) {
             this.servers = servers;
             return this;
         }
