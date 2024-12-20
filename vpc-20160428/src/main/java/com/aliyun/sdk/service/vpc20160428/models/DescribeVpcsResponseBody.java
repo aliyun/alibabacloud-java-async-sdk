@@ -135,7 +135,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details about the VPC.</p>
+         * <p>The details of the VPC.</p>
          */
         public Builder vpcs(Vpcs vpcs) {
             this.vpcs = vpcs;
@@ -1016,7 +1016,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * DnsHostnameStatus.
+             * <p>Indicates whether the Domain Name System (DNS) feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DISABLED</p>
              */
             public Builder dnsHostnameStatus(String dnsHostnameStatus) {
                 this.dnsHostnameStatus = dnsHostnameStatus;
@@ -1024,7 +1027,17 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * EnabledIpv6.
+             * <p>Indicates whether the IPv6 is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>false: false</p>
+             * </li>
+             * <li><p>true: true</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabledIpv6(Boolean enabledIpv6) {
                 this.enabledIpv6 = enabledIpv6;

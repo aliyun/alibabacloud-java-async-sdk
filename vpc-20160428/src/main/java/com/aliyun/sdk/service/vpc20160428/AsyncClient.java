@@ -3804,6 +3804,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TerminateVirtualBorderRouterResponse> terminateVirtualBorderRouter(TerminateVirtualBorderRouterRequest request);
 
     /**
+     * @param request the request parameters of TransformEipSegmentToPublicIpAddressPool  TransformEipSegmentToPublicIpAddressPoolRequest
+     * @return TransformEipSegmentToPublicIpAddressPoolResponse
+     */
+    CompletableFuture<TransformEipSegmentToPublicIpAddressPoolResponse> transformEipSegmentToPublicIpAddressPool(TransformEipSegmentToPublicIpAddressPoolRequest request);
+
+    /**
      * @param request the request parameters of UnTagResources  UnTagResourcesRequest
      * @return UnTagResourcesResponse
      */
