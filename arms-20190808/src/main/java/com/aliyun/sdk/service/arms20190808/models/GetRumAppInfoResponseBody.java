@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,13 +183,13 @@ public class GetRumAppInfoResponseBody extends TeaModel {
      */
     public static class ModuleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("defaultConfig")
-        private java.util.Map < String, DataBonreeSDKConfigModuleConfigDefaultConfigValue > defaultConfig;
+        private java.util.Map<String, DataBonreeSDKConfigModuleConfigDefaultConfigValue> defaultConfig;
 
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
         @com.aliyun.core.annotation.NameInMap("versionConfigs")
-        private java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValue > versionConfigs;
+        private java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValue> versionConfigs;
 
         private ModuleConfig(Builder builder) {
             this.defaultConfig = builder.defaultConfig;
@@ -203,7 +208,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         /**
          * @return defaultConfig
          */
-        public java.util.Map < String, DataBonreeSDKConfigModuleConfigDefaultConfigValue > getDefaultConfig() {
+        public java.util.Map<String, DataBonreeSDKConfigModuleConfigDefaultConfigValue> getDefaultConfig() {
             return this.defaultConfig;
         }
 
@@ -217,19 +222,19 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         /**
          * @return versionConfigs
          */
-        public java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValue > getVersionConfigs() {
+        public java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValue> getVersionConfigs() {
             return this.versionConfigs;
         }
 
         public static final class Builder {
-            private java.util.Map < String, DataBonreeSDKConfigModuleConfigDefaultConfigValue > defaultConfig; 
+            private java.util.Map<String, DataBonreeSDKConfigModuleConfigDefaultConfigValue> defaultConfig; 
             private Boolean enable; 
-            private java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValue > versionConfigs; 
+            private java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValue> versionConfigs; 
 
             /**
              * <p>The default configuration of the application.</p>
              */
-            public Builder defaultConfig(java.util.Map < String, DataBonreeSDKConfigModuleConfigDefaultConfigValue > defaultConfig) {
+            public Builder defaultConfig(java.util.Map<String, DataBonreeSDKConfigModuleConfigDefaultConfigValue> defaultConfig) {
                 this.defaultConfig = defaultConfig;
                 return this;
             }
@@ -248,7 +253,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             /**
              * <p>The version configurations of the application.</p>
              */
-            public Builder versionConfigs(java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValue > versionConfigs) {
+            public Builder versionConfigs(java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValue> versionConfigs) {
                 this.versionConfigs = versionConfigs;
                 return this;
             }
@@ -408,7 +413,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         private String domain;
 
         @com.aliyun.core.annotation.NameInMap("PropagatorTypes")
-        private java.util.List < String > propagatorTypes;
+        private java.util.List<String> propagatorTypes;
 
         @com.aliyun.core.annotation.NameInMap("SamplingRate")
         private Integer samplingRate;
@@ -449,7 +454,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         /**
          * @return propagatorTypes
          */
-        public java.util.List < String > getPropagatorTypes() {
+        public java.util.List<String> getPropagatorTypes() {
             return this.propagatorTypes;
         }
 
@@ -470,7 +475,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String domain; 
-            private java.util.List < String > propagatorTypes; 
+            private java.util.List<String> propagatorTypes; 
             private Integer samplingRate; 
             private Boolean tracing; 
 
@@ -499,7 +504,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             /**
              * <p>The trace propagation protocols. This parameter is required if the tracing analysis feature is enabled.</p>
              */
-            public Builder propagatorTypes(java.util.List < String > propagatorTypes) {
+            public Builder propagatorTypes(java.util.List<String> propagatorTypes) {
                 this.propagatorTypes = propagatorTypes;
                 return this;
             }
@@ -660,7 +665,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("ServiceDomainConfigs")
-        private java.util.List < ServiceDomainConfigs> serviceDomainConfigs;
+        private java.util.List<ServiceDomainConfigs> serviceDomainConfigs;
 
         @com.aliyun.core.annotation.NameInMap("SlsLogstore")
         private String slsLogstore;
@@ -672,7 +677,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -817,7 +822,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         /**
          * @return serviceDomainConfigs
          */
-        public java.util.List < ServiceDomainConfigs> getServiceDomainConfigs() {
+        public java.util.List<ServiceDomainConfigs> getServiceDomainConfigs() {
             return this.serviceDomainConfigs;
         }
 
@@ -845,7 +850,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -872,11 +877,11 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private String pid; 
             private String regionId; 
             private String resourceGroupId; 
-            private java.util.List < ServiceDomainConfigs> serviceDomainConfigs; 
+            private java.util.List<ServiceDomainConfigs> serviceDomainConfigs; 
             private String slsLogstore; 
             private String slsProject; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String type; 
 
             /**
@@ -1041,7 +1046,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             /**
              * <p>The list of service domain configurations. Only mobile applications are supported.</p>
              */
-            public Builder serviceDomainConfigs(java.util.List < ServiceDomainConfigs> serviceDomainConfigs) {
+            public Builder serviceDomainConfigs(java.util.List<ServiceDomainConfigs> serviceDomainConfigs) {
                 this.serviceDomainConfigs = serviceDomainConfigs;
                 return this;
             }
@@ -1082,7 +1087,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

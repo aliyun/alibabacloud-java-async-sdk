@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -94,10 +99,10 @@ public class UpdateIntegrationResponseBody extends TeaModel {
         private String duplicateKey;
 
         @com.aliyun.core.annotation.NameInMap("ExtendedFieldRedefineRules")
-        private java.util.List < java.util.Map<String, ?>> extendedFieldRedefineRules;
+        private java.util.List<java.util.Map<String, ?>> extendedFieldRedefineRules;
 
         @com.aliyun.core.annotation.NameInMap("FieldRedefineRules")
-        private java.util.List < java.util.Map<String, ?>> fieldRedefineRules;
+        private java.util.List<java.util.Map<String, ?>> fieldRedefineRules;
 
         @com.aliyun.core.annotation.NameInMap("InitiativeRecoverField")
         private String initiativeRecoverField;
@@ -124,7 +129,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
         private String shortToken;
 
         @com.aliyun.core.annotation.NameInMap("Stat")
-        private java.util.List < Long > stat;
+        private java.util.List<Long> stat;
 
         @com.aliyun.core.annotation.NameInMap("State")
         private Boolean state;
@@ -187,14 +192,14 @@ public class UpdateIntegrationResponseBody extends TeaModel {
         /**
          * @return extendedFieldRedefineRules
          */
-        public java.util.List < java.util.Map<String, ?>> getExtendedFieldRedefineRules() {
+        public java.util.List<java.util.Map<String, ?>> getExtendedFieldRedefineRules() {
             return this.extendedFieldRedefineRules;
         }
 
         /**
          * @return fieldRedefineRules
          */
-        public java.util.List < java.util.Map<String, ?>> getFieldRedefineRules() {
+        public java.util.List<java.util.Map<String, ?>> getFieldRedefineRules() {
             return this.fieldRedefineRules;
         }
 
@@ -257,7 +262,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
         /**
          * @return stat
          */
-        public java.util.List < Long > getStat() {
+        public java.util.List<Long> getStat() {
             return this.stat;
         }
 
@@ -273,8 +278,8 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             private Boolean autoRecover; 
             private String description; 
             private String duplicateKey; 
-            private java.util.List < java.util.Map<String, ?>> extendedFieldRedefineRules; 
-            private java.util.List < java.util.Map<String, ?>> fieldRedefineRules; 
+            private java.util.List<java.util.Map<String, ?>> extendedFieldRedefineRules; 
+            private java.util.List<java.util.Map<String, ?>> fieldRedefineRules; 
             private String initiativeRecoverField; 
             private String initiativeRecoverValue; 
             private Long integrationId; 
@@ -283,7 +288,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             private String liveness; 
             private Long recoverTime; 
             private String shortToken; 
-            private java.util.List < Long > stat; 
+            private java.util.List<Long> stat; 
             private Boolean state; 
 
             /**
@@ -337,7 +342,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             /**
              * <p>The extended mapped fields of the alert source.</p>
              */
-            public Builder extendedFieldRedefineRules(java.util.List < java.util.Map<String, ?>> extendedFieldRedefineRules) {
+            public Builder extendedFieldRedefineRules(java.util.List<java.util.Map<String, ?>> extendedFieldRedefineRules) {
                 this.extendedFieldRedefineRules = extendedFieldRedefineRules;
                 return this;
             }
@@ -345,7 +350,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             /**
              * <p>The predefined mapped fields of the alert source.</p>
              */
-            public Builder fieldRedefineRules(java.util.List < java.util.Map<String, ?>> fieldRedefineRules) {
+            public Builder fieldRedefineRules(java.util.List<java.util.Map<String, ?>> fieldRedefineRules) {
                 this.fieldRedefineRules = fieldRedefineRules;
                 return this;
             }
@@ -451,7 +456,7 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             /**
              * <p>The total number of alert events and the number of abnormal alert events in the last hour.</p>
              */
-            public Builder stat(java.util.List < Long > stat) {
+            public Builder stat(java.util.List<Long> stat) {
                 this.stat = stat;
                 return this;
             }

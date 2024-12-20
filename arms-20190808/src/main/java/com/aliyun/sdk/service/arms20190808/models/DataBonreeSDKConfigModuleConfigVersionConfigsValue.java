@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
     private Boolean useCustom;
 
     @com.aliyun.core.annotation.NameInMap("customConfig")
-    private java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue > customConfig;
+    private java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue> customConfig;
 
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
@@ -49,7 +54,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
     /**
      * @return customConfig
      */
-    public java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue > getCustomConfig() {
+    public java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue> getCustomConfig() {
         return this.customConfig;
     }
 
@@ -69,7 +74,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
 
     public static final class Builder {
         private Boolean useCustom; 
-        private java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue > customConfig; 
+        private java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue> customConfig; 
         private String description; 
         private Long updateTime; 
 
@@ -87,7 +92,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
         /**
          * <p>The custom configuration.</p>
          */
-        public Builder customConfig(java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue > customConfig) {
+        public Builder customConfig(java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue> customConfig) {
             this.customConfig = customConfig;
             return this;
         }

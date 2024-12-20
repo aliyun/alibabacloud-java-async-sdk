@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -190,13 +195,13 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         private Long createTime;
 
         @com.aliyun.core.annotation.NameInMap("DispatchRules")
-        private java.util.List < DispatchRules> dispatchRules;
+        private java.util.List<DispatchRules> dispatchRules;
 
         @com.aliyun.core.annotation.NameInMap("EndsAt")
         private Long endsAt;
 
         @com.aliyun.core.annotation.NameInMap("ExpandFields")
-        private java.util.Map < String, ? > expandFields;
+        private java.util.Map<String, ?> expandFields;
 
         @com.aliyun.core.annotation.NameInMap("IntegrationName")
         private String integrationName;
@@ -287,7 +292,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         /**
          * @return dispatchRules
          */
-        public java.util.List < DispatchRules> getDispatchRules() {
+        public java.util.List<DispatchRules> getDispatchRules() {
             return this.dispatchRules;
         }
 
@@ -301,7 +306,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         /**
          * @return expandFields
          */
-        public java.util.Map < String, ? > getExpandFields() {
+        public java.util.Map<String, ?> getExpandFields() {
             return this.expandFields;
         }
 
@@ -367,9 +372,9 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             private String alertType; 
             private Integer count; 
             private Long createTime; 
-            private java.util.List < DispatchRules> dispatchRules; 
+            private java.util.List<DispatchRules> dispatchRules; 
             private Long endsAt; 
-            private java.util.Map < String, ? > expandFields; 
+            private java.util.Map<String, ?> expandFields; 
             private String integrationName; 
             private String integrationType; 
             private String involvedObjectKind; 
@@ -437,7 +442,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             /**
              * <p>The notification policies.</p>
              */
-            public Builder dispatchRules(java.util.List < DispatchRules> dispatchRules) {
+            public Builder dispatchRules(java.util.List<DispatchRules> dispatchRules) {
                 this.dispatchRules = dispatchRules;
                 return this;
             }
@@ -461,7 +466,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
              * <li>The default tags of Application Real-Time Monitoring Service (ARMS).</li>
              * </ul>
              */
-            public Builder expandFields(java.util.Map < String, ? > expandFields) {
+            public Builder expandFields(java.util.Map<String, ?> expandFields) {
                 this.expandFields = expandFields;
                 return this;
             }
@@ -581,7 +586,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
      */
     public static class Page extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alerts")
-        private java.util.List < Alerts> alerts;
+        private java.util.List<Alerts> alerts;
 
         @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;
@@ -610,7 +615,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         /**
          * @return alerts
          */
-        public java.util.List < Alerts> getAlerts() {
+        public java.util.List<Alerts> getAlerts() {
             return this.alerts;
         }
 
@@ -636,7 +641,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Alerts> alerts; 
+            private java.util.List<Alerts> alerts; 
             private Integer page; 
             private Integer pageSize; 
             private Integer total; 
@@ -644,7 +649,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             /**
              * <p>The alerts that have been triggered.</p>
              */
-            public Builder alerts(java.util.List < Alerts> alerts) {
+            public Builder alerts(java.util.List<Alerts> alerts) {
                 this.alerts = alerts;
                 return this;
             }

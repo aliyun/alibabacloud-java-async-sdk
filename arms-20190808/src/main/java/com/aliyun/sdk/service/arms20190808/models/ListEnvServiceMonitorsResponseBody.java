@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -49,7 +54,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -69,7 +74,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
 
@@ -87,7 +92,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
         /**
          * <p>The returned struct.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -285,7 +290,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
         private String creationTimestamp;
 
         @com.aliyun.core.annotation.NameInMap("Endpoints")
-        private java.util.List < Endpoints> endpoints;
+        private java.util.List<Endpoints> endpoints;
 
         @com.aliyun.core.annotation.NameInMap("EnvironmentId")
         private String environmentId;
@@ -366,7 +371,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
         /**
          * @return endpoints
          */
-        public java.util.List < Endpoints> getEndpoints() {
+        public java.util.List<Endpoints> getEndpoints() {
             return this.endpoints;
         }
 
@@ -418,7 +423,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             private String addonVersion; 
             private String configYaml; 
             private String creationTimestamp; 
-            private java.util.List < Endpoints> endpoints; 
+            private java.util.List<Endpoints> endpoints; 
             private String environmentId; 
             private Integer matchedServiceCount; 
             private String namespace; 
@@ -484,7 +489,7 @@ public class ListEnvServiceMonitorsResponseBody extends TeaModel {
             /**
              * <p>The endpoints of the ServiceMonitor.</p>
              */
-            public Builder endpoints(java.util.List < Endpoints> endpoints) {
+            public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
                 return this;
             }

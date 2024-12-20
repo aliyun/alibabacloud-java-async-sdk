@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private ListTimingSyntheticTasksRequest(Builder builder) {
         super(builder);
@@ -73,7 +78,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -81,7 +86,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private Search search; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -132,7 +137,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -172,10 +177,10 @@ public class ListTimingSyntheticTasksRequest extends Request {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("TaskIds")
-        private java.util.List < String > taskIds;
+        private java.util.List<String> taskIds;
 
         @com.aliyun.core.annotation.NameInMap("TaskTypes")
-        private java.util.List < Integer > taskTypes;
+        private java.util.List<Integer> taskTypes;
 
         private Search(Builder builder) {
             this.name = builder.name;
@@ -241,14 +246,14 @@ public class ListTimingSyntheticTasksRequest extends Request {
         /**
          * @return taskIds
          */
-        public java.util.List < String > getTaskIds() {
+        public java.util.List<String> getTaskIds() {
             return this.taskIds;
         }
 
         /**
          * @return taskTypes
          */
-        public java.util.List < Integer > getTaskTypes() {
+        public java.util.List<Integer> getTaskTypes() {
             return this.taskTypes;
         }
 
@@ -259,8 +264,8 @@ public class ListTimingSyntheticTasksRequest extends Request {
             private Integer page; 
             private Integer pageSize; 
             private String status; 
-            private java.util.List < String > taskIds; 
-            private java.util.List < Integer > taskTypes; 
+            private java.util.List<String> taskIds; 
+            private java.util.List<Integer> taskTypes; 
 
             /**
              * <p>The task name.</p>
@@ -331,7 +336,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
             /**
              * <p>The task IDs.</p>
              */
-            public Builder taskIds(java.util.List < String > taskIds) {
+            public Builder taskIds(java.util.List<String> taskIds) {
                 this.taskIds = taskIds;
                 return this;
             }
@@ -339,7 +344,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
             /**
              * <p>The task types.</p>
              */
-            public Builder taskTypes(java.util.List < Integer > taskTypes) {
+            public Builder taskTypes(java.util.List<Integer> taskTypes) {
                 this.taskTypes = taskTypes;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -91,7 +96,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         private Long groupWaitTime;
 
         @com.aliyun.core.annotation.NameInMap("GroupingFields")
-        private java.util.List < String > groupingFields;
+        private java.util.List<String> groupingFields;
 
         @com.aliyun.core.annotation.NameInMap("RepeatInterval")
         private Long repeatInterval;
@@ -136,7 +141,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         /**
          * @return groupingFields
          */
-        public java.util.List < String > getGroupingFields() {
+        public java.util.List<String> getGroupingFields() {
             return this.groupingFields;
         }
 
@@ -151,7 +156,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private Long groupId; 
             private Long groupInterval; 
             private Long groupWaitTime; 
-            private java.util.List < String > groupingFields; 
+            private java.util.List<String> groupingFields; 
             private Long repeatInterval; 
 
             /**
@@ -190,7 +195,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             /**
              * <p>The grouping fields.</p>
              */
-            public Builder groupingFields(java.util.List < String > groupingFields) {
+            public Builder groupingFields(java.util.List<String> groupingFields) {
                 this.groupingFields = groupingFields;
                 return this;
             }
@@ -331,7 +336,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
      */
     public static class LabelMatchExpressionGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LabelMatchExpressions")
-        private java.util.List < LabelMatchExpressions> labelMatchExpressions;
+        private java.util.List<LabelMatchExpressions> labelMatchExpressions;
 
         private LabelMatchExpressionGroups(Builder builder) {
             this.labelMatchExpressions = builder.labelMatchExpressions;
@@ -348,17 +353,17 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         /**
          * @return labelMatchExpressions
          */
-        public java.util.List < LabelMatchExpressions> getLabelMatchExpressions() {
+        public java.util.List<LabelMatchExpressions> getLabelMatchExpressions() {
             return this.labelMatchExpressions;
         }
 
         public static final class Builder {
-            private java.util.List < LabelMatchExpressions> labelMatchExpressions; 
+            private java.util.List<LabelMatchExpressions> labelMatchExpressions; 
 
             /**
              * <p>The collection of conditions of the dispatch rule.</p>
              */
-            public Builder labelMatchExpressions(java.util.List < LabelMatchExpressions> labelMatchExpressions) {
+            public Builder labelMatchExpressions(java.util.List<LabelMatchExpressions> labelMatchExpressions) {
                 this.labelMatchExpressions = labelMatchExpressions;
                 return this;
             }
@@ -378,7 +383,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
      */
     public static class LabelMatchExpressionGrid extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LabelMatchExpressionGroups")
-        private java.util.List < LabelMatchExpressionGroups> labelMatchExpressionGroups;
+        private java.util.List<LabelMatchExpressionGroups> labelMatchExpressionGroups;
 
         private LabelMatchExpressionGrid(Builder builder) {
             this.labelMatchExpressionGroups = builder.labelMatchExpressionGroups;
@@ -395,17 +400,17 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         /**
          * @return labelMatchExpressionGroups
          */
-        public java.util.List < LabelMatchExpressionGroups> getLabelMatchExpressionGroups() {
+        public java.util.List<LabelMatchExpressionGroups> getLabelMatchExpressionGroups() {
             return this.labelMatchExpressionGroups;
         }
 
         public static final class Builder {
-            private java.util.List < LabelMatchExpressionGroups> labelMatchExpressionGroups; 
+            private java.util.List<LabelMatchExpressionGroups> labelMatchExpressionGroups; 
 
             /**
              * <p>The collection of dispatch rules.</p>
              */
-            public Builder labelMatchExpressionGroups(java.util.List < LabelMatchExpressionGroups> labelMatchExpressionGroups) {
+            public Builder labelMatchExpressionGroups(java.util.List<LabelMatchExpressionGroups> labelMatchExpressionGroups) {
                 this.labelMatchExpressionGroups = labelMatchExpressionGroups;
                 return this;
             }
@@ -525,10 +530,10 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
      */
     public static class NotifyRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotifyChannels")
-        private java.util.List < String > notifyChannels;
+        private java.util.List<String> notifyChannels;
 
         @com.aliyun.core.annotation.NameInMap("NotifyObjects")
-        private java.util.List < NotifyObjects> notifyObjects;
+        private java.util.List<NotifyObjects> notifyObjects;
 
         private NotifyRules(Builder builder) {
             this.notifyChannels = builder.notifyChannels;
@@ -546,25 +551,25 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         /**
          * @return notifyChannels
          */
-        public java.util.List < String > getNotifyChannels() {
+        public java.util.List<String> getNotifyChannels() {
             return this.notifyChannels;
         }
 
         /**
          * @return notifyObjects
          */
-        public java.util.List < NotifyObjects> getNotifyObjects() {
+        public java.util.List<NotifyObjects> getNotifyObjects() {
             return this.notifyObjects;
         }
 
         public static final class Builder {
-            private java.util.List < String > notifyChannels; 
-            private java.util.List < NotifyObjects> notifyObjects; 
+            private java.util.List<String> notifyChannels; 
+            private java.util.List<NotifyObjects> notifyObjects; 
 
             /**
              * <p>The notification method Array.</p>
              */
-            public Builder notifyChannels(java.util.List < String > notifyChannels) {
+            public Builder notifyChannels(java.util.List<String> notifyChannels) {
                 this.notifyChannels = notifyChannels;
                 return this;
             }
@@ -572,7 +577,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             /**
              * <p>The collection of alert contacts.</p>
              */
-            public Builder notifyObjects(java.util.List < NotifyObjects> notifyObjects) {
+            public Builder notifyObjects(java.util.List<NotifyObjects> notifyObjects) {
                 this.notifyObjects = notifyObjects;
                 return this;
             }
@@ -595,7 +600,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         private String dispatchType;
 
         @com.aliyun.core.annotation.NameInMap("GroupRules")
-        private java.util.List < GroupRules> groupRules;
+        private java.util.List<GroupRules> groupRules;
 
         @com.aliyun.core.annotation.NameInMap("IsRecover")
         private Boolean isRecover;
@@ -607,7 +612,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("NotifyRules")
-        private java.util.List < NotifyRules> notifyRules;
+        private java.util.List<NotifyRules> notifyRules;
 
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
@@ -644,7 +649,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         /**
          * @return groupRules
          */
-        public java.util.List < GroupRules> getGroupRules() {
+        public java.util.List<GroupRules> getGroupRules() {
             return this.groupRules;
         }
 
@@ -672,7 +677,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         /**
          * @return notifyRules
          */
-        public java.util.List < NotifyRules> getNotifyRules() {
+        public java.util.List<NotifyRules> getNotifyRules() {
             return this.notifyRules;
         }
 
@@ -692,11 +697,11 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String dispatchType; 
-            private java.util.List < GroupRules> groupRules; 
+            private java.util.List<GroupRules> groupRules; 
             private Boolean isRecover; 
             private LabelMatchExpressionGrid labelMatchExpressionGrid; 
             private String name; 
-            private java.util.List < NotifyRules> notifyRules; 
+            private java.util.List<NotifyRules> notifyRules; 
             private Long ruleId; 
             private String state; 
 
@@ -716,7 +721,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             /**
              * <p>The information about groups.</p>
              */
-            public Builder groupRules(java.util.List < GroupRules> groupRules) {
+            public Builder groupRules(java.util.List<GroupRules> groupRules) {
                 this.groupRules = groupRules;
                 return this;
             }
@@ -756,7 +761,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             /**
              * <p>The collection of notification methods.</p>
              */
-            public Builder notifyRules(java.util.List < NotifyRules> notifyRules) {
+            public Builder notifyRules(java.util.List<NotifyRules> notifyRules) {
                 this.notifyRules = notifyRules;
                 return this;
             }

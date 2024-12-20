@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -254,7 +259,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         private String crashReason;
 
         @com.aliyun.core.annotation.NameInMap("Lines")
-        private java.util.List < String > lines;
+        private java.util.List<String> lines;
 
         @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
@@ -263,7 +268,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         private String threadId;
 
         @com.aliyun.core.annotation.NameInMap("ThreadInfoList")
-        private java.util.List < ThreadInfoList> threadInfoList;
+        private java.util.List<ThreadInfoList> threadInfoList;
 
         @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
@@ -311,7 +316,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         /**
          * @return lines
          */
-        public java.util.List < String > getLines() {
+        public java.util.List<String> getLines() {
             return this.lines;
         }
 
@@ -332,7 +337,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         /**
          * @return threadInfoList
          */
-        public java.util.List < ThreadInfoList> getThreadInfoList() {
+        public java.util.List<ThreadInfoList> getThreadInfoList() {
             return this.threadInfoList;
         }
 
@@ -347,10 +352,10 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             private String binaryImages; 
             private String crashAddress; 
             private String crashReason; 
-            private java.util.List < String > lines; 
+            private java.util.List<String> lines; 
             private String moduleName; 
             private String threadId; 
-            private java.util.List < ThreadInfoList> threadInfoList; 
+            private java.util.List<ThreadInfoList> threadInfoList; 
             private String uuid; 
 
             /**
@@ -380,7 +385,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             /**
              * <p>The list of stacks.</p>
              */
-            public Builder lines(java.util.List < String > lines) {
+            public Builder lines(java.util.List<String> lines) {
                 this.lines = lines;
                 return this;
             }
@@ -407,7 +412,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             /**
              * ThreadInfoList.
              */
-            public Builder threadInfoList(java.util.List < ThreadInfoList> threadInfoList) {
+            public Builder threadInfoList(java.util.List<ThreadInfoList> threadInfoList) {
                 this.threadInfoList = threadInfoList;
                 return this;
             }

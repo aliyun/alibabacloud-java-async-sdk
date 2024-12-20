@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,10 +87,10 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
      */
     public static class Webhook extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizHeaders")
-        private java.util.Map < String, ? > bizHeaders;
+        private java.util.Map<String, ?> bizHeaders;
 
         @com.aliyun.core.annotation.NameInMap("BizParams")
-        private java.util.Map < String, ? > bizParams;
+        private java.util.Map<String, ?> bizParams;
 
         @com.aliyun.core.annotation.NameInMap("Body")
         private String body;
@@ -119,14 +124,14 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         /**
          * @return bizHeaders
          */
-        public java.util.Map < String, ? > getBizHeaders() {
+        public java.util.Map<String, ?> getBizHeaders() {
             return this.bizHeaders;
         }
 
         /**
          * @return bizParams
          */
-        public java.util.Map < String, ? > getBizParams() {
+        public java.util.Map<String, ?> getBizParams() {
             return this.bizParams;
         }
 
@@ -159,8 +164,8 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > bizHeaders; 
-            private java.util.Map < String, ? > bizParams; 
+            private java.util.Map<String, ?> bizHeaders; 
+            private java.util.Map<String, ?> bizParams; 
             private String body; 
             private String method; 
             private String recoverBody; 
@@ -172,7 +177,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>[{&quot;Content-Type&quot;:&quot;application/json&quot;}]</p>
              */
-            public Builder bizHeaders(java.util.Map < String, ? > bizHeaders) {
+            public Builder bizHeaders(java.util.Map<String, ?> bizHeaders) {
                 this.bizHeaders = bizHeaders;
                 return this;
             }
@@ -183,7 +188,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>[{&quot;content:&quot;mike&quot;}]</p>
              */
-            public Builder bizParams(java.util.Map < String, ? > bizParams) {
+            public Builder bizParams(java.util.Map<String, ?> bizParams) {
                 this.bizParams = bizParams;
                 return this;
             }
@@ -353,7 +358,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         private Long total;
 
         @com.aliyun.core.annotation.NameInMap("WebhookContacts")
-        private java.util.List < WebhookContacts> webhookContacts;
+        private java.util.List<WebhookContacts> webhookContacts;
 
         private PageBean(Builder builder) {
             this.page = builder.page;
@@ -394,7 +399,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         /**
          * @return webhookContacts
          */
-        public java.util.List < WebhookContacts> getWebhookContacts() {
+        public java.util.List<WebhookContacts> getWebhookContacts() {
             return this.webhookContacts;
         }
 
@@ -402,7 +407,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             private Long page; 
             private Long size; 
             private Long total; 
-            private java.util.List < WebhookContacts> webhookContacts; 
+            private java.util.List<WebhookContacts> webhookContacts; 
 
             /**
              * <p>The page number of the returned page.</p>
@@ -440,7 +445,7 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             /**
              * <p>The list of webhook alert contacts.</p>
              */
-            public Builder webhookContacts(java.util.List < WebhookContacts> webhookContacts) {
+            public Builder webhookContacts(java.util.List<WebhookContacts> webhookContacts) {
                 this.webhookContacts = webhookContacts;
                 return this;
             }

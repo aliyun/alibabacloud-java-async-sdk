@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class GrafanaWorkspaceAccount extends TeaModel {
     private Float gmtCreate;
 
     @com.aliyun.core.annotation.NameInMap("orgs")
-    private java.util.List < GrafanaWorkspaceUserOrg > orgs;
+    private java.util.List<GrafanaWorkspaceUserOrg> orgs;
 
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
@@ -89,7 +94,7 @@ public class GrafanaWorkspaceAccount extends TeaModel {
     /**
      * @return orgs
      */
-    public java.util.List < GrafanaWorkspaceUserOrg > getOrgs() {
+    public java.util.List<GrafanaWorkspaceUserOrg> getOrgs() {
         return this.orgs;
     }
 
@@ -106,7 +111,7 @@ public class GrafanaWorkspaceAccount extends TeaModel {
         private String aliyunUid; 
         private String aliyunUserName; 
         private Float gmtCreate; 
-        private java.util.List < GrafanaWorkspaceUserOrg > orgs; 
+        private java.util.List<GrafanaWorkspaceUserOrg> orgs; 
         private String type; 
 
         /**
@@ -152,7 +157,7 @@ public class GrafanaWorkspaceAccount extends TeaModel {
         /**
          * orgs.
          */
-        public Builder orgs(java.util.List < GrafanaWorkspaceUserOrg > orgs) {
+        public Builder orgs(java.util.List<GrafanaWorkspaceUserOrg> orgs) {
             this.orgs = orgs;
             return this;
         }

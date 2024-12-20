@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GrafanaWorkspaceIntegrationDetail extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("dataSources")
-    private java.util.List < GrafanaWorkspaceIntegrationDataSource > dataSources;
+    private java.util.List<GrafanaWorkspaceIntegrationDataSource> dataSources;
 
     @com.aliyun.core.annotation.NameInMap("integrationId")
     private String integrationId;
@@ -38,7 +43,7 @@ public class GrafanaWorkspaceIntegrationDetail extends TeaModel {
     /**
      * @return dataSources
      */
-    public java.util.List < GrafanaWorkspaceIntegrationDataSource > getDataSources() {
+    public java.util.List<GrafanaWorkspaceIntegrationDataSource> getDataSources() {
         return this.dataSources;
     }
 
@@ -57,14 +62,14 @@ public class GrafanaWorkspaceIntegrationDetail extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GrafanaWorkspaceIntegrationDataSource > dataSources; 
+        private java.util.List<GrafanaWorkspaceIntegrationDataSource> dataSources; 
         private String integrationId; 
         private String status; 
 
         /**
          * dataSources.
          */
-        public Builder dataSources(java.util.List < GrafanaWorkspaceIntegrationDataSource > dataSources) {
+        public Builder dataSources(java.util.List<GrafanaWorkspaceIntegrationDataSource> dataSources) {
             this.dataSources = dataSources;
             return this;
         }

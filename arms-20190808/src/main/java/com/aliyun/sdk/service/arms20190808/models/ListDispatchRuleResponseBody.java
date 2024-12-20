@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDispatchRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DispatchRules")
-    private java.util.List < DispatchRules> dispatchRules;
+    private java.util.List<DispatchRules> dispatchRules;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListDispatchRuleResponseBody extends TeaModel {
     /**
      * @return dispatchRules
      */
-    public java.util.List < DispatchRules> getDispatchRules() {
+    public java.util.List<DispatchRules> getDispatchRules() {
         return this.dispatchRules;
     }
 
@@ -46,13 +51,13 @@ public class ListDispatchRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DispatchRules> dispatchRules; 
+        private java.util.List<DispatchRules> dispatchRules; 
         private String requestId; 
 
         /**
          * <p>The returned struct.</p>
          */
-        public Builder dispatchRules(java.util.List < DispatchRules> dispatchRules) {
+        public Builder dispatchRules(java.util.List<DispatchRules> dispatchRules) {
             this.dispatchRules = dispatchRules;
             return this;
         }

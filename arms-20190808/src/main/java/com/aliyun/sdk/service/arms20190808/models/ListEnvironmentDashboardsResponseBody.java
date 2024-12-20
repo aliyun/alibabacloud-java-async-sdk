@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -161,7 +166,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         private String region;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < String > tags;
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -206,7 +211,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
@@ -234,7 +239,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         public static final class Builder {
             private String folderUid; 
             private String region; 
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
             private String title; 
             private String uid; 
             private String url; 
@@ -264,7 +269,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             /**
              * <p>The keyword.</p>
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -317,7 +322,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Dashboards")
-        private java.util.List < Dashboards> dashboards;
+        private java.util.List<Dashboards> dashboards;
 
         @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
@@ -338,7 +343,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         /**
          * @return dashboards
          */
-        public java.util.List < Dashboards> getDashboards() {
+        public java.util.List<Dashboards> getDashboards() {
             return this.dashboards;
         }
 
@@ -350,13 +355,13 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Dashboards> dashboards; 
+            private java.util.List<Dashboards> dashboards; 
             private Long total; 
 
             /**
              * <p>The dashboards.</p>
              */
-            public Builder dashboards(java.util.List < Dashboards> dashboards) {
+            public Builder dashboards(java.util.List<Dashboards> dashboards) {
                 this.dashboards = dashboards;
                 return this;
             }

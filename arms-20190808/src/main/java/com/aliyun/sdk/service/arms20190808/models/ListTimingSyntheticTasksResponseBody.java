@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -134,7 +139,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         private Integer ipType;
 
         @com.aliyun.core.annotation.NameInMap("Ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         private Hosts(Builder builder) {
             this.domain = builder.domain;
@@ -167,14 +172,14 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
         public static final class Builder {
             private String domain; 
             private Integer ipType; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
 
             /**
              * <p>The destination domain name.</p>
@@ -206,7 +211,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             /**
              * <p>The IP address.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
@@ -226,7 +231,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
      */
     public static class CustomHost extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hosts")
-        private java.util.List < Hosts> hosts;
+        private java.util.List<Hosts> hosts;
 
         @com.aliyun.core.annotation.NameInMap("SelectType")
         private Integer selectType;
@@ -247,7 +252,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         /**
          * @return hosts
          */
-        public java.util.List < Hosts> getHosts() {
+        public java.util.List<Hosts> getHosts() {
             return this.hosts;
         }
 
@@ -259,13 +264,13 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Hosts> hosts; 
+            private java.util.List<Hosts> hosts; 
             private Integer selectType; 
 
             /**
              * <p>The custom host settings.</p>
              */
-            public Builder hosts(java.util.List < Hosts> hosts) {
+            public Builder hosts(java.util.List<Hosts> hosts) {
                 this.hosts = hosts;
                 return this;
             }
@@ -306,7 +311,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         private String prometheusClusterRegion;
 
         @com.aliyun.core.annotation.NameInMap("PrometheusLabels")
-        private java.util.Map < String, String > prometheusLabels;
+        private java.util.Map<String, String> prometheusLabels;
 
         private CustomPrometheusSetting(Builder builder) {
             this.prometheusClusterId = builder.prometheusClusterId;
@@ -339,14 +344,14 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         /**
          * @return prometheusLabels
          */
-        public java.util.Map < String, String > getPrometheusLabels() {
+        public java.util.Map<String, String> getPrometheusLabels() {
             return this.prometheusLabels;
         }
 
         public static final class Builder {
             private String prometheusClusterId; 
             private String prometheusClusterRegion; 
-            private java.util.Map < String, String > prometheusLabels; 
+            private java.util.Map<String, String> prometheusLabels; 
 
             /**
              * <p>A reserved field.</p>
@@ -373,7 +378,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             /**
              * <p>A reserved field.</p>
              */
-            public Builder prometheusLabels(java.util.Map < String, String > prometheusLabels) {
+            public Builder prometheusLabels(java.util.Map<String, String> prometheusLabels) {
                 this.prometheusLabels = prometheusLabels;
                 return this;
             }
@@ -831,7 +836,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
@@ -940,7 +945,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -976,7 +981,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private String regionId; 
             private String resourceGroupId; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String taskId; 
             private Integer taskType; 
             private String url; 
@@ -1091,7 +1096,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -1145,7 +1150,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < Items> items;
+        private java.util.List<Items> items;
 
         @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;
@@ -1174,7 +1179,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < Items> getItems() {
+        public java.util.List<Items> getItems() {
             return this.items;
         }
 
@@ -1200,7 +1205,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Items> items; 
+            private java.util.List<Items> items; 
             private Integer page; 
             private Integer pageSize; 
             private Integer total; 
@@ -1208,7 +1213,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             /**
              * <p>The queried tasks.</p>
              */
-            public Builder items(java.util.List < Items> items) {
+            public Builder items(java.util.List<Items> items) {
                 this.items = items;
                 return this;
             }

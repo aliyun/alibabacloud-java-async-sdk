@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -184,7 +189,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         private String completion;
 
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < java.util.Map<String, ?>> items;
+        private java.util.List<java.util.Map<String, ?>> items;
 
         @com.aliyun.core.annotation.NameInMap("Page")
         private String page;
@@ -233,7 +238,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < java.util.Map<String, ?>> getItems() {
+        public java.util.List<java.util.Map<String, ?>> getItems() {
             return this.items;
         }
 
@@ -268,7 +273,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         public static final class Builder {
             private String authentication; 
             private String completion; 
-            private java.util.List < java.util.Map<String, ?>> items; 
+            private java.util.List<java.util.Map<String, ?>> items; 
             private String page; 
             private String pageSize; 
             private String preference; 
@@ -299,7 +304,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             /**
              * <p>The queried data.</p>
              */
-            public Builder items(java.util.List < java.util.Map<String, ?>> items) {
+            public Builder items(java.util.List<java.util.Map<String, ?>> items) {
                 this.items = items;
                 return this;
             }

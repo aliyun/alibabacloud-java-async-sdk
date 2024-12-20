@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SourceMapList")
-    private java.util.List < SourceMapList> sourceMapList;
+    private java.util.List<SourceMapList> sourceMapList;
 
     private GetSourceMapInfoResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
     /**
      * @return sourceMapList
      */
-    public java.util.List < SourceMapList> getSourceMapList() {
+    public java.util.List<SourceMapList> getSourceMapList() {
         return this.sourceMapList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SourceMapList> sourceMapList; 
+        private java.util.List<SourceMapList> sourceMapList; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
         /**
          * <p>The details of the SourceMap file.</p>
          */
-        public Builder sourceMapList(java.util.List < SourceMapList> sourceMapList) {
+        public Builder sourceMapList(java.util.List<SourceMapList> sourceMapList) {
             this.sourceMapList = sourceMapList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -170,7 +175,7 @@ public class GetRetcodeAppByPidResponseBody extends TeaModel {
         private String retcodeAppType;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private RetcodeApp(Builder builder) {
             this.appId = builder.appId;
@@ -227,7 +232,7 @@ public class GetRetcodeAppByPidResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -237,7 +242,7 @@ public class GetRetcodeAppByPidResponseBody extends TeaModel {
             private String pid; 
             private String resourceGroupId; 
             private String retcodeAppType; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * <p>The ID of the application. The parameter is an auto-increment parameter.</p>
@@ -305,7 +310,7 @@ public class GetRetcodeAppByPidResponseBody extends TeaModel {
             /**
              * <p>The tags that are attached to the instance.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

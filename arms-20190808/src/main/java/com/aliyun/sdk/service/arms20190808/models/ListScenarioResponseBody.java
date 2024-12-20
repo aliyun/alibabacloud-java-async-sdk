@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListScenarioResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ArmsScenarios")
-    private java.util.List < ArmsScenarios> armsScenarios;
+    private java.util.List<ArmsScenarios> armsScenarios;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListScenarioResponseBody extends TeaModel {
     /**
      * @return armsScenarios
      */
-    public java.util.List < ArmsScenarios> getArmsScenarios() {
+    public java.util.List<ArmsScenarios> getArmsScenarios() {
         return this.armsScenarios;
     }
 
@@ -46,13 +51,13 @@ public class ListScenarioResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ArmsScenarios> armsScenarios; 
+        private java.util.List<ArmsScenarios> armsScenarios; 
         private String requestId; 
 
         /**
          * <p>The detailed information of the business monitoring job.</p>
          */
-        public Builder armsScenarios(java.util.List < ArmsScenarios> armsScenarios) {
+        public Builder armsScenarios(java.util.List<ArmsScenarios> armsScenarios) {
             this.armsScenarios = armsScenarios;
             return this;
         }

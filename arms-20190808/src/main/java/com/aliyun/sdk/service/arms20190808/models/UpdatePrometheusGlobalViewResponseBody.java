@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -247,7 +252,7 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedInstances")
-        private java.util.List < FailedInstances> failedInstances;
+        private java.util.List<FailedInstances> failedInstances;
 
         @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
@@ -268,7 +273,7 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
         /**
          * @return failedInstances
          */
-        public java.util.List < FailedInstances> getFailedInstances() {
+        public java.util.List<FailedInstances> getFailedInstances() {
             return this.failedInstances;
         }
 
@@ -280,13 +285,13 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FailedInstances> failedInstances; 
+            private java.util.List<FailedInstances> failedInstances; 
             private Boolean success; 
 
             /**
              * <p>The data sources that failed to be updated.</p>
              */
-            public Builder failedInstances(java.util.List < FailedInstances> failedInstances) {
+            public Builder failedInstances(java.util.List<FailedInstances> failedInstances) {
                 this.failedInstances = failedInstances;
                 return this;
             }

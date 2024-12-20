@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,6 +30,10 @@ public class GetRumExceptionStackRequest extends Request {
     private String exceptionThreadId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtraInfo")
+    private String extraInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Pid")
     @com.aliyun.core.annotation.Validation(required = true)
     private String pid;
@@ -42,6 +51,7 @@ public class GetRumExceptionStackRequest extends Request {
         this.exceptionBinaryImages = builder.exceptionBinaryImages;
         this.exceptionStack = builder.exceptionStack;
         this.exceptionThreadId = builder.exceptionThreadId;
+        this.extraInfo = builder.extraInfo;
         this.pid = builder.pid;
         this.regionId = builder.regionId;
         this.sourcemapType = builder.sourcemapType;
@@ -82,6 +92,13 @@ public class GetRumExceptionStackRequest extends Request {
     }
 
     /**
+     * @return extraInfo
+     */
+    public String getExtraInfo() {
+        return this.extraInfo;
+    }
+
+    /**
      * @return pid
      */
     public String getPid() {
@@ -106,6 +123,7 @@ public class GetRumExceptionStackRequest extends Request {
         private String exceptionBinaryImages; 
         private String exceptionStack; 
         private String exceptionThreadId; 
+        private String extraInfo; 
         private String pid; 
         private String regionId; 
         private String sourcemapType; 
@@ -119,6 +137,7 @@ public class GetRumExceptionStackRequest extends Request {
             this.exceptionBinaryImages = request.exceptionBinaryImages;
             this.exceptionStack = request.exceptionStack;
             this.exceptionThreadId = request.exceptionThreadId;
+            this.extraInfo = request.extraInfo;
             this.pid = request.pid;
             this.regionId = request.regionId;
             this.sourcemapType = request.sourcemapType;
@@ -163,6 +182,15 @@ public class GetRumExceptionStackRequest extends Request {
         public Builder exceptionThreadId(String exceptionThreadId) {
             this.putQueryParameter("ExceptionThreadId", exceptionThreadId);
             this.exceptionThreadId = exceptionThreadId;
+            return this;
+        }
+
+        /**
+         * ExtraInfo.
+         */
+        public Builder extraInfo(String extraInfo) {
+            this.putQueryParameter("ExtraInfo", extraInfo);
+            this.extraInfo = extraInfo;
             return this;
         }
 

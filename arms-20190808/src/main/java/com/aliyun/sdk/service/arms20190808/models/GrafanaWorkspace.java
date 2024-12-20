@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -85,10 +90,10 @@ public class GrafanaWorkspace extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("upgradeVersion")
-    private java.util.List < String > upgradeVersion;
+    private java.util.List<String> upgradeVersion;
 
     @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
@@ -302,14 +307,14 @@ public class GrafanaWorkspace extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     /**
      * @return upgradeVersion
      */
-    public java.util.List < String > getUpgradeVersion() {
+    public java.util.List<String> getUpgradeVersion() {
         return this.upgradeVersion;
     }
 
@@ -345,8 +350,8 @@ public class GrafanaWorkspace extends TeaModel {
         private Boolean shareSynced; 
         private String snatIp; 
         private String status; 
-        private java.util.List < Tags> tags; 
-        private java.util.List < String > upgradeVersion; 
+        private java.util.List<Tags> tags; 
+        private java.util.List<String> upgradeVersion; 
         private String userId; 
 
         /**
@@ -544,7 +549,7 @@ public class GrafanaWorkspace extends TeaModel {
         /**
          * tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
@@ -552,7 +557,7 @@ public class GrafanaWorkspace extends TeaModel {
         /**
          * upgradeVersion.
          */
-        public Builder upgradeVersion(java.util.List < String > upgradeVersion) {
+        public Builder upgradeVersion(java.util.List<String> upgradeVersion) {
             this.upgradeVersion = upgradeVersion;
             return this;
         }

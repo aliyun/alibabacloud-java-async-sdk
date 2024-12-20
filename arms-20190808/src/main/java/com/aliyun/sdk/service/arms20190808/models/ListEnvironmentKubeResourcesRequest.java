@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class ListEnvironmentKubeResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LabelSelectors")
-    private java.util.Map < String, String > labelSelectors;
+    private java.util.Map<String, String> labelSelectors;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
@@ -73,7 +78,7 @@ public class ListEnvironmentKubeResourcesRequest extends Request {
     /**
      * @return labelSelectors
      */
-    public java.util.Map < String, String > getLabelSelectors() {
+    public java.util.Map<String, String> getLabelSelectors() {
         return this.labelSelectors;
     }
 
@@ -94,7 +99,7 @@ public class ListEnvironmentKubeResourcesRequest extends Request {
     public static final class Builder extends Request.Builder<ListEnvironmentKubeResourcesRequest, Builder> {
         private String environmentId; 
         private String kind; 
-        private java.util.Map < String, String > labelSelectors; 
+        private java.util.Map<String, String> labelSelectors; 
         private String namespace; 
         private String regionId; 
 
@@ -138,7 +143,7 @@ public class ListEnvironmentKubeResourcesRequest extends Request {
         /**
          * LabelSelectors.
          */
-        public Builder labelSelectors(java.util.Map < String, String > labelSelectors) {
+        public Builder labelSelectors(java.util.Map<String, String> labelSelectors) {
             String labelSelectorsShrink = shrink(labelSelectors, "LabelSelectors", "json");
             this.putQueryParameter("LabelSelectors", labelSelectorsShrink);
             this.labelSelectors = labelSelectors;

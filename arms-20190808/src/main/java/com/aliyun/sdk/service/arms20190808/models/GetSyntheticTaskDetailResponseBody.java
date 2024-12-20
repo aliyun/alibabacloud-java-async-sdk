@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -227,7 +232,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         private Long alarmFlag;
 
         @com.aliyun.core.annotation.NameInMap("AlertList")
-        private java.util.List < AlertList> alertList;
+        private java.util.List<AlertList> alertList;
 
         @com.aliyun.core.annotation.NameInMap("AlertNotifierId")
         private String alertNotifierId;
@@ -268,7 +273,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         /**
          * @return alertList
          */
-        public java.util.List < AlertList> getAlertList() {
+        public java.util.List<AlertList> getAlertList() {
             return this.alertList;
         }
 
@@ -302,7 +307,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long alarmFlag; 
-            private java.util.List < AlertList> alertList; 
+            private java.util.List<AlertList> alertList; 
             private String alertNotifierId; 
             private String alertPolicyId; 
             private String monitorSamples; 
@@ -322,7 +327,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             /**
              * <p>The list of alerts.</p>
              */
-            public Builder alertList(java.util.List < AlertList> alertList) {
+            public Builder alertList(java.util.List<AlertList> alertList) {
                 this.alertList = alertList;
                 return this;
             }
@@ -711,7 +716,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
      */
     public static class ExtendInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Days")
-        private java.util.List < Long > days;
+        private java.util.List<Long> days;
 
         @com.aliyun.core.annotation.NameInMap("EndMinute")
         private Long endMinute;
@@ -752,7 +757,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         /**
          * @return days
          */
-        public java.util.List < Long > getDays() {
+        public java.util.List<Long> getDays() {
             return this.days;
         }
 
@@ -799,7 +804,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > days; 
+            private java.util.List<Long> days; 
             private Long endMinute; 
             private String endTime; 
             private Long endhour; 
@@ -820,7 +825,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
              * <li>6: Saturday</li>
              * </ul>
              */
-            public Builder days(java.util.List < Long > days) {
+            public Builder days(java.util.List<Long> days) {
                 this.days = days;
                 return this;
             }
@@ -2589,7 +2594,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         private RequestContentBody body;
 
         @com.aliyun.core.annotation.NameInMap("Header")
-        private java.util.List < RequestContentHeader> header;
+        private java.util.List<RequestContentHeader> header;
 
         @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
@@ -2618,7 +2623,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         /**
          * @return header
          */
-        public java.util.List < RequestContentHeader> getHeader() {
+        public java.util.List<RequestContentHeader> getHeader() {
             return this.header;
         }
 
@@ -2631,7 +2636,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private RequestContentBody body; 
-            private java.util.List < RequestContentHeader> header; 
+            private java.util.List<RequestContentHeader> header; 
             private String method; 
 
             /**
@@ -2645,7 +2650,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             /**
              * <p>The request header.</p>
              */
-            public Builder header(java.util.List < RequestContentHeader> header) {
+            public Builder header(java.util.List<RequestContentHeader> header) {
                 this.header = header;
                 return this;
             }
@@ -2945,7 +2950,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         private Long ipType;
 
         @com.aliyun.core.annotation.NameInMap("MonitorList")
-        private java.util.List < MonitorList> monitorList;
+        private java.util.List<MonitorList> monitorList;
 
         @com.aliyun.core.annotation.NameInMap("MonitorListString")
         private String monitorListString;
@@ -3042,7 +3047,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         /**
          * @return monitorList
          */
-        public java.util.List < MonitorList> getMonitorList() {
+        public java.util.List<MonitorList> getMonitorList() {
             return this.monitorList;
         }
 
@@ -3109,7 +3114,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private Long intervalTime; 
             private Long intervalType; 
             private Long ipType; 
-            private java.util.List < MonitorList> monitorList; 
+            private java.util.List<MonitorList> monitorList; 
             private String monitorListString; 
             private Nav nav; 
             private Net net; 
@@ -3204,7 +3209,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             /**
              * <p>The detection points.</p>
              */
-            public Builder monitorList(java.util.List < MonitorList> monitorList) {
+            public Builder monitorList(java.util.List<MonitorList> monitorList) {
                 this.monitorList = monitorList;
                 return this;
             }

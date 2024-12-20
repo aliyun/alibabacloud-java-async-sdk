@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SearchAlertContactGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ContactGroups")
-    private java.util.List < ContactGroups> contactGroups;
+    private java.util.List<ContactGroups> contactGroups;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
     /**
      * @return contactGroups
      */
-    public java.util.List < ContactGroups> getContactGroups() {
+    public java.util.List<ContactGroups> getContactGroups() {
         return this.contactGroups;
     }
 
@@ -46,13 +51,13 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ContactGroups> contactGroups; 
+        private java.util.List<ContactGroups> contactGroups; 
         private String requestId; 
 
         /**
          * <p>The information about the alert contact groups.</p>
          */
-        public Builder contactGroups(java.util.List < ContactGroups> contactGroups) {
+        public Builder contactGroups(java.util.List<ContactGroups> contactGroups) {
             this.contactGroups = contactGroups;
             return this;
         }
@@ -326,7 +331,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         private String contactGroupName;
 
         @com.aliyun.core.annotation.NameInMap("Contacts")
-        private java.util.List < Contacts> contacts;
+        private java.util.List<Contacts> contacts;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -371,7 +376,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         /**
          * @return contacts
          */
-        public java.util.List < Contacts> getContacts() {
+        public java.util.List<Contacts> getContacts() {
             return this.contacts;
         }
 
@@ -399,7 +404,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         public static final class Builder {
             private Long contactGroupId; 
             private String contactGroupName; 
-            private java.util.List < Contacts> contacts; 
+            private java.util.List<Contacts> contacts; 
             private Long createTime; 
             private Long updateTime; 
             private String userId; 
@@ -429,7 +434,7 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             /**
              * <p>The alert contact list.</p>
              */
-            public Builder contacts(java.util.List < Contacts> contacts) {
+            public Builder contacts(java.util.List<Contacts> contacts) {
                 this.contacts = contacts;
                 return this;
             }

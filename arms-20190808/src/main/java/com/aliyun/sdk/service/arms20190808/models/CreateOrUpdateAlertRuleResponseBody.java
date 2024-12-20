@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -240,7 +245,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
      */
     public static class AlertRuleContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertRuleItems")
-        private java.util.List < AlertRuleItems> alertRuleItems;
+        private java.util.List<AlertRuleItems> alertRuleItems;
 
         @com.aliyun.core.annotation.NameInMap("Condition")
         private String condition;
@@ -261,7 +266,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         /**
          * @return alertRuleItems
          */
-        public java.util.List < AlertRuleItems> getAlertRuleItems() {
+        public java.util.List<AlertRuleItems> getAlertRuleItems() {
             return this.alertRuleItems;
         }
 
@@ -273,13 +278,13 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AlertRuleItems> alertRuleItems; 
+            private java.util.List<AlertRuleItems> alertRuleItems; 
             private String condition; 
 
             /**
              * <p>The trigger conditions of the Application Monitoring or Browser Monitoring alert rule.</p>
              */
-            public Builder alertRuleItems(java.util.List < AlertRuleItems> alertRuleItems) {
+            public Builder alertRuleItems(java.util.List<AlertRuleItems> alertRuleItems) {
                 this.alertRuleItems = alertRuleItems;
                 return this;
             }
@@ -539,7 +544,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         private String filterOpt;
 
         @com.aliyun.core.annotation.NameInMap("FilterValues")
-        private java.util.List < String > filterValues;
+        private java.util.List<String> filterValues;
 
         private DimFilters(Builder builder) {
             this.filterKey = builder.filterKey;
@@ -572,14 +577,14 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         /**
          * @return filterValues
          */
-        public java.util.List < String > getFilterValues() {
+        public java.util.List<String> getFilterValues() {
             return this.filterValues;
         }
 
         public static final class Builder {
             private String filterKey; 
             private String filterOpt; 
-            private java.util.List < String > filterValues; 
+            private java.util.List<String> filterValues; 
 
             /**
              * <p>The key of the filter condition.</p>
@@ -606,7 +611,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             /**
              * <p>The details of the filter condition.</p>
              */
-            public Builder filterValues(java.util.List < String > filterValues) {
+            public Builder filterValues(java.util.List<String> filterValues) {
                 this.filterValues = filterValues;
                 return this;
             }
@@ -626,16 +631,16 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
      */
     public static class Filters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomSLSFilters")
-        private java.util.List < CustomSLSFilters> customSLSFilters;
+        private java.util.List<CustomSLSFilters> customSLSFilters;
 
         @com.aliyun.core.annotation.NameInMap("CustomSLSGroupByDimensions")
-        private java.util.List < String > customSLSGroupByDimensions;
+        private java.util.List<String> customSLSGroupByDimensions;
 
         @com.aliyun.core.annotation.NameInMap("CustomSLSWheres")
-        private java.util.List < String > customSLSWheres;
+        private java.util.List<String> customSLSWheres;
 
         @com.aliyun.core.annotation.NameInMap("DimFilters")
-        private java.util.List < DimFilters> dimFilters;
+        private java.util.List<DimFilters> dimFilters;
 
         private Filters(Builder builder) {
             this.customSLSFilters = builder.customSLSFilters;
@@ -655,41 +660,41 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         /**
          * @return customSLSFilters
          */
-        public java.util.List < CustomSLSFilters> getCustomSLSFilters() {
+        public java.util.List<CustomSLSFilters> getCustomSLSFilters() {
             return this.customSLSFilters;
         }
 
         /**
          * @return customSLSGroupByDimensions
          */
-        public java.util.List < String > getCustomSLSGroupByDimensions() {
+        public java.util.List<String> getCustomSLSGroupByDimensions() {
             return this.customSLSGroupByDimensions;
         }
 
         /**
          * @return customSLSWheres
          */
-        public java.util.List < String > getCustomSLSWheres() {
+        public java.util.List<String> getCustomSLSWheres() {
             return this.customSLSWheres;
         }
 
         /**
          * @return dimFilters
          */
-        public java.util.List < DimFilters> getDimFilters() {
+        public java.util.List<DimFilters> getDimFilters() {
             return this.dimFilters;
         }
 
         public static final class Builder {
-            private java.util.List < CustomSLSFilters> customSLSFilters; 
-            private java.util.List < String > customSLSGroupByDimensions; 
-            private java.util.List < String > customSLSWheres; 
-            private java.util.List < DimFilters> dimFilters; 
+            private java.util.List<CustomSLSFilters> customSLSFilters; 
+            private java.util.List<String> customSLSGroupByDimensions; 
+            private java.util.List<String> customSLSWheres; 
+            private java.util.List<DimFilters> dimFilters; 
 
             /**
              * <p>The custom filter condition of the Browser Monitoring alert rule.</p>
              */
-            public Builder customSLSFilters(java.util.List < CustomSLSFilters> customSLSFilters) {
+            public Builder customSLSFilters(java.util.List<CustomSLSFilters> customSLSFilters) {
                 this.customSLSFilters = customSLSFilters;
                 return this;
             }
@@ -697,7 +702,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             /**
              * <p>The information of the aggregation dimension.</p>
              */
-            public Builder customSLSGroupByDimensions(java.util.List < String > customSLSGroupByDimensions) {
+            public Builder customSLSGroupByDimensions(java.util.List<String> customSLSGroupByDimensions) {
                 this.customSLSGroupByDimensions = customSLSGroupByDimensions;
                 return this;
             }
@@ -705,7 +710,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             /**
              * <p>The details of the custom filter condition.</p>
              */
-            public Builder customSLSWheres(java.util.List < String > customSLSWheres) {
+            public Builder customSLSWheres(java.util.List<String> customSLSWheres) {
                 this.customSLSWheres = customSLSWheres;
                 return this;
             }
@@ -713,7 +718,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             /**
              * <p>The information about each filter condition of the Application Monitoring or Browser Monitoring alert rule.</p>
              */
-            public Builder dimFilters(java.util.List < DimFilters> dimFilters) {
+            public Builder dimFilters(java.util.List<DimFilters> dimFilters) {
                 this.dimFilters = dimFilters;
                 return this;
             }
@@ -900,7 +905,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         private String alertType;
 
         @com.aliyun.core.annotation.NameInMap("Annotations")
-        private java.util.List < Annotations> annotations;
+        private java.util.List<Annotations> annotations;
 
         @com.aliyun.core.annotation.NameInMap("AutoAddNewApplication")
         private Boolean autoAddNewApplication;
@@ -921,7 +926,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         private Filters filters;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
@@ -939,7 +944,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         private String notifyStrategy;
 
         @com.aliyun.core.annotation.NameInMap("Pids")
-        private java.util.List < String > pids;
+        private java.util.List<String> pids;
 
         @com.aliyun.core.annotation.NameInMap("PromQL")
         private String promQL;
@@ -948,7 +953,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
@@ -1045,7 +1050,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         /**
          * @return annotations
          */
-        public java.util.List < Annotations> getAnnotations() {
+        public java.util.List<Annotations> getAnnotations() {
             return this.annotations;
         }
 
@@ -1094,7 +1099,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -1136,7 +1141,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         /**
          * @return pids
          */
-        public java.util.List < String > getPids() {
+        public java.util.List<String> getPids() {
             return this.pids;
         }
 
@@ -1157,7 +1162,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1183,23 +1188,23 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             private AlertRuleContent alertRuleContent; 
             private String alertStatus; 
             private String alertType; 
-            private java.util.List < Annotations> annotations; 
+            private java.util.List<Annotations> annotations; 
             private Boolean autoAddNewApplication; 
             private String clusterId; 
             private Long createdTime; 
             private String duration; 
             private String extend; 
             private Filters filters; 
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private String level; 
             private String message; 
             private String metricsType; 
             private String notifyMode; 
             private String notifyStrategy; 
-            private java.util.List < String > pids; 
+            private java.util.List<String> pids; 
             private String promQL; 
             private String regionId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long updatedTime; 
             private String userId; 
 
@@ -1302,7 +1307,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             /**
              * <p>The annotations of the Prometheus alert rule.</p>
              */
-            public Builder annotations(java.util.List < Annotations> annotations) {
+            public Builder annotations(java.util.List<Annotations> annotations) {
                 this.annotations = annotations;
                 return this;
             }
@@ -1377,7 +1382,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             /**
              * <p>The tags of the Prometheus alert rule.</p>
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -1447,7 +1452,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             /**
              * <p>The process ID (PID) that was associated with the Application Monitoring or Browser Monitoring alert rule.</p>
              */
-            public Builder pids(java.util.List < String > pids) {
+            public Builder pids(java.util.List<String> pids) {
                 this.pids = pids;
                 return this;
             }
@@ -1477,7 +1482,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             /**
              * <p>The list of tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

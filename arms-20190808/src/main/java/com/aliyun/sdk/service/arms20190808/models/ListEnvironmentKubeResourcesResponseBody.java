@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -53,7 +58,7 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -96,7 +101,7 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -142,10 +147,10 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
      */
     public static class Metadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Annotations")
-        private java.util.Map < String, String > annotations;
+        private java.util.Map<String, String> annotations;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.Map < String, String > labels;
+        private java.util.Map<String, String> labels;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -171,14 +176,14 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
         /**
          * @return annotations
          */
-        public java.util.Map < String, String > getAnnotations() {
+        public java.util.Map<String, String> getAnnotations() {
             return this.annotations;
         }
 
         /**
          * @return labels
          */
-        public java.util.Map < String, String > getLabels() {
+        public java.util.Map<String, String> getLabels() {
             return this.labels;
         }
 
@@ -197,15 +202,15 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > annotations; 
-            private java.util.Map < String, String > labels; 
+            private java.util.Map<String, String> annotations; 
+            private java.util.Map<String, String> labels; 
             private String name; 
             private String namespace; 
 
             /**
              * Annotations.
              */
-            public Builder annotations(java.util.Map < String, String > annotations) {
+            public Builder annotations(java.util.Map<String, String> annotations) {
                 this.annotations = annotations;
                 return this;
             }
@@ -213,7 +218,7 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
             /**
              * Labels.
              */
-            public Builder labels(java.util.Map < String, String > labels) {
+            public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
                 return this;
             }

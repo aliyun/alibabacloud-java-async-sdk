@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateTimingSyntheticTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AvailableAssertions")
-    private java.util.List < AvailableAssertions> availableAssertions;
+    private java.util.List<AvailableAssertions> availableAssertions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CommonSetting")
@@ -34,7 +39,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Monitors")
-    private java.util.List < Monitors> monitors;
+    private java.util.List<Monitors> monitors;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -50,7 +55,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
@@ -87,7 +92,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
     /**
      * @return availableAssertions
      */
-    public java.util.List < AvailableAssertions> getAvailableAssertions() {
+    public java.util.List<AvailableAssertions> getAvailableAssertions() {
         return this.availableAssertions;
     }
 
@@ -122,7 +127,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
     /**
      * @return monitors
      */
-    public java.util.List < Monitors> getMonitors() {
+    public java.util.List<Monitors> getMonitors() {
         return this.monitors;
     }
 
@@ -150,7 +155,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -162,16 +167,16 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateTimingSyntheticTaskRequest, Builder> {
-        private java.util.List < AvailableAssertions> availableAssertions; 
+        private java.util.List<AvailableAssertions> availableAssertions; 
         private CommonSetting commonSetting; 
         private CustomPeriod customPeriod; 
         private String frequency; 
         private MonitorConf monitorConf; 
-        private java.util.List < Monitors> monitors; 
+        private java.util.List<Monitors> monitors; 
         private String name; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String taskId; 
 
         private Builder() {
@@ -196,7 +201,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         /**
          * <p>The list of assertions.</p>
          */
-        public Builder availableAssertions(java.util.List < AvailableAssertions> availableAssertions) {
+        public Builder availableAssertions(java.util.List<AvailableAssertions> availableAssertions) {
             String availableAssertionsShrink = shrink(availableAssertions, "AvailableAssertions", "json");
             this.putQueryParameter("AvailableAssertions", availableAssertionsShrink);
             this.availableAssertions = availableAssertions;
@@ -248,7 +253,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         /**
          * <p>The list of monitoring points.</p>
          */
-        public Builder monitors(java.util.List < Monitors> monitors) {
+        public Builder monitors(java.util.List<Monitors> monitors) {
             String monitorsShrink = shrink(monitors, "Monitors", "json");
             this.putQueryParameter("Monitors", monitorsShrink);
             this.monitors = monitors;
@@ -294,7 +299,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         /**
          * <p>The list of tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -453,7 +458,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         private Integer ipType;
 
         @com.aliyun.core.annotation.NameInMap("Ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         private Hosts(Builder builder) {
             this.domain = builder.domain;
@@ -486,14 +491,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
         public static final class Builder {
             private String domain; 
             private Integer ipType; 
-            private java.util.List < String > ips; 
+            private java.util.List<String> ips; 
 
             /**
              * <p>The domain name.</p>
@@ -525,7 +530,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             /**
              * <p>The list of IP addresses.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }
@@ -545,7 +550,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
      */
     public static class CustomHost extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hosts")
-        private java.util.List < Hosts> hosts;
+        private java.util.List<Hosts> hosts;
 
         @com.aliyun.core.annotation.NameInMap("SelectType")
         private Integer selectType;
@@ -566,7 +571,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         /**
          * @return hosts
          */
-        public java.util.List < Hosts> getHosts() {
+        public java.util.List<Hosts> getHosts() {
             return this.hosts;
         }
 
@@ -578,13 +583,13 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Hosts> hosts; 
+            private java.util.List<Hosts> hosts; 
             private Integer selectType; 
 
             /**
              * <p>The list of hosts.</p>
              */
-            public Builder hosts(java.util.List < Hosts> hosts) {
+            public Builder hosts(java.util.List<Hosts> hosts) {
                 this.hosts = hosts;
                 return this;
             }
@@ -625,7 +630,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         private String prometheusClusterRegion;
 
         @com.aliyun.core.annotation.NameInMap("PrometheusLabels")
-        private java.util.Map < String, String > prometheusLabels;
+        private java.util.Map<String, String> prometheusLabels;
 
         private CustomPrometheusSetting(Builder builder) {
             this.prometheusClusterId = builder.prometheusClusterId;
@@ -658,14 +663,14 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         /**
          * @return prometheusLabels
          */
-        public java.util.Map < String, String > getPrometheusLabels() {
+        public java.util.Map<String, String> getPrometheusLabels() {
             return this.prometheusLabels;
         }
 
         public static final class Builder {
             private String prometheusClusterId; 
             private String prometheusClusterRegion; 
-            private java.util.Map < String, String > prometheusLabels; 
+            private java.util.Map<String, String> prometheusLabels; 
 
             /**
              * <p>A reserved parameter.</p>
@@ -686,7 +691,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             /**
              * <p>The reserved parameters.</p>
              */
-            public Builder prometheusLabels(java.util.Map < String, String > prometheusLabels) {
+            public Builder prometheusLabels(java.util.Map<String, String> prometheusLabels) {
                 this.prometheusLabels = prometheusLabels;
                 return this;
             }
@@ -1205,7 +1210,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         private RequestBody requestBody;
 
         @com.aliyun.core.annotation.NameInMap("RequestHeaders")
-        private java.util.Map < String, String > requestHeaders;
+        private java.util.Map<String, String> requestHeaders;
 
         @com.aliyun.core.annotation.NameInMap("TargetUrl")
         private String targetUrl;
@@ -1270,7 +1275,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         /**
          * @return requestHeaders
          */
-        public java.util.Map < String, String > getRequestHeaders() {
+        public java.util.Map<String, String> getRequestHeaders() {
             return this.requestHeaders;
         }
 
@@ -1294,7 +1299,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private String method; 
             private Integer protocolAlpnProtocol; 
             private RequestBody requestBody; 
-            private java.util.Map < String, String > requestHeaders; 
+            private java.util.Map<String, String> requestHeaders; 
             private String targetUrl; 
             private Long timeout; 
 
@@ -1361,7 +1366,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             /**
              * <p>The custom header field.</p>
              */
-            public Builder requestHeaders(java.util.Map < String, String > requestHeaders) {
+            public Builder requestHeaders(java.util.Map<String, String> requestHeaders) {
                 this.requestHeaders = requestHeaders;
                 return this;
             }
@@ -1406,7 +1411,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         private Long connectionTimeout;
 
         @com.aliyun.core.annotation.NameInMap("CustomHeaderContent")
-        private java.util.Map < String, String > customHeaderContent;
+        private java.util.Map<String, String> customHeaderContent;
 
         @com.aliyun.core.annotation.NameInMap("DownloadKernel")
         private Integer downloadKernel;
@@ -1495,7 +1500,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         /**
          * @return customHeaderContent
          */
-        public java.util.Map < String, String > getCustomHeaderContent() {
+        public java.util.Map<String, String> getCustomHeaderContent() {
             return this.customHeaderContent;
         }
 
@@ -1613,7 +1618,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
 
         public static final class Builder {
             private Long connectionTimeout; 
-            private java.util.Map < String, String > customHeaderContent; 
+            private java.util.Map<String, String> customHeaderContent; 
             private Integer downloadKernel; 
             private Integer ignoreCertificateAuthError; 
             private Integer ignoreCertificateCanceledError; 
@@ -1645,7 +1650,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             /**
              * <p>The content of the custom request header. Format: JSON map.</p>
              */
-            public Builder customHeaderContent(java.util.Map < String, String > customHeaderContent) {
+            public Builder customHeaderContent(java.util.Map<String, String> customHeaderContent) {
                 this.customHeaderContent = customHeaderContent;
                 return this;
             }
@@ -2442,7 +2447,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
      */
     public static class Stream extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomHeaderContent")
-        private java.util.Map < String, String > customHeaderContent;
+        private java.util.Map<String, String> customHeaderContent;
 
         @com.aliyun.core.annotation.NameInMap("PlayerType")
         private Integer playerType;
@@ -2483,7 +2488,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         /**
          * @return customHeaderContent
          */
-        public java.util.Map < String, String > getCustomHeaderContent() {
+        public java.util.Map<String, String> getCustomHeaderContent() {
             return this.customHeaderContent;
         }
 
@@ -2530,7 +2535,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > customHeaderContent; 
+            private java.util.Map<String, String> customHeaderContent; 
             private Integer playerType; 
             private Integer streamAddressType; 
             private Integer streamMonitorTimeout; 
@@ -2541,7 +2546,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             /**
              * <p>The custom header. Format: JSON map.</p>
              */
-            public Builder customHeaderContent(java.util.Map < String, String > customHeaderContent) {
+            public Builder customHeaderContent(java.util.Map<String, String> customHeaderContent) {
                 this.customHeaderContent = customHeaderContent;
                 return this;
             }
@@ -2641,7 +2646,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         private Integer customHeader;
 
         @com.aliyun.core.annotation.NameInMap("CustomHeaderContent")
-        private java.util.Map < String, String > customHeaderContent;
+        private java.util.Map<String, String> customHeaderContent;
 
         @com.aliyun.core.annotation.NameInMap("DNSHijackWhitelist")
         private String DNSHijackWhitelist;
@@ -2738,7 +2743,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         /**
          * @return customHeaderContent
          */
-        public java.util.Map < String, String > getCustomHeaderContent() {
+        public java.util.Map<String, String> getCustomHeaderContent() {
             return this.customHeaderContent;
         }
 
@@ -2857,7 +2862,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
         public static final class Builder {
             private Integer automaticScrolling; 
             private Integer customHeader; 
-            private java.util.Map < String, String > customHeaderContent; 
+            private java.util.Map<String, String> customHeaderContent; 
             private String DNSHijackWhitelist; 
             private Integer disableCache; 
             private Integer disableCompression; 
@@ -2900,7 +2905,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             /**
              * <p>The custom header. Format: JSON map.</p>
              */
-            public Builder customHeaderContent(java.util.Map < String, String > customHeaderContent) {
+            public Builder customHeaderContent(java.util.Map<String, String> customHeaderContent) {
                 this.customHeaderContent = customHeaderContent;
                 return this;
             }

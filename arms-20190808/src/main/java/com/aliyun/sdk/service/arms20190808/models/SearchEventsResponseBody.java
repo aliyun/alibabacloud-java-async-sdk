@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -130,7 +135,7 @@ public class SearchEventsResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("Links")
-        private java.util.List < String > links;
+        private java.util.List<String> links;
 
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -207,7 +212,7 @@ public class SearchEventsResponseBody extends TeaModel {
         /**
          * @return links
          */
-        public java.util.List < String > getLinks() {
+        public java.util.List<String> getLinks() {
             return this.links;
         }
 
@@ -226,7 +231,7 @@ public class SearchEventsResponseBody extends TeaModel {
             private String eventLevel; 
             private Long eventTime; 
             private Long id; 
-            private java.util.List < String > links; 
+            private java.util.List<String> links; 
             private String message; 
 
             /**
@@ -319,7 +324,7 @@ public class SearchEventsResponseBody extends TeaModel {
             /**
              * <p>The list of event URLs.</p>
              */
-            public Builder links(java.util.List < String > links) {
+            public Builder links(java.util.List<String> links) {
                 this.links = links;
                 return this;
             }
@@ -350,7 +355,7 @@ public class SearchEventsResponseBody extends TeaModel {
      */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Event")
-        private java.util.List < Event> event;
+        private java.util.List<Event> event;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -379,7 +384,7 @@ public class SearchEventsResponseBody extends TeaModel {
         /**
          * @return event
          */
-        public java.util.List < Event> getEvent() {
+        public java.util.List<Event> getEvent() {
             return this.event;
         }
 
@@ -405,7 +410,7 @@ public class SearchEventsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Event> event; 
+            private java.util.List<Event> event; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -413,7 +418,7 @@ public class SearchEventsResponseBody extends TeaModel {
             /**
              * <p>The information about the alert events.</p>
              */
-            public Builder event(java.util.List < Event> event) {
+            public Builder event(java.util.List<Event> event) {
                 this.event = event;
                 return this;
             }

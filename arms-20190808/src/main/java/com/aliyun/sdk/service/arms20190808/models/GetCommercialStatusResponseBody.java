@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -91,7 +96,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
         private Boolean enable;
 
         @com.aliyun.core.annotation.NameInMap("ExtraInfo")
-        private java.util.Map < String, ? > extraInfo;
+        private java.util.Map<String, ?> extraInfo;
 
         @com.aliyun.core.annotation.NameInMap("FreeDays")
         private Long freeDays;
@@ -144,7 +149,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
         /**
          * @return extraInfo
          */
-        public java.util.Map < String, ? > getExtraInfo() {
+        public java.util.Map<String, ?> getExtraInfo() {
             return this.extraInfo;
         }
 
@@ -173,7 +178,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             private Boolean basic; 
             private String chargeType; 
             private Boolean enable; 
-            private java.util.Map < String, ? > extraInfo; 
+            private java.util.Map<String, ?> extraInfo; 
             private Long freeDays; 
             private String lable; 
             private String status; 
@@ -217,7 +222,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>info</p>
              */
-            public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
                 this.extraInfo = extraInfo;
                 return this;
             }

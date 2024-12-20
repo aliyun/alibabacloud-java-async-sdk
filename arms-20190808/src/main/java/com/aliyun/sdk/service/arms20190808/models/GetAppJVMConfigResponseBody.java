@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("JvmInfoList")
-    private java.util.List < JvmInfoList> jvmInfoList;
+    private java.util.List<JvmInfoList> jvmInfoList;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -53,7 +58,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
     /**
      * @return jvmInfoList
      */
-    public java.util.List < JvmInfoList> getJvmInfoList() {
+    public java.util.List<JvmInfoList> getJvmInfoList() {
         return this.jvmInfoList;
     }
 
@@ -80,7 +85,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < JvmInfoList> jvmInfoList; 
+        private java.util.List<JvmInfoList> jvmInfoList; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -99,7 +104,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         /**
          * <p>The list of JVM information.</p>
          */
-        public Builder jvmInfoList(java.util.List < JvmInfoList> jvmInfoList) {
+        public Builder jvmInfoList(java.util.List<JvmInfoList> jvmInfoList) {
             this.jvmInfoList = jvmInfoList;
             return this;
         }

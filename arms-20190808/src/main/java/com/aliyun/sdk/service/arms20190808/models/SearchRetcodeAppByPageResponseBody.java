@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -179,7 +184,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         private String retcodeAppType;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -272,7 +277,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -306,7 +311,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             private String regionId; 
             private String resourceGroupId; 
             private String retcodeAppType; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String type; 
             private Long updateTime; 
             private String userId; 
@@ -410,7 +415,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             /**
              * <p>The tag.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -473,7 +478,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("RetcodeApps")
-        private java.util.List < RetcodeApps> retcodeApps;
+        private java.util.List<RetcodeApps> retcodeApps;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -510,7 +515,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         /**
          * @return retcodeApps
          */
-        public java.util.List < RetcodeApps> getRetcodeApps() {
+        public java.util.List<RetcodeApps> getRetcodeApps() {
             return this.retcodeApps;
         }
 
@@ -524,7 +529,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < RetcodeApps> retcodeApps; 
+            private java.util.List<RetcodeApps> retcodeApps; 
             private Integer totalCount; 
 
             /**
@@ -552,7 +557,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             /**
              * <p>The browser monitoring tasks that are returned.</p>
              */
-            public Builder retcodeApps(java.util.List < RetcodeApps> retcodeApps) {
+            public Builder retcodeApps(java.util.List<RetcodeApps> retcodeApps) {
                 this.retcodeApps = retcodeApps;
                 return this;
             }

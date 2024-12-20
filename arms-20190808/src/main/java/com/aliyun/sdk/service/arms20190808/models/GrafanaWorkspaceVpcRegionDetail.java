@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class GrafanaWorkspaceVpcRegionDetail extends TeaModel {
     private String securityGroupId;
 
     @com.aliyun.core.annotation.NameInMap("securityGroupIds")
-    private java.util.List < String > securityGroupIds;
+    private java.util.List<String> securityGroupIds;
 
     @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
@@ -40,7 +45,7 @@ public class GrafanaWorkspaceVpcRegionDetail extends TeaModel {
     private String vSwitchId;
 
     @com.aliyun.core.annotation.NameInMap("vSwitchIds")
-    private java.util.List < String > vSwitchIds;
+    private java.util.List<String> vSwitchIds;
 
     @com.aliyun.core.annotation.NameInMap("vpcId")
     private String vpcId;
@@ -112,7 +117,7 @@ public class GrafanaWorkspaceVpcRegionDetail extends TeaModel {
     /**
      * @return securityGroupIds
      */
-    public java.util.List < String > getSecurityGroupIds() {
+    public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -133,7 +138,7 @@ public class GrafanaWorkspaceVpcRegionDetail extends TeaModel {
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -151,10 +156,10 @@ public class GrafanaWorkspaceVpcRegionDetail extends TeaModel {
         private String name; 
         private String regionId; 
         private String securityGroupId; 
-        private java.util.List < String > securityGroupIds; 
+        private java.util.List<String> securityGroupIds; 
         private String userId; 
         private String vSwitchId; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
         private String vpcId; 
 
         /**
@@ -208,7 +213,7 @@ public class GrafanaWorkspaceVpcRegionDetail extends TeaModel {
         /**
          * securityGroupIds.
          */
-        public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+        public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
@@ -232,7 +237,7 @@ public class GrafanaWorkspaceVpcRegionDetail extends TeaModel {
         /**
          * vSwitchIds.
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
             return this;
         }

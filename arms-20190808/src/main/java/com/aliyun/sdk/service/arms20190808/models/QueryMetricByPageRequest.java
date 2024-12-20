@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,11 +28,11 @@ public class QueryMetricByPageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomFilters")
-    private java.util.List < String > customFilters;
+    private java.util.List<String> customFilters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Dimensions")
-    private java.util.List < String > dimensions;
+    private java.util.List<String> dimensions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
@@ -36,7 +41,7 @@ public class QueryMetricByPageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    private java.util.List<Filters> filters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IntervalInSec")
@@ -45,7 +50,7 @@ public class QueryMetricByPageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Measures")
-    private java.util.List < String > measures;
+    private java.util.List<String> measures;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Metric")
@@ -117,14 +122,14 @@ public class QueryMetricByPageRequest extends Request {
     /**
      * @return customFilters
      */
-    public java.util.List < String > getCustomFilters() {
+    public java.util.List<String> getCustomFilters() {
         return this.customFilters;
     }
 
     /**
      * @return dimensions
      */
-    public java.util.List < String > getDimensions() {
+    public java.util.List<String> getDimensions() {
         return this.dimensions;
     }
 
@@ -138,7 +143,7 @@ public class QueryMetricByPageRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -152,7 +157,7 @@ public class QueryMetricByPageRequest extends Request {
     /**
      * @return measures
      */
-    public java.util.List < String > getMeasures() {
+    public java.util.List<String> getMeasures() {
         return this.measures;
     }
 
@@ -194,12 +199,12 @@ public class QueryMetricByPageRequest extends Request {
     public static final class Builder extends Request.Builder<QueryMetricByPageRequest, Builder> {
         private String regionId; 
         private Integer currentPage; 
-        private java.util.List < String > customFilters; 
-        private java.util.List < String > dimensions; 
+        private java.util.List<String> customFilters; 
+        private java.util.List<String> dimensions; 
         private Long endTime; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Integer intervalInSec; 
-        private java.util.List < String > measures; 
+        private java.util.List<String> measures; 
         private String metric; 
         private String order; 
         private String orderBy; 
@@ -251,7 +256,7 @@ public class QueryMetricByPageRequest extends Request {
         /**
          * <p>Custom filter conditions.</p>
          */
-        public Builder customFilters(java.util.List < String > customFilters) {
+        public Builder customFilters(java.util.List<String> customFilters) {
             this.putQueryParameter("CustomFilters", customFilters);
             this.customFilters = customFilters;
             return this;
@@ -263,7 +268,7 @@ public class QueryMetricByPageRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;detector_browser&quot;,&quot;detector_device&quot;]</p>
          */
-        public Builder dimensions(java.util.List < String > dimensions) {
+        public Builder dimensions(java.util.List<String> dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
             return this;
@@ -285,7 +290,7 @@ public class QueryMetricByPageRequest extends Request {
         /**
          * <p>The filter conditions.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;
@@ -309,7 +314,7 @@ public class QueryMetricByPageRequest extends Request {
          * <strong>example:</strong>
          * <p>pv</p>
          */
-        public Builder measures(java.util.List < String > measures) {
+        public Builder measures(java.util.List<String> measures) {
             this.putQueryParameter("Measures", measures);
             this.measures = measures;
             return this;

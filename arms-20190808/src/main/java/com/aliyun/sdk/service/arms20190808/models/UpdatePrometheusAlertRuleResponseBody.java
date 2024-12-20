@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -292,7 +297,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         private String alertName;
 
         @com.aliyun.core.annotation.NameInMap("Annotations")
-        private java.util.List < Annotations> annotations;
+        private java.util.List<Annotations> annotations;
 
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -307,7 +312,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         private String expression;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -361,7 +366,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         /**
          * @return annotations
          */
-        public java.util.List < Annotations> getAnnotations() {
+        public java.util.List<Annotations> getAnnotations() {
             return this.annotations;
         }
 
@@ -396,7 +401,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
@@ -431,12 +436,12 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
         public static final class Builder {
             private Long alertId; 
             private String alertName; 
-            private java.util.List < Annotations> annotations; 
+            private java.util.List<Annotations> annotations; 
             private String clusterId; 
             private Long dispatchRuleId; 
             private String duration; 
             private String expression; 
-            private java.util.List < Labels> labels; 
+            private java.util.List<Labels> labels; 
             private String message; 
             private String notifyType; 
             private Integer status; 
@@ -461,7 +466,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             /**
              * Annotations.
              */
-            public Builder annotations(java.util.List < Annotations> annotations) {
+            public Builder annotations(java.util.List<Annotations> annotations) {
                 this.annotations = annotations;
                 return this;
             }
@@ -501,7 +506,7 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
             /**
              * Labels.
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }

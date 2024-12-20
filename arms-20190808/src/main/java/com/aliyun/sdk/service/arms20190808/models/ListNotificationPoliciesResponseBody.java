@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -88,7 +93,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         private Long groupWait;
 
         @com.aliyun.core.annotation.NameInMap("GroupingFields")
-        private java.util.List < String > groupingFields;
+        private java.util.List<String> groupingFields;
 
         private GroupRule(Builder builder) {
             this.groupInterval = builder.groupInterval;
@@ -121,14 +126,14 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         /**
          * @return groupingFields
          */
-        public java.util.List < String > getGroupingFields() {
+        public java.util.List<String> getGroupingFields() {
             return this.groupingFields;
         }
 
         public static final class Builder {
             private Long groupInterval; 
             private Long groupWait; 
-            private java.util.List < String > groupingFields; 
+            private java.util.List<String> groupingFields; 
 
             /**
              * <p>The time interval of grouping. Unit: seconds. Default value: 30.</p>
@@ -159,7 +164,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
              * <li>If you specify the groupingFields field, alerts with the same field will be sent to contacts in one notification.</li>
              * </ul>
              */
-            public Builder groupingFields(java.util.List < String > groupingFields) {
+            public Builder groupingFields(java.util.List<String> groupingFields) {
                 this.groupingFields = groupingFields;
                 return this;
             }
@@ -283,7 +288,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
      */
     public static class MatchingRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchingConditions")
-        private java.util.List < MatchingConditions> matchingConditions;
+        private java.util.List<MatchingConditions> matchingConditions;
 
         private MatchingRules(Builder builder) {
             this.matchingConditions = builder.matchingConditions;
@@ -300,17 +305,17 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         /**
          * @return matchingConditions
          */
-        public java.util.List < MatchingConditions> getMatchingConditions() {
+        public java.util.List<MatchingConditions> getMatchingConditions() {
             return this.matchingConditions;
         }
 
         public static final class Builder {
-            private java.util.List < MatchingConditions> matchingConditions; 
+            private java.util.List<MatchingConditions> matchingConditions; 
 
             /**
              * <p>The matching conditions.</p>
              */
-            public Builder matchingConditions(java.util.List < MatchingConditions> matchingConditions) {
+            public Builder matchingConditions(java.util.List<MatchingConditions> matchingConditions) {
                 this.matchingConditions = matchingConditions;
                 return this;
             }
@@ -330,7 +335,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
      */
     public static class NotifyObjects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotifyChannels")
-        private java.util.List < String > notifyChannels;
+        private java.util.List<String> notifyChannels;
 
         @com.aliyun.core.annotation.NameInMap("NotifyObjectId")
         private Long notifyObjectId;
@@ -359,7 +364,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         /**
          * @return notifyChannels
          */
-        public java.util.List < String > getNotifyChannels() {
+        public java.util.List<String> getNotifyChannels() {
             return this.notifyChannels;
         }
 
@@ -385,7 +390,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > notifyChannels; 
+            private java.util.List<String> notifyChannels; 
             private Long notifyObjectId; 
             private String notifyObjectName; 
             private String notifyObjectType; 
@@ -393,7 +398,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             /**
              * <p>The notification methods specified for a contact.</p>
              */
-            public Builder notifyChannels(java.util.List < String > notifyChannels) {
+            public Builder notifyChannels(java.util.List<String> notifyChannels) {
                 this.notifyChannels = notifyChannels;
                 return this;
             }
@@ -452,13 +457,13 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
      */
     public static class NotifyRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotifyChannels")
-        private java.util.List < String > notifyChannels;
+        private java.util.List<String> notifyChannels;
 
         @com.aliyun.core.annotation.NameInMap("NotifyEndTime")
         private String notifyEndTime;
 
         @com.aliyun.core.annotation.NameInMap("NotifyObjects")
-        private java.util.List < NotifyObjects> notifyObjects;
+        private java.util.List<NotifyObjects> notifyObjects;
 
         @com.aliyun.core.annotation.NameInMap("NotifyStartTime")
         private String notifyStartTime;
@@ -481,7 +486,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         /**
          * @return notifyChannels
          */
-        public java.util.List < String > getNotifyChannels() {
+        public java.util.List<String> getNotifyChannels() {
             return this.notifyChannels;
         }
 
@@ -495,7 +500,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         /**
          * @return notifyObjects
          */
-        public java.util.List < NotifyObjects> getNotifyObjects() {
+        public java.util.List<NotifyObjects> getNotifyObjects() {
             return this.notifyObjects;
         }
 
@@ -507,15 +512,15 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > notifyChannels; 
+            private java.util.List<String> notifyChannels; 
             private String notifyEndTime; 
-            private java.util.List < NotifyObjects> notifyObjects; 
+            private java.util.List<NotifyObjects> notifyObjects; 
             private String notifyStartTime; 
 
             /**
              * <p>The notification method.</p>
              */
-            public Builder notifyChannels(java.util.List < String > notifyChannels) {
+            public Builder notifyChannels(java.util.List<String> notifyChannels) {
                 this.notifyChannels = notifyChannels;
                 return this;
             }
@@ -534,7 +539,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             /**
              * <p>The notification objects.</p>
              */
-            public Builder notifyObjects(java.util.List < NotifyObjects> notifyObjects) {
+            public Builder notifyObjects(java.util.List<NotifyObjects> notifyObjects) {
                 this.notifyObjects = notifyObjects;
                 return this;
             }
@@ -814,7 +819,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         private Long integrationId;
 
         @com.aliyun.core.annotation.NameInMap("MatchingRules")
-        private java.util.List < MatchingRules> matchingRules;
+        private java.util.List<MatchingRules> matchingRules;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -899,7 +904,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         /**
          * @return matchingRules
          */
-        public java.util.List < MatchingRules> getMatchingRules() {
+        public java.util.List<MatchingRules> getMatchingRules() {
             return this.matchingRules;
         }
 
@@ -958,7 +963,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private GroupRule groupRule; 
             private Long id; 
             private Long integrationId; 
-            private java.util.List < MatchingRules> matchingRules; 
+            private java.util.List<MatchingRules> matchingRules; 
             private String name; 
             private NotifyRule notifyRule; 
             private NotifyTemplate notifyTemplate; 
@@ -1022,7 +1027,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             /**
              * <p>The matching rules for alert events.</p>
              */
-            public Builder matchingRules(java.util.List < MatchingRules> matchingRules) {
+            public Builder matchingRules(java.util.List<MatchingRules> matchingRules) {
                 this.matchingRules = matchingRules;
                 return this;
             }
@@ -1121,7 +1126,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
      */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotificationPolicies")
-        private java.util.List < NotificationPolicies> notificationPolicies;
+        private java.util.List<NotificationPolicies> notificationPolicies;
 
         @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
@@ -1150,7 +1155,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         /**
          * @return notificationPolicies
          */
-        public java.util.List < NotificationPolicies> getNotificationPolicies() {
+        public java.util.List<NotificationPolicies> getNotificationPolicies() {
             return this.notificationPolicies;
         }
 
@@ -1176,7 +1181,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < NotificationPolicies> notificationPolicies; 
+            private java.util.List<NotificationPolicies> notificationPolicies; 
             private Long page; 
             private Long size; 
             private Long total; 
@@ -1184,7 +1189,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             /**
              * <p>The queried notification policies.</p>
              */
-            public Builder notificationPolicies(java.util.List < NotificationPolicies> notificationPolicies) {
+            public Builder notificationPolicies(java.util.List<NotificationPolicies> notificationPolicies) {
                 this.notificationPolicies = notificationPolicies;
                 return this;
             }

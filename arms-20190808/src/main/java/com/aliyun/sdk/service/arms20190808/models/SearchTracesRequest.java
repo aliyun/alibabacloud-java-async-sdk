@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class SearchTracesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExclusionFilters")
-    private java.util.List < ExclusionFilters> exclusionFilters;
+    private java.util.List<ExclusionFilters> exclusionFilters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MinDuration")
@@ -57,7 +62,7 @@ public class SearchTracesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private SearchTracesRequest(Builder builder) {
         super(builder);
@@ -97,7 +102,7 @@ public class SearchTracesRequest extends Request {
     /**
      * @return exclusionFilters
      */
-    public java.util.List < ExclusionFilters> getExclusionFilters() {
+    public java.util.List<ExclusionFilters> getExclusionFilters() {
         return this.exclusionFilters;
     }
 
@@ -160,13 +165,13 @@ public class SearchTracesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<SearchTracesRequest, Builder> {
         private Long endTime; 
-        private java.util.List < ExclusionFilters> exclusionFilters; 
+        private java.util.List<ExclusionFilters> exclusionFilters; 
         private Long minDuration; 
         private String operationName; 
         private String pid; 
@@ -175,7 +180,7 @@ public class SearchTracesRequest extends Request {
         private String serviceIp; 
         private String serviceName; 
         private Long startTime; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -212,7 +217,7 @@ public class SearchTracesRequest extends Request {
         /**
          * <p>The filter conditions.</p>
          */
-        public Builder exclusionFilters(java.util.List < ExclusionFilters> exclusionFilters) {
+        public Builder exclusionFilters(java.util.List<ExclusionFilters> exclusionFilters) {
             this.putQueryParameter("ExclusionFilters", exclusionFilters);
             this.exclusionFilters = exclusionFilters;
             return this;
@@ -323,7 +328,7 @@ public class SearchTracesRequest extends Request {
         /**
          * <p>The list of tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;

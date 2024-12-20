@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class CreateSyntheticTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MonitorList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < MonitorList> monitorList;
+    private java.util.List<MonitorList> monitorList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Navigation")
@@ -157,7 +162,7 @@ public class CreateSyntheticTaskRequest extends Request {
     /**
      * @return monitorList
      */
-    public java.util.List < MonitorList> getMonitorList() {
+    public java.util.List<MonitorList> getMonitorList() {
         return this.monitorList;
     }
 
@@ -224,7 +229,7 @@ public class CreateSyntheticTaskRequest extends Request {
         private String intervalTime; 
         private String intervalType; 
         private Long ipType; 
-        private java.util.List < MonitorList> monitorList; 
+        private java.util.List<MonitorList> monitorList; 
         private Navigation navigation; 
         private Net net; 
         private Protocol protocol; 
@@ -355,7 +360,7 @@ public class CreateSyntheticTaskRequest extends Request {
          * <p>The list of monitoring points.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder monitorList(java.util.List < MonitorList> monitorList) {
+        public Builder monitorList(java.util.List<MonitorList> monitorList) {
             String monitorListShrink = shrink(monitorList, "MonitorList", "json");
             this.putQueryParameter("MonitorList", monitorListShrink);
             this.monitorList = monitorList;
@@ -591,7 +596,7 @@ public class CreateSyntheticTaskRequest extends Request {
         private String alarmFlag;
 
         @com.aliyun.core.annotation.NameInMap("AlertList")
-        private java.util.List < AlertList> alertList;
+        private java.util.List<AlertList> alertList;
 
         @com.aliyun.core.annotation.NameInMap("AlertNotifierId")
         private String alertNotifierId;
@@ -632,7 +637,7 @@ public class CreateSyntheticTaskRequest extends Request {
         /**
          * @return alertList
          */
-        public java.util.List < AlertList> getAlertList() {
+        public java.util.List<AlertList> getAlertList() {
             return this.alertList;
         }
 
@@ -666,7 +671,7 @@ public class CreateSyntheticTaskRequest extends Request {
 
         public static final class Builder {
             private String alarmFlag; 
-            private java.util.List < AlertList> alertList; 
+            private java.util.List<AlertList> alertList; 
             private String alertNotifierId; 
             private String alertPolicyId; 
             private Long monitorSamples; 
@@ -690,7 +695,7 @@ public class CreateSyntheticTaskRequest extends Request {
             /**
              * <p>The alert parameters.</p>
              */
-            public Builder alertList(java.util.List < AlertList> alertList) {
+            public Builder alertList(java.util.List<AlertList> alertList) {
                 this.alertList = alertList;
                 return this;
             }
@@ -1102,7 +1107,7 @@ public class CreateSyntheticTaskRequest extends Request {
      */
     public static class ExtendInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Days")
-        private java.util.List < Long > days;
+        private java.util.List<Long> days;
 
         @com.aliyun.core.annotation.NameInMap("EndHour")
         private Long endHour;
@@ -1143,7 +1148,7 @@ public class CreateSyntheticTaskRequest extends Request {
         /**
          * @return days
          */
-        public java.util.List < Long > getDays() {
+        public java.util.List<Long> getDays() {
             return this.days;
         }
 
@@ -1190,7 +1195,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Long > days; 
+            private java.util.List<Long> days; 
             private Long endHour; 
             private Long endMinute; 
             private String endTime; 
@@ -1201,7 +1206,7 @@ public class CreateSyntheticTaskRequest extends Request {
             /**
              * <p>The day on which synthetic monitoring is performed.</p>
              */
-            public Builder days(java.util.List < Long > days) {
+            public Builder days(java.util.List<Long> days) {
                 this.days = days;
                 return this;
             }
@@ -2768,7 +2773,7 @@ public class CreateSyntheticTaskRequest extends Request {
      */
     public static class RequestContentBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FormData")
-        private java.util.List < FormData> formData;
+        private java.util.List<FormData> formData;
 
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
@@ -2780,7 +2785,7 @@ public class CreateSyntheticTaskRequest extends Request {
         private String raw;
 
         @com.aliyun.core.annotation.NameInMap("UrlEncoding")
-        private java.util.List < UrlEncoding> urlEncoding;
+        private java.util.List<UrlEncoding> urlEncoding;
 
         private RequestContentBody(Builder builder) {
             this.formData = builder.formData;
@@ -2801,7 +2806,7 @@ public class CreateSyntheticTaskRequest extends Request {
         /**
          * @return formData
          */
-        public java.util.List < FormData> getFormData() {
+        public java.util.List<FormData> getFormData() {
             return this.formData;
         }
 
@@ -2829,21 +2834,21 @@ public class CreateSyntheticTaskRequest extends Request {
         /**
          * @return urlEncoding
          */
-        public java.util.List < UrlEncoding> getUrlEncoding() {
+        public java.util.List<UrlEncoding> getUrlEncoding() {
             return this.urlEncoding;
         }
 
         public static final class Builder {
-            private java.util.List < FormData> formData; 
+            private java.util.List<FormData> formData; 
             private String language; 
             private String mode; 
             private String raw; 
-            private java.util.List < UrlEncoding> urlEncoding; 
+            private java.util.List<UrlEncoding> urlEncoding; 
 
             /**
              * <p>The data that is passed when the <strong>Mode</strong> parameter is set to <strong>form-data</strong>.</p>
              */
-            public Builder formData(java.util.List < FormData> formData) {
+            public Builder formData(java.util.List<FormData> formData) {
                 this.formData = formData;
                 return this;
             }
@@ -2896,7 +2901,7 @@ public class CreateSyntheticTaskRequest extends Request {
             /**
              * <p>The data that is passed when the <strong>Mode</strong> parameter is set to <strong>x-www-form-urlencoded</strong>.</p>
              */
-            public Builder urlEncoding(java.util.List < UrlEncoding> urlEncoding) {
+            public Builder urlEncoding(java.util.List<UrlEncoding> urlEncoding) {
                 this.urlEncoding = urlEncoding;
                 return this;
             }
@@ -2992,7 +2997,7 @@ public class CreateSyntheticTaskRequest extends Request {
         private RequestContentBody body;
 
         @com.aliyun.core.annotation.NameInMap("Header")
-        private java.util.List < RequestContentHeader> header;
+        private java.util.List<RequestContentHeader> header;
 
         @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
@@ -3021,7 +3026,7 @@ public class CreateSyntheticTaskRequest extends Request {
         /**
          * @return header
          */
-        public java.util.List < RequestContentHeader> getHeader() {
+        public java.util.List<RequestContentHeader> getHeader() {
             return this.header;
         }
 
@@ -3034,7 +3039,7 @@ public class CreateSyntheticTaskRequest extends Request {
 
         public static final class Builder {
             private RequestContentBody body; 
-            private java.util.List < RequestContentHeader> header; 
+            private java.util.List<RequestContentHeader> header; 
             private String method; 
 
             /**
@@ -3048,7 +3053,7 @@ public class CreateSyntheticTaskRequest extends Request {
             /**
              * <p>The custom header of a request to initiate an API performance synthetic monitoring task.</p>
              */
-            public Builder header(java.util.List < RequestContentHeader> header) {
+            public Builder header(java.util.List<RequestContentHeader> header) {
                 this.header = header;
                 return this;
             }

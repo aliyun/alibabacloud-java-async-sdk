@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -49,7 +54,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -69,7 +74,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
 
@@ -87,7 +92,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         /**
          * <p>The returned struct.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -134,7 +139,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         private String metricsPath;
 
         @com.aliyun.core.annotation.NameInMap("ScrapeDiscoverys")
-        private java.util.List < String > scrapeDiscoverys;
+        private java.util.List<String> scrapeDiscoverys;
 
         @com.aliyun.core.annotation.NameInMap("ScrapeInterval")
         private String scrapeInterval;
@@ -171,7 +176,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         /**
          * @return scrapeDiscoverys
          */
-        public java.util.List < String > getScrapeDiscoverys() {
+        public java.util.List<String> getScrapeDiscoverys() {
             return this.scrapeDiscoverys;
         }
 
@@ -185,7 +190,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         public static final class Builder {
             private String jobName; 
             private String metricsPath; 
-            private java.util.List < String > scrapeDiscoverys; 
+            private java.util.List<String> scrapeDiscoverys; 
             private String scrapeInterval; 
 
             /**
@@ -213,7 +218,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             /**
              * <p>The service discovery methods.</p>
              */
-            public Builder scrapeDiscoverys(java.util.List < String > scrapeDiscoverys) {
+            public Builder scrapeDiscoverys(java.util.List<String> scrapeDiscoverys) {
                 this.scrapeDiscoverys = scrapeDiscoverys;
                 return this;
             }
@@ -268,7 +273,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("ScrapeConfigs")
-        private java.util.List < ScrapeConfigs> scrapeConfigs;
+        private java.util.List<ScrapeConfigs> scrapeConfigs;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -353,7 +358,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         /**
          * @return scrapeConfigs
          */
-        public java.util.List < ScrapeConfigs> getScrapeConfigs() {
+        public java.util.List<ScrapeConfigs> getScrapeConfigs() {
             return this.scrapeConfigs;
         }
 
@@ -373,7 +378,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             private String customJobName; 
             private String environmentId; 
             private String regionId; 
-            private java.util.List < ScrapeConfigs> scrapeConfigs; 
+            private java.util.List<ScrapeConfigs> scrapeConfigs; 
             private String status; 
 
             /**
@@ -467,7 +472,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             /**
              * <p>The capture configurations.</p>
              */
-            public Builder scrapeConfigs(java.util.List < ScrapeConfigs> scrapeConfigs) {
+            public Builder scrapeConfigs(java.util.List<ScrapeConfigs> scrapeConfigs) {
                 this.scrapeConfigs = scrapeConfigs;
                 return this;
             }

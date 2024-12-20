@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -53,7 +58,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -99,7 +104,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         /**
          * <p>The metric details.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -346,7 +351,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < MetricsLabels> labels;
+        private java.util.List<MetricsLabels> labels;
 
         @com.aliyun.core.annotation.NameInMap("Metric")
         private String metric;
@@ -383,7 +388,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < MetricsLabels> getLabels() {
+        public java.util.List<MetricsLabels> getLabels() {
             return this.labels;
         }
 
@@ -410,7 +415,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String description; 
-            private java.util.List < MetricsLabels> labels; 
+            private java.util.List<MetricsLabels> labels; 
             private String metric; 
             private String type; 
             private String unit; 
@@ -429,7 +434,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder labels(java.util.List < MetricsLabels> labels) {
+            public Builder labels(java.util.List<MetricsLabels> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -485,10 +490,10 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         private String group;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < Labels> labels;
+        private java.util.List<Labels> labels;
 
         @com.aliyun.core.annotation.NameInMap("Metrics")
-        private java.util.List < Metrics> metrics;
+        private java.util.List<Metrics> metrics;
 
         private Data(Builder builder) {
             this.group = builder.group;
@@ -514,21 +519,21 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < Labels> getLabels() {
+        public java.util.List<Labels> getLabels() {
             return this.labels;
         }
 
         /**
          * @return metrics
          */
-        public java.util.List < Metrics> getMetrics() {
+        public java.util.List<Metrics> getMetrics() {
             return this.metrics;
         }
 
         public static final class Builder {
             private String group; 
-            private java.util.List < Labels> labels; 
-            private java.util.List < Metrics> metrics; 
+            private java.util.List<Labels> labels; 
+            private java.util.List<Metrics> metrics; 
 
             /**
              * <p>The metric group.</p>
@@ -544,7 +549,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder labels(java.util.List < Labels> labels) {
+            public Builder labels(java.util.List<Labels> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -552,7 +557,7 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
             /**
              * <p>The metrics.</p>
              */
-            public Builder metrics(java.util.List < Metrics> metrics) {
+            public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
                 return this;
             }

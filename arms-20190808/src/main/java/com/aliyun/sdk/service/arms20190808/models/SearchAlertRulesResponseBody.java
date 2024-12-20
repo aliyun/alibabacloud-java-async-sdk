@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -385,7 +390,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         private String operator;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private AlertRule(Builder builder) {
             this.operator = builder.operator;
@@ -410,13 +415,13 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private String operator; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * <p>The logical operator between conditions. Valid values: <code>&amp;</code>: AND. <code>|</code>: OR.</p>
@@ -432,7 +437,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             /**
              * <p>The condition of the alert rule.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }
@@ -565,7 +570,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         private String appId;
 
         @com.aliyun.core.annotation.NameInMap("Dimensions")
-        private java.util.List < Dimensions> dimensions;
+        private java.util.List<Dimensions> dimensions;
 
         @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
@@ -606,7 +611,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         /**
          * @return dimensions
          */
-        public java.util.List < Dimensions> getDimensions() {
+        public java.util.List<Dimensions> getDimensions() {
             return this.dimensions;
         }
 
@@ -627,7 +632,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String appGroupId; 
             private String appId; 
-            private java.util.List < Dimensions> dimensions; 
+            private java.util.List<Dimensions> dimensions; 
             private String pid; 
             private String type; 
 
@@ -656,7 +661,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             /**
              * <p>The dimensions in the condition.</p>
              */
-            public Builder dimensions(java.util.List < Dimensions> dimensions) {
+            public Builder dimensions(java.util.List<Dimensions> dimensions) {
                 this.dimensions = dimensions;
                 return this;
             }
@@ -843,7 +848,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         private Integer alertVersion;
 
         @com.aliyun.core.annotation.NameInMap("AlertWays")
-        private java.util.List < String > alertWays;
+        private java.util.List<String> alertWays;
 
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -972,7 +977,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         /**
          * @return alertWays
          */
-        public java.util.List < String > getAlertWays() {
+        public java.util.List<String> getAlertWays() {
             return this.alertWays;
         }
 
@@ -1095,7 +1100,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private String alertTitle; 
             private Integer alertType; 
             private Integer alertVersion; 
-            private java.util.List < String > alertWays; 
+            private java.util.List<String> alertWays; 
             private String config; 
             private String contactGroupIdList; 
             private String contactGroupIds; 
@@ -1186,7 +1191,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             /**
              * <p>Sending method of alarm notification.</p>
              */
-            public Builder alertWays(java.util.List < String > alertWays) {
+            public Builder alertWays(java.util.List<String> alertWays) {
                 this.alertWays = alertWays;
                 return this;
             }
@@ -1391,7 +1396,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
      */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertRules")
-        private java.util.List < AlertRules> alertRules;
+        private java.util.List<AlertRules> alertRules;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -1420,7 +1425,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         /**
          * @return alertRules
          */
-        public java.util.List < AlertRules> getAlertRules() {
+        public java.util.List<AlertRules> getAlertRules() {
             return this.alertRules;
         }
 
@@ -1446,7 +1451,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AlertRules> alertRules; 
+            private java.util.List<AlertRules> alertRules; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -1454,7 +1459,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             /**
              * <p>The details of the alert rules.</p>
              */
-            public Builder alertRules(java.util.List < AlertRules> alertRules) {
+            public Builder alertRules(java.util.List<AlertRules> alertRules) {
                 this.alertRules = alertRules;
                 return this;
             }

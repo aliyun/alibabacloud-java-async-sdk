@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryAppMetadataResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.Map < String, ? > data;
+    private java.util.Map<String, ?> data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -53,7 +58,7 @@ public class QueryAppMetadataResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.Map < String, ? > getData() {
+    public java.util.Map<String, ?> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class QueryAppMetadataResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.Map < String, ? > data; 
+        private java.util.Map<String, ?> data; 
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
@@ -108,7 +113,7 @@ public class QueryAppMetadataResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{&quot;408d5533&quot;: &quot;SELECT * FROM user_base_info&quot;}</p>
          */
-        public Builder data(java.util.Map < String, ? > data) {
+        public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
             return this;
         }

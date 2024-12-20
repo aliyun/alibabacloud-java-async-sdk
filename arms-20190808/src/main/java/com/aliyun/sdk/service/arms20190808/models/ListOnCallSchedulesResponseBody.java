@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
      */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OnCallSchedules")
-        private java.util.List < OnCallSchedules> onCallSchedules;
+        private java.util.List<OnCallSchedules> onCallSchedules;
 
         @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
@@ -207,7 +212,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
         /**
          * @return onCallSchedules
          */
-        public java.util.List < OnCallSchedules> getOnCallSchedules() {
+        public java.util.List<OnCallSchedules> getOnCallSchedules() {
             return this.onCallSchedules;
         }
 
@@ -233,7 +238,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < OnCallSchedules> onCallSchedules; 
+            private java.util.List<OnCallSchedules> onCallSchedules; 
             private Long page; 
             private Long size; 
             private Long total; 
@@ -241,7 +246,7 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             /**
              * <p>The information about the scheduling policy.</p>
              */
-            public Builder onCallSchedules(java.util.List < OnCallSchedules> onCallSchedules) {
+            public Builder onCallSchedules(java.util.List<OnCallSchedules> onCallSchedules) {
                 this.onCallSchedules = onCallSchedules;
                 return this;
             }

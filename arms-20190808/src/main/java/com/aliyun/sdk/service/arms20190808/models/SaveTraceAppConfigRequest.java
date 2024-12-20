@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class SaveTraceAppConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Settings")
-    private java.util.List < Settings> settings;
+    private java.util.List<Settings> settings;
 
     private SaveTraceAppConfigRequest(Builder builder) {
         super(builder);
@@ -62,14 +67,14 @@ public class SaveTraceAppConfigRequest extends Request {
     /**
      * @return settings
      */
-    public java.util.List < Settings> getSettings() {
+    public java.util.List<Settings> getSettings() {
         return this.settings;
     }
 
     public static final class Builder extends Request.Builder<SaveTraceAppConfigRequest, Builder> {
         private String regionId; 
         private String pid; 
-        private java.util.List < Settings> settings; 
+        private java.util.List<Settings> settings; 
 
         private Builder() {
             super();
@@ -108,7 +113,7 @@ public class SaveTraceAppConfigRequest extends Request {
         /**
          * <p>The settings of Application Monitoring.</p>
          */
-        public Builder settings(java.util.List < Settings> settings) {
+        public Builder settings(java.util.List<Settings> settings) {
             this.putQueryParameter("Settings", settings);
             this.settings = settings;
             return this;

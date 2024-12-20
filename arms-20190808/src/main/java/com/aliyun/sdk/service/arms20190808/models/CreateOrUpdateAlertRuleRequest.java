@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -84,7 +89,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MarkTags")
-    private java.util.List < MarkTags> markTags;
+    private java.util.List<MarkTags> markTags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Message")
@@ -129,7 +134,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private CreateOrUpdateAlertRuleRequest(Builder builder) {
         super(builder);
@@ -299,7 +304,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     /**
      * @return markTags
      */
-    public java.util.List < MarkTags> getMarkTags() {
+    public java.util.List<MarkTags> getMarkTags() {
         return this.markTags;
     }
 
@@ -376,7 +381,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -398,7 +403,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         private String filters; 
         private String labels; 
         private String level; 
-        private java.util.List < MarkTags> markTags; 
+        private java.util.List<MarkTags> markTags; 
         private String message; 
         private String metricsKey; 
         private String metricsType; 
@@ -409,7 +414,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         private String product; 
         private String promQL; 
         private String regionId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -739,7 +744,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         /**
          * <p>Application Tags. Used for application monitoring alert rules, to filter applications associated with alert rules.</p>
          */
-        public Builder markTags(java.util.List < MarkTags> markTags) {
+        public Builder markTags(java.util.List<MarkTags> markTags) {
             this.putBodyParameter("MarkTags", markTags);
             this.markTags = markTags;
             return this;
@@ -882,7 +887,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         /**
          * <p>The list of tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("Tags", tags);
             this.tags = tags;
             return this;

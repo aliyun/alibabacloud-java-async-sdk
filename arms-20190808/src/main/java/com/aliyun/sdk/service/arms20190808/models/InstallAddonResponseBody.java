@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -322,7 +327,7 @@ public class InstallAddonResponseBody extends TeaModel {
         private Long alertRuleCount;
 
         @com.aliyun.core.annotation.NameInMap("Conditions")
-        private java.util.List < Conditions> conditions;
+        private java.util.List<Conditions> conditions;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -419,7 +424,7 @@ public class InstallAddonResponseBody extends TeaModel {
         /**
          * @return conditions
          */
-        public java.util.List < Conditions> getConditions() {
+        public java.util.List<Conditions> getConditions() {
             return this.conditions;
         }
 
@@ -538,7 +543,7 @@ public class InstallAddonResponseBody extends TeaModel {
         public static final class Builder {
             private String addonName; 
             private Long alertRuleCount; 
-            private java.util.List < Conditions> conditions; 
+            private java.util.List<Conditions> conditions; 
             private String createTime; 
             private Long dashboardCount; 
             private String environmentId; 
@@ -581,7 +586,7 @@ public class InstallAddonResponseBody extends TeaModel {
             /**
              * <p>The installation phase.</p>
              */
-            public Builder conditions(java.util.List < Conditions> conditions) {
+            public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
                 return this;
             }

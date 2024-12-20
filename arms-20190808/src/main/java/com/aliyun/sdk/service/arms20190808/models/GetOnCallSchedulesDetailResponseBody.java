@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -680,10 +685,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
      */
     public static class ScheduleLayers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactIds")
-        private java.util.List < Long > contactIds;
+        private java.util.List<Long> contactIds;
 
         @com.aliyun.core.annotation.NameInMap("Restrictions")
-        private java.util.List < Restrictions> restrictions;
+        private java.util.List<Restrictions> restrictions;
 
         @com.aliyun.core.annotation.NameInMap("RotationType")
         private String rotationType;
@@ -713,14 +718,14 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         /**
          * @return contactIds
          */
-        public java.util.List < Long > getContactIds() {
+        public java.util.List<Long> getContactIds() {
             return this.contactIds;
         }
 
         /**
          * @return restrictions
          */
-        public java.util.List < Restrictions> getRestrictions() {
+        public java.util.List<Restrictions> getRestrictions() {
             return this.restrictions;
         }
 
@@ -746,8 +751,8 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > contactIds; 
-            private java.util.List < Restrictions> restrictions; 
+            private java.util.List<Long> contactIds; 
+            private java.util.List<Restrictions> restrictions; 
             private String rotationType; 
             private Long shiftLength; 
             private String startTime; 
@@ -755,7 +760,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             /**
              * <p>The ID list of users on duty.</p>
              */
-            public Builder contactIds(java.util.List < Long > contactIds) {
+            public Builder contactIds(java.util.List<Long> contactIds) {
                 this.contactIds = contactIds;
                 return this;
             }
@@ -763,7 +768,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             /**
              * <p>The limit on the time of the shift.</p>
              */
-            public Builder restrictions(java.util.List < Restrictions> restrictions) {
+            public Builder restrictions(java.util.List<Restrictions> restrictions) {
                 this.restrictions = restrictions;
                 return this;
             }
@@ -833,16 +838,16 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("RenderedFinnalEntries")
-        private java.util.List < RenderedFinnalEntries> renderedFinnalEntries;
+        private java.util.List<RenderedFinnalEntries> renderedFinnalEntries;
 
         @com.aliyun.core.annotation.NameInMap("RenderedLayerEntries")
-        private java.util.List < java.util.List < RenderedLayerEntries> > renderedLayerEntries;
+        private java.util.List<java.util.List<RenderedLayerEntries>> renderedLayerEntries;
 
         @com.aliyun.core.annotation.NameInMap("RenderedSubstitudeEntries")
-        private java.util.List < RenderedSubstitudeEntries> renderedSubstitudeEntries;
+        private java.util.List<RenderedSubstitudeEntries> renderedSubstitudeEntries;
 
         @com.aliyun.core.annotation.NameInMap("ScheduleLayers")
-        private java.util.List < ScheduleLayers> scheduleLayers;
+        private java.util.List<ScheduleLayers> scheduleLayers;
 
         private Data(Builder builder) {
             this.alertRobotId = builder.alertRobotId;
@@ -894,28 +899,28 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         /**
          * @return renderedFinnalEntries
          */
-        public java.util.List < RenderedFinnalEntries> getRenderedFinnalEntries() {
+        public java.util.List<RenderedFinnalEntries> getRenderedFinnalEntries() {
             return this.renderedFinnalEntries;
         }
 
         /**
          * @return renderedLayerEntries
          */
-        public java.util.List < java.util.List < RenderedLayerEntries> > getRenderedLayerEntries() {
+        public java.util.List<java.util.List<RenderedLayerEntries>> getRenderedLayerEntries() {
             return this.renderedLayerEntries;
         }
 
         /**
          * @return renderedSubstitudeEntries
          */
-        public java.util.List < RenderedSubstitudeEntries> getRenderedSubstitudeEntries() {
+        public java.util.List<RenderedSubstitudeEntries> getRenderedSubstitudeEntries() {
             return this.renderedSubstitudeEntries;
         }
 
         /**
          * @return scheduleLayers
          */
-        public java.util.List < ScheduleLayers> getScheduleLayers() {
+        public java.util.List<ScheduleLayers> getScheduleLayers() {
             return this.scheduleLayers;
         }
 
@@ -924,10 +929,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String description; 
             private Long id; 
             private String name; 
-            private java.util.List < RenderedFinnalEntries> renderedFinnalEntries; 
-            private java.util.List < java.util.List < RenderedLayerEntries> > renderedLayerEntries; 
-            private java.util.List < RenderedSubstitudeEntries> renderedSubstitudeEntries; 
-            private java.util.List < ScheduleLayers> scheduleLayers; 
+            private java.util.List<RenderedFinnalEntries> renderedFinnalEntries; 
+            private java.util.List<java.util.List<RenderedLayerEntries>> renderedLayerEntries; 
+            private java.util.List<RenderedSubstitudeEntries> renderedSubstitudeEntries; 
+            private java.util.List<ScheduleLayers> scheduleLayers; 
 
             /**
              * <p>The URL of the DingTalk chatbot, which is used to receive notifications about shift changes.</p>
@@ -976,7 +981,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             /**
              * <p>The information about the final user on duty.</p>
              */
-            public Builder renderedFinnalEntries(java.util.List < RenderedFinnalEntries> renderedFinnalEntries) {
+            public Builder renderedFinnalEntries(java.util.List<RenderedFinnalEntries> renderedFinnalEntries) {
                 this.renderedFinnalEntries = renderedFinnalEntries;
                 return this;
             }
@@ -984,7 +989,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             /**
              * <p>The scheduled users on duty within a time range.</p>
              */
-            public Builder renderedLayerEntries(java.util.List < java.util.List < RenderedLayerEntries> > renderedLayerEntries) {
+            public Builder renderedLayerEntries(java.util.List<java.util.List<RenderedLayerEntries>> renderedLayerEntries) {
                 this.renderedLayerEntries = renderedLayerEntries;
                 return this;
             }
@@ -992,7 +997,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             /**
              * <p>The information about the substitutes within a time range.</p>
              */
-            public Builder renderedSubstitudeEntries(java.util.List < RenderedSubstitudeEntries> renderedSubstitudeEntries) {
+            public Builder renderedSubstitudeEntries(java.util.List<RenderedSubstitudeEntries> renderedSubstitudeEntries) {
                 this.renderedSubstitudeEntries = renderedSubstitudeEntries;
                 return this;
             }
@@ -1000,7 +1005,7 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             /**
              * <p>The information about the shift.</p>
              */
-            public Builder scheduleLayers(java.util.List < ScheduleLayers> scheduleLayers) {
+            public Builder scheduleLayers(java.util.List<ScheduleLayers> scheduleLayers) {
                 this.scheduleLayers = scheduleLayers;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class GrafanaWorkspaceIntegrationDataSource extends TeaModel {
     private String exploreUrl;
 
     @com.aliyun.core.annotation.NameInMap("extra")
-    private java.util.Map < String, String > extra;
+    private java.util.Map<String, String> extra;
 
     @com.aliyun.core.annotation.NameInMap("folderUrl")
     private String folderUrl;
@@ -112,7 +117,7 @@ public class GrafanaWorkspaceIntegrationDataSource extends TeaModel {
     /**
      * @return extra
      */
-    public java.util.Map < String, String > getExtra() {
+    public java.util.Map<String, String> getExtra() {
         return this.extra;
     }
 
@@ -151,7 +156,7 @@ public class GrafanaWorkspaceIntegrationDataSource extends TeaModel {
         private String datasourceUrl; 
         private String description; 
         private String exploreUrl; 
-        private java.util.Map < String, String > extra; 
+        private java.util.Map<String, String> extra; 
         private String folderUrl; 
         private String regionId; 
         private String status; 
@@ -208,7 +213,7 @@ public class GrafanaWorkspaceIntegrationDataSource extends TeaModel {
         /**
          * extra.
          */
-        public Builder extra(java.util.Map < String, String > extra) {
+        public Builder extra(java.util.Map<String, String> extra) {
             this.extra = extra;
             return this;
         }

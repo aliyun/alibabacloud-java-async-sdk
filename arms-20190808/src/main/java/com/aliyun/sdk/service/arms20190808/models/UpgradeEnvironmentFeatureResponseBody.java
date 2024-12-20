@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class UpgradeEnvironmentFeatureResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.Map < String, String > data;
+    private java.util.Map<String, String> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -53,7 +58,7 @@ public class UpgradeEnvironmentFeatureResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.Map < String, String > getData() {
+    public java.util.Map<String, String> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class UpgradeEnvironmentFeatureResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.Map < String, String > data; 
+        private java.util.Map<String, String> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -99,7 +104,7 @@ public class UpgradeEnvironmentFeatureResponseBody extends TeaModel {
         /**
          * <p>The status of the job.</p>
          */
-        public Builder data(java.util.Map < String, String > data) {
+        public Builder data(java.util.Map<String, String> data) {
             this.data = data;
             return this;
         }

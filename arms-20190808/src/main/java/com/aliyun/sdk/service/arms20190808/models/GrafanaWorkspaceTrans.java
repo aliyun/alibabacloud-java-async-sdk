@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class GrafanaWorkspaceTrans extends TeaModel {
     private String processStatus;
 
     @com.aliyun.core.annotation.NameInMap("transDetails")
-    private java.util.List < GrafanaWorkspaceTransDetail > transDetails;
+    private java.util.List<GrafanaWorkspaceTransDetail> transDetails;
 
     @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
@@ -122,7 +127,7 @@ public class GrafanaWorkspaceTrans extends TeaModel {
     /**
      * @return transDetails
      */
-    public java.util.List < GrafanaWorkspaceTransDetail > getTransDetails() {
+    public java.util.List<GrafanaWorkspaceTransDetail> getTransDetails() {
         return this.transDetails;
     }
 
@@ -142,7 +147,7 @@ public class GrafanaWorkspaceTrans extends TeaModel {
         private Long id; 
         private String msg; 
         private String processStatus; 
-        private java.util.List < GrafanaWorkspaceTransDetail > transDetails; 
+        private java.util.List<GrafanaWorkspaceTransDetail> transDetails; 
         private String userId; 
 
         /**
@@ -212,7 +217,7 @@ public class GrafanaWorkspaceTrans extends TeaModel {
         /**
          * transDetails.
          */
-        public Builder transDetails(java.util.List < GrafanaWorkspaceTransDetail > transDetails) {
+        public Builder transDetails(java.util.List<GrafanaWorkspaceTransDetail> transDetails) {
             this.transDetails = transDetails;
             return this;
         }

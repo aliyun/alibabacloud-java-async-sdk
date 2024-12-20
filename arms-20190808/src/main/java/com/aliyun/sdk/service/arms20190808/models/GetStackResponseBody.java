@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetStackResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StackInfo")
-    private java.util.List < StackInfo> stackInfo;
+    private java.util.List<StackInfo> stackInfo;
 
     private GetStackResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class GetStackResponseBody extends TeaModel {
     /**
      * @return stackInfo
      */
-    public java.util.List < StackInfo> getStackInfo() {
+    public java.util.List<StackInfo> getStackInfo() {
         return this.stackInfo;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < StackInfo> stackInfo; 
+        private java.util.List<StackInfo> stackInfo; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * <p>The information of the method stack.</p>
          */
-        public Builder stackInfo(java.util.List < StackInfo> stackInfo) {
+        public Builder stackInfo(java.util.List<StackInfo> stackInfo) {
             this.stackInfo = stackInfo;
             return this;
         }

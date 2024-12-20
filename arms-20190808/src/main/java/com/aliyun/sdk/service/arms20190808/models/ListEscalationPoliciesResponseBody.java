@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
      */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EscalationPolicies")
-        private java.util.List < EscalationPolicies> escalationPolicies;
+        private java.util.List<EscalationPolicies> escalationPolicies;
 
         @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
@@ -184,7 +189,7 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
         /**
          * @return escalationPolicies
          */
-        public java.util.List < EscalationPolicies> getEscalationPolicies() {
+        public java.util.List<EscalationPolicies> getEscalationPolicies() {
             return this.escalationPolicies;
         }
 
@@ -210,7 +215,7 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EscalationPolicies> escalationPolicies; 
+            private java.util.List<EscalationPolicies> escalationPolicies; 
             private Long page; 
             private Long size; 
             private Long total; 
@@ -218,7 +223,7 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
             /**
              * <p>The list of escalation policies.</p>
              */
-            public Builder escalationPolicies(java.util.List < EscalationPolicies> escalationPolicies) {
+            public Builder escalationPolicies(java.util.List<EscalationPolicies> escalationPolicies) {
                 this.escalationPolicies = escalationPolicies;
                 return this;
             }

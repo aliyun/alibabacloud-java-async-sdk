@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -462,7 +467,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
      */
     public static class Environments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addons")
-        private java.util.List < Addons> addons;
+        private java.util.List<Addons> addons;
 
         @com.aliyun.core.annotation.NameInMap("BindResourceId")
         private String bindResourceId;
@@ -492,7 +497,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         private String environmentType;
 
         @com.aliyun.core.annotation.NameInMap("Features")
-        private java.util.List < Features> features;
+        private java.util.List<Features> features;
 
         @com.aliyun.core.annotation.NameInMap("FeePackage")
         private String feePackage;
@@ -528,7 +533,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -571,7 +576,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         /**
          * @return addons
          */
-        public java.util.List < Addons> getAddons() {
+        public java.util.List<Addons> getAddons() {
             return this.addons;
         }
 
@@ -641,7 +646,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         /**
          * @return features
          */
-        public java.util.List < Features> getFeatures() {
+        public java.util.List<Features> getFeatures() {
             return this.features;
         }
 
@@ -725,7 +730,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -737,7 +742,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Addons> addons; 
+            private java.util.List<Addons> addons; 
             private String bindResourceId; 
             private String bindResourceProfile; 
             private String bindResourceType; 
@@ -747,7 +752,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String environmentId; 
             private String environmentName; 
             private String environmentType; 
-            private java.util.List < Features> features; 
+            private java.util.List<Features> features; 
             private String feePackage; 
             private String grafanaDatasourceUid; 
             private String grafanaFolderTitle; 
@@ -759,13 +764,13 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String regionId; 
             private Integer releaseCount; 
             private String resourceGroupId; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String userId; 
 
             /**
              * <p>The add-ons.</p>
              */
-            public Builder addons(java.util.List < Addons> addons) {
+            public Builder addons(java.util.List<Addons> addons) {
                 this.addons = addons;
                 return this;
             }
@@ -877,7 +882,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             /**
              * <p>The parameters of the feature.</p>
              */
-            public Builder features(java.util.List < Features> features) {
+            public Builder features(java.util.List<Features> features) {
                 this.features = features;
                 return this;
             }
@@ -1015,7 +1020,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             /**
              * <p>The tags of the environment resource.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -1046,7 +1051,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Environments")
-        private java.util.List < Environments> environments;
+        private java.util.List<Environments> environments;
 
         @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
@@ -1067,7 +1072,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         /**
          * @return environments
          */
-        public java.util.List < Environments> getEnvironments() {
+        public java.util.List<Environments> getEnvironments() {
             return this.environments;
         }
 
@@ -1079,13 +1084,13 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Environments> environments; 
+            private java.util.List<Environments> environments; 
             private Long total; 
 
             /**
              * <p>The queried environments.</p>
              */
-            public Builder environments(java.util.List < Environments> environments) {
+            public Builder environments(java.util.List<Environments> environments) {
                 this.environments = environments;
                 return this;
             }

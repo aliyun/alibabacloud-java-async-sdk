@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -337,7 +342,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         private Boolean isLastPage;
 
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("NavigateFirstPage")
         private String navigateFirstPage;
@@ -418,7 +423,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -483,7 +488,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             private Boolean hasPreviousPage; 
             private Boolean isFirstPage; 
             private Boolean isLastPage; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private String navigateFirstPage; 
             private String navigateLastPage; 
             private String navigatePageNums; 
@@ -540,7 +545,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             /**
              * <p>The task information.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

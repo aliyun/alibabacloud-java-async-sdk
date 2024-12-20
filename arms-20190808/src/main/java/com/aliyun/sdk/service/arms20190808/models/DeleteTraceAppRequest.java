@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -267,7 +272,7 @@ public class DeleteTraceAppRequest extends Request {
      */
     public static class DeleteReason extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReasonIds")
-        private java.util.List < ReasonIds> reasonIds;
+        private java.util.List<ReasonIds> reasonIds;
 
         @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
@@ -288,7 +293,7 @@ public class DeleteTraceAppRequest extends Request {
         /**
          * @return reasonIds
          */
-        public java.util.List < ReasonIds> getReasonIds() {
+        public java.util.List<ReasonIds> getReasonIds() {
             return this.reasonIds;
         }
 
@@ -300,13 +305,13 @@ public class DeleteTraceAppRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < ReasonIds> reasonIds; 
+            private java.util.List<ReasonIds> reasonIds; 
             private String remark; 
 
             /**
              * <p>Reasons Ids.</p>
              */
-            public Builder reasonIds(java.util.List < ReasonIds> reasonIds) {
+            public Builder reasonIds(java.util.List<ReasonIds> reasonIds) {
                 this.reasonIds = reasonIds;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,13 +27,13 @@ public class GrafanaWorkspaceIntegration extends TeaModel {
     private String integrationName;
 
     @com.aliyun.core.annotation.NameInMap("previews")
-    private java.util.List < GrafanaWorkspaceIntegrationPreview > previews;
+    private java.util.List<GrafanaWorkspaceIntegrationPreview> previews;
 
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("supportRegions")
-    private java.util.List < String > supportRegions;
+    private java.util.List<String> supportRegions;
 
     private GrafanaWorkspaceIntegration(Builder builder) {
         this.datasourceAmount = builder.datasourceAmount;
@@ -71,7 +76,7 @@ public class GrafanaWorkspaceIntegration extends TeaModel {
     /**
      * @return previews
      */
-    public java.util.List < GrafanaWorkspaceIntegrationPreview > getPreviews() {
+    public java.util.List<GrafanaWorkspaceIntegrationPreview> getPreviews() {
         return this.previews;
     }
 
@@ -85,7 +90,7 @@ public class GrafanaWorkspaceIntegration extends TeaModel {
     /**
      * @return supportRegions
      */
-    public java.util.List < String > getSupportRegions() {
+    public java.util.List<String> getSupportRegions() {
         return this.supportRegions;
     }
 
@@ -93,9 +98,9 @@ public class GrafanaWorkspaceIntegration extends TeaModel {
         private Long datasourceAmount; 
         private String integrationId; 
         private String integrationName; 
-        private java.util.List < GrafanaWorkspaceIntegrationPreview > previews; 
+        private java.util.List<GrafanaWorkspaceIntegrationPreview> previews; 
         private String status; 
-        private java.util.List < String > supportRegions; 
+        private java.util.List<String> supportRegions; 
 
         /**
          * datasourceAmount.
@@ -124,7 +129,7 @@ public class GrafanaWorkspaceIntegration extends TeaModel {
         /**
          * previews.
          */
-        public Builder previews(java.util.List < GrafanaWorkspaceIntegrationPreview > previews) {
+        public Builder previews(java.util.List<GrafanaWorkspaceIntegrationPreview> previews) {
             this.previews = previews;
             return this;
         }
@@ -140,7 +145,7 @@ public class GrafanaWorkspaceIntegration extends TeaModel {
         /**
          * supportRegions.
          */
-        public Builder supportRegions(java.util.List < String > supportRegions) {
+        public Builder supportRegions(java.util.List<String> supportRegions) {
             this.supportRegions = supportRegions;
             return this;
         }

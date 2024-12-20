@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -167,7 +172,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         private String dingSignKey;
 
         @com.aliyun.core.annotation.NameInMap("DispatchRules")
-        private java.util.List < DispatchRules> dispatchRules;
+        private java.util.List<DispatchRules> dispatchRules;
 
         @com.aliyun.core.annotation.NameInMap("RobotAddr")
         private String robotAddr;
@@ -232,7 +237,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         /**
          * @return dispatchRules
          */
-        public java.util.List < DispatchRules> getDispatchRules() {
+        public java.util.List<DispatchRules> getDispatchRules() {
             return this.dispatchRules;
         }
 
@@ -269,7 +274,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             private Boolean dailyNoc; 
             private String dailyNocTime; 
             private String dingSignKey; 
-            private java.util.List < DispatchRules> dispatchRules; 
+            private java.util.List<DispatchRules> dispatchRules; 
             private String robotAddr; 
             private Float robotId; 
             private String robotName; 
@@ -326,7 +331,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             /**
              * <p>The notification policies.</p>
              */
-            public Builder dispatchRules(java.util.List < DispatchRules> dispatchRules) {
+            public Builder dispatchRules(java.util.List<DispatchRules> dispatchRules) {
                 this.dispatchRules = dispatchRules;
                 return this;
             }
@@ -394,7 +399,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
      */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertIMRobots")
-        private java.util.List < AlertIMRobots> alertIMRobots;
+        private java.util.List<AlertIMRobots> alertIMRobots;
 
         @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
@@ -423,7 +428,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         /**
          * @return alertIMRobots
          */
-        public java.util.List < AlertIMRobots> getAlertIMRobots() {
+        public java.util.List<AlertIMRobots> getAlertIMRobots() {
             return this.alertIMRobots;
         }
 
@@ -449,7 +454,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AlertIMRobots> alertIMRobots; 
+            private java.util.List<AlertIMRobots> alertIMRobots; 
             private Long page; 
             private Long size; 
             private Long total; 
@@ -457,7 +462,7 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             /**
              * <p>The queried IM chatbots.</p>
              */
-            public Builder alertIMRobots(java.util.List < AlertIMRobots> alertIMRobots) {
+            public Builder alertIMRobots(java.util.List<AlertIMRobots> alertIMRobots) {
                 this.alertIMRobots = alertIMRobots;
                 return this;
             }

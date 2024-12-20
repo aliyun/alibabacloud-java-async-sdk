@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -258,7 +263,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         private String subClustersJson;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -439,7 +444,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -484,7 +489,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             private String resourceType; 
             private String securityGroupId; 
             private String subClustersJson; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String userId; 
             private String vSwitchId; 
             private String vpcId; 
@@ -713,7 +718,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             /**
              * <p>The list of tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -766,7 +771,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrometheusInstances")
-        private java.util.List < PrometheusInstances> prometheusInstances;
+        private java.util.List<PrometheusInstances> prometheusInstances;
 
         private Data(Builder builder) {
             this.prometheusInstances = builder.prometheusInstances;
@@ -783,17 +788,17 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         /**
          * @return prometheusInstances
          */
-        public java.util.List < PrometheusInstances> getPrometheusInstances() {
+        public java.util.List<PrometheusInstances> getPrometheusInstances() {
             return this.prometheusInstances;
         }
 
         public static final class Builder {
-            private java.util.List < PrometheusInstances> prometheusInstances; 
+            private java.util.List<PrometheusInstances> prometheusInstances; 
 
             /**
              * <p>The queried Prometheus instances.</p>
              */
-            public Builder prometheusInstances(java.util.List < PrometheusInstances> prometheusInstances) {
+            public Builder prometheusInstances(java.util.List<PrometheusInstances> prometheusInstances) {
                 this.prometheusInstances = prometheusInstances;
                 return this;
             }

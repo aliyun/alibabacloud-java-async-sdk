@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class SwitchSyntheticTaskStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskIds")
-    private java.util.List < Long > taskIds;
+    private java.util.List<Long> taskIds;
 
     private SwitchSyntheticTaskStatusRequest(Builder builder) {
         super(builder);
@@ -49,13 +54,13 @@ public class SwitchSyntheticTaskStatusRequest extends Request {
     /**
      * @return taskIds
      */
-    public java.util.List < Long > getTaskIds() {
+    public java.util.List<Long> getTaskIds() {
         return this.taskIds;
     }
 
     public static final class Builder extends Request.Builder<SwitchSyntheticTaskStatusRequest, Builder> {
         private Long switchStatus; 
-        private java.util.List < Long > taskIds; 
+        private java.util.List<Long> taskIds; 
 
         private Builder() {
             super();
@@ -86,7 +91,7 @@ public class SwitchSyntheticTaskStatusRequest extends Request {
         /**
          * <p>The task IDs. You can specify up to 30 task IDs at a time.</p>
          */
-        public Builder taskIds(java.util.List < Long > taskIds) {
+        public Builder taskIds(java.util.List<Long> taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
             this.taskIds = taskIds;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,13 +27,13 @@ public class CallChainInfo extends TeaModel {
     private String appType;
 
     @com.aliyun.core.annotation.NameInMap("Children")
-    private java.util.List < CallChainInfo > children;
+    private java.util.List<CallChainInfo> children;
 
     @com.aliyun.core.annotation.NameInMap("HaveSpan")
     private Boolean haveSpan;
 
     @com.aliyun.core.annotation.NameInMap("LogMap")
-    private java.util.Map < String, java.util.Map<String, ?>> logMap;
+    private java.util.Map<String, java.util.Map<String, ?>> logMap;
 
     @com.aliyun.core.annotation.NameInMap("LogTime")
     private Long logTime;
@@ -64,7 +69,7 @@ public class CallChainInfo extends TeaModel {
     private String spanId;
 
     @com.aliyun.core.annotation.NameInMap("TagMap")
-    private java.util.Map < String, String > tagMap;
+    private java.util.Map<String, String> tagMap;
 
     @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
@@ -123,7 +128,7 @@ public class CallChainInfo extends TeaModel {
     /**
      * @return children
      */
-    public java.util.List < CallChainInfo > getChildren() {
+    public java.util.List<CallChainInfo> getChildren() {
         return this.children;
     }
 
@@ -137,7 +142,7 @@ public class CallChainInfo extends TeaModel {
     /**
      * @return logMap
      */
-    public java.util.Map < String, java.util.Map<String, ?>> getLogMap() {
+    public java.util.Map<String, java.util.Map<String, ?>> getLogMap() {
         return this.logMap;
     }
 
@@ -221,7 +226,7 @@ public class CallChainInfo extends TeaModel {
     /**
      * @return tagMap
      */
-    public java.util.Map < String, String > getTagMap() {
+    public java.util.Map<String, String> getTagMap() {
         return this.tagMap;
     }
 
@@ -236,9 +241,9 @@ public class CallChainInfo extends TeaModel {
         private String additionalInfo; 
         private String appName; 
         private String appType; 
-        private java.util.List < CallChainInfo > children; 
+        private java.util.List<CallChainInfo> children; 
         private Boolean haveSpan; 
-        private java.util.Map < String, java.util.Map<String, ?>> logMap; 
+        private java.util.Map<String, java.util.Map<String, ?>> logMap; 
         private Long logTime; 
         private String parentSpanId; 
         private String pid; 
@@ -250,7 +255,7 @@ public class CallChainInfo extends TeaModel {
         private String serverIp; 
         private Long span; 
         private String spanId; 
-        private java.util.Map < String, String > tagMap; 
+        private java.util.Map<String, String> tagMap; 
         private String traceId; 
 
         /**
@@ -280,7 +285,7 @@ public class CallChainInfo extends TeaModel {
         /**
          * Children.
          */
-        public Builder children(java.util.List < CallChainInfo > children) {
+        public Builder children(java.util.List<CallChainInfo> children) {
             this.children = children;
             return this;
         }
@@ -296,7 +301,7 @@ public class CallChainInfo extends TeaModel {
         /**
          * LogMap.
          */
-        public Builder logMap(java.util.Map < String, java.util.Map<String, ?>> logMap) {
+        public Builder logMap(java.util.Map<String, java.util.Map<String, ?>> logMap) {
             this.logMap = logMap;
             return this;
         }
@@ -392,7 +397,7 @@ public class CallChainInfo extends TeaModel {
         /**
          * TagMap.
          */
-        public Builder tagMap(java.util.Map < String, String > tagMap) {
+        public Builder tagMap(java.util.Map<String, String> tagMap) {
             this.tagMap = tagMap;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -279,7 +284,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
      */
     public static class Events extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alarms")
-        private java.util.List < Alarms> alarms;
+        private java.util.List<Alarms> alarms;
 
         @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
@@ -309,7 +314,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         private String labels;
 
         @com.aliyun.core.annotation.NameInMap("NotificationPolicies")
-        private java.util.List < NotificationPolicies> notificationPolicies;
+        private java.util.List<NotificationPolicies> notificationPolicies;
 
         @com.aliyun.core.annotation.NameInMap("ReceiveTime")
         private String receiveTime;
@@ -356,7 +361,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         /**
          * @return alarms
          */
-        public java.util.List < Alarms> getAlarms() {
+        public java.util.List<Alarms> getAlarms() {
             return this.alarms;
         }
 
@@ -426,7 +431,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         /**
          * @return notificationPolicies
          */
-        public java.util.List < NotificationPolicies> getNotificationPolicies() {
+        public java.util.List<NotificationPolicies> getNotificationPolicies() {
             return this.notificationPolicies;
         }
 
@@ -466,7 +471,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Alarms> alarms; 
+            private java.util.List<Alarms> alarms; 
             private String alertName; 
             private String annotations; 
             private String description; 
@@ -476,7 +481,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private String integrationName; 
             private String integrationType; 
             private String labels; 
-            private java.util.List < NotificationPolicies> notificationPolicies; 
+            private java.util.List<NotificationPolicies> notificationPolicies; 
             private String receiveTime; 
             private String severity; 
             private String startTime; 
@@ -486,7 +491,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             /**
              * <p>The associated alerts.</p>
              */
-            public Builder alarms(java.util.List < Alarms> alarms) {
+            public Builder alarms(java.util.List<Alarms> alarms) {
                 this.alarms = alarms;
                 return this;
             }
@@ -593,7 +598,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             /**
              * <p>The associated notification policies.</p>
              */
-            public Builder notificationPolicies(java.util.List < NotificationPolicies> notificationPolicies) {
+            public Builder notificationPolicies(java.util.List<NotificationPolicies> notificationPolicies) {
                 this.notificationPolicies = notificationPolicies;
                 return this;
             }
@@ -680,7 +685,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
      */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Events")
-        private java.util.List < Events> events;
+        private java.util.List<Events> events;
 
         @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
@@ -709,7 +714,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         /**
          * @return events
          */
-        public java.util.List < Events> getEvents() {
+        public java.util.List<Events> getEvents() {
             return this.events;
         }
 
@@ -735,7 +740,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Events> events; 
+            private java.util.List<Events> events; 
             private Long page; 
             private Long size; 
             private Long total; 
@@ -743,7 +748,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             /**
              * <p>The queried historical alert events.</p>
              */
-            public Builder events(java.util.List < Events> events) {
+            public Builder events(java.util.List<Events> events) {
                 this.events = events;
                 return this;
             }

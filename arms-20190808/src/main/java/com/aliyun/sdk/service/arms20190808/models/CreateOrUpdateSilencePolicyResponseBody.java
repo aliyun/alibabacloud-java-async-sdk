@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -186,7 +191,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
      */
     public static class MatchingRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MatchingConditions")
-        private java.util.List < MatchingConditions> matchingConditions;
+        private java.util.List<MatchingConditions> matchingConditions;
 
         private MatchingRules(Builder builder) {
             this.matchingConditions = builder.matchingConditions;
@@ -203,17 +208,17 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         /**
          * @return matchingConditions
          */
-        public java.util.List < MatchingConditions> getMatchingConditions() {
+        public java.util.List<MatchingConditions> getMatchingConditions() {
             return this.matchingConditions;
         }
 
         public static final class Builder {
-            private java.util.List < MatchingConditions> matchingConditions; 
+            private java.util.List<MatchingConditions> matchingConditions; 
 
             /**
              * <p>A list of matching conditions.</p>
              */
-            public Builder matchingConditions(java.util.List < MatchingConditions> matchingConditions) {
+            public Builder matchingConditions(java.util.List<MatchingConditions> matchingConditions) {
                 this.matchingConditions = matchingConditions;
                 return this;
             }
@@ -239,7 +244,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         private Long id;
 
         @com.aliyun.core.annotation.NameInMap("MatchingRules")
-        private java.util.List < MatchingRules> matchingRules;
+        private java.util.List<MatchingRules> matchingRules;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -288,7 +293,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         /**
          * @return matchingRules
          */
-        public java.util.List < MatchingRules> getMatchingRules() {
+        public java.util.List<MatchingRules> getMatchingRules() {
             return this.matchingRules;
         }
 
@@ -323,7 +328,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String effectiveTimeType; 
             private Long id; 
-            private java.util.List < MatchingRules> matchingRules; 
+            private java.util.List<MatchingRules> matchingRules; 
             private String name; 
             private String state; 
             private String timePeriod; 
@@ -351,7 +356,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             /**
              * <p>A list of matching rules.</p>
              */
-            public Builder matchingRules(java.util.List < MatchingRules> matchingRules) {
+            public Builder matchingRules(java.util.List<MatchingRules> matchingRules) {
                 this.matchingRules = matchingRules;
                 return this;
             }

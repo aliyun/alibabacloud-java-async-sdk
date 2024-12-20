@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -154,7 +159,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         private String alias;
 
         @com.aliyun.core.annotation.NameInMap("Config")
-        private java.util.Map < String, String > config;
+        private java.util.Map<String, String> config;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -215,7 +220,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         /**
          * @return config
          */
-        public java.util.Map < String, String > getConfig() {
+        public java.util.Map<String, String> getConfig() {
             return this.config;
         }
 
@@ -284,7 +289,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alias; 
-            private java.util.Map < String, String > config; 
+            private java.util.Map<String, String> config; 
             private String description; 
             private String environmentId; 
             private String icon; 
@@ -309,7 +314,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             /**
              * <p>The configuration of the feature.</p>
              */
-            public Builder config(java.util.Map < String, String > config) {
+            public Builder config(java.util.Map<String, String> config) {
                 this.config = config;
                 return this;
             }
@@ -433,7 +438,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
      */
     public static class FeatureContainers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Args")
-        private java.util.List < String > args;
+        private java.util.List<String> args;
 
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
@@ -458,7 +463,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         /**
          * @return args
          */
-        public java.util.List < String > getArgs() {
+        public java.util.List<String> getArgs() {
             return this.args;
         }
 
@@ -477,14 +482,14 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > args; 
+            private java.util.List<String> args; 
             private String image; 
             private String name; 
 
             /**
              * <p>The container parameters.</p>
              */
-            public Builder args(java.util.List < String > args) {
+            public Builder args(java.util.List<String> args) {
                 this.args = args;
                 return this;
             }
@@ -529,10 +534,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         private String bindResourceId;
 
         @com.aliyun.core.annotation.NameInMap("FeatureContainers")
-        private java.util.List < FeatureContainers> featureContainers;
+        private java.util.List<FeatureContainers> featureContainers;
 
         @com.aliyun.core.annotation.NameInMap("Ips")
-        private java.util.List < String > ips;
+        private java.util.List<String> ips;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -578,14 +583,14 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         /**
          * @return featureContainers
          */
-        public java.util.List < FeatureContainers> getFeatureContainers() {
+        public java.util.List<FeatureContainers> getFeatureContainers() {
             return this.featureContainers;
         }
 
         /**
          * @return ips
          */
-        public java.util.List < String > getIps() {
+        public java.util.List<String> getIps() {
             return this.ips;
         }
 
@@ -626,8 +631,8 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bindResourceId; 
-            private java.util.List < FeatureContainers> featureContainers; 
-            private java.util.List < String > ips; 
+            private java.util.List<FeatureContainers> featureContainers; 
+            private java.util.List<String> ips; 
             private String name; 
             private String namespace; 
             private String securityGroupId; 
@@ -648,7 +653,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             /**
              * <p>The containers of the feature.</p>
              */
-            public Builder featureContainers(java.util.List < FeatureContainers> featureContainers) {
+            public Builder featureContainers(java.util.List<FeatureContainers> featureContainers) {
                 this.featureContainers = featureContainers;
                 return this;
             }
@@ -656,7 +661,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             /**
              * <p>The IP address of the pod.</p>
              */
-            public Builder ips(java.util.List < String > ips) {
+            public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
                 return this;
             }

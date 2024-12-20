@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -237,7 +242,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         private String enableAuthToken;
 
         @com.aliyun.core.annotation.NameInMap("ExtraInfo")
-        private java.util.Map < String, String > extraInfo;
+        private java.util.Map<String, String> extraInfo;
 
         @com.aliyun.core.annotation.NameInMap("GrafanaInstanceId")
         private String grafanaInstanceId;
@@ -294,10 +299,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         private String subClustersJson;
 
         @com.aliyun.core.annotation.NameInMap("SupportAuthTypes")
-        private java.util.List < String > supportAuthTypes;
+        private java.util.List<String> supportAuthTypes;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -446,7 +451,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         /**
          * @return extraInfo
          */
-        public java.util.Map < String, String > getExtraInfo() {
+        public java.util.Map<String, String> getExtraInfo() {
             return this.extraInfo;
         }
 
@@ -579,14 +584,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         /**
          * @return supportAuthTypes
          */
-        public java.util.List < String > getSupportAuthTypes() {
+        public java.util.List<String> getSupportAuthTypes() {
             return this.supportAuthTypes;
         }
 
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -631,7 +636,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private Boolean enableAuthFreeRead; 
             private Boolean enableAuthFreeWrite; 
             private String enableAuthToken; 
-            private java.util.Map < String, String > extraInfo; 
+            private java.util.Map<String, String> extraInfo; 
             private String grafanaInstanceId; 
             private String httpApiInterUrl; 
             private String httpApiIntraUrl; 
@@ -650,8 +655,8 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String securityGroupId; 
             private Integer storageDuration; 
             private String subClustersJson; 
-            private java.util.List < String > supportAuthTypes; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<String> supportAuthTypes; 
+            private java.util.List<Tags> tags; 
             private String userId; 
             private String vSwitchId; 
             private String version; 
@@ -799,7 +804,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             /**
              * <p>The extra information.</p>
              */
-            public Builder extraInfo(java.util.Map < String, String > extraInfo) {
+            public Builder extraInfo(java.util.Map<String, String> extraInfo) {
                 this.extraInfo = extraInfo;
                 return this;
             }
@@ -1006,7 +1011,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             /**
              * <p>The supported authentication types.</p>
              */
-            public Builder supportAuthTypes(java.util.List < String > supportAuthTypes) {
+            public Builder supportAuthTypes(java.util.List<String> supportAuthTypes) {
                 this.supportAuthTypes = supportAuthTypes;
                 return this;
             }
@@ -1014,7 +1019,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             /**
              * <p>The tags of the instance.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

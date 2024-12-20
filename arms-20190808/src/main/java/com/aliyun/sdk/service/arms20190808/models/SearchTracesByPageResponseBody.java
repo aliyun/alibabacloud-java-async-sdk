@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -276,7 +281,7 @@ public class SearchTracesByPageResponseBody extends TeaModel {
         private Integer total;
 
         @com.aliyun.core.annotation.NameInMap("TraceInfos")
-        private java.util.List < TraceInfos> traceInfos;
+        private java.util.List<TraceInfos> traceInfos;
 
         private PageBean(Builder builder) {
             this.pageNumber = builder.pageNumber;
@@ -317,7 +322,7 @@ public class SearchTracesByPageResponseBody extends TeaModel {
         /**
          * @return traceInfos
          */
-        public java.util.List < TraceInfos> getTraceInfos() {
+        public java.util.List<TraceInfos> getTraceInfos() {
             return this.traceInfos;
         }
 
@@ -325,7 +330,7 @@ public class SearchTracesByPageResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer total; 
-            private java.util.List < TraceInfos> traceInfos; 
+            private java.util.List<TraceInfos> traceInfos; 
 
             /**
              * <p>The page number of the returned page.</p>
@@ -363,7 +368,7 @@ public class SearchTracesByPageResponseBody extends TeaModel {
             /**
              * <p>The details of the returned traces.</p>
              */
-            public Builder traceInfos(java.util.List < TraceInfos> traceInfos) {
+            public Builder traceInfos(java.util.List<TraceInfos> traceInfos) {
                 this.traceInfos = traceInfos;
                 return this;
             }

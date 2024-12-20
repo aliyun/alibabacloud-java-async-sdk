@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class QueryAppTopologyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filters")
-    private java.util.Map < String, String > filters;
+    private java.util.Map<String, String> filters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Pid")
@@ -114,7 +119,7 @@ public class QueryAppTopologyRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.Map < String, String > getFilters() {
+    public java.util.Map<String, String> getFilters() {
         return this.filters;
     }
 
@@ -158,7 +163,7 @@ public class QueryAppTopologyRequest extends Request {
         private String db; 
         private String dbName; 
         private Long endTime; 
-        private java.util.Map < String, String > filters; 
+        private java.util.Map<String, String> filters; 
         private String pid; 
         private String regionId; 
         private String rpc; 
@@ -235,7 +240,7 @@ public class QueryAppTopologyRequest extends Request {
         /**
          * <p>The filter conditions.</p>
          */
-        public Builder filters(java.util.Map < String, String > filters) {
+        public Builder filters(java.util.Map<String, String> filters) {
             String filtersShrink = shrink(filters, "Filters", "json");
             this.putQueryParameter("Filters", filtersShrink);
             this.filters = filters;

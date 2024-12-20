@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -303,7 +308,7 @@ public class DescribeContactsResponseBody extends TeaModel {
      */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertContacts")
-        private java.util.List < AlertContacts> alertContacts;
+        private java.util.List<AlertContacts> alertContacts;
 
         @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
@@ -332,7 +337,7 @@ public class DescribeContactsResponseBody extends TeaModel {
         /**
          * @return alertContacts
          */
-        public java.util.List < AlertContacts> getAlertContacts() {
+        public java.util.List<AlertContacts> getAlertContacts() {
             return this.alertContacts;
         }
 
@@ -358,7 +363,7 @@ public class DescribeContactsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AlertContacts> alertContacts; 
+            private java.util.List<AlertContacts> alertContacts; 
             private Long page; 
             private Long size; 
             private Long total; 
@@ -366,7 +371,7 @@ public class DescribeContactsResponseBody extends TeaModel {
             /**
              * <p>The alert contacts.</p>
              */
-            public Builder alertContacts(java.util.List < AlertContacts> alertContacts) {
+            public Builder alertContacts(java.util.List<AlertContacts> alertContacts) {
                 this.alertContacts = alertContacts;
                 return this;
             }

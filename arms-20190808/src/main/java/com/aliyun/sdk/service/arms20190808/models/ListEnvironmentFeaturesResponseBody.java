@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -53,7 +58,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -99,7 +104,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         /**
          * <p>The returned struct.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -158,7 +163,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         private String alias;
 
         @com.aliyun.core.annotation.NameInMap("Config")
-        private java.util.Map < String, String > config;
+        private java.util.Map<String, String> config;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -219,7 +224,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         /**
          * @return config
          */
-        public java.util.Map < String, String > getConfig() {
+        public java.util.Map<String, String> getConfig() {
             return this.config;
         }
 
@@ -288,7 +293,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alias; 
-            private java.util.Map < String, String > config; 
+            private java.util.Map<String, String> config; 
             private String description; 
             private String environmentId; 
             private String icon; 
@@ -313,7 +318,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             /**
              * <p>The feature configuration.</p>
              */
-            public Builder config(java.util.Map < String, String > config) {
+            public Builder config(java.util.Map<String, String> config) {
                 this.config = config;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,11 +24,11 @@ public class GetRumOcuStatisticDataRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Group")
-    private java.util.List < String > group;
+    private java.util.List<String> group;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Page")
@@ -83,14 +88,14 @@ public class GetRumOcuStatisticDataRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
     /**
      * @return group
      */
-    public java.util.List < String > getGroup() {
+    public java.util.List<String> getGroup() {
         return this.group;
     }
 
@@ -131,8 +136,8 @@ public class GetRumOcuStatisticDataRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetRumOcuStatisticDataRequest, Builder> {
         private Long endTime; 
-        private java.util.List < Filter> filter; 
-        private java.util.List < String > group; 
+        private java.util.List<Filter> filter; 
+        private java.util.List<String> group; 
         private Integer page; 
         private Integer pageSize; 
         private String queryType; 
@@ -176,7 +181,7 @@ public class GetRumOcuStatisticDataRequest extends Request {
          * <li>Data type: dataType</li>
          * </ul>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             String filterShrink = shrink(filter, "Filter", "json");
             this.putQueryParameter("Filter", filterShrink);
             this.filter = filter;
@@ -193,7 +198,7 @@ public class GetRumOcuStatisticDataRequest extends Request {
          * <li>startTime: The total number of OCUs is grouped by start time.</li>
          * </ul>
          */
-        public Builder group(java.util.List < String > group) {
+        public Builder group(java.util.List<String> group) {
             String groupShrink = shrink(group, "Group", "json");
             this.putQueryParameter("Group", groupShrink);
             this.group = group;

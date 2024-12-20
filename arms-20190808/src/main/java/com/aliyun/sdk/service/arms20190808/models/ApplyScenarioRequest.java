@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class ApplyScenarioRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Config")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map < String, ? > config;
+    private java.util.Map<String, ?> config;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -98,7 +103,7 @@ public class ApplyScenarioRequest extends Request {
     /**
      * @return config
      */
-    public java.util.Map < String, ? > getConfig() {
+    public java.util.Map<String, ?> getConfig() {
         return this.config;
     }
 
@@ -167,7 +172,7 @@ public class ApplyScenarioRequest extends Request {
 
     public static final class Builder extends Request.Builder<ApplyScenarioRequest, Builder> {
         private String appId; 
-        private java.util.Map < String, ? > config; 
+        private java.util.Map<String, ?> config; 
         private String name; 
         private String regionId; 
         private String scenario; 
@@ -217,7 +222,7 @@ public class ApplyScenarioRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;rpcType&quot;:&quot;0&quot;,&quot;nameMatchType&quot;:&quot;EQUALS&quot;,&quot;service&quot;:&quot;/api/pop/test&quot;,&quot;operator&quot;:&quot;and&quot;,&quot;filterItems&quot;:[{&quot;type&quot;:&quot;HttpHeaders&quot;,&quot;key&quot;:&quot;uid&quot;,&quot;opt&quot;:&quot;==&quot;,&quot;value&quot;:&quot;123456789&quot;}],&quot;group&quot;:{&quot;type&quot;:&quot;HttpRequestParameters&quot;,&quot;key&quot;:&quot;name&quot;}}</p>
          */
-        public Builder config(java.util.Map < String, ? > config) {
+        public Builder config(java.util.Map<String, ?> config) {
             String configShrink = shrink(config, "Config", "json");
             this.putQueryParameter("Config", configShrink);
             this.config = config;

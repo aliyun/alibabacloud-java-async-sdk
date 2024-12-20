@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetMultipleTraceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MultiCallChainInfos")
-    private java.util.List < MultiCallChainInfos> multiCallChainInfos;
+    private java.util.List<MultiCallChainInfos> multiCallChainInfos;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     /**
      * @return multiCallChainInfos
      */
-    public java.util.List < MultiCallChainInfos> getMultiCallChainInfos() {
+    public java.util.List<MultiCallChainInfos> getMultiCallChainInfos() {
         return this.multiCallChainInfos;
     }
 
@@ -46,13 +51,13 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MultiCallChainInfos> multiCallChainInfos; 
+        private java.util.List<MultiCallChainInfos> multiCallChainInfos; 
         private String requestId; 
 
         /**
          * <p>The details of traces.</p>
          */
-        public Builder multiCallChainInfos(java.util.List < MultiCallChainInfos> multiCallChainInfos) {
+        public Builder multiCallChainInfos(java.util.List<MultiCallChainInfos> multiCallChainInfos) {
             this.multiCallChainInfos = multiCallChainInfos;
             return this;
         }
@@ -155,7 +160,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
      */
     public static class LogEventList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagEntryList")
-        private java.util.List < TagEntryList> tagEntryList;
+        private java.util.List<TagEntryList> tagEntryList;
 
         @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
@@ -176,7 +181,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         /**
          * @return tagEntryList
          */
-        public java.util.List < TagEntryList> getTagEntryList() {
+        public java.util.List<TagEntryList> getTagEntryList() {
             return this.tagEntryList;
         }
 
@@ -188,13 +193,13 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < TagEntryList> tagEntryList; 
+            private java.util.List<TagEntryList> tagEntryList; 
             private Long timestamp; 
 
             /**
              * <p>The tags of the trace.</p>
              */
-            public Builder tagEntryList(java.util.List < TagEntryList> tagEntryList) {
+            public Builder tagEntryList(java.util.List<TagEntryList> tagEntryList) {
                 this.tagEntryList = tagEntryList;
                 return this;
             }
@@ -304,7 +309,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         private Boolean haveStack;
 
         @com.aliyun.core.annotation.NameInMap("LogEventList")
-        private java.util.List < LogEventList> logEventList;
+        private java.util.List<LogEventList> logEventList;
 
         @com.aliyun.core.annotation.NameInMap("OperationName")
         private String operationName;
@@ -331,7 +336,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         private String spanId;
 
         @com.aliyun.core.annotation.NameInMap("TagEntryList")
-        private java.util.List < SpansTagEntryList> tagEntryList;
+        private java.util.List<SpansTagEntryList> tagEntryList;
 
         @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
@@ -381,7 +386,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         /**
          * @return logEventList
          */
-        public java.util.List < LogEventList> getLogEventList() {
+        public java.util.List<LogEventList> getLogEventList() {
             return this.logEventList;
         }
 
@@ -444,7 +449,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         /**
          * @return tagEntryList
          */
-        public java.util.List < SpansTagEntryList> getTagEntryList() {
+        public java.util.List<SpansTagEntryList> getTagEntryList() {
             return this.tagEntryList;
         }
 
@@ -465,7 +470,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         public static final class Builder {
             private Long duration; 
             private Boolean haveStack; 
-            private java.util.List < LogEventList> logEventList; 
+            private java.util.List<LogEventList> logEventList; 
             private String operationName; 
             private String parentSpanId; 
             private String resultCode; 
@@ -474,7 +479,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             private String serviceIp; 
             private String serviceName; 
             private String spanId; 
-            private java.util.List < SpansTagEntryList> tagEntryList; 
+            private java.util.List<SpansTagEntryList> tagEntryList; 
             private Long timestamp; 
             private String traceID; 
 
@@ -507,7 +512,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             /**
              * <p>The log events in the trace.</p>
              */
-            public Builder logEventList(java.util.List < LogEventList> logEventList) {
+            public Builder logEventList(java.util.List<LogEventList> logEventList) {
                 this.logEventList = logEventList;
                 return this;
             }
@@ -627,7 +632,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             /**
              * <p>The tags of the trace.</p>
              */
-            public Builder tagEntryList(java.util.List < SpansTagEntryList> tagEntryList) {
+            public Builder tagEntryList(java.util.List<SpansTagEntryList> tagEntryList) {
                 this.tagEntryList = tagEntryList;
                 return this;
             }
@@ -669,7 +674,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
      */
     public static class MultiCallChainInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Spans")
-        private java.util.List < Spans> spans;
+        private java.util.List<Spans> spans;
 
         @com.aliyun.core.annotation.NameInMap("TraceID")
         private String traceID;
@@ -690,7 +695,7 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         /**
          * @return spans
          */
-        public java.util.List < Spans> getSpans() {
+        public java.util.List<Spans> getSpans() {
             return this.spans;
         }
 
@@ -702,13 +707,13 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Spans> spans; 
+            private java.util.List<Spans> spans; 
             private String traceID; 
 
             /**
              * <p>The details of the trace.</p>
              */
-            public Builder spans(java.util.List < Spans> spans) {
+            public Builder spans(java.util.List<Spans> spans) {
                 this.spans = spans;
                 return this;
             }

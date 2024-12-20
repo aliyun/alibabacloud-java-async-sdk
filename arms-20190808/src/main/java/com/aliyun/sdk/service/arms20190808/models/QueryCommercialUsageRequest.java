@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,11 @@ public class QueryCommercialUsageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AdvancedFilters")
-    private java.util.List < AdvancedFilters> advancedFilters;
+    private java.util.List<AdvancedFilters> advancedFilters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Dimensions")
-    private java.util.List < String > dimensions;
+    private java.util.List<String> dimensions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
@@ -36,7 +41,7 @@ public class QueryCommercialUsageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Measures")
-    private java.util.List < String > measures;
+    private java.util.List<String> measures;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Metric")
@@ -99,14 +104,14 @@ public class QueryCommercialUsageRequest extends Request {
     /**
      * @return advancedFilters
      */
-    public java.util.List < AdvancedFilters> getAdvancedFilters() {
+    public java.util.List<AdvancedFilters> getAdvancedFilters() {
         return this.advancedFilters;
     }
 
     /**
      * @return dimensions
      */
-    public java.util.List < String > getDimensions() {
+    public java.util.List<String> getDimensions() {
         return this.dimensions;
     }
 
@@ -127,7 +132,7 @@ public class QueryCommercialUsageRequest extends Request {
     /**
      * @return measures
      */
-    public java.util.List < String > getMeasures() {
+    public java.util.List<String> getMeasures() {
         return this.measures;
     }
 
@@ -168,11 +173,11 @@ public class QueryCommercialUsageRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryCommercialUsageRequest, Builder> {
         private String regionId; 
-        private java.util.List < AdvancedFilters> advancedFilters; 
-        private java.util.List < String > dimensions; 
+        private java.util.List<AdvancedFilters> advancedFilters; 
+        private java.util.List<String> dimensions; 
         private Long endTime; 
         private Integer intervalInSec; 
-        private java.util.List < String > measures; 
+        private java.util.List<String> measures; 
         private String metric; 
         private String order; 
         private String orderBy; 
@@ -210,7 +215,7 @@ public class QueryCommercialUsageRequest extends Request {
         /**
          * <p>The filter conditions.</p>
          */
-        public Builder advancedFilters(java.util.List < AdvancedFilters> advancedFilters) {
+        public Builder advancedFilters(java.util.List<AdvancedFilters> advancedFilters) {
             this.putQueryParameter("AdvancedFilters", advancedFilters);
             this.advancedFilters = advancedFilters;
             return this;
@@ -226,7 +231,7 @@ public class QueryCommercialUsageRequest extends Request {
          * <li>instanceType: instance type</li>
          * </ul>
          */
-        public Builder dimensions(java.util.List < String > dimensions) {
+        public Builder dimensions(java.util.List<String> dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
             return this;
@@ -265,7 +270,7 @@ public class QueryCommercialUsageRequest extends Request {
         /**
          * <p>The measures of the metric that you want to query.</p>
          */
-        public Builder measures(java.util.List < String > measures) {
+        public Builder measures(java.util.List<String> measures) {
             this.putQueryParameter("Measures", measures);
             this.measures = measures;
             return this;

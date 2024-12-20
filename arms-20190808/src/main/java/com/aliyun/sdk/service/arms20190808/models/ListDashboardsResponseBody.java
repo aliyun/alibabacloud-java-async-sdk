@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDashboardsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DashboardVos")
-    private java.util.List < DashboardVos> dashboardVos;
+    private java.util.List<DashboardVos> dashboardVos;
 
     @com.aliyun.core.annotation.NameInMap("EnvironmentId")
     private String environmentId;
@@ -46,7 +51,7 @@ public class ListDashboardsResponseBody extends TeaModel {
     /**
      * @return dashboardVos
      */
-    public java.util.List < DashboardVos> getDashboardVos() {
+    public java.util.List<DashboardVos> getDashboardVos() {
         return this.dashboardVos;
     }
 
@@ -79,7 +84,7 @@ public class ListDashboardsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DashboardVos> dashboardVos; 
+        private java.util.List<DashboardVos> dashboardVos; 
         private String environmentId; 
         private String grafanaServiceOpened; 
         private String prometheusServiceOpened; 
@@ -88,7 +93,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         /**
          * <p>The information about the Grafana dashboard.</p>
          */
-        public Builder dashboardVos(java.util.List < DashboardVos> dashboardVos) {
+        public Builder dashboardVos(java.util.List<DashboardVos> dashboardVos) {
             this.dashboardVos = dashboardVos;
             return this;
         }
@@ -181,7 +186,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         private Boolean needUpdate;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < String > tags;
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
@@ -302,7 +307,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
@@ -359,7 +364,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             private String language; 
             private String name; 
             private Boolean needUpdate; 
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
             private String time; 
             private String title; 
             private String type; 
@@ -502,7 +507,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             /**
              * <p>The tags of the Grafana dashboard.</p>
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -625,7 +630,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         private Boolean needUpdate;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < String > tags;
+        private java.util.List<String> tags;
 
         @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
@@ -754,7 +759,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
@@ -812,7 +817,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             private String language; 
             private String name; 
             private Boolean needUpdate; 
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
             private String time; 
             private String title; 
             private String type; 
@@ -963,7 +968,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             /**
              * <p>The tags of the Grafana dashboard.</p>
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }

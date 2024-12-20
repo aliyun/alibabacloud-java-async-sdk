@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListSyntheticDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AdvancedFilters")
-    private java.util.List < AdvancedFilters> advancedFilters;
+    private java.util.List<AdvancedFilters> advancedFilters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Category")
@@ -30,11 +35,11 @@ public class ListSyntheticDetailRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExactFilters")
-    private java.util.List < ExactFilters> exactFilters;
+    private java.util.List<ExactFilters> exactFilters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filters")
-    private java.util.Map < String, String > filters;
+    private java.util.Map<String, String> filters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Order")
@@ -97,7 +102,7 @@ public class ListSyntheticDetailRequest extends Request {
     /**
      * @return advancedFilters
      */
-    public java.util.List < AdvancedFilters> getAdvancedFilters() {
+    public java.util.List<AdvancedFilters> getAdvancedFilters() {
         return this.advancedFilters;
     }
 
@@ -125,14 +130,14 @@ public class ListSyntheticDetailRequest extends Request {
     /**
      * @return exactFilters
      */
-    public java.util.List < ExactFilters> getExactFilters() {
+    public java.util.List<ExactFilters> getExactFilters() {
         return this.exactFilters;
     }
 
     /**
      * @return filters
      */
-    public java.util.Map < String, String > getFilters() {
+    public java.util.Map<String, String> getFilters() {
         return this.filters;
     }
 
@@ -186,12 +191,12 @@ public class ListSyntheticDetailRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListSyntheticDetailRequest, Builder> {
-        private java.util.List < AdvancedFilters> advancedFilters; 
+        private java.util.List<AdvancedFilters> advancedFilters; 
         private String category; 
         private String detail; 
         private Long endTime; 
-        private java.util.List < ExactFilters> exactFilters; 
-        private java.util.Map < String, String > filters; 
+        private java.util.List<ExactFilters> exactFilters; 
+        private java.util.Map<String, String> filters; 
         private String order; 
         private String orderBy; 
         private Integer page; 
@@ -228,7 +233,7 @@ public class ListSyntheticDetailRequest extends Request {
          * <li>To query the result details of a synthetic monitoring task, set this parameter in the following format: [{&quot;Key&quot;:&quot;dataId&quot;,&quot;OpType&quot;:&quot;eq&quot;,&quot;Value&quot;:&quot;dataId&quot;}]. dataId is returned when you query the list of synthetic test results.</li>
          * </ul>
          */
-        public Builder advancedFilters(java.util.List < AdvancedFilters> advancedFilters) {
+        public Builder advancedFilters(java.util.List<AdvancedFilters> advancedFilters) {
             String advancedFiltersShrink = shrink(advancedFilters, "AdvancedFilters", "json");
             this.putQueryParameter("AdvancedFilters", advancedFiltersShrink);
             this.advancedFilters = advancedFilters;
@@ -283,7 +288,7 @@ public class ListSyntheticDetailRequest extends Request {
         /**
          * <p>A reserved field.</p>
          */
-        public Builder exactFilters(java.util.List < ExactFilters> exactFilters) {
+        public Builder exactFilters(java.util.List<ExactFilters> exactFilters) {
             String exactFiltersShrink = shrink(exactFilters, "ExactFilters", "json");
             this.putQueryParameter("ExactFilters", exactFiltersShrink);
             this.exactFilters = exactFilters;
@@ -297,7 +302,7 @@ public class ListSyntheticDetailRequest extends Request {
          * <li>To query the result details of a synthetic monitoring task, set this parameter in the following format: {&quot;taskId&quot;:&quot;${taskId}&quot;,&quot;dataId&quot;:&quot;${dataId}&quot;}.</li>
          * </ul>
          */
-        public Builder filters(java.util.Map < String, String > filters) {
+        public Builder filters(java.util.Map<String, String> filters) {
             String filtersShrink = shrink(filters, "Filters", "json");
             this.putQueryParameter("Filters", filtersShrink);
             this.filters = filters;

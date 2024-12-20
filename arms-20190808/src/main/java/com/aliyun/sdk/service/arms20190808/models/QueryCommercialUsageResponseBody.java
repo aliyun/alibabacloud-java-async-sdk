@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         private Boolean complete;
 
         @com.aliyun.core.annotation.NameInMap("Items")
-        private java.util.List < java.util.Map<String, ?>> items;
+        private java.util.List<java.util.Map<String, ?>> items;
 
         private Data(Builder builder) {
             this.complete = builder.complete;
@@ -203,13 +208,13 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         /**
          * @return items
          */
-        public java.util.List < java.util.Map<String, ?>> getItems() {
+        public java.util.List<java.util.Map<String, ?>> getItems() {
             return this.items;
         }
 
         public static final class Builder {
             private Boolean complete; 
-            private java.util.List < java.util.Map<String, ?>> items; 
+            private java.util.List<java.util.Map<String, ?>> items; 
 
             /**
              * <p>Indicates whether a multi-region query is complete. Valid values:</p>
@@ -229,7 +234,7 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
             /**
              * <p>The returned struct.</p>
              */
-            public Builder items(java.util.List < java.util.Map<String, ?>> items) {
+            public Builder items(java.util.List<java.util.Map<String, ?>> items) {
                 this.items = items;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -589,10 +594,10 @@ public class ListAlertsResponseBody extends TeaModel {
         private Long acknowledgeTime;
 
         @com.aliyun.core.annotation.NameInMap("Activities")
-        private java.util.List < Activities> activities;
+        private java.util.List<Activities> activities;
 
         @com.aliyun.core.annotation.NameInMap("AlertEvents")
-        private java.util.List < AlertEvents> alertEvents;
+        private java.util.List<AlertEvents> alertEvents;
 
         @com.aliyun.core.annotation.NameInMap("AlertId")
         private Long alertId;
@@ -670,14 +675,14 @@ public class ListAlertsResponseBody extends TeaModel {
         /**
          * @return activities
          */
-        public java.util.List < Activities> getActivities() {
+        public java.util.List<Activities> getActivities() {
             return this.activities;
         }
 
         /**
          * @return alertEvents
          */
-        public java.util.List < AlertEvents> getAlertEvents() {
+        public java.util.List<AlertEvents> getAlertEvents() {
             return this.alertEvents;
         }
 
@@ -774,8 +779,8 @@ public class ListAlertsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long acknowledgeTime; 
-            private java.util.List < Activities> activities; 
-            private java.util.List < AlertEvents> alertEvents; 
+            private java.util.List<Activities> activities; 
+            private java.util.List<AlertEvents> alertEvents; 
             private Long alertId; 
             private String alertName; 
             private String createTime; 
@@ -801,7 +806,7 @@ public class ListAlertsResponseBody extends TeaModel {
             /**
              * <p>The list of activities.</p>
              */
-            public Builder activities(java.util.List < Activities> activities) {
+            public Builder activities(java.util.List<Activities> activities) {
                 this.activities = activities;
                 return this;
             }
@@ -809,7 +814,7 @@ public class ListAlertsResponseBody extends TeaModel {
             /**
              * <p>The list of events.</p>
              */
-            public Builder alertEvents(java.util.List < AlertEvents> alertEvents) {
+            public Builder alertEvents(java.util.List<AlertEvents> alertEvents) {
                 this.alertEvents = alertEvents;
                 return this;
             }
@@ -962,7 +967,7 @@ public class ListAlertsResponseBody extends TeaModel {
      */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ListAlerts")
-        private java.util.List < ListAlerts> listAlerts;
+        private java.util.List<ListAlerts> listAlerts;
 
         @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
@@ -991,7 +996,7 @@ public class ListAlertsResponseBody extends TeaModel {
         /**
          * @return listAlerts
          */
-        public java.util.List < ListAlerts> getListAlerts() {
+        public java.util.List<ListAlerts> getListAlerts() {
             return this.listAlerts;
         }
 
@@ -1017,7 +1022,7 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ListAlerts> listAlerts; 
+            private java.util.List<ListAlerts> listAlerts; 
             private Long page; 
             private Long size; 
             private Long total; 
@@ -1025,7 +1030,7 @@ public class ListAlertsResponseBody extends TeaModel {
             /**
              * <p>The alerts for which the alert sending history is queried.</p>
              */
-            public Builder listAlerts(java.util.List < ListAlerts> listAlerts) {
+            public Builder listAlerts(java.util.List<ListAlerts> listAlerts) {
                 this.listAlerts = listAlerts;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListAddonsResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -53,7 +58,7 @@ public class ListAddonsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class ListAddonsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -99,7 +104,7 @@ public class ListAddonsResponseBody extends TeaModel {
         /**
          * <p>The queried add-ons.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -251,13 +256,13 @@ public class ListAddonsResponseBody extends TeaModel {
      */
     public static class Dependencies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterTypes")
-        private java.util.List < String > clusterTypes;
+        private java.util.List<String> clusterTypes;
 
         @com.aliyun.core.annotation.NameInMap("Features")
-        private java.util.Map < String, Boolean > features;
+        private java.util.Map<String, Boolean> features;
 
         @com.aliyun.core.annotation.NameInMap("Services")
-        private java.util.List < String > services;
+        private java.util.List<String> services;
 
         private Dependencies(Builder builder) {
             this.clusterTypes = builder.clusterTypes;
@@ -276,33 +281,33 @@ public class ListAddonsResponseBody extends TeaModel {
         /**
          * @return clusterTypes
          */
-        public java.util.List < String > getClusterTypes() {
+        public java.util.List<String> getClusterTypes() {
             return this.clusterTypes;
         }
 
         /**
          * @return features
          */
-        public java.util.Map < String, Boolean > getFeatures() {
+        public java.util.Map<String, Boolean> getFeatures() {
             return this.features;
         }
 
         /**
          * @return services
          */
-        public java.util.List < String > getServices() {
+        public java.util.List<String> getServices() {
             return this.services;
         }
 
         public static final class Builder {
-            private java.util.List < String > clusterTypes; 
-            private java.util.Map < String, Boolean > features; 
-            private java.util.List < String > services; 
+            private java.util.List<String> clusterTypes; 
+            private java.util.Map<String, Boolean> features; 
+            private java.util.List<String> services; 
 
             /**
              * <p>The supported cluster types.</p>
              */
-            public Builder clusterTypes(java.util.List < String > clusterTypes) {
+            public Builder clusterTypes(java.util.List<String> clusterTypes) {
                 this.clusterTypes = clusterTypes;
                 return this;
             }
@@ -310,7 +315,7 @@ public class ListAddonsResponseBody extends TeaModel {
             /**
              * <p>The feature on which the environment depends.</p>
              */
-            public Builder features(java.util.Map < String, Boolean > features) {
+            public Builder features(java.util.Map<String, Boolean> features) {
                 this.features = features;
                 return this;
             }
@@ -318,7 +323,7 @@ public class ListAddonsResponseBody extends TeaModel {
             /**
              * <p>The services.</p>
              */
-            public Builder services(java.util.List < String > services) {
+            public Builder services(java.util.List<String> services) {
                 this.services = services;
                 return this;
             }
@@ -338,7 +343,7 @@ public class ListAddonsResponseBody extends TeaModel {
      */
     public static class MetricCheckRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PromQL")
-        private java.util.List < String > promQL;
+        private java.util.List<String> promQL;
 
         private MetricCheckRule(Builder builder) {
             this.promQL = builder.promQL;
@@ -355,17 +360,17 @@ public class ListAddonsResponseBody extends TeaModel {
         /**
          * @return promQL
          */
-        public java.util.List < String > getPromQL() {
+        public java.util.List<String> getPromQL() {
             return this.promQL;
         }
 
         public static final class Builder {
-            private java.util.List < String > promQL; 
+            private java.util.List<String> promQL; 
 
             /**
              * <p>The PromQL statements.</p>
              */
-            public Builder promQL(java.util.List < String > promQL) {
+            public Builder promQL(java.util.List<String> promQL) {
                 this.promQL = promQL;
                 return this;
             }
@@ -519,7 +524,7 @@ public class ListAddonsResponseBody extends TeaModel {
         private Boolean needRestartAfterIntegration;
 
         @com.aliyun.core.annotation.NameInMap("Protocols")
-        private java.util.List < Protocols> protocols;
+        private java.util.List<Protocols> protocols;
 
         @com.aliyun.core.annotation.NameInMap("TargetAddonName")
         private String targetAddonName;
@@ -580,7 +585,7 @@ public class ListAddonsResponseBody extends TeaModel {
         /**
          * @return protocols
          */
-        public java.util.List < Protocols> getProtocols() {
+        public java.util.List<Protocols> getProtocols() {
             return this.protocols;
         }
 
@@ -597,7 +602,7 @@ public class ListAddonsResponseBody extends TeaModel {
             private Boolean enableServiceAccount; 
             private MetricCheckRule metricCheckRule; 
             private Boolean needRestartAfterIntegration; 
-            private java.util.List < Protocols> protocols; 
+            private java.util.List<Protocols> protocols; 
             private String targetAddonName; 
 
             /**
@@ -655,7 +660,7 @@ public class ListAddonsResponseBody extends TeaModel {
             /**
              * <p>The supported protocols.</p>
              */
-            public Builder protocols(java.util.List < Protocols> protocols) {
+            public Builder protocols(java.util.List<Protocols> protocols) {
                 this.protocols = protocols;
                 return this;
             }
@@ -848,22 +853,22 @@ public class ListAddonsResponseBody extends TeaModel {
         private String alias;
 
         @com.aliyun.core.annotation.NameInMap("Categories")
-        private java.util.List < String > categories;
+        private java.util.List<String> categories;
 
         @com.aliyun.core.annotation.NameInMap("Dashboards")
-        private java.util.List < Dashboards> dashboards;
+        private java.util.List<Dashboards> dashboards;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Environments")
-        private java.util.List < Environments> environments;
+        private java.util.List<Environments> environments;
 
         @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
         @com.aliyun.core.annotation.NameInMap("Keywords")
-        private java.util.List < String > keywords;
+        private java.util.List<String> keywords;
 
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
@@ -921,14 +926,14 @@ public class ListAddonsResponseBody extends TeaModel {
         /**
          * @return categories
          */
-        public java.util.List < String > getCategories() {
+        public java.util.List<String> getCategories() {
             return this.categories;
         }
 
         /**
          * @return dashboards
          */
-        public java.util.List < Dashboards> getDashboards() {
+        public java.util.List<Dashboards> getDashboards() {
             return this.dashboards;
         }
 
@@ -942,7 +947,7 @@ public class ListAddonsResponseBody extends TeaModel {
         /**
          * @return environments
          */
-        public java.util.List < Environments> getEnvironments() {
+        public java.util.List<Environments> getEnvironments() {
             return this.environments;
         }
 
@@ -956,7 +961,7 @@ public class ListAddonsResponseBody extends TeaModel {
         /**
          * @return keywords
          */
-        public java.util.List < String > getKeywords() {
+        public java.util.List<String> getKeywords() {
             return this.keywords;
         }
 
@@ -1011,12 +1016,12 @@ public class ListAddonsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alias; 
-            private java.util.List < String > categories; 
-            private java.util.List < Dashboards> dashboards; 
+            private java.util.List<String> categories; 
+            private java.util.List<Dashboards> dashboards; 
             private String description; 
-            private java.util.List < Environments> environments; 
+            private java.util.List<Environments> environments; 
             private String icon; 
-            private java.util.List < String > keywords; 
+            private java.util.List<String> keywords; 
             private String language; 
             private String latestReleaseCreateTime; 
             private String name; 
@@ -1039,7 +1044,7 @@ public class ListAddonsResponseBody extends TeaModel {
             /**
              * <p>The tags of the add-on.</p>
              */
-            public Builder categories(java.util.List < String > categories) {
+            public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
                 return this;
             }
@@ -1047,7 +1052,7 @@ public class ListAddonsResponseBody extends TeaModel {
             /**
              * <p>The dashboards.</p>
              */
-            public Builder dashboards(java.util.List < Dashboards> dashboards) {
+            public Builder dashboards(java.util.List<Dashboards> dashboards) {
                 this.dashboards = dashboards;
                 return this;
             }
@@ -1066,7 +1071,7 @@ public class ListAddonsResponseBody extends TeaModel {
             /**
              * <p>The supported environments.</p>
              */
-            public Builder environments(java.util.List < Environments> environments) {
+            public Builder environments(java.util.List<Environments> environments) {
                 this.environments = environments;
                 return this;
             }
@@ -1085,7 +1090,7 @@ public class ListAddonsResponseBody extends TeaModel {
             /**
              * <p>The collection of keywords.</p>
              */
-            public Builder keywords(java.util.List < String > keywords) {
+            public Builder keywords(java.util.List<String> keywords) {
                 this.keywords = keywords;
                 return this;
             }

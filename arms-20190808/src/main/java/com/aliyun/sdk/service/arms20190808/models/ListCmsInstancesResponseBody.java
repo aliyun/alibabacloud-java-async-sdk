@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -309,7 +314,7 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         private Boolean enableTag;
 
         @com.aliyun.core.annotation.NameInMap("Products")
-        private java.util.List < Products> products;
+        private java.util.List<Products> products;
 
         private Data(Builder builder) {
             this.enableTag = builder.enableTag;
@@ -334,13 +339,13 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         /**
          * @return products
          */
-        public java.util.List < Products> getProducts() {
+        public java.util.List<Products> getProducts() {
             return this.products;
         }
 
         public static final class Builder {
             private Boolean enableTag; 
-            private java.util.List < Products> products; 
+            private java.util.List<Products> products; 
 
             /**
              * EnableTag.
@@ -353,7 +358,7 @@ public class ListCmsInstancesResponseBody extends TeaModel {
             /**
              * Products.
              */
-            public Builder products(java.util.List < Products> products) {
+            public Builder products(java.util.List<Products> products) {
                 this.products = products;
                 return this;
             }

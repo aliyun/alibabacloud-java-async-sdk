@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -142,7 +147,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
      */
     public static class ActiveTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiscoveredLabels")
-        private java.util.Map < String, String > discoveredLabels;
+        private java.util.Map<String, String> discoveredLabels;
 
         @com.aliyun.core.annotation.NameInMap("GlobalUrl")
         private String globalUrl;
@@ -151,7 +156,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         private String health;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.Map < String, String > labels;
+        private java.util.Map<String, String> labels;
 
         @com.aliyun.core.annotation.NameInMap("LastError")
         private String lastError;
@@ -195,7 +200,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         /**
          * @return discoveredLabels
          */
-        public java.util.Map < String, String > getDiscoveredLabels() {
+        public java.util.Map<String, String> getDiscoveredLabels() {
             return this.discoveredLabels;
         }
 
@@ -216,7 +221,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.Map < String, String > getLabels() {
+        public java.util.Map<String, String> getLabels() {
             return this.labels;
         }
 
@@ -263,10 +268,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > discoveredLabels; 
+            private java.util.Map<String, String> discoveredLabels; 
             private String globalUrl; 
             private String health; 
-            private java.util.Map < String, String > labels; 
+            private java.util.Map<String, String> labels; 
             private String lastError; 
             private String lastScrape; 
             private Double lastScrapeDuration; 
@@ -277,7 +282,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             /**
              * DiscoveredLabels.
              */
-            public Builder discoveredLabels(java.util.Map < String, String > discoveredLabels) {
+            public Builder discoveredLabels(java.util.Map<String, String> discoveredLabels) {
                 this.discoveredLabels = discoveredLabels;
                 return this;
             }
@@ -301,7 +306,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             /**
              * Labels.
              */
-            public Builder labels(java.util.Map < String, String > labels) {
+            public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -369,7 +374,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
      */
     public static class DroppedTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiscoveredLabels")
-        private java.util.Map < String, String > discoveredLabels;
+        private java.util.Map<String, String> discoveredLabels;
 
         @com.aliyun.core.annotation.NameInMap("GlobalUrl")
         private String globalUrl;
@@ -378,7 +383,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         private String health;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.Map < String, String > labels;
+        private java.util.Map<String, String> labels;
 
         @com.aliyun.core.annotation.NameInMap("LastError")
         private String lastError;
@@ -422,7 +427,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         /**
          * @return discoveredLabels
          */
-        public java.util.Map < String, String > getDiscoveredLabels() {
+        public java.util.Map<String, String> getDiscoveredLabels() {
             return this.discoveredLabels;
         }
 
@@ -443,7 +448,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.Map < String, String > getLabels() {
+        public java.util.Map<String, String> getLabels() {
             return this.labels;
         }
 
@@ -490,10 +495,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > discoveredLabels; 
+            private java.util.Map<String, String> discoveredLabels; 
             private String globalUrl; 
             private String health; 
-            private java.util.Map < String, String > labels; 
+            private java.util.Map<String, String> labels; 
             private String lastError; 
             private String lastScrape; 
             private Double lastScrapeDuration; 
@@ -504,7 +509,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             /**
              * DiscoveredLabels.
              */
-            public Builder discoveredLabels(java.util.Map < String, String > discoveredLabels) {
+            public Builder discoveredLabels(java.util.Map<String, String> discoveredLabels) {
                 this.discoveredLabels = discoveredLabels;
                 return this;
             }
@@ -528,7 +533,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             /**
              * Labels.
              */
-            public Builder labels(java.util.Map < String, String > labels) {
+            public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -596,10 +601,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveTargets")
-        private java.util.List < ActiveTargets> activeTargets;
+        private java.util.List<ActiveTargets> activeTargets;
 
         @com.aliyun.core.annotation.NameInMap("DroppedTargets")
-        private java.util.List < DroppedTargets> droppedTargets;
+        private java.util.List<DroppedTargets> droppedTargets;
 
         private Data(Builder builder) {
             this.activeTargets = builder.activeTargets;
@@ -617,25 +622,25 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         /**
          * @return activeTargets
          */
-        public java.util.List < ActiveTargets> getActiveTargets() {
+        public java.util.List<ActiveTargets> getActiveTargets() {
             return this.activeTargets;
         }
 
         /**
          * @return droppedTargets
          */
-        public java.util.List < DroppedTargets> getDroppedTargets() {
+        public java.util.List<DroppedTargets> getDroppedTargets() {
             return this.droppedTargets;
         }
 
         public static final class Builder {
-            private java.util.List < ActiveTargets> activeTargets; 
-            private java.util.List < DroppedTargets> droppedTargets; 
+            private java.util.List<ActiveTargets> activeTargets; 
+            private java.util.List<DroppedTargets> droppedTargets; 
 
             /**
              * ActiveTargets.
              */
-            public Builder activeTargets(java.util.List < ActiveTargets> activeTargets) {
+            public Builder activeTargets(java.util.List<ActiveTargets> activeTargets) {
                 this.activeTargets = activeTargets;
                 return this;
             }
@@ -643,7 +648,7 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             /**
              * DroppedTargets.
              */
-            public Builder droppedTargets(java.util.List < DroppedTargets> droppedTargets) {
+            public Builder droppedTargets(java.util.List<DroppedTargets> droppedTargets) {
                 this.droppedTargets = droppedTargets;
                 return this;
             }

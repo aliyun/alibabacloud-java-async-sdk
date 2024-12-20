@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteAppListRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Pids")
-    private java.util.List < String > pids;
+    private java.util.List<String> pids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -42,7 +47,7 @@ public class DeleteAppListRequest extends Request {
     /**
      * @return pids
      */
-    public java.util.List < String > getPids() {
+    public java.util.List<String> getPids() {
         return this.pids;
     }
 
@@ -54,7 +59,7 @@ public class DeleteAppListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteAppListRequest, Builder> {
-        private java.util.List < String > pids; 
+        private java.util.List<String> pids; 
         private String regionId; 
 
         private Builder() {
@@ -70,7 +75,7 @@ public class DeleteAppListRequest extends Request {
         /**
          * <p>The PIDs of the applications monitored by ARMS Application Monitoring.</p>
          */
-        public Builder pids(java.util.List < String > pids) {
+        public Builder pids(java.util.List<String> pids) {
             this.putQueryParameter("Pids", pids);
             this.pids = pids;
             return this;

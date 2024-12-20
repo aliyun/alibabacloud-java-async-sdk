@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetRumAppsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppList")
-    private java.util.List < AppList> appList;
+    private java.util.List<AppList> appList;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
@@ -50,7 +55,7 @@ public class GetRumAppsResponseBody extends TeaModel {
     /**
      * @return appList
      */
-    public java.util.List < AppList> getAppList() {
+    public java.util.List<AppList> getAppList() {
         return this.appList;
     }
 
@@ -90,7 +95,7 @@ public class GetRumAppsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AppList> appList; 
+        private java.util.List<AppList> appList; 
         private Integer code; 
         private Integer httpStatusCode; 
         private String message; 
@@ -100,7 +105,7 @@ public class GetRumAppsResponseBody extends TeaModel {
         /**
          * <p>The queried applications.</p>
          */
-        public Builder appList(java.util.List < AppList> appList) {
+        public Builder appList(java.util.List<AppList> appList) {
             this.appList = appList;
             return this;
         }
@@ -184,7 +189,7 @@ public class GetRumAppsResponseBody extends TeaModel {
         private String domain;
 
         @com.aliyun.core.annotation.NameInMap("PropagatorTypes")
-        private java.util.List < String > propagatorTypes;
+        private java.util.List<String> propagatorTypes;
 
         @com.aliyun.core.annotation.NameInMap("Tracing")
         private String tracing;
@@ -221,7 +226,7 @@ public class GetRumAppsResponseBody extends TeaModel {
         /**
          * @return propagatorTypes
          */
-        public java.util.List < String > getPropagatorTypes() {
+        public java.util.List<String> getPropagatorTypes() {
             return this.propagatorTypes;
         }
 
@@ -235,7 +240,7 @@ public class GetRumAppsResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String domain; 
-            private java.util.List < String > propagatorTypes; 
+            private java.util.List<String> propagatorTypes; 
             private String tracing; 
 
             /**
@@ -263,7 +268,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             /**
              * <p>The trace propagation protocols. This parameter is required if the tracing analysis feature is enabled.</p>
              */
-            public Builder propagatorTypes(java.util.List < String > propagatorTypes) {
+            public Builder propagatorTypes(java.util.List<String> propagatorTypes) {
                 this.propagatorTypes = propagatorTypes;
                 return this;
             }
@@ -404,7 +409,7 @@ public class GetRumAppsResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("ServiceDomainConfigs")
-        private java.util.List < ServiceDomainConfigs> serviceDomainConfigs;
+        private java.util.List<ServiceDomainConfigs> serviceDomainConfigs;
 
         @com.aliyun.core.annotation.NameInMap("SlsLogstore")
         private String slsLogstore;
@@ -416,7 +421,7 @@ public class GetRumAppsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -529,7 +534,7 @@ public class GetRumAppsResponseBody extends TeaModel {
         /**
          * @return serviceDomainConfigs
          */
-        public java.util.List < ServiceDomainConfigs> getServiceDomainConfigs() {
+        public java.util.List<ServiceDomainConfigs> getServiceDomainConfigs() {
             return this.serviceDomainConfigs;
         }
 
@@ -557,7 +562,7 @@ public class GetRumAppsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -580,11 +585,11 @@ public class GetRumAppsResponseBody extends TeaModel {
             private String pid; 
             private String regionId; 
             private String resourceGroupId; 
-            private java.util.List < ServiceDomainConfigs> serviceDomainConfigs; 
+            private java.util.List<ServiceDomainConfigs> serviceDomainConfigs; 
             private String slsLogstore; 
             private String slsProject; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String type; 
 
             /**
@@ -711,7 +716,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             /**
              * <p>The list of service domain configurations. Only mobile applications are supported.</p>
              */
-            public Builder serviceDomainConfigs(java.util.List < ServiceDomainConfigs> serviceDomainConfigs) {
+            public Builder serviceDomainConfigs(java.util.List<ServiceDomainConfigs> serviceDomainConfigs) {
                 this.serviceDomainConfigs = serviceDomainConfigs;
                 return this;
             }
@@ -752,7 +757,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

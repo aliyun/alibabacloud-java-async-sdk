@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInsightsEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InsightsEvents")
-    private java.util.List < InsightsEvents> insightsEvents;
+    private java.util.List<InsightsEvents> insightsEvents;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
     /**
      * @return insightsEvents
      */
-    public java.util.List < InsightsEvents> getInsightsEvents() {
+    public java.util.List<InsightsEvents> getInsightsEvents() {
         return this.insightsEvents;
     }
 
@@ -46,13 +51,13 @@ public class ListInsightsEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InsightsEvents> insightsEvents; 
+        private java.util.List<InsightsEvents> insightsEvents; 
         private String requestId; 
 
         /**
          * <p>The details of the event.</p>
          */
-        public Builder insightsEvents(java.util.List < InsightsEvents> insightsEvents) {
+        public Builder insightsEvents(java.util.List<InsightsEvents> insightsEvents) {
             this.insightsEvents = insightsEvents;
             return this;
         }

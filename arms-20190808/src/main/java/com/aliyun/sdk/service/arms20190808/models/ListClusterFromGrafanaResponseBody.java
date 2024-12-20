@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListClusterFromGrafanaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PromClusterList")
-    private java.util.List < PromClusterList> promClusterList;
+    private java.util.List<PromClusterList> promClusterList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
     /**
      * @return promClusterList
      */
-    public java.util.List < PromClusterList> getPromClusterList() {
+    public java.util.List<PromClusterList> getPromClusterList() {
         return this.promClusterList;
     }
 
@@ -46,13 +51,13 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < PromClusterList> promClusterList; 
+        private java.util.List<PromClusterList> promClusterList; 
         private String requestId; 
 
         /**
          * <p>The cluster information.</p>
          */
-        public Builder promClusterList(java.util.List < PromClusterList> promClusterList) {
+        public Builder promClusterList(java.util.List<PromClusterList> promClusterList) {
             this.promClusterList = promClusterList;
             return this;
         }

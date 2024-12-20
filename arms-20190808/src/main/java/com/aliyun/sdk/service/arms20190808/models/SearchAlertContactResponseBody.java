@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -389,7 +394,7 @@ public class SearchAlertContactResponseBody extends TeaModel {
      */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contacts")
-        private java.util.List < Contacts> contacts;
+        private java.util.List<Contacts> contacts;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -418,7 +423,7 @@ public class SearchAlertContactResponseBody extends TeaModel {
         /**
          * @return contacts
          */
-        public java.util.List < Contacts> getContacts() {
+        public java.util.List<Contacts> getContacts() {
             return this.contacts;
         }
 
@@ -444,7 +449,7 @@ public class SearchAlertContactResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Contacts> contacts; 
+            private java.util.List<Contacts> contacts; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -452,7 +457,7 @@ public class SearchAlertContactResponseBody extends TeaModel {
             /**
              * <p>The information about the alert contacts.</p>
              */
-            public Builder contacts(java.util.List < Contacts> contacts) {
+            public Builder contacts(java.util.List<Contacts> contacts) {
                 this.contacts = contacts;
                 return this;
             }

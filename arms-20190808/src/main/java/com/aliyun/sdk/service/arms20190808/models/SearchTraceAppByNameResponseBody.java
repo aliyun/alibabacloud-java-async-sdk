@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TraceApps")
-    private java.util.List < TraceApps> traceApps;
+    private java.util.List<TraceApps> traceApps;
 
     private SearchTraceAppByNameResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
     /**
      * @return traceApps
      */
-    public java.util.List < TraceApps> getTraceApps() {
+    public java.util.List<TraceApps> getTraceApps() {
         return this.traceApps;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < TraceApps> traceApps; 
+        private java.util.List<TraceApps> traceApps; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         /**
          * <p>The information about the monitoring task.</p>
          */
-        public Builder traceApps(java.util.List < TraceApps> traceApps) {
+        public Builder traceApps(java.util.List<TraceApps> traceApps) {
             this.traceApps = traceApps;
             return this;
         }
@@ -164,7 +169,7 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         private Long createTime;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
-        private java.util.List < String > labels;
+        private java.util.List<String> labels;
 
         @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
@@ -179,7 +184,7 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         private Boolean show;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -237,7 +242,7 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         /**
          * @return labels
          */
-        public java.util.List < String > getLabels() {
+        public java.util.List<String> getLabels() {
             return this.labels;
         }
 
@@ -272,7 +277,7 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -301,12 +306,12 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             private Long appId; 
             private String appName; 
             private Long createTime; 
-            private java.util.List < String > labels; 
+            private java.util.List<String> labels; 
             private String pid; 
             private String regionId; 
             private String resourceGroupId; 
             private Boolean show; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String type; 
             private Long updateTime; 
             private String userId; 
@@ -347,7 +352,7 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             /**
              * <p>The aliases of the application.</p>
              */
-            public Builder labels(java.util.List < String > labels) {
+            public Builder labels(java.util.List<String> labels) {
                 this.labels = labels;
                 return this;
             }
@@ -403,7 +408,7 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             /**
              * <p>A list of tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

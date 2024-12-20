@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
      */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventBridgeIntegrations")
-        private java.util.List < EventBridgeIntegrations> eventBridgeIntegrations;
+        private java.util.List<EventBridgeIntegrations> eventBridgeIntegrations;
 
         @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
@@ -207,7 +212,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
         /**
          * @return eventBridgeIntegrations
          */
-        public java.util.List < EventBridgeIntegrations> getEventBridgeIntegrations() {
+        public java.util.List<EventBridgeIntegrations> getEventBridgeIntegrations() {
             return this.eventBridgeIntegrations;
         }
 
@@ -233,7 +238,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < EventBridgeIntegrations> eventBridgeIntegrations; 
+            private java.util.List<EventBridgeIntegrations> eventBridgeIntegrations; 
             private Long page; 
             private Long size; 
             private Long total; 
@@ -241,7 +246,7 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             /**
              * <p>The EventBridge integrations.</p>
              */
-            public Builder eventBridgeIntegrations(java.util.List < EventBridgeIntegrations> eventBridgeIntegrations) {
+            public Builder eventBridgeIntegrations(java.util.List<EventBridgeIntegrations> eventBridgeIntegrations) {
                 this.eventBridgeIntegrations = eventBridgeIntegrations;
                 return this;
             }

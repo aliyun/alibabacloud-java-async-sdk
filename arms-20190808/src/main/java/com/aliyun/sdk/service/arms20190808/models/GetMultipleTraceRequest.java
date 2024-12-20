@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class GetMultipleTraceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TraceIDs")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > traceIDs;
+    private java.util.List<String> traceIDs;
 
     private GetMultipleTraceRequest(Builder builder) {
         super(builder);
@@ -77,7 +82,7 @@ public class GetMultipleTraceRequest extends Request {
     /**
      * @return traceIDs
      */
-    public java.util.List < String > getTraceIDs() {
+    public java.util.List<String> getTraceIDs() {
         return this.traceIDs;
     }
 
@@ -85,7 +90,7 @@ public class GetMultipleTraceRequest extends Request {
         private Long endTime; 
         private String regionId; 
         private Long startTime; 
-        private java.util.List < String > traceIDs; 
+        private java.util.List<String> traceIDs; 
 
         private Builder() {
             super();
@@ -145,7 +150,7 @@ public class GetMultipleTraceRequest extends Request {
          * <strong>example:</strong>
          * <p>ac1400a115951745017447033d****</p>
          */
-        public Builder traceIDs(java.util.List < String > traceIDs) {
+        public Builder traceIDs(java.util.List<String> traceIDs) {
             this.putQueryParameter("TraceIDs", traceIDs);
             this.traceIDs = traceIDs;
             return this;
