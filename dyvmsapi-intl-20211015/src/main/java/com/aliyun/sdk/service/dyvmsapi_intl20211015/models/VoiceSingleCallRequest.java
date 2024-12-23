@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link BackendCallSignalRequest} extends {@link RequestModel}
+ * {@link VoiceSingleCallRequest} extends {@link RequestModel}
  *
- * <p>BackendCallSignalRequest</p>
+ * <p>VoiceSingleCallRequest</p>
  */
-public class BackendCallSignalRequest extends Request {
+public class VoiceSingleCallRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CalledNumber")
     private String calledNumber;
@@ -50,8 +50,20 @@ public class BackendCallSignalRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendType")
+    private Long sendType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Speed")
     private Long speed;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    private String taskName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimingStart")
+    private String timingStart;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TtsCode")
@@ -62,10 +74,14 @@ public class BackendCallSignalRequest extends Request {
     private String ttsParam;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceCode")
+    private String voiceCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Volume")
     private Long volume;
 
-    private BackendCallSignalRequest(Builder builder) {
+    private VoiceSingleCallRequest(Builder builder) {
         super(builder);
         this.calledNumber = builder.calledNumber;
         this.callerIdNumber = builder.callerIdNumber;
@@ -75,9 +91,13 @@ public class BackendCallSignalRequest extends Request {
         this.playTimes = builder.playTimes;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.sendType = builder.sendType;
         this.speed = builder.speed;
+        this.taskName = builder.taskName;
+        this.timingStart = builder.timingStart;
         this.ttsCode = builder.ttsCode;
         this.ttsParam = builder.ttsParam;
+        this.voiceCode = builder.voiceCode;
         this.volume = builder.volume;
     }
 
@@ -85,7 +105,7 @@ public class BackendCallSignalRequest extends Request {
         return new Builder();
     }
 
-    public static BackendCallSignalRequest create() {
+    public static VoiceSingleCallRequest create() {
         return builder().build();
     }
 
@@ -151,10 +171,31 @@ public class BackendCallSignalRequest extends Request {
     }
 
     /**
+     * @return sendType
+     */
+    public Long getSendType() {
+        return this.sendType;
+    }
+
+    /**
      * @return speed
      */
     public Long getSpeed() {
         return this.speed;
+    }
+
+    /**
+     * @return taskName
+     */
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    /**
+     * @return timingStart
+     */
+    public String getTimingStart() {
+        return this.timingStart;
     }
 
     /**
@@ -172,13 +213,20 @@ public class BackendCallSignalRequest extends Request {
     }
 
     /**
+     * @return voiceCode
+     */
+    public String getVoiceCode() {
+        return this.voiceCode;
+    }
+
+    /**
      * @return volume
      */
     public Long getVolume() {
         return this.volume;
     }
 
-    public static final class Builder extends Request.Builder<BackendCallSignalRequest, Builder> {
+    public static final class Builder extends Request.Builder<VoiceSingleCallRequest, Builder> {
         private String calledNumber; 
         private String callerIdNumber; 
         private String countryId; 
@@ -187,16 +235,20 @@ public class BackendCallSignalRequest extends Request {
         private Long playTimes; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Long sendType; 
         private Long speed; 
+        private String taskName; 
+        private String timingStart; 
         private String ttsCode; 
         private String ttsParam; 
+        private String voiceCode; 
         private Long volume; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(BackendCallSignalRequest request) {
+        private Builder(VoiceSingleCallRequest request) {
             super(request);
             this.calledNumber = request.calledNumber;
             this.callerIdNumber = request.callerIdNumber;
@@ -206,18 +258,18 @@ public class BackendCallSignalRequest extends Request {
             this.playTimes = request.playTimes;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.sendType = request.sendType;
             this.speed = request.speed;
+            this.taskName = request.taskName;
+            this.timingStart = request.timingStart;
             this.ttsCode = request.ttsCode;
             this.ttsParam = request.ttsParam;
+            this.voiceCode = request.voiceCode;
             this.volume = request.volume;
         } 
 
         /**
-         * <p>The phone number that receives the voice notification.</p>
-         * <p>You must add the country code to the beginning of the phone number. Example: 85200****00.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>852****0000</p>
+         * CalledNumber.
          */
         public Builder calledNumber(String calledNumber) {
             this.putQueryParameter("CalledNumber", calledNumber);
@@ -226,11 +278,7 @@ public class BackendCallSignalRequest extends Request {
         }
 
         /**
-         * <p>The calling number.</p>
-         * <p>If you do not specify this parameter, the system uses a local random number as the display number. If you use a dedicated number for outbound calls, you must specify the purchased number. You can specify only one number. You can log on to the VMS console and choose Number Management to view the purchased phone numbers.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>852****0000</p>
+         * CallerIdNumber.
          */
         public Builder callerIdNumber(String callerIdNumber) {
             this.putQueryParameter("CallerIdNumber", callerIdNumber);
@@ -239,10 +287,7 @@ public class BackendCallSignalRequest extends Request {
         }
 
         /**
-         * <p>The ISO2 country code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HK</p>
+         * CountryId.
          */
         public Builder countryId(String countryId) {
             this.putQueryParameter("CountryId", countryId);
@@ -251,11 +296,7 @@ public class BackendCallSignalRequest extends Request {
         }
 
         /**
-         * <p>The ID reserved for the caller. This ID is returned to the caller in a receipt message.</p>
-         * <p>The value must be of the STRING type and 1 to 15 bytes in length.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>22522****</p>
+         * OutId.
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -273,10 +314,7 @@ public class BackendCallSignalRequest extends Request {
         }
 
         /**
-         * <p>The number of times the voice notification is played back in a call. Valid values: 1 to 3. Default value: 3.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
+         * PlayTimes.
          */
         public Builder playTimes(Long playTimes) {
             this.putQueryParameter("PlayTimes", playTimes);
@@ -303,10 +341,16 @@ public class BackendCallSignalRequest extends Request {
         }
 
         /**
-         * <p>The playback speed. Valid values: -500 to 500.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
+         * SendType.
+         */
+        public Builder sendType(Long sendType) {
+            this.putQueryParameter("SendType", sendType);
+            this.sendType = sendType;
+            return this;
+        }
+
+        /**
+         * Speed.
          */
         public Builder speed(Long speed) {
             this.putQueryParameter("Speed", speed);
@@ -315,11 +359,25 @@ public class BackendCallSignalRequest extends Request {
         }
 
         /**
-         * <p>The ID of the approved voice verification code template.</p>
-         * <p>You can log on to the VMS console and choose Voice Call Template to view the template ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1001</p>
+         * TaskName.
+         */
+        public Builder taskName(String taskName) {
+            this.putQueryParameter("TaskName", taskName);
+            this.taskName = taskName;
+            return this;
+        }
+
+        /**
+         * TimingStart.
+         */
+        public Builder timingStart(String timingStart) {
+            this.putQueryParameter("TimingStart", timingStart);
+            this.timingStart = timingStart;
+            return this;
+        }
+
+        /**
+         * TtsCode.
          */
         public Builder ttsCode(String ttsCode) {
             this.putQueryParameter("TtsCode", ttsCode);
@@ -328,10 +386,7 @@ public class BackendCallSignalRequest extends Request {
         }
 
         /**
-         * <p>The variables in the template, in the JSON format.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;code&quot;:&quot;1234&quot;}</p>
+         * TtsParam.
          */
         public Builder ttsParam(String ttsParam) {
             this.putQueryParameter("TtsParam", ttsParam);
@@ -340,10 +395,16 @@ public class BackendCallSignalRequest extends Request {
         }
 
         /**
-         * <p>The playback volume of the voice notification. Valid values: 0 to 100. Default value: 100.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
+         * VoiceCode.
+         */
+        public Builder voiceCode(String voiceCode) {
+            this.putQueryParameter("VoiceCode", voiceCode);
+            this.voiceCode = voiceCode;
+            return this;
+        }
+
+        /**
+         * Volume.
          */
         public Builder volume(Long volume) {
             this.putQueryParameter("Volume", volume);
@@ -352,8 +413,8 @@ public class BackendCallSignalRequest extends Request {
         }
 
         @Override
-        public BackendCallSignalRequest build() {
-            return new BackendCallSignalRequest(this);
+        public VoiceSingleCallRequest build() {
+            return new VoiceSingleCallRequest(this);
         } 
 
     } 

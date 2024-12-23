@@ -1,75 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi_intl20211015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BackendCallGroupRequest} extends {@link RequestModel}
  *
  * <p>BackendCallGroupRequest</p>
  */
 public class BackendCallGroupRequest extends Request {
-    @Query
-    @NameInMap("CalledNumber")
-    private java.util.List < String > calledNumber;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
+    private java.util.List<String> calledNumber;
 
-    @Query
-    @NameInMap("CallerIdNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallerIdNumber")
     private String callerIdNumber;
 
-    @Query
-    @NameInMap("CountryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CountryId")
     private String countryId;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PlayTimes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlayTimes")
     private Long playTimes;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SendType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendType")
     private Long sendType;
 
-    @Query
-    @NameInMap("Speed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Speed")
     private Long speed;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
-    @Query
-    @NameInMap("TimingStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimingStart")
     private String timingStart;
 
-    @Query
-    @NameInMap("TtsCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsCode")
     private String ttsCode;
 
-    @Query
-    @NameInMap("VoiceCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceCode")
     private String voiceCode;
 
-    @Query
-    @NameInMap("Volume")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Volume")
     private Long volume;
 
     private BackendCallGroupRequest(Builder builder) {
@@ -107,7 +112,7 @@ public class BackendCallGroupRequest extends Request {
     /**
      * @return calledNumber
      */
-    public java.util.List < String > getCalledNumber() {
+    public java.util.List<String> getCalledNumber() {
         return this.calledNumber;
     }
 
@@ -210,7 +215,7 @@ public class BackendCallGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BackendCallGroupRequest, Builder> {
-        private java.util.List < String > calledNumber; 
+        private java.util.List<String> calledNumber; 
         private String callerIdNumber; 
         private String countryId; 
         private String outId; 
@@ -250,9 +255,9 @@ public class BackendCallGroupRequest extends Request {
         } 
 
         /**
-         * The called numbers. You can specify up to 50,000 phone numbers.
+         * <p>The called numbers. You can specify up to 50,000 phone numbers.</p>
          */
-        public Builder calledNumber(java.util.List < String > calledNumber) {
+        public Builder calledNumber(java.util.List<String> calledNumber) {
             String calledNumberShrink = shrink(calledNumber, "CalledNumber", "json");
             this.putQueryParameter("CalledNumber", calledNumberShrink);
             this.calledNumber = calledNumber;
@@ -260,10 +265,11 @@ public class BackendCallGroupRequest extends Request {
         }
 
         /**
-         * The calling number.
-         * <p>
+         * <p>The calling number.</p>
+         * <p>If you do not specify this parameter, the system uses a local random number as the display number. If you use a dedicated number for outbound calls, you must specify the purchased number. You can specify only one number. You can log on to the VMS console and choose Number Management to view the purchased phone numbers.</p>
          * 
-         * If you do not specify this parameter, the system uses a local random number as the display number. If you use a dedicated number for outbound calls, you must specify the purchased number. You can specify only one number. You can log on to the VMS console and choose Number Management to view the purchased phone numbers.
+         * <strong>example:</strong>
+         * <p>852****1111</p>
          */
         public Builder callerIdNumber(String callerIdNumber) {
             this.putQueryParameter("CallerIdNumber", callerIdNumber);
@@ -272,7 +278,10 @@ public class BackendCallGroupRequest extends Request {
         }
 
         /**
-         * The ISO2 country code.
+         * <p>The ISO2 country code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HK</p>
          */
         public Builder countryId(String countryId) {
             this.putQueryParameter("CountryId", countryId);
@@ -281,10 +290,11 @@ public class BackendCallGroupRequest extends Request {
         }
 
         /**
-         * The ID reserved for the caller. This ID is returned to the caller in a receipt message.
-         * <p>
+         * <p>The ID reserved for the caller. This ID is returned to the caller in a receipt message.</p>
+         * <p>The value must be of the STRING type and 1 to 15 bytes in length.</p>
          * 
-         * The value must be of the STRING type and 1 to 15 bytes in length.
+         * <strong>example:</strong>
+         * <p>22596****</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -302,7 +312,10 @@ public class BackendCallGroupRequest extends Request {
         }
 
         /**
-         * The number of times the audio file is played. Valid values: 1 to 3.
+         * <p>The number of times the audio file is played. Valid values: 1 to 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder playTimes(Long playTimes) {
             this.putQueryParameter("PlayTimes", playTimes);
@@ -329,12 +342,12 @@ public class BackendCallGroupRequest extends Request {
         }
 
         /**
-         * The delivery type. Valid values: 1 and 2.
-         * <p>
+         * <p>The delivery type. Valid values: 1 and 2.</p>
+         * <p>1: The audio file is delivered immediately.</p>
+         * <p>2: The audio file is delivered at a scheduled time. If you specify SendType as 2, you must specify TimingStart.</p>
          * 
-         * 1: The audio file is delivered immediately.
-         * 
-         * 2: The audio file is delivered at a scheduled time. If you specify SendType as 2, you must specify TimingStart.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder sendType(Long sendType) {
             this.putQueryParameter("SendType", sendType);
@@ -343,10 +356,11 @@ public class BackendCallGroupRequest extends Request {
         }
 
         /**
-         * The playback speed. Valid values: -500 to 500.
-         * <p>
+         * <p>The playback speed. Valid values: -500 to 500.</p>
+         * <p>You must specify this parameter when the audio type is text-to-speech (TTS). You do not need to specify this parameter when you use recordings.</p>
          * 
-         * You must specify this parameter when the audio type is text-to-speech (TTS). You do not need to specify this parameter when you use recordings.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder speed(Long speed) {
             this.putQueryParameter("Speed", speed);
@@ -355,7 +369,7 @@ public class BackendCallGroupRequest extends Request {
         }
 
         /**
-         * The task name.
+         * <p>The task name.</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -364,7 +378,10 @@ public class BackendCallGroupRequest extends Request {
         }
 
         /**
-         * The time when the audio file is scheduled to be delivered.
+         * <p>The time when the audio file is scheduled to be delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-01T08:00:00+08:00</p>
          */
         public Builder timingStart(String timingStart) {
             this.putQueryParameter("TimingStart", timingStart);
@@ -373,12 +390,12 @@ public class BackendCallGroupRequest extends Request {
         }
 
         /**
-         * The voice template ID of the audio file.
-         * <p>
+         * <p>The voice template ID of the audio file.</p>
+         * <p>You can log on to the VMS console and choose Voice Call Template &gt; Audio File to view the template ID.</p>
+         * <p>You must specify either TtsCode or VoiceCode. You can specify TtsCode to use the audio file as the call content. Alternatively, you can specify VoiceCode to use preset text as the call content.</p>
          * 
-         * You can log on to the VMS console and choose Voice Call Template > Audio File to view the template ID.
-         * 
-         * You must specify either TtsCode or VoiceCode. You can specify TtsCode to use the audio file as the call content. Alternatively, you can specify VoiceCode to use preset text as the call content.
+         * <strong>example:</strong>
+         * <p>100001</p>
          */
         public Builder ttsCode(String ttsCode) {
             this.putQueryParameter("TtsCode", ttsCode);
@@ -387,12 +404,12 @@ public class BackendCallGroupRequest extends Request {
         }
 
         /**
-         * The TTS template ID.
-         * <p>
+         * <p>The TTS template ID.</p>
+         * <p>You can log on to the VMS console and choose Voice Call Template &gt; TTS Template to view the template ID.</p>
+         * <p>You must specify either TtsCode or VoiceCode. You can specify TtsCode to use the audio file as the call content. Alternatively, you can specify VoiceCode to use preset text as the call content.</p>
          * 
-         * You can log on to the VMS console and choose Voice Call Template > TTS Template to view the template ID.
-         * 
-         * You must specify either TtsCode or VoiceCode. You can specify TtsCode to use the audio file as the call content. Alternatively, you can specify VoiceCode to use preset text as the call content.
+         * <strong>example:</strong>
+         * <p>200001</p>
          */
         public Builder voiceCode(String voiceCode) {
             this.putQueryParameter("VoiceCode", voiceCode);
@@ -401,7 +418,10 @@ public class BackendCallGroupRequest extends Request {
         }
 
         /**
-         * The playback volume of the audio file. Valid values: 0 to 100. Default value: 100.
+         * <p>The playback volume of the audio file. Valid values: 0 to 100. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder volume(Long volume) {
             this.putQueryParameter("Volume", volume);

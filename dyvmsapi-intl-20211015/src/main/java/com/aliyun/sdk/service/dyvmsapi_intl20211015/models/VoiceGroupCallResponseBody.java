@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SignalCallResponseBody} extends {@link TeaModel}
+ * {@link VoiceGroupCallResponseBody} extends {@link TeaModel}
  *
- * <p>SignalCallResponseBody</p>
+ * <p>VoiceGroupCallResponseBody</p>
  */
-public class SignalCallResponseBody extends TeaModel {
+public class VoiceGroupCallResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
@@ -27,7 +27,7 @@ public class SignalCallResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("Model")
-    private Model model;
+    private java.util.Map<String, ?> model;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,7 +35,7 @@ public class SignalCallResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private SignalCallResponseBody(Builder builder) {
+    private VoiceGroupCallResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
@@ -48,7 +48,7 @@ public class SignalCallResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SignalCallResponseBody create() {
+    public static VoiceGroupCallResponseBody create() {
         return builder().build();
     }
 
@@ -76,7 +76,7 @@ public class SignalCallResponseBody extends TeaModel {
     /**
      * @return model
      */
-    public Model getModel() {
+    public java.util.Map<String, ?> getModel() {
         return this.model;
     }
 
@@ -98,7 +98,7 @@ public class SignalCallResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private String code; 
         private String message; 
-        private Model model; 
+        private java.util.Map<String, ?> model; 
         private String requestId; 
         private Boolean success; 
 
@@ -111,10 +111,7 @@ public class SignalCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求状态码。  返回OK代表请求成功。 其他错误码，请参见API错误码。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,10 +119,7 @@ public class SignalCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回信息描述。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -135,16 +129,13 @@ public class SignalCallResponseBody extends TeaModel {
         /**
          * Model.
          */
-        public Builder model(Model model) {
+        public Builder model(java.util.Map<String, ?> model) {
             this.model = model;
             return this;
         }
 
         /**
-         * <p>请求ID。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>D9CB****-<strong><strong>-</strong></strong>-****-********9D23</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -152,70 +143,17 @@ public class SignalCallResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求是否成功，成功：true，失败：false。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public SignalCallResponseBody build() {
-            return new SignalCallResponseBody(this);
+        public VoiceGroupCallResponseBody build() {
+            return new VoiceGroupCallResponseBody(this);
         } 
 
     } 
 
-    /**
-     * 
-     * {@link SignalCallResponseBody} extends {@link TeaModel}
-     *
-     * <p>SignalCallResponseBody</p>
-     */
-    public static class Model extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CallId")
-        private String callId;
-
-        private Model(Builder builder) {
-            this.callId = builder.callId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Model create() {
-            return builder().build();
-        }
-
-        /**
-         * @return callId
-         */
-        public String getCallId() {
-            return this.callId;
-        }
-
-        public static final class Builder {
-            private String callId; 
-
-            /**
-             * <p>任务ID，可以通过此ID查询任务的详情。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>550E****-<strong><strong>-</strong></strong>-****-********0CA0</p>
-             */
-            public Builder callId(String callId) {
-                this.callId = callId;
-                return this;
-            }
-
-            public Model build() {
-                return new Model(this);
-            } 
-
-        } 
-
-    }
 }

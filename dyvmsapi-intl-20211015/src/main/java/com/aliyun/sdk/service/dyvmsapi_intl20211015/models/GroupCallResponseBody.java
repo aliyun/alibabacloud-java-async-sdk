@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi_intl20211015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GroupCallResponseBody} extends {@link TeaModel}
  *
  * <p>GroupCallResponseBody</p>
  */
 public class GroupCallResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GroupCallResponseBody(Builder builder) {
@@ -94,7 +99,10 @@ public class GroupCallResponseBody extends TeaModel {
         }
 
         /**
-         * 请求状态码。  返回OK代表请求成功。 其他错误码，请参见API错误码。
+         * <p>请求状态码。  返回OK代表请求成功。 其他错误码，请参见API错误码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,7 +110,10 @@ public class GroupCallResponseBody extends TeaModel {
         }
 
         /**
-         * 返回信息描述
+         * <p>返回信息描述</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +129,10 @@ public class GroupCallResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * <p>请求ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E50F****-<strong><strong>-</strong></strong>-****-********966F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,8 +145,14 @@ public class GroupCallResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GroupCallResponseBody} extends {@link TeaModel}
+     *
+     * <p>GroupCallResponseBody</p>
+     */
     public static class Model extends TeaModel {
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Model(Builder builder) {
@@ -158,7 +178,10 @@ public class GroupCallResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * 任务ID，可以通过此ID查询任务的详情。
+             * <p>任务ID，可以通过此ID查询任务的详情。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>550E****-<strong><strong>-</strong></strong>-****-********00A0</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

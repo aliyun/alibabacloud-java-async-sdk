@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of BackendCallGroup  BackendCallGroupRequest
+     * @return BackendCallGroupResponse
+     */
     @Override
     public CompletableFuture<BackendCallGroupResponse> backendCallGroup(BackendCallGroupRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BackendCallSignal  BackendCallSignalRequest
+     * @return BackendCallSignalResponse
+     */
     @Override
     public CompletableFuture<BackendCallSignalResponse> backendCallSignal(BackendCallSignalRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GroupCall  GroupCallRequest
+     * @return GroupCallResponse
+     */
     @Override
     public CompletableFuture<GroupCallResponse> groupCall(GroupCallRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SignalCall  SignalCallRequest
+     * @return SignalCallResponse
+     */
     @Override
     public CompletableFuture<SignalCallResponse> signalCall(SignalCallRequest request) {
         try {
@@ -90,6 +106,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SignalCallResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of VoiceGroupCall  VoiceGroupCallRequest
+     * @return VoiceGroupCallResponse
+     */
+    @Override
+    public CompletableFuture<VoiceGroupCallResponse> voiceGroupCall(VoiceGroupCallRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("VoiceGroupCall").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(VoiceGroupCallResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<VoiceGroupCallResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of VoiceSingleCall  VoiceSingleCallRequest
+     * @return VoiceSingleCallResponse
+     */
+    @Override
+    public CompletableFuture<VoiceSingleCallResponse> voiceSingleCall(VoiceSingleCallRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("VoiceSingleCall").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(VoiceSingleCallResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<VoiceSingleCallResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

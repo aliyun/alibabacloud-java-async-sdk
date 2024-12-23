@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link BackendCallSignalResponse} extends {@link TeaModel}
+ * {@link VoiceGroupCallResponse} extends {@link TeaModel}
  *
- * <p>BackendCallSignalResponse</p>
+ * <p>VoiceGroupCallResponse</p>
  */
-public class BackendCallSignalResponse extends Response {
+public class VoiceGroupCallResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class BackendCallSignalResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private BackendCallSignalResponseBody body;
+    private VoiceGroupCallResponseBody body;
 
-    private BackendCallSignalResponse(BuilderImpl builder) {
+    private VoiceGroupCallResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static BackendCallSignalResponse create() {
+    public static VoiceGroupCallResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class BackendCallSignalResponse extends Response {
     /**
      * @return body
      */
-    public BackendCallSignalResponseBody getBody() {
+    public VoiceGroupCallResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<BackendCallSignalResponse, Builder> {
+    public interface Builder extends Response.Builder<VoiceGroupCallResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(BackendCallSignalResponseBody body);
+        Builder body(VoiceGroupCallResponseBody body);
 
         @Override
-        BackendCallSignalResponse build();
+        VoiceGroupCallResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<BackendCallSignalResponse, Builder>
+            extends Response.BuilderImpl<VoiceGroupCallResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private BackendCallSignalResponseBody body; 
+        private VoiceGroupCallResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(BackendCallSignalResponse response) {
+        private BuilderImpl(VoiceGroupCallResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class BackendCallSignalResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(BackendCallSignalResponseBody body) {
+        public Builder body(VoiceGroupCallResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public BackendCallSignalResponse build() {
-            return new BackendCallSignalResponse(this);
+        public VoiceGroupCallResponse build() {
+            return new VoiceGroupCallResponse(this);
         } 
 
     } 

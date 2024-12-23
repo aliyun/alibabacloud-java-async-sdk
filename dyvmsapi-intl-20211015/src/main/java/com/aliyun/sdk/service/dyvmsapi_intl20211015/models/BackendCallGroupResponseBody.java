@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi_intl20211015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BackendCallGroupResponseBody} extends {@link TeaModel}
  *
  * <p>BackendCallGroupResponseBody</p>
  */
 public class BackendCallGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private BackendCallGroupResponseBody(Builder builder) {
@@ -74,10 +79,11 @@ public class BackendCallGroupResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The response code.
-         * <p>
+         * <p>The response code.</p>
+         * <p>The value OK indicates that the request was successful. Other values indicate that the request failed. For more information, see Error codes.</p>
          * 
-         * The value OK indicates that the request was successful. Other values indicate that the request failed. For more information, see Error codes.
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,7 +91,10 @@ public class BackendCallGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -93,7 +102,10 @@ public class BackendCallGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E50FFA85-0B79-4421-A7BD-00B0A271966F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +113,10 @@ public class BackendCallGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID. You can use this ID to query the details of the task.
+         * <p>The task ID. You can use this ID to query the details of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550e8400-e29b-41d4-a716-446655440000</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

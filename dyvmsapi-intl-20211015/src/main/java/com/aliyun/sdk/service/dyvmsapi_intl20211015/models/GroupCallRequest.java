@@ -1,91 +1,96 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyvmsapi_intl20211015.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GroupCallRequest} extends {@link RequestModel}
  *
  * <p>GroupCallRequest</p>
  */
 public class GroupCallRequest extends Request {
-    @Query
-    @NameInMap("CalledNumber")
-    private java.util.List < String > calledNumber;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
+    private java.util.List<String> calledNumber;
 
-    @Query
-    @NameInMap("CallerIdNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallerIdNumber")
     private String callerIdNumber;
 
-    @Query
-    @NameInMap("CountryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CountryId")
     private String countryId;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PlayTimes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlayTimes")
     private Long playTimes;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SendType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendType")
     private Long sendType;
 
-    @Query
-    @NameInMap("Signature")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Signature")
     private String signature;
 
-    @Query
-    @NameInMap("SignatureNonce")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignatureNonce")
     private String signatureNonce;
 
-    @Query
-    @NameInMap("Speed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Speed")
     private Long speed;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
-    @Query
-    @NameInMap("Timestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
     private String timestamp;
 
-    @Query
-    @NameInMap("TimingStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimingStart")
     private String timingStart;
 
-    @Query
-    @NameInMap("TtsCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsCode")
     private String ttsCode;
 
-    @Query
-    @NameInMap("TtsParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsParam")
     private String ttsParam;
 
-    @Query
-    @NameInMap("VoiceCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceCode")
     private String voiceCode;
 
-    @Query
-    @NameInMap("Volume")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Volume")
     private Long volume;
 
     private GroupCallRequest(Builder builder) {
@@ -127,7 +132,7 @@ public class GroupCallRequest extends Request {
     /**
      * @return calledNumber
      */
-    public java.util.List < String > getCalledNumber() {
+    public java.util.List<String> getCalledNumber() {
         return this.calledNumber;
     }
 
@@ -258,7 +263,7 @@ public class GroupCallRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GroupCallRequest, Builder> {
-        private java.util.List < String > calledNumber; 
+        private java.util.List<String> calledNumber; 
         private String callerIdNumber; 
         private String countryId; 
         private String outId; 
@@ -306,9 +311,9 @@ public class GroupCallRequest extends Request {
         } 
 
         /**
-         * 被叫号码。上限为5万个。
+         * <p>被叫号码。上限为5万个。</p>
          */
-        public Builder calledNumber(java.util.List < String > calledNumber) {
+        public Builder calledNumber(java.util.List<String> calledNumber) {
             String calledNumberShrink = shrink(calledNumber, "CalledNumber", "json");
             this.putQueryParameter("CalledNumber", calledNumberShrink);
             this.calledNumber = calledNumber;
@@ -316,7 +321,10 @@ public class GroupCallRequest extends Request {
         }
 
         /**
-         * 主叫号码。  若您不填该参数，系统将会使用当地随机号码作为外显号码。 若您专属号码外呼，则必须传入已购买的号码，仅支持一个号码。您可以登录国际语音服务控制台，选择"号码管理"查看已购买的号码。
+         * <p>主叫号码。  若您不填该参数，系统将会使用当地随机号码作为外显号码。 若您专属号码外呼，则必须传入已购买的号码，仅支持一个号码。您可以登录国际语音服务控制台，选择&quot;号码管理&quot;查看已购买的号码。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>852****1111</p>
          */
         public Builder callerIdNumber(String callerIdNumber) {
             this.putQueryParameter("CallerIdNumber", callerIdNumber);
@@ -325,7 +333,10 @@ public class GroupCallRequest extends Request {
         }
 
         /**
-         * 国家/地区二字码，ISO2。
+         * <p>国家/地区二字码，ISO2。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HK</p>
          */
         public Builder countryId(String countryId) {
             this.putQueryParameter("CountryId", countryId);
@@ -334,7 +345,10 @@ public class GroupCallRequest extends Request {
         }
 
         /**
-         * 预留给调用方使用的ID，最终会通过在回执消息中将此ID带回给调用方。  字符串类型，长度为1~15个字节。
+         * <p>预留给调用方使用的ID，最终会通过在回执消息中将此ID带回给调用方。  字符串类型，长度为1~15个字节。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -352,7 +366,10 @@ public class GroupCallRequest extends Request {
         }
 
         /**
-         * 语音文件的播放次数。取值范围：1~3。
+         * <p>语音文件的播放次数。取值范围：1~3。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder playTimes(Long playTimes) {
             this.putQueryParameter("PlayTimes", playTimes);
@@ -379,7 +396,10 @@ public class GroupCallRequest extends Request {
         }
 
         /**
-         * 发送类型：取值[1,2]。  1： 立即开始发送任务，不等待。  2： 定时开始发送任务。如果传该类型，TimingStart为必选字段。
+         * <p>发送类型：取值[1,2]。  1： 立即开始发送任务，不等待。  2： 定时开始发送任务。如果传该类型，TimingStart为必选字段。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder sendType(Long sendType) {
             this.putQueryParameter("SendType", sendType);
@@ -406,7 +426,10 @@ public class GroupCallRequest extends Request {
         }
 
         /**
-         * 语速控制，取值范围：-500~500。  音频类型为TTS时必传。录音文件可不传。
+         * <p>语速控制，取值范围：-500~500。  音频类型为TTS时必传。录音文件可不传。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94</p>
          */
         public Builder speed(Long speed) {
             this.putQueryParameter("Speed", speed);
@@ -415,7 +438,10 @@ public class GroupCallRequest extends Request {
         }
 
         /**
-         * 任务名称。
+         * <p>任务名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>群呼任务</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -433,7 +459,10 @@ public class GroupCallRequest extends Request {
         }
 
         /**
-         * 2022-05-01T08:00:00+08:00
+         * <p>2022-05-01T08:00:00+08:00</p>
+         * 
+         * <strong>example:</strong>
+         * <p>定时发送的时间。</p>
          */
         public Builder timingStart(String timingStart) {
             this.putQueryParameter("TimingStart", timingStart);
@@ -442,7 +471,10 @@ public class GroupCallRequest extends Request {
         }
 
         /**
-         * 文本转语音的模板ID。  您可以登录国际语音服务控制台，选择"语音模板管理"-"文本转语音模板"，查看模板ID。  此参数与VoiceCode二选一必填。分别代表使用语音文件作为呼叫内容呼叫或者使用固定模板文字作为呼叫内容。
+         * <p>文本转语音的模板ID。  您可以登录国际语音服务控制台，选择&quot;语音模板管理&quot;-&quot;文本转语音模板&quot;，查看模板ID。  此参数与VoiceCode二选一必填。分别代表使用语音文件作为呼叫内容呼叫或者使用固定模板文字作为呼叫内容。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1****01</p>
          */
         public Builder ttsCode(String ttsCode) {
             this.putQueryParameter("TtsCode", ttsCode);
@@ -451,7 +483,10 @@ public class GroupCallRequest extends Request {
         }
 
         /**
-         * 模板中的变量参数，JSON格式。
+         * <p>模板中的变量参数，JSON格式。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;:&quot;1234&quot;}</p>
          */
         public Builder ttsParam(String ttsParam) {
             this.putQueryParameter("TtsParam", ttsParam);
@@ -460,7 +495,10 @@ public class GroupCallRequest extends Request {
         }
 
         /**
-         * 语音文件的模板ID。  您可以登录国际语音服务控制台，选择"语音模板管理"-"语音文件"，查看模板ID。  此参数与TtsCode二选一必填。分别代表使用语音文件作为呼叫内容呼叫或者使用固定模板文字作为呼叫内容。
+         * <p>语音文件的模板ID。  您可以登录国际语音服务控制台，选择&quot;语音模板管理&quot;-&quot;语音文件&quot;，查看模板ID。  此参数与TtsCode二选一必填。分别代表使用语音文件作为呼叫内容呼叫或者使用固定模板文字作为呼叫内容。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2*****01</p>
          */
         public Builder voiceCode(String voiceCode) {
             this.putQueryParameter("VoiceCode", voiceCode);
@@ -469,7 +507,10 @@ public class GroupCallRequest extends Request {
         }
 
         /**
-         * 语音文件播放的音量。取值范围：0~100，默认取值100。
+         * <p>语音文件播放的音量。取值范围：0~100，默认取值100。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder volume(Long volume) {
             this.putQueryParameter("Volume", volume);
