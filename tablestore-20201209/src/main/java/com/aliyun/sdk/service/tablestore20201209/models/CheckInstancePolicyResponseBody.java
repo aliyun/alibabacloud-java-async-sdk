@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateInstanceResponseBody} extends {@link TeaModel}
+ * {@link CheckInstancePolicyResponseBody} extends {@link TeaModel}
  *
- * <p>CreateInstanceResponseBody</p>
+ * <p>CheckInstancePolicyResponseBody</p>
  */
-public class CreateInstanceResponseBody extends TeaModel {
+public class CheckInstancePolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -26,7 +26,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateInstanceResponseBody(Builder builder) {
+    private CheckInstancePolicyResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -36,7 +36,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateInstanceResponseBody create() {
+    public static CheckInstancePolicyResponseBody create() {
         return builder().build();
     }
 
@@ -70,7 +70,7 @@ public class CreateInstanceResponseBody extends TeaModel {
          * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class CreateInstanceResponseBody extends TeaModel {
          * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>Verification passed.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -92,15 +92,15 @@ public class CreateInstanceResponseBody extends TeaModel {
          * <p>The request ID, which can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
-         * <p>39871ED2-62C0-578F-A32E-B88072D5582F</p>
+         * <p>757E172A-F94B-5E78-8A23-D9068E42F2E9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateInstanceResponseBody build() {
-            return new CreateInstanceResponseBody(this);
+        public CheckInstancePolicyResponseBody build() {
+            return new CheckInstancePolicyResponseBody(this);
         } 
 
     } 

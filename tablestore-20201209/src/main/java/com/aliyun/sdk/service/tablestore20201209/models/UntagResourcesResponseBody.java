@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tablestore20201209.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>UntagResourcesResponseBody</p>
  */
 public class UntagResourcesResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private UntagResourcesResponseBody(Builder builder) {
@@ -38,7 +43,10 @@ public class UntagResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * requestId.
+         * <p>The request ID, which can be used to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26B43C99-F5C9-5341-B462-37427C5BF201</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

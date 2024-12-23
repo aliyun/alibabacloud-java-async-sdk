@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ChangeResourceGroupResponseBody} extends {@link TeaModel}
+ * {@link UpdateInstanceElasticVCUUpperLimitResponseBody} extends {@link TeaModel}
  *
- * <p>ChangeResourceGroupResponseBody</p>
+ * <p>UpdateInstanceElasticVCUUpperLimitResponseBody</p>
  */
-public class ChangeResourceGroupResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("RequestId")
+public class UpdateInstanceElasticVCUUpperLimitResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    private ChangeResourceGroupResponseBody(Builder builder) {
+    private UpdateInstanceElasticVCUUpperLimitResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ChangeResourceGroupResponseBody create() {
+    public static UpdateInstanceElasticVCUUpperLimitResponseBody create() {
         return builder().build();
     }
 
@@ -46,15 +46,15 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
          * <p>The request ID, which can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
-         * <p>39871ED2-62C0-578F-A32E-B88072D5582F</p>
+         * <p>B37BBA04-D827-55C8-B901-5264B904E8C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ChangeResourceGroupResponseBody build() {
-            return new ChangeResourceGroupResponseBody(this);
+        public UpdateInstanceElasticVCUUpperLimitResponseBody build() {
+            return new UpdateInstanceElasticVCUUpperLimitResponseBody(this);
         } 
 
     } 

@@ -1,59 +1,64 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tablestore20201209.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Body
-    @NameInMap("ClusterType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterType;
 
-    @Body
-    @NameInMap("DisableReplication")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisableReplication")
     private Boolean disableReplication;
 
-    @Body
-    @NameInMap("InstanceDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceDescription")
     private String instanceDescription;
 
-    @Body
-    @NameInMap("InstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    @Body
-    @NameInMap("Network")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Network")
     private String network;
 
-    @Body
-    @NameInMap("NetworkSourceACL")
-    private java.util.List < String > networkSourceACL;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NetworkSourceACL")
+    private java.util.List<String> networkSourceACL;
 
-    @Body
-    @NameInMap("NetworkTypeACL")
-    private java.util.List < String > networkTypeACL;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NetworkTypeACL")
+    private java.util.List<String> networkTypeACL;
 
-    @Body
-    @NameInMap("Policy")
-    @Validation(maxLength = 4000)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Policy")
+    @com.aliyun.core.annotation.Validation(maxLength = 4000)
     private String policy;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
     private CreateInstanceRequest(Builder builder) {
         super(builder);
@@ -120,14 +125,14 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return networkSourceACL
      */
-    public java.util.List < String > getNetworkSourceACL() {
+    public java.util.List<String> getNetworkSourceACL() {
         return this.networkSourceACL;
     }
 
     /**
      * @return networkTypeACL
      */
-    public java.util.List < String > getNetworkTypeACL() {
+    public java.util.List<String> getNetworkTypeACL() {
         return this.networkTypeACL;
     }
 
@@ -148,7 +153,7 @@ public class CreateInstanceRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -158,11 +163,11 @@ public class CreateInstanceRequest extends Request {
         private String instanceDescription; 
         private String instanceName; 
         private String network; 
-        private java.util.List < String > networkSourceACL; 
-        private java.util.List < String > networkTypeACL; 
+        private java.util.List<String> networkSourceACL; 
+        private java.util.List<String> networkTypeACL; 
         private String policy; 
         private String resourceGroupId; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -183,7 +188,15 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * ClusterType.
+         * <p>The type of the instance.</p>
+         * <ul>
+         * <li>SSD: high-performance instance</li>
+         * <li>HYBRID: capacity instance</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SSD</p>
          */
         public Builder clusterType(String clusterType) {
             this.putBodyParameter("ClusterType", clusterType);
@@ -192,7 +205,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * DisableReplication.
+         * <p>(Deprecated) Specifies whether to enable disaster recovery for the instance.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableReplication(Boolean disableReplication) {
             this.putBodyParameter("DisableReplication", disableReplication);
@@ -201,7 +222,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceDescription.
+         * <p>The description of the instance. The instance description must be 3 to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>the test instance</p>
          */
         public Builder instanceDescription(String instanceDescription) {
             this.putBodyParameter("InstanceDescription", instanceDescription);
@@ -210,7 +234,19 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the instance. Instance naming conventions:</p>
+         * <ul>
+         * <li>The name can contain only letters, digits, and hyphens (-).</li>
+         * <li>The name must start with a letter.</li>
+         * <li>The name cannot end with a hyphen (-).</li>
+         * <li>The name is case-insensitive.</li>
+         * <li>The name must be 3 to 16 characters in length.</li>
+         * <li>The name cannot contain the following words: ali, ay, ots, taobao, and admin.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance-test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -219,7 +255,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Network.
+         * <p>(Deprecated) The network type of the instance. Valid values: NORMAL and VPC_CONSOLE. Default value: NORMAL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder network(String network) {
             this.putBodyParameter("Network", network);
@@ -228,25 +267,63 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * NetworkSourceACL.
+         * <p>The types of the source from which access is allowed. By default, the following source type is allowed:</p>
+         * <p>TRUST_PROXY: console</p>
          */
-        public Builder networkSourceACL(java.util.List < String > networkSourceACL) {
+        public Builder networkSourceACL(java.util.List<String> networkSourceACL) {
             this.putBodyParameter("NetworkSourceACL", networkSourceACL);
             this.networkSourceACL = networkSourceACL;
             return this;
         }
 
         /**
-         * NetworkTypeACL.
+         * <p>The types of the network from which access is allowed. By default, the following network types are allowed:</p>
+         * <ul>
+         * <li>INTERNET: Internet</li>
+         * <li>VPC: virtual private cloud (VPC)</li>
+         * <li>CLASSIC: classic network</li>
+         * </ul>
          */
-        public Builder networkTypeACL(java.util.List < String > networkTypeACL) {
+        public Builder networkTypeACL(java.util.List<String> networkTypeACL) {
             this.putBodyParameter("NetworkTypeACL", networkTypeACL);
             this.networkTypeACL = networkTypeACL;
             return this;
         }
 
         /**
-         * Policy.
+         * <p>The instance policy in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;Version&quot;: &quot;1&quot;,
+         *     &quot;Statement&quot;: [
+         *         {
+         *             &quot;Action&quot;: [
+         *                 &quot;ots:<em>&quot;
+         *             ],
+         *             &quot;Resource&quot;: [
+         *                 &quot;acs:ots:</em>:13791xxxxxxxxxxx:instance/myinstance*&quot;
+         *             ],
+         *             &quot;Principal&quot;: [
+         *                 &quot;*&quot;
+         *             ],
+         *             &quot;Effect&quot;: &quot;Allow&quot;,
+         *             &quot;Condition&quot;: {
+         *                 &quot;StringEquals&quot;: {
+         *                     &quot;ots:TLSVersion&quot;: [
+         *                         &quot;1.2&quot;
+         *                     ]
+         *                 },
+         *                 &quot;IpAddress&quot;: {
+         *                     &quot;acs:SourceIp&quot;: [
+         *                         &quot;192.168.0.1&quot;,
+         *                         &quot;198.51.100.1&quot;
+         *                     ]
+         *                 }
+         *             }
+         *         }
+         *     ]
+         * }</p>
          */
         public Builder policy(String policy) {
             this.putBodyParameter("Policy", policy);
@@ -255,7 +332,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxh4em5jnbcd</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -264,9 +344,9 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -279,13 +359,19 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Tags(Builder builder) {
@@ -320,7 +406,11 @@ public class CreateInstanceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. The tag key can be up to 64 characters in length.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p_instance</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -328,7 +418,11 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be up to 64 characters in length.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0woauavextilfqr61</p>
              */
             public Builder value(String value) {
                 this.value = value;

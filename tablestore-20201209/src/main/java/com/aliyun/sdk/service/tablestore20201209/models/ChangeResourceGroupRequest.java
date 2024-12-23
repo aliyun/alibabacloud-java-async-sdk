@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tablestore20201209.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ChangeResourceGroupRequest</p>
  */
 public class ChangeResourceGroupRequest extends Request {
-    @Body
-    @NameInMap("NewResourceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NewResourceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newResourceGroupId;
 
-    @Body
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
     private ChangeResourceGroupRequest(Builder builder) {
@@ -70,7 +75,11 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * NewResourceGroupId.
+         * <p>The ID of the new resource group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek3bgek3kxhyky</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putBodyParameter("NewResourceGroupId", newResourceGroupId);
@@ -79,7 +88,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource ID, which is the instance name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>first-ins</p>
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeRegionsResponse} extends {@link TeaModel}
+ * {@link DeleteInstancePolicyResponse} extends {@link TeaModel}
  *
- * <p>DescribeRegionsResponse</p>
+ * <p>DeleteInstancePolicyResponse</p>
  */
-public class DescribeRegionsResponse extends Response {
+public class DeleteInstancePolicyResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribeRegionsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeRegionsResponseBody body;
+    private DeleteInstancePolicyResponseBody body;
 
-    private DescribeRegionsResponse(BuilderImpl builder) {
+    private DeleteInstancePolicyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeRegionsResponse create() {
+    public static DeleteInstancePolicyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribeRegionsResponse extends Response {
     /**
      * @return body
      */
-    public DescribeRegionsResponseBody getBody() {
+    public DeleteInstancePolicyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeRegionsResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteInstancePolicyResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeRegionsResponseBody body);
+        Builder body(DeleteInstancePolicyResponseBody body);
 
         @Override
-        DescribeRegionsResponse build();
+        DeleteInstancePolicyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeRegionsResponse, Builder>
+            extends Response.BuilderImpl<DeleteInstancePolicyResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeRegionsResponseBody body; 
+        private DeleteInstancePolicyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeRegionsResponse response) {
+        private BuilderImpl(DeleteInstancePolicyResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeRegionsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeRegionsResponseBody body) {
+        public Builder body(DeleteInstancePolicyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeRegionsResponse build() {
-            return new DescribeRegionsResponse(this);
+        public DeleteInstancePolicyResponse build() {
+            return new DeleteInstancePolicyResponse(this);
         } 
 
     } 

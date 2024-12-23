@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tablestore20201209.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancesResponseBody</p>
  */
 public class ListInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    private java.util.List<Instances> instances;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListInstancesResponseBody(Builder builder) {
@@ -42,7 +47,7 @@ public class ListInstancesResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -68,21 +73,24 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
 
         /**
-         * Instances.
+         * <p>The instances.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
 
         /**
-         * NextToken.
+         * <p>The token that determines the start position of the next query. If this parameter is empty, all instances that you want to query are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESCG15aC1xxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +98,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E734979F-5A44-5993-9CE5-C23103576923</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +109,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of instances returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -111,44 +125,53 @@ public class ListInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("InstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("InstanceDescription")
         private String instanceDescription;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceSpecification")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpecification")
         private String instanceSpecification;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("PaymentType")
+        @com.aliyun.core.annotation.NameInMap("IsMultiAZ")
+        private Boolean isMultiAZ;
+
+        @com.aliyun.core.annotation.NameInMap("PaymentType")
         private String paymentType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SPInstanceId")
+        @com.aliyun.core.annotation.NameInMap("SPInstanceId")
         private String SPInstanceId;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VCUQuota")
+        @com.aliyun.core.annotation.NameInMap("VCUQuota")
         private Integer VCUQuota;
 
         private Instances(Builder builder) {
@@ -158,6 +181,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.instanceSpecification = builder.instanceSpecification;
             this.instanceStatus = builder.instanceStatus;
+            this.isMultiAZ = builder.isMultiAZ;
             this.paymentType = builder.paymentType;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
@@ -218,6 +242,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return isMultiAZ
+         */
+        public Boolean getIsMultiAZ() {
+            return this.isMultiAZ;
+        }
+
+        /**
          * @return paymentType
          */
         public String getPaymentType() {
@@ -273,6 +304,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String instanceName; 
             private String instanceSpecification; 
             private String instanceStatus; 
+            private Boolean isMultiAZ; 
             private String paymentType; 
             private String regionId; 
             private String resourceGroupId; 
@@ -282,7 +314,10 @@ public class ListInstancesResponseBody extends TeaModel {
             private Integer VCUQuota; 
 
             /**
-             * AliasName.
+             * <p>The instance alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance-test</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -290,7 +325,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-04-07T09:19:21Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -298,7 +336,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDescription.
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description of the test instance.</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -306,7 +347,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The name of the instance, which is used to uniquely identify the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance-test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -314,7 +358,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpecification.
+             * <p>The type of the instance.</p>
+             * <ul>
+             * <li>SSD: high-performance instance</li>
+             * <li>HYBRID: capacity instance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HYBRID</p>
              */
             public Builder instanceSpecification(String instanceSpecification) {
                 this.instanceSpecification = instanceSpecification;
@@ -322,7 +373,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -330,7 +384,22 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentType.
+             * IsMultiAZ.
+             */
+            public Builder isMultiAZ(Boolean isMultiAZ) {
+                this.isMultiAZ = isMultiAZ;
+                return this;
+            }
+
+            /**
+             * <p>The billing method.</p>
+             * <ul>
+             * <li>Subscription: subscription</li>
+             * <li>PayAsYouGo: pay as you go</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Subscription</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -338,7 +407,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-huhehaote</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -346,7 +418,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxh4em5jnbcd</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -354,7 +429,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SPInstanceId.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ots_standard_public_cn-g4t3igqjj002</p>
              */
             public Builder SPInstanceId(String SPInstanceId) {
                 this.SPInstanceId = SPInstanceId;
@@ -362,7 +440,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type.</p>
+             * <ul>
+             * <li>SSD: high-performance</li>
+             * <li>HYBRID: capacity</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HYBRID</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -370,7 +455,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13542356466</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -378,7 +466,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VCUQuota.
+             * <p>The VCU quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder VCUQuota(Integer VCUQuota) {
                 this.VCUQuota = VCUQuota;

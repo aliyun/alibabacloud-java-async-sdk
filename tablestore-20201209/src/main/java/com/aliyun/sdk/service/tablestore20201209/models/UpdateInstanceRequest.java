@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tablestore20201209.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceRequest</p>
  */
 public class UpdateInstanceRequest extends Request {
-    @Body
-    @NameInMap("AliasName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AliasName")
     private String aliasName;
 
-    @Body
-    @NameInMap("InstanceDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceDescription")
     private String instanceDescription;
 
-    @Body
-    @NameInMap("InstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    @Body
-    @NameInMap("Network")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Network")
     private String network;
 
-    @Body
-    @NameInMap("NetworkSourceACL")
-    private java.util.List < String > networkSourceACL;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NetworkSourceACL")
+    private java.util.List<String> networkSourceACL;
 
-    @Body
-    @NameInMap("NetworkTypeACL")
-    private java.util.List < String > networkTypeACL;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NetworkTypeACL")
+    private java.util.List<String> networkTypeACL;
 
     private UpdateInstanceRequest(Builder builder) {
         super(builder);
@@ -91,14 +96,14 @@ public class UpdateInstanceRequest extends Request {
     /**
      * @return networkSourceACL
      */
-    public java.util.List < String > getNetworkSourceACL() {
+    public java.util.List<String> getNetworkSourceACL() {
         return this.networkSourceACL;
     }
 
     /**
      * @return networkTypeACL
      */
-    public java.util.List < String > getNetworkTypeACL() {
+    public java.util.List<String> getNetworkTypeACL() {
         return this.networkTypeACL;
     }
 
@@ -107,8 +112,8 @@ public class UpdateInstanceRequest extends Request {
         private String instanceDescription; 
         private String instanceName; 
         private String network; 
-        private java.util.List < String > networkSourceACL; 
-        private java.util.List < String > networkTypeACL; 
+        private java.util.List<String> networkSourceACL; 
+        private java.util.List<String> networkTypeACL; 
 
         private Builder() {
             super();
@@ -125,7 +130,10 @@ public class UpdateInstanceRequest extends Request {
         } 
 
         /**
-         * AliasName.
+         * <p>The alias of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance-test</p>
          */
         public Builder aliasName(String aliasName) {
             this.putBodyParameter("AliasName", aliasName);
@@ -134,7 +142,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceDescription.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>the test instance</p>
          */
         public Builder instanceDescription(String instanceDescription) {
             this.putBodyParameter("InstanceDescription", instanceDescription);
@@ -143,7 +154,11 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the instance whose information you want to update.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance-test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -152,7 +167,10 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * Network.
+         * <p>(Deprecated) The network type of the instance. Valid values: NORMAL and VPC_CONSOLE. Default value: NORMAL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder network(String network) {
             this.putBodyParameter("Network", network);
@@ -161,18 +179,24 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * NetworkSourceACL.
+         * <p>The new sources of the network from which access is allowed. By default, all sources of networks are allowed. Valid value:</p>
+         * <p>TRUST_PROXY: the console</p>
          */
-        public Builder networkSourceACL(java.util.List < String > networkSourceACL) {
+        public Builder networkSourceACL(java.util.List<String> networkSourceACL) {
             this.putBodyParameter("NetworkSourceACL", networkSourceACL);
             this.networkSourceACL = networkSourceACL;
             return this;
         }
 
         /**
-         * NetworkTypeACL.
+         * <p>The new types of the network from which access is allowed. By default, all types of networks are allowed. Valid values:</p>
+         * <ul>
+         * <li>INTERNET: the Internet</li>
+         * <li>VPC: VPCs</li>
+         * <li>CLASSIC: the classic network</li>
+         * </ul>
          */
-        public Builder networkTypeACL(java.util.List < String > networkTypeACL) {
+        public Builder networkTypeACL(java.util.List<String> networkTypeACL) {
             this.putBodyParameter("NetworkTypeACL", networkTypeACL);
             this.networkTypeACL = networkTypeACL;
             return this;

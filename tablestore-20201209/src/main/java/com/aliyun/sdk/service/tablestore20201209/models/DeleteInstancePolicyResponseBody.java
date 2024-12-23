@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateInstanceResponseBody} extends {@link TeaModel}
+ * {@link DeleteInstancePolicyResponseBody} extends {@link TeaModel}
  *
- * <p>CreateInstanceResponseBody</p>
+ * <p>DeleteInstancePolicyResponseBody</p>
  */
-public class CreateInstanceResponseBody extends TeaModel {
+public class DeleteInstancePolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -26,7 +26,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateInstanceResponseBody(Builder builder) {
+    private DeleteInstancePolicyResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -36,7 +36,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateInstanceResponseBody create() {
+    public static DeleteInstancePolicyResponseBody create() {
         return builder().build();
     }
 
@@ -92,15 +92,15 @@ public class CreateInstanceResponseBody extends TeaModel {
          * <p>The request ID, which can be used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
-         * <p>39871ED2-62C0-578F-A32E-B88072D5582F</p>
+         * <p>3104C83E-6E82-57FB-BB88-8C64CCFDEF89</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateInstanceResponseBody build() {
-            return new CreateInstanceResponseBody(this);
+        public DeleteInstancePolicyResponseBody build() {
+            return new DeleteInstancePolicyResponseBody(this);
         } 
 
     } 

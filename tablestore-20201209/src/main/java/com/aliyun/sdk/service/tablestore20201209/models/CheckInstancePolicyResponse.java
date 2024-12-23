@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeRegionsResponse} extends {@link TeaModel}
+ * {@link CheckInstancePolicyResponse} extends {@link TeaModel}
  *
- * <p>DescribeRegionsResponse</p>
+ * <p>CheckInstancePolicyResponse</p>
  */
-public class DescribeRegionsResponse extends Response {
+public class CheckInstancePolicyResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribeRegionsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeRegionsResponseBody body;
+    private CheckInstancePolicyResponseBody body;
 
-    private DescribeRegionsResponse(BuilderImpl builder) {
+    private CheckInstancePolicyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeRegionsResponse create() {
+    public static CheckInstancePolicyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribeRegionsResponse extends Response {
     /**
      * @return body
      */
-    public DescribeRegionsResponseBody getBody() {
+    public CheckInstancePolicyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeRegionsResponse, Builder> {
+    public interface Builder extends Response.Builder<CheckInstancePolicyResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeRegionsResponseBody body);
+        Builder body(CheckInstancePolicyResponseBody body);
 
         @Override
-        DescribeRegionsResponse build();
+        CheckInstancePolicyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeRegionsResponse, Builder>
+            extends Response.BuilderImpl<CheckInstancePolicyResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeRegionsResponseBody body; 
+        private CheckInstancePolicyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeRegionsResponse response) {
+        private BuilderImpl(CheckInstancePolicyResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeRegionsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeRegionsResponseBody body) {
+        public Builder body(CheckInstancePolicyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeRegionsResponse build() {
-            return new DescribeRegionsResponse(this);
+        public CheckInstancePolicyResponse build() {
+            return new CheckInstancePolicyResponse(this);
         } 
 
     } 

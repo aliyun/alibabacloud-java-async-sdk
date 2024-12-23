@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeRegionsResponse} extends {@link TeaModel}
+ * {@link UpdateInstanceElasticVCUUpperLimitResponse} extends {@link TeaModel}
  *
- * <p>DescribeRegionsResponse</p>
+ * <p>UpdateInstanceElasticVCUUpperLimitResponse</p>
  */
-public class DescribeRegionsResponse extends Response {
+public class UpdateInstanceElasticVCUUpperLimitResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribeRegionsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeRegionsResponseBody body;
+    private UpdateInstanceElasticVCUUpperLimitResponseBody body;
 
-    private DescribeRegionsResponse(BuilderImpl builder) {
+    private UpdateInstanceElasticVCUUpperLimitResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeRegionsResponse create() {
+    public static UpdateInstanceElasticVCUUpperLimitResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribeRegionsResponse extends Response {
     /**
      * @return body
      */
-    public DescribeRegionsResponseBody getBody() {
+    public UpdateInstanceElasticVCUUpperLimitResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeRegionsResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateInstanceElasticVCUUpperLimitResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeRegionsResponseBody body);
+        Builder body(UpdateInstanceElasticVCUUpperLimitResponseBody body);
 
         @Override
-        DescribeRegionsResponse build();
+        UpdateInstanceElasticVCUUpperLimitResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeRegionsResponse, Builder>
+            extends Response.BuilderImpl<UpdateInstanceElasticVCUUpperLimitResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeRegionsResponseBody body; 
+        private UpdateInstanceElasticVCUUpperLimitResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeRegionsResponse response) {
+        private BuilderImpl(UpdateInstanceElasticVCUUpperLimitResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeRegionsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeRegionsResponseBody body) {
+        public Builder body(UpdateInstanceElasticVCUUpperLimitResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeRegionsResponse build() {
-            return new DescribeRegionsResponse(this);
+        public UpdateInstanceElasticVCUUpperLimitResponse build() {
+            return new UpdateInstanceElasticVCUUpperLimitResponse(this);
         } 
 
     } 

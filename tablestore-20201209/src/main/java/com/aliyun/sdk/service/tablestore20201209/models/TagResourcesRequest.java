@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tablestore20201209.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
  */
 public class TagResourcesRequest extends Request {
-    @Body
-    @NameInMap("ResourceIds")
-    @Validation(required = true)
-    private java.util.List < String > resourceIds;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> resourceIds;
 
-    @Body
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Body
-    @NameInMap("Tags")
-    @Validation(required = true)
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Tags> tags;
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
@@ -50,7 +55,7 @@ public class TagResourcesRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -64,14 +69,14 @@ public class TagResourcesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> resourceIds; 
         private String resourceType; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -85,16 +90,22 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * ResourceIds.
+         * <p>The resource IDs, which are instance names.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putBodyParameter("ResourceIds", resourceIds);
             this.resourceIds = resourceIds;
             return this;
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the resource. valid value:</p>
+         * <p>instance: instance</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -103,9 +114,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("Tags", tags);
             this.tags = tags;
             return this;
@@ -118,13 +130,19 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Tags(Builder builder) {
@@ -159,7 +177,11 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>created</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -167,7 +189,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-0007z8j1omiabo5i872l</p>
              */
             public Builder value(String value) {
                 this.value = value;

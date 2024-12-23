@@ -1,78 +1,86 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tablestore20201209.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceResponseBody</p>
  */
 public class GetInstanceResponseBody extends TeaModel {
-    @NameInMap("AliasName")
+    @com.aliyun.core.annotation.NameInMap("AliasName")
     private String aliasName;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("InstanceDescription")
+    @com.aliyun.core.annotation.NameInMap("InstanceDescription")
     private String instanceDescription;
 
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @NameInMap("InstanceSpecification")
+    @com.aliyun.core.annotation.NameInMap("InstanceSpecification")
     private String instanceSpecification;
 
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
-    @NameInMap("Network")
+    @com.aliyun.core.annotation.NameInMap("IsMultiAZ")
+    private Boolean isMultiAZ;
+
+    @com.aliyun.core.annotation.NameInMap("Network")
     private String network;
 
-    @NameInMap("NetworkSourceACL")
-    private java.util.List < String > networkSourceACL;
+    @com.aliyun.core.annotation.NameInMap("NetworkSourceACL")
+    private java.util.List<String> networkSourceACL;
 
-    @NameInMap("NetworkTypeACL")
-    private java.util.List < String > networkTypeACL;
+    @com.aliyun.core.annotation.NameInMap("NetworkTypeACL")
+    private java.util.List<String> networkTypeACL;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private String policy;
 
-    @NameInMap("PolicyVersion")
+    @com.aliyun.core.annotation.NameInMap("PolicyVersion")
     private Long policyVersion;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SPInstanceId")
+    @com.aliyun.core.annotation.NameInMap("SPInstanceId")
     private String SPInstanceId;
 
-    @NameInMap("StorageType")
+    @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
-    @NameInMap("TableQuota")
+    @com.aliyun.core.annotation.NameInMap("TableQuota")
     private Integer tableQuota;
 
-    @NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("VCUQuota")
+    @com.aliyun.core.annotation.NameInMap("VCUQuota")
     private Integer VCUQuota;
 
     private GetInstanceResponseBody(Builder builder) {
@@ -82,6 +90,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.instanceName = builder.instanceName;
         this.instanceSpecification = builder.instanceSpecification;
         this.instanceStatus = builder.instanceStatus;
+        this.isMultiAZ = builder.isMultiAZ;
         this.network = builder.network;
         this.networkSourceACL = builder.networkSourceACL;
         this.networkTypeACL = builder.networkTypeACL;
@@ -150,6 +159,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return isMultiAZ
+     */
+    public Boolean getIsMultiAZ() {
+        return this.isMultiAZ;
+    }
+
+    /**
      * @return network
      */
     public String getNetwork() {
@@ -159,14 +175,14 @@ public class GetInstanceResponseBody extends TeaModel {
     /**
      * @return networkSourceACL
      */
-    public java.util.List < String > getNetworkSourceACL() {
+    public java.util.List<String> getNetworkSourceACL() {
         return this.networkSourceACL;
     }
 
     /**
      * @return networkTypeACL
      */
-    public java.util.List < String > getNetworkTypeACL() {
+    public java.util.List<String> getNetworkTypeACL() {
         return this.networkTypeACL;
     }
 
@@ -236,7 +252,7 @@ public class GetInstanceResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -261,9 +277,10 @@ public class GetInstanceResponseBody extends TeaModel {
         private String instanceName; 
         private String instanceSpecification; 
         private String instanceStatus; 
+        private Boolean isMultiAZ; 
         private String network; 
-        private java.util.List < String > networkSourceACL; 
-        private java.util.List < String > networkTypeACL; 
+        private java.util.List<String> networkSourceACL; 
+        private java.util.List<String> networkTypeACL; 
         private String paymentType; 
         private String policy; 
         private Long policyVersion; 
@@ -273,12 +290,15 @@ public class GetInstanceResponseBody extends TeaModel {
         private String SPInstanceId; 
         private String storageType; 
         private Integer tableQuota; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String userId; 
         private Integer VCUQuota; 
 
         /**
-         * AliasName.
+         * <p>The alias of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance-test</p>
          */
         public Builder aliasName(String aliasName) {
             this.aliasName = aliasName;
@@ -286,7 +306,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-23T07:24:33Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -294,7 +317,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceDescription.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description of the test instance.</p>
          */
         public Builder instanceDescription(String instanceDescription) {
             this.instanceDescription = instanceDescription;
@@ -302,7 +328,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance-test</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -310,7 +339,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceSpecification.
+         * <p>The type of the instance.</p>
+         * <ul>
+         * <li>SSD: high-performance instance</li>
+         * <li>HYBRID: capacity instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SSD</p>
          */
         public Builder instanceSpecification(String instanceSpecification) {
             this.instanceSpecification = instanceSpecification;
@@ -318,7 +354,15 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceStatus.
+         * <p>The status of the instance.</p>
+         * <ul>
+         * <li>normal: The instance works as expected.</li>
+         * <li>forbidden: The instance is disabled.</li>
+         * <li>Deleting: The instance is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;
@@ -326,7 +370,23 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Network.
+         * IsMultiAZ.
+         */
+        public Builder isMultiAZ(Boolean isMultiAZ) {
+            this.isMultiAZ = isMultiAZ;
+            return this;
+        }
+
+        /**
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li>VPC: The instance can be accessed only over the bound virtual private clouds (VPCs).</li>
+         * <li>VPC_CONSOLE: The instance can be accessed from the Tablestore console or over the bound VPCs.</li>
+         * <li>NORMAL: The instance can be accessed from networks of the custom types.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder network(String network) {
             this.network = network;
@@ -334,23 +394,36 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkSourceACL.
+         * <p>The sources of the network from which access is allowed. Valid value:</p>
+         * <p>TRUST_PROXY: console</p>
          */
-        public Builder networkSourceACL(java.util.List < String > networkSourceACL) {
+        public Builder networkSourceACL(java.util.List<String> networkSourceACL) {
             this.networkSourceACL = networkSourceACL;
             return this;
         }
 
         /**
-         * NetworkTypeACL.
+         * <p>The types of the network from which access is allowed. Valid values:</p>
+         * <ul>
+         * <li>CLASSIC: the classic network</li>
+         * <li>INTERNET: the Internet</li>
+         * <li>VPC: VPCs</li>
+         * </ul>
          */
-        public Builder networkTypeACL(java.util.List < String > networkTypeACL) {
+        public Builder networkTypeACL(java.util.List<String> networkTypeACL) {
             this.networkTypeACL = networkTypeACL;
             return this;
         }
 
         /**
-         * PaymentType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>Subscription: subscription</li>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -358,7 +431,39 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Policy.
+         * <p>The instance policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;Version&quot;: &quot;1&quot;,
+         *     &quot;Statement&quot;: [
+         *         {
+         *             &quot;Action&quot;: [
+         *                 &quot;ots:<em>&quot;
+         *             ],
+         *             &quot;Resource&quot;: [
+         *                 &quot;acs:ots:</em>:13791xxxxxxxxxxx:instance/myinstance*&quot;
+         *             ],
+         *             &quot;Principal&quot;: [
+         *                 &quot;*&quot;
+         *             ],
+         *             &quot;Effect&quot;: &quot;Allow&quot;,
+         *             &quot;Condition&quot;: {
+         *                 &quot;StringEquals&quot;: {
+         *                     &quot;ots:TLSVersion&quot;: [
+         *                         &quot;1.2&quot;
+         *                     ]
+         *                 },
+         *                 &quot;IpAddress&quot;: {
+         *                     &quot;acs:SourceIp&quot;: [
+         *                         &quot;192.168.0.1&quot;,
+         *                         &quot;198.51.100.1&quot;
+         *                     ]
+         *                 }
+         *             }
+         *         }
+         *     ]
+         * }</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -366,7 +471,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PolicyVersion.
+         * <p>The version of the instance policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder policyVersion(Long policyVersion) {
             this.policyVersion = policyVersion;
@@ -374,7 +482,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -382,7 +493,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>757E172A-F94B-5E78-8A23-D9068E42F2E9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -390,7 +504,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxh4em5jncda</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -398,7 +515,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * SPInstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ots_standard_public_cn-9lb34u7u5001</p>
          */
         public Builder SPInstanceId(String SPInstanceId) {
             this.SPInstanceId = SPInstanceId;
@@ -406,7 +526,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * StorageType.
+         * <p>The storage type.</p>
+         * <ul>
+         * <li>SSD: high-performance</li>
+         * <li>HYBRID: capacity</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HYBRID</p>
          */
         public Builder storageType(String storageType) {
             this.storageType = storageType;
@@ -414,7 +541,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TableQuota.
+         * <p>The total number of tables in the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder tableQuota(Integer tableQuota) {
             this.tableQuota = tableQuota;
@@ -422,15 +552,18 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The tags of the instance.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
 
         /**
-         * UserId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16542312566</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -438,7 +571,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * VCUQuota.
+         * <p>The VCU quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder VCUQuota(Integer VCUQuota) {
             this.VCUQuota = VCUQuota;
@@ -451,17 +587,23 @@ public class GetInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -514,7 +656,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -522,7 +667,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * <p>(Deprecated) The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>keyTestA</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -530,7 +678,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>(Deprecated) The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00004a20240452b0</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -538,7 +689,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>333</p>
              */
             public Builder value(String value) {
                 this.value = value;

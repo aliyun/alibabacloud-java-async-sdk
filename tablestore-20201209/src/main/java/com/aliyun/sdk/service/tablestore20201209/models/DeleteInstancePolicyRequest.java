@@ -12,26 +12,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteInstanceRequest} extends {@link RequestModel}
+ * {@link DeleteInstancePolicyRequest} extends {@link RequestModel}
  *
- * <p>DeleteInstanceRequest</p>
+ * <p>DeleteInstancePolicyRequest</p>
  */
-public class DeleteInstanceRequest extends Request {
+public class DeleteInstancePolicyRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    private DeleteInstanceRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PolicyVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Long policyVersion;
+
+    private DeleteInstancePolicyRequest(Builder builder) {
         super(builder);
         this.instanceName = builder.instanceName;
+        this.policyVersion = builder.policyVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteInstanceRequest create() {
+    public static DeleteInstancePolicyRequest create() {
         return builder().build();
     }
 
@@ -47,16 +53,25 @@ public class DeleteInstanceRequest extends Request {
         return this.instanceName;
     }
 
-    public static final class Builder extends Request.Builder<DeleteInstanceRequest, Builder> {
+    /**
+     * @return policyVersion
+     */
+    public Long getPolicyVersion() {
+        return this.policyVersion;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteInstancePolicyRequest, Builder> {
         private String instanceName; 
+        private Long policyVersion; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteInstanceRequest request) {
+        private Builder(DeleteInstancePolicyRequest request) {
             super(request);
             this.instanceName = request.instanceName;
+            this.policyVersion = request.policyVersion;
         } 
 
         /**
@@ -64,7 +79,7 @@ public class DeleteInstanceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>instance-test</p>
+         * <p>my-test-12345</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -72,9 +87,22 @@ public class DeleteInstanceRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The version of the instance policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        public Builder policyVersion(Long policyVersion) {
+            this.putBodyParameter("PolicyVersion", policyVersion);
+            this.policyVersion = policyVersion;
+            return this;
+        }
+
         @Override
-        public DeleteInstanceRequest build() {
-            return new DeleteInstanceRequest(this);
+        public DeleteInstancePolicyRequest build() {
+            return new DeleteInstancePolicyRequest(this);
         } 
 
     } 
