@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class GetPromptTemplateResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("variables")
-    private java.util.List < String > variables;
+    private java.util.List<String> variables;
 
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     private String workspaceId;
@@ -78,7 +83,7 @@ public class GetPromptTemplateResponseBody extends TeaModel {
     /**
      * @return variables
      */
-    public java.util.List < String > getVariables() {
+    public java.util.List<String> getVariables() {
         return this.variables;
     }
 
@@ -94,7 +99,7 @@ public class GetPromptTemplateResponseBody extends TeaModel {
         private String name; 
         private String promptTemplateId; 
         private String requestId; 
-        private java.util.List < String > variables; 
+        private java.util.List<String> variables; 
         private String workspaceId; 
 
         /**
@@ -132,7 +137,7 @@ public class GetPromptTemplateResponseBody extends TeaModel {
         /**
          * variables.
          */
-        public Builder variables(java.util.List < String > variables) {
+        public Builder variables(java.util.List<String> variables) {
             this.variables = variables;
             return this;
         }

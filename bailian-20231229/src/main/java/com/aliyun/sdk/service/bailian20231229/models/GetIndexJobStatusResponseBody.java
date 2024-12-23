@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -323,7 +328,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Documents")
-        private java.util.List < Documents> documents;
+        private java.util.List<Documents> documents;
 
         @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
@@ -348,7 +353,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         /**
          * @return documents
          */
-        public java.util.List < Documents> getDocuments() {
+        public java.util.List<Documents> getDocuments() {
             return this.documents;
         }
 
@@ -367,14 +372,14 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Documents> documents; 
+            private java.util.List<Documents> documents; 
             private String jobId; 
             private String status; 
 
             /**
              * <p>The list of imported documents.</p>
              */
-            public Builder documents(java.util.List < Documents> documents) {
+            public Builder documents(java.util.List<Documents> documents) {
                 this.documents = documents;
                 return this;
             }

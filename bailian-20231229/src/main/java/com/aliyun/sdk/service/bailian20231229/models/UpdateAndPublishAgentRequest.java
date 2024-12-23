@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,6 +41,10 @@ public class UpdateAndPublishAgentRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sampleLibrary")
+    private SampleLibrary sampleLibrary;
+
     private UpdateAndPublishAgentRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
@@ -44,6 +53,7 @@ public class UpdateAndPublishAgentRequest extends Request {
         this.instructions = builder.instructions;
         this.modelId = builder.modelId;
         this.name = builder.name;
+        this.sampleLibrary = builder.sampleLibrary;
     }
 
     public static Builder builder() {
@@ -101,6 +111,13 @@ public class UpdateAndPublishAgentRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return sampleLibrary
+     */
+    public SampleLibrary getSampleLibrary() {
+        return this.sampleLibrary;
+    }
+
     public static final class Builder extends Request.Builder<UpdateAndPublishAgentRequest, Builder> {
         private String workspaceId; 
         private String appCode; 
@@ -108,6 +125,7 @@ public class UpdateAndPublishAgentRequest extends Request {
         private String instructions; 
         private String modelId; 
         private String name; 
+        private SampleLibrary sampleLibrary; 
 
         private Builder() {
             super();
@@ -121,6 +139,7 @@ public class UpdateAndPublishAgentRequest extends Request {
             this.instructions = request.instructions;
             this.modelId = request.modelId;
             this.name = request.name;
+            this.sampleLibrary = request.sampleLibrary;
         } 
 
         /**
@@ -175,6 +194,16 @@ public class UpdateAndPublishAgentRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * sampleLibrary.
+         */
+        public Builder sampleLibrary(SampleLibrary sampleLibrary) {
+            String sampleLibraryShrink = shrink(sampleLibrary, "sampleLibrary", "json");
+            this.putBodyParameter("sampleLibrary", sampleLibraryShrink);
+            this.sampleLibrary = sampleLibrary;
             return this;
         }
 
@@ -453,22 +482,54 @@ public class UpdateAndPublishAgentRequest extends Request {
      * <p>UpdateAndPublishAgentRequest</p>
      */
     public static class RagConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("answerScope")
+        private String answerScope;
+
         @com.aliyun.core.annotation.NameInMap("enableCitation")
         private Boolean enableCitation;
 
         @com.aliyun.core.annotation.NameInMap("enableSearch")
         private Boolean enableSearch;
 
+        @com.aliyun.core.annotation.NameInMap("enableWebSearch")
+        private Boolean enableWebSearch;
+
+        @com.aliyun.core.annotation.NameInMap("fixedReplyDetail")
+        private String fixedReplyDetail;
+
         @com.aliyun.core.annotation.NameInMap("knowledgeBaseCodeList")
-        private java.util.List < String > knowledgeBaseCodeList;
+        private java.util.List<String> knowledgeBaseCodeList;
+
+        @com.aliyun.core.annotation.NameInMap("promptStrategy")
+        private String promptStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("ragRejectType")
+        private String ragRejectType;
+
+        @com.aliyun.core.annotation.NameInMap("rejectFilterPrompt")
+        private String rejectFilterPrompt;
+
+        @com.aliyun.core.annotation.NameInMap("rejectFilterType")
+        private String rejectFilterType;
+
+        @com.aliyun.core.annotation.NameInMap("retrieveMaxLength")
+        private Integer retrieveMaxLength;
 
         @com.aliyun.core.annotation.NameInMap("topK")
         private Integer topK;
 
         private RagConfig(Builder builder) {
+            this.answerScope = builder.answerScope;
             this.enableCitation = builder.enableCitation;
             this.enableSearch = builder.enableSearch;
+            this.enableWebSearch = builder.enableWebSearch;
+            this.fixedReplyDetail = builder.fixedReplyDetail;
             this.knowledgeBaseCodeList = builder.knowledgeBaseCodeList;
+            this.promptStrategy = builder.promptStrategy;
+            this.ragRejectType = builder.ragRejectType;
+            this.rejectFilterPrompt = builder.rejectFilterPrompt;
+            this.rejectFilterType = builder.rejectFilterType;
+            this.retrieveMaxLength = builder.retrieveMaxLength;
             this.topK = builder.topK;
         }
 
@@ -478,6 +539,13 @@ public class UpdateAndPublishAgentRequest extends Request {
 
         public static RagConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return answerScope
+         */
+        public String getAnswerScope() {
+            return this.answerScope;
         }
 
         /**
@@ -495,10 +563,59 @@ public class UpdateAndPublishAgentRequest extends Request {
         }
 
         /**
+         * @return enableWebSearch
+         */
+        public Boolean getEnableWebSearch() {
+            return this.enableWebSearch;
+        }
+
+        /**
+         * @return fixedReplyDetail
+         */
+        public String getFixedReplyDetail() {
+            return this.fixedReplyDetail;
+        }
+
+        /**
          * @return knowledgeBaseCodeList
          */
-        public java.util.List < String > getKnowledgeBaseCodeList() {
+        public java.util.List<String> getKnowledgeBaseCodeList() {
             return this.knowledgeBaseCodeList;
+        }
+
+        /**
+         * @return promptStrategy
+         */
+        public String getPromptStrategy() {
+            return this.promptStrategy;
+        }
+
+        /**
+         * @return ragRejectType
+         */
+        public String getRagRejectType() {
+            return this.ragRejectType;
+        }
+
+        /**
+         * @return rejectFilterPrompt
+         */
+        public String getRejectFilterPrompt() {
+            return this.rejectFilterPrompt;
+        }
+
+        /**
+         * @return rejectFilterType
+         */
+        public String getRejectFilterType() {
+            return this.rejectFilterType;
+        }
+
+        /**
+         * @return retrieveMaxLength
+         */
+        public Integer getRetrieveMaxLength() {
+            return this.retrieveMaxLength;
         }
 
         /**
@@ -509,10 +626,26 @@ public class UpdateAndPublishAgentRequest extends Request {
         }
 
         public static final class Builder {
+            private String answerScope; 
             private Boolean enableCitation; 
             private Boolean enableSearch; 
-            private java.util.List < String > knowledgeBaseCodeList; 
+            private Boolean enableWebSearch; 
+            private String fixedReplyDetail; 
+            private java.util.List<String> knowledgeBaseCodeList; 
+            private String promptStrategy; 
+            private String ragRejectType; 
+            private String rejectFilterPrompt; 
+            private String rejectFilterType; 
+            private Integer retrieveMaxLength; 
             private Integer topK; 
+
+            /**
+             * answerScope.
+             */
+            public Builder answerScope(String answerScope) {
+                this.answerScope = answerScope;
+                return this;
+            }
 
             /**
              * enableCitation.
@@ -531,10 +664,66 @@ public class UpdateAndPublishAgentRequest extends Request {
             }
 
             /**
+             * enableWebSearch.
+             */
+            public Builder enableWebSearch(Boolean enableWebSearch) {
+                this.enableWebSearch = enableWebSearch;
+                return this;
+            }
+
+            /**
+             * fixedReplyDetail.
+             */
+            public Builder fixedReplyDetail(String fixedReplyDetail) {
+                this.fixedReplyDetail = fixedReplyDetail;
+                return this;
+            }
+
+            /**
              * knowledgeBaseCodeList.
              */
-            public Builder knowledgeBaseCodeList(java.util.List < String > knowledgeBaseCodeList) {
+            public Builder knowledgeBaseCodeList(java.util.List<String> knowledgeBaseCodeList) {
                 this.knowledgeBaseCodeList = knowledgeBaseCodeList;
+                return this;
+            }
+
+            /**
+             * promptStrategy.
+             */
+            public Builder promptStrategy(String promptStrategy) {
+                this.promptStrategy = promptStrategy;
+                return this;
+            }
+
+            /**
+             * ragRejectType.
+             */
+            public Builder ragRejectType(String ragRejectType) {
+                this.ragRejectType = ragRejectType;
+                return this;
+            }
+
+            /**
+             * rejectFilterPrompt.
+             */
+            public Builder rejectFilterPrompt(String rejectFilterPrompt) {
+                this.rejectFilterPrompt = rejectFilterPrompt;
+                return this;
+            }
+
+            /**
+             * rejectFilterType.
+             */
+            public Builder rejectFilterType(String rejectFilterType) {
+                this.rejectFilterType = rejectFilterType;
+                return this;
+            }
+
+            /**
+             * retrieveMaxLength.
+             */
+            public Builder retrieveMaxLength(Integer retrieveMaxLength) {
+                this.retrieveMaxLength = retrieveMaxLength;
                 return this;
             }
 
@@ -717,10 +906,10 @@ public class UpdateAndPublishAgentRequest extends Request {
         private Security security;
 
         @com.aliyun.core.annotation.NameInMap("tools")
-        private java.util.List < Tools> tools;
+        private java.util.List<Tools> tools;
 
         @com.aliyun.core.annotation.NameInMap("workFlows")
-        private java.util.List < WorkFlows> workFlows;
+        private java.util.List<WorkFlows> workFlows;
 
         private ApplicationConfig(Builder builder) {
             this.historyConfig = builder.historyConfig;
@@ -778,14 +967,14 @@ public class UpdateAndPublishAgentRequest extends Request {
         /**
          * @return tools
          */
-        public java.util.List < Tools> getTools() {
+        public java.util.List<Tools> getTools() {
             return this.tools;
         }
 
         /**
          * @return workFlows
          */
-        public java.util.List < WorkFlows> getWorkFlows() {
+        public java.util.List<WorkFlows> getWorkFlows() {
             return this.workFlows;
         }
 
@@ -795,8 +984,8 @@ public class UpdateAndPublishAgentRequest extends Request {
             private Parameters parameters; 
             private RagConfig ragConfig; 
             private Security security; 
-            private java.util.List < Tools> tools; 
-            private java.util.List < WorkFlows> workFlows; 
+            private java.util.List<Tools> tools; 
+            private java.util.List<WorkFlows> workFlows; 
 
             /**
              * historyConfig.
@@ -841,7 +1030,7 @@ public class UpdateAndPublishAgentRequest extends Request {
             /**
              * tools.
              */
-            public Builder tools(java.util.List < Tools> tools) {
+            public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;
                 return this;
             }
@@ -849,13 +1038,100 @@ public class UpdateAndPublishAgentRequest extends Request {
             /**
              * workFlows.
              */
-            public Builder workFlows(java.util.List < WorkFlows> workFlows) {
+            public Builder workFlows(java.util.List<WorkFlows> workFlows) {
                 this.workFlows = workFlows;
                 return this;
             }
 
             public ApplicationConfig build() {
                 return new ApplicationConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateAndPublishAgentRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateAndPublishAgentRequest</p>
+     */
+    public static class SampleLibrary extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enableSample")
+        private Boolean enableSample;
+
+        @com.aliyun.core.annotation.NameInMap("sampleLibraryIdList")
+        private java.util.List<String> sampleLibraryIdList;
+
+        @com.aliyun.core.annotation.NameInMap("topK")
+        private Integer topK;
+
+        private SampleLibrary(Builder builder) {
+            this.enableSample = builder.enableSample;
+            this.sampleLibraryIdList = builder.sampleLibraryIdList;
+            this.topK = builder.topK;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SampleLibrary create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableSample
+         */
+        public Boolean getEnableSample() {
+            return this.enableSample;
+        }
+
+        /**
+         * @return sampleLibraryIdList
+         */
+        public java.util.List<String> getSampleLibraryIdList() {
+            return this.sampleLibraryIdList;
+        }
+
+        /**
+         * @return topK
+         */
+        public Integer getTopK() {
+            return this.topK;
+        }
+
+        public static final class Builder {
+            private Boolean enableSample; 
+            private java.util.List<String> sampleLibraryIdList; 
+            private Integer topK; 
+
+            /**
+             * enableSample.
+             */
+            public Builder enableSample(Boolean enableSample) {
+                this.enableSample = enableSample;
+                return this;
+            }
+
+            /**
+             * sampleLibraryIdList.
+             */
+            public Builder sampleLibraryIdList(java.util.List<String> sampleLibraryIdList) {
+                this.sampleLibraryIdList = sampleLibraryIdList;
+                return this;
+            }
+
+            /**
+             * topK.
+             */
+            public Builder topK(Integer topK) {
+                this.topK = topK;
+                return this;
+            }
+
+            public SampleLibrary build() {
+                return new SampleLibrary(this);
             } 
 
         } 

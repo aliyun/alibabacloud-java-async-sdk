@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListMemoriesResponseBody extends TeaModel {
     private Integer maxResults;
 
     @com.aliyun.core.annotation.NameInMap("memories")
-    private java.util.List < Memories> memories;
+    private java.util.List<Memories> memories;
 
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
@@ -57,7 +62,7 @@ public class ListMemoriesResponseBody extends TeaModel {
     /**
      * @return memories
      */
-    public java.util.List < Memories> getMemories() {
+    public java.util.List<Memories> getMemories() {
         return this.memories;
     }
 
@@ -91,7 +96,7 @@ public class ListMemoriesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer maxResults; 
-        private java.util.List < Memories> memories; 
+        private java.util.List<Memories> memories; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
@@ -108,7 +113,7 @@ public class ListMemoriesResponseBody extends TeaModel {
         /**
          * memories.
          */
-        public Builder memories(java.util.List < Memories> memories) {
+        public Builder memories(java.util.List<Memories> memories) {
             this.memories = memories;
             return this;
         }

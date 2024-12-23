@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,11 +24,11 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CategoryIds")
-    private java.util.List < String > categoryIds;
+    private java.util.List<String> categoryIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DocumentIds")
-    private java.util.List < String > documentIds;
+    private java.util.List<String> documentIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IndexId")
@@ -67,14 +72,14 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
     /**
      * @return categoryIds
      */
-    public java.util.List < String > getCategoryIds() {
+    public java.util.List<String> getCategoryIds() {
         return this.categoryIds;
     }
 
     /**
      * @return documentIds
      */
-    public java.util.List < String > getDocumentIds() {
+    public java.util.List<String> getDocumentIds() {
         return this.documentIds;
     }
 
@@ -94,8 +99,8 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitIndexAddDocumentsJobRequest, Builder> {
         private String workspaceId; 
-        private java.util.List < String > categoryIds; 
-        private java.util.List < String > documentIds; 
+        private java.util.List<String> categoryIds; 
+        private java.util.List<String> documentIds; 
         private String indexId; 
         private String sourceType; 
 
@@ -128,7 +133,7 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         /**
          * <p>The list of primary key IDs of the category.</p>
          */
-        public Builder categoryIds(java.util.List < String > categoryIds) {
+        public Builder categoryIds(java.util.List<String> categoryIds) {
             String categoryIdsShrink = shrink(categoryIds, "CategoryIds", "json");
             this.putQueryParameter("CategoryIds", categoryIdsShrink);
             this.categoryIds = categoryIds;
@@ -138,7 +143,7 @@ public class SubmitIndexAddDocumentsJobRequest extends Request {
         /**
          * <p>The list of the primary key IDs of the documents.</p>
          */
-        public Builder documentIds(java.util.List < String > documentIds) {
+        public Builder documentIds(java.util.List<String> documentIds) {
             String documentIdsShrink = shrink(documentIds, "DocumentIds", "json");
             this.putQueryParameter("DocumentIds", documentIdsShrink);
             this.documentIds = documentIds;

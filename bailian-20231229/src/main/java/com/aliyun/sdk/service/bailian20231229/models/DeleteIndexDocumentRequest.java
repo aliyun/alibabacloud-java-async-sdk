@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class DeleteIndexDocumentRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DocumentIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > documentIds;
+    private java.util.List<String> documentIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IndexId")
@@ -57,7 +62,7 @@ public class DeleteIndexDocumentRequest extends Request {
     /**
      * @return documentIds
      */
-    public java.util.List < String > getDocumentIds() {
+    public java.util.List<String> getDocumentIds() {
         return this.documentIds;
     }
 
@@ -70,7 +75,7 @@ public class DeleteIndexDocumentRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteIndexDocumentRequest, Builder> {
         private String workspaceId; 
-        private java.util.List < String > documentIds; 
+        private java.util.List<String> documentIds; 
         private String indexId; 
 
         private Builder() {
@@ -101,7 +106,7 @@ public class DeleteIndexDocumentRequest extends Request {
          * <p>The list of the primary key IDs of the documents.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder documentIds(java.util.List < String > documentIds) {
+        public Builder documentIds(java.util.List<String> documentIds) {
             String documentIdsShrink = shrink(documentIds, "DocumentIds", "json");
             this.putQueryParameter("DocumentIds", documentIdsShrink);
             this.documentIds = documentIds;

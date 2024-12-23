@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -184,7 +189,7 @@ public class ListIndicesResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("DocumentIds")
-        private java.util.List < String > documentIds;
+        private java.util.List<String> documentIds;
 
         @com.aliyun.core.annotation.NameInMap("EmbeddingModelName")
         private String embeddingModelName;
@@ -265,7 +270,7 @@ public class ListIndicesResponseBody extends TeaModel {
         /**
          * @return documentIds
          */
-        public java.util.List < String > getDocumentIds() {
+        public java.util.List<String> getDocumentIds() {
             return this.documentIds;
         }
 
@@ -356,7 +361,7 @@ public class ListIndicesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer chunkSize; 
             private String description; 
-            private java.util.List < String > documentIds; 
+            private java.util.List<String> documentIds; 
             private String embeddingModelName; 
             private String id; 
             private String name; 
@@ -395,7 +400,7 @@ public class ListIndicesResponseBody extends TeaModel {
             /**
              * <p>The list of the primary key IDs of the documents.</p>
              */
-            public Builder documentIds(java.util.List < String > documentIds) {
+            public Builder documentIds(java.util.List<String> documentIds) {
                 this.documentIds = documentIds;
                 return this;
             }
@@ -583,7 +588,7 @@ public class ListIndicesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Indices")
-        private java.util.List < Indices> indices;
+        private java.util.List<Indices> indices;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -612,7 +617,7 @@ public class ListIndicesResponseBody extends TeaModel {
         /**
          * @return indices
          */
-        public java.util.List < Indices> getIndices() {
+        public java.util.List<Indices> getIndices() {
             return this.indices;
         }
 
@@ -638,7 +643,7 @@ public class ListIndicesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Indices> indices; 
+            private java.util.List<Indices> indices; 
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
@@ -646,7 +651,7 @@ public class ListIndicesResponseBody extends TeaModel {
             /**
              * <p>The list of knowledge bases.</p>
              */
-            public Builder indices(java.util.List < Indices> indices) {
+            public Builder indices(java.util.List<Indices> indices) {
                 this.indices = indices;
                 return this;
             }

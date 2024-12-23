@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -426,7 +431,7 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         private Boolean enableSearch;
 
         @com.aliyun.core.annotation.NameInMap("knowledgeBaseCodeList")
-        private java.util.List < String > knowledgeBaseCodeList;
+        private java.util.List<String> knowledgeBaseCodeList;
 
         @com.aliyun.core.annotation.NameInMap("topK")
         private Integer topK;
@@ -463,7 +468,7 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         /**
          * @return knowledgeBaseCodeList
          */
-        public java.util.List < String > getKnowledgeBaseCodeList() {
+        public java.util.List<String> getKnowledgeBaseCodeList() {
             return this.knowledgeBaseCodeList;
         }
 
@@ -477,7 +482,7 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enableCitation; 
             private Boolean enableSearch; 
-            private java.util.List < String > knowledgeBaseCodeList; 
+            private java.util.List<String> knowledgeBaseCodeList; 
             private Integer topK; 
 
             /**
@@ -499,7 +504,7 @@ public class ListPublishedAgentResponseBody extends TeaModel {
             /**
              * knowledgeBaseCodeList.
              */
-            public Builder knowledgeBaseCodeList(java.util.List < String > knowledgeBaseCodeList) {
+            public Builder knowledgeBaseCodeList(java.util.List<String> knowledgeBaseCodeList) {
                 this.knowledgeBaseCodeList = knowledgeBaseCodeList;
                 return this;
             }
@@ -683,10 +688,10 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         private Security security;
 
         @com.aliyun.core.annotation.NameInMap("tools")
-        private java.util.List < Tools> tools;
+        private java.util.List<Tools> tools;
 
         @com.aliyun.core.annotation.NameInMap("workFlows")
-        private java.util.List < WorkFlows> workFlows;
+        private java.util.List<WorkFlows> workFlows;
 
         private ApplicationConfig(Builder builder) {
             this.historyConfig = builder.historyConfig;
@@ -744,14 +749,14 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         /**
          * @return tools
          */
-        public java.util.List < Tools> getTools() {
+        public java.util.List<Tools> getTools() {
             return this.tools;
         }
 
         /**
          * @return workFlows
          */
-        public java.util.List < WorkFlows> getWorkFlows() {
+        public java.util.List<WorkFlows> getWorkFlows() {
             return this.workFlows;
         }
 
@@ -761,8 +766,8 @@ public class ListPublishedAgentResponseBody extends TeaModel {
             private Parameters parameters; 
             private RagConfig ragConfig; 
             private Security security; 
-            private java.util.List < Tools> tools; 
-            private java.util.List < WorkFlows> workFlows; 
+            private java.util.List<Tools> tools; 
+            private java.util.List<WorkFlows> workFlows; 
 
             /**
              * historyConfig.
@@ -807,7 +812,7 @@ public class ListPublishedAgentResponseBody extends TeaModel {
             /**
              * tools.
              */
-            public Builder tools(java.util.List < Tools> tools) {
+            public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;
                 return this;
             }
@@ -815,7 +820,7 @@ public class ListPublishedAgentResponseBody extends TeaModel {
             /**
              * workFlows.
              */
-            public Builder workFlows(java.util.List < WorkFlows> workFlows) {
+            public Builder workFlows(java.util.List<WorkFlows> workFlows) {
                 this.workFlows = workFlows;
                 return this;
             }
@@ -962,7 +967,7 @@ public class ListPublishedAgentResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("list")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("pageNo")
         private Integer pageNo;
@@ -991,7 +996,7 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -1017,7 +1022,7 @@ public class ListPublishedAgentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNo; 
             private Integer pageSize; 
             private Integer total; 
@@ -1025,7 +1030,7 @@ public class ListPublishedAgentResponseBody extends TeaModel {
             /**
              * list.
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

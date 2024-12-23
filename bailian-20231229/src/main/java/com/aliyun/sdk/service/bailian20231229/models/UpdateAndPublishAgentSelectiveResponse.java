@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListMemoriesResponse} extends {@link TeaModel}
+ * {@link UpdateAndPublishAgentSelectiveResponse} extends {@link TeaModel}
  *
- * <p>ListMemoriesResponse</p>
+ * <p>UpdateAndPublishAgentSelectiveResponse</p>
  */
-public class ListMemoriesResponse extends Response {
+public class UpdateAndPublishAgentSelectiveResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListMemoriesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListMemoriesResponseBody body;
+    private UpdateAndPublishAgentSelectiveResponseBody body;
 
-    private ListMemoriesResponse(BuilderImpl builder) {
+    private UpdateAndPublishAgentSelectiveResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListMemoriesResponse create() {
+    public static UpdateAndPublishAgentSelectiveResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListMemoriesResponse extends Response {
     /**
      * @return body
      */
-    public ListMemoriesResponseBody getBody() {
+    public UpdateAndPublishAgentSelectiveResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListMemoriesResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateAndPublishAgentSelectiveResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListMemoriesResponseBody body);
+        Builder body(UpdateAndPublishAgentSelectiveResponseBody body);
 
         @Override
-        ListMemoriesResponse build();
+        UpdateAndPublishAgentSelectiveResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListMemoriesResponse, Builder>
+            extends Response.BuilderImpl<UpdateAndPublishAgentSelectiveResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListMemoriesResponseBody body; 
+        private UpdateAndPublishAgentSelectiveResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListMemoriesResponse response) {
+        private BuilderImpl(UpdateAndPublishAgentSelectiveResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListMemoriesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListMemoriesResponseBody body) {
+        public Builder body(UpdateAndPublishAgentSelectiveResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListMemoriesResponse build() {
-            return new ListMemoriesResponse(this);
+        public UpdateAndPublishAgentSelectiveResponse build() {
+            return new UpdateAndPublishAgentSelectiveResponse(this);
         } 
 
     } 

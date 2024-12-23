@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeletedDocument")
-        private java.util.List < String > deletedDocument;
+        private java.util.List<String> deletedDocument;
 
         private Data(Builder builder) {
             this.deletedDocument = builder.deletedDocument;
@@ -195,17 +200,17 @@ public class DeleteIndexDocumentResponseBody extends TeaModel {
         /**
          * @return deletedDocument
          */
-        public java.util.List < String > getDeletedDocument() {
+        public java.util.List<String> getDeletedDocument() {
             return this.deletedDocument;
         }
 
         public static final class Builder {
-            private java.util.List < String > deletedDocument; 
+            private java.util.List<String> deletedDocument; 
 
             /**
              * <p>The list of primary key IDs of documents that are deleted.</p>
              */
-            public Builder deletedDocument(java.util.List < String > deletedDocument) {
+            public Builder deletedDocument(java.util.List<String> deletedDocument) {
                 this.deletedDocument = deletedDocument;
                 return this;
             }

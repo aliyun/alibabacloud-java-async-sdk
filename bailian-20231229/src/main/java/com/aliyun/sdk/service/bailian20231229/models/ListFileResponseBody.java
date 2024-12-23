@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -186,7 +191,7 @@ public class ListFileResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < String > tags;
+        private java.util.List<String> tags;
 
         private FileList(Builder builder) {
             this.categoryId = builder.categoryId;
@@ -267,7 +272,7 @@ public class ListFileResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
@@ -280,7 +285,7 @@ public class ListFileResponseBody extends TeaModel {
             private String parser; 
             private Long sizeInBytes; 
             private String status; 
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
 
             /**
              * CategoryId.
@@ -349,7 +354,7 @@ public class ListFileResponseBody extends TeaModel {
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -369,7 +374,7 @@ public class ListFileResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileList")
-        private java.util.List < FileList> fileList;
+        private java.util.List<FileList> fileList;
 
         @com.aliyun.core.annotation.NameInMap("HasNext")
         private Boolean hasNext;
@@ -402,7 +407,7 @@ public class ListFileResponseBody extends TeaModel {
         /**
          * @return fileList
          */
-        public java.util.List < FileList> getFileList() {
+        public java.util.List<FileList> getFileList() {
             return this.fileList;
         }
 
@@ -435,7 +440,7 @@ public class ListFileResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < FileList> fileList; 
+            private java.util.List<FileList> fileList; 
             private Boolean hasNext; 
             private Integer maxResults; 
             private String nextToken; 
@@ -444,7 +449,7 @@ public class ListFileResponseBody extends TeaModel {
             /**
              * FileList.
              */
-            public Builder fileList(java.util.List < FileList> fileList) {
+            public Builder fileList(java.util.List<FileList> fileList) {
                 this.fileList = fileList;
                 return this;
             }

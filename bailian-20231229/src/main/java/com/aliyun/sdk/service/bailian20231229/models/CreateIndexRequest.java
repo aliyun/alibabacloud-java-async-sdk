@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreateIndexRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CategoryIds")
-    private java.util.List < String > categoryIds;
+    private java.util.List<String> categoryIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChunkSize")
@@ -27,7 +32,7 @@ public class CreateIndexRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Columns")
-    private java.util.List < Columns> columns;
+    private java.util.List<Columns> columns;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataSource")
@@ -39,7 +44,7 @@ public class CreateIndexRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DocumentIds")
-    private java.util.List < String > documentIds;
+    private java.util.List<String> documentIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EmbeddingModelName")
@@ -91,7 +96,7 @@ public class CreateIndexRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("metaExtractColumns")
-    private java.util.List < MetaExtractColumns> metaExtractColumns;
+    private java.util.List<MetaExtractColumns> metaExtractColumns;
 
     private CreateIndexRequest(Builder builder) {
         super(builder);
@@ -139,7 +144,7 @@ public class CreateIndexRequest extends Request {
     /**
      * @return categoryIds
      */
-    public java.util.List < String > getCategoryIds() {
+    public java.util.List<String> getCategoryIds() {
         return this.categoryIds;
     }
 
@@ -153,7 +158,7 @@ public class CreateIndexRequest extends Request {
     /**
      * @return columns
      */
-    public java.util.List < Columns> getColumns() {
+    public java.util.List<Columns> getColumns() {
         return this.columns;
     }
 
@@ -174,7 +179,7 @@ public class CreateIndexRequest extends Request {
     /**
      * @return documentIds
      */
-    public java.util.List < String > getDocumentIds() {
+    public java.util.List<String> getDocumentIds() {
         return this.documentIds;
     }
 
@@ -258,18 +263,18 @@ public class CreateIndexRequest extends Request {
     /**
      * @return metaExtractColumns
      */
-    public java.util.List < MetaExtractColumns> getMetaExtractColumns() {
+    public java.util.List<MetaExtractColumns> getMetaExtractColumns() {
         return this.metaExtractColumns;
     }
 
     public static final class Builder extends Request.Builder<CreateIndexRequest, Builder> {
         private String workspaceId; 
-        private java.util.List < String > categoryIds; 
+        private java.util.List<String> categoryIds; 
         private Integer chunkSize; 
-        private java.util.List < Columns> columns; 
+        private java.util.List<Columns> columns; 
         private DataSource dataSource; 
         private String description; 
-        private java.util.List < String > documentIds; 
+        private java.util.List<String> documentIds; 
         private String embeddingModelName; 
         private String name; 
         private Integer overlapSize; 
@@ -281,7 +286,7 @@ public class CreateIndexRequest extends Request {
         private String sinkType; 
         private String sourceType; 
         private String structureType; 
-        private java.util.List < MetaExtractColumns> metaExtractColumns; 
+        private java.util.List<MetaExtractColumns> metaExtractColumns; 
 
         private Builder() {
             super();
@@ -326,7 +331,7 @@ public class CreateIndexRequest extends Request {
         /**
          * <p>The list of primary key IDs of the categories to be imported into the knowledge base.</p>
          */
-        public Builder categoryIds(java.util.List < String > categoryIds) {
+        public Builder categoryIds(java.util.List<String> categoryIds) {
             String categoryIdsShrink = shrink(categoryIds, "CategoryIds", "json");
             this.putQueryParameter("CategoryIds", categoryIdsShrink);
             this.categoryIds = categoryIds;
@@ -352,7 +357,7 @@ public class CreateIndexRequest extends Request {
         /**
          * Columns.
          */
-        public Builder columns(java.util.List < Columns> columns) {
+        public Builder columns(java.util.List<Columns> columns) {
             String columnsShrink = shrink(columns, "Columns", "json");
             this.putQueryParameter("Columns", columnsShrink);
             this.columns = columns;
@@ -383,7 +388,7 @@ public class CreateIndexRequest extends Request {
         /**
          * <p>The list of primary key IDs of the documents to be imported into the knowledge base.</p>
          */
-        public Builder documentIds(java.util.List < String > documentIds) {
+        public Builder documentIds(java.util.List<String> documentIds) {
             String documentIdsShrink = shrink(documentIds, "DocumentIds", "json");
             this.putQueryParameter("DocumentIds", documentIdsShrink);
             this.documentIds = documentIds;
@@ -577,7 +582,7 @@ public class CreateIndexRequest extends Request {
         /**
          * metaExtractColumns.
          */
-        public Builder metaExtractColumns(java.util.List < MetaExtractColumns> metaExtractColumns) {
+        public Builder metaExtractColumns(java.util.List<MetaExtractColumns> metaExtractColumns) {
             String metaExtractColumnsShrink = shrink(metaExtractColumns, "metaExtractColumns", "json");
             this.putQueryParameter("metaExtractColumns", metaExtractColumnsShrink);
             this.metaExtractColumns = metaExtractColumns;

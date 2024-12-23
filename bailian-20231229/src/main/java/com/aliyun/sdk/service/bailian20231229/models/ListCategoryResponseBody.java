@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -289,7 +294,7 @@ public class ListCategoryResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryList")
-        private java.util.List < CategoryList> categoryList;
+        private java.util.List<CategoryList> categoryList;
 
         @com.aliyun.core.annotation.NameInMap("HasNext")
         private Boolean hasNext;
@@ -322,7 +327,7 @@ public class ListCategoryResponseBody extends TeaModel {
         /**
          * @return categoryList
          */
-        public java.util.List < CategoryList> getCategoryList() {
+        public java.util.List<CategoryList> getCategoryList() {
             return this.categoryList;
         }
 
@@ -355,7 +360,7 @@ public class ListCategoryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CategoryList> categoryList; 
+            private java.util.List<CategoryList> categoryList; 
             private Boolean hasNext; 
             private Integer maxResults; 
             private String nextToken; 
@@ -364,7 +369,7 @@ public class ListCategoryResponseBody extends TeaModel {
             /**
              * CategoryList.
              */
-            public Builder categoryList(java.util.List < CategoryList> categoryList) {
+            public Builder categoryList(java.util.List<CategoryList> categoryList) {
                 this.categoryList = categoryList;
                 return this;
             }

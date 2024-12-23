@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class UpdateFileTagRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tags")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > tags;
+    private java.util.List<String> tags;
 
     private UpdateFileTagRequest(Builder builder) {
         super(builder);
@@ -76,7 +81,7 @@ public class UpdateFileTagRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -84,7 +89,7 @@ public class UpdateFileTagRequest extends Request {
         private String workspaceId; 
         private String regionId; 
         private String fileId; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
 
         private Builder() {
             super();
@@ -134,7 +139,7 @@ public class UpdateFileTagRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putBodyParameter("Tags", tagsShrink);
             this.tags = tags;

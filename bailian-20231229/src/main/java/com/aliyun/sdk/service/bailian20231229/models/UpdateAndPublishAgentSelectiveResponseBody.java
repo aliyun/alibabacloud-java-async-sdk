@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateAndPublishAgentResponseBody} extends {@link TeaModel}
+ * {@link UpdateAndPublishAgentSelectiveResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateAndPublishAgentResponseBody</p>
+ * <p>UpdateAndPublishAgentSelectiveResponseBody</p>
  */
-public class UpdateAndPublishAgentResponseBody extends TeaModel {
+public class UpdateAndPublishAgentSelectiveResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
@@ -35,7 +35,7 @@ public class UpdateAndPublishAgentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private UpdateAndPublishAgentResponseBody(Builder builder) {
+    private UpdateAndPublishAgentSelectiveResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
@@ -48,7 +48,7 @@ public class UpdateAndPublishAgentResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateAndPublishAgentResponseBody create() {
+    public static UpdateAndPublishAgentSelectiveResponseBody create() {
         return builder().build();
     }
 
@@ -150,8 +150,8 @@ public class UpdateAndPublishAgentResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdateAndPublishAgentResponseBody build() {
-            return new UpdateAndPublishAgentResponseBody(this);
+        public UpdateAndPublishAgentSelectiveResponseBody build() {
+            return new UpdateAndPublishAgentSelectiveResponseBody(this);
         } 
 
     } 

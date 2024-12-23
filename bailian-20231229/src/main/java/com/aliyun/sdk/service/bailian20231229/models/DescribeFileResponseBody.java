@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -202,7 +207,7 @@ public class DescribeFileResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < String > tags;
+        private java.util.List<String> tags;
 
         private Data(Builder builder) {
             this.categoryId = builder.categoryId;
@@ -283,7 +288,7 @@ public class DescribeFileResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < String > getTags() {
+        public java.util.List<String> getTags() {
             return this.tags;
         }
 
@@ -296,7 +301,7 @@ public class DescribeFileResponseBody extends TeaModel {
             private String parser; 
             private Long sizeInBytes; 
             private String status; 
-            private java.util.List < String > tags; 
+            private java.util.List<String> tags; 
 
             /**
              * <p>The ID of the category to which the document belongs.</p>
@@ -398,7 +403,7 @@ public class DescribeFileResponseBody extends TeaModel {
             /**
              * <p>The tags that are associated with the document. A document can be associated with multiple tags.</p>
              */
-            public Builder tags(java.util.List < String > tags) {
+            public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
                 return this;
             }

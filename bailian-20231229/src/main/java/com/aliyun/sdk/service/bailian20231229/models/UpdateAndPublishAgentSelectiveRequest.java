@@ -12,14 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateAndPulishAgentRequest} extends {@link RequestModel}
+ * {@link UpdateAndPublishAgentSelectiveRequest} extends {@link RequestModel}
  *
- * <p>CreateAndPulishAgentRequest</p>
+ * <p>UpdateAndPublishAgentSelectiveRequest</p>
  */
-public class CreateAndPulishAgentRequest extends Request {
+public class UpdateAndPublishAgentSelectiveRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     private String workspaceId;
+
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appCode")
+    private String appCode;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("applicationConfig")
@@ -41,9 +45,10 @@ public class CreateAndPulishAgentRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("sampleLibrary")
     private SampleLibrary sampleLibrary;
 
-    private CreateAndPulishAgentRequest(Builder builder) {
+    private UpdateAndPublishAgentSelectiveRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
+        this.appCode = builder.appCode;
         this.applicationConfig = builder.applicationConfig;
         this.instructions = builder.instructions;
         this.modelId = builder.modelId;
@@ -55,7 +60,7 @@ public class CreateAndPulishAgentRequest extends Request {
         return new Builder();
     }
 
-    public static CreateAndPulishAgentRequest create() {
+    public static UpdateAndPublishAgentSelectiveRequest create() {
         return builder().build();
     }
 
@@ -69,6 +74,13 @@ public class CreateAndPulishAgentRequest extends Request {
      */
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    /**
+     * @return appCode
+     */
+    public String getAppCode() {
+        return this.appCode;
     }
 
     /**
@@ -106,8 +118,9 @@ public class CreateAndPulishAgentRequest extends Request {
         return this.sampleLibrary;
     }
 
-    public static final class Builder extends Request.Builder<CreateAndPulishAgentRequest, Builder> {
+    public static final class Builder extends Request.Builder<UpdateAndPublishAgentSelectiveRequest, Builder> {
         private String workspaceId; 
+        private String appCode; 
         private ApplicationConfig applicationConfig; 
         private String instructions; 
         private String modelId; 
@@ -118,9 +131,10 @@ public class CreateAndPulishAgentRequest extends Request {
             super();
         } 
 
-        private Builder(CreateAndPulishAgentRequest request) {
+        private Builder(UpdateAndPublishAgentSelectiveRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
+            this.appCode = request.appCode;
             this.applicationConfig = request.applicationConfig;
             this.instructions = request.instructions;
             this.modelId = request.modelId;
@@ -134,6 +148,15 @@ public class CreateAndPulishAgentRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * appCode.
+         */
+        public Builder appCode(String appCode) {
+            this.putPathParameter("appCode", appCode);
+            this.appCode = appCode;
             return this;
         }
 
@@ -185,17 +208,17 @@ public class CreateAndPulishAgentRequest extends Request {
         }
 
         @Override
-        public CreateAndPulishAgentRequest build() {
-            return new CreateAndPulishAgentRequest(this);
+        public UpdateAndPublishAgentSelectiveRequest build() {
+            return new UpdateAndPublishAgentSelectiveRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     * {@link UpdateAndPublishAgentSelectiveRequest} extends {@link TeaModel}
      *
-     * <p>CreateAndPulishAgentRequest</p>
+     * <p>UpdateAndPublishAgentSelectiveRequest</p>
      */
     public static class HistoryConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableAdbRecord")
@@ -320,9 +343,9 @@ public class CreateAndPulishAgentRequest extends Request {
     }
     /**
      * 
-     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     * {@link UpdateAndPublishAgentSelectiveRequest} extends {@link TeaModel}
      *
-     * <p>CreateAndPulishAgentRequest</p>
+     * <p>UpdateAndPublishAgentSelectiveRequest</p>
      */
     public static class LongTermMemory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enable")
@@ -367,9 +390,9 @@ public class CreateAndPulishAgentRequest extends Request {
     }
     /**
      * 
-     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     * {@link UpdateAndPublishAgentSelectiveRequest} extends {@link TeaModel}
      *
-     * <p>CreateAndPulishAgentRequest</p>
+     * <p>UpdateAndPublishAgentSelectiveRequest</p>
      */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dialogRound")
@@ -454,9 +477,9 @@ public class CreateAndPulishAgentRequest extends Request {
     }
     /**
      * 
-     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     * {@link UpdateAndPublishAgentSelectiveRequest} extends {@link TeaModel}
      *
-     * <p>CreateAndPulishAgentRequest</p>
+     * <p>UpdateAndPublishAgentSelectiveRequest</p>
      */
     public static class RagConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("answerScope")
@@ -469,7 +492,7 @@ public class CreateAndPulishAgentRequest extends Request {
         private Boolean enableSearch;
 
         @com.aliyun.core.annotation.NameInMap("enableWebSearch")
-        private Boolean enableWebSearch;
+        private String enableWebSearch;
 
         @com.aliyun.core.annotation.NameInMap("fixedReplyDetail")
         private String fixedReplyDetail;
@@ -542,7 +565,7 @@ public class CreateAndPulishAgentRequest extends Request {
         /**
          * @return enableWebSearch
          */
-        public Boolean getEnableWebSearch() {
+        public String getEnableWebSearch() {
             return this.enableWebSearch;
         }
 
@@ -606,7 +629,7 @@ public class CreateAndPulishAgentRequest extends Request {
             private String answerScope; 
             private Boolean enableCitation; 
             private Boolean enableSearch; 
-            private Boolean enableWebSearch; 
+            private String enableWebSearch; 
             private String fixedReplyDetail; 
             private java.util.List<String> knowledgeBaseCodeList; 
             private String promptStrategy; 
@@ -643,7 +666,7 @@ public class CreateAndPulishAgentRequest extends Request {
             /**
              * enableWebSearch.
              */
-            public Builder enableWebSearch(Boolean enableWebSearch) {
+            public Builder enableWebSearch(String enableWebSearch) {
                 this.enableWebSearch = enableWebSearch;
                 return this;
             }
@@ -721,15 +744,15 @@ public class CreateAndPulishAgentRequest extends Request {
     }
     /**
      * 
-     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     * {@link UpdateAndPublishAgentSelectiveRequest} extends {@link TeaModel}
      *
-     * <p>CreateAndPulishAgentRequest</p>
+     * <p>UpdateAndPublishAgentSelectiveRequest</p>
      */
-    public static class SecurityConfig extends TeaModel {
+    public static class Security extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("processingStrategy")
         private String processingStrategy;
 
-        private SecurityConfig(Builder builder) {
+        private Security(Builder builder) {
             this.processingStrategy = builder.processingStrategy;
         }
 
@@ -737,7 +760,7 @@ public class CreateAndPulishAgentRequest extends Request {
             return new Builder();
         }
 
-        public static SecurityConfig create() {
+        public static Security create() {
             return builder().build();
         }
 
@@ -759,8 +782,8 @@ public class CreateAndPulishAgentRequest extends Request {
                 return this;
             }
 
-            public SecurityConfig build() {
-                return new SecurityConfig(this);
+            public Security build() {
+                return new Security(this);
             } 
 
         } 
@@ -768,9 +791,9 @@ public class CreateAndPulishAgentRequest extends Request {
     }
     /**
      * 
-     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     * {@link UpdateAndPublishAgentSelectiveRequest} extends {@link TeaModel}
      *
-     * <p>CreateAndPulishAgentRequest</p>
+     * <p>UpdateAndPublishAgentSelectiveRequest</p>
      */
     public static class Tools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
@@ -815,9 +838,9 @@ public class CreateAndPulishAgentRequest extends Request {
     }
     /**
      * 
-     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     * {@link UpdateAndPublishAgentSelectiveRequest} extends {@link TeaModel}
      *
-     * <p>CreateAndPulishAgentRequest</p>
+     * <p>UpdateAndPublishAgentSelectiveRequest</p>
      */
     public static class WorkFlows extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("type")
@@ -862,9 +885,9 @@ public class CreateAndPulishAgentRequest extends Request {
     }
     /**
      * 
-     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     * {@link UpdateAndPublishAgentSelectiveRequest} extends {@link TeaModel}
      *
-     * <p>CreateAndPulishAgentRequest</p>
+     * <p>UpdateAndPublishAgentSelectiveRequest</p>
      */
     public static class ApplicationConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("historyConfig")
@@ -879,8 +902,8 @@ public class CreateAndPulishAgentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ragConfig")
         private RagConfig ragConfig;
 
-        @com.aliyun.core.annotation.NameInMap("securityConfig")
-        private SecurityConfig securityConfig;
+        @com.aliyun.core.annotation.NameInMap("security")
+        private Security security;
 
         @com.aliyun.core.annotation.NameInMap("tools")
         private java.util.List<Tools> tools;
@@ -893,7 +916,7 @@ public class CreateAndPulishAgentRequest extends Request {
             this.longTermMemory = builder.longTermMemory;
             this.parameters = builder.parameters;
             this.ragConfig = builder.ragConfig;
-            this.securityConfig = builder.securityConfig;
+            this.security = builder.security;
             this.tools = builder.tools;
             this.workFlows = builder.workFlows;
         }
@@ -935,10 +958,10 @@ public class CreateAndPulishAgentRequest extends Request {
         }
 
         /**
-         * @return securityConfig
+         * @return security
          */
-        public SecurityConfig getSecurityConfig() {
-            return this.securityConfig;
+        public Security getSecurity() {
+            return this.security;
         }
 
         /**
@@ -960,7 +983,7 @@ public class CreateAndPulishAgentRequest extends Request {
             private LongTermMemory longTermMemory; 
             private Parameters parameters; 
             private RagConfig ragConfig; 
-            private SecurityConfig securityConfig; 
+            private Security security; 
             private java.util.List<Tools> tools; 
             private java.util.List<WorkFlows> workFlows; 
 
@@ -997,10 +1020,10 @@ public class CreateAndPulishAgentRequest extends Request {
             }
 
             /**
-             * securityConfig.
+             * security.
              */
-            public Builder securityConfig(SecurityConfig securityConfig) {
-                this.securityConfig = securityConfig;
+            public Builder security(Security security) {
+                this.security = security;
                 return this;
             }
 
@@ -1029,9 +1052,9 @@ public class CreateAndPulishAgentRequest extends Request {
     }
     /**
      * 
-     * {@link CreateAndPulishAgentRequest} extends {@link TeaModel}
+     * {@link UpdateAndPublishAgentSelectiveRequest} extends {@link TeaModel}
      *
-     * <p>CreateAndPulishAgentRequest</p>
+     * <p>UpdateAndPublishAgentSelectiveRequest</p>
      */
     public static class SampleLibrary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableSample")

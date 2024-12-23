@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("promptTemplates")
-    private java.util.List < PromptTemplates> promptTemplates;
+    private java.util.List<PromptTemplates> promptTemplates;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -64,7 +69,7 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
     /**
      * @return promptTemplates
      */
-    public java.util.List < PromptTemplates> getPromptTemplates() {
+    public java.util.List<PromptTemplates> getPromptTemplates() {
         return this.promptTemplates;
     }
 
@@ -92,7 +97,7 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < PromptTemplates> promptTemplates; 
+        private java.util.List<PromptTemplates> promptTemplates; 
         private String requestId; 
         private Integer totalCount; 
         private String workspaceId; 
@@ -116,7 +121,7 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
         /**
          * promptTemplates.
          */
-        public Builder promptTemplates(java.util.List < PromptTemplates> promptTemplates) {
+        public Builder promptTemplates(java.util.List<PromptTemplates> promptTemplates) {
             this.promptTemplates = promptTemplates;
             return this;
         }
@@ -171,7 +176,7 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
         private String type;
 
         @com.aliyun.core.annotation.NameInMap("variables")
-        private java.util.List < String > variables;
+        private java.util.List<String> variables;
 
         private PromptTemplates(Builder builder) {
             this.content = builder.content;
@@ -220,7 +225,7 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
         /**
          * @return variables
          */
-        public java.util.List < String > getVariables() {
+        public java.util.List<String> getVariables() {
             return this.variables;
         }
 
@@ -229,7 +234,7 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
             private String name; 
             private String promptTemplateId; 
             private String type; 
-            private java.util.List < String > variables; 
+            private java.util.List<String> variables; 
 
             /**
              * content.
@@ -266,7 +271,7 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
             /**
              * variables.
              */
-            public Builder variables(java.util.List < String > variables) {
+            public Builder variables(java.util.List<String> variables) {
                 this.variables = variables;
                 return this;
             }

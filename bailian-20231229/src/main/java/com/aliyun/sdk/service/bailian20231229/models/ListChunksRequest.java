@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListChunksRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Fields")
-    private java.util.List < String > fields;
+    private java.util.List<String> fields;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FileId")
@@ -76,7 +81,7 @@ public class ListChunksRequest extends Request {
     /**
      * @return fields
      */
-    public java.util.List < String > getFields() {
+    public java.util.List<String> getFields() {
         return this.fields;
     }
 
@@ -117,7 +122,7 @@ public class ListChunksRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListChunksRequest, Builder> {
         private String workspaceId; 
-        private java.util.List < String > fields; 
+        private java.util.List<String> fields; 
         private String fileId; 
         private String filed; 
         private String indexId; 
@@ -155,7 +160,7 @@ public class ListChunksRequest extends Request {
         /**
          * <p>An array of field names. This parameter is used to filter non-private fields (prefixed with_underscores) in the Metadata parameter returned by this operation. By default, this parameter is left empty, which means all non-private fields in the Metadata parameter are returned. If you only want specified non-private fields, such as title, set this parameter to title.</p>
          */
-        public Builder fields(java.util.List < String > fields) {
+        public Builder fields(java.util.List<String> fields) {
             this.putBodyParameter("Fields", fields);
             this.fields = fields;
             return this;

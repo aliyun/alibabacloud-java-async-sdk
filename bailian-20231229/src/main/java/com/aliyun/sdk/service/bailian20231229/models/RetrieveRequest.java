@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class RetrieveRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Images")
-    private java.util.List < String > images;
+    private java.util.List<String> images;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IndexId")
@@ -44,7 +49,7 @@ public class RetrieveRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Rerank")
-    private java.util.List < Rerank> rerank;
+    private java.util.List<Rerank> rerank;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RerankMinScore")
@@ -56,7 +61,7 @@ public class RetrieveRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Rewrite")
-    private java.util.List < Rewrite> rewrite;
+    private java.util.List<Rewrite> rewrite;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaveRetrieverHistory")
@@ -64,7 +69,7 @@ public class RetrieveRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchFilters")
-    private java.util.List < java.util.Map<String, String>> searchFilters;
+    private java.util.List<java.util.Map<String, String>> searchFilters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SparseSimilarityTopK")
@@ -132,7 +137,7 @@ public class RetrieveRequest extends Request {
     /**
      * @return images
      */
-    public java.util.List < String > getImages() {
+    public java.util.List<String> getImages() {
         return this.images;
     }
 
@@ -153,7 +158,7 @@ public class RetrieveRequest extends Request {
     /**
      * @return rerank
      */
-    public java.util.List < Rerank> getRerank() {
+    public java.util.List<Rerank> getRerank() {
         return this.rerank;
     }
 
@@ -174,7 +179,7 @@ public class RetrieveRequest extends Request {
     /**
      * @return rewrite
      */
-    public java.util.List < Rewrite> getRewrite() {
+    public java.util.List<Rewrite> getRewrite() {
         return this.rewrite;
     }
 
@@ -188,7 +193,7 @@ public class RetrieveRequest extends Request {
     /**
      * @return searchFilters
      */
-    public java.util.List < java.util.Map<String, String>> getSearchFilters() {
+    public java.util.List<java.util.Map<String, String>> getSearchFilters() {
         return this.searchFilters;
     }
 
@@ -204,15 +209,15 @@ public class RetrieveRequest extends Request {
         private Integer denseSimilarityTopK; 
         private Boolean enableReranking; 
         private Boolean enableRewrite; 
-        private java.util.List < String > images; 
+        private java.util.List<String> images; 
         private String indexId; 
         private String query; 
-        private java.util.List < Rerank> rerank; 
+        private java.util.List<Rerank> rerank; 
         private Float rerankMinScore; 
         private Integer rerankTopN; 
-        private java.util.List < Rewrite> rewrite; 
+        private java.util.List<Rewrite> rewrite; 
         private Boolean saveRetrieverHistory; 
-        private java.util.List < java.util.Map<String, String>> searchFilters; 
+        private java.util.List<java.util.Map<String, String>> searchFilters; 
         private Integer sparseSimilarityTopK; 
 
         private Builder() {
@@ -300,7 +305,7 @@ public class RetrieveRequest extends Request {
         /**
          * Images.
          */
-        public Builder images(java.util.List < String > images) {
+        public Builder images(java.util.List<String> images) {
             String imagesShrink = shrink(images, "Images", "simple");
             this.putQueryParameter("Images", imagesShrink);
             this.images = images;
@@ -332,7 +337,7 @@ public class RetrieveRequest extends Request {
         /**
          * <p>Ranking configurations.</p>
          */
-        public Builder rerank(java.util.List < Rerank> rerank) {
+        public Builder rerank(java.util.List<Rerank> rerank) {
             String rerankShrink = shrink(rerank, "Rerank", "json");
             this.putQueryParameter("Rerank", rerankShrink);
             this.rerank = rerank;
@@ -367,7 +372,7 @@ public class RetrieveRequest extends Request {
         /**
          * <p>Conversation rewriting configurations.</p>
          */
-        public Builder rewrite(java.util.List < Rewrite> rewrite) {
+        public Builder rewrite(java.util.List<Rewrite> rewrite) {
             String rewriteShrink = shrink(rewrite, "Rewrite", "json");
             this.putQueryParameter("Rewrite", rewriteShrink);
             this.rewrite = rewrite;
@@ -394,7 +399,7 @@ public class RetrieveRequest extends Request {
         /**
          * <p>Specifies complex filter conditions. For more information about the syntax of SearchFilters, see the SearchFilter syntax section of this topic.</p>
          */
-        public Builder searchFilters(java.util.List < java.util.Map<String, String>> searchFilters) {
+        public Builder searchFilters(java.util.List<java.util.Map<String, String>> searchFilters) {
             String searchFiltersShrink = shrink(searchFilters, "SearchFilters", "json");
             this.putQueryParameter("SearchFilters", searchFiltersShrink);
             this.searchFilters = searchFilters;

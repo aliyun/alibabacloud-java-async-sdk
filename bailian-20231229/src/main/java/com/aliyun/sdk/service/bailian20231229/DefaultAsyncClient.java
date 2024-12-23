@@ -59,12 +59,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you have obtained the lease and uploaded the document to the temporary storage space by using the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. For more information, see <a href="https://help.aliyun.com/zh/model-studio/developer-reference/upload-files-by-calling-api">Upload files by calling API</a>.</p>
+     * <p>  Before you call this operation, make sure that you have obtained the lease and uploaded the document to the temporary storage space by using the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/upload-files-by-calling-api">Upload files by calling API</a>.</p>
      * <blockquote>
      * <p> After you call this operation, the used lease ID expires immediately. Do not use the same lease ID to submit new requests.</p>
      * </blockquote>
      * <ul>
-     * <li>You must call this operation within 12 hours after you call the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. Otherwise, the lease expires and the request fails.</li>
+     * <li>You must call this operation within 12 hours after you call the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation. Otherwise, the lease expires and the request fails.</li>
      * <li>After you call this operation, the system parses and imports your document. The process takes some time.</li>
      * <li>This interface is not idempotent.</li>
      * </ul>
@@ -761,6 +761,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateAndPublishAgentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateAndPublishAgentSelective  UpdateAndPublishAgentSelectiveRequest
+     * @return UpdateAndPublishAgentSelectiveResponse
+     */
+    @Override
+    public CompletableFuture<UpdateAndPublishAgentSelectiveResponse> updateAndPublishAgentSelective(UpdateAndPublishAgentSelectiveRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAndPublishAgentSelective").setMethod(HttpMethod.PUT).setPathRegex("/{workspaceId}/application/agents/{appCode}/updateAndPublishAgentSelective").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAndPublishAgentSelectiveResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateAndPublishAgentSelectiveResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class AddFileRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < String > tags;
+    private java.util.List<String> tags;
 
     private AddFileRequest(Builder builder) {
         super(builder);
@@ -101,7 +106,7 @@ public class AddFileRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < String > getTags() {
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
@@ -111,7 +116,7 @@ public class AddFileRequest extends Request {
         private String categoryId; 
         private String leaseId; 
         private String parser; 
-        private java.util.List < String > tags; 
+        private java.util.List<String> tags; 
 
         private Builder() {
             super();
@@ -128,7 +133,7 @@ public class AddFileRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to which the document is uploaded. On the <a href="https://bailian.console.aliyun.com/knowledge-base#/home">homepage</a> of the console, click the workspace Details icon in the upper-left corner to view the workspace ID.</p>
+         * <p>The ID of the workspace to which the document is uploaded. On the <a href="https://bailian.console.alibabacloud.com/#/home">homepage</a> of the console, click the workspace Details icon in the upper-left corner to view the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +155,7 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * <p>The primary key ID of the category to which the document is uploaded. This parameter corresponds to the <code>CategoryId</code> returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-addcategory">AddCategory</a> operation. You can also click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a> page to view the ID. You can set the parameter to default, which specifies the Default Category created by the system.</p>
+         * <p>The primary key ID of the category to which the document is uploaded. This parameter corresponds to the <code>CategoryId</code>&lt;props=&quot;china&quot;&gt; returned by the <a href="https://www.alibabacloud.com/help/zh/model-studio/developer-reference/api-bailian-2023-12-29-addcategory">AddCategory</a> operation. You can also click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> page to view the ID. You can set the parameter to default, which specifies the Default Category created by the system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +168,7 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * <p>The lease ID, which corresponds to the <code>FileUploadLeaseId</code> parameter returned by the <a href="https://help.aliyun.com/zh/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation.</p>
+         * <p>The lease ID, which corresponds to the <code>FileUploadLeaseId</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-applyfileuploadlease">ApplyFileUploadLease</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +199,7 @@ public class AddFileRequest extends Request {
         /**
          * <p>A list of tags associated with the document. The default value is null, which means no tags. You can specify up to 10 tags.</p>
          */
-        public Builder tags(java.util.List < String > tags) {
+        public Builder tags(java.util.List<String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putBodyParameter("Tags", tagsShrink);
             this.tags = tags;

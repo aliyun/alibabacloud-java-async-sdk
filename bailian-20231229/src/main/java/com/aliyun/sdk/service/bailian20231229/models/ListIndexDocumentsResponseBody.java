@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bailian20231229.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -393,7 +398,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Documents")
-        private java.util.List < Documents> documents;
+        private java.util.List<Documents> documents;
 
         @com.aliyun.core.annotation.NameInMap("IndexId")
         private String indexId;
@@ -426,7 +431,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         /**
          * @return documents
          */
-        public java.util.List < Documents> getDocuments() {
+        public java.util.List<Documents> getDocuments() {
             return this.documents;
         }
 
@@ -459,7 +464,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Documents> documents; 
+            private java.util.List<Documents> documents; 
             private String indexId; 
             private Integer pageNumber; 
             private Integer pageSize; 
@@ -468,7 +473,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
             /**
              * <p>The list of documents in the knowledge base.</p>
              */
-            public Builder documents(java.util.List < Documents> documents) {
+            public Builder documents(java.util.List<Documents> documents) {
                 this.documents = documents;
                 return this;
             }
