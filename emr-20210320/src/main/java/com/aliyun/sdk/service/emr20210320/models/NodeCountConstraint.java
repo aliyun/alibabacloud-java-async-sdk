@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class NodeCountConstraint extends TeaModel {
     private String type;
 
     @com.aliyun.core.annotation.NameInMap("Values")
-    private java.util.List < Integer > values;
+    private java.util.List<Integer> values;
 
     private NodeCountConstraint(Builder builder) {
         this.max = builder.max;
@@ -64,7 +69,7 @@ public class NodeCountConstraint extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < Integer > getValues() {
+    public java.util.List<Integer> getValues() {
         return this.values;
     }
 
@@ -72,7 +77,7 @@ public class NodeCountConstraint extends TeaModel {
         private Integer max; 
         private Integer min; 
         private String type; 
-        private java.util.List < Integer > values; 
+        private java.util.List<Integer> values; 
 
         /**
          * Max.
@@ -104,7 +109,7 @@ public class NodeCountConstraint extends TeaModel {
         /**
          * Values.
          */
-        public Builder values(java.util.List < Integer > values) {
+        public Builder values(java.util.List<Integer> values) {
             this.values = values;
             return this;
         }

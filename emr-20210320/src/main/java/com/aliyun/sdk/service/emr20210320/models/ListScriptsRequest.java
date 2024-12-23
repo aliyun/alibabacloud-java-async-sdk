@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -113,7 +118,7 @@ public class ListScriptsRequest extends Request {
         } 
 
         /**
-         * <p>集群ID。</p>
+         * <p>Cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +131,7 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * <p>一次获取的最大记录数。取值范围：1~100。</p>
+         * <p>The maximum number of records to retrieve at once.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -138,7 +143,7 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+         * <p>Marks the current position to start reading from.</p>
          * 
          * <strong>example:</strong>
          * <p>dd6b1b2a-5837-5237-abe4-ff0c89568980</p>
@@ -150,7 +155,7 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * <p>区域ID。</p>
+         * <p>Region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +168,11 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * <p>集群脚本类型。</p>
+         * <p>Type of cluster script. Possible values:</p>
+         * <ul>
+         * <li>BOOTSTRAP: Bootstrap script.</li>
+         * <li>NORMAL: Regular cluster script.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

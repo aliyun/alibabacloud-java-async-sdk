@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListDoctorComputeSummaryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ComponentTypes")
-    private java.util.List < String > componentTypes;
+    private java.util.List<String> componentTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DateTime")
@@ -82,7 +87,7 @@ public class ListDoctorComputeSummaryRequest extends Request {
     /**
      * @return componentTypes
      */
-    public java.util.List < String > getComponentTypes() {
+    public java.util.List<String> getComponentTypes() {
         return this.componentTypes;
     }
 
@@ -130,7 +135,7 @@ public class ListDoctorComputeSummaryRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListDoctorComputeSummaryRequest, Builder> {
         private String clusterId; 
-        private java.util.List < String > componentTypes; 
+        private java.util.List<String> componentTypes; 
         private String dateTime; 
         private Integer maxResults; 
         private String nextToken; 
@@ -179,7 +184,7 @@ public class ListDoctorComputeSummaryRequest extends Request {
          * <strong>example:</strong>
          * <p>null</p>
          */
-        public Builder componentTypes(java.util.List < String > componentTypes) {
+        public Builder componentTypes(java.util.List<String> componentTypes) {
             this.putQueryParameter("ComponentTypes", componentTypes);
             this.componentTypes = componentTypes;
             return this;

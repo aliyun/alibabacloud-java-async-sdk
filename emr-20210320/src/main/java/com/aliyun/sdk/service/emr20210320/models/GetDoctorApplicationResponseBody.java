@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -744,7 +749,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
         private Long endTime;
 
         @com.aliyun.core.annotation.NameInMap("Ids")
-        private java.util.List < String > ids;
+        private java.util.List<String> ids;
 
         @com.aliyun.core.annotation.NameInMap("Metrics")
         private Metrics metrics;
@@ -809,7 +814,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
         /**
          * @return ids
          */
-        public java.util.List < String > getIds() {
+        public java.util.List<String> getIds() {
             return this.ids;
         }
 
@@ -859,7 +864,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             private Analysis analysis; 
             private String appName; 
             private Long endTime; 
-            private java.util.List < String > ids; 
+            private java.util.List<String> ids; 
             private Metrics metrics; 
             private String querySql; 
             private String queue; 
@@ -903,7 +908,7 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>null</p>
              */
-            public Builder ids(java.util.List < String > ids) {
+            public Builder ids(java.util.List<String> ids) {
                 this.ids = ids;
                 return this;
             }

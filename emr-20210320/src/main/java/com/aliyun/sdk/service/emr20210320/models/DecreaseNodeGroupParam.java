@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class DecreaseNodeGroupParam extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ReleaseInstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > releaseInstanceIds;
+    private java.util.List<String> releaseInstanceIds;
 
     private DecreaseNodeGroupParam(Builder builder) {
         this.nodeGroupId = builder.nodeGroupId;
@@ -43,13 +48,13 @@ public class DecreaseNodeGroupParam extends TeaModel {
     /**
      * @return releaseInstanceIds
      */
-    public java.util.List < String > getReleaseInstanceIds() {
+    public java.util.List<String> getReleaseInstanceIds() {
         return this.releaseInstanceIds;
     }
 
     public static final class Builder {
         private String nodeGroupId; 
-        private java.util.List < String > releaseInstanceIds; 
+        private java.util.List<String> releaseInstanceIds; 
 
         /**
          * <p>This parameter is required.</p>
@@ -65,7 +70,7 @@ public class DecreaseNodeGroupParam extends TeaModel {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder releaseInstanceIds(java.util.List < String > releaseInstanceIds) {
+        public Builder releaseInstanceIds(java.util.List<String> releaseInstanceIds) {
             this.releaseInstanceIds = releaseInstanceIds;
             return this;
         }

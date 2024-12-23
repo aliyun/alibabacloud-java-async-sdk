@@ -12,34 +12,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListDoctorReportsRequest} extends {@link RequestModel}
+ * {@link UpdateClusterAttributeRequest} extends {@link RequestModel}
  *
- * <p>ListDoctorReportsRequest</p>
+ * <p>UpdateClusterAttributeRequest</p>
  */
-public class ListDoctorReportsRequest extends Request {
+public class UpdateClusterAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("MaxResults")
-    private Integer maxResults;
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
+    private String clusterName;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NextToken")
-    private String nextToken;
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    private ListDoctorReportsRequest(Builder builder) {
+    private UpdateClusterAttributeRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
-        this.maxResults = builder.maxResults;
-        this.nextToken = builder.nextToken;
+        this.clusterName = builder.clusterName;
+        this.deletionProtection = builder.deletionProtection;
+        this.description = builder.description;
         this.regionId = builder.regionId;
     }
 
@@ -47,7 +52,7 @@ public class ListDoctorReportsRequest extends Request {
         return new Builder();
     }
 
-    public static ListDoctorReportsRequest create() {
+    public static UpdateClusterAttributeRequest create() {
         return builder().build();
     }
 
@@ -64,17 +69,24 @@ public class ListDoctorReportsRequest extends Request {
     }
 
     /**
-     * @return maxResults
+     * @return clusterName
      */
-    public Integer getMaxResults() {
-        return this.maxResults;
+    public String getClusterName() {
+        return this.clusterName;
     }
 
     /**
-     * @return nextToken
+     * @return deletionProtection
      */
-    public String getNextToken() {
-        return this.nextToken;
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -84,26 +96,28 @@ public class ListDoctorReportsRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<ListDoctorReportsRequest, Builder> {
+    public static final class Builder extends Request.Builder<UpdateClusterAttributeRequest, Builder> {
         private String clusterId; 
-        private Integer maxResults; 
-        private String nextToken; 
+        private String clusterName; 
+        private Boolean deletionProtection; 
+        private String description; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListDoctorReportsRequest request) {
+        private Builder(UpdateClusterAttributeRequest request) {
             super(request);
             this.clusterId = request.clusterId;
-            this.maxResults = request.maxResults;
-            this.nextToken = request.nextToken;
+            this.clusterName = request.clusterName;
+            this.deletionProtection = request.deletionProtection;
+            this.description = request.description;
             this.regionId = request.regionId;
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>集群ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,31 +130,37 @@ public class ListDoctorReportsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>集群名称。</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>emrtest</p>
          */
-        public Builder maxResults(Integer maxResults) {
-            this.putQueryParameter("MaxResults", maxResults);
-            this.maxResults = maxResults;
+        public Builder clusterName(String clusterName) {
+            this.putQueryParameter("ClusterName", clusterName);
+            this.clusterName = clusterName;
             return this;
         }
 
         /**
-         * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
+         * DeletionProtection.
          */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("NextToken", nextToken);
-            this.nextToken = nextToken;
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
             return this;
         }
 
         /**
-         * <p>The region ID.</p>
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>区域ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,8 +173,8 @@ public class ListDoctorReportsRequest extends Request {
         }
 
         @Override
-        public ListDoctorReportsRequest build() {
-            return new ListDoctorReportsRequest(this);
+        public UpdateClusterAttributeRequest build() {
+            return new UpdateClusterAttributeRequest(this);
         } 
 
     } 

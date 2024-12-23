@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ScalingActivities")
-    private java.util.List < ScalingActivities> scalingActivities;
+    private java.util.List<ScalingActivities> scalingActivities;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
     /**
      * @return scalingActivities
      */
-    public java.util.List < ScalingActivities> getScalingActivities() {
+    public java.util.List<ScalingActivities> getScalingActivities() {
         return this.scalingActivities;
     }
 
@@ -82,7 +87,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ScalingActivities> scalingActivities; 
+        private java.util.List<ScalingActivities> scalingActivities; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         /**
          * <p>The scaling activities.</p>
          */
-        public Builder scalingActivities(java.util.List < ScalingActivities> scalingActivities) {
+        public Builder scalingActivities(java.util.List<ScalingActivities> scalingActivities) {
             this.scalingActivities = scalingActivities;
             return this;
         }
@@ -172,7 +177,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         private Integer expectNum;
 
         @com.aliyun.core.annotation.NameInMap("InstanceTypeToNum")
-        private java.util.Map < String, Integer > instanceTypeToNum;
+        private java.util.Map<String, Integer> instanceTypeToNum;
 
         @com.aliyun.core.annotation.NameInMap("NodeGroupId")
         private String nodeGroupId;
@@ -269,7 +274,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         /**
          * @return instanceTypeToNum
          */
-        public java.util.Map < String, Integer > getInstanceTypeToNum() {
+        public java.util.Map<String, Integer> getInstanceTypeToNum() {
             return this.instanceTypeToNum;
         }
 
@@ -323,7 +328,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             private String description; 
             private Long endTime; 
             private Integer expectNum; 
-            private java.util.Map < String, Integer > instanceTypeToNum; 
+            private java.util.Map<String, Integer> instanceTypeToNum; 
             private String nodeGroupId; 
             private String nodeGroupName; 
             private String operationId; 
@@ -421,7 +426,7 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             /**
              * InstanceTypeToNum.
              */
-            public Builder instanceTypeToNum(java.util.Map < String, Integer > instanceTypeToNum) {
+            public Builder instanceTypeToNum(java.util.Map<String, Integer> instanceTypeToNum) {
                 this.instanceTypeToNum = instanceTypeToNum;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class PutAutoScalingPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingRules")
-    private java.util.List < ScalingRule > scalingRules;
+    private java.util.List<ScalingRule> scalingRules;
 
     private PutAutoScalingPolicyRequest(Builder builder) {
         super(builder);
@@ -88,7 +93,7 @@ public class PutAutoScalingPolicyRequest extends Request {
     /**
      * @return scalingRules
      */
-    public java.util.List < ScalingRule > getScalingRules() {
+    public java.util.List<ScalingRule> getScalingRules() {
         return this.scalingRules;
     }
 
@@ -97,7 +102,7 @@ public class PutAutoScalingPolicyRequest extends Request {
         private ScalingConstraints constraints; 
         private String nodeGroupId; 
         private String regionId; 
-        private java.util.List < ScalingRule > scalingRules; 
+        private java.util.List<ScalingRule> scalingRules; 
 
         private Builder() {
             super();
@@ -163,7 +168,7 @@ public class PutAutoScalingPolicyRequest extends Request {
         /**
          * <p>The auto scaling rules. Number of elements in the array: 0 to 100.</p>
          */
-        public Builder scalingRules(java.util.List < ScalingRule > scalingRules) {
+        public Builder scalingRules(java.util.List<ScalingRule> scalingRules) {
             this.putQueryParameter("ScalingRules", scalingRules);
             this.scalingRules = scalingRules;
             return this;

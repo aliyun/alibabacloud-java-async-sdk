@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class ListDoctorJobsStatsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupBy")
-    private java.util.List < String > groupBy;
+    private java.util.List<String> groupBy;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -93,7 +98,7 @@ public class ListDoctorJobsStatsRequest extends Request {
     /**
      * @return groupBy
      */
-    public java.util.List < String > getGroupBy() {
+    public java.util.List<String> getGroupBy() {
         return this.groupBy;
     }
 
@@ -142,7 +147,7 @@ public class ListDoctorJobsStatsRequest extends Request {
     public static final class Builder extends Request.Builder<ListDoctorJobsStatsRequest, Builder> {
         private String clusterId; 
         private EndRange endRange; 
-        private java.util.List < String > groupBy; 
+        private java.util.List<String> groupBy; 
         private Integer maxResults; 
         private String nextToken; 
         private String orderBy; 
@@ -196,7 +201,7 @@ public class ListDoctorJobsStatsRequest extends Request {
          * <strong>example:</strong>
          * <p>null</p>
          */
-        public Builder groupBy(java.util.List < String > groupBy) {
+        public Builder groupBy(java.util.List<String> groupBy) {
             this.putQueryParameter("GroupBy", groupBy);
             this.groupBy = groupBy;
             return this;

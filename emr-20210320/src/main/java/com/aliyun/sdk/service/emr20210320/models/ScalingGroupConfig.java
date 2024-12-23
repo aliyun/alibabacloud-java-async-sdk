@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ScalingGroupConfig extends TeaModel {
     private Long defaultCoolDownTime;
 
     @com.aliyun.core.annotation.NameInMap("InstanceTypeList")
-    private java.util.List < InstanceTypeList> instanceTypeList;
+    private java.util.List<InstanceTypeList> instanceTypeList;
 
     @com.aliyun.core.annotation.NameInMap("MultiAvailablePolicy")
     private MultiAvailablePolicy multiAvailablePolicy;
@@ -110,7 +115,7 @@ public class ScalingGroupConfig extends TeaModel {
     /**
      * @return instanceTypeList
      */
-    public java.util.List < InstanceTypeList> getInstanceTypeList() {
+    public java.util.List<InstanceTypeList> getInstanceTypeList() {
         return this.instanceTypeList;
     }
 
@@ -182,7 +187,7 @@ public class ScalingGroupConfig extends TeaModel {
         private Integer dataDiskCount; 
         private Long dataDiskSize; 
         private Long defaultCoolDownTime; 
-        private java.util.List < InstanceTypeList> instanceTypeList; 
+        private java.util.List<InstanceTypeList> instanceTypeList; 
         private MultiAvailablePolicy multiAvailablePolicy; 
         private NodeOfflinePolicy nodeOfflinePolicy; 
         private PrivatePoolOptions privatePoolOptions; 
@@ -240,7 +245,7 @@ public class ScalingGroupConfig extends TeaModel {
         /**
          * <p>抢占实例列表。</p>
          */
-        public Builder instanceTypeList(java.util.List < InstanceTypeList> instanceTypeList) {
+        public Builder instanceTypeList(java.util.List<InstanceTypeList> instanceTypeList) {
             this.instanceTypeList = instanceTypeList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -117,10 +122,10 @@ public class ComponentLayout extends TeaModel {
         private String nodeGroupName;
 
         @com.aliyun.core.annotation.NameInMap("NodeGroupTypes")
-        private java.util.List < String > nodeGroupTypes;
+        private java.util.List<String> nodeGroupTypes;
 
         @com.aliyun.core.annotation.NameInMap("NodeNames")
-        private java.util.List < String > nodeNames;
+        private java.util.List<String> nodeNames;
 
         @com.aliyun.core.annotation.NameInMap("NodeSelectType")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -179,14 +184,14 @@ public class ComponentLayout extends TeaModel {
         /**
          * @return nodeGroupTypes
          */
-        public java.util.List < String > getNodeGroupTypes() {
+        public java.util.List<String> getNodeGroupTypes() {
             return this.nodeGroupTypes;
         }
 
         /**
          * @return nodeNames
          */
-        public java.util.List < String > getNodeNames() {
+        public java.util.List<String> getNodeNames() {
             return this.nodeNames;
         }
 
@@ -209,8 +214,8 @@ public class ComponentLayout extends TeaModel {
             private String nodeGroupId; 
             private Integer nodeGroupIndex; 
             private String nodeGroupName; 
-            private java.util.List < String > nodeGroupTypes; 
-            private java.util.List < String > nodeNames; 
+            private java.util.List<String> nodeGroupTypes; 
+            private java.util.List<String> nodeNames; 
             private String nodeSelectType; 
             private Integer nodeStartIndex; 
 
@@ -264,7 +269,7 @@ public class ComponentLayout extends TeaModel {
              * <strong>example:</strong>
              * <p>[null]</p>
              */
-            public Builder nodeGroupTypes(java.util.List < String > nodeGroupTypes) {
+            public Builder nodeGroupTypes(java.util.List<String> nodeGroupTypes) {
                 this.nodeGroupTypes = nodeGroupTypes;
                 return this;
             }
@@ -275,7 +280,7 @@ public class ComponentLayout extends TeaModel {
              * <strong>example:</strong>
              * <p>[null]</p>
              */
-            public Builder nodeNames(java.util.List < String > nodeNames) {
+            public Builder nodeNames(java.util.List<String> nodeNames) {
                 this.nodeNames = nodeNames;
                 return this;
             }

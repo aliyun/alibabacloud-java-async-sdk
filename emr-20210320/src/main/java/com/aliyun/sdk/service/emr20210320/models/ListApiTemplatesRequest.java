@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class ListApiTemplatesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateIds")
-    private java.util.List < String > templateIds;
+    private java.util.List<String> templateIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateName")
@@ -116,7 +121,7 @@ public class ListApiTemplatesRequest extends Request {
     /**
      * @return templateIds
      */
-    public java.util.List < String > getTemplateIds() {
+    public java.util.List<String> getTemplateIds() {
         return this.templateIds;
     }
 
@@ -134,7 +139,7 @@ public class ListApiTemplatesRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String templateId; 
-        private java.util.List < String > templateIds; 
+        private java.util.List<String> templateIds; 
         private String templateName; 
 
         private Builder() {
@@ -233,7 +238,7 @@ public class ListApiTemplatesRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;AT-****&quot;]</p>
          */
-        public Builder templateIds(java.util.List < String > templateIds) {
+        public Builder templateIds(java.util.List<String> templateIds) {
             this.putQueryParameter("TemplateIds", templateIds);
             this.templateIds = templateIds;
             return this;

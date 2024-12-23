@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListClustersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterIds")
-    private java.util.List < String > clusterIds;
+    private java.util.List<String> clusterIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterName")
@@ -22,11 +27,11 @@ public class ListClustersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterStates")
-    private java.util.List < String > clusterStates;
+    private java.util.List<String> clusterStates;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterTypes")
-    private java.util.List < String > clusterTypes;
+    private java.util.List<String> clusterTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -38,7 +43,7 @@ public class ListClustersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PaymentTypes")
-    private java.util.List < String > paymentTypes;
+    private java.util.List<String> paymentTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -51,7 +56,7 @@ public class ListClustersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tag > tags;
+    private java.util.List<Tag> tags;
 
     private ListClustersRequest(Builder builder) {
         super(builder);
@@ -83,7 +88,7 @@ public class ListClustersRequest extends Request {
     /**
      * @return clusterIds
      */
-    public java.util.List < String > getClusterIds() {
+    public java.util.List<String> getClusterIds() {
         return this.clusterIds;
     }
 
@@ -97,14 +102,14 @@ public class ListClustersRequest extends Request {
     /**
      * @return clusterStates
      */
-    public java.util.List < String > getClusterStates() {
+    public java.util.List<String> getClusterStates() {
         return this.clusterStates;
     }
 
     /**
      * @return clusterTypes
      */
-    public java.util.List < String > getClusterTypes() {
+    public java.util.List<String> getClusterTypes() {
         return this.clusterTypes;
     }
 
@@ -125,7 +130,7 @@ public class ListClustersRequest extends Request {
     /**
      * @return paymentTypes
      */
-    public java.util.List < String > getPaymentTypes() {
+    public java.util.List<String> getPaymentTypes() {
         return this.paymentTypes;
     }
 
@@ -146,21 +151,21 @@ public class ListClustersRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<ListClustersRequest, Builder> {
-        private java.util.List < String > clusterIds; 
+        private java.util.List<String> clusterIds; 
         private String clusterName; 
-        private java.util.List < String > clusterStates; 
-        private java.util.List < String > clusterTypes; 
+        private java.util.List<String> clusterStates; 
+        private java.util.List<String> clusterTypes; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > paymentTypes; 
+        private java.util.List<String> paymentTypes; 
         private String regionId; 
         private String resourceGroupId; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
 
         private Builder() {
             super();
@@ -186,7 +191,7 @@ public class ListClustersRequest extends Request {
          * <strong>example:</strong>
          * <p>rg-acfmzabjyop****</p>
          */
-        public Builder clusterIds(java.util.List < String > clusterIds) {
+        public Builder clusterIds(java.util.List<String> clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
             this.clusterIds = clusterIds;
             return this;
@@ -210,7 +215,7 @@ public class ListClustersRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;HADOOP&quot;]</p>
          */
-        public Builder clusterStates(java.util.List < String > clusterStates) {
+        public Builder clusterStates(java.util.List<String> clusterStates) {
             this.putQueryParameter("ClusterStates", clusterStates);
             this.clusterStates = clusterStates;
             return this;
@@ -222,7 +227,7 @@ public class ListClustersRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;c-b933c5aac8fe****&quot;]</p>
          */
-        public Builder clusterTypes(java.util.List < String > clusterTypes) {
+        public Builder clusterTypes(java.util.List<String> clusterTypes) {
             this.putQueryParameter("ClusterTypes", clusterTypes);
             this.clusterTypes = clusterTypes;
             return this;
@@ -258,7 +263,7 @@ public class ListClustersRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;ECS&quot;]</p>
          */
-        public Builder paymentTypes(java.util.List < String > paymentTypes) {
+        public Builder paymentTypes(java.util.List<String> paymentTypes) {
             this.putQueryParameter("PaymentTypes", paymentTypes);
             this.paymentTypes = paymentTypes;
             return this;
@@ -323,7 +328,7 @@ public class ListClustersRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;PayAsYouGo&quot;]</p>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

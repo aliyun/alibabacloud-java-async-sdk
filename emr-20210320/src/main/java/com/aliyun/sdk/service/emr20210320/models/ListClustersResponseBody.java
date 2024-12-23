@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListClustersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Clusters")
-    private java.util.List < ClusterSummary > clusters;
+    private java.util.List<ClusterSummary> clusters;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class ListClustersResponseBody extends TeaModel {
     /**
      * @return clusters
      */
-    public java.util.List < ClusterSummary > getClusters() {
+    public java.util.List<ClusterSummary> getClusters() {
         return this.clusters;
     }
 
@@ -79,7 +84,7 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ClusterSummary > clusters; 
+        private java.util.List<ClusterSummary> clusters; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * <p>The clusters.</p>
          */
-        public Builder clusters(java.util.List < ClusterSummary > clusters) {
+        public Builder clusters(java.util.List<ClusterSummary> clusters) {
             this.clusters = clusters;
             return this;
         }

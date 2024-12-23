@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListComponentsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Components")
-    private java.util.List < Components> components;
+    private java.util.List<Components> components;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class ListComponentsResponseBody extends TeaModel {
     /**
      * @return components
      */
-    public java.util.List < Components> getComponents() {
+    public java.util.List<Components> getComponents() {
         return this.components;
     }
 
@@ -79,7 +84,7 @@ public class ListComponentsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Components> components; 
+        private java.util.List<Components> components; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListComponentsResponseBody extends TeaModel {
         /**
          * Components.
          */
-        public Builder components(java.util.List < Components> components) {
+        public Builder components(java.util.List<Components> components) {
             this.components = components;
             return this;
         }
@@ -154,7 +159,7 @@ public class ListComponentsResponseBody extends TeaModel {
         private String applicationName;
 
         @com.aliyun.core.annotation.NameInMap("Attributes")
-        private java.util.List < Attribute > attributes;
+        private java.util.List<Attribute> attributes;
 
         @com.aliyun.core.annotation.NameInMap("ComponentName")
         private String componentName;
@@ -191,7 +196,7 @@ public class ListComponentsResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.List < Attribute > getAttributes() {
+        public java.util.List<Attribute> getAttributes() {
             return this.attributes;
         }
 
@@ -218,7 +223,7 @@ public class ListComponentsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String applicationName; 
-            private java.util.List < Attribute > attributes; 
+            private java.util.List<Attribute> attributes; 
             private String componentName; 
             private String namespace; 
             private Integer replica; 
@@ -237,7 +242,7 @@ public class ListComponentsResponseBody extends TeaModel {
             /**
              * <p>属性列表。</p>
              */
-            public Builder attributes(java.util.List < Attribute > attributes) {
+            public Builder attributes(java.util.List<Attribute> attributes) {
                 this.attributes = attributes;
                 return this;
             }

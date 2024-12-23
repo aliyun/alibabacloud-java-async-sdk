@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class TriggerCondition extends TeaModel {
     private String statistics;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tag > tags;
+    private java.util.List<Tag> tags;
 
     @com.aliyun.core.annotation.NameInMap("Threshold")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -71,7 +76,7 @@ public class TriggerCondition extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
@@ -86,7 +91,7 @@ public class TriggerCondition extends TeaModel {
         private String comparisonOperator; 
         private String metricName; 
         private String statistics; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
         private Double threshold; 
 
         /**
@@ -141,7 +146,7 @@ public class TriggerCondition extends TeaModel {
         /**
          * <p>指标Tag。</p>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.tags = tags;
             return this;
         }

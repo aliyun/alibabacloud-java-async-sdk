@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,27 +32,27 @@ public class ListNodesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeGroupIds")
-    private java.util.List < String > nodeGroupIds;
+    private java.util.List<String> nodeGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeIds")
-    private java.util.List < String > nodeIds;
+    private java.util.List<String> nodeIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeNames")
-    private java.util.List < String > nodeNames;
+    private java.util.List<String> nodeNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeStates")
-    private java.util.List < String > nodeStates;
+    private java.util.List<String> nodeStates;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrivateIps")
-    private java.util.List < String > privateIps;
+    private java.util.List<String> privateIps;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PublicIps")
-    private java.util.List < String > publicIps;
+    private java.util.List<String> publicIps;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -56,7 +61,7 @@ public class ListNodesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tag > tags;
+    private java.util.List<Tag> tags;
 
     private ListNodesRequest(Builder builder) {
         super(builder);
@@ -110,42 +115,42 @@ public class ListNodesRequest extends Request {
     /**
      * @return nodeGroupIds
      */
-    public java.util.List < String > getNodeGroupIds() {
+    public java.util.List<String> getNodeGroupIds() {
         return this.nodeGroupIds;
     }
 
     /**
      * @return nodeIds
      */
-    public java.util.List < String > getNodeIds() {
+    public java.util.List<String> getNodeIds() {
         return this.nodeIds;
     }
 
     /**
      * @return nodeNames
      */
-    public java.util.List < String > getNodeNames() {
+    public java.util.List<String> getNodeNames() {
         return this.nodeNames;
     }
 
     /**
      * @return nodeStates
      */
-    public java.util.List < String > getNodeStates() {
+    public java.util.List<String> getNodeStates() {
         return this.nodeStates;
     }
 
     /**
      * @return privateIps
      */
-    public java.util.List < String > getPrivateIps() {
+    public java.util.List<String> getPrivateIps() {
         return this.privateIps;
     }
 
     /**
      * @return publicIps
      */
-    public java.util.List < String > getPublicIps() {
+    public java.util.List<String> getPublicIps() {
         return this.publicIps;
     }
 
@@ -159,7 +164,7 @@ public class ListNodesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
@@ -167,14 +172,14 @@ public class ListNodesRequest extends Request {
         private String clusterId; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > nodeGroupIds; 
-        private java.util.List < String > nodeIds; 
-        private java.util.List < String > nodeNames; 
-        private java.util.List < String > nodeStates; 
-        private java.util.List < String > privateIps; 
-        private java.util.List < String > publicIps; 
+        private java.util.List<String> nodeGroupIds; 
+        private java.util.List<String> nodeIds; 
+        private java.util.List<String> nodeNames; 
+        private java.util.List<String> nodeStates; 
+        private java.util.List<String> privateIps; 
+        private java.util.List<String> publicIps; 
         private String regionId; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
 
         private Builder() {
             super();
@@ -238,7 +243,7 @@ public class ListNodesRequest extends Request {
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
-        public Builder nodeGroupIds(java.util.List < String > nodeGroupIds) {
+        public Builder nodeGroupIds(java.util.List<String> nodeGroupIds) {
             this.putQueryParameter("NodeGroupIds", nodeGroupIds);
             this.nodeGroupIds = nodeGroupIds;
             return this;
@@ -250,7 +255,7 @@ public class ListNodesRequest extends Request {
          * <strong>example:</strong>
          * <p>c-b933c5aac8fe****</p>
          */
-        public Builder nodeIds(java.util.List < String > nodeIds) {
+        public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putQueryParameter("NodeIds", nodeIds);
             this.nodeIds = nodeIds;
             return this;
@@ -262,7 +267,7 @@ public class ListNodesRequest extends Request {
          * <strong>example:</strong>
          * <p>20</p>
          */
-        public Builder nodeNames(java.util.List < String > nodeNames) {
+        public Builder nodeNames(java.util.List<String> nodeNames) {
             this.putQueryParameter("NodeNames", nodeNames);
             this.nodeNames = nodeNames;
             return this;
@@ -274,7 +279,7 @@ public class ListNodesRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;CREATED&quot;]</p>
          */
-        public Builder nodeStates(java.util.List < String > nodeStates) {
+        public Builder nodeStates(java.util.List<String> nodeStates) {
             this.putQueryParameter("NodeStates", nodeStates);
             this.nodeStates = nodeStates;
             return this;
@@ -286,7 +291,7 @@ public class ListNodesRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;172.12.0.91&quot;]</p>
          */
-        public Builder privateIps(java.util.List < String > privateIps) {
+        public Builder privateIps(java.util.List<String> privateIps) {
             this.putQueryParameter("PrivateIps", privateIps);
             this.privateIps = privateIps;
             return this;
@@ -298,7 +303,7 @@ public class ListNodesRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;120.13.14.38&quot;]</p>
          */
-        public Builder publicIps(java.util.List < String > publicIps) {
+        public Builder publicIps(java.util.List<String> publicIps) {
             this.putQueryParameter("PublicIps", publicIps);
             this.publicIps = publicIps;
             return this;
@@ -320,7 +325,7 @@ public class ListNodesRequest extends Request {
         /**
          * <p>The list of tags to be bound.</p>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

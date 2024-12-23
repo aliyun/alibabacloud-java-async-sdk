@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,16 +19,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RunClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ApplicationConfigs")
-    private java.util.List < ApplicationConfig > applicationConfigs;
+    private java.util.List<ApplicationConfig> applicationConfigs;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Applications")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Application > applications;
+    private java.util.List<Application> applications;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BootstrapScripts")
-    private java.util.List < Script > bootstrapScripts;
+    private java.util.List<Script> bootstrapScripts;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -58,7 +63,7 @@ public class RunClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NodeGroups")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < NodeGroupConfig > nodeGroups;
+    private java.util.List<NodeGroupConfig> nodeGroups;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PaymentType")
@@ -88,7 +93,7 @@ public class RunClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tag > tags;
+    private java.util.List<Tag> tags;
 
     private RunClusterRequest(Builder builder) {
         super(builder);
@@ -128,21 +133,21 @@ public class RunClusterRequest extends Request {
     /**
      * @return applicationConfigs
      */
-    public java.util.List < ApplicationConfig > getApplicationConfigs() {
+    public java.util.List<ApplicationConfig> getApplicationConfigs() {
         return this.applicationConfigs;
     }
 
     /**
      * @return applications
      */
-    public java.util.List < Application > getApplications() {
+    public java.util.List<Application> getApplications() {
         return this.applications;
     }
 
     /**
      * @return bootstrapScripts
      */
-    public java.util.List < Script > getBootstrapScripts() {
+    public java.util.List<Script> getBootstrapScripts() {
         return this.bootstrapScripts;
     }
 
@@ -198,7 +203,7 @@ public class RunClusterRequest extends Request {
     /**
      * @return nodeGroups
      */
-    public java.util.List < NodeGroupConfig > getNodeGroups() {
+    public java.util.List<NodeGroupConfig> getNodeGroups() {
         return this.nodeGroups;
     }
 
@@ -247,14 +252,14 @@ public class RunClusterRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<RunClusterRequest, Builder> {
-        private java.util.List < ApplicationConfig > applicationConfigs; 
-        private java.util.List < Application > applications; 
-        private java.util.List < Script > bootstrapScripts; 
+        private java.util.List<ApplicationConfig> applicationConfigs; 
+        private java.util.List<Application> applications; 
+        private java.util.List<Script> bootstrapScripts; 
         private String clientToken; 
         private String clusterName; 
         private String clusterType; 
@@ -262,14 +267,14 @@ public class RunClusterRequest extends Request {
         private String deployMode; 
         private String description; 
         private NodeAttributes nodeAttributes; 
-        private java.util.List < NodeGroupConfig > nodeGroups; 
+        private java.util.List<NodeGroupConfig> nodeGroups; 
         private String paymentType; 
         private String regionId; 
         private String releaseVersion; 
         private String resourceGroupId; 
         private String securityMode; 
         private SubscriptionConfig subscriptionConfig; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
 
         private Builder() {
             super();
@@ -298,9 +303,9 @@ public class RunClusterRequest extends Request {
         } 
 
         /**
-         * <p>The service configurations. Number of elements in the array: 1 to 1,000.</p>
+         * <p>The application configurations. Number of elements in the array: 1 to 1000.</p>
          */
-        public Builder applicationConfigs(java.util.List < ApplicationConfig > applicationConfigs) {
+        public Builder applicationConfigs(java.util.List<ApplicationConfig> applicationConfigs) {
             String applicationConfigsShrink = shrink(applicationConfigs, "ApplicationConfigs", "json");
             this.putBodyParameter("ApplicationConfigs", applicationConfigsShrink);
             this.applicationConfigs = applicationConfigs;
@@ -308,10 +313,10 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>The list of services. Number of elements in the array: 1 to 100.</p>
+         * <p>The services. Number of elements in the array: 1 to 100.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder applications(java.util.List < Application > applications) {
+        public Builder applications(java.util.List<Application> applications) {
             String applicationsShrink = shrink(applications, "Applications", "json");
             this.putBodyParameter("Applications", applicationsShrink);
             this.applications = applications;
@@ -321,7 +326,7 @@ public class RunClusterRequest extends Request {
         /**
          * <p>The bootstrap actions. Number of elements in the array: 1 to 10.</p>
          */
-        public Builder bootstrapScripts(java.util.List < Script > bootstrapScripts) {
+        public Builder bootstrapScripts(java.util.List<Script> bootstrapScripts) {
             String bootstrapScriptsShrink = shrink(bootstrapScripts, "BootstrapScripts", "json");
             this.putBodyParameter("BootstrapScripts", bootstrapScriptsShrink);
             this.bootstrapScripts = bootstrapScripts;
@@ -413,7 +418,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>The basic attributes of all ECS instances in the cluster.</p>
+         * <p>The attributes of all ECS instances.</p>
          */
         public Builder nodeAttributes(NodeAttributes nodeAttributes) {
             String nodeAttributesShrink = shrink(nodeAttributes, "NodeAttributes", "json");
@@ -426,7 +431,7 @@ public class RunClusterRequest extends Request {
          * <p>The node groups. Number of elements in the array: 1 to 100.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder nodeGroups(java.util.List < NodeGroupConfig > nodeGroups) {
+        public Builder nodeGroups(java.util.List<NodeGroupConfig> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
             this.putBodyParameter("NodeGroups", nodeGroupsShrink);
             this.nodeGroups = nodeGroups;
@@ -505,7 +510,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.</p>
+         * <p>The subscription configurations. This parameter takes effect only if you set the PaymentType parameter to Subscription.</p>
          */
         public Builder subscriptionConfig(SubscriptionConfig subscriptionConfig) {
             String subscriptionConfigShrink = shrink(subscriptionConfig, "SubscriptionConfig", "json");
@@ -515,9 +520,9 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>The list of tags. Number of elements in the array: 0 to 20.</p>
+         * <p>The tags. Number of elements in the array: 0 to 20.</p>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putBodyParameter("Tags", tagsShrink);
             this.tags = tags;

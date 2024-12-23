@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,10 +21,10 @@ public class AckConfig extends TeaModel {
     private String ackInstanceId;
 
     @com.aliyun.core.annotation.NameInMap("CustomAnnotations")
-    private java.util.List < Tag > customAnnotations;
+    private java.util.List<Tag> customAnnotations;
 
     @com.aliyun.core.annotation.NameInMap("CustomLabels")
-    private java.util.List < Tag > customLabels;
+    private java.util.List<Tag> customLabels;
 
     @com.aliyun.core.annotation.NameInMap("DataDiskSize")
     private Integer dataDiskSize;
@@ -43,7 +48,7 @@ public class AckConfig extends TeaModel {
     private String nodeAffinity;
 
     @com.aliyun.core.annotation.NameInMap("NodeSelectors")
-    private java.util.List < Tag > nodeSelectors;
+    private java.util.List<Tag> nodeSelectors;
 
     @com.aliyun.core.annotation.NameInMap("PodAffinity")
     private String podAffinity;
@@ -52,10 +57,10 @@ public class AckConfig extends TeaModel {
     private String podAntiAffinity;
 
     @com.aliyun.core.annotation.NameInMap("PreStartCommand")
-    private java.util.List < String > preStartCommand;
+    private java.util.List<String> preStartCommand;
 
     @com.aliyun.core.annotation.NameInMap("Pvcs")
-    private java.util.List < Pvcs> pvcs;
+    private java.util.List<Pvcs> pvcs;
 
     @com.aliyun.core.annotation.NameInMap("RequestCpu")
     private Float requestCpu;
@@ -64,13 +69,13 @@ public class AckConfig extends TeaModel {
     private Float requestMemory;
 
     @com.aliyun.core.annotation.NameInMap("Tolerations")
-    private java.util.List < Toleration > tolerations;
+    private java.util.List<Toleration> tolerations;
 
     @com.aliyun.core.annotation.NameInMap("VolumeMounts")
-    private java.util.List < VolumeMounts> volumeMounts;
+    private java.util.List<VolumeMounts> volumeMounts;
 
     @com.aliyun.core.annotation.NameInMap("Volumes")
-    private java.util.List < Volumes> volumes;
+    private java.util.List<Volumes> volumes;
 
     private AckConfig(Builder builder) {
         this.ackInstanceId = builder.ackInstanceId;
@@ -113,14 +118,14 @@ public class AckConfig extends TeaModel {
     /**
      * @return customAnnotations
      */
-    public java.util.List < Tag > getCustomAnnotations() {
+    public java.util.List<Tag> getCustomAnnotations() {
         return this.customAnnotations;
     }
 
     /**
      * @return customLabels
      */
-    public java.util.List < Tag > getCustomLabels() {
+    public java.util.List<Tag> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -176,7 +181,7 @@ public class AckConfig extends TeaModel {
     /**
      * @return nodeSelectors
      */
-    public java.util.List < Tag > getNodeSelectors() {
+    public java.util.List<Tag> getNodeSelectors() {
         return this.nodeSelectors;
     }
 
@@ -197,14 +202,14 @@ public class AckConfig extends TeaModel {
     /**
      * @return preStartCommand
      */
-    public java.util.List < String > getPreStartCommand() {
+    public java.util.List<String> getPreStartCommand() {
         return this.preStartCommand;
     }
 
     /**
      * @return pvcs
      */
-    public java.util.List < Pvcs> getPvcs() {
+    public java.util.List<Pvcs> getPvcs() {
         return this.pvcs;
     }
 
@@ -225,28 +230,28 @@ public class AckConfig extends TeaModel {
     /**
      * @return tolerations
      */
-    public java.util.List < Toleration > getTolerations() {
+    public java.util.List<Toleration> getTolerations() {
         return this.tolerations;
     }
 
     /**
      * @return volumeMounts
      */
-    public java.util.List < VolumeMounts> getVolumeMounts() {
+    public java.util.List<VolumeMounts> getVolumeMounts() {
         return this.volumeMounts;
     }
 
     /**
      * @return volumes
      */
-    public java.util.List < Volumes> getVolumes() {
+    public java.util.List<Volumes> getVolumes() {
         return this.volumes;
     }
 
     public static final class Builder {
         private String ackInstanceId; 
-        private java.util.List < Tag > customAnnotations; 
-        private java.util.List < Tag > customLabels; 
+        private java.util.List<Tag> customAnnotations; 
+        private java.util.List<Tag> customLabels; 
         private Integer dataDiskSize; 
         private String dataDiskStorageClass; 
         private Float limitCpu; 
@@ -254,16 +259,16 @@ public class AckConfig extends TeaModel {
         private Boolean mountHostCgroup; 
         private String namespace; 
         private String nodeAffinity; 
-        private java.util.List < Tag > nodeSelectors; 
+        private java.util.List<Tag> nodeSelectors; 
         private String podAffinity; 
         private String podAntiAffinity; 
-        private java.util.List < String > preStartCommand; 
-        private java.util.List < Pvcs> pvcs; 
+        private java.util.List<String> preStartCommand; 
+        private java.util.List<Pvcs> pvcs; 
         private Float requestCpu; 
         private Float requestMemory; 
-        private java.util.List < Toleration > tolerations; 
-        private java.util.List < VolumeMounts> volumeMounts; 
-        private java.util.List < Volumes> volumes; 
+        private java.util.List<Toleration> tolerations; 
+        private java.util.List<VolumeMounts> volumeMounts; 
+        private java.util.List<Volumes> volumes; 
 
         /**
          * <p>ack集群id</p>
@@ -276,7 +281,7 @@ public class AckConfig extends TeaModel {
         /**
          * CustomAnnotations.
          */
-        public Builder customAnnotations(java.util.List < Tag > customAnnotations) {
+        public Builder customAnnotations(java.util.List<Tag> customAnnotations) {
             this.customAnnotations = customAnnotations;
             return this;
         }
@@ -284,7 +289,7 @@ public class AckConfig extends TeaModel {
         /**
          * CustomLabels.
          */
-        public Builder customLabels(java.util.List < Tag > customLabels) {
+        public Builder customLabels(java.util.List<Tag> customLabels) {
             this.customLabels = customLabels;
             return this;
         }
@@ -348,7 +353,7 @@ public class AckConfig extends TeaModel {
         /**
          * <p>ack的节点标签限制</p>
          */
-        public Builder nodeSelectors(java.util.List < Tag > nodeSelectors) {
+        public Builder nodeSelectors(java.util.List<Tag> nodeSelectors) {
             this.nodeSelectors = nodeSelectors;
             return this;
         }
@@ -372,7 +377,7 @@ public class AckConfig extends TeaModel {
         /**
          * PreStartCommand.
          */
-        public Builder preStartCommand(java.util.List < String > preStartCommand) {
+        public Builder preStartCommand(java.util.List<String> preStartCommand) {
             this.preStartCommand = preStartCommand;
             return this;
         }
@@ -380,7 +385,7 @@ public class AckConfig extends TeaModel {
         /**
          * Pvcs.
          */
-        public Builder pvcs(java.util.List < Pvcs> pvcs) {
+        public Builder pvcs(java.util.List<Pvcs> pvcs) {
             this.pvcs = pvcs;
             return this;
         }
@@ -404,7 +409,7 @@ public class AckConfig extends TeaModel {
         /**
          * <p>ack的节点污点容忍</p>
          */
-        public Builder tolerations(java.util.List < Toleration > tolerations) {
+        public Builder tolerations(java.util.List<Toleration> tolerations) {
             this.tolerations = tolerations;
             return this;
         }
@@ -412,7 +417,7 @@ public class AckConfig extends TeaModel {
         /**
          * VolumeMounts.
          */
-        public Builder volumeMounts(java.util.List < VolumeMounts> volumeMounts) {
+        public Builder volumeMounts(java.util.List<VolumeMounts> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
@@ -420,7 +425,7 @@ public class AckConfig extends TeaModel {
         /**
          * Volumes.
          */
-        public Builder volumes(java.util.List < Volumes> volumes) {
+        public Builder volumes(java.util.List<Volumes> volumes) {
             this.volumes = volumes;
             return this;
         }

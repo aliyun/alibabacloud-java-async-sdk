@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstanceTypesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceTypes")
-    private java.util.List < InstanceType > instanceTypes;
+    private java.util.List<InstanceType> instanceTypes;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
     /**
      * @return instanceTypes
      */
-    public java.util.List < InstanceType > getInstanceTypes() {
+    public java.util.List<InstanceType> getInstanceTypes() {
         return this.instanceTypes;
     }
 
@@ -79,7 +84,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstanceType > instanceTypes; 
+        private java.util.List<InstanceType> instanceTypes; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
         /**
          * <p>The instance types.</p>
          */
-        public Builder instanceTypes(java.util.List < InstanceType > instanceTypes) {
+        public Builder instanceTypes(java.util.List<InstanceType> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }

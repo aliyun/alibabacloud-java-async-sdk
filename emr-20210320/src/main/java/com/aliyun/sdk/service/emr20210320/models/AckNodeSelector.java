@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AckNodeSelector extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.NameInMap("Taints")
-    private java.util.List < Taints> taints;
+    private java.util.List<Taints> taints;
 
     private AckNodeSelector(Builder builder) {
         this.labels = builder.labels;
@@ -34,25 +39,25 @@ public class AckNodeSelector extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
     /**
      * @return taints
      */
-    public java.util.List < Taints> getTaints() {
+    public java.util.List<Taints> getTaints() {
         return this.taints;
     }
 
     public static final class Builder {
-        private java.util.List < Labels> labels; 
-        private java.util.List < Taints> taints; 
+        private java.util.List<Labels> labels; 
+        private java.util.List<Taints> taints; 
 
         /**
          * <p>污点列表。</p>
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
             return this;
         }
@@ -60,7 +65,7 @@ public class AckNodeSelector extends TeaModel {
         /**
          * <p>污点列表。</p>
          */
-        public Builder taints(java.util.List < Taints> taints) {
+        public Builder taints(java.util.List<Taints> taints) {
             this.taints = taints;
             return this;
         }

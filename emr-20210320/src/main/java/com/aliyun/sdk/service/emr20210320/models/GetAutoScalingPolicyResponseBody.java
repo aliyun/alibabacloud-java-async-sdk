@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -357,7 +362,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         private String scalingPolicyId;
 
         @com.aliyun.core.annotation.NameInMap("ScalingRules")
-        private java.util.List < ScalingRules> scalingRules;
+        private java.util.List<ScalingRules> scalingRules;
 
         private ScalingPolicy(Builder builder) {
             this.clusterId = builder.clusterId;
@@ -406,7 +411,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         /**
          * @return scalingRules
          */
-        public java.util.List < ScalingRules> getScalingRules() {
+        public java.util.List<ScalingRules> getScalingRules() {
             return this.scalingRules;
         }
 
@@ -415,7 +420,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             private Constraints constraints; 
             private String nodeGroupId; 
             private String scalingPolicyId; 
-            private java.util.List < ScalingRules> scalingRules; 
+            private java.util.List<ScalingRules> scalingRules; 
 
             /**
              * <p>The cluster ID.</p>
@@ -461,7 +466,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             /**
              * <p>The auto scaling rules.</p>
              */
-            public Builder scalingRules(java.util.List < ScalingRules> scalingRules) {
+            public Builder scalingRules(java.util.List<ScalingRules> scalingRules) {
                 this.scalingRules = scalingRules;
                 return this;
             }

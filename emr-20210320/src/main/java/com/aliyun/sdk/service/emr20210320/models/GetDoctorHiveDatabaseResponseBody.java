@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -6512,7 +6517,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
         private Analysis analysis;
 
         @com.aliyun.core.annotation.NameInMap("Formats")
-        private java.util.List < Formats> formats;
+        private java.util.List<Formats> formats;
 
         @com.aliyun.core.annotation.NameInMap("Metrics")
         private Metrics metrics;
@@ -6541,7 +6546,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
         /**
          * @return formats
          */
-        public java.util.List < Formats> getFormats() {
+        public java.util.List<Formats> getFormats() {
             return this.formats;
         }
 
@@ -6554,7 +6559,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
 
         public static final class Builder {
             private Analysis analysis; 
-            private java.util.List < Formats> formats; 
+            private java.util.List<Formats> formats; 
             private Metrics metrics; 
 
             /**
@@ -6568,7 +6573,7 @@ public class GetDoctorHiveDatabaseResponseBody extends TeaModel {
             /**
              * <p>The information from the perspective of storage formats.</p>
              */
-            public Builder formats(java.util.List < Formats> formats) {
+            public Builder formats(java.util.List<Formats> formats) {
                 this.formats = formats;
                 return this;
             }

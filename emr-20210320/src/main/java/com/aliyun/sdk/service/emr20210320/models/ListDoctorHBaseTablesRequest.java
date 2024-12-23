@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,7 +50,7 @@ public class ListDoctorHBaseTablesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TableNames")
-    private java.util.List < String > tableNames;
+    private java.util.List<String> tableNames;
 
     private ListDoctorHBaseTablesRequest(Builder builder) {
         super(builder);
@@ -124,7 +129,7 @@ public class ListDoctorHBaseTablesRequest extends Request {
     /**
      * @return tableNames
      */
-    public java.util.List < String > getTableNames() {
+    public java.util.List<String> getTableNames() {
         return this.tableNames;
     }
 
@@ -136,7 +141,7 @@ public class ListDoctorHBaseTablesRequest extends Request {
         private String orderBy; 
         private String orderType; 
         private String regionId; 
-        private java.util.List < String > tableNames; 
+        private java.util.List<String> tableNames; 
 
         private Builder() {
             super();
@@ -255,7 +260,7 @@ public class ListDoctorHBaseTablesRequest extends Request {
          * <strong>example:</strong>
          * <p>null</p>
          */
-        public Builder tableNames(java.util.List < String > tableNames) {
+        public Builder tableNames(java.util.List<String> tableNames) {
             this.putQueryParameter("TableNames", tableNames);
             this.tableNames = tableNames;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class NodeGroup extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AdditionalSecurityGroupIds")
-    private java.util.List < String > additionalSecurityGroupIds;
+    private java.util.List<String> additionalSecurityGroupIds;
 
     @com.aliyun.core.annotation.NameInMap("CostOptimizedConfig")
     private CostOptimizedConfig costOptimizedConfig;
 
     @com.aliyun.core.annotation.NameInMap("DataDisks")
-    private java.util.List < DataDisk > dataDisks;
+    private java.util.List<DataDisk> dataDisks;
 
     @com.aliyun.core.annotation.NameInMap("DeploymentSetStrategy")
     private String deploymentSetStrategy;
@@ -28,7 +33,7 @@ public class NodeGroup extends TeaModel {
     private Boolean gracefulShutdown;
 
     @com.aliyun.core.annotation.NameInMap("InstanceTypes")
-    private java.util.List < String > instanceTypes;
+    private java.util.List<String> instanceTypes;
 
     @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
@@ -55,7 +60,7 @@ public class NodeGroup extends TeaModel {
     private Integer runningNodeCount;
 
     @com.aliyun.core.annotation.NameInMap("SpotBidPrices")
-    private java.util.List < SpotBidPrice > spotBidPrices;
+    private java.util.List<SpotBidPrice> spotBidPrices;
 
     @com.aliyun.core.annotation.NameInMap("SpotInstanceRemedy")
     private Boolean spotInstanceRemedy;
@@ -73,7 +78,7 @@ public class NodeGroup extends TeaModel {
     private SystemDisk systemDisk;
 
     @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-    private java.util.List < String > vSwitchIds;
+    private java.util.List<String> vSwitchIds;
 
     @com.aliyun.core.annotation.NameInMap("WithPublicIp")
     private Boolean withPublicIp;
@@ -118,7 +123,7 @@ public class NodeGroup extends TeaModel {
     /**
      * @return additionalSecurityGroupIds
      */
-    public java.util.List < String > getAdditionalSecurityGroupIds() {
+    public java.util.List<String> getAdditionalSecurityGroupIds() {
         return this.additionalSecurityGroupIds;
     }
 
@@ -132,7 +137,7 @@ public class NodeGroup extends TeaModel {
     /**
      * @return dataDisks
      */
-    public java.util.List < DataDisk > getDataDisks() {
+    public java.util.List<DataDisk> getDataDisks() {
         return this.dataDisks;
     }
 
@@ -153,7 +158,7 @@ public class NodeGroup extends TeaModel {
     /**
      * @return instanceTypes
      */
-    public java.util.List < String > getInstanceTypes() {
+    public java.util.List<String> getInstanceTypes() {
         return this.instanceTypes;
     }
 
@@ -216,7 +221,7 @@ public class NodeGroup extends TeaModel {
     /**
      * @return spotBidPrices
      */
-    public java.util.List < SpotBidPrice > getSpotBidPrices() {
+    public java.util.List<SpotBidPrice> getSpotBidPrices() {
         return this.spotBidPrices;
     }
 
@@ -258,7 +263,7 @@ public class NodeGroup extends TeaModel {
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -277,12 +282,12 @@ public class NodeGroup extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > additionalSecurityGroupIds; 
+        private java.util.List<String> additionalSecurityGroupIds; 
         private CostOptimizedConfig costOptimizedConfig; 
-        private java.util.List < DataDisk > dataDisks; 
+        private java.util.List<DataDisk> dataDisks; 
         private String deploymentSetStrategy; 
         private Boolean gracefulShutdown; 
-        private java.util.List < String > instanceTypes; 
+        private java.util.List<String> instanceTypes; 
         private String nodeGroupId; 
         private String nodeGroupName; 
         private String nodeGroupState; 
@@ -291,13 +296,13 @@ public class NodeGroup extends TeaModel {
         private String paymentType; 
         private PrivatePoolOptions privatePoolOptions; 
         private Integer runningNodeCount; 
-        private java.util.List < SpotBidPrice > spotBidPrices; 
+        private java.util.List<SpotBidPrice> spotBidPrices; 
         private Boolean spotInstanceRemedy; 
         private String spotStrategy; 
         private NodeGroupStateChangeReason stateChangeReason; 
         private String status; 
         private SystemDisk systemDisk; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
         private Boolean withPublicIp; 
         private String zoneId; 
 
@@ -307,7 +312,7 @@ public class NodeGroup extends TeaModel {
          * <strong>example:</strong>
          * <p>[&quot;sg-hp3abbae8lb6lmb1****&quot;]</p>
          */
-        public Builder additionalSecurityGroupIds(java.util.List < String > additionalSecurityGroupIds) {
+        public Builder additionalSecurityGroupIds(java.util.List<String> additionalSecurityGroupIds) {
             this.additionalSecurityGroupIds = additionalSecurityGroupIds;
             return this;
         }
@@ -323,7 +328,7 @@ public class NodeGroup extends TeaModel {
         /**
          * <p>数据盘列表。</p>
          */
-        public Builder dataDisks(java.util.List < DataDisk > dataDisks) {
+        public Builder dataDisks(java.util.List<DataDisk> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
@@ -366,7 +371,7 @@ public class NodeGroup extends TeaModel {
          * <strong>example:</strong>
          * <p>[&quot;ecs.g6.4xlarge&quot;]</p>
          */
-        public Builder instanceTypes(java.util.List < String > instanceTypes) {
+        public Builder instanceTypes(java.util.List<String> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
@@ -471,7 +476,7 @@ public class NodeGroup extends TeaModel {
         /**
          * SpotBidPrices.
          */
-        public Builder spotBidPrices(java.util.List < SpotBidPrice > spotBidPrices) {
+        public Builder spotBidPrices(java.util.List<SpotBidPrice> spotBidPrices) {
             this.spotBidPrices = spotBidPrices;
             return this;
         }
@@ -533,7 +538,7 @@ public class NodeGroup extends TeaModel {
          * <strong>example:</strong>
          * <p>[&quot;vsw-hp35g7ya5ymw68mmg****&quot;]</p>
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
             return this;
         }

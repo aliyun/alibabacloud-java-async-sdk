@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ValueConstraints extends TeaModel {
     private String type;
 
     @com.aliyun.core.annotation.NameInMap("Values")
-    private java.util.List < Integer > values;
+    private java.util.List<Integer> values;
 
     private ValueConstraints(Builder builder) {
         this.defaultValue = builder.defaultValue;
@@ -85,7 +90,7 @@ public class ValueConstraints extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < Integer > getValues() {
+    public java.util.List<Integer> getValues() {
         return this.values;
     }
 
@@ -95,7 +100,7 @@ public class ValueConstraints extends TeaModel {
         private Integer start; 
         private Integer step; 
         private String type; 
-        private java.util.List < Integer > values; 
+        private java.util.List<Integer> values; 
 
         /**
          * <p>默认值。</p>
@@ -143,7 +148,7 @@ public class ValueConstraints extends TeaModel {
          * <strong>example:</strong>
          * <p>null</p>
          */
-        public Builder values(java.util.List < Integer > values) {
+        public Builder values(java.util.List<Integer> values) {
             this.values = values;
             return this;
         }

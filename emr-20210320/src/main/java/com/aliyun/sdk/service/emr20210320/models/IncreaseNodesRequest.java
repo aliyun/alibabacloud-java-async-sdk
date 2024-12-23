@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class IncreaseNodesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationConfigs")
-    private java.util.List < ApplicationConfig > applicationConfigs;
+    private java.util.List<ApplicationConfig> applicationConfigs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoPayOrder")
@@ -86,7 +91,7 @@ public class IncreaseNodesRequest extends Request {
     /**
      * @return applicationConfigs
      */
-    public java.util.List < ApplicationConfig > getApplicationConfigs() {
+    public java.util.List<ApplicationConfig> getApplicationConfigs() {
         return this.applicationConfigs;
     }
 
@@ -154,7 +159,7 @@ public class IncreaseNodesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<IncreaseNodesRequest, Builder> {
-        private java.util.List < ApplicationConfig > applicationConfigs; 
+        private java.util.List<ApplicationConfig> applicationConfigs; 
         private Boolean autoPayOrder; 
         private Boolean autoRenew; 
         private String clusterId; 
@@ -189,7 +194,7 @@ public class IncreaseNodesRequest extends Request {
          * <strong>example:</strong>
          * <p>Month</p>
          */
-        public Builder applicationConfigs(java.util.List < ApplicationConfig > applicationConfigs) {
+        public Builder applicationConfigs(java.util.List<ApplicationConfig> applicationConfigs) {
             this.putQueryParameter("ApplicationConfigs", applicationConfigs);
             this.applicationConfigs = applicationConfigs;
             return this;

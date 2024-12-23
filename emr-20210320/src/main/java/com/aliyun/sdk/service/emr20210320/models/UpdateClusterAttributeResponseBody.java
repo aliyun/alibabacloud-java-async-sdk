@@ -12,28 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateApiTemplateResponseBody} extends {@link TeaModel}
+ * {@link UpdateClusterAttributeResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateApiTemplateResponseBody</p>
+ * <p>UpdateClusterAttributeResponseBody</p>
  */
-public class UpdateApiTemplateResponseBody extends TeaModel {
+public class UpdateClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("Success")
-    @Deprecated
-    private Boolean success;
-
-    private UpdateApiTemplateResponseBody(Builder builder) {
+    private UpdateClusterAttributeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateApiTemplateResponseBody create() {
+    public static UpdateClusterAttributeResponseBody create() {
         return builder().build();
     }
 
@@ -44,16 +39,8 @@ public class UpdateApiTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return success
-     */
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public static final class Builder {
         private String requestId; 
-        private Boolean success; 
 
         /**
          * <p>请求ID。</p>
@@ -66,16 +53,8 @@ public class UpdateApiTemplateResponseBody extends TeaModel {
             return this;
         }
 
-        /**
-         * Success.
-         */
-        public Builder success(Boolean success) {
-            this.success = success;
-            return this;
-        }
-
-        public UpdateApiTemplateResponseBody build() {
-            return new UpdateApiTemplateResponseBody(this);
+        public UpdateClusterAttributeResponseBody build() {
+            return new UpdateClusterAttributeResponseBody(this);
         } 
 
     } 

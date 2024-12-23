@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,10 +21,10 @@ public class InstanceCategory extends TeaModel {
     private String defaultValue;
 
     @com.aliyun.core.annotation.NameInMap("Keys")
-    private java.util.List < String > keys;
+    private java.util.List<String> keys;
 
     @com.aliyun.core.annotation.NameInMap("Values")
-    private java.util.List < String > values;
+    private java.util.List<String> values;
 
     private InstanceCategory(Builder builder) {
         this.defaultValue = builder.defaultValue;
@@ -45,21 +50,21 @@ public class InstanceCategory extends TeaModel {
     /**
      * @return keys
      */
-    public java.util.List < String > getKeys() {
+    public java.util.List<String> getKeys() {
         return this.keys;
     }
 
     /**
      * @return values
      */
-    public java.util.List < String > getValues() {
+    public java.util.List<String> getValues() {
         return this.values;
     }
 
     public static final class Builder {
         private String defaultValue; 
-        private java.util.List < String > keys; 
-        private java.util.List < String > values; 
+        private java.util.List<String> keys; 
+        private java.util.List<String> values; 
 
         /**
          * <p>默认值。</p>
@@ -75,7 +80,7 @@ public class InstanceCategory extends TeaModel {
         /**
          * Keys.
          */
-        public Builder keys(java.util.List < String > keys) {
+        public Builder keys(java.util.List<String> keys) {
             this.keys = keys;
             return this;
         }
@@ -83,7 +88,7 @@ public class InstanceCategory extends TeaModel {
         /**
          * Values.
          */
-        public Builder values(java.util.List < String > values) {
+        public Builder values(java.util.List<String> values) {
             this.values = values;
             return this;
         }

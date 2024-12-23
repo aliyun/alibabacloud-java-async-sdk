@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -17,20 +22,20 @@ public class NodeSelector extends TeaModel {
     private String nodeGroupId;
 
     @com.aliyun.core.annotation.NameInMap("NodeGroupIds")
-    private java.util.List < String > nodeGroupIds;
+    private java.util.List<String> nodeGroupIds;
 
     @com.aliyun.core.annotation.NameInMap("NodeGroupName")
     @Deprecated
     private String nodeGroupName;
 
     @com.aliyun.core.annotation.NameInMap("NodeGroupNames")
-    private java.util.List < String > nodeGroupNames;
+    private java.util.List<String> nodeGroupNames;
 
     @com.aliyun.core.annotation.NameInMap("NodeGroupTypes")
-    private java.util.List < String > nodeGroupTypes;
+    private java.util.List<String> nodeGroupTypes;
 
     @com.aliyun.core.annotation.NameInMap("NodeNames")
-    private java.util.List < String > nodeNames;
+    private java.util.List<String> nodeNames;
 
     @com.aliyun.core.annotation.NameInMap("NodeSelectType")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -64,7 +69,7 @@ public class NodeSelector extends TeaModel {
     /**
      * @return nodeGroupIds
      */
-    public java.util.List < String > getNodeGroupIds() {
+    public java.util.List<String> getNodeGroupIds() {
         return this.nodeGroupIds;
     }
 
@@ -78,21 +83,21 @@ public class NodeSelector extends TeaModel {
     /**
      * @return nodeGroupNames
      */
-    public java.util.List < String > getNodeGroupNames() {
+    public java.util.List<String> getNodeGroupNames() {
         return this.nodeGroupNames;
     }
 
     /**
      * @return nodeGroupTypes
      */
-    public java.util.List < String > getNodeGroupTypes() {
+    public java.util.List<String> getNodeGroupTypes() {
         return this.nodeGroupTypes;
     }
 
     /**
      * @return nodeNames
      */
-    public java.util.List < String > getNodeNames() {
+    public java.util.List<String> getNodeNames() {
         return this.nodeNames;
     }
 
@@ -105,11 +110,11 @@ public class NodeSelector extends TeaModel {
 
     public static final class Builder {
         private String nodeGroupId; 
-        private java.util.List < String > nodeGroupIds; 
+        private java.util.List<String> nodeGroupIds; 
         private String nodeGroupName; 
-        private java.util.List < String > nodeGroupNames; 
-        private java.util.List < String > nodeGroupTypes; 
-        private java.util.List < String > nodeNames; 
+        private java.util.List<String> nodeGroupNames; 
+        private java.util.List<String> nodeGroupTypes; 
+        private java.util.List<String> nodeNames; 
         private String nodeSelectType; 
 
         /**
@@ -126,7 +131,7 @@ public class NodeSelector extends TeaModel {
         /**
          * NodeGroupIds.
          */
-        public Builder nodeGroupIds(java.util.List < String > nodeGroupIds) {
+        public Builder nodeGroupIds(java.util.List<String> nodeGroupIds) {
             this.nodeGroupIds = nodeGroupIds;
             return this;
         }
@@ -145,7 +150,7 @@ public class NodeSelector extends TeaModel {
         /**
          * NodeGroupNames.
          */
-        public Builder nodeGroupNames(java.util.List < String > nodeGroupNames) {
+        public Builder nodeGroupNames(java.util.List<String> nodeGroupNames) {
             this.nodeGroupNames = nodeGroupNames;
             return this;
         }
@@ -156,7 +161,7 @@ public class NodeSelector extends TeaModel {
          * <strong>example:</strong>
          * <p>[&quot;CORE&quot;,&quot;TASK&quot;]</p>
          */
-        public Builder nodeGroupTypes(java.util.List < String > nodeGroupTypes) {
+        public Builder nodeGroupTypes(java.util.List<String> nodeGroupTypes) {
             this.nodeGroupTypes = nodeGroupTypes;
             return this;
         }
@@ -167,7 +172,7 @@ public class NodeSelector extends TeaModel {
          * <strong>example:</strong>
          * <p>[&quot;core1-1&quot;]</p>
          */
-        public Builder nodeNames(java.util.List < String > nodeNames) {
+        public Builder nodeNames(java.util.List<String> nodeNames) {
             this.nodeNames = nodeNames;
             return this;
         }

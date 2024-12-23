@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListComponentsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationNames")
-    private java.util.List < String > applicationNames;
+    private java.util.List<String> applicationNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
@@ -23,11 +28,11 @@ public class ListComponentsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ComponentNames")
-    private java.util.List < String > componentNames;
+    private java.util.List<String> componentNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ComponentStates")
-    private java.util.List < String > componentStates;
+    private java.util.List<String> componentStates;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -69,7 +74,7 @@ public class ListComponentsRequest extends Request {
     /**
      * @return applicationNames
      */
-    public java.util.List < String > getApplicationNames() {
+    public java.util.List<String> getApplicationNames() {
         return this.applicationNames;
     }
 
@@ -83,14 +88,14 @@ public class ListComponentsRequest extends Request {
     /**
      * @return componentNames
      */
-    public java.util.List < String > getComponentNames() {
+    public java.util.List<String> getComponentNames() {
         return this.componentNames;
     }
 
     /**
      * @return componentStates
      */
-    public java.util.List < String > getComponentStates() {
+    public java.util.List<String> getComponentStates() {
         return this.componentStates;
     }
 
@@ -116,10 +121,10 @@ public class ListComponentsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListComponentsRequest, Builder> {
-        private java.util.List < String > applicationNames; 
+        private java.util.List<String> applicationNames; 
         private String clusterId; 
-        private java.util.List < String > componentNames; 
-        private java.util.List < String > componentStates; 
+        private java.util.List<String> componentNames; 
+        private java.util.List<String> componentStates; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
@@ -145,7 +150,7 @@ public class ListComponentsRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;HDFS&quot;]</p>
          */
-        public Builder applicationNames(java.util.List < String > applicationNames) {
+        public Builder applicationNames(java.util.List<String> applicationNames) {
             this.putQueryParameter("ApplicationNames", applicationNames);
             this.applicationNames = applicationNames;
             return this;
@@ -170,7 +175,7 @@ public class ListComponentsRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;DataNode&quot;]</p>
          */
-        public Builder componentNames(java.util.List < String > componentNames) {
+        public Builder componentNames(java.util.List<String> componentNames) {
             this.putQueryParameter("ComponentNames", componentNames);
             this.componentNames = componentNames;
             return this;
@@ -179,7 +184,7 @@ public class ListComponentsRequest extends Request {
         /**
          * ComponentStates.
          */
-        public Builder componentStates(java.util.List < String > componentStates) {
+        public Builder componentStates(java.util.List<String> componentStates) {
             this.putQueryParameter("ComponentStates", componentStates);
             this.componentStates = componentStates;
             return this;

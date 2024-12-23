@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class TagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resourceIds;
+    private java.util.List<String> resourceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -30,7 +35,7 @@ public class TagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Tag > tags;
+    private java.util.List<Tag> tags;
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
@@ -63,7 +68,7 @@ public class TagResourcesRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.List < String > getResourceIds() {
+    public java.util.List<String> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -77,15 +82,15 @@ public class TagResourcesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > resourceIds; 
+        private java.util.List<String> resourceIds; 
         private String resourceType; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
 
         private Builder() {
             super();
@@ -119,7 +124,7 @@ public class TagResourcesRequest extends Request {
          * <strong>example:</strong>
          * <p>cluster</p>
          */
-        public Builder resourceIds(java.util.List < String > resourceIds) {
+        public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
             this.resourceIds = resourceIds;
             return this;
@@ -148,7 +153,7 @@ public class TagResourcesRequest extends Request {
          * <strong>example:</strong>
          * <p>[null]</p>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

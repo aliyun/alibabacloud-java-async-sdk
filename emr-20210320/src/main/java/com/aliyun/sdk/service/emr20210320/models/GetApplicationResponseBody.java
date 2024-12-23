@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -340,7 +345,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private String actionName;
 
         @com.aliyun.core.annotation.NameInMap("ActionParams")
-        private java.util.List < ActionParams> actionParams;
+        private java.util.List<ActionParams> actionParams;
 
         @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
@@ -381,7 +386,7 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * @return actionParams
          */
-        public java.util.List < ActionParams> getActionParams() {
+        public java.util.List<ActionParams> getActionParams() {
             return this.actionParams;
         }
 
@@ -415,7 +420,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String actionName; 
-            private java.util.List < ActionParams> actionParams; 
+            private java.util.List<ActionParams> actionParams; 
             private String command; 
             private String componentName; 
             private String description; 
@@ -435,7 +440,7 @@ public class GetApplicationResponseBody extends TeaModel {
             /**
              * <p>操作参数。</p>
              */
-            public Builder actionParams(java.util.List < ActionParams> actionParams) {
+            public Builder actionParams(java.util.List<ActionParams> actionParams) {
                 this.actionParams = actionParams;
                 return this;
             }
@@ -499,7 +504,7 @@ public class GetApplicationResponseBody extends TeaModel {
      */
     public static class Application extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Actions")
-        private java.util.List < Actions> actions;
+        private java.util.List<Actions> actions;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
@@ -532,7 +537,7 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < Actions> getActions() {
+        public java.util.List<Actions> getActions() {
             return this.actions;
         }
 
@@ -565,7 +570,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Actions> actions; 
+            private java.util.List<Actions> actions; 
             private String applicationName; 
             private String applicationState; 
             private String applicationVersion; 
@@ -574,7 +579,7 @@ public class GetApplicationResponseBody extends TeaModel {
             /**
              * <p>操作列表。</p>
              */
-            public Builder actions(java.util.List < Actions> actions) {
+            public Builder actions(java.util.List<Actions> actions) {
                 this.actions = actions;
                 return this;
             }

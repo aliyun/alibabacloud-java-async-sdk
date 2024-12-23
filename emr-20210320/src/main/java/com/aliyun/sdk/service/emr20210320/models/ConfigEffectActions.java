@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ConfigEffectActions extends TeaModel {
     private String configEffectAction;
 
     @com.aliyun.core.annotation.NameInMap("ConfigFiles")
-    private java.util.List < String > configFiles;
+    private java.util.List<String> configFiles;
 
     private ConfigEffectActions(Builder builder) {
         this.configEffectAction = builder.configEffectAction;
@@ -41,13 +46,13 @@ public class ConfigEffectActions extends TeaModel {
     /**
      * @return configFiles
      */
-    public java.util.List < String > getConfigFiles() {
+    public java.util.List<String> getConfigFiles() {
         return this.configFiles;
     }
 
     public static final class Builder {
         private String configEffectAction; 
-        private java.util.List < String > configFiles; 
+        private java.util.List<String> configFiles; 
 
         /**
          * <p>配置生效动作。</p>
@@ -66,7 +71,7 @@ public class ConfigEffectActions extends TeaModel {
          * <strong>example:</strong>
          * <p>null</p>
          */
-        public Builder configFiles(java.util.List < String > configFiles) {
+        public Builder configFiles(java.util.List<String> configFiles) {
             this.configFiles = configFiles;
             return this;
         }

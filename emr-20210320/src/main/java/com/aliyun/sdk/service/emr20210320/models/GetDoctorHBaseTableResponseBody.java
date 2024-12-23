@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,13 +87,13 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
      */
     public static class Analysis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadRequestHotspotRegionList")
-        private java.util.List < String > readRequestHotspotRegionList;
+        private java.util.List<String> readRequestHotspotRegionList;
 
         @com.aliyun.core.annotation.NameInMap("ReadRequestUnbalanceSuggestion")
         private String readRequestUnbalanceSuggestion;
 
         @com.aliyun.core.annotation.NameInMap("RequestHotspotRegionList")
-        private java.util.List < String > requestHotspotRegionList;
+        private java.util.List<String> requestHotspotRegionList;
 
         @com.aliyun.core.annotation.NameInMap("RequestUnbalanceSuggestion")
         private String requestUnbalanceSuggestion;
@@ -97,7 +102,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         private Integer tableScore;
 
         @com.aliyun.core.annotation.NameInMap("WriteRequestHotspotRegionList")
-        private java.util.List < String > writeRequestHotspotRegionList;
+        private java.util.List<String> writeRequestHotspotRegionList;
 
         @com.aliyun.core.annotation.NameInMap("WriteRequestUnbalanceSuggestion")
         private String writeRequestUnbalanceSuggestion;
@@ -123,7 +128,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         /**
          * @return readRequestHotspotRegionList
          */
-        public java.util.List < String > getReadRequestHotspotRegionList() {
+        public java.util.List<String> getReadRequestHotspotRegionList() {
             return this.readRequestHotspotRegionList;
         }
 
@@ -137,7 +142,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         /**
          * @return requestHotspotRegionList
          */
-        public java.util.List < String > getRequestHotspotRegionList() {
+        public java.util.List<String> getRequestHotspotRegionList() {
             return this.requestHotspotRegionList;
         }
 
@@ -158,7 +163,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         /**
          * @return writeRequestHotspotRegionList
          */
-        public java.util.List < String > getWriteRequestHotspotRegionList() {
+        public java.util.List<String> getWriteRequestHotspotRegionList() {
             return this.writeRequestHotspotRegionList;
         }
 
@@ -170,12 +175,12 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > readRequestHotspotRegionList; 
+            private java.util.List<String> readRequestHotspotRegionList; 
             private String readRequestUnbalanceSuggestion; 
-            private java.util.List < String > requestHotspotRegionList; 
+            private java.util.List<String> requestHotspotRegionList; 
             private String requestUnbalanceSuggestion; 
             private Integer tableScore; 
-            private java.util.List < String > writeRequestHotspotRegionList; 
+            private java.util.List<String> writeRequestHotspotRegionList; 
             private String writeRequestUnbalanceSuggestion; 
 
             /**
@@ -184,7 +189,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>null</p>
              */
-            public Builder readRequestHotspotRegionList(java.util.List < String > readRequestHotspotRegionList) {
+            public Builder readRequestHotspotRegionList(java.util.List<String> readRequestHotspotRegionList) {
                 this.readRequestHotspotRegionList = readRequestHotspotRegionList;
                 return this;
             }
@@ -206,7 +211,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>null</p>
              */
-            public Builder requestHotspotRegionList(java.util.List < String > requestHotspotRegionList) {
+            public Builder requestHotspotRegionList(java.util.List<String> requestHotspotRegionList) {
                 this.requestHotspotRegionList = requestHotspotRegionList;
                 return this;
             }
@@ -239,7 +244,7 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>null</p>
              */
-            public Builder writeRequestHotspotRegionList(java.util.List < String > writeRequestHotspotRegionList) {
+            public Builder writeRequestHotspotRegionList(java.util.List<String> writeRequestHotspotRegionList) {
                 this.writeRequestHotspotRegionList = writeRequestHotspotRegionList;
                 return this;
             }

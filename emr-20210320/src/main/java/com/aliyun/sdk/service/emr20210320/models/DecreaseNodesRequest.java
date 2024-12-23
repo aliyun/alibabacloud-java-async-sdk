@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,7 +41,7 @@ public class DecreaseNodesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeIds")
-    private java.util.List < String > nodeIds;
+    private java.util.List<String> nodeIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -105,7 +110,7 @@ public class DecreaseNodesRequest extends Request {
     /**
      * @return nodeIds
      */
-    public java.util.List < String > getNodeIds() {
+    public java.util.List<String> getNodeIds() {
         return this.nodeIds;
     }
 
@@ -122,7 +127,7 @@ public class DecreaseNodesRequest extends Request {
         private String clusterId; 
         private Integer decreaseNodeCount; 
         private String nodeGroupId; 
-        private java.util.List < String > nodeIds; 
+        private java.util.List<String> nodeIds; 
         private String regionId; 
 
         private Builder() {
@@ -141,7 +146,7 @@ public class DecreaseNodesRequest extends Request {
         } 
 
         /**
-         * BatchInterval.
+         * <p>The cooldown interval between two batches.</p>
          */
         public Builder batchInterval(Integer batchInterval) {
             this.putQueryParameter("BatchInterval", batchInterval);
@@ -150,7 +155,7 @@ public class DecreaseNodesRequest extends Request {
         }
 
         /**
-         * BatchSize.
+         * <p>The number of nodes to be removed in a single batch.</p>
          */
         public Builder batchSize(Integer batchSize) {
             this.putQueryParameter("BatchSize", batchSize);
@@ -202,7 +207,7 @@ public class DecreaseNodesRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;i-bp1cudc25w2bfwl5****&quot;]</p>
          */
-        public Builder nodeIds(java.util.List < String > nodeIds) {
+        public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putQueryParameter("NodeIds", nodeIds);
             this.nodeIds = nodeIds;
             return this;

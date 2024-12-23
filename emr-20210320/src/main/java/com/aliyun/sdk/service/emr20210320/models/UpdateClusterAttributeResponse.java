@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListNodesResponse} extends {@link TeaModel}
+ * {@link UpdateClusterAttributeResponse} extends {@link TeaModel}
  *
- * <p>ListNodesResponse</p>
+ * <p>UpdateClusterAttributeResponse</p>
  */
-public class ListNodesResponse extends Response {
+public class UpdateClusterAttributeResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListNodesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListNodesResponseBody body;
+    private UpdateClusterAttributeResponseBody body;
 
-    private ListNodesResponse(BuilderImpl builder) {
+    private UpdateClusterAttributeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListNodesResponse create() {
+    public static UpdateClusterAttributeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListNodesResponse extends Response {
     /**
      * @return body
      */
-    public ListNodesResponseBody getBody() {
+    public UpdateClusterAttributeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListNodesResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateClusterAttributeResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListNodesResponseBody body);
+        Builder body(UpdateClusterAttributeResponseBody body);
 
         @Override
-        ListNodesResponse build();
+        UpdateClusterAttributeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListNodesResponse, Builder>
+            extends Response.BuilderImpl<UpdateClusterAttributeResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListNodesResponseBody body; 
+        private UpdateClusterAttributeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListNodesResponse response) {
+        private BuilderImpl(UpdateClusterAttributeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListNodesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListNodesResponseBody body) {
+        public Builder body(UpdateClusterAttributeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListNodesResponse build() {
-            return new ListNodesResponse(this);
+        public UpdateClusterAttributeResponse build() {
+            return new UpdateClusterAttributeResponse(this);
         } 
 
     } 

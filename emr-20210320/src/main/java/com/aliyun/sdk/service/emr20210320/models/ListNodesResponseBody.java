@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListNodesResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("Nodes")
-    private java.util.List < Node > nodes;
+    private java.util.List<Node> nodes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class ListNodesResponseBody extends TeaModel {
     /**
      * @return nodes
      */
-    public java.util.List < Node > getNodes() {
+    public java.util.List<Node> getNodes() {
         return this.nodes;
     }
 
@@ -81,7 +86,7 @@ public class ListNodesResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < Node > nodes; 
+        private java.util.List<Node> nodes; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -110,7 +115,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * <p>Details about nodes.</p>
          */
-        public Builder nodes(java.util.List < Node > nodes) {
+        public Builder nodes(java.util.List<Node> nodes) {
             this.nodes = nodes;
             return this;
         }

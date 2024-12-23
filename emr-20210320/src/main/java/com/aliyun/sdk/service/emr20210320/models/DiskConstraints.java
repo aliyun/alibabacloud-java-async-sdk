@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DiskConstraints extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Categories")
-    private java.util.List < String > categories;
+    private java.util.List<String> categories;
 
     @com.aliyun.core.annotation.NameInMap("CountConstraint")
     private ValueConstraints countConstraint;
@@ -38,7 +43,7 @@ public class DiskConstraints extends TeaModel {
     /**
      * @return categories
      */
-    public java.util.List < String > getCategories() {
+    public java.util.List<String> getCategories() {
         return this.categories;
     }
 
@@ -57,7 +62,7 @@ public class DiskConstraints extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > categories; 
+        private java.util.List<String> categories; 
         private ValueConstraints countConstraint; 
         private ValueConstraints sizeConstraint; 
 
@@ -67,7 +72,7 @@ public class DiskConstraints extends TeaModel {
          * <strong>example:</strong>
          * <p>[&quot;cloud_efficiency&quot;,&quot;cloud_ssd&quot;,&quot;cloud_essd&quot;,&quot;local_disk&quot;]</p>
          */
-        public Builder categories(java.util.List < String > categories) {
+        public Builder categories(java.util.List<String> categories) {
             this.categories = categories;
             return this;
         }

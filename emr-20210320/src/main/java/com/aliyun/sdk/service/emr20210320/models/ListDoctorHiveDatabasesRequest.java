@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListDoctorHiveDatabasesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatabaseNames")
-    private java.util.List < String > databaseNames;
+    private java.util.List<String> databaseNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DateTime")
@@ -82,7 +87,7 @@ public class ListDoctorHiveDatabasesRequest extends Request {
     /**
      * @return databaseNames
      */
-    public java.util.List < String > getDatabaseNames() {
+    public java.util.List<String> getDatabaseNames() {
         return this.databaseNames;
     }
 
@@ -130,7 +135,7 @@ public class ListDoctorHiveDatabasesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListDoctorHiveDatabasesRequest, Builder> {
         private String clusterId; 
-        private java.util.List < String > databaseNames; 
+        private java.util.List<String> databaseNames; 
         private String dateTime; 
         private Integer maxResults; 
         private String nextToken; 
@@ -173,7 +178,7 @@ public class ListDoctorHiveDatabasesRequest extends Request {
          * <strong>example:</strong>
          * <p>null</p>
          */
-        public Builder databaseNames(java.util.List < String > databaseNames) {
+        public Builder databaseNames(java.util.List<String> databaseNames) {
             this.putQueryParameter("DatabaseNames", databaseNames);
             this.databaseNames = databaseNames;
             return this;

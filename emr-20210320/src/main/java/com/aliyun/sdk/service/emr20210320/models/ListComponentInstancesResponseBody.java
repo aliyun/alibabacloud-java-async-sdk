@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListComponentInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ComponentInstances")
-    private java.util.List < ComponentInstances> componentInstances;
+    private java.util.List<ComponentInstances> componentInstances;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
     /**
      * @return componentInstances
      */
-    public java.util.List < ComponentInstances> getComponentInstances() {
+    public java.util.List<ComponentInstances> getComponentInstances() {
         return this.componentInstances;
     }
 
@@ -79,7 +84,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ComponentInstances> componentInstances; 
+        private java.util.List<ComponentInstances> componentInstances; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
         /**
          * ComponentInstances.
          */
-        public Builder componentInstances(java.util.List < ComponentInstances> componentInstances) {
+        public Builder componentInstances(java.util.List<ComponentInstances> componentInstances) {
             this.componentInstances = componentInstances;
             return this;
         }

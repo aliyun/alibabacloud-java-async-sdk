@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("NodeGroups")
-    private java.util.List < NodeGroup > nodeGroups;
+    private java.util.List<NodeGroup> nodeGroups;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
     /**
      * @return nodeGroups
      */
-    public java.util.List < NodeGroup > getNodeGroups() {
+    public java.util.List<NodeGroup> getNodeGroups() {
         return this.nodeGroups;
     }
 
@@ -81,7 +86,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < NodeGroup > nodeGroups; 
+        private java.util.List<NodeGroup> nodeGroups; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -110,7 +115,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         /**
          * <p>The array of node groups.</p>
          */
-        public Builder nodeGroups(java.util.List < NodeGroup > nodeGroups) {
+        public Builder nodeGroups(java.util.List<NodeGroup> nodeGroups) {
             this.nodeGroups = nodeGroups;
             return this;
         }

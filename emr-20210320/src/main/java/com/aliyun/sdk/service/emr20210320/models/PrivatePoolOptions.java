@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class PrivatePoolOptions extends TeaModel {
     private String matchCriteria;
 
     @com.aliyun.core.annotation.NameInMap("PrivatePoolIds")
-    private java.util.List < String > privatePoolIds;
+    private java.util.List<String> privatePoolIds;
 
     private PrivatePoolOptions(Builder builder) {
         this.matchCriteria = builder.matchCriteria;
@@ -41,13 +46,13 @@ public class PrivatePoolOptions extends TeaModel {
     /**
      * @return privatePoolIds
      */
-    public java.util.List < String > getPrivatePoolIds() {
+    public java.util.List<String> getPrivatePoolIds() {
         return this.privatePoolIds;
     }
 
     public static final class Builder {
         private String matchCriteria; 
-        private java.util.List < String > privatePoolIds; 
+        private java.util.List<String> privatePoolIds; 
 
         /**
          * MatchCriteria.
@@ -60,7 +65,7 @@ public class PrivatePoolOptions extends TeaModel {
         /**
          * PrivatePoolIds.
          */
-        public Builder privatePoolIds(java.util.List < String > privatePoolIds) {
+        public Builder privatePoolIds(java.util.List<String> privatePoolIds) {
             this.privatePoolIds = privatePoolIds;
             return this;
         }

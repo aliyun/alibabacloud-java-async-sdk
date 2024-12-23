@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -51,7 +56,7 @@ public class DeleteApiTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>请求ID。</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -62,7 +67,10 @@ public class DeleteApiTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the call was successful: - true: Call succeeded - false: Call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

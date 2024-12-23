@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class MetricsTrigger extends TeaModel {
     private String conditionLogicOperator;
 
     @com.aliyun.core.annotation.NameInMap("Conditions")
-    private java.util.List < TriggerCondition > conditions;
+    private java.util.List<TriggerCondition> conditions;
 
     @com.aliyun.core.annotation.NameInMap("CoolDownInterval")
     private Integer coolDownInterval;
@@ -26,7 +31,7 @@ public class MetricsTrigger extends TeaModel {
     private Integer evaluationCount;
 
     @com.aliyun.core.annotation.NameInMap("TimeConstraints")
-    private java.util.List < TimeConstraint > timeConstraints;
+    private java.util.List<TimeConstraint> timeConstraints;
 
     @com.aliyun.core.annotation.NameInMap("TimeWindow")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -59,7 +64,7 @@ public class MetricsTrigger extends TeaModel {
     /**
      * @return conditions
      */
-    public java.util.List < TriggerCondition > getConditions() {
+    public java.util.List<TriggerCondition> getConditions() {
         return this.conditions;
     }
 
@@ -80,7 +85,7 @@ public class MetricsTrigger extends TeaModel {
     /**
      * @return timeConstraints
      */
-    public java.util.List < TimeConstraint > getTimeConstraints() {
+    public java.util.List<TimeConstraint> getTimeConstraints() {
         return this.timeConstraints;
     }
 
@@ -93,10 +98,10 @@ public class MetricsTrigger extends TeaModel {
 
     public static final class Builder {
         private String conditionLogicOperator; 
-        private java.util.List < TriggerCondition > conditions; 
+        private java.util.List<TriggerCondition> conditions; 
         private Integer coolDownInterval; 
         private Integer evaluationCount; 
-        private java.util.List < TimeConstraint > timeConstraints; 
+        private java.util.List<TimeConstraint> timeConstraints; 
         private Integer timeWindow; 
 
         /**
@@ -117,7 +122,7 @@ public class MetricsTrigger extends TeaModel {
         /**
          * <p>指标触发条件列表。</p>
          */
-        public Builder conditions(java.util.List < TriggerCondition > conditions) {
+        public Builder conditions(java.util.List<TriggerCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
@@ -148,7 +153,7 @@ public class MetricsTrigger extends TeaModel {
         /**
          * <p>时间限制。</p>
          */
-        public Builder timeConstraints(java.util.List < TimeConstraint > timeConstraints) {
+        public Builder timeConstraints(java.util.List<TimeConstraint> timeConstraints) {
             this.timeConstraints = timeConstraints;
             return this;
         }

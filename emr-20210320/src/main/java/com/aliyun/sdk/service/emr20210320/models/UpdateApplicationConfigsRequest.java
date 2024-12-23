@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class UpdateApplicationConfigsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ApplicationConfigs")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < UpdateApplicationConfig > applicationConfigs;
+    private java.util.List<UpdateApplicationConfig> applicationConfigs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationName")
@@ -86,7 +91,7 @@ public class UpdateApplicationConfigsRequest extends Request {
     /**
      * @return applicationConfigs
      */
-    public java.util.List < UpdateApplicationConfig > getApplicationConfigs() {
+    public java.util.List<UpdateApplicationConfig> getApplicationConfigs() {
         return this.applicationConfigs;
     }
 
@@ -154,7 +159,7 @@ public class UpdateApplicationConfigsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateApplicationConfigsRequest, Builder> {
-        private java.util.List < UpdateApplicationConfig > applicationConfigs; 
+        private java.util.List<UpdateApplicationConfig> applicationConfigs; 
         private String applicationName; 
         private String clusterId; 
         private String configAction; 
@@ -187,7 +192,7 @@ public class UpdateApplicationConfigsRequest extends Request {
          * <p>应用配置列表。</p>
          * <p>This parameter is required.</p>
          */
-        public Builder applicationConfigs(java.util.List < UpdateApplicationConfig > applicationConfigs) {
+        public Builder applicationConfigs(java.util.List<UpdateApplicationConfig> applicationConfigs) {
             this.putBodyParameter("ApplicationConfigs", applicationConfigs);
             this.applicationConfigs = applicationConfigs;
             return this;

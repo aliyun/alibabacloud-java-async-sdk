@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDoctorReportsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,7 +84,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         /**
          * <p>The reports.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -247,7 +252,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentTypes")
-        private java.util.List < String > componentTypes;
+        private java.util.List<String> componentTypes;
 
         @com.aliyun.core.annotation.NameInMap("DateTime")
         private String dateTime;
@@ -272,7 +277,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         /**
          * @return componentTypes
          */
-        public java.util.List < String > getComponentTypes() {
+        public java.util.List<String> getComponentTypes() {
             return this.componentTypes;
         }
 
@@ -291,7 +296,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > componentTypes; 
+            private java.util.List<String> componentTypes; 
             private String dateTime; 
             private SummaryReport summaryReport; 
 
@@ -345,7 +350,7 @@ public class ListDoctorReportsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>null</p>
              */
-            public Builder componentTypes(java.util.List < String > componentTypes) {
+            public Builder componentTypes(java.util.List<String> componentTypes) {
                 this.componentTypes = componentTypes;
                 return this;
             }

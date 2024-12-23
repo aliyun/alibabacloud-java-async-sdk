@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,19 +32,19 @@ public class ListNodeGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeGroupIds")
-    private java.util.List < String > nodeGroupIds;
+    private java.util.List<String> nodeGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeGroupNames")
-    private java.util.List < String > nodeGroupNames;
+    private java.util.List<String> nodeGroupNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeGroupStates")
-    private java.util.List < String > nodeGroupStates;
+    private java.util.List<String> nodeGroupStates;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeGroupTypes")
-    private java.util.List < String > nodeGroupTypes;
+    private java.util.List<String> nodeGroupTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -95,28 +100,28 @@ public class ListNodeGroupsRequest extends Request {
     /**
      * @return nodeGroupIds
      */
-    public java.util.List < String > getNodeGroupIds() {
+    public java.util.List<String> getNodeGroupIds() {
         return this.nodeGroupIds;
     }
 
     /**
      * @return nodeGroupNames
      */
-    public java.util.List < String > getNodeGroupNames() {
+    public java.util.List<String> getNodeGroupNames() {
         return this.nodeGroupNames;
     }
 
     /**
      * @return nodeGroupStates
      */
-    public java.util.List < String > getNodeGroupStates() {
+    public java.util.List<String> getNodeGroupStates() {
         return this.nodeGroupStates;
     }
 
     /**
      * @return nodeGroupTypes
      */
-    public java.util.List < String > getNodeGroupTypes() {
+    public java.util.List<String> getNodeGroupTypes() {
         return this.nodeGroupTypes;
     }
 
@@ -131,10 +136,10 @@ public class ListNodeGroupsRequest extends Request {
         private String clusterId; 
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < String > nodeGroupIds; 
-        private java.util.List < String > nodeGroupNames; 
-        private java.util.List < String > nodeGroupStates; 
-        private java.util.List < String > nodeGroupTypes; 
+        private java.util.List<String> nodeGroupIds; 
+        private java.util.List<String> nodeGroupNames; 
+        private java.util.List<String> nodeGroupStates; 
+        private java.util.List<String> nodeGroupTypes; 
         private String regionId; 
 
         private Builder() {
@@ -196,7 +201,7 @@ public class ListNodeGroupsRequest extends Request {
          * <strong>example:</strong>
          * <p>c-b933c5aac8fe****</p>
          */
-        public Builder nodeGroupIds(java.util.List < String > nodeGroupIds) {
+        public Builder nodeGroupIds(java.util.List<String> nodeGroupIds) {
             this.putQueryParameter("NodeGroupIds", nodeGroupIds);
             this.nodeGroupIds = nodeGroupIds;
             return this;
@@ -208,7 +213,7 @@ public class ListNodeGroupsRequest extends Request {
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
          */
-        public Builder nodeGroupNames(java.util.List < String > nodeGroupNames) {
+        public Builder nodeGroupNames(java.util.List<String> nodeGroupNames) {
             this.putQueryParameter("NodeGroupNames", nodeGroupNames);
             this.nodeGroupNames = nodeGroupNames;
             return this;
@@ -220,7 +225,7 @@ public class ListNodeGroupsRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;CORE&quot;]</p>
          */
-        public Builder nodeGroupStates(java.util.List < String > nodeGroupStates) {
+        public Builder nodeGroupStates(java.util.List<String> nodeGroupStates) {
             this.putQueryParameter("NodeGroupStates", nodeGroupStates);
             this.nodeGroupStates = nodeGroupStates;
             return this;
@@ -232,7 +237,7 @@ public class ListNodeGroupsRequest extends Request {
          * <strong>example:</strong>
          * <p>20</p>
          */
-        public Builder nodeGroupTypes(java.util.List < String > nodeGroupTypes) {
+        public Builder nodeGroupTypes(java.util.List<String> nodeGroupTypes) {
             this.putQueryParameter("NodeGroupTypes", nodeGroupTypes);
             this.nodeGroupTypes = nodeGroupTypes;
             return this;

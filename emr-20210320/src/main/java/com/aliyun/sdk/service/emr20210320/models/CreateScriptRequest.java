@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class CreateScriptRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Scripts")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Script > scripts;
+    private java.util.List<Script> scripts;
 
     private CreateScriptRequest(Builder builder) {
         super(builder);
@@ -77,7 +82,7 @@ public class CreateScriptRequest extends Request {
     /**
      * @return scripts
      */
-    public java.util.List < Script > getScripts() {
+    public java.util.List<Script> getScripts() {
         return this.scripts;
     }
 
@@ -85,7 +90,7 @@ public class CreateScriptRequest extends Request {
         private String clusterId; 
         private String regionId; 
         private String scriptType; 
-        private java.util.List < Script > scripts; 
+        private java.util.List<Script> scripts; 
 
         private Builder() {
             super();
@@ -146,7 +151,7 @@ public class CreateScriptRequest extends Request {
          * <p>The scripts.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder scripts(java.util.List < Script > scripts) {
+        public Builder scripts(java.util.List<Script> scripts) {
             this.putQueryParameter("Scripts", scripts);
             this.scripts = scripts;
             return this;

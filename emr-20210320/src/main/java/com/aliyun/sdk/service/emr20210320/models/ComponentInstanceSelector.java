@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,10 +25,10 @@ public class ComponentInstanceSelector extends TeaModel {
     private String applicationName;
 
     @com.aliyun.core.annotation.NameInMap("ComponentInstances")
-    private java.util.List < ComponentInstances> componentInstances;
+    private java.util.List<ComponentInstances> componentInstances;
 
     @com.aliyun.core.annotation.NameInMap("Components")
-    private java.util.List < Components> components;
+    private java.util.List<Components> components;
 
     @com.aliyun.core.annotation.NameInMap("RunActionScope")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -62,14 +67,14 @@ public class ComponentInstanceSelector extends TeaModel {
     /**
      * @return componentInstances
      */
-    public java.util.List < ComponentInstances> getComponentInstances() {
+    public java.util.List<ComponentInstances> getComponentInstances() {
         return this.componentInstances;
     }
 
     /**
      * @return components
      */
-    public java.util.List < Components> getComponents() {
+    public java.util.List<Components> getComponents() {
         return this.components;
     }
 
@@ -83,8 +88,8 @@ public class ComponentInstanceSelector extends TeaModel {
     public static final class Builder {
         private String actionScope; 
         private String applicationName; 
-        private java.util.List < ComponentInstances> componentInstances; 
-        private java.util.List < Components> components; 
+        private java.util.List<ComponentInstances> componentInstances; 
+        private java.util.List<Components> components; 
         private String runActionScope; 
 
         /**
@@ -109,7 +114,7 @@ public class ComponentInstanceSelector extends TeaModel {
         /**
          * <p>组件实例列表。actionScope为COPONENT_INSTANCE时使用。</p>
          */
-        public Builder componentInstances(java.util.List < ComponentInstances> componentInstances) {
+        public Builder componentInstances(java.util.List<ComponentInstances> componentInstances) {
             this.componentInstances = componentInstances;
             return this;
         }
@@ -118,7 +123,7 @@ public class ComponentInstanceSelector extends TeaModel {
          * <p>组件列表。
          * actionScope为COPONENT时使用。</p>
          */
-        public Builder components(java.util.List < Components> components) {
+        public Builder components(java.util.List<Components> components) {
             this.components = components;
             return this;
         }

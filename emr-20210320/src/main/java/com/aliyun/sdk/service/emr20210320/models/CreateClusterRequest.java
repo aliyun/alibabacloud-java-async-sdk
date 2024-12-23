@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,16 +19,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApplicationConfigs")
-    private java.util.List < ApplicationConfig > applicationConfigs;
+    private java.util.List<ApplicationConfig> applicationConfigs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Applications")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Application > applications;
+    private java.util.List<Application> applications;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BootstrapScripts")
-    private java.util.List < Script > bootstrapScripts;
+    private java.util.List<Script> bootstrapScripts;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -59,7 +64,7 @@ public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeGroups")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < NodeGroupConfig > nodeGroups;
+    private java.util.List<NodeGroupConfig> nodeGroups;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PaymentType")
@@ -89,7 +94,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tag > tags;
+    private java.util.List<Tag> tags;
 
     private CreateClusterRequest(Builder builder) {
         super(builder);
@@ -129,21 +134,21 @@ public class CreateClusterRequest extends Request {
     /**
      * @return applicationConfigs
      */
-    public java.util.List < ApplicationConfig > getApplicationConfigs() {
+    public java.util.List<ApplicationConfig> getApplicationConfigs() {
         return this.applicationConfigs;
     }
 
     /**
      * @return applications
      */
-    public java.util.List < Application > getApplications() {
+    public java.util.List<Application> getApplications() {
         return this.applications;
     }
 
     /**
      * @return bootstrapScripts
      */
-    public java.util.List < Script > getBootstrapScripts() {
+    public java.util.List<Script> getBootstrapScripts() {
         return this.bootstrapScripts;
     }
 
@@ -199,7 +204,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return nodeGroups
      */
-    public java.util.List < NodeGroupConfig > getNodeGroups() {
+    public java.util.List<NodeGroupConfig> getNodeGroups() {
         return this.nodeGroups;
     }
 
@@ -248,14 +253,14 @@ public class CreateClusterRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<CreateClusterRequest, Builder> {
-        private java.util.List < ApplicationConfig > applicationConfigs; 
-        private java.util.List < Application > applications; 
-        private java.util.List < Script > bootstrapScripts; 
+        private java.util.List<ApplicationConfig> applicationConfigs; 
+        private java.util.List<Application> applications; 
+        private java.util.List<Script> bootstrapScripts; 
         private String clientToken; 
         private String clusterName; 
         private String clusterType; 
@@ -263,14 +268,14 @@ public class CreateClusterRequest extends Request {
         private String deployMode; 
         private String description; 
         private NodeAttributes nodeAttributes; 
-        private java.util.List < NodeGroupConfig > nodeGroups; 
+        private java.util.List<NodeGroupConfig> nodeGroups; 
         private String paymentType; 
         private String regionId; 
         private String releaseVersion; 
         private String resourceGroupId; 
         private String securityMode; 
         private SubscriptionConfig subscriptionConfig; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
 
         private Builder() {
             super();
@@ -299,9 +304,9 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * <p>The service configurations. Number of elements in the array: 1 to 1000.</p>
+         * <p>The application configurations. Number of elements in the array: 1 to 1000.</p>
          */
-        public Builder applicationConfigs(java.util.List < ApplicationConfig > applicationConfigs) {
+        public Builder applicationConfigs(java.util.List<ApplicationConfig> applicationConfigs) {
             this.putQueryParameter("ApplicationConfigs", applicationConfigs);
             this.applicationConfigs = applicationConfigs;
             return this;
@@ -311,7 +316,7 @@ public class CreateClusterRequest extends Request {
          * <p>The services. Number of elements in the array: 1 to 100.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder applications(java.util.List < Application > applications) {
+        public Builder applications(java.util.List<Application> applications) {
             this.putQueryParameter("Applications", applications);
             this.applications = applications;
             return this;
@@ -320,7 +325,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>The bootstrap actions. Number of elements in the array: 1 to 10.</p>
          */
-        public Builder bootstrapScripts(java.util.List < Script > bootstrapScripts) {
+        public Builder bootstrapScripts(java.util.List<Script> bootstrapScripts) {
             this.putQueryParameter("BootstrapScripts", bootstrapScripts);
             this.bootstrapScripts = bootstrapScripts;
             return this;
@@ -399,7 +404,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The cluster description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Emr cluster for ETL</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -408,7 +416,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The attributes of all ECS instances. The basic attributes of all ECS instances in the cluster.</p>
+         * <p>The attributes of all ECS instances.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodeAttributes(NodeAttributes nodeAttributes) {
@@ -424,7 +432,7 @@ public class CreateClusterRequest extends Request {
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
-        public Builder nodeGroups(java.util.List < NodeGroupConfig > nodeGroups) {
+        public Builder nodeGroups(java.util.List<NodeGroupConfig> nodeGroups) {
             this.putQueryParameter("NodeGroups", nodeGroups);
             this.nodeGroups = nodeGroups;
             return this;
@@ -461,7 +469,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The version of EMR. You can view the EMR release version on the EMR cluster purchase page.</p>
+         * <p>The EMR version. You can query available E-MapReduce (EMR) versions in the EMR console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -502,7 +510,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.</p>
+         * <p>The subscription configurations. This parameter takes effect only if you set the PaymentType parameter to Subscription.</p>
          */
         public Builder subscriptionConfig(SubscriptionConfig subscriptionConfig) {
             this.putQueryParameter("SubscriptionConfig", subscriptionConfig);
@@ -511,12 +519,12 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The list of tags. Number of elements in the array: 0 to 20.</p>
+         * <p>The tags. Number of elements in the array: 0 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
             return this;

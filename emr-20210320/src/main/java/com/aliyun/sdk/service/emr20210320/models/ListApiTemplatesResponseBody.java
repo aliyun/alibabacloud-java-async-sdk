@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListApiTemplatesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ApiTemplates")
     @Deprecated
-    private java.util.List < ApiTemplate > apiTemplates;
+    private java.util.List<ApiTemplate> apiTemplates;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -47,7 +52,7 @@ public class ListApiTemplatesResponseBody extends TeaModel {
     /**
      * @return apiTemplates
      */
-    public java.util.List < ApiTemplate > getApiTemplates() {
+    public java.util.List<ApiTemplate> getApiTemplates() {
         return this.apiTemplates;
     }
 
@@ -80,7 +85,7 @@ public class ListApiTemplatesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ApiTemplate > apiTemplates; 
+        private java.util.List<ApiTemplate> apiTemplates; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -89,7 +94,7 @@ public class ListApiTemplatesResponseBody extends TeaModel {
         /**
          * <p>The API operation templates.</p>
          */
-        public Builder apiTemplates(java.util.List < ApiTemplate > apiTemplates) {
+        public Builder apiTemplates(java.util.List<ApiTemplate> apiTemplates) {
             this.apiTemplates = apiTemplates;
             return this;
         }

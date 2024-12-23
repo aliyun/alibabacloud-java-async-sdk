@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDoctorApplicationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,7 +84,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         /**
          * <p>The details of jobs.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -816,7 +821,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         private Long endTime;
 
         @com.aliyun.core.annotation.NameInMap("Ids")
-        private java.util.List < String > ids;
+        private java.util.List<String> ids;
 
         @com.aliyun.core.annotation.NameInMap("Metrics")
         private Metrics metrics;
@@ -889,7 +894,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
         /**
          * @return ids
          */
-        public java.util.List < String > getIds() {
+        public java.util.List<String> getIds() {
             return this.ids;
         }
 
@@ -940,7 +945,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
             private String appId; 
             private String appName; 
             private Long endTime; 
-            private java.util.List < String > ids; 
+            private java.util.List<String> ids; 
             private Metrics metrics; 
             private String querySql; 
             private String queue; 
@@ -995,7 +1000,7 @@ public class ListDoctorApplicationsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>null</p>
              */
-            public Builder ids(java.util.List < String > ids) {
+            public Builder ids(java.util.List<String> ids) {
                 this.ids = ids;
                 return this;
             }

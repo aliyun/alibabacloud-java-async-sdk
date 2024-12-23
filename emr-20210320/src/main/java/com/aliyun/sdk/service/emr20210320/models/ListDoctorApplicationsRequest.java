@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListDoctorApplicationsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppIds")
-    private java.util.List < String > appIds;
+    private java.util.List<String> appIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
@@ -44,7 +49,7 @@ public class ListDoctorApplicationsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Queues")
-    private java.util.List < String > queues;
+    private java.util.List<String> queues;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -53,11 +58,11 @@ public class ListDoctorApplicationsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Types")
-    private java.util.List < String > types;
+    private java.util.List<String> types;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Users")
-    private java.util.List < String > users;
+    private java.util.List<String> users;
 
     private ListDoctorApplicationsRequest(Builder builder) {
         super(builder);
@@ -90,7 +95,7 @@ public class ListDoctorApplicationsRequest extends Request {
     /**
      * @return appIds
      */
-    public java.util.List < String > getAppIds() {
+    public java.util.List<String> getAppIds() {
         return this.appIds;
     }
 
@@ -139,7 +144,7 @@ public class ListDoctorApplicationsRequest extends Request {
     /**
      * @return queues
      */
-    public java.util.List < String > getQueues() {
+    public java.util.List<String> getQueues() {
         return this.queues;
     }
 
@@ -153,29 +158,29 @@ public class ListDoctorApplicationsRequest extends Request {
     /**
      * @return types
      */
-    public java.util.List < String > getTypes() {
+    public java.util.List<String> getTypes() {
         return this.types;
     }
 
     /**
      * @return users
      */
-    public java.util.List < String > getUsers() {
+    public java.util.List<String> getUsers() {
         return this.users;
     }
 
     public static final class Builder extends Request.Builder<ListDoctorApplicationsRequest, Builder> {
-        private java.util.List < String > appIds; 
+        private java.util.List<String> appIds; 
         private String clusterId; 
         private String dateTime; 
         private Integer maxResults; 
         private String nextToken; 
         private String orderBy; 
         private String orderType; 
-        private java.util.List < String > queues; 
+        private java.util.List<String> queues; 
         private String regionId; 
-        private java.util.List < String > types; 
-        private java.util.List < String > users; 
+        private java.util.List<String> types; 
+        private java.util.List<String> users; 
 
         private Builder() {
             super();
@@ -202,7 +207,7 @@ public class ListDoctorApplicationsRequest extends Request {
          * <strong>example:</strong>
          * <p>null</p>
          */
-        public Builder appIds(java.util.List < String > appIds) {
+        public Builder appIds(java.util.List<String> appIds) {
             this.putQueryParameter("AppIds", appIds);
             this.appIds = appIds;
             return this;
@@ -301,7 +306,7 @@ public class ListDoctorApplicationsRequest extends Request {
          * <strong>example:</strong>
          * <p>null</p>
          */
-        public Builder queues(java.util.List < String > queues) {
+        public Builder queues(java.util.List<String> queues) {
             this.putQueryParameter("Queues", queues);
             this.queues = queues;
             return this;
@@ -326,7 +331,7 @@ public class ListDoctorApplicationsRequest extends Request {
          * <strong>example:</strong>
          * <p>null</p>
          */
-        public Builder types(java.util.List < String > types) {
+        public Builder types(java.util.List<String> types) {
             this.putQueryParameter("Types", types);
             this.types = types;
             return this;
@@ -338,7 +343,7 @@ public class ListDoctorApplicationsRequest extends Request {
          * <strong>example:</strong>
          * <p>null</p>
          */
-        public Builder users(java.util.List < String > users) {
+        public Builder users(java.util.List<String> users) {
             this.putQueryParameter("Users", users);
             this.users = users;
             return this;

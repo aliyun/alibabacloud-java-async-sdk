@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -142,7 +147,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * MaxOnDemandCapacity.
+             * <p>The maximum number of nodes that you can configure based on your business requirements.</p>
              */
             public Builder maxOnDemandCapacity(Integer maxOnDemandCapacity) {
                 this.maxOnDemandCapacity = maxOnDemandCapacity;
@@ -357,7 +362,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         private String scalingPolicyType;
 
         @com.aliyun.core.annotation.NameInMap("ScalingRules")
-        private java.util.List < ScalingRules> scalingRules;
+        private java.util.List<ScalingRules> scalingRules;
 
         private ScalingPolicies(Builder builder) {
             this.clusterId = builder.clusterId;
@@ -414,7 +419,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         /**
          * @return scalingRules
          */
-        public java.util.List < ScalingRules> getScalingRules() {
+        public java.util.List<ScalingRules> getScalingRules() {
             return this.scalingRules;
         }
 
@@ -424,7 +429,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             private String nodeGroupId; 
             private String scalingPolicyId; 
             private String scalingPolicyType; 
-            private java.util.List < ScalingRules> scalingRules; 
+            private java.util.List<ScalingRules> scalingRules; 
 
             /**
              * <p>The cluster ID.</p>
@@ -468,7 +473,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingPolicyType.
+             * <p>The type of the auto scaling policy.</p>
              */
             public Builder scalingPolicyType(String scalingPolicyType) {
                 this.scalingPolicyType = scalingPolicyType;
@@ -478,7 +483,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             /**
              * <p>The list of auto scaling rules.</p>
              */
-            public Builder scalingRules(java.util.List < ScalingRules> scalingRules) {
+            public Builder scalingRules(java.util.List<ScalingRules> scalingRules) {
                 this.scalingRules = scalingRules;
                 return this;
             }
@@ -498,13 +503,13 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
      */
     public static class ClusterCloneMeta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationConfigs")
-        private java.util.List < ApplicationConfig > applicationConfigs;
+        private java.util.List<ApplicationConfig> applicationConfigs;
 
         @com.aliyun.core.annotation.NameInMap("Applications")
-        private java.util.List < Application > applications;
+        private java.util.List<Application> applications;
 
         @com.aliyun.core.annotation.NameInMap("BootstrapScripts")
-        private java.util.List < Script > bootstrapScripts;
+        private java.util.List<Script> bootstrapScripts;
 
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -534,7 +539,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         private NodeAttributes nodeAttributes;
 
         @com.aliyun.core.annotation.NameInMap("NodeGroups")
-        private java.util.List < NodeGroup > nodeGroups;
+        private java.util.List<NodeGroup> nodeGroups;
 
         @com.aliyun.core.annotation.NameInMap("PaymentType")
         private String paymentType;
@@ -549,7 +554,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("ScalingPolicies")
-        private java.util.List < ScalingPolicies> scalingPolicies;
+        private java.util.List<ScalingPolicies> scalingPolicies;
 
         @com.aliyun.core.annotation.NameInMap("SecurityMode")
         private String securityMode;
@@ -558,7 +563,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         private SubscriptionConfig subscriptionConfig;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tag > tags;
+        private java.util.List<Tag> tags;
 
         private ClusterCloneMeta(Builder builder) {
             this.applicationConfigs = builder.applicationConfigs;
@@ -595,21 +600,21 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         /**
          * @return applicationConfigs
          */
-        public java.util.List < ApplicationConfig > getApplicationConfigs() {
+        public java.util.List<ApplicationConfig> getApplicationConfigs() {
             return this.applicationConfigs;
         }
 
         /**
          * @return applications
          */
-        public java.util.List < Application > getApplications() {
+        public java.util.List<Application> getApplications() {
             return this.applications;
         }
 
         /**
          * @return bootstrapScripts
          */
-        public java.util.List < Script > getBootstrapScripts() {
+        public java.util.List<Script> getBootstrapScripts() {
             return this.bootstrapScripts;
         }
 
@@ -679,7 +684,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         /**
          * @return nodeGroups
          */
-        public java.util.List < NodeGroup > getNodeGroups() {
+        public java.util.List<NodeGroup> getNodeGroups() {
             return this.nodeGroups;
         }
 
@@ -714,7 +719,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         /**
          * @return scalingPolicies
          */
-        public java.util.List < ScalingPolicies> getScalingPolicies() {
+        public java.util.List<ScalingPolicies> getScalingPolicies() {
             return this.scalingPolicies;
         }
 
@@ -735,14 +740,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tag > getTags() {
+        public java.util.List<Tag> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.List < ApplicationConfig > applicationConfigs; 
-            private java.util.List < Application > applications; 
-            private java.util.List < Script > bootstrapScripts; 
+            private java.util.List<ApplicationConfig> applicationConfigs; 
+            private java.util.List<Application> applications; 
+            private java.util.List<Script> bootstrapScripts; 
             private String clusterId; 
             private String clusterName; 
             private String clusterState; 
@@ -752,20 +757,20 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             private String emrDefaultRole; 
             private Boolean existCloneConfig; 
             private NodeAttributes nodeAttributes; 
-            private java.util.List < NodeGroup > nodeGroups; 
+            private java.util.List<NodeGroup> nodeGroups; 
             private String paymentType; 
             private String regionId; 
             private String releaseVersion; 
             private String resourceGroupId; 
-            private java.util.List < ScalingPolicies> scalingPolicies; 
+            private java.util.List<ScalingPolicies> scalingPolicies; 
             private String securityMode; 
             private SubscriptionConfig subscriptionConfig; 
-            private java.util.List < Tag > tags; 
+            private java.util.List<Tag> tags; 
 
             /**
              * <p>The modified configuration items.</p>
              */
-            public Builder applicationConfigs(java.util.List < ApplicationConfig > applicationConfigs) {
+            public Builder applicationConfigs(java.util.List<ApplicationConfig> applicationConfigs) {
                 this.applicationConfigs = applicationConfigs;
                 return this;
             }
@@ -773,7 +778,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             /**
              * <p>The services deployed in the cluster.</p>
              */
-            public Builder applications(java.util.List < Application > applications) {
+            public Builder applications(java.util.List<Application> applications) {
                 this.applications = applications;
                 return this;
             }
@@ -781,7 +786,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             /**
              * <p>The bootstrap actions. Number of elements in the array: 1 to 10.</p>
              */
-            public Builder bootstrapScripts(java.util.List < Script > bootstrapScripts) {
+            public Builder bootstrapScripts(java.util.List<Script> bootstrapScripts) {
                 this.bootstrapScripts = bootstrapScripts;
                 return this;
             }
@@ -895,7 +900,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attributes of all ECS instances.</p>
+             * <p>The node attributes.</p>
              */
             public Builder nodeAttributes(NodeAttributes nodeAttributes) {
                 this.nodeAttributes = nodeAttributes;
@@ -905,7 +910,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             /**
              * <p>The node groups. Number of elements in the array: 1 to 100.</p>
              */
-            public Builder nodeGroups(java.util.List < NodeGroup > nodeGroups) {
+            public Builder nodeGroups(java.util.List<NodeGroup> nodeGroups) {
                 this.nodeGroups = nodeGroups;
                 return this;
             }
@@ -961,7 +966,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             /**
              * <p>The auto scaling policies of each node group in the cluster.</p>
              */
-            public Builder scalingPolicies(java.util.List < ScalingPolicies> scalingPolicies) {
+            public Builder scalingPolicies(java.util.List<ScalingPolicies> scalingPolicies) {
                 this.scalingPolicies = scalingPolicies;
                 return this;
             }
@@ -990,9 +995,9 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of tags.</p>
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tag > tags) {
+            public Builder tags(java.util.List<Tag> tags) {
                 this.tags = tags;
                 return this;
             }

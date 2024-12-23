@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -45,7 +50,7 @@ public class ListDoctorHBaseRegionServersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionServerHosts")
-    private java.util.List < String > regionServerHosts;
+    private java.util.List<String> regionServerHosts;
 
     private ListDoctorHBaseRegionServersRequest(Builder builder) {
         super(builder);
@@ -124,7 +129,7 @@ public class ListDoctorHBaseRegionServersRequest extends Request {
     /**
      * @return regionServerHosts
      */
-    public java.util.List < String > getRegionServerHosts() {
+    public java.util.List<String> getRegionServerHosts() {
         return this.regionServerHosts;
     }
 
@@ -136,7 +141,7 @@ public class ListDoctorHBaseRegionServersRequest extends Request {
         private String orderBy; 
         private String orderType; 
         private String regionId; 
-        private java.util.List < String > regionServerHosts; 
+        private java.util.List<String> regionServerHosts; 
 
         private Builder() {
             super();
@@ -254,7 +259,7 @@ public class ListDoctorHBaseRegionServersRequest extends Request {
          * <strong>example:</strong>
          * <p>null</p>
          */
-        public Builder regionServerHosts(java.util.List < String > regionServerHosts) {
+        public Builder regionServerHosts(java.util.List<String> regionServerHosts) {
             this.putQueryParameter("RegionServerHosts", regionServerHosts);
             this.regionServerHosts = regionServerHosts;
             return this;

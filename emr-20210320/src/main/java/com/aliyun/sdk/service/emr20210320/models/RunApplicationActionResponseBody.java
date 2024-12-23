@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RunApplicationActionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AbnInstances")
-    private java.util.List < AbnInstances> abnInstances;
+    private java.util.List<AbnInstances> abnInstances;
 
     @com.aliyun.core.annotation.NameInMap("OperationId")
     private String operationId;
@@ -38,7 +43,7 @@ public class RunApplicationActionResponseBody extends TeaModel {
     /**
      * @return abnInstances
      */
-    public java.util.List < AbnInstances> getAbnInstances() {
+    public java.util.List<AbnInstances> getAbnInstances() {
         return this.abnInstances;
     }
 
@@ -57,14 +62,14 @@ public class RunApplicationActionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AbnInstances> abnInstances; 
+        private java.util.List<AbnInstances> abnInstances; 
         private String operationId; 
         private String requestId; 
 
         /**
          * <p>The abnormal nodes.</p>
          */
-        public Builder abnInstances(java.util.List < AbnInstances> abnInstances) {
+        public Builder abnInstances(java.util.List<AbnInstances> abnInstances) {
             this.abnInstances = abnInstances;
             return this;
         }

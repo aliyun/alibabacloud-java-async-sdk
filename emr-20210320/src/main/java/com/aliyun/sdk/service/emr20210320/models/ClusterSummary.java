@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -58,7 +63,7 @@ public class ClusterSummary extends TeaModel {
     private ClusterStateChangeReason stateChangeReason;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tag > tags;
+    private java.util.List<Tag> tags;
 
     private ClusterSummary(Builder builder) {
         this.clusterId = builder.clusterId;
@@ -195,7 +200,7 @@ public class ClusterSummary extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
@@ -215,7 +220,7 @@ public class ClusterSummary extends TeaModel {
         private String releaseVersion; 
         private String resourceGroupId; 
         private ClusterStateChangeReason stateChangeReason; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
 
         /**
          * <p>集群ID。</p>
@@ -393,7 +398,7 @@ public class ClusterSummary extends TeaModel {
         /**
          * <p>标签列表。</p>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.tags = tags;
             return this;
         }

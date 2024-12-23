@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingActivityStates")
-    private java.util.List < String > scalingActivityStates;
+    private java.util.List<String> scalingActivityStates;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScalingActivityType")
@@ -131,7 +136,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
     /**
      * @return scalingActivityStates
      */
-    public java.util.List < String > getScalingActivityStates() {
+    public java.util.List<String> getScalingActivityStates() {
         return this.scalingActivityStates;
     }
 
@@ -170,7 +175,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
         private String nextToken; 
         private String nodeGroupId; 
         private String regionId; 
-        private java.util.List < String > scalingActivityStates; 
+        private java.util.List<String> scalingActivityStates; 
         private String scalingActivityType; 
         private String scalingPolicyType; 
         private String scalingRuleName; 
@@ -275,7 +280,7 @@ public class ListAutoScalingActivitiesRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;REJECTED&quot;,&quot;SUCCESSFUL&quot;]</p>
          */
-        public Builder scalingActivityStates(java.util.List < String > scalingActivityStates) {
+        public Builder scalingActivityStates(java.util.List<String> scalingActivityStates) {
             this.putQueryParameter("ScalingActivityStates", scalingActivityStates);
             this.scalingActivityStates = scalingActivityStates;
             return this;

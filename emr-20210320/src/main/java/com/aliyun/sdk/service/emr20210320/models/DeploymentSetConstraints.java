@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DeploymentSetConstraints extends TeaModel {
     private ReplacementStrategy replacementStrategy;
 
     @com.aliyun.core.annotation.NameInMap("Values")
-    private java.util.List < String > values;
+    private java.util.List<String> values;
 
     private DeploymentSetConstraints(Builder builder) {
         this.defaultValue = builder.defaultValue;
@@ -63,7 +68,7 @@ public class DeploymentSetConstraints extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < String > getValues() {
+    public java.util.List<String> getValues() {
         return this.values;
     }
 
@@ -71,7 +76,7 @@ public class DeploymentSetConstraints extends TeaModel {
         private String defaultValue; 
         private String enableState; 
         private ReplacementStrategy replacementStrategy; 
-        private java.util.List < String > values; 
+        private java.util.List<String> values; 
 
         /**
          * <p>默认值。</p>
@@ -106,7 +111,7 @@ public class DeploymentSetConstraints extends TeaModel {
          * <strong>example:</strong>
          * <p>[&quot;CLUSTER&quot;,&quot;NODE_GROUP&quot;,&quot;NONE&quot;]</p>
          */
-        public Builder values(java.util.List < String > values) {
+        public Builder values(java.util.List<String> values) {
             this.values = values;
             return this;
         }

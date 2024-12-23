@@ -1263,7 +1263,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>RunCluster is an upgraded version of CreateCluster and supports more parameters. Parameters of the object and array types are in the JSON format, which are friendly for users who use CLI.</p>
+     * <p>RunCluster is an upgraded version of CreateCluster. RunCluster uses HTTPS POST requests and supports more parameters. Complex parameters, such as parameters of the object and array types, are in the JSON format and are more friendly for users who use CLI.</p>
      * 
      * @param request the request parameters of RunCluster  RunClusterRequest
      * @return RunClusterResponse
@@ -1352,6 +1352,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateApplicationConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateClusterAttribute  UpdateClusterAttributeRequest
+     * @return UpdateClusterAttributeResponse
+     */
+    @Override
+    public CompletableFuture<UpdateClusterAttributeResponse> updateClusterAttribute(UpdateClusterAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateClusterAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateClusterAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateClusterAttributeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
