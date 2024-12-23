@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eais20190624.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class CreateEaiJupyterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnvironmentVar")
-    private java.util.List < EnvironmentVar> environmentVar;
+    private java.util.List<EnvironmentVar> environmentVar;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -97,7 +102,7 @@ public class CreateEaiJupyterRequest extends Request {
     /**
      * @return environmentVar
      */
-    public java.util.List < EnvironmentVar> getEnvironmentVar() {
+    public java.util.List<EnvironmentVar> getEnvironmentVar() {
         return this.environmentVar;
     }
 
@@ -133,7 +138,7 @@ public class CreateEaiJupyterRequest extends Request {
         private String clientToken; 
         private String eaisName; 
         private String eaisType; 
-        private java.util.List < EnvironmentVar> environmentVar; 
+        private java.util.List<EnvironmentVar> environmentVar; 
         private String regionId; 
         private String resourceGroupId; 
         private String securityGroupId; 
@@ -188,7 +193,7 @@ public class CreateEaiJupyterRequest extends Request {
         /**
          * EnvironmentVar.
          */
-        public Builder environmentVar(java.util.List < EnvironmentVar> environmentVar) {
+        public Builder environmentVar(java.util.List<EnvironmentVar> environmentVar) {
             String environmentVarShrink = shrink(environmentVar, "EnvironmentVar", "json");
             this.putQueryParameter("EnvironmentVar", environmentVarShrink);
             this.environmentVar = environmentVar;

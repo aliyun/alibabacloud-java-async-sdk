@@ -1,3 +1,6 @@
+2024-12-23 Version: 2.0.1
+- Generated java-async 2019-06-24 for eais.
+
 2024-10-24 Version: 2.0.0
 - Generated java-async 2019-06-24 for eais.
 

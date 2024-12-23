@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eais20190624.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
     private String instanceId;
 
     @com.aliyun.core.annotation.NameInMap("PodMetrics")
-    private java.util.List < PodMetrics> podMetrics;
+    private java.util.List<PodMetrics> podMetrics;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
     /**
      * @return podMetrics
      */
-    public java.util.List < PodMetrics> getPodMetrics() {
+    public java.util.List<PodMetrics> getPodMetrics() {
         return this.podMetrics;
     }
 
@@ -58,7 +63,7 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String instanceId; 
-        private java.util.List < PodMetrics> podMetrics; 
+        private java.util.List<PodMetrics> podMetrics; 
         private String requestId; 
 
         /**
@@ -72,7 +77,7 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         /**
          * PodMetrics.
          */
-        public Builder podMetrics(java.util.List < PodMetrics> podMetrics) {
+        public Builder podMetrics(java.util.List<PodMetrics> podMetrics) {
             this.podMetrics = podMetrics;
             return this;
         }
@@ -166,7 +171,7 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
      */
     public static class PodMetrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Metrics")
-        private java.util.List < Metrics> metrics;
+        private java.util.List<Metrics> metrics;
 
         @com.aliyun.core.annotation.NameInMap("PodId")
         private String podId;
@@ -187,7 +192,7 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         /**
          * @return metrics
          */
-        public java.util.List < Metrics> getMetrics() {
+        public java.util.List<Metrics> getMetrics() {
             return this.metrics;
         }
 
@@ -199,13 +204,13 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Metrics> metrics; 
+            private java.util.List<Metrics> metrics; 
             private String podId; 
 
             /**
              * Metrics.
              */
-            public Builder metrics(java.util.List < Metrics> metrics) {
+            public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
                 return this;
             }
