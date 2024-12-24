@@ -546,12 +546,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEdgeContainerTerminalResponse> getEdgeContainerTerminal(GetEdgeContainerTerminalRequest request);
 
     /**
-     * @param request the request parameters of GetErService  GetErServiceRequest
-     * @return GetErServiceResponse
-     */
-    CompletableFuture<GetErServiceResponse> getErService(GetErServiceRequest request);
-
-    /**
      * @param request the request parameters of GetKv  GetKvRequest
      * @return GetKvResponse
      */
