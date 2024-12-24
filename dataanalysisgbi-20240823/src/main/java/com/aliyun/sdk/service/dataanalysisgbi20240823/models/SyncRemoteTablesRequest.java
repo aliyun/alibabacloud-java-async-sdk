@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataanalysisgbi20240823.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class SyncRemoteTablesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("keepTableNames")
-    private java.util.List < String > keepTableNames;
+    private java.util.List<String> keepTableNames;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pullSamples")
@@ -27,7 +32,7 @@ public class SyncRemoteTablesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tableNames")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > tableNames;
+    private java.util.List<String> tableNames;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("workspaceId")
@@ -66,7 +71,7 @@ public class SyncRemoteTablesRequest extends Request {
     /**
      * @return keepTableNames
      */
-    public java.util.List < String > getKeepTableNames() {
+    public java.util.List<String> getKeepTableNames() {
         return this.keepTableNames;
     }
 
@@ -80,7 +85,7 @@ public class SyncRemoteTablesRequest extends Request {
     /**
      * @return tableNames
      */
-    public java.util.List < String > getTableNames() {
+    public java.util.List<String> getTableNames() {
         return this.tableNames;
     }
 
@@ -93,9 +98,9 @@ public class SyncRemoteTablesRequest extends Request {
 
     public static final class Builder extends Request.Builder<SyncRemoteTablesRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > keepTableNames; 
+        private java.util.List<String> keepTableNames; 
         private Boolean pullSamples; 
-        private java.util.List < String > tableNames; 
+        private java.util.List<String> tableNames; 
         private String workspaceId; 
 
         private Builder() {
@@ -123,7 +128,7 @@ public class SyncRemoteTablesRequest extends Request {
         /**
          * keepTableNames.
          */
-        public Builder keepTableNames(java.util.List < String > keepTableNames) {
+        public Builder keepTableNames(java.util.List<String> keepTableNames) {
             this.putBodyParameter("keepTableNames", keepTableNames);
             this.keepTableNames = keepTableNames;
             return this;
@@ -141,7 +146,7 @@ public class SyncRemoteTablesRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder tableNames(java.util.List < String > tableNames) {
+        public Builder tableNames(java.util.List<String> tableNames) {
             this.putBodyParameter("tableNames", tableNames);
             this.tableNames = tableNames;
             return this;

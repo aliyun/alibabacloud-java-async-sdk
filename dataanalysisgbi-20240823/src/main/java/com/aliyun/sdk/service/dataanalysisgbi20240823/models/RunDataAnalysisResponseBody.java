@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataanalysisgbi20240823.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -119,10 +124,10 @@ public class RunDataAnalysisResponseBody extends TeaModel {
      */
     public static class SqlData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("column")
-        private java.util.List < String > column;
+        private java.util.List<String> column;
 
         @com.aliyun.core.annotation.NameInMap("data")
-        private java.util.List < java.util.Map<String, ?>> data;
+        private java.util.List<java.util.Map<String, ?>> data;
 
         private SqlData(Builder builder) {
             this.column = builder.column;
@@ -140,25 +145,25 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         /**
          * @return column
          */
-        public java.util.List < String > getColumn() {
+        public java.util.List<String> getColumn() {
             return this.column;
         }
 
         /**
          * @return data
          */
-        public java.util.List < java.util.Map<String, ?>> getData() {
+        public java.util.List<java.util.Map<String, ?>> getData() {
             return this.data;
         }
 
         public static final class Builder {
-            private java.util.List < String > column; 
-            private java.util.List < java.util.Map<String, ?>> data; 
+            private java.util.List<String> column; 
+            private java.util.List<java.util.Map<String, ?>> data; 
 
             /**
              * column.
              */
-            public Builder column(java.util.List < String > column) {
+            public Builder column(java.util.List<String> column) {
                 this.column = column;
                 return this;
             }
@@ -166,7 +171,7 @@ public class RunDataAnalysisResponseBody extends TeaModel {
             /**
              * data.
              */
-            public Builder data(java.util.List < java.util.Map<String, ?>> data) {
+            public Builder data(java.util.List<java.util.Map<String, ?>> data) {
                 this.data = data;
                 return this;
             }
@@ -189,10 +194,10 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         private String plotType;
 
         @com.aliyun.core.annotation.NameInMap("xAxis")
-        private java.util.List < String > xAxis;
+        private java.util.List<String> xAxis;
 
         @com.aliyun.core.annotation.NameInMap("yAxis")
-        private java.util.List < String > yAxis;
+        private java.util.List<String> yAxis;
 
         private VisualizationData(Builder builder) {
             this.plotType = builder.plotType;
@@ -218,21 +223,21 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         /**
          * @return xAxis
          */
-        public java.util.List < String > getXAxis() {
+        public java.util.List<String> getXAxis() {
             return this.xAxis;
         }
 
         /**
          * @return yAxis
          */
-        public java.util.List < String > getYAxis() {
+        public java.util.List<String> getYAxis() {
             return this.yAxis;
         }
 
         public static final class Builder {
             private String plotType; 
-            private java.util.List < String > xAxis; 
-            private java.util.List < String > yAxis; 
+            private java.util.List<String> xAxis; 
+            private java.util.List<String> yAxis; 
 
             /**
              * plotType.
@@ -245,7 +250,7 @@ public class RunDataAnalysisResponseBody extends TeaModel {
             /**
              * xAxis.
              */
-            public Builder xAxis(java.util.List < String > xAxis) {
+            public Builder xAxis(java.util.List<String> xAxis) {
                 this.xAxis = xAxis;
                 return this;
             }
@@ -253,7 +258,7 @@ public class RunDataAnalysisResponseBody extends TeaModel {
             /**
              * yAxis.
              */
-            public Builder yAxis(java.util.List < String > yAxis) {
+            public Builder yAxis(java.util.List<String> yAxis) {
                 this.yAxis = yAxis;
                 return this;
             }
@@ -358,7 +363,7 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         private String rewrite;
 
         @com.aliyun.core.annotation.NameInMap("selector")
-        private java.util.List < String > selector;
+        private java.util.List<String> selector;
 
         @com.aliyun.core.annotation.NameInMap("sessionId")
         private String sessionId;
@@ -443,7 +448,7 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         /**
          * @return selector
          */
-        public java.util.List < String > getSelector() {
+        public java.util.List<String> getSelector() {
             return this.selector;
         }
 
@@ -489,7 +494,7 @@ public class RunDataAnalysisResponseBody extends TeaModel {
             private Long httpStatusCode; 
             private String requestId; 
             private String rewrite; 
-            private java.util.List < String > selector; 
+            private java.util.List<String> selector; 
             private String sessionId; 
             private String sql; 
             private SqlData sqlData; 
@@ -547,7 +552,7 @@ public class RunDataAnalysisResponseBody extends TeaModel {
             /**
              * selector.
              */
-            public Builder selector(java.util.List < String > selector) {
+            public Builder selector(java.util.List<String> selector) {
                 this.selector = selector;
                 return this;
             }

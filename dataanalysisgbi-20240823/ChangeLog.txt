@@ -1,3 +1,6 @@
+2024-12-24 Version: 1.0.6
+- Generated java-async 2024-08-23 for DataAnalysisGBI.
+
 2024-12-10 Version: 1.0.5
 - Generated java-async 2024-08-23 for DataAnalysisGBI.
 
