@@ -20,6 +20,9 @@ public class QuerySearchLibResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("IndexInfo")
+    private java.util.List<IndexInfo> indexInfo;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -34,6 +37,7 @@ public class QuerySearchLibResponseBody extends TeaModel {
 
     private QuerySearchLibResponseBody(Builder builder) {
         this.code = builder.code;
+        this.indexInfo = builder.indexInfo;
         this.requestId = builder.requestId;
         this.searchLibName = builder.searchLibName;
         this.status = builder.status;
@@ -53,6 +57,13 @@ public class QuerySearchLibResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return indexInfo
+     */
+    public java.util.List<IndexInfo> getIndexInfo() {
+        return this.indexInfo;
     }
 
     /**
@@ -85,6 +96,7 @@ public class QuerySearchLibResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private java.util.List<IndexInfo> indexInfo; 
         private String requestId; 
         private String searchLibName; 
         private String status; 
@@ -98,6 +110,14 @@ public class QuerySearchLibResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * IndexInfo.
+         */
+        public Builder indexInfo(java.util.List<IndexInfo> indexInfo) {
+            this.indexInfo = indexInfo;
             return this;
         }
 
@@ -161,4 +181,91 @@ public class QuerySearchLibResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySearchLibResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySearchLibResponseBody</p>
+     */
+    public static class IndexInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IndexReadiness")
+        private String indexReadiness;
+
+        @com.aliyun.core.annotation.NameInMap("IndexStatus")
+        private String indexStatus;
+
+        @com.aliyun.core.annotation.NameInMap("IndexType")
+        private String indexType;
+
+        private IndexInfo(Builder builder) {
+            this.indexReadiness = builder.indexReadiness;
+            this.indexStatus = builder.indexStatus;
+            this.indexType = builder.indexType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IndexInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return indexReadiness
+         */
+        public String getIndexReadiness() {
+            return this.indexReadiness;
+        }
+
+        /**
+         * @return indexStatus
+         */
+        public String getIndexStatus() {
+            return this.indexStatus;
+        }
+
+        /**
+         * @return indexType
+         */
+        public String getIndexType() {
+            return this.indexType;
+        }
+
+        public static final class Builder {
+            private String indexReadiness; 
+            private String indexStatus; 
+            private String indexType; 
+
+            /**
+             * IndexReadiness.
+             */
+            public Builder indexReadiness(String indexReadiness) {
+                this.indexReadiness = indexReadiness;
+                return this;
+            }
+
+            /**
+             * IndexStatus.
+             */
+            public Builder indexStatus(String indexStatus) {
+                this.indexStatus = indexStatus;
+                return this;
+            }
+
+            /**
+             * IndexType.
+             */
+            public Builder indexType(String indexType) {
+                this.indexType = indexType;
+                return this;
+            }
+
+            public IndexInfo build() {
+                return new IndexInfo(this);
+            } 
+
+        } 
+
+    }
 }
