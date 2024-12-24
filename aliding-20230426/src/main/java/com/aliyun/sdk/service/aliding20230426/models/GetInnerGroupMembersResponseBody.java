@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetInnerGroupMembersResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("userIds")
-    private java.util.List < String > userIds;
+    private java.util.List<String> userIds;
 
     @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
@@ -71,7 +76,7 @@ public class GetInnerGroupMembersResponseBody extends TeaModel {
     /**
      * @return userIds
      */
-    public java.util.List < String > getUserIds() {
+    public java.util.List<String> getUserIds() {
         return this.userIds;
     }
 
@@ -93,7 +98,7 @@ public class GetInnerGroupMembersResponseBody extends TeaModel {
         private Boolean hasMore; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < String > userIds; 
+        private java.util.List<String> userIds; 
         private String vendorRequestId; 
         private String vendorType; 
 
@@ -124,7 +129,7 @@ public class GetInnerGroupMembersResponseBody extends TeaModel {
         /**
          * userIds.
          */
-        public Builder userIds(java.util.List < String > userIds) {
+        public Builder userIds(java.util.List<String> userIds) {
             this.userIds = userIds;
             return this;
         }

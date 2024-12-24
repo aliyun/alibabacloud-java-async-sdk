@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class PatchEventRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Attendees")
-    private java.util.List < Attendees> attendees;
+    private java.util.List<Attendees> attendees;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CalendarId")
@@ -27,7 +32,7 @@ public class PatchEventRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CardInstances")
-    private java.util.List < CardInstances> cardInstances;
+    private java.util.List<CardInstances> cardInstances;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
@@ -44,7 +49,7 @@ public class PatchEventRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Extra")
-    private java.util.Map < String, String > extra;
+    private java.util.Map<String, String> extra;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IsAllDay")
@@ -60,7 +65,7 @@ public class PatchEventRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Reminders")
-    private java.util.List < Reminders> reminders;
+    private java.util.List<Reminders> reminders;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Start")
@@ -111,7 +116,7 @@ public class PatchEventRequest extends Request {
     /**
      * @return attendees
      */
-    public java.util.List < Attendees> getAttendees() {
+    public java.util.List<Attendees> getAttendees() {
         return this.attendees;
     }
 
@@ -125,7 +130,7 @@ public class PatchEventRequest extends Request {
     /**
      * @return cardInstances
      */
-    public java.util.List < CardInstances> getCardInstances() {
+    public java.util.List<CardInstances> getCardInstances() {
         return this.cardInstances;
     }
 
@@ -153,7 +158,7 @@ public class PatchEventRequest extends Request {
     /**
      * @return extra
      */
-    public java.util.Map < String, String > getExtra() {
+    public java.util.Map<String, String> getExtra() {
         return this.extra;
     }
 
@@ -181,7 +186,7 @@ public class PatchEventRequest extends Request {
     /**
      * @return reminders
      */
-    public java.util.List < Reminders> getReminders() {
+    public java.util.List<Reminders> getReminders() {
         return this.reminders;
     }
 
@@ -201,17 +206,17 @@ public class PatchEventRequest extends Request {
 
     public static final class Builder extends Request.Builder<PatchEventRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.List < Attendees> attendees; 
+        private java.util.List<Attendees> attendees; 
         private String calendarId; 
-        private java.util.List < CardInstances> cardInstances; 
+        private java.util.List<CardInstances> cardInstances; 
         private String description; 
         private End end; 
         private String eventId; 
-        private java.util.Map < String, String > extra; 
+        private java.util.Map<String, String> extra; 
         private Boolean isAllDay; 
         private Location location; 
         private Recurrence recurrence; 
-        private java.util.List < Reminders> reminders; 
+        private java.util.List<Reminders> reminders; 
         private Start start; 
         private String summary; 
 
@@ -250,7 +255,7 @@ public class PatchEventRequest extends Request {
         /**
          * Attendees.
          */
-        public Builder attendees(java.util.List < Attendees> attendees) {
+        public Builder attendees(java.util.List<Attendees> attendees) {
             String attendeesShrink = shrink(attendees, "Attendees", "json");
             this.putBodyParameter("Attendees", attendeesShrink);
             this.attendees = attendees;
@@ -272,7 +277,7 @@ public class PatchEventRequest extends Request {
         /**
          * CardInstances.
          */
-        public Builder cardInstances(java.util.List < CardInstances> cardInstances) {
+        public Builder cardInstances(java.util.List<CardInstances> cardInstances) {
             String cardInstancesShrink = shrink(cardInstances, "CardInstances", "json");
             this.putBodyParameter("CardInstances", cardInstancesShrink);
             this.cardInstances = cardInstances;
@@ -313,7 +318,7 @@ public class PatchEventRequest extends Request {
         /**
          * Extra.
          */
-        public Builder extra(java.util.Map < String, String > extra) {
+        public Builder extra(java.util.Map<String, String> extra) {
             String extraShrink = shrink(extra, "Extra", "json");
             this.putBodyParameter("Extra", extraShrink);
             this.extra = extra;
@@ -352,7 +357,7 @@ public class PatchEventRequest extends Request {
         /**
          * Reminders.
          */
-        public Builder reminders(java.util.List < Reminders> reminders) {
+        public Builder reminders(java.util.List<Reminders> reminders) {
             String remindersShrink = shrink(reminders, "Reminders", "json");
             this.putBodyParameter("Reminders", remindersShrink);
             this.reminders = reminders;

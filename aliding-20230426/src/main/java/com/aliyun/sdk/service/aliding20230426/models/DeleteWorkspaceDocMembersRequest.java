@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DeleteWorkspaceDocMembersRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Members")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Members> members;
+    private java.util.List<Members> members;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NodeId")
@@ -67,7 +72,7 @@ public class DeleteWorkspaceDocMembersRequest extends Request {
     /**
      * @return members
      */
-    public java.util.List < Members> getMembers() {
+    public java.util.List<Members> getMembers() {
         return this.members;
     }
 
@@ -94,7 +99,7 @@ public class DeleteWorkspaceDocMembersRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteWorkspaceDocMembersRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.List < Members> members; 
+        private java.util.List<Members> members; 
         private String nodeId; 
         private TenantContext tenantContext; 
         private String workspaceId; 
@@ -125,7 +130,7 @@ public class DeleteWorkspaceDocMembersRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder members(java.util.List < Members> members) {
+        public Builder members(java.util.List<Members> members) {
             String membersShrink = shrink(members, "Members", "json");
             this.putBodyParameter("Members", membersShrink);
             this.members = members;

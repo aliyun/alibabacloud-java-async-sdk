@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class QueryMinutesSummaryRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("summaryTypeList")
-    private java.util.List < String > summaryTypeList;
+    private java.util.List<String> summaryTypeList;
 
     private QueryMinutesSummaryRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class QueryMinutesSummaryRequest extends Request {
     /**
      * @return summaryTypeList
      */
-    public java.util.List < String > getSummaryTypeList() {
+    public java.util.List<String> getSummaryTypeList() {
         return this.summaryTypeList;
     }
 
@@ -82,7 +87,7 @@ public class QueryMinutesSummaryRequest extends Request {
         private AccountContext accountContext; 
         private TenantContext tenantContext; 
         private String conferenceId; 
-        private java.util.List < String > summaryTypeList; 
+        private java.util.List<String> summaryTypeList; 
 
         private Builder() {
             super();
@@ -131,7 +136,7 @@ public class QueryMinutesSummaryRequest extends Request {
         /**
          * summaryTypeList.
          */
-        public Builder summaryTypeList(java.util.List < String > summaryTypeList) {
+        public Builder summaryTypeList(java.util.List<String> summaryTypeList) {
             String summaryTypeListShrink = shrink(summaryTypeList, "summaryTypeList", "json");
             this.putBodyParameter("summaryTypeList", summaryTypeListShrink);
             this.summaryTypeList = summaryTypeList;

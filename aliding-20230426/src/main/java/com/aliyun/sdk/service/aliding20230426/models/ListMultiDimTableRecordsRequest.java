@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -283,7 +288,7 @@ public class ListMultiDimTableRecordsRequest extends Request {
         private String operator;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < ? > value;
+        private java.util.List<?> value;
 
         private Conditions(Builder builder) {
             this.field = builder.field;
@@ -316,14 +321,14 @@ public class ListMultiDimTableRecordsRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < ? > getValue() {
+        public java.util.List<?> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String field; 
             private String operator; 
-            private java.util.List < ? > value; 
+            private java.util.List<?> value; 
 
             /**
              * Field.
@@ -344,7 +349,7 @@ public class ListMultiDimTableRecordsRequest extends Request {
             /**
              * Value.
              */
-            public Builder value(java.util.List < ? > value) {
+            public Builder value(java.util.List<?> value) {
                 this.value = value;
                 return this;
             }
@@ -367,7 +372,7 @@ public class ListMultiDimTableRecordsRequest extends Request {
         private String combination;
 
         @com.aliyun.core.annotation.NameInMap("Conditions")
-        private java.util.List < Conditions> conditions;
+        private java.util.List<Conditions> conditions;
 
         private Filter(Builder builder) {
             this.combination = builder.combination;
@@ -392,13 +397,13 @@ public class ListMultiDimTableRecordsRequest extends Request {
         /**
          * @return conditions
          */
-        public java.util.List < Conditions> getConditions() {
+        public java.util.List<Conditions> getConditions() {
             return this.conditions;
         }
 
         public static final class Builder {
             private String combination; 
-            private java.util.List < Conditions> conditions; 
+            private java.util.List<Conditions> conditions; 
 
             /**
              * Combination.
@@ -411,7 +416,7 @@ public class ListMultiDimTableRecordsRequest extends Request {
             /**
              * Conditions.
              */
-            public Builder conditions(java.util.List < Conditions> conditions) {
+            public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
                 return this;
             }

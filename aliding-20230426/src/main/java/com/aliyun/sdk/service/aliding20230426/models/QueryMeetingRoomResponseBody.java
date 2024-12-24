@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -209,7 +214,7 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
      */
     public static class ReservationAuthority extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizedMembers")
-        private java.util.List < AuthorizedMembers> authorizedMembers;
+        private java.util.List<AuthorizedMembers> authorizedMembers;
 
         private ReservationAuthority(Builder builder) {
             this.authorizedMembers = builder.authorizedMembers;
@@ -226,17 +231,17 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         /**
          * @return authorizedMembers
          */
-        public java.util.List < AuthorizedMembers> getAuthorizedMembers() {
+        public java.util.List<AuthorizedMembers> getAuthorizedMembers() {
             return this.authorizedMembers;
         }
 
         public static final class Builder {
-            private java.util.List < AuthorizedMembers> authorizedMembers; 
+            private java.util.List<AuthorizedMembers> authorizedMembers; 
 
             /**
              * AuthorizedMembers.
              */
-            public Builder authorizedMembers(java.util.List < AuthorizedMembers> authorizedMembers) {
+            public Builder authorizedMembers(java.util.List<AuthorizedMembers> authorizedMembers) {
                 this.authorizedMembers = authorizedMembers;
                 return this;
             }
@@ -480,7 +485,7 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         private String corpId;
 
         @com.aliyun.core.annotation.NameInMap("DeviceUnionIds")
-        private java.util.List < String > deviceUnionIds;
+        private java.util.List<String> deviceUnionIds;
 
         @com.aliyun.core.annotation.NameInMap("EnableCycleReservation")
         private Boolean enableCycleReservation;
@@ -501,7 +506,7 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         private String roomId;
 
         @com.aliyun.core.annotation.NameInMap("RoomLabels")
-        private java.util.List < RoomLabels> roomLabels;
+        private java.util.List<RoomLabels> roomLabels;
 
         @com.aliyun.core.annotation.NameInMap("RoomLocation")
         private RoomLocation roomLocation;
@@ -557,7 +562,7 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         /**
          * @return deviceUnionIds
          */
-        public java.util.List < String > getDeviceUnionIds() {
+        public java.util.List<String> getDeviceUnionIds() {
             return this.deviceUnionIds;
         }
 
@@ -606,7 +611,7 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
         /**
          * @return roomLabels
          */
-        public java.util.List < RoomLabels> getRoomLabels() {
+        public java.util.List<RoomLabels> getRoomLabels() {
             return this.roomLabels;
         }
 
@@ -654,14 +659,14 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
 
         public static final class Builder {
             private String corpId; 
-            private java.util.List < String > deviceUnionIds; 
+            private java.util.List<String> deviceUnionIds; 
             private Boolean enableCycleReservation; 
             private String isvRoomId; 
             private ReservationAuthority reservationAuthority; 
             private Integer roomCapacity; 
             private RoomGroup roomGroup; 
             private String roomId; 
-            private java.util.List < RoomLabels> roomLabels; 
+            private java.util.List<RoomLabels> roomLabels; 
             private RoomLocation roomLocation; 
             private String roomName; 
             private String roomPicture; 
@@ -680,7 +685,7 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
             /**
              * DeviceUnionIds.
              */
-            public Builder deviceUnionIds(java.util.List < String > deviceUnionIds) {
+            public Builder deviceUnionIds(java.util.List<String> deviceUnionIds) {
                 this.deviceUnionIds = deviceUnionIds;
                 return this;
             }
@@ -736,7 +741,7 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
             /**
              * RoomLabels.
              */
-            public Builder roomLabels(java.util.List < RoomLabels> roomLabels) {
+            public Builder roomLabels(java.util.List<RoomLabels> roomLabels) {
                 this.roomLabels = roomLabels;
                 return this;
             }

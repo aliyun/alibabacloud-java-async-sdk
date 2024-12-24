@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,19 +18,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetRangeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("backgroundColors")
-    private java.util.List < java.util.List < BackgroundColors> > backgroundColors;
+    private java.util.List<java.util.List<BackgroundColors>> backgroundColors;
 
     @com.aliyun.core.annotation.NameInMap("displayValues")
-    private java.util.List < java.util.List < String > > displayValues;
+    private java.util.List<java.util.List<String>> displayValues;
 
     @com.aliyun.core.annotation.NameInMap("formulas")
-    private java.util.List < java.util.List < String > > formulas;
+    private java.util.List<java.util.List<String>> formulas;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("values")
-    private java.util.List < java.util.List < ? > > values;
+    private java.util.List<java.util.List<?>> values;
 
     private GetRangeResponseBody(Builder builder) {
         this.backgroundColors = builder.backgroundColors;
@@ -46,21 +51,21 @@ public class GetRangeResponseBody extends TeaModel {
     /**
      * @return backgroundColors
      */
-    public java.util.List < java.util.List < BackgroundColors> > getBackgroundColors() {
+    public java.util.List<java.util.List<BackgroundColors>> getBackgroundColors() {
         return this.backgroundColors;
     }
 
     /**
      * @return displayValues
      */
-    public java.util.List < java.util.List < String > > getDisplayValues() {
+    public java.util.List<java.util.List<String>> getDisplayValues() {
         return this.displayValues;
     }
 
     /**
      * @return formulas
      */
-    public java.util.List < java.util.List < String > > getFormulas() {
+    public java.util.List<java.util.List<String>> getFormulas() {
         return this.formulas;
     }
 
@@ -74,21 +79,21 @@ public class GetRangeResponseBody extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < java.util.List < ? > > getValues() {
+    public java.util.List<java.util.List<?>> getValues() {
         return this.values;
     }
 
     public static final class Builder {
-        private java.util.List < java.util.List < BackgroundColors> > backgroundColors; 
-        private java.util.List < java.util.List < String > > displayValues; 
-        private java.util.List < java.util.List < String > > formulas; 
+        private java.util.List<java.util.List<BackgroundColors>> backgroundColors; 
+        private java.util.List<java.util.List<String>> displayValues; 
+        private java.util.List<java.util.List<String>> formulas; 
         private String requestId; 
-        private java.util.List < java.util.List < ? > > values; 
+        private java.util.List<java.util.List<?>> values; 
 
         /**
          * backgroundColors.
          */
-        public Builder backgroundColors(java.util.List < java.util.List < BackgroundColors> > backgroundColors) {
+        public Builder backgroundColors(java.util.List<java.util.List<BackgroundColors>> backgroundColors) {
             this.backgroundColors = backgroundColors;
             return this;
         }
@@ -96,7 +101,7 @@ public class GetRangeResponseBody extends TeaModel {
         /**
          * displayValues.
          */
-        public Builder displayValues(java.util.List < java.util.List < String > > displayValues) {
+        public Builder displayValues(java.util.List<java.util.List<String>> displayValues) {
             this.displayValues = displayValues;
             return this;
         }
@@ -104,7 +109,7 @@ public class GetRangeResponseBody extends TeaModel {
         /**
          * formulas.
          */
-        public Builder formulas(java.util.List < java.util.List < String > > formulas) {
+        public Builder formulas(java.util.List<java.util.List<String>> formulas) {
             this.formulas = formulas;
             return this;
         }
@@ -123,7 +128,7 @@ public class GetRangeResponseBody extends TeaModel {
         /**
          * values.
          */
-        public Builder values(java.util.List < java.util.List < ? > > values) {
+        public Builder values(java.util.List<java.util.List<?>> values) {
             this.values = values;
             return this;
         }

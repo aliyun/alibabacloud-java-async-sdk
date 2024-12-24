@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetSpaceDirectoriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("children")
-    private java.util.List < Children> children;
+    private java.util.List<Children> children;
 
     @com.aliyun.core.annotation.NameInMap("hasMore")
     private Boolean hasMore;
@@ -42,7 +47,7 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     /**
      * @return children
      */
-    public java.util.List < Children> getChildren() {
+    public java.util.List<Children> getChildren() {
         return this.children;
     }
 
@@ -68,7 +73,7 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Children> children; 
+        private java.util.List<Children> children; 
         private Boolean hasMore; 
         private String nextToken; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         /**
          * children.
          */
-        public Builder children(java.util.List < Children> children) {
+        public Builder children(java.util.List<Children> children) {
             this.children = children;
             return this;
         }
@@ -584,13 +589,13 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
      */
     public static class VisitorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DentryActions")
-        private java.util.List < String > dentryActions;
+        private java.util.List<String> dentryActions;
 
         @com.aliyun.core.annotation.NameInMap("RoleCode")
         private String roleCode;
 
         @com.aliyun.core.annotation.NameInMap("SpaceActions")
-        private java.util.List < String > spaceActions;
+        private java.util.List<String> spaceActions;
 
         private VisitorInfo(Builder builder) {
             this.dentryActions = builder.dentryActions;
@@ -609,7 +614,7 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         /**
          * @return dentryActions
          */
-        public java.util.List < String > getDentryActions() {
+        public java.util.List<String> getDentryActions() {
             return this.dentryActions;
         }
 
@@ -623,19 +628,19 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         /**
          * @return spaceActions
          */
-        public java.util.List < String > getSpaceActions() {
+        public java.util.List<String> getSpaceActions() {
             return this.spaceActions;
         }
 
         public static final class Builder {
-            private java.util.List < String > dentryActions; 
+            private java.util.List<String> dentryActions; 
             private String roleCode; 
-            private java.util.List < String > spaceActions; 
+            private java.util.List<String> spaceActions; 
 
             /**
              * DentryActions.
              */
-            public Builder dentryActions(java.util.List < String > dentryActions) {
+            public Builder dentryActions(java.util.List<String> dentryActions) {
                 this.dentryActions = dentryActions;
                 return this;
             }
@@ -651,7 +656,7 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
             /**
              * SpaceActions.
              */
-            public Builder spaceActions(java.util.List < String > spaceActions) {
+            public Builder spaceActions(java.util.List<String> spaceActions) {
                 this.spaceActions = spaceActions;
                 return this;
             }
@@ -692,7 +697,7 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         private Owner owner;
 
         @com.aliyun.core.annotation.NameInMap("RecentList")
-        private java.util.List < ? > recentList;
+        private java.util.List<?> recentList;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
@@ -777,7 +782,7 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         /**
          * @return recentList
          */
-        public java.util.List < ? > getRecentList() {
+        public java.util.List<?> getRecentList() {
             return this.recentList;
         }
 
@@ -810,7 +815,7 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private Owner owner; 
-            private java.util.List < ? > recentList; 
+            private java.util.List<?> recentList; 
             private Integer type; 
             private String url; 
             private VisitorInfo visitorInfo; 
@@ -874,7 +879,7 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
             /**
              * RecentList.
              */
-            public Builder recentList(java.util.List < ? > recentList) {
+            public Builder recentList(java.util.List<?> recentList) {
                 this.recentList = recentList;
                 return this;
             }
@@ -1035,13 +1040,13 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
      */
     public static class ChildrenVisitorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DentryActions")
-        private java.util.List < String > dentryActions;
+        private java.util.List<String> dentryActions;
 
         @com.aliyun.core.annotation.NameInMap("RoleCode")
         private String roleCode;
 
         @com.aliyun.core.annotation.NameInMap("SpaceActions")
-        private java.util.List < String > spaceActions;
+        private java.util.List<String> spaceActions;
 
         private ChildrenVisitorInfo(Builder builder) {
             this.dentryActions = builder.dentryActions;
@@ -1060,7 +1065,7 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         /**
          * @return dentryActions
          */
-        public java.util.List < String > getDentryActions() {
+        public java.util.List<String> getDentryActions() {
             return this.dentryActions;
         }
 
@@ -1074,19 +1079,19 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         /**
          * @return spaceActions
          */
-        public java.util.List < String > getSpaceActions() {
+        public java.util.List<String> getSpaceActions() {
             return this.spaceActions;
         }
 
         public static final class Builder {
-            private java.util.List < String > dentryActions; 
+            private java.util.List<String> dentryActions; 
             private String roleCode; 
-            private java.util.List < String > spaceActions; 
+            private java.util.List<String> spaceActions; 
 
             /**
              * DentryActions.
              */
-            public Builder dentryActions(java.util.List < String > dentryActions) {
+            public Builder dentryActions(java.util.List<String> dentryActions) {
                 this.dentryActions = dentryActions;
                 return this;
             }
@@ -1102,7 +1107,7 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
             /**
              * SpaceActions.
              */
-            public Builder spaceActions(java.util.List < String > spaceActions) {
+            public Builder spaceActions(java.util.List<String> spaceActions) {
                 this.spaceActions = spaceActions;
                 return this;
             }

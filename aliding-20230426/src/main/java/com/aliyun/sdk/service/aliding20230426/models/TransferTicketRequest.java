@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class TransferTicketRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProcessorUserIds")
-    private java.util.List < String > processorUserIds;
+    private java.util.List<String> processorUserIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantContext")
@@ -97,7 +102,7 @@ public class TransferTicketRequest extends Request {
     /**
      * @return processorUserIds
      */
-    public java.util.List < String > getProcessorUserIds() {
+    public java.util.List<String> getProcessorUserIds() {
         return this.processorUserIds;
     }
 
@@ -120,7 +125,7 @@ public class TransferTicketRequest extends Request {
         private Notify notify; 
         private String openTeamId; 
         private String openTicketId; 
-        private java.util.List < String > processorUserIds; 
+        private java.util.List<String> processorUserIds; 
         private TenantContext tenantContext; 
         private TicketMemo ticketMemo; 
 
@@ -186,7 +191,7 @@ public class TransferTicketRequest extends Request {
         /**
          * ProcessorUserIds.
          */
-        public Builder processorUserIds(java.util.List < String > processorUserIds) {
+        public Builder processorUserIds(java.util.List<String> processorUserIds) {
             String processorUserIdsShrink = shrink(processorUserIds, "ProcessorUserIds", "json");
             this.putBodyParameter("ProcessorUserIds", processorUserIdsShrink);
             this.processorUserIds = processorUserIds;
@@ -279,13 +284,13 @@ public class TransferTicketRequest extends Request {
      */
     public static class Notify extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupNoticeReceiverUserIds")
-        private java.util.List < String > groupNoticeReceiverUserIds;
+        private java.util.List<String> groupNoticeReceiverUserIds;
 
         @com.aliyun.core.annotation.NameInMap("NoticeAllGroupMember")
         private Boolean noticeAllGroupMember;
 
         @com.aliyun.core.annotation.NameInMap("WorkNoticeReceiverUserIds")
-        private java.util.List < String > workNoticeReceiverUserIds;
+        private java.util.List<String> workNoticeReceiverUserIds;
 
         private Notify(Builder builder) {
             this.groupNoticeReceiverUserIds = builder.groupNoticeReceiverUserIds;
@@ -304,7 +309,7 @@ public class TransferTicketRequest extends Request {
         /**
          * @return groupNoticeReceiverUserIds
          */
-        public java.util.List < String > getGroupNoticeReceiverUserIds() {
+        public java.util.List<String> getGroupNoticeReceiverUserIds() {
             return this.groupNoticeReceiverUserIds;
         }
 
@@ -318,19 +323,19 @@ public class TransferTicketRequest extends Request {
         /**
          * @return workNoticeReceiverUserIds
          */
-        public java.util.List < String > getWorkNoticeReceiverUserIds() {
+        public java.util.List<String> getWorkNoticeReceiverUserIds() {
             return this.workNoticeReceiverUserIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > groupNoticeReceiverUserIds; 
+            private java.util.List<String> groupNoticeReceiverUserIds; 
             private Boolean noticeAllGroupMember; 
-            private java.util.List < String > workNoticeReceiverUserIds; 
+            private java.util.List<String> workNoticeReceiverUserIds; 
 
             /**
              * GroupNoticeReceiverUserIds.
              */
-            public Builder groupNoticeReceiverUserIds(java.util.List < String > groupNoticeReceiverUserIds) {
+            public Builder groupNoticeReceiverUserIds(java.util.List<String> groupNoticeReceiverUserIds) {
                 this.groupNoticeReceiverUserIds = groupNoticeReceiverUserIds;
                 return this;
             }
@@ -346,7 +351,7 @@ public class TransferTicketRequest extends Request {
             /**
              * WorkNoticeReceiverUserIds.
              */
-            public Builder workNoticeReceiverUserIds(java.util.List < String > workNoticeReceiverUserIds) {
+            public Builder workNoticeReceiverUserIds(java.util.List<String> workNoticeReceiverUserIds) {
                 this.workNoticeReceiverUserIds = workNoticeReceiverUserIds;
                 return this;
             }
@@ -480,7 +485,7 @@ public class TransferTicketRequest extends Request {
      */
     public static class TicketMemo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attachments")
-        private java.util.List < Attachments> attachments;
+        private java.util.List<Attachments> attachments;
 
         @com.aliyun.core.annotation.NameInMap("Memo")
         private String memo;
@@ -501,7 +506,7 @@ public class TransferTicketRequest extends Request {
         /**
          * @return attachments
          */
-        public java.util.List < Attachments> getAttachments() {
+        public java.util.List<Attachments> getAttachments() {
             return this.attachments;
         }
 
@@ -513,13 +518,13 @@ public class TransferTicketRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Attachments> attachments; 
+            private java.util.List<Attachments> attachments; 
             private String memo; 
 
             /**
              * Attachments.
              */
-            public Builder attachments(java.util.List < Attachments> attachments) {
+            public Builder attachments(java.util.List<Attachments> attachments) {
                 this.attachments = attachments;
                 return this;
             }

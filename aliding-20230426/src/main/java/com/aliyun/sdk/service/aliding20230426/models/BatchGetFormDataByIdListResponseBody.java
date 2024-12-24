@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
@@ -49,7 +54,7 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -69,7 +74,7 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private String vendorRequestId; 
         private String vendorType; 
 
@@ -84,7 +89,7 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -393,7 +398,7 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
         private String creatorUserId;
 
         @com.aliyun.core.annotation.NameInMap("FormData")
-        private java.util.Map < String, ? > formData;
+        private java.util.Map<String, ?> formData;
 
         @com.aliyun.core.annotation.NameInMap("FormInstanceId")
         private String formInstanceId;
@@ -474,7 +479,7 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
         /**
          * @return formData
          */
-        public java.util.Map < String, ? > getFormData() {
+        public java.util.Map<String, ?> getFormData() {
             return this.formData;
         }
 
@@ -565,7 +570,7 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
         public static final class Builder {
             private String createTimeGMT; 
             private String creatorUserId; 
-            private java.util.Map < String, ? > formData; 
+            private java.util.Map<String, ?> formData; 
             private String formInstanceId; 
             private String formUuid; 
             private Long id; 
@@ -598,7 +603,7 @@ public class BatchGetFormDataByIdListResponseBody extends TeaModel {
             /**
              * FormData.
              */
-            public Builder formData(java.util.Map < String, ? > formData) {
+            public Builder formData(java.util.Map<String, ?> formData) {
                 this.formData = formData;
                 return this;
             }

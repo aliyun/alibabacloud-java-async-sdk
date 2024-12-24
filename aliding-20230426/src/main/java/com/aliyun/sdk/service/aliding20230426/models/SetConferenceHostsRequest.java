@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class SetConferenceHostsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > userIds;
+    private java.util.List<String> userIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("conferenceId")
@@ -81,7 +86,7 @@ public class SetConferenceHostsRequest extends Request {
     /**
      * @return userIds
      */
-    public java.util.List < String > getUserIds() {
+    public java.util.List<String> getUserIds() {
         return this.userIds;
     }
 
@@ -96,7 +101,7 @@ public class SetConferenceHostsRequest extends Request {
         private AccountContext accountContext; 
         private String operationType; 
         private TenantContext tenantContext; 
-        private java.util.List < String > userIds; 
+        private java.util.List<String> userIds; 
         private String conferenceId; 
 
         private Builder() {
@@ -150,7 +155,7 @@ public class SetConferenceHostsRequest extends Request {
          * <strong>example:</strong>
          * <p>[ &quot;012345&quot;]</p>
          */
-        public Builder userIds(java.util.List < String > userIds) {
+        public Builder userIds(java.util.List<String> userIds) {
             String userIdsShrink = shrink(userIds, "UserIds", "json");
             this.putBodyParameter("UserIds", userIdsShrink);
             this.userIds = userIds;

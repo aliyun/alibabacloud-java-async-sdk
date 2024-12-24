@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class RemoveAttendeeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AttendeesToRemove")
-    private java.util.List < String > attendeesToRemove;
+    private java.util.List<String> attendeesToRemove;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CalendarId")
@@ -61,7 +66,7 @@ public class RemoveAttendeeRequest extends Request {
     /**
      * @return attendeesToRemove
      */
-    public java.util.List < String > getAttendeesToRemove() {
+    public java.util.List<String> getAttendeesToRemove() {
         return this.attendeesToRemove;
     }
 
@@ -81,7 +86,7 @@ public class RemoveAttendeeRequest extends Request {
 
     public static final class Builder extends Request.Builder<RemoveAttendeeRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.List < String > attendeesToRemove; 
+        private java.util.List<String> attendeesToRemove; 
         private String calendarId; 
         private String eventId; 
 
@@ -110,7 +115,7 @@ public class RemoveAttendeeRequest extends Request {
         /**
          * AttendeesToRemove.
          */
-        public Builder attendeesToRemove(java.util.List < String > attendeesToRemove) {
+        public Builder attendeesToRemove(java.util.List<String> attendeesToRemove) {
             String attendeesToRemoveShrink = shrink(attendeesToRemove, "AttendeesToRemove", "json");
             this.putBodyParameter("AttendeesToRemove", attendeesToRemoveShrink);
             this.attendeesToRemove = attendeesToRemove;

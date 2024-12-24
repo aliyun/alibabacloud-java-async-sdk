@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
     private String outResult;
 
     @com.aliyun.core.annotation.NameInMap("owners")
-    private java.util.List < Owners> owners;
+    private java.util.List<Owners> owners;
 
     @com.aliyun.core.annotation.NameInMap("processId")
     private String processId;
@@ -37,13 +42,13 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
     private String status;
 
     @com.aliyun.core.annotation.NameInMap("tasks")
-    private java.util.List < Tasks> tasks;
+    private java.util.List<Tasks> tasks;
 
     @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
     @com.aliyun.core.annotation.NameInMap("variables")
-    private java.util.Map < String, ? > variables;
+    private java.util.Map<String, ?> variables;
 
     @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
@@ -99,7 +104,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
     /**
      * @return owners
      */
-    public java.util.List < Owners> getOwners() {
+    public java.util.List<Owners> getOwners() {
         return this.owners;
     }
 
@@ -134,7 +139,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
     /**
      * @return tasks
      */
-    public java.util.List < Tasks> getTasks() {
+    public java.util.List<Tasks> getTasks() {
         return this.tasks;
     }
 
@@ -148,7 +153,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
     /**
      * @return variables
      */
-    public java.util.Map < String, ? > getVariables() {
+    public java.util.Map<String, ?> getVariables() {
         return this.variables;
     }
 
@@ -170,14 +175,14 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         private String formUuid; 
         private Originator originator; 
         private String outResult; 
-        private java.util.List < Owners> owners; 
+        private java.util.List<Owners> owners; 
         private String processId; 
         private String processInstanceId; 
         private String requestId; 
         private String status; 
-        private java.util.List < Tasks> tasks; 
+        private java.util.List<Tasks> tasks; 
         private String title; 
-        private java.util.Map < String, ? > variables; 
+        private java.util.Map<String, ?> variables; 
         private String vendorRequestId; 
         private String vendorType; 
 
@@ -208,7 +213,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         /**
          * owners.
          */
-        public Builder owners(java.util.List < Owners> owners) {
+        public Builder owners(java.util.List<Owners> owners) {
             this.owners = owners;
             return this;
         }
@@ -248,7 +253,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         /**
          * tasks.
          */
-        public Builder tasks(java.util.List < Tasks> tasks) {
+        public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
             return this;
         }
@@ -264,7 +269,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         /**
          * variables.
          */
-        public Builder variables(java.util.Map < String, ? > variables) {
+        public Builder variables(java.util.Map<String, ?> variables) {
             this.variables = variables;
             return this;
         }
@@ -495,7 +500,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         private String displayName;
 
         @com.aliyun.core.annotation.NameInMap("MasterDataDepartments")
-        private java.util.List < MasterDataDepartments> masterDataDepartments;
+        private java.util.List<MasterDataDepartments> masterDataDepartments;
 
         @com.aliyun.core.annotation.NameInMap("OrderNumber")
         private String orderNumber;
@@ -560,7 +565,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         /**
          * @return masterDataDepartments
          */
-        public java.util.List < MasterDataDepartments> getMasterDataDepartments() {
+        public java.util.List<MasterDataDepartments> getMasterDataDepartments() {
             return this.masterDataDepartments;
         }
 
@@ -610,7 +615,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             private String departmentDescription; 
             private String displayEnName; 
             private String displayName; 
-            private java.util.List < MasterDataDepartments> masterDataDepartments; 
+            private java.util.List<MasterDataDepartments> masterDataDepartments; 
             private String orderNumber; 
             private String personalPhoto; 
             private String status; 
@@ -645,7 +650,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             /**
              * MasterDataDepartments.
              */
-            public Builder masterDataDepartments(java.util.List < MasterDataDepartments> masterDataDepartments) {
+            public Builder masterDataDepartments(java.util.List<MasterDataDepartments> masterDataDepartments) {
                 this.masterDataDepartments = masterDataDepartments;
                 return this;
             }
@@ -909,7 +914,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         private String displayName;
 
         @com.aliyun.core.annotation.NameInMap("MasterDataDepartments")
-        private java.util.List < OwnersMasterDataDepartments> masterDataDepartments;
+        private java.util.List<OwnersMasterDataDepartments> masterDataDepartments;
 
         @com.aliyun.core.annotation.NameInMap("OrderNumber")
         private String orderNumber;
@@ -974,7 +979,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
         /**
          * @return masterDataDepartments
          */
-        public java.util.List < OwnersMasterDataDepartments> getMasterDataDepartments() {
+        public java.util.List<OwnersMasterDataDepartments> getMasterDataDepartments() {
             return this.masterDataDepartments;
         }
 
@@ -1024,7 +1029,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             private String departmentDescription; 
             private String displayEnName; 
             private String displayName; 
-            private java.util.List < OwnersMasterDataDepartments> masterDataDepartments; 
+            private java.util.List<OwnersMasterDataDepartments> masterDataDepartments; 
             private String orderNumber; 
             private String personalPhoto; 
             private String status; 
@@ -1059,7 +1064,7 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
             /**
              * MasterDataDepartments.
              */
-            public Builder masterDataDepartments(java.util.List < OwnersMasterDataDepartments> masterDataDepartments) {
+            public Builder masterDataDepartments(java.util.List<OwnersMasterDataDepartments> masterDataDepartments) {
                 this.masterDataDepartments = masterDataDepartments;
                 return this;
             }

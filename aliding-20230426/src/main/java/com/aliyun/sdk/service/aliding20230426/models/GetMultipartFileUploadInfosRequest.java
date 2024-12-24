@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetMultipartFileUploadInfosRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PartNumbers")
-    private java.util.List < Integer > partNumbers;
+    private java.util.List<Integer> partNumbers;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantContext")
@@ -71,7 +76,7 @@ public class GetMultipartFileUploadInfosRequest extends Request {
     /**
      * @return partNumbers
      */
-    public java.util.List < Integer > getPartNumbers() {
+    public java.util.List<Integer> getPartNumbers() {
         return this.partNumbers;
     }
 
@@ -92,7 +97,7 @@ public class GetMultipartFileUploadInfosRequest extends Request {
     public static final class Builder extends Request.Builder<GetMultipartFileUploadInfosRequest, Builder> {
         private AccountContext accountContext; 
         private Option option; 
-        private java.util.List < Integer > partNumbers; 
+        private java.util.List<Integer> partNumbers; 
         private TenantContext tenantContext; 
         private String uploadKey; 
 
@@ -132,7 +137,7 @@ public class GetMultipartFileUploadInfosRequest extends Request {
         /**
          * PartNumbers.
          */
-        public Builder partNumbers(java.util.List < Integer > partNumbers) {
+        public Builder partNumbers(java.util.List<Integer> partNumbers) {
             String partNumbersShrink = shrink(partNumbers, "PartNumbers", "json");
             this.putBodyParameter("PartNumbers", partNumbersShrink);
             this.partNumbers = partNumbers;

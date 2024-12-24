@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,10 +30,10 @@ public class GetUserResponseBody extends TeaModel {
     private Boolean boss;
 
     @com.aliyun.core.annotation.NameInMap("deptIdList")
-    private java.util.List < Long > deptIdList;
+    private java.util.List<Long> deptIdList;
 
     @com.aliyun.core.annotation.NameInMap("deptOrderList")
-    private java.util.List < DeptOrderList> deptOrderList;
+    private java.util.List<DeptOrderList> deptOrderList;
 
     @com.aliyun.core.annotation.NameInMap("email")
     private String email;
@@ -58,7 +63,7 @@ public class GetUserResponseBody extends TeaModel {
     private String jobNumber;
 
     @com.aliyun.core.annotation.NameInMap("leaderInDept")
-    private java.util.List < LeaderInDept> leaderInDept;
+    private java.util.List<LeaderInDept> leaderInDept;
 
     @com.aliyun.core.annotation.NameInMap("loginId")
     private String loginId;
@@ -88,7 +93,7 @@ public class GetUserResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("roleList")
-    private java.util.List < RoleList> roleList;
+    private java.util.List<RoleList> roleList;
 
     @com.aliyun.core.annotation.NameInMap("senior")
     private Boolean senior;
@@ -190,14 +195,14 @@ public class GetUserResponseBody extends TeaModel {
     /**
      * @return deptIdList
      */
-    public java.util.List < Long > getDeptIdList() {
+    public java.util.List<Long> getDeptIdList() {
         return this.deptIdList;
     }
 
     /**
      * @return deptOrderList
      */
-    public java.util.List < DeptOrderList> getDeptOrderList() {
+    public java.util.List<DeptOrderList> getDeptOrderList() {
         return this.deptOrderList;
     }
 
@@ -267,7 +272,7 @@ public class GetUserResponseBody extends TeaModel {
     /**
      * @return leaderInDept
      */
-    public java.util.List < LeaderInDept> getLeaderInDept() {
+    public java.util.List<LeaderInDept> getLeaderInDept() {
         return this.leaderInDept;
     }
 
@@ -337,7 +342,7 @@ public class GetUserResponseBody extends TeaModel {
     /**
      * @return roleList
      */
-    public java.util.List < RoleList> getRoleList() {
+    public java.util.List<RoleList> getRoleList() {
         return this.roleList;
     }
 
@@ -402,8 +407,8 @@ public class GetUserResponseBody extends TeaModel {
         private Boolean admin; 
         private String avatar; 
         private Boolean boss; 
-        private java.util.List < Long > deptIdList; 
-        private java.util.List < DeptOrderList> deptOrderList; 
+        private java.util.List<Long> deptIdList; 
+        private java.util.List<DeptOrderList> deptOrderList; 
         private String email; 
         private Boolean exclusiveAccount; 
         private String exclusiveAccountCorpId; 
@@ -413,7 +418,7 @@ public class GetUserResponseBody extends TeaModel {
         private Boolean hideMobile; 
         private Long hiredDate; 
         private String jobNumber; 
-        private java.util.List < LeaderInDept> leaderInDept; 
+        private java.util.List<LeaderInDept> leaderInDept; 
         private String loginId; 
         private String managerUserid; 
         private String mobile; 
@@ -423,7 +428,7 @@ public class GetUserResponseBody extends TeaModel {
         private Boolean realAuthed; 
         private String remark; 
         private String requestId; 
-        private java.util.List < RoleList> roleList; 
+        private java.util.List<RoleList> roleList; 
         private Boolean senior; 
         private String stateCode; 
         private String telephone; 
@@ -468,7 +473,7 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * deptIdList.
          */
-        public Builder deptIdList(java.util.List < Long > deptIdList) {
+        public Builder deptIdList(java.util.List<Long> deptIdList) {
             this.deptIdList = deptIdList;
             return this;
         }
@@ -476,7 +481,7 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * deptOrderList.
          */
-        public Builder deptOrderList(java.util.List < DeptOrderList> deptOrderList) {
+        public Builder deptOrderList(java.util.List<DeptOrderList> deptOrderList) {
             this.deptOrderList = deptOrderList;
             return this;
         }
@@ -556,7 +561,7 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * leaderInDept.
          */
-        public Builder leaderInDept(java.util.List < LeaderInDept> leaderInDept) {
+        public Builder leaderInDept(java.util.List<LeaderInDept> leaderInDept) {
             this.leaderInDept = leaderInDept;
             return this;
         }
@@ -636,7 +641,7 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * roleList.
          */
-        public Builder roleList(java.util.List < RoleList> roleList) {
+        public Builder roleList(java.util.List<RoleList> roleList) {
             this.roleList = roleList;
             return this;
         }
@@ -1010,7 +1015,7 @@ public class GetUserResponseBody extends TeaModel {
         private String corpId;
 
         @com.aliyun.core.annotation.NameInMap("unionEmpMapList")
-        private java.util.List < UnionEmpMapList> unionEmpMapList;
+        private java.util.List<UnionEmpMapList> unionEmpMapList;
 
         @com.aliyun.core.annotation.NameInMap("userid")
         private String userid;
@@ -1039,7 +1044,7 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * @return unionEmpMapList
          */
-        public java.util.List < UnionEmpMapList> getUnionEmpMapList() {
+        public java.util.List<UnionEmpMapList> getUnionEmpMapList() {
             return this.unionEmpMapList;
         }
 
@@ -1052,7 +1057,7 @@ public class GetUserResponseBody extends TeaModel {
 
         public static final class Builder {
             private String corpId; 
-            private java.util.List < UnionEmpMapList> unionEmpMapList; 
+            private java.util.List<UnionEmpMapList> unionEmpMapList; 
             private String userid; 
 
             /**
@@ -1066,7 +1071,7 @@ public class GetUserResponseBody extends TeaModel {
             /**
              * unionEmpMapList.
              */
-            public Builder unionEmpMapList(java.util.List < UnionEmpMapList> unionEmpMapList) {
+            public Builder unionEmpMapList(java.util.List<UnionEmpMapList> unionEmpMapList) {
                 this.unionEmpMapList = unionEmpMapList;
                 return this;
             }

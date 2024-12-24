@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class CreateVideoConferenceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InviteUserIds")
-    private java.util.List < String > inviteUserIds;
+    private java.util.List<String> inviteUserIds;
 
     private CreateVideoConferenceRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class CreateVideoConferenceRequest extends Request {
     /**
      * @return inviteUserIds
      */
-    public java.util.List < String > getInviteUserIds() {
+    public java.util.List<String> getInviteUserIds() {
         return this.inviteUserIds;
     }
 
@@ -82,7 +87,7 @@ public class CreateVideoConferenceRequest extends Request {
         private AccountContext accountContext; 
         private String confTitle; 
         private Boolean inviteCaller; 
-        private java.util.List < String > inviteUserIds; 
+        private java.util.List<String> inviteUserIds; 
 
         private Builder() {
             super();
@@ -127,7 +132,7 @@ public class CreateVideoConferenceRequest extends Request {
         /**
          * InviteUserIds.
          */
-        public Builder inviteUserIds(java.util.List < String > inviteUserIds) {
+        public Builder inviteUserIds(java.util.List<String> inviteUserIds) {
             String inviteUserIdsShrink = shrink(inviteUserIds, "InviteUserIds", "json");
             this.putBodyParameter("InviteUserIds", inviteUserIdsShrink);
             this.inviteUserIds = inviteUserIds;

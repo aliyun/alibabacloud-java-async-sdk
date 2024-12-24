@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class SendBannerRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Content")
-    private java.util.Map < String, ? > content;
+    private java.util.Map<String, ?> content;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndTime")
@@ -64,7 +69,7 @@ public class SendBannerRequest extends Request {
     /**
      * @return content
      */
-    public java.util.Map < String, ? > getContent() {
+    public java.util.Map<String, ?> getContent() {
         return this.content;
     }
 
@@ -91,7 +96,7 @@ public class SendBannerRequest extends Request {
 
     public static final class Builder extends Request.Builder<SendBannerRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.Map < String, ? > content; 
+        private java.util.Map<String, ?> content; 
         private Long endTime; 
         private Long startTime; 
         private TenantContext tenantContext; 
@@ -122,7 +127,7 @@ public class SendBannerRequest extends Request {
         /**
          * Content.
          */
-        public Builder content(java.util.Map < String, ? > content) {
+        public Builder content(java.util.Map<String, ?> content) {
             String contentShrink = shrink(content, "Content", "json");
             this.putBodyParameter("Content", contentShrink);
             this.content = content;

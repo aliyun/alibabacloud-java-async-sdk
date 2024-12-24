@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class CreateTodoTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("contentFieldList")
-    private java.util.List < ContentFieldList> contentFieldList;
+    private java.util.List<ContentFieldList> contentFieldList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("creatorId")
@@ -42,7 +47,7 @@ public class CreateTodoTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("executorIds")
-    private java.util.List < String > executorIds;
+    private java.util.List<String> executorIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("isOnlyShowExecutor")
@@ -58,7 +63,7 @@ public class CreateTodoTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("participantIds")
-    private java.util.List < String > participantIds;
+    private java.util.List<String> participantIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("priority")
@@ -122,7 +127,7 @@ public class CreateTodoTaskRequest extends Request {
     /**
      * @return contentFieldList
      */
-    public java.util.List < ContentFieldList> getContentFieldList() {
+    public java.util.List<ContentFieldList> getContentFieldList() {
         return this.contentFieldList;
     }
 
@@ -157,7 +162,7 @@ public class CreateTodoTaskRequest extends Request {
     /**
      * @return executorIds
      */
-    public java.util.List < String > getExecutorIds() {
+    public java.util.List<String> getExecutorIds() {
         return this.executorIds;
     }
 
@@ -185,7 +190,7 @@ public class CreateTodoTaskRequest extends Request {
     /**
      * @return participantIds
      */
-    public java.util.List < String > getParticipantIds() {
+    public java.util.List<String> getParticipantIds() {
         return this.participantIds;
     }
 
@@ -213,16 +218,16 @@ public class CreateTodoTaskRequest extends Request {
     public static final class Builder extends Request.Builder<CreateTodoTaskRequest, Builder> {
         private AccountContext accountContext; 
         private TenantContext tenantContext; 
-        private java.util.List < ContentFieldList> contentFieldList; 
+        private java.util.List<ContentFieldList> contentFieldList; 
         private String creatorId; 
         private String description; 
         private DetailUrl detailUrl; 
         private Long dueTime; 
-        private java.util.List < String > executorIds; 
+        private java.util.List<String> executorIds; 
         private Boolean isOnlyShowExecutor; 
         private NotifyConfigs notifyConfigs; 
         private String operatorId; 
-        private java.util.List < String > participantIds; 
+        private java.util.List<String> participantIds; 
         private Integer priority; 
         private String sourceId; 
         private String subject; 
@@ -273,7 +278,7 @@ public class CreateTodoTaskRequest extends Request {
         /**
          * contentFieldList.
          */
-        public Builder contentFieldList(java.util.List < ContentFieldList> contentFieldList) {
+        public Builder contentFieldList(java.util.List<ContentFieldList> contentFieldList) {
             String contentFieldListShrink = shrink(contentFieldList, "contentFieldList", "json");
             this.putBodyParameter("contentFieldList", contentFieldListShrink);
             this.contentFieldList = contentFieldList;
@@ -320,7 +325,7 @@ public class CreateTodoTaskRequest extends Request {
         /**
          * executorIds.
          */
-        public Builder executorIds(java.util.List < String > executorIds) {
+        public Builder executorIds(java.util.List<String> executorIds) {
             String executorIdsShrink = shrink(executorIds, "executorIds", "json");
             this.putBodyParameter("executorIds", executorIdsShrink);
             this.executorIds = executorIds;
@@ -358,7 +363,7 @@ public class CreateTodoTaskRequest extends Request {
         /**
          * participantIds.
          */
-        public Builder participantIds(java.util.List < String > participantIds) {
+        public Builder participantIds(java.util.List<String> participantIds) {
             String participantIdsShrink = shrink(participantIds, "participantIds", "json");
             this.putBodyParameter("participantIds", participantIdsShrink);
             this.participantIds = participantIds;

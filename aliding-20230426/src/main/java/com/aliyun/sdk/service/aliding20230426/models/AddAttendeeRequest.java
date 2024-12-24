@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class AddAttendeeRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AttendeesToAdd")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AttendeesToAdd> attendeesToAdd;
+    private java.util.List<AttendeesToAdd> attendeesToAdd;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CalendarId")
@@ -72,7 +77,7 @@ public class AddAttendeeRequest extends Request {
     /**
      * @return attendeesToAdd
      */
-    public java.util.List < AttendeesToAdd> getAttendeesToAdd() {
+    public java.util.List<AttendeesToAdd> getAttendeesToAdd() {
         return this.attendeesToAdd;
     }
 
@@ -106,7 +111,7 @@ public class AddAttendeeRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddAttendeeRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.List < AttendeesToAdd> attendeesToAdd; 
+        private java.util.List<AttendeesToAdd> attendeesToAdd; 
         private String calendarId; 
         private String eventId; 
         private Boolean chatNotification; 
@@ -139,7 +144,7 @@ public class AddAttendeeRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder attendeesToAdd(java.util.List < AttendeesToAdd> attendeesToAdd) {
+        public Builder attendeesToAdd(java.util.List<AttendeesToAdd> attendeesToAdd) {
             String attendeesToAddShrink = shrink(attendeesToAdd, "AttendeesToAdd", "json");
             this.putBodyParameter("AttendeesToAdd", attendeesToAddShrink);
             this.attendeesToAdd = attendeesToAdd;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetFormDataByIDResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("formData")
-    private java.util.Map < String, ? > formData;
+    private java.util.Map<String, ?> formData;
 
     @com.aliyun.core.annotation.NameInMap("formInstId")
     private String formInstId;
@@ -54,7 +59,7 @@ public class GetFormDataByIDResponseBody extends TeaModel {
     /**
      * @return formData
      */
-    public java.util.Map < String, ? > getFormData() {
+    public java.util.Map<String, ?> getFormData() {
         return this.formData;
     }
 
@@ -101,7 +106,7 @@ public class GetFormDataByIDResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > formData; 
+        private java.util.Map<String, ?> formData; 
         private String formInstId; 
         private String modifiedTimeGMT; 
         private Originator originator; 
@@ -112,7 +117,7 @@ public class GetFormDataByIDResponseBody extends TeaModel {
         /**
          * formData.
          */
-        public Builder formData(java.util.Map < String, ? > formData) {
+        public Builder formData(java.util.Map<String, ?> formData) {
             this.formData = formData;
             return this;
         }

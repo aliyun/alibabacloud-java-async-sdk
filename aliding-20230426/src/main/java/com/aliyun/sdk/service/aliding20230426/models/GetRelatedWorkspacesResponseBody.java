@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
     private String vendorType;
 
     @com.aliyun.core.annotation.NameInMap("workspaces")
-    private java.util.List < Workspaces> workspaces;
+    private java.util.List<Workspaces> workspaces;
 
     private GetRelatedWorkspacesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -63,7 +68,7 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
     /**
      * @return workspaces
      */
-    public java.util.List < Workspaces> getWorkspaces() {
+    public java.util.List<Workspaces> getWorkspaces() {
         return this.workspaces;
     }
 
@@ -71,7 +76,7 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
-        private java.util.List < Workspaces> workspaces; 
+        private java.util.List<Workspaces> workspaces; 
 
         /**
          * requestId.
@@ -100,7 +105,7 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
         /**
          * workspaces.
          */
-        public Builder workspaces(java.util.List < Workspaces> workspaces) {
+        public Builder workspaces(java.util.List<Workspaces> workspaces) {
             this.workspaces = workspaces;
             return this;
         }
@@ -238,7 +243,7 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
         private String owner;
 
         @com.aliyun.core.annotation.NameInMap("RecentList")
-        private java.util.List < RecentList> recentList;
+        private java.util.List<RecentList> recentList;
 
         @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
@@ -299,7 +304,7 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
         /**
          * @return recentList
          */
-        public java.util.List < RecentList> getRecentList() {
+        public java.util.List<RecentList> getRecentList() {
             return this.recentList;
         }
 
@@ -329,7 +334,7 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
             private Boolean deleted; 
             private String name; 
             private String owner; 
-            private java.util.List < RecentList> recentList; 
+            private java.util.List<RecentList> recentList; 
             private String role; 
             private String url; 
             private String workspaceId; 
@@ -369,7 +374,7 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
             /**
              * RecentList.
              */
-            public Builder recentList(java.util.List < RecentList> recentList) {
+            public Builder recentList(java.util.List<RecentList> recentList) {
                 this.recentList = recentList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTicketOperateRecordResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("records")
-    private java.util.List < Records> records;
+    private java.util.List<Records> records;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -42,7 +47,7 @@ public class ListTicketOperateRecordResponseBody extends TeaModel {
     /**
      * @return records
      */
-    public java.util.List < Records> getRecords() {
+    public java.util.List<Records> getRecords() {
         return this.records;
     }
 
@@ -68,7 +73,7 @@ public class ListTicketOperateRecordResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Records> records; 
+        private java.util.List<Records> records; 
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
@@ -76,7 +81,7 @@ public class ListTicketOperateRecordResponseBody extends TeaModel {
         /**
          * records.
          */
-        public Builder records(java.util.List < Records> records) {
+        public Builder records(java.util.List<Records> records) {
             this.records = records;
             return this;
         }
@@ -253,7 +258,7 @@ public class ListTicketOperateRecordResponseBody extends TeaModel {
      */
     public static class TicketMemo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attachments")
-        private java.util.List < Attachments> attachments;
+        private java.util.List<Attachments> attachments;
 
         @com.aliyun.core.annotation.NameInMap("Memo")
         private String memo;
@@ -274,7 +279,7 @@ public class ListTicketOperateRecordResponseBody extends TeaModel {
         /**
          * @return attachments
          */
-        public java.util.List < Attachments> getAttachments() {
+        public java.util.List<Attachments> getAttachments() {
             return this.attachments;
         }
 
@@ -286,13 +291,13 @@ public class ListTicketOperateRecordResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Attachments> attachments; 
+            private java.util.List<Attachments> attachments; 
             private String memo; 
 
             /**
              * Attachments.
              */
-            public Builder attachments(java.util.List < Attachments> attachments) {
+            public Builder attachments(java.util.List<Attachments> attachments) {
                 this.attachments = attachments;
                 return this;
             }

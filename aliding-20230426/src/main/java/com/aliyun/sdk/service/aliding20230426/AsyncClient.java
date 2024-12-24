@@ -638,6 +638,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetOrgLiveListResponse> getOrgLiveList(GetOrgLiveListRequest request);
 
     /**
+     * @param request the request parameters of GetOrgOrWebOpenDocContentTaskId  GetOrgOrWebOpenDocContentTaskIdRequest
+     * @return GetOrgOrWebOpenDocContentTaskIdResponse
+     */
+    CompletableFuture<GetOrgOrWebOpenDocContentTaskIdResponse> getOrgOrWebOpenDocContentTaskId(GetOrgOrWebOpenDocContentTaskIdRequest request);
+
+    /**
      * @param request the request parameters of GetProcessDefinition  GetProcessDefinitionRequest
      * @return GetProcessDefinitionResponse
      */
@@ -918,6 +924,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryConferenceInfoResponse
      */
     CompletableFuture<QueryConferenceInfoResponse> queryConferenceInfo(QueryConferenceInfoRequest request);
+
+    /**
+     * @param request the request parameters of QueryConferenceInfoByRoomCode  QueryConferenceInfoByRoomCodeRequest
+     * @return QueryConferenceInfoByRoomCodeResponse
+     */
+    CompletableFuture<QueryConferenceInfoByRoomCodeResponse> queryConferenceInfoByRoomCode(QueryConferenceInfoByRoomCodeRequest request);
 
     /**
      * @param request the request parameters of QueryConferenceMembers  QueryConferenceMembersRequest

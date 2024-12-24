@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryScheduleConferenceInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("conferenceList")
-    private java.util.List < ConferenceList> conferenceList;
+    private java.util.List<ConferenceList> conferenceList;
 
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
@@ -50,7 +55,7 @@ public class QueryScheduleConferenceInfoResponseBody extends TeaModel {
     /**
      * @return conferenceList
      */
-    public java.util.List < ConferenceList> getConferenceList() {
+    public java.util.List<ConferenceList> getConferenceList() {
         return this.conferenceList;
     }
 
@@ -90,7 +95,7 @@ public class QueryScheduleConferenceInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ConferenceList> conferenceList; 
+        private java.util.List<ConferenceList> conferenceList; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
@@ -100,7 +105,7 @@ public class QueryScheduleConferenceInfoResponseBody extends TeaModel {
         /**
          * conferenceList.
          */
-        public Builder conferenceList(java.util.List < ConferenceList> conferenceList) {
+        public Builder conferenceList(java.util.List<ConferenceList> conferenceList) {
             this.conferenceList = conferenceList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
     private Boolean hasMore;
 
     @com.aliyun.core.annotation.NameInMap("paragraphList")
-    private java.util.List < ParagraphList> paragraphList;
+    private java.util.List<ParagraphList> paragraphList;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
     /**
      * @return paragraphList
      */
-    public java.util.List < ParagraphList> getParagraphList() {
+    public java.util.List<ParagraphList> getParagraphList() {
         return this.paragraphList;
     }
 
@@ -58,7 +63,7 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
 
     public static final class Builder {
         private Boolean hasMore; 
-        private java.util.List < ParagraphList> paragraphList; 
+        private java.util.List<ParagraphList> paragraphList; 
         private String requestId; 
 
         /**
@@ -72,7 +77,7 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
         /**
          * paragraphList.
          */
-        public Builder paragraphList(java.util.List < ParagraphList> paragraphList) {
+        public Builder paragraphList(java.util.List<ParagraphList> paragraphList) {
             this.paragraphList = paragraphList;
             return this;
         }
@@ -221,7 +226,7 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
         private String userId;
 
         @com.aliyun.core.annotation.NameInMap("WordList")
-        private java.util.List < WordList> wordList;
+        private java.util.List<WordList> wordList;
 
         private SentenceList(Builder builder) {
             this.endTime = builder.endTime;
@@ -270,7 +275,7 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
         /**
          * @return wordList
          */
-        public java.util.List < WordList> getWordList() {
+        public java.util.List<WordList> getWordList() {
             return this.wordList;
         }
 
@@ -279,7 +284,7 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
             private String sentence; 
             private Long startTime; 
             private String userId; 
-            private java.util.List < WordList> wordList; 
+            private java.util.List<WordList> wordList; 
 
             /**
              * EndTime.
@@ -316,7 +321,7 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
             /**
              * WordList.
              */
-            public Builder wordList(java.util.List < WordList> wordList) {
+            public Builder wordList(java.util.List<WordList> wordList) {
                 this.wordList = wordList;
                 return this;
             }
@@ -351,7 +356,7 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
         private Long recordId;
 
         @com.aliyun.core.annotation.NameInMap("SentenceList")
-        private java.util.List < SentenceList> sentenceList;
+        private java.util.List<SentenceList> sentenceList;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
@@ -420,7 +425,7 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
         /**
          * @return sentenceList
          */
-        public java.util.List < SentenceList> getSentenceList() {
+        public java.util.List<SentenceList> getSentenceList() {
             return this.sentenceList;
         }
 
@@ -451,7 +456,7 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
             private String nickName; 
             private String paragraph; 
             private Long recordId; 
-            private java.util.List < SentenceList> sentenceList; 
+            private java.util.List<SentenceList> sentenceList; 
             private Long startTime; 
             private Long status; 
             private String userId; 
@@ -499,7 +504,7 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
             /**
              * SentenceList.
              */
-            public Builder sentenceList(java.util.List < SentenceList> sentenceList) {
+            public Builder sentenceList(java.util.List<SentenceList> sentenceList) {
                 this.sentenceList = sentenceList;
                 return this;
             }

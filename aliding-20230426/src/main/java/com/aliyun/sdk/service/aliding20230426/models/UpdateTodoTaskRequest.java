@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,11 +39,11 @@ public class UpdateTodoTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("executorIds")
-    private java.util.List < String > executorIds;
+    private java.util.List<String> executorIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("participantIds")
-    private java.util.List < String > participantIds;
+    private java.util.List<String> participantIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("subject")
@@ -113,14 +118,14 @@ public class UpdateTodoTaskRequest extends Request {
     /**
      * @return executorIds
      */
-    public java.util.List < String > getExecutorIds() {
+    public java.util.List<String> getExecutorIds() {
         return this.executorIds;
     }
 
     /**
      * @return participantIds
      */
-    public java.util.List < String > getParticipantIds() {
+    public java.util.List<String> getParticipantIds() {
         return this.participantIds;
     }
 
@@ -144,8 +149,8 @@ public class UpdateTodoTaskRequest extends Request {
         private String description; 
         private Boolean done; 
         private Long dueTime; 
-        private java.util.List < String > executorIds; 
-        private java.util.List < String > participantIds; 
+        private java.util.List<String> executorIds; 
+        private java.util.List<String> participantIds; 
         private String subject; 
         private String taskId; 
 
@@ -216,7 +221,7 @@ public class UpdateTodoTaskRequest extends Request {
         /**
          * executorIds.
          */
-        public Builder executorIds(java.util.List < String > executorIds) {
+        public Builder executorIds(java.util.List<String> executorIds) {
             String executorIdsShrink = shrink(executorIds, "executorIds", "json");
             this.putBodyParameter("executorIds", executorIdsShrink);
             this.executorIds = executorIds;
@@ -226,7 +231,7 @@ public class UpdateTodoTaskRequest extends Request {
         /**
          * participantIds.
          */
-        public Builder participantIds(java.util.List < String > participantIds) {
+        public Builder participantIds(java.util.List<String> participantIds) {
             String participantIdsShrink = shrink(participantIds, "participantIds", "json");
             this.putBodyParameter("participantIds", participantIdsShrink);
             this.participantIds = participantIds;

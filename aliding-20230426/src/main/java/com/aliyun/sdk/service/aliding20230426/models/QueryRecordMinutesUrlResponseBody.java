@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryRecordMinutesUrlResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("recordMinutesUrls")
-    private java.util.List < RecordMinutesUrls> recordMinutesUrls;
+    private java.util.List<RecordMinutesUrls> recordMinutesUrls;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -42,7 +47,7 @@ public class QueryRecordMinutesUrlResponseBody extends TeaModel {
     /**
      * @return recordMinutesUrls
      */
-    public java.util.List < RecordMinutesUrls> getRecordMinutesUrls() {
+    public java.util.List<RecordMinutesUrls> getRecordMinutesUrls() {
         return this.recordMinutesUrls;
     }
 
@@ -68,7 +73,7 @@ public class QueryRecordMinutesUrlResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RecordMinutesUrls> recordMinutesUrls; 
+        private java.util.List<RecordMinutesUrls> recordMinutesUrls; 
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
@@ -76,7 +81,7 @@ public class QueryRecordMinutesUrlResponseBody extends TeaModel {
         /**
          * recordMinutesUrls.
          */
-        public Builder recordMinutesUrls(java.util.List < RecordMinutesUrls> recordMinutesUrls) {
+        public Builder recordMinutesUrls(java.util.List<RecordMinutesUrls> recordMinutesUrls) {
             this.recordMinutesUrls = recordMinutesUrls;
             return this;
         }

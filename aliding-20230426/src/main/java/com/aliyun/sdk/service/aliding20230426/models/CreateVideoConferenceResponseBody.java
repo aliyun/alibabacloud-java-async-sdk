@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class CreateVideoConferenceResponseBody extends TeaModel {
     private String hostPassword;
 
     @com.aliyun.core.annotation.NameInMap("phoneNumbers")
-    private java.util.List < String > phoneNumbers;
+    private java.util.List<String> phoneNumbers;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -82,7 +87,7 @@ public class CreateVideoConferenceResponseBody extends TeaModel {
     /**
      * @return phoneNumbers
      */
-    public java.util.List < String > getPhoneNumbers() {
+    public java.util.List<String> getPhoneNumbers() {
         return this.phoneNumbers;
     }
 
@@ -105,7 +110,7 @@ public class CreateVideoConferenceResponseBody extends TeaModel {
         private String conferencePassword; 
         private String externalLinkUrl; 
         private String hostPassword; 
-        private java.util.List < String > phoneNumbers; 
+        private java.util.List<String> phoneNumbers; 
         private String requestId; 
         private String roomCode; 
 
@@ -144,7 +149,7 @@ public class CreateVideoConferenceResponseBody extends TeaModel {
         /**
          * phoneNumbers.
          */
-        public Builder phoneNumbers(java.util.List < String > phoneNumbers) {
+        public Builder phoneNumbers(java.util.List<String> phoneNumbers) {
             this.phoneNumbers = phoneNumbers;
             return this;
         }

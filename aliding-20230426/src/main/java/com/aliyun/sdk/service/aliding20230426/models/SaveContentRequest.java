@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class SaveContentRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Contents")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Contents> contents;
+    private java.util.List<Contents> contents;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DdFrom")
@@ -67,7 +72,7 @@ public class SaveContentRequest extends Request {
     /**
      * @return contents
      */
-    public java.util.List < Contents> getContents() {
+    public java.util.List<Contents> getContents() {
         return this.contents;
     }
 
@@ -94,7 +99,7 @@ public class SaveContentRequest extends Request {
 
     public static final class Builder extends Request.Builder<SaveContentRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.List < Contents> contents; 
+        private java.util.List<Contents> contents; 
         private String ddFrom; 
         private String templateId; 
         private TenantContext tenantContext; 
@@ -128,7 +133,7 @@ public class SaveContentRequest extends Request {
          * <strong>example:</strong>
          * <p>[]</p>
          */
-        public Builder contents(java.util.List < Contents> contents) {
+        public Builder contents(java.util.List<Contents> contents) {
             String contentsShrink = shrink(contents, "Contents", "json");
             this.putBodyParameter("Contents", contentsShrink);
             this.contents = contents;

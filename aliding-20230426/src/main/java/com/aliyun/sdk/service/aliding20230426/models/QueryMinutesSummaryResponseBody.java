@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -593,10 +598,10 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
         private String question;
 
         @com.aliyun.core.annotation.NameInMap("SentenceIdsOfAnswer")
-        private java.util.List < Long > sentenceIdsOfAnswer;
+        private java.util.List<Long> sentenceIdsOfAnswer;
 
         @com.aliyun.core.annotation.NameInMap("SentenceIdsOfQuestion")
-        private java.util.List < Long > sentenceIdsOfQuestion;
+        private java.util.List<Long> sentenceIdsOfQuestion;
 
         private QuestionsAnsweringSummary(Builder builder) {
             this.answer = builder.answer;
@@ -630,22 +635,22 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
         /**
          * @return sentenceIdsOfAnswer
          */
-        public java.util.List < Long > getSentenceIdsOfAnswer() {
+        public java.util.List<Long> getSentenceIdsOfAnswer() {
             return this.sentenceIdsOfAnswer;
         }
 
         /**
          * @return sentenceIdsOfQuestion
          */
-        public java.util.List < Long > getSentenceIdsOfQuestion() {
+        public java.util.List<Long> getSentenceIdsOfQuestion() {
             return this.sentenceIdsOfQuestion;
         }
 
         public static final class Builder {
             private String answer; 
             private String question; 
-            private java.util.List < Long > sentenceIdsOfAnswer; 
-            private java.util.List < Long > sentenceIdsOfQuestion; 
+            private java.util.List<Long> sentenceIdsOfAnswer; 
+            private java.util.List<Long> sentenceIdsOfQuestion; 
 
             /**
              * Answer.
@@ -666,7 +671,7 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
             /**
              * SentenceIdsOfAnswer.
              */
-            public Builder sentenceIdsOfAnswer(java.util.List < Long > sentenceIdsOfAnswer) {
+            public Builder sentenceIdsOfAnswer(java.util.List<Long> sentenceIdsOfAnswer) {
                 this.sentenceIdsOfAnswer = sentenceIdsOfAnswer;
                 return this;
             }
@@ -674,7 +679,7 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
             /**
              * SentenceIdsOfQuestion.
              */
-            public Builder sentenceIdsOfQuestion(java.util.List < Long > sentenceIdsOfQuestion) {
+            public Builder sentenceIdsOfQuestion(java.util.List<Long> sentenceIdsOfQuestion) {
                 this.sentenceIdsOfQuestion = sentenceIdsOfQuestion;
                 return this;
             }
@@ -697,22 +702,22 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
         private Actions actions;
 
         @com.aliyun.core.annotation.NameInMap("AutoChapters")
-        private java.util.List < AutoChapters> autoChapters;
+        private java.util.List<AutoChapters> autoChapters;
 
         @com.aliyun.core.annotation.NameInMap("ConversationalSummary")
-        private java.util.List < ConversationalSummary> conversationalSummary;
+        private java.util.List<ConversationalSummary> conversationalSummary;
 
         @com.aliyun.core.annotation.NameInMap("KeySentences")
         private KeySentences keySentences;
 
         @com.aliyun.core.annotation.NameInMap("Keywords")
-        private java.util.List < String > keywords;
+        private java.util.List<String> keywords;
 
         @com.aliyun.core.annotation.NameInMap("ParagraphSummary")
         private String paragraphSummary;
 
         @com.aliyun.core.annotation.NameInMap("QuestionsAnsweringSummary")
-        private java.util.List < QuestionsAnsweringSummary> questionsAnsweringSummary;
+        private java.util.List<QuestionsAnsweringSummary> questionsAnsweringSummary;
 
         private Summary(Builder builder) {
             this.actions = builder.actions;
@@ -742,14 +747,14 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
         /**
          * @return autoChapters
          */
-        public java.util.List < AutoChapters> getAutoChapters() {
+        public java.util.List<AutoChapters> getAutoChapters() {
             return this.autoChapters;
         }
 
         /**
          * @return conversationalSummary
          */
-        public java.util.List < ConversationalSummary> getConversationalSummary() {
+        public java.util.List<ConversationalSummary> getConversationalSummary() {
             return this.conversationalSummary;
         }
 
@@ -763,7 +768,7 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
         /**
          * @return keywords
          */
-        public java.util.List < String > getKeywords() {
+        public java.util.List<String> getKeywords() {
             return this.keywords;
         }
 
@@ -777,18 +782,18 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
         /**
          * @return questionsAnsweringSummary
          */
-        public java.util.List < QuestionsAnsweringSummary> getQuestionsAnsweringSummary() {
+        public java.util.List<QuestionsAnsweringSummary> getQuestionsAnsweringSummary() {
             return this.questionsAnsweringSummary;
         }
 
         public static final class Builder {
             private Actions actions; 
-            private java.util.List < AutoChapters> autoChapters; 
-            private java.util.List < ConversationalSummary> conversationalSummary; 
+            private java.util.List<AutoChapters> autoChapters; 
+            private java.util.List<ConversationalSummary> conversationalSummary; 
             private KeySentences keySentences; 
-            private java.util.List < String > keywords; 
+            private java.util.List<String> keywords; 
             private String paragraphSummary; 
-            private java.util.List < QuestionsAnsweringSummary> questionsAnsweringSummary; 
+            private java.util.List<QuestionsAnsweringSummary> questionsAnsweringSummary; 
 
             /**
              * Actions.
@@ -801,7 +806,7 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
             /**
              * AutoChapters.
              */
-            public Builder autoChapters(java.util.List < AutoChapters> autoChapters) {
+            public Builder autoChapters(java.util.List<AutoChapters> autoChapters) {
                 this.autoChapters = autoChapters;
                 return this;
             }
@@ -809,7 +814,7 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
             /**
              * ConversationalSummary.
              */
-            public Builder conversationalSummary(java.util.List < ConversationalSummary> conversationalSummary) {
+            public Builder conversationalSummary(java.util.List<ConversationalSummary> conversationalSummary) {
                 this.conversationalSummary = conversationalSummary;
                 return this;
             }
@@ -825,7 +830,7 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
             /**
              * Keywords.
              */
-            public Builder keywords(java.util.List < String > keywords) {
+            public Builder keywords(java.util.List<String> keywords) {
                 this.keywords = keywords;
                 return this;
             }
@@ -841,7 +846,7 @@ public class QueryMinutesSummaryResponseBody extends TeaModel {
             /**
              * QuestionsAnsweringSummary.
              */
-            public Builder questionsAnsweringSummary(java.util.List < QuestionsAnsweringSummary> questionsAnsweringSummary) {
+            public Builder questionsAnsweringSummary(java.util.List<QuestionsAnsweringSummary> questionsAnsweringSummary) {
                 this.questionsAnsweringSummary = questionsAnsweringSummary;
                 return this;
             }

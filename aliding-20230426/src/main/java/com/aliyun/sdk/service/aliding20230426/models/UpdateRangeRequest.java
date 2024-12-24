@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,11 +23,11 @@ public class UpdateRangeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BackgroundColors")
-    private java.util.List < java.util.List < String > > backgroundColors;
+    private java.util.List<java.util.List<String>> backgroundColors;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Hyperlinks")
-    private java.util.List < java.util.List < Hyperlinks> > hyperlinks;
+    private java.util.List<java.util.List<Hyperlinks>> hyperlinks;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NumberFormat")
@@ -44,7 +49,7 @@ public class UpdateRangeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Values")
-    private java.util.List < java.util.List < String > > values;
+    private java.util.List<java.util.List<String>> values;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkbookId")
@@ -87,14 +92,14 @@ public class UpdateRangeRequest extends Request {
     /**
      * @return backgroundColors
      */
-    public java.util.List < java.util.List < String > > getBackgroundColors() {
+    public java.util.List<java.util.List<String>> getBackgroundColors() {
         return this.backgroundColors;
     }
 
     /**
      * @return hyperlinks
      */
-    public java.util.List < java.util.List < Hyperlinks> > getHyperlinks() {
+    public java.util.List<java.util.List<Hyperlinks>> getHyperlinks() {
         return this.hyperlinks;
     }
 
@@ -129,7 +134,7 @@ public class UpdateRangeRequest extends Request {
     /**
      * @return values
      */
-    public java.util.List < java.util.List < String > > getValues() {
+    public java.util.List<java.util.List<String>> getValues() {
         return this.values;
     }
 
@@ -142,13 +147,13 @@ public class UpdateRangeRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateRangeRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.List < java.util.List < String > > backgroundColors; 
-        private java.util.List < java.util.List < Hyperlinks> > hyperlinks; 
+        private java.util.List<java.util.List<String>> backgroundColors; 
+        private java.util.List<java.util.List<Hyperlinks>> hyperlinks; 
         private String numberFormat; 
         private String rangeAddress; 
         private String sheetId; 
         private TenantContext tenantContext; 
-        private java.util.List < java.util.List < String > > values; 
+        private java.util.List<java.util.List<String>> values; 
         private String workbookId; 
 
         private Builder() {
@@ -181,7 +186,7 @@ public class UpdateRangeRequest extends Request {
         /**
          * BackgroundColors.
          */
-        public Builder backgroundColors(java.util.List < java.util.List < String > > backgroundColors) {
+        public Builder backgroundColors(java.util.List<java.util.List<String>> backgroundColors) {
             String backgroundColorsShrink = shrink(backgroundColors, "BackgroundColors", "json");
             this.putBodyParameter("BackgroundColors", backgroundColorsShrink);
             this.backgroundColors = backgroundColors;
@@ -191,7 +196,7 @@ public class UpdateRangeRequest extends Request {
         /**
          * Hyperlinks.
          */
-        public Builder hyperlinks(java.util.List < java.util.List < Hyperlinks> > hyperlinks) {
+        public Builder hyperlinks(java.util.List<java.util.List<Hyperlinks>> hyperlinks) {
             String hyperlinksShrink = shrink(hyperlinks, "Hyperlinks", "json");
             this.putBodyParameter("Hyperlinks", hyperlinksShrink);
             this.hyperlinks = hyperlinks;
@@ -244,7 +249,7 @@ public class UpdateRangeRequest extends Request {
         /**
          * Values.
          */
-        public Builder values(java.util.List < java.util.List < String > > values) {
+        public Builder values(java.util.List<java.util.List<String>> values) {
             String valuesShrink = shrink(values, "Values", "json");
             this.putBodyParameter("Values", valuesShrink);
             this.values = values;

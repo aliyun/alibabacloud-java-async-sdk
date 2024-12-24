@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListReportResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("dataList")
-    private java.util.List < DataList> dataList;
+    private java.util.List<DataList> dataList;
 
     @com.aliyun.core.annotation.NameInMap("hasMore")
     private Boolean hasMore;
@@ -46,7 +51,7 @@ public class ListReportResponseBody extends TeaModel {
     /**
      * @return dataList
      */
-    public java.util.List < DataList> getDataList() {
+    public java.util.List<DataList> getDataList() {
         return this.dataList;
     }
 
@@ -79,7 +84,7 @@ public class ListReportResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DataList> dataList; 
+        private java.util.List<DataList> dataList; 
         private Boolean hasMore; 
         private Long nextCursor; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListReportResponseBody extends TeaModel {
         /**
          * dataList.
          */
-        public Builder dataList(java.util.List < DataList> dataList) {
+        public Builder dataList(java.util.List<DataList> dataList) {
             this.dataList = dataList;
             return this;
         }
@@ -249,7 +254,7 @@ public class ListReportResponseBody extends TeaModel {
      */
     public static class DataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Contents")
-        private java.util.List < Contents> contents;
+        private java.util.List<Contents> contents;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -264,7 +269,7 @@ public class ListReportResponseBody extends TeaModel {
         private String deptName;
 
         @com.aliyun.core.annotation.NameInMap("Images")
-        private java.util.List < String > images;
+        private java.util.List<String> images;
 
         @com.aliyun.core.annotation.NameInMap("Latitude")
         private String latitude;
@@ -310,7 +315,7 @@ public class ListReportResponseBody extends TeaModel {
         /**
          * @return contents
          */
-        public java.util.List < Contents> getContents() {
+        public java.util.List<Contents> getContents() {
             return this.contents;
         }
 
@@ -345,7 +350,7 @@ public class ListReportResponseBody extends TeaModel {
         /**
          * @return images
          */
-        public java.util.List < String > getImages() {
+        public java.util.List<String> getImages() {
             return this.images;
         }
 
@@ -392,12 +397,12 @@ public class ListReportResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Contents> contents; 
+            private java.util.List<Contents> contents; 
             private Long createTime; 
             private String creatorId; 
             private String creatorName; 
             private String deptName; 
-            private java.util.List < String > images; 
+            private java.util.List<String> images; 
             private String latitude; 
             private String longitude; 
             private Long modifiedTime; 
@@ -408,7 +413,7 @@ public class ListReportResponseBody extends TeaModel {
             /**
              * Contents.
              */
-            public Builder contents(java.util.List < Contents> contents) {
+            public Builder contents(java.util.List<Contents> contents) {
                 this.contents = contents;
                 return this;
             }
@@ -448,7 +453,7 @@ public class ListReportResponseBody extends TeaModel {
             /**
              * Images.
              */
-            public Builder images(java.util.List < String > images) {
+            public Builder images(java.util.List<String> images) {
                 this.images = images;
                 return this;
             }

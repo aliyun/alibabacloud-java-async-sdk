@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class UpdateStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ErrorLines")
-    private java.util.List < Integer > errorLines;
+    private java.util.List<Integer> errorLines;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImportSequence")
@@ -81,7 +86,7 @@ public class UpdateStatusRequest extends Request {
     /**
      * @return errorLines
      */
-    public java.util.List < Integer > getErrorLines() {
+    public java.util.List<Integer> getErrorLines() {
         return this.errorLines;
     }
 
@@ -116,7 +121,7 @@ public class UpdateStatusRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateStatusRequest, Builder> {
         private AccountContext accountContext; 
         private String appType; 
-        private java.util.List < Integer > errorLines; 
+        private java.util.List<Integer> errorLines; 
         private String importSequence; 
         private String language; 
         private String status; 
@@ -159,7 +164,7 @@ public class UpdateStatusRequest extends Request {
         /**
          * ErrorLines.
          */
-        public Builder errorLines(java.util.List < Integer > errorLines) {
+        public Builder errorLines(java.util.List<Integer> errorLines) {
             String errorLinesShrink = shrink(errorLines, "ErrorLines", "json");
             this.putBodyParameter("ErrorLines", errorLinesShrink);
             this.errorLines = errorLines;

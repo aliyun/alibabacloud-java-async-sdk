@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class GetScheduleRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserIds")
-    private java.util.List < String > userIds;
+    private java.util.List<String> userIds;
 
     private GetScheduleRequest(Builder builder) {
         super(builder);
@@ -85,7 +90,7 @@ public class GetScheduleRequest extends Request {
     /**
      * @return userIds
      */
-    public java.util.List < String > getUserIds() {
+    public java.util.List<String> getUserIds() {
         return this.userIds;
     }
 
@@ -94,7 +99,7 @@ public class GetScheduleRequest extends Request {
         private String endTime; 
         private String startTime; 
         private TenantContext tenantContext; 
-        private java.util.List < String > userIds; 
+        private java.util.List<String> userIds; 
 
         private Builder() {
             super();
@@ -150,7 +155,7 @@ public class GetScheduleRequest extends Request {
         /**
          * UserIds.
          */
-        public Builder userIds(java.util.List < String > userIds) {
+        public Builder userIds(java.util.List<String> userIds) {
             String userIdsShrink = shrink(userIds, "UserIds", "json");
             this.putBodyParameter("UserIds", userIdsShrink);
             this.userIds = userIds;

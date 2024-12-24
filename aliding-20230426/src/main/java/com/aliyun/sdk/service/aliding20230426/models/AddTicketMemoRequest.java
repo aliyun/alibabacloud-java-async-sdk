@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -345,7 +350,7 @@ public class AddTicketMemoRequest extends Request {
      */
     public static class TicketMemo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attachments")
-        private java.util.List < Attachments> attachments;
+        private java.util.List<Attachments> attachments;
 
         @com.aliyun.core.annotation.NameInMap("Memo")
         private String memo;
@@ -366,7 +371,7 @@ public class AddTicketMemoRequest extends Request {
         /**
          * @return attachments
          */
-        public java.util.List < Attachments> getAttachments() {
+        public java.util.List<Attachments> getAttachments() {
             return this.attachments;
         }
 
@@ -378,13 +383,13 @@ public class AddTicketMemoRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Attachments> attachments; 
+            private java.util.List<Attachments> attachments; 
             private String memo; 
 
             /**
              * Attachments.
              */
-            public Builder attachments(java.util.List < Attachments> attachments) {
+            public Builder attachments(java.util.List<Attachments> attachments) {
                 this.attachments = attachments;
                 return this;
             }

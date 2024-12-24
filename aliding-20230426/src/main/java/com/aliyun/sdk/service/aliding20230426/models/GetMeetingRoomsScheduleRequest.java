@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class GetMeetingRoomsScheduleRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RoomIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > roomIds;
+    private java.util.List<String> roomIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -69,7 +74,7 @@ public class GetMeetingRoomsScheduleRequest extends Request {
     /**
      * @return roomIds
      */
-    public java.util.List < String > getRoomIds() {
+    public java.util.List<String> getRoomIds() {
         return this.roomIds;
     }
 
@@ -83,7 +88,7 @@ public class GetMeetingRoomsScheduleRequest extends Request {
     public static final class Builder extends Request.Builder<GetMeetingRoomsScheduleRequest, Builder> {
         private AccountContext accountContext; 
         private String endTime; 
-        private java.util.List < String > roomIds; 
+        private java.util.List<String> roomIds; 
         private String startTime; 
 
         private Builder() {
@@ -126,7 +131,7 @@ public class GetMeetingRoomsScheduleRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;4002xxxxx&quot;]</p>
          */
-        public Builder roomIds(java.util.List < String > roomIds) {
+        public Builder roomIds(java.util.List<String> roomIds) {
             String roomIdsShrink = shrink(roomIds, "RoomIds", "json");
             this.putBodyParameter("RoomIds", roomIdsShrink);
             this.roomIds = roomIds;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -142,16 +147,16 @@ public class GetFileDownloadInfoResponseBody extends TeaModel {
         private Integer expirationSeconds;
 
         @com.aliyun.core.annotation.NameInMap("Headers")
-        private java.util.Map < String, String > headers;
+        private java.util.Map<String, String> headers;
 
         @com.aliyun.core.annotation.NameInMap("InternalResourceUrls")
-        private java.util.List < String > internalResourceUrls;
+        private java.util.List<String> internalResourceUrls;
 
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         @com.aliyun.core.annotation.NameInMap("ResourceUrls")
-        private java.util.List < String > resourceUrls;
+        private java.util.List<String> resourceUrls;
 
         private HeaderSignatureInfo(Builder builder) {
             this.expirationSeconds = builder.expirationSeconds;
@@ -179,14 +184,14 @@ public class GetFileDownloadInfoResponseBody extends TeaModel {
         /**
          * @return headers
          */
-        public java.util.Map < String, String > getHeaders() {
+        public java.util.Map<String, String> getHeaders() {
             return this.headers;
         }
 
         /**
          * @return internalResourceUrls
          */
-        public java.util.List < String > getInternalResourceUrls() {
+        public java.util.List<String> getInternalResourceUrls() {
             return this.internalResourceUrls;
         }
 
@@ -200,16 +205,16 @@ public class GetFileDownloadInfoResponseBody extends TeaModel {
         /**
          * @return resourceUrls
          */
-        public java.util.List < String > getResourceUrls() {
+        public java.util.List<String> getResourceUrls() {
             return this.resourceUrls;
         }
 
         public static final class Builder {
             private Integer expirationSeconds; 
-            private java.util.Map < String, String > headers; 
-            private java.util.List < String > internalResourceUrls; 
+            private java.util.Map<String, String> headers; 
+            private java.util.List<String> internalResourceUrls; 
             private String region; 
-            private java.util.List < String > resourceUrls; 
+            private java.util.List<String> resourceUrls; 
 
             /**
              * ExpirationSeconds.
@@ -222,7 +227,7 @@ public class GetFileDownloadInfoResponseBody extends TeaModel {
             /**
              * Headers.
              */
-            public Builder headers(java.util.Map < String, String > headers) {
+            public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
                 return this;
             }
@@ -230,7 +235,7 @@ public class GetFileDownloadInfoResponseBody extends TeaModel {
             /**
              * InternalResourceUrls.
              */
-            public Builder internalResourceUrls(java.util.List < String > internalResourceUrls) {
+            public Builder internalResourceUrls(java.util.List<String> internalResourceUrls) {
                 this.internalResourceUrls = internalResourceUrls;
                 return this;
             }
@@ -246,7 +251,7 @@ public class GetFileDownloadInfoResponseBody extends TeaModel {
             /**
              * ResourceUrls.
              */
-            public Builder resourceUrls(java.util.List < String > resourceUrls) {
+            public Builder resourceUrls(java.util.List<String> resourceUrls) {
                 this.resourceUrls = resourceUrls;
                 return this;
             }

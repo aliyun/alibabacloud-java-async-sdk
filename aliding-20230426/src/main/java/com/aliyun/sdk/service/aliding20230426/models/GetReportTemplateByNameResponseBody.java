@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetReportTemplateByNameResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("defaultReceivedConvs")
-    private java.util.List < DefaultReceivedConvs> defaultReceivedConvs;
+    private java.util.List<DefaultReceivedConvs> defaultReceivedConvs;
 
     @com.aliyun.core.annotation.NameInMap("defaultReceivers")
-    private java.util.List < DefaultReceivers> defaultReceivers;
+    private java.util.List<DefaultReceivers> defaultReceivers;
 
     @com.aliyun.core.annotation.NameInMap("fields")
-    private java.util.List < Fields> fields;
+    private java.util.List<Fields> fields;
 
     @com.aliyun.core.annotation.NameInMap("id")
     private String id;
@@ -58,21 +63,21 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
     /**
      * @return defaultReceivedConvs
      */
-    public java.util.List < DefaultReceivedConvs> getDefaultReceivedConvs() {
+    public java.util.List<DefaultReceivedConvs> getDefaultReceivedConvs() {
         return this.defaultReceivedConvs;
     }
 
     /**
      * @return defaultReceivers
      */
-    public java.util.List < DefaultReceivers> getDefaultReceivers() {
+    public java.util.List<DefaultReceivers> getDefaultReceivers() {
         return this.defaultReceivers;
     }
 
     /**
      * @return fields
      */
-    public java.util.List < Fields> getFields() {
+    public java.util.List<Fields> getFields() {
         return this.fields;
     }
 
@@ -112,9 +117,9 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DefaultReceivedConvs> defaultReceivedConvs; 
-        private java.util.List < DefaultReceivers> defaultReceivers; 
-        private java.util.List < Fields> fields; 
+        private java.util.List<DefaultReceivedConvs> defaultReceivedConvs; 
+        private java.util.List<DefaultReceivers> defaultReceivers; 
+        private java.util.List<Fields> fields; 
         private String id; 
         private String name; 
         private String requestId; 
@@ -124,7 +129,7 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
         /**
          * defaultReceivedConvs.
          */
-        public Builder defaultReceivedConvs(java.util.List < DefaultReceivedConvs> defaultReceivedConvs) {
+        public Builder defaultReceivedConvs(java.util.List<DefaultReceivedConvs> defaultReceivedConvs) {
             this.defaultReceivedConvs = defaultReceivedConvs;
             return this;
         }
@@ -132,7 +137,7 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
         /**
          * defaultReceivers.
          */
-        public Builder defaultReceivers(java.util.List < DefaultReceivers> defaultReceivers) {
+        public Builder defaultReceivers(java.util.List<DefaultReceivers> defaultReceivers) {
             this.defaultReceivers = defaultReceivers;
             return this;
         }
@@ -140,7 +145,7 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
         /**
          * fields.
          */
-        public Builder fields(java.util.List < Fields> fields) {
+        public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
             return this;
         }

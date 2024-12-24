@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class UpdateMeetingRoomRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RoomLabelIds")
-    private java.util.List < Long > roomLabelIds;
+    private java.util.List<Long> roomLabelIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RoomLocation")
@@ -146,7 +151,7 @@ public class UpdateMeetingRoomRequest extends Request {
     /**
      * @return roomLabelIds
      */
-    public java.util.List < Long > getRoomLabelIds() {
+    public java.util.List<Long> getRoomLabelIds() {
         return this.roomLabelIds;
     }
 
@@ -193,7 +198,7 @@ public class UpdateMeetingRoomRequest extends Request {
         private ReservationAuthority reservationAuthority; 
         private Integer roomCapacity; 
         private String roomId; 
-        private java.util.List < Long > roomLabelIds; 
+        private java.util.List<Long> roomLabelIds; 
         private RoomLocation roomLocation; 
         private String roomName; 
         private String roomPicture; 
@@ -289,7 +294,7 @@ public class UpdateMeetingRoomRequest extends Request {
         /**
          * RoomLabelIds.
          */
-        public Builder roomLabelIds(java.util.List < Long > roomLabelIds) {
+        public Builder roomLabelIds(java.util.List<Long> roomLabelIds) {
             String roomLabelIdsShrink = shrink(roomLabelIds, "RoomLabelIds", "json");
             this.putBodyParameter("RoomLabelIds", roomLabelIdsShrink);
             this.roomLabelIds = roomLabelIds;
@@ -496,7 +501,7 @@ public class UpdateMeetingRoomRequest extends Request {
      */
     public static class ReservationAuthority extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizedMembers")
-        private java.util.List < AuthorizedMembers> authorizedMembers;
+        private java.util.List<AuthorizedMembers> authorizedMembers;
 
         private ReservationAuthority(Builder builder) {
             this.authorizedMembers = builder.authorizedMembers;
@@ -513,17 +518,17 @@ public class UpdateMeetingRoomRequest extends Request {
         /**
          * @return authorizedMembers
          */
-        public java.util.List < AuthorizedMembers> getAuthorizedMembers() {
+        public java.util.List<AuthorizedMembers> getAuthorizedMembers() {
             return this.authorizedMembers;
         }
 
         public static final class Builder {
-            private java.util.List < AuthorizedMembers> authorizedMembers; 
+            private java.util.List<AuthorizedMembers> authorizedMembers; 
 
             /**
              * AuthorizedMembers.
              */
-            public Builder authorizedMembers(java.util.List < AuthorizedMembers> authorizedMembers) {
+            public Builder authorizedMembers(java.util.List<AuthorizedMembers> authorizedMembers) {
                 this.authorizedMembers = authorizedMembers;
                 return this;
             }

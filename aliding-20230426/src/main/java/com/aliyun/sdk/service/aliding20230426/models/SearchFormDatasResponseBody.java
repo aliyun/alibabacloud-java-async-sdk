@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class SearchFormDatasResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -57,7 +62,7 @@ public class SearchFormDatasResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -91,7 +96,7 @@ public class SearchFormDatasResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
         private Integer totalCount; 
         private String vendorRequestId; 
@@ -108,7 +113,7 @@ public class SearchFormDatasResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -476,7 +481,7 @@ public class SearchFormDatasResponseBody extends TeaModel {
         private Long dataId;
 
         @com.aliyun.core.annotation.NameInMap("FormData")
-        private java.util.Map < String, ? > formData;
+        private java.util.Map<String, ?> formData;
 
         @com.aliyun.core.annotation.NameInMap("FormInstanceId")
         private String formInstanceId;
@@ -565,7 +570,7 @@ public class SearchFormDatasResponseBody extends TeaModel {
         /**
          * @return formData
          */
-        public java.util.Map < String, ? > getFormData() {
+        public java.util.Map<String, ?> getFormData() {
             return this.formData;
         }
 
@@ -657,7 +662,7 @@ public class SearchFormDatasResponseBody extends TeaModel {
             private String createdTimeGMT; 
             private String creatorUserId; 
             private Long dataId; 
-            private java.util.Map < String, ? > formData; 
+            private java.util.Map<String, ?> formData; 
             private String formInstanceId; 
             private String formUuid; 
             private String instanceValue; 
@@ -698,7 +703,7 @@ public class SearchFormDatasResponseBody extends TeaModel {
             /**
              * FormData.
              */
-            public Builder formData(java.util.Map < String, ? > formData) {
+            public Builder formData(java.util.Map<String, ?> formData) {
                 this.formData = formData;
                 return this;
             }

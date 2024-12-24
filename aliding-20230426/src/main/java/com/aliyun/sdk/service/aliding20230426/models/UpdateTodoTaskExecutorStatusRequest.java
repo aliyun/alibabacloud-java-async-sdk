@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class UpdateTodoTaskExecutorStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("executorStatusList")
-    private java.util.List < ExecutorStatusList> executorStatusList;
+    private java.util.List<ExecutorStatusList> executorStatusList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("operatorId")
@@ -72,7 +77,7 @@ public class UpdateTodoTaskExecutorStatusRequest extends Request {
     /**
      * @return executorStatusList
      */
-    public java.util.List < ExecutorStatusList> getExecutorStatusList() {
+    public java.util.List<ExecutorStatusList> getExecutorStatusList() {
         return this.executorStatusList;
     }
 
@@ -93,7 +98,7 @@ public class UpdateTodoTaskExecutorStatusRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateTodoTaskExecutorStatusRequest, Builder> {
         private AccountContext accountContext; 
         private TenantContext tenantContext; 
-        private java.util.List < ExecutorStatusList> executorStatusList; 
+        private java.util.List<ExecutorStatusList> executorStatusList; 
         private String operatorId; 
         private String taskId; 
 
@@ -133,7 +138,7 @@ public class UpdateTodoTaskExecutorStatusRequest extends Request {
         /**
          * executorStatusList.
          */
-        public Builder executorStatusList(java.util.List < ExecutorStatusList> executorStatusList) {
+        public Builder executorStatusList(java.util.List<ExecutorStatusList> executorStatusList) {
             String executorStatusListShrink = shrink(executorStatusList, "executorStatusList", "json");
             this.putBodyParameter("executorStatusList", executorStatusListShrink);
             this.executorStatusList = executorStatusList;

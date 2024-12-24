@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetScheduleResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("scheduleInformation")
-    private java.util.List < ScheduleInformation> scheduleInformation;
+    private java.util.List<ScheduleInformation> scheduleInformation;
 
     @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
@@ -49,7 +54,7 @@ public class GetScheduleResponseBody extends TeaModel {
     /**
      * @return scheduleInformation
      */
-    public java.util.List < ScheduleInformation> getScheduleInformation() {
+    public java.util.List<ScheduleInformation> getScheduleInformation() {
         return this.scheduleInformation;
     }
 
@@ -69,7 +74,7 @@ public class GetScheduleResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ScheduleInformation> scheduleInformation; 
+        private java.util.List<ScheduleInformation> scheduleInformation; 
         private String vendorRequestId; 
         private String vendorType; 
 
@@ -84,7 +89,7 @@ public class GetScheduleResponseBody extends TeaModel {
         /**
          * scheduleInformation.
          */
-        public Builder scheduleInformation(java.util.List < ScheduleInformation> scheduleInformation) {
+        public Builder scheduleInformation(java.util.List<ScheduleInformation> scheduleInformation) {
             this.scheduleInformation = scheduleInformation;
             return this;
         }
@@ -383,7 +388,7 @@ public class GetScheduleResponseBody extends TeaModel {
         private String error;
 
         @com.aliyun.core.annotation.NameInMap("ScheduleItems")
-        private java.util.List < ScheduleItems> scheduleItems;
+        private java.util.List<ScheduleItems> scheduleItems;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -412,7 +417,7 @@ public class GetScheduleResponseBody extends TeaModel {
         /**
          * @return scheduleItems
          */
-        public java.util.List < ScheduleItems> getScheduleItems() {
+        public java.util.List<ScheduleItems> getScheduleItems() {
             return this.scheduleItems;
         }
 
@@ -425,7 +430,7 @@ public class GetScheduleResponseBody extends TeaModel {
 
         public static final class Builder {
             private String error; 
-            private java.util.List < ScheduleItems> scheduleItems; 
+            private java.util.List<ScheduleItems> scheduleItems; 
             private String userId; 
 
             /**
@@ -439,7 +444,7 @@ public class GetScheduleResponseBody extends TeaModel {
             /**
              * ScheduleItems.
              */
-            public Builder scheduleItems(java.util.List < ScheduleItems> scheduleItems) {
+            public Builder scheduleItems(java.util.List<ScheduleItems> scheduleItems) {
                 this.scheduleItems = scheduleItems;
                 return this;
             }

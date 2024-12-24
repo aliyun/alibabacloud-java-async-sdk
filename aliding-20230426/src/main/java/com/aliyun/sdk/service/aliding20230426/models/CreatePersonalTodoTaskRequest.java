@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class CreatePersonalTodoTaskRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExecutorIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > executorIds;
+    private java.util.List<String> executorIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NotifyConfigs")
@@ -35,7 +40,7 @@ public class CreatePersonalTodoTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ParticipantIds")
-    private java.util.List < String > participantIds;
+    private java.util.List<String> participantIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ReminderTimeStamp")
@@ -100,7 +105,7 @@ public class CreatePersonalTodoTaskRequest extends Request {
     /**
      * @return executorIds
      */
-    public java.util.List < String > getExecutorIds() {
+    public java.util.List<String> getExecutorIds() {
         return this.executorIds;
     }
 
@@ -114,7 +119,7 @@ public class CreatePersonalTodoTaskRequest extends Request {
     /**
      * @return participantIds
      */
-    public java.util.List < String > getParticipantIds() {
+    public java.util.List<String> getParticipantIds() {
         return this.participantIds;
     }
 
@@ -143,9 +148,9 @@ public class CreatePersonalTodoTaskRequest extends Request {
         private AccountContext accountContext; 
         private String description; 
         private Long dueTime; 
-        private java.util.List < String > executorIds; 
+        private java.util.List<String> executorIds; 
         private NotifyConfigs notifyConfigs; 
-        private java.util.List < String > participantIds; 
+        private java.util.List<String> participantIds; 
         private Long reminderTimeStamp; 
         private String subject; 
         private TenantContext tenantContext; 
@@ -201,7 +206,7 @@ public class CreatePersonalTodoTaskRequest extends Request {
          * <strong>example:</strong>
          * <p>[ &quot;012345&quot; ]</p>
          */
-        public Builder executorIds(java.util.List < String > executorIds) {
+        public Builder executorIds(java.util.List<String> executorIds) {
             String executorIdsShrink = shrink(executorIds, "ExecutorIds", "json");
             this.putBodyParameter("ExecutorIds", executorIdsShrink);
             this.executorIds = executorIds;
@@ -221,7 +226,7 @@ public class CreatePersonalTodoTaskRequest extends Request {
         /**
          * ParticipantIds.
          */
-        public Builder participantIds(java.util.List < String > participantIds) {
+        public Builder participantIds(java.util.List<String> participantIds) {
             String participantIdsShrink = shrink(participantIds, "ParticipantIds", "json");
             this.putBodyParameter("ParticipantIds", participantIdsShrink);
             this.participantIds = participantIds;

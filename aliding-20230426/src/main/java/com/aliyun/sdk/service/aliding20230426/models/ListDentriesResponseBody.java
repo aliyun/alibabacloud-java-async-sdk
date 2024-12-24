@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDentriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("dentries")
-    private java.util.List < Dentries> dentries;
+    private java.util.List<Dentries> dentries;
 
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
@@ -46,7 +51,7 @@ public class ListDentriesResponseBody extends TeaModel {
     /**
      * @return dentries
      */
-    public java.util.List < Dentries> getDentries() {
+    public java.util.List<Dentries> getDentries() {
         return this.dentries;
     }
 
@@ -79,7 +84,7 @@ public class ListDentriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Dentries> dentries; 
+        private java.util.List<Dentries> dentries; 
         private String nextToken; 
         private String requestId; 
         private String vendorRequestId; 
@@ -88,7 +93,7 @@ public class ListDentriesResponseBody extends TeaModel {
         /**
          * dentries.
          */
-        public Builder dentries(java.util.List < Dentries> dentries) {
+        public Builder dentries(java.util.List<Dentries> dentries) {
             this.dentries = dentries;
             return this;
         }
@@ -273,7 +278,7 @@ public class ListDentriesResponseBody extends TeaModel {
      */
     public static class Dentries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppProperties")
-        private java.util.Map < String, java.util.List<DentriesAppPropertiesValue>> appProperties;
+        private java.util.Map<String, java.util.List<DentriesAppPropertiesValue>> appProperties;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -366,7 +371,7 @@ public class ListDentriesResponseBody extends TeaModel {
         /**
          * @return appProperties
          */
-        public java.util.Map < String, java.util.List<DentriesAppPropertiesValue>> getAppProperties() {
+        public java.util.Map<String, java.util.List<DentriesAppPropertiesValue>> getAppProperties() {
             return this.appProperties;
         }
 
@@ -504,7 +509,7 @@ public class ListDentriesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, java.util.List<DentriesAppPropertiesValue>> appProperties; 
+            private java.util.Map<String, java.util.List<DentriesAppPropertiesValue>> appProperties; 
             private String createTime; 
             private String creatorId; 
             private String extension; 
@@ -528,7 +533,7 @@ public class ListDentriesResponseBody extends TeaModel {
             /**
              * AppProperties.
              */
-            public Builder appProperties(java.util.Map < String, java.util.List<DentriesAppPropertiesValue>> appProperties) {
+            public Builder appProperties(java.util.Map<String, java.util.List<DentriesAppPropertiesValue>> appProperties) {
                 this.appProperties = appProperties;
                 return this;
             }

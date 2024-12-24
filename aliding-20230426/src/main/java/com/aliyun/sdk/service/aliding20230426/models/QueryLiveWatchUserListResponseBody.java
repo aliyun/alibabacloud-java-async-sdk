@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryLiveWatchUserListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("orgUsesList")
-    private java.util.List < OrgUsesList> orgUsesList;
+    private java.util.List<OrgUsesList> orgUsesList;
 
     @com.aliyun.core.annotation.NameInMap("outOrgUserList")
-    private java.util.List < OutOrgUserList> outOrgUserList;
+    private java.util.List<OutOrgUserList> outOrgUserList;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -38,14 +43,14 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
     /**
      * @return orgUsesList
      */
-    public java.util.List < OrgUsesList> getOrgUsesList() {
+    public java.util.List<OrgUsesList> getOrgUsesList() {
         return this.orgUsesList;
     }
 
     /**
      * @return outOrgUserList
      */
-    public java.util.List < OutOrgUserList> getOutOrgUserList() {
+    public java.util.List<OutOrgUserList> getOutOrgUserList() {
         return this.outOrgUserList;
     }
 
@@ -57,14 +62,14 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OrgUsesList> orgUsesList; 
-        private java.util.List < OutOrgUserList> outOrgUserList; 
+        private java.util.List<OrgUsesList> orgUsesList; 
+        private java.util.List<OutOrgUserList> outOrgUserList; 
         private String requestId; 
 
         /**
          * orgUsesList.
          */
-        public Builder orgUsesList(java.util.List < OrgUsesList> orgUsesList) {
+        public Builder orgUsesList(java.util.List<OrgUsesList> orgUsesList) {
             this.orgUsesList = orgUsesList;
             return this;
         }
@@ -72,7 +77,7 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
         /**
          * outOrgUserList.
          */
-        public Builder outOrgUserList(java.util.List < OutOrgUserList> outOrgUserList) {
+        public Builder outOrgUserList(java.util.List<OutOrgUserList> outOrgUserList) {
             this.outOrgUserList = outOrgUserList;
             return this;
         }

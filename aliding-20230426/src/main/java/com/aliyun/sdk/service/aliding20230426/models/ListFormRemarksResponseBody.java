@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFormRemarksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("formRemarkVoMap")
-    private java.util.Map < String, ? > formRemarkVoMap;
+    private java.util.Map<String, ?> formRemarkVoMap;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -42,7 +47,7 @@ public class ListFormRemarksResponseBody extends TeaModel {
     /**
      * @return formRemarkVoMap
      */
-    public java.util.Map < String, ? > getFormRemarkVoMap() {
+    public java.util.Map<String, ?> getFormRemarkVoMap() {
         return this.formRemarkVoMap;
     }
 
@@ -68,7 +73,7 @@ public class ListFormRemarksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > formRemarkVoMap; 
+        private java.util.Map<String, ?> formRemarkVoMap; 
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
@@ -76,7 +81,7 @@ public class ListFormRemarksResponseBody extends TeaModel {
         /**
          * formRemarkVoMap.
          */
-        public Builder formRemarkVoMap(java.util.Map < String, ? > formRemarkVoMap) {
+        public Builder formRemarkVoMap(java.util.Map<String, ?> formRemarkVoMap) {
             this.formRemarkVoMap = formRemarkVoMap;
             return this;
         }

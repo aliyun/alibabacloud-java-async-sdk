@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryUserHonorsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("honors")
-    private java.util.List < Honors> honors;
+    private java.util.List<Honors> honors;
 
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class QueryUserHonorsResponseBody extends TeaModel {
     /**
      * @return honors
      */
-    public java.util.List < Honors> getHonors() {
+    public java.util.List<Honors> getHonors() {
         return this.honors;
     }
 
@@ -57,14 +62,14 @@ public class QueryUserHonorsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Honors> honors; 
+        private java.util.List<Honors> honors; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * honors.
          */
-        public Builder honors(java.util.List < Honors> honors) {
+        public Builder honors(java.util.List<Honors> honors) {
             this.honors = honors;
             return this;
         }
@@ -172,7 +177,7 @@ public class QueryUserHonorsResponseBody extends TeaModel {
         private Long expirationTime;
 
         @com.aliyun.core.annotation.NameInMap("grantHistory")
-        private java.util.List < GrantHistory> grantHistory;
+        private java.util.List<GrantHistory> grantHistory;
 
         @com.aliyun.core.annotation.NameInMap("honorDesc")
         private String honorDesc;
@@ -209,7 +214,7 @@ public class QueryUserHonorsResponseBody extends TeaModel {
         /**
          * @return grantHistory
          */
-        public java.util.List < GrantHistory> getGrantHistory() {
+        public java.util.List<GrantHistory> getGrantHistory() {
             return this.grantHistory;
         }
 
@@ -236,7 +241,7 @@ public class QueryUserHonorsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long expirationTime; 
-            private java.util.List < GrantHistory> grantHistory; 
+            private java.util.List<GrantHistory> grantHistory; 
             private String honorDesc; 
             private String honorId; 
             private String honorName; 
@@ -252,7 +257,7 @@ public class QueryUserHonorsResponseBody extends TeaModel {
             /**
              * grantHistory.
              */
-            public Builder grantHistory(java.util.List < GrantHistory> grantHistory) {
+            public Builder grantHistory(java.util.List<GrantHistory> grantHistory) {
                 this.grantHistory = grantHistory;
                 return this;
             }

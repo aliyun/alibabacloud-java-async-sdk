@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryCloudRecordVideoResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("videoList")
-    private java.util.List < VideoList> videoList;
+    private java.util.List<VideoList> videoList;
 
     private QueryCloudRecordVideoResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class QueryCloudRecordVideoResponseBody extends TeaModel {
     /**
      * @return videoList
      */
-    public java.util.List < VideoList> getVideoList() {
+    public java.util.List<VideoList> getVideoList() {
         return this.videoList;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < VideoList> videoList; 
+        private java.util.List<VideoList> videoList; 
 
         /**
          * <p>requestId</p>
@@ -63,7 +68,7 @@ public class QueryCloudRecordVideoResponseBody extends TeaModel {
         /**
          * videoList.
          */
-        public Builder videoList(java.util.List < VideoList> videoList) {
+        public Builder videoList(java.util.List<VideoList> videoList) {
             this.videoList = videoList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class RemoveMeetingRoomsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MeetingRoomsToRemove")
-    private java.util.List < MeetingRoomsToRemove> meetingRoomsToRemove;
+    private java.util.List<MeetingRoomsToRemove> meetingRoomsToRemove;
 
     private RemoveMeetingRoomsRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class RemoveMeetingRoomsRequest extends Request {
     /**
      * @return meetingRoomsToRemove
      */
-    public java.util.List < MeetingRoomsToRemove> getMeetingRoomsToRemove() {
+    public java.util.List<MeetingRoomsToRemove> getMeetingRoomsToRemove() {
         return this.meetingRoomsToRemove;
     }
 
@@ -83,7 +88,7 @@ public class RemoveMeetingRoomsRequest extends Request {
         private AccountContext accountContext; 
         private String calendarId; 
         private String eventId; 
-        private java.util.List < MeetingRoomsToRemove> meetingRoomsToRemove; 
+        private java.util.List<MeetingRoomsToRemove> meetingRoomsToRemove; 
 
         private Builder() {
             super();
@@ -134,7 +139,7 @@ public class RemoveMeetingRoomsRequest extends Request {
         /**
          * MeetingRoomsToRemove.
          */
-        public Builder meetingRoomsToRemove(java.util.List < MeetingRoomsToRemove> meetingRoomsToRemove) {
+        public Builder meetingRoomsToRemove(java.util.List<MeetingRoomsToRemove> meetingRoomsToRemove) {
             String meetingRoomsToRemoveShrink = shrink(meetingRoomsToRemove, "MeetingRoomsToRemove", "json");
             this.putBodyParameter("MeetingRoomsToRemove", meetingRoomsToRemoveShrink);
             this.meetingRoomsToRemove = meetingRoomsToRemove;

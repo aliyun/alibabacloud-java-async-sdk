@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class CreateDeliveryPlanRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Content")
-    private java.util.Map < String, ? > content;
+    private java.util.Map<String, ?> content;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndTime")
@@ -38,7 +43,7 @@ public class CreateDeliveryPlanRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserIdList")
-    private java.util.List < String > userIdList;
+    private java.util.List<String> userIdList;
 
     private CreateDeliveryPlanRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class CreateDeliveryPlanRequest extends Request {
     /**
      * @return content
      */
-    public java.util.Map < String, ? > getContent() {
+    public java.util.Map<String, ?> getContent() {
         return this.content;
     }
 
@@ -109,18 +114,18 @@ public class CreateDeliveryPlanRequest extends Request {
     /**
      * @return userIdList
      */
-    public java.util.List < String > getUserIdList() {
+    public java.util.List<String> getUserIdList() {
         return this.userIdList;
     }
 
     public static final class Builder extends Request.Builder<CreateDeliveryPlanRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.Map < String, ? > content; 
+        private java.util.Map<String, ?> content; 
         private Long endTime; 
         private String resId; 
         private Long startTime; 
         private TenantContext tenantContext; 
-        private java.util.List < String > userIdList; 
+        private java.util.List<String> userIdList; 
 
         private Builder() {
             super();
@@ -150,7 +155,7 @@ public class CreateDeliveryPlanRequest extends Request {
         /**
          * Content.
          */
-        public Builder content(java.util.Map < String, ? > content) {
+        public Builder content(java.util.Map<String, ?> content) {
             String contentShrink = shrink(content, "Content", "json");
             this.putBodyParameter("Content", contentShrink);
             this.content = content;
@@ -197,7 +202,7 @@ public class CreateDeliveryPlanRequest extends Request {
         /**
          * UserIdList.
          */
-        public Builder userIdList(java.util.List < String > userIdList) {
+        public Builder userIdList(java.util.List<String> userIdList) {
             String userIdListShrink = shrink(userIdList, "UserIdList", "json");
             this.putBodyParameter("UserIdList", userIdListShrink);
             this.userIdList = userIdList;

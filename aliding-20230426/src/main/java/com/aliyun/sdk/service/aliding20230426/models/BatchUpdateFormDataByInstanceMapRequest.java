@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class BatchUpdateFormDataByInstanceMapRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UpdateFormDataJsonMap")
-    private java.util.Map < String, ? > updateFormDataJsonMap;
+    private java.util.Map<String, ?> updateFormDataJsonMap;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UseLatestFormSchemaVersion")
@@ -126,7 +131,7 @@ public class BatchUpdateFormDataByInstanceMapRequest extends Request {
     /**
      * @return updateFormDataJsonMap
      */
-    public java.util.Map < String, ? > getUpdateFormDataJsonMap() {
+    public java.util.Map<String, ?> getUpdateFormDataJsonMap() {
         return this.updateFormDataJsonMap;
     }
 
@@ -145,7 +150,7 @@ public class BatchUpdateFormDataByInstanceMapRequest extends Request {
         private Boolean ignoreEmpty; 
         private Boolean noExecuteExpression; 
         private String systemToken; 
-        private java.util.Map < String, ? > updateFormDataJsonMap; 
+        private java.util.Map<String, ?> updateFormDataJsonMap; 
         private Boolean useLatestFormSchemaVersion; 
 
         private Builder() {
@@ -232,7 +237,7 @@ public class BatchUpdateFormDataByInstanceMapRequest extends Request {
         /**
          * UpdateFormDataJsonMap.
          */
-        public Builder updateFormDataJsonMap(java.util.Map < String, ? > updateFormDataJsonMap) {
+        public Builder updateFormDataJsonMap(java.util.Map<String, ?> updateFormDataJsonMap) {
             String updateFormDataJsonMapShrink = shrink(updateFormDataJsonMap, "UpdateFormDataJsonMap", "json");
             this.putBodyParameter("UpdateFormDataJsonMap", updateFormDataJsonMapShrink);
             this.updateFormDataJsonMap = updateFormDataJsonMap;

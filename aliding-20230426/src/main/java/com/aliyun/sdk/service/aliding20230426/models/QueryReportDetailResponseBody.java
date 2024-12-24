@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryReportDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("content")
-    private java.util.List < Content> content;
+    private java.util.List<Content> content;
 
     @com.aliyun.core.annotation.NameInMap("createTime")
     private Long createTime;
@@ -74,7 +79,7 @@ public class QueryReportDetailResponseBody extends TeaModel {
     /**
      * @return content
      */
-    public java.util.List < Content> getContent() {
+    public java.util.List<Content> getContent() {
         return this.content;
     }
 
@@ -156,7 +161,7 @@ public class QueryReportDetailResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Content> content; 
+        private java.util.List<Content> content; 
         private Long createTime; 
         private String creatorId; 
         private String creatorName; 
@@ -172,7 +177,7 @@ public class QueryReportDetailResponseBody extends TeaModel {
         /**
          * content.
          */
-        public Builder content(java.util.List < Content> content) {
+        public Builder content(java.util.List<Content> content) {
             this.content = content;
             return this;
         }
@@ -279,7 +284,7 @@ public class QueryReportDetailResponseBody extends TeaModel {
      */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Images")
-        private java.util.List < String > images;
+        private java.util.List<String> images;
 
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -312,7 +317,7 @@ public class QueryReportDetailResponseBody extends TeaModel {
         /**
          * @return images
          */
-        public java.util.List < String > getImages() {
+        public java.util.List<String> getImages() {
             return this.images;
         }
 
@@ -345,7 +350,7 @@ public class QueryReportDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > images; 
+            private java.util.List<String> images; 
             private String key; 
             private String sort; 
             private String type; 
@@ -354,7 +359,7 @@ public class QueryReportDetailResponseBody extends TeaModel {
             /**
              * Images.
              */
-            public Builder images(java.util.List < String > images) {
+            public Builder images(java.util.List<String> images) {
                 this.images = images;
                 return this;
             }

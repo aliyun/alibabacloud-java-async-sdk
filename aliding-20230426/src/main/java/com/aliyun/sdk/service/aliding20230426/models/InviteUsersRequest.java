@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class InviteUsersRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InviteeList")
-    private java.util.List < InviteeList> inviteeList;
+    private java.util.List<InviteeList> inviteeList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantContext")
@@ -31,7 +36,7 @@ public class InviteUsersRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("phoneInviteeList")
-    private java.util.List < PhoneInviteeList> phoneInviteeList;
+    private java.util.List<PhoneInviteeList> phoneInviteeList;
 
     private InviteUsersRequest(Builder builder) {
         super(builder);
@@ -65,7 +70,7 @@ public class InviteUsersRequest extends Request {
     /**
      * @return inviteeList
      */
-    public java.util.List < InviteeList> getInviteeList() {
+    public java.util.List<InviteeList> getInviteeList() {
         return this.inviteeList;
     }
 
@@ -86,16 +91,16 @@ public class InviteUsersRequest extends Request {
     /**
      * @return phoneInviteeList
      */
-    public java.util.List < PhoneInviteeList> getPhoneInviteeList() {
+    public java.util.List<PhoneInviteeList> getPhoneInviteeList() {
         return this.phoneInviteeList;
     }
 
     public static final class Builder extends Request.Builder<InviteUsersRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.List < InviteeList> inviteeList; 
+        private java.util.List<InviteeList> inviteeList; 
         private TenantContext tenantContext; 
         private String conferenceId; 
-        private java.util.List < PhoneInviteeList> phoneInviteeList; 
+        private java.util.List<PhoneInviteeList> phoneInviteeList; 
 
         private Builder() {
             super();
@@ -123,7 +128,7 @@ public class InviteUsersRequest extends Request {
         /**
          * InviteeList.
          */
-        public Builder inviteeList(java.util.List < InviteeList> inviteeList) {
+        public Builder inviteeList(java.util.List<InviteeList> inviteeList) {
             String inviteeListShrink = shrink(inviteeList, "InviteeList", "json");
             this.putBodyParameter("InviteeList", inviteeListShrink);
             this.inviteeList = inviteeList;
@@ -155,7 +160,7 @@ public class InviteUsersRequest extends Request {
         /**
          * phoneInviteeList.
          */
-        public Builder phoneInviteeList(java.util.List < PhoneInviteeList> phoneInviteeList) {
+        public Builder phoneInviteeList(java.util.List<PhoneInviteeList> phoneInviteeList) {
             String phoneInviteeListShrink = shrink(phoneInviteeList, "phoneInviteeList", "json");
             this.putBodyParameter("phoneInviteeList", phoneInviteeListShrink);
             this.phoneInviteeList = phoneInviteeList;

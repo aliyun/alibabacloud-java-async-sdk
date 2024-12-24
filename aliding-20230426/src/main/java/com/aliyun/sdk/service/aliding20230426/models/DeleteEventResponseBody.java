@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DeleteEventResponseBody extends TeaModel {
     private String errorCode;
 
     @com.aliyun.core.annotation.NameInMap("errorCtx")
-    private java.util.Map < String, ? > errorCtx;
+    private java.util.Map<String, ?> errorCtx;
 
     @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
@@ -68,7 +73,7 @@ public class DeleteEventResponseBody extends TeaModel {
     /**
      * @return errorCtx
      */
-    public java.util.Map < String, ? > getErrorCtx() {
+    public java.util.Map<String, ?> getErrorCtx() {
         return this.errorCtx;
     }
 
@@ -103,7 +108,7 @@ public class DeleteEventResponseBody extends TeaModel {
     public static final class Builder {
         private Content content; 
         private String errorCode; 
-        private java.util.Map < String, ? > errorCtx; 
+        private java.util.Map<String, ?> errorCtx; 
         private String errorMsg; 
         private Integer httpStatusCode; 
         private String requestId; 
@@ -128,7 +133,7 @@ public class DeleteEventResponseBody extends TeaModel {
         /**
          * errorCtx.
          */
-        public Builder errorCtx(java.util.Map < String, ? > errorCtx) {
+        public Builder errorCtx(java.util.Map<String, ?> errorCtx) {
             this.errorCtx = errorCtx;
             return this;
         }

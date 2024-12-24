@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -253,7 +258,7 @@ public class CommitFileResponseBody extends TeaModel {
      */
     public static class Dentry extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppProperties")
-        private java.util.Map < String, java.util.List<DentryAppPropertiesValue>> appProperties;
+        private java.util.Map<String, java.util.List<DentryAppPropertiesValue>> appProperties;
 
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -350,7 +355,7 @@ public class CommitFileResponseBody extends TeaModel {
         /**
          * @return appProperties
          */
-        public java.util.Map < String, java.util.List<DentryAppPropertiesValue>> getAppProperties() {
+        public java.util.Map<String, java.util.List<DentryAppPropertiesValue>> getAppProperties() {
             return this.appProperties;
         }
 
@@ -495,7 +500,7 @@ public class CommitFileResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, java.util.List<DentryAppPropertiesValue>> appProperties; 
+            private java.util.Map<String, java.util.List<DentryAppPropertiesValue>> appProperties; 
             private String category; 
             private String createTime; 
             private String creatorId; 
@@ -520,7 +525,7 @@ public class CommitFileResponseBody extends TeaModel {
             /**
              * AppProperties.
              */
-            public Builder appProperties(java.util.Map < String, java.util.List<DentryAppPropertiesValue>> appProperties) {
+            public Builder appProperties(java.util.Map<String, java.util.List<DentryAppPropertiesValue>> appProperties) {
                 this.appProperties = appProperties;
                 return this;
             }

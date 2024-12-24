@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class GetReportUnReadCountRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Request")
-    private java.util.Map < String, ? > request;
+    private java.util.Map<String, ?> request;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantContext")
@@ -54,7 +59,7 @@ public class GetReportUnReadCountRequest extends Request {
     /**
      * @return request
      */
-    public java.util.Map < String, ? > getRequest() {
+    public java.util.Map<String, ?> getRequest() {
         return this.request;
     }
 
@@ -67,7 +72,7 @@ public class GetReportUnReadCountRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetReportUnReadCountRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.Map < String, ? > request; 
+        private java.util.Map<String, ?> request; 
         private TenantContext tenantContext; 
 
         private Builder() {
@@ -94,7 +99,7 @@ public class GetReportUnReadCountRequest extends Request {
         /**
          * Request.
          */
-        public Builder request(java.util.Map < String, ? > request) {
+        public Builder request(java.util.Map<String, ?> request) {
             String requestShrink = shrink(request, "Request", "json");
             this.putBodyParameter("Request", requestShrink);
             this.request = request;

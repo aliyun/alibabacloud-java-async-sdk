@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class AddMeetingRoomsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MeetingRoomsToAdd")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < MeetingRoomsToAdd> meetingRoomsToAdd;
+    private java.util.List<MeetingRoomsToAdd> meetingRoomsToAdd;
 
     private AddMeetingRoomsRequest(Builder builder) {
         super(builder);
@@ -76,7 +81,7 @@ public class AddMeetingRoomsRequest extends Request {
     /**
      * @return meetingRoomsToAdd
      */
-    public java.util.List < MeetingRoomsToAdd> getMeetingRoomsToAdd() {
+    public java.util.List<MeetingRoomsToAdd> getMeetingRoomsToAdd() {
         return this.meetingRoomsToAdd;
     }
 
@@ -84,7 +89,7 @@ public class AddMeetingRoomsRequest extends Request {
         private AccountContext accountContext; 
         private String calendarId; 
         private String eventId; 
-        private java.util.List < MeetingRoomsToAdd> meetingRoomsToAdd; 
+        private java.util.List<MeetingRoomsToAdd> meetingRoomsToAdd; 
 
         private Builder() {
             super();
@@ -135,7 +140,7 @@ public class AddMeetingRoomsRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder meetingRoomsToAdd(java.util.List < MeetingRoomsToAdd> meetingRoomsToAdd) {
+        public Builder meetingRoomsToAdd(java.util.List<MeetingRoomsToAdd> meetingRoomsToAdd) {
             String meetingRoomsToAddShrink = shrink(meetingRoomsToAdd, "MeetingRoomsToAdd", "json");
             this.putBodyParameter("MeetingRoomsToAdd", meetingRoomsToAddShrink);
             this.meetingRoomsToAdd = meetingRoomsToAdd;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateSearchKeywordResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("arguments")
-    private java.util.List < ? > arguments;
+    private java.util.List<?> arguments;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -46,7 +51,7 @@ public class CreateSearchKeywordResponseBody extends TeaModel {
     /**
      * @return arguments
      */
-    public java.util.List < ? > getArguments() {
+    public java.util.List<?> getArguments() {
         return this.arguments;
     }
 
@@ -79,7 +84,7 @@ public class CreateSearchKeywordResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ? > arguments; 
+        private java.util.List<?> arguments; 
         private String requestId; 
         private Boolean success; 
         private String vendorRequestId; 
@@ -88,7 +93,7 @@ public class CreateSearchKeywordResponseBody extends TeaModel {
         /**
          * arguments.
          */
-        public Builder arguments(java.util.List < ? > arguments) {
+        public Builder arguments(java.util.List<?> arguments) {
             this.arguments = arguments;
             return this;
         }

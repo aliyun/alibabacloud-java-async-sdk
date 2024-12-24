@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
@@ -50,7 +55,7 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Long pageNumber; 
         private String requestId; 
         private Long totalCount; 
@@ -100,7 +105,7 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
         /**
          * data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -433,7 +438,7 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
         private String creatorUserId;
 
         @com.aliyun.core.annotation.NameInMap("FormData")
-        private java.util.Map < String, ? > formData;
+        private java.util.Map<String, ?> formData;
 
         @com.aliyun.core.annotation.NameInMap("FormInstanceId")
         private String formInstanceId;
@@ -514,7 +519,7 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
         /**
          * @return formData
          */
-        public java.util.Map < String, ? > getFormData() {
+        public java.util.Map<String, ?> getFormData() {
             return this.formData;
         }
 
@@ -605,7 +610,7 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
         public static final class Builder {
             private String createTimeGMT; 
             private String creatorUserId; 
-            private java.util.Map < String, ? > formData; 
+            private java.util.Map<String, ?> formData; 
             private String formInstanceId; 
             private String formUuid; 
             private Long id; 
@@ -638,7 +643,7 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
             /**
              * FormData.
              */
-            public Builder formData(java.util.Map < String, ? > formData) {
+            public Builder formData(java.util.Map<String, ?> formData) {
                 this.formData = formData;
                 return this;
             }

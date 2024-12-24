@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -198,6 +203,200 @@ public class UpdateScheduleConfSettingsRequest extends Request {
      *
      * <p>UpdateScheduleConfSettingsRequest</p>
      */
+    public static class MoziConfOpenRecordSetting extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IsFollowHost")
+        private Boolean isFollowHost;
+
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private String mode;
+
+        @com.aliyun.core.annotation.NameInMap("RecordAutoStart")
+        private Integer recordAutoStart;
+
+        @com.aliyun.core.annotation.NameInMap("RecordAutoStartType")
+        private Integer recordAutoStartType;
+
+        private MoziConfOpenRecordSetting(Builder builder) {
+            this.isFollowHost = builder.isFollowHost;
+            this.mode = builder.mode;
+            this.recordAutoStart = builder.recordAutoStart;
+            this.recordAutoStartType = builder.recordAutoStartType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MoziConfOpenRecordSetting create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isFollowHost
+         */
+        public Boolean getIsFollowHost() {
+            return this.isFollowHost;
+        }
+
+        /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
+         * @return recordAutoStart
+         */
+        public Integer getRecordAutoStart() {
+            return this.recordAutoStart;
+        }
+
+        /**
+         * @return recordAutoStartType
+         */
+        public Integer getRecordAutoStartType() {
+            return this.recordAutoStartType;
+        }
+
+        public static final class Builder {
+            private Boolean isFollowHost; 
+            private String mode; 
+            private Integer recordAutoStart; 
+            private Integer recordAutoStartType; 
+
+            /**
+             * IsFollowHost.
+             */
+            public Builder isFollowHost(Boolean isFollowHost) {
+                this.isFollowHost = isFollowHost;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
+             * RecordAutoStart.
+             */
+            public Builder recordAutoStart(Integer recordAutoStart) {
+                this.recordAutoStart = recordAutoStart;
+                return this;
+            }
+
+            /**
+             * RecordAutoStartType.
+             */
+            public Builder recordAutoStartType(Integer recordAutoStartType) {
+                this.recordAutoStartType = recordAutoStartType;
+                return this;
+            }
+
+            public MoziConfOpenRecordSetting build() {
+                return new MoziConfOpenRecordSetting(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateScheduleConfSettingsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateScheduleConfSettingsRequest</p>
+     */
+    public static class MoziConfExtensionAppSettings extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoOpenMode")
+        private Integer autoOpenMode;
+
+        @com.aliyun.core.annotation.NameInMap("CoolAppCode")
+        private String coolAppCode;
+
+        @com.aliyun.core.annotation.NameInMap("ExtensionAppBizData")
+        private String extensionAppBizData;
+
+        private MoziConfExtensionAppSettings(Builder builder) {
+            this.autoOpenMode = builder.autoOpenMode;
+            this.coolAppCode = builder.coolAppCode;
+            this.extensionAppBizData = builder.extensionAppBizData;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MoziConfExtensionAppSettings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoOpenMode
+         */
+        public Integer getAutoOpenMode() {
+            return this.autoOpenMode;
+        }
+
+        /**
+         * @return coolAppCode
+         */
+        public String getCoolAppCode() {
+            return this.coolAppCode;
+        }
+
+        /**
+         * @return extensionAppBizData
+         */
+        public String getExtensionAppBizData() {
+            return this.extensionAppBizData;
+        }
+
+        public static final class Builder {
+            private Integer autoOpenMode; 
+            private String coolAppCode; 
+            private String extensionAppBizData; 
+
+            /**
+             * AutoOpenMode.
+             */
+            public Builder autoOpenMode(Integer autoOpenMode) {
+                this.autoOpenMode = autoOpenMode;
+                return this;
+            }
+
+            /**
+             * CoolAppCode.
+             */
+            public Builder coolAppCode(String coolAppCode) {
+                this.coolAppCode = coolAppCode;
+                return this;
+            }
+
+            /**
+             * ExtensionAppBizData.
+             */
+            public Builder extensionAppBizData(String extensionAppBizData) {
+                this.extensionAppBizData = extensionAppBizData;
+                return this;
+            }
+
+            public MoziConfExtensionAppSettings build() {
+                return new MoziConfExtensionAppSettings(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateScheduleConfSettingsRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateScheduleConfSettingsRequest</p>
+     */
     public static class MoziConfVirtualExtraSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudRecordOwnerUserId")
         private String cloudRecordOwnerUserId;
@@ -220,6 +419,9 @@ public class UpdateScheduleConfSettingsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("MinutesOwnerUserId")
         private String minutesOwnerUserId;
 
+        @com.aliyun.core.annotation.NameInMap("MoziConfExtensionAppSettings")
+        private java.util.List<MoziConfExtensionAppSettings> moziConfExtensionAppSettings;
+
         @com.aliyun.core.annotation.NameInMap("PushAllMeetingRecords")
         private Boolean pushAllMeetingRecords;
 
@@ -240,6 +442,7 @@ public class UpdateScheduleConfSettingsRequest extends Request {
             this.lockMediaStatusMicMute = builder.lockMediaStatusMicMute;
             this.lockNick = builder.lockNick;
             this.minutesOwnerUserId = builder.minutesOwnerUserId;
+            this.moziConfExtensionAppSettings = builder.moziConfExtensionAppSettings;
             this.pushAllMeetingRecords = builder.pushAllMeetingRecords;
             this.pushCloudRecordCard = builder.pushCloudRecordCard;
             this.pushMinutesCard = builder.pushMinutesCard;
@@ -304,6 +507,13 @@ public class UpdateScheduleConfSettingsRequest extends Request {
         }
 
         /**
+         * @return moziConfExtensionAppSettings
+         */
+        public java.util.List<MoziConfExtensionAppSettings> getMoziConfExtensionAppSettings() {
+            return this.moziConfExtensionAppSettings;
+        }
+
+        /**
          * @return pushAllMeetingRecords
          */
         public Boolean getPushAllMeetingRecords() {
@@ -339,6 +549,7 @@ public class UpdateScheduleConfSettingsRequest extends Request {
             private Integer lockMediaStatusMicMute; 
             private Integer lockNick; 
             private String minutesOwnerUserId; 
+            private java.util.List<MoziConfExtensionAppSettings> moziConfExtensionAppSettings; 
             private Boolean pushAllMeetingRecords; 
             private Boolean pushCloudRecordCard; 
             private Boolean pushMinutesCard; 
@@ -401,6 +612,14 @@ public class UpdateScheduleConfSettingsRequest extends Request {
             }
 
             /**
+             * MoziConfExtensionAppSettings.
+             */
+            public Builder moziConfExtensionAppSettings(java.util.List<MoziConfExtensionAppSettings> moziConfExtensionAppSettings) {
+                this.moziConfExtensionAppSettings = moziConfExtensionAppSettings;
+                return this;
+            }
+
+            /**
              * PushAllMeetingRecords.
              */
             public Builder pushAllMeetingRecords(Boolean pushAllMeetingRecords) {
@@ -447,7 +666,7 @@ public class UpdateScheduleConfSettingsRequest extends Request {
      */
     public static class ScheduleConfSettingModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CohostUserIds")
-        private java.util.List < String > cohostUserIds;
+        private java.util.List<String> cohostUserIds;
 
         @com.aliyun.core.annotation.NameInMap("ConfAllowedCorpId")
         private String confAllowedCorpId;
@@ -457,6 +676,9 @@ public class UpdateScheduleConfSettingsRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("LockRoom")
         private Integer lockRoom;
+
+        @com.aliyun.core.annotation.NameInMap("MoziConfOpenRecordSetting")
+        private MoziConfOpenRecordSetting moziConfOpenRecordSetting;
 
         @com.aliyun.core.annotation.NameInMap("MoziConfVirtualExtraSetting")
         private MoziConfVirtualExtraSetting moziConfVirtualExtraSetting;
@@ -472,6 +694,7 @@ public class UpdateScheduleConfSettingsRequest extends Request {
             this.confAllowedCorpId = builder.confAllowedCorpId;
             this.hostUserId = builder.hostUserId;
             this.lockRoom = builder.lockRoom;
+            this.moziConfOpenRecordSetting = builder.moziConfOpenRecordSetting;
             this.moziConfVirtualExtraSetting = builder.moziConfVirtualExtraSetting;
             this.muteOnJoin = builder.muteOnJoin;
             this.screenShareForbidden = builder.screenShareForbidden;
@@ -488,7 +711,7 @@ public class UpdateScheduleConfSettingsRequest extends Request {
         /**
          * @return cohostUserIds
          */
-        public java.util.List < String > getCohostUserIds() {
+        public java.util.List<String> getCohostUserIds() {
             return this.cohostUserIds;
         }
 
@@ -514,6 +737,13 @@ public class UpdateScheduleConfSettingsRequest extends Request {
         }
 
         /**
+         * @return moziConfOpenRecordSetting
+         */
+        public MoziConfOpenRecordSetting getMoziConfOpenRecordSetting() {
+            return this.moziConfOpenRecordSetting;
+        }
+
+        /**
          * @return moziConfVirtualExtraSetting
          */
         public MoziConfVirtualExtraSetting getMoziConfVirtualExtraSetting() {
@@ -535,10 +765,11 @@ public class UpdateScheduleConfSettingsRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > cohostUserIds; 
+            private java.util.List<String> cohostUserIds; 
             private String confAllowedCorpId; 
             private String hostUserId; 
             private Integer lockRoom; 
+            private MoziConfOpenRecordSetting moziConfOpenRecordSetting; 
             private MoziConfVirtualExtraSetting moziConfVirtualExtraSetting; 
             private Integer muteOnJoin; 
             private Integer screenShareForbidden; 
@@ -546,7 +777,7 @@ public class UpdateScheduleConfSettingsRequest extends Request {
             /**
              * CohostUserIds.
              */
-            public Builder cohostUserIds(java.util.List < String > cohostUserIds) {
+            public Builder cohostUserIds(java.util.List<String> cohostUserIds) {
                 this.cohostUserIds = cohostUserIds;
                 return this;
             }
@@ -572,6 +803,14 @@ public class UpdateScheduleConfSettingsRequest extends Request {
              */
             public Builder lockRoom(Integer lockRoom) {
                 this.lockRoom = lockRoom;
+                return this;
+            }
+
+            /**
+             * MoziConfOpenRecordSetting.
+             */
+            public Builder moziConfOpenRecordSetting(MoziConfOpenRecordSetting moziConfOpenRecordSetting) {
+                this.moziConfOpenRecordSetting = moziConfOpenRecordSetting;
                 return this;
             }
 

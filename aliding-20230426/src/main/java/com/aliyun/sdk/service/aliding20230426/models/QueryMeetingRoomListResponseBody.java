@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     private QueryMeetingRoomListResponseBody(Builder builder) {
         this.hasMore = builder.hasMore;
@@ -63,7 +68,7 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -71,7 +76,7 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
         private Boolean hasMore; 
         private Long nextToken; 
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
 
         /**
          * hasMore.
@@ -103,7 +108,7 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -358,7 +363,7 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
         private String roomId;
 
         @com.aliyun.core.annotation.NameInMap("RoomLabels")
-        private java.util.List < RoomLabels> roomLabels;
+        private java.util.List<RoomLabels> roomLabels;
 
         @com.aliyun.core.annotation.NameInMap("RoomLocation")
         private RoomLocation roomLocation;
@@ -435,7 +440,7 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
         /**
          * @return roomLabels
          */
-        public java.util.List < RoomLabels> getRoomLabels() {
+        public java.util.List<RoomLabels> getRoomLabels() {
             return this.roomLabels;
         }
 
@@ -480,7 +485,7 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
             private Integer roomCapacity; 
             private RoomGroup roomGroup; 
             private String roomId; 
-            private java.util.List < RoomLabels> roomLabels; 
+            private java.util.List<RoomLabels> roomLabels; 
             private RoomLocation roomLocation; 
             private String roomName; 
             private String roomPicture; 
@@ -530,7 +535,7 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
             /**
              * RoomLabels.
              */
-            public Builder roomLabels(java.util.List < RoomLabels> roomLabels) {
+            public Builder roomLabels(java.util.List<RoomLabels> roomLabels) {
                 this.roomLabels = roomLabels;
                 return this;
             }

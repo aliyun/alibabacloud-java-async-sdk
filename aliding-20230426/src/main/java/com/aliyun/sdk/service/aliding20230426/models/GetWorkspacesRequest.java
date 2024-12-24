@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class GetWorkspacesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > workspaceIds;
+    private java.util.List<String> workspaceIds;
 
     private GetWorkspacesRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class GetWorkspacesRequest extends Request {
     /**
      * @return workspaceIds
      */
-    public java.util.List < String > getWorkspaceIds() {
+    public java.util.List<String> getWorkspaceIds() {
         return this.workspaceIds;
     }
 
@@ -82,7 +87,7 @@ public class GetWorkspacesRequest extends Request {
         private AccountContext accountContext; 
         private Option option; 
         private TenantContext tenantContext; 
-        private java.util.List < String > workspaceIds; 
+        private java.util.List<String> workspaceIds; 
 
         private Builder() {
             super();
@@ -132,7 +137,7 @@ public class GetWorkspacesRequest extends Request {
          * <strong>example:</strong>
          * <p>workspace_id</p>
          */
-        public Builder workspaceIds(java.util.List < String > workspaceIds) {
+        public Builder workspaceIds(java.util.List<String> workspaceIds) {
             String workspaceIdsShrink = shrink(workspaceIds, "WorkspaceIds", "json");
             this.putBodyParameter("WorkspaceIds", workspaceIdsShrink);
             this.workspaceIds = workspaceIds;

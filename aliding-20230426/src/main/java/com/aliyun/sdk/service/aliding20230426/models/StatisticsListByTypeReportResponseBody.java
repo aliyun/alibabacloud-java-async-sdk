@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class StatisticsListByTypeReportResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("useridList")
-    private java.util.List < String > useridList;
+    private java.util.List<String> useridList;
 
     private StatisticsListByTypeReportResponseBody(Builder builder) {
         this.hasMore = builder.hasMore;
@@ -63,7 +68,7 @@ public class StatisticsListByTypeReportResponseBody extends TeaModel {
     /**
      * @return useridList
      */
-    public java.util.List < String > getUseridList() {
+    public java.util.List<String> getUseridList() {
         return this.useridList;
     }
 
@@ -71,7 +76,7 @@ public class StatisticsListByTypeReportResponseBody extends TeaModel {
         private Boolean hasMore; 
         private Long nextCursor; 
         private String requestId; 
-        private java.util.List < String > useridList; 
+        private java.util.List<String> useridList; 
 
         /**
          * hasMore.
@@ -103,7 +108,7 @@ public class StatisticsListByTypeReportResponseBody extends TeaModel {
         /**
          * useridList.
          */
-        public Builder useridList(java.util.List < String > useridList) {
+        public Builder useridList(java.util.List<String> useridList) {
             this.useridList = useridList;
             return this;
         }

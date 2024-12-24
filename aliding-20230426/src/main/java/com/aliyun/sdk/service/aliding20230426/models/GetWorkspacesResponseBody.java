@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetWorkspacesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("workspace")
-    private java.util.List < Workspace> workspace;
+    private java.util.List<Workspace> workspace;
 
     private GetWorkspacesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class GetWorkspacesResponseBody extends TeaModel {
     /**
      * @return workspace
      */
-    public java.util.List < Workspace> getWorkspace() {
+    public java.util.List<Workspace> getWorkspace() {
         return this.workspace;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Workspace> workspace; 
+        private java.util.List<Workspace> workspace; 
 
         /**
          * <p>requestId</p>
@@ -63,7 +68,7 @@ public class GetWorkspacesResponseBody extends TeaModel {
         /**
          * workspace.
          */
-        public Builder workspace(java.util.List < Workspace> workspace) {
+        public Builder workspace(java.util.List<Workspace> workspace) {
             this.workspace = workspace;
             return this;
         }

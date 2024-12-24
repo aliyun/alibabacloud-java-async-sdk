@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class CreateTodoTaskResponseBody extends TeaModel {
     private String bizTag;
 
     @com.aliyun.core.annotation.NameInMap("contentFieldList")
-    private java.util.List < ContentFieldList> contentFieldList;
+    private java.util.List<ContentFieldList> contentFieldList;
 
     @com.aliyun.core.annotation.NameInMap("createdTime")
     private Long createdTime;
@@ -37,7 +42,7 @@ public class CreateTodoTaskResponseBody extends TeaModel {
     private Long dueTime;
 
     @com.aliyun.core.annotation.NameInMap("executorIds")
-    private java.util.List < String > executorIds;
+    private java.util.List<String> executorIds;
 
     @com.aliyun.core.annotation.NameInMap("finishTime")
     private Long finishTime;
@@ -58,7 +63,7 @@ public class CreateTodoTaskResponseBody extends TeaModel {
     private NotifyConfigs notifyConfigs;
 
     @com.aliyun.core.annotation.NameInMap("participantIds")
-    private java.util.List < String > participantIds;
+    private java.util.List<String> participantIds;
 
     @com.aliyun.core.annotation.NameInMap("priority")
     private Integer priority;
@@ -121,7 +126,7 @@ public class CreateTodoTaskResponseBody extends TeaModel {
     /**
      * @return contentFieldList
      */
-    public java.util.List < ContentFieldList> getContentFieldList() {
+    public java.util.List<ContentFieldList> getContentFieldList() {
         return this.contentFieldList;
     }
 
@@ -170,7 +175,7 @@ public class CreateTodoTaskResponseBody extends TeaModel {
     /**
      * @return executorIds
      */
-    public java.util.List < String > getExecutorIds() {
+    public java.util.List<String> getExecutorIds() {
         return this.executorIds;
     }
 
@@ -219,7 +224,7 @@ public class CreateTodoTaskResponseBody extends TeaModel {
     /**
      * @return participantIds
      */
-    public java.util.List < String > getParticipantIds() {
+    public java.util.List<String> getParticipantIds() {
         return this.participantIds;
     }
 
@@ -267,21 +272,21 @@ public class CreateTodoTaskResponseBody extends TeaModel {
 
     public static final class Builder {
         private String bizTag; 
-        private java.util.List < ContentFieldList> contentFieldList; 
+        private java.util.List<ContentFieldList> contentFieldList; 
         private Long createdTime; 
         private String creatorId; 
         private String description; 
         private DetailUrl detailUrl; 
         private Boolean done; 
         private Long dueTime; 
-        private java.util.List < String > executorIds; 
+        private java.util.List<String> executorIds; 
         private Long finishTime; 
         private String id; 
         private Boolean isOnlyShowExecutor; 
         private Long modifiedTime; 
         private String modifierId; 
         private NotifyConfigs notifyConfigs; 
-        private java.util.List < String > participantIds; 
+        private java.util.List<String> participantIds; 
         private Integer priority; 
         private String requestId; 
         private String source; 
@@ -300,7 +305,7 @@ public class CreateTodoTaskResponseBody extends TeaModel {
         /**
          * contentFieldList.
          */
-        public Builder contentFieldList(java.util.List < ContentFieldList> contentFieldList) {
+        public Builder contentFieldList(java.util.List<ContentFieldList> contentFieldList) {
             this.contentFieldList = contentFieldList;
             return this;
         }
@@ -356,7 +361,7 @@ public class CreateTodoTaskResponseBody extends TeaModel {
         /**
          * executorIds.
          */
-        public Builder executorIds(java.util.List < String > executorIds) {
+        public Builder executorIds(java.util.List<String> executorIds) {
             this.executorIds = executorIds;
             return this;
         }
@@ -412,7 +417,7 @@ public class CreateTodoTaskResponseBody extends TeaModel {
         /**
          * participantIds.
          */
-        public Builder participantIds(java.util.List < String > participantIds) {
+        public Builder participantIds(java.util.List<String> participantIds) {
             this.participantIds = participantIds;
             return this;
         }

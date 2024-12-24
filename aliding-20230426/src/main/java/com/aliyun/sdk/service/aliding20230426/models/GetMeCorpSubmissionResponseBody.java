@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetMeCorpSubmissionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
@@ -50,7 +55,7 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Long pageNumber; 
         private String requestId; 
         private Long totalCount; 
@@ -100,7 +105,7 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -673,13 +678,13 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Actioner")
-        private java.util.List < Actioner> actioner;
+        private java.util.List<Actioner> actioner;
 
         @com.aliyun.core.annotation.NameInMap("ActionerId")
-        private java.util.List < String > actionerId;
+        private java.util.List<String> actionerId;
 
         @com.aliyun.core.annotation.NameInMap("ActionerName")
-        private java.util.List < String > actionerName;
+        private java.util.List<String> actionerName;
 
         @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
@@ -688,10 +693,10 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
         private String createTimeGMT;
 
         @com.aliyun.core.annotation.NameInMap("CurrentActivityInstances")
-        private java.util.List < CurrentActivityInstances> currentActivityInstances;
+        private java.util.List<CurrentActivityInstances> currentActivityInstances;
 
         @com.aliyun.core.annotation.NameInMap("DataMap")
-        private java.util.Map < String, ? > dataMap;
+        private java.util.Map<String, ?> dataMap;
 
         @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
@@ -790,21 +795,21 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
         /**
          * @return actioner
          */
-        public java.util.List < Actioner> getActioner() {
+        public java.util.List<Actioner> getActioner() {
             return this.actioner;
         }
 
         /**
          * @return actionerId
          */
-        public java.util.List < String > getActionerId() {
+        public java.util.List<String> getActionerId() {
             return this.actionerId;
         }
 
         /**
          * @return actionerName
          */
-        public java.util.List < String > getActionerName() {
+        public java.util.List<String> getActionerName() {
             return this.actionerName;
         }
 
@@ -825,14 +830,14 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
         /**
          * @return currentActivityInstances
          */
-        public java.util.List < CurrentActivityInstances> getCurrentActivityInstances() {
+        public java.util.List<CurrentActivityInstances> getCurrentActivityInstances() {
             return this.currentActivityInstances;
         }
 
         /**
          * @return dataMap
          */
-        public java.util.Map < String, ? > getDataMap() {
+        public java.util.Map<String, ?> getDataMap() {
             return this.dataMap;
         }
 
@@ -970,13 +975,13 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Actioner> actioner; 
-            private java.util.List < String > actionerId; 
-            private java.util.List < String > actionerName; 
+            private java.util.List<Actioner> actioner; 
+            private java.util.List<String> actionerId; 
+            private java.util.List<String> actionerName; 
             private String appType; 
             private String createTimeGMT; 
-            private java.util.List < CurrentActivityInstances> currentActivityInstances; 
-            private java.util.Map < String, ? > dataMap; 
+            private java.util.List<CurrentActivityInstances> currentActivityInstances; 
+            private java.util.Map<String, ?> dataMap; 
             private String dataType; 
             private String finishTimeGMT; 
             private String formInstanceId; 
@@ -1000,7 +1005,7 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
             /**
              * Actioner.
              */
-            public Builder actioner(java.util.List < Actioner> actioner) {
+            public Builder actioner(java.util.List<Actioner> actioner) {
                 this.actioner = actioner;
                 return this;
             }
@@ -1008,7 +1013,7 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
             /**
              * ActionerId.
              */
-            public Builder actionerId(java.util.List < String > actionerId) {
+            public Builder actionerId(java.util.List<String> actionerId) {
                 this.actionerId = actionerId;
                 return this;
             }
@@ -1016,7 +1021,7 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
             /**
              * ActionerName.
              */
-            public Builder actionerName(java.util.List < String > actionerName) {
+            public Builder actionerName(java.util.List<String> actionerName) {
                 this.actionerName = actionerName;
                 return this;
             }
@@ -1040,7 +1045,7 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
             /**
              * CurrentActivityInstances.
              */
-            public Builder currentActivityInstances(java.util.List < CurrentActivityInstances> currentActivityInstances) {
+            public Builder currentActivityInstances(java.util.List<CurrentActivityInstances> currentActivityInstances) {
                 this.currentActivityInstances = currentActivityInstances;
                 return this;
             }
@@ -1048,7 +1053,7 @@ public class GetMeCorpSubmissionResponseBody extends TeaModel {
             /**
              * DataMap.
              */
-            public Builder dataMap(java.util.Map < String, ? > dataMap) {
+            public Builder dataMap(java.util.Map<String, ?> dataMap) {
                 this.dataMap = dataMap;
                 return this;
             }

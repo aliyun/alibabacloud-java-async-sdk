@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -266,7 +271,7 @@ public class GetGroupLiveListResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupLiveList")
-        private java.util.List < GroupLiveList> groupLiveList;
+        private java.util.List<GroupLiveList> groupLiveList;
 
         private Result(Builder builder) {
             this.groupLiveList = builder.groupLiveList;
@@ -283,17 +288,17 @@ public class GetGroupLiveListResponseBody extends TeaModel {
         /**
          * @return groupLiveList
          */
-        public java.util.List < GroupLiveList> getGroupLiveList() {
+        public java.util.List<GroupLiveList> getGroupLiveList() {
             return this.groupLiveList;
         }
 
         public static final class Builder {
-            private java.util.List < GroupLiveList> groupLiveList; 
+            private java.util.List<GroupLiveList> groupLiveList; 
 
             /**
              * GroupLiveList.
              */
-            public Builder groupLiveList(java.util.List < GroupLiveList> groupLiveList) {
+            public Builder groupLiveList(java.util.List<GroupLiveList> groupLiveList) {
                 this.groupLiveList = groupLiveList;
                 return this;
             }

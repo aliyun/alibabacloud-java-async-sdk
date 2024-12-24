@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class AddWorkspaceMembersRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Members")
-    private java.util.List < Members> members;
+    private java.util.List<Members> members;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantContext")
@@ -60,7 +65,7 @@ public class AddWorkspaceMembersRequest extends Request {
     /**
      * @return members
      */
-    public java.util.List < Members> getMembers() {
+    public java.util.List<Members> getMembers() {
         return this.members;
     }
 
@@ -80,7 +85,7 @@ public class AddWorkspaceMembersRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddWorkspaceMembersRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.List < Members> members; 
+        private java.util.List<Members> members; 
         private TenantContext tenantContext; 
         private String workspaceId; 
 
@@ -109,7 +114,7 @@ public class AddWorkspaceMembersRequest extends Request {
         /**
          * Members.
          */
-        public Builder members(java.util.List < Members> members) {
+        public Builder members(java.util.List<Members> members) {
             String membersShrink = shrink(members, "Members", "json");
             this.putBodyParameter("Members", membersShrink);
             this.members = members;

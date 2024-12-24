@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetTemplateListByUserIdResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("templateList")
-    private java.util.List < TemplateList> templateList;
+    private java.util.List<TemplateList> templateList;
 
     private GetTemplateListByUserIdResponseBody(Builder builder) {
         this.nextCursor = builder.nextCursor;
@@ -52,14 +57,14 @@ public class GetTemplateListByUserIdResponseBody extends TeaModel {
     /**
      * @return templateList
      */
-    public java.util.List < TemplateList> getTemplateList() {
+    public java.util.List<TemplateList> getTemplateList() {
         return this.templateList;
     }
 
     public static final class Builder {
         private Long nextCursor; 
         private String requestId; 
-        private java.util.List < TemplateList> templateList; 
+        private java.util.List<TemplateList> templateList; 
 
         /**
          * nextCursor.
@@ -83,7 +88,7 @@ public class GetTemplateListByUserIdResponseBody extends TeaModel {
         /**
          * templateList.
          */
-        public Builder templateList(java.util.List < TemplateList> templateList) {
+        public Builder templateList(java.util.List<TemplateList> templateList) {
             this.templateList = templateList;
             return this;
         }

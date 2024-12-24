@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListDriveSpacesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("spaces")
-    private java.util.List < Spaces> spaces;
+    private java.util.List<Spaces> spaces;
 
     @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
@@ -60,7 +65,7 @@ public class ListDriveSpacesResponseBody extends TeaModel {
     /**
      * @return spaces
      */
-    public java.util.List < Spaces> getSpaces() {
+    public java.util.List<Spaces> getSpaces() {
         return this.spaces;
     }
 
@@ -81,7 +86,7 @@ public class ListDriveSpacesResponseBody extends TeaModel {
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Spaces> spaces; 
+        private java.util.List<Spaces> spaces; 
         private String vendorRequestId; 
         private String vendorType; 
 
@@ -104,7 +109,7 @@ public class ListDriveSpacesResponseBody extends TeaModel {
         /**
          * spaces.
          */
-        public Builder spaces(java.util.List < Spaces> spaces) {
+        public Builder spaces(java.util.List<Spaces> spaces) {
             this.spaces = spaces;
             return this;
         }

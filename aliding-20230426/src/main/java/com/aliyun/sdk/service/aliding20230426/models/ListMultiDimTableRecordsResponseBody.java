@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("records")
-    private java.util.List < Records> records;
+    private java.util.List<Records> records;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -64,7 +69,7 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
     /**
      * @return records
      */
-    public java.util.List < Records> getRecords() {
+    public java.util.List<Records> getRecords() {
         return this.records;
     }
 
@@ -92,7 +97,7 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean hasMore; 
         private String nextToken; 
-        private java.util.List < Records> records; 
+        private java.util.List<Records> records; 
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
@@ -116,7 +121,7 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
         /**
          * records.
          */
-        public Builder records(java.util.List < Records> records) {
+        public Builder records(java.util.List<Records> records) {
             this.records = records;
             return this;
         }
@@ -259,7 +264,7 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
         private Long createdTime;
 
         @com.aliyun.core.annotation.NameInMap("Fields")
-        private java.util.Map < String, ? > fields;
+        private java.util.Map<String, ?> fields;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -304,7 +309,7 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
         /**
          * @return fields
          */
-        public java.util.Map < String, ? > getFields() {
+        public java.util.Map<String, ?> getFields() {
             return this.fields;
         }
 
@@ -332,7 +337,7 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private CreatedBy createdBy; 
             private Long createdTime; 
-            private java.util.Map < String, ? > fields; 
+            private java.util.Map<String, ?> fields; 
             private String id; 
             private LastModifiedBy lastModifiedBy; 
             private Long lastModifiedTime; 
@@ -356,7 +361,7 @@ public class ListMultiDimTableRecordsResponseBody extends TeaModel {
             /**
              * Fields.
              */
-            public Builder fields(java.util.Map < String, ? > fields) {
+            public Builder fields(java.util.Map<String, ?> fields) {
                 this.fields = fields;
                 return this;
             }

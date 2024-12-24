@@ -1894,6 +1894,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetOrgOrWebOpenDocContentTaskId  GetOrgOrWebOpenDocContentTaskIdRequest
+     * @return GetOrgOrWebOpenDocContentTaskIdResponse
+     */
+    @Override
+    public CompletableFuture<GetOrgOrWebOpenDocContentTaskIdResponse> getOrgOrWebOpenDocContentTaskId(GetOrgOrWebOpenDocContentTaskIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetOrgOrWebOpenDocContentTaskId").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v2/documents/getOrgOrWebOpenDocContentTaskId").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetOrgOrWebOpenDocContentTaskIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetOrgOrWebOpenDocContentTaskIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetProcessDefinition  GetProcessDefinitionRequest
      * @return GetProcessDefinitionResponse
      */
@@ -2734,6 +2752,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryConferenceInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryConferenceInfoByRoomCode  QueryConferenceInfoByRoomCodeRequest
+     * @return QueryConferenceInfoByRoomCodeResponse
+     */
+    @Override
+    public CompletableFuture<QueryConferenceInfoByRoomCodeResponse> queryConferenceInfoByRoomCode(QueryConferenceInfoByRoomCodeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryConferenceInfoByRoomCode").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/ysp/queryConferenceInfoByRoomCode").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryConferenceInfoByRoomCodeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryConferenceInfoByRoomCodeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

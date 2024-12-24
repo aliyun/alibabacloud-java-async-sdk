@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -121,6 +126,9 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnchorNickname")
         private String anchorNickname;
 
+        @com.aliyun.core.annotation.NameInMap("AnchorUnionId")
+        private String anchorUnionId;
+
         @com.aliyun.core.annotation.NameInMap("AnchorUserId")
         private String anchorUserId;
 
@@ -134,13 +142,14 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         private String liveUuid;
 
         @com.aliyun.core.annotation.NameInMap("ShareOpenConversationIds")
-        private java.util.List < String > shareOpenConversationIds;
+        private java.util.List<String> shareOpenConversationIds;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private LiveList(Builder builder) {
             this.anchorNickname = builder.anchorNickname;
+            this.anchorUnionId = builder.anchorUnionId;
             this.anchorUserId = builder.anchorUserId;
             this.liveEndTime = builder.liveEndTime;
             this.liveStartTime = builder.liveStartTime;
@@ -162,6 +171,13 @@ public class GetOrgLiveListResponseBody extends TeaModel {
          */
         public String getAnchorNickname() {
             return this.anchorNickname;
+        }
+
+        /**
+         * @return anchorUnionId
+         */
+        public String getAnchorUnionId() {
+            return this.anchorUnionId;
         }
 
         /**
@@ -195,7 +211,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         /**
          * @return shareOpenConversationIds
          */
-        public java.util.List < String > getShareOpenConversationIds() {
+        public java.util.List<String> getShareOpenConversationIds() {
             return this.shareOpenConversationIds;
         }
 
@@ -208,11 +224,12 @@ public class GetOrgLiveListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String anchorNickname; 
+            private String anchorUnionId; 
             private String anchorUserId; 
             private Long liveEndTime; 
             private Long liveStartTime; 
             private String liveUuid; 
-            private java.util.List < String > shareOpenConversationIds; 
+            private java.util.List<String> shareOpenConversationIds; 
             private String title; 
 
             /**
@@ -220,6 +237,14 @@ public class GetOrgLiveListResponseBody extends TeaModel {
              */
             public Builder anchorNickname(String anchorNickname) {
                 this.anchorNickname = anchorNickname;
+                return this;
+            }
+
+            /**
+             * AnchorUnionId.
+             */
+            public Builder anchorUnionId(String anchorUnionId) {
+                this.anchorUnionId = anchorUnionId;
                 return this;
             }
 
@@ -258,7 +283,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
             /**
              * ShareOpenConversationIds.
              */
-            public Builder shareOpenConversationIds(java.util.List < String > shareOpenConversationIds) {
+            public Builder shareOpenConversationIds(java.util.List<String> shareOpenConversationIds) {
                 this.shareOpenConversationIds = shareOpenConversationIds;
                 return this;
             }
@@ -289,7 +314,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         private Boolean hasMore;
 
         @com.aliyun.core.annotation.NameInMap("LiveList")
-        private java.util.List < LiveList> liveList;
+        private java.util.List<LiveList> liveList;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
@@ -326,7 +351,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         /**
          * @return liveList
          */
-        public java.util.List < LiveList> getLiveList() {
+        public java.util.List<LiveList> getLiveList() {
             return this.liveList;
         }
 
@@ -353,7 +378,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean hasMore; 
-            private java.util.List < LiveList> liveList; 
+            private java.util.List<LiveList> liveList; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
@@ -369,7 +394,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
             /**
              * LiveList.
              */
-            public Builder liveList(java.util.List < LiveList> liveList) {
+            public Builder liveList(java.util.List<LiveList> liveList) {
                 this.liveList = liveList;
                 return this;
             }
@@ -415,6 +440,9 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnchorNickname")
         private String anchorNickname;
 
+        @com.aliyun.core.annotation.NameInMap("AnchorUnionId")
+        private String anchorUnionId;
+
         @com.aliyun.core.annotation.NameInMap("AnchorUserId")
         private String anchorUserId;
 
@@ -432,6 +460,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
 
         private UpdateLiveLiveList(Builder builder) {
             this.anchorNickname = builder.anchorNickname;
+            this.anchorUnionId = builder.anchorUnionId;
             this.anchorUserId = builder.anchorUserId;
             this.liveEndTime = builder.liveEndTime;
             this.liveStartTime = builder.liveStartTime;
@@ -452,6 +481,13 @@ public class GetOrgLiveListResponseBody extends TeaModel {
          */
         public String getAnchorNickname() {
             return this.anchorNickname;
+        }
+
+        /**
+         * @return anchorUnionId
+         */
+        public String getAnchorUnionId() {
+            return this.anchorUnionId;
         }
 
         /**
@@ -491,6 +527,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String anchorNickname; 
+            private String anchorUnionId; 
             private String anchorUserId; 
             private Long liveEndTime; 
             private Long liveStartTime; 
@@ -502,6 +539,14 @@ public class GetOrgLiveListResponseBody extends TeaModel {
              */
             public Builder anchorNickname(String anchorNickname) {
                 this.anchorNickname = anchorNickname;
+                return this;
+            }
+
+            /**
+             * AnchorUnionId.
+             */
+            public Builder anchorUnionId(String anchorUnionId) {
+                this.anchorUnionId = anchorUnionId;
                 return this;
             }
 
@@ -563,7 +608,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         private Boolean hasMore;
 
         @com.aliyun.core.annotation.NameInMap("LiveList")
-        private java.util.List < UpdateLiveLiveList> liveList;
+        private java.util.List<UpdateLiveLiveList> liveList;
 
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
@@ -600,7 +645,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         /**
          * @return liveList
          */
-        public java.util.List < UpdateLiveLiveList> getLiveList() {
+        public java.util.List<UpdateLiveLiveList> getLiveList() {
             return this.liveList;
         }
 
@@ -627,7 +672,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean hasMore; 
-            private java.util.List < UpdateLiveLiveList> liveList; 
+            private java.util.List<UpdateLiveLiveList> liveList; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
@@ -643,7 +688,7 @@ public class GetOrgLiveListResponseBody extends TeaModel {
             /**
              * LiveList.
              */
-            public Builder liveList(java.util.List < UpdateLiveLiveList> liveList) {
+            public Builder liveList(java.util.List<UpdateLiveLiveList> liveList) {
                 this.liveList = liveList;
                 return this;
             }

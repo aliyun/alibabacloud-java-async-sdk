@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetNewestInnerGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("groupInfos")
-    private java.util.List < GroupInfos> groupInfos;
+    private java.util.List<GroupInfos> groupInfos;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -42,7 +47,7 @@ public class GetNewestInnerGroupsResponseBody extends TeaModel {
     /**
      * @return groupInfos
      */
-    public java.util.List < GroupInfos> getGroupInfos() {
+    public java.util.List<GroupInfos> getGroupInfos() {
         return this.groupInfos;
     }
 
@@ -68,7 +73,7 @@ public class GetNewestInnerGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GroupInfos> groupInfos; 
+        private java.util.List<GroupInfos> groupInfos; 
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
@@ -76,7 +81,7 @@ public class GetNewestInnerGroupsResponseBody extends TeaModel {
         /**
          * groupInfos.
          */
-        public Builder groupInfos(java.util.List < GroupInfos> groupInfos) {
+        public Builder groupInfos(java.util.List<GroupInfos> groupInfos) {
             this.groupInfos = groupInfos;
             return this;
         }

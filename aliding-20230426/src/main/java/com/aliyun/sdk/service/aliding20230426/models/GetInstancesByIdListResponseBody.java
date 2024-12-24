@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
@@ -49,7 +54,7 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -69,7 +74,7 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private String vendorRequestId; 
         private String vendorType; 
 
@@ -84,7 +89,7 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
         /**
          * result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -507,13 +512,13 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionExecutor")
-        private java.util.List < ActionExecutor> actionExecutor;
+        private java.util.List<ActionExecutor> actionExecutor;
 
         @com.aliyun.core.annotation.NameInMap("ApprovedResult")
         private String approvedResult;
 
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.Map < String, ? > data;
+        private java.util.Map<String, ?> data;
 
         @com.aliyun.core.annotation.NameInMap("FormUuid")
         private String formUuid;
@@ -556,7 +561,7 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
         /**
          * @return actionExecutor
          */
-        public java.util.List < ActionExecutor> getActionExecutor() {
+        public java.util.List<ActionExecutor> getActionExecutor() {
             return this.actionExecutor;
         }
 
@@ -570,7 +575,7 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.Map < String, ? > getData() {
+        public java.util.Map<String, ?> getData() {
             return this.data;
         }
 
@@ -617,9 +622,9 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ActionExecutor> actionExecutor; 
+            private java.util.List<ActionExecutor> actionExecutor; 
             private String approvedResult; 
-            private java.util.Map < String, ? > data; 
+            private java.util.Map<String, ?> data; 
             private String formUuid; 
             private String instanceStatus; 
             private Originator originator; 
@@ -630,7 +635,7 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
             /**
              * ActionExecutor.
              */
-            public Builder actionExecutor(java.util.List < ActionExecutor> actionExecutor) {
+            public Builder actionExecutor(java.util.List<ActionExecutor> actionExecutor) {
                 this.actionExecutor = actionExecutor;
                 return this;
             }
@@ -646,7 +651,7 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
             /**
              * Data.
              */
-            public Builder data(java.util.Map < String, ? > data) {
+            public Builder data(java.util.Map<String, ?> data) {
                 this.data = data;
                 return this;
             }

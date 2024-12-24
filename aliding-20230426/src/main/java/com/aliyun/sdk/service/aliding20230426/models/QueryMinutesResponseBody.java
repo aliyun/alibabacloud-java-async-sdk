@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryMinutesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("audioList")
-    private java.util.List < AudioList> audioList;
+    private java.util.List<AudioList> audioList;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -42,7 +47,7 @@ public class QueryMinutesResponseBody extends TeaModel {
     /**
      * @return audioList
      */
-    public java.util.List < AudioList> getAudioList() {
+    public java.util.List<AudioList> getAudioList() {
         return this.audioList;
     }
 
@@ -68,7 +73,7 @@ public class QueryMinutesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AudioList> audioList; 
+        private java.util.List<AudioList> audioList; 
         private String requestId; 
         private String vendorRequestId; 
         private String vendorType; 
@@ -76,7 +81,7 @@ public class QueryMinutesResponseBody extends TeaModel {
         /**
          * audioList.
          */
-        public Builder audioList(java.util.List < AudioList> audioList) {
+        public Builder audioList(java.util.List<AudioList> audioList) {
             this.audioList = audioList;
             return this;
         }

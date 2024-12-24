@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("events")
-    private java.util.List < Events> events;
+    private java.util.List<Events> events;
 
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
@@ -50,7 +55,7 @@ public class ListEventsResponseBody extends TeaModel {
     /**
      * @return events
      */
-    public java.util.List < Events> getEvents() {
+    public java.util.List<Events> getEvents() {
         return this.events;
     }
 
@@ -90,7 +95,7 @@ public class ListEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Events> events; 
+        private java.util.List<Events> events; 
         private String nextToken; 
         private String requestId; 
         private String syncToken; 
@@ -100,7 +105,7 @@ public class ListEventsResponseBody extends TeaModel {
         /**
          * events.
          */
-        public Builder events(java.util.List < Events> events) {
+        public Builder events(java.util.List<Events> events) {
             this.events = events;
             return this;
         }
@@ -520,7 +525,7 @@ public class ListEventsResponseBody extends TeaModel {
         private String displayName;
 
         @com.aliyun.core.annotation.NameInMap("MeetingRooms")
-        private java.util.List < String > meetingRooms;
+        private java.util.List<String> meetingRooms;
 
         private Location(Builder builder) {
             this.displayName = builder.displayName;
@@ -545,13 +550,13 @@ public class ListEventsResponseBody extends TeaModel {
         /**
          * @return meetingRooms
          */
-        public java.util.List < String > getMeetingRooms() {
+        public java.util.List<String> getMeetingRooms() {
             return this.meetingRooms;
         }
 
         public static final class Builder {
             private String displayName; 
-            private java.util.List < String > meetingRooms; 
+            private java.util.List<String> meetingRooms; 
 
             /**
              * DisplayName.
@@ -564,7 +569,7 @@ public class ListEventsResponseBody extends TeaModel {
             /**
              * MeetingRooms.
              */
-            public Builder meetingRooms(java.util.List < String > meetingRooms) {
+            public Builder meetingRooms(java.util.List<String> meetingRooms) {
                 this.meetingRooms = meetingRooms;
                 return this;
             }
@@ -674,7 +679,7 @@ public class ListEventsResponseBody extends TeaModel {
         private String conferenceId;
 
         @com.aliyun.core.annotation.NameInMap("ExtraInfo")
-        private java.util.Map < String, ? > extraInfo;
+        private java.util.Map<String, ?> extraInfo;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -707,7 +712,7 @@ public class ListEventsResponseBody extends TeaModel {
         /**
          * @return extraInfo
          */
-        public java.util.Map < String, ? > getExtraInfo() {
+        public java.util.Map<String, ?> getExtraInfo() {
             return this.extraInfo;
         }
 
@@ -727,7 +732,7 @@ public class ListEventsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String conferenceId; 
-            private java.util.Map < String, ? > extraInfo; 
+            private java.util.Map<String, ?> extraInfo; 
             private String type; 
             private String url; 
 
@@ -742,7 +747,7 @@ public class ListEventsResponseBody extends TeaModel {
             /**
              * ExtraInfo.
              */
-            public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
                 this.extraInfo = extraInfo;
                 return this;
             }
@@ -1394,10 +1399,10 @@ public class ListEventsResponseBody extends TeaModel {
      */
     public static class Events extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attendees")
-        private java.util.List < Attendees> attendees;
+        private java.util.List<Attendees> attendees;
 
         @com.aliyun.core.annotation.NameInMap("Categories")
-        private java.util.List < Categories> categories;
+        private java.util.List<Categories> categories;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -1421,7 +1426,7 @@ public class ListEventsResponseBody extends TeaModel {
         private Location location;
 
         @com.aliyun.core.annotation.NameInMap("MeetingRooms")
-        private java.util.List < MeetingRooms> meetingRooms;
+        private java.util.List<MeetingRooms> meetingRooms;
 
         @com.aliyun.core.annotation.NameInMap("OnlineMeetingInfo")
         private OnlineMeetingInfo onlineMeetingInfo;
@@ -1436,7 +1441,7 @@ public class ListEventsResponseBody extends TeaModel {
         private Recurrence recurrence;
 
         @com.aliyun.core.annotation.NameInMap("Reminders")
-        private java.util.List < Reminders> reminders;
+        private java.util.List<Reminders> reminders;
 
         @com.aliyun.core.annotation.NameInMap("RichTextDescription")
         private RichTextDescription richTextDescription;
@@ -1491,14 +1496,14 @@ public class ListEventsResponseBody extends TeaModel {
         /**
          * @return attendees
          */
-        public java.util.List < Attendees> getAttendees() {
+        public java.util.List<Attendees> getAttendees() {
             return this.attendees;
         }
 
         /**
          * @return categories
          */
-        public java.util.List < Categories> getCategories() {
+        public java.util.List<Categories> getCategories() {
             return this.categories;
         }
 
@@ -1554,7 +1559,7 @@ public class ListEventsResponseBody extends TeaModel {
         /**
          * @return meetingRooms
          */
-        public java.util.List < MeetingRooms> getMeetingRooms() {
+        public java.util.List<MeetingRooms> getMeetingRooms() {
             return this.meetingRooms;
         }
 
@@ -1589,7 +1594,7 @@ public class ListEventsResponseBody extends TeaModel {
         /**
          * @return reminders
          */
-        public java.util.List < Reminders> getReminders() {
+        public java.util.List<Reminders> getReminders() {
             return this.reminders;
         }
 
@@ -1636,8 +1641,8 @@ public class ListEventsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Attendees> attendees; 
-            private java.util.List < Categories> categories; 
+            private java.util.List<Attendees> attendees; 
+            private java.util.List<Categories> categories; 
             private String createTime; 
             private String description; 
             private End end; 
@@ -1645,12 +1650,12 @@ public class ListEventsResponseBody extends TeaModel {
             private String id; 
             private Boolean isAllDay; 
             private Location location; 
-            private java.util.List < MeetingRooms> meetingRooms; 
+            private java.util.List<MeetingRooms> meetingRooms; 
             private OnlineMeetingInfo onlineMeetingInfo; 
             private Organizer organizer; 
             private OriginStart originStart; 
             private Recurrence recurrence; 
-            private java.util.List < Reminders> reminders; 
+            private java.util.List<Reminders> reminders; 
             private RichTextDescription richTextDescription; 
             private String seriesMasterId; 
             private Start start; 
@@ -1661,7 +1666,7 @@ public class ListEventsResponseBody extends TeaModel {
             /**
              * Attendees.
              */
-            public Builder attendees(java.util.List < Attendees> attendees) {
+            public Builder attendees(java.util.List<Attendees> attendees) {
                 this.attendees = attendees;
                 return this;
             }
@@ -1669,7 +1674,7 @@ public class ListEventsResponseBody extends TeaModel {
             /**
              * Categories.
              */
-            public Builder categories(java.util.List < Categories> categories) {
+            public Builder categories(java.util.List<Categories> categories) {
                 this.categories = categories;
                 return this;
             }
@@ -1733,7 +1738,7 @@ public class ListEventsResponseBody extends TeaModel {
             /**
              * MeetingRooms.
              */
-            public Builder meetingRooms(java.util.List < MeetingRooms> meetingRooms) {
+            public Builder meetingRooms(java.util.List<MeetingRooms> meetingRooms) {
                 this.meetingRooms = meetingRooms;
                 return this;
             }
@@ -1773,7 +1778,7 @@ public class ListEventsResponseBody extends TeaModel {
             /**
              * Reminders.
              */
-            public Builder reminders(java.util.List < Reminders> reminders) {
+            public Builder reminders(java.util.List<Reminders> reminders) {
                 this.reminders = reminders;
                 return this;
             }

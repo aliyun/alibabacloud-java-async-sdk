@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetAllSheetsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("value")
-    private java.util.List < Value> value;
+    private java.util.List<Value> value;
 
     private GetAllSheetsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class GetAllSheetsResponseBody extends TeaModel {
     /**
      * @return value
      */
-    public java.util.List < Value> getValue() {
+    public java.util.List<Value> getValue() {
         return this.value;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Value> value; 
+        private java.util.List<Value> value; 
 
         /**
          * <p>requestId</p>
@@ -63,7 +68,7 @@ public class GetAllSheetsResponseBody extends TeaModel {
         /**
          * value.
          */
-        public Builder value(java.util.List < Value> value) {
+        public Builder value(java.util.List<Value> value) {
             this.value = value;
             return this;
         }

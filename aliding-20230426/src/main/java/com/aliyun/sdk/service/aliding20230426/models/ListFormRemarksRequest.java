@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class ListFormRemarksRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FormInstanceIdList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > formInstanceIdList;
+    private java.util.List<String> formInstanceIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FormUuid")
@@ -75,7 +80,7 @@ public class ListFormRemarksRequest extends Request {
     /**
      * @return formInstanceIdList
      */
-    public java.util.List < String > getFormInstanceIdList() {
+    public java.util.List<String> getFormInstanceIdList() {
         return this.formInstanceIdList;
     }
 
@@ -96,7 +101,7 @@ public class ListFormRemarksRequest extends Request {
     public static final class Builder extends Request.Builder<ListFormRemarksRequest, Builder> {
         private AccountContext accountContext; 
         private String appType; 
-        private java.util.List < String > formInstanceIdList; 
+        private java.util.List<String> formInstanceIdList; 
         private String formUuid; 
         private String systemToken; 
 
@@ -141,7 +146,7 @@ public class ListFormRemarksRequest extends Request {
          * <strong>example:</strong>
          * <p>FORM-xxxxx</p>
          */
-        public Builder formInstanceIdList(java.util.List < String > formInstanceIdList) {
+        public Builder formInstanceIdList(java.util.List<String> formInstanceIdList) {
             String formInstanceIdListShrink = shrink(formInstanceIdList, "FormInstanceIdList", "json");
             this.putBodyParameter("FormInstanceIdList", formInstanceIdListShrink);
             this.formInstanceIdList = formInstanceIdList;

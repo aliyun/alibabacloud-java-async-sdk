@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetTaskCopiesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
@@ -50,7 +55,7 @@ public class GetTaskCopiesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class GetTaskCopiesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Long pageNumber; 
         private String requestId; 
         private Long totalCount; 
@@ -100,7 +105,7 @@ public class GetTaskCopiesResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -286,10 +291,10 @@ public class GetTaskCopiesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionExecutorId")
-        private java.util.List < String > actionExecutorId;
+        private java.util.List<String> actionExecutorId;
 
         @com.aliyun.core.annotation.NameInMap("ActionExecutorName")
-        private java.util.List < String > actionExecutorName;
+        private java.util.List<String> actionExecutorName;
 
         @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
@@ -301,10 +306,10 @@ public class GetTaskCopiesResponseBody extends TeaModel {
         private String createTimeGMT;
 
         @com.aliyun.core.annotation.NameInMap("CurrentActivityInstances")
-        private java.util.List < CurrentActivityInstances> currentActivityInstances;
+        private java.util.List<CurrentActivityInstances> currentActivityInstances;
 
         @com.aliyun.core.annotation.NameInMap("DataMap")
-        private java.util.Map < String, ? > dataMap;
+        private java.util.Map<String, ?> dataMap;
 
         @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
@@ -407,14 +412,14 @@ public class GetTaskCopiesResponseBody extends TeaModel {
         /**
          * @return actionExecutorId
          */
-        public java.util.List < String > getActionExecutorId() {
+        public java.util.List<String> getActionExecutorId() {
             return this.actionExecutorId;
         }
 
         /**
          * @return actionExecutorName
          */
-        public java.util.List < String > getActionExecutorName() {
+        public java.util.List<String> getActionExecutorName() {
             return this.actionExecutorName;
         }
 
@@ -442,14 +447,14 @@ public class GetTaskCopiesResponseBody extends TeaModel {
         /**
          * @return currentActivityInstances
          */
-        public java.util.List < CurrentActivityInstances> getCurrentActivityInstances() {
+        public java.util.List<CurrentActivityInstances> getCurrentActivityInstances() {
             return this.currentActivityInstances;
         }
 
         /**
          * @return dataMap
          */
-        public java.util.Map < String, ? > getDataMap() {
+        public java.util.Map<String, ?> getDataMap() {
             return this.dataMap;
         }
 
@@ -594,13 +599,13 @@ public class GetTaskCopiesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > actionExecutorId; 
-            private java.util.List < String > actionExecutorName; 
+            private java.util.List<String> actionExecutorId; 
+            private java.util.List<String> actionExecutorName; 
             private String appType; 
             private String carbonActivityId; 
             private String createTimeGMT; 
-            private java.util.List < CurrentActivityInstances> currentActivityInstances; 
-            private java.util.Map < String, ? > dataMap; 
+            private java.util.List<CurrentActivityInstances> currentActivityInstances; 
+            private java.util.Map<String, ?> dataMap; 
             private String dataType; 
             private String finishTimeGMT; 
             private String formInstanceId; 
@@ -625,7 +630,7 @@ public class GetTaskCopiesResponseBody extends TeaModel {
             /**
              * ActionExecutorId.
              */
-            public Builder actionExecutorId(java.util.List < String > actionExecutorId) {
+            public Builder actionExecutorId(java.util.List<String> actionExecutorId) {
                 this.actionExecutorId = actionExecutorId;
                 return this;
             }
@@ -633,7 +638,7 @@ public class GetTaskCopiesResponseBody extends TeaModel {
             /**
              * ActionExecutorName.
              */
-            public Builder actionExecutorName(java.util.List < String > actionExecutorName) {
+            public Builder actionExecutorName(java.util.List<String> actionExecutorName) {
                 this.actionExecutorName = actionExecutorName;
                 return this;
             }
@@ -665,7 +670,7 @@ public class GetTaskCopiesResponseBody extends TeaModel {
             /**
              * CurrentActivityInstances.
              */
-            public Builder currentActivityInstances(java.util.List < CurrentActivityInstances> currentActivityInstances) {
+            public Builder currentActivityInstances(java.util.List<CurrentActivityInstances> currentActivityInstances) {
                 this.currentActivityInstances = currentActivityInstances;
                 return this;
             }
@@ -673,7 +678,7 @@ public class GetTaskCopiesResponseBody extends TeaModel {
             /**
              * DataMap.
              */
-            public Builder dataMap(java.util.Map < String, ? > dataMap) {
+            public Builder dataMap(java.util.Map<String, ?> dataMap) {
                 this.dataMap = dataMap;
                 return this;
             }

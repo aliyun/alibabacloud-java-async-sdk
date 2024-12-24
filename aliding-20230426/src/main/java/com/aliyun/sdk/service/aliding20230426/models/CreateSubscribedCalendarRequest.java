@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class CreateSubscribedCalendarRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Managers")
-    private java.util.List < String > managers;
+    private java.util.List<String> managers;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -73,7 +78,7 @@ public class CreateSubscribedCalendarRequest extends Request {
     /**
      * @return managers
      */
-    public java.util.List < String > getManagers() {
+    public java.util.List<String> getManagers() {
         return this.managers;
     }
 
@@ -94,7 +99,7 @@ public class CreateSubscribedCalendarRequest extends Request {
     public static final class Builder extends Request.Builder<CreateSubscribedCalendarRequest, Builder> {
         private AccountContext accountContext; 
         private String description; 
-        private java.util.List < String > managers; 
+        private java.util.List<String> managers; 
         private String name; 
         private SubscribeScope subscribeScope; 
 
@@ -133,7 +138,7 @@ public class CreateSubscribedCalendarRequest extends Request {
         /**
          * Managers.
          */
-        public Builder managers(java.util.List < String > managers) {
+        public Builder managers(java.util.List<String> managers) {
             String managersShrink = shrink(managers, "Managers", "json");
             this.putBodyParameter("Managers", managersShrink);
             this.managers = managers;
@@ -225,13 +230,13 @@ public class CreateSubscribedCalendarRequest extends Request {
      */
     public static class SubscribeScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CorpIds")
-        private java.util.List < String > corpIds;
+        private java.util.List<String> corpIds;
 
         @com.aliyun.core.annotation.NameInMap("OpenConversationIds")
-        private java.util.List < String > openConversationIds;
+        private java.util.List<String> openConversationIds;
 
         @com.aliyun.core.annotation.NameInMap("UserIds")
-        private java.util.List < String > userIds;
+        private java.util.List<String> userIds;
 
         private SubscribeScope(Builder builder) {
             this.corpIds = builder.corpIds;
@@ -250,33 +255,33 @@ public class CreateSubscribedCalendarRequest extends Request {
         /**
          * @return corpIds
          */
-        public java.util.List < String > getCorpIds() {
+        public java.util.List<String> getCorpIds() {
             return this.corpIds;
         }
 
         /**
          * @return openConversationIds
          */
-        public java.util.List < String > getOpenConversationIds() {
+        public java.util.List<String> getOpenConversationIds() {
             return this.openConversationIds;
         }
 
         /**
          * @return userIds
          */
-        public java.util.List < String > getUserIds() {
+        public java.util.List<String> getUserIds() {
             return this.userIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > corpIds; 
-            private java.util.List < String > openConversationIds; 
-            private java.util.List < String > userIds; 
+            private java.util.List<String> corpIds; 
+            private java.util.List<String> openConversationIds; 
+            private java.util.List<String> userIds; 
 
             /**
              * CorpIds.
              */
-            public Builder corpIds(java.util.List < String > corpIds) {
+            public Builder corpIds(java.util.List<String> corpIds) {
                 this.corpIds = corpIds;
                 return this;
             }
@@ -284,7 +289,7 @@ public class CreateSubscribedCalendarRequest extends Request {
             /**
              * OpenConversationIds.
              */
-            public Builder openConversationIds(java.util.List < String > openConversationIds) {
+            public Builder openConversationIds(java.util.List<String> openConversationIds) {
                 this.openConversationIds = openConversationIds;
                 return this;
             }
@@ -292,7 +297,7 @@ public class CreateSubscribedCalendarRequest extends Request {
             /**
              * UserIds.
              */
-            public Builder userIds(java.util.List < String > userIds) {
+            public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
                 return this;
             }

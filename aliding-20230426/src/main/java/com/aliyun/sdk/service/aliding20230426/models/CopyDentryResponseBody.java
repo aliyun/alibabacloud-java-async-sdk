@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CopyDentryResponseBody extends TeaModel {
     private Long createdTime;
 
     @com.aliyun.core.annotation.NameInMap("creator")
-    private java.util.Map < String, ? > creator;
+    private java.util.Map<String, ?> creator;
 
     @com.aliyun.core.annotation.NameInMap("dentryId")
     private String dentryId;
@@ -61,7 +66,7 @@ public class CopyDentryResponseBody extends TeaModel {
     private Long updatedTime;
 
     @com.aliyun.core.annotation.NameInMap("updater")
-    private java.util.Map < String, ? > updater;
+    private java.util.Map<String, ?> updater;
 
     @com.aliyun.core.annotation.NameInMap("url")
     private String url;
@@ -73,7 +78,7 @@ public class CopyDentryResponseBody extends TeaModel {
     private String vendorType;
 
     @com.aliyun.core.annotation.NameInMap("visitorInfo")
-    private java.util.Map < String, ? > visitorInfo;
+    private java.util.Map<String, ?> visitorInfo;
 
     private CopyDentryResponseBody(Builder builder) {
         this.contentType = builder.contentType;
@@ -124,7 +129,7 @@ public class CopyDentryResponseBody extends TeaModel {
     /**
      * @return creator
      */
-    public java.util.Map < String, ? > getCreator() {
+    public java.util.Map<String, ?> getCreator() {
         return this.creator;
     }
 
@@ -222,7 +227,7 @@ public class CopyDentryResponseBody extends TeaModel {
     /**
      * @return updater
      */
-    public java.util.Map < String, ? > getUpdater() {
+    public java.util.Map<String, ?> getUpdater() {
         return this.updater;
     }
 
@@ -250,14 +255,14 @@ public class CopyDentryResponseBody extends TeaModel {
     /**
      * @return visitorInfo
      */
-    public java.util.Map < String, ? > getVisitorInfo() {
+    public java.util.Map<String, ?> getVisitorInfo() {
         return this.visitorInfo;
     }
 
     public static final class Builder {
         private String contentType; 
         private Long createdTime; 
-        private java.util.Map < String, ? > creator; 
+        private java.util.Map<String, ?> creator; 
         private String dentryId; 
         private String dentryType; 
         private String dentryUuid; 
@@ -271,11 +276,11 @@ public class CopyDentryResponseBody extends TeaModel {
         private Space space; 
         private String spaceId; 
         private Long updatedTime; 
-        private java.util.Map < String, ? > updater; 
+        private java.util.Map<String, ?> updater; 
         private String url; 
         private String vendorRequestId; 
         private String vendorType; 
-        private java.util.Map < String, ? > visitorInfo; 
+        private java.util.Map<String, ?> visitorInfo; 
 
         /**
          * contentType.
@@ -296,7 +301,7 @@ public class CopyDentryResponseBody extends TeaModel {
         /**
          * creator.
          */
-        public Builder creator(java.util.Map < String, ? > creator) {
+        public Builder creator(java.util.Map<String, ?> creator) {
             this.creator = creator;
             return this;
         }
@@ -408,7 +413,7 @@ public class CopyDentryResponseBody extends TeaModel {
         /**
          * updater.
          */
-        public Builder updater(java.util.Map < String, ? > updater) {
+        public Builder updater(java.util.Map<String, ?> updater) {
             this.updater = updater;
             return this;
         }
@@ -440,7 +445,7 @@ public class CopyDentryResponseBody extends TeaModel {
         /**
          * visitorInfo.
          */
-        public Builder visitorInfo(java.util.Map < String, ? > visitorInfo) {
+        public Builder visitorInfo(java.util.Map<String, ?> visitorInfo) {
             this.visitorInfo = visitorInfo;
             return this;
         }
@@ -1229,13 +1234,13 @@ public class CopyDentryResponseBody extends TeaModel {
      */
     public static class VisitorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DentryActions")
-        private java.util.List < String > dentryActions;
+        private java.util.List<String> dentryActions;
 
         @com.aliyun.core.annotation.NameInMap("RoleCode")
         private String roleCode;
 
         @com.aliyun.core.annotation.NameInMap("SpaceActions")
-        private java.util.List < String > spaceActions;
+        private java.util.List<String> spaceActions;
 
         private VisitorInfo(Builder builder) {
             this.dentryActions = builder.dentryActions;
@@ -1254,7 +1259,7 @@ public class CopyDentryResponseBody extends TeaModel {
         /**
          * @return dentryActions
          */
-        public java.util.List < String > getDentryActions() {
+        public java.util.List<String> getDentryActions() {
             return this.dentryActions;
         }
 
@@ -1268,19 +1273,19 @@ public class CopyDentryResponseBody extends TeaModel {
         /**
          * @return spaceActions
          */
-        public java.util.List < String > getSpaceActions() {
+        public java.util.List<String> getSpaceActions() {
             return this.spaceActions;
         }
 
         public static final class Builder {
-            private java.util.List < String > dentryActions; 
+            private java.util.List<String> dentryActions; 
             private String roleCode; 
-            private java.util.List < String > spaceActions; 
+            private java.util.List<String> spaceActions; 
 
             /**
              * DentryActions.
              */
-            public Builder dentryActions(java.util.List < String > dentryActions) {
+            public Builder dentryActions(java.util.List<String> dentryActions) {
                 this.dentryActions = dentryActions;
                 return this;
             }
@@ -1296,7 +1301,7 @@ public class CopyDentryResponseBody extends TeaModel {
             /**
              * SpaceActions.
              */
-            public Builder spaceActions(java.util.List < String > spaceActions) {
+            public Builder spaceActions(java.util.List<String> spaceActions) {
                 this.spaceActions = spaceActions;
                 return this;
             }
@@ -1723,13 +1728,13 @@ public class CopyDentryResponseBody extends TeaModel {
      */
     public static class SpaceVisitorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DentryActions")
-        private java.util.List < String > dentryActions;
+        private java.util.List<String> dentryActions;
 
         @com.aliyun.core.annotation.NameInMap("RoleCode")
         private String roleCode;
 
         @com.aliyun.core.annotation.NameInMap("SpaceActions")
-        private java.util.List < String > spaceActions;
+        private java.util.List<String> spaceActions;
 
         private SpaceVisitorInfo(Builder builder) {
             this.dentryActions = builder.dentryActions;
@@ -1748,7 +1753,7 @@ public class CopyDentryResponseBody extends TeaModel {
         /**
          * @return dentryActions
          */
-        public java.util.List < String > getDentryActions() {
+        public java.util.List<String> getDentryActions() {
             return this.dentryActions;
         }
 
@@ -1762,19 +1767,19 @@ public class CopyDentryResponseBody extends TeaModel {
         /**
          * @return spaceActions
          */
-        public java.util.List < String > getSpaceActions() {
+        public java.util.List<String> getSpaceActions() {
             return this.spaceActions;
         }
 
         public static final class Builder {
-            private java.util.List < String > dentryActions; 
+            private java.util.List<String> dentryActions; 
             private String roleCode; 
-            private java.util.List < String > spaceActions; 
+            private java.util.List<String> spaceActions; 
 
             /**
              * DentryActions.
              */
-            public Builder dentryActions(java.util.List < String > dentryActions) {
+            public Builder dentryActions(java.util.List<String> dentryActions) {
                 this.dentryActions = dentryActions;
                 return this;
             }
@@ -1790,7 +1795,7 @@ public class CopyDentryResponseBody extends TeaModel {
             /**
              * SpaceActions.
              */
-            public Builder spaceActions(java.util.List < String > spaceActions) {
+            public Builder spaceActions(java.util.List<String> spaceActions) {
                 this.spaceActions = spaceActions;
                 return this;
             }
@@ -1831,7 +1836,7 @@ public class CopyDentryResponseBody extends TeaModel {
         private Owner owner;
 
         @com.aliyun.core.annotation.NameInMap("RecentList")
-        private java.util.List < RecentList> recentList;
+        private java.util.List<RecentList> recentList;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
@@ -1916,7 +1921,7 @@ public class CopyDentryResponseBody extends TeaModel {
         /**
          * @return recentList
          */
-        public java.util.List < RecentList> getRecentList() {
+        public java.util.List<RecentList> getRecentList() {
             return this.recentList;
         }
 
@@ -1949,7 +1954,7 @@ public class CopyDentryResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private Owner owner; 
-            private java.util.List < RecentList> recentList; 
+            private java.util.List<RecentList> recentList; 
             private Integer type; 
             private String url; 
             private SpaceVisitorInfo visitorInfo; 
@@ -2013,7 +2018,7 @@ public class CopyDentryResponseBody extends TeaModel {
             /**
              * RecentList.
              */
-            public Builder recentList(java.util.List < RecentList> recentList) {
+            public Builder recentList(java.util.List<RecentList> recentList) {
                 this.recentList = recentList;
                 return this;
             }

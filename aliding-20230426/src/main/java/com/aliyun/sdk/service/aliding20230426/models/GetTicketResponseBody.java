@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class GetTicketResponseBody extends TeaModel {
     private String stage;
 
     @com.aliyun.core.annotation.NameInMap("takers")
-    private java.util.List < Takers> takers;
+    private java.util.List<Takers> takers;
 
     @com.aliyun.core.annotation.NameInMap("template")
     private Template template;
@@ -160,7 +165,7 @@ public class GetTicketResponseBody extends TeaModel {
     /**
      * @return takers
      */
-    public java.util.List < Takers> getTakers() {
+    public java.util.List<Takers> getTakers() {
         return this.takers;
     }
 
@@ -210,7 +215,7 @@ public class GetTicketResponseBody extends TeaModel {
         private String scene; 
         private String sceneContext; 
         private String stage; 
-        private java.util.List < Takers> takers; 
+        private java.util.List<Takers> takers; 
         private Template template; 
         private String title; 
         private String updateTime; 
@@ -300,7 +305,7 @@ public class GetTicketResponseBody extends TeaModel {
         /**
          * takers.
          */
-        public Builder takers(java.util.List < Takers> takers) {
+        public Builder takers(java.util.List<Takers> takers) {
             this.takers = takers;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class GetTodoTaskResponseBody extends TeaModel {
     private Long dueTime;
 
     @com.aliyun.core.annotation.NameInMap("executorIds")
-    private java.util.List < String > executorIds;
+    private java.util.List<String> executorIds;
 
     @com.aliyun.core.annotation.NameInMap("finishTime")
     private Long finishTime;
@@ -55,7 +60,7 @@ public class GetTodoTaskResponseBody extends TeaModel {
     private String modifierId;
 
     @com.aliyun.core.annotation.NameInMap("participantIds")
-    private java.util.List < String > participantIds;
+    private java.util.List<String> participantIds;
 
     @com.aliyun.core.annotation.NameInMap("priority")
     private Integer priority;
@@ -182,7 +187,7 @@ public class GetTodoTaskResponseBody extends TeaModel {
     /**
      * @return executorIds
      */
-    public java.util.List < String > getExecutorIds() {
+    public java.util.List<String> getExecutorIds() {
         return this.executorIds;
     }
 
@@ -224,7 +229,7 @@ public class GetTodoTaskResponseBody extends TeaModel {
     /**
      * @return participantIds
      */
-    public java.util.List < String > getParticipantIds() {
+    public java.util.List<String> getParticipantIds() {
         return this.participantIds;
     }
 
@@ -307,13 +312,13 @@ public class GetTodoTaskResponseBody extends TeaModel {
         private DetailUrl detailUrl; 
         private Boolean done; 
         private Long dueTime; 
-        private java.util.List < String > executorIds; 
+        private java.util.List<String> executorIds; 
         private Long finishTime; 
         private String id; 
         private Boolean isOnlyShowExecutor; 
         private Long modifiedTime; 
         private String modifierId; 
-        private java.util.List < String > participantIds; 
+        private java.util.List<String> participantIds; 
         private Integer priority; 
         private String requestId; 
         private String source; 
@@ -392,7 +397,7 @@ public class GetTodoTaskResponseBody extends TeaModel {
         /**
          * executorIds.
          */
-        public Builder executorIds(java.util.List < String > executorIds) {
+        public Builder executorIds(java.util.List<String> executorIds) {
             this.executorIds = executorIds;
             return this;
         }
@@ -440,7 +445,7 @@ public class GetTodoTaskResponseBody extends TeaModel {
         /**
          * participantIds.
          */
-        public Builder participantIds(java.util.List < String > participantIds) {
+        public Builder participantIds(java.util.List<String> participantIds) {
             this.participantIds = participantIds;
             return this;
         }

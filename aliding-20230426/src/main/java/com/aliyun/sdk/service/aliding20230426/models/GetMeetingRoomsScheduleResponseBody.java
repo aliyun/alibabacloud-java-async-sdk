@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("scheduleInformation")
-    private java.util.List < ScheduleInformation> scheduleInformation;
+    private java.util.List<ScheduleInformation> scheduleInformation;
 
     private GetMeetingRoomsScheduleResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
     /**
      * @return scheduleInformation
      */
-    public java.util.List < ScheduleInformation> getScheduleInformation() {
+    public java.util.List<ScheduleInformation> getScheduleInformation() {
         return this.scheduleInformation;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ScheduleInformation> scheduleInformation; 
+        private java.util.List<ScheduleInformation> scheduleInformation; 
 
         /**
          * <p>requestId</p>
@@ -63,7 +68,7 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
         /**
          * scheduleInformation.
          */
-        public Builder scheduleInformation(java.util.List < ScheduleInformation> scheduleInformation) {
+        public Builder scheduleInformation(java.util.List<ScheduleInformation> scheduleInformation) {
             this.scheduleInformation = scheduleInformation;
             return this;
         }
@@ -396,7 +401,7 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
         private String roomId;
 
         @com.aliyun.core.annotation.NameInMap("ScheduleItems")
-        private java.util.List < ScheduleItems> scheduleItems;
+        private java.util.List<ScheduleItems> scheduleItems;
 
         private ScheduleInformation(Builder builder) {
             this.error = builder.error;
@@ -429,14 +434,14 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
         /**
          * @return scheduleItems
          */
-        public java.util.List < ScheduleItems> getScheduleItems() {
+        public java.util.List<ScheduleItems> getScheduleItems() {
             return this.scheduleItems;
         }
 
         public static final class Builder {
             private String error; 
             private String roomId; 
-            private java.util.List < ScheduleItems> scheduleItems; 
+            private java.util.List<ScheduleItems> scheduleItems; 
 
             /**
              * Error.
@@ -457,7 +462,7 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
             /**
              * ScheduleItems.
              */
-            public Builder scheduleItems(java.util.List < ScheduleItems> scheduleItems) {
+            public Builder scheduleItems(java.util.List<ScheduleItems> scheduleItems) {
                 this.scheduleItems = scheduleItems;
                 return this;
             }

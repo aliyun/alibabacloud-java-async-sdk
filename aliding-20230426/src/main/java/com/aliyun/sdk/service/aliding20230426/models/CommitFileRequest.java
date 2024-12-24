@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -333,7 +338,7 @@ public class CommitFileRequest extends Request {
      */
     public static class Option extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppProperties")
-        private java.util.List < AppProperties> appProperties;
+        private java.util.List<AppProperties> appProperties;
 
         @com.aliyun.core.annotation.NameInMap("ConflictStrategy")
         private String conflictStrategy;
@@ -366,7 +371,7 @@ public class CommitFileRequest extends Request {
         /**
          * @return appProperties
          */
-        public java.util.List < AppProperties> getAppProperties() {
+        public java.util.List<AppProperties> getAppProperties() {
             return this.appProperties;
         }
 
@@ -399,7 +404,7 @@ public class CommitFileRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < AppProperties> appProperties; 
+            private java.util.List<AppProperties> appProperties; 
             private String conflictStrategy; 
             private Boolean convertToOnlineDoc; 
             private String convertToOnlineDocTargetDocumentType; 
@@ -408,7 +413,7 @@ public class CommitFileRequest extends Request {
             /**
              * AppProperties.
              */
-            public Builder appProperties(java.util.List < AppProperties> appProperties) {
+            public Builder appProperties(java.util.List<AppProperties> appProperties) {
                 this.appProperties = appProperties;
                 return this;
             }

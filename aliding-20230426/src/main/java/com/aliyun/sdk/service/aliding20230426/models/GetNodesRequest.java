@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetNodesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NodeIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > nodeIds;
+    private java.util.List<String> nodeIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Option")
@@ -60,7 +65,7 @@ public class GetNodesRequest extends Request {
     /**
      * @return nodeIds
      */
-    public java.util.List < String > getNodeIds() {
+    public java.util.List<String> getNodeIds() {
         return this.nodeIds;
     }
 
@@ -80,7 +85,7 @@ public class GetNodesRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetNodesRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.List < String > nodeIds; 
+        private java.util.List<String> nodeIds; 
         private Option option; 
         private TenantContext tenantContext; 
 
@@ -109,7 +114,7 @@ public class GetNodesRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder nodeIds(java.util.List < String > nodeIds) {
+        public Builder nodeIds(java.util.List<String> nodeIds) {
             String nodeIdsShrink = shrink(nodeIds, "NodeIds", "json");
             this.putBodyParameter("NodeIds", nodeIdsShrink);
             this.nodeIds = nodeIds;

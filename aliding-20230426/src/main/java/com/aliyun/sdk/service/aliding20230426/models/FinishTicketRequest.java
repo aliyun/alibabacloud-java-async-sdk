@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -255,13 +260,13 @@ public class FinishTicketRequest extends Request {
      */
     public static class Notify extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupNoticeReceiverUserIds")
-        private java.util.List < String > groupNoticeReceiverUserIds;
+        private java.util.List<String> groupNoticeReceiverUserIds;
 
         @com.aliyun.core.annotation.NameInMap("NoticeAllGroupMember")
         private Boolean noticeAllGroupMember;
 
         @com.aliyun.core.annotation.NameInMap("WorkNoticeReceiverUserIds")
-        private java.util.List < String > workNoticeReceiverUserIds;
+        private java.util.List<String> workNoticeReceiverUserIds;
 
         private Notify(Builder builder) {
             this.groupNoticeReceiverUserIds = builder.groupNoticeReceiverUserIds;
@@ -280,7 +285,7 @@ public class FinishTicketRequest extends Request {
         /**
          * @return groupNoticeReceiverUserIds
          */
-        public java.util.List < String > getGroupNoticeReceiverUserIds() {
+        public java.util.List<String> getGroupNoticeReceiverUserIds() {
             return this.groupNoticeReceiverUserIds;
         }
 
@@ -294,19 +299,19 @@ public class FinishTicketRequest extends Request {
         /**
          * @return workNoticeReceiverUserIds
          */
-        public java.util.List < String > getWorkNoticeReceiverUserIds() {
+        public java.util.List<String> getWorkNoticeReceiverUserIds() {
             return this.workNoticeReceiverUserIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > groupNoticeReceiverUserIds; 
+            private java.util.List<String> groupNoticeReceiverUserIds; 
             private Boolean noticeAllGroupMember; 
-            private java.util.List < String > workNoticeReceiverUserIds; 
+            private java.util.List<String> workNoticeReceiverUserIds; 
 
             /**
              * GroupNoticeReceiverUserIds.
              */
-            public Builder groupNoticeReceiverUserIds(java.util.List < String > groupNoticeReceiverUserIds) {
+            public Builder groupNoticeReceiverUserIds(java.util.List<String> groupNoticeReceiverUserIds) {
                 this.groupNoticeReceiverUserIds = groupNoticeReceiverUserIds;
                 return this;
             }
@@ -322,7 +327,7 @@ public class FinishTicketRequest extends Request {
             /**
              * WorkNoticeReceiverUserIds.
              */
-            public Builder workNoticeReceiverUserIds(java.util.List < String > workNoticeReceiverUserIds) {
+            public Builder workNoticeReceiverUserIds(java.util.List<String> workNoticeReceiverUserIds) {
                 this.workNoticeReceiverUserIds = workNoticeReceiverUserIds;
                 return this;
             }
@@ -456,7 +461,7 @@ public class FinishTicketRequest extends Request {
      */
     public static class TicketMemo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attachments")
-        private java.util.List < Attachments> attachments;
+        private java.util.List<Attachments> attachments;
 
         @com.aliyun.core.annotation.NameInMap("Memo")
         private String memo;
@@ -477,7 +482,7 @@ public class FinishTicketRequest extends Request {
         /**
          * @return attachments
          */
-        public java.util.List < Attachments> getAttachments() {
+        public java.util.List<Attachments> getAttachments() {
             return this.attachments;
         }
 
@@ -489,13 +494,13 @@ public class FinishTicketRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Attachments> attachments; 
+            private java.util.List<Attachments> attachments; 
             private String memo; 
 
             /**
              * Attachments.
              */
-            public Builder attachments(java.util.List < Attachments> attachments) {
+            public Builder attachments(java.util.List<Attachments> attachments) {
                 this.attachments = attachments;
                 return this;
             }

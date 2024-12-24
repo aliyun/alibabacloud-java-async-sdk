@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,7 +54,7 @@ public class GrantHonorRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("openConversationIds")
-    private java.util.List < String > openConversationIds;
+    private java.util.List<String> openConversationIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("orgId")
@@ -59,7 +64,7 @@ public class GrantHonorRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("receiverUserIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > receiverUserIds;
+    private java.util.List<String> receiverUserIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("senderUserId")
@@ -154,7 +159,7 @@ public class GrantHonorRequest extends Request {
     /**
      * @return openConversationIds
      */
-    public java.util.List < String > getOpenConversationIds() {
+    public java.util.List<String> getOpenConversationIds() {
         return this.openConversationIds;
     }
 
@@ -168,7 +173,7 @@ public class GrantHonorRequest extends Request {
     /**
      * @return receiverUserIds
      */
-    public java.util.List < String > getReceiverUserIds() {
+    public java.util.List<String> getReceiverUserIds() {
         return this.receiverUserIds;
     }
 
@@ -188,9 +193,9 @@ public class GrantHonorRequest extends Request {
         private String honorId; 
         private Boolean noticeAnnouncer; 
         private Boolean noticeSingle; 
-        private java.util.List < String > openConversationIds; 
+        private java.util.List<String> openConversationIds; 
         private Long orgId; 
-        private java.util.List < String > receiverUserIds; 
+        private java.util.List<String> receiverUserIds; 
         private String senderUserId; 
 
         private Builder() {
@@ -293,7 +298,7 @@ public class GrantHonorRequest extends Request {
         /**
          * openConversationIds.
          */
-        public Builder openConversationIds(java.util.List < String > openConversationIds) {
+        public Builder openConversationIds(java.util.List<String> openConversationIds) {
             String openConversationIdsShrink = shrink(openConversationIds, "openConversationIds", "json");
             this.putBodyParameter("openConversationIds", openConversationIdsShrink);
             this.openConversationIds = openConversationIds;
@@ -315,7 +320,7 @@ public class GrantHonorRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder receiverUserIds(java.util.List < String > receiverUserIds) {
+        public Builder receiverUserIds(java.util.List<String> receiverUserIds) {
             String receiverUserIdsShrink = shrink(receiverUserIds, "receiverUserIds", "json");
             this.putBodyParameter("receiverUserIds", receiverUserIdsShrink);
             this.receiverUserIds = receiverUserIds;

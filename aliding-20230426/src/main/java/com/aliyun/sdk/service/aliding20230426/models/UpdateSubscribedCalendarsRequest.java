@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class UpdateSubscribedCalendarsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Managers")
-    private java.util.List < String > managers;
+    private java.util.List<String> managers;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -84,7 +89,7 @@ public class UpdateSubscribedCalendarsRequest extends Request {
     /**
      * @return managers
      */
-    public java.util.List < String > getManagers() {
+    public java.util.List<String> getManagers() {
         return this.managers;
     }
 
@@ -106,7 +111,7 @@ public class UpdateSubscribedCalendarsRequest extends Request {
         private AccountContext accountContext; 
         private String calendarId; 
         private String description; 
-        private java.util.List < String > managers; 
+        private java.util.List<String> managers; 
         private String name; 
         private SubscribeScope subscribeScope; 
 
@@ -158,7 +163,7 @@ public class UpdateSubscribedCalendarsRequest extends Request {
         /**
          * Managers.
          */
-        public Builder managers(java.util.List < String > managers) {
+        public Builder managers(java.util.List<String> managers) {
             String managersShrink = shrink(managers, "Managers", "json");
             this.putBodyParameter("Managers", managersShrink);
             this.managers = managers;
@@ -250,7 +255,7 @@ public class UpdateSubscribedCalendarsRequest extends Request {
      */
     public static class SubscribeScope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserIds")
-        private java.util.List < String > userIds;
+        private java.util.List<String> userIds;
 
         private SubscribeScope(Builder builder) {
             this.userIds = builder.userIds;
@@ -267,17 +272,17 @@ public class UpdateSubscribedCalendarsRequest extends Request {
         /**
          * @return userIds
          */
-        public java.util.List < String > getUserIds() {
+        public java.util.List<String> getUserIds() {
             return this.userIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > userIds; 
+            private java.util.List<String> userIds; 
 
             /**
              * UserIds.
              */
-            public Builder userIds(java.util.List < String > userIds) {
+            public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
                 return this;
             }

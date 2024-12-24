@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryOrgHonorsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("openHonors")
-    private java.util.List < OpenHonors> openHonors;
+    private java.util.List<OpenHonors> openHonors;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class QueryOrgHonorsResponseBody extends TeaModel {
     /**
      * @return openHonors
      */
-    public java.util.List < OpenHonors> getOpenHonors() {
+    public java.util.List<OpenHonors> getOpenHonors() {
         return this.openHonors;
     }
 
@@ -58,7 +63,7 @@ public class QueryOrgHonorsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < OpenHonors> openHonors; 
+        private java.util.List<OpenHonors> openHonors; 
         private String requestId; 
 
         /**
@@ -72,7 +77,7 @@ public class QueryOrgHonorsResponseBody extends TeaModel {
         /**
          * openHonors.
          */
-        public Builder openHonors(java.util.List < OpenHonors> openHonors) {
+        public Builder openHonors(java.util.List<OpenHonors> openHonors) {
             this.openHonors = openHonors;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -249,7 +254,7 @@ public class ListCalendarsResponseBody extends TeaModel {
      */
     public static class Response extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Calendars")
-        private java.util.List < Calendars> calendars;
+        private java.util.List<Calendars> calendars;
 
         private Response(Builder builder) {
             this.calendars = builder.calendars;
@@ -266,17 +271,17 @@ public class ListCalendarsResponseBody extends TeaModel {
         /**
          * @return calendars
          */
-        public java.util.List < Calendars> getCalendars() {
+        public java.util.List<Calendars> getCalendars() {
             return this.calendars;
         }
 
         public static final class Builder {
-            private java.util.List < Calendars> calendars; 
+            private java.util.List<Calendars> calendars; 
 
             /**
              * Calendars.
              */
-            public Builder calendars(java.util.List < Calendars> calendars) {
+            public Builder calendars(java.util.List<Calendars> calendars) {
                 this.calendars = calendars;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryScheduleConferenceResponseBody extends TeaModel {
     private Long endTime;
 
     @com.aliyun.core.annotation.NameInMap("phones")
-    private java.util.List < String > phones;
+    private java.util.List<String> phones;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -65,7 +70,7 @@ public class QueryScheduleConferenceResponseBody extends TeaModel {
     /**
      * @return phones
      */
-    public java.util.List < String > getPhones() {
+    public java.util.List<String> getPhones() {
         return this.phones;
     }
 
@@ -113,7 +118,7 @@ public class QueryScheduleConferenceResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long endTime; 
-        private java.util.List < String > phones; 
+        private java.util.List<String> phones; 
         private String requestId; 
         private String roomCode; 
         private String scheduleConferenceId; 
@@ -132,7 +137,7 @@ public class QueryScheduleConferenceResponseBody extends TeaModel {
         /**
          * phones.
          */
-        public Builder phones(java.util.List < String > phones) {
+        public Builder phones(java.util.List<String> phones) {
             this.phones = phones;
             return this;
         }

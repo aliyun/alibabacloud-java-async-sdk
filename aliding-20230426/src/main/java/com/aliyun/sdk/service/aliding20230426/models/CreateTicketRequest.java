@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -37,7 +42,7 @@ public class CreateTicketRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProcessorUserIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > processorUserIds;
+    private java.util.List<String> processorUserIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Scene")
@@ -122,7 +127,7 @@ public class CreateTicketRequest extends Request {
     /**
      * @return processorUserIds
      */
-    public java.util.List < String > getProcessorUserIds() {
+    public java.util.List<String> getProcessorUserIds() {
         return this.processorUserIds;
     }
 
@@ -160,7 +165,7 @@ public class CreateTicketRequest extends Request {
         private Notify notify; 
         private String openTeamId; 
         private String openTemplateBizId; 
-        private java.util.List < String > processorUserIds; 
+        private java.util.List<String> processorUserIds; 
         private String scene; 
         private SceneContext sceneContext; 
         private TenantContext tenantContext; 
@@ -240,7 +245,7 @@ public class CreateTicketRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder processorUserIds(java.util.List < String > processorUserIds) {
+        public Builder processorUserIds(java.util.List<String> processorUserIds) {
             String processorUserIdsShrink = shrink(processorUserIds, "ProcessorUserIds", "json");
             this.putBodyParameter("ProcessorUserIds", processorUserIdsShrink);
             this.processorUserIds = processorUserIds;
@@ -357,13 +362,13 @@ public class CreateTicketRequest extends Request {
      */
     public static class Notify extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupNoticeReceiverUserIds")
-        private java.util.List < String > groupNoticeReceiverUserIds;
+        private java.util.List<String> groupNoticeReceiverUserIds;
 
         @com.aliyun.core.annotation.NameInMap("NoticeAllGroupMember")
         private Boolean noticeAllGroupMember;
 
         @com.aliyun.core.annotation.NameInMap("WorkNoticeReceiverUserIds")
-        private java.util.List < String > workNoticeReceiverUserIds;
+        private java.util.List<String> workNoticeReceiverUserIds;
 
         private Notify(Builder builder) {
             this.groupNoticeReceiverUserIds = builder.groupNoticeReceiverUserIds;
@@ -382,7 +387,7 @@ public class CreateTicketRequest extends Request {
         /**
          * @return groupNoticeReceiverUserIds
          */
-        public java.util.List < String > getGroupNoticeReceiverUserIds() {
+        public java.util.List<String> getGroupNoticeReceiverUserIds() {
             return this.groupNoticeReceiverUserIds;
         }
 
@@ -396,19 +401,19 @@ public class CreateTicketRequest extends Request {
         /**
          * @return workNoticeReceiverUserIds
          */
-        public java.util.List < String > getWorkNoticeReceiverUserIds() {
+        public java.util.List<String> getWorkNoticeReceiverUserIds() {
             return this.workNoticeReceiverUserIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > groupNoticeReceiverUserIds; 
+            private java.util.List<String> groupNoticeReceiverUserIds; 
             private Boolean noticeAllGroupMember; 
-            private java.util.List < String > workNoticeReceiverUserIds; 
+            private java.util.List<String> workNoticeReceiverUserIds; 
 
             /**
              * GroupNoticeReceiverUserIds.
              */
-            public Builder groupNoticeReceiverUserIds(java.util.List < String > groupNoticeReceiverUserIds) {
+            public Builder groupNoticeReceiverUserIds(java.util.List<String> groupNoticeReceiverUserIds) {
                 this.groupNoticeReceiverUserIds = groupNoticeReceiverUserIds;
                 return this;
             }
@@ -424,7 +429,7 @@ public class CreateTicketRequest extends Request {
             /**
              * WorkNoticeReceiverUserIds.
              */
-            public Builder workNoticeReceiverUserIds(java.util.List < String > workNoticeReceiverUserIds) {
+            public Builder workNoticeReceiverUserIds(java.util.List<String> workNoticeReceiverUserIds) {
                 this.workNoticeReceiverUserIds = workNoticeReceiverUserIds;
                 return this;
             }
@@ -511,13 +516,13 @@ public class CreateTicketRequest extends Request {
      */
     public static class SceneContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupMsgs")
-        private java.util.List < GroupMsgs> groupMsgs;
+        private java.util.List<GroupMsgs> groupMsgs;
 
         @com.aliyun.core.annotation.NameInMap("OpenConversationId")
         private String openConversationId;
 
         @com.aliyun.core.annotation.NameInMap("RelevantorUserIds")
-        private java.util.List < String > relevantorUserIds;
+        private java.util.List<String> relevantorUserIds;
 
         @com.aliyun.core.annotation.NameInMap("TopicId")
         private String topicId;
@@ -540,7 +545,7 @@ public class CreateTicketRequest extends Request {
         /**
          * @return groupMsgs
          */
-        public java.util.List < GroupMsgs> getGroupMsgs() {
+        public java.util.List<GroupMsgs> getGroupMsgs() {
             return this.groupMsgs;
         }
 
@@ -554,7 +559,7 @@ public class CreateTicketRequest extends Request {
         /**
          * @return relevantorUserIds
          */
-        public java.util.List < String > getRelevantorUserIds() {
+        public java.util.List<String> getRelevantorUserIds() {
             return this.relevantorUserIds;
         }
 
@@ -566,15 +571,15 @@ public class CreateTicketRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < GroupMsgs> groupMsgs; 
+            private java.util.List<GroupMsgs> groupMsgs; 
             private String openConversationId; 
-            private java.util.List < String > relevantorUserIds; 
+            private java.util.List<String> relevantorUserIds; 
             private String topicId; 
 
             /**
              * GroupMsgs.
              */
-            public Builder groupMsgs(java.util.List < GroupMsgs> groupMsgs) {
+            public Builder groupMsgs(java.util.List<GroupMsgs> groupMsgs) {
                 this.groupMsgs = groupMsgs;
                 return this;
             }
@@ -590,7 +595,7 @@ public class CreateTicketRequest extends Request {
             /**
              * RelevantorUserIds.
              */
-            public Builder relevantorUserIds(java.util.List < String > relevantorUserIds) {
+            public Builder relevantorUserIds(java.util.List<String> relevantorUserIds) {
                 this.relevantorUserIds = relevantorUserIds;
                 return this;
             }

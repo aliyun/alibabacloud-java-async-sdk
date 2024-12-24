@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetMultiDimTableAllFieldsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("value")
-    private java.util.List < Value> value;
+    private java.util.List<Value> value;
 
     @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
@@ -49,7 +54,7 @@ public class GetMultiDimTableAllFieldsResponseBody extends TeaModel {
     /**
      * @return value
      */
-    public java.util.List < Value> getValue() {
+    public java.util.List<Value> getValue() {
         return this.value;
     }
 
@@ -69,7 +74,7 @@ public class GetMultiDimTableAllFieldsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Value> value; 
+        private java.util.List<Value> value; 
         private String vendorRequestId; 
         private String vendorType; 
 
@@ -84,7 +89,7 @@ public class GetMultiDimTableAllFieldsResponseBody extends TeaModel {
         /**
          * value.
          */
-        public Builder value(java.util.List < Value> value) {
+        public Builder value(java.util.List<Value> value) {
             this.value = value;
             return this;
         }
@@ -125,7 +130,7 @@ public class GetMultiDimTableAllFieldsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Property")
-        private java.util.Map < String, ? > property;
+        private java.util.Map<String, ?> property;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -162,7 +167,7 @@ public class GetMultiDimTableAllFieldsResponseBody extends TeaModel {
         /**
          * @return property
          */
-        public java.util.Map < String, ? > getProperty() {
+        public java.util.Map<String, ?> getProperty() {
             return this.property;
         }
 
@@ -176,7 +181,7 @@ public class GetMultiDimTableAllFieldsResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
-            private java.util.Map < String, ? > property; 
+            private java.util.Map<String, ?> property; 
             private String type; 
 
             /**
@@ -198,7 +203,7 @@ public class GetMultiDimTableAllFieldsResponseBody extends TeaModel {
             /**
              * Property.
              */
-            public Builder property(java.util.Map < String, ? > property) {
+            public Builder property(java.util.Map<String, ?> property) {
                 this.property = property;
                 return this;
             }

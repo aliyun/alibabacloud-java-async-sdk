@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class BatchSaveFormDataRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FormDataJsonList")
-    private java.util.List < String > formDataJsonList;
+    private java.util.List<String> formDataJsonList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FormUuid")
@@ -93,7 +98,7 @@ public class BatchSaveFormDataRequest extends Request {
     /**
      * @return formDataJsonList
      */
-    public java.util.List < String > getFormDataJsonList() {
+    public java.util.List<String> getFormDataJsonList() {
         return this.formDataJsonList;
     }
 
@@ -129,7 +134,7 @@ public class BatchSaveFormDataRequest extends Request {
         private AccountContext accountContext; 
         private String appType; 
         private Boolean asynchronousExecution; 
-        private java.util.List < String > formDataJsonList; 
+        private java.util.List<String> formDataJsonList; 
         private String formUuid; 
         private Boolean keepRunningAfterException; 
         private Boolean noExecuteExpression; 
@@ -182,7 +187,7 @@ public class BatchSaveFormDataRequest extends Request {
         /**
          * FormDataJsonList.
          */
-        public Builder formDataJsonList(java.util.List < String > formDataJsonList) {
+        public Builder formDataJsonList(java.util.List<String> formDataJsonList) {
             String formDataJsonListShrink = shrink(formDataJsonList, "FormDataJsonList", "json");
             this.putBodyParameter("FormDataJsonList", formDataJsonListShrink);
             this.formDataJsonList = formDataJsonList;

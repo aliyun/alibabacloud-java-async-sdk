@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
@@ -50,7 +55,7 @@ public class GetInstancesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -90,7 +95,7 @@ public class GetInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Long pageNumber; 
         private String requestId; 
         private Long totalCount; 
@@ -100,7 +105,7 @@ public class GetInstancesResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -547,7 +552,7 @@ public class GetInstancesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionExecutor")
-        private java.util.List < ActionExecutor> actionExecutor;
+        private java.util.List<ActionExecutor> actionExecutor;
 
         @com.aliyun.core.annotation.NameInMap("ApprovedResult")
         private String approvedResult;
@@ -556,7 +561,7 @@ public class GetInstancesResponseBody extends TeaModel {
         private String createTimeGMT;
 
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.Map < String, ? > data;
+        private java.util.Map<String, ?> data;
 
         @com.aliyun.core.annotation.NameInMap("FormUuid")
         private String formUuid;
@@ -608,7 +613,7 @@ public class GetInstancesResponseBody extends TeaModel {
         /**
          * @return actionExecutor
          */
-        public java.util.List < ActionExecutor> getActionExecutor() {
+        public java.util.List<ActionExecutor> getActionExecutor() {
             return this.actionExecutor;
         }
 
@@ -629,7 +634,7 @@ public class GetInstancesResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.Map < String, ? > getData() {
+        public java.util.Map<String, ?> getData() {
             return this.data;
         }
 
@@ -690,10 +695,10 @@ public class GetInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ActionExecutor> actionExecutor; 
+            private java.util.List<ActionExecutor> actionExecutor; 
             private String approvedResult; 
             private String createTimeGMT; 
-            private java.util.Map < String, ? > data; 
+            private java.util.Map<String, ?> data; 
             private String formUuid; 
             private String instanceStatus; 
             private String modifiedTimeGMT; 
@@ -706,7 +711,7 @@ public class GetInstancesResponseBody extends TeaModel {
             /**
              * ActionExecutor.
              */
-            public Builder actionExecutor(java.util.List < ActionExecutor> actionExecutor) {
+            public Builder actionExecutor(java.util.List<ActionExecutor> actionExecutor) {
                 this.actionExecutor = actionExecutor;
                 return this;
             }
@@ -730,7 +735,7 @@ public class GetInstancesResponseBody extends TeaModel {
             /**
              * Data.
              */
-            public Builder data(java.util.Map < String, ? > data) {
+            public Builder data(java.util.Map<String, ?> data) {
                 this.data = data;
                 return this;
             }

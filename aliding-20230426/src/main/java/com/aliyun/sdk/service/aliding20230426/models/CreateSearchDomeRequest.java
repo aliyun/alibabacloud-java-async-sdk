@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class CreateSearchDomeRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserIdList")
-    private java.util.List < String > userIdList;
+    private java.util.List<String> userIdList;
 
     private CreateSearchDomeRequest(Builder builder) {
         super(builder);
@@ -109,7 +114,7 @@ public class CreateSearchDomeRequest extends Request {
     /**
      * @return userIdList
      */
-    public java.util.List < String > getUserIdList() {
+    public java.util.List<String> getUserIdList() {
         return this.userIdList;
     }
 
@@ -120,7 +125,7 @@ public class CreateSearchDomeRequest extends Request {
         private String resId; 
         private Long startTime; 
         private TenantContext tenantContext; 
-        private java.util.List < String > userIdList; 
+        private java.util.List<String> userIdList; 
 
         private Builder() {
             super();
@@ -196,7 +201,7 @@ public class CreateSearchDomeRequest extends Request {
         /**
          * UserIdList.
          */
-        public Builder userIdList(java.util.List < String > userIdList) {
+        public Builder userIdList(java.util.List<String> userIdList) {
             String userIdListShrink = shrink(userIdList, "UserIdList", "json");
             this.putBodyParameter("UserIdList", userIdListShrink);
             this.userIdList = userIdList;

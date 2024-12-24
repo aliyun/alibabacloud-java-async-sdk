@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateEventResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("attendees")
-    private java.util.List < Attendees> attendees;
+    private java.util.List<Attendees> attendees;
 
     @com.aliyun.core.annotation.NameInMap("createTime")
     private String createTime;
@@ -43,7 +48,7 @@ public class CreateEventResponseBody extends TeaModel {
     private Recurrence recurrence;
 
     @com.aliyun.core.annotation.NameInMap("reminders")
-    private java.util.List < Reminders> reminders;
+    private java.util.List<Reminders> reminders;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -58,7 +63,7 @@ public class CreateEventResponseBody extends TeaModel {
     private String summary;
 
     @com.aliyun.core.annotation.NameInMap("uiConfigs")
-    private java.util.List < UiConfigs> uiConfigs;
+    private java.util.List<UiConfigs> uiConfigs;
 
     @com.aliyun.core.annotation.NameInMap("updateTime")
     private String updateTime;
@@ -94,7 +99,7 @@ public class CreateEventResponseBody extends TeaModel {
     /**
      * @return attendees
      */
-    public java.util.List < Attendees> getAttendees() {
+    public java.util.List<Attendees> getAttendees() {
         return this.attendees;
     }
 
@@ -164,7 +169,7 @@ public class CreateEventResponseBody extends TeaModel {
     /**
      * @return reminders
      */
-    public java.util.List < Reminders> getReminders() {
+    public java.util.List<Reminders> getReminders() {
         return this.reminders;
     }
 
@@ -199,7 +204,7 @@ public class CreateEventResponseBody extends TeaModel {
     /**
      * @return uiConfigs
      */
-    public java.util.List < UiConfigs> getUiConfigs() {
+    public java.util.List<UiConfigs> getUiConfigs() {
         return this.uiConfigs;
     }
 
@@ -211,7 +216,7 @@ public class CreateEventResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Attendees> attendees; 
+        private java.util.List<Attendees> attendees; 
         private String createTime; 
         private String description; 
         private End end; 
@@ -221,18 +226,18 @@ public class CreateEventResponseBody extends TeaModel {
         private OnlineMeetingInfo onlineMeetingInfo; 
         private Organizer organizer; 
         private Recurrence recurrence; 
-        private java.util.List < Reminders> reminders; 
+        private java.util.List<Reminders> reminders; 
         private String requestId; 
         private RichTextDescription richTextDescription; 
         private Start start; 
         private String summary; 
-        private java.util.List < UiConfigs> uiConfigs; 
+        private java.util.List<UiConfigs> uiConfigs; 
         private String updateTime; 
 
         /**
          * attendees.
          */
-        public Builder attendees(java.util.List < Attendees> attendees) {
+        public Builder attendees(java.util.List<Attendees> attendees) {
             this.attendees = attendees;
             return this;
         }
@@ -312,7 +317,7 @@ public class CreateEventResponseBody extends TeaModel {
         /**
          * reminders.
          */
-        public Builder reminders(java.util.List < Reminders> reminders) {
+        public Builder reminders(java.util.List<Reminders> reminders) {
             this.reminders = reminders;
             return this;
         }
@@ -355,7 +360,7 @@ public class CreateEventResponseBody extends TeaModel {
         /**
          * uiConfigs.
          */
-        public Builder uiConfigs(java.util.List < UiConfigs> uiConfigs) {
+        public Builder uiConfigs(java.util.List<UiConfigs> uiConfigs) {
             this.uiConfigs = uiConfigs;
             return this;
         }
@@ -626,7 +631,7 @@ public class CreateEventResponseBody extends TeaModel {
         private String conferenceId;
 
         @com.aliyun.core.annotation.NameInMap("ExtraInfo")
-        private java.util.Map < String, ? > extraInfo;
+        private java.util.Map<String, ?> extraInfo;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -659,7 +664,7 @@ public class CreateEventResponseBody extends TeaModel {
         /**
          * @return extraInfo
          */
-        public java.util.Map < String, ? > getExtraInfo() {
+        public java.util.Map<String, ?> getExtraInfo() {
             return this.extraInfo;
         }
 
@@ -679,7 +684,7 @@ public class CreateEventResponseBody extends TeaModel {
 
         public static final class Builder {
             private String conferenceId; 
-            private java.util.Map < String, ? > extraInfo; 
+            private java.util.Map<String, ?> extraInfo; 
             private String type; 
             private String url; 
 
@@ -694,7 +699,7 @@ public class CreateEventResponseBody extends TeaModel {
             /**
              * ExtraInfo.
              */
-            public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
+            public Builder extraInfo(java.util.Map<String, ?> extraInfo) {
                 this.extraInfo = extraInfo;
                 return this;
             }
