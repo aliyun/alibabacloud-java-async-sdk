@@ -38,6 +38,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
     private Boolean coldDataEnabled;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompressionMode")
+    private String compressionMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
     private String DBInstanceClass;
 
@@ -150,6 +154,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
         this.coldDataEnabled = builder.coldDataEnabled;
+        this.compressionMode = builder.compressionMode;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceId = builder.DBInstanceId;
         this.DBInstanceStorage = builder.DBInstanceStorage;
@@ -224,6 +229,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
      */
     public Boolean getColdDataEnabled() {
         return this.coldDataEnabled;
+    }
+
+    /**
+     * @return compressionMode
+     */
+    public String getCompressionMode() {
+        return this.compressionMode;
     }
 
     /**
@@ -414,6 +426,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         private Boolean burstingEnabled; 
         private String category; 
         private Boolean coldDataEnabled; 
+        private String compressionMode; 
         private String DBInstanceClass; 
         private String DBInstanceId; 
         private Integer DBInstanceStorage; 
@@ -452,6 +465,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
             this.burstingEnabled = request.burstingEnabled;
             this.category = request.category;
             this.coldDataEnabled = request.coldDataEnabled;
+            this.compressionMode = request.compressionMode;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceId = request.DBInstanceId;
             this.DBInstanceStorage = request.DBInstanceStorage;
@@ -568,6 +582,15 @@ public class ModifyDBInstanceSpecRequest extends Request {
         public Builder coldDataEnabled(Boolean coldDataEnabled) {
             this.putQueryParameter("ColdDataEnabled", coldDataEnabled);
             this.coldDataEnabled = coldDataEnabled;
+            return this;
+        }
+
+        /**
+         * CompressionMode.
+         */
+        public Builder compressionMode(String compressionMode) {
+            this.putQueryParameter("CompressionMode", compressionMode);
+            this.compressionMode = compressionMode;
             return this;
         }
 

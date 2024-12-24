@@ -969,6 +969,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Collation")
         private String collation;
 
+        @com.aliyun.core.annotation.NameInMap("CompressionMode")
+        private String compressionMode;
+
+        @com.aliyun.core.annotation.NameInMap("CompressionRatio")
+        private String compressionRatio;
+
         @com.aliyun.core.annotation.NameInMap("ConnectionMode")
         private String connectionMode;
 
@@ -1143,6 +1149,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SuperPermissionMode")
         private String superPermissionMode;
 
+        @com.aliyun.core.annotation.NameInMap("SupportCompression")
+        private Boolean supportCompression;
+
         @com.aliyun.core.annotation.NameInMap("TempDBInstanceId")
         private String tempDBInstanceId;
 
@@ -1188,6 +1197,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.category = builder.category;
             this.coldDataEnabled = builder.coldDataEnabled;
             this.collation = builder.collation;
+            this.compressionMode = builder.compressionMode;
+            this.compressionRatio = builder.compressionRatio;
             this.connectionMode = builder.connectionMode;
             this.connectionString = builder.connectionString;
             this.consoleVersion = builder.consoleVersion;
@@ -1246,6 +1257,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.serverlessConfig = builder.serverlessConfig;
             this.slaveZones = builder.slaveZones;
             this.superPermissionMode = builder.superPermissionMode;
+            this.supportCompression = builder.supportCompression;
             this.tempDBInstanceId = builder.tempDBInstanceId;
             this.tempUpgradeTimeEnd = builder.tempUpgradeTimeEnd;
             this.tempUpgradeTimeStart = builder.tempUpgradeTimeStart;
@@ -1342,6 +1354,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getCollation() {
             return this.collation;
+        }
+
+        /**
+         * @return compressionMode
+         */
+        public String getCompressionMode() {
+            return this.compressionMode;
+        }
+
+        /**
+         * @return compressionRatio
+         */
+        public String getCompressionRatio() {
+            return this.compressionRatio;
         }
 
         /**
@@ -1751,6 +1777,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportCompression
+         */
+        public Boolean getSupportCompression() {
+            return this.supportCompression;
+        }
+
+        /**
          * @return tempDBInstanceId
          */
         public String getTempDBInstanceId() {
@@ -1839,6 +1872,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String category; 
             private Boolean coldDataEnabled; 
             private String collation; 
+            private String compressionMode; 
+            private String compressionRatio; 
             private String connectionMode; 
             private String connectionString; 
             private String consoleVersion; 
@@ -1897,6 +1932,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private ServerlessConfig serverlessConfig; 
             private SlaveZones slaveZones; 
             private String superPermissionMode; 
+            private Boolean supportCompression; 
             private String tempDBInstanceId; 
             private String tempUpgradeTimeEnd; 
             private String tempUpgradeTimeStart; 
@@ -2046,6 +2082,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder collation(String collation) {
                 this.collation = collation;
+                return this;
+            }
+
+            /**
+             * CompressionMode.
+             */
+            public Builder compressionMode(String compressionMode) {
+                this.compressionMode = compressionMode;
+                return this;
+            }
+
+            /**
+             * CompressionRatio.
+             */
+            public Builder compressionRatio(String compressionRatio) {
+                this.compressionRatio = compressionRatio;
                 return this;
             }
 
@@ -2761,6 +2813,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder superPermissionMode(String superPermissionMode) {
                 this.superPermissionMode = superPermissionMode;
+                return this;
+            }
+
+            /**
+             * SupportCompression.
+             */
+            public Builder supportCompression(Boolean supportCompression) {
+                this.supportCompression = supportCompression;
                 return this;
             }
 
