@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.milvus20231012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -184,6 +189,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CuNum")
         private Integer cuNum;
 
+        @com.aliyun.core.annotation.NameInMap("CuRatio")
+        private Integer cuRatio;
+
         @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
@@ -196,6 +204,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         private MilvusResourceInfoList(Builder builder) {
             this.componentType = builder.componentType;
             this.cuNum = builder.cuNum;
+            this.cuRatio = builder.cuRatio;
             this.diskSize = builder.diskSize;
             this.diskType = builder.diskType;
             this.replica = builder.replica;
@@ -224,6 +233,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return cuRatio
+         */
+        public Integer getCuRatio() {
+            return this.cuRatio;
+        }
+
+        /**
          * @return diskSize
          */
         public Integer getDiskSize() {
@@ -247,6 +263,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String componentType; 
             private Integer cuNum; 
+            private Integer cuRatio; 
             private Integer diskSize; 
             private String diskType; 
             private Integer replica; 
@@ -264,6 +281,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
              */
             public Builder cuNum(Integer cuNum) {
                 this.cuNum = cuNum;
+                return this;
+            }
+
+            /**
+             * CuRatio.
+             */
+            public Builder cuRatio(Integer cuRatio) {
+                this.cuRatio = cuRatio;
                 return this;
             }
 
@@ -315,7 +340,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         private String intranetUrl;
 
         @com.aliyun.core.annotation.NameInMap("MilvusResourceInfoList")
-        private java.util.List < MilvusResourceInfoList> milvusResourceInfoList;
+        private java.util.List<MilvusResourceInfoList> milvusResourceInfoList;
 
         @com.aliyun.core.annotation.NameInMap("OssStorageSize")
         private String ossStorageSize;
@@ -376,7 +401,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         /**
          * @return milvusResourceInfoList
          */
-        public java.util.List < MilvusResourceInfoList> getMilvusResourceInfoList() {
+        public java.util.List<MilvusResourceInfoList> getMilvusResourceInfoList() {
             return this.milvusResourceInfoList;
         }
 
@@ -419,7 +444,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             private Integer attuPort; 
             private String internetUrl; 
             private String intranetUrl; 
-            private java.util.List < MilvusResourceInfoList> milvusResourceInfoList; 
+            private java.util.List<MilvusResourceInfoList> milvusResourceInfoList; 
             private String ossStorageSize; 
             private Long ossStorageTimestamp; 
             private Integer proxyPort; 
@@ -453,7 +478,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             /**
              * MilvusResourceInfoList.
              */
-            public Builder milvusResourceInfoList(java.util.List < MilvusResourceInfoList> milvusResourceInfoList) {
+            public Builder milvusResourceInfoList(java.util.List<MilvusResourceInfoList> milvusResourceInfoList) {
                 this.milvusResourceInfoList = milvusResourceInfoList;
                 return this;
             }
@@ -772,6 +797,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MeasureConfig")
         private MeasureConfig measureConfig;
 
+        @com.aliyun.core.annotation.NameInMap("NodeType")
+        private String nodeType;
+
         @com.aliyun.core.annotation.NameInMap("OpenPublicNet")
         private Boolean openPublicNet;
 
@@ -826,6 +854,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceStatus = builder.instanceStatus;
             this.measureConfig = builder.measureConfig;
+            this.nodeType = builder.nodeType;
             this.openPublicNet = builder.openPublicNet;
             this.packageType = builder.packageType;
             this.payType = builder.payType;
@@ -925,6 +954,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
          */
         public MeasureConfig getMeasureConfig() {
             return this.measureConfig;
+        }
+
+        /**
+         * @return nodeType
+         */
+        public String getNodeType() {
+            return this.nodeType;
         }
 
         /**
@@ -1037,6 +1073,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceStatus; 
             private MeasureConfig measureConfig; 
+            private String nodeType; 
             private Boolean openPublicNet; 
             private String packageType; 
             private Integer payType; 
@@ -1137,6 +1174,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
              */
             public Builder measureConfig(MeasureConfig measureConfig) {
                 this.measureConfig = measureConfig;
+                return this;
+            }
+
+            /**
+             * NodeType.
+             */
+            public Builder nodeType(String nodeType) {
+                this.nodeType = nodeType;
                 return this;
             }
 

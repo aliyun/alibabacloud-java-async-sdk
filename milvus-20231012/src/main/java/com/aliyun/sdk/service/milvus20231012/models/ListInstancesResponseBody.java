@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.milvus20231012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListInstancesResponseBody extends TeaModel {
     private String accessDeniedDetail;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
@@ -65,7 +70,7 @@ public class ListInstancesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -113,7 +118,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String accessDeniedDetail; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String errCode; 
         private String errMessage; 
         private Integer httpStatusCode; 
@@ -132,7 +137,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -335,7 +340,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String intranetUrl;
 
         @com.aliyun.core.annotation.NameInMap("MilvusResourceInfoList")
-        private java.util.List < MilvusResourceInfoList> milvusResourceInfoList;
+        private java.util.List<MilvusResourceInfoList> milvusResourceInfoList;
 
         @com.aliyun.core.annotation.NameInMap("ProxyPort")
         private Integer proxyPort;
@@ -388,7 +393,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return milvusResourceInfoList
          */
-        public java.util.List < MilvusResourceInfoList> getMilvusResourceInfoList() {
+        public java.util.List<MilvusResourceInfoList> getMilvusResourceInfoList() {
             return this.milvusResourceInfoList;
         }
 
@@ -417,7 +422,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Integer attuPort; 
             private String internetUrl; 
             private String intranetUrl; 
-            private java.util.List < MilvusResourceInfoList> milvusResourceInfoList; 
+            private java.util.List<MilvusResourceInfoList> milvusResourceInfoList; 
             private Integer proxyPort; 
             private Integer totalCuNum; 
             private Integer totalDiskSize; 
@@ -449,7 +454,7 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * MilvusResourceInfoList.
              */
-            public Builder milvusResourceInfoList(java.util.List < MilvusResourceInfoList> milvusResourceInfoList) {
+            public Builder milvusResourceInfoList(java.util.List<MilvusResourceInfoList> milvusResourceInfoList) {
                 this.milvusResourceInfoList = milvusResourceInfoList;
                 return this;
             }
@@ -510,6 +515,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
+        @com.aliyun.core.annotation.NameInMap("NodeType")
+        private String nodeType;
+
         @com.aliyun.core.annotation.NameInMap("OpenPublicNet")
         private Boolean openPublicNet;
 
@@ -550,6 +558,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.expireTime = builder.expireTime;
             this.instanceId = builder.instanceId;
             this.instanceStatus = builder.instanceStatus;
+            this.nodeType = builder.nodeType;
             this.openPublicNet = builder.openPublicNet;
             this.packageType = builder.packageType;
             this.payType = builder.payType;
@@ -611,6 +620,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public String getInstanceStatus() {
             return this.instanceStatus;
+        }
+
+        /**
+         * @return nodeType
+         */
+        public String getNodeType() {
+            return this.nodeType;
         }
 
         /**
@@ -697,6 +713,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Long expireTime; 
             private String instanceId; 
             private String instanceStatus; 
+            private String nodeType; 
             private Boolean openPublicNet; 
             private String packageType; 
             private Integer payType; 
@@ -754,6 +771,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
+                return this;
+            }
+
+            /**
+             * NodeType.
+             */
+            public Builder nodeType(String nodeType) {
+                this.nodeType = nodeType;
                 return this;
             }
 

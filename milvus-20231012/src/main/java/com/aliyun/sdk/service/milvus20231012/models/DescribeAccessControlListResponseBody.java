@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.milvus20231012.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -182,7 +187,7 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
         private String aclId;
 
         @com.aliyun.core.annotation.NameInMap("Cidr")
-        private java.util.List < String > cidr;
+        private java.util.List<String> cidr;
 
         private Data(Builder builder) {
             this.aclId = builder.aclId;
@@ -207,13 +212,13 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
         /**
          * @return cidr
          */
-        public java.util.List < String > getCidr() {
+        public java.util.List<String> getCidr() {
             return this.cidr;
         }
 
         public static final class Builder {
             private String aclId; 
-            private java.util.List < String > cidr; 
+            private java.util.List<String> cidr; 
 
             /**
              * AclId.
@@ -226,7 +231,7 @@ public class DescribeAccessControlListResponseBody extends TeaModel {
             /**
              * Cidr.
              */
-            public Builder cidr(java.util.List < String > cidr) {
+            public Builder cidr(java.util.List<String> cidr) {
                 this.cidr = cidr;
                 return this;
             }
