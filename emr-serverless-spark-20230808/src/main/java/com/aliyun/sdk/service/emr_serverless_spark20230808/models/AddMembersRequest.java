@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class AddMembersRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("memberArns")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > memberArns;
+    private java.util.List<String> memberArns;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("workspaceId")
@@ -49,7 +54,7 @@ public class AddMembersRequest extends Request {
     /**
      * @return memberArns
      */
-    public java.util.List < String > getMemberArns() {
+    public java.util.List<String> getMemberArns() {
         return this.memberArns;
     }
 
@@ -68,7 +73,7 @@ public class AddMembersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddMembersRequest, Builder> {
-        private java.util.List < String > memberArns; 
+        private java.util.List<String> memberArns; 
         private String workspaceId; 
         private String regionId; 
 
@@ -86,7 +91,7 @@ public class AddMembersRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder memberArns(java.util.List < String > memberArns) {
+        public Builder memberArns(java.util.List<String> memberArns) {
             this.putBodyParameter("memberArns", memberArns);
             this.memberArns = memberArns;
             return this;

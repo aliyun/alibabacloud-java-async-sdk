@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ConfigurationOverrides extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("configurations")
-    private java.util.List < Configurations> configurations;
+    private java.util.List<Configurations> configurations;
 
     private ConfigurationOverrides(Builder builder) {
         this.configurations = builder.configurations;
@@ -30,17 +35,17 @@ public class ConfigurationOverrides extends TeaModel {
     /**
      * @return configurations
      */
-    public java.util.List < Configurations> getConfigurations() {
+    public java.util.List<Configurations> getConfigurations() {
         return this.configurations;
     }
 
     public static final class Builder {
-        private java.util.List < Configurations> configurations; 
+        private java.util.List<Configurations> configurations; 
 
         /**
          * configurations.
          */
-        public Builder configurations(java.util.List < Configurations> configurations) {
+        public Builder configurations(java.util.List<Configurations> configurations) {
             this.configurations = configurations;
             return this;
         }

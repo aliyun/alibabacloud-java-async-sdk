@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -59,11 +64,11 @@ public class ListJobRunsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("states")
-    private java.util.List < String > states;
+    private java.util.List<String> states;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private ListJobRunsRequest(Builder builder) {
         super(builder);
@@ -175,14 +180,14 @@ public class ListJobRunsRequest extends Request {
     /**
      * @return states
      */
-    public java.util.List < String > getStates() {
+    public java.util.List<String> getStates() {
         return this.states;
     }
 
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -198,8 +203,8 @@ public class ListJobRunsRequest extends Request {
         private String regionId; 
         private String resourceQueueId; 
         private StartTime startTime; 
-        private java.util.List < String > states; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<String> states; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -354,7 +359,7 @@ public class ListJobRunsRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;Running&quot;,&quot;Submitted&quot;]</p>
          */
-        public Builder states(java.util.List < String > states) {
+        public Builder states(java.util.List<String> states) {
             String statesShrink = shrink(states, "states", "json");
             this.putQueryParameter("states", statesShrink);
             this.states = states;
@@ -364,7 +369,7 @@ public class ListJobRunsRequest extends Request {
         /**
          * <p>The tags of the job.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
             this.putQueryParameter("tags", tagsShrink);
             this.tags = tags;

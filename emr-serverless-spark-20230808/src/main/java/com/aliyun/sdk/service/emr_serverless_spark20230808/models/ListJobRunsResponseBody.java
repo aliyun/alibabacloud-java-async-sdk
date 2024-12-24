@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListJobRunsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("jobRuns")
-    private java.util.List < JobRuns> jobRuns;
+    private java.util.List<JobRuns> jobRuns;
 
     @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
@@ -46,7 +51,7 @@ public class ListJobRunsResponseBody extends TeaModel {
     /**
      * @return jobRuns
      */
-    public java.util.List < JobRuns> getJobRuns() {
+    public java.util.List<JobRuns> getJobRuns() {
         return this.jobRuns;
     }
 
@@ -79,16 +84,16 @@ public class ListJobRunsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < JobRuns> jobRuns; 
+        private java.util.List<JobRuns> jobRuns; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * <p>The list of Spark jobs.</p>
+         * <p>The Spark jobs.</p>
          */
-        public Builder jobRuns(java.util.List < JobRuns> jobRuns) {
+        public Builder jobRuns(java.util.List<JobRuns> jobRuns) {
             this.jobRuns = jobRuns;
             return this;
         }
@@ -151,7 +156,7 @@ public class ListJobRunsResponseBody extends TeaModel {
      */
     public static class ConfigurationOverrides extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configurations")
-        private java.util.List < Configuration > configurations;
+        private java.util.List<Configuration> configurations;
 
         private ConfigurationOverrides(Builder builder) {
             this.configurations = builder.configurations;
@@ -168,17 +173,17 @@ public class ListJobRunsResponseBody extends TeaModel {
         /**
          * @return configurations
          */
-        public java.util.List < Configuration > getConfigurations() {
+        public java.util.List<Configuration> getConfigurations() {
             return this.configurations;
         }
 
         public static final class Builder {
-            private java.util.List < Configuration > configurations; 
+            private java.util.List<Configuration> configurations; 
 
             /**
              * <p>The SparkConf objects.</p>
              */
-            public Builder configurations(java.util.List < Configuration > configurations) {
+            public Builder configurations(java.util.List<Configuration> configurations) {
                 this.configurations = configurations;
                 return this;
             }
@@ -322,7 +327,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         private Long submitTime;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tag > tags;
+        private java.util.List<Tag> tags;
 
         @com.aliyun.core.annotation.NameInMap("vcoreSeconds")
         private Long vcoreSeconds;
@@ -487,7 +492,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tag > getTags() {
+        public java.util.List<Tag> getTags() {
             return this.tags;
         }
 
@@ -530,7 +535,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             private String state; 
             private StateChangeReason stateChangeReason; 
             private Long submitTime; 
-            private java.util.List < Tag > tags; 
+            private java.util.List<Tag> tags; 
             private Long vcoreSeconds; 
             private String webUI; 
             private String workspaceId; 
@@ -702,9 +707,9 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the job.</p>
+             * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tag > tags) {
+            public Builder tags(java.util.List<Tag> tags) {
                 this.tags = tags;
                 return this;
             }

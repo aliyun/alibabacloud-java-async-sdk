@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class Artifact extends TeaModel {
     private Credential credential;
 
     @com.aliyun.core.annotation.NameInMap("fullPath")
-    private java.util.List < String > fullPath;
+    private java.util.List<String> fullPath;
 
     @com.aliyun.core.annotation.NameInMap("gmtCreated")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -101,7 +106,7 @@ public class Artifact extends TeaModel {
     /**
      * @return fullPath
      */
-    public java.util.List < String > getFullPath() {
+    public java.util.List<String> getFullPath() {
         return this.fullPath;
     }
 
@@ -145,7 +150,7 @@ public class Artifact extends TeaModel {
         private String catagoryBizId; 
         private Long creator; 
         private Credential credential; 
-        private java.util.List < String > fullPath; 
+        private java.util.List<String> fullPath; 
         private String gmtCreated; 
         private String gmtModified; 
         private String location; 
@@ -187,7 +192,7 @@ public class Artifact extends TeaModel {
         /**
          * fullPath.
          */
-        public Builder fullPath(java.util.List < String > fullPath) {
+        public Builder fullPath(java.util.List<String> fullPath) {
             this.fullPath = fullPath;
             return this;
         }

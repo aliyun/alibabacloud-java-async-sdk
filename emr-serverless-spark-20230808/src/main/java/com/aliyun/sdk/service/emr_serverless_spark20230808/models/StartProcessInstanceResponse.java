@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateSqlStatementResponse} extends {@link TeaModel}
+ * {@link StartProcessInstanceResponse} extends {@link TeaModel}
  *
- * <p>CreateSqlStatementResponse</p>
+ * <p>StartProcessInstanceResponse</p>
  */
-public class CreateSqlStatementResponse extends Response {
+public class StartProcessInstanceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CreateSqlStatementResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateSqlStatementResponseBody body;
+    private StartProcessInstanceResponseBody body;
 
-    private CreateSqlStatementResponse(BuilderImpl builder) {
+    private StartProcessInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateSqlStatementResponse create() {
+    public static StartProcessInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CreateSqlStatementResponse extends Response {
     /**
      * @return body
      */
-    public CreateSqlStatementResponseBody getBody() {
+    public StartProcessInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateSqlStatementResponse, Builder> {
+    public interface Builder extends Response.Builder<StartProcessInstanceResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateSqlStatementResponseBody body);
+        Builder body(StartProcessInstanceResponseBody body);
 
         @Override
-        CreateSqlStatementResponse build();
+        StartProcessInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateSqlStatementResponse, Builder>
+            extends Response.BuilderImpl<StartProcessInstanceResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateSqlStatementResponseBody body; 
+        private StartProcessInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateSqlStatementResponse response) {
+        private BuilderImpl(StartProcessInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CreateSqlStatementResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateSqlStatementResponseBody body) {
+        public Builder body(StartProcessInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateSqlStatementResponse build() {
-            return new CreateSqlStatementResponse(this);
+        public StartProcessInstanceResponse build() {
+            return new StartProcessInstanceResponse(this);
         } 
 
     } 

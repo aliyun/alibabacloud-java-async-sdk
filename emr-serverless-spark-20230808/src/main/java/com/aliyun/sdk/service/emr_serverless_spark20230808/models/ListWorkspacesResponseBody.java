@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("workspaces")
-    private java.util.List < Workspaces> workspaces;
+    private java.util.List<Workspaces> workspaces;
 
     private ListWorkspacesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
     /**
      * @return workspaces
      */
-    public java.util.List < Workspaces> getWorkspaces() {
+    public java.util.List<Workspaces> getWorkspaces() {
         return this.workspaces;
     }
 
@@ -83,7 +88,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < Workspaces> workspaces; 
+        private java.util.List<Workspaces> workspaces; 
 
         /**
          * <p>The maximum number of entries returned.</p>
@@ -132,7 +137,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         /**
          * <p>The workspaces.</p>
          */
-        public Builder workspaces(java.util.List < Workspaces> workspaces) {
+        public Builder workspaces(java.util.List<Workspaces> workspaces) {
             this.workspaces = workspaces;
             return this;
         }

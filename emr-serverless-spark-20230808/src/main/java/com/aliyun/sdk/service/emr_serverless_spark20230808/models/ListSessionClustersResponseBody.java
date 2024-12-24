@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("sessionClusters")
-    private java.util.List < SessionClusters> sessionClusters;
+    private java.util.List<SessionClusters> sessionClusters;
 
     @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
     /**
      * @return sessionClusters
      */
-    public java.util.List < SessionClusters> getSessionClusters() {
+    public java.util.List<SessionClusters> getSessionClusters() {
         return this.sessionClusters;
     }
 
@@ -82,7 +87,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < SessionClusters> sessionClusters; 
+        private java.util.List<SessionClusters> sessionClusters; 
         private Integer totalCount; 
 
         /**
@@ -97,7 +102,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>A pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -119,9 +124,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of sessions.</p>
+         * <p>The sessions.</p>
          */
-        public Builder sessionClusters(java.util.List < SessionClusters> sessionClusters) {
+        public Builder sessionClusters(java.util.List<SessionClusters> sessionClusters) {
             this.sessionClusters = sessionClusters;
             return this;
         }
@@ -443,7 +448,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
      */
     public static class SessionClusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("applicationConfigs")
-        private java.util.List < ApplicationConfigs> applicationConfigs;
+        private java.util.List<ApplicationConfigs> applicationConfigs;
 
         @com.aliyun.core.annotation.NameInMap("autoStartConfiguration")
         private AutoStartConfiguration autoStartConfiguration;
@@ -540,7 +545,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         /**
          * @return applicationConfigs
          */
-        public java.util.List < ApplicationConfigs> getApplicationConfigs() {
+        public java.util.List<ApplicationConfigs> getApplicationConfigs() {
             return this.applicationConfigs;
         }
 
@@ -685,7 +690,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ApplicationConfigs> applicationConfigs; 
+            private java.util.List<ApplicationConfigs> applicationConfigs; 
             private AutoStartConfiguration autoStartConfiguration; 
             private AutoStopConfiguration autoStopConfiguration; 
             private String displayReleaseVersion; 
@@ -710,7 +715,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             /**
              * <p>The session configurations, which are equivalent to the configurations of the Spark job.</p>
              */
-            public Builder applicationConfigs(java.util.List < ApplicationConfigs> applicationConfigs) {
+            public Builder applicationConfigs(java.util.List<ApplicationConfigs> applicationConfigs) {
                 this.applicationConfigs = applicationConfigs;
                 return this;
             }
@@ -733,6 +738,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
 
             /**
              * <p>The version of the Spark engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</p>
              */
             public Builder displayReleaseVersion(String displayReleaseVersion) {
                 this.displayReleaseVersion = displayReleaseVersion;
@@ -740,7 +748,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * domain.
+             * <p>The public endpoint of the Thrift server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emr-spark-gateway-cn-hangzhou.data.aliyun.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -748,7 +759,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * domainInner.
+             * <p>The internal endpoint of the Thrift server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emr-spark-gateway-cn-hangzhou-internal.data.aliyuncs.com</p>
              */
             public Builder domainInner(String domainInner) {
                 this.domainInner = domainInner;
@@ -778,7 +792,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1732267598000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -847,7 +864,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1732267598000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -856,6 +876,13 @@ public class ListSessionClustersResponseBody extends TeaModel {
 
             /**
              * <p>The status of the session.</p>
+             * <ul>
+             * <li>Starting</li>
+             * <li>Running</li>
+             * <li>Stopping</li>
+             * <li>Stopped</li>
+             * <li>Error</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Running</p>

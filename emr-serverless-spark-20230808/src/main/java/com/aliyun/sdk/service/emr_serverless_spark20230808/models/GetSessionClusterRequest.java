@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class GetSessionClusterRequest extends Request {
         } 
 
         /**
-         * <p>工作空间id。</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>w-1234abcd</p>
@@ -94,7 +99,7 @@ public class GetSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>作业名称。</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>emr-spark-demo-job</p>
@@ -106,7 +111,10 @@ public class GetSessionClusterRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

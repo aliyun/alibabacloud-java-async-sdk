@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -155,7 +160,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("executionTime")
-        private java.util.List < Long > executionTime;
+        private java.util.List<Long> executionTime;
 
         @com.aliyun.core.annotation.NameInMap("sqlErrorCode")
         private String sqlErrorCode;
@@ -164,7 +169,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
         private String sqlErrorMessage;
 
         @com.aliyun.core.annotation.NameInMap("sqlOutputs")
-        private java.util.List < SqlOutputs> sqlOutputs;
+        private java.util.List<SqlOutputs> sqlOutputs;
 
         @com.aliyun.core.annotation.NameInMap("state")
         private String state;
@@ -192,7 +197,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
         /**
          * @return executionTime
          */
-        public java.util.List < Long > getExecutionTime() {
+        public java.util.List<Long> getExecutionTime() {
             return this.executionTime;
         }
 
@@ -213,7 +218,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
         /**
          * @return sqlOutputs
          */
-        public java.util.List < SqlOutputs> getSqlOutputs() {
+        public java.util.List<SqlOutputs> getSqlOutputs() {
             return this.sqlOutputs;
         }
 
@@ -232,17 +237,17 @@ public class GetSqlStatementResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > executionTime; 
+            private java.util.List<Long> executionTime; 
             private String sqlErrorCode; 
             private String sqlErrorMessage; 
-            private java.util.List < SqlOutputs> sqlOutputs; 
+            private java.util.List<SqlOutputs> sqlOutputs; 
             private String state; 
             private String statementId; 
 
             /**
              * <p>The list of time that is consumed by SQL queries.</p>
              */
-            public Builder executionTime(java.util.List < Long > executionTime) {
+            public Builder executionTime(java.util.List<Long> executionTime) {
                 this.executionTime = executionTime;
                 return this;
             }
@@ -272,7 +277,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
             /**
              * <p>The query results.</p>
              */
-            public Builder sqlOutputs(java.util.List < SqlOutputs> sqlOutputs) {
+            public Builder sqlOutputs(java.util.List<SqlOutputs> sqlOutputs) {
                 this.sqlOutputs = sqlOutputs;
                 return this;
             }

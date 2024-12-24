@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -98,7 +103,7 @@ public class GetTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Template data) {
             this.data = data;
@@ -106,7 +111,13 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <ul>
+         * <li>If the value of success was false, an error code was returned.</li>
+         * <li>If the value of success was true, a null value was returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>040003</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +125,13 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <ul>
+         * <li>If the value of success was false, an error message was returned.</li>
+         * <li>If the value of success was true, a null value was returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidUser.NotFound</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +139,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -133,7 +150,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>484D9DDA-300D-525E-AF7A-0CCCA5C64A7A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +161,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -50,7 +55,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
         private SessionCluster sessionCluster; 
 
         /**
-         * <p>请求ID。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -61,7 +66,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
         }
 
         /**
-         * sessionCluster.
+         * <p>The session.</p>
          */
         public Builder sessionCluster(SessionCluster sessionCluster) {
             this.sessionCluster = sessionCluster;
@@ -131,7 +136,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             private String configItemValue; 
 
             /**
-             * configFileName.
+             * <p>The name of the configuration file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark-defaults.conf</p>
              */
             public Builder configFileName(String configFileName) {
                 this.configFileName = configFileName;
@@ -139,7 +147,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * configItemKey.
+             * <p>The key of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark.app.name</p>
              */
             public Builder configItemKey(String configItemKey) {
                 this.configItemKey = configItemKey;
@@ -147,7 +158,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * configItemValue.
+             * <p>The configuration value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder configItemValue(String configItemValue) {
                 this.configItemValue = configItemValue;
@@ -194,7 +208,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             private Boolean enable; 
 
             /**
-             * enable.
+             * <p>Indicates whether automatic startup is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -253,7 +270,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             private Integer idleTimeoutMinutes; 
 
             /**
-             * enable.
+             * <p>Indicates whether automatic termination is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -261,7 +281,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * idleTimeoutMinutes.
+             * <p>The idle timeout period. The session is automatically terminated when the idle timeout period is exceeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder idleTimeoutMinutes(Integer idleTimeoutMinutes) {
                 this.idleTimeoutMinutes = idleTimeoutMinutes;
@@ -320,7 +343,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * code.
+             * <p>The status change code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -328,7 +354,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The status change message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -350,7 +379,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
      */
     public static class SessionCluster extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("applicationConfigs")
-        private java.util.List < ApplicationConfigs> applicationConfigs;
+        private java.util.List<ApplicationConfigs> applicationConfigs;
 
         @com.aliyun.core.annotation.NameInMap("autoStartConfiguration")
         private AutoStartConfiguration autoStartConfiguration;
@@ -451,7 +480,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
         /**
          * @return applicationConfigs
          */
-        public java.util.List < ApplicationConfigs> getApplicationConfigs() {
+        public java.util.List<ApplicationConfigs> getApplicationConfigs() {
             return this.applicationConfigs;
         }
 
@@ -603,7 +632,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ApplicationConfigs> applicationConfigs; 
+            private java.util.List<ApplicationConfigs> applicationConfigs; 
             private AutoStartConfiguration autoStartConfiguration; 
             private AutoStopConfiguration autoStopConfiguration; 
             private String displayReleaseVersion; 
@@ -627,15 +656,15 @@ public class GetSessionClusterResponseBody extends TeaModel {
             private String workspaceId; 
 
             /**
-             * applicationConfigs.
+             * <p>The Spark configurations.</p>
              */
-            public Builder applicationConfigs(java.util.List < ApplicationConfigs> applicationConfigs) {
+            public Builder applicationConfigs(java.util.List<ApplicationConfigs> applicationConfigs) {
                 this.applicationConfigs = applicationConfigs;
                 return this;
             }
 
             /**
-             * autoStartConfiguration.
+             * <p>The automatic startup configurations.</p>
              */
             public Builder autoStartConfiguration(AutoStartConfiguration autoStartConfiguration) {
                 this.autoStartConfiguration = autoStartConfiguration;
@@ -643,7 +672,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * autoStopConfiguration.
+             * <p>The automatic termination configurations.</p>
              */
             public Builder autoStopConfiguration(AutoStopConfiguration autoStopConfiguration) {
                 this.autoStopConfiguration = autoStopConfiguration;
@@ -651,7 +680,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * displayReleaseVersion.
+             * <p>The version of the Spark engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-2.2(Java Runtime)</p>
              */
             public Builder displayReleaseVersion(String displayReleaseVersion) {
                 this.displayReleaseVersion = displayReleaseVersion;
@@ -659,7 +691,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * domain.
+             * <p>The domain name to which the Spark UI of the session belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>your.domain.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -667,7 +702,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * domainInner.
+             * <p>The internal endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emr-spark-gateway-cn-hangzhou-internal.data.aliyuncs.com</p>
              */
             public Builder domainInner(String domainInner) {
                 this.domainInner = domainInner;
@@ -675,7 +713,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * draftId.
+             * <p>The ID of the job that is associated with the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TSK-xxxxxxxx</p>
              */
             public Builder draftId(String draftId) {
                 this.draftId = draftId;
@@ -683,7 +724,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * envId.
+             * <p>The environment ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env-cpv569tlhtgndjl86t40</p>
              */
             public Builder envId(String envId) {
                 this.envId = envId;
@@ -691,7 +735,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * fusion.
+             * <p>Indicates whether the Fusion engine is used for acceleration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder fusion(Boolean fusion) {
                 this.fusion = fusion;
@@ -699,7 +746,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-01 06:23:01</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -707,7 +757,15 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * kind.
+             * <p>The type of the job. This parameter is required and cannot be modified after the deployment is created. Valid values:</p>
+             * <ul>
+             * <li>SQLSCRIPT</li>
+             * <li>JAR</li>
+             * <li>PYTHON</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -715,7 +773,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -723,7 +784,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>作业实例名称。</p>
+             * <p>The queue name.</p>
              * 
              * <strong>example:</strong>
              * <p>jobName</p>
@@ -734,7 +795,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * releaseVersion.
+             * <p>The version of E-MapReduce (EMR) Serverless Spark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esr-2.2(Java Runtime)</p>
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -742,7 +806,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>交互式作业会话id。</p>
+             * <p>The session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1234abcd-12ab-34cd-56ef-1234567890ab</p>
@@ -753,7 +817,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-01 06:23:01</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -761,7 +828,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>作业状态。</p>
+             * <p>The job status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -772,7 +839,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * stateChangeReason.
+             * <p>The reason of the job status change.</p>
              */
             public Builder stateChangeReason(StateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -780,7 +847,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>任务实例ID。</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>jr-231231</p>
@@ -791,7 +858,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * userName.
+             * <p>The name of the account that is used to create the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -799,7 +869,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * webUI.
+             * <p>The Spark UI of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://spark-ui/link">https://spark-ui/link</a></p>
              */
             public Builder webUI(String webUI) {
                 this.webUI = webUI;
@@ -807,7 +880,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作空间id。</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>w-1234abcd</p>

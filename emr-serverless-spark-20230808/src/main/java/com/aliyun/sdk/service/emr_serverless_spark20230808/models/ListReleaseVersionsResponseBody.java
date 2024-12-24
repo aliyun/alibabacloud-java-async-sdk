@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("releaseVersions")
-    private java.util.List < ReleaseVersions> releaseVersions;
+    private java.util.List<ReleaseVersions> releaseVersions;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
     /**
      * @return releaseVersions
      */
-    public java.util.List < ReleaseVersions> getReleaseVersions() {
+    public java.util.List<ReleaseVersions> getReleaseVersions() {
         return this.releaseVersions;
     }
 
@@ -81,7 +86,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < ReleaseVersions> releaseVersions; 
+        private java.util.List<ReleaseVersions> releaseVersions; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -110,7 +115,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         /**
          * <p>The versions.</p>
          */
-        public Builder releaseVersions(java.util.List < ReleaseVersions> releaseVersions) {
+        public Builder releaseVersions(java.util.List<ReleaseVersions> releaseVersions) {
             this.releaseVersions = releaseVersions;
             return this;
         }
@@ -154,7 +159,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         private String communityVersion;
 
         @com.aliyun.core.annotation.NameInMap("cpuArchitectures")
-        private java.util.List < String > cpuArchitectures;
+        private java.util.List<String> cpuArchitectures;
 
         @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
         private String displayReleaseVersion;
@@ -211,7 +216,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         /**
          * @return cpuArchitectures
          */
-        public java.util.List < String > getCpuArchitectures() {
+        public java.util.List<String> getCpuArchitectures() {
             return this.cpuArchitectures;
         }
 
@@ -273,7 +278,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String communityVersion; 
-            private java.util.List < String > cpuArchitectures; 
+            private java.util.List<String> cpuArchitectures; 
             private String displayReleaseVersion; 
             private Boolean fusion; 
             private Long gmtCreate; 
@@ -297,7 +302,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             /**
              * <p>The CPU architectures.</p>
              */
-            public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
+            public Builder cpuArchitectures(java.util.List<String> cpuArchitectures) {
                 this.cpuArchitectures = cpuArchitectures;
                 return this;
             }

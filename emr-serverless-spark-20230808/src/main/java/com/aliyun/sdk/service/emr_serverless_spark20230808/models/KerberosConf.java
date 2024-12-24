@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class KerberosConf extends TeaModel {
     private String kerberosConfId;
 
     @com.aliyun.core.annotation.NameInMap("keytabs")
-    private java.util.List < String > keytabs;
+    private java.util.List<String> keytabs;
 
     @com.aliyun.core.annotation.NameInMap("krb5Conf")
     private String krb5Conf;
@@ -101,7 +106,7 @@ public class KerberosConf extends TeaModel {
     /**
      * @return keytabs
      */
-    public java.util.List < String > getKeytabs() {
+    public java.util.List<String> getKeytabs() {
         return this.keytabs;
     }
 
@@ -139,7 +144,7 @@ public class KerberosConf extends TeaModel {
         private String gmtCreated; 
         private String gmtModified; 
         private String kerberosConfId; 
-        private java.util.List < String > keytabs; 
+        private java.util.List<String> keytabs; 
         private String krb5Conf; 
         private String name; 
         private String networkServiceId; 
@@ -188,7 +193,7 @@ public class KerberosConf extends TeaModel {
         /**
          * keytabs.
          */
-        public Builder keytabs(java.util.List < String > keytabs) {
+        public Builder keytabs(java.util.List<String> keytabs) {
             this.keytabs = keytabs;
             return this;
         }

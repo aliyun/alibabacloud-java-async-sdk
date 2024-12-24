@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,10 @@ public class GetTemplateRequest extends Request {
         } 
 
         /**
-         * workspaceBizId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-8adde60aa809701f</p>
          */
         public Builder workspaceBizId(String workspaceBizId) {
             this.putPathParameter("workspaceBizId", workspaceBizId);
@@ -91,7 +99,10 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -100,7 +111,14 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * templateType.
+         * <p>The template type.</p>
+         * <ul>
+         * <li>TASK</li>
+         * <li>SESSION</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TASK</p>
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("templateType", templateType);

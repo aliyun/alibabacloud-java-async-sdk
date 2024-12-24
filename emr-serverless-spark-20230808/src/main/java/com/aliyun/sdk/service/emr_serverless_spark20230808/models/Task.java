@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Task extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("archives")
-    private java.util.List < String > archives;
+    private java.util.List<String> archives;
 
     @com.aliyun.core.annotation.NameInMap("artifactUrl")
     private String artifactUrl;
@@ -54,13 +59,13 @@ public class Task extends TeaModel {
     private String environmentId;
 
     @com.aliyun.core.annotation.NameInMap("extraArtifactIds")
-    private java.util.List < String > extraArtifactIds;
+    private java.util.List<String> extraArtifactIds;
 
     @com.aliyun.core.annotation.NameInMap("extraSparkSubmitParams")
     private String extraSparkSubmitParams;
 
     @com.aliyun.core.annotation.NameInMap("files")
-    private java.util.List < String > files;
+    private java.util.List<String> files;
 
     @com.aliyun.core.annotation.NameInMap("fusion")
     private Boolean fusion;
@@ -84,7 +89,7 @@ public class Task extends TeaModel {
     private Boolean isStreaming;
 
     @com.aliyun.core.annotation.NameInMap("jars")
-    private java.util.List < String > jars;
+    private java.util.List<String> jars;
 
     @com.aliyun.core.annotation.NameInMap("lastRunResourceQueueId")
     private String lastRunResourceQueueId;
@@ -98,13 +103,13 @@ public class Task extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("pyFiles")
-    private java.util.List < String > pyFiles;
+    private java.util.List<String> pyFiles;
 
     @com.aliyun.core.annotation.NameInMap("sparkArgs")
     private String sparkArgs;
 
     @com.aliyun.core.annotation.NameInMap("sparkConf")
-    private java.util.List < SparkConf > sparkConf;
+    private java.util.List<SparkConf> sparkConf;
 
     @com.aliyun.core.annotation.NameInMap("sparkDriverCores")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -141,7 +146,7 @@ public class Task extends TeaModel {
     private String sparkVersion;
 
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.Map < String, String > tags;
+    private java.util.Map<String, String> tags;
 
     @com.aliyun.core.annotation.NameInMap("timeout")
     private Integer timeout;
@@ -205,7 +210,7 @@ public class Task extends TeaModel {
     /**
      * @return archives
      */
-    public java.util.List < String > getArchives() {
+    public java.util.List<String> getArchives() {
         return this.archives;
     }
 
@@ -296,7 +301,7 @@ public class Task extends TeaModel {
     /**
      * @return extraArtifactIds
      */
-    public java.util.List < String > getExtraArtifactIds() {
+    public java.util.List<String> getExtraArtifactIds() {
         return this.extraArtifactIds;
     }
 
@@ -310,7 +315,7 @@ public class Task extends TeaModel {
     /**
      * @return files
      */
-    public java.util.List < String > getFiles() {
+    public java.util.List<String> getFiles() {
         return this.files;
     }
 
@@ -359,7 +364,7 @@ public class Task extends TeaModel {
     /**
      * @return jars
      */
-    public java.util.List < String > getJars() {
+    public java.util.List<String> getJars() {
         return this.jars;
     }
 
@@ -387,7 +392,7 @@ public class Task extends TeaModel {
     /**
      * @return pyFiles
      */
-    public java.util.List < String > getPyFiles() {
+    public java.util.List<String> getPyFiles() {
         return this.pyFiles;
     }
 
@@ -401,7 +406,7 @@ public class Task extends TeaModel {
     /**
      * @return sparkConf
      */
-    public java.util.List < SparkConf > getSparkConf() {
+    public java.util.List<SparkConf> getSparkConf() {
         return this.sparkConf;
     }
 
@@ -471,7 +476,7 @@ public class Task extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.Map < String, String > getTags() {
+    public java.util.Map<String, String> getTags() {
         return this.tags;
     }
 
@@ -490,7 +495,7 @@ public class Task extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > archives; 
+        private java.util.List<String> archives; 
         private String artifactUrl; 
         private String bizId; 
         private String categoryBizId; 
@@ -503,22 +508,22 @@ public class Task extends TeaModel {
         private String defaultSqlComputeId; 
         private String deploymentId; 
         private String environmentId; 
-        private java.util.List < String > extraArtifactIds; 
+        private java.util.List<String> extraArtifactIds; 
         private String extraSparkSubmitParams; 
-        private java.util.List < String > files; 
+        private java.util.List<String> files; 
         private Boolean fusion; 
         private String gmtCreated; 
         private String gmtModified; 
         private Boolean hasChanged; 
         private Boolean hasCommited; 
         private Boolean isStreaming; 
-        private java.util.List < String > jars; 
+        private java.util.List<String> jars; 
         private String lastRunResourceQueueId; 
         private Long modifier; 
         private String name; 
-        private java.util.List < String > pyFiles; 
+        private java.util.List<String> pyFiles; 
         private String sparkArgs; 
-        private java.util.List < SparkConf > sparkConf; 
+        private java.util.List<SparkConf> sparkConf; 
         private Integer sparkDriverCores; 
         private Long sparkDriverMemory; 
         private String sparkEntrypoint; 
@@ -528,14 +533,14 @@ public class Task extends TeaModel {
         private String sparkLogPath; 
         private String sparkSubmitClause; 
         private String sparkVersion; 
-        private java.util.Map < String, String > tags; 
+        private java.util.Map<String, String> tags; 
         private Integer timeout; 
         private String type; 
 
         /**
          * archives.
          */
-        public Builder archives(java.util.List < String > archives) {
+        public Builder archives(java.util.List<String> archives) {
             this.archives = archives;
             return this;
         }
@@ -639,7 +644,7 @@ public class Task extends TeaModel {
         /**
          * extraArtifactIds.
          */
-        public Builder extraArtifactIds(java.util.List < String > extraArtifactIds) {
+        public Builder extraArtifactIds(java.util.List<String> extraArtifactIds) {
             this.extraArtifactIds = extraArtifactIds;
             return this;
         }
@@ -655,7 +660,7 @@ public class Task extends TeaModel {
         /**
          * files.
          */
-        public Builder files(java.util.List < String > files) {
+        public Builder files(java.util.List<String> files) {
             this.files = files;
             return this;
         }
@@ -711,7 +716,7 @@ public class Task extends TeaModel {
         /**
          * jars.
          */
-        public Builder jars(java.util.List < String > jars) {
+        public Builder jars(java.util.List<String> jars) {
             this.jars = jars;
             return this;
         }
@@ -743,7 +748,7 @@ public class Task extends TeaModel {
         /**
          * pyFiles.
          */
-        public Builder pyFiles(java.util.List < String > pyFiles) {
+        public Builder pyFiles(java.util.List<String> pyFiles) {
             this.pyFiles = pyFiles;
             return this;
         }
@@ -759,7 +764,7 @@ public class Task extends TeaModel {
         /**
          * sparkConf.
          */
-        public Builder sparkConf(java.util.List < SparkConf > sparkConf) {
+        public Builder sparkConf(java.util.List<SparkConf> sparkConf) {
             this.sparkConf = sparkConf;
             return this;
         }
@@ -839,7 +844,7 @@ public class Task extends TeaModel {
         /**
          * tags.
          */
-        public Builder tags(java.util.Map < String, String > tags) {
+        public Builder tags(java.util.Map<String, String> tags) {
             this.tags = tags;
             return this;
         }

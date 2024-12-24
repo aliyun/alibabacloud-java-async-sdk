@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateSqlStatementResponse} extends {@link TeaModel}
+ * {@link CreateProcessDefinitionWithScheduleResponse} extends {@link TeaModel}
  *
- * <p>CreateSqlStatementResponse</p>
+ * <p>CreateProcessDefinitionWithScheduleResponse</p>
  */
-public class CreateSqlStatementResponse extends Response {
+public class CreateProcessDefinitionWithScheduleResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CreateSqlStatementResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateSqlStatementResponseBody body;
+    private CreateProcessDefinitionWithScheduleResponseBody body;
 
-    private CreateSqlStatementResponse(BuilderImpl builder) {
+    private CreateProcessDefinitionWithScheduleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateSqlStatementResponse create() {
+    public static CreateProcessDefinitionWithScheduleResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CreateSqlStatementResponse extends Response {
     /**
      * @return body
      */
-    public CreateSqlStatementResponseBody getBody() {
+    public CreateProcessDefinitionWithScheduleResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateSqlStatementResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateProcessDefinitionWithScheduleResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateSqlStatementResponseBody body);
+        Builder body(CreateProcessDefinitionWithScheduleResponseBody body);
 
         @Override
-        CreateSqlStatementResponse build();
+        CreateProcessDefinitionWithScheduleResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateSqlStatementResponse, Builder>
+            extends Response.BuilderImpl<CreateProcessDefinitionWithScheduleResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateSqlStatementResponseBody body; 
+        private CreateProcessDefinitionWithScheduleResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateSqlStatementResponse response) {
+        private BuilderImpl(CreateProcessDefinitionWithScheduleResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CreateSqlStatementResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateSqlStatementResponseBody body) {
+        public Builder body(CreateProcessDefinitionWithScheduleResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateSqlStatementResponse build() {
-            return new CreateSqlStatementResponse(this);
+        public CreateProcessDefinitionWithScheduleResponse build() {
+            return new CreateProcessDefinitionWithScheduleResponse(this);
         } 
 
     } 

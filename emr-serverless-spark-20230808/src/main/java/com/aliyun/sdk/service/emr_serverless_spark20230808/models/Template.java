@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class Template extends TeaModel {
     private Long modifier;
 
     @com.aliyun.core.annotation.NameInMap("sparkConf")
-    private java.util.List < SparkConf > sparkConf;
+    private java.util.List<SparkConf> sparkConf;
 
     @com.aliyun.core.annotation.NameInMap("sparkDriverCores")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -139,7 +144,7 @@ public class Template extends TeaModel {
     /**
      * @return sparkConf
      */
-    public java.util.List < SparkConf > getSparkConf() {
+    public java.util.List<SparkConf> getSparkConf() {
         return this.sparkConf;
     }
 
@@ -206,7 +211,7 @@ public class Template extends TeaModel {
         private String gmtCreated; 
         private String gmtModified; 
         private Long modifier; 
-        private java.util.List < SparkConf > sparkConf; 
+        private java.util.List<SparkConf> sparkConf; 
         private Integer sparkDriverCores; 
         private Long sparkDriverMemory; 
         private Integer sparkExecutorCores; 
@@ -267,7 +272,7 @@ public class Template extends TeaModel {
         /**
          * sparkConf.
          */
-        public Builder sparkConf(java.util.List < SparkConf > sparkConf) {
+        public Builder sparkConf(java.util.List<SparkConf> sparkConf) {
             this.sparkConf = sparkConf;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -129,7 +134,7 @@ public class ListLogContentsResponseBody extends TeaModel {
      */
     public static class ListLogContent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("contents")
-        private java.util.List < Contents> contents;
+        private java.util.List<Contents> contents;
 
         @com.aliyun.core.annotation.NameInMap("totalLength")
         private Long totalLength;
@@ -150,7 +155,7 @@ public class ListLogContentsResponseBody extends TeaModel {
         /**
          * @return contents
          */
-        public java.util.List < Contents> getContents() {
+        public java.util.List<Contents> getContents() {
             return this.contents;
         }
 
@@ -162,13 +167,13 @@ public class ListLogContentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Contents> contents; 
+            private java.util.List<Contents> contents; 
             private Long totalLength; 
 
             /**
              * contents.
              */
-            public Builder contents(java.util.List < Contents> contents) {
+            public Builder contents(java.util.List<Contents> contents) {
                 this.contents = contents;
                 return this;
             }

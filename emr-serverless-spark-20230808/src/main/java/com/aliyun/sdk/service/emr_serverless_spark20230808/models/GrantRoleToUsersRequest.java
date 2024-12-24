@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class GrantRoleToUsersRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("userArns")
-    private java.util.List < String > userArns;
+    private java.util.List<String> userArns;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("regionId")
@@ -54,7 +59,7 @@ public class GrantRoleToUsersRequest extends Request {
     /**
      * @return userArns
      */
-    public java.util.List < String > getUserArns() {
+    public java.util.List<String> getUserArns() {
         return this.userArns;
     }
 
@@ -67,7 +72,7 @@ public class GrantRoleToUsersRequest extends Request {
 
     public static final class Builder extends Request.Builder<GrantRoleToUsersRequest, Builder> {
         private String roleArn; 
-        private java.util.List < String > userArns; 
+        private java.util.List<String> userArns; 
         private String regionId; 
 
         private Builder() {
@@ -96,7 +101,7 @@ public class GrantRoleToUsersRequest extends Request {
         /**
          * <p>The user ARNs.</p>
          */
-        public Builder userArns(java.util.List < String > userArns) {
+        public Builder userArns(java.util.List<String> userArns) {
             this.putBodyParameter("userArns", userArns);
             this.userArns = userArns;
             return this;

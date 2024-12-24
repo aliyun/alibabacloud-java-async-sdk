@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelJobRunResponse> cancelJobRun(CancelJobRunRequest request);
 
     /**
+     * @param request the request parameters of CreateProcessDefinitionWithSchedule  CreateProcessDefinitionWithScheduleRequest
+     * @return CreateProcessDefinitionWithScheduleResponse
+     */
+    CompletableFuture<CreateProcessDefinitionWithScheduleResponse> createProcessDefinitionWithSchedule(CreateProcessDefinitionWithScheduleRequest request);
+
+    /**
      * @param request the request parameters of CreateSqlStatement  CreateSqlStatementRequest
      * @return CreateSqlStatementResponse
      */
@@ -110,6 +116,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartJobRunResponse> startJobRun(StartJobRunRequest request);
 
     /**
+     * @param request the request parameters of StartProcessInstance  StartProcessInstanceRequest
+     * @return StartProcessInstanceResponse
+     */
+    CompletableFuture<StartProcessInstanceResponse> startProcessInstance(StartProcessInstanceRequest request);
+
+    /**
      * @param request the request parameters of StartSessionCluster  StartSessionClusterRequest
      * @return StartSessionClusterResponse
      */
@@ -126,5 +138,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TerminateSqlStatementResponse
      */
     CompletableFuture<TerminateSqlStatementResponse> terminateSqlStatement(TerminateSqlStatementRequest request);
+
+    /**
+     * @param request the request parameters of UpdateProcessDefinitionWithSchedule  UpdateProcessDefinitionWithScheduleRequest
+     * @return UpdateProcessDefinitionWithScheduleResponse
+     */
+    CompletableFuture<UpdateProcessDefinitionWithScheduleResponse> updateProcessDefinitionWithSchedule(UpdateProcessDefinitionWithScheduleRequest request);
 
 }

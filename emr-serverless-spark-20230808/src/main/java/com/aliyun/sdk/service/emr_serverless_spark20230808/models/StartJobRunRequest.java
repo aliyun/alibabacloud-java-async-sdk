@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -63,7 +68,7 @@ public class StartJobRunRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("tags")
-    private java.util.List < Tag > tags;
+    private java.util.List<Tag> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("regionId")
@@ -187,7 +192,7 @@ public class StartJobRunRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tag > getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
@@ -211,7 +216,7 @@ public class StartJobRunRequest extends Request {
         private String name; 
         private String releaseVersion; 
         private String resourceQueueId; 
-        private java.util.List < Tag > tags; 
+        private java.util.List<Tag> tags; 
         private String regionId; 
 
         private Builder() {
@@ -375,9 +380,9 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * <p>The tags of the job.</p>
+         * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tag > tags) {
+        public Builder tags(java.util.List<Tag> tags) {
             this.putBodyParameter("tags", tags);
             this.tags = tags;
             return this;
@@ -506,7 +511,7 @@ public class StartJobRunRequest extends Request {
      */
     public static class ConfigurationOverrides extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configurations")
-        private java.util.List < Configurations> configurations;
+        private java.util.List<Configurations> configurations;
 
         private ConfigurationOverrides(Builder builder) {
             this.configurations = builder.configurations;
@@ -523,17 +528,17 @@ public class StartJobRunRequest extends Request {
         /**
          * @return configurations
          */
-        public java.util.List < Configurations> getConfigurations() {
+        public java.util.List<Configurations> getConfigurations() {
             return this.configurations;
         }
 
         public static final class Builder {
-            private java.util.List < Configurations> configurations; 
+            private java.util.List<Configurations> configurations; 
 
             /**
              * <p>The SparkConf objects.</p>
              */
-            public Builder configurations(java.util.List < Configurations> configurations) {
+            public Builder configurations(java.util.List<Configurations> configurations) {
                 this.configurations = configurations;
                 return this;
             }

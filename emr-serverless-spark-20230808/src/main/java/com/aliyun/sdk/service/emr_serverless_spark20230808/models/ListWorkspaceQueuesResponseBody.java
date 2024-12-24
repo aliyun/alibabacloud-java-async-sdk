@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("queues")
-    private java.util.List < Queues> queues;
+    private java.util.List<Queues> queues;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
     /**
      * @return queues
      */
-    public java.util.List < Queues> getQueues() {
+    public java.util.List<Queues> getQueues() {
         return this.queues;
     }
 
@@ -81,7 +86,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < Queues> queues; 
+        private java.util.List<Queues> queues; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -110,7 +115,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         /**
          * <p>The list of queues.</p>
          */
-        public Builder queues(java.util.List < Queues> queues) {
+        public Builder queues(java.util.List<Queues> queues) {
             this.queues = queues;
             return this;
         }
@@ -157,7 +162,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         private String actionName;
 
         @com.aliyun.core.annotation.NameInMap("dependencies")
-        private java.util.List < String > dependencies;
+        private java.util.List<String> dependencies;
 
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -198,7 +203,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         /**
          * @return dependencies
          */
-        public java.util.List < String > getDependencies() {
+        public java.util.List<String> getDependencies() {
             return this.dependencies;
         }
 
@@ -219,7 +224,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public static final class Builder {
             private String actionArn; 
             private String actionName; 
-            private java.util.List < String > dependencies; 
+            private java.util.List<String> dependencies; 
             private String description; 
             private String displayName; 
 
@@ -251,7 +256,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>[&quot;view&quot;]</p>
              */
-            public Builder dependencies(java.util.List < String > dependencies) {
+            public Builder dependencies(java.util.List<String> dependencies) {
                 this.dependencies = dependencies;
                 return this;
             }
@@ -293,13 +298,13 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
      */
     public static class Queues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allowActions")
-        private java.util.List < AllowActions> allowActions;
+        private java.util.List<AllowActions> allowActions;
 
         @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
         @com.aliyun.core.annotation.NameInMap("environments")
-        private java.util.List < String > environments;
+        private java.util.List<String> environments;
 
         @com.aliyun.core.annotation.NameInMap("maxResource")
         private String maxResource;
@@ -358,7 +363,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         /**
          * @return allowActions
          */
-        public java.util.List < AllowActions> getAllowActions() {
+        public java.util.List<AllowActions> getAllowActions() {
             return this.allowActions;
         }
 
@@ -372,7 +377,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         /**
          * @return environments
          */
-        public java.util.List < String > getEnvironments() {
+        public java.util.List<String> getEnvironments() {
             return this.environments;
         }
 
@@ -447,9 +452,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AllowActions> allowActions; 
+            private java.util.List<AllowActions> allowActions; 
             private String creator; 
-            private java.util.List < String > environments; 
+            private java.util.List<String> environments; 
             private String maxResource; 
             private String minResource; 
             private String properties; 
@@ -464,7 +469,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             /**
              * <p>The operations allowed for the queue.</p>
              */
-            public Builder allowActions(java.util.List < AllowActions> allowActions) {
+            public Builder allowActions(java.util.List<AllowActions> allowActions) {
                 this.allowActions = allowActions;
                 return this;
             }
@@ -483,7 +488,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             /**
              * <p>The environment types of the queue.</p>
              */
-            public Builder environments(java.util.List < String > environments) {
+            public Builder environments(java.util.List<String> environments) {
                 this.environments = environments;
                 return this;
             }

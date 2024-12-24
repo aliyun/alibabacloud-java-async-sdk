@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SqlOutput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("rows")
-    private java.util.List < Rows> rows;
+    private java.util.List<Rows> rows;
 
     @com.aliyun.core.annotation.NameInMap("schema")
     private Schema schema;
@@ -34,7 +39,7 @@ public class SqlOutput extends TeaModel {
     /**
      * @return rows
      */
-    public java.util.List < Rows> getRows() {
+    public java.util.List<Rows> getRows() {
         return this.rows;
     }
 
@@ -46,13 +51,13 @@ public class SqlOutput extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Rows> rows; 
+        private java.util.List<Rows> rows; 
         private Schema schema; 
 
         /**
          * rows.
          */
-        public Builder rows(java.util.List < Rows> rows) {
+        public Builder rows(java.util.List<Rows> rows) {
             this.rows = rows;
             return this;
         }
@@ -79,7 +84,7 @@ public class SqlOutput extends TeaModel {
      */
     public static class Rows extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private Rows(Builder builder) {
             this.values = builder.values;
@@ -96,17 +101,17 @@ public class SqlOutput extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
              * values.
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -213,7 +218,7 @@ public class SqlOutput extends TeaModel {
      */
     public static class Schema extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fields")
-        private java.util.List < Fields> fields;
+        private java.util.List<Fields> fields;
 
         private Schema(Builder builder) {
             this.fields = builder.fields;
@@ -230,17 +235,17 @@ public class SqlOutput extends TeaModel {
         /**
          * @return fields
          */
-        public java.util.List < Fields> getFields() {
+        public java.util.List<Fields> getFields() {
             return this.fields;
         }
 
         public static final class Builder {
-            private java.util.List < Fields> fields; 
+            private java.util.List<Fields> fields; 
 
             /**
              * fields.
              */
-            public Builder fields(java.util.List < Fields> fields) {
+            public Builder fields(java.util.List<Fields> fields) {
                 this.fields = fields;
                 return this;
             }

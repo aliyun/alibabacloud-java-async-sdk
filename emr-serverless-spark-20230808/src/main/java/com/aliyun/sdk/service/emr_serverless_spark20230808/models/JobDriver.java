@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -62,7 +67,7 @@ public class JobDriver extends TeaModel {
         private String entryPoint;
 
         @com.aliyun.core.annotation.NameInMap("entryPointArguments")
-        private java.util.List < String > entryPointArguments;
+        private java.util.List<String> entryPointArguments;
 
         @com.aliyun.core.annotation.NameInMap("sparkSubmitParameters")
         private String sparkSubmitParameters;
@@ -91,7 +96,7 @@ public class JobDriver extends TeaModel {
         /**
          * @return entryPointArguments
          */
-        public java.util.List < String > getEntryPointArguments() {
+        public java.util.List<String> getEntryPointArguments() {
             return this.entryPointArguments;
         }
 
@@ -104,7 +109,7 @@ public class JobDriver extends TeaModel {
 
         public static final class Builder {
             private String entryPoint; 
-            private java.util.List < String > entryPointArguments; 
+            private java.util.List<String> entryPointArguments; 
             private String sparkSubmitParameters; 
 
             /**
@@ -118,7 +123,7 @@ public class JobDriver extends TeaModel {
             /**
              * entryPointArguments.
              */
-            public Builder entryPointArguments(java.util.List < String > entryPointArguments) {
+            public Builder entryPointArguments(java.util.List<String> entryPointArguments) {
                 this.entryPointArguments = entryPointArguments;
                 return this;
             }
