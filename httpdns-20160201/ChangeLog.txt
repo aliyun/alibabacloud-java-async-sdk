@@ -1,3 +1,6 @@
+2024-12-24 Version: 1.0.4
+- Generated java-async 2016-02-01 for Httpdns.
+
 2024-12-20 Version: 1.0.3
 - Generated java-async 2016-02-01 for Httpdns.
 

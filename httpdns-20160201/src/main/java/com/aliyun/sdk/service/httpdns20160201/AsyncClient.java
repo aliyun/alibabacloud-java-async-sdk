@@ -61,4 +61,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request);
 
+    /**
+     * @param request the request parameters of RefreshResolveCache  RefreshResolveCacheRequest
+     * @return RefreshResolveCacheResponse
+     */
+    CompletableFuture<RefreshResolveCacheResponse> refreshResolveCache(RefreshResolveCacheRequest request);
+
 }
