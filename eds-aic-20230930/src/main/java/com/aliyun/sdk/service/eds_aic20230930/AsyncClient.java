@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BackupFileResponse> backupFile(BackupFileRequest request);
 
     /**
+     * @param request the request parameters of BatchGetAcpConnectionTicket  BatchGetAcpConnectionTicketRequest
+     * @return BatchGetAcpConnectionTicketResponse
+     */
+    CompletableFuture<BatchGetAcpConnectionTicketResponse> batchGetAcpConnectionTicket(BatchGetAcpConnectionTicketRequest request);
+
+    /**
      * @param request the request parameters of CheckResourceStock  CheckResourceStockRequest
      * @return CheckResourceStockResponse
      */
