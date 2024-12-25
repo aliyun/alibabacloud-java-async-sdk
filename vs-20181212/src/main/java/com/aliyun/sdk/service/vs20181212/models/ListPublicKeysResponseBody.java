@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublicKeysResponseBody} extends {@link TeaModel}
  *
  * <p>ListPublicKeysResponseBody</p>
@@ -18,7 +24,7 @@ public class ListPublicKeysResponseBody extends TeaModel {
     private Long pageSize;
 
     @com.aliyun.core.annotation.NameInMap("PublicKeys")
-    private java.util.List < PublicKeys> publicKeys;
+    private java.util.List<PublicKeys> publicKeys;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -59,7 +65,7 @@ public class ListPublicKeysResponseBody extends TeaModel {
     /**
      * @return publicKeys
      */
-    public java.util.List < PublicKeys> getPublicKeys() {
+    public java.util.List<PublicKeys> getPublicKeys() {
         return this.publicKeys;
     }
 
@@ -80,7 +86,7 @@ public class ListPublicKeysResponseBody extends TeaModel {
     public static final class Builder {
         private Long pageNumber; 
         private Long pageSize; 
-        private java.util.List < PublicKeys> publicKeys; 
+        private java.util.List<PublicKeys> publicKeys; 
         private String requestId; 
         private Long totalCount; 
 
@@ -103,7 +109,7 @@ public class ListPublicKeysResponseBody extends TeaModel {
         /**
          * PublicKeys.
          */
-        public Builder publicKeys(java.util.List < PublicKeys> publicKeys) {
+        public Builder publicKeys(java.util.List<PublicKeys> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListPublicKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPublicKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPublicKeysResponseBody</p>
+     */
     public static class PublicKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -143,6 +155,9 @@ public class ListPublicKeysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyName")
         private String keyName;
 
+        @com.aliyun.core.annotation.NameInMap("KeyType")
+        private String keyType;
+
         @com.aliyun.core.annotation.NameInMap("UploadTime")
         private String uploadTime;
 
@@ -151,6 +166,7 @@ public class ListPublicKeysResponseBody extends TeaModel {
             this.description = builder.description;
             this.keyGroup = builder.keyGroup;
             this.keyName = builder.keyName;
+            this.keyType = builder.keyType;
             this.uploadTime = builder.uploadTime;
         }
 
@@ -191,6 +207,13 @@ public class ListPublicKeysResponseBody extends TeaModel {
         }
 
         /**
+         * @return keyType
+         */
+        public String getKeyType() {
+            return this.keyType;
+        }
+
+        /**
          * @return uploadTime
          */
         public String getUploadTime() {
@@ -202,6 +225,7 @@ public class ListPublicKeysResponseBody extends TeaModel {
             private String description; 
             private String keyGroup; 
             private String keyName; 
+            private String keyType; 
             private String uploadTime; 
 
             /**
@@ -233,6 +257,14 @@ public class ListPublicKeysResponseBody extends TeaModel {
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
+                return this;
+            }
+
+            /**
+             * KeyType.
+             */
+            public Builder keyType(String keyType) {
+                this.keyType = keyType;
                 return this;
             }
 

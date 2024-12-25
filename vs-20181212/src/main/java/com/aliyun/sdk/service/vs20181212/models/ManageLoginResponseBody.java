@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ManageLoginResponseBody} extends {@link TeaModel}
  *
  * <p>ManageLoginResponseBody</p>
@@ -70,7 +76,16 @@ public class ManageLoginResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ManageLoginResponseBody} extends {@link TeaModel}
+     *
+     * <p>ManageLoginResponseBody</p>
+     */
     public static class LoginInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AdbLoginPort")
+        private Integer adbLoginPort;
+
         @com.aliyun.core.annotation.NameInMap("LoginHostname")
         private String loginHostname;
 
@@ -78,6 +93,7 @@ public class ManageLoginResponseBody extends TeaModel {
         private Integer loginPort;
 
         private LoginInfo(Builder builder) {
+            this.adbLoginPort = builder.adbLoginPort;
             this.loginHostname = builder.loginHostname;
             this.loginPort = builder.loginPort;
         }
@@ -88,6 +104,13 @@ public class ManageLoginResponseBody extends TeaModel {
 
         public static LoginInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return adbLoginPort
+         */
+        public Integer getAdbLoginPort() {
+            return this.adbLoginPort;
         }
 
         /**
@@ -105,8 +128,17 @@ public class ManageLoginResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer adbLoginPort; 
             private String loginHostname; 
             private Integer loginPort; 
+
+            /**
+             * AdbLoginPort.
+             */
+            public Builder adbLoginPort(Integer adbLoginPort) {
+                this.adbLoginPort = adbLoginPort;
+                return this;
+            }
 
             /**
              * LoginHostname.

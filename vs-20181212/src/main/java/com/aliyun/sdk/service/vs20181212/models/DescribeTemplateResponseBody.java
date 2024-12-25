@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTemplateResponseBody</p>
@@ -72,7 +78,7 @@ public class DescribeTemplateResponseBody extends TeaModel {
     private Long retention;
 
     @com.aliyun.core.annotation.NameInMap("TransConfigs")
-    private java.util.List < TransConfigs> transConfigs;
+    private java.util.List<TransConfigs> transConfigs;
 
     @com.aliyun.core.annotation.NameInMap("Trigger")
     private String trigger;
@@ -257,7 +263,7 @@ public class DescribeTemplateResponseBody extends TeaModel {
     /**
      * @return transConfigs
      */
-    public java.util.List < TransConfigs> getTransConfigs() {
+    public java.util.List<TransConfigs> getTransConfigs() {
         return this.transConfigs;
     }
 
@@ -296,7 +302,7 @@ public class DescribeTemplateResponseBody extends TeaModel {
         private String region; 
         private String requestId; 
         private Long retention; 
-        private java.util.List < TransConfigs> transConfigs; 
+        private java.util.List<TransConfigs> transConfigs; 
         private String trigger; 
         private String type; 
 
@@ -463,7 +469,7 @@ public class DescribeTemplateResponseBody extends TeaModel {
         /**
          * TransConfigs.
          */
-        public Builder transConfigs(java.util.List < TransConfigs> transConfigs) {
+        public Builder transConfigs(java.util.List<TransConfigs> transConfigs) {
             this.transConfigs = transConfigs;
             return this;
         }
@@ -490,6 +496,12 @@ public class DescribeTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTemplateResponseBody</p>
+     */
     public static class TransConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Fps")
         private Long fps;

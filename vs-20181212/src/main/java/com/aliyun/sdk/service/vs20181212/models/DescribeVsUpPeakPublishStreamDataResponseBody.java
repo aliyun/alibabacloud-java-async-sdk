@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsUpPeakPublishStreamDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsUpPeakPublishStreamDataResponseBody</p>
@@ -70,6 +76,12 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsUpPeakPublishStreamDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsUpPeakPublishStreamDataResponseBody</p>
+     */
     public static class DescribeVsUpPeakPublishStreamData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandWidth")
         private String bandWidth;
@@ -191,9 +203,15 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsUpPeakPublishStreamDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsUpPeakPublishStreamDataResponseBody</p>
+     */
     public static class DescribeVsUpPeakPublishStreamDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DescribeVsUpPeakPublishStreamData")
-        private java.util.List < DescribeVsUpPeakPublishStreamData> describeVsUpPeakPublishStreamData;
+        private java.util.List<DescribeVsUpPeakPublishStreamData> describeVsUpPeakPublishStreamData;
 
         private DescribeVsUpPeakPublishStreamDatas(Builder builder) {
             this.describeVsUpPeakPublishStreamData = builder.describeVsUpPeakPublishStreamData;
@@ -210,17 +228,17 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
         /**
          * @return describeVsUpPeakPublishStreamData
          */
-        public java.util.List < DescribeVsUpPeakPublishStreamData> getDescribeVsUpPeakPublishStreamData() {
+        public java.util.List<DescribeVsUpPeakPublishStreamData> getDescribeVsUpPeakPublishStreamData() {
             return this.describeVsUpPeakPublishStreamData;
         }
 
         public static final class Builder {
-            private java.util.List < DescribeVsUpPeakPublishStreamData> describeVsUpPeakPublishStreamData; 
+            private java.util.List<DescribeVsUpPeakPublishStreamData> describeVsUpPeakPublishStreamData; 
 
             /**
              * DescribeVsUpPeakPublishStreamData.
              */
-            public Builder describeVsUpPeakPublishStreamData(java.util.List < DescribeVsUpPeakPublishStreamData> describeVsUpPeakPublishStreamData) {
+            public Builder describeVsUpPeakPublishStreamData(java.util.List<DescribeVsUpPeakPublishStreamData> describeVsUpPeakPublishStreamData) {
                 this.describeVsUpPeakPublishStreamData = describeVsUpPeakPublishStreamData;
                 return this;
             }

@@ -1,33 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeContainerInstanceIdResponse} extends {@link TeaModel}
+ * 
+ * {@link ListRenderingInstanceGatewayResponse} extends {@link TeaModel}
  *
- * <p>DescribeContainerInstanceIdResponse</p>
+ * <p>ListRenderingInstanceGatewayResponse</p>
  */
-public class DescribeContainerInstanceIdResponse extends Response {
+public class ListRenderingInstanceGatewayResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeContainerInstanceIdResponseBody body;
+    private ListRenderingInstanceGatewayResponseBody body;
 
-    private DescribeContainerInstanceIdResponse(BuilderImpl builder) {
+    private ListRenderingInstanceGatewayResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeContainerInstanceIdResponse create() {
+    public static ListRenderingInstanceGatewayResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -39,7 +45,7 @@ public class DescribeContainerInstanceIdResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -53,35 +59,35 @@ public class DescribeContainerInstanceIdResponse extends Response {
     /**
      * @return body
      */
-    public DescribeContainerInstanceIdResponseBody getBody() {
+    public ListRenderingInstanceGatewayResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeContainerInstanceIdResponse, Builder> {
+    public interface Builder extends Response.Builder<ListRenderingInstanceGatewayResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeContainerInstanceIdResponseBody body);
+        Builder body(ListRenderingInstanceGatewayResponseBody body);
 
         @Override
-        DescribeContainerInstanceIdResponse build();
+        ListRenderingInstanceGatewayResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeContainerInstanceIdResponse, Builder>
+            extends Response.BuilderImpl<ListRenderingInstanceGatewayResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeContainerInstanceIdResponseBody body; 
+        private ListRenderingInstanceGatewayResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeContainerInstanceIdResponse response) {
+        private BuilderImpl(ListRenderingInstanceGatewayResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -92,7 +98,7 @@ public class DescribeContainerInstanceIdResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -110,14 +116,14 @@ public class DescribeContainerInstanceIdResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeContainerInstanceIdResponseBody body) {
+        public Builder body(ListRenderingInstanceGatewayResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeContainerInstanceIdResponse build() {
-            return new DescribeContainerInstanceIdResponse(this);
+        public ListRenderingInstanceGatewayResponse build() {
+            return new ListRenderingInstanceGatewayResponse(this);
         } 
 
     } 

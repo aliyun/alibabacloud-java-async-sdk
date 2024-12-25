@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchBindPurchasedDevicesRequest} extends {@link RequestModel}
  *
  * <p>BatchBindPurchasedDevicesRequest</p>
@@ -98,7 +104,10 @@ public class BatchBindPurchasedDevicesRequest extends Request {
         } 
 
         /**
-         * DeviceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -107,7 +116,10 @@ public class BatchBindPurchasedDevicesRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****174-cn-qingdao</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -125,7 +137,10 @@ public class BatchBindPurchasedDevicesRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

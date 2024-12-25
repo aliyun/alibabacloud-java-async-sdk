@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPublicKeysRequest} extends {@link RequestModel}
  *
  * <p>ListPublicKeysRequest</p>
@@ -20,6 +26,10 @@ public class ListPublicKeysRequest extends Request {
     private String keyName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyType")
+    private String keyType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
@@ -32,6 +42,7 @@ public class ListPublicKeysRequest extends Request {
         super(builder);
         this.keyGroup = builder.keyGroup;
         this.keyName = builder.keyName;
+        this.keyType = builder.keyType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -64,6 +75,13 @@ public class ListPublicKeysRequest extends Request {
     }
 
     /**
+     * @return keyType
+     */
+    public String getKeyType() {
+        return this.keyType;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -80,6 +98,7 @@ public class ListPublicKeysRequest extends Request {
     public static final class Builder extends Request.Builder<ListPublicKeysRequest, Builder> {
         private String keyGroup; 
         private String keyName; 
+        private String keyType; 
         private Long pageNumber; 
         private Long pageSize; 
 
@@ -91,6 +110,7 @@ public class ListPublicKeysRequest extends Request {
             super(request);
             this.keyGroup = request.keyGroup;
             this.keyName = request.keyName;
+            this.keyType = request.keyType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
@@ -110,6 +130,15 @@ public class ListPublicKeysRequest extends Request {
         public Builder keyName(String keyName) {
             this.putQueryParameter("KeyName", keyName);
             this.keyName = keyName;
+            return this;
+        }
+
+        /**
+         * KeyType.
+         */
+        public Builder keyType(String keyType) {
+            this.putQueryParameter("KeyType", keyType);
+            this.keyType = keyType;
             return this;
         }
 

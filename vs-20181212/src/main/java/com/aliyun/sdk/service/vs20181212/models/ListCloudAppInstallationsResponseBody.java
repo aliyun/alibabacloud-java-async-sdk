@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudAppInstallationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCloudAppInstallationsResponseBody</p>
  */
 public class ListCloudAppInstallationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstallationInfos")
-    private java.util.List < InstallationInfos> installationInfos;
+    private java.util.List<InstallationInfos> installationInfos;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -45,7 +51,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
     /**
      * @return installationInfos
      */
-    public java.util.List < InstallationInfos> getInstallationInfos() {
+    public java.util.List<InstallationInfos> getInstallationInfos() {
         return this.installationInfos;
     }
 
@@ -78,7 +84,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstallationInfos> installationInfos; 
+        private java.util.List<InstallationInfos> installationInfos; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -87,7 +93,7 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         /**
          * InstallationInfos.
          */
-        public Builder installationInfos(java.util.List < InstallationInfos> installationInfos) {
+        public Builder installationInfos(java.util.List<InstallationInfos> installationInfos) {
             this.installationInfos = installationInfos;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudAppInstallationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudAppInstallationsResponseBody</p>
+     */
     public static class InstallationInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;

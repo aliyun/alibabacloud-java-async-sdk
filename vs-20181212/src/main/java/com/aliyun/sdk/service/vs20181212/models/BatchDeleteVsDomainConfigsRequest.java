@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDeleteVsDomainConfigsRequest} extends {@link RequestModel}
  *
  * <p>BatchDeleteVsDomainConfigsRequest</p>
@@ -83,7 +89,10 @@ public class BatchDeleteVsDomainConfigsRequest extends Request {
         } 
 
         /**
-         * DomainNames.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -92,7 +101,10 @@ public class BatchDeleteVsDomainConfigsRequest extends Request {
         }
 
         /**
-         * FunctionNames.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https_force</p>
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

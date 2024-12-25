@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartTransferStreamRequest} extends {@link RequestModel}
  *
  * <p>StartTransferStreamRequest</p>
@@ -97,7 +103,10 @@ public class StartTransferStreamRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323*****998-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -124,7 +133,10 @@ public class StartTransferStreamRequest extends Request {
         }
 
         /**
-         * Url.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

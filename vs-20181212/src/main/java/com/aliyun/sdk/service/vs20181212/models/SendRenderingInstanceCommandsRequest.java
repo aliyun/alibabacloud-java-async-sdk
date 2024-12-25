@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendRenderingInstanceCommandsRequest} extends {@link RequestModel}
  *
  * <p>SendRenderingInstanceCommandsRequest</p>
@@ -69,7 +75,10 @@ public class SendRenderingInstanceCommandsRequest extends Request {
         } 
 
         /**
-         * Commands.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>date;ls -l /tmp</p>
          */
         public Builder commands(String commands) {
             this.putBodyParameter("Commands", commands);
@@ -78,7 +87,10 @@ public class SendRenderingInstanceCommandsRequest extends Request {
         }
 
         /**
-         * RenderingInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);

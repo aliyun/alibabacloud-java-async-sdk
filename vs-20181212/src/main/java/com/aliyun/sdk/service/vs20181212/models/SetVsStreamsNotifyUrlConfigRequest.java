@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetVsStreamsNotifyUrlConfigRequest} extends {@link RequestModel}
  *
  * <p>SetVsStreamsNotifyUrlConfigRequest</p>
@@ -129,7 +135,10 @@ public class SetVsStreamsNotifyUrlConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -138,7 +147,10 @@ public class SetVsStreamsNotifyUrlConfigRequest extends Request {
         }
 
         /**
-         * NotifyUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx.com/xx">http://xxx.com/xx</a></p>
          */
         public Builder notifyUrl(String notifyUrl) {
             this.putQueryParameter("NotifyUrl", notifyUrl);

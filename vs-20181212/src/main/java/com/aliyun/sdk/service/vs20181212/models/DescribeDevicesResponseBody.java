@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDevicesResponseBody</p>
  */
 public class DescribeDevicesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Devices")
-    private java.util.List < Devices> devices;
+    private java.util.List<Devices> devices;
 
     @com.aliyun.core.annotation.NameInMap("PageCount")
     private Long pageCount;
@@ -49,7 +55,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
     /**
      * @return devices
      */
-    public java.util.List < Devices> getDevices() {
+    public java.util.List<Devices> getDevices() {
         return this.devices;
     }
 
@@ -89,7 +95,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Devices> devices; 
+        private java.util.List<Devices> devices; 
         private Long pageCount; 
         private Long pageNum; 
         private Long pageSize; 
@@ -99,7 +105,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         /**
          * Devices.
          */
-        public Builder devices(java.util.List < Devices> devices) {
+        public Builder devices(java.util.List<Devices> devices) {
             this.devices = devices;
             return this;
         }
@@ -150,6 +156,12 @@ public class DescribeDevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDevicesResponseBody</p>
+     */
     public static class Directory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
@@ -291,6 +303,12 @@ public class DescribeDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDevicesResponseBody</p>
+     */
     public static class Stats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelNum")
         private Long channelNum;
@@ -412,6 +430,12 @@ public class DescribeDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDevicesResponseBody</p>
+     */
     public static class Devices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmMethod")
         private String alarmMethod;

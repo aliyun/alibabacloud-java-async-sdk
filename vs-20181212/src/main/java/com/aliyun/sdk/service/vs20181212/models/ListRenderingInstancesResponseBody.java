@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRenderingInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListRenderingInstancesResponseBody</p>
  */
 public class ListRenderingInstancesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RenderingInstances")
-    private java.util.List < RenderingInstances> renderingInstances;
+    private java.util.List<RenderingInstances> renderingInstances;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -37,7 +43,7 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
     /**
      * @return renderingInstances
      */
-    public java.util.List < RenderingInstances> getRenderingInstances() {
+    public java.util.List<RenderingInstances> getRenderingInstances() {
         return this.renderingInstances;
     }
 
@@ -56,14 +62,14 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < RenderingInstances> renderingInstances; 
+        private java.util.List<RenderingInstances> renderingInstances; 
         private String requestId; 
         private Long totalCount; 
 
         /**
          * RenderingInstances.
          */
-        public Builder renderingInstances(java.util.List < RenderingInstances> renderingInstances) {
+        public Builder renderingInstances(java.util.List<RenderingInstances> renderingInstances) {
             this.renderingInstances = renderingInstances;
             return this;
         }
@@ -90,6 +96,12 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRenderingInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRenderingInstancesResponseBody</p>
+     */
     public static class RenderingInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -100,10 +112,14 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RenderingSpec")
         private String renderingSpec;
 
+        @com.aliyun.core.annotation.NameInMap("StorageSize")
+        private Integer storageSize;
+
         private RenderingInstances(Builder builder) {
             this.creationTime = builder.creationTime;
             this.renderingInstanceId = builder.renderingInstanceId;
             this.renderingSpec = builder.renderingSpec;
+            this.storageSize = builder.storageSize;
         }
 
         public static Builder builder() {
@@ -135,10 +151,18 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
             return this.renderingSpec;
         }
 
+        /**
+         * @return storageSize
+         */
+        public Integer getStorageSize() {
+            return this.storageSize;
+        }
+
         public static final class Builder {
             private String creationTime; 
             private String renderingInstanceId; 
             private String renderingSpec; 
+            private Integer storageSize; 
 
             /**
              * CreationTime.
@@ -161,6 +185,14 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
              */
             public Builder renderingSpec(String renderingSpec) {
                 this.renderingSpec = renderingSpec;
+                return this;
+            }
+
+            /**
+             * StorageSize.
+             */
+            public Builder storageSize(Integer storageSize) {
+                this.storageSize = storageSize;
                 return this;
             }
 

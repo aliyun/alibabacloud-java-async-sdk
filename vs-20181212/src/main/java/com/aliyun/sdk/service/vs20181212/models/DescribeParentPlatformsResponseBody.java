@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParentPlatformsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParentPlatformsResponseBody</p>
@@ -21,7 +27,7 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
     private Long pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Platforms")
-    private java.util.List < Platforms> platforms;
+    private java.util.List<Platforms> platforms;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -70,7 +76,7 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
     /**
      * @return platforms
      */
-    public java.util.List < Platforms> getPlatforms() {
+    public java.util.List<Platforms> getPlatforms() {
         return this.platforms;
     }
 
@@ -92,7 +98,7 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         private Long pageCount; 
         private Long pageNum; 
         private Long pageSize; 
-        private java.util.List < Platforms> platforms; 
+        private java.util.List<Platforms> platforms; 
         private String requestId; 
         private Long totalCount; 
 
@@ -123,7 +129,7 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         /**
          * Platforms.
          */
-        public Builder platforms(java.util.List < Platforms> platforms) {
+        public Builder platforms(java.util.List<Platforms> platforms) {
             this.platforms = platforms;
             return this;
         }
@@ -150,6 +156,12 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParentPlatformsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParentPlatformsResponseBody</p>
+     */
     public static class Platforms extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoStart")
         private Boolean autoStart;

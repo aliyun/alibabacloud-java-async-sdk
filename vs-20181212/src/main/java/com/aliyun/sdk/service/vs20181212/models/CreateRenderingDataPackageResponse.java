@@ -1,33 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeClusterDevicesResponse} extends {@link TeaModel}
+ * 
+ * {@link CreateRenderingDataPackageResponse} extends {@link TeaModel}
  *
- * <p>DescribeClusterDevicesResponse</p>
+ * <p>CreateRenderingDataPackageResponse</p>
  */
-public class DescribeClusterDevicesResponse extends Response {
+public class CreateRenderingDataPackageResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeClusterDevicesResponseBody body;
+    private CreateRenderingDataPackageResponseBody body;
 
-    private DescribeClusterDevicesResponse(BuilderImpl builder) {
+    private CreateRenderingDataPackageResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeClusterDevicesResponse create() {
+    public static CreateRenderingDataPackageResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -39,7 +45,7 @@ public class DescribeClusterDevicesResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -53,35 +59,35 @@ public class DescribeClusterDevicesResponse extends Response {
     /**
      * @return body
      */
-    public DescribeClusterDevicesResponseBody getBody() {
+    public CreateRenderingDataPackageResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeClusterDevicesResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateRenderingDataPackageResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeClusterDevicesResponseBody body);
+        Builder body(CreateRenderingDataPackageResponseBody body);
 
         @Override
-        DescribeClusterDevicesResponse build();
+        CreateRenderingDataPackageResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeClusterDevicesResponse, Builder>
+            extends Response.BuilderImpl<CreateRenderingDataPackageResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeClusterDevicesResponseBody body; 
+        private CreateRenderingDataPackageResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeClusterDevicesResponse response) {
+        private BuilderImpl(CreateRenderingDataPackageResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -92,7 +98,7 @@ public class DescribeClusterDevicesResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -110,14 +116,14 @@ public class DescribeClusterDevicesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeClusterDevicesResponseBody body) {
+        public Builder body(CreateRenderingDataPackageResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeClusterDevicesResponse build() {
-            return new DescribeClusterDevicesResponse(this);
+        public CreateRenderingDataPackageResponse build() {
+            return new CreateRenderingDataPackageResponse(this);
         } 
 
     } 

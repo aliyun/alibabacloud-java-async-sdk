@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDeviceAlarmRequest} extends {@link RequestModel}
  *
  * <p>CreateDeviceAlarmRequest</p>
@@ -172,7 +178,10 @@ public class CreateDeviceAlarmRequest extends Request {
         } 
 
         /**
-         * Alarm.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder alarm(Integer alarm) {
             this.putQueryParameter("Alarm", alarm);
@@ -181,7 +190,10 @@ public class CreateDeviceAlarmRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder channelId(Integer channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -190,7 +202,10 @@ public class CreateDeviceAlarmRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1632314789000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -208,7 +223,10 @@ public class CreateDeviceAlarmRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -217,7 +235,10 @@ public class CreateDeviceAlarmRequest extends Request {
         }
 
         /**
-         * ObjectType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder objectType(Integer objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -235,7 +256,10 @@ public class CreateDeviceAlarmRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1632121707000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -244,7 +268,7 @@ public class CreateDeviceAlarmRequest extends Request {
         }
 
         /**
-         * SubAlarm.
+         * <p>This parameter is required.</p>
          */
         public Builder subAlarm(Integer subAlarm) {
             this.putQueryParameter("SubAlarm", subAlarm);

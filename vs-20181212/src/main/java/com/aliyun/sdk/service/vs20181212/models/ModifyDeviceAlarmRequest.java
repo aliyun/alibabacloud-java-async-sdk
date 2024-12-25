@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDeviceAlarmRequest} extends {@link RequestModel}
  *
  * <p>ModifyDeviceAlarmRequest</p>
@@ -113,7 +119,10 @@ public class ModifyDeviceAlarmRequest extends Request {
         } 
 
         /**
-         * AlarmId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0dGo7jLwwf1000296232</p>
          */
         public Builder alarmId(String alarmId) {
             this.putQueryParameter("AlarmId", alarmId);
@@ -122,7 +131,10 @@ public class ModifyDeviceAlarmRequest extends Request {
         }
 
         /**
-         * ChannelId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder channelId(Integer channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -131,7 +143,10 @@ public class ModifyDeviceAlarmRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -149,7 +164,10 @@ public class ModifyDeviceAlarmRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

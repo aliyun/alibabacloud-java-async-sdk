@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ForbidVsStreamRequest} extends {@link RequestModel}
  *
  * <p>ForbidVsStreamRequest</p>
@@ -155,7 +161,10 @@ public class ForbidVsStreamRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxApp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -173,7 +182,10 @@ public class ForbidVsStreamRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -182,7 +194,10 @@ public class ForbidVsStreamRequest extends Request {
         }
 
         /**
-         * LiveStreamType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>publisher</p>
          */
         public Builder liveStreamType(String liveStreamType) {
             this.putQueryParameter("LiveStreamType", liveStreamType);
@@ -218,7 +233,10 @@ public class ForbidVsStreamRequest extends Request {
         }
 
         /**
-         * StreamName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxStream</p>
          */
         public Builder streamName(String streamName) {
             this.putQueryParameter("StreamName", streamName);

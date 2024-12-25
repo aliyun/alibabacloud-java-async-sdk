@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRenderingInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListRenderingInstancesRequest</p>
@@ -28,12 +34,17 @@ public class ListRenderingInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RenderingSpec")
     private String renderingSpec;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageSize")
+    private Integer storageSize;
+
     private ListRenderingInstancesRequest(Builder builder) {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.renderingInstanceId = builder.renderingInstanceId;
         this.renderingSpec = builder.renderingSpec;
+        this.storageSize = builder.storageSize;
     }
 
     public static Builder builder() {
@@ -77,11 +88,19 @@ public class ListRenderingInstancesRequest extends Request {
         return this.renderingSpec;
     }
 
+    /**
+     * @return storageSize
+     */
+    public Integer getStorageSize() {
+        return this.storageSize;
+    }
+
     public static final class Builder extends Request.Builder<ListRenderingInstancesRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String renderingInstanceId; 
         private String renderingSpec; 
+        private Integer storageSize; 
 
         private Builder() {
             super();
@@ -93,6 +112,7 @@ public class ListRenderingInstancesRequest extends Request {
             this.pageSize = request.pageSize;
             this.renderingInstanceId = request.renderingInstanceId;
             this.renderingSpec = request.renderingSpec;
+            this.storageSize = request.storageSize;
         } 
 
         /**
@@ -128,6 +148,15 @@ public class ListRenderingInstancesRequest extends Request {
         public Builder renderingSpec(String renderingSpec) {
             this.putQueryParameter("RenderingSpec", renderingSpec);
             this.renderingSpec = renderingSpec;
+            return this;
+        }
+
+        /**
+         * StorageSize.
+         */
+        public Builder storageSize(Integer storageSize) {
+            this.putQueryParameter("StorageSize", storageSize);
+            this.storageSize = storageSize;
             return this;
         }
 

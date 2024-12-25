@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDirectoriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDirectoriesResponseBody</p>
  */
 public class DescribeDirectoriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Directories")
-    private java.util.List < Directories> directories;
+    private java.util.List<Directories> directories;
 
     @com.aliyun.core.annotation.NameInMap("PageCount")
     private Long pageCount;
@@ -49,7 +55,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     /**
      * @return directories
      */
-    public java.util.List < Directories> getDirectories() {
+    public java.util.List<Directories> getDirectories() {
         return this.directories;
     }
 
@@ -89,7 +95,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Directories> directories; 
+        private java.util.List<Directories> directories; 
         private Long pageCount; 
         private Long pageNum; 
         private Long pageSize; 
@@ -99,7 +105,7 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         /**
          * Directories.
          */
-        public Builder directories(java.util.List < Directories> directories) {
+        public Builder directories(java.util.List<Directories> directories) {
             this.directories = directories;
             return this;
         }
@@ -150,6 +156,12 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDirectoriesResponseBody</p>
+     */
     public static class Directories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateParentPlatformRequest} extends {@link RequestModel}
  *
  * <p>CreateParentPlatformRequest</p>
@@ -242,7 +248,10 @@ public class CreateParentPlatformRequest extends Request {
         }
 
         /**
-         * GbId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31000*****2170123451</p>
          */
         public Builder gbId(String gbId) {
             this.putQueryParameter("GbId", gbId);
@@ -251,7 +260,10 @@ public class CreateParentPlatformRequest extends Request {
         }
 
         /**
-         * Ip.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.10.10</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -260,7 +272,7 @@ public class CreateParentPlatformRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -278,7 +290,10 @@ public class CreateParentPlatformRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5060</p>
          */
         public Builder port(Long port) {
             this.putQueryParameter("Port", port);

@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFilesResponseBody} extends {@link TeaModel}
  *
  * <p>ListFilesResponseBody</p>
  */
 public class ListFilesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Files")
-    private java.util.List < Files> files;
+    private java.util.List<Files> files;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -45,7 +51,7 @@ public class ListFilesResponseBody extends TeaModel {
     /**
      * @return files
      */
-    public java.util.List < Files> getFiles() {
+    public java.util.List<Files> getFiles() {
         return this.files;
     }
 
@@ -78,7 +84,7 @@ public class ListFilesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Files> files; 
+        private java.util.List<Files> files; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -87,7 +93,7 @@ public class ListFilesResponseBody extends TeaModel {
         /**
          * Files.
          */
-        public Builder files(java.util.List < Files> files) {
+        public Builder files(java.util.List<Files> files) {
             this.files = files;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFilesResponseBody</p>
+     */
     public static class Files extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;

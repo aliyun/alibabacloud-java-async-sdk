@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsDomainRegionDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsDomainRegionDataResponseBody</p>
@@ -150,6 +156,12 @@ public class DescribeVsDomainRegionDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsDomainRegionDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainRegionDataResponseBody</p>
+     */
     public static class RegionProportionData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgObjectSize")
         private String avgObjectSize;
@@ -411,9 +423,15 @@ public class DescribeVsDomainRegionDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsDomainRegionDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainRegionDataResponseBody</p>
+     */
     public static class Value extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionProportionData")
-        private java.util.List < RegionProportionData> regionProportionData;
+        private java.util.List<RegionProportionData> regionProportionData;
 
         private Value(Builder builder) {
             this.regionProportionData = builder.regionProportionData;
@@ -430,17 +448,17 @@ public class DescribeVsDomainRegionDataResponseBody extends TeaModel {
         /**
          * @return regionProportionData
          */
-        public java.util.List < RegionProportionData> getRegionProportionData() {
+        public java.util.List<RegionProportionData> getRegionProportionData() {
             return this.regionProportionData;
         }
 
         public static final class Builder {
-            private java.util.List < RegionProportionData> regionProportionData; 
+            private java.util.List<RegionProportionData> regionProportionData; 
 
             /**
              * RegionProportionData.
              */
-            public Builder regionProportionData(java.util.List < RegionProportionData> regionProportionData) {
+            public Builder regionProportionData(java.util.List<RegionProportionData> regionProportionData) {
                 this.regionProportionData = regionProportionData;
                 return this;
             }

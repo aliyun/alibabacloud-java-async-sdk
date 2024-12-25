@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchUnbindTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>BatchUnbindTemplateResponseBody</p>
  */
 public class BatchUnbindTemplateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Bindings")
-    private java.util.List < Bindings> bindings;
+    private java.util.List<Bindings> bindings;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
     /**
      * @return bindings
      */
-    public java.util.List < Bindings> getBindings() {
+    public java.util.List<Bindings> getBindings() {
         return this.bindings;
     }
 
@@ -45,13 +51,13 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Bindings> bindings; 
+        private java.util.List<Bindings> bindings; 
         private String requestId; 
 
         /**
          * Bindings.
          */
-        public Builder bindings(java.util.List < Bindings> bindings) {
+        public Builder bindings(java.util.List<Bindings> bindings) {
             this.bindings = bindings;
             return this;
         }
@@ -70,6 +76,12 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchUnbindTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchUnbindTemplateResponseBody</p>
+     */
     public static class Bindings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Error")
         private String error;

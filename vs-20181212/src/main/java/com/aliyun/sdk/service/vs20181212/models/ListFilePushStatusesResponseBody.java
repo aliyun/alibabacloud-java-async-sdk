@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFilePushStatusesResponseBody} extends {@link TeaModel}
  *
  * <p>ListFilePushStatusesResponseBody</p>
@@ -18,7 +24,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
     private Long pageSize;
 
     @com.aliyun.core.annotation.NameInMap("PushStatuses")
-    private java.util.List < PushStatuses> pushStatuses;
+    private java.util.List<PushStatuses> pushStatuses;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -59,7 +65,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
     /**
      * @return pushStatuses
      */
-    public java.util.List < PushStatuses> getPushStatuses() {
+    public java.util.List<PushStatuses> getPushStatuses() {
         return this.pushStatuses;
     }
 
@@ -80,7 +86,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
     public static final class Builder {
         private Long pageNumber; 
         private Long pageSize; 
-        private java.util.List < PushStatuses> pushStatuses; 
+        private java.util.List<PushStatuses> pushStatuses; 
         private String requestId; 
         private Long totalCount; 
 
@@ -103,7 +109,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         /**
          * PushStatuses.
          */
-        public Builder pushStatuses(java.util.List < PushStatuses> pushStatuses) {
+        public Builder pushStatuses(java.util.List<PushStatuses> pushStatuses) {
             this.pushStatuses = pushStatuses;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFilePushStatusesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFilePushStatusesResponseBody</p>
+     */
     public static class PushStatuses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;

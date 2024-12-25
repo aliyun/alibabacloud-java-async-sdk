@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRenderingInstanceConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRenderingInstanceConfigurationResponseBody</p>
  */
 public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Configuration")
-    private java.util.List < Configuration> configuration;
+    private java.util.List<Configuration> configuration;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -33,7 +39,7 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
     /**
      * @return configuration
      */
-    public java.util.List < Configuration> getConfiguration() {
+    public java.util.List<Configuration> getConfiguration() {
         return this.configuration;
     }
 
@@ -45,13 +51,13 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
     }
 
     public static final class Builder {
-        private java.util.List < Configuration> configuration; 
+        private java.util.List<Configuration> configuration; 
         private String requestId; 
 
         /**
          * Configuration.
          */
-        public Builder configuration(java.util.List < Configuration> configuration) {
+        public Builder configuration(java.util.List<Configuration> configuration) {
             this.configuration = configuration;
             return this;
         }
@@ -70,6 +76,12 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRenderingInstanceConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenderingInstanceConfigurationResponseBody</p>
+     */
     public static class Attributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -131,9 +143,15 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenderingInstanceConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenderingInstanceConfigurationResponseBody</p>
+     */
     public static class Configuration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
-        private java.util.List < Attributes> attributes;
+        private java.util.List<Attributes> attributes;
 
         @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
@@ -154,7 +172,7 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
         /**
          * @return attributes
          */
-        public java.util.List < Attributes> getAttributes() {
+        public java.util.List<Attributes> getAttributes() {
             return this.attributes;
         }
 
@@ -166,13 +184,13 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
         }
 
         public static final class Builder {
-            private java.util.List < Attributes> attributes; 
+            private java.util.List<Attributes> attributes; 
             private String moduleName; 
 
             /**
              * Attributes.
              */
-            public Builder attributes(java.util.List < Attributes> attributes) {
+            public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
                 return this;
             }

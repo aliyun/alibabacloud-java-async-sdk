@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsUserResourcePackageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsUserResourcePackageResponseBody</p>
@@ -70,6 +76,12 @@ public class DescribeVsUserResourcePackageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsUserResourcePackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsUserResourcePackageResponseBody</p>
+     */
     public static class ResourcePackageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
@@ -211,9 +223,15 @@ public class DescribeVsUserResourcePackageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsUserResourcePackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsUserResourcePackageResponseBody</p>
+     */
     public static class ResourcePackageInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourcePackageInfo")
-        private java.util.List < ResourcePackageInfo> resourcePackageInfo;
+        private java.util.List<ResourcePackageInfo> resourcePackageInfo;
 
         private ResourcePackageInfos(Builder builder) {
             this.resourcePackageInfo = builder.resourcePackageInfo;
@@ -230,17 +248,17 @@ public class DescribeVsUserResourcePackageResponseBody extends TeaModel {
         /**
          * @return resourcePackageInfo
          */
-        public java.util.List < ResourcePackageInfo> getResourcePackageInfo() {
+        public java.util.List<ResourcePackageInfo> getResourcePackageInfo() {
             return this.resourcePackageInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ResourcePackageInfo> resourcePackageInfo; 
+            private java.util.List<ResourcePackageInfo> resourcePackageInfo; 
 
             /**
              * ResourcePackageInfo.
              */
-            public Builder resourcePackageInfo(java.util.List < ResourcePackageInfo> resourcePackageInfo) {
+            public Builder resourcePackageInfo(java.util.List<ResourcePackageInfo> resourcePackageInfo) {
                 this.resourcePackageInfo = resourcePackageInfo;
                 return this;
             }

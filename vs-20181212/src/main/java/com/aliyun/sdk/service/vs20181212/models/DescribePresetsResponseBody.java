@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePresetsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePresetsResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribePresetsResponseBody extends TeaModel {
     private String id;
 
     @com.aliyun.core.annotation.NameInMap("Presets")
-    private java.util.List < Presets> presets;
+    private java.util.List<Presets> presets;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -44,7 +50,7 @@ public class DescribePresetsResponseBody extends TeaModel {
     /**
      * @return presets
      */
-    public java.util.List < Presets> getPresets() {
+    public java.util.List<Presets> getPresets() {
         return this.presets;
     }
 
@@ -57,7 +63,7 @@ public class DescribePresetsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String id; 
-        private java.util.List < Presets> presets; 
+        private java.util.List<Presets> presets; 
         private String requestId; 
 
         /**
@@ -71,7 +77,7 @@ public class DescribePresetsResponseBody extends TeaModel {
         /**
          * Presets.
          */
-        public Builder presets(java.util.List < Presets> presets) {
+        public Builder presets(java.util.List<Presets> presets) {
             this.presets = presets;
             return this;
         }
@@ -90,6 +96,12 @@ public class DescribePresetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePresetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePresetsResponseBody</p>
+     */
     public static class Presets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;

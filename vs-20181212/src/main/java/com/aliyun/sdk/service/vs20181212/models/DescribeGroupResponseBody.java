@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupResponseBody</p>
@@ -39,10 +45,10 @@ public class DescribeGroupResponseBody extends TeaModel {
     private Long gbPort;
 
     @com.aliyun.core.annotation.NameInMap("GbTcpPorts")
-    private java.util.List < String > gbTcpPorts;
+    private java.util.List<String> gbTcpPorts;
 
     @com.aliyun.core.annotation.NameInMap("GbUdpPorts")
-    private java.util.List < String > gbUdpPorts;
+    private java.util.List<String> gbUdpPorts;
 
     @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
@@ -176,14 +182,14 @@ public class DescribeGroupResponseBody extends TeaModel {
     /**
      * @return gbTcpPorts
      */
-    public java.util.List < String > getGbTcpPorts() {
+    public java.util.List<String> getGbTcpPorts() {
         return this.gbTcpPorts;
     }
 
     /**
      * @return gbUdpPorts
      */
-    public java.util.List < String > getGbUdpPorts() {
+    public java.util.List<String> getGbUdpPorts() {
         return this.gbUdpPorts;
     }
 
@@ -274,8 +280,8 @@ public class DescribeGroupResponseBody extends TeaModel {
         private String gbId; 
         private String gbIp; 
         private Long gbPort; 
-        private java.util.List < String > gbTcpPorts; 
-        private java.util.List < String > gbUdpPorts; 
+        private java.util.List<String> gbTcpPorts; 
+        private java.util.List<String> gbUdpPorts; 
         private String id; 
         private String inProtocol; 
         private Boolean lazyPull; 
@@ -363,7 +369,7 @@ public class DescribeGroupResponseBody extends TeaModel {
         /**
          * GbTcpPorts.
          */
-        public Builder gbTcpPorts(java.util.List < String > gbTcpPorts) {
+        public Builder gbTcpPorts(java.util.List<String> gbTcpPorts) {
             this.gbTcpPorts = gbTcpPorts;
             return this;
         }
@@ -371,7 +377,7 @@ public class DescribeGroupResponseBody extends TeaModel {
         /**
          * GbUdpPorts.
          */
-        public Builder gbUdpPorts(java.util.List < String > gbUdpPorts) {
+        public Builder gbUdpPorts(java.util.List<String> gbUdpPorts) {
             this.gbUdpPorts = gbUdpPorts;
             return this;
         }
@@ -470,6 +476,12 @@ public class DescribeGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupResponseBody</p>
+     */
     public static class Stats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceNum")
         private Long deviceNum;

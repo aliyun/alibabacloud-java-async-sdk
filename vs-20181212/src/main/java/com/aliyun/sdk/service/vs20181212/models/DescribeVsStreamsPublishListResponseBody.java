@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsStreamsPublishListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsStreamsPublishListResponseBody</p>
@@ -150,6 +156,12 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsStreamsPublishListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsStreamsPublishListResponseBody</p>
+     */
     public static class LiveStreamPublishInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -431,9 +443,15 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsStreamsPublishListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsStreamsPublishListResponseBody</p>
+     */
     public static class PublishInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LiveStreamPublishInfo")
-        private java.util.List < LiveStreamPublishInfo> liveStreamPublishInfo;
+        private java.util.List<LiveStreamPublishInfo> liveStreamPublishInfo;
 
         private PublishInfo(Builder builder) {
             this.liveStreamPublishInfo = builder.liveStreamPublishInfo;
@@ -450,17 +468,17 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
         /**
          * @return liveStreamPublishInfo
          */
-        public java.util.List < LiveStreamPublishInfo> getLiveStreamPublishInfo() {
+        public java.util.List<LiveStreamPublishInfo> getLiveStreamPublishInfo() {
             return this.liveStreamPublishInfo;
         }
 
         public static final class Builder {
-            private java.util.List < LiveStreamPublishInfo> liveStreamPublishInfo; 
+            private java.util.List<LiveStreamPublishInfo> liveStreamPublishInfo; 
 
             /**
              * LiveStreamPublishInfo.
              */
-            public Builder liveStreamPublishInfo(java.util.List < LiveStreamPublishInfo> liveStreamPublishInfo) {
+            public Builder liveStreamPublishInfo(java.util.List<LiveStreamPublishInfo> liveStreamPublishInfo) {
                 this.liveStreamPublishInfo = liveStreamPublishInfo;
                 return this;
             }

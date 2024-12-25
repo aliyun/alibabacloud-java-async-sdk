@@ -1,20 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateClusterResponseBody} extends {@link TeaModel}
+ * 
+ * {@link DeleteRenderingInstanceGatewayResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateClusterResponseBody</p>
+ * <p>DeleteRenderingInstanceGatewayResponseBody</p>
  */
-public class UpdateClusterResponseBody extends TeaModel {
+public class DeleteRenderingInstanceGatewayResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdateClusterResponseBody(Builder builder) {
+    private DeleteRenderingInstanceGatewayResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -22,7 +28,7 @@ public class UpdateClusterResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateClusterResponseBody create() {
+    public static DeleteRenderingInstanceGatewayResponseBody create() {
         return builder().build();
     }
 
@@ -44,8 +50,8 @@ public class UpdateClusterResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdateClusterResponseBody build() {
-            return new UpdateClusterResponseBody(this);
+        public DeleteRenderingInstanceGatewayResponseBody build() {
+            return new DeleteRenderingInstanceGatewayResponseBody(this);
         } 
 
     } 

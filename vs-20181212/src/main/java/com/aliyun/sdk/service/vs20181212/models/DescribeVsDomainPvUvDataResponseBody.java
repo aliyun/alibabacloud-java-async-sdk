@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsDomainPvUvDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsDomainPvUvDataResponseBody</p>
@@ -150,6 +156,12 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsDomainPvUvDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainPvUvDataResponseBody</p>
+     */
     public static class PvUvDataInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PV")
         private String pv;
@@ -231,9 +243,15 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsDomainPvUvDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainPvUvDataResponseBody</p>
+     */
     public static class PvUvDataInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PvUvDataInfo")
-        private java.util.List < PvUvDataInfo> pvUvDataInfo;
+        private java.util.List<PvUvDataInfo> pvUvDataInfo;
 
         private PvUvDataInfos(Builder builder) {
             this.pvUvDataInfo = builder.pvUvDataInfo;
@@ -250,17 +268,17 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
         /**
          * @return pvUvDataInfo
          */
-        public java.util.List < PvUvDataInfo> getPvUvDataInfo() {
+        public java.util.List<PvUvDataInfo> getPvUvDataInfo() {
             return this.pvUvDataInfo;
         }
 
         public static final class Builder {
-            private java.util.List < PvUvDataInfo> pvUvDataInfo; 
+            private java.util.List<PvUvDataInfo> pvUvDataInfo; 
 
             /**
              * PvUvDataInfo.
              */
-            public Builder pvUvDataInfo(java.util.List < PvUvDataInfo> pvUvDataInfo) {
+            public Builder pvUvDataInfo(java.util.List<PvUvDataInfo> pvUvDataInfo) {
                 this.pvUvDataInfo = pvUvDataInfo;
                 return this;
             }

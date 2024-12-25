@@ -1,24 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateClusterResponseBody} extends {@link TeaModel}
+ * 
+ * {@link CreateRenderingInstanceGatewayResponseBody} extends {@link TeaModel}
  *
- * <p>CreateClusterResponseBody</p>
+ * <p>CreateRenderingInstanceGatewayResponseBody</p>
  */
-public class CreateClusterResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("ClusterId")
-    private String clusterId;
-
+public class CreateRenderingInstanceGatewayResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateClusterResponseBody(Builder builder) {
-        this.clusterId = builder.clusterId;
+    private CreateRenderingInstanceGatewayResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -26,15 +28,8 @@ public class CreateClusterResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateClusterResponseBody create() {
+    public static CreateRenderingInstanceGatewayResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return clusterId
-     */
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     /**
@@ -45,16 +40,7 @@ public class CreateClusterResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String clusterId; 
         private String requestId; 
-
-        /**
-         * ClusterId.
-         */
-        public Builder clusterId(String clusterId) {
-            this.clusterId = clusterId;
-            return this;
-        }
 
         /**
          * RequestId.
@@ -64,8 +50,8 @@ public class CreateClusterResponseBody extends TeaModel {
             return this;
         }
 
-        public CreateClusterResponseBody build() {
-            return new CreateClusterResponseBody(this);
+        public CreateRenderingInstanceGatewayResponseBody build() {
+            return new CreateRenderingInstanceGatewayResponseBody(this);
         } 
 
     } 

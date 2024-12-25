@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRenderingInstanceConfigurationRequest} extends {@link RequestModel}
  *
  * <p>DescribeRenderingInstanceConfigurationRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeRenderingInstanceConfigurationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Configuration")
-    private java.util.List < Configuration> configuration;
+    private java.util.List<Configuration> configuration;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
@@ -42,7 +48,7 @@ public class DescribeRenderingInstanceConfigurationRequest extends Request {
     /**
      * @return configuration
      */
-    public java.util.List < Configuration> getConfiguration() {
+    public java.util.List<Configuration> getConfiguration() {
         return this.configuration;
     }
 
@@ -54,7 +60,7 @@ public class DescribeRenderingInstanceConfigurationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRenderingInstanceConfigurationRequest, Builder> {
-        private java.util.List < Configuration> configuration; 
+        private java.util.List<Configuration> configuration; 
         private String renderingInstanceId; 
 
         private Builder() {
@@ -70,7 +76,7 @@ public class DescribeRenderingInstanceConfigurationRequest extends Request {
         /**
          * Configuration.
          */
-        public Builder configuration(java.util.List < Configuration> configuration) {
+        public Builder configuration(java.util.List<Configuration> configuration) {
             String configurationShrink = shrink(configuration, "Configuration", "json");
             this.putQueryParameter("Configuration", configurationShrink);
             this.configuration = configuration;
@@ -78,7 +84,10 @@ public class DescribeRenderingInstanceConfigurationRequest extends Request {
         }
 
         /**
-         * RenderingInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
@@ -93,9 +102,15 @@ public class DescribeRenderingInstanceConfigurationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRenderingInstanceConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeRenderingInstanceConfigurationRequest</p>
+     */
     public static class Configuration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttributeNames")
-        private java.util.List < String > attributeNames;
+        private java.util.List<String> attributeNames;
 
         @com.aliyun.core.annotation.NameInMap("ModuleName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -117,7 +132,7 @@ public class DescribeRenderingInstanceConfigurationRequest extends Request {
         /**
          * @return attributeNames
          */
-        public java.util.List < String > getAttributeNames() {
+        public java.util.List<String> getAttributeNames() {
             return this.attributeNames;
         }
 
@@ -129,19 +144,22 @@ public class DescribeRenderingInstanceConfigurationRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > attributeNames; 
+            private java.util.List<String> attributeNames; 
             private String moduleName; 
 
             /**
              * AttributeNames.
              */
-            public Builder attributeNames(java.util.List < String > attributeNames) {
+            public Builder attributeNames(java.util.List<String> attributeNames) {
                 this.attributeNames = attributeNames;
                 return this;
             }
 
             /**
-             * ModuleName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>location</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;

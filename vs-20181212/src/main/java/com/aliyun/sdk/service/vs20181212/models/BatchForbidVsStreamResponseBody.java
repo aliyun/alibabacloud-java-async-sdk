@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchForbidVsStreamResponseBody} extends {@link TeaModel}
  *
  * <p>BatchForbidVsStreamResponseBody</p>
@@ -70,9 +76,15 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchForbidVsStreamResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchForbidVsStreamResponseBody</p>
+     */
     public static class Channels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channel")
-        private java.util.List < String > channel;
+        private java.util.List<String> channel;
 
         private Channels(Builder builder) {
             this.channel = builder.channel;
@@ -89,17 +101,17 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
         /**
          * @return channel
          */
-        public java.util.List < String > getChannel() {
+        public java.util.List<String> getChannel() {
             return this.channel;
         }
 
         public static final class Builder {
-            private java.util.List < String > channel; 
+            private java.util.List<String> channel; 
 
             /**
              * Channel.
              */
-            public Builder channel(java.util.List < String > channel) {
+            public Builder channel(java.util.List<String> channel) {
                 this.channel = channel;
                 return this;
             }
@@ -111,6 +123,12 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchForbidVsStreamResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchForbidVsStreamResponseBody</p>
+     */
     public static class ForbidResultInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channels")
         private Channels channels;
@@ -212,9 +230,15 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchForbidVsStreamResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchForbidVsStreamResponseBody</p>
+     */
     public static class ForbidResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForbidResultInfo")
-        private java.util.List < ForbidResultInfo> forbidResultInfo;
+        private java.util.List<ForbidResultInfo> forbidResultInfo;
 
         private ForbidResult(Builder builder) {
             this.forbidResultInfo = builder.forbidResultInfo;
@@ -231,17 +255,17 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
         /**
          * @return forbidResultInfo
          */
-        public java.util.List < ForbidResultInfo> getForbidResultInfo() {
+        public java.util.List<ForbidResultInfo> getForbidResultInfo() {
             return this.forbidResultInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ForbidResultInfo> forbidResultInfo; 
+            private java.util.List<ForbidResultInfo> forbidResultInfo; 
 
             /**
              * ForbidResultInfo.
              */
-            public Builder forbidResultInfo(java.util.List < ForbidResultInfo> forbidResultInfo) {
+            public Builder forbidResultInfo(java.util.List<ForbidResultInfo> forbidResultInfo) {
                 this.forbidResultInfo = forbidResultInfo;
                 return this;
             }

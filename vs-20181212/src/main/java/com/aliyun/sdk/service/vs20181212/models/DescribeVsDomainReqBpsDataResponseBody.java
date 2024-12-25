@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsDomainReqBpsDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsDomainReqBpsDataResponseBody</p>
@@ -150,6 +156,12 @@ public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsDomainReqBpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainReqBpsDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReqBpsValue")
         private String reqBpsValue;
@@ -211,9 +223,15 @@ public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsDomainReqBpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainReqBpsDataResponseBody</p>
+     */
     public static class ReqBpsDataPerInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        private java.util.List<DataModule> dataModule;
 
         private ReqBpsDataPerInterval(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -230,17 +248,17 @@ public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

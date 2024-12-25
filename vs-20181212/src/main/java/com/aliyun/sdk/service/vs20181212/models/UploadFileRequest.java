@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadFileRequest} extends {@link RequestModel}
  *
  * <p>UploadFileRequest</p>
@@ -123,7 +129,10 @@ public class UploadFileRequest extends Request {
         }
 
         /**
-         * FileName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mytest</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -132,7 +141,10 @@ public class UploadFileRequest extends Request {
         }
 
         /**
-         * Md5.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150b6083f50dd08159d45a0d5e4b56f9</p>
          */
         public Builder md5(String md5) {
             this.putQueryParameter("Md5", md5);
@@ -141,7 +153,10 @@ public class UploadFileRequest extends Request {
         }
 
         /**
-         * OriginUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.xxx.xxx.tar">https://xxx.xxx.xxx.tar</a></p>
          */
         public Builder originUrl(String originUrl) {
             this.putQueryParameter("OriginUrl", originUrl);
@@ -150,7 +165,10 @@ public class UploadFileRequest extends Request {
         }
 
         /**
-         * TargetPath.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/data/tmp/test/xxx.tar</p>
          */
         public Builder targetPath(String targetPath) {
             this.putQueryParameter("TargetPath", targetPath);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRecordsRequest</p>
@@ -183,7 +189,10 @@ public class DescribeRecordsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-24T00:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -246,7 +255,10 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-22T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -255,7 +267,10 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
-         * StreamId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>323*****997-cn-qingdao</p>
          */
         public Builder streamId(String streamId) {
             this.putQueryParameter("StreamId", streamId);
@@ -264,7 +279,10 @@ public class DescribeRecordsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

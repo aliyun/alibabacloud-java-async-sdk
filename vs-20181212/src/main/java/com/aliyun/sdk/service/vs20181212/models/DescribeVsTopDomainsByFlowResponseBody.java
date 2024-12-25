@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsTopDomainsByFlowResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsTopDomainsByFlowResponseBody</p>
@@ -150,6 +156,12 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsTopDomainsByFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsTopDomainsByFlowResponseBody</p>
+     */
     public static class TopDomain extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
@@ -311,9 +323,15 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsTopDomainsByFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsTopDomainsByFlowResponseBody</p>
+     */
     public static class TopDomains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TopDomain")
-        private java.util.List < TopDomain> topDomain;
+        private java.util.List<TopDomain> topDomain;
 
         private TopDomains(Builder builder) {
             this.topDomain = builder.topDomain;
@@ -330,17 +348,17 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
         /**
          * @return topDomain
          */
-        public java.util.List < TopDomain> getTopDomain() {
+        public java.util.List<TopDomain> getTopDomain() {
             return this.topDomain;
         }
 
         public static final class Builder {
-            private java.util.List < TopDomain> topDomain; 
+            private java.util.List<TopDomain> topDomain; 
 
             /**
              * TopDomain.
              */
-            public Builder topDomain(java.util.List < TopDomain> topDomain) {
+            public Builder topDomain(java.util.List<TopDomain> topDomain) {
                 this.topDomain = topDomain;
                 return this;
             }

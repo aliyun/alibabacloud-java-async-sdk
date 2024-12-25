@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeviceURLRequest} extends {@link RequestModel}
  *
  * <p>DescribeDeviceURLRequest</p>
@@ -172,7 +178,10 @@ public class DescribeDeviceURLRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -190,7 +199,10 @@ public class DescribeDeviceURLRequest extends Request {
         }
 
         /**
-         * OutProtocol.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp</p>
          */
         public Builder outProtocol(String outProtocol) {
             this.putQueryParameter("OutProtocol", outProtocol);
@@ -208,7 +220,10 @@ public class DescribeDeviceURLRequest extends Request {
         }
 
         /**
-         * Stream.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>live001</p>
          */
         public Builder stream(String stream) {
             this.putQueryParameter("Stream", stream);

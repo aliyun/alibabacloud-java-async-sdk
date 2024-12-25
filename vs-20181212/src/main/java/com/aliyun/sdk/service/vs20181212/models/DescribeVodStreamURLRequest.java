@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVodStreamURLRequest} extends {@link RequestModel}
  *
  * <p>DescribeVodStreamURLRequest</p>
@@ -77,7 +83,10 @@ public class DescribeVodStreamURLRequest extends Request {
         }
 
         /**
-         * Url.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

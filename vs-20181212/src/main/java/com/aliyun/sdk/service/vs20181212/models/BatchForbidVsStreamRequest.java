@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchForbidVsStreamRequest} extends {@link RequestModel}
  *
  * <p>BatchForbidVsStreamRequest</p>
@@ -140,7 +146,10 @@ public class BatchForbidVsStreamRequest extends Request {
         } 
 
         /**
-         * Channel.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>live/stream1,live/stream2</p>
          */
         public Builder channel(String channel) {
             this.putQueryParameter("Channel", channel);
@@ -158,7 +167,10 @@ public class BatchForbidVsStreamRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -167,7 +179,10 @@ public class BatchForbidVsStreamRequest extends Request {
         }
 
         /**
-         * LiveStreamType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>publisher</p>
          */
         public Builder liveStreamType(String liveStreamType) {
             this.putQueryParameter("LiveStreamType", liveStreamType);

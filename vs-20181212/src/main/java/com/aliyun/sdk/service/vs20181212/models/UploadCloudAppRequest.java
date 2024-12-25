@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadCloudAppRequest} extends {@link RequestModel}
  *
  * <p>UploadCloudAppRequest</p>
@@ -114,7 +120,10 @@ public class UploadCloudAppRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aaa.bbb</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -123,7 +132,10 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
-         * AppVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1</p>
          */
         public Builder appVersion(String appVersion) {
             this.putQueryParameter("AppVersion", appVersion);
@@ -141,7 +153,10 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
-         * DownloadUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.xxx.xxx.apk">https://xxx.xxx.xxx.apk</a></p>
          */
         public Builder downloadUrl(String downloadUrl) {
             this.putQueryParameter("DownloadUrl", downloadUrl);
@@ -150,7 +165,10 @@ public class UploadCloudAppRequest extends Request {
         }
 
         /**
-         * Md5.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CFBB7BD10CDD7279642ADAB8FEF3DEE</p>
          */
         public Builder md5(String md5) {
             this.putQueryParameter("Md5", md5);

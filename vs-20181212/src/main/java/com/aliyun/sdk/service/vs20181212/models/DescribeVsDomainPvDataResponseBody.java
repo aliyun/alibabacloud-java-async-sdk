@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsDomainPvDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsDomainPvDataResponseBody</p>
@@ -150,6 +156,12 @@ public class DescribeVsDomainPvDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsDomainPvDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainPvDataResponseBody</p>
+     */
     public static class UsageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
@@ -211,9 +223,15 @@ public class DescribeVsDomainPvDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsDomainPvDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsDomainPvDataResponseBody</p>
+     */
     public static class PvDataInterval extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsageData")
-        private java.util.List < UsageData> usageData;
+        private java.util.List<UsageData> usageData;
 
         private PvDataInterval(Builder builder) {
             this.usageData = builder.usageData;
@@ -230,17 +248,17 @@ public class DescribeVsDomainPvDataResponseBody extends TeaModel {
         /**
          * @return usageData
          */
-        public java.util.List < UsageData> getUsageData() {
+        public java.util.List<UsageData> getUsageData() {
             return this.usageData;
         }
 
         public static final class Builder {
-            private java.util.List < UsageData> usageData; 
+            private java.util.List<UsageData> usageData; 
 
             /**
              * UsageData.
              */
-            public Builder usageData(java.util.List < UsageData> usageData) {
+            public Builder usageData(java.util.List<UsageData> usageData) {
                 this.usageData = usageData;
                 return this;
             }

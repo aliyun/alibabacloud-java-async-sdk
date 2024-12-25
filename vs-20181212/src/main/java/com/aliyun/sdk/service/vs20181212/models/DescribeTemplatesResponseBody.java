@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTemplatesResponseBody</p>
@@ -24,7 +30,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Templates")
-    private java.util.List < Templates> templates;
+    private java.util.List<Templates> templates;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -77,7 +83,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     /**
      * @return templates
      */
-    public java.util.List < Templates> getTemplates() {
+    public java.util.List<Templates> getTemplates() {
         return this.templates;
     }
 
@@ -93,7 +99,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         private Long pageNum; 
         private Long pageSize; 
         private String requestId; 
-        private java.util.List < Templates> templates; 
+        private java.util.List<Templates> templates; 
         private Long totalCount; 
 
         /**
@@ -131,7 +137,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         /**
          * Templates.
          */
-        public Builder templates(java.util.List < Templates> templates) {
+        public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
             return this;
         }
@@ -150,6 +156,12 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTemplatesResponseBody</p>
+     */
     public static class TransConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Fps")
         private Long fps;
@@ -331,6 +343,12 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTemplatesResponseBody</p>
+     */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Callback")
         private String callback;
@@ -390,7 +408,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         private Long retention;
 
         @com.aliyun.core.annotation.NameInMap("TransConfigs")
-        private java.util.List < TransConfigs> transConfigs;
+        private java.util.List<TransConfigs> transConfigs;
 
         @com.aliyun.core.annotation.NameInMap("Trigger")
         private String trigger;
@@ -567,7 +585,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         /**
          * @return transConfigs
          */
-        public java.util.List < TransConfigs> getTransConfigs() {
+        public java.util.List<TransConfigs> getTransConfigs() {
             return this.transConfigs;
         }
 
@@ -605,7 +623,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             private String ossFilePrefix; 
             private String region; 
             private Long retention; 
-            private java.util.List < TransConfigs> transConfigs; 
+            private java.util.List<TransConfigs> transConfigs; 
             private String trigger; 
             private String type; 
 
@@ -764,7 +782,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             /**
              * TransConfigs.
              */
-            public Builder transConfigs(java.util.List < TransConfigs> transConfigs) {
+            public Builder transConfigs(java.util.List<TransConfigs> transConfigs) {
                 this.transConfigs = transConfigs;
                 return this;
             }

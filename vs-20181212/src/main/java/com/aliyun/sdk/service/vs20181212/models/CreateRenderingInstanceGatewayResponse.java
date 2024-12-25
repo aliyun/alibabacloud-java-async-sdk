@@ -1,33 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteClusterResponse} extends {@link TeaModel}
+ * 
+ * {@link CreateRenderingInstanceGatewayResponse} extends {@link TeaModel}
  *
- * <p>DeleteClusterResponse</p>
+ * <p>CreateRenderingInstanceGatewayResponse</p>
  */
-public class DeleteClusterResponse extends Response {
+public class CreateRenderingInstanceGatewayResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteClusterResponseBody body;
+    private CreateRenderingInstanceGatewayResponseBody body;
 
-    private DeleteClusterResponse(BuilderImpl builder) {
+    private CreateRenderingInstanceGatewayResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteClusterResponse create() {
+    public static CreateRenderingInstanceGatewayResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -39,7 +45,7 @@ public class DeleteClusterResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -53,35 +59,35 @@ public class DeleteClusterResponse extends Response {
     /**
      * @return body
      */
-    public DeleteClusterResponseBody getBody() {
+    public CreateRenderingInstanceGatewayResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteClusterResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateRenderingInstanceGatewayResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteClusterResponseBody body);
+        Builder body(CreateRenderingInstanceGatewayResponseBody body);
 
         @Override
-        DeleteClusterResponse build();
+        CreateRenderingInstanceGatewayResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteClusterResponse, Builder>
+            extends Response.BuilderImpl<CreateRenderingInstanceGatewayResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DeleteClusterResponseBody body; 
+        private CreateRenderingInstanceGatewayResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteClusterResponse response) {
+        private BuilderImpl(CreateRenderingInstanceGatewayResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -92,7 +98,7 @@ public class DeleteClusterResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -110,14 +116,14 @@ public class DeleteClusterResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteClusterResponseBody body) {
+        public Builder body(CreateRenderingInstanceGatewayResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteClusterResponse build() {
-            return new DeleteClusterResponse(this);
+        public CreateRenderingInstanceGatewayResponse build() {
+            return new CreateRenderingInstanceGatewayResponse(this);
         } 
 
     } 

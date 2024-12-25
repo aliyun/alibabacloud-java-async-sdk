@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCloudAppsResponseBody</p>
  */
 public class ListCloudAppsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CloudApps")
-    private java.util.List < CloudApps> cloudApps;
+    private java.util.List<CloudApps> cloudApps;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -45,7 +51,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
     /**
      * @return cloudApps
      */
-    public java.util.List < CloudApps> getCloudApps() {
+    public java.util.List<CloudApps> getCloudApps() {
         return this.cloudApps;
     }
 
@@ -78,7 +84,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CloudApps> cloudApps; 
+        private java.util.List<CloudApps> cloudApps; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -87,7 +93,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         /**
          * CloudApps.
          */
-        public Builder cloudApps(java.util.List < CloudApps> cloudApps) {
+        public Builder cloudApps(java.util.List<CloudApps> cloudApps) {
             this.cloudApps = cloudApps;
             return this;
         }
@@ -130,6 +136,12 @@ public class ListCloudAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudAppsResponseBody</p>
+     */
     public static class CloudApps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStreamsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStreamsResponseBody</p>
@@ -24,7 +30,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Streams")
-    private java.util.List < Streams> streams;
+    private java.util.List<Streams> streams;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
@@ -77,7 +83,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
     /**
      * @return streams
      */
-    public java.util.List < Streams> getStreams() {
+    public java.util.List<Streams> getStreams() {
         return this.streams;
     }
 
@@ -93,7 +99,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
         private Long pageNum; 
         private Long pageSize; 
         private String requestId; 
-        private java.util.List < Streams> streams; 
+        private java.util.List<Streams> streams; 
         private Long totalCount; 
 
         /**
@@ -131,7 +137,7 @@ public class DescribeStreamsResponseBody extends TeaModel {
         /**
          * Streams.
          */
-        public Builder streams(java.util.List < Streams> streams) {
+        public Builder streams(java.util.List<Streams> streams) {
             this.streams = streams;
             return this;
         }
@@ -150,6 +156,12 @@ public class DescribeStreamsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStreamsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStreamsResponseBody</p>
+     */
     public static class Streams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("App")
         private String app;

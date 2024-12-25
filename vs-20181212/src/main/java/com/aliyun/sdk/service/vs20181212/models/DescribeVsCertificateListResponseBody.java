@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsCertificateListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsCertificateListResponseBody</p>
@@ -70,6 +76,12 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsCertificateListResponseBody</p>
+     */
     public static class CertList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertId")
         private Long certId;
@@ -211,9 +223,15 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsCertificateListResponseBody</p>
+     */
     public static class CertificateListModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertList")
-        private java.util.List < CertList> certList;
+        private java.util.List<CertList> certList;
 
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -234,7 +252,7 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         /**
          * @return certList
          */
-        public java.util.List < CertList> getCertList() {
+        public java.util.List<CertList> getCertList() {
             return this.certList;
         }
 
@@ -246,13 +264,13 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CertList> certList; 
+            private java.util.List<CertList> certList; 
             private Integer count; 
 
             /**
              * CertList.
              */
-            public Builder certList(java.util.List < CertList> certList) {
+            public Builder certList(java.util.List<CertList> certList) {
                 this.certList = certList;
                 return this;
             }

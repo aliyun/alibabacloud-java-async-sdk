@@ -1,33 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeUserDevicesResponse} extends {@link TeaModel}
+ * 
+ * {@link ModifyRenderingInstanceResponse} extends {@link TeaModel}
  *
- * <p>DescribeUserDevicesResponse</p>
+ * <p>ModifyRenderingInstanceResponse</p>
  */
-public class DescribeUserDevicesResponse extends Response {
+public class ModifyRenderingInstanceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeUserDevicesResponseBody body;
+    private ModifyRenderingInstanceResponseBody body;
 
-    private DescribeUserDevicesResponse(BuilderImpl builder) {
+    private ModifyRenderingInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeUserDevicesResponse create() {
+    public static ModifyRenderingInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -39,7 +45,7 @@ public class DescribeUserDevicesResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -53,35 +59,35 @@ public class DescribeUserDevicesResponse extends Response {
     /**
      * @return body
      */
-    public DescribeUserDevicesResponseBody getBody() {
+    public ModifyRenderingInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeUserDevicesResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyRenderingInstanceResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeUserDevicesResponseBody body);
+        Builder body(ModifyRenderingInstanceResponseBody body);
 
         @Override
-        DescribeUserDevicesResponse build();
+        ModifyRenderingInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeUserDevicesResponse, Builder>
+            extends Response.BuilderImpl<ModifyRenderingInstanceResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeUserDevicesResponseBody body; 
+        private ModifyRenderingInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeUserDevicesResponse response) {
+        private BuilderImpl(ModifyRenderingInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -92,7 +98,7 @@ public class DescribeUserDevicesResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -110,14 +116,14 @@ public class DescribeUserDevicesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeUserDevicesResponseBody body) {
+        public Builder body(ModifyRenderingInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeUserDevicesResponse build() {
-            return new DescribeUserDevicesResponse(this);
+        public ModifyRenderingInstanceResponse build() {
+            return new ModifyRenderingInstanceResponse(this);
         } 
 
     } 

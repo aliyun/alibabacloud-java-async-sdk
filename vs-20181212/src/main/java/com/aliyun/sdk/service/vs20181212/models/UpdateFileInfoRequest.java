@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFileInfoRequest} extends {@link RequestModel}
  *
  * <p>UpdateFileInfoRequest</p>
@@ -69,7 +75,7 @@ public class UpdateFileInfoRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>This parameter is required.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -78,7 +84,10 @@ public class UpdateFileInfoRequest extends Request {
         }
 
         /**
-         * FileId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-16713accddtgtj6340jgnclhwsg1813f718db2f7</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);

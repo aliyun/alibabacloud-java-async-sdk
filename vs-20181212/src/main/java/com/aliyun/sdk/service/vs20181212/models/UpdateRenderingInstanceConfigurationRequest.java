@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRenderingInstanceConfigurationRequest} extends {@link RequestModel}
  *
  * <p>UpdateRenderingInstanceConfigurationRequest</p>
@@ -14,7 +20,7 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Configuration")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Configuration> configuration;
+    private java.util.List<Configuration> configuration;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
@@ -43,7 +49,7 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
     /**
      * @return configuration
      */
-    public java.util.List < Configuration> getConfiguration() {
+    public java.util.List<Configuration> getConfiguration() {
         return this.configuration;
     }
 
@@ -55,7 +61,7 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateRenderingInstanceConfigurationRequest, Builder> {
-        private java.util.List < Configuration> configuration; 
+        private java.util.List<Configuration> configuration; 
         private String renderingInstanceId; 
 
         private Builder() {
@@ -69,9 +75,9 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
         } 
 
         /**
-         * Configuration.
+         * <p>This parameter is required.</p>
          */
-        public Builder configuration(java.util.List < Configuration> configuration) {
+        public Builder configuration(java.util.List<Configuration> configuration) {
             String configurationShrink = shrink(configuration, "Configuration", "json");
             this.putBodyParameter("Configuration", configurationShrink);
             this.configuration = configuration;
@@ -79,7 +85,10 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
         }
 
         /**
-         * RenderingInstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
@@ -94,6 +103,12 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateRenderingInstanceConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRenderingInstanceConfigurationRequest</p>
+     */
     public static class Attributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -135,7 +150,10 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
             private Object value; 
 
             /**
-             * Name.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lon</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -143,7 +161,10 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -157,10 +178,16 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateRenderingInstanceConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateRenderingInstanceConfigurationRequest</p>
+     */
     public static class Configuration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < Attributes> attributes;
+        private java.util.List<Attributes> attributes;
 
         @com.aliyun.core.annotation.NameInMap("ModuleName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -182,7 +209,7 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
         /**
          * @return attributes
          */
-        public java.util.List < Attributes> getAttributes() {
+        public java.util.List<Attributes> getAttributes() {
             return this.attributes;
         }
 
@@ -194,19 +221,22 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Attributes> attributes; 
+            private java.util.List<Attributes> attributes; 
             private String moduleName; 
 
             /**
-             * Attributes.
+             * <p>This parameter is required.</p>
              */
-            public Builder attributes(java.util.List < Attributes> attributes) {
+            public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
                 return this;
             }
 
             /**
-             * ModuleName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>location</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;

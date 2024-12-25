@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsPullStreamInfoConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVsPullStreamInfoConfigResponseBody</p>
@@ -70,6 +76,12 @@ public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVsPullStreamInfoConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsPullStreamInfoConfigResponseBody</p>
+     */
     public static class LiveAppRecord extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -211,9 +223,15 @@ public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVsPullStreamInfoConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVsPullStreamInfoConfigResponseBody</p>
+     */
     public static class LiveAppRecordList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LiveAppRecord")
-        private java.util.List < LiveAppRecord> liveAppRecord;
+        private java.util.List<LiveAppRecord> liveAppRecord;
 
         private LiveAppRecordList(Builder builder) {
             this.liveAppRecord = builder.liveAppRecord;
@@ -230,17 +248,17 @@ public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
         /**
          * @return liveAppRecord
          */
-        public java.util.List < LiveAppRecord> getLiveAppRecord() {
+        public java.util.List<LiveAppRecord> getLiveAppRecord() {
             return this.liveAppRecord;
         }
 
         public static final class Builder {
-            private java.util.List < LiveAppRecord> liveAppRecord; 
+            private java.util.List<LiveAppRecord> liveAppRecord; 
 
             /**
              * LiveAppRecord.
              */
-            public Builder liveAppRecord(java.util.List < LiveAppRecord> liveAppRecord) {
+            public Builder liveAppRecord(java.util.List<LiveAppRecord> liveAppRecord) {
                 this.liveAppRecord = liveAppRecord;
                 return this;
             }

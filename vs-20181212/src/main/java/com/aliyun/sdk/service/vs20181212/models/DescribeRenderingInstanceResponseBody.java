@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRenderingInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRenderingInstanceResponseBody</p>
@@ -21,16 +27,22 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     private String hostname;
 
     @com.aliyun.core.annotation.NameInMap("PortMappings")
-    private java.util.List < PortMappings> portMappings;
+    private java.util.List<PortMappings> portMappings;
 
     @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
     private String renderingInstanceId;
+
+    @com.aliyun.core.annotation.NameInMap("RenderingSpec")
+    private String renderingSpec;
 
     @com.aliyun.core.annotation.NameInMap("RenderingStatus")
     private RenderingStatus renderingStatus;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("StorageSize")
+    private Integer storageSize;
 
     @com.aliyun.core.annotation.NameInMap("SystemInfo")
     private SystemInfo systemInfo;
@@ -41,8 +53,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         this.hostname = builder.hostname;
         this.portMappings = builder.portMappings;
         this.renderingInstanceId = builder.renderingInstanceId;
+        this.renderingSpec = builder.renderingSpec;
         this.renderingStatus = builder.renderingStatus;
         this.requestId = builder.requestId;
+        this.storageSize = builder.storageSize;
         this.systemInfo = builder.systemInfo;
     }
 
@@ -78,7 +92,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     /**
      * @return portMappings
      */
-    public java.util.List < PortMappings> getPortMappings() {
+    public java.util.List<PortMappings> getPortMappings() {
         return this.portMappings;
     }
 
@@ -87,6 +101,13 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
      */
     public String getRenderingInstanceId() {
         return this.renderingInstanceId;
+    }
+
+    /**
+     * @return renderingSpec
+     */
+    public String getRenderingSpec() {
+        return this.renderingSpec;
     }
 
     /**
@@ -104,6 +125,13 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return storageSize
+     */
+    public Integer getStorageSize() {
+        return this.storageSize;
+    }
+
+    /**
      * @return systemInfo
      */
     public SystemInfo getSystemInfo() {
@@ -114,10 +142,12 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         private ConfigInfo configInfo; 
         private String creationTime; 
         private String hostname; 
-        private java.util.List < PortMappings> portMappings; 
+        private java.util.List<PortMappings> portMappings; 
         private String renderingInstanceId; 
+        private String renderingSpec; 
         private RenderingStatus renderingStatus; 
         private String requestId; 
+        private Integer storageSize; 
         private SystemInfo systemInfo; 
 
         /**
@@ -147,7 +177,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         /**
          * PortMappings.
          */
-        public Builder portMappings(java.util.List < PortMappings> portMappings) {
+        public Builder portMappings(java.util.List<PortMappings> portMappings) {
             this.portMappings = portMappings;
             return this;
         }
@@ -157,6 +187,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
          */
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.renderingInstanceId = renderingInstanceId;
+            return this;
+        }
+
+        /**
+         * RenderingSpec.
+         */
+        public Builder renderingSpec(String renderingSpec) {
+            this.renderingSpec = renderingSpec;
             return this;
         }
 
@@ -177,6 +215,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * StorageSize.
+         */
+        public Builder storageSize(Integer storageSize) {
+            this.storageSize = storageSize;
+            return this;
+        }
+
+        /**
          * SystemInfo.
          */
         public Builder systemInfo(SystemInfo systemInfo) {
@@ -190,6 +236,12 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRenderingInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenderingInstanceResponseBody</p>
+     */
     public static class Attributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -251,9 +303,15 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenderingInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenderingInstanceResponseBody</p>
+     */
     public static class Configuration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
-        private java.util.List < Attributes> attributes;
+        private java.util.List<Attributes> attributes;
 
         @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
@@ -274,7 +332,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.List < Attributes> getAttributes() {
+        public java.util.List<Attributes> getAttributes() {
             return this.attributes;
         }
 
@@ -286,13 +344,13 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Attributes> attributes; 
+            private java.util.List<Attributes> attributes; 
             private String moduleName; 
 
             /**
              * Attributes.
              */
-            public Builder attributes(java.util.List < Attributes> attributes) {
+            public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
                 return this;
             }
@@ -312,6 +370,12 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenderingInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenderingInstanceResponseBody</p>
+     */
     public static class NetworkConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthStatus")
         private String bandwidthStatus;
@@ -413,9 +477,15 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenderingInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenderingInstanceResponseBody</p>
+     */
     public static class ConfigInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Configuration")
-        private java.util.List < Configuration> configuration;
+        private java.util.List<Configuration> configuration;
 
         @com.aliyun.core.annotation.NameInMap("NetworkConfig")
         private NetworkConfig networkConfig;
@@ -436,7 +506,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         /**
          * @return configuration
          */
-        public java.util.List < Configuration> getConfiguration() {
+        public java.util.List<Configuration> getConfiguration() {
             return this.configuration;
         }
 
@@ -448,13 +518,13 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Configuration> configuration; 
+            private java.util.List<Configuration> configuration; 
             private NetworkConfig networkConfig; 
 
             /**
              * Configuration.
              */
-            public Builder configuration(java.util.List < Configuration> configuration) {
+            public Builder configuration(java.util.List<Configuration> configuration) {
                 this.configuration = configuration;
                 return this;
             }
@@ -474,6 +544,12 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenderingInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenderingInstanceResponseBody</p>
+     */
     public static class PortMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExternalPort")
         private String externalPort;
@@ -535,6 +611,12 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenderingInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenderingInstanceResponseBody</p>
+     */
     public static class RenderingStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -616,6 +698,12 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRenderingInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenderingInstanceResponseBody</p>
+     */
     public static class SystemInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Frequency")
         private Integer frequency;

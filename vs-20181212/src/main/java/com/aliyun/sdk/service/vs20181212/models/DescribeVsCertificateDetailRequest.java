@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVsCertificateDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeVsCertificateDetailRequest</p>
@@ -68,7 +74,10 @@ public class DescribeVsCertificateDetailRequest extends Request {
         } 
 
         /**
-         * CertName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-539xxxx</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);

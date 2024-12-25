@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeviceChannelsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDeviceChannelsResponseBody</p>
  */
 public class DescribeDeviceChannelsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Channels")
-    private java.util.List < Channels> channels;
+    private java.util.List<Channels> channels;
 
     @com.aliyun.core.annotation.NameInMap("PageCount")
     private Long pageCount;
@@ -49,7 +55,7 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
     /**
      * @return channels
      */
-    public java.util.List < Channels> getChannels() {
+    public java.util.List<Channels> getChannels() {
         return this.channels;
     }
 
@@ -89,7 +95,7 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Channels> channels; 
+        private java.util.List<Channels> channels; 
         private Long pageCount; 
         private Long pageNum; 
         private Long pageSize; 
@@ -99,7 +105,7 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         /**
          * Channels.
          */
-        public Builder channels(java.util.List < Channels> channels) {
+        public Builder channels(java.util.List<Channels> channels) {
             this.channels = channels;
             return this;
         }
@@ -150,6 +156,12 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDeviceChannelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeviceChannelsResponseBody</p>
+     */
     public static class Channels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelId")
         private Long channelId;

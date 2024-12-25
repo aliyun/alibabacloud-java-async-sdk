@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRenderingInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateRenderingInstanceRequest</p>
@@ -18,6 +24,10 @@ public class CreateRenderingInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientInfo")
     private ClientInfo clientInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceBillingCycle")
+    private String instanceBillingCycle;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
@@ -40,15 +50,21 @@ public class CreateRenderingInstanceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String renderingSpec;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageSize")
+    private String storageSize;
+
     private CreateRenderingInstanceRequest(Builder builder) {
         super(builder);
         this.autoRenew = builder.autoRenew;
         this.clientInfo = builder.clientInfo;
+        this.instanceBillingCycle = builder.instanceBillingCycle;
         this.instanceChargeType = builder.instanceChargeType;
         this.internetChargeType = builder.internetChargeType;
         this.internetMaxBandwidth = builder.internetMaxBandwidth;
         this.period = builder.period;
         this.renderingSpec = builder.renderingSpec;
+        this.storageSize = builder.storageSize;
     }
 
     public static Builder builder() {
@@ -76,6 +92,13 @@ public class CreateRenderingInstanceRequest extends Request {
      */
     public ClientInfo getClientInfo() {
         return this.clientInfo;
+    }
+
+    /**
+     * @return instanceBillingCycle
+     */
+    public String getInstanceBillingCycle() {
+        return this.instanceBillingCycle;
     }
 
     /**
@@ -113,14 +136,23 @@ public class CreateRenderingInstanceRequest extends Request {
         return this.renderingSpec;
     }
 
+    /**
+     * @return storageSize
+     */
+    public String getStorageSize() {
+        return this.storageSize;
+    }
+
     public static final class Builder extends Request.Builder<CreateRenderingInstanceRequest, Builder> {
         private Boolean autoRenew; 
         private ClientInfo clientInfo; 
+        private String instanceBillingCycle; 
         private String instanceChargeType; 
         private String internetChargeType; 
         private Long internetMaxBandwidth; 
         private String period; 
         private String renderingSpec; 
+        private String storageSize; 
 
         private Builder() {
             super();
@@ -130,11 +162,13 @@ public class CreateRenderingInstanceRequest extends Request {
             super(request);
             this.autoRenew = request.autoRenew;
             this.clientInfo = request.clientInfo;
+            this.instanceBillingCycle = request.instanceBillingCycle;
             this.instanceChargeType = request.instanceChargeType;
             this.internetChargeType = request.internetChargeType;
             this.internetMaxBandwidth = request.internetMaxBandwidth;
             this.period = request.period;
             this.renderingSpec = request.renderingSpec;
+            this.storageSize = request.storageSize;
         } 
 
         /**
@@ -153,6 +187,15 @@ public class CreateRenderingInstanceRequest extends Request {
             String clientInfoShrink = shrink(clientInfo, "ClientInfo", "json");
             this.putQueryParameter("ClientInfo", clientInfoShrink);
             this.clientInfo = clientInfo;
+            return this;
+        }
+
+        /**
+         * InstanceBillingCycle.
+         */
+        public Builder instanceBillingCycle(String instanceBillingCycle) {
+            this.putQueryParameter("InstanceBillingCycle", instanceBillingCycle);
+            this.instanceBillingCycle = instanceBillingCycle;
             return this;
         }
 
@@ -193,11 +236,23 @@ public class CreateRenderingInstanceRequest extends Request {
         }
 
         /**
-         * RenderingSpec.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crs.cp.l1</p>
          */
         public Builder renderingSpec(String renderingSpec) {
             this.putQueryParameter("RenderingSpec", renderingSpec);
             this.renderingSpec = renderingSpec;
+            return this;
+        }
+
+        /**
+         * StorageSize.
+         */
+        public Builder storageSize(String storageSize) {
+            this.putQueryParameter("StorageSize", storageSize);
+            this.storageSize = storageSize;
             return this;
         }
 
@@ -208,6 +263,12 @@ public class CreateRenderingInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRenderingInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRenderingInstanceRequest</p>
+     */
     public static class ClientInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
