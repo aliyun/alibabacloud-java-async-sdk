@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DeleteGatewayIntranetLinkedVpcPeerRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PeerVpcs")
-    private java.util.List < PeerVpcs> peerVpcs;
+    private java.util.List<PeerVpcs> peerVpcs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
@@ -66,7 +71,7 @@ public class DeleteGatewayIntranetLinkedVpcPeerRequest extends Request {
     /**
      * @return peerVpcs
      */
-    public java.util.List < PeerVpcs> getPeerVpcs() {
+    public java.util.List<PeerVpcs> getPeerVpcs() {
         return this.peerVpcs;
     }
 
@@ -80,7 +85,7 @@ public class DeleteGatewayIntranetLinkedVpcPeerRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteGatewayIntranetLinkedVpcPeerRequest, Builder> {
         private String clusterId; 
         private String gatewayId; 
-        private java.util.List < PeerVpcs> peerVpcs; 
+        private java.util.List<PeerVpcs> peerVpcs; 
         private String vpcId; 
 
         private Builder() {
@@ -122,7 +127,7 @@ public class DeleteGatewayIntranetLinkedVpcPeerRequest extends Request {
         /**
          * <p>The VPC peer.</p>
          */
-        public Builder peerVpcs(java.util.List < PeerVpcs> peerVpcs) {
+        public Builder peerVpcs(java.util.List<PeerVpcs> peerVpcs) {
             String peerVpcsShrink = shrink(peerVpcs, "PeerVpcs", "json");
             this.putQueryParameter("PeerVpcs", peerVpcsShrink);
             this.peerVpcs = peerVpcs;

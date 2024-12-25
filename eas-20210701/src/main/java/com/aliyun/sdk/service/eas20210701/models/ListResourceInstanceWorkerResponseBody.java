@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("Pods")
-    private java.util.List < ResourceInstanceWorker > pods;
+    private java.util.List<ResourceInstanceWorker> pods;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
     /**
      * @return pods
      */
-    public java.util.List < ResourceInstanceWorker > getPods() {
+    public java.util.List<ResourceInstanceWorker> getPods() {
         return this.pods;
     }
 
@@ -81,7 +86,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
     public static final class Builder {
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < ResourceInstanceWorker > pods; 
+        private java.util.List<ResourceInstanceWorker> pods; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -110,7 +115,7 @@ public class ListResourceInstanceWorkerResponseBody extends TeaModel {
         /**
          * <p>The workers.</p>
          */
-        public Builder pods(java.util.List < ResourceInstanceWorker > pods) {
+        public Builder pods(java.util.List<ResourceInstanceWorker> pods) {
             this.pods = pods;
             return this;
         }

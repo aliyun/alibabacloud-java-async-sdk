@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -55,7 +60,7 @@ public class Service extends TeaModel {
     private String intranetEndpoint;
 
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Labels> labels;
+    private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.NameInMap("LatestVersion")
     private Integer latestVersion;
@@ -296,7 +301,7 @@ public class Service extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Labels> getLabels() {
+    public java.util.List<Labels> getLabels() {
         return this.labels;
     }
 
@@ -511,7 +516,7 @@ public class Service extends TeaModel {
         private String image; 
         private String internetEndpoint; 
         private String intranetEndpoint; 
-        private java.util.List < Labels> labels; 
+        private java.util.List<Labels> labels; 
         private Integer latestVersion; 
         private Integer memory; 
         private String message; 
@@ -656,7 +661,7 @@ public class Service extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Labels> labels) {
+        public Builder labels(java.util.List<Labels> labels) {
             this.labels = labels;
             return this;
         }

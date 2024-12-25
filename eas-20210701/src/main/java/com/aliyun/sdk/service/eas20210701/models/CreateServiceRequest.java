@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class CreateServiceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.Map < String, String > labels;
+    private java.util.Map<String, String> labels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -59,7 +64,7 @@ public class CreateServiceRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.Map < String, String > getLabels() {
+    public java.util.Map<String, String> getLabels() {
         return this.labels;
     }
 
@@ -79,7 +84,7 @@ public class CreateServiceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateServiceRequest, Builder> {
         private String develop; 
-        private java.util.Map < String, String > labels; 
+        private java.util.Map<String, String> labels; 
         private String workspaceId; 
         private String body; 
 
@@ -126,7 +131,7 @@ public class CreateServiceRequest extends Request {
         /**
          * <p>The custom label.</p>
          */
-        public Builder labels(java.util.Map < String, String > labels) {
+        public Builder labels(java.util.Map<String, String> labels) {
             String labelsShrink = shrink(labels, "Labels", "json");
             this.putQueryParameter("Labels", labelsShrink);
             this.labels = labels;

@@ -248,6 +248,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeGroupResponse> describeGroup(DescribeGroupRequest request);
 
     /**
+     * @param request the request parameters of DescribeGroupEndpoints  DescribeGroupEndpointsRequest
+     * @return DescribeGroupEndpointsResponse
+     */
+    CompletableFuture<DescribeGroupEndpointsResponse> describeGroupEndpoints(DescribeGroupEndpointsRequest request);
+
+    /**
      * @param request the request parameters of DescribeResource  DescribeResourceRequest
      * @return DescribeResourceResponse
      */
@@ -288,6 +294,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeServiceDiagnosisResponse
      */
     CompletableFuture<DescribeServiceDiagnosisResponse> describeServiceDiagnosis(DescribeServiceDiagnosisRequest request);
+
+    /**
+     * @param request the request parameters of DescribeServiceEndpoints  DescribeServiceEndpointsRequest
+     * @return DescribeServiceEndpointsResponse
+     */
+    CompletableFuture<DescribeServiceEndpointsResponse> describeServiceEndpoints(DescribeServiceEndpointsRequest request);
 
     /**
      * @param request the request parameters of DescribeServiceEvent  DescribeServiceEventRequest

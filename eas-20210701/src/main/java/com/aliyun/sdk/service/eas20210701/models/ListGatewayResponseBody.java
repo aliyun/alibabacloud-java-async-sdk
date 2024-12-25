@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListGatewayResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Gateways")
-    private java.util.List < Gateways> gateways;
+    private java.util.List<Gateways> gateways;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class ListGatewayResponseBody extends TeaModel {
     /**
      * @return gateways
      */
-    public java.util.List < Gateways> getGateways() {
+    public java.util.List<Gateways> getGateways() {
         return this.gateways;
     }
 
@@ -79,7 +84,7 @@ public class ListGatewayResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Gateways> gateways; 
+        private java.util.List<Gateways> gateways; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListGatewayResponseBody extends TeaModel {
         /**
          * <p>The private gateways.</p>
          */
-        public Builder gateways(java.util.List < Gateways> gateways) {
+        public Builder gateways(java.util.List<Gateways> gateways) {
             this.gateways = gateways;
             return this;
         }
@@ -434,7 +439,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * SSLRedirectionEnabled.
+             * <p>Specifies whether to enable HTTP to HTTPS redirection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder SSLRedirectionEnabled(Boolean SSLRedirectionEnabled) {
                 this.SSLRedirectionEnabled = SSLRedirectionEnabled;

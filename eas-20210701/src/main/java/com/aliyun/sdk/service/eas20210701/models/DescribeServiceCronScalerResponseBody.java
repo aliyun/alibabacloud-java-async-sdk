@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeServiceCronScalerResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExcludeDates")
-    private java.util.List < String > excludeDates;
+    private java.util.List<String> excludeDates;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ScaleJobs")
-    private java.util.List < ScaleJobs> scaleJobs;
+    private java.util.List<ScaleJobs> scaleJobs;
 
     @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
@@ -42,7 +47,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
     /**
      * @return excludeDates
      */
-    public java.util.List < String > getExcludeDates() {
+    public java.util.List<String> getExcludeDates() {
         return this.excludeDates;
     }
 
@@ -56,7 +61,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
     /**
      * @return scaleJobs
      */
-    public java.util.List < ScaleJobs> getScaleJobs() {
+    public java.util.List<ScaleJobs> getScaleJobs() {
         return this.scaleJobs;
     }
 
@@ -68,15 +73,15 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > excludeDates; 
+        private java.util.List<String> excludeDates; 
         private String requestId; 
-        private java.util.List < ScaleJobs> scaleJobs; 
+        private java.util.List<ScaleJobs> scaleJobs; 
         private String serviceName; 
 
         /**
          * <p>The points in time that are excluded when you schedule a CronHPA job. The points in time must be specified by using a cron expression.</p>
          */
-        public Builder excludeDates(java.util.List < String > excludeDates) {
+        public Builder excludeDates(java.util.List<String> excludeDates) {
             this.excludeDates = excludeDates;
             return this;
         }
@@ -95,7 +100,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
         /**
          * <p>The CronHPA jobs.</p>
          */
-        public Builder scaleJobs(java.util.List < ScaleJobs> scaleJobs) {
+        public Builder scaleJobs(java.util.List<ScaleJobs> scaleJobs) {
             this.scaleJobs = scaleJobs;
             return this;
         }

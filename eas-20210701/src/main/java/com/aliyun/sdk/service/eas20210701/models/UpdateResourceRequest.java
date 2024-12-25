@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -289,10 +294,10 @@ public class UpdateResourceRequest extends Request {
      */
     public static class SelfManagedResourceOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeMatchLabels")
-        private java.util.Map < String, String > nodeMatchLabels;
+        private java.util.Map<String, String> nodeMatchLabels;
 
         @com.aliyun.core.annotation.NameInMap("NodeTolerations")
-        private java.util.List < NodeTolerations> nodeTolerations;
+        private java.util.List<NodeTolerations> nodeTolerations;
 
         private SelfManagedResourceOptions(Builder builder) {
             this.nodeMatchLabels = builder.nodeMatchLabels;
@@ -310,25 +315,25 @@ public class UpdateResourceRequest extends Request {
         /**
          * @return nodeMatchLabels
          */
-        public java.util.Map < String, String > getNodeMatchLabels() {
+        public java.util.Map<String, String> getNodeMatchLabels() {
             return this.nodeMatchLabels;
         }
 
         /**
          * @return nodeTolerations
          */
-        public java.util.List < NodeTolerations> getNodeTolerations() {
+        public java.util.List<NodeTolerations> getNodeTolerations() {
             return this.nodeTolerations;
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > nodeMatchLabels; 
-            private java.util.List < NodeTolerations> nodeTolerations; 
+            private java.util.Map<String, String> nodeMatchLabels; 
+            private java.util.List<NodeTolerations> nodeTolerations; 
 
             /**
              * <p>Tag tag key-value pairs for nodes.</p>
              */
-            public Builder nodeMatchLabels(java.util.Map < String, String > nodeMatchLabels) {
+            public Builder nodeMatchLabels(java.util.Map<String, String> nodeMatchLabels) {
                 this.nodeMatchLabels = nodeMatchLabels;
                 return this;
             }
@@ -336,7 +341,7 @@ public class UpdateResourceRequest extends Request {
             /**
              * <p>Tolerations for nodes.</p>
              */
-            public Builder nodeTolerations(java.util.List < NodeTolerations> nodeTolerations) {
+            public Builder nodeTolerations(java.util.List<NodeTolerations> nodeTolerations) {
                 this.nodeTolerations = nodeTolerations;
                 return this;
             }

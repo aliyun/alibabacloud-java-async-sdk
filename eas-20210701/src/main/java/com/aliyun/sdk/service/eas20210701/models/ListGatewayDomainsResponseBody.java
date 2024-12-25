@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListGatewayDomainsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CustomDomains")
-    private java.util.List < CustomDomains> customDomains;
+    private java.util.List<CustomDomains> customDomains;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -38,7 +43,7 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
     /**
      * @return customDomains
      */
-    public java.util.List < CustomDomains> getCustomDomains() {
+    public java.util.List<CustomDomains> getCustomDomains() {
         return this.customDomains;
     }
 
@@ -57,14 +62,14 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CustomDomains> customDomains; 
+        private java.util.List<CustomDomains> customDomains; 
         private String message; 
         private String requestId; 
 
         /**
          * <p>The list of custom domain names.</p>
          */
-        public Builder customDomains(java.util.List < CustomDomains> customDomains) {
+        public Builder customDomains(java.util.List<CustomDomains> customDomains) {
             this.customDomains = customDomains;
             return this;
         }

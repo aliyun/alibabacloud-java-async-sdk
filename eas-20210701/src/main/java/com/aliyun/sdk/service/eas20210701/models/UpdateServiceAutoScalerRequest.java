@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("scaleStrategies")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < ScaleStrategies> scaleStrategies;
+    private java.util.List<ScaleStrategies> scaleStrategies;
 
     private UpdateServiceAutoScalerRequest(Builder builder) {
         super(builder);
@@ -102,7 +107,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
     /**
      * @return scaleStrategies
      */
-    public java.util.List < ScaleStrategies> getScaleStrategies() {
+    public java.util.List<ScaleStrategies> getScaleStrategies() {
         return this.scaleStrategies;
     }
 
@@ -112,7 +117,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
         private Behavior behavior; 
         private Integer max; 
         private Integer min; 
-        private java.util.List < ScaleStrategies> scaleStrategies; 
+        private java.util.List<ScaleStrategies> scaleStrategies; 
 
         private Builder() {
             super();
@@ -193,7 +198,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
          * <p>The auto scaling policies.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder scaleStrategies(java.util.List < ScaleStrategies> scaleStrategies) {
+        public Builder scaleStrategies(java.util.List<ScaleStrategies> scaleStrategies) {
             this.putBodyParameter("scaleStrategies", scaleStrategies);
             this.scaleStrategies = scaleStrategies;
             return this;

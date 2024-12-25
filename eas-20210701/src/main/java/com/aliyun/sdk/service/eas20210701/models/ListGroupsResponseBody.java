@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Groups")
-    private java.util.List < Group > groups;
+    private java.util.List<Group> groups;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -46,7 +51,7 @@ public class ListGroupsResponseBody extends TeaModel {
     /**
      * @return groups
      */
-    public java.util.List < Group > getGroups() {
+    public java.util.List<Group> getGroups() {
         return this.groups;
     }
 
@@ -79,7 +84,7 @@ public class ListGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Group > groups; 
+        private java.util.List<Group> groups; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class ListGroupsResponseBody extends TeaModel {
         /**
          * <p>The service groups.</p>
          */
-        public Builder groups(java.util.List < Group > groups) {
+        public Builder groups(java.util.List<Group> groups) {
             this.groups = groups;
             return this;
         }

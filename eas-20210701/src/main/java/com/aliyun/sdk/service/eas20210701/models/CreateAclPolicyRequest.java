@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class CreateAclPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclPolicyList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < AclPolicyList> aclPolicyList;
+    private java.util.List<AclPolicyList> aclPolicyList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
@@ -69,7 +74,7 @@ public class CreateAclPolicyRequest extends Request {
     /**
      * @return aclPolicyList
      */
-    public java.util.List < AclPolicyList> getAclPolicyList() {
+    public java.util.List<AclPolicyList> getAclPolicyList() {
         return this.aclPolicyList;
     }
 
@@ -83,7 +88,7 @@ public class CreateAclPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAclPolicyRequest, Builder> {
         private String clusterId; 
         private String gatewayId; 
-        private java.util.List < AclPolicyList> aclPolicyList; 
+        private java.util.List<AclPolicyList> aclPolicyList; 
         private String vpcId; 
 
         private Builder() {
@@ -128,7 +133,7 @@ public class CreateAclPolicyRequest extends Request {
          * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder aclPolicyList(java.util.List < AclPolicyList> aclPolicyList) {
+        public Builder aclPolicyList(java.util.List<AclPolicyList> aclPolicyList) {
             String aclPolicyListShrink = shrink(aclPolicyList, "AclPolicyList", "json");
             this.putQueryParameter("AclPolicyList", aclPolicyListShrink);
             this.aclPolicyList = aclPolicyList;

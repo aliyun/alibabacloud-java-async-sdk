@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class DeleteAclPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AclPolicyList")
-    private java.util.List < AclPolicyList> aclPolicyList;
+    private java.util.List<AclPolicyList> aclPolicyList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
@@ -68,7 +73,7 @@ public class DeleteAclPolicyRequest extends Request {
     /**
      * @return aclPolicyList
      */
-    public java.util.List < AclPolicyList> getAclPolicyList() {
+    public java.util.List<AclPolicyList> getAclPolicyList() {
         return this.aclPolicyList;
     }
 
@@ -82,7 +87,7 @@ public class DeleteAclPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteAclPolicyRequest, Builder> {
         private String clusterId; 
         private String gatewayId; 
-        private java.util.List < AclPolicyList> aclPolicyList; 
+        private java.util.List<AclPolicyList> aclPolicyList; 
         private String vpcId; 
 
         private Builder() {
@@ -126,7 +131,7 @@ public class DeleteAclPolicyRequest extends Request {
         /**
          * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway.</p>
          */
-        public Builder aclPolicyList(java.util.List < AclPolicyList> aclPolicyList) {
+        public Builder aclPolicyList(java.util.List<AclPolicyList> aclPolicyList) {
             String aclPolicyListShrink = shrink(aclPolicyList, "AclPolicyList", "json");
             this.putQueryParameter("AclPolicyList", aclPolicyListShrink);
             this.aclPolicyList = aclPolicyList;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeResourceDLinkResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AuxVSwitchList")
-    private java.util.List < String > auxVSwitchList;
+    private java.util.List<String> auxVSwitchList;
 
     @com.aliyun.core.annotation.NameInMap("DestinationCIDRs")
     private String destinationCIDRs;
@@ -50,7 +55,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
     /**
      * @return auxVSwitchList
      */
-    public java.util.List < String > getAuxVSwitchList() {
+    public java.util.List<String> getAuxVSwitchList() {
         return this.auxVSwitchList;
     }
 
@@ -90,7 +95,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > auxVSwitchList; 
+        private java.util.List<String> auxVSwitchList; 
         private String destinationCIDRs; 
         private String requestId; 
         private String securityGroupId; 
@@ -100,7 +105,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         /**
          * <p>The IDs of the secondary vSwitches that are directly connected.</p>
          */
-        public Builder auxVSwitchList(java.util.List < String > auxVSwitchList) {
+        public Builder auxVSwitchList(java.util.List<String> auxVSwitchList) {
             this.auxVSwitchList = auxVSwitchList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class UpdateVirtualResourceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VirtualResourceName")
@@ -68,7 +73,7 @@ public class UpdateVirtualResourceRequest extends Request {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
@@ -82,7 +87,7 @@ public class UpdateVirtualResourceRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateVirtualResourceRequest, Builder> {
         private String clusterId; 
         private String virtualResourceId; 
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
         private String virtualResourceName; 
 
         private Builder() {
@@ -129,7 +134,7 @@ public class UpdateVirtualResourceRequest extends Request {
          * <p> If you specify this parameter, previous data are overwritten.</p>
          * </blockquote>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.putBodyParameter("Resources", resources);
             this.resources = resources;
             return this;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class Resource extends TeaModel {
     private String createTime;
 
     @com.aliyun.core.annotation.NameInMap("ExtraData")
-    private java.util.Map < String, ? > extraData;
+    private java.util.Map<String, ?> extraData;
 
     @com.aliyun.core.annotation.NameInMap("GpuCount")
     private Integer gpuCount;
@@ -107,7 +112,7 @@ public class Resource extends TeaModel {
     /**
      * @return extraData
      */
-    public java.util.Map < String, ? > getExtraData() {
+    public java.util.Map<String, ?> getExtraData() {
         return this.extraData;
     }
 
@@ -192,7 +197,7 @@ public class Resource extends TeaModel {
         private String clusterId; 
         private Integer cpuCount; 
         private String createTime; 
-        private java.util.Map < String, ? > extraData; 
+        private java.util.Map<String, ?> extraData; 
         private Integer gpuCount; 
         private Integer instanceCount; 
         private String message; 
@@ -232,7 +237,7 @@ public class Resource extends TeaModel {
         /**
          * ExtraData.
          */
-        public Builder extraData(java.util.Map < String, ? > extraData) {
+        public Builder extraData(java.util.Map<String, ?> extraData) {
             this.extraData = extraData;
             return this;
         }

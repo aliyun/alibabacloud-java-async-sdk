@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class UpdateServiceLabelRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Labels")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map < String, String > labels;
+    private java.util.Map<String, String> labels;
 
     private UpdateServiceLabelRequest(Builder builder) {
         super(builder);
@@ -64,14 +69,14 @@ public class UpdateServiceLabelRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.Map < String, String > getLabels() {
+    public java.util.Map<String, String> getLabels() {
         return this.labels;
     }
 
     public static final class Builder extends Request.Builder<UpdateServiceLabelRequest, Builder> {
         private String clusterId; 
         private String serviceName; 
-        private java.util.Map < String, String > labels; 
+        private java.util.Map<String, String> labels; 
 
         private Builder() {
             super();
@@ -114,7 +119,7 @@ public class UpdateServiceLabelRequest extends Request {
          * <p>The custom service tags.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder labels(java.util.Map < String, String > labels) {
+        public Builder labels(java.util.Map<String, String> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
             return this;

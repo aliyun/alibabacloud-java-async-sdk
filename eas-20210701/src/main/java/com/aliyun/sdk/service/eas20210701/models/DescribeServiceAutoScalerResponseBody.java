@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Behavior")
-    private java.util.Map < String, ? > behavior;
+    private java.util.Map<String, ?> behavior;
 
     @com.aliyun.core.annotation.NameInMap("CurrentMetrics")
-    private java.util.List < CurrentMetrics> currentMetrics;
+    private java.util.List<CurrentMetrics> currentMetrics;
 
     @com.aliyun.core.annotation.NameInMap("MaxReplica")
     private Integer maxReplica;
@@ -28,7 +33,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ScaleStrategies")
-    private java.util.List < ScaleStrategies> scaleStrategies;
+    private java.util.List<ScaleStrategies> scaleStrategies;
 
     @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
@@ -54,14 +59,14 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     /**
      * @return behavior
      */
-    public java.util.Map < String, ? > getBehavior() {
+    public java.util.Map<String, ?> getBehavior() {
         return this.behavior;
     }
 
     /**
      * @return currentMetrics
      */
-    public java.util.List < CurrentMetrics> getCurrentMetrics() {
+    public java.util.List<CurrentMetrics> getCurrentMetrics() {
         return this.currentMetrics;
     }
 
@@ -89,7 +94,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     /**
      * @return scaleStrategies
      */
-    public java.util.List < ScaleStrategies> getScaleStrategies() {
+    public java.util.List<ScaleStrategies> getScaleStrategies() {
         return this.scaleStrategies;
     }
 
@@ -101,12 +106,12 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > behavior; 
-        private java.util.List < CurrentMetrics> currentMetrics; 
+        private java.util.Map<String, ?> behavior; 
+        private java.util.List<CurrentMetrics> currentMetrics; 
         private Integer maxReplica; 
         private Integer minReplica; 
         private String requestId; 
-        private java.util.List < ScaleStrategies> scaleStrategies; 
+        private java.util.List<ScaleStrategies> scaleStrategies; 
         private String serviceName; 
 
         /**
@@ -121,7 +126,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
          *   }
          * }</p>
          */
-        public Builder behavior(java.util.Map < String, ? > behavior) {
+        public Builder behavior(java.util.Map<String, ?> behavior) {
             this.behavior = behavior;
             return this;
         }
@@ -129,7 +134,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         /**
          * <p>The metrics.</p>
          */
-        public Builder currentMetrics(java.util.List < CurrentMetrics> currentMetrics) {
+        public Builder currentMetrics(java.util.List<CurrentMetrics> currentMetrics) {
             this.currentMetrics = currentMetrics;
             return this;
         }
@@ -170,7 +175,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         /**
          * <p>The auto scaling policies.</p>
          */
-        public Builder scaleStrategies(java.util.List < ScaleStrategies> scaleStrategies) {
+        public Builder scaleStrategies(java.util.List<ScaleStrategies> scaleStrategies) {
             this.scaleStrategies = scaleStrategies;
             return this;
         }

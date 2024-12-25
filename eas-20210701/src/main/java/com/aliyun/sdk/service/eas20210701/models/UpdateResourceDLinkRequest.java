@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class UpdateResourceDLinkRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VSwitchIdList")
-    private java.util.List < String > vSwitchIdList;
+    private java.util.List<String> vSwitchIdList;
 
     private UpdateResourceDLinkRequest(Builder builder) {
         super(builder);
@@ -101,7 +106,7 @@ public class UpdateResourceDLinkRequest extends Request {
     /**
      * @return vSwitchIdList
      */
-    public java.util.List < String > getVSwitchIdList() {
+    public java.util.List<String> getVSwitchIdList() {
         return this.vSwitchIdList;
     }
 
@@ -111,7 +116,7 @@ public class UpdateResourceDLinkRequest extends Request {
         private String destinationCIDRs; 
         private String securityGroupId; 
         private String vSwitchId; 
-        private java.util.List < String > vSwitchIdList; 
+        private java.util.List<String> vSwitchIdList; 
 
         private Builder() {
             super();
@@ -194,7 +199,7 @@ public class UpdateResourceDLinkRequest extends Request {
         /**
          * <p>The vSwitches of the clients that you want to connect to. After this parameter is specified, the CIDR blocks of these vSwitches are added to the back-to-origin route of the server.</p>
          */
-        public Builder vSwitchIdList(java.util.List < String > vSwitchIdList) {
+        public Builder vSwitchIdList(java.util.List<String> vSwitchIdList) {
             this.putBodyParameter("VSwitchIdList", vSwitchIdList);
             this.vSwitchIdList = vSwitchIdList;
             return this;

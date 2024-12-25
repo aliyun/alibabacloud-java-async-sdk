@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class UpdateServiceMirrorRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Target")
-    private java.util.List < String > target;
+    private java.util.List<String> target;
 
     private UpdateServiceMirrorRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class UpdateServiceMirrorRequest extends Request {
     /**
      * @return target
      */
-    public java.util.List < String > getTarget() {
+    public java.util.List<String> getTarget() {
         return this.target;
     }
 
@@ -83,7 +88,7 @@ public class UpdateServiceMirrorRequest extends Request {
         private String clusterId; 
         private String serviceName; 
         private Integer ratio; 
-        private java.util.List < String > target; 
+        private java.util.List<String> target; 
 
         private Builder() {
             super();
@@ -138,7 +143,7 @@ public class UpdateServiceMirrorRequest extends Request {
         /**
          * <p>The service instances.</p>
          */
-        public Builder target(java.util.List < String > target) {
+        public Builder target(java.util.List<String> target) {
             this.putBodyParameter("Target", target);
             this.target = target;
             return this;

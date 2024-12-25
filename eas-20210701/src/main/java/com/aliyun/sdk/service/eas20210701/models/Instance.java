@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -43,7 +48,7 @@ public class Instance extends TeaModel {
     private Boolean isolated;
 
     @com.aliyun.core.annotation.NameInMap("LastState")
-    private java.util.List < java.util.Map<String, ?>> lastState;
+    private java.util.List<java.util.Map<String, ?>> lastState;
 
     @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
@@ -197,7 +202,7 @@ public class Instance extends TeaModel {
     /**
      * @return lastState
      */
-    public java.util.List < java.util.Map<String, ?>> getLastState() {
+    public java.util.List<java.util.Map<String, ?>> getLastState() {
         return this.lastState;
     }
 
@@ -310,7 +315,7 @@ public class Instance extends TeaModel {
         private Integer instancePort; 
         private Boolean isSpot; 
         private Boolean isolated; 
-        private java.util.List < java.util.Map<String, ?>> lastState; 
+        private java.util.List<java.util.Map<String, ?>> lastState; 
         private String namespace; 
         private Float originalAmount; 
         private Integer readyProcesses; 
@@ -409,7 +414,7 @@ public class Instance extends TeaModel {
         /**
          * LastState.
          */
-        public Builder lastState(java.util.List < java.util.Map<String, ?>> lastState) {
+        public Builder lastState(java.util.List<java.util.Map<String, ?>> lastState) {
             this.lastState = lastState;
             return this;
         }

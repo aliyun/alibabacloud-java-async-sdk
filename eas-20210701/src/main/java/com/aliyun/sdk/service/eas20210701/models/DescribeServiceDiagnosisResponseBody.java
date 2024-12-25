@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeServiceDiagnosisResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DiagnosisList")
-    private java.util.List < DiagnosisList> diagnosisList;
+    private java.util.List<DiagnosisList> diagnosisList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeServiceDiagnosisResponseBody extends TeaModel {
     /**
      * @return diagnosisList
      */
-    public java.util.List < DiagnosisList> getDiagnosisList() {
+    public java.util.List<DiagnosisList> getDiagnosisList() {
         return this.diagnosisList;
     }
 
@@ -46,13 +51,13 @@ public class DescribeServiceDiagnosisResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DiagnosisList> diagnosisList; 
+        private java.util.List<DiagnosisList> diagnosisList; 
         private String requestId; 
 
         /**
          * <p>The diagnostics list.</p>
          */
-        public Builder diagnosisList(java.util.List < DiagnosisList> diagnosisList) {
+        public Builder diagnosisList(java.util.List<DiagnosisList> diagnosisList) {
             this.diagnosisList = diagnosisList;
             return this;
         }
@@ -82,10 +87,10 @@ public class DescribeServiceDiagnosisResponseBody extends TeaModel {
      */
     public static class DiagnosisList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Advices")
-        private java.util.List < String > advices;
+        private java.util.List<String> advices;
 
         @com.aliyun.core.annotation.NameInMap("Causes")
-        private java.util.List < String > causes;
+        private java.util.List<String> causes;
 
         @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
@@ -107,14 +112,14 @@ public class DescribeServiceDiagnosisResponseBody extends TeaModel {
         /**
          * @return advices
          */
-        public java.util.List < String > getAdvices() {
+        public java.util.List<String> getAdvices() {
             return this.advices;
         }
 
         /**
          * @return causes
          */
-        public java.util.List < String > getCauses() {
+        public java.util.List<String> getCauses() {
             return this.causes;
         }
 
@@ -126,14 +131,14 @@ public class DescribeServiceDiagnosisResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > advices; 
-            private java.util.List < String > causes; 
+            private java.util.List<String> advices; 
+            private java.util.List<String> causes; 
             private String error; 
 
             /**
              * <p>The suggestions about how to handle the errors.</p>
              */
-            public Builder advices(java.util.List < String > advices) {
+            public Builder advices(java.util.List<String> advices) {
                 this.advices = advices;
                 return this;
             }
@@ -141,7 +146,7 @@ public class DescribeServiceDiagnosisResponseBody extends TeaModel {
             /**
              * <p>The causes of the errors.</p>
              */
-            public Builder causes(java.util.List < String > causes) {
+            public Builder causes(java.util.List<String> causes) {
                 this.causes = causes;
                 return this;
             }

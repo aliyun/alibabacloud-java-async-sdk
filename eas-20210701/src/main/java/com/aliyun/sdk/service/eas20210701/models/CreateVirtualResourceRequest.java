@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateVirtualResourceRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < Resources> resources;
+    private java.util.List<Resources> resources;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VirtualResourceName")
@@ -42,7 +47,7 @@ public class CreateVirtualResourceRequest extends Request {
     /**
      * @return resources
      */
-    public java.util.List < Resources> getResources() {
+    public java.util.List<Resources> getResources() {
         return this.resources;
     }
 
@@ -54,7 +59,7 @@ public class CreateVirtualResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateVirtualResourceRequest, Builder> {
-        private java.util.List < Resources> resources; 
+        private java.util.List<Resources> resources; 
         private String virtualResourceName; 
 
         private Builder() {
@@ -70,7 +75,7 @@ public class CreateVirtualResourceRequest extends Request {
         /**
          * <p>The list of resources in the virtual resource group.</p>
          */
-        public Builder resources(java.util.List < Resources> resources) {
+        public Builder resources(java.util.List<Resources> resources) {
             this.putBodyParameter("Resources", resources);
             this.resources = resources;
             return this;

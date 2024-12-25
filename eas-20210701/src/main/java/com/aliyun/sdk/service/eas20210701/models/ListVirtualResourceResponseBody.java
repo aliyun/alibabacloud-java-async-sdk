@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
     private Integer totalCount;
 
     @com.aliyun.core.annotation.NameInMap("VirtualResources")
-    private java.util.List < VirtualResources> virtualResources;
+    private java.util.List<VirtualResources> virtualResources;
 
     private ListVirtualResourceResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -74,7 +79,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
     /**
      * @return virtualResources
      */
-    public java.util.List < VirtualResources> getVirtualResources() {
+    public java.util.List<VirtualResources> getVirtualResources() {
         return this.virtualResources;
     }
 
@@ -83,7 +88,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
-        private java.util.List < VirtualResources> virtualResources; 
+        private java.util.List<VirtualResources> virtualResources; 
 
         /**
          * <p>The page number.</p>
@@ -132,7 +137,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         /**
          * <p>The list of virtual resource groups.</p>
          */
-        public Builder virtualResources(java.util.List < VirtualResources> virtualResources) {
+        public Builder virtualResources(java.util.List<VirtualResources> virtualResources) {
             this.virtualResources = virtualResources;
             return this;
         }

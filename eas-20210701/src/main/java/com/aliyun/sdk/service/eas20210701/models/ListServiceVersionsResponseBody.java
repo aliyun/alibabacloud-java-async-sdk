@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
     private Long totalCount;
 
     @com.aliyun.core.annotation.NameInMap("Versions")
-    private java.util.List < Versions> versions;
+    private java.util.List<Versions> versions;
 
     private ListServiceVersionsResponseBody(Builder builder) {
         this.pageNumber = builder.pageNumber;
@@ -74,7 +79,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
     /**
      * @return versions
      */
-    public java.util.List < Versions> getVersions() {
+    public java.util.List<Versions> getVersions() {
         return this.versions;
     }
 
@@ -83,7 +88,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Long totalCount; 
-        private java.util.List < Versions> versions; 
+        private java.util.List<Versions> versions; 
 
         /**
          * <p>The page number.</p>
@@ -132,7 +137,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         /**
          * <p>The historical versions of the service.</p>
          */
-        public Builder versions(java.util.List < Versions> versions) {
+        public Builder versions(java.util.List<Versions> versions) {
             this.versions = versions;
             return this;
         }

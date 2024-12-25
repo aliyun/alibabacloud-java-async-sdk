@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DeleteServiceLabelRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Keys")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > keys;
+    private java.util.List<String> keys;
 
     private DeleteServiceLabelRequest(Builder builder) {
         super(builder);
@@ -64,14 +69,14 @@ public class DeleteServiceLabelRequest extends Request {
     /**
      * @return keys
      */
-    public java.util.List < String > getKeys() {
+    public java.util.List<String> getKeys() {
         return this.keys;
     }
 
     public static final class Builder extends Request.Builder<DeleteServiceLabelRequest, Builder> {
         private String clusterId; 
         private String serviceName; 
-        private java.util.List < String > keys; 
+        private java.util.List<String> keys; 
 
         private Builder() {
             super();
@@ -114,7 +119,7 @@ public class DeleteServiceLabelRequest extends Request {
          * <p>The service tags that you want to delete.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder keys(java.util.List < String > keys) {
+        public Builder keys(java.util.List<String> keys) {
             String keysShrink = shrink(keys, "Keys", "simple");
             this.putQueryParameter("Keys", keysShrink);
             this.keys = keys;

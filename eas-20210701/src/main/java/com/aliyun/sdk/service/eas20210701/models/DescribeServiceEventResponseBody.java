@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeServiceEventResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Events")
-    private java.util.List < Events> events;
+    private java.util.List<Events> events;
 
     @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
@@ -46,7 +51,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
     /**
      * @return events
      */
-    public java.util.List < Events> getEvents() {
+    public java.util.List<Events> getEvents() {
         return this.events;
     }
 
@@ -79,7 +84,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Events> events; 
+        private java.util.List<Events> events; 
         private Long pageNum; 
         private String requestId; 
         private Long totalCount; 
@@ -88,7 +93,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         /**
          * <p>The events.</p>
          */
-        public Builder events(java.util.List < Events> events) {
+        public Builder events(java.util.List<Events> events) {
             this.events = events;
             return this;
         }

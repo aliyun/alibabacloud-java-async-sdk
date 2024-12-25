@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListTenantAddonsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Addons")
-    private java.util.List < Addons> addons;
+    private java.util.List<Addons> addons;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class ListTenantAddonsResponseBody extends TeaModel {
     /**
      * @return addons
      */
-    public java.util.List < Addons> getAddons() {
+    public java.util.List<Addons> getAddons() {
         return this.addons;
     }
 
@@ -46,13 +51,13 @@ public class ListTenantAddonsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Addons> addons; 
+        private java.util.List<Addons> addons; 
         private String requestId; 
 
         /**
          * <p>The information about the plug-in.</p>
          */
-        public Builder addons(java.util.List < Addons> addons) {
+        public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
             return this;
         }
@@ -82,7 +87,7 @@ public class ListTenantAddonsResponseBody extends TeaModel {
      */
     public static class Addons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
-        private java.util.Map < String, String > attributes;
+        private java.util.Map<String, String> attributes;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -103,7 +108,7 @@ public class ListTenantAddonsResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.Map < String, String > getAttributes() {
+        public java.util.Map<String, String> getAttributes() {
             return this.attributes;
         }
 
@@ -115,13 +120,13 @@ public class ListTenantAddonsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > attributes; 
+            private java.util.Map<String, String> attributes; 
             private String name; 
 
             /**
              * <p>The attributes of the plug-in.</p>
              */
-            public Builder attributes(java.util.Map < String, String > attributes) {
+            public Builder attributes(java.util.Map<String, String> attributes) {
                 this.attributes = attributes;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class ListServicesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Label")
-    private java.util.Map < String, String > label;
+    private java.util.Map<String, String> label;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Order")
@@ -138,7 +143,7 @@ public class ListServicesRequest extends Request {
     /**
      * @return label
      */
-    public java.util.Map < String, String > getLabel() {
+    public java.util.Map<String, String> getLabel() {
         return this.label;
     }
 
@@ -237,7 +242,7 @@ public class ListServicesRequest extends Request {
         private String filter; 
         private String gateway; 
         private String groupName; 
-        private java.util.Map < String, String > label; 
+        private java.util.Map<String, String> label; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -316,7 +321,7 @@ public class ListServicesRequest extends Request {
         /**
          * <p>The tag that is used to filter services.</p>
          */
-        public Builder label(java.util.Map < String, String > label) {
+        public Builder label(java.util.Map<String, String> label) {
             String labelShrink = shrink(label, "Label", "json");
             this.putQueryParameter("Label", labelShrink);
             this.label = label;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListServicesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Services")
-    private java.util.List < Service > services;
+    private java.util.List<Service> services;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class ListServicesResponseBody extends TeaModel {
     /**
      * @return services
      */
-    public java.util.List < Service > getServices() {
+    public java.util.List<Service> getServices() {
         return this.services;
     }
 
@@ -82,7 +87,7 @@ public class ListServicesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Service > services; 
+        private java.util.List<Service> services; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class ListServicesResponseBody extends TeaModel {
         /**
          * <p>The services.</p>
          */
-        public Builder services(java.util.List < Service > services) {
+        public Builder services(java.util.List<Service> services) {
             this.services = services;
             return this;
         }

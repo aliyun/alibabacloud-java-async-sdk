@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
     private String gatewayId;
 
     @com.aliyun.core.annotation.NameInMap("IntranetLinkedVpcList")
-    private java.util.List < IntranetLinkedVpcList> intranetLinkedVpcList;
+    private java.util.List<IntranetLinkedVpcList> intranetLinkedVpcList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
     /**
      * @return intranetLinkedVpcList
      */
-    public java.util.List < IntranetLinkedVpcList> getIntranetLinkedVpcList() {
+    public java.util.List<IntranetLinkedVpcList> getIntranetLinkedVpcList() {
         return this.intranetLinkedVpcList;
     }
 
@@ -58,7 +63,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
 
     public static final class Builder {
         private String gatewayId; 
-        private java.util.List < IntranetLinkedVpcList> intranetLinkedVpcList; 
+        private java.util.List<IntranetLinkedVpcList> intranetLinkedVpcList; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         /**
          * <p>The internal endpoints.</p>
          */
-        public Builder intranetLinkedVpcList(java.util.List < IntranetLinkedVpcList> intranetLinkedVpcList) {
+        public Builder intranetLinkedVpcList(java.util.List<IntranetLinkedVpcList> intranetLinkedVpcList) {
             this.intranetLinkedVpcList = intranetLinkedVpcList;
             return this;
         }

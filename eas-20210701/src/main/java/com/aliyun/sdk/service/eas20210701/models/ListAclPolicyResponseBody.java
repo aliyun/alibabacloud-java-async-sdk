@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,10 +21,10 @@ public class ListAclPolicyResponseBody extends TeaModel {
     private String gatewayId;
 
     @com.aliyun.core.annotation.NameInMap("InternetAclPolicyList")
-    private java.util.List < InternetAclPolicyList> internetAclPolicyList;
+    private java.util.List<InternetAclPolicyList> internetAclPolicyList;
 
     @com.aliyun.core.annotation.NameInMap("IntranetVpcAclPolicyList")
-    private java.util.List < IntranetVpcAclPolicyList> intranetVpcAclPolicyList;
+    private java.util.List<IntranetVpcAclPolicyList> intranetVpcAclPolicyList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -49,14 +54,14 @@ public class ListAclPolicyResponseBody extends TeaModel {
     /**
      * @return internetAclPolicyList
      */
-    public java.util.List < InternetAclPolicyList> getInternetAclPolicyList() {
+    public java.util.List<InternetAclPolicyList> getInternetAclPolicyList() {
         return this.internetAclPolicyList;
     }
 
     /**
      * @return intranetVpcAclPolicyList
      */
-    public java.util.List < IntranetVpcAclPolicyList> getIntranetVpcAclPolicyList() {
+    public java.util.List<IntranetVpcAclPolicyList> getIntranetVpcAclPolicyList() {
         return this.intranetVpcAclPolicyList;
     }
 
@@ -69,8 +74,8 @@ public class ListAclPolicyResponseBody extends TeaModel {
 
     public static final class Builder {
         private String gatewayId; 
-        private java.util.List < InternetAclPolicyList> internetAclPolicyList; 
-        private java.util.List < IntranetVpcAclPolicyList> intranetVpcAclPolicyList; 
+        private java.util.List<InternetAclPolicyList> internetAclPolicyList; 
+        private java.util.List<IntranetVpcAclPolicyList> intranetVpcAclPolicyList; 
         private String requestId; 
 
         /**
@@ -87,7 +92,7 @@ public class ListAclPolicyResponseBody extends TeaModel {
         /**
          * <p>The access control policies of the private gateway over the Internet.</p>
          */
-        public Builder internetAclPolicyList(java.util.List < InternetAclPolicyList> internetAclPolicyList) {
+        public Builder internetAclPolicyList(java.util.List<InternetAclPolicyList> internetAclPolicyList) {
             this.internetAclPolicyList = internetAclPolicyList;
             return this;
         }
@@ -95,7 +100,7 @@ public class ListAclPolicyResponseBody extends TeaModel {
         /**
          * <p>The access control policies of the private gateway over the internal network.</p>
          */
-        public Builder intranetVpcAclPolicyList(java.util.List < IntranetVpcAclPolicyList> intranetVpcAclPolicyList) {
+        public Builder intranetVpcAclPolicyList(java.util.List<IntranetVpcAclPolicyList> intranetVpcAclPolicyList) {
             this.intranetVpcAclPolicyList = intranetVpcAclPolicyList;
             return this;
         }
@@ -198,7 +203,7 @@ public class ListAclPolicyResponseBody extends TeaModel {
      */
     public static class InternetAclPolicyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclPolicyList")
-        private java.util.List < AclPolicyList> aclPolicyList;
+        private java.util.List<AclPolicyList> aclPolicyList;
 
         private InternetAclPolicyList(Builder builder) {
             this.aclPolicyList = builder.aclPolicyList;
@@ -215,17 +220,17 @@ public class ListAclPolicyResponseBody extends TeaModel {
         /**
          * @return aclPolicyList
          */
-        public java.util.List < AclPolicyList> getAclPolicyList() {
+        public java.util.List<AclPolicyList> getAclPolicyList() {
             return this.aclPolicyList;
         }
 
         public static final class Builder {
-            private java.util.List < AclPolicyList> aclPolicyList; 
+            private java.util.List<AclPolicyList> aclPolicyList; 
 
             /**
              * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway over the Internet.</p>
              */
-            public Builder aclPolicyList(java.util.List < AclPolicyList> aclPolicyList) {
+            public Builder aclPolicyList(java.util.List<AclPolicyList> aclPolicyList) {
                 this.aclPolicyList = aclPolicyList;
                 return this;
             }
@@ -318,7 +323,7 @@ public class ListAclPolicyResponseBody extends TeaModel {
      */
     public static class IntranetVpcAclPolicyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclPolicyList")
-        private java.util.List < IntranetVpcAclPolicyListAclPolicyList> aclPolicyList;
+        private java.util.List<IntranetVpcAclPolicyListAclPolicyList> aclPolicyList;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -339,7 +344,7 @@ public class ListAclPolicyResponseBody extends TeaModel {
         /**
          * @return aclPolicyList
          */
-        public java.util.List < IntranetVpcAclPolicyListAclPolicyList> getAclPolicyList() {
+        public java.util.List<IntranetVpcAclPolicyListAclPolicyList> getAclPolicyList() {
             return this.aclPolicyList;
         }
 
@@ -351,13 +356,13 @@ public class ListAclPolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < IntranetVpcAclPolicyListAclPolicyList> aclPolicyList; 
+            private java.util.List<IntranetVpcAclPolicyListAclPolicyList> aclPolicyList; 
             private String vpcId; 
 
             /**
              * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway over the internal network.</p>
              */
-            public Builder aclPolicyList(java.util.List < IntranetVpcAclPolicyListAclPolicyList> aclPolicyList) {
+            public Builder aclPolicyList(java.util.List<IntranetVpcAclPolicyListAclPolicyList> aclPolicyList) {
                 this.aclPolicyList = aclPolicyList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class CreateAppServiceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Config")
-    private java.util.Map < String, ? > config;
+    private java.util.Map<String, ?> config;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Replicas")
@@ -104,7 +109,7 @@ public class CreateAppServiceRequest extends Request {
     /**
      * @return config
      */
-    public java.util.Map < String, ? > getConfig() {
+    public java.util.Map<String, ?> getConfig() {
         return this.config;
     }
 
@@ -134,7 +139,7 @@ public class CreateAppServiceRequest extends Request {
         private String workspaceId; 
         private String appType; 
         private String appVersion; 
-        private java.util.Map < String, ? > config; 
+        private java.util.Map<String, ?> config; 
         private Integer replicas; 
         private String serviceName; 
         private String serviceSpec; 
@@ -216,7 +221,7 @@ public class CreateAppServiceRequest extends Request {
         /**
          * <p>The additional configurations that are required for service deployment.</p>
          */
-        public Builder config(java.util.Map < String, ? > config) {
+        public Builder config(java.util.Map<String, ?> config) {
             this.putBodyParameter("Config", config);
             this.config = config;
             return this;

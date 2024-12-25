@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -417,10 +422,10 @@ public class CreateResourceRequest extends Request {
         private String externalClusterId;
 
         @com.aliyun.core.annotation.NameInMap("NodeMatchLabels")
-        private java.util.Map < String, String > nodeMatchLabels;
+        private java.util.Map<String, String> nodeMatchLabels;
 
         @com.aliyun.core.annotation.NameInMap("NodeTolerations")
-        private java.util.List < NodeTolerations> nodeTolerations;
+        private java.util.List<NodeTolerations> nodeTolerations;
 
         @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
@@ -450,14 +455,14 @@ public class CreateResourceRequest extends Request {
         /**
          * @return nodeMatchLabels
          */
-        public java.util.Map < String, String > getNodeMatchLabels() {
+        public java.util.Map<String, String> getNodeMatchLabels() {
             return this.nodeMatchLabels;
         }
 
         /**
          * @return nodeTolerations
          */
-        public java.util.List < NodeTolerations> getNodeTolerations() {
+        public java.util.List<NodeTolerations> getNodeTolerations() {
             return this.nodeTolerations;
         }
 
@@ -470,8 +475,8 @@ public class CreateResourceRequest extends Request {
 
         public static final class Builder {
             private String externalClusterId; 
-            private java.util.Map < String, String > nodeMatchLabels; 
-            private java.util.List < NodeTolerations> nodeTolerations; 
+            private java.util.Map<String, String> nodeMatchLabels; 
+            private java.util.List<NodeTolerations> nodeTolerations; 
             private String roleName; 
 
             /**
@@ -488,7 +493,7 @@ public class CreateResourceRequest extends Request {
             /**
              * <p>The tag key-value pairs for nodes.</p>
              */
-            public Builder nodeMatchLabels(java.util.Map < String, String > nodeMatchLabels) {
+            public Builder nodeMatchLabels(java.util.Map<String, String> nodeMatchLabels) {
                 this.nodeMatchLabels = nodeMatchLabels;
                 return this;
             }
@@ -496,7 +501,7 @@ public class CreateResourceRequest extends Request {
             /**
              * <p>Tolerations for nodes.</p>
              */
-            public Builder nodeTolerations(java.util.List < NodeTolerations> nodeTolerations) {
+            public Builder nodeTolerations(java.util.List<NodeTolerations> nodeTolerations) {
                 this.nodeTolerations = nodeTolerations;
                 return this;
             }

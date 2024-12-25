@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
     private String gatewayId;
 
     @com.aliyun.core.annotation.NameInMap("PeerVpcList")
-    private java.util.List < PeerVpcList> peerVpcList;
+    private java.util.List<PeerVpcList> peerVpcList;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
     /**
      * @return peerVpcList
      */
-    public java.util.List < PeerVpcList> getPeerVpcList() {
+    public java.util.List<PeerVpcList> getPeerVpcList() {
         return this.peerVpcList;
     }
 
@@ -58,7 +63,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
 
     public static final class Builder {
         private String gatewayId; 
-        private java.util.List < PeerVpcList> peerVpcList; 
+        private java.util.List<PeerVpcList> peerVpcList; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         /**
          * <p>The list of VPC peers.</p>
          */
-        public Builder peerVpcList(java.util.List < PeerVpcList> peerVpcList) {
+        public Builder peerVpcList(java.util.List<PeerVpcList> peerVpcList) {
             this.peerVpcList = peerVpcList;
             return this;
         }
@@ -178,7 +183,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
      */
     public static class PeerVpcList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PeerVpcs")
-        private java.util.List < PeerVpcs> peerVpcs;
+        private java.util.List<PeerVpcs> peerVpcs;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -199,7 +204,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         /**
          * @return peerVpcs
          */
-        public java.util.List < PeerVpcs> getPeerVpcs() {
+        public java.util.List<PeerVpcs> getPeerVpcs() {
             return this.peerVpcs;
         }
 
@@ -211,13 +216,13 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < PeerVpcs> peerVpcs; 
+            private java.util.List<PeerVpcs> peerVpcs; 
             private String vpcId; 
 
             /**
              * <p>The ID of the VPC peers.</p>
              */
-            public Builder peerVpcs(java.util.List < PeerVpcs> peerVpcs) {
+            public Builder peerVpcs(java.util.List<PeerVpcs> peerVpcs) {
                 this.peerVpcs = peerVpcs;
                 return this;
             }

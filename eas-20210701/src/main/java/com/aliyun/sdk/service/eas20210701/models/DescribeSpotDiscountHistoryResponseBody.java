@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SpotDiscounts")
-    private java.util.List < SpotDiscounts> spotDiscounts;
+    private java.util.List<SpotDiscounts> spotDiscounts;
 
     private DescribeSpotDiscountHistoryResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
     /**
      * @return spotDiscounts
      */
-    public java.util.List < SpotDiscounts> getSpotDiscounts() {
+    public java.util.List<SpotDiscounts> getSpotDiscounts() {
         return this.spotDiscounts;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SpotDiscounts> spotDiscounts; 
+        private java.util.List<SpotDiscounts> spotDiscounts; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
         /**
          * <p>The discount for the preemptible instance.</p>
          */
-        public Builder spotDiscounts(java.util.List < SpotDiscounts> spotDiscounts) {
+        public Builder spotDiscounts(java.util.List<SpotDiscounts> spotDiscounts) {
             this.spotDiscounts = spotDiscounts;
             return this;
         }
