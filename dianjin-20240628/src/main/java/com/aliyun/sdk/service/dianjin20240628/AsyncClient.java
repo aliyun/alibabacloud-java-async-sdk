@@ -194,6 +194,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReIndexResponse> reIndex(ReIndexRequest request);
 
     /**
+     * @param request the request parameters of RealTimeDialog  RealTimeDialogRequest
+     * @return RealTimeDialogResponse
+     */
+    CompletableFuture<RealTimeDialogResponse> realTimeDialog(RealTimeDialogRequest request);
+
+    ResponseIterable<RealTimeDialogResponseBody> realTimeDialogWithResponseIterable(RealTimeDialogRequest request);
+
+    /**
      * @param request the request parameters of RebuildTask  RebuildTaskRequest
      * @return RebuildTaskResponse
      */

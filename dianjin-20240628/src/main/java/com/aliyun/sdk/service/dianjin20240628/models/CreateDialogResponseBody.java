@@ -203,10 +203,14 @@ public class CreateDialogResponseBody extends TeaModel {
      * <p>CreateDialogResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("openingRemarks")
+        private String openingRemarks;
+
         @com.aliyun.core.annotation.NameInMap("sessionId")
         private String sessionId;
 
         private Data(Builder builder) {
+            this.openingRemarks = builder.openingRemarks;
             this.sessionId = builder.sessionId;
         }
 
@@ -219,6 +223,13 @@ public class CreateDialogResponseBody extends TeaModel {
         }
 
         /**
+         * @return openingRemarks
+         */
+        public String getOpeningRemarks() {
+            return this.openingRemarks;
+        }
+
+        /**
          * @return sessionId
          */
         public String getSessionId() {
@@ -226,7 +237,16 @@ public class CreateDialogResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String openingRemarks; 
             private String sessionId; 
+
+            /**
+             * openingRemarks.
+             */
+            public Builder openingRemarks(String openingRemarks) {
+                this.openingRemarks = openingRemarks;
+                return this;
+            }
 
             /**
              * sessionId.

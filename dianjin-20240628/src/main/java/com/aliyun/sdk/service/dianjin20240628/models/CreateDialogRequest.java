@@ -28,6 +28,10 @@ public class CreateDialogRequest extends Request {
     private String channel;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableLibrary")
+    private Boolean enableLibrary;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("metaData")
     private java.util.Map<String, ?> metaData;
 
@@ -38,7 +42,6 @@ public class CreateDialogRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("qaLibraryList")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> qaLibraryList;
 
     @com.aliyun.core.annotation.Body
@@ -46,14 +49,20 @@ public class CreateDialogRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("selfDirected")
+    private Boolean selfDirected;
+
     private CreateDialogRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.channel = builder.channel;
+        this.enableLibrary = builder.enableLibrary;
         this.metaData = builder.metaData;
         this.playCode = builder.playCode;
         this.qaLibraryList = builder.qaLibraryList;
         this.requestId = builder.requestId;
+        this.selfDirected = builder.selfDirected;
     }
 
     public static Builder builder() {
@@ -84,6 +93,13 @@ public class CreateDialogRequest extends Request {
     }
 
     /**
+     * @return enableLibrary
+     */
+    public Boolean getEnableLibrary() {
+        return this.enableLibrary;
+    }
+
+    /**
      * @return metaData
      */
     public java.util.Map<String, ?> getMetaData() {
@@ -111,13 +127,22 @@ public class CreateDialogRequest extends Request {
         return this.requestId;
     }
 
+    /**
+     * @return selfDirected
+     */
+    public Boolean getSelfDirected() {
+        return this.selfDirected;
+    }
+
     public static final class Builder extends Request.Builder<CreateDialogRequest, Builder> {
         private String workspaceId; 
         private String channel; 
+        private Boolean enableLibrary; 
         private java.util.Map<String, ?> metaData; 
         private String playCode; 
         private java.util.List<String> qaLibraryList; 
         private String requestId; 
+        private Boolean selfDirected; 
 
         private Builder() {
             super();
@@ -127,10 +152,12 @@ public class CreateDialogRequest extends Request {
             super(request);
             this.workspaceId = request.workspaceId;
             this.channel = request.channel;
+            this.enableLibrary = request.enableLibrary;
             this.metaData = request.metaData;
             this.playCode = request.playCode;
             this.qaLibraryList = request.qaLibraryList;
             this.requestId = request.requestId;
+            this.selfDirected = request.selfDirected;
         } 
 
         /**
@@ -158,6 +185,15 @@ public class CreateDialogRequest extends Request {
         }
 
         /**
+         * enableLibrary.
+         */
+        public Builder enableLibrary(Boolean enableLibrary) {
+            this.putBodyParameter("enableLibrary", enableLibrary);
+            this.enableLibrary = enableLibrary;
+            return this;
+        }
+
+        /**
          * metaData.
          */
         public Builder metaData(java.util.Map<String, ?> metaData) {
@@ -179,7 +215,7 @@ public class CreateDialogRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * qaLibraryList.
          */
         public Builder qaLibraryList(java.util.List<String> qaLibraryList) {
             this.putBodyParameter("qaLibraryList", qaLibraryList);
@@ -196,6 +232,15 @@ public class CreateDialogRequest extends Request {
         public Builder requestId(String requestId) {
             this.putBodyParameter("requestId", requestId);
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * selfDirected.
+         */
+        public Builder selfDirected(Boolean selfDirected) {
+            this.putBodyParameter("selfDirected", selfDirected);
+            this.selfDirected = selfDirected;
             return this;
         }
 
