@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SaleControlAvailableResource")
-    private java.util.List < SaleControlAvailableResource> saleControlAvailableResource;
+    private java.util.List<SaleControlAvailableResource> saleControlAvailableResource;
 
     private DescribeEnsSaleControlAvailableResourceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
     /**
      * @return saleControlAvailableResource
      */
-    public java.util.List < SaleControlAvailableResource> getSaleControlAvailableResource() {
+    public java.util.List<SaleControlAvailableResource> getSaleControlAvailableResource() {
         return this.saleControlAvailableResource;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SaleControlAvailableResource> saleControlAvailableResource; 
+        private java.util.List<SaleControlAvailableResource> saleControlAvailableResource; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         /**
          * SaleControlAvailableResource.
          */
-        public Builder saleControlAvailableResource(java.util.List < SaleControlAvailableResource> saleControlAvailableResource) {
+        public Builder saleControlAvailableResource(java.util.List<SaleControlAvailableResource> saleControlAvailableResource) {
             this.saleControlAvailableResource = saleControlAvailableResource;
             return this;
         }
@@ -574,10 +579,10 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
      */
     public static class AvailableStorageType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableDefaultStorageType")
-        private java.util.List < AvailableDefaultStorageType> availableDefaultStorageType;
+        private java.util.List<AvailableDefaultStorageType> availableDefaultStorageType;
 
         @com.aliyun.core.annotation.NameInMap("AvailableSpecialStorageType")
-        private java.util.List < java.util.List < AvailableSpecialStorageType> > availableSpecialStorageType;
+        private java.util.List<java.util.List<AvailableSpecialStorageType>> availableSpecialStorageType;
 
         private AvailableStorageType(Builder builder) {
             this.availableDefaultStorageType = builder.availableDefaultStorageType;
@@ -595,25 +600,25 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         /**
          * @return availableDefaultStorageType
          */
-        public java.util.List < AvailableDefaultStorageType> getAvailableDefaultStorageType() {
+        public java.util.List<AvailableDefaultStorageType> getAvailableDefaultStorageType() {
             return this.availableDefaultStorageType;
         }
 
         /**
          * @return availableSpecialStorageType
          */
-        public java.util.List < java.util.List < AvailableSpecialStorageType> > getAvailableSpecialStorageType() {
+        public java.util.List<java.util.List<AvailableSpecialStorageType>> getAvailableSpecialStorageType() {
             return this.availableSpecialStorageType;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableDefaultStorageType> availableDefaultStorageType; 
-            private java.util.List < java.util.List < AvailableSpecialStorageType> > availableSpecialStorageType; 
+            private java.util.List<AvailableDefaultStorageType> availableDefaultStorageType; 
+            private java.util.List<java.util.List<AvailableSpecialStorageType>> availableSpecialStorageType; 
 
             /**
              * AvailableDefaultStorageType.
              */
-            public Builder availableDefaultStorageType(java.util.List < AvailableDefaultStorageType> availableDefaultStorageType) {
+            public Builder availableDefaultStorageType(java.util.List<AvailableDefaultStorageType> availableDefaultStorageType) {
                 this.availableDefaultStorageType = availableDefaultStorageType;
                 return this;
             }
@@ -621,7 +626,7 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
             /**
              * AvailableSpecialStorageType.
              */
-            public Builder availableSpecialStorageType(java.util.List < java.util.List < AvailableSpecialStorageType> > availableSpecialStorageType) {
+            public Builder availableSpecialStorageType(java.util.List<java.util.List<AvailableSpecialStorageType>> availableSpecialStorageType) {
                 this.availableSpecialStorageType = availableSpecialStorageType;
                 return this;
             }
@@ -641,13 +646,13 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
      */
     public static class SaleControlAvailableResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableDiskType")
-        private java.util.List < AvailableDiskType> availableDiskType;
+        private java.util.List<AvailableDiskType> availableDiskType;
 
         @com.aliyun.core.annotation.NameInMap("AvailableRegion")
-        private java.util.List < AvailableRegion> availableRegion;
+        private java.util.List<AvailableRegion> availableRegion;
 
         @com.aliyun.core.annotation.NameInMap("AvailableSpec")
-        private java.util.List < AvailableSpec> availableSpec;
+        private java.util.List<AvailableSpec> availableSpec;
 
         @com.aliyun.core.annotation.NameInMap("AvailableStorageType")
         private AvailableStorageType availableStorageType;
@@ -678,21 +683,21 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         /**
          * @return availableDiskType
          */
-        public java.util.List < AvailableDiskType> getAvailableDiskType() {
+        public java.util.List<AvailableDiskType> getAvailableDiskType() {
             return this.availableDiskType;
         }
 
         /**
          * @return availableRegion
          */
-        public java.util.List < AvailableRegion> getAvailableRegion() {
+        public java.util.List<AvailableRegion> getAvailableRegion() {
             return this.availableRegion;
         }
 
         /**
          * @return availableSpec
          */
-        public java.util.List < AvailableSpec> getAvailableSpec() {
+        public java.util.List<AvailableSpec> getAvailableSpec() {
             return this.availableSpec;
         }
 
@@ -718,9 +723,9 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         }
 
         public static final class Builder {
-            private java.util.List < AvailableDiskType> availableDiskType; 
-            private java.util.List < AvailableRegion> availableRegion; 
-            private java.util.List < AvailableSpec> availableSpec; 
+            private java.util.List<AvailableDiskType> availableDiskType; 
+            private java.util.List<AvailableRegion> availableRegion; 
+            private java.util.List<AvailableSpec> availableSpec; 
             private AvailableStorageType availableStorageType; 
             private String commodityCode; 
             private String orderType; 
@@ -728,7 +733,7 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
             /**
              * AvailableDiskType.
              */
-            public Builder availableDiskType(java.util.List < AvailableDiskType> availableDiskType) {
+            public Builder availableDiskType(java.util.List<AvailableDiskType> availableDiskType) {
                 this.availableDiskType = availableDiskType;
                 return this;
             }
@@ -736,7 +741,7 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
             /**
              * AvailableRegion.
              */
-            public Builder availableRegion(java.util.List < AvailableRegion> availableRegion) {
+            public Builder availableRegion(java.util.List<AvailableRegion> availableRegion) {
                 this.availableRegion = availableRegion;
                 return this;
             }
@@ -744,7 +749,7 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
             /**
              * AvailableSpec.
              */
-            public Builder availableSpec(java.util.List < AvailableSpec> availableSpec) {
+            public Builder availableSpec(java.util.List<AvailableSpec> availableSpec) {
                 this.availableSpec = availableSpec;
                 return this;
             }

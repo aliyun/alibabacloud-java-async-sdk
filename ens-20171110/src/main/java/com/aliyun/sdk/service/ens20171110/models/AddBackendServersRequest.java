@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class AddBackendServersRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackendServers")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < BackendServers> backendServers;
+    private java.util.List<BackendServers> backendServers;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
@@ -44,7 +49,7 @@ public class AddBackendServersRequest extends Request {
     /**
      * @return backendServers
      */
-    public java.util.List < BackendServers> getBackendServers() {
+    public java.util.List<BackendServers> getBackendServers() {
         return this.backendServers;
     }
 
@@ -56,7 +61,7 @@ public class AddBackendServersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddBackendServersRequest, Builder> {
-        private java.util.List < BackendServers> backendServers; 
+        private java.util.List<BackendServers> backendServers; 
         private String loadBalancerId; 
 
         private Builder() {
@@ -76,7 +81,7 @@ public class AddBackendServersRequest extends Request {
          * </blockquote>
          * <p>This parameter is required.</p>
          */
-        public Builder backendServers(java.util.List < BackendServers> backendServers) {
+        public Builder backendServers(java.util.List<BackendServers> backendServers) {
             String backendServersShrink = shrink(backendServers, "BackendServers", "json");
             this.putQueryParameter("BackendServers", backendServersShrink);
             this.backendServers = backendServers;

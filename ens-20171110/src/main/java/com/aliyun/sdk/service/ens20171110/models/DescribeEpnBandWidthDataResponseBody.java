@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
      */
     public static class MonitorData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandWidthMonitorData")
-        private java.util.List < BandWidthMonitorData> bandWidthMonitorData;
+        private java.util.List<BandWidthMonitorData> bandWidthMonitorData;
 
         @com.aliyun.core.annotation.NameInMap("MaxDownBandWidth")
         private Long maxDownBandWidth;
@@ -249,7 +254,7 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
         /**
          * @return bandWidthMonitorData
          */
-        public java.util.List < BandWidthMonitorData> getBandWidthMonitorData() {
+        public java.util.List<BandWidthMonitorData> getBandWidthMonitorData() {
             return this.bandWidthMonitorData;
         }
 
@@ -268,14 +273,14 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BandWidthMonitorData> bandWidthMonitorData; 
+            private java.util.List<BandWidthMonitorData> bandWidthMonitorData; 
             private Long maxDownBandWidth; 
             private Long maxUpBandWidth; 
 
             /**
              * <p>The bandwidth data.</p>
              */
-            public Builder bandWidthMonitorData(java.util.List < BandWidthMonitorData> bandWidthMonitorData) {
+            public Builder bandWidthMonitorData(java.util.List<BandWidthMonitorData> bandWidthMonitorData) {
                 this.bandWidthMonitorData = bandWidthMonitorData;
                 return this;
             }

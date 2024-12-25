@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ServerLoadBalancerMonitorData")
-    private java.util.List < ServerLoadBalancerMonitorData> serverLoadBalancerMonitorData;
+    private java.util.List<ServerLoadBalancerMonitorData> serverLoadBalancerMonitorData;
 
     private DescribeServerLoadBalancerMonitorResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
     /**
      * @return serverLoadBalancerMonitorData
      */
-    public java.util.List < ServerLoadBalancerMonitorData> getServerLoadBalancerMonitorData() {
+    public java.util.List<ServerLoadBalancerMonitorData> getServerLoadBalancerMonitorData() {
         return this.serverLoadBalancerMonitorData;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ServerLoadBalancerMonitorData> serverLoadBalancerMonitorData; 
+        private java.util.List<ServerLoadBalancerMonitorData> serverLoadBalancerMonitorData; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DescribeServerLoadBalancerMonitorResponseBody extends TeaModel {
         /**
          * <p>The array of the monitoring data.</p>
          */
-        public Builder serverLoadBalancerMonitorData(java.util.List < ServerLoadBalancerMonitorData> serverLoadBalancerMonitorData) {
+        public Builder serverLoadBalancerMonitorData(java.util.List<ServerLoadBalancerMonitorData> serverLoadBalancerMonitorData) {
             this.serverLoadBalancerMonitorData = serverLoadBalancerMonitorData;
             return this;
         }

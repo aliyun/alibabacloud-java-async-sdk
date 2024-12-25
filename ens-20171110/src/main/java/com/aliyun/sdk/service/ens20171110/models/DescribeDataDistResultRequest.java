@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class DescribeDataDistResultRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnsRegionIds")
-    private java.util.List < String > ensRegionIds;
+    private java.util.List<String> ensRegionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
@@ -99,7 +104,7 @@ public class DescribeDataDistResultRequest extends Request {
     /**
      * @return ensRegionIds
      */
-    public java.util.List < String > getEnsRegionIds() {
+    public java.util.List<String> getEnsRegionIds() {
         return this.ensRegionIds;
     }
 
@@ -142,7 +147,7 @@ public class DescribeDataDistResultRequest extends Request {
         private String appId; 
         private String dataNames; 
         private String dataVersions; 
-        private java.util.List < String > ensRegionIds; 
+        private java.util.List<String> ensRegionIds; 
         private String instanceIds; 
         private String maxDate; 
         private String minDate; 
@@ -206,7 +211,7 @@ public class DescribeDataDistResultRequest extends Request {
         /**
          * <p>The IDs of the ENS nodes.</p>
          */
-        public Builder ensRegionIds(java.util.List < String > ensRegionIds) {
+        public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             String ensRegionIdsShrink = shrink(ensRegionIds, "EnsRegionIds", "json");
             this.putQueryParameter("EnsRegionIds", ensRegionIdsShrink);
             this.ensRegionIds = ensRegionIds;

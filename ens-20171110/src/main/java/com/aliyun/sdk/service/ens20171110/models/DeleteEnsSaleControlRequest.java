@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DeleteEnsSaleControlRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaleControls")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < SaleControls> saleControls;
+    private java.util.List<SaleControls> saleControls;
 
     private DeleteEnsSaleControlRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class DeleteEnsSaleControlRequest extends Request {
     /**
      * @return saleControls
      */
-    public java.util.List < SaleControls> getSaleControls() {
+    public java.util.List<SaleControls> getSaleControls() {
         return this.saleControls;
     }
 
@@ -83,7 +88,7 @@ public class DeleteEnsSaleControlRequest extends Request {
         private String aliUidAccount; 
         private String commodityCode; 
         private String customAccount; 
-        private java.util.List < SaleControls> saleControls; 
+        private java.util.List<SaleControls> saleControls; 
 
         private Builder() {
             super();
@@ -127,7 +132,7 @@ public class DeleteEnsSaleControlRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder saleControls(java.util.List < SaleControls> saleControls) {
+        public Builder saleControls(java.util.List<SaleControls> saleControls) {
             String saleControlsShrink = shrink(saleControls, "SaleControls", "json");
             this.putQueryParameter("SaleControls", saleControlsShrink);
             this.saleControls = saleControls;

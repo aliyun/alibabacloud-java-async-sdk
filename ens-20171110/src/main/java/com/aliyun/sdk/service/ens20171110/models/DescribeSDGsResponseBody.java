@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SDGs")
-    private java.util.List < SDGs> SDGs;
+    private java.util.List<SDGs> SDGs;
 
     private DescribeSDGsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeSDGsResponseBody extends TeaModel {
     /**
      * @return SDGs
      */
-    public java.util.List < SDGs> getSDGs() {
+    public java.util.List<SDGs> getSDGs() {
         return this.SDGs;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SDGs> SDGs; 
+        private java.util.List<SDGs> SDGs; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
         /**
          * <p>The information about the SDGs.</p>
          */
-        public Builder SDGs(java.util.List < SDGs> SDGs) {
+        public Builder SDGs(java.util.List<SDGs> SDGs) {
             this.SDGs = SDGs;
             return this;
         }
@@ -336,7 +341,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
      */
     public static class SDGs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvaliableRegionIds")
-        private java.util.List < AvaliableRegionIds> avaliableRegionIds;
+        private java.util.List<AvaliableRegionIds> avaliableRegionIds;
 
         @com.aliyun.core.annotation.NameInMap("CreationInstanceId")
         private String creationInstanceId;
@@ -348,7 +353,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
         private String creationTime;
 
         @com.aliyun.core.annotation.NameInMap("DeployedInstanceIds")
-        private java.util.List < DeployedInstanceIds> deployedInstanceIds;
+        private java.util.List<DeployedInstanceIds> deployedInstanceIds;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -393,7 +398,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
         /**
          * @return avaliableRegionIds
          */
-        public java.util.List < AvaliableRegionIds> getAvaliableRegionIds() {
+        public java.util.List<AvaliableRegionIds> getAvaliableRegionIds() {
             return this.avaliableRegionIds;
         }
 
@@ -421,7 +426,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
         /**
          * @return deployedInstanceIds
          */
-        public java.util.List < DeployedInstanceIds> getDeployedInstanceIds() {
+        public java.util.List<DeployedInstanceIds> getDeployedInstanceIds() {
             return this.deployedInstanceIds;
         }
 
@@ -468,11 +473,11 @@ public class DescribeSDGsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AvaliableRegionIds> avaliableRegionIds; 
+            private java.util.List<AvaliableRegionIds> avaliableRegionIds; 
             private String creationInstanceId; 
             private String creationRegionId; 
             private String creationTime; 
-            private java.util.List < DeployedInstanceIds> deployedInstanceIds; 
+            private java.util.List<DeployedInstanceIds> deployedInstanceIds; 
             private String description; 
             private String parentSDGId; 
             private String SDGId; 
@@ -483,7 +488,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
             /**
              * <p>The IDs of available edge nodes.</p>
              */
-            public Builder avaliableRegionIds(java.util.List < AvaliableRegionIds> avaliableRegionIds) {
+            public Builder avaliableRegionIds(java.util.List<AvaliableRegionIds> avaliableRegionIds) {
                 this.avaliableRegionIds = avaliableRegionIds;
                 return this;
             }
@@ -524,7 +529,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
             /**
              * <p>The deployment information.</p>
              */
-            public Builder deployedInstanceIds(java.util.List < DeployedInstanceIds> deployedInstanceIds) {
+            public Builder deployedInstanceIds(java.util.List<DeployedInstanceIds> deployedInstanceIds) {
                 this.deployedInstanceIds = deployedInstanceIds;
                 return this;
             }

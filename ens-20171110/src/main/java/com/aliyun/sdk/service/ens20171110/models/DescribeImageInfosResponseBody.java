@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -212,7 +217,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
      */
     public static class DiskDeviceMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskDeviceMapping")
-        private java.util.List < DiskDeviceMapping> diskDeviceMapping;
+        private java.util.List<DiskDeviceMapping> diskDeviceMapping;
 
         private DiskDeviceMappings(Builder builder) {
             this.diskDeviceMapping = builder.diskDeviceMapping;
@@ -229,17 +234,17 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         /**
          * @return diskDeviceMapping
          */
-        public java.util.List < DiskDeviceMapping> getDiskDeviceMapping() {
+        public java.util.List<DiskDeviceMapping> getDiskDeviceMapping() {
             return this.diskDeviceMapping;
         }
 
         public static final class Builder {
-            private java.util.List < DiskDeviceMapping> diskDeviceMapping; 
+            private java.util.List<DiskDeviceMapping> diskDeviceMapping; 
 
             /**
              * DiskDeviceMapping.
              */
-            public Builder diskDeviceMapping(java.util.List < DiskDeviceMapping> diskDeviceMapping) {
+            public Builder diskDeviceMapping(java.util.List<DiskDeviceMapping> diskDeviceMapping) {
                 this.diskDeviceMapping = diskDeviceMapping;
                 return this;
             }
@@ -473,7 +478,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
      */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Image")
-        private java.util.List < Image> image;
+        private java.util.List<Image> image;
 
         private Images(Builder builder) {
             this.image = builder.image;
@@ -490,17 +495,17 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         /**
          * @return image
          */
-        public java.util.List < Image> getImage() {
+        public java.util.List<Image> getImage() {
             return this.image;
         }
 
         public static final class Builder {
-            private java.util.List < Image> image; 
+            private java.util.List<Image> image; 
 
             /**
              * Image.
              */
-            public Builder image(java.util.List < Image> image) {
+            public Builder image(java.util.List<Image> image) {
                 this.image = image;
                 return this;
             }

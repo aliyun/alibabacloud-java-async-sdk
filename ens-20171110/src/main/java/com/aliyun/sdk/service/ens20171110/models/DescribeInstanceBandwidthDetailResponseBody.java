@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Bandwidths")
-    private java.util.List < Bandwidths> bandwidths;
+    private java.util.List<Bandwidths> bandwidths;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
     /**
      * @return bandwidths
      */
-    public java.util.List < Bandwidths> getBandwidths() {
+    public java.util.List<Bandwidths> getBandwidths() {
         return this.bandwidths;
     }
 
@@ -79,7 +84,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Bandwidths> bandwidths; 
+        private java.util.List<Bandwidths> bandwidths; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeInstanceBandwidthDetailResponseBody extends TeaModel {
         /**
          * Bandwidths.
          */
-        public Builder bandwidths(java.util.List < Bandwidths> bandwidths) {
+        public Builder bandwidths(java.util.List<Bandwidths> bandwidths) {
             this.bandwidths = bandwidths;
             return this;
         }

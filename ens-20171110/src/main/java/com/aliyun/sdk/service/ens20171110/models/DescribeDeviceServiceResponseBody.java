@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,10 +27,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceDetailInfos")
-    private java.util.List < ResourceDetailInfos> resourceDetailInfos;
+    private java.util.List<ResourceDetailInfos> resourceDetailInfos;
 
     @com.aliyun.core.annotation.NameInMap("ResourceInfos")
-    private java.util.List < ResourceInfos> resourceInfos;
+    private java.util.List<ResourceInfos> resourceInfos;
 
     private DescribeDeviceServiceResponseBody(Builder builder) {
         this.appMetaData = builder.appMetaData;
@@ -67,14 +72,14 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
     /**
      * @return resourceDetailInfos
      */
-    public java.util.List < ResourceDetailInfos> getResourceDetailInfos() {
+    public java.util.List<ResourceDetailInfos> getResourceDetailInfos() {
         return this.resourceDetailInfos;
     }
 
     /**
      * @return resourceInfos
      */
-    public java.util.List < ResourceInfos> getResourceInfos() {
+    public java.util.List<ResourceInfos> getResourceInfos() {
         return this.resourceInfos;
     }
 
@@ -82,8 +87,8 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         private AppMetaData appMetaData; 
         private AppStatus appStatus; 
         private String requestId; 
-        private java.util.List < ResourceDetailInfos> resourceDetailInfos; 
-        private java.util.List < ResourceInfos> resourceInfos; 
+        private java.util.List<ResourceDetailInfos> resourceDetailInfos; 
+        private java.util.List<ResourceInfos> resourceInfos; 
 
         /**
          * <p>The basic properties of the application.</p>
@@ -115,7 +120,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         /**
          * <p>The information about the devices.</p>
          */
-        public Builder resourceDetailInfos(java.util.List < ResourceDetailInfos> resourceDetailInfos) {
+        public Builder resourceDetailInfos(java.util.List<ResourceDetailInfos> resourceDetailInfos) {
             this.resourceDetailInfos = resourceDetailInfos;
             return this;
         }
@@ -123,7 +128,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         /**
          * <p>The information about the instances.</p>
          */
-        public Builder resourceInfos(java.util.List < ResourceInfos> resourceInfos) {
+        public Builder resourceInfos(java.util.List<ResourceInfos> resourceInfos) {
             this.resourceInfos = resourceInfos;
             return this;
         }
@@ -826,7 +831,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Network")
-        private java.util.List < Network> network;
+        private java.util.List<Network> network;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -855,7 +860,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         /**
          * @return network
          */
-        public java.util.List < Network> getNetwork() {
+        public java.util.List<Network> getNetwork() {
             return this.network;
         }
 
@@ -868,7 +873,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String name; 
-            private java.util.List < Network> network; 
+            private java.util.List<Network> network; 
             private String status; 
 
             /**
@@ -885,7 +890,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             /**
              * <p>The network information.</p>
              */
-            public Builder network(java.util.List < Network> network) {
+            public Builder network(java.util.List<Network> network) {
                 this.network = network;
                 return this;
             }
@@ -1028,7 +1033,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("DeviceInfos")
-        private java.util.List < DeviceInfos> deviceInfos;
+        private java.util.List<DeviceInfos> deviceInfos;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -1037,10 +1042,10 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         private String instanceStatus;
 
         @com.aliyun.core.annotation.NameInMap("InternalIps")
-        private java.util.List < InternalIps> internalIps;
+        private java.util.List<InternalIps> internalIps;
 
         @com.aliyun.core.annotation.NameInMap("PublicIps")
-        private java.util.List < PublicIps> publicIps;
+        private java.util.List<PublicIps> publicIps;
 
         @com.aliyun.core.annotation.NameInMap("RegionCode")
         private String regionCode;
@@ -1105,7 +1110,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         /**
          * @return deviceInfos
          */
-        public java.util.List < DeviceInfos> getDeviceInfos() {
+        public java.util.List<DeviceInfos> getDeviceInfos() {
             return this.deviceInfos;
         }
 
@@ -1126,14 +1131,14 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         /**
          * @return internalIps
          */
-        public java.util.List < InternalIps> getInternalIps() {
+        public java.util.List<InternalIps> getInternalIps() {
             return this.internalIps;
         }
 
         /**
          * @return publicIps
          */
-        public java.util.List < PublicIps> getPublicIps() {
+        public java.util.List<PublicIps> getPublicIps() {
             return this.publicIps;
         }
 
@@ -1163,11 +1168,11 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             private String areaCode; 
             private String areaName; 
             private String createTime; 
-            private java.util.List < DeviceInfos> deviceInfos; 
+            private java.util.List<DeviceInfos> deviceInfos; 
             private String instanceId; 
             private String instanceStatus; 
-            private java.util.List < InternalIps> internalIps; 
-            private java.util.List < PublicIps> publicIps; 
+            private java.util.List<InternalIps> internalIps; 
+            private java.util.List<PublicIps> publicIps; 
             private String regionCode; 
             private String regionId; 
             private String regionName; 
@@ -1219,7 +1224,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             /**
              * <p>The information about the devices.</p>
              */
-            public Builder deviceInfos(java.util.List < DeviceInfos> deviceInfos) {
+            public Builder deviceInfos(java.util.List<DeviceInfos> deviceInfos) {
                 this.deviceInfos = deviceInfos;
                 return this;
             }
@@ -1249,7 +1254,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             /**
              * <p>The internal IP addresses.</p>
              */
-            public Builder internalIps(java.util.List < InternalIps> internalIps) {
+            public Builder internalIps(java.util.List<InternalIps> internalIps) {
                 this.internalIps = internalIps;
                 return this;
             }
@@ -1257,7 +1262,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
             /**
              * <p>The public IP addresses.</p>
              */
-            public Builder publicIps(java.util.List < PublicIps> publicIps) {
+            public Builder publicIps(java.util.List<PublicIps> publicIps) {
                 this.publicIps = publicIps;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteHaVipsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HaVipIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > haVipIds;
+    private java.util.List<String> haVipIds;
 
     private DeleteHaVipsRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class DeleteHaVipsRequest extends Request {
     /**
      * @return haVipIds
      */
-    public java.util.List < String > getHaVipIds() {
+    public java.util.List<String> getHaVipIds() {
         return this.haVipIds;
     }
 
     public static final class Builder extends Request.Builder<DeleteHaVipsRequest, Builder> {
-        private java.util.List < String > haVipIds; 
+        private java.util.List<String> haVipIds; 
 
         private Builder() {
             super();
@@ -57,7 +62,7 @@ public class DeleteHaVipsRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder haVipIds(java.util.List < String > haVipIds) {
+        public Builder haVipIds(java.util.List<String> haVipIds) {
             String haVipIdsShrink = shrink(haVipIds, "HaVipIds", "json");
             this.putQueryParameter("HaVipIds", haVipIdsShrink);
             this.haVipIds = haVipIds;

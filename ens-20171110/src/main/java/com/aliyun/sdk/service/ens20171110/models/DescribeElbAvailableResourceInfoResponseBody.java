@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ElbAvailableResourceInfo")
-    private java.util.List < ElbAvailableResourceInfo> elbAvailableResourceInfo;
+    private java.util.List<ElbAvailableResourceInfo> elbAvailableResourceInfo;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
     /**
      * @return elbAvailableResourceInfo
      */
-    public java.util.List < ElbAvailableResourceInfo> getElbAvailableResourceInfo() {
+    public java.util.List<ElbAvailableResourceInfo> getElbAvailableResourceInfo() {
         return this.elbAvailableResourceInfo;
     }
 
@@ -46,13 +51,13 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ElbAvailableResourceInfo> elbAvailableResourceInfo; 
+        private java.util.List<ElbAvailableResourceInfo> elbAvailableResourceInfo; 
         private String requestId; 
 
         /**
          * <p>The information about resources.</p>
          */
-        public Builder elbAvailableResourceInfo(java.util.List < ElbAvailableResourceInfo> elbAvailableResourceInfo) {
+        public Builder elbAvailableResourceInfo(java.util.List<ElbAvailableResourceInfo> elbAvailableResourceInfo) {
             this.elbAvailableResourceInfo = elbAvailableResourceInfo;
             return this;
         }
@@ -94,7 +99,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         private String ensRegionId;
 
         @com.aliyun.core.annotation.NameInMap("LoadBalancerSpec")
-        private java.util.List < String > loadBalancerSpec;
+        private java.util.List<String> loadBalancerSpec;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -151,7 +156,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         /**
          * @return loadBalancerSpec
          */
-        public java.util.List < String > getLoadBalancerSpec() {
+        public java.util.List<String> getLoadBalancerSpec() {
             return this.loadBalancerSpec;
         }
 
@@ -174,7 +179,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             private String canBuyCount; 
             private String enName; 
             private String ensRegionId; 
-            private java.util.List < String > loadBalancerSpec; 
+            private java.util.List<String> loadBalancerSpec; 
             private String name; 
             private String province; 
 
@@ -225,7 +230,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
             /**
              * <p>The specifications of the ELB instances.</p>
              */
-            public Builder loadBalancerSpec(java.util.List < String > loadBalancerSpec) {
+            public Builder loadBalancerSpec(java.util.List<String> loadBalancerSpec) {
                 this.loadBalancerSpec = loadBalancerSpec;
                 return this;
             }

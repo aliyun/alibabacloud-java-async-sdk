@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeHaVipsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("HaVips")
-    private java.util.List < HaVips> haVips;
+    private java.util.List<HaVips> haVips;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
@@ -46,7 +51,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
     /**
      * @return haVips
      */
-    public java.util.List < HaVips> getHaVips() {
+    public java.util.List<HaVips> getHaVips() {
         return this.haVips;
     }
 
@@ -79,7 +84,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < HaVips> haVips; 
+        private java.util.List<HaVips> haVips; 
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         /**
          * <p>Details of the HAVIPs.</p>
          */
-        public Builder haVips(java.util.List < HaVips> haVips) {
+        public Builder haVips(java.util.List<HaVips> haVips) {
             this.haVips = haVips;
             return this;
         }
@@ -375,10 +380,10 @@ public class DescribeHaVipsResponseBody extends TeaModel {
      */
     public static class HaVips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedEipAddresses")
-        private java.util.List < AssociatedEipAddresses> associatedEipAddresses;
+        private java.util.List<AssociatedEipAddresses> associatedEipAddresses;
 
         @com.aliyun.core.annotation.NameInMap("AssociatedInstances")
-        private java.util.List < AssociatedInstances> associatedInstances;
+        private java.util.List<AssociatedInstances> associatedInstances;
 
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -432,14 +437,14 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         /**
          * @return associatedEipAddresses
          */
-        public java.util.List < AssociatedEipAddresses> getAssociatedEipAddresses() {
+        public java.util.List<AssociatedEipAddresses> getAssociatedEipAddresses() {
             return this.associatedEipAddresses;
         }
 
         /**
          * @return associatedInstances
          */
-        public java.util.List < AssociatedInstances> getAssociatedInstances() {
+        public java.util.List<AssociatedInstances> getAssociatedInstances() {
             return this.associatedInstances;
         }
 
@@ -507,8 +512,8 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AssociatedEipAddresses> associatedEipAddresses; 
-            private java.util.List < AssociatedInstances> associatedInstances; 
+            private java.util.List<AssociatedEipAddresses> associatedEipAddresses; 
+            private java.util.List<AssociatedInstances> associatedInstances; 
             private String creationTime; 
             private String description; 
             private String ensRegionId; 
@@ -522,7 +527,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             /**
              * <p>The elastic IP addresses (EIPs) that are associated with the HAVIP.</p>
              */
-            public Builder associatedEipAddresses(java.util.List < AssociatedEipAddresses> associatedEipAddresses) {
+            public Builder associatedEipAddresses(java.util.List<AssociatedEipAddresses> associatedEipAddresses) {
                 this.associatedEipAddresses = associatedEipAddresses;
                 return this;
             }
@@ -530,7 +535,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             /**
              * <p>The information about instances that are associated with the HAVIP.</p>
              */
-            public Builder associatedInstances(java.util.List < AssociatedInstances> associatedInstances) {
+            public Builder associatedInstances(java.util.List<AssociatedInstances> associatedInstances) {
                 this.associatedInstances = associatedInstances;
                 return this;
             }

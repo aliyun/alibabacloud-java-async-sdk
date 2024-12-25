@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateStorageGatewayResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AllocationId")
-    private java.util.List < AllocationId> allocationId;
+    private java.util.List<AllocationId> allocationId;
 
     @com.aliyun.core.annotation.NameInMap("BizStatusCode")
     private String bizStatusCode;
@@ -22,7 +27,7 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("UnAllocationId")
-    private java.util.List < UnAllocationId> unAllocationId;
+    private java.util.List<UnAllocationId> unAllocationId;
 
     private CreateStorageGatewayResponseBody(Builder builder) {
         this.allocationId = builder.allocationId;
@@ -42,7 +47,7 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
     /**
      * @return allocationId
      */
-    public java.util.List < AllocationId> getAllocationId() {
+    public java.util.List<AllocationId> getAllocationId() {
         return this.allocationId;
     }
 
@@ -63,20 +68,20 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
     /**
      * @return unAllocationId
      */
-    public java.util.List < UnAllocationId> getUnAllocationId() {
+    public java.util.List<UnAllocationId> getUnAllocationId() {
         return this.unAllocationId;
     }
 
     public static final class Builder {
-        private java.util.List < AllocationId> allocationId; 
+        private java.util.List<AllocationId> allocationId; 
         private String bizStatusCode; 
         private String requestId; 
-        private java.util.List < UnAllocationId> unAllocationId; 
+        private java.util.List<UnAllocationId> unAllocationId; 
 
         /**
          * <p>The list of created nodes.</p>
          */
-        public Builder allocationId(java.util.List < AllocationId> allocationId) {
+        public Builder allocationId(java.util.List<AllocationId> allocationId) {
             this.allocationId = allocationId;
             return this;
         }
@@ -110,7 +115,7 @@ public class CreateStorageGatewayResponseBody extends TeaModel {
         /**
          * <p>The list of nodes that are not created.</p>
          */
-        public Builder unAllocationId(java.util.List < UnAllocationId> unAllocationId) {
+        public Builder unAllocationId(java.util.List<UnAllocationId> unAllocationId) {
             this.unAllocationId = unAllocationId;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeNCInformationResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
@@ -61,7 +66,7 @@ public class DescribeNCInformationResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -102,7 +107,7 @@ public class DescribeNCInformationResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String desc; 
         private String msg; 
         private Pager pager; 
@@ -120,7 +125,7 @@ public class DescribeNCInformationResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -986,7 +991,7 @@ public class DescribeNCInformationResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < String > tag;
+        private java.util.List<String> tag;
 
         @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
@@ -1023,7 +1028,7 @@ public class DescribeNCInformationResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < String > getTag() {
+        public java.util.List<String> getTag() {
             return this.tag;
         }
 
@@ -1037,7 +1042,7 @@ public class DescribeNCInformationResponseBody extends TeaModel {
         public static final class Builder {
             private String ip; 
             private String name; 
-            private java.util.List < String > tag; 
+            private java.util.List<String> tag; 
             private String uuid; 
 
             /**
@@ -1059,7 +1064,7 @@ public class DescribeNCInformationResponseBody extends TeaModel {
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < String > tag) {
+            public Builder tag(java.util.List<String> tag) {
                 this.tag = tag;
                 return this;
             }

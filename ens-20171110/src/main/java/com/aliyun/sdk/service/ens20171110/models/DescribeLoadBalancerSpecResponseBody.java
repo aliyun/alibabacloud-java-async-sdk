@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LoadBalancerSpecs")
-    private java.util.List < LoadBalancerSpecs> loadBalancerSpecs;
+    private java.util.List<LoadBalancerSpecs> loadBalancerSpecs;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
     /**
      * @return loadBalancerSpecs
      */
-    public java.util.List < LoadBalancerSpecs> getLoadBalancerSpecs() {
+    public java.util.List<LoadBalancerSpecs> getLoadBalancerSpecs() {
         return this.loadBalancerSpecs;
     }
 
@@ -79,7 +84,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LoadBalancerSpecs> loadBalancerSpecs; 
+        private java.util.List<LoadBalancerSpecs> loadBalancerSpecs; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
         /**
          * <p>The specifications. Valid values:</p>
          */
-        public Builder loadBalancerSpecs(java.util.List < LoadBalancerSpecs> loadBalancerSpecs) {
+        public Builder loadBalancerSpecs(java.util.List<LoadBalancerSpecs> loadBalancerSpecs) {
             this.loadBalancerSpecs = loadBalancerSpecs;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -275,7 +280,7 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
      */
     public static class EnsNetDistricts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsNetDistrict")
-        private java.util.List < EnsNetDistrict> ensNetDistrict;
+        private java.util.List<EnsNetDistrict> ensNetDistrict;
 
         private EnsNetDistricts(Builder builder) {
             this.ensNetDistrict = builder.ensNetDistrict;
@@ -292,17 +297,17 @@ public class DescribeEnsNetDistrictResponseBody extends TeaModel {
         /**
          * @return ensNetDistrict
          */
-        public java.util.List < EnsNetDistrict> getEnsNetDistrict() {
+        public java.util.List<EnsNetDistrict> getEnsNetDistrict() {
             return this.ensNetDistrict;
         }
 
         public static final class Builder {
-            private java.util.List < EnsNetDistrict> ensNetDistrict; 
+            private java.util.List<EnsNetDistrict> ensNetDistrict; 
 
             /**
              * EnsNetDistrict.
              */
-            public Builder ensNetDistrict(java.util.List < EnsNetDistrict> ensNetDistrict) {
+            public Builder ensNetDistrict(java.util.List<EnsNetDistrict> ensNetDistrict) {
                 this.ensNetDistrict = ensNetDistrict;
                 return this;
             }

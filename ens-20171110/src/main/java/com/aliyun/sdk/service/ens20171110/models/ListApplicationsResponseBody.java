@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -306,7 +311,7 @@ public class ListApplicationsResponseBody extends TeaModel {
      */
     public static class AppList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("App")
-        private java.util.List < App> app;
+        private java.util.List<App> app;
 
         private AppList(Builder builder) {
             this.app = builder.app;
@@ -323,17 +328,17 @@ public class ListApplicationsResponseBody extends TeaModel {
         /**
          * @return app
          */
-        public java.util.List < App> getApp() {
+        public java.util.List<App> getApp() {
             return this.app;
         }
 
         public static final class Builder {
-            private java.util.List < App> app; 
+            private java.util.List<App> app; 
 
             /**
              * App.
              */
-            public Builder app(java.util.List < App> app) {
+            public Builder app(java.util.List<App> app) {
                 this.app = app;
                 return this;
             }
@@ -423,7 +428,7 @@ public class ListApplicationsResponseBody extends TeaModel {
      */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Application")
-        private java.util.List < Application> application;
+        private java.util.List<Application> application;
 
         private Applications(Builder builder) {
             this.application = builder.application;
@@ -440,17 +445,17 @@ public class ListApplicationsResponseBody extends TeaModel {
         /**
          * @return application
          */
-        public java.util.List < Application> getApplication() {
+        public java.util.List<Application> getApplication() {
             return this.application;
         }
 
         public static final class Builder {
-            private java.util.List < Application> application; 
+            private java.util.List<Application> application; 
 
             /**
              * Application.
              */
-            public Builder application(java.util.List < Application> application) {
+            public Builder application(java.util.List<Application> application) {
                 this.application = application;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreateSnapshotResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SnapShotId")
-    private java.util.List < String > snapShotId;
+    private java.util.List<String> snapShotId;
 
     private CreateSnapshotResponseBody(Builder builder) {
         this.orderId = builder.orderId;
@@ -52,14 +57,14 @@ public class CreateSnapshotResponseBody extends TeaModel {
     /**
      * @return snapShotId
      */
-    public java.util.List < String > getSnapShotId() {
+    public java.util.List<String> getSnapShotId() {
         return this.snapShotId;
     }
 
     public static final class Builder {
         private String orderId; 
         private String requestId; 
-        private java.util.List < String > snapShotId; 
+        private java.util.List<String> snapShotId; 
 
         /**
          * <p>The ID of the order.</p>
@@ -89,7 +94,7 @@ public class CreateSnapshotResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>s-bp17441ohwka0yuh****</p>
          */
-        public Builder snapShotId(java.util.List < String > snapShotId) {
+        public Builder snapShotId(java.util.List<String> snapShotId) {
             this.snapShotId = snapShotId;
             return this;
         }

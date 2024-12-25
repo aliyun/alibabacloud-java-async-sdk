@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SnatTableEntries")
-    private java.util.List < SnatTableEntries> snatTableEntries;
+    private java.util.List<SnatTableEntries> snatTableEntries;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     /**
      * @return snatTableEntries
      */
-    public java.util.List < SnatTableEntries> getSnatTableEntries() {
+    public java.util.List<SnatTableEntries> getSnatTableEntries() {
         return this.snatTableEntries;
     }
 
@@ -82,7 +87,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SnatTableEntries> snatTableEntries; 
+        private java.util.List<SnatTableEntries> snatTableEntries; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         /**
          * <p>The details of the SNAT entries.</p>
          */
-        public Builder snatTableEntries(java.util.List < SnatTableEntries> snatTableEntries) {
+        public Builder snatTableEntries(java.util.List<SnatTableEntries> snatTableEntries) {
             this.snatTableEntries = snatTableEntries;
             return this;
         }

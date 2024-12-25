@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeSDGsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SDGIds")
-    private java.util.List < String > SDGIds;
+    private java.util.List<String> SDGIds;
 
     private DescribeSDGsRequest(Builder builder) {
         super(builder);
@@ -42,20 +47,20 @@ public class DescribeSDGsRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
     /**
      * @return SDGIds
      */
-    public java.util.List < String > getSDGIds() {
+    public java.util.List<String> getSDGIds() {
         return this.SDGIds;
     }
 
     public static final class Builder extends Request.Builder<DescribeSDGsRequest, Builder> {
-        private java.util.List < String > instanceIds; 
-        private java.util.List < String > SDGIds; 
+        private java.util.List<String> instanceIds; 
+        private java.util.List<String> SDGIds; 
 
         private Builder() {
             super();
@@ -70,7 +75,7 @@ public class DescribeSDGsRequest extends Request {
         /**
          * <p>The AIC instance ID to be queried.</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
             this.putQueryParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;
@@ -80,7 +85,7 @@ public class DescribeSDGsRequest extends Request {
         /**
          * <p>The IDs of SDGs that you want to query. By default, all SDGs are queried.</p>
          */
-        public Builder SDGIds(java.util.List < String > SDGIds) {
+        public Builder SDGIds(java.util.List<String> SDGIds) {
             String SDGIdsShrink = shrink(SDGIds, "SDGIds", "json");
             this.putQueryParameter("SDGIds", SDGIdsShrink);
             this.SDGIds = SDGIds;

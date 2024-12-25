@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -386,7 +391,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
      */
     public static class CloudResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudResourceSetType")
-        private java.util.List < CloudResourceSetType> cloudResourceSetType;
+        private java.util.List<CloudResourceSetType> cloudResourceSetType;
 
         private CloudResources(Builder builder) {
             this.cloudResourceSetType = builder.cloudResourceSetType;
@@ -403,17 +408,17 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         /**
          * @return cloudResourceSetType
          */
-        public java.util.List < CloudResourceSetType> getCloudResourceSetType() {
+        public java.util.List<CloudResourceSetType> getCloudResourceSetType() {
             return this.cloudResourceSetType;
         }
 
         public static final class Builder {
-            private java.util.List < CloudResourceSetType> cloudResourceSetType; 
+            private java.util.List<CloudResourceSetType> cloudResourceSetType; 
 
             /**
              * CloudResourceSetType.
              */
-            public Builder cloudResourceSetType(java.util.List < CloudResourceSetType> cloudResourceSetType) {
+            public Builder cloudResourceSetType(java.util.List<CloudResourceSetType> cloudResourceSetType) {
                 this.cloudResourceSetType = cloudResourceSetType;
                 return this;
             }
@@ -433,7 +438,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
      */
     public static class VSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
-        private java.util.List < String > vSwitchId;
+        private java.util.List<String> vSwitchId;
 
         private VSwitchIds(Builder builder) {
             this.vSwitchId = builder.vSwitchId;
@@ -450,17 +455,17 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         /**
          * @return vSwitchId
          */
-        public java.util.List < String > getVSwitchId() {
+        public java.util.List<String> getVSwitchId() {
             return this.vSwitchId;
         }
 
         public static final class Builder {
-            private java.util.List < String > vSwitchId; 
+            private java.util.List<String> vSwitchId; 
 
             /**
              * VSwitchId.
              */
-            public Builder vSwitchId(java.util.List < String > vSwitchId) {
+            public Builder vSwitchId(java.util.List<String> vSwitchId) {
                 this.vSwitchId = vSwitchId;
                 return this;
             }

@@ -491,6 +491,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDiskResponse> deleteDisk(DeleteDiskRequest request);
 
     /**
+     * @param request the request parameters of DeleteEip  DeleteEipRequest
+     * @return DeleteEipResponse
+     */
+    CompletableFuture<DeleteEipResponse> deleteEip(DeleteEipRequest request);
+
+    /**
      * @param request the request parameters of DeleteEnsRouteEntry  DeleteEnsRouteEntryRequest
      * @return DeleteEnsRouteEntryResponse
      */

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeARMServerInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AICSpecs")
-    private java.util.List < String > AICSpecs;
+    private java.util.List<String> AICSpecs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DescribeAICInstances")
@@ -22,7 +27,7 @@ public class DescribeARMServerInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnsRegionIds")
-    private java.util.List < String > ensRegionIds;
+    private java.util.List<String> ensRegionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxDate")
@@ -55,15 +60,15 @@ public class DescribeARMServerInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServerIds")
-    private java.util.List < String > serverIds;
+    private java.util.List<String> serverIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServerSpecs")
-    private java.util.List < String > serverSpecs;
+    private java.util.List<String> serverSpecs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("States")
-    private java.util.List < String > states;
+    private java.util.List<String> states;
 
     private DescribeARMServerInstancesRequest(Builder builder) {
         super(builder);
@@ -98,7 +103,7 @@ public class DescribeARMServerInstancesRequest extends Request {
     /**
      * @return AICSpecs
      */
-    public java.util.List < String > getAICSpecs() {
+    public java.util.List<String> getAICSpecs() {
         return this.AICSpecs;
     }
 
@@ -112,7 +117,7 @@ public class DescribeARMServerInstancesRequest extends Request {
     /**
      * @return ensRegionIds
      */
-    public java.util.List < String > getEnsRegionIds() {
+    public java.util.List<String> getEnsRegionIds() {
         return this.ensRegionIds;
     }
 
@@ -168,28 +173,28 @@ public class DescribeARMServerInstancesRequest extends Request {
     /**
      * @return serverIds
      */
-    public java.util.List < String > getServerIds() {
+    public java.util.List<String> getServerIds() {
         return this.serverIds;
     }
 
     /**
      * @return serverSpecs
      */
-    public java.util.List < String > getServerSpecs() {
+    public java.util.List<String> getServerSpecs() {
         return this.serverSpecs;
     }
 
     /**
      * @return states
      */
-    public java.util.List < String > getStates() {
+    public java.util.List<String> getStates() {
         return this.states;
     }
 
     public static final class Builder extends Request.Builder<DescribeARMServerInstancesRequest, Builder> {
-        private java.util.List < String > AICSpecs; 
+        private java.util.List<String> AICSpecs; 
         private Boolean describeAICInstances; 
-        private java.util.List < String > ensRegionIds; 
+        private java.util.List<String> ensRegionIds; 
         private String maxDate; 
         private String minDate; 
         private String name; 
@@ -197,9 +202,9 @@ public class DescribeARMServerInstancesRequest extends Request {
         private String orderByParams; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < String > serverIds; 
-        private java.util.List < String > serverSpecs; 
-        private java.util.List < String > states; 
+        private java.util.List<String> serverIds; 
+        private java.util.List<String> serverSpecs; 
+        private java.util.List<String> states; 
 
         private Builder() {
             super();
@@ -225,7 +230,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         /**
          * <p>The container specifications.</p>
          */
-        public Builder AICSpecs(java.util.List < String > AICSpecs) {
+        public Builder AICSpecs(java.util.List<String> AICSpecs) {
             String AICSpecsShrink = shrink(AICSpecs, "AICSpecs", "json");
             this.putQueryParameter("AICSpecs", AICSpecsShrink);
             this.AICSpecs = AICSpecs;
@@ -251,7 +256,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         /**
          * <p>The IDs of the Edge Node Service (ENS) nodes.</p>
          */
-        public Builder ensRegionIds(java.util.List < String > ensRegionIds) {
+        public Builder ensRegionIds(java.util.List<String> ensRegionIds) {
             String ensRegionIdsShrink = shrink(ensRegionIds, "EnsRegionIds", "json");
             this.putQueryParameter("EnsRegionIds", ensRegionIdsShrink);
             this.ensRegionIds = ensRegionIds;
@@ -348,7 +353,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         /**
          * <p>The IDs of the ARM servers.</p>
          */
-        public Builder serverIds(java.util.List < String > serverIds) {
+        public Builder serverIds(java.util.List<String> serverIds) {
             String serverIdsShrink = shrink(serverIds, "ServerIds", "json");
             this.putQueryParameter("ServerIds", serverIdsShrink);
             this.serverIds = serverIds;
@@ -358,7 +363,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         /**
          * <p>The server specifications.</p>
          */
-        public Builder serverSpecs(java.util.List < String > serverSpecs) {
+        public Builder serverSpecs(java.util.List<String> serverSpecs) {
             String serverSpecsShrink = shrink(serverSpecs, "ServerSpecs", "json");
             this.putQueryParameter("ServerSpecs", serverSpecsShrink);
             this.serverSpecs = serverSpecs;
@@ -368,7 +373,7 @@ public class DescribeARMServerInstancesRequest extends Request {
         /**
          * <p>The operation statuses.</p>
          */
-        public Builder states(java.util.List < String > states) {
+        public Builder states(java.util.List<String> states) {
             String statesShrink = shrink(states, "States", "json");
             this.putQueryParameter("States", statesShrink);
             this.states = states;

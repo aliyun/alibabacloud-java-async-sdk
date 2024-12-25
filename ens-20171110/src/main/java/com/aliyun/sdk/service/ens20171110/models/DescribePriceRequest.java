@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribePriceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDisk")
-    private java.util.List < DataDisk> dataDisk;
+    private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemDisk")
@@ -22,7 +27,7 @@ public class DescribePriceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataDisks")
-    private java.util.List < DataDisks> dataDisks;
+    private java.util.List<DataDisks> dataDisks;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnsRegionId")
@@ -82,7 +87,7 @@ public class DescribePriceRequest extends Request {
     /**
      * @return dataDisk
      */
-    public java.util.List < DataDisk> getDataDisk() {
+    public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
     }
 
@@ -96,7 +101,7 @@ public class DescribePriceRequest extends Request {
     /**
      * @return dataDisks
      */
-    public java.util.List < DataDisks> getDataDisks() {
+    public java.util.List<DataDisks> getDataDisks() {
         return this.dataDisks;
     }
 
@@ -143,9 +148,9 @@ public class DescribePriceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribePriceRequest, Builder> {
-        private java.util.List < DataDisk> dataDisk; 
+        private java.util.List<DataDisk> dataDisk; 
         private SystemDisk systemDisk; 
-        private java.util.List < DataDisks> dataDisks; 
+        private java.util.List<DataDisks> dataDisks; 
         private String ensRegionId; 
         private String instanceType; 
         private String internetChargeType; 
@@ -173,7 +178,7 @@ public class DescribePriceRequest extends Request {
         /**
          * DataDisk.
          */
-        public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+        public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
             return this;
@@ -191,7 +196,7 @@ public class DescribePriceRequest extends Request {
         /**
          * <p>If you leave DataDisk.1.Size empty, the value that you specified for this parameter is used.</p>
          */
-        public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
+        public Builder dataDisks(java.util.List<DataDisks> dataDisks) {
             String dataDisksShrink = shrink(dataDisks, "DataDisks", "json");
             this.putQueryParameter("DataDisks", dataDisksShrink);
             this.dataDisks = dataDisks;

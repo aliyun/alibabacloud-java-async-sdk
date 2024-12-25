@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     private String snatIp;
 
     @com.aliyun.core.annotation.NameInMap("SnatIps")
-    private java.util.List < SnatIps> snatIps;
+    private java.util.List<SnatIps> snatIps;
 
     @com.aliyun.core.annotation.NameInMap("SourceCIDR")
     private String sourceCIDR;
@@ -149,7 +154,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     /**
      * @return snatIps
      */
-    public java.util.List < SnatIps> getSnatIps() {
+    public java.util.List<SnatIps> getSnatIps() {
         return this.snatIps;
     }
 
@@ -198,7 +203,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         private String snatEntryId; 
         private String snatEntryName; 
         private String snatIp; 
-        private java.util.List < SnatIps> snatIps; 
+        private java.util.List<SnatIps> snatIps; 
         private String sourceCIDR; 
         private String standbySnatIp; 
         private String standbyStatus; 
@@ -304,7 +309,7 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
         /**
          * <p>The information about the EIP specified in the SNAT entry.</p>
          */
-        public Builder snatIps(java.util.List < SnatIps> snatIps) {
+        public Builder snatIps(java.util.List<SnatIps> snatIps) {
             this.snatIps = snatIps;
             return this;
         }

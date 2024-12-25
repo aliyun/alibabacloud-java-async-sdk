@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConfVersions")
-    private java.util.List < ConfVersions> confVersions;
+    private java.util.List<ConfVersions> confVersions;
 
     @com.aliyun.core.annotation.NameInMap("EPNInstanceId")
     private String EPNInstanceId;
@@ -22,7 +27,7 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
     private String EPNInstanceName;
 
     @com.aliyun.core.annotation.NameInMap("Instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     @com.aliyun.core.annotation.NameInMap("NetworkingModel")
     private String networkingModel;
@@ -31,7 +36,7 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("VSwitches")
-    private java.util.List < VSwitches> vSwitches;
+    private java.util.List<VSwitches> vSwitches;
 
     private DescribeEpnInstanceAttributeResponseBody(Builder builder) {
         this.confVersions = builder.confVersions;
@@ -54,7 +59,7 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
     /**
      * @return confVersions
      */
-    public java.util.List < ConfVersions> getConfVersions() {
+    public java.util.List<ConfVersions> getConfVersions() {
         return this.confVersions;
     }
 
@@ -75,7 +80,7 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
@@ -96,23 +101,23 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
     /**
      * @return vSwitches
      */
-    public java.util.List < VSwitches> getVSwitches() {
+    public java.util.List<VSwitches> getVSwitches() {
         return this.vSwitches;
     }
 
     public static final class Builder {
-        private java.util.List < ConfVersions> confVersions; 
+        private java.util.List<ConfVersions> confVersions; 
         private String EPNInstanceId; 
         private String EPNInstanceName; 
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
         private String networkingModel; 
         private String requestId; 
-        private java.util.List < VSwitches> vSwitches; 
+        private java.util.List<VSwitches> vSwitches; 
 
         /**
          * <p>The information about the EPN configurations.</p>
          */
-        public Builder confVersions(java.util.List < ConfVersions> confVersions) {
+        public Builder confVersions(java.util.List<ConfVersions> confVersions) {
             this.confVersions = confVersions;
             return this;
         }
@@ -142,7 +147,7 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The information about the instance.</p>
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
             return this;
         }
@@ -177,7 +182,7 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>Details of the vSwitch.</p>
          */
-        public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
+        public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
             this.vSwitches = vSwitches;
             return this;
         }

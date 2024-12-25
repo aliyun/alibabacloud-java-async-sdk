@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,10 +21,10 @@ public class ListObjectsResponseBody extends TeaModel {
     private String bucketName;
 
     @com.aliyun.core.annotation.NameInMap("CommonPrefixes")
-    private java.util.List < String > commonPrefixes;
+    private java.util.List<String> commonPrefixes;
 
     @com.aliyun.core.annotation.NameInMap("Contents")
-    private java.util.List < Contents> contents;
+    private java.util.List<Contents> contents;
 
     @com.aliyun.core.annotation.NameInMap("ContinuationToken")
     private String continuationToken;
@@ -89,14 +94,14 @@ public class ListObjectsResponseBody extends TeaModel {
     /**
      * @return commonPrefixes
      */
-    public java.util.List < String > getCommonPrefixes() {
+    public java.util.List<String> getCommonPrefixes() {
         return this.commonPrefixes;
     }
 
     /**
      * @return contents
      */
-    public java.util.List < Contents> getContents() {
+    public java.util.List<Contents> getContents() {
         return this.contents;
     }
 
@@ -179,8 +184,8 @@ public class ListObjectsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String bucketName; 
-        private java.util.List < String > commonPrefixes; 
-        private java.util.List < Contents> contents; 
+        private java.util.List<String> commonPrefixes; 
+        private java.util.List<Contents> contents; 
         private String continuationToken; 
         private String delimiter; 
         private String encodingType; 
@@ -207,7 +212,7 @@ public class ListObjectsResponseBody extends TeaModel {
         /**
          * <p>If the delimiter parameter is specified in the request, the response contains CommonPrefixes. Objects whose names contain the same string from the prefix to the next occurrence of the delimiter are grouped as a single result element in CommonPrefixes.</p>
          */
-        public Builder commonPrefixes(java.util.List < String > commonPrefixes) {
+        public Builder commonPrefixes(java.util.List<String> commonPrefixes) {
             this.commonPrefixes = commonPrefixes;
             return this;
         }
@@ -215,7 +220,7 @@ public class ListObjectsResponseBody extends TeaModel {
         /**
          * <p>The list of object metadata.</p>
          */
-        public Builder contents(java.util.List < Contents> contents) {
+        public Builder contents(java.util.List<Contents> contents) {
             this.contents = contents;
             return this;
         }

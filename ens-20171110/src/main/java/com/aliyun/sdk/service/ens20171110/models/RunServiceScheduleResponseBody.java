@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -316,7 +321,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
      */
     public static class CommandResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommandResult")
-        private java.util.List < CommandResult> commandResult;
+        private java.util.List<CommandResult> commandResult;
 
         private CommandResults(Builder builder) {
             this.commandResult = builder.commandResult;
@@ -333,17 +338,17 @@ public class RunServiceScheduleResponseBody extends TeaModel {
         /**
          * @return commandResult
          */
-        public java.util.List < CommandResult> getCommandResult() {
+        public java.util.List<CommandResult> getCommandResult() {
             return this.commandResult;
         }
 
         public static final class Builder {
-            private java.util.List < CommandResult> commandResult; 
+            private java.util.List<CommandResult> commandResult; 
 
             /**
              * CommandResult.
              */
-            public Builder commandResult(java.util.List < CommandResult> commandResult) {
+            public Builder commandResult(java.util.List<CommandResult> commandResult) {
                 this.commandResult = commandResult;
                 return this;
             }

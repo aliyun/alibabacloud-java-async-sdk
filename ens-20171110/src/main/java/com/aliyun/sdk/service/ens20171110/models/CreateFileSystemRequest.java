@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CreateFileSystemRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OrderDetails")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < OrderDetails> orderDetails;
+    private java.util.List<OrderDetails> orderDetails;
 
     private CreateFileSystemRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class CreateFileSystemRequest extends Request {
     /**
      * @return orderDetails
      */
-    public java.util.List < OrderDetails> getOrderDetails() {
+    public java.util.List<OrderDetails> getOrderDetails() {
         return this.orderDetails;
     }
 
     public static final class Builder extends Request.Builder<CreateFileSystemRequest, Builder> {
-        private java.util.List < OrderDetails> orderDetails; 
+        private java.util.List<OrderDetails> orderDetails; 
 
         private Builder() {
             super();
@@ -58,7 +63,7 @@ public class CreateFileSystemRequest extends Request {
          * <p>The information about the orders.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder orderDetails(java.util.List < OrderDetails> orderDetails) {
+        public Builder orderDetails(java.util.List<OrderDetails> orderDetails) {
             String orderDetailsShrink = shrink(orderDetails, "OrderDetails", "json");
             this.putQueryParameter("OrderDetails", orderDetailsShrink);
             this.orderDetails = orderDetails;

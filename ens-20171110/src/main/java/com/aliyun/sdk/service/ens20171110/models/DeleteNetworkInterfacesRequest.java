@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteNetworkInterfacesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > networkInterfaceIds;
+    private java.util.List<String> networkInterfaceIds;
 
     private DeleteNetworkInterfacesRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class DeleteNetworkInterfacesRequest extends Request {
     /**
      * @return networkInterfaceIds
      */
-    public java.util.List < String > getNetworkInterfaceIds() {
+    public java.util.List<String> getNetworkInterfaceIds() {
         return this.networkInterfaceIds;
     }
 
     public static final class Builder extends Request.Builder<DeleteNetworkInterfacesRequest, Builder> {
-        private java.util.List < String > networkInterfaceIds; 
+        private java.util.List<String> networkInterfaceIds; 
 
         private Builder() {
             super();
@@ -57,7 +62,7 @@ public class DeleteNetworkInterfacesRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder networkInterfaceIds(java.util.List < String > networkInterfaceIds) {
+        public Builder networkInterfaceIds(java.util.List<String> networkInterfaceIds) {
             String networkInterfaceIdsShrink = shrink(networkInterfaceIds, "NetworkInterfaceIds", "json");
             this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIdsShrink);
             this.networkInterfaceIds = networkInterfaceIds;

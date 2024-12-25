@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Servers")
-    private java.util.List < Servers> servers;
+    private java.util.List<Servers> servers;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
     /**
      * @return servers
      */
-    public java.util.List < Servers> getServers() {
+    public java.util.List<Servers> getServers() {
         return this.servers;
     }
 
@@ -82,7 +87,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < Servers> servers; 
+        private java.util.List<Servers> servers; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         /**
          * <p>The information about the servers and the AIC instances.</p>
          */
-        public Builder servers(java.util.List < Servers> servers) {
+        public Builder servers(java.util.List<Servers> servers) {
             this.servers = servers;
             return this;
         }
@@ -612,7 +617,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
      */
     public static class Servers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AICInstances")
-        private java.util.List < AICInstances> AICInstances;
+        private java.util.List<AICInstances> AICInstances;
 
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -673,7 +678,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         /**
          * @return AICInstances
          */
-        public java.util.List < AICInstances> getAICInstances() {
+        public java.util.List<AICInstances> getAICInstances() {
             return this.AICInstances;
         }
 
@@ -755,7 +760,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AICInstances> AICInstances; 
+            private java.util.List<AICInstances> AICInstances; 
             private String creationTime; 
             private String ensRegionId; 
             private String expiredTime; 
@@ -771,7 +776,7 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
             /**
              * <p>The information about the AIC instances.</p>
              */
-            public Builder AICInstances(java.util.List < AICInstances> AICInstances) {
+            public Builder AICInstances(java.util.List<AICInstances> AICInstances) {
                 this.AICInstances = AICInstances;
                 return this;
             }

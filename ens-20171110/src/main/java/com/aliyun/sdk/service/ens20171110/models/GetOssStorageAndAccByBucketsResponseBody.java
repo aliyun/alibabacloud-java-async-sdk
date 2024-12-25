@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BucketList")
-    private java.util.List < BucketList> bucketList;
+    private java.util.List<BucketList> bucketList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
     /**
      * @return bucketList
      */
-    public java.util.List < BucketList> getBucketList() {
+    public java.util.List<BucketList> getBucketList() {
         return this.bucketList;
     }
 
@@ -46,13 +51,13 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < BucketList> bucketList; 
+        private java.util.List<BucketList> bucketList; 
         private String requestId; 
 
         /**
          * <p>The information about the bucket.</p>
          */
-        public Builder bucketList(java.util.List < BucketList> bucketList) {
+        public Builder bucketList(java.util.List<BucketList> bucketList) {
             this.bucketList = bucketList;
             return this;
         }

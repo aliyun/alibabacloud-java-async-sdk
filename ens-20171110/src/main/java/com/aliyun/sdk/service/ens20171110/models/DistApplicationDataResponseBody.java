@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -125,7 +130,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
      */
     public static class DistInstanceIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DistInstanceId")
-        private java.util.List < String > distInstanceId;
+        private java.util.List<String> distInstanceId;
 
         private DistInstanceIds(Builder builder) {
             this.distInstanceId = builder.distInstanceId;
@@ -142,17 +147,17 @@ public class DistApplicationDataResponseBody extends TeaModel {
         /**
          * @return distInstanceId
          */
-        public java.util.List < String > getDistInstanceId() {
+        public java.util.List<String> getDistInstanceId() {
             return this.distInstanceId;
         }
 
         public static final class Builder {
-            private java.util.List < String > distInstanceId; 
+            private java.util.List<String> distInstanceId; 
 
             /**
              * DistInstanceId.
              */
-            public Builder distInstanceId(java.util.List < String > distInstanceId) {
+            public Builder distInstanceId(java.util.List<String> distInstanceId) {
                 this.distInstanceId = distInstanceId;
                 return this;
             }
@@ -291,7 +296,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
      */
     public static class DistResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DistResult")
-        private java.util.List < DistResult> distResult;
+        private java.util.List<DistResult> distResult;
 
         private DistResults(Builder builder) {
             this.distResult = builder.distResult;
@@ -308,17 +313,17 @@ public class DistApplicationDataResponseBody extends TeaModel {
         /**
          * @return distResult
          */
-        public java.util.List < DistResult> getDistResult() {
+        public java.util.List<DistResult> getDistResult() {
             return this.distResult;
         }
 
         public static final class Builder {
-            private java.util.List < DistResult> distResult; 
+            private java.util.List<DistResult> distResult; 
 
             /**
              * DistResult.
              */
-            public Builder distResult(java.util.List < DistResult> distResult) {
+            public Builder distResult(java.util.List<DistResult> distResult) {
                 this.distResult = distResult;
                 return this;
             }

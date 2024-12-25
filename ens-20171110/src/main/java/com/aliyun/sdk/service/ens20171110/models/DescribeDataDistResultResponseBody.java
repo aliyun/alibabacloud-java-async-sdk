@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,7 +275,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
      */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
-        private java.util.List < Instance> instance;
+        private java.util.List<Instance> instance;
 
         private Instances(Builder builder) {
             this.instance = builder.instance;
@@ -287,17 +292,17 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < Instance> instance; 
+            private java.util.List<Instance> instance; 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }
@@ -417,7 +422,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
      */
     public static class StatusStats extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StatusStat")
-        private java.util.List < StatusStat> statusStat;
+        private java.util.List<StatusStat> statusStat;
 
         private StatusStats(Builder builder) {
             this.statusStat = builder.statusStat;
@@ -434,17 +439,17 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         /**
          * @return statusStat
          */
-        public java.util.List < StatusStat> getStatusStat() {
+        public java.util.List<StatusStat> getStatusStat() {
             return this.statusStat;
         }
 
         public static final class Builder {
-            private java.util.List < StatusStat> statusStat; 
+            private java.util.List<StatusStat> statusStat; 
 
             /**
              * StatusStat.
              */
-            public Builder statusStat(java.util.List < StatusStat> statusStat) {
+            public Builder statusStat(java.util.List<StatusStat> statusStat) {
                 this.statusStat = statusStat;
                 return this;
             }
@@ -557,7 +562,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
      */
     public static class DistResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DistResult")
-        private java.util.List < DistResult> distResult;
+        private java.util.List<DistResult> distResult;
 
         private DistResults(Builder builder) {
             this.distResult = builder.distResult;
@@ -574,17 +579,17 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
         /**
          * @return distResult
          */
-        public java.util.List < DistResult> getDistResult() {
+        public java.util.List<DistResult> getDistResult() {
             return this.distResult;
         }
 
         public static final class Builder {
-            private java.util.List < DistResult> distResult; 
+            private java.util.List<DistResult> distResult; 
 
             /**
              * DistResult.
              */
-            public Builder distResult(java.util.List < DistResult> distResult) {
+            public Builder distResult(java.util.List<DistResult> distResult) {
                 this.distResult = distResult;
                 return this;
             }

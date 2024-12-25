@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -391,7 +396,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
      */
     public static class EnsRegionIdResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsRegionIdResource")
-        private java.util.List < EnsRegionIdResource> ensRegionIdResource;
+        private java.util.List<EnsRegionIdResource> ensRegionIdResource;
 
         private EnsRegionIdResources(Builder builder) {
             this.ensRegionIdResource = builder.ensRegionIdResource;
@@ -408,17 +413,17 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         /**
          * @return ensRegionIdResource
          */
-        public java.util.List < EnsRegionIdResource> getEnsRegionIdResource() {
+        public java.util.List<EnsRegionIdResource> getEnsRegionIdResource() {
             return this.ensRegionIdResource;
         }
 
         public static final class Builder {
-            private java.util.List < EnsRegionIdResource> ensRegionIdResource; 
+            private java.util.List<EnsRegionIdResource> ensRegionIdResource; 
 
             /**
              * EnsRegionIdResource.
              */
-            public Builder ensRegionIdResource(java.util.List < EnsRegionIdResource> ensRegionIdResource) {
+            public Builder ensRegionIdResource(java.util.List<EnsRegionIdResource> ensRegionIdResource) {
                 this.ensRegionIdResource = ensRegionIdResource;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Rule")
-    private java.util.List < Rule> rule;
+    private java.util.List<Rule> rule;
 
     private GetBucketLifecycleResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
     /**
      * @return rule
      */
-    public java.util.List < Rule> getRule() {
+    public java.util.List<Rule> getRule() {
         return this.rule;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Rule> rule; 
+        private java.util.List<Rule> rule; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
         /**
          * <p>The detailed information about the rule.</p>
          */
-        public Builder rule(java.util.List < Rule> rule) {
+        public Builder rule(java.util.List<Rule> rule) {
             this.rule = rule;
             return this;
         }

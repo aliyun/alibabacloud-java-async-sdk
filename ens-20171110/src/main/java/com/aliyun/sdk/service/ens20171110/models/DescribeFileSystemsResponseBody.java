@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeFileSystemsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FileSystems")
-    private java.util.List < FileSystems> fileSystems;
+    private java.util.List<FileSystems> fileSystems;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     /**
      * @return fileSystems
      */
-    public java.util.List < FileSystems> getFileSystems() {
+    public java.util.List<FileSystems> getFileSystems() {
         return this.fileSystems;
     }
 
@@ -79,7 +84,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FileSystems> fileSystems; 
+        private java.util.List<FileSystems> fileSystems; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * <p>The information about the file systems.</p>
          */
-        public Builder fileSystems(java.util.List < FileSystems> fileSystems) {
+        public Builder fileSystems(java.util.List<FileSystems> fileSystems) {
             this.fileSystems = fileSystems;
             return this;
         }
@@ -294,7 +299,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         private Long meteredSize;
 
         @com.aliyun.core.annotation.NameInMap("MountTargets")
-        private java.util.List < MountTargets> mountTargets;
+        private java.util.List<MountTargets> mountTargets;
 
         @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
@@ -375,7 +380,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * @return mountTargets
          */
-        public java.util.List < MountTargets> getMountTargets() {
+        public java.util.List<MountTargets> getMountTargets() {
             return this.mountTargets;
         }
 
@@ -414,7 +419,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String fileSystemId; 
             private String fileSystemName; 
             private Long meteredSize; 
-            private java.util.List < MountTargets> mountTargets; 
+            private java.util.List<MountTargets> mountTargets; 
             private String payType; 
             private String protocolType; 
             private String status; 
@@ -489,7 +494,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             /**
              * <p>The information about mount targets.</p>
              */
-            public Builder mountTargets(java.util.List < MountTargets> mountTargets) {
+            public Builder mountTargets(java.util.List<MountTargets> mountTargets) {
                 this.mountTargets = mountTargets;
                 return this;
             }

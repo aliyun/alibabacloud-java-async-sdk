@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNatGatewaysResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NatGateways")
-    private java.util.List < NatGateways> natGateways;
+    private java.util.List<NatGateways> natGateways;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
@@ -46,7 +51,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     /**
      * @return natGateways
      */
-    public java.util.List < NatGateways> getNatGateways() {
+    public java.util.List<NatGateways> getNatGateways() {
         return this.natGateways;
     }
 
@@ -79,7 +84,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NatGateways> natGateways; 
+        private java.util.List<NatGateways> natGateways; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         /**
          * <p>Details about the NAT gateways.</p>
          */
-        public Builder natGateways(java.util.List < NatGateways> natGateways) {
+        public Builder natGateways(java.util.List<NatGateways> natGateways) {
             this.natGateways = natGateways;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SaleControl")
-    private java.util.List < SaleControl> saleControl;
+    private java.util.List<SaleControl> saleControl;
 
     private DescribeEnsSaleControlStockResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
     /**
      * @return saleControl
      */
-    public java.util.List < SaleControl> getSaleControl() {
+    public java.util.List<SaleControl> getSaleControl() {
         return this.saleControl;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SaleControl> saleControl; 
+        private java.util.List<SaleControl> saleControl; 
 
         /**
          * RequestId.
@@ -60,7 +65,7 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         /**
          * SaleControl.
          */
-        public Builder saleControl(java.util.List < SaleControl> saleControl) {
+        public Builder saleControl(java.util.List<SaleControl> saleControl) {
             this.saleControl = saleControl;
             return this;
         }
@@ -437,7 +442,7 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         private BasicSaleControl basicSaleControl;
 
         @com.aliyun.core.annotation.NameInMap("ConditionSaleControl")
-        private java.util.List < ConditionSaleControl> conditionSaleControl;
+        private java.util.List<ConditionSaleControl> conditionSaleControl;
 
         private SaleControlItem(Builder builder) {
             this.basicSaleControl = builder.basicSaleControl;
@@ -462,13 +467,13 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         /**
          * @return conditionSaleControl
          */
-        public java.util.List < ConditionSaleControl> getConditionSaleControl() {
+        public java.util.List<ConditionSaleControl> getConditionSaleControl() {
             return this.conditionSaleControl;
         }
 
         public static final class Builder {
             private BasicSaleControl basicSaleControl; 
-            private java.util.List < ConditionSaleControl> conditionSaleControl; 
+            private java.util.List<ConditionSaleControl> conditionSaleControl; 
 
             /**
              * BasicSaleControl.
@@ -481,7 +486,7 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
             /**
              * ConditionSaleControl.
              */
-            public Builder conditionSaleControl(java.util.List < ConditionSaleControl> conditionSaleControl) {
+            public Builder conditionSaleControl(java.util.List<ConditionSaleControl> conditionSaleControl) {
                 this.conditionSaleControl = conditionSaleControl;
                 return this;
             }
@@ -574,7 +579,7 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         private String orderType;
 
         @com.aliyun.core.annotation.NameInMap("SaleControlItems")
-        private java.util.List < SaleControlItems> saleControlItems;
+        private java.util.List<SaleControlItems> saleControlItems;
 
         private SaleControl(Builder builder) {
             this.commodityCode = builder.commodityCode;
@@ -607,14 +612,14 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
         /**
          * @return saleControlItems
          */
-        public java.util.List < SaleControlItems> getSaleControlItems() {
+        public java.util.List<SaleControlItems> getSaleControlItems() {
             return this.saleControlItems;
         }
 
         public static final class Builder {
             private String commodityCode; 
             private String orderType; 
-            private java.util.List < SaleControlItems> saleControlItems; 
+            private java.util.List<SaleControlItems> saleControlItems; 
 
             /**
              * CommodityCode.
@@ -635,7 +640,7 @@ public class DescribeEnsSaleControlStockResponseBody extends TeaModel {
             /**
              * SaleControlItems.
              */
-            public Builder saleControlItems(java.util.List < SaleControlItems> saleControlItems) {
+            public Builder saleControlItems(java.util.List<SaleControlItems> saleControlItems) {
                 this.saleControlItems = saleControlItems;
                 return this;
             }

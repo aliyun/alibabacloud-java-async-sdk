@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -418,7 +423,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
      */
     public static class EPNInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EPNInstance")
-        private java.util.List < EPNInstance> EPNInstance;
+        private java.util.List<EPNInstance> EPNInstance;
 
         private EPNInstances(Builder builder) {
             this.EPNInstance = builder.EPNInstance;
@@ -435,17 +440,17 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
         /**
          * @return EPNInstance
          */
-        public java.util.List < EPNInstance> getEPNInstance() {
+        public java.util.List<EPNInstance> getEPNInstance() {
             return this.EPNInstance;
         }
 
         public static final class Builder {
-            private java.util.List < EPNInstance> EPNInstance; 
+            private java.util.List<EPNInstance> EPNInstance; 
 
             /**
              * EPNInstance.
              */
-            public Builder EPNInstance(java.util.List < EPNInstance> EPNInstance) {
+            public Builder EPNInstance(java.util.List<EPNInstance> EPNInstance) {
                 this.EPNInstance = EPNInstance;
                 return this;
             }

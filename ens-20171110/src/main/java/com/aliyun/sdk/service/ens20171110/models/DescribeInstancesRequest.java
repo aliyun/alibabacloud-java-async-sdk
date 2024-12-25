@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -78,7 +83,7 @@ public class DescribeInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceStatus")
-    private java.util.List < String > serviceStatus;
+    private java.util.List<String> serviceStatus;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -86,7 +91,7 @@ public class DescribeInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
@@ -244,7 +249,7 @@ public class DescribeInstancesRequest extends Request {
     /**
      * @return serviceStatus
      */
-    public java.util.List < String > getServiceStatus() {
+    public java.util.List<String> getServiceStatus() {
         return this.serviceStatus;
     }
 
@@ -258,7 +263,7 @@ public class DescribeInstancesRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -286,9 +291,9 @@ public class DescribeInstancesRequest extends Request {
         private String pageSize; 
         private String searchKey; 
         private String securityGroupId; 
-        private java.util.List < String > serviceStatus; 
+        private java.util.List<String> serviceStatus; 
         private String status; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String vSwitchId; 
 
         private Builder() {
@@ -523,7 +528,7 @@ public class DescribeInstancesRequest extends Request {
         /**
          * ServiceStatus.
          */
-        public Builder serviceStatus(java.util.List < String > serviceStatus) {
+        public Builder serviceStatus(java.util.List<String> serviceStatus) {
             String serviceStatusShrink = shrink(serviceStatus, "ServiceStatus", "json");
             this.putQueryParameter("ServiceStatus", serviceStatusShrink);
             this.serviceStatus = serviceStatus;
@@ -550,7 +555,7 @@ public class DescribeInstancesRequest extends Request {
         /**
          * <p>The tags that are added to the resource. This operation does not return tag information. You can call this operation in combination with the tag-related operations.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

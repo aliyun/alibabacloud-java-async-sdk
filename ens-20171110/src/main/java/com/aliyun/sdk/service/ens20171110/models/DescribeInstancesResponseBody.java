@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -482,7 +487,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class InstanceDataDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataDisk")
-        private java.util.List < DataDisk> dataDisk;
+        private java.util.List<DataDisk> dataDisk;
 
         private InstanceDataDisk(Builder builder) {
             this.dataDisk = builder.dataDisk;
@@ -499,17 +504,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return dataDisk
          */
-        public java.util.List < DataDisk> getDataDisk() {
+        public java.util.List<DataDisk> getDataDisk() {
             return this.dataDisk;
         }
 
         public static final class Builder {
-            private java.util.List < DataDisk> dataDisk; 
+            private java.util.List<DataDisk> dataDisk; 
 
             /**
              * DataDisk.
              */
-            public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
+            public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
                 this.dataDisk = dataDisk;
                 return this;
             }
@@ -529,7 +534,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class InnerIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
-        private java.util.List < String > ipAddress;
+        private java.util.List<String> ipAddress;
 
         private InnerIpAddress(Builder builder) {
             this.ipAddress = builder.ipAddress;
@@ -546,17 +551,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < String > getIpAddress() {
+        public java.util.List<String> getIpAddress() {
             return this.ipAddress;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipAddress; 
+            private java.util.List<String> ipAddress; 
 
             /**
              * IpAddress.
              */
-            public Builder ipAddress(java.util.List < String > ipAddress) {
+            public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }
@@ -576,7 +581,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class PrivateIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
-        private java.util.List < String > ipAddress;
+        private java.util.List<String> ipAddress;
 
         private PrivateIpAddress(Builder builder) {
             this.ipAddress = builder.ipAddress;
@@ -593,17 +598,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < String > getIpAddress() {
+        public java.util.List<String> getIpAddress() {
             return this.ipAddress;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipAddress; 
+            private java.util.List<String> ipAddress; 
 
             /**
              * IpAddress.
              */
-            public Builder ipAddress(java.util.List < String > ipAddress) {
+            public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }
@@ -763,7 +768,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class Ipv6Sets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6Set")
-        private java.util.List < Ipv6Set> ipv6Set;
+        private java.util.List<Ipv6Set> ipv6Set;
 
         private Ipv6Sets(Builder builder) {
             this.ipv6Set = builder.ipv6Set;
@@ -780,17 +785,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return ipv6Set
          */
-        public java.util.List < Ipv6Set> getIpv6Set() {
+        public java.util.List<Ipv6Set> getIpv6Set() {
             return this.ipv6Set;
         }
 
         public static final class Builder {
-            private java.util.List < Ipv6Set> ipv6Set; 
+            private java.util.List<Ipv6Set> ipv6Set; 
 
             /**
              * Ipv6Set.
              */
-            public Builder ipv6Set(java.util.List < Ipv6Set> ipv6Set) {
+            public Builder ipv6Set(java.util.List<Ipv6Set> ipv6Set) {
                 this.ipv6Set = ipv6Set;
                 return this;
             }
@@ -877,7 +882,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class PrivateIpSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateIpSet")
-        private java.util.List < PrivateIpSet> privateIpSet;
+        private java.util.List<PrivateIpSet> privateIpSet;
 
         private PrivateIpSets(Builder builder) {
             this.privateIpSet = builder.privateIpSet;
@@ -894,17 +899,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return privateIpSet
          */
-        public java.util.List < PrivateIpSet> getPrivateIpSet() {
+        public java.util.List<PrivateIpSet> getPrivateIpSet() {
             return this.privateIpSet;
         }
 
         public static final class Builder {
-            private java.util.List < PrivateIpSet> privateIpSet; 
+            private java.util.List<PrivateIpSet> privateIpSet; 
 
             /**
              * PrivateIpSet.
              */
-            public Builder privateIpSet(java.util.List < PrivateIpSet> privateIpSet) {
+            public Builder privateIpSet(java.util.List<PrivateIpSet> privateIpSet) {
                 this.privateIpSet = privateIpSet;
                 return this;
             }
@@ -1071,7 +1076,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class InstanceNetworkInterfaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkInterfaces")
-        private java.util.List < NetworkInterfaces> networkInterfaces;
+        private java.util.List<NetworkInterfaces> networkInterfaces;
 
         private InstanceNetworkInterfaces(Builder builder) {
             this.networkInterfaces = builder.networkInterfaces;
@@ -1088,17 +1093,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return networkInterfaces
          */
-        public java.util.List < NetworkInterfaces> getNetworkInterfaces() {
+        public java.util.List<NetworkInterfaces> getNetworkInterfaces() {
             return this.networkInterfaces;
         }
 
         public static final class Builder {
-            private java.util.List < NetworkInterfaces> networkInterfaces; 
+            private java.util.List<NetworkInterfaces> networkInterfaces; 
 
             /**
              * NetworkInterfaces.
              */
-            public Builder networkInterfaces(java.util.List < NetworkInterfaces> networkInterfaces) {
+            public Builder networkInterfaces(java.util.List<NetworkInterfaces> networkInterfaces) {
                 this.networkInterfaces = networkInterfaces;
                 return this;
             }
@@ -1214,7 +1219,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class PrivateIpAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
-        private java.util.List < PrivateIpAddressesPrivateIpAddress> privateIpAddress;
+        private java.util.List<PrivateIpAddressesPrivateIpAddress> privateIpAddress;
 
         private PrivateIpAddresses(Builder builder) {
             this.privateIpAddress = builder.privateIpAddress;
@@ -1231,17 +1236,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return privateIpAddress
          */
-        public java.util.List < PrivateIpAddressesPrivateIpAddress> getPrivateIpAddress() {
+        public java.util.List<PrivateIpAddressesPrivateIpAddress> getPrivateIpAddress() {
             return this.privateIpAddress;
         }
 
         public static final class Builder {
-            private java.util.List < PrivateIpAddressesPrivateIpAddress> privateIpAddress; 
+            private java.util.List<PrivateIpAddressesPrivateIpAddress> privateIpAddress; 
 
             /**
              * <p>Details of the private IP addresses.</p>
              */
-            public Builder privateIpAddress(java.util.List < PrivateIpAddressesPrivateIpAddress> privateIpAddress) {
+            public Builder privateIpAddress(java.util.List<PrivateIpAddressesPrivateIpAddress> privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
                 return this;
             }
@@ -1261,7 +1266,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class PublicIpAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpAddress")
-        private java.util.List < String > ipAddress;
+        private java.util.List<String> ipAddress;
 
         private PublicIpAddress(Builder builder) {
             this.ipAddress = builder.ipAddress;
@@ -1278,17 +1283,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return ipAddress
          */
-        public java.util.List < String > getIpAddress() {
+        public java.util.List<String> getIpAddress() {
             return this.ipAddress;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipAddress; 
+            private java.util.List<String> ipAddress; 
 
             /**
              * IpAddress.
              */
-            public Builder ipAddress(java.util.List < String > ipAddress) {
+            public Builder ipAddress(java.util.List<String> ipAddress) {
                 this.ipAddress = ipAddress;
                 return this;
             }
@@ -1404,7 +1409,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class PublicIpAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
-        private java.util.List < PublicIpAddressesPublicIpAddress> publicIpAddress;
+        private java.util.List<PublicIpAddressesPublicIpAddress> publicIpAddress;
 
         private PublicIpAddresses(Builder builder) {
             this.publicIpAddress = builder.publicIpAddress;
@@ -1421,17 +1426,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return publicIpAddress
          */
-        public java.util.List < PublicIpAddressesPublicIpAddress> getPublicIpAddress() {
+        public java.util.List<PublicIpAddressesPublicIpAddress> getPublicIpAddress() {
             return this.publicIpAddress;
         }
 
         public static final class Builder {
-            private java.util.List < PublicIpAddressesPublicIpAddress> publicIpAddress; 
+            private java.util.List<PublicIpAddressesPublicIpAddress> publicIpAddress; 
 
             /**
              * PublicIpAddress.
              */
-            public Builder publicIpAddress(java.util.List < PublicIpAddressesPublicIpAddress> publicIpAddress) {
+            public Builder publicIpAddress(java.util.List<PublicIpAddressesPublicIpAddress> publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
                 return this;
             }
@@ -1451,7 +1456,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class SecurityGroupIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
-        private java.util.List < String > securityGroupId;
+        private java.util.List<String> securityGroupId;
 
         private SecurityGroupIds(Builder builder) {
             this.securityGroupId = builder.securityGroupId;
@@ -1468,17 +1473,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return securityGroupId
          */
-        public java.util.List < String > getSecurityGroupId() {
+        public java.util.List<String> getSecurityGroupId() {
             return this.securityGroupId;
         }
 
         public static final class Builder {
-            private java.util.List < String > securityGroupId; 
+            private java.util.List<String> securityGroupId; 
 
             /**
              * SecurityGroupId.
              */
-            public Builder securityGroupId(java.util.List < String > securityGroupId) {
+            public Builder securityGroupId(java.util.List<String> securityGroupId) {
                 this.securityGroupId = securityGroupId;
                 return this;
             }
@@ -1819,7 +1824,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class InstanceTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private InstanceTags(Builder builder) {
             this.tags = builder.tags;
@@ -1836,17 +1841,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
         public static final class Builder {
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
 
             /**
              * Tags.
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -2598,7 +2603,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
      */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
-        private java.util.List < Instance> instance;
+        private java.util.List<Instance> instance;
 
         private Instances(Builder builder) {
             this.instance = builder.instance;
@@ -2615,17 +2620,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return instance
          */
-        public java.util.List < Instance> getInstance() {
+        public java.util.List<Instance> getInstance() {
             return this.instance;
         }
 
         public static final class Builder {
-            private java.util.List < Instance> instance; 
+            private java.util.List<Instance> instance; 
 
             /**
              * Instance.
              */
-            public Builder instance(java.util.List < Instance> instance) {
+            public Builder instance(java.util.List<Instance> instance) {
                 this.instance = instance;
                 return this;
             }

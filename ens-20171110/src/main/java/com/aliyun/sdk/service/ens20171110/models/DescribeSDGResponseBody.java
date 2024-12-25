@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeSDGResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SDGs")
-    private java.util.List < SDGs> SDGs;
+    private java.util.List<SDGs> SDGs;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class DescribeSDGResponseBody extends TeaModel {
     /**
      * @return SDGs
      */
-    public java.util.List < SDGs> getSDGs() {
+    public java.util.List<SDGs> getSDGs() {
         return this.SDGs;
     }
 
@@ -82,7 +87,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < SDGs> SDGs; 
+        private java.util.List<SDGs> SDGs; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         /**
          * <p>The information about the SDGs.</p>
          */
-        public Builder SDGs(java.util.List < SDGs> SDGs) {
+        public Builder SDGs(java.util.List<SDGs> SDGs) {
             this.SDGs = SDGs;
             return this;
         }
@@ -419,7 +424,7 @@ public class DescribeSDGResponseBody extends TeaModel {
      */
     public static class SDGs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvaliableRegionIds")
-        private java.util.List < AvaliableRegionIds> avaliableRegionIds;
+        private java.util.List<AvaliableRegionIds> avaliableRegionIds;
 
         @com.aliyun.core.annotation.NameInMap("CreationInstanceId")
         private String creationInstanceId;
@@ -437,7 +442,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         private String parentSDGId;
 
         @com.aliyun.core.annotation.NameInMap("PreloadInfos")
-        private java.util.List < PreloadInfos> preloadInfos;
+        private java.util.List<PreloadInfos> preloadInfos;
 
         @com.aliyun.core.annotation.NameInMap("SDGId")
         private String SDGId;
@@ -476,7 +481,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         /**
          * @return avaliableRegionIds
          */
-        public java.util.List < AvaliableRegionIds> getAvaliableRegionIds() {
+        public java.util.List<AvaliableRegionIds> getAvaliableRegionIds() {
             return this.avaliableRegionIds;
         }
 
@@ -518,7 +523,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         /**
          * @return preloadInfos
          */
-        public java.util.List < PreloadInfos> getPreloadInfos() {
+        public java.util.List<PreloadInfos> getPreloadInfos() {
             return this.preloadInfos;
         }
 
@@ -551,13 +556,13 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AvaliableRegionIds> avaliableRegionIds; 
+            private java.util.List<AvaliableRegionIds> avaliableRegionIds; 
             private String creationInstanceId; 
             private String creationRegionId; 
             private String creationTime; 
             private String description; 
             private String parentSDGId; 
-            private java.util.List < PreloadInfos> preloadInfos; 
+            private java.util.List<PreloadInfos> preloadInfos; 
             private String SDGId; 
             private Long size; 
             private String status; 
@@ -566,7 +571,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             /**
              * <p>SDGs that have snapshots.</p>
              */
-            public Builder avaliableRegionIds(java.util.List < AvaliableRegionIds> avaliableRegionIds) {
+            public Builder avaliableRegionIds(java.util.List<AvaliableRegionIds> avaliableRegionIds) {
                 this.avaliableRegionIds = avaliableRegionIds;
                 return this;
             }
@@ -629,7 +634,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             /**
              * <p>The preload information.</p>
              */
-            public Builder preloadInfos(java.util.List < PreloadInfos> preloadInfos) {
+            public Builder preloadInfos(java.util.List<PreloadInfos> preloadInfos) {
                 this.preloadInfos = preloadInfos;
                 return this;
             }

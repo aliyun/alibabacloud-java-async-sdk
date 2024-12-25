@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DeleteDeviceInternetPortResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RuleIds")
-    private java.util.List < String > ruleIds;
+    private java.util.List<String> ruleIds;
 
     private DeleteDeviceInternetPortResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class DeleteDeviceInternetPortResponseBody extends TeaModel {
     /**
      * @return ruleIds
      */
-    public java.util.List < String > getRuleIds() {
+    public java.util.List<String> getRuleIds() {
         return this.ruleIds;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < String > ruleIds; 
+        private java.util.List<String> ruleIds; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class DeleteDeviceInternetPortResponseBody extends TeaModel {
         /**
          * <p>The list of rules.</p>
          */
-        public Builder ruleIds(java.util.List < String > ruleIds) {
+        public Builder ruleIds(java.util.List<String> ruleIds) {
             this.ruleIds = ruleIds;
             return this;
         }

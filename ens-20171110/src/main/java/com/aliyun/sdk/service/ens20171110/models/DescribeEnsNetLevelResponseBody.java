@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -160,7 +165,7 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
      */
     public static class EnsNetLevels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnsNetLevel")
-        private java.util.List < EnsNetLevel> ensNetLevel;
+        private java.util.List<EnsNetLevel> ensNetLevel;
 
         private EnsNetLevels(Builder builder) {
             this.ensNetLevel = builder.ensNetLevel;
@@ -177,17 +182,17 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
         /**
          * @return ensNetLevel
          */
-        public java.util.List < EnsNetLevel> getEnsNetLevel() {
+        public java.util.List<EnsNetLevel> getEnsNetLevel() {
             return this.ensNetLevel;
         }
 
         public static final class Builder {
-            private java.util.List < EnsNetLevel> ensNetLevel; 
+            private java.util.List<EnsNetLevel> ensNetLevel; 
 
             /**
              * EnsNetLevel.
              */
-            public Builder ensNetLevel(java.util.List < EnsNetLevel> ensNetLevel) {
+            public Builder ensNetLevel(java.util.List<EnsNetLevel> ensNetLevel) {
                 this.ensNetLevel = ensNetLevel;
                 return this;
             }

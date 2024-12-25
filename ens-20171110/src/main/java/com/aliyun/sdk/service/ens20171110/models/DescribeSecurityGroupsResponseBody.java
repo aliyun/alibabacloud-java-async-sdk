@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -293,7 +298,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
      */
     public static class SecurityGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroup")
-        private java.util.List < SecurityGroup> securityGroup;
+        private java.util.List<SecurityGroup> securityGroup;
 
         private SecurityGroups(Builder builder) {
             this.securityGroup = builder.securityGroup;
@@ -310,17 +315,17 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         /**
          * @return securityGroup
          */
-        public java.util.List < SecurityGroup> getSecurityGroup() {
+        public java.util.List<SecurityGroup> getSecurityGroup() {
             return this.securityGroup;
         }
 
         public static final class Builder {
-            private java.util.List < SecurityGroup> securityGroup; 
+            private java.util.List<SecurityGroup> securityGroup; 
 
             /**
              * SecurityGroup.
              */
-            public Builder securityGroup(java.util.List < SecurityGroup> securityGroup) {
+            public Builder securityGroup(java.util.List<SecurityGroup> securityGroup) {
                 this.securityGroup = securityGroup;
                 return this;
             }

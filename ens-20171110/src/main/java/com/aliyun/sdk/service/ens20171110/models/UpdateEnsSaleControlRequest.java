@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class UpdateEnsSaleControlRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaleControls")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < SaleControls> saleControls;
+    private java.util.List<SaleControls> saleControls;
 
     private UpdateEnsSaleControlRequest(Builder builder) {
         super(builder);
@@ -75,7 +80,7 @@ public class UpdateEnsSaleControlRequest extends Request {
     /**
      * @return saleControls
      */
-    public java.util.List < SaleControls> getSaleControls() {
+    public java.util.List<SaleControls> getSaleControls() {
         return this.saleControls;
     }
 
@@ -83,7 +88,7 @@ public class UpdateEnsSaleControlRequest extends Request {
         private String aliUidAccount; 
         private String commodityCode; 
         private String customAccount; 
-        private java.util.List < SaleControls> saleControls; 
+        private java.util.List<SaleControls> saleControls; 
 
         private Builder() {
             super();
@@ -127,7 +132,7 @@ public class UpdateEnsSaleControlRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder saleControls(java.util.List < SaleControls> saleControls) {
+        public Builder saleControls(java.util.List<SaleControls> saleControls) {
             String saleControlsShrink = shrink(saleControls, "SaleControls", "json");
             this.putQueryParameter("SaleControls", saleControlsShrink);
             this.saleControls = saleControls;
@@ -222,7 +227,7 @@ public class UpdateEnsSaleControlRequest extends Request {
         private String moduleMinValue;
 
         @com.aliyun.core.annotation.NameInMap("ModuleValue")
-        private java.util.List < String > moduleValue;
+        private java.util.List<String> moduleValue;
 
         private ModuleValue(Builder builder) {
             this.moduleMaxValue = builder.moduleMaxValue;
@@ -255,14 +260,14 @@ public class UpdateEnsSaleControlRequest extends Request {
         /**
          * @return moduleValue
          */
-        public java.util.List < String > getModuleValue() {
+        public java.util.List<String> getModuleValue() {
             return this.moduleValue;
         }
 
         public static final class Builder {
             private String moduleMaxValue; 
             private String moduleMinValue; 
-            private java.util.List < String > moduleValue; 
+            private java.util.List<String> moduleValue; 
 
             /**
              * ModuleMaxValue.
@@ -283,7 +288,7 @@ public class UpdateEnsSaleControlRequest extends Request {
             /**
              * ModuleValue.
              */
-            public Builder moduleValue(java.util.List < String > moduleValue) {
+            public Builder moduleValue(java.util.List<String> moduleValue) {
                 this.moduleValue = moduleValue;
                 return this;
             }
@@ -303,7 +308,7 @@ public class UpdateEnsSaleControlRequest extends Request {
      */
     public static class SaleControls extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionControls")
-        private java.util.List < ConditionControls> conditionControls;
+        private java.util.List<ConditionControls> conditionControls;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -344,7 +349,7 @@ public class UpdateEnsSaleControlRequest extends Request {
         /**
          * @return conditionControls
          */
-        public java.util.List < ConditionControls> getConditionControls() {
+        public java.util.List<ConditionControls> getConditionControls() {
             return this.conditionControls;
         }
 
@@ -384,7 +389,7 @@ public class UpdateEnsSaleControlRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < ConditionControls> conditionControls; 
+            private java.util.List<ConditionControls> conditionControls; 
             private String description; 
             private String moduleCode; 
             private ModuleValue moduleValue; 
@@ -394,7 +399,7 @@ public class UpdateEnsSaleControlRequest extends Request {
             /**
              * ConditionControls.
              */
-            public Builder conditionControls(java.util.List < ConditionControls> conditionControls) {
+            public Builder conditionControls(java.util.List<ConditionControls> conditionControls) {
                 this.conditionControls = conditionControls;
                 return this;
             }

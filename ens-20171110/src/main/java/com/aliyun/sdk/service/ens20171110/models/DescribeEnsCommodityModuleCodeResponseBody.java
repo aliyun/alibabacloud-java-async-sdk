@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeEnsCommodityModuleCodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CommodityCodesInfo")
-    private java.util.List < CommodityCodesInfo> commodityCodesInfo;
+    private java.util.List<CommodityCodesInfo> commodityCodesInfo;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DescribeEnsCommodityModuleCodeResponseBody extends TeaModel {
     /**
      * @return commodityCodesInfo
      */
-    public java.util.List < CommodityCodesInfo> getCommodityCodesInfo() {
+    public java.util.List<CommodityCodesInfo> getCommodityCodesInfo() {
         return this.commodityCodesInfo;
     }
 
@@ -46,13 +51,13 @@ public class DescribeEnsCommodityModuleCodeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CommodityCodesInfo> commodityCodesInfo; 
+        private java.util.List<CommodityCodesInfo> commodityCodesInfo; 
         private String requestId; 
 
         /**
          * CommodityCodesInfo.
          */
-        public Builder commodityCodesInfo(java.util.List < CommodityCodesInfo> commodityCodesInfo) {
+        public Builder commodityCodesInfo(java.util.List<CommodityCodesInfo> commodityCodesInfo) {
             this.commodityCodesInfo = commodityCodesInfo;
             return this;
         }
@@ -149,7 +154,7 @@ public class DescribeEnsCommodityModuleCodeResponseBody extends TeaModel {
         private String commodityCode;
 
         @com.aliyun.core.annotation.NameInMap("ModuleCodesInfo")
-        private java.util.List < ModuleCodesInfo> moduleCodesInfo;
+        private java.util.List<ModuleCodesInfo> moduleCodesInfo;
 
         private CommodityCodesInfo(Builder builder) {
             this.commodityCode = builder.commodityCode;
@@ -174,13 +179,13 @@ public class DescribeEnsCommodityModuleCodeResponseBody extends TeaModel {
         /**
          * @return moduleCodesInfo
          */
-        public java.util.List < ModuleCodesInfo> getModuleCodesInfo() {
+        public java.util.List<ModuleCodesInfo> getModuleCodesInfo() {
             return this.moduleCodesInfo;
         }
 
         public static final class Builder {
             private String commodityCode; 
-            private java.util.List < ModuleCodesInfo> moduleCodesInfo; 
+            private java.util.List<ModuleCodesInfo> moduleCodesInfo; 
 
             /**
              * CommodityCode.
@@ -193,7 +198,7 @@ public class DescribeEnsCommodityModuleCodeResponseBody extends TeaModel {
             /**
              * ModuleCodesInfo.
              */
-            public Builder moduleCodesInfo(java.util.List < ModuleCodesInfo> moduleCodesInfo) {
+            public Builder moduleCodesInfo(java.util.List<ModuleCodesInfo> moduleCodesInfo) {
                 this.moduleCodesInfo = moduleCodesInfo;
                 return this;
             }

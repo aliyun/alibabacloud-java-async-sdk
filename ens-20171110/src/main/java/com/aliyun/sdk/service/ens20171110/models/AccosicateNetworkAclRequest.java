@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class AccosicateNetworkAclRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Resource")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Resource> resource;
+    private java.util.List<Resource> resource;
 
     private AccosicateNetworkAclRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class AccosicateNetworkAclRequest extends Request {
     /**
      * @return resource
      */
-    public java.util.List < Resource> getResource() {
+    public java.util.List<Resource> getResource() {
         return this.resource;
     }
 
     public static final class Builder extends Request.Builder<AccosicateNetworkAclRequest, Builder> {
         private String networkAclId; 
-        private java.util.List < Resource> resource; 
+        private java.util.List<Resource> resource; 
 
         private Builder() {
             super();
@@ -86,7 +91,7 @@ public class AccosicateNetworkAclRequest extends Request {
          * <p>The type of resource with which you want to associate the network ACL.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder resource(java.util.List < Resource> resource) {
+        public Builder resource(java.util.List<Resource> resource) {
             this.putQueryParameter("Resource", resource);
             this.resource = resource;
             return this;

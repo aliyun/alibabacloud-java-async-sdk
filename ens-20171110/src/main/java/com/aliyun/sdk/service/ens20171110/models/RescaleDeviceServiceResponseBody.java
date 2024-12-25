@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RescaleDeviceServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DeviceIds")
-    private java.util.List < String > deviceIds;
+    private java.util.List<String> deviceIds;
 
     @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
@@ -22,7 +27,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceDetailInfos")
-    private java.util.List < ResourceDetailInfos> resourceDetailInfos;
+    private java.util.List<ResourceDetailInfos> resourceDetailInfos;
 
     private RescaleDeviceServiceResponseBody(Builder builder) {
         this.deviceIds = builder.deviceIds;
@@ -42,7 +47,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
     /**
      * @return deviceIds
      */
-    public java.util.List < String > getDeviceIds() {
+    public java.util.List<String> getDeviceIds() {
         return this.deviceIds;
     }
 
@@ -63,20 +68,20 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
     /**
      * @return resourceDetailInfos
      */
-    public java.util.List < ResourceDetailInfos> getResourceDetailInfos() {
+    public java.util.List<ResourceDetailInfos> getResourceDetailInfos() {
         return this.resourceDetailInfos;
     }
 
     public static final class Builder {
-        private java.util.List < String > deviceIds; 
+        private java.util.List<String> deviceIds; 
         private String orderId; 
         private String requestId; 
-        private java.util.List < ResourceDetailInfos> resourceDetailInfos; 
+        private java.util.List<ResourceDetailInfos> resourceDetailInfos; 
 
         /**
          * <p>The IDs of the devices.</p>
          */
-        public Builder deviceIds(java.util.List < String > deviceIds) {
+        public Builder deviceIds(java.util.List<String> deviceIds) {
             this.deviceIds = deviceIds;
             return this;
         }
@@ -106,7 +111,7 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         /**
          * <p>The key properties of the device.</p>
          */
-        public Builder resourceDetailInfos(java.util.List < ResourceDetailInfos> resourceDetailInfos) {
+        public Builder resourceDetailInfos(java.util.List<ResourceDetailInfos> resourceDetailInfos) {
             this.resourceDetailInfos = resourceDetailInfos;
             return this;
         }

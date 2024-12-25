@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DeploymentStatus")
-    private java.util.List < DeploymentStatus> deploymentStatus;
+    private java.util.List<DeploymentStatus> deploymentStatus;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
@@ -46,7 +51,7 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
     /**
      * @return deploymentStatus
      */
-    public java.util.List < DeploymentStatus> getDeploymentStatus() {
+    public java.util.List<DeploymentStatus> getDeploymentStatus() {
         return this.deploymentStatus;
     }
 
@@ -79,7 +84,7 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DeploymentStatus> deploymentStatus; 
+        private java.util.List<DeploymentStatus> deploymentStatus; 
         private Long pageNumber; 
         private String pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         /**
          * DeploymentStatus.
          */
-        public Builder deploymentStatus(java.util.List < DeploymentStatus> deploymentStatus) {
+        public Builder deploymentStatus(java.util.List<DeploymentStatus> deploymentStatus) {
             this.deploymentStatus = deploymentStatus;
             return this;
         }

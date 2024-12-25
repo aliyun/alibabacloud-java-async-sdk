@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -151,7 +156,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
      */
     public static class VSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
-        private java.util.List < String > vSwitchId;
+        private java.util.List<String> vSwitchId;
 
         private VSwitchIds(Builder builder) {
             this.vSwitchId = builder.vSwitchId;
@@ -168,17 +173,17 @@ public class DescribeNetworksResponseBody extends TeaModel {
         /**
          * @return vSwitchId
          */
-        public java.util.List < String > getVSwitchId() {
+        public java.util.List<String> getVSwitchId() {
             return this.vSwitchId;
         }
 
         public static final class Builder {
-            private java.util.List < String > vSwitchId; 
+            private java.util.List<String> vSwitchId; 
 
             /**
              * VSwitchId.
              */
-            public Builder vSwitchId(java.util.List < String > vSwitchId) {
+            public Builder vSwitchId(java.util.List<String> vSwitchId) {
                 this.vSwitchId = vSwitchId;
                 return this;
             }
@@ -456,7 +461,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
      */
     public static class Networks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Network")
-        private java.util.List < Network> network;
+        private java.util.List<Network> network;
 
         private Networks(Builder builder) {
             this.network = builder.network;
@@ -473,17 +478,17 @@ public class DescribeNetworksResponseBody extends TeaModel {
         /**
          * @return network
          */
-        public java.util.List < Network> getNetwork() {
+        public java.util.List<Network> getNetwork() {
             return this.network;
         }
 
         public static final class Builder {
-            private java.util.List < Network> network; 
+            private java.util.List<Network> network; 
 
             /**
              * Network.
              */
-            public Builder network(java.util.List < Network> network) {
+            public Builder network(java.util.List<Network> network) {
                 this.network = network;
                 return this;
             }

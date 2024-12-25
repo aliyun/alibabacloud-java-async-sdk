@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -205,7 +210,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
      */
     public static class InstanceRenewAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceRenewAttribute")
-        private java.util.List < InstanceRenewAttribute> instanceRenewAttribute;
+        private java.util.List<InstanceRenewAttribute> instanceRenewAttribute;
 
         private InstanceRenewAttributes(Builder builder) {
             this.instanceRenewAttribute = builder.instanceRenewAttribute;
@@ -222,17 +227,17 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         /**
          * @return instanceRenewAttribute
          */
-        public java.util.List < InstanceRenewAttribute> getInstanceRenewAttribute() {
+        public java.util.List<InstanceRenewAttribute> getInstanceRenewAttribute() {
             return this.instanceRenewAttribute;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceRenewAttribute> instanceRenewAttribute; 
+            private java.util.List<InstanceRenewAttribute> instanceRenewAttribute; 
 
             /**
              * InstanceRenewAttribute.
              */
-            public Builder instanceRenewAttribute(java.util.List < InstanceRenewAttribute> instanceRenewAttribute) {
+            public Builder instanceRenewAttribute(java.util.List<InstanceRenewAttribute> instanceRenewAttribute) {
                 this.instanceRenewAttribute = instanceRenewAttribute;
                 return this;
             }

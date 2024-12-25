@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class CreateNetworkInterfaceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > securityGroupIds;
+    private java.util.List<String> securityGroupIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
@@ -69,7 +74,7 @@ public class CreateNetworkInterfaceRequest extends Request {
     /**
      * @return securityGroupIds
      */
-    public java.util.List < String > getSecurityGroupIds() {
+    public java.util.List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -83,7 +88,7 @@ public class CreateNetworkInterfaceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateNetworkInterfaceRequest, Builder> {
         private String description; 
         private String name; 
-        private java.util.List < String > securityGroupIds; 
+        private java.util.List<String> securityGroupIds; 
         private String vSwitchId; 
 
         private Builder() {
@@ -119,7 +124,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+        public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
             String securityGroupIdsShrink = shrink(securityGroupIds, "SecurityGroupIds", "json");
             this.putQueryParameter("SecurityGroupIds", securityGroupIdsShrink);
             this.securityGroupIds = securityGroupIds;

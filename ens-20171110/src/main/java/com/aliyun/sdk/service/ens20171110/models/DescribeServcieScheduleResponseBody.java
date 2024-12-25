@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -293,7 +298,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
      */
     public static class ContainerStatuses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContainerStatus")
-        private java.util.List < ContainerStatus> containerStatus;
+        private java.util.List<ContainerStatus> containerStatus;
 
         private ContainerStatuses(Builder builder) {
             this.containerStatus = builder.containerStatus;
@@ -310,17 +315,17 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         /**
          * @return containerStatus
          */
-        public java.util.List < ContainerStatus> getContainerStatus() {
+        public java.util.List<ContainerStatus> getContainerStatus() {
             return this.containerStatus;
         }
 
         public static final class Builder {
-            private java.util.List < ContainerStatus> containerStatus; 
+            private java.util.List<ContainerStatus> containerStatus; 
 
             /**
              * ContainerStatus.
              */
-            public Builder containerStatus(java.util.List < ContainerStatus> containerStatus) {
+            public Builder containerStatus(java.util.List<ContainerStatus> containerStatus) {
                 this.containerStatus = containerStatus;
                 return this;
             }

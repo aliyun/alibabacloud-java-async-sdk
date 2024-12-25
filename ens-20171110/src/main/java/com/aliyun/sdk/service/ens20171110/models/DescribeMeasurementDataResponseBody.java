@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -178,7 +183,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
      */
     public static class BandWidthFeeDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandWidthFeeData")
-        private java.util.List < BandWidthFeeData> bandWidthFeeData;
+        private java.util.List<BandWidthFeeData> bandWidthFeeData;
 
         private BandWidthFeeDatas(Builder builder) {
             this.bandWidthFeeData = builder.bandWidthFeeData;
@@ -195,17 +200,17 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         /**
          * @return bandWidthFeeData
          */
-        public java.util.List < BandWidthFeeData> getBandWidthFeeData() {
+        public java.util.List<BandWidthFeeData> getBandWidthFeeData() {
             return this.bandWidthFeeData;
         }
 
         public static final class Builder {
-            private java.util.List < BandWidthFeeData> bandWidthFeeData; 
+            private java.util.List<BandWidthFeeData> bandWidthFeeData; 
 
             /**
              * BandWidthFeeData.
              */
-            public Builder bandWidthFeeData(java.util.List < BandWidthFeeData> bandWidthFeeData) {
+            public Builder bandWidthFeeData(java.util.List<BandWidthFeeData> bandWidthFeeData) {
                 this.bandWidthFeeData = bandWidthFeeData;
                 return this;
             }
@@ -445,7 +450,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
      */
     public static class ResourceFeeDataDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceFeeDataDetail")
-        private java.util.List < ResourceFeeDataDetail> resourceFeeDataDetail;
+        private java.util.List<ResourceFeeDataDetail> resourceFeeDataDetail;
 
         private ResourceFeeDataDetails(Builder builder) {
             this.resourceFeeDataDetail = builder.resourceFeeDataDetail;
@@ -462,17 +467,17 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         /**
          * @return resourceFeeDataDetail
          */
-        public java.util.List < ResourceFeeDataDetail> getResourceFeeDataDetail() {
+        public java.util.List<ResourceFeeDataDetail> getResourceFeeDataDetail() {
             return this.resourceFeeDataDetail;
         }
 
         public static final class Builder {
-            private java.util.List < ResourceFeeDataDetail> resourceFeeDataDetail; 
+            private java.util.List<ResourceFeeDataDetail> resourceFeeDataDetail; 
 
             /**
              * ResourceFeeDataDetail.
              */
-            public Builder resourceFeeDataDetail(java.util.List < ResourceFeeDataDetail> resourceFeeDataDetail) {
+            public Builder resourceFeeDataDetail(java.util.List<ResourceFeeDataDetail> resourceFeeDataDetail) {
                 this.resourceFeeDataDetail = resourceFeeDataDetail;
                 return this;
             }
@@ -675,7 +680,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
      */
     public static class MeasurementDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MeasurementData")
-        private java.util.List < MeasurementData> measurementData;
+        private java.util.List<MeasurementData> measurementData;
 
         private MeasurementDatas(Builder builder) {
             this.measurementData = builder.measurementData;
@@ -692,17 +697,17 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
         /**
          * @return measurementData
          */
-        public java.util.List < MeasurementData> getMeasurementData() {
+        public java.util.List<MeasurementData> getMeasurementData() {
             return this.measurementData;
         }
 
         public static final class Builder {
-            private java.util.List < MeasurementData> measurementData; 
+            private java.util.List<MeasurementData> measurementData; 
 
             /**
              * MeasurementData.
              */
-            public Builder measurementData(java.util.List < MeasurementData> measurementData) {
+            public Builder measurementData(java.util.List<MeasurementData> measurementData) {
                 this.measurementData = measurementData;
                 return this;
             }

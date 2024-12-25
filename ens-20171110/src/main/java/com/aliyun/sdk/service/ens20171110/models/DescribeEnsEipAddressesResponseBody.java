@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -552,7 +557,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
      */
     public static class EipAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EipAddress")
-        private java.util.List < EipAddress> eipAddress;
+        private java.util.List<EipAddress> eipAddress;
 
         private EipAddresses(Builder builder) {
             this.eipAddress = builder.eipAddress;
@@ -569,17 +574,17 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         /**
          * @return eipAddress
          */
-        public java.util.List < EipAddress> getEipAddress() {
+        public java.util.List<EipAddress> getEipAddress() {
             return this.eipAddress;
         }
 
         public static final class Builder {
-            private java.util.List < EipAddress> eipAddress; 
+            private java.util.List<EipAddress> eipAddress; 
 
             /**
              * EipAddress.
              */
-            public Builder eipAddress(java.util.List < EipAddress> eipAddress) {
+            public Builder eipAddress(java.util.List<EipAddress> eipAddress) {
                 this.eipAddress = eipAddress;
                 return this;
             }

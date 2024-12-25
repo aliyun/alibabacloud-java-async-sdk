@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     private String addressIPVersion;
 
     @com.aliyun.core.annotation.NameInMap("BackendServers")
-    private java.util.List < BackendServers> backendServers;
+    private java.util.List<BackendServers> backendServers;
 
     @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
@@ -34,10 +39,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     private String ensRegionId;
 
     @com.aliyun.core.annotation.NameInMap("ListenerPorts")
-    private java.util.List < String > listenerPorts;
+    private java.util.List<String> listenerPorts;
 
     @com.aliyun.core.annotation.NameInMap("ListenerPortsAndProtocols")
-    private java.util.List < ListenerPortsAndProtocols> listenerPortsAndProtocols;
+    private java.util.List<ListenerPortsAndProtocols> listenerPortsAndProtocols;
 
     @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
     private String loadBalancerId;
@@ -108,7 +113,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     /**
      * @return backendServers
      */
-    public java.util.List < BackendServers> getBackendServers() {
+    public java.util.List<BackendServers> getBackendServers() {
         return this.backendServers;
     }
 
@@ -143,14 +148,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     /**
      * @return listenerPorts
      */
-    public java.util.List < String > getListenerPorts() {
+    public java.util.List<String> getListenerPorts() {
         return this.listenerPorts;
     }
 
     /**
      * @return listenerPortsAndProtocols
      */
-    public java.util.List < ListenerPortsAndProtocols> getListenerPortsAndProtocols() {
+    public java.util.List<ListenerPortsAndProtocols> getListenerPortsAndProtocols() {
         return this.listenerPortsAndProtocols;
     }
 
@@ -213,13 +218,13 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private String address; 
         private String addressIPVersion; 
-        private java.util.List < BackendServers> backendServers; 
+        private java.util.List<BackendServers> backendServers; 
         private Integer bandwidth; 
         private String createTime; 
         private String endTime; 
         private String ensRegionId; 
-        private java.util.List < String > listenerPorts; 
-        private java.util.List < ListenerPortsAndProtocols> listenerPortsAndProtocols; 
+        private java.util.List<String> listenerPorts; 
+        private java.util.List<ListenerPortsAndProtocols> listenerPortsAndProtocols; 
         private String loadBalancerId; 
         private String loadBalancerName; 
         private String loadBalancerSpec; 
@@ -254,7 +259,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         /**
          * <p>The list of backend servers.</p>
          */
-        public Builder backendServers(java.util.List < BackendServers> backendServers) {
+        public Builder backendServers(java.util.List<BackendServers> backendServers) {
             this.backendServers = backendServers;
             return this;
         }
@@ -306,7 +311,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         /**
          * <p>The frontend ports that are used by the ELB instance.</p>
          */
-        public Builder listenerPorts(java.util.List < String > listenerPorts) {
+        public Builder listenerPorts(java.util.List<String> listenerPorts) {
             this.listenerPorts = listenerPorts;
             return this;
         }
@@ -314,7 +319,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         /**
          * <p>The frontend ports and protocols that are used by the ELB instance.</p>
          */
-        public Builder listenerPortsAndProtocols(java.util.List < ListenerPortsAndProtocols> listenerPortsAndProtocols) {
+        public Builder listenerPortsAndProtocols(java.util.List<ListenerPortsAndProtocols> listenerPortsAndProtocols) {
             this.listenerPortsAndProtocols = listenerPortsAndProtocols;
             return this;
         }

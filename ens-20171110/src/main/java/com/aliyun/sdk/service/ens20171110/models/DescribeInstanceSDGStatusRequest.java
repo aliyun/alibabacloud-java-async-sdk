@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class DescribeInstanceSDGStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SDGIds")
-    private java.util.List < String > SDGIds;
+    private java.util.List<String> SDGIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
@@ -80,7 +85,7 @@ public class DescribeInstanceSDGStatusRequest extends Request {
     /**
      * @return SDGIds
      */
-    public java.util.List < String > getSDGIds() {
+    public java.util.List<String> getSDGIds() {
         return this.SDGIds;
     }
 
@@ -95,7 +100,7 @@ public class DescribeInstanceSDGStatusRequest extends Request {
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < String > SDGIds; 
+        private java.util.List<String> SDGIds; 
         private String status; 
 
         private Builder() {
@@ -144,7 +149,7 @@ public class DescribeInstanceSDGStatusRequest extends Request {
         /**
          * SDGIds.
          */
-        public Builder SDGIds(java.util.List < String > SDGIds) {
+        public Builder SDGIds(java.util.List<String> SDGIds) {
             String SDGIdsShrink = shrink(SDGIds, "SDGIds", "json");
             this.putQueryParameter("SDGIds", SDGIdsShrink);
             this.SDGIds = SDGIds;

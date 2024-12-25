@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class CopySnapshotRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationRegionIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > destinationRegionIds;
+    private java.util.List<String> destinationRegionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationSnapshotDescription")
@@ -54,7 +59,7 @@ public class CopySnapshotRequest extends Request {
     /**
      * @return destinationRegionIds
      */
-    public java.util.List < String > getDestinationRegionIds() {
+    public java.util.List<String> getDestinationRegionIds() {
         return this.destinationRegionIds;
     }
 
@@ -80,7 +85,7 @@ public class CopySnapshotRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CopySnapshotRequest, Builder> {
-        private java.util.List < String > destinationRegionIds; 
+        private java.util.List<String> destinationRegionIds; 
         private String destinationSnapshotDescription; 
         private String destinationSnapshotName; 
         private String snapshotId; 
@@ -101,7 +106,7 @@ public class CopySnapshotRequest extends Request {
          * <p>The IDs of destination nodes.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder destinationRegionIds(java.util.List < String > destinationRegionIds) {
+        public Builder destinationRegionIds(java.util.List<String> destinationRegionIds) {
             String destinationRegionIdsShrink = shrink(destinationRegionIds, "DestinationRegionIds", "json");
             this.putQueryParameter("DestinationRegionIds", destinationRegionIdsShrink);
             this.destinationRegionIds = destinationRegionIds;

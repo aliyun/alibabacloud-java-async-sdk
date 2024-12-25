@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RouteEntrys")
-    private java.util.List < RouteEntrys> routeEntrys;
+    private java.util.List<RouteEntrys> routeEntrys;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     /**
      * @return routeEntrys
      */
-    public java.util.List < RouteEntrys> getRouteEntrys() {
+    public java.util.List<RouteEntrys> getRouteEntrys() {
         return this.routeEntrys;
     }
 
@@ -82,7 +87,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < RouteEntrys> routeEntrys; 
+        private java.util.List<RouteEntrys> routeEntrys; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         /**
          * <p>The information about the route.</p>
          */
-        public Builder routeEntrys(java.util.List < RouteEntrys> routeEntrys) {
+        public Builder routeEntrys(java.util.List<RouteEntrys> routeEntrys) {
             this.routeEntrys = routeEntrys;
             return this;
         }
@@ -230,7 +235,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         private String destinationCidrBlock;
 
         @com.aliyun.core.annotation.NameInMap("NextHops")
-        private java.util.List < NextHops> nextHops;
+        private java.util.List<NextHops> nextHops;
 
         @com.aliyun.core.annotation.NameInMap("RouteEntryId")
         private String routeEntryId;
@@ -283,7 +288,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         /**
          * @return nextHops
          */
-        public java.util.List < NextHops> getNextHops() {
+        public java.util.List<NextHops> getNextHops() {
             return this.nextHops;
         }
 
@@ -325,7 +330,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String destinationCidrBlock; 
-            private java.util.List < NextHops> nextHops; 
+            private java.util.List<NextHops> nextHops; 
             private String routeEntryId; 
             private String routeEntryName; 
             private String routeTableId; 
@@ -357,7 +362,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             /**
              * <p>The information about the next hop.</p>
              */
-            public Builder nextHops(java.util.List < NextHops> nextHops) {
+            public Builder nextHops(java.util.List<NextHops> nextHops) {
                 this.nextHops = nextHops;
                 return this;
             }

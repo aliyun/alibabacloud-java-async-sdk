@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ForwardTableEntries")
-    private java.util.List < ForwardTableEntries> forwardTableEntries;
+    private java.util.List<ForwardTableEntries> forwardTableEntries;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
@@ -46,7 +51,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     /**
      * @return forwardTableEntries
      */
-    public java.util.List < ForwardTableEntries> getForwardTableEntries() {
+    public java.util.List<ForwardTableEntries> getForwardTableEntries() {
         return this.forwardTableEntries;
     }
 
@@ -79,7 +84,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ForwardTableEntries> forwardTableEntries; 
+        private java.util.List<ForwardTableEntries> forwardTableEntries; 
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         /**
          * <p>Details of DNAT entries.</p>
          */
-        public Builder forwardTableEntries(java.util.List < ForwardTableEntries> forwardTableEntries) {
+        public Builder forwardTableEntries(java.util.List<ForwardTableEntries> forwardTableEntries) {
             this.forwardTableEntries = forwardTableEntries;
             return this;
         }

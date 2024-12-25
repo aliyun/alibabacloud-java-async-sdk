@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -270,7 +275,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
      */
     public static class RegionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
-        private java.util.List < RegionId> regionId;
+        private java.util.List<RegionId> regionId;
 
         private RegionIds(Builder builder) {
             this.regionId = builder.regionId;
@@ -287,12 +292,12 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         /**
          * @return regionId
          */
-        public java.util.List < RegionId> getRegionId() {
+        public java.util.List<RegionId> getRegionId() {
             return this.regionId;
         }
 
         public static final class Builder {
-            private java.util.List < RegionId> regionId; 
+            private java.util.List<RegionId> regionId; 
 
             /**
              * <p>The ID of the ENS node.</p>
@@ -300,7 +305,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>cn-wuxi-5</p>
              */
-            public Builder regionId(java.util.List < RegionId> regionId) {
+            public Builder regionId(java.util.List<RegionId> regionId) {
                 this.regionId = regionId;
                 return this;
             }
@@ -413,7 +418,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
      */
     public static class StatusStatS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StatusStat")
-        private java.util.List < StatusStat> statusStat;
+        private java.util.List<StatusStat> statusStat;
 
         private StatusStatS(Builder builder) {
             this.statusStat = builder.statusStat;
@@ -430,17 +435,17 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         /**
          * @return statusStat
          */
-        public java.util.List < StatusStat> getStatusStat() {
+        public java.util.List<StatusStat> getStatusStat() {
             return this.statusStat;
         }
 
         public static final class Builder {
-            private java.util.List < StatusStat> statusStat; 
+            private java.util.List<StatusStat> statusStat; 
 
             /**
              * StatusStat.
              */
-            public Builder statusStat(java.util.List < StatusStat> statusStat) {
+            public Builder statusStat(java.util.List<StatusStat> statusStat) {
                 this.statusStat = statusStat;
                 return this;
             }
@@ -553,7 +558,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
      */
     public static class PushResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PushResult")
-        private java.util.List < PushResult> pushResult;
+        private java.util.List<PushResult> pushResult;
 
         private PushResults(Builder builder) {
             this.pushResult = builder.pushResult;
@@ -570,17 +575,17 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
         /**
          * @return pushResult
          */
-        public java.util.List < PushResult> getPushResult() {
+        public java.util.List<PushResult> getPushResult() {
             return this.pushResult;
         }
 
         public static final class Builder {
-            private java.util.List < PushResult> pushResult; 
+            private java.util.List<PushResult> pushResult; 
 
             /**
              * PushResult.
              */
-            public Builder pushResult(java.util.List < PushResult> pushResult) {
+            public Builder pushResult(java.util.List<PushResult> pushResult) {
                 this.pushResult = pushResult;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -85,7 +90,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         private String networkInterfaceId;
 
         @com.aliyun.core.annotation.NameInMap("PrivateIpSet")
-        private java.util.List < String > privateIpSet;
+        private java.util.List<String> privateIpSet;
 
         private AssignedPrivateIpAddressesSet(Builder builder) {
             this.networkInterfaceId = builder.networkInterfaceId;
@@ -110,13 +115,13 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         /**
          * @return privateIpSet
          */
-        public java.util.List < String > getPrivateIpSet() {
+        public java.util.List<String> getPrivateIpSet() {
             return this.privateIpSet;
         }
 
         public static final class Builder {
             private String networkInterfaceId; 
-            private java.util.List < String > privateIpSet; 
+            private java.util.List<String> privateIpSet; 
 
             /**
              * <p>The ID of the ENI.</p>
@@ -132,7 +137,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             /**
              * <p>The assigned private IP addresses.</p>
              */
-            public Builder privateIpSet(java.util.List < String > privateIpSet) {
+            public Builder privateIpSet(java.util.List<String> privateIpSet) {
                 this.privateIpSet = privateIpSet;
                 return this;
             }

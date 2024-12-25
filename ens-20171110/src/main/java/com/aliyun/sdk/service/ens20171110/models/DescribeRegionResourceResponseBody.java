@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRegionResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
@@ -46,7 +51,7 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,7 +84,7 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String desc; 
         private String msg; 
         private Pager pager; 
@@ -88,7 +93,7 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -3966,7 +3971,7 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         private ArmCard armCard;
 
         @com.aliyun.core.annotation.NameInMap("Attributes")
-        private java.util.List < String > attributes;
+        private java.util.List<String> attributes;
 
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Bandwidth bandwidth;
@@ -3993,13 +3998,13 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         private String houseId;
 
         @com.aliyun.core.annotation.NameInMap("Ipv4s")
-        private java.util.List < Ipv4s> ipv4s;
+        private java.util.List<Ipv4s> ipv4s;
 
         @com.aliyun.core.annotation.NameInMap("Ipv6s")
-        private java.util.List < Ipv6s> ipv6s;
+        private java.util.List<Ipv6s> ipv6s;
 
         @com.aliyun.core.annotation.NameInMap("IspTypes")
-        private java.util.List < String > ispTypes;
+        private java.util.List<String> ispTypes;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Memory memory;
@@ -4111,7 +4116,7 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.List < String > getAttributes() {
+        public java.util.List<String> getAttributes() {
             return this.attributes;
         }
 
@@ -4174,21 +4179,21 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
         /**
          * @return ipv4s
          */
-        public java.util.List < Ipv4s> getIpv4s() {
+        public java.util.List<Ipv4s> getIpv4s() {
             return this.ipv4s;
         }
 
         /**
          * @return ipv6s
          */
-        public java.util.List < Ipv6s> getIpv6s() {
+        public java.util.List<Ipv6s> getIpv6s() {
             return this.ipv6s;
         }
 
         /**
          * @return ispTypes
          */
-        public java.util.List < String > getIspTypes() {
+        public java.util.List<String> getIspTypes() {
             return this.ispTypes;
         }
 
@@ -4301,7 +4306,7 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private String areaCode; 
             private String areaName; 
             private ArmCard armCard; 
-            private java.util.List < String > attributes; 
+            private java.util.List<String> attributes; 
             private Bandwidth bandwidth; 
             private BlockStorage blockStorage; 
             private String countryCode; 
@@ -4310,9 +4315,9 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             private Gpu gpu; 
             private Hdd hdd; 
             private String houseId; 
-            private java.util.List < Ipv4s> ipv4s; 
-            private java.util.List < Ipv6s> ipv6s; 
-            private java.util.List < String > ispTypes; 
+            private java.util.List<Ipv4s> ipv4s; 
+            private java.util.List<Ipv6s> ipv6s; 
+            private java.util.List<String> ispTypes; 
             private Memory memory; 
             private String name; 
             private Nvme nvme; 
@@ -4356,7 +4361,7 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             /**
              * Attributes.
              */
-            public Builder attributes(java.util.List < String > attributes) {
+            public Builder attributes(java.util.List<String> attributes) {
                 this.attributes = attributes;
                 return this;
             }
@@ -4428,7 +4433,7 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             /**
              * Ipv4s.
              */
-            public Builder ipv4s(java.util.List < Ipv4s> ipv4s) {
+            public Builder ipv4s(java.util.List<Ipv4s> ipv4s) {
                 this.ipv4s = ipv4s;
                 return this;
             }
@@ -4436,7 +4441,7 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             /**
              * Ipv6s.
              */
-            public Builder ipv6s(java.util.List < Ipv6s> ipv6s) {
+            public Builder ipv6s(java.util.List<Ipv6s> ipv6s) {
                 this.ipv6s = ipv6s;
                 return this;
             }
@@ -4444,7 +4449,7 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
             /**
              * IspTypes.
              */
-            public Builder ispTypes(java.util.List < String > ispTypes) {
+            public Builder ispTypes(java.util.List<String> ispTypes) {
                 this.ispTypes = ispTypes;
                 return this;
             }

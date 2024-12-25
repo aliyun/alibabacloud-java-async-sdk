@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class UpgradeAICInstanceImageRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServerIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > serverIds;
+    private java.util.List<String> serverIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Timeout")
@@ -56,7 +61,7 @@ public class UpgradeAICInstanceImageRequest extends Request {
     /**
      * @return serverIds
      */
-    public java.util.List < String > getServerIds() {
+    public java.util.List<String> getServerIds() {
         return this.serverIds;
     }
 
@@ -69,7 +74,7 @@ public class UpgradeAICInstanceImageRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpgradeAICInstanceImageRequest, Builder> {
         private String imageId; 
-        private java.util.List < String > serverIds; 
+        private java.util.List<String> serverIds; 
         private Integer timeout; 
 
         private Builder() {
@@ -100,7 +105,7 @@ public class UpgradeAICInstanceImageRequest extends Request {
          * <p>The IDs of the servers.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder serverIds(java.util.List < String > serverIds) {
+        public Builder serverIds(java.util.List<String> serverIds) {
             String serverIdsShrink = shrink(serverIds, "ServerIds", "json");
             this.putQueryParameter("ServerIds", serverIdsShrink);
             this.serverIds = serverIds;

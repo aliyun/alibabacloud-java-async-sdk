@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -20,7 +25,7 @@ public class UnassociateNetworkAclRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Resource")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Resource> resource;
+    private java.util.List<Resource> resource;
 
     private UnassociateNetworkAclRequest(Builder builder) {
         super(builder);
@@ -51,13 +56,13 @@ public class UnassociateNetworkAclRequest extends Request {
     /**
      * @return resource
      */
-    public java.util.List < Resource> getResource() {
+    public java.util.List<Resource> getResource() {
         return this.resource;
     }
 
     public static final class Builder extends Request.Builder<UnassociateNetworkAclRequest, Builder> {
         private String networkAclId; 
-        private java.util.List < Resource> resource; 
+        private java.util.List<Resource> resource; 
 
         private Builder() {
             super();
@@ -86,7 +91,7 @@ public class UnassociateNetworkAclRequest extends Request {
          * <p>Resources that you want to disassociate. Valid values of <strong>N</strong>: 0 to 29. A maximum of 30 resources can be unbound.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder resource(java.util.List < Resource> resource) {
+        public Builder resource(java.util.List<Resource> resource) {
             this.putQueryParameter("Resource", resource);
             this.resource = resource;
             return this;

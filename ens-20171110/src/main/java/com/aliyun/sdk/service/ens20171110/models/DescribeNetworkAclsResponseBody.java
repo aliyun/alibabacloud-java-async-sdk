@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeNetworkAclsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NetworkAcls")
-    private java.util.List < NetworkAcls> networkAcls;
+    private java.util.List<NetworkAcls> networkAcls;
 
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
@@ -46,7 +51,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
     /**
      * @return networkAcls
      */
-    public java.util.List < NetworkAcls> getNetworkAcls() {
+    public java.util.List<NetworkAcls> getNetworkAcls() {
         return this.networkAcls;
     }
 
@@ -79,7 +84,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < NetworkAcls> networkAcls; 
+        private java.util.List<NetworkAcls> networkAcls; 
         private String pageNumber; 
         private String pageSize; 
         private String requestId; 
@@ -88,7 +93,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * <p>Details of the network ACLs.</p>
          */
-        public Builder networkAcls(java.util.List < NetworkAcls> networkAcls) {
+        public Builder networkAcls(java.util.List<NetworkAcls> networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
@@ -785,10 +790,10 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("EgressAclEntries")
-        private java.util.List < EgressAclEntries> egressAclEntries;
+        private java.util.List<EgressAclEntries> egressAclEntries;
 
         @com.aliyun.core.annotation.NameInMap("IngressAclEntries")
-        private java.util.List < IngressAclEntries> ingressAclEntries;
+        private java.util.List<IngressAclEntries> ingressAclEntries;
 
         @com.aliyun.core.annotation.NameInMap("NetworkAclId")
         private String networkAclId;
@@ -797,7 +802,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         private String networkAclName;
 
         @com.aliyun.core.annotation.NameInMap("Resources")
-        private java.util.List < Resources> resources;
+        private java.util.List<Resources> resources;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -838,14 +843,14 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * @return egressAclEntries
          */
-        public java.util.List < EgressAclEntries> getEgressAclEntries() {
+        public java.util.List<EgressAclEntries> getEgressAclEntries() {
             return this.egressAclEntries;
         }
 
         /**
          * @return ingressAclEntries
          */
-        public java.util.List < IngressAclEntries> getIngressAclEntries() {
+        public java.util.List<IngressAclEntries> getIngressAclEntries() {
             return this.ingressAclEntries;
         }
 
@@ -866,7 +871,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         /**
          * @return resources
          */
-        public java.util.List < Resources> getResources() {
+        public java.util.List<Resources> getResources() {
             return this.resources;
         }
 
@@ -880,11 +885,11 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         public static final class Builder {
             private String creationTime; 
             private String description; 
-            private java.util.List < EgressAclEntries> egressAclEntries; 
-            private java.util.List < IngressAclEntries> ingressAclEntries; 
+            private java.util.List<EgressAclEntries> egressAclEntries; 
+            private java.util.List<IngressAclEntries> ingressAclEntries; 
             private String networkAclId; 
             private String networkAclName; 
-            private java.util.List < Resources> resources; 
+            private java.util.List<Resources> resources; 
             private String status; 
 
             /**
@@ -912,7 +917,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             /**
              * <p>Details of the outbound rules.</p>
              */
-            public Builder egressAclEntries(java.util.List < EgressAclEntries> egressAclEntries) {
+            public Builder egressAclEntries(java.util.List<EgressAclEntries> egressAclEntries) {
                 this.egressAclEntries = egressAclEntries;
                 return this;
             }
@@ -920,7 +925,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             /**
              * <p>Details of the inbound rules.</p>
              */
-            public Builder ingressAclEntries(java.util.List < IngressAclEntries> ingressAclEntries) {
+            public Builder ingressAclEntries(java.util.List<IngressAclEntries> ingressAclEntries) {
                 this.ingressAclEntries = ingressAclEntries;
                 return this;
             }
@@ -950,7 +955,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             /**
              * <p>Details of the associated resources.</p>
              */
-            public Builder resources(java.util.List < Resources> resources) {
+            public Builder resources(java.util.List<Resources> resources) {
                 this.resources = resources;
                 return this;
             }

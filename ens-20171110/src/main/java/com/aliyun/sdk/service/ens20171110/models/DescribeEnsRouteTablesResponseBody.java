@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RouteTables")
-    private java.util.List < RouteTables> routeTables;
+    private java.util.List<RouteTables> routeTables;
 
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
@@ -67,7 +72,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
     /**
      * @return routeTables
      */
-    public java.util.List < RouteTables> getRouteTables() {
+    public java.util.List<RouteTables> getRouteTables() {
         return this.routeTables;
     }
 
@@ -82,7 +87,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String requestId; 
-        private java.util.List < RouteTables> routeTables; 
+        private java.util.List<RouteTables> routeTables; 
         private Integer totalCount; 
 
         /**
@@ -121,7 +126,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         /**
          * <p>The information about the route tables.</p>
          */
-        public Builder routeTables(java.util.List < RouteTables> routeTables) {
+        public Builder routeTables(java.util.List<RouteTables> routeTables) {
             this.routeTables = routeTables;
             return this;
         }
@@ -172,7 +177,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         private String type;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private java.util.List < String > vSwitchIds;
+        private java.util.List<String> vSwitchIds;
 
         private RouteTables(Builder builder) {
             this.creationTime = builder.creationTime;
@@ -245,7 +250,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         /**
          * @return vSwitchIds
          */
-        public java.util.List < String > getVSwitchIds() {
+        public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -257,7 +262,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
             private String routeTableName; 
             private String status; 
             private String type; 
-            private java.util.List < String > vSwitchIds; 
+            private java.util.List<String> vSwitchIds; 
 
             /**
              * <p>The time when the route table was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
@@ -343,7 +348,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
             /**
              * <p>The vSwitches that are associated with the route table.</p>
              */
-            public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+            public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }

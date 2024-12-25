@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6Address")
-    private java.util.List < String > ipv6Address;
+    private java.util.List<String> ipv6Address;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkId")
@@ -113,7 +118,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
     /**
      * @return ipv6Address
      */
-    public java.util.List < String > getIpv6Address() {
+    public java.util.List<String> getIpv6Address() {
         return this.ipv6Address;
     }
 
@@ -190,7 +195,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeNetworkInterfacesRequest, Builder> {
         private String ensRegionId; 
         private String instanceId; 
-        private java.util.List < String > ipv6Address; 
+        private java.util.List<String> ipv6Address; 
         private String networkId; 
         private String networkInterfaceId; 
         private String networkInterfaceName; 
@@ -250,7 +255,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         /**
          * <p>IPv6 addresses N of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
          */
-        public Builder ipv6Address(java.util.List < String > ipv6Address) {
+        public Builder ipv6Address(java.util.List<String> ipv6Address) {
             String ipv6AddressShrink = shrink(ipv6Address, "Ipv6Address", "simple");
             this.putQueryParameter("Ipv6Address", ipv6AddressShrink);
             this.ipv6Address = ipv6Address;
