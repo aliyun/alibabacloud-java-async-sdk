@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetAccessControlListAttributeRequest} extends {@link RequestModel}
  *
  * <p>SetAccessControlListAttributeRequest</p>
@@ -140,7 +146,11 @@ public class SetAccessControlListAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the network ACL.
+         * <p>The ACL ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-bp1l0kk4gxce43k******</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -149,7 +159,11 @@ public class SetAccessControlListAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the network ACL. The name must be 1 to 80 characters in length, and can contain only letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of the network ACL must be unique within each region.
+         * <p>The ACL name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
@@ -176,10 +190,12 @@ public class SetAccessControlListAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the network ACL is created.
-         * <p>
+         * <p>The region ID of the ACL.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

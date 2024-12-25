@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyLoadBalancerPayTypeRequest} extends {@link RequestModel}
  *
  * <p>ModifyLoadBalancerPayTypeRequest</p>
@@ -181,13 +187,17 @@ public class ModifyLoadBalancerPayTypeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is valid only when the <code>PayType</code> parameter is set to <strong>PrePay</strong>. This parameter is valid only for pay-as-you-go instances.</p>
+         * </blockquote>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
-         * 
-         * >  This parameter is valid only when the `PayType` parameter is set to **PrePay**. This parameter is valid only for pay-as-you-go instances.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -196,13 +206,17 @@ public class ModifyLoadBalancerPayTypeRequest extends Request {
         }
 
         /**
-         * The subscription duration.
-         * <p>
+         * <p>The subscription duration.</p>
+         * <ul>
+         * <li>If <strong>PricingCycle</strong> is set to <strong>month</strong>, the valid values are <strong>1</strong> to <strong>9</strong>.</li>
+         * <li>If <strong>PricingCycle</strong> is set to <strong>year</strong>, the valid values are <strong>1</strong> to <strong>3</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is valid only when the <strong>PayType</strong> parameter is set to <strong>PrePay</strong>. This parameter is valid only for pay-as-you-go instances.</p>
+         * </blockquote>
          * 
-         * *   If **PricingCycle** is set to **month**, the valid values are **1** to **9**.
-         * *   If **PricingCycle** is set to **year**, the valid values are **1** to **3**.
-         * 
-         * >  This parameter is valid only when the **PayType** parameter is set to **PrePay**. This parameter is valid only for pay-as-you-go instances.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -211,7 +225,11 @@ public class ModifyLoadBalancerPayTypeRequest extends Request {
         }
 
         /**
-         * The ID of the CLB instance.
+         * <p>The ID of the CLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1b6c719dfa08ex*****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -238,12 +256,14 @@ public class ModifyLoadBalancerPayTypeRequest extends Request {
         }
 
         /**
-         * The billing method of the CLB instance. Valid values:
-         * <p>
+         * <p>The billing method of the CLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PayOnDemand</strong> (default): pay-as-you-go</li>
+         * </ul>
+         * <p>To change the billing method of a pay-as-you-go CLB instance to subscription, you must set the parameter to <strong>PrePay</strong>. In addition, the previous billing method of the CLB instance must be <strong>PayOnDemand</strong>.</p>
          * 
-         * *   **PayOnDemand** (default): pay-as-you-go
-         * 
-         * To change the billing method of a pay-as-you-go CLB instance to subscription, you must set the parameter to **PrePay**. In addition, the previous billing method of the CLB instance must be **PayOnDemand**.
+         * <strong>example:</strong>
+         * <p>PrePay</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -252,12 +272,14 @@ public class ModifyLoadBalancerPayTypeRequest extends Request {
         }
 
         /**
-         * The billing cycle.
-         * <p>
+         * <p>The billing cycle.</p>
+         * <p>Valid values: <strong>year</strong> and <strong>month</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is valid only when the <strong>PayType</strong> parameter is set to <strong>PrePay</strong>. This parameter is valid only for pay-as-you-go instances.</p>
+         * </blockquote>
          * 
-         * Valid values: **year** and **month**.
-         * 
-         * >  This parameter is valid only when the **PayType** parameter is set to **PrePay**. This parameter is valid only for pay-as-you-go instances.
+         * <strong>example:</strong>
+         * <p>month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -266,10 +288,12 @@ public class ModifyLoadBalancerPayTypeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the CLB instance is deployed.
-         * <p>
+         * <p>The ID of the region where the CLB instance is deployed.</p>
+         * <p>You can query the region ID from the <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a> list or by calling the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

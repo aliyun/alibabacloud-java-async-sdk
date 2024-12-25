@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCACertificatesRequest} extends {@link RequestModel}
  *
  * <p>DescribeCACertificatesRequest</p>
@@ -42,7 +48,7 @@ public class DescribeCACertificatesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeCACertificatesRequest(Builder builder) {
         super(builder);
@@ -121,7 +127,7 @@ public class DescribeCACertificatesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -133,7 +139,7 @@ public class DescribeCACertificatesRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -152,7 +158,10 @@ public class DescribeCACertificatesRequest extends Request {
         } 
 
         /**
-         * The CA certificate ID.
+         * <p>The CA certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139a00604bd-cn-east-hangzho****</p>
          */
         public Builder CACertificateId(String CACertificateId) {
             this.putQueryParameter("CACertificateId", CACertificateId);
@@ -179,10 +188,12 @@ public class DescribeCACertificatesRequest extends Request {
         }
 
         /**
-         * The region of the CA certificates.
-         * <p>
+         * <p>The region of the CA certificates.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -191,7 +202,10 @@ public class DescribeCACertificatesRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -218,9 +232,9 @@ public class DescribeCACertificatesRequest extends Request {
         }
 
         /**
-         * The tags of the CA certificates.
+         * <p>The tags of the CA certificates.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -233,6 +247,12 @@ public class DescribeCACertificatesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCACertificatesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCACertificatesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -272,10 +292,11 @@ public class DescribeCACertificatesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N. Valid values of N: **1 to 20**. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N. Valid values of N: <strong>1 to 20</strong>. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It must not start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -283,7 +304,10 @@ public class DescribeCACertificatesRequest extends Request {
             }
 
             /**
-             * The value of tag N. Valid values of N: **1 to 20**. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.
+             * <p>The value of tag N. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It must not start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;

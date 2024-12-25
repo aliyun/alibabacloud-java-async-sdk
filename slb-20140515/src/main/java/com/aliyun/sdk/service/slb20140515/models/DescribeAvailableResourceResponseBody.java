@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableResourceResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The zones and the supported resources.
+         * <p>The zones and the supported resources.</p>
          */
         public Builder availableResources(AvailableResources availableResources) {
             this.availableResources = availableResources;
@@ -57,7 +63,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173B0EEA-22ED-4EE2-91F9-3A1CDDFFBBBA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
         private String addressIPVersion;
@@ -109,10 +124,11 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String addressType; 
 
             /**
-             * The type of the IP address.
-             * <p>
+             * <p>The type of the IP address.</p>
+             * <p>Valid values: <strong>ipv4 and ipv6</strong>.</p>
              * 
-             * Valid values: **ipv4 and ipv6**.
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;
@@ -120,10 +136,11 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The network type.
-             * <p>
+             * <p>The network type.</p>
+             * <p>Valid values: <strong>vpc, classic-internet, and classic-intranet</strong>.</p>
              * 
-             * Valid values: **vpc, classic-internet, and classic-intranet**.
+             * <strong>example:</strong>
+             * <p>classic_internet</p>
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -137,9 +154,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportResource")
-        private java.util.List < SupportResource> supportResource;
+        private java.util.List<SupportResource> supportResource;
 
         private SupportResources(Builder builder) {
             this.supportResource = builder.supportResource;
@@ -156,17 +179,17 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportResource
          */
-        public java.util.List < SupportResource> getSupportResource() {
+        public java.util.List<SupportResource> getSupportResource() {
             return this.supportResource;
         }
 
         public static final class Builder {
-            private java.util.List < SupportResource> supportResource; 
+            private java.util.List<SupportResource> supportResource; 
 
             /**
              * SupportResource.
              */
-            public Builder supportResource(java.util.List < SupportResource> supportResource) {
+            public Builder supportResource(java.util.List<SupportResource> supportResource) {
                 this.supportResource = supportResource;
                 return this;
             }
@@ -178,6 +201,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class AvailableResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MasterZoneId")
         private String masterZoneId;
@@ -229,7 +258,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private SupportResources supportResources; 
 
             /**
-             * The primary zone.
+             * <p>The primary zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-a</p>
              */
             public Builder masterZoneId(String masterZoneId) {
                 this.masterZoneId = masterZoneId;
@@ -237,7 +269,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The secondary zone.
+             * <p>The secondary zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-b</p>
              */
             public Builder slaveZoneId(String slaveZoneId) {
                 this.slaveZoneId = slaveZoneId;
@@ -245,7 +280,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The supported resources.
+             * <p>The supported resources.</p>
              */
             public Builder supportResources(SupportResources supportResources) {
                 this.supportResources = supportResources;
@@ -259,9 +294,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class AvailableResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableResource")
-        private java.util.List < AvailableResource> availableResource;
+        private java.util.List<AvailableResource> availableResource;
 
         private AvailableResources(Builder builder) {
             this.availableResource = builder.availableResource;
@@ -278,17 +319,17 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return availableResource
          */
-        public java.util.List < AvailableResource> getAvailableResource() {
+        public java.util.List<AvailableResource> getAvailableResource() {
             return this.availableResource;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableResource> availableResource; 
+            private java.util.List<AvailableResource> availableResource; 
 
             /**
              * AvailableResource.
              */
-            public Builder availableResource(java.util.List < AvailableResource> availableResource) {
+            public Builder availableResource(java.util.List<AvailableResource> availableResource) {
                 this.availableResource = availableResource;
                 return this;
             }

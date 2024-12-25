@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMasterSlaveServerGroupAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeMasterSlaveServerGroupAttributeRequest</p>
@@ -125,7 +131,11 @@ public class DescribeMasterSlaveServerGroupAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the primary/secondary server group.
+         * <p>The ID of the primary/secondary server group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-cige6j******</p>
          */
         public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
             this.putQueryParameter("MasterSlaveServerGroupId", masterSlaveServerGroupId);
@@ -152,7 +162,11 @@ public class DescribeMasterSlaveServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the Classic Load Balancer (CLB) instance.
+         * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

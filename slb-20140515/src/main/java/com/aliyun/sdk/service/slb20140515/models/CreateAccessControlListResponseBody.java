@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessControlListResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAccessControlListResponseBody</p>
@@ -49,7 +55,10 @@ public class CreateAccessControlListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IP version. Valid values: **ipv4** and **ipv6**.
+         * <p>The IP version. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-rj9xpxzcwxrukois****</p>
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -57,7 +66,10 @@ public class CreateAccessControlListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the ACL belongs.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>988CB45E-1643-48C0-87B4-928DDF77EA49</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

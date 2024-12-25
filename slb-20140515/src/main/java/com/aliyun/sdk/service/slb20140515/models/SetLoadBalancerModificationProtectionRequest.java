@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetLoadBalancerModificationProtectionRequest} extends {@link RequestModel}
  *
  * <p>SetLoadBalancerModificationProtectionRequest</p>
@@ -154,7 +160,11 @@ public class SetLoadBalancerModificationProtectionRequest extends Request {
         } 
 
         /**
-         * The ID of the CLB instance.
+         * <p>The ID of the CLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1b6c719dfa08e*****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -163,10 +173,13 @@ public class SetLoadBalancerModificationProtectionRequest extends Request {
         }
 
         /**
-         * The reason why the configuration read-only mode is enabled. The value must be 1 to 80 characters in length. It must start with a letter and can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
-         * <p>
+         * <p>The reason why the configuration read-only mode is enabled. The value must be 1 to 80 characters in length. It must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <blockquote>
+         * <p> This parameter is valid only if the <strong>ModificationProtectionStatus</strong> parameter is set to <strong>ConsoleProtection</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is valid only if the **ModificationProtectionStatus** parameter is set to **ConsoleProtection**.
+         * <strong>example:</strong>
+         * <p>Configuration change</p>
          */
         public Builder modificationProtectionReason(String modificationProtectionReason) {
             this.putQueryParameter("ModificationProtectionReason", modificationProtectionReason);
@@ -175,13 +188,18 @@ public class SetLoadBalancerModificationProtectionRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the configuration read-only mode. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the configuration read-only mode. Valid values:</p>
+         * <ul>
+         * <li><strong>NonProtection</strong>: disables the configuration read-only mode. After you disable the configuration read-only mode, the value of <strong>ModificationProtectionReason</strong> is cleared.</li>
+         * <li><strong>ConsoleProtection</strong>: enables the configuration read-only mode.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set this parameter to <strong>ConsoleProtection</strong>, you cannot use the CLB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **NonProtection**: disables the configuration read-only mode. After you disable the configuration read-only mode, the value of **ModificationProtectionReason** is cleared.
-         * *   **ConsoleProtection**: enables the configuration read-only mode.
-         * 
-         * >  If you set this parameter to **ConsoleProtection**, you cannot use the CLB console to modify instance configurations. However, you can call API operations to modify instance configurations.
+         * <strong>example:</strong>
+         * <p>ConsoleProtection</p>
          */
         public Builder modificationProtectionStatus(String modificationProtectionStatus) {
             this.putQueryParameter("ModificationProtectionStatus", modificationProtectionStatus);
@@ -208,10 +226,12 @@ public class SetLoadBalancerModificationProtectionRequest extends Request {
         }
 
         /**
-         * The region ID of the CLB instance.
-         * <p>
+         * <p>The region ID of the CLB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

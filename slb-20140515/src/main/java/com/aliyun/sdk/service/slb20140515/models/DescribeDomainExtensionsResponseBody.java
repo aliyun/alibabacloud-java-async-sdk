@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainExtensionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainExtensionsResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of additional certificates.
+         * <p>The list of additional certificates.</p>
          */
         public Builder domainExtensions(DomainExtensions domainExtensions) {
             this.domainExtensions = domainExtensions;
@@ -57,7 +63,10 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48C1B671-C6DB-4DDE-9B30-10557E36CDE0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainExtensionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainExtensionsResponseBody</p>
+     */
     public static class DomainExtension extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -121,7 +136,10 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
             private String serverCertificateId; 
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -129,7 +147,10 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the additional certificate.
+             * <p>The ID of the additional certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de-bp1rp7ta1****</p>
              */
             public Builder domainExtensionId(String domainExtensionId) {
                 this.domainExtensionId = domainExtensionId;
@@ -137,7 +158,10 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server certificate that is used by the domain name.
+             * <p>The ID of the server certificate that is used by the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231579085529123_166f8204689_1714763408_70998****</p>
              */
             public Builder serverCertificateId(String serverCertificateId) {
                 this.serverCertificateId = serverCertificateId;
@@ -151,9 +175,15 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainExtensionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainExtensionsResponseBody</p>
+     */
     public static class DomainExtensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainExtension")
-        private java.util.List < DomainExtension> domainExtension;
+        private java.util.List<DomainExtension> domainExtension;
 
         private DomainExtensions(Builder builder) {
             this.domainExtension = builder.domainExtension;
@@ -170,17 +200,17 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
         /**
          * @return domainExtension
          */
-        public java.util.List < DomainExtension> getDomainExtension() {
+        public java.util.List<DomainExtension> getDomainExtension() {
             return this.domainExtension;
         }
 
         public static final class Builder {
-            private java.util.List < DomainExtension> domainExtension; 
+            private java.util.List<DomainExtension> domainExtension; 
 
             /**
              * DomainExtension.
              */
-            public Builder domainExtension(java.util.List < DomainExtension> domainExtension) {
+            public Builder domainExtension(java.util.List<DomainExtension> domainExtension) {
                 this.domainExtension = domainExtension;
                 return this;
             }

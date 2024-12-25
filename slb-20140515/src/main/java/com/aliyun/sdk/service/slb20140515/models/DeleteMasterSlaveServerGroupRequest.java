@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMasterSlaveServerGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteMasterSlaveServerGroupRequest</p>
@@ -125,10 +131,14 @@ public class DeleteMasterSlaveServerGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the active/standby server group to be deleted.
-         * <p>
+         * <p>The primary/secondary server group ID.</p>
+         * <blockquote>
+         * <p> You cannot delete a primary/secondary server group that is in use.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  An active/standby server group in use cannot be deleted.
+         * <strong>example:</strong>
+         * <p>rsp-cige6*****</p>
          */
         public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
             this.putQueryParameter("MasterSlaveServerGroupId", masterSlaveServerGroupId);
@@ -155,7 +165,11 @@ public class DeleteMasterSlaveServerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the associated Server Load Balancer (SLB) instance belongs.
+         * <p>The region ID of the Server Load Balancer (SLB) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveListenerWhiteListItemRequest} extends {@link RequestModel}
  *
  * <p>RemoveListenerWhiteListItemRequest</p>
@@ -168,7 +174,11 @@ public class RemoveListenerWhiteListItemRequest extends Request {
         } 
 
         /**
-         * The listening port.
+         * <p>The listening port.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -177,10 +187,13 @@ public class RemoveListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * The frontend protocol that is used by the CLB instance.
-         * <p>
+         * <p>The frontend protocol that is used by the CLB instance.</p>
+         * <blockquote>
+         * <p> This parameter is required when listeners that use different protocols listen on the same port.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when listeners that use different protocols listen on the same port.
+         * <strong>example:</strong>
+         * <p>https</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -189,7 +202,11 @@ public class RemoveListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * The ID of the CLB instance.
+         * <p>The ID of the CLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-8vb86hxixo8lvsja8****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -216,10 +233,11 @@ public class RemoveListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * The region where the Classic Load Balancer (CLB) instance is created.
-         * <p>
+         * <p>The region where the Classic Load Balancer (CLB) instance is created.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -246,10 +264,14 @@ public class RemoveListenerWhiteListItemRequest extends Request {
         }
 
         /**
-         * The list of IP addresses or CIDR blocks that you want to remove from the whitelist. Separate multiple IP addresses or CIDR blocks with commas (,).
-         * <p>
+         * <p>The list of IP addresses or CIDR blocks that you want to remove from the whitelist. Separate multiple IP addresses or CIDR blocks with commas (,).</p>
+         * <blockquote>
+         * <p> If all IP addresses are removed from the whitelist, the listener does not forward requests.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  If all IP addresses are removed from the whitelist, the listener does not forward requests.
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder sourceItems(String sourceItems) {
             this.putQueryParameter("SourceItems", sourceItems);

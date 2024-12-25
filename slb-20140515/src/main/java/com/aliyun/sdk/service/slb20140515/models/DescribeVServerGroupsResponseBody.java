@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVServerGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVServerGroupsResponseBody</p>
@@ -49,7 +55,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         private VServerGroups vServerGroups; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of backend servers.
+         * <p>The backend servers.</p>
          */
         public Builder vServerGroups(VServerGroups vServerGroups) {
             this.vServerGroups = vServerGroups;
@@ -70,6 +79,12 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVServerGroupsResponseBody</p>
+     */
     public static class Listener extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
@@ -109,7 +124,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * The listening port.
+             * <p>The listener port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -117,7 +135,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The listening protocol. Valid values: **tcp**, **udp**, **http**, and **https**.
+             * <p>The listener protocol. Valid values: <strong>tcp</strong>, <strong>udp</strong>, <strong>http</strong>, and <strong>https</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -131,9 +152,15 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVServerGroupsResponseBody</p>
+     */
     public static class Listeners extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Listener")
-        private java.util.List < Listener> listener;
+        private java.util.List<Listener> listener;
 
         private Listeners(Builder builder) {
             this.listener = builder.listener;
@@ -150,17 +177,17 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         /**
          * @return listener
          */
-        public java.util.List < Listener> getListener() {
+        public java.util.List<Listener> getListener() {
             return this.listener;
         }
 
         public static final class Builder {
-            private java.util.List < Listener> listener; 
+            private java.util.List<Listener> listener; 
 
             /**
              * Listener.
              */
-            public Builder listener(java.util.List < Listener> listener) {
+            public Builder listener(java.util.List<Listener> listener) {
                 this.listener = listener;
                 return this;
             }
@@ -172,6 +199,12 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVServerGroupsResponseBody</p>
+     */
     public static class Rule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -235,7 +268,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The requested domain name.
+             * <p>The requested domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -243,7 +279,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the forwarding rule.
+             * <p>The ID of the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule-a3x3pg1yohq3lq****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -251,7 +290,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the forwarding rule.
+             * <p>The name of the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -259,7 +301,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The request path.
+             * <p>The request URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/example</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -273,9 +318,15 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVServerGroupsResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rule")
-        private java.util.List < Rule> rule;
+        private java.util.List<Rule> rule;
 
         private Rules(Builder builder) {
             this.rule = builder.rule;
@@ -292,17 +343,17 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         /**
          * @return rule
          */
-        public java.util.List < Rule> getRule() {
+        public java.util.List<Rule> getRule() {
             return this.rule;
         }
 
         public static final class Builder {
-            private java.util.List < Rule> rule; 
+            private java.util.List<Rule> rule; 
 
             /**
              * Rule.
              */
-            public Builder rule(java.util.List < Rule> rule) {
+            public Builder rule(java.util.List<Rule> rule) {
                 this.rule = rule;
                 return this;
             }
@@ -314,6 +365,12 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVServerGroupsResponseBody</p>
+     */
     public static class AssociatedObjects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Listeners")
         private Listeners listeners;
@@ -353,7 +410,7 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             private Rules rules; 
 
             /**
-             * The list of listeners.
+             * <p>The listeners.</p>
              */
             public Builder listeners(Listeners listeners) {
                 this.listeners = listeners;
@@ -361,7 +418,7 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of forwarding rules.
+             * <p>The forwarding rules.</p>
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;
@@ -375,6 +432,12 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVServerGroupsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -414,7 +477,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag keys of the resource.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -422,7 +488,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -436,9 +505,15 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVServerGroupsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -455,17 +530,17 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -477,6 +552,12 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVServerGroupsResponseBody</p>
+     */
     public static class VServerGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedObjects")
         private AssociatedObjects associatedObjects;
@@ -564,7 +645,7 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             private String vServerGroupName; 
 
             /**
-             * The items associated with the server groups.
+             * <p>The associated resources.</p>
              */
             public Builder associatedObjects(AssociatedObjects associatedObjects) {
                 this.associatedObjects = associatedObjects;
@@ -572,7 +653,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the CLB instance was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+             * <p>The time when the CLB instance was created. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-31T02:49:05Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -580,10 +664,11 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers. 
-             * <p>
+             * <p>The number of servers.</p>
+             * <p>This parameter is unavailable by default. To use this parameter, submit a ticket or contact your account manager.</p>
              * 
-             * >  The feature corresponding to this parameter is not available by default. If you want to use this feature, [submit a ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex).
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serverCount(Long serverCount) {
                 this.serverCount = serverCount;
@@ -591,7 +676,7 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -599,7 +684,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server group.
+             * <p>The server group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsp-0bfuc*****</p>
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;
@@ -607,7 +695,10 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server group.
+             * <p>The server group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Group3</p>
              */
             public Builder vServerGroupName(String vServerGroupName) {
                 this.vServerGroupName = vServerGroupName;
@@ -621,9 +712,15 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVServerGroupsResponseBody</p>
+     */
     public static class VServerGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VServerGroup")
-        private java.util.List < VServerGroup> vServerGroup;
+        private java.util.List<VServerGroup> vServerGroup;
 
         private VServerGroups(Builder builder) {
             this.vServerGroup = builder.vServerGroup;
@@ -640,17 +737,17 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         /**
          * @return vServerGroup
          */
-        public java.util.List < VServerGroup> getVServerGroup() {
+        public java.util.List<VServerGroup> getVServerGroup() {
             return this.vServerGroup;
         }
 
         public static final class Builder {
-            private java.util.List < VServerGroup> vServerGroup; 
+            private java.util.List<VServerGroup> vServerGroup; 
 
             /**
              * VServerGroup.
              */
-            public Builder vServerGroup(java.util.List < VServerGroup> vServerGroup) {
+            public Builder vServerGroup(java.util.List<VServerGroup> vServerGroup) {
                 this.vServerGroup = vServerGroup;
                 return this;
             }

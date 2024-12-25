@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -31,7 +37,7 @@ public class UntagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > resourceId;
+    private java.util.List<String> resourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -48,7 +54,7 @@ public class UntagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagKey")
-    private java.util.List < String > tagKey;
+    private java.util.List<String> tagKey;
 
     private UntagResourcesRequest(Builder builder) {
         super(builder);
@@ -107,7 +113,7 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -135,7 +141,7 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return tagKey
      */
-    public java.util.List < String > getTagKey() {
+    public java.util.List<String> getTagKey() {
         return this.tagKey;
     }
 
@@ -144,11 +150,11 @@ public class UntagResourcesRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private java.util.List < String > resourceId; 
+        private java.util.List<String> resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String resourceType; 
-        private java.util.List < String > tagKey; 
+        private java.util.List<String> tagKey; 
 
         private Builder() {
             super();
@@ -168,10 +174,11 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the specified one or more resources. This parameter takes effect only if the **TagKey.N** parameter is not set.
-         * <p>
+         * <p>Specifies whether to remove all tags from the specified resource. This parameter takes effect only if <strong>TagKey.N</strong> is empty.</p>
+         * <p>Valid values: <strong>true</strong> and <strong>false</strong>.</p>
          * 
-         * Valid values: **true** and **false**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -198,10 +205,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Server Load Balancer (SLB) instance is created.
-         * <p>
+         * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -210,9 +219,16 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource. Valid values of N: 1 to 20.
+         * <p>The ID of the resource. You can specify at most 20 resources.</p>
+         * <blockquote>
+         * <p> Set <strong>ResourceId</strong> of the <strong>listener</strong> to <strong>LoadBalancerId_Listener protocol_Port</strong>. Set LoadBalancerId to the ID of the CLB instance, and Port to the listener port.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp16qjewdsunr41m1****</p>
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
@@ -237,12 +253,19 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of resource. Valid values:</p>
+         * <ul>
+         * <li><strong>instance</strong>: CLB instance</li>
+         * <li><strong>certificate</strong>: certificate</li>
+         * <li><strong>acl</strong>: access control list (ACL)</li>
+         * <li><strong>listener</strong>: listener</li>
+         * <li><strong>vservergroup</strong>: vServer group</li>
+         * <li><strong>masterslaveservergroup</strong>: primary/secondary server group</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **instance**: an SLB instance
-         * *   **certificate**: a certificate
-         * *   **acl**: a network access control list (ACL)
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -251,14 +274,16 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag value. Valid values of N: **1** to **20**.
-         * <p>
+         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <blockquote>
+         * <p> If you do not specify <strong>TagKey</strong>, all tags are removed from the instance.</p>
+         * </blockquote>
          * 
-         * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:` or `aliyun`.
-         * 
-         * >  If you do not set **TagKey**, all tags of the specified instance are removed.
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
-        public Builder tagKey(java.util.List < String > tagKey) {
+        public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);
             this.tagKey = tagKey;
             return this;

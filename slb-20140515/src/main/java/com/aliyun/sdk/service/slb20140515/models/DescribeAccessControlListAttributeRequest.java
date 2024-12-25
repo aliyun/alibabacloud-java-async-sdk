@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessControlListAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccessControlListAttributeRequest</p>
@@ -167,10 +173,10 @@ public class DescribeAccessControlListAttributeRequest extends Request {
         } 
 
         /**
-         * The remarks of the ACL entry.
-         * <p>
+         * <p>The remarks of the ACL entry.</p>
          * 
-         * It must be 2 to 100 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder aclEntryComment(String aclEntryComment) {
             this.putQueryParameter("AclEntryComment", aclEntryComment);
@@ -179,7 +185,11 @@ public class DescribeAccessControlListAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the ACL.
+         * <p>The ID of the ACL that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-bp1ut10zzvh1y8dfs****</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -206,7 +216,10 @@ public class DescribeAccessControlListAttributeRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -215,7 +228,10 @@ public class DescribeAccessControlListAttributeRequest extends Request {
         }
 
         /**
-         * The number of entries returned on each page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -224,7 +240,12 @@ public class DescribeAccessControlListAttributeRequest extends Request {
         }
 
         /**
-         * The time when the network ACL was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
+         * <p>The region ID of the ACL.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401682.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

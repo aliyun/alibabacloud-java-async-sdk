@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeListenerAccessControlAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeListenerAccessControlAttributeRequest</p>
@@ -153,10 +159,12 @@ public class DescribeListenerAccessControlAttributeRequest extends Request {
         } 
 
         /**
-         * The frontend port that is used by the CLB instance.
-         * <p>
+         * <p>The frontend port that is used by the CLB instance.</p>
+         * <p>Valid values: <strong>1 to 65535</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: **1 to 65535**.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -165,10 +173,13 @@ public class DescribeListenerAccessControlAttributeRequest extends Request {
         }
 
         /**
-         * The frontend protocol that is used by the CLB instance.
-         * <p>
+         * <p>The frontend protocol that is used by the CLB instance.</p>
+         * <blockquote>
+         * <p>This parameter is required if the same port is specified for listeners of different protocols.</p>
+         * </blockquote>
          * 
-         * > This parameter is required if the same port is specified for listeners of different protocols.
+         * <strong>example:</strong>
+         * <p>https</p>
          */
         public Builder listenerProtocol(String listenerProtocol) {
             this.putQueryParameter("ListenerProtocol", listenerProtocol);
@@ -177,7 +188,11 @@ public class DescribeListenerAccessControlAttributeRequest extends Request {
         }
 
         /**
-         * The CLB instance ID.
+         * <p>The CLB instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-8vb86hxixo8lvsja8****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -204,10 +219,11 @@ public class DescribeListenerAccessControlAttributeRequest extends Request {
         }
 
         /**
-         * The region where the Classic Load Balancer (CLB) instance is created.
-         * <p>
+         * <p>The region where the Classic Load Balancer (CLB) instance is created.</p>
+         * <p>You can query the region ID from the <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a> list or by calling the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation.</p>
          * 
-         * You can query the region ID from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

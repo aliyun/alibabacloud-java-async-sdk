@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetBackendServersResponseBody} extends {@link TeaModel}
  *
  * <p>SetBackendServersResponseBody</p>
@@ -61,7 +67,7 @@ public class SetBackendServersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of backend servers.
+         * <p>The backend servers.</p>
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -69,7 +75,10 @@ public class SetBackendServersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the CLB instance.
+         * <p>The ID of the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1qjwo61pqz3a******</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -77,7 +86,10 @@ public class SetBackendServersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +102,12 @@ public class SetBackendServersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SetBackendServersResponseBody} extends {@link TeaModel}
+     *
+     * <p>SetBackendServersResponseBody</p>
+     */
     public static class BackendServer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -153,7 +171,10 @@ public class SetBackendServersResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * The description of the backend server.
+             * <p>The description of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backend server</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -161,7 +182,10 @@ public class SetBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-hhshhs****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -169,11 +193,15 @@ public class SetBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend server. Valid values:
-             * <p>
+             * <p>The type of backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>ecs</strong> (default): ECS instance</li>
+             * <li><strong>eni</strong>: ENI</li>
+             * <li><strong>eci</strong>: elastic container instance</li>
+             * </ul>
              * 
-             * *   **ecs** (default): an ECS instance
-             * *   **eni**: an elastic network interface (ENI)
+             * <strong>example:</strong>
+             * <p>eni</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -181,7 +209,10 @@ public class SetBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the backend server.
+             * <p>The weight of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -195,9 +226,15 @@ public class SetBackendServersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SetBackendServersResponseBody} extends {@link TeaModel}
+     *
+     * <p>SetBackendServersResponseBody</p>
+     */
     public static class BackendServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackendServer")
-        private java.util.List < BackendServer> backendServer;
+        private java.util.List<BackendServer> backendServer;
 
         private BackendServers(Builder builder) {
             this.backendServer = builder.backendServer;
@@ -214,17 +251,17 @@ public class SetBackendServersResponseBody extends TeaModel {
         /**
          * @return backendServer
          */
-        public java.util.List < BackendServer> getBackendServer() {
+        public java.util.List<BackendServer> getBackendServer() {
             return this.backendServer;
         }
 
         public static final class Builder {
-            private java.util.List < BackendServer> backendServer; 
+            private java.util.List<BackendServer> backendServer; 
 
             /**
              * BackendServer.
              */
-            public Builder backendServer(java.util.List < BackendServer> backendServer) {
+            public Builder backendServer(java.util.List<BackendServer> backendServer) {
                 this.backendServer = backendServer;
                 return this;
             }

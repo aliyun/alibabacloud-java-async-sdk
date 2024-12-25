@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadCACertificateRequest} extends {@link RequestModel}
  *
  * <p>UploadCACertificateRequest</p>
@@ -47,7 +53,7 @@ public class UploadCACertificateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private UploadCACertificateRequest(Builder builder) {
         super(builder);
@@ -134,7 +140,7 @@ public class UploadCACertificateRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -147,7 +153,7 @@ public class UploadCACertificateRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -167,10 +173,11 @@ public class UploadCACertificateRequest extends Request {
         } 
 
         /**
-         * The name of this action.
-         * <p>
+         * <p>The information about the CA certificate.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Value: **UploadCACertificate**
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder CACertificate(String CACertificate) {
             this.putQueryParameter("CACertificate", CACertificate);
@@ -179,10 +186,10 @@ public class UploadCACertificateRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the CA certificate belongs.
-         * <p>
+         * <p>The CA certificate name.</p>
          * 
-         * To query the region ID, call [DescribeRegions](~~27584~~).
+         * <strong>example:</strong>
+         * <p>mycacert01</p>
          */
         public Builder CACertificateName(String CACertificateName) {
             this.putQueryParameter("CACertificateName", CACertificateName);
@@ -209,7 +216,12 @@ public class UploadCACertificateRequest extends Request {
         }
 
         /**
-         * The region id.
+         * <p>The region of the CA certificates.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401682.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,7 +230,10 @@ public class UploadCACertificateRequest extends Request {
         }
 
         /**
-         * The content of the CA certificate to be uploaded.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rto*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -245,9 +260,12 @@ public class UploadCACertificateRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UploadCACertificate</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -260,6 +278,12 @@ public class UploadCACertificateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UploadCACertificateRequest} extends {@link TeaModel}
+     *
+     * <p>UploadCACertificateRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -299,10 +323,10 @@ public class UploadCACertificateRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. You can specify at most 20 tag keys.
-             * <p>
+             * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -310,10 +334,10 @@ public class UploadCACertificateRequest extends Request {
             }
 
             /**
-             * The tag value. Valid values of N: **1 to 20**. The tag value can be an empty string.
-             * <p>
+             * <p>The tag value. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string. The tag value must be 1 to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

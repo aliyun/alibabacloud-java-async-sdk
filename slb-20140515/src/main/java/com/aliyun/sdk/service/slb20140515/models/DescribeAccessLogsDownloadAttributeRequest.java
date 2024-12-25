@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessLogsDownloadAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccessLogsDownloadAttributeRequest</p>
@@ -181,7 +187,10 @@ public class DescribeAccessLogsDownloadAttributeRequest extends Request {
         } 
 
         /**
-         * The CLB instance ID.
+         * <p>The CLB instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1b6c719dfa08ex*****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -190,7 +199,10 @@ public class DescribeAccessLogsDownloadAttributeRequest extends Request {
         }
 
         /**
-         * The type of access log. Set the value to **layer7**, which specifies Layer 7 access logs.
+         * <p>The type of access log. Set the value to <strong>layer7</strong>, which specifies Layer 7 access logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>layer7</p>
          */
         public Builder logType(String logType) {
             this.putQueryParameter("LogType", logType);
@@ -217,7 +229,10 @@ public class DescribeAccessLogsDownloadAttributeRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -226,7 +241,10 @@ public class DescribeAccessLogsDownloadAttributeRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **50**. Default value: **10**.
+         * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,10 +253,12 @@ public class DescribeAccessLogsDownloadAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the CLB instance.
-         * <p>
+         * <p>The region ID of the CLB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -265,10 +285,11 @@ public class DescribeAccessLogsDownloadAttributeRequest extends Request {
         }
 
         /**
-         * The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.
-         * <p>
+         * <p>The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.</p>
+         * <p>You can specify up to 10 tags in each call.</p>
          * 
-         * You can specify up to 10 tags in each call.
+         * <strong>example:</strong>
+         * <p>[{&quot;tagKey&quot;:&quot;Key1&quot;,&quot;tagValue&quot;:&quot;Value1&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

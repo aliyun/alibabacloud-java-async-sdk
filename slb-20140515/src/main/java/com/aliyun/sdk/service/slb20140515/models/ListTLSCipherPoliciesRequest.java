@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTLSCipherPoliciesRequest} extends {@link RequestModel}
  *
  * <p>ListTLSCipherPoliciesRequest</p>
@@ -180,11 +186,14 @@ public class ListTLSCipherPoliciesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return the information about the associated listeners. Valid values:
-         * <p>
+         * <p>Specifies whether to return the information about the associated listeners. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: returns the information about the associated listeners.</li>
+         * <li><strong>false</strong> (default): does not return the information about the associated listeners.</li>
+         * </ul>
          * 
-         * *   **true**: returns the information about the associated listeners.
-         * *   **false** (default): does not return the information about the associated listeners.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeListener(Boolean includeListener) {
             this.putQueryParameter("IncludeListener", includeListener);
@@ -193,7 +202,10 @@ public class ListTLSCipherPoliciesRequest extends Request {
         }
 
         /**
-         * The maximum number of TLS policies to be queried in this call. Valid values: **1** to **100**. If you do not set this parameter, the default value **20** is used.
+         * <p>The maximum number of TLS policies to be queried in this call. Valid values: <strong>1</strong> to <strong>100</strong>. If you do not set this parameter, the default value <strong>20</strong> is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxItems(Integer maxItems) {
             this.putQueryParameter("MaxItems", maxItems);
@@ -202,7 +214,10 @@ public class ListTLSCipherPoliciesRequest extends Request {
         }
 
         /**
-         * The name of the TLS policy. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * <p>The name of the TLS policy. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLSPolicy-test****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -211,11 +226,14 @@ public class ListTLSCipherPoliciesRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
-         * <p>
+         * <p>The token that is used for the next query. Valid values:</p>
+         * <ul>
+         * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
+         * <li>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</li>
+         * </ul>
          * 
-         * *   If this is your first query or no next query is to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -242,10 +260,12 @@ public class ListTLSCipherPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Classic Load Balancer (CLB) instance is deployed.
-         * <p>
+         * <p>The ID of the region where the Classic Load Balancer (CLB) instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,7 +292,10 @@ public class ListTLSCipherPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the TLS policy.
+         * <p>The ID of the TLS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tls-bp17elso1h323r****</p>
          */
         public Builder TLSCipherPolicyId(String TLSCipherPolicyId) {
             this.putQueryParameter("TLSCipherPolicyId", TLSCipherPolicyId);

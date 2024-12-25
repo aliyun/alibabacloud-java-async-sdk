@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadCACertificateResponseBody} extends {@link TeaModel}
  *
  * <p>UploadCACertificateResponseBody</p>
@@ -145,7 +151,10 @@ public class UploadCACertificateResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * The name of the CA certificate.
+         * <p>The ID of the CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139a0******-cn-east-hangzhou-01</p>
          */
         public Builder CACertificateId(String CACertificateId) {
             this.CACertificateId = CACertificateId;
@@ -153,7 +162,10 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name of the CA certificate.
+         * <p>The CA certificate name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mycacert01</p>
          */
         public Builder CACertificateName(String CACertificateName) {
             this.CACertificateName = CACertificateName;
@@ -161,7 +173,10 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The fingerprint of the CA certificate.
+         * <p>The domain name on the CA certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.example.com</p>
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
@@ -169,7 +184,10 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the CA certificate expires.
+         * <p>The time when the CA certificate was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-08-31T02:49:05Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -177,7 +195,10 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the CA certificate.
+         * <p>The timestamp when the CA certificate was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1504147745000</p>
          */
         public Builder createTimeStamp(Long createTimeStamp) {
             this.createTimeStamp = createTimeStamp;
@@ -185,7 +206,10 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp generated when the CA certificate is uploaded.
+         * <p>The time when the CA certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-21T06:04:25Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -193,7 +217,10 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the enterprise resource group.
+         * <p>The timestamp when the server certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1732169065000</p>
          */
         public Builder expireTimeStamp(Long expireTimeStamp) {
             this.expireTimeStamp = expireTimeStamp;
@@ -201,7 +228,10 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The fingerprint of the server certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:DF:AB:ED</p>
          */
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = fingerprint;
@@ -209,7 +239,10 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the enterprise resource group.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -217,7 +250,10 @@ public class UploadCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the CA certificate is uploaded.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rt******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

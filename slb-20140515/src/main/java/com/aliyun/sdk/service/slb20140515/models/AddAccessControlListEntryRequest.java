@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddAccessControlListEntryRequest} extends {@link RequestModel}
  *
  * <p>AddAccessControlListEntryRequest</p>
@@ -138,13 +144,14 @@ public class AddAccessControlListEntryRequest extends Request {
         } 
 
         /**
-         * The configuration of the network ACL. Valid values:
-         * <p>
-         * 
-         * *   **entry**: the IP entries that you want to add to the network ACL. You can add CIDR blocks. Separate multiple CIDR blocks with commas (,).
-         * *   **comment**: the comment on the network ACL.
-         * 
-         * > You can add at most 50 IP entries to a network ACL in each call. If the IP entry that you want to add to a network ACL already exists, the IP entry is not added. The IP entries that you add must be CIDR blocks.
+         * <p>The configuration of the network ACL. Valid values:</p>
+         * <ul>
+         * <li><strong>entry</strong>: the IP entries that you want to add to the network ACL. You can add CIDR blocks. Separate multiple CIDR blocks with commas (,).</li>
+         * <li><strong>comment</strong>: the comment on the network ACL.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You can add at most 50 IP entries to a network ACL in each call. If the IP entry that you want to add to a network ACL already exists, the IP entry is not added. The IP entries that you add must be CIDR blocks.</p>
+         * </blockquote>
          */
         public Builder aclEntrys(String aclEntrys) {
             this.putQueryParameter("AclEntrys", aclEntrys);
@@ -153,7 +160,10 @@ public class AddAccessControlListEntryRequest extends Request {
         }
 
         /**
-         * The ID of the network ACL.
+         * <p>The ID of the network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-bp1l0kk4gxce43kze*****</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -180,7 +190,11 @@ public class AddAccessControlListEntryRequest extends Request {
         }
 
         /**
-         * The region ID of the network ACL.
+         * <p>The region ID of the network ACL.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

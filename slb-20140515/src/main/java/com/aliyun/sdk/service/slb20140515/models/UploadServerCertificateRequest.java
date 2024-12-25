@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadServerCertificateRequest} extends {@link RequestModel}
  *
  * <p>UploadServerCertificateRequest</p>
@@ -62,7 +68,7 @@ public class UploadServerCertificateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private UploadServerCertificateRequest(Builder builder) {
         super(builder);
@@ -181,7 +187,7 @@ public class UploadServerCertificateRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -198,7 +204,7 @@ public class UploadServerCertificateRequest extends Request {
         private Long resourceOwnerId; 
         private String serverCertificate; 
         private String serverCertificateName; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -222,7 +228,10 @@ public class UploadServerCertificateRequest extends Request {
         } 
 
         /**
-         * AliCloud certificate ID.
+         * <p>AliCloud certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>775****</p>
          */
         public Builder aliCloudCertificateId(String aliCloudCertificateId) {
             this.putQueryParameter("AliCloudCertificateId", aliCloudCertificateId);
@@ -231,7 +240,10 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * AliCloud certificate name.
+         * <p>AliCloud certificate name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudcertificate</p>
          */
         public Builder aliCloudCertificateName(String aliCloudCertificateName) {
             this.putQueryParameter("AliCloudCertificateName", aliCloudCertificateName);
@@ -240,7 +252,10 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * The region ID of AliCloud certificate.
+         * <p>The region ID of AliCloud certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder aliCloudCertificateRegionId(String aliCloudCertificateRegionId) {
             this.putQueryParameter("AliCloudCertificateRegionId", aliCloudCertificateRegionId);
@@ -267,7 +282,10 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * The private key of the certificate.
+         * <p>The private key of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN RSA PRIVATE KEY----- MIIEogIB****** -----END RSA PRIVATE KEY-----</p>
          */
         public Builder privateKey(String privateKey) {
             this.putQueryParameter("PrivateKey", privateKey);
@@ -276,10 +294,12 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * The region ID of the CLB instance.
-         * <p>
+         * <p>The region ID of the CLB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -288,7 +308,10 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rto****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -315,7 +338,10 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * The server certificate to be uploaded.
+         * <p>The server certificate to be uploaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE----- MIIGDTCC****** -----END CERTIFICATE-----</p>
          */
         public Builder serverCertificate(String serverCertificate) {
             this.putQueryParameter("ServerCertificate", serverCertificate);
@@ -324,10 +350,11 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * The name of the server certificate.
-         * <p>
+         * <p>The name of the server certificate.</p>
+         * <p>The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (_), and hyphens (-).</p>
          * 
-         * The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>mycert01</p>
          */
         public Builder serverCertificateName(String serverCertificateName) {
             this.putQueryParameter("ServerCertificateName", serverCertificateName);
@@ -336,9 +363,9 @@ public class UploadServerCertificateRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -351,6 +378,12 @@ public class UploadServerCertificateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UploadServerCertificateRequest} extends {@link TeaModel}
+     *
+     * <p>UploadServerCertificateRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -390,10 +423,11 @@ public class UploadServerCertificateRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N. Valid values of N: **1 to 20**. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N. Valid values of N: <strong>1 to 20</strong>. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -401,7 +435,10 @@ public class UploadServerCertificateRequest extends Request {
             }
 
             /**
-             * The value of tag N. Valid values of N: **1 to 20**. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` and `acs:`.
+             * <p>The value of tag N. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> and <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

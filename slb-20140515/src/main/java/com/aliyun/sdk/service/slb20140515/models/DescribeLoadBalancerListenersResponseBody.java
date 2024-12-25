@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancerListenersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLoadBalancerListenersResponseBody</p>
  */
 public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Listeners")
-    private java.util.List < Listeners> listeners;
+    private java.util.List<Listeners> listeners;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -45,7 +51,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
     /**
      * @return listeners
      */
-    public java.util.List < Listeners> getListeners() {
+    public java.util.List<Listeners> getListeners() {
         return this.listeners;
     }
 
@@ -78,25 +84,28 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Listeners> listeners; 
+        private java.util.List<Listeners> listeners; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
         /**
-         * The list of listeners on the CLB instance.
-         * <p>
-         * 
-         * >  This parameter is not returned if no listener is created on the CLB instance.
+         * <p>A list of listeners of the CLB instance.</p>
+         * <blockquote>
+         * <p> This parameter is not returned if the CLB instance does not have a listener.</p>
+         * </blockquote>
          */
-        public Builder listeners(java.util.List < Listeners> listeners) {
+        public Builder listeners(java.util.List<Listeners> listeners) {
             this.listeners = listeners;
             return this;
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -104,11 +113,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
+         * <p>The token that determines the start point of the query. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, it indicates that no subsequent query is to be sent.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+         * </ul>
          * 
-         * *   If **NextToken** is empty, it indicates that no subsequent query is to be sent.
-         * *   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -116,7 +128,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,7 +139,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -137,6 +155,12 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLoadBalancerListenersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerListenersResponseBody</p>
+     */
     public static class HTTPListenerConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cookie")
         private String cookie;
@@ -476,7 +500,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             private String xForwardedForProto; 
 
             /**
-             * The cookie that is configured on the server.
+             * <p>The cookie configures for the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B490B5EBF6F3CD402E515D22BCDA****</p>
              */
             public Builder cookie(String cookie) {
                 this.cookie = cookie;
@@ -484,10 +511,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of a cookie. Unit: seconds.
-             * <p>
+             * <p>The maximum amount of time to wait before the session cookie expires. Unit: seconds.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>86400</strong>.</p>
              * 
-             * Valid values: **1** to **86400**.
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder cookieTimeout(Integer cookieTimeout) {
                 this.cookieTimeout = cookieTimeout;
@@ -495,10 +523,13 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The listening port that is used to redirect HTTP requests to HTTPS.
-             * <p>
+             * <p>The listener port that is used for HTTP-to-HTTPS redirection.</p>
+             * <blockquote>
+             * <p> If the <strong>ListenerForward</strong> parameter is set to <strong>off</strong>, this parameter is not returned.</p>
+             * </blockquote>
              * 
-             * >  If the **ListenerForward** parameter is set to **off**, this parameter is not displayed.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder forwardPort(Integer forwardPort) {
                 this.forwardPort = forwardPort;
@@ -506,11 +537,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Gzip compression is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether GZIP compression is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder gzip(String gzip) {
                 this.gzip = gzip;
@@ -518,11 +552,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the health check feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder healthCheck(String healthCheck) {
                 this.healthCheck = healthCheck;
@@ -530,10 +567,13 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used for health checks.
-             * <p>
+             * <p>The port that is used for health checks.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only when <strong>HealthCheck</strong> is set to <strong>on</strong>.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect when the **HealthCheck** parameter is set to **on**.
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
                 this.healthCheckConnectPort = healthCheckConnectPort;
@@ -541,7 +581,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name that is used for health checks.
+             * <p>The domain name that is used for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder healthCheckDomain(String healthCheckDomain) {
                 this.healthCheckDomain = healthCheckDomain;
@@ -549,7 +592,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status codes that are used to determine whether the backend server passes the health check.
+             * <p>The HTTP status code that indicates a healthy backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http_2xx,http_3xx</p>
              */
             public Builder healthCheckHttpCode(String healthCheckHttpCode) {
                 this.healthCheckHttpCode = healthCheckHttpCode;
@@ -557,7 +603,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP version that is used for health checks.
+             * <p>The HTTP version for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP 1.0</p>
              */
             public Builder healthCheckHttpVersion(String healthCheckHttpVersion) {
                 this.healthCheckHttpVersion = healthCheckHttpVersion;
@@ -565,7 +614,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which health checks are performed. Unit: seconds.
+             * <p>The interval at which health checks are performed. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
@@ -573,7 +625,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The health check method. Valid values: **head** and **get**.
+             * <p>The health check method. Valid values: <strong>head</strong> and <strong>get</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get</p>
              */
             public Builder healthCheckMethod(String healthCheckMethod) {
                 this.healthCheckMethod = healthCheckMethod;
@@ -581,7 +636,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum timeout period of a health check. Unit: seconds.
+             * <p>The maximum timeout period of a health check. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder healthCheckTimeout(Integer healthCheckTimeout) {
                 this.healthCheckTimeout = healthCheckTimeout;
@@ -589,7 +647,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used for health checks.
+             * <p>The protocol that you want to use for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder healthCheckType(String healthCheckType) {
                 this.healthCheckType = healthCheckType;
@@ -597,7 +658,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The URI that is used for health checks.
+             * <p>The URI that is used for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test/index.html</p>
              */
             public Builder healthCheckURI(String healthCheckURI) {
                 this.healthCheckURI = healthCheckURI;
@@ -605,10 +669,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.
-             * <p>
+             * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <strong>fail</strong> to <strong>success</strong>.</p>
+             * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * 
-             * Valid values: **2** to **10**.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder healthyThreshold(Integer healthyThreshold) {
                 this.healthyThreshold = healthyThreshold;
@@ -616,10 +681,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of an idle connection. Unit: seconds. Valid values: **1** to **60**.
-             * <p>
+             * <p>The timeout period of an idle connection. Unit: seconds. Valid values: <strong>1</strong> to <strong>60</strong>.</p>
+             * <p>If no request is received within the specified timeout period, CLB closes the connection. When a request is received, CLB establishes a new connection.</p>
              * 
-             * If no request is received within the specified timeout period, CLB closes the connection. When a request is received, CLB establishes a new connection.
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder idleTimeout(Integer idleTimeout) {
                 this.idleTimeout = idleTimeout;
@@ -627,11 +693,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether HTTP-to-HTTPS redirection is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether HTTP-to-HTTPS redirection is enabled for the listener. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder listenerForward(String listenerForward) {
                 this.listenerForward = listenerForward;
@@ -639,10 +708,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of a request. Unit: seconds. Valid values: **1** to **180**.
-             * <p>
+             * <p>The timeout period of a request. Unit: seconds. Valid values: <strong>1</strong> to <strong>180</strong>.</p>
+             * <p>If no response is received from a backend server during the request timeout period, CLB sends the <code>HTTP 504</code> status code to the client.</p>
              * 
-             * If no response is received from a backend server during the request timeout period, CLB sends the `HTTP 504` status code to the client.
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder requestTimeout(Integer requestTimeout) {
                 this.requestTimeout = requestTimeout;
@@ -650,11 +720,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether session persistence is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether session persistence is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder stickySession(String stickySession) {
                 this.stickySession = stickySession;
@@ -662,11 +735,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to handle a cookie. Valid values:
-             * <p>
+             * <p>The method used to handle the cookie. Valid values:</p>
+             * <ul>
+             * <li><strong>insert</strong>: inserts a cookie. CLB inserts the SERVERID cookie to the HTTP or HTTPS response to the first request from a client. Subsequent requests that carry the SERVERID cookie from the client are forwarded to the same backend server as the first request.</li>
+             * <li><strong>server</strong>: rewrites the original cookie. CLB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</li>
+             * </ul>
              * 
-             * *   **insert**: inserts a cookie. CLB inserts a cookie (SERVERID) into the first HTTP or HTTPS response that is sent to a client. The next request from the client contains this cookie, and the listener forwards this request to the recorded backend server.
-             * *   **server**: rewrites a cookie. When CLB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. The next request from the client carries the user-defined cookie, and the listener will distribute the request to the recorded backend server.
+             * <strong>example:</strong>
+             * <p>insert</p>
              */
             public Builder stickySessionType(String stickySessionType) {
                 this.stickySessionType = stickySessionType;
@@ -674,10 +750,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
-             * <p>
+             * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health check status of the backend server changes from <strong>success</strong> to <strong>fail</strong>.</p>
+             * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * 
-             * Valid values: **2** to **10**.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder unhealthyThreshold(Integer unhealthyThreshold) {
                 this.unhealthyThreshold = unhealthyThreshold;
@@ -685,11 +762,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `XForwardedFor` header is used to retrieve client IP addresses. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>X-Forwarded-For</code> header is used to preserve client IP addresses. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder xForwardedFor(String xForwardedFor) {
                 this.xForwardedFor = xForwardedFor;
@@ -697,11 +777,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `XForwardedFor_ClientSrcPort` header is used to retrieve the client port. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>XForwardedFor_ClientSrcPort</code> header is used to retrieve the client port. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder xForwardedForClientSrcPort(String xForwardedForClientSrcPort) {
                 this.xForwardedForClientSrcPort = xForwardedForClientSrcPort;
@@ -709,11 +792,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `SLB-ID` header is used to retrieve the ID of the CLB instance. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>SLB-ID</code> header is used to retrieve the ID of the CLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder xForwardedForSLBID(String xForwardedForSLBID) {
                 this.xForwardedForSLBID = xForwardedForSLBID;
@@ -721,11 +807,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `SLB-IP` header is used to retrieve the virtual IP address requested by the client. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>SLB-IP</code> header is used to retrieve the VIP of the client. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder xForwardedForSLBIP(String xForwardedForSLBIP) {
                 this.xForwardedForSLBIP = xForwardedForSLBIP;
@@ -733,11 +822,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `XForwardedFor_SLBPORT` header is used to retrieve the listening port. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>XForwardedFor_SLBPORT</code> header is used to retrieve the listener port of the CLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder xForwardedForSLBPORT(String xForwardedForSLBPORT) {
                 this.xForwardedForSLBPORT = xForwardedForSLBPORT;
@@ -745,11 +837,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `X-Forwarded-Proto` header is used to retrieve the listening protocol. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>X-Forwarded-Proto</code> header is used to obtain the listener protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder xForwardedForProto(String xForwardedForProto) {
                 this.xForwardedForProto = xForwardedForProto;
@@ -763,6 +858,12 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLoadBalancerListenersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerListenersResponseBody</p>
+     */
     public static class HTTPSListenerConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CACertificateId")
         private String CACertificateId;
@@ -1174,7 +1275,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             private String xForwardedForProto; 
 
             /**
-             * The ID of the certificate authority (CA) certificate.
+             * <p>The ID of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idkp-234-cn-test-0****</p>
              */
             public Builder CACertificateId(String CACertificateId) {
                 this.CACertificateId = CACertificateId;
@@ -1182,7 +1286,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The cookie that is configured on the server.
+             * <p>The cookie configures for the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B490B5EBF6F3CD402E515D22BCDA****</p>
              */
             public Builder cookie(String cookie) {
                 this.cookie = cookie;
@@ -1190,10 +1297,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of a cookie. Unit: seconds.
-             * <p>
+             * <p>The maximum amount of time to wait before the session cookie expires. Unit: seconds.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>86400</strong>.</p>
              * 
-             * Valid values: **1** to **86400**.
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder cookieTimeout(Integer cookieTimeout) {
                 this.cookieTimeout = cookieTimeout;
@@ -1201,11 +1309,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether `HTTP 2.0` is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether <code>HTTP 2.0</code> is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder enableHttp2(String enableHttp2) {
                 this.enableHttp2 = enableHttp2;
@@ -1213,11 +1324,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Gzip compression is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether GZIP compression is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder gzip(String gzip) {
                 this.gzip = gzip;
@@ -1225,11 +1339,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the health check feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder healthCheck(String healthCheck) {
                 this.healthCheck = healthCheck;
@@ -1237,7 +1354,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used for health checks.
+             * <p>The port that is used for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
                 this.healthCheckConnectPort = healthCheckConnectPort;
@@ -1245,7 +1365,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name that is used for health checks.
+             * <p>The domain name that is used for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder healthCheckDomain(String healthCheckDomain) {
                 this.healthCheckDomain = healthCheckDomain;
@@ -1253,7 +1376,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status codes that are used to determine whether the backend server passes the health check.
+             * <p>The HTTP status code that indicates a healthy backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http_2xx,http_3xx</p>
              */
             public Builder healthCheckHttpCode(String healthCheckHttpCode) {
                 this.healthCheckHttpCode = healthCheckHttpCode;
@@ -1261,7 +1387,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP version that is used for health checks.
+             * <p>The HTTP version for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP 1.0</p>
              */
             public Builder healthCheckHttpVersion(String healthCheckHttpVersion) {
                 this.healthCheckHttpVersion = healthCheckHttpVersion;
@@ -1269,7 +1398,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which health checks are performed. Unit: seconds.
+             * <p>The interval at which health checks are performed. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
@@ -1277,7 +1409,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The health check method.
+             * <p>The health check method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get</p>
              */
             public Builder healthCheckMethod(String healthCheckMethod) {
                 this.healthCheckMethod = healthCheckMethod;
@@ -1285,7 +1420,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum timeout period of a health check. Unit: seconds.
+             * <p>The timeout period of a health check response. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder healthCheckTimeout(Integer healthCheckTimeout) {
                 this.healthCheckTimeout = healthCheckTimeout;
@@ -1293,7 +1431,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used for health checks.
+             * <p>The protocol that you want to use for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder healthCheckType(String healthCheckType) {
                 this.healthCheckType = healthCheckType;
@@ -1301,7 +1442,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The URI that is used for health checks.
+             * <p>The URI that is used for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test/index.html</p>
              */
             public Builder healthCheckURI(String healthCheckURI) {
                 this.healthCheckURI = healthCheckURI;
@@ -1309,10 +1453,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.
-             * <p>
+             * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <strong>fail</strong> to <strong>success</strong>.</p>
+             * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * 
-             * Valid values: **2** to **10**.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder healthyThreshold(Integer healthyThreshold) {
                 this.healthyThreshold = healthyThreshold;
@@ -1320,10 +1465,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of an idle connection. Unit: seconds. Valid values: **1** to **60**.
-             * <p>
+             * <p>The timeout period of an idle connection. Unit: seconds. Valid values: <strong>1</strong> to <strong>60</strong>.</p>
+             * <p>If no request is received within the specified timeout period, CLB closes the connection. When a request is received, CLB establishes a new connection.</p>
              * 
-             * If no request is received within the specified timeout period, CLB closes the connection. When a request is received, CLB establishes a new connection.
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder idleTimeout(Integer idleTimeout) {
                 this.idleTimeout = idleTimeout;
@@ -1331,10 +1477,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The request timeout period. Unit: seconds. Valid values: **1** to **180**.
-             * <p>
+             * <p>The request timeout period. Unit: seconds. Valid values: <strong>1</strong> to <strong>180</strong>.</p>
+             * <p>If no response is received from a backend server during the request timeout period, CLB sends the <code>HTTP 504</code> status code to the client.</p>
              * 
-             * If no response is received from a backend server during the request timeout period, CLB sends the `HTTP 504` status code to the client.
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder requestTimeout(Integer requestTimeout) {
                 this.requestTimeout = requestTimeout;
@@ -1342,7 +1489,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server certificate.
+             * <p>The ID of the server certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idkp-123-cn-test-0****</p>
              */
             public Builder serverCertificateId(String serverCertificateId) {
                 this.serverCertificateId = serverCertificateId;
@@ -1350,11 +1500,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether session persistence is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether session persistence is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder stickySession(String stickySession) {
                 this.stickySession = stickySession;
@@ -1362,11 +1515,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to handle a cookie.
-             * <p>
+             * <p>The method used to handle the cookie.</p>
+             * <ul>
+             * <li><strong>insert</strong>: inserts a cookie. CLB inserts the SERVERID cookie to the HTTP or HTTPS response to the first request from a client. Subsequent requests that carry the SERVERID cookie from the client are forwarded to the same backend server as the first request.</li>
+             * <li><strong>server</strong>: rewrites the original cookie. CLB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</li>
+             * </ul>
              * 
-             * *   **insert**: inserts a cookie. CLB inserts a cookie (SERVERID) into the first HTTP or HTTPS response that is sent to a client. The next request from the client contains this cookie, and the listener forwards this request to the recorded backend server.
-             * *   **server**: rewrites a cookie. When CLB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. The next request from the client carries the user-defined cookie, and the listener will distribute the request to the recorded backend server.
+             * <strong>example:</strong>
+             * <p>insert</p>
              */
             public Builder stickySessionType(String stickySessionType) {
                 this.stickySessionType = stickySessionType;
@@ -1374,38 +1530,32 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The Transport Layer Security (TLS) security policy. Each security policy contains TLS protocol versions and cipher suites available for HTTPS.
-             * <p>
+             * <p>A TLS security policy contains TLS protocols and cipher suites available for HTTPS.</p>
+             * <ul>
+             * <li><p><strong>tls_cipher_policy_1_0</strong>:</p>
+             * <p>Supported TLS versions: TLSv1.0, TLSv1.1, and TLSv1.2.</p>
+             * <p>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</p>
+             * </li>
+             * <li><p><strong>tls_cipher_policy_1_1</strong>:</p>
+             * <p>Supported TLS versions: TLSv1.1 and TLSv1.2.</p>
+             * <p>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</p>
+             * </li>
+             * <li><p><strong>tls_cipher_policy_1_2</strong></p>
+             * <p>Supported TLS versions: TLSv1.2.</p>
+             * <p>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA.</p>
+             * </li>
+             * <li><p><strong>tls_cipher_policy_1_2_strict</strong></p>
+             * <p>Supported TLS versions: TLSv1.2.</p>
+             * <p>Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA.</p>
+             * </li>
+             * <li><p><strong>tls_cipher_policy_1_2_strict_with_1_3</strong></p>
+             * <p>Supported TLS versions: TLSv1.2 and TLSv1.3.</p>
+             * <p>Supported cipher suites: TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_CHACHA20_POLY1305_SHA256, TLS_AES_128_CCM_SHA256, TLS_AES_128_CCM_8_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA.</p>
+             * </li>
+             * </ul>
              * 
-             * *   **tls_cipher_policy\_1\_0**:
-             * 
-             *     Supported TLS versions: TLS 1.0, TLS 1.1, and TLS 1.2
-             * 
-             *     Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
-             * 
-             * *   **tls_cipher_policy\_1\_1**:
-             * 
-             *     Supported TLS versions: TLS 1.1 and TLS 1.2
-             * 
-             *     Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
-             * 
-             * *   **tls_cipher_policy\_1\_2**
-             * 
-             *     Supported TLS version: TLS 1.2
-             * 
-             *     Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, AES128-GCM-SHA256, AES256-GCM-SHA384, AES128-SHA256, AES256-SHA256, ECDHE-RSA-AES128-SHA, ECDHE-RSA-AES256-SHA, AES128-SHA, AES256-SHA, and DES-CBC3-SHA
-             * 
-             * *   **tls_cipher_policy\_1\_2\_strict**
-             * 
-             *     Supported TLS version: TLS 1.2
-             * 
-             *     Supported cipher suites: ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
-             * 
-             * *   **tls_cipher_policy\_1\_2\_strict_with\_1\_3**
-             * 
-             *     Supported TLS versions: TLS 1.2 and TLS 1.3
-             * 
-             *     Supported cipher suites: TLS_AES\_128\_GCM_SHA256, TLS_AES\_256\_GCM_SHA384, TLS_CHACHA20\_POLY1305\_SHA256, TLS_AES\_128\_CCM_SHA256, TLS_AES\_128\_CCM\_8\_SHA256, ECDHE-ECDSA-AES128-GCM-SHA256, ECDHE-ECDSA-AES256-GCM-SHA384, ECDHE-ECDSA-AES128-SHA256, ECDHE-ECDSA-AES256-SHA384, ECDHE-RSA-AES128-GCM-SHA256, ECDHE-RSA-AES256-GCM-SHA384, ECDHE-RSA-AES128-SHA256, ECDHE-RSA-AES256-SHA384, ECDHE-ECDSA-AES128-SHA, ECDHE-ECDSA-AES256-SHA, ECDHE-RSA-AES128-SHA, and ECDHE-RSA-AES256-SHA
+             * <strong>example:</strong>
+             * <p>tls_cipher_policy_1_0</p>
              */
             public Builder TLSCipherPolicy(String TLSCipherPolicy) {
                 this.TLSCipherPolicy = TLSCipherPolicy;
@@ -1413,10 +1563,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
-             * <p>
+             * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health check status of the backend server changes from <strong>success</strong> to <strong>fail</strong>.</p>
+             * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * 
-             * Valid values: **2** to **10**.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder unhealthyThreshold(Integer unhealthyThreshold) {
                 this.unhealthyThreshold = unhealthyThreshold;
@@ -1424,11 +1575,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `XForwardedFor` header is used to retrieve client IP addresses. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>X-Forwarded-For</code> header is used to retrieve client IP addresses. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder xForwardedFor(String xForwardedFor) {
                 this.xForwardedFor = xForwardedFor;
@@ -1436,11 +1590,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `XForwardedFor_ClientCertClientVerify` header is used to retrieve the verification result of the client certificate. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>XForwardedFor_ClientCertClientVerify</code> header is used to obtain the verification result of the client certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder xForwardedForClientCertClientVerify(String xForwardedForClientCertClientVerify) {
                 this.xForwardedForClientCertClientVerify = xForwardedForClientCertClientVerify;
@@ -1448,11 +1605,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `XForwardedFor_ClientCertFingerprint` header is used to retrieve the fingerprint of the client certificate. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>XForwardedFor_ClientCertFingerprint</code> header is used to obtain the fingerprint of the client certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder xForwardedForClientCertFingerprint(String xForwardedForClientCertFingerprint) {
                 this.xForwardedForClientCertFingerprint = xForwardedForClientCertFingerprint;
@@ -1460,11 +1620,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `XForwardedFor_ClientCertIssuerDN` header is used to retrieve information about the authority that issues the client certificate. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>XForwardedFor_ClientCertIssuerDN</code> header is used to obtain information about the authority that issues the client certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder xForwardedForClientCertIssuerDN(String xForwardedForClientCertIssuerDN) {
                 this.xForwardedForClientCertIssuerDN = xForwardedForClientCertIssuerDN;
@@ -1472,11 +1635,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `XForwardedFor_ClientCertSubjectDN` header is used to retrieve information about the owner of the client certificate. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>XForwardedFor_ClientCertSubjectDN</code> header is used to obtain information about the owner of the client certificate. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder xForwardedForClientCertSubjectDN(String xForwardedForClientCertSubjectDN) {
                 this.xForwardedForClientCertSubjectDN = xForwardedForClientCertSubjectDN;
@@ -1484,11 +1650,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `XForwardedFor_ClientSrcPort` header is used to retrieve the client port. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>XForwardedFor_ClientSrcPort</code> header is used to retrieve the client port. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder xForwardedForClientSrcPort(String xForwardedForClientSrcPort) {
                 this.xForwardedForClientSrcPort = xForwardedForClientSrcPort;
@@ -1496,11 +1665,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `SLB-ID` header is used to retrieve the ID of the CLB instance. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>SLB-ID</code> header is used to retrieve the ID of the CLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder xForwardedForSLBID(String xForwardedForSLBID) {
                 this.xForwardedForSLBID = xForwardedForSLBID;
@@ -1508,11 +1680,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `SLB-IP` header is used to retrieve the virtual IP address requested by the client. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>SLB-IP</code> header is used to retrieve the VIP of the client. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder xForwardedForSLBIP(String xForwardedForSLBIP) {
                 this.xForwardedForSLBIP = xForwardedForSLBIP;
@@ -1520,11 +1695,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `XForwardedFor_SLBPORT` header is used to retrieve the listening port. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>XForwardedFor_SLBPORT</code> header is used to retrieve the listener port of the CLB instance. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder xForwardedForSLBPORT(String xForwardedForSLBPORT) {
                 this.xForwardedForSLBPORT = xForwardedForSLBPORT;
@@ -1532,11 +1710,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the `X-Forwarded-Proto` header is used to retrieve the listening protocol. Valid values:
-             * <p>
+             * <p>Indicates whether the <code>X-Forwarded-Proto</code> header is used to obtain the listener protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder xForwardedForProto(String xForwardedForProto) {
                 this.xForwardedForProto = xForwardedForProto;
@@ -1550,6 +1731,12 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLoadBalancerListenersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerListenersResponseBody</p>
+     */
     public static class TCPListenerConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionDrain")
         private String connectionDrain;
@@ -1769,11 +1956,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             private Integer unhealthyThreshold; 
 
             /**
-             * Indicates whether connection draining is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether connection draining is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder connectionDrain(String connectionDrain) {
                 this.connectionDrain = connectionDrain;
@@ -1781,10 +1971,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of connection draining. Unit: seconds.
-             * <p>
+             * <p>The timeout period of connection draining. Unit: seconds.</p>
+             * <p>Value values: <strong>10 to 900</strong>.</p>
              * 
-             * Value values: **10 to 900**.
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder connectionDrainTimeout(Integer connectionDrainTimeout) {
                 this.connectionDrainTimeout = connectionDrainTimeout;
@@ -1792,7 +1983,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of a connection. Unit: seconds.
+             * <p>The timeout period of a connection. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder establishedTimeout(Integer establishedTimeout) {
                 this.establishedTimeout = establishedTimeout;
@@ -1800,11 +1994,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the health check feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder healthCheck(String healthCheck) {
                 this.healthCheck = healthCheck;
@@ -1812,7 +2009,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used for health checks.
+             * <p>The port that is used for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
                 this.healthCheckConnectPort = healthCheckConnectPort;
@@ -1820,10 +2020,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of health checks. Unit: seconds.
-             * <p>
+             * <p>The timeout period of health checks. Unit: seconds.</p>
+             * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
              * 
-             * Valid values: **1** to **300**.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
                 this.healthCheckConnectTimeout = healthCheckConnectTimeout;
@@ -1831,7 +2032,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name that is used for health checks.
+             * <p>The domain name that is used for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder healthCheckDomain(String healthCheckDomain) {
                 this.healthCheckDomain = healthCheckDomain;
@@ -1839,7 +2043,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status codes that are used to determine whether the backend server passes the health check.
+             * <p>The HTTP status code that indicates a healthy backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http_2xx,http_3xx</p>
              */
             public Builder healthCheckHttpCode(String healthCheckHttpCode) {
                 this.healthCheckHttpCode = healthCheckHttpCode;
@@ -1847,7 +2054,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The interval between two consecutive health checks. Unit: seconds.
+             * <p>The interval between two consecutive health checks. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
@@ -1855,7 +2065,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The health check method.
+             * <p>The health check method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get</p>
              */
             public Builder healthCheckMethod(String healthCheckMethod) {
                 this.healthCheckMethod = healthCheckMethod;
@@ -1863,7 +2076,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used for health checks.
+             * <p>The protocol that you want to use for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder healthCheckType(String healthCheckType) {
                 this.healthCheckType = healthCheckType;
@@ -1871,7 +2087,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The URI that is used for health checks.
+             * <p>The URI that is used for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test/index.html</p>
              */
             public Builder healthCheckURI(String healthCheckURI) {
                 this.healthCheckURI = healthCheckURI;
@@ -1879,10 +2098,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.
-             * <p>
+             * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <strong>fail</strong> to <strong>success</strong>.</p>
+             * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * 
-             * Valid values: **2** to **10**.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder healthyThreshold(Integer healthyThreshold) {
                 this.healthyThreshold = healthyThreshold;
@@ -1890,7 +2110,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary/secondary server group that is associated with the listener.
+             * <p>The ID of the primary/secondary server group associated with the listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsp-0bfucw*****</p>
              */
             public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
                 this.masterSlaveServerGroupId = masterSlaveServerGroupId;
@@ -1898,12 +2121,12 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether session persistence is enabled. Unit: seconds.
-             * <p>
+             * <p>Indicates whether session persistence is enabled. Unit: seconds.</p>
+             * <p>Valid values: <strong>0</strong> to <strong>3600</strong>.</p>
+             * <p><strong>0</strong> indicates that session persistence is disabled.</p>
              * 
-             * Valid values: **0** to **3600**.
-             * 
-             * **0** indicates that session persistence is disabled.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder persistenceTimeout(Integer persistenceTimeout) {
                 this.persistenceTimeout = persistenceTimeout;
@@ -1911,11 +2134,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:
-             * <p>
+             * <p>Indicates whether the Proxy protocol is used to pass source client IP addresses to backend servers. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: enables the burst feature for the data disk.</li>
+             * <li><strong>false</strong>: The task is not being retried.</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder proxyProtocolV2Enabled(String proxyProtocolV2Enabled) {
                 this.proxyProtocolV2Enabled = proxyProtocolV2Enabled;
@@ -1923,10 +2149,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
-             * <p>
+             * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health check status of the backend server changes from <strong>success</strong> to <strong>fail</strong>.</p>
+             * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
              * 
-             * Valid values: **2** to **10**.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder unhealthyThreshold(Integer unhealthyThreshold) {
                 this.unhealthyThreshold = unhealthyThreshold;
@@ -1940,6 +2167,12 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLoadBalancerListenersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerListenersResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -1979,7 +2212,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1987,10 +2223,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
-             * <p>
+             * <p>The tag value.</p>
              * 
-             * For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -2004,6 +2240,12 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLoadBalancerListenersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerListenersResponseBody</p>
+     */
     public static class UDPListenerConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionDrain")
         private String connectionDrain;
@@ -2163,11 +2405,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             private Integer unhealthyThreshold; 
 
             /**
-             * Indicates whether connection draining is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether connection draining is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder connectionDrain(String connectionDrain) {
                 this.connectionDrain = connectionDrain;
@@ -2175,10 +2420,11 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of connection draining. Unit: seconds.
-             * <p>
+             * <p>The timeout period of connection draining. Unit: seconds.</p>
+             * <p>Value values: <strong>10 to 900</strong>.</p>
              * 
-             * Value values: **10 to 900**.
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder connectionDrainTimeout(Integer connectionDrainTimeout) {
                 this.connectionDrainTimeout = connectionDrainTimeout;
@@ -2186,11 +2432,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the health check feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder healthCheck(String healthCheck) {
                 this.healthCheck = healthCheck;
@@ -2198,7 +2447,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used for health checks.
+             * <p>The port that is used for health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
                 this.healthCheckConnectPort = healthCheckConnectPort;
@@ -2206,7 +2458,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for a health check response.
+             * <p>The timeout period for a health check response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
                 this.healthCheckConnectTimeout = healthCheckConnectTimeout;
@@ -2214,7 +2469,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The response string for UDP listener health checks.
+             * <p>The response string of UDP health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder healthCheckExp(String healthCheckExp) {
                 this.healthCheckExp = healthCheckExp;
@@ -2222,7 +2480,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The interval between two consecutive health checks. Unit: seconds.
+             * <p>The interval between two consecutive health checks. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
@@ -2230,7 +2491,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The request string for UDP listener health checks.
+             * <p>The request string of UDP health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder healthCheckReq(String healthCheckReq) {
                 this.healthCheckReq = healthCheckReq;
@@ -2238,7 +2502,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that a backend server must consecutively pass health checks before it is declared healthy.
+             * <p>The number of times that a backend server must consecutively pass health checks before it is declared healthy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder healthyThreshold(Integer healthyThreshold) {
                 this.healthyThreshold = healthyThreshold;
@@ -2246,7 +2513,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary/secondary server group that is associated with the listener.
+             * <p>The ID of the primary/secondary server group that is associated with the listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsp-0bfucw****</p>
              */
             public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
                 this.masterSlaveServerGroupId = masterSlaveServerGroupId;
@@ -2254,11 +2524,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:
-             * <p>
+             * <p>Indicates whether the Proxy protocol is used to pass source client IP addresses to backend servers. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: enables the burst feature for the data disk.</li>
+             * <li><strong>false</strong>: The task is not being retried.</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder proxyProtocolV2Enabled(String proxyProtocolV2Enabled) {
                 this.proxyProtocolV2Enabled = proxyProtocolV2Enabled;
@@ -2266,7 +2539,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that a backend server must consecutively fail health checks before it is declared unhealthy.
+             * <p>The number of times that a backend server must consecutively fail health checks before it is declared unhealthy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder unhealthyThreshold(Integer unhealthyThreshold) {
                 this.unhealthyThreshold = unhealthyThreshold;
@@ -2280,12 +2556,18 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLoadBalancerListenersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerListenersResponseBody</p>
+     */
     public static class Listeners extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
 
         @com.aliyun.core.annotation.NameInMap("AclIds")
-        private java.util.List < String > aclIds;
+        private java.util.List<String> aclIds;
 
         @com.aliyun.core.annotation.NameInMap("AclStatus")
         private String aclStatus;
@@ -2327,7 +2609,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         private TCPListenerConfig TCPListenerConfig;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UDPListenerConfig")
         private UDPListenerConfig UDPListenerConfig;
@@ -2374,7 +2656,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         /**
          * @return aclIds
          */
-        public java.util.List < String > getAclIds() {
+        public java.util.List<String> getAclIds() {
             return this.aclIds;
         }
 
@@ -2472,7 +2754,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -2492,7 +2774,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aclId; 
-            private java.util.List < String > aclIds; 
+            private java.util.List<String> aclIds; 
             private String aclStatus; 
             private String aclType; 
             private Integer backendServerPort; 
@@ -2506,12 +2788,15 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             private String scheduler; 
             private String status; 
             private TCPListenerConfig TCPListenerConfig; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private UDPListenerConfig UDPListenerConfig; 
             private String vServerGroupId; 
 
             /**
-             * The ID of the network ACL.
+             * <p>The ID of the access control list (ACL).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nacl-a2do9e413e0spzasx****</p>
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -2519,19 +2804,22 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * AclIds.
+             * <p>The IDs of the ACLs.</p>
              */
-            public Builder aclIds(java.util.List < String > aclIds) {
+            public Builder aclIds(java.util.List<String> aclIds) {
                 this.aclIds = aclIds;
                 return this;
             }
 
             /**
-             * Indicates whether access control is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether access control is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong></li>
+             * <li><strong>off</strong></li>
+             * </ul>
              * 
-             * *   **on**: yes
-             * *   **off**: no
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -2539,16 +2827,18 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network access control list (ACL). Valid values:
-             * <p>
+             * <p>The type of access control. Valid values:</p>
+             * <ul>
+             * <li><strong>white</strong>: The listener forwards requests only from IP addresses and CIDR blocks on the whitelist. Your service may be adversely affected if the whitelist is not properly configured. If a whitelist is configured, the listener forwards requests only from IP addresses that are added to the whitelist.</li>
+             * </ul>
+             * <p>If you configure a whitelist but no IP address is added to the whitelist, the listener forwards all requests.</p>
+             * <ul>
+             * <li><strong>black</strong>: The listener blocks requests from IP addresses and CIDR blocks on the blacklist.</li>
+             * </ul>
+             * <p>If you configure a blacklist but no IP address is added to the blacklist, the listener forwards all requests.</p>
              * 
-             * *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the network ACL are forwarded. Whitelists apply to scenarios in which you want to allow only specific IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. After a whitelist is configured, only requests from IP addresses that are added to the whitelist are forwarded by the listener.
-             * 
-             * If you enable a whitelist but do not add an IP address to the whitelist, the listener forwards all requests.
-             * 
-             * *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the network ACL are denied. A blacklist applies to scenarios in which you want to deny access from specific IP addresses.
-             * 
-             * If a blacklist is configured for a listener but no IP address is added to the blacklist, the listener forwards all requests.
+             * <strong>example:</strong>
+             * <p>white</p>
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -2556,10 +2846,13 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the backend server.
-             * <p>
+             * <p>The port of the backend server.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only when the <code>VServerGroupId</code> and <code>MasterSlaveServerGroupId</code> parameters are both empty.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect when the `VServerGroupId` parameter and the `MasterSlaveServerGroupId` parameter are empty.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder backendServerPort(Integer backendServerPort) {
                 this.backendServerPort = backendServerPort;
@@ -2567,11 +2860,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:
-             * <p>
+             * <p>The maximum bandwidth of the listener. Unit: Mbit/s.</p>
              * 
-             * *   **-1**: If -1 is returned, it indicates that the bandwidth of the listener is unlimited.
-             * *   **1 to 5120**: If a value from 1 to 5120 is returned, the value indicates the maximum bandwidth of the listener. The sum of the maximum bandwidth of all listeners added to a CLB instance does not exceed the maximum bandwidth of the CLB instance.
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -2579,7 +2871,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the listener.
+             * <p>The description of the listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2587,7 +2882,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the HTTP listener.
+             * <p>The configurations of the HTTP listener.</p>
              */
             public Builder HTTPListenerConfig(HTTPListenerConfig HTTPListenerConfig) {
                 this.HTTPListenerConfig = HTTPListenerConfig;
@@ -2595,7 +2890,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the HTTPS listener.
+             * <p>The configurations of the HTTPS listener.</p>
              */
             public Builder HTTPSListenerConfig(HTTPSListenerConfig HTTPSListenerConfig) {
                 this.HTTPSListenerConfig = HTTPSListenerConfig;
@@ -2603,7 +2898,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The listening port.
+             * <p>The listener port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder listenerPort(Integer listenerPort) {
                 this.listenerPort = listenerPort;
@@ -2611,7 +2909,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol used by the listener.
+             * <p>The protocol used by the listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder listenerProtocol(String listenerProtocol) {
                 this.listenerProtocol = listenerProtocol;
@@ -2619,7 +2920,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CLB instance.
+             * <p>The ID of the CLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-bp1b6c719dfa****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -2627,11 +2931,20 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling algorithm. Valid values:
-             * <p>
+             * <p>The scheduling algorithm. Valid values:</p>
+             * <ul>
+             * <li><strong>wrr</strong>: Backend servers with higher weights receive more requests than those with lower weights.</li>
+             * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
+             * <li><strong>sch</strong>: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
+             * <li><strong>tch</strong>: specifies consistent hashing based on the source IP address, destination IP address, source port, and destination port. Requests that have the same four factors are distributed to the same backend server.</li>
+             * <li><strong>qch</strong>: specifies consistent hashing based on Quick UDP Internet Connection (QUIC) IDs. Requests that contain the same QUIC ID are scheduled to the same backend server.</li>
+             * </ul>
+             * <blockquote>
+             * <p> Only high-performance CLB instances support the <strong>sch</strong>, <strong>tch</strong>, and <strong>qch</strong> consistent hashing algorithms.</p>
+             * </blockquote>
              * 
-             * *   **wrr**: Backend servers with higher weights receive more requests than those with lower weights.
-             * *   **rr**: Requests are distributed to backend servers in sequence.
+             * <strong>example:</strong>
+             * <p>wrr</p>
              */
             public Builder scheduler(String scheduler) {
                 this.scheduler = scheduler;
@@ -2639,11 +2952,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the listener. Valid values:
-             * <p>
+             * <p>The status of the listener. Valid values:</p>
+             * <ul>
+             * <li><strong>running</strong></li>
+             * <li><strong>stopped</strong></li>
+             * </ul>
              * 
-             * *   **running**: The listener runs as expected.
-             * *   **stopped**: The listener is disabled.
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2651,7 +2967,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the TCP listener.
+             * <p>The configurations of the TCP listener.</p>
              */
             public Builder TCPListenerConfig(TCPListenerConfig TCPListenerConfig) {
                 this.TCPListenerConfig = TCPListenerConfig;
@@ -2659,15 +2975,15 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>A list of tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The configuration of the UDP listener.
+             * <p>The configurations of the UDP listener.</p>
              */
             public Builder UDPListenerConfig(UDPListenerConfig UDPListenerConfig) {
                 this.UDPListenerConfig = UDPListenerConfig;
@@ -2675,7 +2991,10 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vServer group that is associated with the listener.
+             * <p>The ID of the vServer group associated with the listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsp-cige6j****</p>
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;

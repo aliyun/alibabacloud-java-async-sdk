@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyLoadBalancerInstanceChargeTypeRequest} extends {@link RequestModel}
  *
  * <p>ModifyLoadBalancerInstanceChargeTypeRequest</p>
@@ -183,10 +189,11 @@ public class ModifyLoadBalancerInstanceChargeTypeRequest extends Request {
         } 
 
         /**
-         * The maximum bandwidth of the Internet-facing CLB instance that is billed on a pay-by-bandwidth basis.
-         * <p>
+         * <p>The maximum bandwidth of the Internet-facing CLB instance that is billed on a pay-by-bandwidth basis.</p>
+         * <p>You do not need to set this parameter. The metering method of Internet data transfer for pay-by-LCU instances supports only pay-by-traffic.</p>
          * 
-         * You do not need to set this parameter. The metering method of Internet data transfer for pay-by-LCU instances supports only pay-by-traffic.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -195,10 +202,12 @@ public class ModifyLoadBalancerInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The metering method of the instance after the change.
-         * <p>
+         * <p>The metering method of the instance after the change.</p>
+         * <p>Valid value: <strong>PayByCLCU</strong>. Only pay-by-LCU is supported.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid value: **PayByCLCU**. Only pay-by-LCU is supported.
+         * <strong>example:</strong>
+         * <p>PayByCLCU</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -207,13 +216,17 @@ public class ModifyLoadBalancerInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The metering method of Internet data transfer after the change.
-         * <p>
+         * <p>The metering method of Internet data transfer after the change.</p>
+         * <p>Valid value: <strong>paybytraffic</strong>.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If the value of the <strong>InstanceChargeType</strong> parameter is set to <strong>PayByCLCU</strong>, only pay-by-data-transfer is supported.</li>
+         * <li>When you change the metering method, the new metering method takes effect at 00:00:00 the next day.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * Valid value: **paybytraffic**.
-         * 
-         * > *   If the value of the **InstanceChargeType** parameter is set to **PayByCLCU**, only pay-by-data-transfer is supported.
-         * >*   When you change the metering method, the new metering method takes effect at 00:00:00 the next day.
+         * <strong>example:</strong>
+         * <p>paybytraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -222,7 +235,11 @@ public class ModifyLoadBalancerInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The ID of the CLB instance.
+         * <p>The ID of the CLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1b3jus5hpenznuu****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -231,10 +248,11 @@ public class ModifyLoadBalancerInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The specification of the CLB instance.
-         * <p>
+         * <p>The specification of the CLB instance.</p>
+         * <p>You do not need to set this parameter. For pay-as-you-go CLB instances, you can only change the metering method from pay-by-specification to pay-by-LCU. You cannot change the metering method from pay-by-LCU to pay-by-specification.</p>
          * 
-         * You do not need to set this parameter. For pay-as-you-go CLB instances, you can only change the metering method from pay-by-specification to pay-by-LCU. You cannot change the metering method from pay-by-LCU to pay-by-specification.
+         * <strong>example:</strong>
+         * <p>slb.s1.small</p>
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.putQueryParameter("LoadBalancerSpec", loadBalancerSpec);
@@ -261,10 +279,12 @@ public class ModifyLoadBalancerInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The region ID of the CLB instance.
-         * <p>
+         * <p>The region ID of the CLB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

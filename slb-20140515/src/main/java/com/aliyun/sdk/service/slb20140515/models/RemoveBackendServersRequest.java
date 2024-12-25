@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveBackendServersRequest} extends {@link RequestModel}
  *
  * <p>RemoveBackendServersRequest</p>
@@ -139,25 +145,37 @@ public class RemoveBackendServersRequest extends Request {
         } 
 
         /**
-         * The backend servers to be removed.
-         * <p>
+         * <p>The backend servers that you want to remove.</p>
+         * <ul>
+         * <li><p><strong>ServerId</strong>: The IDs of the backend servers. Set the value to a string. This parameter is required.</p>
+         * </li>
+         * <li><p><strong>Type</strong>: the type of the backend server. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong> (default): Elastic Compute Service (ECS) instance</li>
+         * <li><strong>eni</strong>: elastic network interface (ENI)</li>
+         * <li><strong>eci</strong>: elastic container instance</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>Weight</strong>: the weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Set the value to an integer.</p>
+         * </li>
+         * </ul>
+         * <p>You can specify at most 20 backend servers in each call. Examples:</p>
+         * <ul>
+         * <li>Remove ECS instances:</li>
+         * </ul>
+         * <p><code>[{&quot;ServerId&quot;:&quot;i-bp1fq61enf4loa5i****&quot;, &quot;Type&quot;: &quot;ecs&quot;,&quot;Weight&quot;:&quot;100&quot;}]</code></p>
+         * <ul>
+         * <li>Remove ENIs:</li>
+         * </ul>
+         * <p><code>[{&quot;ServerId&quot;:&quot;eni-2ze1sdp5****&quot;,&quot;Type&quot;: &quot;eni&quot;,&quot;Weight&quot;:&quot;100&quot;}]</code></p>
+         * <ul>
+         * <li>Remove elastic container instances:</li>
+         * </ul>
+         * <p><code>[{&quot;ServerId&quot;:&quot;eci-2ze1sdp5****&quot;,&quot;Type&quot;: &quot;eci&quot;,&quot;Weight&quot;:&quot;100&quot;}]</code></p>
+         * <p>This parameter is required.</p>
          * 
-         * *   **ServerId**: The IDs of the backend servers. Set the value to a string. This parameter is required.
-         * 
-         * *   **Type**: The type of the backend server. Valid values:
-         * 
-         *     *   **ecs** (default): an Elastic Compute Service (ECS) instance
-         * 
-         *     <!---->
-         * 
-         *     *   **eni**: an elastic network interface (ENI)
-         * 
-         * *   **Weight**: the weight of the backend server. Valid values: **0** to **100**. Set the value to an integer.
-         * 
-         * You can remove at most 20 backend servers in each call. Examples:
-         * 
-         * *   Remove an ECS instance: `[{"ServerId":"i-bp1fq61enf4loa5i****", "Type": "ecs","Weight":"100"}]`
-         * *   Remove an ENI: `[{"ServerId":"eni-2ze1sdp5****","Type": "eni","Weight":"100"}]`
+         * <strong>example:</strong>
+         * <p>[{&quot;ServerId&quot;:&quot;i-bp1fq61enf4loa5i****&quot;, &quot;Type&quot;: &quot;ecs&quot;,&quot;Weight&quot;:&quot;100&quot;}]</p>
          */
         public Builder backendServers(String backendServers) {
             this.putQueryParameter("BackendServers", backendServers);
@@ -166,7 +184,11 @@ public class RemoveBackendServersRequest extends Request {
         }
 
         /**
-         * The ID of the CLB instance.
+         * <p>The ID of the CLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp15lbk8uja8rvm4a****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -193,7 +215,10 @@ public class RemoveBackendServersRequest extends Request {
         }
 
         /**
-         * The ID of the region where the CLB instance is deployed.
+         * <p>The ID of the region where the CLB instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

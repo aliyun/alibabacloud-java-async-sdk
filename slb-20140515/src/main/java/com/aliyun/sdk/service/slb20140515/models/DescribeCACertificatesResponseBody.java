@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCACertificatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCACertificatesResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the CA certificate.
+         * <p>The information about the CA certificate.</p>
          */
         public Builder CACertificates(CACertificates CACertificates) {
             this.CACertificates = CACertificates;
@@ -57,7 +63,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCACertificatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCACertificatesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -109,7 +124,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -117,7 +135,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -131,9 +152,15 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCACertificatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCACertificatesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -150,17 +177,17 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -172,6 +199,12 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCACertificatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCACertificatesResponseBody</p>
+     */
     public static class CACertificate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CACertificateId")
         private String CACertificateId;
@@ -319,7 +352,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The CA certificate ID.
+             * <p>The CA certificate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139a00604bd-cn-east-hangzho****</p>
              */
             public Builder CACertificateId(String CACertificateId) {
                 this.CACertificateId = CACertificateId;
@@ -327,7 +363,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The CA certificate name.
+             * <p>The CA certificate name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder CACertificateName(String CACertificateName) {
                 this.CACertificateName = CACertificateName;
@@ -335,7 +374,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the CA certificate.
+             * <p>The domain name of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -343,7 +385,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the CA certificate was created. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.
+             * <p>The time when the CA certificate was created. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-31T02:49:05Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -351,10 +396,11 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the CA certificate was created. Unit: milliseconds.
-             * <p>
+             * <p>The timestamp when the CA certificate was created. Unit: milliseconds.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>1504147745000</p>
              */
             public Builder createTimeStamp(Long createTimeStamp) {
                 this.createTimeStamp = createTimeStamp;
@@ -362,7 +408,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the CA certificate expires. The time is in the `YYYY-MM-DDThh:mm:ssZ` format.
+             * <p>The time when the CA certificate expires. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-21T06:04:25Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -370,10 +419,11 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates when the CA certificate expires. Unit: milliseconds.
-             * <p>
+             * <p>The timestamp that indicates when the CA certificate expires. Unit: milliseconds.</p>
+             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <strong>example:</strong>
+             * <p>1732169065000</p>
              */
             public Builder expireTimeStamp(Long expireTimeStamp) {
                 this.expireTimeStamp = expireTimeStamp;
@@ -381,7 +431,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The fingerprint of the CA certificate.
+             * <p>The fingerprint of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79:43:fb:7d:a4:7f:44:32:61:16:57:17:e3:e8:b7:36:03:57:f6:89</p>
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -389,7 +442,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The region of the CA certificate.
+             * <p>The region of the CA certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -397,7 +453,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-atstuj3rtop****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -405,7 +464,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * <p>The tag.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -419,9 +478,15 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCACertificatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCACertificatesResponseBody</p>
+     */
     public static class CACertificates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CACertificate")
-        private java.util.List < CACertificate> CACertificate;
+        private java.util.List<CACertificate> CACertificate;
 
         private CACertificates(Builder builder) {
             this.CACertificate = builder.CACertificate;
@@ -438,17 +503,17 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         /**
          * @return CACertificate
          */
-        public java.util.List < CACertificate> getCACertificate() {
+        public java.util.List<CACertificate> getCACertificate() {
             return this.CACertificate;
         }
 
         public static final class Builder {
-            private java.util.List < CACertificate> CACertificate; 
+            private java.util.List<CACertificate> CACertificate; 
 
             /**
              * CACertificate.
              */
-            public Builder CACertificate(java.util.List < CACertificate> CACertificate) {
+            public Builder CACertificate(java.util.List<CACertificate> CACertificate) {
                 this.CACertificate = CACertificate;
                 return this;
             }

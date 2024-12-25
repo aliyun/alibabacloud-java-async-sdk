@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMasterSlaveServerGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMasterSlaveServerGroupsResponseBody</p>
@@ -49,7 +55,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The primary/secondary server groups.
+         * <p>The primary/secondary server groups.</p>
          */
         public Builder masterSlaveServerGroups(MasterSlaveServerGroups masterSlaveServerGroups) {
             this.masterSlaveServerGroups = masterSlaveServerGroups;
@@ -57,7 +63,10 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMasterSlaveServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMasterSlaveServerGroupsResponseBody</p>
+     */
     public static class Listener extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
@@ -109,7 +124,10 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * The listener port.
+             * <p>The listener port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -117,7 +135,10 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The listener protocol.
+             * <p>The listener protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -131,9 +152,15 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMasterSlaveServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMasterSlaveServerGroupsResponseBody</p>
+     */
     public static class Listeners extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Listener")
-        private java.util.List < Listener> listener;
+        private java.util.List<Listener> listener;
 
         private Listeners(Builder builder) {
             this.listener = builder.listener;
@@ -150,17 +177,17 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         /**
          * @return listener
          */
-        public java.util.List < Listener> getListener() {
+        public java.util.List<Listener> getListener() {
             return this.listener;
         }
 
         public static final class Builder {
-            private java.util.List < Listener> listener; 
+            private java.util.List<Listener> listener; 
 
             /**
              * Listener.
              */
-            public Builder listener(java.util.List < Listener> listener) {
+            public Builder listener(java.util.List<Listener> listener) {
                 this.listener = listener;
                 return this;
             }
@@ -172,6 +199,12 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMasterSlaveServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMasterSlaveServerGroupsResponseBody</p>
+     */
     public static class AssociatedObjects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Listeners")
         private Listeners listeners;
@@ -199,7 +232,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             private Listeners listeners; 
 
             /**
-             * The listeners.
+             * <p>The listeners.</p>
              */
             public Builder listeners(Listeners listeners) {
                 this.listeners = listeners;
@@ -213,6 +246,12 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMasterSlaveServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMasterSlaveServerGroupsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -252,7 +291,10 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_slb_yaochi_tag_key-0</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -260,7 +302,10 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>000098dab00323fb</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -274,9 +319,15 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMasterSlaveServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMasterSlaveServerGroupsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -293,17 +344,17 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -315,6 +366,12 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMasterSlaveServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMasterSlaveServerGroupsResponseBody</p>
+     */
     public static class MasterSlaveServerGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedObjects")
         private AssociatedObjects associatedObjects;
@@ -390,7 +447,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The associated resources.
+             * <p>The associated resources.</p>
              */
             public Builder associatedObjects(AssociatedObjects associatedObjects) {
                 this.associatedObjects = associatedObjects;
@@ -398,7 +455,10 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the CLB instance was created. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format.
+             * <p>The time when the CLB instance was created. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-02T02:49:05Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -406,7 +466,10 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary/secondary server group.
+             * <p>The ID of the primary/secondary server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsp-0bfuc******</p>
              */
             public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
                 this.masterSlaveServerGroupId = masterSlaveServerGroupId;
@@ -414,7 +477,10 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the primary/secondary server group.
+             * <p>The name of the primary/secondary server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Group3</p>
              */
             public Builder masterSlaveServerGroupName(String masterSlaveServerGroupName) {
                 this.masterSlaveServerGroupName = masterSlaveServerGroupName;
@@ -422,7 +488,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags to add to the resource.
+             * <p>The tags to add to the resource.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -436,9 +502,15 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeMasterSlaveServerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMasterSlaveServerGroupsResponseBody</p>
+     */
     public static class MasterSlaveServerGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MasterSlaveServerGroup")
-        private java.util.List < MasterSlaveServerGroup> masterSlaveServerGroup;
+        private java.util.List<MasterSlaveServerGroup> masterSlaveServerGroup;
 
         private MasterSlaveServerGroups(Builder builder) {
             this.masterSlaveServerGroup = builder.masterSlaveServerGroup;
@@ -455,17 +527,17 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         /**
          * @return masterSlaveServerGroup
          */
-        public java.util.List < MasterSlaveServerGroup> getMasterSlaveServerGroup() {
+        public java.util.List<MasterSlaveServerGroup> getMasterSlaveServerGroup() {
             return this.masterSlaveServerGroup;
         }
 
         public static final class Builder {
-            private java.util.List < MasterSlaveServerGroup> masterSlaveServerGroup; 
+            private java.util.List<MasterSlaveServerGroup> masterSlaveServerGroup; 
 
             /**
              * MasterSlaveServerGroup.
              */
-            public Builder masterSlaveServerGroup(java.util.List < MasterSlaveServerGroup> masterSlaveServerGroup) {
+            public Builder masterSlaveServerGroup(java.util.List<MasterSlaveServerGroup> masterSlaveServerGroup) {
                 this.masterSlaveServerGroup = masterSlaveServerGroup;
                 return this;
             }

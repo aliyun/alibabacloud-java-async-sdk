@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableResourceRequest} extends {@link RequestModel}
  *
  * <p>DescribeAvailableResourceRequest</p>
@@ -138,10 +144,11 @@ public class DescribeAvailableResourceRequest extends Request {
         } 
 
         /**
-         * The type of the IP address.
-         * <p>
+         * <p>The type of the IP address.</p>
+         * <p>Valid values: <strong>ipv4 and ipv6</strong>.</p>
          * 
-         * Valid values: **ipv4 and ipv6**.
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.putQueryParameter("AddressIPVersion", addressIPVersion);
@@ -150,16 +157,14 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The network type.
-         * <p>
+         * <p>The network type.</p>
+         * <p>Valid values: <strong>vpc, classic-internet, and classic-intranet</strong>.</p>
+         * <p>vpc: an internal Classic Load Balancer (CLB) instance that is deployed in a virtual private cloud (VPC).</p>
+         * <p>classic_internet: a public-facing CLB instance.</p>
+         * <p>classic_intranet: an internal CLB instance that is deployed in a classic network.</p>
          * 
-         * Valid values: **vpc, classic-internet, and classic-intranet**.
-         * 
-         * vpc: an internal Classic Load Balancer (CLB) instance that is deployed in a virtual private cloud (VPC).
-         * 
-         * classic_internet: a public-facing CLB instance.
-         * 
-         * classic_intranet: an internal CLB instance that is deployed in a classic network.
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -186,7 +191,11 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

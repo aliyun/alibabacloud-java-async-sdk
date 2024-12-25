@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeZonesResponseBody</p>
@@ -49,7 +55,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         private Zones zones; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A48D35FF-440A-4BC0-A4A2-A9BF69B7E43A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The zones.
+         * <p>The zones.</p>
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -70,6 +79,12 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class SlaveZone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -109,7 +124,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The name of the secondary zone.
+             * <p>The name of the secondary zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Queries zones in a specified region.</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -117,7 +135,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the secondary zone.
+             * <p>The ID of the secondary zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -131,9 +152,15 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class SlaveZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlaveZone")
-        private java.util.List < SlaveZone> slaveZone;
+        private java.util.List<SlaveZone> slaveZone;
 
         private SlaveZones(Builder builder) {
             this.slaveZone = builder.slaveZone;
@@ -150,17 +177,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return slaveZone
          */
-        public java.util.List < SlaveZone> getSlaveZone() {
+        public java.util.List<SlaveZone> getSlaveZone() {
             return this.slaveZone;
         }
 
         public static final class Builder {
-            private java.util.List < SlaveZone> slaveZone; 
+            private java.util.List<SlaveZone> slaveZone; 
 
             /**
              * SlaveZone.
              */
-            public Builder slaveZone(java.util.List < SlaveZone> slaveZone) {
+            public Builder slaveZone(java.util.List<SlaveZone> slaveZone) {
                 this.slaveZone = slaveZone;
                 return this;
             }
@@ -172,6 +199,12 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -223,7 +256,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The name of the zone.
+             * <p>The name of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The list of secondary zones.</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -231,7 +267,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The secondary zones.
+             * <p>The secondary zones.</p>
              */
             public Builder slaveZones(SlaveZones slaveZones) {
                 this.slaveZones = slaveZones;
@@ -239,7 +275,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -253,9 +292,15 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeZonesResponseBody</p>
+     */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Zone")
-        private java.util.List < Zone> zone;
+        private java.util.List<Zone> zone;
 
         private Zones(Builder builder) {
             this.zone = builder.zone;
@@ -272,17 +317,17 @@ public class DescribeZonesResponseBody extends TeaModel {
         /**
          * @return zone
          */
-        public java.util.List < Zone> getZone() {
+        public java.util.List<Zone> getZone() {
             return this.zone;
         }
 
         public static final class Builder {
-            private java.util.List < Zone> zone; 
+            private java.util.List<Zone> zone; 
 
             /**
              * Zone.
              */
-            public Builder zone(java.util.List < Zone> zone) {
+            public Builder zone(java.util.List<Zone> zone) {
                 this.zone = zone;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancersRequest} extends {@link RequestModel}
  *
  * <p>DescribeLoadBalancersRequest</p>
@@ -100,7 +106,7 @@ public class DescribeLoadBalancersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
@@ -306,7 +312,7 @@ public class DescribeLoadBalancersRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -353,7 +359,7 @@ public class DescribeLoadBalancersRequest extends Request {
         private String serverId; 
         private String serverIntranetAddress; 
         private String slaveZoneId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String tags; 
         private String vSwitchId; 
         private String vpcId; 
@@ -392,7 +398,10 @@ public class DescribeLoadBalancersRequest extends Request {
         } 
 
         /**
-         * The IP address that the CLB instance uses to provide services.
+         * <p>The IP address that the CLB instance uses to provide services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -401,7 +410,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The IP version that is used by the CLB instance. Valid values: **ipv4** and **ipv6**.
+         * <p>The IP version that is used by the CLB instance. Valid values: <strong>ipv4</strong> and <strong>ipv6</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.putQueryParameter("AddressIPVersion", addressIPVersion);
@@ -410,11 +422,14 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The network type of the CLB instance. Valid values:
-         * <p>
+         * <p>The network type of the CLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>internet:</strong> After an Internet-facing CLB instance is created, the system assigns a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.</li>
+         * <li><strong>intranet:</strong> After an internal-facing CLB instance is created, the system assigns a private IP address to the CLB instance. Then, the CLB instance can forward requests only over internal networks.</li>
+         * </ul>
          * 
-         * *   **internet:** After an Internet-facing CLB instance is created, the system assigns a public IP address to the CLB instance. Then, the CLB instance can forward requests over the Internet.
-         * *   **intranet:** After an internal-facing CLB instance is created, the system assigns a private IP address to the CLB instance. Then, the CLB instance can forward requests only over internal networks.
+         * <strong>example:</strong>
+         * <p>intranet</p>
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -423,11 +438,14 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The metering method of Internet data transfer. Valid values:
-         * <p>
+         * <p>The metering method of Internet data transfer. Valid values:</p>
+         * <ul>
+         * <li><strong>paybybandwidth:</strong> pay-by-bandwidth.</li>
+         * <li><strong>paybytraffic:</strong> pay-by-data-transfer.</li>
+         * </ul>
          * 
-         * *   **paybybandwidth:** pay-by-bandwidth.
-         * *   **paybytraffic:** pay-by-data-transfer.
+         * <strong>example:</strong>
+         * <p>paybytraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -436,10 +454,11 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the CLB instance.
-         * <p>
+         * <p>The ID of the CLB instance.</p>
+         * <p>You can specify up to 10 IDs. Separate multiple IDs with commas (,).</p>
          * 
-         * You can specify up to 10 IDs. Separate multiple IDs with commas (,).
+         * <strong>example:</strong>
+         * <p>lb-bp1b6c719dfa****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -448,12 +467,12 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The name of the CLB instance.
-         * <p>
+         * <p>The name of the CLB instance.</p>
+         * <p>The name must be 1 to 80 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * <p>You can specify up to 10 names. Separate multiple names with commas (,).</p>
          * 
-         * The name must be 1 to 80 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
-         * 
-         * You can specify up to 10 names. Separate multiple names with commas (,).
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder loadBalancerName(String loadBalancerName) {
             this.putQueryParameter("LoadBalancerName", loadBalancerName);
@@ -462,12 +481,15 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The status of the CLB instance. Valid values:
-         * <p>
+         * <p>The status of the CLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>inactive:</strong> The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.</li>
+         * <li><strong>active:</strong> The CLB instance runs as expected. By default, newly created CLB instances are in the <strong>active</strong> state.</li>
+         * <li><strong>locked:</strong> The CLB instance is locked. After a CLB instance expires, it is locked for seven days. A locked CLB instance cannot forward traffic and you cannot perform operations on the locked CLB instance. However, other settings such as the IP address are retained.</li>
+         * </ul>
          * 
-         * *   **inactive:** The CLB instance is disabled. CLB instances in the inactive state do not forward traffic.
-         * *   **active:** The CLB instance runs as expected. By default, newly created CLB instances are in the **active** state.
-         * *   **locked:** The CLB instance is locked. After a CLB instance expires, it is locked for seven days. A locked CLB instance cannot forward traffic and you cannot perform operations on the locked CLB instance. However, other settings such as the IP address are retained.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.putQueryParameter("LoadBalancerStatus", loadBalancerStatus);
@@ -476,7 +498,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the primary zone to which the CLB instance belongs.
+         * <p>The ID of the primary zone to which the CLB instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder masterZoneId(String masterZoneId) {
             this.putQueryParameter("MasterZoneId", masterZoneId);
@@ -485,11 +510,14 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The network type of the internal-facing CLB instance. Valid values:
-         * <p>
+         * <p>The network type of the internal-facing CLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>vpc:</strong> VPC.</li>
+         * <li><strong>classic:</strong> classic network.</li>
+         * </ul>
          * 
-         * *   **vpc:** VPC.
-         * *   **classic:** classic network.
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -516,7 +544,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -525,12 +556,14 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+         * <blockquote>
+         * <p> If you specify the <strong>PageSize</strong> parameter, you must also specify the <strong>PageNumber</strong> parameter.</p>
+         * </blockquote>
          * 
-         * Valid values: **1** to **100**.
-         * 
-         * >  If you specify the **PageSize** parameter, you must also specify the **PageNumber** parameter.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -539,10 +572,13 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The billing method of the CLB instance. Valid values:
-         * <p>
+         * <p>The billing method of the CLB instance. Valid values:</p>
+         * <ul>
+         * <li>Set the value to <strong>PayOnDemand</strong>.</li>
+         * </ul>
          * 
-         * *   Set the value to **PayOnDemand**.
+         * <strong>example:</strong>
+         * <p>PayOnDemand</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -551,10 +587,12 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the region where the CLB instance is deployed.
-         * <p>
+         * <p>The ID of the region where the CLB instance is deployed.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -563,7 +601,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -590,7 +631,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the backend server that is added to the CLB instance.
+         * <p>The ID of the backend server that is added to the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vm-server-23****</p>
          */
         public Builder serverId(String serverId) {
             this.putQueryParameter("ServerId", serverId);
@@ -599,10 +643,11 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The private IP address of the backend server that is added to the CLB instance.
-         * <p>
+         * <p>The private IP address of the backend server that is added to the CLB instance.</p>
+         * <p>You can specify multiple IP addresses. Separate multiple IP addresses with commas (,).</p>
          * 
-         * You can specify multiple IP addresses. Separate multiple IP addresses with commas (,).
+         * <strong>example:</strong>
+         * <p>10.XX.XX.102</p>
          */
         public Builder serverIntranetAddress(String serverIntranetAddress) {
             this.putQueryParameter("ServerIntranetAddress", serverIntranetAddress);
@@ -611,10 +656,11 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the secondary zone to which the CLB instance belongs.
-         * <p>
+         * <p>The ID of the secondary zone to which the CLB instance belongs.</p>
+         * <p>CLB instances on Alibaba Finance Cloud do not support cross-zone deployment.</p>
          * 
-         * CLB instances on Alibaba Finance Cloud do not support cross-zone deployment.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-d</p>
          */
         public Builder slaveZoneId(String slaveZoneId) {
             this.putQueryParameter("SlaveZoneId", slaveZoneId);
@@ -623,19 +669,20 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.
-         * <p>
+         * <p>The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.</p>
+         * <p>You can specify up to 10 tags in each call.</p>
          * 
-         * You can specify up to 10 tags in each call.
+         * <strong>example:</strong>
+         * <p>[{&quot;tagKey&quot;:&quot;Key1&quot;,&quot;tagValue&quot;:&quot;Value1&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -644,7 +691,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which the CLB instance belongs.
+         * <p>The ID of the vSwitch to which the CLB instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp12mw1f8k3****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -653,7 +703,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the CLB instance belongs.
+         * <p>The ID of the virtual private cloud (VPC) to which the CLB instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1aevy8sof****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -668,6 +721,12 @@ public class DescribeLoadBalancersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLoadBalancersRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancersRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -707,10 +766,11 @@ public class DescribeLoadBalancersRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key must be 1 to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag key must be 1 to 64 characters in length and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -718,10 +778,11 @@ public class DescribeLoadBalancersRequest extends Request {
             }
 
             /**
-             * The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.
-             * <p>
+             * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be at most 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be at most 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

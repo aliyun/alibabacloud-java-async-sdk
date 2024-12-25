@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMasterSlaveServerGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateMasterSlaveServerGroupRequest</p>
@@ -47,7 +53,7 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private CreateMasterSlaveServerGroupRequest(Builder builder) {
         super(builder);
@@ -134,7 +140,7 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -147,7 +153,7 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -167,7 +173,11 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the SLB instance.
+         * <p>The CLB instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1hv944r69al4j******</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -176,49 +186,41 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
         }
 
         /**
-         * The backend servers in the primary/secondary server group.
-         * <p>
+         * <p>The backend servers in the primary/secondary server group. Each primary/secondary server group consists of two backend servers.</p>
+         * <p>Configure the following parameters:</p>
+         * <ul>
+         * <li><p><strong>ServerId</strong>: required. The IDs of the backend servers. Specify the IDs in a string. You can specify the IDs of Elastic Compute Service (ECS) instances, elastic network interfaces (ENIs), and elastic container instances. If you set <strong>ServerId</strong> to the IDs of ENIs or elastic container instances, you must configure the <strong>Type</strong> parameter.</p>
+         * </li>
+         * <li><p><strong>Weight</strong>: the weight of the backend server. Valid values: <strong>0</strong> to <strong>100</strong>. Default value: <strong>100</strong>. If you set the weight of a backend server to 0, no requests are forwarded to the backend server.</p>
+         * </li>
+         * <li><p><strong>Description</strong>: optional. The description of the backend servers. Specify the description in a string. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/). periods (.), and underscores (_).</p>
+         * </li>
+         * <li><p><strong>Type</strong>: the type of the backend server. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong> (default): ECS instance</li>
+         * <li><strong>eni</strong>: ENI</li>
+         * <li><strong>eci</strong>: elastic container instance</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> You can specify ENIs and elastic container instances as backend servers only for high-performance CLB instances.</p>
+         * </blockquote>
+         * <ul>
+         * <li><p><strong>ServerIp</strong>: the IP address of the ENI or elastic container instance.</p>
+         * </li>
+         * <li><p><strong>Port</strong>: the backend port.</p>
+         * </li>
+         * <li><p><strong>ServerType</strong>: Specify the primary and secondary backend servers in a string. Valid values:</p>
+         * <ul>
+         * <li><strong>Master</strong>: primary server</li>
+         * <li><strong>Slave</strong>: secondary server</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * The value of this parameter must be a STRING list in the JSON format. You can specify up to 20 elements in each request.
-         * 
-         * *   **ServerId**: Required. Specify the ID of the backend server. The value must be of the STRING type.
-         * 
-         * *   **Port**: Required. Specify the port that is used by the backend server. The value must be of the INTEGER type. Valid values: **1** to **65535**.
-         * 
-         * *   **Weight**: Required. Specify the weight of the backend server. The value must be of the INTEGER type. Valid values: **0** to **100**.
-         * 
-         * *   \*\*Description \*\*: Optional. The description of the backend server. The value must be of the STRING type. The description must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
-         * 
-         * *   **ServerType**: the type of the backend server. The value must be of the STRING type. Valid values:
-         * 
-         *     *   **Master**
-         * 
-         * *   **Slave**
-         * 
-         * *   **Type**: the service type of backend server. The value must be of the STRING type. Valid values:
-         * 
-         *     *   **ecs**
-         *     *   **eni**
-         * 
-         * *   **ServerIp**
-         * 
-         * A primary/secondary server group can contain up to two backend servers.
-         * 
-         * If you do not specify this parameter, an empty primary/secondary server group is created.
-         * 
-         * Examples:
-         * 
-         * *   ECS instances:
-         * 
-         * `[{ "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"82","ServerType":"Master","Description":"test-112" }, { "ServerId": "i-xxxxxxxxx", "Weight": "100", "Type": "ecs", "Port":"84","ServerType":"Slave","Description":"test-112" }]`
-         * 
-         * *   ENIs:
-         * 
-         *     `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "Port":"80","ServerType":"Master","Description":"test-112" }, { "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni", "ServerIp": "192.168.**.**", "Port":"80","ServerType":"Slave","Description":"test-112" }]`
-         * 
-         * *   IP addresses of ENIs:
-         * 
-         *     `[{ "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni","ServerIp": "192.168.**.**", "Port":"80","ServerType":"Master","Description":"test-112" }, { "ServerId": "eni-xxxxxxxxx", "Weight": "100", "Type": "eni","ServerIp": "192.168.**.**", "Port":"80","ServerType":"Slave","Description":"test-112" }]`
+         * <strong>example:</strong>
+         * <p>[{ &quot;ServerId&quot;: &quot;i-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;ecs&quot;,  &quot;Port&quot;:&quot;82&quot;,&quot;ServerType&quot;:&quot;Master&quot;,&quot;Description&quot;:&quot;test-112&quot; },  { &quot;ServerId&quot;: &quot;i-xxxxxxxxx&quot;, &quot;Weight&quot;: &quot;100&quot;, &quot;Type&quot;: &quot;ecs&quot;,  &quot;Port&quot;:&quot;84&quot;,&quot;ServerType&quot;:&quot;Slave&quot;,&quot;Description&quot;:&quot;test-112&quot; }]</p>
          */
         public Builder masterSlaveBackendServers(String masterSlaveBackendServers) {
             this.putQueryParameter("MasterSlaveBackendServers", masterSlaveBackendServers);
@@ -227,7 +229,10 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
         }
 
         /**
-         * The name of the primary/secondary server group.
+         * <p>The name of the primary/secondary server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Group1</p>
          */
         public Builder masterSlaveServerGroupName(String masterSlaveServerGroupName) {
             this.putQueryParameter("MasterSlaveServerGroupName", masterSlaveServerGroupName);
@@ -254,7 +259,11 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Server Load Balancer (SLB) instance is deployed.
+         * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -281,9 +290,9 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
         }
 
         /**
-         * 标签列表。
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -296,6 +305,12 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMasterSlaveServerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMasterSlaveServerGroupRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -335,10 +350,11 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
             private String value; 
 
             /**
-             * 资源标签键。N的取值范围：**1**~**20**。一旦输入该值，则不允许为空字符串。
-             * <p>
+             * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
              * 
-             * 最多支持64个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -346,9 +362,10 @@ public class CreateMasterSlaveServerGroupRequest extends Request {
             }
 
             /**
-             * 资源的标签值。N的取值范围：**1~20**。一旦输入该值，可以为空字符串。
-             * <p>
-             * 最多支持128个字符，不能以`aliyun`和`acs:`开头，不能包含`http://`或者`https://`。
+             * <p>The value of tag N. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;

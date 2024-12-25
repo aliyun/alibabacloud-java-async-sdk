@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDomainExtensionAttributeRequest} extends {@link RequestModel}
  *
  * <p>SetDomainExtensionAttributeRequest</p>
@@ -139,7 +145,11 @@ public class SetDomainExtensionAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the domain name that is associated with the additional certificate to be replaced.
+         * <p>The ID of the domain name that is associated with the additional certificate to be replaced.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de-bp1rp7ta*****</p>
          */
         public Builder domainExtensionId(String domainExtensionId) {
             this.putQueryParameter("DomainExtensionId", domainExtensionId);
@@ -166,7 +176,11 @@ public class SetDomainExtensionAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the SLB instance is created.
+         * <p>The region ID of the Server Load Balancer (SLB) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +207,10 @@ public class SetDomainExtensionAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the new certificate.
+         * <p>The ID of the new certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231579xxxxxxxx_166f8204689_1714763408_709981xxx</p>
          */
         public Builder serverCertificateId(String serverCertificateId) {
             this.putQueryParameter("ServerCertificateId", serverCertificateId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMasterSlaveServerGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMasterSlaveServerGroupResponseBody</p>
@@ -61,7 +67,7 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The backend servers in the primary/secondary server group.
+         * <p>The backend servers in the primary/secondary server group.</p>
          */
         public Builder masterSlaveBackendServers(MasterSlaveBackendServers masterSlaveBackendServers) {
             this.masterSlaveBackendServers = masterSlaveBackendServers;
@@ -69,7 +75,10 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The primary/secondary server group ID.
+         * <p>The ID of the active/standby server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-bp19au4******</p>
          */
         public Builder masterSlaveServerGroupId(String masterSlaveServerGroupId) {
             this.masterSlaveServerGroupId = masterSlaveServerGroupId;
@@ -77,7 +86,10 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7CA4DB76-4D32-523B-822E-5C9494613D46</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +102,12 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMasterSlaveServerGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMasterSlaveServerGroupResponseBody</p>
+     */
     public static class MasterSlaveBackendServer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -177,7 +195,10 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The description of the primary/secondary server group.
+             * <p>The description of the primary/secondary server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-112</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -185,7 +206,10 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used by the backend server.
+             * <p>The port that is used by the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>82</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -193,7 +217,10 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance or ENI that is added.
+             * <p>The ID of the backend server that you want to add.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1fq61enf4loa5i****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -201,10 +228,11 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend server.
-             * <p>
+             * <p>The type of backend server.</p>
+             * <p>Valid values: <strong>Master</strong> and <strong>Slave</strong>.</p>
              * 
-             * Valid values: **Master** and **Slave**.
+             * <strong>example:</strong>
+             * <p>Master</p>
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -212,11 +240,15 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The service type of the backend server. Valid values:
-             * <p>
+             * <p>The type of backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>ecs</strong>: ECS instance</li>
+             * <li><strong>eni</strong>: ENI</li>
+             * <li><strong>eci</strong>: elastic container instance</li>
+             * </ul>
              * 
-             * *   **ecs**
-             * *   **eni**
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -224,7 +256,10 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the backend server.
+             * <p>The weight of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -238,9 +273,15 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateMasterSlaveServerGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMasterSlaveServerGroupResponseBody</p>
+     */
     public static class MasterSlaveBackendServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MasterSlaveBackendServer")
-        private java.util.List < MasterSlaveBackendServer> masterSlaveBackendServer;
+        private java.util.List<MasterSlaveBackendServer> masterSlaveBackendServer;
 
         private MasterSlaveBackendServers(Builder builder) {
             this.masterSlaveBackendServer = builder.masterSlaveBackendServer;
@@ -257,17 +298,17 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         /**
          * @return masterSlaveBackendServer
          */
-        public java.util.List < MasterSlaveBackendServer> getMasterSlaveBackendServer() {
+        public java.util.List<MasterSlaveBackendServer> getMasterSlaveBackendServer() {
             return this.masterSlaveBackendServer;
         }
 
         public static final class Builder {
-            private java.util.List < MasterSlaveBackendServer> masterSlaveBackendServer; 
+            private java.util.List<MasterSlaveBackendServer> masterSlaveBackendServer; 
 
             /**
              * MasterSlaveBackendServer.
              */
-            public Builder masterSlaveBackendServer(java.util.List < MasterSlaveBackendServer> masterSlaveBackendServer) {
+            public Builder masterSlaveBackendServer(java.util.List<MasterSlaveBackendServer> masterSlaveBackendServer) {
                 this.masterSlaveBackendServer = masterSlaveBackendServer;
                 return this;
             }

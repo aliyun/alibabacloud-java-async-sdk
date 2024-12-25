@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagsResponseBody</p>
@@ -85,7 +91,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of the returned page. Minimum value: 1. Default value: 1.
+         * <p>The number of the returned page. Minimum value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +102,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Default value: 50. Maximum value: 100.
+         * <p>The number of entries returned per page. Default value: 50. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +113,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +124,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * A list of tags.
+         * <p>The tags that are queried.</p>
          */
         public Builder tagSets(TagSets tagSets) {
             this.tagSets = tagSets;
@@ -117,7 +132,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of instances returned.
+         * <p>The number of instances returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +148,12 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class TagSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
@@ -181,7 +205,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The number of instances to which the tag is added.
+             * <p>The number of instances to which the tag is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -189,7 +216,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -197,7 +227,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -211,9 +244,15 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class TagSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagSet")
-        private java.util.List < TagSet> tagSet;
+        private java.util.List<TagSet> tagSet;
 
         private TagSets(Builder builder) {
             this.tagSet = builder.tagSet;
@@ -230,17 +269,17 @@ public class DescribeTagsResponseBody extends TeaModel {
         /**
          * @return tagSet
          */
-        public java.util.List < TagSet> getTagSet() {
+        public java.util.List<TagSet> getTagSet() {
             return this.tagSet;
         }
 
         public static final class Builder {
-            private java.util.List < TagSet> tagSet; 
+            private java.util.List<TagSet> tagSet; 
 
             /**
              * TagSet.
              */
-            public Builder tagSet(java.util.List < TagSet> tagSet) {
+            public Builder tagSet(java.util.List<TagSet> tagSet) {
                 this.tagSet = tagSet;
                 return this;
             }

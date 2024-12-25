@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetLoadBalancerStatusRequest} extends {@link RequestModel}
  *
  * <p>SetLoadBalancerStatusRequest</p>
@@ -139,7 +145,11 @@ public class SetLoadBalancerStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the CLB instance.
+         * <p>The ID of the CLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1b6c719dfa08e******</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -148,20 +158,23 @@ public class SetLoadBalancerStatusRequest extends Request {
         }
 
         /**
-         * The state of the CLB instance. Valid values: **active** and **inactive**.
-         * <p>
+         * <p>The state of the CLB instance. Valid values: <strong>active</strong> and <strong>inactive</strong>.</p>
+         * <ul>
+         * <li><p><strong>active</strong> (default)</p>
+         * <p>If a CLB instance is in the <strong>active</strong> state, listeners of the CLB instance can forward traffic based on forwarding rules.</p>
+         * <p>By default, newly created CLB instances are in the <strong>active</strong> state.</p>
+         * </li>
+         * <li><p><strong>inactive</strong></p>
+         * <p>If a CLB instance is in the <strong>inactive</strong> state, listeners of the CLB instance do not forward traffic.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> If all listeners of a CLB instance are deleted, the CLB instance automatically switches to the <strong>inactive</strong> state.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **active** (default)
-         * 
-         *     If a CLB instance is in the **active** state, listeners of the CLB instance can forward traffic based on forwarding rules.
-         * 
-         *     By default, newly created CLB instances are in the **active** state.
-         * 
-         * *   **inactive**
-         * 
-         *     If a CLB instance is in the **inactive** state, listeners of the CLB instance do not forward traffic.
-         * 
-         * >  If all listeners of a CLB instance are deleted, the CLB instance automatically switches to the **inactive** state.
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.putQueryParameter("LoadBalancerStatus", loadBalancerStatus);
@@ -188,10 +201,11 @@ public class SetLoadBalancerStatusRequest extends Request {
         }
 
         /**
-         * The ID of the region where the CLB instance is deployed.
-         * <p>
+         * <p>The ID of the region where the CLB instance is deployed.</p>
+         * <p>You can query region IDs from the <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a> list or by calling the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation.</p>
          * 
-         * You can query region IDs from the [Regions and zones](~~40654~~) list or by calling the [DescribeRegions](~~25609~~) operation.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

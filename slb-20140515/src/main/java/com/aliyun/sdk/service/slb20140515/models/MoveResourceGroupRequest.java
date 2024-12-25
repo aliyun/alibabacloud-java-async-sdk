@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>MoveResourceGroupRequest</p>
@@ -183,7 +189,11 @@ public class MoveResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the resource group to which you want to move the resource.
+         * <p>The ID of the resource group to which you want to move the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2rpsek5h****</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -210,7 +220,11 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the Classic Load Balancer (CLB) instance.
+         * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -219,7 +233,10 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2dmxj56z****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -228,7 +245,11 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The resource ID.
+         * <p>The resource ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-uf6ghek7ds2btzt65****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -255,12 +276,16 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li><strong>loadbalancer</strong>: a CLB instance</li>
+         * <li><strong>certificate</strong>: a certificate</li>
+         * <li><strong>acl</strong>: an access control list (ACL)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **loadbalancer**: a CLB instance
-         * *   **certificate**: a certificate
-         * *   **acl**: an access control list (ACL)
+         * <strong>example:</strong>
+         * <p>loadbalancer</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -269,7 +294,10 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The AccessKey ID provided by Alibaba Cloud.
+         * <p>The AccessKey ID provided by Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI5tPmFGUpmyWwD8gp****</p>
          */
         public Builder accessKeyId(String accessKeyId) {
             this.putQueryParameter("access_key_id", accessKeyId);

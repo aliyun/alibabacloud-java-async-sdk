@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainExtensionAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainExtensionAttributeRequest</p>
@@ -125,7 +131,11 @@ public class DescribeDomainExtensionAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the additional certificate.
+         * <p>The ID of the additional certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de-bp1rp7ta1****</p>
          */
         public Builder domainExtensionId(String domainExtensionId) {
             this.putQueryParameter("DomainExtensionId", domainExtensionId);
@@ -152,7 +162,11 @@ public class DescribeDomainExtensionAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Server Load Balancer (SLB) instance is deployed.
+         * <p>The ID of the region where the Server Load Balancer (SLB) instance is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

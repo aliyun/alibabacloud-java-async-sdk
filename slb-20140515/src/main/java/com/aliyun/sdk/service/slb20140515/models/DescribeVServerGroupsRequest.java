@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVServerGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVServerGroupsRequest</p>
@@ -51,7 +57,7 @@ public class DescribeVServerGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeVServerGroupsRequest(Builder builder) {
         super(builder);
@@ -146,7 +152,7 @@ public class DescribeVServerGroupsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -160,7 +166,7 @@ public class DescribeVServerGroupsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -181,7 +187,10 @@ public class DescribeVServerGroupsRequest extends Request {
         } 
 
         /**
-         * The name of the vServer group.
+         * <p>The name of the vServer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Group3</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -190,11 +199,14 @@ public class DescribeVServerGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to return information about the associated listeners. Valid values:
-         * <p>
+         * <p>Specifies whether to return information about the associated listeners. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeListener(Boolean includeListener) {
             this.putQueryParameter("IncludeListener", includeListener);
@@ -203,11 +215,14 @@ public class DescribeVServerGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the forwarding rules associated with the vServer groups. Valid values:
-         * <p>
+         * <p>Specifies whether to return the forwarding rules associated with the vServer groups. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false** (default): no
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeRule(Boolean includeRule) {
             this.putQueryParameter("IncludeRule", includeRule);
@@ -216,7 +231,11 @@ public class DescribeVServerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the CLB instance.
+         * <p>The ID of the CLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1o94dp5i6ea*******</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -243,10 +262,12 @@ public class DescribeVServerGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the Classic Load Balancer (CLB) instance.
-         * <p>
+         * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -273,9 +294,9 @@ public class DescribeVServerGroupsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -288,6 +309,12 @@ public class DescribeVServerGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVServerGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeVServerGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -327,7 +354,11 @@ public class DescribeVServerGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs</code>:.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -335,7 +366,11 @@ public class DescribeVServerGroupsRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

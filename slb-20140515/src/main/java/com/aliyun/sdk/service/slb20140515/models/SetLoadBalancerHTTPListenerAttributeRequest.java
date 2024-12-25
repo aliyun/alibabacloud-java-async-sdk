@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetLoadBalancerHTTPListenerAttributeRequest} extends {@link RequestModel}
  *
  * <p>SetLoadBalancerHTTPListenerAttributeRequest</p>
@@ -582,10 +588,13 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the access control list (ACL) that is associated with the listener.
-         * <p>
+         * <p>The ID of the access control list (ACL) that is associated with the listener.</p>
+         * <blockquote>
+         * <p>This parameter is required when <strong>AclStatus</strong> is set to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is required when **AclStatus** is set to **on**.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);
@@ -594,11 +603,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable access control. Valid values:
-         * <p>
+         * <p>Specifies whether to enable access control. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder aclStatus(String aclStatus) {
             this.putQueryParameter("AclStatus", aclStatus);
@@ -607,18 +619,21 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The type of the ACL. Valid values:
-         * <p>
+         * <p>The type of the ACL. Valid values:</p>
+         * <ul>
+         * <li><strong>white</strong>: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where you want to allow only specific IP addresses to access an application. Risks may occur if a whitelist is improperly configured. If a whitelist is configured, only requests from IP addresses that are added to the whitelist are forwarded by the listener.</li>
+         * </ul>
+         * <p>If you enable a whitelist but do not add an IP address to the ACL, the listener forwards all requests.</p>
+         * <ul>
+         * <li><strong>black</strong>: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists apply to scenarios where you want to block access from specified IP addresses to an application.</li>
+         * </ul>
+         * <p>If a blacklist is configured for a listener but no IP addresses are added to the blacklist, the listener forwards all requests.</p>
+         * <blockquote>
+         * <p>This parameter takes effect when the value of <strong>AclStatus</strong> is set to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where you want to allow only specific IP addresses to access an application. Risks may occur if a whitelist is improperly configured. If a whitelist is configured, only requests from IP addresses that are added to the whitelist are forwarded by the listener.
-         * 
-         * If you enable a whitelist but do not add an IP address to the ACL, the listener forwards all requests.
-         * 
-         * *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists apply to scenarios where you want to block access from specified IP addresses to an application.
-         * 
-         * If a blacklist is configured for a listener but no IP addresses are added to the blacklist, the listener forwards all requests.
-         * 
-         * > This parameter takes effect when the value of **AclStatus** is set to **on**.
+         * <strong>example:</strong>
+         * <p>white</p>
          */
         public Builder aclType(String aclType) {
             this.putQueryParameter("AclType", aclType);
@@ -627,10 +642,13 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The maximum bandwidth of the listener. Unit: Mbit/s. Set the value to
-         * <p>
+         * <p>The maximum bandwidth of the listener. Unit: Mbit/s. Set the value to</p>
+         * <ul>
+         * <li><strong>-1</strong>: For a pay-by-data-transfer Internet-facing CLB instance, this value specifies that the bandwidth of the listener is unlimited.</li>
+         * </ul>
          * 
-         * *   **-1**: For a pay-by-data-transfer Internet-facing CLB instance, this value specifies that the bandwidth of the listener is unlimited.
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -639,12 +657,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The cookie that is configured on the server.
-         * <p>
+         * <p>The cookie that is configured on the server.</p>
+         * <p>The cookie must be 1 to 200 characters in length, and can contain ASCII characters and digits. It cannot contain commas (,), semicolons (;), or spaces. It cannot start with a dollar sign ($).</p>
+         * <blockquote>
+         * <p>This parameter is required when <strong>StickySession</strong> is set to <strong>on</strong> and <strong>StickySessionType</strong> is set to <strong>server</strong>.</p>
+         * </blockquote>
          * 
-         * The cookie must be 1 to 200 characters in length, and can contain ASCII characters and digits. It cannot contain commas (,), semicolons (;), or spaces. It cannot start with a dollar sign ($).
-         * 
-         * > This parameter is required when **StickySession** is set to **on** and **StickySessionType** is set to **server**.
+         * <strong>example:</strong>
+         * <p>B490B5EBF6F3CD402E515D22BCDA****</p>
          */
         public Builder cookie(String cookie) {
             this.putQueryParameter("Cookie", cookie);
@@ -653,12 +673,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The timeout period of a cookie.
-         * <p>
+         * <p>The timeout period of a cookie.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>86400</strong>. Unit: seconds.</p>
+         * <blockquote>
+         * <p>This parameter is required when <strong>StickySession</strong> is set to <strong>on</strong> and <strong>StickySessionType</strong> is set to <strong>insert</strong>.</p>
+         * </blockquote>
          * 
-         * Valid values: **1** to **86400**. Unit: seconds.
-         * 
-         * > This parameter is required when **StickySession** is set to **on** and **StickySessionType** is set to **insert**.
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder cookieTimeout(Integer cookieTimeout) {
             this.putQueryParameter("CookieTimeout", cookieTimeout);
@@ -667,7 +689,10 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The description of the listener.
+         * <p>The description of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -676,11 +701,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable `GZIP` compression to compress specific types of files. Valid values:
-         * <p>
+         * <p>Specifies whether to enable <code>GZIP</code> compression to compress specific types of files. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder gzip(String gzip) {
             this.putQueryParameter("Gzip", gzip);
@@ -689,11 +717,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the health check feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the health check feature. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder healthCheck(String healthCheck) {
             this.putQueryParameter("HealthCheck", healthCheck);
@@ -702,12 +733,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The port that is used for health checks.
-         * <p>
+         * <p>The port that is used for health checks.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * Valid values: **1** to **65535**.
-         * 
-         * > This parameter takes effect only if you set **HealthCheck** to **on**.
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.putQueryParameter("HealthCheckConnectPort", healthCheckConnectPort);
@@ -716,13 +749,17 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The domain name that is used for health checks. Valid values:
-         * <p>
+         * <p>The domain name that is used for health checks. Valid values:</p>
+         * <ul>
+         * <li><strong>$_ip</strong>: the private IP address of a backend server. If you specify **$_ip <strong>or</strong> ignore HealthCheckDomain**, CLB uses the private IP addresses of backend servers as the health check domain names.</li>
+         * <li><strong>domain</strong>: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</li>
+         * </ul>
+         * <blockquote>
+         * <p>The parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * *   **$\_ip**: the private IP address of a backend server. If you specify \*\*$\_ip **or** ignore HealthCheckDomain\*\*, CLB uses the private IP addresses of backend servers as the health check domain names.
-         * *   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).
-         * 
-         * > The parameter takes effect only if you set **HealthCheck** to **on**.
+         * <strong>example:</strong>
+         * <p>172.XX.XX.16</p>
          */
         public Builder healthCheckDomain(String healthCheckDomain) {
             this.putQueryParameter("HealthCheckDomain", healthCheckDomain);
@@ -731,12 +768,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The HTTP status code for a successful health check. Separate multiple HTTP status codes with commas (,).
-         * <p>
+         * <p>The HTTP status code for a successful health check. Separate multiple HTTP status codes with commas (,).</p>
+         * <p>Valid values: <strong>http_2xx</strong>, <strong>http_3xx</strong>, <strong>http_4xx</strong>, and <strong>http_5xx</strong>.</p>
+         * <blockquote>
+         * <p> The parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.
-         * 
-         * >  The parameter takes effect only if you set **HealthCheck** to **on**.
+         * <strong>example:</strong>
+         * <p>http_2xx,http_3xx</p>
          */
         public Builder healthCheckHttpCode(String healthCheckHttpCode) {
             this.putQueryParameter("HealthCheckHttpCode", healthCheckHttpCode);
@@ -745,12 +784,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The interval at which health checks are performed.
-         * <p>
+         * <p>The interval at which health checks are performed.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>50</strong>. Unit: seconds.</p>
+         * <blockquote>
+         * <p> The parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * Valid values: **1** to **50**. Unit: seconds.
-         * 
-         * >  The parameter takes effect only if you set **HealthCheck** to **on**.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.putQueryParameter("HealthCheckInterval", healthCheckInterval);
@@ -759,10 +800,13 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The health check method that is used in HTTP health checks. Valid values: **head** and **get**.
-         * <p>
+         * <p>The health check method that is used in HTTP health checks. Valid values: <strong>head</strong> and <strong>get</strong>.</p>
+         * <blockquote>
+         * <p>The parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * > The parameter takes effect only if you set **HealthCheck** to **on**.
+         * <strong>example:</strong>
+         * <p>get</p>
          */
         public Builder healthCheckMethod(String healthCheckMethod) {
             this.putQueryParameter("HealthCheckMethod", healthCheckMethod);
@@ -771,12 +815,11 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The timeout period of a health check response. If a backend server, such as an Elastic Compute Service (ECS) instance, does not respond to a probe packet within the specified timeout period, the server fails the health check. This parameter takes effect only if you set **HealthCheck** to **on**.
-         * <p>
+         * <p>The timeout period of a health check response. If a backend ECS instance does not respond within the specified timeout period, the ECS instance fails the health check. This parameter takes effect only if the <strong>HealthCheck</strong> parameter is set to <strong>on</strong>.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>300</strong>. Unit: seconds.</p>
          * 
-         * Valid values: **1** to **300**. Unit: seconds.
-         * 
-         * > If the value of **HealthCheckTimeout** is smaller than the value of **HealthCheckInterval**, the value of **HealthCheckTimeout** becomes invalid and the value of **HealthCheckInterval** is used as the timeout period.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.putQueryParameter("HealthCheckTimeout", healthCheckTimeout);
@@ -785,12 +828,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The Uniform Resource Identifier (URI) that you want to use for health checks.
-         * <p>
+         * <p>The Uniform Resource Identifier (URI) that you want to use for health checks.</p>
+         * <p>The URI must be 1 to 80 characters in length, and can contain letters, digits, and the following characters: - / . % ? # &amp; The URI must start with a forward slash (/) but cannot be a single forward slash (/).</p>
+         * <blockquote>
+         * <p>The parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * The URI must be 1 to 80 characters in length, and can contain letters, digits, and the following characters: - / . % ? # & The URI must start with a forward slash (/) but cannot be a single forward slash (/).
-         * 
-         * > The parameter takes effect only if you set **HealthCheck** to **on**.
+         * <strong>example:</strong>
+         * <p>/test/index.html</p>
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.putQueryParameter("HealthCheckURI", healthCheckURI);
@@ -799,12 +844,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.
-         * <p>
+         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from <strong>fail</strong> to <strong>success</strong>.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * <blockquote>
+         * <p>The parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * Valid values: **2** to **10**.
-         * 
-         * > The parameter takes effect only if you set **HealthCheck** to **on**.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.putQueryParameter("HealthyThreshold", healthyThreshold);
@@ -813,10 +860,11 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The timeout period of an idle connection. Unit: seconds. Valid values: **1 to 60**. Default value: **15**.
-         * <p>
+         * <p>The timeout period of an idle connection. Unit: seconds. Valid values: <strong>1 to 60</strong>. Default value: <strong>15</strong>.</p>
+         * <p>If no request is received within the specified timeout period, CLB closes the connection. When a request is received, CLB establishes a new connection.</p>
          * 
-         * If no request is received within the specified timeout period, CLB closes the connection. When a request is received, CLB establishes a new connection.
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.putQueryParameter("IdleTimeout", idleTimeout);
@@ -825,10 +873,12 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The frontend port that is used by the CLB instance.
-         * <p>
+         * <p>The frontend port that is used by the CLB instance.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: **1** to **65535**.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -837,7 +887,11 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The CLB instance ID.
+         * <p>The CLB instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1qjwo61pqz3ah*****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -864,10 +918,11 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the CLB instance.
-         * <p>
+         * <p>The region ID of the CLB instance.</p>
+         * <p>You can query the region ID from the <a href="https://help.aliyun.com/document_detail/27585.html">Regions and zones</a> list or by calling the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation.</p>
          * 
-         * You can query the region ID from the [Regions and zones](~~27585~~) list or by calling the [DescribeRegions](~~27584~~) operation.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -876,10 +931,11 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The timeout period of a request. Unit: seconds. Valid values: **1 to 180**. Default value: **60**.
-         * <p>
+         * <p>The timeout period of a request. Unit: seconds. Valid values: <strong>1 to 180</strong>. Default value: <strong>60</strong>.</p>
+         * <p>If no response is received from the backend server within the request timeout period, CLB returns an HTTP 504 error code to the client.</p>
          * 
-         * If no response is received from the backend server within the request timeout period, CLB returns an HTTP 504 error code to the client.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder requestTimeout(Integer requestTimeout) {
             this.putQueryParameter("RequestTimeout", requestTimeout);
@@ -906,11 +962,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The scheduling algorithm. Valid values:
-         * <p>
+         * <p>The scheduling algorithm. Valid values:</p>
+         * <ul>
+         * <li><strong>wrr</strong>: Backend servers that have higher weights receive more requests than backend servers that have lower weights.</li>
+         * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
+         * </ul>
          * 
-         * *   **wrr**: Backend servers that have higher weights receive more requests than backend servers that have lower weights.
-         * *   **rr**: Requests are distributed to backend servers in sequence.
+         * <strong>example:</strong>
+         * <p>wrr</p>
          */
         public Builder scheduler(String scheduler) {
             this.putQueryParameter("Scheduler", scheduler);
@@ -919,11 +978,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable session persistence. Valid values:
-         * <p>
+         * <p>Specifies whether to enable session persistence. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder stickySession(String stickySession) {
             this.putQueryParameter("StickySession", stickySession);
@@ -932,18 +994,21 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The method that is used to handle a cookie. Valid values:
-         * <p>
+         * <p>The method that is used to handle a cookie. Valid values:</p>
+         * <ul>
+         * <li><strong>insert</strong>: inserts a cookie.</li>
+         * </ul>
+         * <p>CLB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client contains this cookie, and the listener distributes the request to the recorded backend server.</p>
+         * <ul>
+         * <li><strong>server</strong>: rewrites a cookie.</li>
+         * </ul>
+         * <p>When CLB detects a user-defined cookie, CLB overwrites the original cookie with the user-defined cookie. The next request from the client carries the user-defined cookie, and the listener forwards the request to the recorded backend server.</p>
+         * <blockquote>
+         * <p>This parameter is required when <strong>StickySession</strong> is set to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * *   **insert**: inserts a cookie.
-         * 
-         * CLB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client contains this cookie, and the listener distributes the request to the recorded backend server.
-         * 
-         * *   **server**: rewrites a cookie.
-         * 
-         * When CLB detects a user-defined cookie, CLB overwrites the original cookie with the user-defined cookie. The next request from the client carries the user-defined cookie, and the listener forwards the request to the recorded backend server.
-         * 
-         * > This parameter is required when **StickySession** is set to **on**.
+         * <strong>example:</strong>
+         * <p>insert</p>
          */
         public Builder stickySessionType(String stickySessionType) {
             this.putQueryParameter("StickySessionType", stickySessionType);
@@ -952,12 +1017,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.
-         * <p>
+         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from <strong>success</strong> to <strong>fail</strong>.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * <blockquote>
+         * <p>The parameter takes effect only if you set <strong>HealthCheck</strong> to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * Valid values: **2** to **10**.
-         * 
-         * > The parameter takes effect only if you set **HealthCheck** to **on**.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.putQueryParameter("UnhealthyThreshold", unhealthyThreshold);
@@ -966,11 +1033,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to use a vServer group. Valid values:
-         * <p>
+         * <p>Specifies whether to use a vServer group. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder vServerGroup(String vServerGroup) {
             this.putQueryParameter("VServerGroup", vServerGroup);
@@ -979,7 +1049,10 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the vServer group.
+         * <p>The ID of the vServer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-cige6j*****</p>
          */
         public Builder vServerGroupId(String vServerGroupId) {
             this.putQueryParameter("VServerGroupId", vServerGroupId);
@@ -988,11 +1061,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the `X-Forwarded-For` header to preserve client IP addresses. Valid values:
-         * <p>
+         * <p>Specifies whether to use the <code>X-Forwarded-For</code> header to preserve client IP addresses. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong> (default)</li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on** (default)
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder xForwardedFor(String xForwardedFor) {
             this.putQueryParameter("XForwardedFor", xForwardedFor);
@@ -1001,11 +1077,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the `XForwardedFor_ClientSrcPort` header to retrieve the client port. Valid values:
-         * <p>
+         * <p>Specifies whether to use the <code>XForwardedFor_ClientSrcPort</code> header to retrieve the client port. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder xForwardedForClientSrcPort(String xForwardedForClientSrcPort) {
             this.putQueryParameter("XForwardedFor_ClientSrcPort", xForwardedForClientSrcPort);
@@ -1014,11 +1093,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the `SLB-ID` header to retrieve the ID of the CLB instance. Valid values:
-         * <p>
+         * <p>Specifies whether to use the <code>SLB-ID</code> header to retrieve the ID of the CLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder xForwardedForSLBID(String xForwardedForSLBID) {
             this.putQueryParameter("XForwardedFor_SLBID", xForwardedForSLBID);
@@ -1027,11 +1109,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the `SLB-IP` header to retrieve the virtual IP address (VIP) requested by the client. Valid values:
-         * <p>
+         * <p>Specifies whether to use the <code>SLB-IP</code> header to retrieve the virtual IP address (VIP) requested by the client. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder xForwardedForSLBIP(String xForwardedForSLBIP) {
             this.putQueryParameter("XForwardedFor_SLBIP", xForwardedForSLBIP);
@@ -1040,11 +1125,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the `XForwardedFor_SLBPORT` header to retrieve the listener port of the CLB instance. Valid values:
-         * <p>
+         * <p>Specifies whether to use the <code>XForwardedFor_SLBPORT</code> header to retrieve the listener port of the CLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder xForwardedForSLBPORT(String xForwardedForSLBPORT) {
             this.putQueryParameter("XForwardedFor_SLBPORT", xForwardedForSLBPORT);
@@ -1053,11 +1141,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listener protocol. Valid values:
-         * <p>
+         * <p>Specifies whether to use the <code>X-Forwarded-Proto</code> header to retrieve the listener protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder xForwardedForProto(String xForwardedForProto) {
             this.putQueryParameter("XForwardedFor_proto", xForwardedForProto);

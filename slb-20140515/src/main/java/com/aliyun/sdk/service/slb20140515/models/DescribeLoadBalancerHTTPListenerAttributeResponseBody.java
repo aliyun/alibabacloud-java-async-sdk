@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancerHTTPListenerAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLoadBalancerHTTPListenerAttributeResponseBody</p>
@@ -517,10 +523,13 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         private String xForwardedForProto; 
 
         /**
-         * The ID of the network ACL that is associated with a listener.
-         * <p>
+         * <p>The ID of the network ACL that is associated with a listener.</p>
+         * <blockquote>
+         * <p>This parameter is returned when <strong>AclStatus</strong> is set to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is returned when **AclStatus** is set to **on**.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -536,11 +545,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether access control is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether access control is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder aclStatus(String aclStatus) {
             this.aclStatus = aclStatus;
@@ -548,18 +560,21 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The type of the ACL. Valid values:
-         * <p>
+         * <p>The type of the ACL. Valid values:</p>
+         * <ul>
+         * <li><strong>white</strong>: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where you want to allow only specific IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. If a whitelist is configured, only requests from IP addresses that are added to the whitelist are forwarded by the listener.</li>
+         * </ul>
+         * <p>If you enable a whitelist but do not add an IP address to the ACL, the listener forwards all requests.</p>
+         * <ul>
+         * <li><strong>black</strong>: a blacklist. All requests from the IP addresses or CIDR blocks in the network ACL are rejected. Blacklists apply to scenarios where you want to block access from specified IP addresses to an application.</li>
+         * </ul>
+         * <p>If a blacklist is configured for a listener but no IP address is added to the blacklist, the listener forwards all requests.</p>
+         * <blockquote>
+         * <p>This parameter is required when <strong>AclStatus</strong> is set to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists apply to scenarios where you want to allow only specific IP addresses to access an application. Your service may be adversely affected if the whitelist is not properly configured. If a whitelist is configured, only requests from IP addresses that are added to the whitelist are forwarded by the listener.
-         * 
-         * If you enable a whitelist but do not add an IP address to the ACL, the listener forwards all requests.
-         * 
-         * *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the network ACL are rejected. Blacklists apply to scenarios where you want to block access from specified IP addresses to an application.
-         * 
-         * If a blacklist is configured for a listener but no IP address is added to the blacklist, the listener forwards all requests.
-         * 
-         * > This parameter is required when **AclStatus** is set to **on**.
+         * <strong>example:</strong>
+         * <p>white</p>
          */
         public Builder aclType(String aclType) {
             this.aclType = aclType;
@@ -567,7 +582,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The backend port that is used by the CLB instance.
+         * <p>The backend port that is used by the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder backendServerPort(Integer backendServerPort) {
             this.backendServerPort = backendServerPort;
@@ -575,11 +593,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The maximum bandwidth of the listener. Unit: Mbit/s.
-         * <p>
+         * <p>The maximum bandwidth of the listener. Unit: Mbit/s.</p>
+         * <ul>
+         * <li><strong>-1</strong>: If -1 is returned, it indicates that the bandwidth of the listener is unlimited.</li>
+         * <li><strong>1 to 5120</strong>: If a value from 1 to 5120 is returned, the value indicates the maximum bandwidth of the listener. The sum of the maximum bandwidth of all listeners added to a CLB instance does not exceed the maximum bandwidth of the CLB instance.</li>
+         * </ul>
          * 
-         * *   **-1**: If -1 is returned, it indicates that the bandwidth of the listener is unlimited.
-         * *   **1 to 5120**: If a value from 1 to 5120 is returned, the value indicates the maximum bandwidth of the listener. The sum of the maximum bandwidth of all listeners added to a CLB instance does not exceed the maximum bandwidth of the CLB instance.
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -587,7 +608,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The cookie that is configured on the server.
+         * <p>The cookie that is configured on the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B490B5EBF6F3CD402E515D22BCDA1598</p>
          */
         public Builder cookie(String cookie) {
             this.cookie = cookie;
@@ -595,7 +619,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The timeout period of a cookie. Unit: seconds.
+         * <p>The timeout period of a cookie. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder cookieTimeout(Integer cookieTimeout) {
             this.cookieTimeout = cookieTimeout;
@@ -603,7 +630,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The name of the listener.
+         * <p>The name of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -611,10 +641,13 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The listener port that is used to redirect HTTP requests to HTTPS.
-         * <p>
+         * <p>The listener port that is used to redirect HTTP requests to HTTPS.</p>
+         * <blockquote>
+         * <p> If the <strong>ListenerForward</strong> parameter is set to <strong>off</strong>, this parameter is not displayed.</p>
+         * </blockquote>
          * 
-         * >  If the **ListenerForward** parameter is set to **off**, this parameter is not displayed.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder forwardPort(Integer forwardPort) {
             this.forwardPort = forwardPort;
@@ -622,11 +655,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether `Gzip` compression is enabled to compress specific types of files. Valid values:
-         * <p>
+         * <p>Indicates whether <code>Gzip</code> compression is enabled to compress specific types of files. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder gzip(String gzip) {
             this.gzip = gzip;
@@ -634,11 +670,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether the health check feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder healthCheck(String healthCheck) {
             this.healthCheck = healthCheck;
@@ -646,10 +685,13 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The port that is used for health checks.
-         * <p>
+         * <p>The port that is used for health checks.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when <strong>HealthCheck</strong> is set to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter takes effect only when **HealthCheck** is set to **on**.
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
@@ -657,7 +699,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The domain name that you want to use for health checks.
+         * <p>The domain name that you want to use for health checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.domain.com">www.domain.com</a></p>
          */
         public Builder healthCheckDomain(String healthCheckDomain) {
             this.healthCheckDomain = healthCheckDomain;
@@ -665,7 +710,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The HTTP status code for a successful health check.
+         * <p>The HTTP status code for a successful health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http_2xx,http_3xx</p>
          */
         public Builder healthCheckHttpCode(String healthCheckHttpCode) {
             this.healthCheckHttpCode = healthCheckHttpCode;
@@ -673,7 +721,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The interval at which health checks are performed. Unit: seconds.
+         * <p>The interval at which health checks are performed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder healthCheckInterval(Integer healthCheckInterval) {
             this.healthCheckInterval = healthCheckInterval;
@@ -681,10 +732,13 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The health check method used by HTTP listeners. Valid values: **head** and **get**.
-         * <p>
+         * <p>The health check method used by HTTP listeners. Valid values: <strong>head</strong> and <strong>get</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is returned when <strong>HealthCheck</strong> is set to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * > This parameter is returned when **HealthCheck** is set to **on**.
+         * <strong>example:</strong>
+         * <p>get</p>
          */
         public Builder healthCheckMethod(String healthCheckMethod) {
             this.healthCheckMethod = healthCheckMethod;
@@ -692,7 +746,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The timeout period of each health check. Unit: seconds.
+         * <p>The timeout period of each health check. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.healthCheckTimeout = healthCheckTimeout;
@@ -700,10 +757,11 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The URL path that is used for health checks.
-         * <p>
+         * <p>The URL path that is used for health checks.</p>
+         * <p>The URI must be 1 to 80 characters in length, and can contain only digits, letters, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&amp;). The URI must start with a forward slash (/) but cannot be a single forward slash (/).</p>
          * 
-         * The URI must be 1 to 80 characters in length, and can contain only digits, letters, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&). The URI must start with a forward slash (/) but cannot be a single forward slash (/).
+         * <strong>example:</strong>
+         * <p>/test/index.html</p>
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.healthCheckURI = healthCheckURI;
@@ -711,7 +769,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The healthy threshold.
+         * <p>The healthy threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
@@ -719,12 +780,12 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The timeout period of an idle connection. Unit: seconds.
-         * <p>
+         * <p>The timeout period of an idle connection. Unit: seconds.</p>
+         * <p>Default value: <strong>15</strong>. Valid values: <strong>1 to 60</strong>.</p>
+         * <p>If no request is received within the specified timeout period, CLB closes the connection. When a request is received, CLB establishes a new connection.</p>
          * 
-         * Default value: **15**. Valid values: **1 to 60**.
-         * 
-         * If no request is received within the specified timeout period, CLB closes the connection. When a request is received, CLB establishes a new connection.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder idleTimeout(Integer idleTimeout) {
             this.idleTimeout = idleTimeout;
@@ -732,11 +793,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether HTTP-to-HTTPS redirection is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether HTTP-to-HTTPS redirection is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder listenerForward(String listenerForward) {
             this.listenerForward = listenerForward;
@@ -744,7 +808,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The frontend port that is used by the CLB instance.
+         * <p>The frontend port that is used by the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
@@ -752,7 +819,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The CLB instance ID.
+         * <p>The CLB instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1uaunez0uho0zf0****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
@@ -760,7 +830,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -768,12 +841,12 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The timeout period of a request. Unit: seconds.
-         * <p>
+         * <p>The timeout period of a request. Unit: seconds.</p>
+         * <p>Default value: <strong>60</strong>. Valid values: <strong>1 to 180</strong>.</p>
+         * <p>If no response is received from a backend server within the specified timeout period, CLB returns the HTTP 504 status code to the client.</p>
          * 
-         * Default value: **60**. Valid values: **1 to 180**.
-         * 
-         * If no response is received from a backend server within the specified timeout period, CLB returns the HTTP 504 status code to the client.
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         public Builder requestTimeout(Integer requestTimeout) {
             this.requestTimeout = requestTimeout;
@@ -781,7 +854,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The list of forwarding rules.
+         * <p>The list of forwarding rules.</p>
          */
         public Builder rules(Rules rules) {
             this.rules = rules;
@@ -789,11 +862,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The routing algorithm. Valid values:
-         * <p>
+         * <p>The routing algorithm. Valid values:</p>
+         * <ul>
+         * <li><strong>wrr</strong>: Backend servers that have higher weights receive more requests than backend servers that have lower weights.</li>
+         * <li>** rr**: Requests are sequentially distributed to backend servers.</li>
+         * </ul>
          * 
-         * *   **wrr**: Backend servers that have higher weights receive more requests than backend servers that have lower weights.
-         * *   \*\* rr\*\*: Requests are sequentially distributed to backend servers.
+         * <strong>example:</strong>
+         * <p>wrr</p>
          */
         public Builder scheduler(String scheduler) {
             this.scheduler = scheduler;
@@ -801,11 +877,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether the listener is in the Secure state. Valid values:
-         * <p>
+         * <p>Indicates whether the listener is in the Secure state. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder securityStatus(String securityStatus) {
             this.securityStatus = securityStatus;
@@ -813,11 +892,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The status of the listener. Valid values:
-         * <p>
+         * <p>The status of the listener. Valid values:</p>
+         * <ul>
+         * <li><strong>running</strong></li>
+         * <li><strong>stopped</strong></li>
+         * </ul>
          * 
-         * *   **running**
-         * *   **stopped**
+         * <strong>example:</strong>
+         * <p>stopped</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -825,11 +907,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether session persistence is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether session persistence is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder stickySession(String stickySession) {
             this.stickySession = stickySession;
@@ -837,20 +922,22 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The method that is used to handle a cookie.
-         * <p>
+         * <p>The method that is used to handle a cookie.</p>
+         * <p>Valid values: <strong>insert</strong> and <strong>server</strong>.</p>
+         * <ul>
+         * <li><p><strong>insert</strong>: inserts a cookie.</p>
+         * <p>CLB inserts a session cookie (SERVERID) into the first HTTP or HTTPS response that is sent to a client. Subsequent requests to CLB carry this cookie, and CLB determines the destination servers of the requests based on the cookies.</p>
+         * </li>
+         * <li><p><strong>server</strong>: rewrites a cookie.</p>
+         * <p>When CLB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. The next request from the client carries the user-defined cookie, and the listener forwards this request to the recorded backend server.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is required when <strong>StickySession</strong> is set to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * Valid values: **insert** and **server**.
-         * 
-         * *   **insert**: inserts a cookie.
-         * 
-         *     CLB inserts a session cookie (SERVERID) into the first HTTP or HTTPS response that is sent to a client. Subsequent requests to CLB carry this cookie, and CLB determines the destination servers of the requests based on the cookies.
-         * 
-         * *   **server**: rewrites a cookie.
-         * 
-         *     When CLB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. The next request from the client carries the user-defined cookie, and the listener forwards this request to the recorded backend server.
-         * 
-         * > This parameter is required when **StickySession** is set to **on**.
+         * <strong>example:</strong>
+         * <p>insert</p>
          */
         public Builder stickySessionType(String stickySessionType) {
             this.stickySessionType = stickySessionType;
@@ -858,7 +945,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -866,7 +953,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The unhealthy threshold.
+         * <p>The unhealthy threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
@@ -874,7 +964,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The ID of the associated server group.
+         * <p>The ID of the associated server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-cige6j****</p>
          */
         public Builder vServerGroupId(String vServerGroupId) {
             this.vServerGroupId = vServerGroupId;
@@ -882,11 +975,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether the `X-Forwarded-For` header is used to preserve the real IP address of the client. Valid values:
-         * <p>
+         * <p>Indicates whether the <code>X-Forwarded-For</code> header is used to preserve the real IP address of the client. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder xForwardedFor(String xForwardedFor) {
             this.xForwardedFor = xForwardedFor;
@@ -894,11 +990,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether the `XForwardedFor_ClientSrcPort` header is used to retrieve the client port. Valid values:
-         * <p>
+         * <p>Indicates whether the <code>XForwardedFor_ClientSrcPort</code> header is used to retrieve the client port. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder xForwardedForClientSrcPort(String xForwardedForClientSrcPort) {
             this.xForwardedForClientSrcPort = xForwardedForClientSrcPort;
@@ -906,11 +1005,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether the `SLB-ID` header is used to retrieve the ID of the CLB instance. Valid values:
-         * <p>
+         * <p>Indicates whether the <code>SLB-ID</code> header is used to retrieve the ID of the CLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder xForwardedForSLBID(String xForwardedForSLBID) {
             this.xForwardedForSLBID = xForwardedForSLBID;
@@ -918,11 +1020,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether the `SLB-IP` header is used to retrieve the virtual IP address requested by the client. Valid values:
-         * <p>
+         * <p>Indicates whether the <code>SLB-IP</code> header is used to retrieve the virtual IP address requested by the client. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder xForwardedForSLBIP(String xForwardedForSLBIP) {
             this.xForwardedForSLBIP = xForwardedForSLBIP;
@@ -930,11 +1035,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether the `XForwardedFor_SLBPORT` header is used to retrieve the listener port of the CLB instance. Valid values:
-         * <p>
+         * <p>Indicates whether the <code>XForwardedFor_SLBPORT</code> header is used to retrieve the listener port of the CLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder xForwardedForSLBPORT(String xForwardedForSLBPORT) {
             this.xForwardedForSLBPORT = xForwardedForSLBPORT;
@@ -942,11 +1050,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Indicates whether the `X-Forwarded-Proto` header is used to retrieve the listener protocol. Valid values:
-         * <p>
+         * <p>Indicates whether the <code>X-Forwarded-Proto</code> header is used to retrieve the listener protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
          * 
-         * *   **on**
-         * *   **off**
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder xForwardedForProto(String xForwardedForProto) {
             this.xForwardedForProto = xForwardedForProto;
@@ -959,9 +1070,15 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLoadBalancerHTTPListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerHTTPListenerAttributeResponseBody</p>
+     */
     public static class AclIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclId")
-        private java.util.List < String > aclId;
+        private java.util.List<String> aclId;
 
         private AclIds(Builder builder) {
             this.aclId = builder.aclId;
@@ -978,20 +1095,23 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         /**
          * @return aclId
          */
-        public java.util.List < String > getAclId() {
+        public java.util.List<String> getAclId() {
             return this.aclId;
         }
 
         public static final class Builder {
-            private java.util.List < String > aclId; 
+            private java.util.List<String> aclId; 
 
             /**
-             * The ID of the network ACL that is associated with a listener.
-             * <p>
+             * <p>The ID of the network ACL that is associated with a listener.</p>
+             * <blockquote>
+             * <p>This parameter is returned when <strong>AclStatus</strong> is set to <strong>on</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned when **AclStatus** is set to **on**.
+             * <strong>example:</strong>
+             * <p>on</p>
              */
-            public Builder aclId(java.util.List < String > aclId) {
+            public Builder aclId(java.util.List<String> aclId) {
                 this.aclId = aclId;
                 return this;
             }
@@ -1003,6 +1123,12 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLoadBalancerHTTPListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerHTTPListenerAttributeResponseBody</p>
+     */
     public static class Rule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -1078,7 +1204,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
             private String vServerGroupId; 
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -1086,7 +1215,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
             }
 
             /**
-             * The ID of the forwarding rule.
+             * <p>The ID of the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -1094,7 +1226,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
             }
 
             /**
-             * The name of the forwarding rule.
+             * <p>The name of the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1102,7 +1237,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
             }
 
             /**
-             * The request URL.
+             * <p>The request URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/example</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1110,7 +1248,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
             }
 
             /**
-             * The ID of the server group specified in the forwarding rule.
+             * <p>The ID of the server group specified in the forwarding rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;
@@ -1124,9 +1265,15 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLoadBalancerHTTPListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerHTTPListenerAttributeResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rule")
-        private java.util.List < Rule> rule;
+        private java.util.List<Rule> rule;
 
         private Rules(Builder builder) {
             this.rule = builder.rule;
@@ -1143,17 +1290,17 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         /**
          * @return rule
          */
-        public java.util.List < Rule> getRule() {
+        public java.util.List<Rule> getRule() {
             return this.rule;
         }
 
         public static final class Builder {
-            private java.util.List < Rule> rule; 
+            private java.util.List<Rule> rule; 
 
             /**
              * Rule.
              */
-            public Builder rule(java.util.List < Rule> rule) {
+            public Builder rule(java.util.List<Rule> rule) {
                 this.rule = rule;
                 return this;
             }
@@ -1165,6 +1312,12 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLoadBalancerHTTPListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerHTTPListenerAttributeResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -1204,7 +1357,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
             private String tagValue; 
 
             /**
-             * The key of tag N. Valid values of N: **1** to **20**. The tag key cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with `acs:` or `aliyun` or contain `http://` or `https://`.
+             * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag key cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with <code>acs:</code> or <code>aliyun</code> or contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1212,7 +1368,10 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
             }
 
             /**
-             * The value of tag N. Valid values of N: **1** to **20**. The tag value can be an empty string. The tag value must be 0 to 128 characters in length, and cannot start with `acs:`. It cannot contain `http://` or `https://`.
+             * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string. The tag value must be 0 to 128 characters in length, and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1226,9 +1385,15 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLoadBalancerHTTPListenerAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoadBalancerHTTPListenerAttributeResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -1245,17 +1410,17 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

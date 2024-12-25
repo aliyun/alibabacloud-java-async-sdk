@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoadBalancerHTTPListenerAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeLoadBalancerHTTPListenerAttributeRequest</p>
@@ -139,10 +145,12 @@ public class DescribeLoadBalancerHTTPListenerAttributeRequest extends Request {
         } 
 
         /**
-         * The frontend port that is used by the CLB instance.
-         * <p>
+         * <p>The frontend port that is used by the CLB instance.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: **1** to **65535**.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -151,7 +159,11 @@ public class DescribeLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The CLB instance ID.
+         * <p>The CLB instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1uaunez0uho0zf0****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -178,10 +190,11 @@ public class DescribeLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the CLB instance.
-         * <p>
+         * <p>The region ID of the CLB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

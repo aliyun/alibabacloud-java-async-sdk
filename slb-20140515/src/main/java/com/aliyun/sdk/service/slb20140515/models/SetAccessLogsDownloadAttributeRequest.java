@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetAccessLogsDownloadAttributeRequest} extends {@link RequestModel}
  *
  * <p>SetAccessLogsDownloadAttributeRequest</p>
@@ -153,7 +159,10 @@ public class SetAccessLogsDownloadAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the CLB instance.
+         * <p>The ID of the CLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1b6c719dfa08ex*****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -162,12 +171,16 @@ public class SetAccessLogsDownloadAttributeRequest extends Request {
         }
 
         /**
-         * The access log forwarding rule. Parameters:
-         * <p>
+         * <p>The access log forwarding rule. Parameters:</p>
+         * <ul>
+         * <li><strong>LogProject</strong>: the name of the project of Simple Log Service.</li>
+         * <li><strong>LogStore</strong>: the name of the Logstore of Simple Log Service.</li>
+         * <li><strong>LoadBalancerId</strong>: the ID of the CLB instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **LogProject**: the name of the project.
-         * *   **LogStore**: the name of the Logstore.
-         * *   **LoadBalancerId**: the ID of the CLB instance.
+         * <strong>example:</strong>
+         * <p>[{&quot;logProject&quot;:&quot;my-project&quot;, &quot;LogStore&quot;:&quot;my-log-store&quot;, &quot;LoadBalancerId&quot;:&quot;lb-uf68ps3rekbljmdb0****&quot;}]</p>
          */
         public Builder logsDownloadAttributes(String logsDownloadAttributes) {
             this.putQueryParameter("LogsDownloadAttributes", logsDownloadAttributes);
@@ -194,10 +207,12 @@ public class SetAccessLogsDownloadAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the region where the CLB instance is deployed.
-         * <p>
+         * <p>The region ID of the CLB instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/27584.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -224,10 +239,11 @@ public class SetAccessLogsDownloadAttributeRequest extends Request {
         }
 
         /**
-         * The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.
-         * <p>
+         * <p>The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.</p>
+         * <p>You can specify up to 10 tags in each call.</p>
          * 
-         * You can specify up to 10 tags in each call.
+         * <strong>example:</strong>
+         * <p>[{&quot;tagKey&quot;:&quot;Key1&quot;,&quot;tagValue&quot;:&quot;Value1&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

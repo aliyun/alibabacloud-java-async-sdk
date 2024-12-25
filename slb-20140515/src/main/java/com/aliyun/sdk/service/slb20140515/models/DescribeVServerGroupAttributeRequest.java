@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVServerGroupAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeVServerGroupAttributeRequest</p>
@@ -143,7 +149,11 @@ public class DescribeVServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the Classic Load Balancer (CLB) instance.
+         * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,7 +180,11 @@ public class DescribeVServerGroupAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the vServer group.
+         * <p>The ID of the vServer group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-cige6****</p>
          */
         public Builder vServerGroupId(String vServerGroupId) {
             this.putQueryParameter("VServerGroupId", vServerGroupId);

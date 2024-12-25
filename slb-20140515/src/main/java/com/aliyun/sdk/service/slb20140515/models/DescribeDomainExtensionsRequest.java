@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainExtensionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainExtensionsRequest</p>
@@ -154,7 +160,10 @@ public class DescribeDomainExtensionsRequest extends Request {
         } 
 
         /**
-         * The ID of the additional certificate.
+         * <p>The ID of the additional certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de-bp1rp7ta1****</p>
          */
         public Builder domainExtensionId(String domainExtensionId) {
             this.putQueryParameter("DomainExtensionId", domainExtensionId);
@@ -163,7 +172,11 @@ public class DescribeDomainExtensionsRequest extends Request {
         }
 
         /**
-         * The frontend port of the HTTPS listener that is configured for the Classic Load Balancer (CLB) instance. Valid values: **1 to 65535**.
+         * <p>The frontend port of the HTTPS listener that is configured for the Classic Load Balancer (CLB) instance. Valid values: <strong>1 to 65535</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -172,7 +185,11 @@ public class DescribeDomainExtensionsRequest extends Request {
         }
 
         /**
-         * The ID of the CLB instance.
+         * <p>The ID of the CLB instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1b6c719dfa08ex****</p>
          */
         public Builder loadBalancerId(String loadBalancerId) {
             this.putQueryParameter("LoadBalancerId", loadBalancerId);
@@ -199,7 +216,11 @@ public class DescribeDomainExtensionsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the CLB instance is deployed.
+         * <p>The ID of the region where the CLB instance is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

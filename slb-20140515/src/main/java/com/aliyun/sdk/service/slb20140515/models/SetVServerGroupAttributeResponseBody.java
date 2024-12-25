@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetVServerGroupAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>SetVServerGroupAttributeResponseBody</p>
@@ -73,7 +79,7 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
         private String vServerGroupName; 
 
         /**
-         * The list of backend servers.
+         * <p>The backend servers.</p>
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -81,7 +87,10 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +98,10 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the vServer group.
+         * <p>The server group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rsp-cige6****</p>
          */
         public Builder vServerGroupId(String vServerGroupId) {
             this.vServerGroupId = vServerGroupId;
@@ -97,7 +109,10 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the vServer group.
+         * <p>The name of the vServer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Group1</p>
          */
         public Builder vServerGroupName(String vServerGroupName) {
             this.vServerGroupName = vServerGroupName;
@@ -110,6 +125,12 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SetVServerGroupAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>SetVServerGroupAttributeResponseBody</p>
+     */
     public static class BackendServer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -185,7 +206,10 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The description of the vServer group.
+             * <p>The description of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Backend server group description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -193,7 +217,10 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used by the backend server.
+             * <p>The port that is used by the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -201,7 +228,10 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance or ENI.
+             * <p>The ID of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1ek6yd7jvkx****</p>
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -209,11 +239,15 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of backend server. Valid values:
-             * <p>
+             * <p>The type of backend server. Valid values:</p>
+             * <ul>
+             * <li><strong>ecs</strong> (default): ECS instance</li>
+             * <li><strong>eni</strong>: ENI</li>
+             * <li><strong>eci</strong>: elastic container instance</li>
+             * </ul>
              * 
-             * *   **ecs**: an ECS instance
-             * *   **eni**: an ENI
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -221,7 +255,10 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the backend server.
+             * <p>The weight of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -235,9 +272,15 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SetVServerGroupAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>SetVServerGroupAttributeResponseBody</p>
+     */
     public static class BackendServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackendServer")
-        private java.util.List < BackendServer> backendServer;
+        private java.util.List<BackendServer> backendServer;
 
         private BackendServers(Builder builder) {
             this.backendServer = builder.backendServer;
@@ -254,17 +297,17 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
         /**
          * @return backendServer
          */
-        public java.util.List < BackendServer> getBackendServer() {
+        public java.util.List<BackendServer> getBackendServer() {
             return this.backendServer;
         }
 
         public static final class Builder {
-            private java.util.List < BackendServer> backendServer; 
+            private java.util.List<BackendServer> backendServer; 
 
             /**
              * BackendServer.
              */
-            public Builder backendServer(java.util.List < BackendServer> backendServer) {
+            public Builder backendServer(java.util.List<BackendServer> backendServer) {
                 this.backendServer = backendServer;
                 return this;
             }
