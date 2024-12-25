@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CountTextResponse> countText(CountTextRequest request);
 
     /**
+     * @param request the request parameters of CreateAICoachTask  CreateAICoachTaskRequest
+     * @return CreateAICoachTaskResponse
+     */
+    CompletableFuture<CreateAICoachTaskResponse> createAICoachTask(CreateAICoachTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateAICoachTaskSession  CreateAICoachTaskSessionRequest
      * @return CreateAICoachTaskSessionResponse
      */
@@ -176,6 +182,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InteractTextResponse> interactText(InteractTextRequest request);
 
     ResponseIterable<InteractTextResponseBody> interactTextWithResponseIterable(InteractTextRequest request);
+
+    /**
+     * @param request the request parameters of ListAICoachScriptPage  ListAICoachScriptPageRequest
+     * @return ListAICoachScriptPageResponse
+     */
+    CompletableFuture<ListAICoachScriptPageResponse> listAICoachScriptPage(ListAICoachScriptPageRequest request);
 
     /**
      * @param request the request parameters of ListAICoachTaskPage  ListAICoachTaskPageRequest

@@ -149,6 +149,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateAICoachTask  CreateAICoachTaskRequest
+     * @return CreateAICoachTaskResponse
+     */
+    @Override
+    public CompletableFuture<CreateAICoachTaskResponse> createAICoachTask(CreateAICoachTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAICoachTask").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/aicoach/createTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAICoachTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAICoachTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateAICoachTaskSession  CreateAICoachTaskSessionRequest
      * @return CreateAICoachTaskSessionResponse
      */
@@ -516,6 +534,24 @@ public final class DefaultAsyncClient implements AsyncClient {
         ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
         this.handler.execute(params);
         return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of ListAICoachScriptPage  ListAICoachScriptPageRequest
+     * @return ListAICoachScriptPageResponse
+     */
+    @Override
+    public CompletableFuture<ListAICoachScriptPageResponse> listAICoachScriptPage(ListAICoachScriptPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAICoachScriptPage").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/aicoach/pageScript").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAICoachScriptPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAICoachScriptPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
     }
 
     /**
