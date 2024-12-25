@@ -136,6 +136,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunDataAnalysisResponseBody> runDataAnalysisWithResponseIterable(RunDataAnalysisRequest request);
 
     /**
+     * @param request the request parameters of RunDataResultAnalysis  RunDataResultAnalysisRequest
+     * @return RunDataResultAnalysisResponse
+     */
+    CompletableFuture<RunDataResultAnalysisResponse> runDataResultAnalysis(RunDataResultAnalysisRequest request);
+
+    ResponseIterable<RunDataResultAnalysisResponseBody> runDataResultAnalysisWithResponseIterable(RunDataResultAnalysisRequest request);
+
+    /**
+     * @param request the request parameters of RunSqlGeneration  RunSqlGenerationRequest
+     * @return RunSqlGenerationResponse
+     */
+    CompletableFuture<RunSqlGenerationResponse> runSqlGeneration(RunSqlGenerationRequest request);
+
+    ResponseIterable<RunSqlGenerationResponseBody> runSqlGenerationWithResponseIterable(RunSqlGenerationRequest request);
+
+    /**
      * @param request the request parameters of SaveVirtualDatasourceDdl  SaveVirtualDatasourceDdlRequest
      * @return SaveVirtualDatasourceDdlResponse
      */

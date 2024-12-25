@@ -12,27 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RunDataAnalysisRequest} extends {@link RequestModel}
+ * {@link RunSqlGenerationRequest} extends {@link RequestModel}
  *
- * <p>RunDataAnalysisRequest</p>
+ * <p>RunSqlGenerationRequest</p>
  */
-public class RunDataAnalysisRequest extends Request {
+public class RunSqlGenerationRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
-
-    @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("workspaceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String workspaceId;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("dataRole")
-    private java.util.List<String> dataRole;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("generateSqlOnly")
-    private Boolean generateSqlOnly;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("query")
@@ -47,27 +34,25 @@ public class RunDataAnalysisRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("specificationType")
     private String specificationType;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("userParams")
-    private java.util.Map<String, ?> userParams;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String workspaceId;
 
-    private RunDataAnalysisRequest(Builder builder) {
+    private RunSqlGenerationRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.workspaceId = builder.workspaceId;
-        this.dataRole = builder.dataRole;
-        this.generateSqlOnly = builder.generateSqlOnly;
         this.query = builder.query;
         this.sessionId = builder.sessionId;
         this.specificationType = builder.specificationType;
-        this.userParams = builder.userParams;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static RunDataAnalysisRequest create() {
+    public static RunSqlGenerationRequest create() {
         return builder().build();
     }
 
@@ -81,27 +66,6 @@ public class RunDataAnalysisRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
-    }
-
-    /**
-     * @return workspaceId
-     */
-    public String getWorkspaceId() {
-        return this.workspaceId;
-    }
-
-    /**
-     * @return dataRole
-     */
-    public java.util.List<String> getDataRole() {
-        return this.dataRole;
-    }
-
-    /**
-     * @return generateSqlOnly
-     */
-    public Boolean getGenerateSqlOnly() {
-        return this.generateSqlOnly;
     }
 
     /**
@@ -126,36 +90,30 @@ public class RunDataAnalysisRequest extends Request {
     }
 
     /**
-     * @return userParams
+     * @return workspaceId
      */
-    public java.util.Map<String, ?> getUserParams() {
-        return this.userParams;
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<RunDataAnalysisRequest, Builder> {
+    public static final class Builder extends Request.Builder<RunSqlGenerationRequest, Builder> {
         private String regionId; 
-        private String workspaceId; 
-        private java.util.List<String> dataRole; 
-        private Boolean generateSqlOnly; 
         private String query; 
         private String sessionId; 
         private String specificationType; 
-        private java.util.Map<String, ?> userParams; 
+        private String workspaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RunDataAnalysisRequest request) {
+        private Builder(RunSqlGenerationRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.workspaceId = request.workspaceId;
-            this.dataRole = request.dataRole;
-            this.generateSqlOnly = request.generateSqlOnly;
             this.query = request.query;
             this.sessionId = request.sessionId;
             this.specificationType = request.specificationType;
-            this.userParams = request.userParams;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -164,36 +122,6 @@ public class RunDataAnalysisRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("regionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>llm-2v3934xtp49esw64</p>
-         */
-        public Builder workspaceId(String workspaceId) {
-            this.putPathParameter("workspaceId", workspaceId);
-            this.workspaceId = workspaceId;
-            return this;
-        }
-
-        /**
-         * dataRole.
-         */
-        public Builder dataRole(java.util.List<String> dataRole) {
-            this.putBodyParameter("dataRole", dataRole);
-            this.dataRole = dataRole;
-            return this;
-        }
-
-        /**
-         * generateSqlOnly.
-         */
-        public Builder generateSqlOnly(Boolean generateSqlOnly) {
-            this.putBodyParameter("generateSqlOnly", generateSqlOnly);
-            this.generateSqlOnly = generateSqlOnly;
             return this;
         }
 
@@ -225,17 +153,20 @@ public class RunDataAnalysisRequest extends Request {
         }
 
         /**
-         * userParams.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-2v3934xtp49esw64</p>
          */
-        public Builder userParams(java.util.Map<String, ?> userParams) {
-            this.putBodyParameter("userParams", userParams);
-            this.userParams = userParams;
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("workspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 
         @Override
-        public RunDataAnalysisRequest build() {
-            return new RunDataAnalysisRequest(this);
+        public RunSqlGenerationRequest build() {
+            return new RunSqlGenerationRequest(this);
         } 
 
     } 

@@ -393,6 +393,62 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RunDataResultAnalysis  RunDataResultAnalysisRequest
+     * @return RunDataResultAnalysisResponse
+     */
+    @Override
+    public CompletableFuture<RunDataResultAnalysisResponse> runDataResultAnalysis(RunDataResultAnalysisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunDataResultAnalysis").setMethod(HttpMethod.POST).setPathRegex("/gbi/runDataResultAnalysis").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunDataResultAnalysisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunDataResultAnalysisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunDataResultAnalysisResponseBody> runDataResultAnalysisWithResponseIterable(RunDataResultAnalysisRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunDataResultAnalysis").setMethod(HttpMethod.POST).setPathRegex("/gbi/runDataResultAnalysis").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        RunDataResultAnalysisResponseBodyIterator iterator = RunDataResultAnalysisResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of RunSqlGeneration  RunSqlGenerationRequest
+     * @return RunSqlGenerationResponse
+     */
+    @Override
+    public CompletableFuture<RunSqlGenerationResponse> runSqlGeneration(RunSqlGenerationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunSqlGeneration").setMethod(HttpMethod.POST).setPathRegex("/gbi/runSqlGeneration").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunSqlGenerationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunSqlGenerationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunSqlGenerationResponseBody> runSqlGenerationWithResponseIterable(RunSqlGenerationRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunSqlGeneration").setMethod(HttpMethod.POST).setPathRegex("/gbi/runSqlGeneration").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        RunSqlGenerationResponseBodyIterator iterator = RunSqlGenerationResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of SaveVirtualDatasourceDdl  SaveVirtualDatasourceDdlRequest
      * @return SaveVirtualDatasourceDdlResponse
      */
