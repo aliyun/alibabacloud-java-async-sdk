@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class QueryStoriesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FigureClusterIds")
-    private java.util.List < String > figureClusterIds;
+    private java.util.List<String> figureClusterIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -147,7 +152,7 @@ public class QueryStoriesRequest extends Request {
     /**
      * @return figureClusterIds
      */
-    public java.util.List < String > getFigureClusterIds() {
+    public java.util.List<String> getFigureClusterIds() {
         return this.figureClusterIds;
     }
 
@@ -240,7 +245,7 @@ public class QueryStoriesRequest extends Request {
         private TimeRange createTimeRange; 
         private String customLabels; 
         private String datasetName; 
-        private java.util.List < String > figureClusterIds; 
+        private java.util.List<String> figureClusterIds; 
         private Long maxResults; 
         private String nextToken; 
         private String objectId; 
@@ -326,7 +331,7 @@ public class QueryStoriesRequest extends Request {
         /**
          * <p>The IDs of the face clusters.</p>
          */
-        public Builder figureClusterIds(java.util.List < String > figureClusterIds) {
+        public Builder figureClusterIds(java.util.List<String> figureClusterIds) {
             String figureClusterIdsShrink = shrink(figureClusterIds, "FigureClusterIds", "json");
             this.putQueryParameter("FigureClusterIds", figureClusterIdsShrink);
             this.figureClusterIds = figureClusterIds;
@@ -449,7 +454,7 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * <p>The subtype of the story. For a list of valid values, see <a href="https://help.aliyun.com/document_detail/475311.html">Story types and subtypes</a>.</p>
+         * <p>The subtype of the story. For a list of valid values, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>SeasonHighlights</p>
@@ -461,7 +466,7 @@ public class QueryStoriesRequest extends Request {
         }
 
         /**
-         * <p>The type of the story. For a list of valid values, see <a href="https://help.aliyun.com/document_detail/475311.html">Story types and subtypes</a>.</p>
+         * <p>The type of the story. For a list of valid values, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>TimeMemory</p>

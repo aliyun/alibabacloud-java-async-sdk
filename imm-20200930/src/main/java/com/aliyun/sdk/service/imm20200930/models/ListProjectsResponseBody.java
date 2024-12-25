@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListProjectsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("Projects")
-    private java.util.List < Project > projects;
+    private java.util.List<Project> projects;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -45,7 +50,7 @@ public class ListProjectsResponseBody extends TeaModel {
     /**
      * @return projects
      */
-    public java.util.List < Project > getProjects() {
+    public java.util.List<Project> getProjects() {
         return this.projects;
     }
 
@@ -58,7 +63,7 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String nextToken; 
-        private java.util.List < Project > projects; 
+        private java.util.List<Project> projects; 
         private String requestId; 
 
         /**
@@ -75,7 +80,7 @@ public class ListProjectsResponseBody extends TeaModel {
         /**
          * <p>The projects.</p>
          */
-        public Builder projects(java.util.List < Project > projects) {
+        public Builder projects(java.util.List<Project> projects) {
             this.projects = projects;
             return this;
         }

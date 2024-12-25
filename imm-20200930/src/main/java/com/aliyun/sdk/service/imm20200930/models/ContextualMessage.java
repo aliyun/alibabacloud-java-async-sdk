@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ContextualMessage extends TeaModel {
     private String content;
 
     @com.aliyun.core.annotation.NameInMap("Files")
-    private java.util.List < ContextualFile > files;
+    private java.util.List<ContextualFile> files;
 
     @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
@@ -45,7 +50,7 @@ public class ContextualMessage extends TeaModel {
     /**
      * @return files
      */
-    public java.util.List < ContextualFile > getFiles() {
+    public java.util.List<ContextualFile> getFiles() {
         return this.files;
     }
 
@@ -58,7 +63,7 @@ public class ContextualMessage extends TeaModel {
 
     public static final class Builder {
         private String content; 
-        private java.util.List < ContextualFile > files; 
+        private java.util.List<ContextualFile> files; 
         private String role; 
 
         /**
@@ -72,7 +77,7 @@ public class ContextualMessage extends TeaModel {
         /**
          * Files.
          */
-        public Builder files(java.util.List < ContextualFile > files) {
+        public Builder files(java.util.List<ContextualFile> files) {
             this.files = files;
             return this;
         }

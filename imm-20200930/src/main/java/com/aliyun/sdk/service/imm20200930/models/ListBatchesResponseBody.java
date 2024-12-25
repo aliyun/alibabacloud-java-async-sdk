@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListBatchesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Batches")
-    private java.util.List < DataIngestion > batches;
+    private java.util.List<DataIngestion> batches;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class ListBatchesResponseBody extends TeaModel {
     /**
      * @return batches
      */
-    public java.util.List < DataIngestion > getBatches() {
+    public java.util.List<DataIngestion> getBatches() {
         return this.batches;
     }
 
@@ -57,14 +62,14 @@ public class ListBatchesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DataIngestion > batches; 
+        private java.util.List<DataIngestion> batches; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>The batch processing tasks.</p>
          */
-        public Builder batches(java.util.List < DataIngestion > batches) {
+        public Builder batches(java.util.List<DataIngestion> batches) {
             this.batches = batches;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class RemoveStoryFilesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Files")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Files> files;
+    private java.util.List<Files> files;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ObjectId")
@@ -75,7 +80,7 @@ public class RemoveStoryFilesRequest extends Request {
     /**
      * @return files
      */
-    public java.util.List < Files> getFiles() {
+    public java.util.List<Files> getFiles() {
         return this.files;
     }
 
@@ -96,7 +101,7 @@ public class RemoveStoryFilesRequest extends Request {
     public static final class Builder extends Request.Builder<RemoveStoryFilesRequest, Builder> {
         private String regionId; 
         private String datasetName; 
-        private java.util.List < Files> files; 
+        private java.util.List<Files> files; 
         private String objectId; 
         private String projectName; 
 
@@ -139,7 +144,7 @@ public class RemoveStoryFilesRequest extends Request {
          * <p>The files that you want to delete.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder files(java.util.List < Files> files) {
+        public Builder files(java.util.List<Files> files) {
             String filesShrink = shrink(files, "Files", "json");
             this.putBodyParameter("Files", filesShrink);
             this.files = files;

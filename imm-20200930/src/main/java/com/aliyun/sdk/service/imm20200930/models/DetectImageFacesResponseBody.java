@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DetectImageFacesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Faces")
-    private java.util.List < Figure > faces;
+    private java.util.List<Figure> faces;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DetectImageFacesResponseBody extends TeaModel {
     /**
      * @return faces
      */
-    public java.util.List < Figure > getFaces() {
+    public java.util.List<Figure> getFaces() {
         return this.faces;
     }
 
@@ -46,13 +51,13 @@ public class DetectImageFacesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Figure > faces; 
+        private java.util.List<Figure> faces; 
         private String requestId; 
 
         /**
          * <p>The faces.</p>
          */
-        public Builder faces(java.util.List < Figure > faces) {
+        public Builder faces(java.util.List<Figure> faces) {
             this.faces = faces;
             return this;
         }

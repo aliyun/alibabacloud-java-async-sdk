@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class Hyperparameters extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("InputSize")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Long > inputSize;
+    private java.util.List<Long> inputSize;
 
     @com.aliyun.core.annotation.NameInMap("MaxEpoch")
     private Long maxEpoch;
@@ -88,7 +93,7 @@ public class Hyperparameters extends TeaModel {
     /**
      * @return inputSize
      */
-    public java.util.List < Long > getInputSize() {
+    public java.util.List<Long> getInputSize() {
         return this.inputSize;
     }
 
@@ -118,7 +123,7 @@ public class Hyperparameters extends TeaModel {
         private Long batchSize; 
         private Long dataLoaderWorkers; 
         private CustomParams evaluator; 
-        private java.util.List < Long > inputSize; 
+        private java.util.List<Long> inputSize; 
         private Long maxEpoch; 
         private Optimization optimization; 
         private Schedule schedule; 
@@ -158,7 +163,7 @@ public class Hyperparameters extends TeaModel {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder inputSize(java.util.List < Long > inputSize) {
+        public Builder inputSize(java.util.List<Long> inputSize) {
             this.inputSize = inputSize;
             return this;
         }

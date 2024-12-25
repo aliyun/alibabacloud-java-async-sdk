@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DetectMediaMetaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Addresses")
-    private java.util.List < Address > addresses;
+    private java.util.List<Address> addresses;
 
     @com.aliyun.core.annotation.NameInMap("Album")
     private String album;
@@ -25,7 +30,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
     private String artist;
 
     @com.aliyun.core.annotation.NameInMap("AudioStreams")
-    private java.util.List < AudioStream > audioStreams;
+    private java.util.List<AudioStream> audioStreams;
 
     @com.aliyun.core.annotation.NameInMap("Bitrate")
     private Long bitrate;
@@ -70,7 +75,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
     private Long streamCount;
 
     @com.aliyun.core.annotation.NameInMap("Subtitles")
-    private java.util.List < SubtitleStream > subtitles;
+    private java.util.List<SubtitleStream> subtitles;
 
     @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
@@ -79,7 +84,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
     private Long videoHeight;
 
     @com.aliyun.core.annotation.NameInMap("VideoStreams")
-    private java.util.List < VideoStream > videoStreams;
+    private java.util.List<VideoStream> videoStreams;
 
     @com.aliyun.core.annotation.NameInMap("VideoWidth")
     private Long videoWidth;
@@ -122,7 +127,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
     /**
      * @return addresses
      */
-    public java.util.List < Address > getAddresses() {
+    public java.util.List<Address> getAddresses() {
         return this.addresses;
     }
 
@@ -150,7 +155,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
     /**
      * @return audioStreams
      */
-    public java.util.List < AudioStream > getAudioStreams() {
+    public java.util.List<AudioStream> getAudioStreams() {
         return this.audioStreams;
     }
 
@@ -255,7 +260,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
     /**
      * @return subtitles
      */
-    public java.util.List < SubtitleStream > getSubtitles() {
+    public java.util.List<SubtitleStream> getSubtitles() {
         return this.subtitles;
     }
 
@@ -276,7 +281,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
     /**
      * @return videoStreams
      */
-    public java.util.List < VideoStream > getVideoStreams() {
+    public java.util.List<VideoStream> getVideoStreams() {
         return this.videoStreams;
     }
 
@@ -288,11 +293,11 @@ public class DetectMediaMetaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Address > addresses; 
+        private java.util.List<Address> addresses; 
         private String album; 
         private String albumArtist; 
         private String artist; 
-        private java.util.List < AudioStream > audioStreams; 
+        private java.util.List<AudioStream> audioStreams; 
         private Long bitrate; 
         private String composer; 
         private Double duration; 
@@ -307,17 +312,17 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         private Long size; 
         private Double startTime; 
         private Long streamCount; 
-        private java.util.List < SubtitleStream > subtitles; 
+        private java.util.List<SubtitleStream> subtitles; 
         private String title; 
         private Long videoHeight; 
-        private java.util.List < VideoStream > videoStreams; 
+        private java.util.List<VideoStream> videoStreams; 
         private Long videoWidth; 
 
         /**
          * <p>The addresses.</p>
          * <p>This parameter is returned only when address information is detected.</p>
          */
-        public Builder addresses(java.util.List < Address > addresses) {
+        public Builder addresses(java.util.List<Address> addresses) {
             this.addresses = addresses;
             return this;
         }
@@ -358,7 +363,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         /**
          * <p>The audio streams.</p>
          */
-        public Builder audioStreams(java.util.List < AudioStream > audioStreams) {
+        public Builder audioStreams(java.util.List<AudioStream> audioStreams) {
             this.audioStreams = audioStreams;
             return this;
         }
@@ -520,7 +525,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         /**
          * <p>The subtitle streams.</p>
          */
-        public Builder subtitles(java.util.List < SubtitleStream > subtitles) {
+        public Builder subtitles(java.util.List<SubtitleStream> subtitles) {
             this.subtitles = subtitles;
             return this;
         }
@@ -550,7 +555,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         /**
          * <p>The video streams.</p>
          */
-        public Builder videoStreams(java.util.List < VideoStream > videoStreams) {
+        public Builder videoStreams(java.util.List<VideoStream> videoStreams) {
             this.videoStreams = videoStreams;
             return this;
         }

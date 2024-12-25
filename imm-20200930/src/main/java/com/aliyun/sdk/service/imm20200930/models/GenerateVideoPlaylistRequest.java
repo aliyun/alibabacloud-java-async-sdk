@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,7 +52,7 @@ public class GenerateVideoPlaylistRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceSubtitles")
-    private java.util.List < SourceSubtitles> sourceSubtitles;
+    private java.util.List<SourceSubtitles> sourceSubtitles;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceURI")
@@ -56,12 +61,12 @@ public class GenerateVideoPlaylistRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, String > tags;
+    private java.util.Map<String, String> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Targets")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Targets> targets;
+    private java.util.List<Targets> targets;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserData")
@@ -156,7 +161,7 @@ public class GenerateVideoPlaylistRequest extends Request {
     /**
      * @return sourceSubtitles
      */
-    public java.util.List < SourceSubtitles> getSourceSubtitles() {
+    public java.util.List<SourceSubtitles> getSourceSubtitles() {
         return this.sourceSubtitles;
     }
 
@@ -170,14 +175,14 @@ public class GenerateVideoPlaylistRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, String > getTags() {
+    public java.util.Map<String, String> getTags() {
         return this.tags;
     }
 
     /**
      * @return targets
      */
-    public java.util.List < Targets> getTargets() {
+    public java.util.List<Targets> getTargets() {
         return this.targets;
     }
 
@@ -197,10 +202,10 @@ public class GenerateVideoPlaylistRequest extends Request {
         private String projectName; 
         private Float sourceDuration; 
         private Float sourceStartTime; 
-        private java.util.List < SourceSubtitles> sourceSubtitles; 
+        private java.util.List<SourceSubtitles> sourceSubtitles; 
         private String sourceURI; 
-        private java.util.Map < String, String > tags; 
-        private java.util.List < Targets> targets; 
+        private java.util.Map<String, String> tags; 
+        private java.util.List<Targets> targets; 
         private String userData; 
 
         private Builder() {
@@ -261,7 +266,7 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. To view details, click Notification. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a>.</p>
+         * <p>The notification settings. To view details, click Notification. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -340,7 +345,7 @@ public class GenerateVideoPlaylistRequest extends Request {
         /**
          * <p>The subtitle files. By default, this parameter is left empty. Up to two subtitle files are supported.</p>
          */
-        public Builder sourceSubtitles(java.util.List < SourceSubtitles> sourceSubtitles) {
+        public Builder sourceSubtitles(java.util.List<SourceSubtitles> sourceSubtitles) {
             String sourceSubtitlesShrink = shrink(sourceSubtitles, "SourceSubtitles", "json");
             this.putQueryParameter("SourceSubtitles", sourceSubtitlesShrink);
             this.sourceSubtitles = sourceSubtitles;
@@ -370,7 +375,7 @@ public class GenerateVideoPlaylistRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, String > tags) {
+        public Builder tags(java.util.Map<String, String> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -384,7 +389,7 @@ public class GenerateVideoPlaylistRequest extends Request {
          * </blockquote>
          * <p>This parameter is required.</p>
          */
-        public Builder targets(java.util.List < Targets> targets) {
+        public Builder targets(java.util.List<Targets> targets) {
             String targetsShrink = shrink(targets, "Targets", "json");
             this.putQueryParameter("Targets", targetsShrink);
             this.targets = targets;
@@ -503,7 +508,7 @@ public class GenerateVideoPlaylistRequest extends Request {
         private Float duration;
 
         @com.aliyun.core.annotation.NameInMap("InitialSegments")
-        private java.util.List < Float > initialSegments;
+        private java.util.List<Float> initialSegments;
 
         @com.aliyun.core.annotation.NameInMap("InitialTranscode")
         private Float initialTranscode;
@@ -512,7 +517,7 @@ public class GenerateVideoPlaylistRequest extends Request {
         private TargetSubtitle subtitle;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, String > tags;
+        private java.util.Map<String, String> tags;
 
         @com.aliyun.core.annotation.NameInMap("TranscodeAhead")
         private Integer transcodeAhead;
@@ -560,7 +565,7 @@ public class GenerateVideoPlaylistRequest extends Request {
         /**
          * @return initialSegments
          */
-        public java.util.List < Float > getInitialSegments() {
+        public java.util.List<Float> getInitialSegments() {
             return this.initialSegments;
         }
 
@@ -581,7 +586,7 @@ public class GenerateVideoPlaylistRequest extends Request {
         /**
          * @return tags
          */
-        public java.util.Map < String, String > getTags() {
+        public java.util.Map<String, String> getTags() {
             return this.tags;
         }
 
@@ -609,10 +614,10 @@ public class GenerateVideoPlaylistRequest extends Request {
         public static final class Builder {
             private TargetAudio audio; 
             private Float duration; 
-            private java.util.List < Float > initialSegments; 
+            private java.util.List<Float> initialSegments; 
             private Float initialTranscode; 
             private TargetSubtitle subtitle; 
-            private java.util.Map < String, String > tags; 
+            private java.util.Map<String, String> tags; 
             private Integer transcodeAhead; 
             private String URI; 
             private TargetVideo video; 
@@ -642,7 +647,7 @@ public class GenerateVideoPlaylistRequest extends Request {
             /**
              * <p>The array of the durations of the pre-transcoded TS files. The array can contain the durations of up to six pre-transcoded TS files. By default, this parameter is left empty. This parameter is independent of the <strong>Duration</strong> parameter.</p>
              */
-            public Builder initialSegments(java.util.List < Float > initialSegments) {
+            public Builder initialSegments(java.util.List<Float> initialSegments) {
                 this.initialSegments = initialSegments;
                 return this;
             }
@@ -683,7 +688,7 @@ public class GenerateVideoPlaylistRequest extends Request {
              * <p> The combination of the value of the Tags parameter and the value of the Tags parameter in the upper level is used as the tag value of the current output. If the value of the Tags parameter in the current level is the same as the value of the Tags parameter in the upper level, use the value of the Tags parameter in the current level.</p>
              * </blockquote>
              */
-            public Builder tags(java.util.Map < String, String > tags) {
+            public Builder tags(java.util.Map<String, String> tags) {
                 this.tags = tags;
                 return this;
             }

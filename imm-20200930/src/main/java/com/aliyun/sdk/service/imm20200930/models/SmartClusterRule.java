@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SmartClusterRule extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Keywords")
-    private java.util.List < String > keywords;
+    private java.util.List<String> keywords;
 
     @com.aliyun.core.annotation.NameInMap("Sensitivity")
     private Float sensitivity;
@@ -34,7 +39,7 @@ public class SmartClusterRule extends TeaModel {
     /**
      * @return keywords
      */
-    public java.util.List < String > getKeywords() {
+    public java.util.List<String> getKeywords() {
         return this.keywords;
     }
 
@@ -46,13 +51,13 @@ public class SmartClusterRule extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > keywords; 
+        private java.util.List<String> keywords; 
         private Float sensitivity; 
 
         /**
          * Keywords.
          */
-        public Builder keywords(java.util.List < String > keywords) {
+        public Builder keywords(java.util.List<String> keywords) {
             this.keywords = keywords;
             return this;
         }

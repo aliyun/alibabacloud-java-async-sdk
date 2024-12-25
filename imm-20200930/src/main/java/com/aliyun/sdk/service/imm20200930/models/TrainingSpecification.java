@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,7 +41,7 @@ public class TrainingSpecification extends TeaModel {
     private String targetURI;
 
     @com.aliyun.core.annotation.NameInMap("Transforms")
-    private java.util.List < CustomParams > transforms;
+    private java.util.List<CustomParams> transforms;
 
     @com.aliyun.core.annotation.NameInMap("ValidationSourceURI")
     private String validationSourceURI;
@@ -109,7 +114,7 @@ public class TrainingSpecification extends TeaModel {
     /**
      * @return transforms
      */
-    public java.util.List < CustomParams > getTransforms() {
+    public java.util.List<CustomParams> getTransforms() {
         return this.transforms;
     }
 
@@ -134,7 +139,7 @@ public class TrainingSpecification extends TeaModel {
         private Runtime runtime; 
         private String sourceURI; 
         private String targetURI; 
-        private java.util.List < CustomParams > transforms; 
+        private java.util.List<CustomParams> transforms; 
         private String validationSourceURI; 
         private Float validationSplit; 
 
@@ -195,7 +200,7 @@ public class TrainingSpecification extends TeaModel {
         /**
          * Transforms.
          */
-        public Builder transforms(java.util.List < CustomParams > transforms) {
+        public Builder transforms(java.util.List<CustomParams> transforms) {
             this.transforms = transforms;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class BatchGetFigureClusterRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ObjectIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > objectIds;
+    private java.util.List<String> objectIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectName")
@@ -69,7 +74,7 @@ public class BatchGetFigureClusterRequest extends Request {
     /**
      * @return objectIds
      */
-    public java.util.List < String > getObjectIds() {
+    public java.util.List<String> getObjectIds() {
         return this.objectIds;
     }
 
@@ -83,7 +88,7 @@ public class BatchGetFigureClusterRequest extends Request {
     public static final class Builder extends Request.Builder<BatchGetFigureClusterRequest, Builder> {
         private String regionId; 
         private String datasetName; 
-        private java.util.List < String > objectIds; 
+        private java.util.List<String> objectIds; 
         private String projectName; 
 
         private Builder() {
@@ -124,7 +129,7 @@ public class BatchGetFigureClusterRequest extends Request {
          * <p>The cluster IDs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder objectIds(java.util.List < String > objectIds) {
+        public Builder objectIds(java.util.List<String> objectIds) {
             String objectIdsShrink = shrink(objectIds, "ObjectIds", "json");
             this.putQueryParameter("ObjectIds", objectIdsShrink);
             this.objectIds = objectIds;

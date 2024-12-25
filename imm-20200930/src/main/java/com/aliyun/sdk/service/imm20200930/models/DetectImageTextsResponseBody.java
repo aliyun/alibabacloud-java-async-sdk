@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DetectImageTextsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OCRContents")
-    private java.util.List < OCRContents > OCRContents;
+    private java.util.List<OCRContents> OCRContents;
 
     @com.aliyun.core.annotation.NameInMap("OCRTexts")
     private String OCRTexts;
@@ -38,7 +43,7 @@ public class DetectImageTextsResponseBody extends TeaModel {
     /**
      * @return OCRContents
      */
-    public java.util.List < OCRContents > getOCRContents() {
+    public java.util.List<OCRContents> getOCRContents() {
         return this.OCRContents;
     }
 
@@ -57,14 +62,14 @@ public class DetectImageTextsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OCRContents > OCRContents; 
+        private java.util.List<OCRContents> OCRContents; 
         private String OCRTexts; 
         private String requestId; 
 
         /**
          * <p>OCR text blocks.</p>
          */
-        public Builder OCRContents(java.util.List < OCRContents > OCRContents) {
+        public Builder OCRContents(java.util.List<OCRContents> OCRContents) {
             this.OCRContents = OCRContents;
             return this;
         }

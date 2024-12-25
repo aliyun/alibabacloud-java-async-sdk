@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class LocationDateCluster extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Addresses")
-    private java.util.List < Address > addresses;
+    private java.util.List<Address> addresses;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -22,7 +27,7 @@ public class LocationDateCluster extends TeaModel {
     private String customId;
 
     @com.aliyun.core.annotation.NameInMap("CustomLabels")
-    private java.util.Map < String, ? > customLabels;
+    private java.util.Map<String, ?> customLabels;
 
     @com.aliyun.core.annotation.NameInMap("LocationDateClusterEndTime")
     private String locationDateClusterEndTime;
@@ -66,7 +71,7 @@ public class LocationDateCluster extends TeaModel {
     /**
      * @return addresses
      */
-    public java.util.List < Address > getAddresses() {
+    public java.util.List<Address> getAddresses() {
         return this.addresses;
     }
 
@@ -87,7 +92,7 @@ public class LocationDateCluster extends TeaModel {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, ? > getCustomLabels() {
+    public java.util.Map<String, ?> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -134,10 +139,10 @@ public class LocationDateCluster extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Address > addresses; 
+        private java.util.List<Address> addresses; 
         private String createTime; 
         private String customId; 
-        private java.util.Map < String, ? > customLabels; 
+        private java.util.Map<String, ?> customLabels; 
         private String locationDateClusterEndTime; 
         private String locationDateClusterLevel; 
         private String locationDateClusterStartTime; 
@@ -148,7 +153,7 @@ public class LocationDateCluster extends TeaModel {
         /**
          * Addresses.
          */
-        public Builder addresses(java.util.List < Address > addresses) {
+        public Builder addresses(java.util.List<Address> addresses) {
             this.addresses = addresses;
             return this;
         }
@@ -172,7 +177,7 @@ public class LocationDateCluster extends TeaModel {
         /**
          * CustomLabels.
          */
-        public Builder customLabels(java.util.Map < String, ? > customLabels) {
+        public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
             return this;
         }

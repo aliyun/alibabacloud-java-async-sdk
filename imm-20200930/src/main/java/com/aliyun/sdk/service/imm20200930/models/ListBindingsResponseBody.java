@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListBindingsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Bindings")
-    private java.util.List < Binding > bindings;
+    private java.util.List<Binding> bindings;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class ListBindingsResponseBody extends TeaModel {
     /**
      * @return bindings
      */
-    public java.util.List < Binding > getBindings() {
+    public java.util.List<Binding> getBindings() {
         return this.bindings;
     }
 
@@ -57,14 +62,14 @@ public class ListBindingsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Binding > bindings; 
+        private java.util.List<Binding> bindings; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>The bindings between the dataset and OSS buckets.</p>
          */
-        public Builder bindings(java.util.List < Binding > bindings) {
+        public Builder bindings(java.util.List<Binding> bindings) {
             this.bindings = bindings;
             return this;
         }

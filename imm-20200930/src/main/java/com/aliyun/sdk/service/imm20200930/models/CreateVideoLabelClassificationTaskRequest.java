@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,7 +41,7 @@ public class CreateVideoLabelClassificationTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserData")
@@ -104,7 +109,7 @@ public class CreateVideoLabelClassificationTaskRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -121,7 +126,7 @@ public class CreateVideoLabelClassificationTaskRequest extends Request {
         private Notification notification; 
         private String projectName; 
         private String sourceURI; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String userData; 
 
         private Builder() {
@@ -149,7 +154,8 @@ public class CreateVideoLabelClassificationTaskRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
+         * <p>The configurations of authorization chains. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -159,7 +165,7 @@ public class CreateVideoLabelClassificationTaskRequest extends Request {
         }
 
         /**
-         * <p>消息通知配置，支持使用MNS、RocketMQ接收异步消息通知。</p>
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -169,6 +175,7 @@ public class CreateVideoLabelClassificationTaskRequest extends Request {
         }
 
         /**
+         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,6 +188,8 @@ public class CreateVideoLabelClassificationTaskRequest extends Request {
         }
 
         /**
+         * <p>The OSS URI of the video file.</p>
+         * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the path of the object with the extension included.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,9 +202,12 @@ public class CreateVideoLabelClassificationTaskRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags, which can be used to search for and filter asynchronous tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;:&quot;val1&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -203,7 +215,10 @@ public class CreateVideoLabelClassificationTaskRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom data, which is returned in an asynchronous notification and facilitates notification management. The maximum length is 2,048 bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

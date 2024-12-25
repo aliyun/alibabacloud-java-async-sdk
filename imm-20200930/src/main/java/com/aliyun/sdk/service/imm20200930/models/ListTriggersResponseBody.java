@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListTriggersResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Triggers")
-    private java.util.List < DataIngestion > triggers;
+    private java.util.List<DataIngestion> triggers;
 
     private ListTriggersResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class ListTriggersResponseBody extends TeaModel {
     /**
      * @return triggers
      */
-    public java.util.List < DataIngestion > getTriggers() {
+    public java.util.List<DataIngestion> getTriggers() {
         return this.triggers;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < DataIngestion > triggers; 
+        private java.util.List<DataIngestion> triggers; 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -87,7 +92,7 @@ public class ListTriggersResponseBody extends TeaModel {
         /**
          * <p>The triggers.</p>
          */
-        public Builder triggers(java.util.List < DataIngestion > triggers) {
+        public Builder triggers(java.util.List<DataIngestion> triggers) {
             this.triggers = triggers;
             return this;
         }

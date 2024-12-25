@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -55,7 +60,7 @@ public class Project extends TeaModel {
     private String serviceRole;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
@@ -196,7 +201,7 @@ public class Project extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
@@ -236,7 +241,7 @@ public class Project extends TeaModel {
         private String projectName; 
         private Long projectQueriesPerSecond; 
         private String serviceRole; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<Tags> tags; 
         private String templateId; 
         private Long totalFileSize; 
         private String updateTime; 
@@ -356,7 +361,7 @@ public class Project extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }

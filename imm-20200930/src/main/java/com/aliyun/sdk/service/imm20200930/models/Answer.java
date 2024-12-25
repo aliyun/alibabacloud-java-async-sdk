@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class Answer extends TeaModel {
     private String content;
 
     @com.aliyun.core.annotation.NameInMap("References")
-    private java.util.List < ReferenceFile > references;
+    private java.util.List<ReferenceFile> references;
 
     private Answer(Builder builder) {
         this.content = builder.content;
@@ -41,13 +46,13 @@ public class Answer extends TeaModel {
     /**
      * @return references
      */
-    public java.util.List < ReferenceFile > getReferences() {
+    public java.util.List<ReferenceFile> getReferences() {
         return this.references;
     }
 
     public static final class Builder {
         private String content; 
-        private java.util.List < ReferenceFile > references; 
+        private java.util.List<ReferenceFile> references; 
 
         /**
          * Content.
@@ -60,7 +65,7 @@ public class Answer extends TeaModel {
         /**
          * References.
          */
-        public Builder references(java.util.List < ReferenceFile > references) {
+        public Builder references(java.util.List<ReferenceFile> references) {
             this.references = references;
             return this;
         }

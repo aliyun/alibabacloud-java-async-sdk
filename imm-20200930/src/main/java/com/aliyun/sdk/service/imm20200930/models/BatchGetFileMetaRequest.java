@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,11 +34,11 @@ public class BatchGetFileMetaRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("URIs")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > URIs;
+    private java.util.List<String> URIs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WithFields")
-    private java.util.List < String > withFields;
+    private java.util.List<String> withFields;
 
     private BatchGetFileMetaRequest(Builder builder) {
         super(builder);
@@ -81,14 +86,14 @@ public class BatchGetFileMetaRequest extends Request {
     /**
      * @return URIs
      */
-    public java.util.List < String > getURIs() {
+    public java.util.List<String> getURIs() {
         return this.URIs;
     }
 
     /**
      * @return withFields
      */
-    public java.util.List < String > getWithFields() {
+    public java.util.List<String> getWithFields() {
         return this.withFields;
     }
 
@@ -96,8 +101,8 @@ public class BatchGetFileMetaRequest extends Request {
         private String regionId; 
         private String datasetName; 
         private String projectName; 
-        private java.util.List < String > URIs; 
-        private java.util.List < String > withFields; 
+        private java.util.List<String> URIs; 
+        private java.util.List<String> withFields; 
 
         private Builder() {
             super();
@@ -151,7 +156,7 @@ public class BatchGetFileMetaRequest extends Request {
          * <p>The array of object URIs. You can specify up to 100 object URIs in an array.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder URIs(java.util.List < String > URIs) {
+        public Builder URIs(java.util.List<String> URIs) {
             String URIsShrink = shrink(URIs, "URIs", "json");
             this.putQueryParameter("URIs", URIsShrink);
             this.URIs = URIs;
@@ -162,7 +167,7 @@ public class BatchGetFileMetaRequest extends Request {
          * <p>The fields to return. If you specify this parameter, only specified metadata fields are returned. You can use this parameter to control the size of the response.</p>
          * <p>If you do not specify this parameter or leave this parameter empty, the operation returns all metadata fields.</p>
          */
-        public Builder withFields(java.util.List < String > withFields) {
+        public Builder withFields(java.util.List<String> withFields) {
             String withFieldsShrink = shrink(withFields, "WithFields", "json");
             this.putQueryParameter("WithFields", withFieldsShrink);
             this.withFields = withFields;

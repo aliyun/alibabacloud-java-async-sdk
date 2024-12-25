@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class CreateStoryRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustomLabels")
-    private java.util.Map < String, ? > customLabels;
+    private java.util.Map<String, ?> customLabels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DatasetName")
@@ -81,7 +86,7 @@ public class CreateStoryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserData")
@@ -146,7 +151,7 @@ public class CreateStoryRequest extends Request {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, ? > getCustomLabels() {
+    public java.util.Map<String, ?> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -237,7 +242,7 @@ public class CreateStoryRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -252,7 +257,7 @@ public class CreateStoryRequest extends Request {
         private String regionId; 
         private AddressForStory address; 
         private String customId; 
-        private java.util.Map < String, ? > customLabels; 
+        private java.util.Map<String, ?> customLabels; 
         private String datasetName; 
         private Long maxFileCount; 
         private Long minFileCount; 
@@ -265,7 +270,7 @@ public class CreateStoryRequest extends Request {
         private String storyStartTime; 
         private String storySubType; 
         private String storyType; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String userData; 
 
         private Builder() {
@@ -334,7 +339,7 @@ public class CreateStoryRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
          */
-        public Builder customLabels(java.util.Map < String, ? > customLabels) {
+        public Builder customLabels(java.util.Map<String, ?> customLabels) {
             String customLabelsShrink = shrink(customLabels, "CustomLabels", "json");
             this.putBodyParameter("CustomLabels", customLabelsShrink);
             this.customLabels = customLabels;
@@ -379,7 +384,7 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For more information, see &quot;Notification&quot;. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous notification format</a>.</p>
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -462,7 +467,7 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * <p>The subtype of the story. For information about valid subtypes, see <a href="https://help.aliyun.com/document_detail/475311.html">Story types and subtypes</a>.</p>
+         * <p>The subtype of the story. For information about valid subtypes, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Solo</p>
@@ -474,7 +479,7 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * <p>The type of the story. For information about valid types, see <a href="https://help.aliyun.com/document_detail/475311.html">Story types and subtypes</a>.</p>
+         * <p>The type of the story. For information about valid types, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -497,7 +502,7 @@ public class CreateStoryRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;key&quot;:&quot;val&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

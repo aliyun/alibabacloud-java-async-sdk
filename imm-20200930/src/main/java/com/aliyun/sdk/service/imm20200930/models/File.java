@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class File extends TeaModel {
     private String accessControlRequestMethod;
 
     @com.aliyun.core.annotation.NameInMap("Addresses")
-    private java.util.List < Address > addresses;
+    private java.util.List<Address> addresses;
 
     @com.aliyun.core.annotation.NameInMap("Album")
     private String album;
@@ -31,10 +36,10 @@ public class File extends TeaModel {
     private String artist;
 
     @com.aliyun.core.annotation.NameInMap("AudioCovers")
-    private java.util.List < Image > audioCovers;
+    private java.util.List<Image> audioCovers;
 
     @com.aliyun.core.annotation.NameInMap("AudioStreams")
-    private java.util.List < AudioStream > audioStreams;
+    private java.util.List<AudioStream> audioStreams;
 
     @com.aliyun.core.annotation.NameInMap("Bitrate")
     private Long bitrate;
@@ -64,13 +69,13 @@ public class File extends TeaModel {
     private String createTime;
 
     @com.aliyun.core.annotation.NameInMap("CroppingSuggestions")
-    private java.util.List < CroppingSuggestion > croppingSuggestions;
+    private java.util.List<CroppingSuggestion> croppingSuggestions;
 
     @com.aliyun.core.annotation.NameInMap("CustomId")
     private String customId;
 
     @com.aliyun.core.annotation.NameInMap("CustomLabels")
-    private java.util.Map < String, ? > customLabels;
+    private java.util.Map<String, ?> customLabels;
 
     @com.aliyun.core.annotation.NameInMap("DatasetName")
     private String datasetName;
@@ -85,13 +90,13 @@ public class File extends TeaModel {
     private String EXIF;
 
     @com.aliyun.core.annotation.NameInMap("Elements")
-    private java.util.List < Element > elements;
+    private java.util.List<Element> elements;
 
     @com.aliyun.core.annotation.NameInMap("FigureCount")
     private Long figureCount;
 
     @com.aliyun.core.annotation.NameInMap("Figures")
-    private java.util.List < Figure > figures;
+    private java.util.List<Figure> figures;
 
     @com.aliyun.core.annotation.NameInMap("FileAccessTime")
     private String fileAccessTime;
@@ -124,7 +129,7 @@ public class File extends TeaModel {
     private Long imageWidth;
 
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Label > labels;
+    private java.util.List<Label> labels;
 
     @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
@@ -136,7 +141,7 @@ public class File extends TeaModel {
     private String mediaType;
 
     @com.aliyun.core.annotation.NameInMap("OCRContents")
-    private java.util.List < OCRContents > OCRContents;
+    private java.util.List<OCRContents> OCRContents;
 
     @com.aliyun.core.annotation.NameInMap("OCRTexts")
     private String OCRTexts;
@@ -157,7 +162,7 @@ public class File extends TeaModel {
     private String OSSStorageClass;
 
     @com.aliyun.core.annotation.NameInMap("OSSTagging")
-    private java.util.Map < String, ? > OSSTagging;
+    private java.util.Map<String, ?> OSSTagging;
 
     @com.aliyun.core.annotation.NameInMap("OSSTaggingCount")
     private Long OSSTaggingCount;
@@ -166,7 +171,7 @@ public class File extends TeaModel {
     private String OSSURI;
 
     @com.aliyun.core.annotation.NameInMap("OSSUserMeta")
-    private java.util.Map < String, ? > OSSUserMeta;
+    private java.util.Map<String, ?> OSSUserMeta;
 
     @com.aliyun.core.annotation.NameInMap("OSSVersionId")
     private String OSSVersionId;
@@ -208,10 +213,10 @@ public class File extends TeaModel {
     private String reason;
 
     @com.aliyun.core.annotation.NameInMap("SceneElements")
-    private java.util.List < SceneElement > sceneElements;
+    private java.util.List<SceneElement> sceneElements;
 
     @com.aliyun.core.annotation.NameInMap("SemanticTypes")
-    private java.util.List < String > semanticTypes;
+    private java.util.List<String> semanticTypes;
 
     @com.aliyun.core.annotation.NameInMap("ServerSideDataEncryption")
     private String serverSideDataEncryption;
@@ -235,7 +240,7 @@ public class File extends TeaModel {
     private Long streamCount;
 
     @com.aliyun.core.annotation.NameInMap("Subtitles")
-    private java.util.List < SubtitleStream > subtitles;
+    private java.util.List<SubtitleStream> subtitles;
 
     @com.aliyun.core.annotation.NameInMap("Timezone")
     private String timezone;
@@ -256,7 +261,7 @@ public class File extends TeaModel {
     private Long videoHeight;
 
     @com.aliyun.core.annotation.NameInMap("VideoStreams")
-    private java.util.List < VideoStream > videoStreams;
+    private java.util.List<VideoStream> videoStreams;
 
     @com.aliyun.core.annotation.NameInMap("VideoWidth")
     private Long videoWidth;
@@ -372,7 +377,7 @@ public class File extends TeaModel {
     /**
      * @return addresses
      */
-    public java.util.List < Address > getAddresses() {
+    public java.util.List<Address> getAddresses() {
         return this.addresses;
     }
 
@@ -400,14 +405,14 @@ public class File extends TeaModel {
     /**
      * @return audioCovers
      */
-    public java.util.List < Image > getAudioCovers() {
+    public java.util.List<Image> getAudioCovers() {
         return this.audioCovers;
     }
 
     /**
      * @return audioStreams
      */
-    public java.util.List < AudioStream > getAudioStreams() {
+    public java.util.List<AudioStream> getAudioStreams() {
         return this.audioStreams;
     }
 
@@ -477,7 +482,7 @@ public class File extends TeaModel {
     /**
      * @return croppingSuggestions
      */
-    public java.util.List < CroppingSuggestion > getCroppingSuggestions() {
+    public java.util.List<CroppingSuggestion> getCroppingSuggestions() {
         return this.croppingSuggestions;
     }
 
@@ -491,7 +496,7 @@ public class File extends TeaModel {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, ? > getCustomLabels() {
+    public java.util.Map<String, ?> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -526,7 +531,7 @@ public class File extends TeaModel {
     /**
      * @return elements
      */
-    public java.util.List < Element > getElements() {
+    public java.util.List<Element> getElements() {
         return this.elements;
     }
 
@@ -540,7 +545,7 @@ public class File extends TeaModel {
     /**
      * @return figures
      */
-    public java.util.List < Figure > getFigures() {
+    public java.util.List<Figure> getFigures() {
         return this.figures;
     }
 
@@ -617,7 +622,7 @@ public class File extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Label > getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 
@@ -645,7 +650,7 @@ public class File extends TeaModel {
     /**
      * @return OCRContents
      */
-    public java.util.List < OCRContents > getOCRContents() {
+    public java.util.List<OCRContents> getOCRContents() {
         return this.OCRContents;
     }
 
@@ -694,7 +699,7 @@ public class File extends TeaModel {
     /**
      * @return OSSTagging
      */
-    public java.util.Map < String, ? > getOSSTagging() {
+    public java.util.Map<String, ?> getOSSTagging() {
         return this.OSSTagging;
     }
 
@@ -715,7 +720,7 @@ public class File extends TeaModel {
     /**
      * @return OSSUserMeta
      */
-    public java.util.Map < String, ? > getOSSUserMeta() {
+    public java.util.Map<String, ?> getOSSUserMeta() {
         return this.OSSUserMeta;
     }
 
@@ -813,14 +818,14 @@ public class File extends TeaModel {
     /**
      * @return sceneElements
      */
-    public java.util.List < SceneElement > getSceneElements() {
+    public java.util.List<SceneElement> getSceneElements() {
         return this.sceneElements;
     }
 
     /**
      * @return semanticTypes
      */
-    public java.util.List < String > getSemanticTypes() {
+    public java.util.List<String> getSemanticTypes() {
         return this.semanticTypes;
     }
 
@@ -876,7 +881,7 @@ public class File extends TeaModel {
     /**
      * @return subtitles
      */
-    public java.util.List < SubtitleStream > getSubtitles() {
+    public java.util.List<SubtitleStream> getSubtitles() {
         return this.subtitles;
     }
 
@@ -925,7 +930,7 @@ public class File extends TeaModel {
     /**
      * @return videoStreams
      */
-    public java.util.List < VideoStream > getVideoStreams() {
+    public java.util.List<VideoStream> getVideoStreams() {
         return this.videoStreams;
     }
 
@@ -939,12 +944,12 @@ public class File extends TeaModel {
     public static final class Builder {
         private String accessControlAllowOrigin; 
         private String accessControlRequestMethod; 
-        private java.util.List < Address > addresses; 
+        private java.util.List<Address> addresses; 
         private String album; 
         private String albumArtist; 
         private String artist; 
-        private java.util.List < Image > audioCovers; 
-        private java.util.List < AudioStream > audioStreams; 
+        private java.util.List<Image> audioCovers; 
+        private java.util.List<AudioStream> audioStreams; 
         private Long bitrate; 
         private String cacheControl; 
         private String composer; 
@@ -954,16 +959,16 @@ public class File extends TeaModel {
         private String contentMd5; 
         private String contentType; 
         private String createTime; 
-        private java.util.List < CroppingSuggestion > croppingSuggestions; 
+        private java.util.List<CroppingSuggestion> croppingSuggestions; 
         private String customId; 
-        private java.util.Map < String, ? > customLabels; 
+        private java.util.Map<String, ?> customLabels; 
         private String datasetName; 
         private Double duration; 
         private String eTag; 
         private String EXIF; 
-        private java.util.List < Element > elements; 
+        private java.util.List<Element> elements; 
         private Long figureCount; 
-        private java.util.List < Figure > figures; 
+        private java.util.List<Figure> figures; 
         private String fileAccessTime; 
         private String fileCreateTime; 
         private String fileHash; 
@@ -974,21 +979,21 @@ public class File extends TeaModel {
         private Long imageHeight; 
         private ImageScore imageScore; 
         private Long imageWidth; 
-        private java.util.List < Label > labels; 
+        private java.util.List<Label> labels; 
         private String language; 
         private String latLong; 
         private String mediaType; 
-        private java.util.List < OCRContents > OCRContents; 
+        private java.util.List<OCRContents> OCRContents; 
         private String OCRTexts; 
         private String OSSCRC64; 
         private String OSSDeleteMarker; 
         private String OSSExpiration; 
         private String OSSObjectType; 
         private String OSSStorageClass; 
-        private java.util.Map < String, ? > OSSTagging; 
+        private java.util.Map<String, ?> OSSTagging; 
         private Long OSSTaggingCount; 
         private String OSSURI; 
-        private java.util.Map < String, ? > OSSUserMeta; 
+        private java.util.Map<String, ?> OSSUserMeta; 
         private String OSSVersionId; 
         private String objectACL; 
         private String objectId; 
@@ -1002,8 +1007,8 @@ public class File extends TeaModel {
         private Long programCount; 
         private String projectName; 
         private String reason; 
-        private java.util.List < SceneElement > sceneElements; 
-        private java.util.List < String > semanticTypes; 
+        private java.util.List<SceneElement> sceneElements; 
+        private java.util.List<String> semanticTypes; 
         private String serverSideDataEncryption; 
         private String serverSideEncryption; 
         private String serverSideEncryptionCustomerAlgorithm; 
@@ -1011,14 +1016,14 @@ public class File extends TeaModel {
         private Long size; 
         private Double startTime; 
         private Long streamCount; 
-        private java.util.List < SubtitleStream > subtitles; 
+        private java.util.List<SubtitleStream> subtitles; 
         private String timezone; 
         private String title; 
         private String travelClusterId; 
         private String URI; 
         private String updateTime; 
         private Long videoHeight; 
-        private java.util.List < VideoStream > videoStreams; 
+        private java.util.List<VideoStream> videoStreams; 
         private Long videoWidth; 
 
         /**
@@ -1040,7 +1045,7 @@ public class File extends TeaModel {
         /**
          * Addresses.
          */
-        public Builder addresses(java.util.List < Address > addresses) {
+        public Builder addresses(java.util.List<Address> addresses) {
             this.addresses = addresses;
             return this;
         }
@@ -1072,7 +1077,7 @@ public class File extends TeaModel {
         /**
          * AudioCovers.
          */
-        public Builder audioCovers(java.util.List < Image > audioCovers) {
+        public Builder audioCovers(java.util.List<Image> audioCovers) {
             this.audioCovers = audioCovers;
             return this;
         }
@@ -1080,7 +1085,7 @@ public class File extends TeaModel {
         /**
          * AudioStreams.
          */
-        public Builder audioStreams(java.util.List < AudioStream > audioStreams) {
+        public Builder audioStreams(java.util.List<AudioStream> audioStreams) {
             this.audioStreams = audioStreams;
             return this;
         }
@@ -1160,7 +1165,7 @@ public class File extends TeaModel {
         /**
          * CroppingSuggestions.
          */
-        public Builder croppingSuggestions(java.util.List < CroppingSuggestion > croppingSuggestions) {
+        public Builder croppingSuggestions(java.util.List<CroppingSuggestion> croppingSuggestions) {
             this.croppingSuggestions = croppingSuggestions;
             return this;
         }
@@ -1176,7 +1181,7 @@ public class File extends TeaModel {
         /**
          * CustomLabels.
          */
-        public Builder customLabels(java.util.Map < String, ? > customLabels) {
+        public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
             return this;
         }
@@ -1216,7 +1221,7 @@ public class File extends TeaModel {
         /**
          * Elements.
          */
-        public Builder elements(java.util.List < Element > elements) {
+        public Builder elements(java.util.List<Element> elements) {
             this.elements = elements;
             return this;
         }
@@ -1232,7 +1237,7 @@ public class File extends TeaModel {
         /**
          * Figures.
          */
-        public Builder figures(java.util.List < Figure > figures) {
+        public Builder figures(java.util.List<Figure> figures) {
             this.figures = figures;
             return this;
         }
@@ -1320,7 +1325,7 @@ public class File extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Label > labels) {
+        public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
             return this;
         }
@@ -1352,7 +1357,7 @@ public class File extends TeaModel {
         /**
          * OCRContents.
          */
-        public Builder OCRContents(java.util.List < OCRContents > OCRContents) {
+        public Builder OCRContents(java.util.List<OCRContents> OCRContents) {
             this.OCRContents = OCRContents;
             return this;
         }
@@ -1408,7 +1413,7 @@ public class File extends TeaModel {
         /**
          * OSSTagging.
          */
-        public Builder OSSTagging(java.util.Map < String, ? > OSSTagging) {
+        public Builder OSSTagging(java.util.Map<String, ?> OSSTagging) {
             this.OSSTagging = OSSTagging;
             return this;
         }
@@ -1432,7 +1437,7 @@ public class File extends TeaModel {
         /**
          * OSSUserMeta.
          */
-        public Builder OSSUserMeta(java.util.Map < String, ? > OSSUserMeta) {
+        public Builder OSSUserMeta(java.util.Map<String, ?> OSSUserMeta) {
             this.OSSUserMeta = OSSUserMeta;
             return this;
         }
@@ -1544,7 +1549,7 @@ public class File extends TeaModel {
         /**
          * SceneElements.
          */
-        public Builder sceneElements(java.util.List < SceneElement > sceneElements) {
+        public Builder sceneElements(java.util.List<SceneElement> sceneElements) {
             this.sceneElements = sceneElements;
             return this;
         }
@@ -1552,7 +1557,7 @@ public class File extends TeaModel {
         /**
          * SemanticTypes.
          */
-        public Builder semanticTypes(java.util.List < String > semanticTypes) {
+        public Builder semanticTypes(java.util.List<String> semanticTypes) {
             this.semanticTypes = semanticTypes;
             return this;
         }
@@ -1616,7 +1621,7 @@ public class File extends TeaModel {
         /**
          * Subtitles.
          */
-        public Builder subtitles(java.util.List < SubtitleStream > subtitles) {
+        public Builder subtitles(java.util.List<SubtitleStream> subtitles) {
             this.subtitles = subtitles;
             return this;
         }
@@ -1672,7 +1677,7 @@ public class File extends TeaModel {
         /**
          * VideoStreams.
          */
-        public Builder videoStreams(java.util.List < VideoStream > videoStreams) {
+        public Builder videoStreams(java.util.List<VideoStream> videoStreams) {
             this.videoStreams = videoStreams;
             return this;
         }

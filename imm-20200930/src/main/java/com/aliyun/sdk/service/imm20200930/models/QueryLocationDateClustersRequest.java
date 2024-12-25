@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class QueryLocationDateClustersRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LocationDateClusterLevels")
-    private java.util.List < String > locationDateClusterLevels;
+    private java.util.List<String> locationDateClusterLevels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LocationDateClusterStartTimeRange")
@@ -156,7 +161,7 @@ public class QueryLocationDateClustersRequest extends Request {
     /**
      * @return locationDateClusterLevels
      */
-    public java.util.List < String > getLocationDateClusterLevels() {
+    public java.util.List<String> getLocationDateClusterLevels() {
         return this.locationDateClusterLevels;
     }
 
@@ -230,7 +235,7 @@ public class QueryLocationDateClustersRequest extends Request {
         private String customLabels; 
         private String datasetName; 
         private TimeRange locationDateClusterEndTimeRange; 
-        private java.util.List < String > locationDateClusterLevels; 
+        private java.util.List<String> locationDateClusterLevels; 
         private TimeRange locationDateClusterStartTimeRange; 
         private Integer maxResults; 
         private String nextToken; 
@@ -332,7 +337,7 @@ public class QueryLocationDateClustersRequest extends Request {
         /**
          * <p>The administrative level of the spatiotemporal clustering groups to be queried.</p>
          */
-        public Builder locationDateClusterLevels(java.util.List < String > locationDateClusterLevels) {
+        public Builder locationDateClusterLevels(java.util.List<String> locationDateClusterLevels) {
             String locationDateClusterLevelsShrink = shrink(locationDateClusterLevels, "LocationDateClusterLevels", "json");
             this.putQueryParameter("LocationDateClusterLevels", locationDateClusterLevelsShrink);
             this.locationDateClusterLevels = locationDateClusterLevels;

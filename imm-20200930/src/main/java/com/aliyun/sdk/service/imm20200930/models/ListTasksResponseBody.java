@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTasksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Tasks")
-    private java.util.List < TaskInfo > tasks;
+    private java.util.List<TaskInfo> tasks;
 
     private ListTasksResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +79,7 @@ public class ListTasksResponseBody extends TeaModel {
     /**
      * @return tasks
      */
-    public java.util.List < TaskInfo > getTasks() {
+    public java.util.List<TaskInfo> getTasks() {
         return this.tasks;
     }
 
@@ -83,7 +88,7 @@ public class ListTasksResponseBody extends TeaModel {
         private String nextToken; 
         private String projectName; 
         private String requestId; 
-        private java.util.List < TaskInfo > tasks; 
+        private java.util.List<TaskInfo> tasks; 
 
         /**
          * <p>The length of the returned result list.</p>
@@ -133,7 +138,7 @@ public class ListTasksResponseBody extends TeaModel {
         /**
          * <p>The tasks.</p>
          */
-        public Builder tasks(java.util.List < TaskInfo > tasks) {
+        public Builder tasks(java.util.List<TaskInfo> tasks) {
             this.tasks = tasks;
             return this;
         }

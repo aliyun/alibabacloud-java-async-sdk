@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DataIngestion extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Actions")
-    private java.util.List < Actions> actions;
+    private java.util.List<Actions> actions;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -46,7 +51,7 @@ public class DataIngestion extends TeaModel {
     private Statistic statistic;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
@@ -78,7 +83,7 @@ public class DataIngestion extends TeaModel {
     /**
      * @return actions
      */
-    public java.util.List < Actions> getActions() {
+    public java.util.List<Actions> getActions() {
         return this.actions;
     }
 
@@ -155,7 +160,7 @@ public class DataIngestion extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -167,7 +172,7 @@ public class DataIngestion extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Actions> actions; 
+        private java.util.List<Actions> actions; 
         private String createTime; 
         private String error; 
         private String id; 
@@ -178,13 +183,13 @@ public class DataIngestion extends TeaModel {
         private String serviceRole; 
         private String state; 
         private Statistic statistic; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String updateTime; 
 
         /**
          * Actions.
          */
-        public Builder actions(java.util.List < Actions> actions) {
+        public Builder actions(java.util.List<Actions> actions) {
             this.actions = actions;
             return this;
         }
@@ -272,7 +277,7 @@ public class DataIngestion extends TeaModel {
         /**
          * Tags.
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             this.tags = tags;
             return this;
         }
@@ -305,7 +310,7 @@ public class DataIngestion extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Parameters")
-        private java.util.List < String > parameters;
+        private java.util.List<String> parameters;
 
         private Actions(Builder builder) {
             this.fastFailPolicy = builder.fastFailPolicy;
@@ -338,14 +343,14 @@ public class DataIngestion extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.List < String > getParameters() {
+        public java.util.List<String> getParameters() {
             return this.parameters;
         }
 
         public static final class Builder {
             private FastFailPolicy fastFailPolicy; 
             private String name; 
-            private java.util.List < String > parameters; 
+            private java.util.List<String> parameters; 
 
             /**
              * FastFailPolicy.
@@ -366,7 +371,7 @@ public class DataIngestion extends TeaModel {
             /**
              * Parameters.
              */
-            public Builder parameters(java.util.List < String > parameters) {
+            public Builder parameters(java.util.List<String> parameters) {
                 this.parameters = parameters;
                 return this;
             }

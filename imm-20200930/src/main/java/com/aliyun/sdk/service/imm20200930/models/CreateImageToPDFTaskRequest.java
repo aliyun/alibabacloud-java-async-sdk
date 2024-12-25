@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,11 +37,11 @@ public class CreateImageToPDFTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Sources")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Sources> sources;
+    private java.util.List<Sources> sources;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetURI")
@@ -103,14 +108,14 @@ public class CreateImageToPDFTaskRequest extends Request {
     /**
      * @return sources
      */
-    public java.util.List < Sources> getSources() {
+    public java.util.List<Sources> getSources() {
         return this.sources;
     }
 
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -133,8 +138,8 @@ public class CreateImageToPDFTaskRequest extends Request {
         private CredentialConfig credentialConfig; 
         private Notification notification; 
         private String projectName; 
-        private java.util.List < Sources> sources; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.List<Sources> sources; 
+        private java.util.Map<String, ?> tags; 
         private String targetURI; 
         private String userData; 
 
@@ -175,7 +180,7 @@ public class CreateImageToPDFTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a>.</p>
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -201,7 +206,7 @@ public class CreateImageToPDFTaskRequest extends Request {
          * <p>The list of images. The sequence of image URIs in the list determines the order in which they are converted.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder sources(java.util.List < Sources> sources) {
+        public Builder sources(java.util.List<Sources> sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
             this.putQueryParameter("Sources", sourcesShrink);
             this.sources = sources;
@@ -216,7 +221,7 @@ public class CreateImageToPDFTaskRequest extends Request {
          *       &quot;User&quot;: &quot;Jane&quot;
          * }</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

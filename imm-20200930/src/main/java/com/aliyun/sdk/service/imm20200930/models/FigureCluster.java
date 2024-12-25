@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class FigureCluster extends TeaModel {
     private String customId;
 
     @com.aliyun.core.annotation.NameInMap("CustomLabels")
-    private java.util.Map < String, ? > customLabels;
+    private java.util.Map<String, ?> customLabels;
 
     @com.aliyun.core.annotation.NameInMap("DatasetName")
     private String datasetName;
@@ -130,7 +135,7 @@ public class FigureCluster extends TeaModel {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, ? > getCustomLabels() {
+    public java.util.Map<String, ?> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -237,7 +242,7 @@ public class FigureCluster extends TeaModel {
         private File cover; 
         private String createTime; 
         private String customId; 
-        private java.util.Map < String, ? > customLabels; 
+        private java.util.Map<String, ?> customLabels; 
         private String datasetName; 
         private Long faceCount; 
         private String gender; 
@@ -288,7 +293,7 @@ public class FigureCluster extends TeaModel {
         /**
          * CustomLabels.
          */
-        public Builder customLabels(java.util.Map < String, ? > customLabels) {
+        public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
             return this;
         }

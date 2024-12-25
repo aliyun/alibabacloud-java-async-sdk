@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class SimpleQueryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Aggregations")
-    private java.util.List < Aggregations> aggregations;
+    private java.util.List<Aggregations> aggregations;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatasetName")
@@ -52,7 +57,7 @@ public class SimpleQueryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WithFields")
-    private java.util.List < String > withFields;
+    private java.util.List<String> withFields;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WithoutTotalHits")
@@ -96,7 +101,7 @@ public class SimpleQueryRequest extends Request {
     /**
      * @return aggregations
      */
-    public java.util.List < Aggregations> getAggregations() {
+    public java.util.List<Aggregations> getAggregations() {
         return this.aggregations;
     }
 
@@ -152,7 +157,7 @@ public class SimpleQueryRequest extends Request {
     /**
      * @return withFields
      */
-    public java.util.List < String > getWithFields() {
+    public java.util.List<String> getWithFields() {
         return this.withFields;
     }
 
@@ -165,7 +170,7 @@ public class SimpleQueryRequest extends Request {
 
     public static final class Builder extends Request.Builder<SimpleQueryRequest, Builder> {
         private String regionId; 
-        private java.util.List < Aggregations> aggregations; 
+        private java.util.List<Aggregations> aggregations; 
         private String datasetName; 
         private Integer maxResults; 
         private String nextToken; 
@@ -173,7 +178,7 @@ public class SimpleQueryRequest extends Request {
         private String projectName; 
         private SimpleQuery query; 
         private String sort; 
-        private java.util.List < String > withFields; 
+        private java.util.List<String> withFields; 
         private Boolean withoutTotalHits; 
 
         private Builder() {
@@ -210,7 +215,7 @@ public class SimpleQueryRequest extends Request {
          * <p> If you perform an aggregate query, the aggregation returned in the response contains only statistical results, not the actual metadata.</p>
          * </blockquote>
          */
-        public Builder aggregations(java.util.List < Aggregations> aggregations) {
+        public Builder aggregations(java.util.List<Aggregations> aggregations) {
             String aggregationsShrink = shrink(aggregations, "Aggregations", "json");
             this.putQueryParameter("Aggregations", aggregationsShrink);
             this.aggregations = aggregations;
@@ -263,12 +268,10 @@ public class SimpleQueryRequest extends Request {
         /**
          * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>asc: sorts the results in ascending order.</li>
-         * <li>desc: sorts the results in descending order. This is the default value.</li>
-         * </ul>
-         * <blockquote>
-         * </blockquote>
-         * <ul>
+         * <li><p>asc: sorts the results in ascending order.</p>
+         * </li>
+         * <li><p>desc: sorts the results in descending order. This is the default value.</p>
+         * </li>
          * <li><p>You can specify multiple sort orders that are separated by commas. Example: asc,desc.</p>
          * </li>
          * <li><p>The number of elements in the Order parameter must be less than or equal to the number of elements in the Sort parameter. For example, if the value of the Sort parameter is Size,Filename, you can set the Order parameter to desc,asc.</p>
@@ -310,7 +313,7 @@ public class SimpleQueryRequest extends Request {
         }
 
         /**
-         * <p>The sort fields. For more information, see <a href="https://help.aliyun.com/document_detail/252856.html">Supported fields and operators</a>.</p>
+         * <p>The sort fields. For more information, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</p>
          * <blockquote>
          * </blockquote>
          * <ul>
@@ -335,7 +338,7 @@ public class SimpleQueryRequest extends Request {
          * <p>The fields that you want to include in the response. You can use this parameter to reduce the size of the response.</p>
          * <p>If you do not specify this parameter or leave this parameter empty, the operation returns all metadata fields.</p>
          */
-        public Builder withFields(java.util.List < String > withFields) {
+        public Builder withFields(java.util.List<String> withFields) {
             String withFieldsShrink = shrink(withFields, "WithFields", "json");
             this.putQueryParameter("WithFields", withFieldsShrink);
             this.withFields = withFields;
@@ -407,7 +410,7 @@ public class SimpleQueryRequest extends Request {
             private String operation; 
 
             /**
-             * <p>The name of the field. For more information about supported fields, see <a href="https://help.aliyun.com/document_detail/252856.html">Supported fields and operators</a>.</p>
+             * <p>The name of the field. For more information about supported fields, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>Size</p>

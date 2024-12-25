@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetFileMetaResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Files")
-    private java.util.List < File > files;
+    private java.util.List<File> files;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class GetFileMetaResponseBody extends TeaModel {
     /**
      * @return files
      */
-    public java.util.List < File > getFiles() {
+    public java.util.List<File> getFiles() {
         return this.files;
     }
 
@@ -46,13 +51,13 @@ public class GetFileMetaResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < File > files; 
+        private java.util.List<File> files; 
         private String requestId; 
 
         /**
          * <p>The metadata returned.</p>
          */
-        public Builder files(java.util.List < File > files) {
+        public Builder files(java.util.List<File> files) {
             this.files = files;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class FigureClusterForReq extends TeaModel {
     private String customId;
 
     @com.aliyun.core.annotation.NameInMap("CustomLabels")
-    private java.util.Map < String, ? > customLabels;
+    private java.util.Map<String, ?> customLabels;
 
     @com.aliyun.core.annotation.NameInMap("MetaLockVersion")
     private Long metaLockVersion;
@@ -64,7 +69,7 @@ public class FigureClusterForReq extends TeaModel {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, ? > getCustomLabels() {
+    public java.util.Map<String, ?> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -92,7 +97,7 @@ public class FigureClusterForReq extends TeaModel {
     public static final class Builder {
         private Cover cover; 
         private String customId; 
-        private java.util.Map < String, ? > customLabels; 
+        private java.util.Map<String, ?> customLabels; 
         private Long metaLockVersion; 
         private String name; 
         private String objectId; 
@@ -116,7 +121,7 @@ public class FigureClusterForReq extends TeaModel {
         /**
          * CustomLabels.
          */
-        public Builder customLabels(java.util.Map < String, ? > customLabels) {
+        public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
             return this;
         }
@@ -206,7 +211,7 @@ public class FigureClusterForReq extends TeaModel {
      */
     public static class Cover extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Figures")
-        private java.util.List < Figures> figures;
+        private java.util.List<Figures> figures;
 
         private Cover(Builder builder) {
             this.figures = builder.figures;
@@ -223,17 +228,17 @@ public class FigureClusterForReq extends TeaModel {
         /**
          * @return figures
          */
-        public java.util.List < Figures> getFigures() {
+        public java.util.List<Figures> getFigures() {
             return this.figures;
         }
 
         public static final class Builder {
-            private java.util.List < Figures> figures; 
+            private java.util.List<Figures> figures; 
 
             /**
              * Figures.
              */
-            public Builder figures(java.util.List < Figures> figures) {
+            public Builder figures(java.util.List<Figures> figures) {
                 this.figures = figures;
                 return this;
             }

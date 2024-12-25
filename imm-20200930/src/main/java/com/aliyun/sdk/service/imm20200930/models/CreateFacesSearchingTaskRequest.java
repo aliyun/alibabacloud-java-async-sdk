@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,7 +41,7 @@ public class CreateFacesSearchingTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Sources")
-    private java.util.List < Sources> sources;
+    private java.util.List<Sources> sources;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserData")
@@ -104,7 +109,7 @@ public class CreateFacesSearchingTaskRequest extends Request {
     /**
      * @return sources
      */
-    public java.util.List < Sources> getSources() {
+    public java.util.List<Sources> getSources() {
         return this.sources;
     }
 
@@ -121,7 +126,7 @@ public class CreateFacesSearchingTaskRequest extends Request {
         private Long maxResult; 
         private Notification notification; 
         private String projectName; 
-        private java.util.List < Sources> sources; 
+        private java.util.List<Sources> sources; 
         private String userData; 
 
         private Builder() {
@@ -174,7 +179,7 @@ public class CreateFacesSearchingTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a>.</p>
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -199,7 +204,7 @@ public class CreateFacesSearchingTaskRequest extends Request {
         /**
          * <p>The images.</p>
          */
-        public Builder sources(java.util.List < Sources> sources) {
+        public Builder sources(java.util.List<Sources> sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
             this.putQueryParameter("Sources", sourcesShrink);
             this.sources = sources;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class CreateBatchRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Actions")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Actions> actions;
+    private java.util.List<Actions> actions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Input")
@@ -42,7 +47,7 @@ public class CreateBatchRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     private CreateBatchRequest(Builder builder) {
         super(builder);
@@ -78,7 +83,7 @@ public class CreateBatchRequest extends Request {
     /**
      * @return actions
      */
-    public java.util.List < Actions> getActions() {
+    public java.util.List<Actions> getActions() {
         return this.actions;
     }
 
@@ -113,18 +118,18 @@ public class CreateBatchRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<CreateBatchRequest, Builder> {
         private String regionId; 
-        private java.util.List < Actions> actions; 
+        private java.util.List<Actions> actions; 
         private Input input; 
         private Notification notification; 
         private String projectName; 
         private String serviceRole; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
 
         private Builder() {
             super();
@@ -154,7 +159,7 @@ public class CreateBatchRequest extends Request {
          * <p>The processing templates.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder actions(java.util.List < Actions> actions) {
+        public Builder actions(java.util.List<Actions> actions) {
             String actionsShrink = shrink(actions, "Actions", "json");
             this.putBodyParameter("Actions", actionsShrink);
             this.actions = actions;
@@ -216,7 +221,7 @@ public class CreateBatchRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;key&quot;: &quot;val&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putBodyParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -245,7 +250,7 @@ public class CreateBatchRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Parameters")
-        private java.util.List < String > parameters;
+        private java.util.List<String> parameters;
 
         private Actions(Builder builder) {
             this.fastFailPolicy = builder.fastFailPolicy;
@@ -278,14 +283,14 @@ public class CreateBatchRequest extends Request {
         /**
          * @return parameters
          */
-        public java.util.List < String > getParameters() {
+        public java.util.List<String> getParameters() {
             return this.parameters;
         }
 
         public static final class Builder {
             private FastFailPolicy fastFailPolicy; 
             private String name; 
-            private java.util.List < String > parameters; 
+            private java.util.List<String> parameters; 
 
             /**
              * <p>The policy configurations for handling failures.</p>
@@ -310,7 +315,7 @@ public class CreateBatchRequest extends Request {
             /**
              * <p>The template parameters.</p>
              */
-            public Builder parameters(java.util.List < String > parameters) {
+            public Builder parameters(java.util.List<String> parameters) {
                 this.parameters = parameters;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DetectImageCodesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Codes")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Codes > codes;
+    private java.util.List<Codes> codes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,7 +40,7 @@ public class DetectImageCodesResponseBody extends TeaModel {
     /**
      * @return codes
      */
-    public java.util.List < Codes > getCodes() {
+    public java.util.List<Codes> getCodes() {
         return this.codes;
     }
 
@@ -47,14 +52,14 @@ public class DetectImageCodesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Codes > codes; 
+        private java.util.List<Codes> codes; 
         private String requestId; 
 
         /**
          * <p>The barcodes or QR codes.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder codes(java.util.List < Codes > codes) {
+        public Builder codes(java.util.List<Codes> codes) {
             this.codes = codes;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -213,8 +218,13 @@ public class EncodeBlindWatermarkRequest extends Request {
         }
 
         /**
-         * <p>The OSS URI of the output image.</p>
-         * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region with the current project. <code>${Object}</code> specifies the path of the object with the extension included.</p>
+         * <p>The URI of the output image in OSS.</p>
+         * <p>Specify the URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>The format of the output image is the same as that of the input image.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

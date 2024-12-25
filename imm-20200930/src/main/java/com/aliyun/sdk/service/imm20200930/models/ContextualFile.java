@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ContextualFile extends TeaModel {
     private String datasetName;
 
     @com.aliyun.core.annotation.NameInMap("Elements")
-    private java.util.List < Element > elements;
+    private java.util.List<Element> elements;
 
     @com.aliyun.core.annotation.NameInMap("MediaType")
     private String mediaType;
@@ -76,7 +81,7 @@ public class ContextualFile extends TeaModel {
     /**
      * @return elements
      */
-    public java.util.List < Element > getElements() {
+    public java.util.List<Element> getElements() {
         return this.elements;
     }
 
@@ -125,7 +130,7 @@ public class ContextualFile extends TeaModel {
     public static final class Builder {
         private String contentType; 
         private String datasetName; 
-        private java.util.List < Element > elements; 
+        private java.util.List<Element> elements; 
         private String mediaType; 
         private String OSSURI; 
         private String objectId; 
@@ -152,7 +157,7 @@ public class ContextualFile extends TeaModel {
         /**
          * Elements.
          */
-        public Builder elements(java.util.List < Element > elements) {
+        public Builder elements(java.util.List<Element> elements) {
             this.elements = elements;
             return this;
         }

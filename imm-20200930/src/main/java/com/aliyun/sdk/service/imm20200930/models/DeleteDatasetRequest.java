@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -93,7 +98,7 @@ public class DeleteDatasetRequest extends Request {
         }
 
         /**
-         * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+         * <p>The name of the dataset.<a href="https://help.aliyun.com/zh/imm/user-guide/create-datasets?spm=a2c4g.11186623.0.0.453e3cbf9vcZrq"></a></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -106,7 +111,7 @@ public class DeleteDatasetRequest extends Request {
         }
 
         /**
-         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>The name of the project.<a href="https://help.aliyun.com/zh/imm/getting-started/create-a-project-1?spm=a2c4g.11186623.0.i30"></a></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

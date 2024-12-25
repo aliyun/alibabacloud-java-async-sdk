@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -46,7 +51,7 @@ public class AddImageMosaicRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Targets")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Targets> targets;
+    private java.util.List<Targets> targets;
 
     private AddImageMosaicRequest(Builder builder) {
         super(builder);
@@ -125,7 +130,7 @@ public class AddImageMosaicRequest extends Request {
     /**
      * @return targets
      */
-    public java.util.List < Targets> getTargets() {
+    public java.util.List<Targets> getTargets() {
         return this.targets;
     }
 
@@ -137,7 +142,7 @@ public class AddImageMosaicRequest extends Request {
         private Integer quality; 
         private String sourceURI; 
         private String targetURI; 
-        private java.util.List < Targets> targets; 
+        private java.util.List<Targets> targets; 
 
         private Builder() {
             super();
@@ -245,7 +250,7 @@ public class AddImageMosaicRequest extends Request {
          * <p>The bounding boxes and processing parameters.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder targets(java.util.List < Targets> targets) {
+        public Builder targets(java.util.List<Targets> targets) {
             String targetsShrink = shrink(targets, "Targets", "json");
             this.putQueryParameter("Targets", targetsShrink);
             this.targets = targets;

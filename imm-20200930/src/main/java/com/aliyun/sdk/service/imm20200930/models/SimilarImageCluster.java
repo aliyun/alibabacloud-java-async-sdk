@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,10 +21,10 @@ public class SimilarImageCluster extends TeaModel {
     private String createTime;
 
     @com.aliyun.core.annotation.NameInMap("CustomLabels")
-    private java.util.Map < String, ? > customLabels;
+    private java.util.Map<String, ?> customLabels;
 
     @com.aliyun.core.annotation.NameInMap("Files")
-    private java.util.List < SimilarImage > files;
+    private java.util.List<SimilarImage> files;
 
     @com.aliyun.core.annotation.NameInMap("ObjectId")
     private String objectId;
@@ -53,14 +58,14 @@ public class SimilarImageCluster extends TeaModel {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, ? > getCustomLabels() {
+    public java.util.Map<String, ?> getCustomLabels() {
         return this.customLabels;
     }
 
     /**
      * @return files
      */
-    public java.util.List < SimilarImage > getFiles() {
+    public java.util.List<SimilarImage> getFiles() {
         return this.files;
     }
 
@@ -80,8 +85,8 @@ public class SimilarImageCluster extends TeaModel {
 
     public static final class Builder {
         private String createTime; 
-        private java.util.Map < String, ? > customLabels; 
-        private java.util.List < SimilarImage > files; 
+        private java.util.Map<String, ?> customLabels; 
+        private java.util.List<SimilarImage> files; 
         private String objectId; 
         private String updateTime; 
 
@@ -96,7 +101,7 @@ public class SimilarImageCluster extends TeaModel {
         /**
          * CustomLabels.
          */
-        public Builder customLabels(java.util.Map < String, ? > customLabels) {
+        public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
             return this;
         }
@@ -104,7 +109,7 @@ public class SimilarImageCluster extends TeaModel {
         /**
          * Files.
          */
-        public Builder files(java.util.List < SimilarImage > files) {
+        public Builder files(java.util.List<SimilarImage> files) {
             this.files = files;
             return this;
         }

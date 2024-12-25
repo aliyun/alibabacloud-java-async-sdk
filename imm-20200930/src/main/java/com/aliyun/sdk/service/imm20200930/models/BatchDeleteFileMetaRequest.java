@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -29,7 +34,7 @@ public class BatchDeleteFileMetaRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("URIs")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > URIs;
+    private java.util.List<String> URIs;
 
     private BatchDeleteFileMetaRequest(Builder builder) {
         super(builder);
@@ -76,7 +81,7 @@ public class BatchDeleteFileMetaRequest extends Request {
     /**
      * @return URIs
      */
-    public java.util.List < String > getURIs() {
+    public java.util.List<String> getURIs() {
         return this.URIs;
     }
 
@@ -84,7 +89,7 @@ public class BatchDeleteFileMetaRequest extends Request {
         private String regionId; 
         private String datasetName; 
         private String projectName; 
-        private java.util.List < String > URIs; 
+        private java.util.List<String> URIs; 
 
         private Builder() {
             super();
@@ -108,7 +113,11 @@ public class BatchDeleteFileMetaRequest extends Request {
         }
 
         /**
+         * <p>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -117,7 +126,11 @@ public class BatchDeleteFileMetaRequest extends Request {
         }
 
         /**
+         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -126,9 +139,10 @@ public class BatchDeleteFileMetaRequest extends Request {
         }
 
         /**
+         * <p>The URIs of the OSS buckets in which the files whose metadata you want to delete are stored. You can specify up to 100 URIs.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder URIs(java.util.List < String > URIs) {
+        public Builder URIs(java.util.List<String> URIs) {
             String URIsShrink = shrink(URIs, "URIs", "json");
             this.putQueryParameter("URIs", URIsShrink);
             this.URIs = URIs;

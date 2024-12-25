@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ElementContent extends TeaModel {
     private String content;
 
     @com.aliyun.core.annotation.NameInMap("TimeRange")
-    private java.util.List < Long > timeRange;
+    private java.util.List<Long> timeRange;
 
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
@@ -49,7 +54,7 @@ public class ElementContent extends TeaModel {
     /**
      * @return timeRange
      */
-    public java.util.List < Long > getTimeRange() {
+    public java.util.List<Long> getTimeRange() {
         return this.timeRange;
     }
 
@@ -69,7 +74,7 @@ public class ElementContent extends TeaModel {
 
     public static final class Builder {
         private String content; 
-        private java.util.List < Long > timeRange; 
+        private java.util.List<Long> timeRange; 
         private String type; 
         private String URL; 
 
@@ -84,7 +89,7 @@ public class ElementContent extends TeaModel {
         /**
          * TimeRange.
          */
-        public Builder timeRange(java.util.List < Long > timeRange) {
+        public Builder timeRange(java.util.List<Long> timeRange) {
             this.timeRange = timeRange;
             return this;
         }

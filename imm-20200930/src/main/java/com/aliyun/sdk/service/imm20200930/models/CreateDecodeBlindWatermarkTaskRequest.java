@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -191,8 +196,8 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The quality of the output image. This parameter is also available in the earlier <a href="https://help.aliyun.com/document_detail/444166.html">DecodeBlindWatermark</a> operation.</p>
-         * <p>The higher the quality, the larger the image size and the higher the watermark resolution quality.</p>
+         * <p>The quality of the output image.
+         * The higher the quality, the larger the image size and the higher the watermark resolution quality.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -204,7 +209,7 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The watermark algorithm model. This parameter is also available in the earlier <a href="https://help.aliyun.com/document_detail/444166.html">DecodeBlindWatermark</a> operation. Valid values: FFT, FFT_FULL, DWT, and DWT_IBG. Default value: FFT.</p>
+         * <p>The watermark algorithm model.Valid values: FFT, FFT_FULL, DWT, and DWT_IBG. Default value: FFT.</p>
          * <p>If this parameter is left empty, the DecodeBlindWatermark operation is called. Otherwise, the CreateDecodeBlindWatermarkTask operation is called.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +222,7 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a>.</p>
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -227,7 +232,7 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The OSS URI of the image before the blind watermark is added. This parameter is also available in the earlier <a href="https://help.aliyun.com/document_detail/444166.html">DecodeBlindWatermark</a> operation.</p>
+         * <p>The OSS URI of the image before the blind watermark is added. </p>
          * <p>Do not specify this parameter when you set the Model parameter to DWT or DWT_IBG.</p>
          * <p>Specify the OSS URI in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format, where <code>&lt;bucket&gt;</code> is the name of the bucket in the same region as the current project and <code>&lt;object&gt;</code> is the path of the object with the extension included.</p>
          * 
@@ -280,8 +285,8 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The OSS URI of the output image. This parameter is also available in the earlier <a href="https://help.aliyun.com/document_detail/444166.html">DecodeBlindWatermark</a> operation.</p>
-         * <p>Specify the OSS URI in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format, where <code>&lt;bucket&gt;</code> is the name of the bucket in the same region as the current project and <code>&lt;object&gt;</code> is the path of the object with the extension included.</p>
+         * <p>The OSS URI of the output image.
+         * Specify the OSS URI in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format, where <code>&lt;bucket&gt;</code> is the name of the bucket in the same region as the current project and <code>&lt;object&gt;</code> is the path of the object with the extension included.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://target/targetobject.jpg</p>

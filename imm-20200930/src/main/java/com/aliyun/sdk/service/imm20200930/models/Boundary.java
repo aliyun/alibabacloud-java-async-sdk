@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class Boundary extends TeaModel {
     private Long left;
 
     @com.aliyun.core.annotation.NameInMap("Polygon")
-    private java.util.List < PointInt64 > polygon;
+    private java.util.List<PointInt64> polygon;
 
     @com.aliyun.core.annotation.NameInMap("Top")
     private Long top;
@@ -60,7 +65,7 @@ public class Boundary extends TeaModel {
     /**
      * @return polygon
      */
-    public java.util.List < PointInt64 > getPolygon() {
+    public java.util.List<PointInt64> getPolygon() {
         return this.polygon;
     }
 
@@ -81,7 +86,7 @@ public class Boundary extends TeaModel {
     public static final class Builder {
         private Long height; 
         private Long left; 
-        private java.util.List < PointInt64 > polygon; 
+        private java.util.List<PointInt64> polygon; 
         private Long top; 
         private Long width; 
 
@@ -104,7 +109,7 @@ public class Boundary extends TeaModel {
         /**
          * Polygon.
          */
-        public Builder polygon(java.util.List < PointInt64 > polygon) {
+        public Builder polygon(java.util.List<PointInt64> polygon) {
             this.polygon = polygon;
             return this;
         }

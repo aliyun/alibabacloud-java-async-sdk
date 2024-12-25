@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Froms")
-    private java.util.List < String > froms;
+    private java.util.List<String> froms;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Notification")
@@ -40,7 +45,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("To")
@@ -101,7 +106,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
     /**
      * @return froms
      */
-    public java.util.List < String > getFroms() {
+    public java.util.List<String> getFroms() {
         return this.froms;
     }
 
@@ -122,7 +127,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -144,10 +149,10 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         private String regionId; 
         private String datasetName; 
         private String from; 
-        private java.util.List < String > froms; 
+        private java.util.List<String> froms; 
         private Notification notification; 
         private String projectName; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String to; 
         private String userData; 
 
@@ -205,7 +210,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         /**
          * <p>The IDs of source clustering groups. You must specify either From or Froms, but not both. You can specify up to 100 task IDs.</p>
          */
-        public Builder froms(java.util.List < String > froms) {
+        public Builder froms(java.util.List<String> froms) {
             String fromsShrink = shrink(froms, "Froms", "json");
             this.putQueryParameter("Froms", fromsShrink);
             this.froms = froms;
@@ -213,7 +218,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For more information, see &quot;Notification&quot;. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous notification format</a>.</p>
+         * <p>The notification message configurations. For more information, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -241,7 +246,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;key&quot;:&quot;val&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

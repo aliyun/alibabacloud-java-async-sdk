@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class SemanticQueryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MediaTypes")
-    private java.util.List < String > mediaTypes;
+    private java.util.List<String> mediaTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
@@ -45,7 +50,7 @@ public class SemanticQueryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WithFields")
-    private java.util.List < String > withFields;
+    private java.util.List<String> withFields;
 
     private SemanticQueryRequest(Builder builder) {
         super(builder);
@@ -96,7 +101,7 @@ public class SemanticQueryRequest extends Request {
     /**
      * @return mediaTypes
      */
-    public java.util.List < String > getMediaTypes() {
+    public java.util.List<String> getMediaTypes() {
         return this.mediaTypes;
     }
 
@@ -124,7 +129,7 @@ public class SemanticQueryRequest extends Request {
     /**
      * @return withFields
      */
-    public java.util.List < String > getWithFields() {
+    public java.util.List<String> getWithFields() {
         return this.withFields;
     }
 
@@ -132,11 +137,11 @@ public class SemanticQueryRequest extends Request {
         private String regionId; 
         private String datasetName; 
         private Integer maxResults; 
-        private java.util.List < String > mediaTypes; 
+        private java.util.List<String> mediaTypes; 
         private String nextToken; 
         private String projectName; 
         private String query; 
-        private java.util.List < String > withFields; 
+        private java.util.List<String> withFields; 
 
         private Builder() {
             super();
@@ -192,7 +197,7 @@ public class SemanticQueryRequest extends Request {
          * <p>The types of the media that you want to query. Default value:</p>
          * <p>[&quot;image&quot;]</p>
          */
-        public Builder mediaTypes(java.util.List < String > mediaTypes) {
+        public Builder mediaTypes(java.util.List<String> mediaTypes) {
             String mediaTypesShrink = shrink(mediaTypes, "MediaTypes", "json");
             this.putQueryParameter("MediaTypes", mediaTypesShrink);
             this.mediaTypes = mediaTypes;
@@ -238,7 +243,7 @@ public class SemanticQueryRequest extends Request {
          * <p>The fields that you want to include in the response. Including only necessary metadata fields can help reduce the size of the response.</p>
          * <p>If you do not specify this parameter or set the value to null, all existing metadata fields are returned.</p>
          */
-        public Builder withFields(java.util.List < String > withFields) {
+        public Builder withFields(java.util.List<String> withFields) {
             String withFieldsShrink = shrink(withFields, "WithFields", "json");
             this.putQueryParameter("WithFields", withFieldsShrink);
             this.withFields = withFields;

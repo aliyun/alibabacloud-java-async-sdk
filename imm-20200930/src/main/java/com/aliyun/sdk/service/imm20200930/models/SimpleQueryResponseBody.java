@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SimpleQueryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Aggregations")
-    private java.util.List < Aggregations> aggregations;
+    private java.util.List<Aggregations> aggregations;
 
     @com.aliyun.core.annotation.NameInMap("Files")
-    private java.util.List < File > files;
+    private java.util.List<File> files;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -47,14 +52,14 @@ public class SimpleQueryResponseBody extends TeaModel {
     /**
      * @return aggregations
      */
-    public java.util.List < Aggregations> getAggregations() {
+    public java.util.List<Aggregations> getAggregations() {
         return this.aggregations;
     }
 
     /**
      * @return files
      */
-    public java.util.List < File > getFiles() {
+    public java.util.List<File> getFiles() {
         return this.files;
     }
 
@@ -80,8 +85,8 @@ public class SimpleQueryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Aggregations> aggregations; 
-        private java.util.List < File > files; 
+        private java.util.List<Aggregations> aggregations; 
+        private java.util.List<File> files; 
         private String nextToken; 
         private String requestId; 
         private Long totalHits; 
@@ -89,7 +94,7 @@ public class SimpleQueryResponseBody extends TeaModel {
         /**
          * <p>The aggregations. This parameter is returned only when the value of the Aggregations request parameter is not empty.</p>
          */
-        public Builder aggregations(java.util.List < Aggregations> aggregations) {
+        public Builder aggregations(java.util.List<Aggregations> aggregations) {
             this.aggregations = aggregations;
             return this;
         }
@@ -97,7 +102,7 @@ public class SimpleQueryResponseBody extends TeaModel {
         /**
          * <p>The files. This parameter is returned only when the value of the Aggregations request parameter is empty.</p>
          */
-        public Builder files(java.util.List < File > files) {
+        public Builder files(java.util.List<File> files) {
             this.files = files;
             return this;
         }
@@ -228,7 +233,7 @@ public class SimpleQueryResponseBody extends TeaModel {
         private String field;
 
         @com.aliyun.core.annotation.NameInMap("Groups")
-        private java.util.List < Groups> groups;
+        private java.util.List<Groups> groups;
 
         @com.aliyun.core.annotation.NameInMap("Operation")
         private String operation;
@@ -261,7 +266,7 @@ public class SimpleQueryResponseBody extends TeaModel {
         /**
          * @return groups
          */
-        public java.util.List < Groups> getGroups() {
+        public java.util.List<Groups> getGroups() {
             return this.groups;
         }
 
@@ -281,7 +286,7 @@ public class SimpleQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String field; 
-            private java.util.List < Groups> groups; 
+            private java.util.List<Groups> groups; 
             private String operation; 
             private Double value; 
 
@@ -299,7 +304,7 @@ public class SimpleQueryResponseBody extends TeaModel {
             /**
              * <p>The grouped aggregations. This parameter is returned only when the group operator is specified in the Aggregations request parameter.</p>
              */
-            public Builder groups(java.util.List < Groups> groups) {
+            public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;
                 return this;
             }

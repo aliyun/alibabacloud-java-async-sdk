@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class Car extends TeaModel {
     private Double confidence;
 
     @com.aliyun.core.annotation.NameInMap("LicensePlates")
-    private java.util.List < LicensePlate > licensePlates;
+    private java.util.List<LicensePlate> licensePlates;
 
     private Car(Builder builder) {
         this.boundary = builder.boundary;
@@ -96,7 +101,7 @@ public class Car extends TeaModel {
     /**
      * @return licensePlates
      */
-    public java.util.List < LicensePlate > getLicensePlates() {
+    public java.util.List<LicensePlate> getLicensePlates() {
         return this.licensePlates;
     }
 
@@ -107,7 +112,7 @@ public class Car extends TeaModel {
         private String carType; 
         private Double carTypeConfidence; 
         private Double confidence; 
-        private java.util.List < LicensePlate > licensePlates; 
+        private java.util.List<LicensePlate> licensePlates; 
 
         /**
          * Boundary.
@@ -160,7 +165,7 @@ public class Car extends TeaModel {
         /**
          * LicensePlates.
          */
-        public Builder licensePlates(java.util.List < LicensePlate > licensePlates) {
+        public Builder licensePlates(java.util.List<LicensePlate> licensePlates) {
             this.licensePlates = licensePlates;
             return this;
         }

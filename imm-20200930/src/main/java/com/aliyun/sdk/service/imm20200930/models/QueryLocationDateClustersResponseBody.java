@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryLocationDateClustersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LocationDateClusters")
-    private java.util.List < LocationDateCluster > locationDateClusters;
+    private java.util.List<LocationDateCluster> locationDateClusters;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -38,7 +43,7 @@ public class QueryLocationDateClustersResponseBody extends TeaModel {
     /**
      * @return locationDateClusters
      */
-    public java.util.List < LocationDateCluster > getLocationDateClusters() {
+    public java.util.List<LocationDateCluster> getLocationDateClusters() {
         return this.locationDateClusters;
     }
 
@@ -57,14 +62,14 @@ public class QueryLocationDateClustersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < LocationDateCluster > locationDateClusters; 
+        private java.util.List<LocationDateCluster> locationDateClusters; 
         private String nextToken; 
         private String requestId; 
 
         /**
          * <p>The list of spatiotemporal groups.</p>
          */
-        public Builder locationDateClusters(java.util.List < LocationDateCluster > locationDateClusters) {
+        public Builder locationDateClusters(java.util.List<LocationDateCluster> locationDateClusters) {
             this.locationDateClusters = locationDateClusters;
             return this;
         }

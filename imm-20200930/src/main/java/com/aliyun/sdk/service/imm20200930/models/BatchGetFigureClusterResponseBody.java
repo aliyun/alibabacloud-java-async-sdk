@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class BatchGetFigureClusterResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FigureClusters")
-    private java.util.List < FigureCluster > figureClusters;
+    private java.util.List<FigureCluster> figureClusters;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class BatchGetFigureClusterResponseBody extends TeaModel {
     /**
      * @return figureClusters
      */
-    public java.util.List < FigureCluster > getFigureClusters() {
+    public java.util.List<FigureCluster> getFigureClusters() {
         return this.figureClusters;
     }
 
@@ -46,13 +51,13 @@ public class BatchGetFigureClusterResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < FigureCluster > figureClusters; 
+        private java.util.List<FigureCluster> figureClusters; 
         private String requestId; 
 
         /**
          * <p>The clusters.</p>
          */
-        public Builder figureClusters(java.util.List < FigureCluster > figureClusters) {
+        public Builder figureClusters(java.util.List<FigureCluster> figureClusters) {
             this.figureClusters = figureClusters;
             return this;
         }

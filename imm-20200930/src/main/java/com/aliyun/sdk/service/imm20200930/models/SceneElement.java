@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SceneElement extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FrameTimes")
-    private java.util.List < Long > frameTimes;
+    private java.util.List<Long> frameTimes;
 
     @com.aliyun.core.annotation.NameInMap("TimeRange")
-    private java.util.List < Long > timeRange;
+    private java.util.List<Long> timeRange;
 
     private SceneElement(Builder builder) {
         this.frameTimes = builder.frameTimes;
@@ -34,25 +39,25 @@ public class SceneElement extends TeaModel {
     /**
      * @return frameTimes
      */
-    public java.util.List < Long > getFrameTimes() {
+    public java.util.List<Long> getFrameTimes() {
         return this.frameTimes;
     }
 
     /**
      * @return timeRange
      */
-    public java.util.List < Long > getTimeRange() {
+    public java.util.List<Long> getTimeRange() {
         return this.timeRange;
     }
 
     public static final class Builder {
-        private java.util.List < Long > frameTimes; 
-        private java.util.List < Long > timeRange; 
+        private java.util.List<Long> frameTimes; 
+        private java.util.List<Long> timeRange; 
 
         /**
          * FrameTimes.
          */
-        public Builder frameTimes(java.util.List < Long > frameTimes) {
+        public Builder frameTimes(java.util.List<Long> frameTimes) {
             this.frameTimes = frameTimes;
             return this;
         }
@@ -60,7 +65,7 @@ public class SceneElement extends TeaModel {
         /**
          * TimeRange.
          */
-        public Builder timeRange(java.util.List < Long > timeRange) {
+        public Builder timeRange(java.util.List<Long> timeRange) {
             this.timeRange = timeRange;
             return this;
         }

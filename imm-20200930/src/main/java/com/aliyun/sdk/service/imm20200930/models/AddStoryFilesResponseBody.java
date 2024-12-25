@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AddStoryFilesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Files")
-    private java.util.List < Files> files;
+    private java.util.List<Files> files;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class AddStoryFilesResponseBody extends TeaModel {
     /**
      * @return files
      */
-    public java.util.List < Files> getFiles() {
+    public java.util.List<Files> getFiles() {
         return this.files;
     }
 
@@ -46,13 +51,13 @@ public class AddStoryFilesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Files> files; 
+        private java.util.List<Files> files; 
         private String requestId; 
 
         /**
          * <p>The objects that were added.</p>
          */
-        public Builder files(java.util.List < Files> files) {
+        public Builder files(java.util.List<Files> files) {
             this.files = files;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Story extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Addresses")
-    private java.util.List < Address > addresses;
+    private java.util.List<Address> addresses;
 
     @com.aliyun.core.annotation.NameInMap("Cover")
     private File cover;
@@ -25,16 +30,16 @@ public class Story extends TeaModel {
     private String customId;
 
     @com.aliyun.core.annotation.NameInMap("CustomLabels")
-    private java.util.Map < String, ? > customLabels;
+    private java.util.Map<String, ?> customLabels;
 
     @com.aliyun.core.annotation.NameInMap("DatasetName")
     private String datasetName;
 
     @com.aliyun.core.annotation.NameInMap("FigureClusterIds")
-    private java.util.List < String > figureClusterIds;
+    private java.util.List<String> figureClusterIds;
 
     @com.aliyun.core.annotation.NameInMap("Files")
-    private java.util.List < File > files;
+    private java.util.List<File> files;
 
     @com.aliyun.core.annotation.NameInMap("ObjectId")
     private String objectId;
@@ -98,7 +103,7 @@ public class Story extends TeaModel {
     /**
      * @return addresses
      */
-    public java.util.List < Address > getAddresses() {
+    public java.util.List<Address> getAddresses() {
         return this.addresses;
     }
 
@@ -126,7 +131,7 @@ public class Story extends TeaModel {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, ? > getCustomLabels() {
+    public java.util.Map<String, ?> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -140,14 +145,14 @@ public class Story extends TeaModel {
     /**
      * @return figureClusterIds
      */
-    public java.util.List < String > getFigureClusterIds() {
+    public java.util.List<String> getFigureClusterIds() {
         return this.figureClusterIds;
     }
 
     /**
      * @return files
      */
-    public java.util.List < File > getFiles() {
+    public java.util.List<File> getFiles() {
         return this.files;
     }
 
@@ -222,14 +227,14 @@ public class Story extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Address > addresses; 
+        private java.util.List<Address> addresses; 
         private File cover; 
         private String createTime; 
         private String customId; 
-        private java.util.Map < String, ? > customLabels; 
+        private java.util.Map<String, ?> customLabels; 
         private String datasetName; 
-        private java.util.List < String > figureClusterIds; 
-        private java.util.List < File > files; 
+        private java.util.List<String> figureClusterIds; 
+        private java.util.List<File> files; 
         private String objectId; 
         private String objectType; 
         private String ownerId; 
@@ -244,7 +249,7 @@ public class Story extends TeaModel {
         /**
          * Addresses.
          */
-        public Builder addresses(java.util.List < Address > addresses) {
+        public Builder addresses(java.util.List<Address> addresses) {
             this.addresses = addresses;
             return this;
         }
@@ -276,7 +281,7 @@ public class Story extends TeaModel {
         /**
          * CustomLabels.
          */
-        public Builder customLabels(java.util.Map < String, ? > customLabels) {
+        public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
             return this;
         }
@@ -292,7 +297,7 @@ public class Story extends TeaModel {
         /**
          * FigureClusterIds.
          */
-        public Builder figureClusterIds(java.util.List < String > figureClusterIds) {
+        public Builder figureClusterIds(java.util.List<String> figureClusterIds) {
             this.figureClusterIds = figureClusterIds;
             return this;
         }
@@ -300,7 +305,7 @@ public class Story extends TeaModel {
         /**
          * Files.
          */
-        public Builder files(java.util.List < File > files) {
+        public Builder files(java.util.List<File> files) {
             this.files = files;
             return this;
         }

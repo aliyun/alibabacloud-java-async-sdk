@@ -86,7 +86,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
      * <ul>
      * <li>To use data processing capabilities of IMM based on the x-oss-process parameter, you must bind an OSS bucket to an IMM project. For more information, see <a href="https://help.aliyun.com/document_detail/2391270.html">x-oss-process</a>.</li>
      * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
@@ -110,6 +110,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>A successful deletion message is returned regardless of whether the metadata of the file exists in the dataset.<blockquote>
+     * </blockquote>
+     * </li>
+     * <li>If you delete the metadata of a file from a dataset, the file stored in Object Storage Service (OSS) or Photo and Drive Service is <strong>not</strong> deleted. If you want to delete the file, use the operations provided by OSS or Photo and Drive Service.</li>
+     * <li>Metadata deletion affects existing face groups and stories but does not affect existing spatiotemporal groups.</li>
+     * </ul>
+     * 
      * @param request the request parameters of BatchDeleteFileMeta  BatchDeleteFileMetaRequest
      * @return BatchDeleteFileMetaResponse
      */
@@ -245,15 +255,53 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ContextualAnswer  ContextualAnswerRequest
+     * @return ContextualAnswerResponse
+     */
+    @Override
+    public CompletableFuture<ContextualAnswerResponse> contextualAnswer(ContextualAnswerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ContextualAnswer").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ContextualAnswerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ContextualAnswerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ContextualRetrieval  ContextualRetrievalRequest
+     * @return ContextualRetrievalResponse
+     */
+    @Override
+    public CompletableFuture<ContextualRetrievalResponse> contextualRetrieval(ContextualRetrievalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ContextualRetrieval").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ContextualRetrievalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ContextualRetrievalResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The operation is in public preview. For any inquires, join our DingTalk group (ID: 31690030817) and share your questions with us.</p>
+     * <p> The operation is in public preview. For any inquires, join our DingTalk chat group (ID: 31690030817) and share your questions with us.</p>
      * </blockquote>
      * <ul>
-     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</li>
+     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
      * <li>The operation supports a package that contains up to 80,000 files.</li>
      * <li>The operation supports ZIP or RAR packages up to 200 GB in size, or 7z packages up to 50 GB in size.</li>
-     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="~~GetTask~~">GetTask</a> or <a href="~~ListTasks~~">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/611278.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateArchiveFileInspectionTask  CreateArchiveFileInspectionTaskRequest
@@ -296,7 +344,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html?spm=a2c4g.475816.0.0.21db309dumhJPw">billing</a> of Intelligent Media Management (IMM).****
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
      * Before you create a binding relationship, make sure that the project and the dataset that you want to use exist.</p>
      * <ul>
      * <li>For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</li>
@@ -326,10 +374,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
      * <ul>
-     * <li>File format: Only PCD files are supported.</li>
-     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="~~GetTask~~">GetTask</a> and <a href="~~ListTasks~~">ListTasks</a> operation to query the value of the returned <code>TaskId</code> and information about the task. If you specify <a href="https://help.aliyun.com/document_detail/611278.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * <li>This operation supports only Point Cloud Data (PCD) files.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications. &gt;</li>
      * </ul>
      * 
      * @param request the request parameters of CreateCompressPointCloudTask  CreateCompressPointCloudTaskRequest
@@ -375,11 +425,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</p>
      * <ul>
-     * <li>A dataset name must be unique within the same project.<a href="~~478153~~"></a></li>
+     * <li>A dataset name must be unique within the same project.</li>
      * <li>A project has an upper limit on the number of datasets that can be created in the project. You can call the <a href="https://help.aliyun.com/document_detail/478155.html">GetProjcet</a> operation to query the dataset limit of the project.</li>
-     * <li>After you create a dataset, you can call the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> operation to index metadata for efficient <a href="https://help.aliyun.com/document_detail/2402363.html">data retrieval and statistics</a> and <a href="https://help.aliyun.com/document_detail/2402365.html">intelligent data management</a>.</li>
+     * <li>After creating a dataset, you can call the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> operation to index metadata. Metadata indexing enhances <a href="https://help.aliyun.com/document_detail/478175.html">data retrieval efficiency and statistics collection</a>, and enables intelligent data management.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDataset  CreateDatasetRequest
@@ -405,8 +455,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ul>
      * <li>Make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</li>
      * <li>A blind watermark can still be extracted even if attacks, such as compression, scaling, cropping, rotation, and color transformation, are performed on the image.</li>
-     * <li>This operation is compatible with its earlier version <a href="https://help.aliyun.com/document_detail/444166.html">DecodeBlindWatermark</a>.</li>
-     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/611278.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDecodeBlindWatermarkTask  CreateDecodeBlindWatermarkTaskRequest
@@ -430,8 +479,8 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
      * <ul>
-     * <li>The operation searches for faces within the face boundary in each input image. The face boundary is consistent with the boundary returned by <a href="https://help.aliyun.com/document_detail/444162.html">DetectImageFaces</a>.</li>
-     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/471456.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * <li>The operation searches for faces within the face boundary in each input image.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateFacesSearchingTask  CreateFacesSearchingTaskRequest
@@ -453,13 +502,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
      * <ul>
-     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="~~CreateBinding~~">CreateBinding</a> operation or manually by calling the <a href="~~IndexFileMeta~~">IndexFileMeta</a> or <a href="~~BatchIndexFileMeta~~">BatchIndexFileMeta</a> operation.<a href="~~CreateDataset~~"></a></li>
-     * <li>Each call to the operation incrementally processes metadata in the dataset.<a href="~~CreateDataset~~"></a> You can regularly call this operation to process incremental files.</li>
-     * <li>After the clustering task is completed, you can call the <a href="~~GetFigureCluster~~">GetFigureCluster</a> or <a href="~~BatchGetFigureCluster~~">BatchGetFigureCluster</a> operation to query information about a specific cluster. You can also call the <a href="~~QueryFigureClusters~~">QueryFigureClusters</a> operation to query all face clusters of the specified dataset.</li>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the CreateBinding operation or manually by calling the IndexFileMeta or BatchIndexFileMeta operation.</li>
+     * <li>Each call to the operation incrementally processes metadata in the dataset. You can regularly call this operation to process incremental files.
+     * After the clustering task is completed, you can call the GetFigureCluster or BatchGetFigureCluster  operation to query information about a specific cluster. You can also call the QueryFigureClusters operation to query all face clusters of the specified dataset.</li>
      * <li>Removing image information from the dataset causes changes to face clusters. When images that contain all faces in a cluster are removed, the cluster is deleted.</li>
-     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="~~GetTask~~">GetTask</a> or <a href="~~ListTasks~~">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/611278.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateFigureClusteringTask  CreateFigureClusteringTaskRequest
@@ -483,9 +534,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
      * <ul>
-     * <li>Before you call this operation, make sure that you have created a face clustering task by calling the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</li>
+     * <li>Before you call this operation, make sure that you have called the <a href="https://help.aliyun.com/document_detail/478180.html">CreateFigureClusteringTask</a> operation to cluster all faces in the dataset.</li>
      * <li>If you merge unrelated groups, the feature values of the target groups are affected. As a result, the incremental data may be inaccurately grouped when you create a face clustering task.</li>
-     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> and <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query the value of the returned <code>TaskId</code> and information about the task. If you specify <a href="https://help.aliyun.com/document_detail/471456.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateFigureClustersMergingTask  CreateFigureClustersMergingTaskRequest
@@ -508,14 +559,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The operation is in public preview. For any inquires, join our DingTalk group (ID: 31690030817) and share your questions with us.</p>
+     * <p> The operation is in public preview. For any inquires, join our DingTalk group (ID: 88490020073) and share your questions with us.
+     *  The operation supports file packing only. Compression support will be added later.</p>
      * </blockquote>
      * <ul>
-     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</li>
-     * <li>The operation can compress up to 80,000 objects into a package.</li>
-     * <li>The total size of all objects to compress into a package cannot exceed 200 GB.</li>
-     * <li>The operation can compress only Standard objects in Object Storage Service (OSS). To compress an object in another storage class, you must first <a href="https://help.aliyun.com/document_detail/90090.html">convert the storage class of the object</a>.</li>
-     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="~~GetTask~~">GetTask</a> or <a href="~~ListTasks~~">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/611278.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
+     * <li>A call to the operation can pack up to 80,000 objects into a package.</li>
+     * <li>The total size of all objects to be packed into a package cannot exceed 200 GB.</li>
+     * <li>The operation can pack only Standard objects in Object Storage Service (OSS). To pack an object in another storage class, you must first <a href="https://help.aliyun.com/document_detail/90090.html">convert the storage class of the object</a>.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateFileCompressionTask  CreateFileCompressionTaskRequest
@@ -538,14 +592,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The operation is in public preview. For any inquires, join our DingTalk group (ID: 31690030817) and share your questions with us.</p>
+     * <p> The operation is in public preview. For any inquires, join our DingTalk group (ID: 88490020073) and share your questions with us.</p>
      * </blockquote>
      * <ul>
-     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</li>
+     * <li>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
      * <li>The operation supports a package that contains up to 80,000 files.</li>
      * <li>The operation supports ZIP or RAR packages up to 200 GB in size, or 7z packages up to 50 GB in size.</li>
      * <li>The operation extracts files in streams to the specified directory. If the file extraction task is interrupted by a corrupt file, files that have been extracted are not deleted.</li>
-     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="~~GetTask~~">GetTask</a> or <a href="~~ListTasks~~">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/611278.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateFileUncompressionTask  CreateFileUncompressionTaskRequest
@@ -567,30 +623,26 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
      * <ul>
-     * <li>The detection result is sent as an asynchronous notification.<ul>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * </ul>
-     * </li>
      * <li>The image for which you want to create a content moderation task must meet the following requirements:<ul>
      * <li>The image URL supports the HTTP and HTTPS protocols.</li>
-     * <li>The image is in one of the following formats: PNG, JPG, JPEG, BMP, GIF, and WEBP.</li>
+     * <li>The image is in one of the following formats: PNG, JPG, JPEG, BMP, GIF, and WebP</li>
      * <li>The image size is limited to 20 MB for synchronous and asynchronous calls, with a maximum height or width of 30,000 pixels. The total number of pixels cannot exceed 250 million. GIF images are limited to 4,194,304 pixels, with a maximum height or width of 30,000 pixels.</li>
-     * <li>The image must be downloaded within 3 seconds. If the download takes longer, a timeout error occurs.</li>
+     * <li>The image download time is limited to 3 seconds. If the download takes longer, a timeout error occurs.</li>
      * <li>To ensure effective moderation, we recommend that you submit an image with dimensions of at least 256 × 256 pixels.</li>
-     * <li>The response time of the CreateImageModerationTask operation varies based on the duration of the image download. Make sure that the image is saved in a stable and reliable location. We recommend that you use Alibaba Cloud Object Storage Service (OSS) or Alibaba Cloud CDN Cache as the storage medium.</li>
+     * <li>The response time of the CreateImageModerationTask operation varies based on the duration of the image download. Make sure that the image is stored in a stable and reliable service. We recommend that you store images on Alibaba Cloud Object Storage Service (OSS) or cache them on Alibaba Cloud CDN.</li>
      * </ul>
      * </li>
-     * <li>The CreateImageModerationTask operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period elapses, the task information is no longer retrievable. You can call the <a href="~~GetTask~~">GetTask</a> or <a href="~~ListTasks~~">ListTasks</a> to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/611278.html">Notification</a>, you can also obtain information about the task based on notifications.<blockquote>
-     * <p> The Suggestion parameter in asynchronous notifications supports the following values:</p>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478241.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.<blockquote>
+     * <p> The detection result is sent as an asynchronous notification. The Suggestion field of the notification can have one of the following values:</p>
      * </blockquote>
      * </li>
      * <li>pass: No non-compliant content is found.</li>
-     * <li>block: Non-compliant content is found in the Categories field. For information about categories, see &quot;Content moderation results&quot;.</li>
-     * <li>review: A manual review is needed before an asynchronous notification is sent to inform you about the result.</li>
+     * <li>block: Non-compliant content is detected. The Categories field value indicates the non-compliance categories. For more information, see Content moderation results.</li>
+     * <li>review: A manual review is needed. After the manual review is finished, another asynchronous notification is sent to inform you about the review result. &gt;</li>
      * </ul>
      * 
      * @param request the request parameters of CreateImageModerationTask  CreateImageModerationTaskRequest
@@ -616,7 +668,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ul>
      * <li>Make sure that the project that you want to use exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
      * <li>You can call this operation to splice up to eight images. Each side of an image cannot exceed 32,876 pixels, and the total number of pixels of the image cannot exceed 1 billion.</li>
-     * <li>The CreateImageSplicingTask operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period elapses, the task information is no longer retrievable. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/471456.html">Notification</a>, you can also obtain information about the task based on notifications.</li>
+     * <li>The CreateImageSplicingTask operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period elapses, the task information is no longer retrievable. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can also obtain information about the task based on notifications.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateImageSplicingTask  CreateImageSplicingTaskRequest
@@ -642,7 +694,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ul>
      * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
      * <li>You can specify up to 100 images in a call to the operation.</li>
-     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/471456.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateImageToPDFTask  CreateImageToPDFTaskRequest
@@ -664,13 +716,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
      * <ul>
      * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
      * <li>Each call to the operation incrementally processes metadata in the dataset.****`` You can regularly call this operation to process incremental files.</li>
      * <li>After a spatiotemporal clustering task is complete, you can call the <a href="https://help.aliyun.com/document_detail/478189.html">QueryLocationDateClusters</a> operation to query the spatiotemporal clustering result.</li>
-     * <li>Removing metadata from a dataset does not affect existing spatiotemporal clusters for the dataset. To delete an existing spatiotemporal cluster, call the <a href="https://help.aliyun.com/document_detail/478191.html">DeleteLocationDateCluster</a> operation.</li>
-     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="~~GetTask~~">GetTask</a> or <a href="~~ListTasks~~">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/611278.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * <li>Removing metadata from a dataset does not affect existing spatiotemporal clusters for the dataset. To delete a spatiotemporal cluster, call the <a href="https://help.aliyun.com/document_detail/478191.html">DeleteLocationDateCluster</a> operation.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateLocationDateClusteringTask  CreateLocationDateClusteringTaskRequest
@@ -692,12 +746,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).</strong></p>
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
      * <ul>
-     * <li>In addition, make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
-     * <li>By default, only one type of video, audio, and subtitle streams is processed when you call this operation to process media transcoding. However, you can specify the number of each type of stream that you want to process.</li>
-     * <li>When you use this operation to execute a media splicing task, up to 11 media files are supported. In this case, the parameters that involve media transcoding and frame capturing apply to the spliced media data.</li>
-     * <li>The CreateMediaConvertTask operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/471456.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
+     * <li>By default, only one type of video, audio, and subtitle streams is processed when you call this operation to process media transcoding. However, you can specify the number of video, audio, or subtitle streams that you want to process.</li>
+     * <li>When you use this operation to execute a media merging task, up to 11 media files are supported. In this case, the parameters that involve media transcoding and frame capturing apply to the merged media data.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.
+     * **<hr>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of CreateMediaConvertTask  CreateMediaConvertTaskRequest
@@ -718,6 +776,35 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</p>
+     * <ul>
+     * <li>The operation supports the following input formats:<ul>
+     * <li>Word documents: doc, docx, wps, wpss, docm, dotm, dot, dotx, and html.</li>
+     * <li>Presentation documents: pptx, ppt, pot, potx, pps, ppsx, dps, dpt, pptm, potm, ppsm, and dpss.</li>
+     * <li>Table documents: xls, xlt, et, ett, xlsx, xltx, csv, xlsb, xlsm, xltm, and ets.</li>
+     * <li>PDF documents: pdf.</li>
+     * </ul>
+     * </li>
+     * <li>The operation supports the following output formats:<ul>
+     * <li>Image files: png and jpg.</li>
+     * <li>Text files: txt.</li>
+     * <li>PDF files: pdf.</li>
+     * </ul>
+     * </li>
+     * <li>The operation supports an input document that is up to 200 MB in size.</li>
+     * <li>The maximum amount of conversion time allowed is 120 seconds. If you convert a file that is relatively large or contains complex content, the conversion may time out.</li>
+     * <li>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can use one of the following methods to query task information:<ul>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.``</li>
+     * <li>In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task information notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For more information about SMQ SDKs, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>.</li>
+     * <li>In the region in which the IMM project is located, create an ApsaraMQ for RocketMQ 4.0 instance, a topic, and a group to receive task notifications. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>. For more information about how to use ApsaraMQ for RocketMQ, see <a href="https://help.aliyun.com/document_detail/169009.html">Call HTTP SDKs to send and subscribe to messages</a>.</li>
+     * <li>In the region in which the IMM project is located, use <a href="https://www.aliyun.com/product/aliware/eventbridge">EventBridge</a> to receive task information notifications. For more information, see <a href="https://help.aliyun.com/document_detail/205730.html">IMM events</a>.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateOfficeConversionTask  CreateOfficeConversionTaskRequest
      * @return CreateOfficeConversionTaskResponse
      */
@@ -739,7 +826,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>  The name of a project must be unique in a region.</p>
      * <ul>
-     * <li>You can create up to 100 projects. If you want to request a quota increase, submit a ticket or join DingTalk Group 31690030817.</li>
+     * <li>By default, you can create up to 100 projects in a region. If you want to request a quota increase to create more projects, submit a ticket or join the DingTalk chat group (ID: 88490020073).</li>
      * <li>After you create a project, you can create other Intelligent Media Management (IMM) resources in the project. For more information, see the following links:<ul>
      * <li><a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/479912.html">CreateTrigger</a></li>
@@ -768,13 +855,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****
+     *     **
+     *     <strong>Note that</strong> Asynchronous processing does not guarantee timely task completion.</p>
      * <ul>
      * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
      * <li>Each call to the operation incrementally processes metadata in the dataset.****`` You can regularly call this operation to process incremental files.</li>
      * <li>After clustering is completed, you can call the <a href="https://help.aliyun.com/document_detail/611304.html">QuerySimilarImageClusters</a> operation to query image clustering results.</li>
      * <li>An image cluster contains at lest two images. Removing similar images from the dataset affects existing image clusters. If image deletion reduces the number of images in a cluster to less than 2, the cluster is automatically deleted.</li>
-     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="~~GetTask~~">GetTask</a> or <a href="~~ListTasks~~">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/611278.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateSimilarImageClusteringTask  CreateSimilarImageClusteringTaskRequest
@@ -796,10 +885,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).</strong></p>
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
      * <ul>
-     * <li>In addition, make sure the file that you want to use is indexed into the dataset that you want to use. To index a file into a dataset, you can call one of the following operations: <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>, <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a>, and <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>.</li>
-     * <li>The CreateStory.operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/611278.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>The operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> to query information about the task. If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateStory  CreateStoryRequest
@@ -841,6 +930,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/2747104.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that an IMM project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.
+     * **
+     * <strong>Note</strong> Asynchronous processing does not guarantee timely task completion.</li>
+     * <li>For more information about video label detection, see <a href="https://help.aliyun.com/document_detail/477189.html">Video label detection</a>.</li>
+     * <li>This operation supports multiple video formats, such as MP4, MPEG-TS, MKV, MOV, AVI, FLV, and M3U8.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is retained only for seven days and cannot be retrieved when the retention period elapses. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateVideoLabelClassificationTask  CreateVideoLabelClassificationTaskRequest
      * @return CreateVideoLabelClassificationTaskResponse
      */
@@ -864,7 +964,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ul>
      * <li>The detection result is sent as an asynchronous notification. The Suggestion parameter in asynchronous notifications supports the following values:<ul>
      * <li>pass: No non-compliant content is found.</li>
-     * <li>block: Non-compliant content is detected. The Categories field value indicates the non-compliance category. For more information, see <a href="https://help.aliyun.com/document_detail/477109.html">Content moderation results</a>.</li>
+     * <li>block: Non-compliant content is detected. The Categories field value indicates the non-compliance category. For more information, see <a href="https://help.aliyun.com/document_detail/2743995.html">Content moderation results</a>.</li>
      * <li>review: A manual review is needed before an asynchronous notification is sent to inform you about the result.</li>
      * </ul>
      * </li>
@@ -876,7 +976,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>The response time of the operation varies based on the amount of time required to download frames. Make sure that video frames to detect are stored in a reliable and stable service. We recommend that you store video frames in OSS or cache video frames on Alibaba Cloud CDN.</li>
      * </ul>
      * </li>
-     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/471456.html">Notification</a>, you can obtain information about the task based on notifications.</li>
+     * <li>This operation is an asynchronous operation. After a task is executed, the task information is saved only for seven days. When the retention period ends, the task information can no longer be retrieved. You can call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to query information about the task.`` If you specify <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a>, you can obtain information about the task based on notifications.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateVideoModerationTask  CreateVideoModerationTaskRequest
@@ -946,9 +1046,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call the <a href="https://help.aliyun.com/document_detail/478257.html">DeleteDataset</a> operation to delete a dataset, make sure that you have <a href="https://help.aliyun.com/document_detail/477173.html">deleted all indexes</a> in the dataset. For more information about how to delete indexes, see <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> and <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a>.</p>
+     * <p>  Before you delete a dataset, make sure that you have deleted all indexes in the dataset. For more information about how to delete indexes, see <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> and <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a>.</p>
      * <ul>
-     * <li>Before you call the <a href="https://help.aliyun.com/document_detail/478257.html">DeleteDataset</a> operation to delete a dataset, make sure that you have deleted all bindings between the dataset and Object Storage Service (OSS) buckets. For more information about how to delete a binding, see <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a>. The <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a> operation does not delete an index that is manually created, even if you set the <code>Cleanup</code> parameter to <code>true</code>. To delete indexes that are manually created, you must call the <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a> operation. For more information about the differences between automatically and manually created indexes, see <a href="https://help.aliyun.com/document_detail/477173.html">Create a metadata index</a>.</li>
+     * <li>Before you <a href="https://help.aliyun.com/document_detail/478160.html">delete a dataset</a>, make sure that you have deleted all bindings between the dataset and Object Storage Service (OSS) buckets. For more information about how to delete a binding, see <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a>. The <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a> operation does not delete an index that is manually created, even if you set the <code>Cleanup</code> parameter to <code>true</code>. To delete indexes that are manually created, you must call the <a href="https://help.aliyun.com/document_detail/478172.html">DeleteFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478173.html">BatchDeleteFileMeta</a> operation. For more information about the differences between automatically and manually created indexes, see <a href="https://help.aliyun.com/document_detail/478166.html">Create a metadata index</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteDataset  DeleteDatasetRequest
@@ -1023,7 +1123,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you delete a project, make sure that all resources in the project, such as datasets, bindings, batch processing tasks, and triggers, are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/478164.html">DeleteDataset</a>, <a href="https://help.aliyun.com/document_detail/478205.html">DeleteBinding</a>, <a href="https://help.aliyun.com/document_detail/479918.html">DeleteBatch</a>, and <a href="https://help.aliyun.com/document_detail/479915.html">DeleteTrigger</a>.</p>
+     * <p>  Before you delete a project, make sure that all resources in the project, such as datasets, bindings, batch processing tasks, and triggers, are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/478164.html">DeleteDataset</a>, <a href="https://help.aliyun.com/document_detail/479918.html">DeleteBatch</a>, and <a href="https://help.aliyun.com/document_detail/479915.html">DeleteTrigger</a>.</p>
      * <ul>
      * <li>After a project is deleted, all resources used by the project are recycled, and all related data is lost and cannot be recovered.</li>
      * </ul>
@@ -1141,7 +1241,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html?spm=a2c4g.611302.0.0.7f371b2erm2dxG#a6ec99e06ahno">Limits on images</a>.</p>
+     * <p>  For information about the image encoding formats supported by this operation, see <a href="https://help.aliyun.com/document_detail/475569.html">Limits on images</a>.</p>
      * 
      * @param request the request parameters of DetectImageCars  DetectImageCarsRequest
      * @return DetectImageCarsResponse
@@ -1410,9 +1510,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</p>
      * <ul>
-     * <li>Before you call this operation, make sure that the file that you want to use is indexed into the dataset that you use. To index a file into a dataset, you can call one of the following operations: <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a>, <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a>, and <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a>.</li>
-     * <li>The response in this example is provided only for reference. The categories and content of metadata vary based on the configurations of <a href="https://help.aliyun.com/document_detail/466304.html">workflow templates</a>. If you have questions, join the DingTalk group 31690030817.</li>
-     * <li>For information about the fields that you can use as query conditions, see <a href="https://help.aliyun.com/document_detail/252856.html">Supported fields and operators</a>.</li>
+     * <li>Before you call this operation, make sure that you have indexed file metadata into the dataset automatically by calling the <a href="https://help.aliyun.com/document_detail/478202.html">CreateBinding</a> operation or manually by calling the <a href="https://help.aliyun.com/document_detail/478166.html">IndexFileMeta</a> or <a href="https://help.aliyun.com/document_detail/478167.html">BatchIndexFileMeta</a> operation.</li>
+     * <li>The sample response is provided for reference only. The metadata type and content in your response may differ based on factors such as the <a href="https://help.aliyun.com/document_detail/466304.html">workflow template configurations</a>. For any inquiries, join the DingTalk chat group (ID: 88490020073) and share your questions with us.</li>
+     * <li>For information about the fields that you can use as query conditions, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of FuzzyQuery  FuzzyQueryRequest
@@ -1439,9 +1539,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>Make sure that the project that you want to use is available in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project Management</a>.</li>
      * <li>By default, you can call this operation to process only one video, audio, or subtitle track. You can specify the number of the video, audio, or subtitle tracks that you want to process.</li>
      * <li>You can call this operation to generate a media playlist and a master playlist. For more information, see the parameter description.</li>
-     * <li>This operation is a synchronous operation. Synchronous or asynchronous transcoding is triggered only during playback or pre-transcoding. You can configure the <a href="https://help.aliyun.com/document_detail/471456.html">Notification</a> parameter to obtain the transcoding task result.</li>
+     * <li>This operation is a synchronous operation. Synchronous or asynchronous transcoding is triggered only during playback or pre-transcoding. You can configure the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to obtain the transcoding task result.</li>
      * <li>For information about the feature description of this operation, see <a href="https://help.aliyun.com/document_detail/477192.html">Live transcoding</a>.</li>
-     * <li>The data processing capability of Object Storage Service (OSS) also provides the playlist generation feature. However, this feature can generate only a media playlist, and related parameters are simplified. For more information, see <a href="https://help.aliyun.com/document_detail/2709281.html">Generate playlists</a>.</li>
+     * <li>The data processing capability of Object Storage Service (OSS) also provides the playlist generation feature. However, this feature can generate only a media playlist, and related parameters are simplified.</li>
      * </ul>
      * 
      * @param request the request parameters of GenerateVideoPlaylist  GenerateVideoPlaylistRequest
@@ -1466,20 +1566,19 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
      * <ul>
      * <li>The operation generates an access token that is valid for 30 minutes and a refresh token that is valid for 1 day.</li>
-     * <li>The returned expiration time is in UTC, which is 8 hours earlier than the UTC+8 time zone that is used in China.</li>
-     * <li>The operation supports the following document types:<ul>
-     * <li>Word documents: .doc, .docx, .txt, .dot, .wps, .wpt, .dotx, .docm, .dotm, and .rtf</li>
-     * <li>Presentations: .ppt, .pptx, .pptm, .ppsx, .ppsm, .pps, .potx, .potm, .dpt, and .dps</li>
-     * <li>Table documents: .et, .xls, .xlt, .xlsx, .xlsm, .xltx, .xltm, and .csv</li>
-     * <li>PDF documents: .pdf</li>
+     * <li>The returned expiration time is in UTC.</li>
+     * <li>The operation supports the following input formats:<ul>
+     * <li>Word files: .doc, .docx, .txt, .dot, .wps, .wpt, .dotx, .docm, .dotm, and .rtf</li>
+     * <li>Presentation files: .ppt, .pptx, .pptm, .ppsx, .ppsm, .pps, .potx, .potm, .dpt, and .dps</li>
+     * <li>Spreadsheet documents: .et, .xls, .xlt, .xlsx, .xlsm, .xltx, .xltm, and .csv</li>
+     * <li>PDF files: .pdf</li>
      * </ul>
      * </li>
      * <li>The operation supports an input document that is up to 200 MB in size.</li>
      * <li>The operation supports an input document that contains up to 5,000 pages.</li>
-     * <li>For a project created before December 1, 2023, you are charged for previewing and editing a document in the project based on the number of times the document is opened. For a project created on December 1, 2023 or later, you are charged for previewing and editing a document in the project based on the number of API operation calls. If you want to switch to API call-based billing for document previewing and editing in an earlier project, use a project created on or after December 1, 2023. In API call-based billing, one API call allows only one user to use the feature. If multiple users use the information returned by the API call, only the last user has access to the document and the access permissions of other users are revoked.</li>
-     * <li>You can use the NotifyTopicName parameter to specify a Simple Message Queue topic in the same region as the IMM project for getting notified of file save operations. For more information, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/zh/imm/developer-reference/weboffice-notification-message-examples?spm=a2c4g.11186623.0.0.7ee46295bRAbGt">WebOffice message example</a>.<blockquote>
-     * <p> Only online preview is supported for PDF documents. When you call the operation on a PDF document, you can set the Readonly option only to true.
-     *  To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</p>
+     * <li>For a project created before December 1, 2023, you are charged for previewing or editing a document in the project based on the number of times the document is opened. For a project created on or after December 1, 2023, you are charged based on the number of API operation calls made for previewing or editing a document. If you want to switch to API call-based billing for document previewing and editing, use a project created on or after December 1, 2023. In API call-based billing, one API call allows only one user to use the feature. If multiple users use the information returned by the API call, only the last user has access to the document and the access permissions of other users are revoked.</li>
+     * <li>You can use the NotifyTopicName parameter to specify a Simple Message Queue (SMQ) topic in the same region as the IMM project for getting notified of file save operations. For more information, see <a href="https://help.aliyun.com/document_detail/32449.html">Use queues</a>. For more information about the JSON example of the Message field, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.<blockquote>
+     * <p> To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1838,7 +1937,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <li>After you create an index from metadata, you can try <a href="https://help.aliyun.com/document_detail/478175.html">simple query</a> to retrieve data. For information about other query capabilities, see <a href="https://help.aliyun.com/document_detail/2402363.html">Query and statistics</a>. You can also <a href="https://help.aliyun.com/document_detail/478180.html">create a face clustering task</a> to group faces. For information about other clustering capabilities, see <a href="https://help.aliyun.com/document_detail/2402365.html">Intelligent management</a>.
      * **
      * <strong>Usage notes</strong></li>
-     * <li>The IndexFileMeta operation is asynchronous, indicating that it takes some time to process the data after a request is submitted. After the processing is complete, the metadata is stored in your dataset. The amount of time it takes for this process varies based on <a href="https://help.aliyun.com/document_detail/466304.html">the workflow template, the operator</a>, and the content of the file, ranging from several seconds to several minutes or even longer. You can subscribe to <a href="https://help.aliyun.com/document_detail/603317.html">Simple Message Service</a> for task completion notifications.</li>
+     * <li>The IndexFileMeta operation is asynchronous, indicating that it takes some time to process the data after a request is submitted. After the processing is complete, the metadata is stored in your dataset. The amount of time it takes for this process varies based on <a href="https://help.aliyun.com/document_detail/466304.html">the workflow template, the operator</a>, and the content of the file, ranging from several seconds to several minutes or even longer. You can subscribe to <a href="https://help.aliyun.com/document_detail/2743997.html">Simple Message Service</a> for task completion notifications.</li>
      * </ul>
      * 
      * @param request the request parameters of IndexFileMeta  IndexFileMetaRequest
@@ -2092,13 +2191,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of Intelligent Media Management (IMM).****</p>
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/477042.html">billing</a> of IMM.****</p>
      * <ul>
-     * <li>For more information, see <a href="https://help.aliyun.com/zh/imm/user-guide/weboffice-billing-instructions?spm=a2c4g.11186623.0.0.7d5668caevtblL">WebOffice billing</a>.</li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/2639703.html">WebOffice billing</a>.</li>
      * <li>The access token returned by this operation is valid for 30 minutes. After the access token expires, you cannot use it to access the document.</li>
      * <li>The refresh token returned by this operation is valid for one day. You need to use the refresh token for the next call to the operation before the refresh token expires. After the validity period elapses, the refresh token is invalid.</li>
-     * <li>The returned expiration time is in UTC, which is 8 hours earlier than the UTC+8 time zone that is used in China.<blockquote>
-     * <p> The access token is used in actual access to the document, whereas the refresh token is used to avoid repeated access configurations.</p>
+     * <li>The returned expiration time is displayed in UTC.<blockquote>
+     * <p> An access token is used to actually access a document, whereas a refresh token is used to avoid repeated access configurations.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -2348,8 +2447,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      *   ],
      *   &quot;Operation&quot;:&quot;and&quot;
      * }
-     * You can also perform aggregate operations to collect and analyze different data based on the specified conditions. For example, you can calculate the sum, count, average value, or maximum value of all files that meet the query conditions. You can also calculate the size distribution of images that meet the query conditions.
-     * For more information, see <a href="https://help.aliyun.com/document_detail/477174.html">Query metadata</a>.</li>
+     * You can also perform aggregate operations to collect and analyze different data based on the specified conditions. For example, you can calculate the sum, count, average value, or maximum value of all files that meet the query conditions. You can also calculate the size distribution of images that meet the query conditions.</li>
      * </ul>
      * 
      * @param request the request parameters of SimpleQuery  SimpleQueryRequest
@@ -2371,7 +2469,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can suspend a batch processing task that is in the Running state. You can call the <a href="~~ResumeBatch~~">ResumeBatch</a> operation to resume a batch processing task that is suspended.</p>
+     * <p>You can suspend a batch processing task that is in the Running state. You can call the <a href="https://help.aliyun.com/document_detail/479914.html">ResumeBatch</a> operation to resume a batch processing task that is suspended.</p>
      * 
      * @param request the request parameters of SuspendBatch  SuspendBatchRequest
      * @return SuspendBatchResponse
@@ -2574,7 +2672,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>  You can update only a trigger that is in the Ready or Failed state. The update operation does not change the trigger status.</p>
      * <ul>
-     * <li>If you update a trigger that is in progress, the trigger is not automatically resumed after you complete the update. You must call the <a href="~~ResumeTrigger~~">ResumeTrigger</a> operation to resume the execution of the trigger.</li>
+     * <li>After you update a trigger, the uncompleted tasks under the original trigger are no longer executed. You can call the <a href="https://help.aliyun.com/document_detail/479916.html">ResumeTrigger</a> operation to resume the execution of the trigger.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateTrigger  UpdateTriggerRequest

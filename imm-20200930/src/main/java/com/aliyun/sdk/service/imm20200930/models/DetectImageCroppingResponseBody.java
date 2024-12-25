@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DetectImageCroppingResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Croppings")
-    private java.util.List < CroppingSuggestion > croppings;
+    private java.util.List<CroppingSuggestion> croppings;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class DetectImageCroppingResponseBody extends TeaModel {
     /**
      * @return croppings
      */
-    public java.util.List < CroppingSuggestion > getCroppings() {
+    public java.util.List<CroppingSuggestion> getCroppings() {
         return this.croppings;
     }
 
@@ -46,13 +51,13 @@ public class DetectImageCroppingResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CroppingSuggestion > croppings; 
+        private java.util.List<CroppingSuggestion> croppings; 
         private String requestId; 
 
         /**
          * <p>The image croppings.</p>
          */
-        public Builder croppings(java.util.List < CroppingSuggestion > croppings) {
+        public Builder croppings(java.util.List<CroppingSuggestion> croppings) {
             this.croppings = croppings;
             return this;
         }

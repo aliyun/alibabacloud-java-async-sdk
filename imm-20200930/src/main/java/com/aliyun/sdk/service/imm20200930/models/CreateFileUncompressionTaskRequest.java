@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class CreateFileUncompressionTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SelectedFiles")
-    private java.util.List < String > selectedFiles;
+    private java.util.List<String> selectedFiles;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceURI")
@@ -114,7 +119,7 @@ public class CreateFileUncompressionTaskRequest extends Request {
     /**
      * @return selectedFiles
      */
-    public java.util.List < String > getSelectedFiles() {
+    public java.util.List<String> getSelectedFiles() {
         return this.selectedFiles;
     }
 
@@ -145,7 +150,7 @@ public class CreateFileUncompressionTaskRequest extends Request {
         private Notification notification; 
         private String password; 
         private String projectName; 
-        private java.util.List < String > selectedFiles; 
+        private java.util.List<String> selectedFiles; 
         private String sourceURI; 
         private String targetURI; 
         private String userData; 
@@ -188,7 +193,7 @@ public class CreateFileUncompressionTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a>.</p>
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -225,7 +230,7 @@ public class CreateFileUncompressionTaskRequest extends Request {
         /**
          * <p>The files to extract. If you do not specify this parameter, the entire package is decompressed.</p>
          */
-        public Builder selectedFiles(java.util.List < String > selectedFiles) {
+        public Builder selectedFiles(java.util.List<String> selectedFiles) {
             String selectedFilesShrink = shrink(selectedFiles, "SelectedFiles", "json");
             this.putQueryParameter("SelectedFiles", selectedFilesShrink);
             this.selectedFiles = selectedFiles;

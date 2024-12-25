@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class CreateVideoModerationTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Scenes")
-    private java.util.List < String > scenes;
+    private java.util.List<String> scenes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceURI")
@@ -48,7 +53,7 @@ public class CreateVideoModerationTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserData")
@@ -126,7 +131,7 @@ public class CreateVideoModerationTaskRequest extends Request {
     /**
      * @return scenes
      */
-    public java.util.List < String > getScenes() {
+    public java.util.List<String> getScenes() {
         return this.scenes;
     }
 
@@ -140,7 +145,7 @@ public class CreateVideoModerationTaskRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -158,9 +163,9 @@ public class CreateVideoModerationTaskRequest extends Request {
         private Long maxFrames; 
         private Notification notification; 
         private String projectName; 
-        private java.util.List < String > scenes; 
+        private java.util.List<String> scenes; 
         private String sourceURI; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String userData; 
 
         private Builder() {
@@ -225,7 +230,7 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For information about the asynchronous notification format, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a> topic.</p>
+         * <p>The notification settings. For information about the asynchronous notification format, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -250,7 +255,7 @@ public class CreateVideoModerationTaskRequest extends Request {
         /**
          * <p>The scenarios of video moderation.</p>
          */
-        public Builder scenes(java.util.List < String > scenes) {
+        public Builder scenes(java.util.List<String> scenes) {
             String scenesShrink = shrink(scenes, "Scenes", "json");
             this.putQueryParameter("Scenes", scenesShrink);
             this.scenes = scenes;
@@ -277,7 +282,7 @@ public class CreateVideoModerationTaskRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

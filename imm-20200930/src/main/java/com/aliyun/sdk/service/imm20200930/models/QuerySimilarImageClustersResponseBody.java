@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class QuerySimilarImageClustersResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SimilarImageClusters")
-    private java.util.List < SimilarImageCluster > similarImageClusters;
+    private java.util.List<SimilarImageCluster> similarImageClusters;
 
     private QuerySimilarImageClustersResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class QuerySimilarImageClustersResponseBody extends TeaModel {
     /**
      * @return similarImageClusters
      */
-    public java.util.List < SimilarImageCluster > getSimilarImageClusters() {
+    public java.util.List<SimilarImageCluster> getSimilarImageClusters() {
         return this.similarImageClusters;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < SimilarImageCluster > similarImageClusters; 
+        private java.util.List<SimilarImageCluster> similarImageClusters; 
 
         /**
          * <p>The pagination token. If the total number of clusters is greater than the value of MaxResults, this token can be used to retrieve the next page. This parameter has a value only if not all the clusters that meet the condition are returned.</p>
@@ -87,7 +92,7 @@ public class QuerySimilarImageClustersResponseBody extends TeaModel {
         /**
          * <p>The list of similar image clusters.</p>
          */
-        public Builder similarImageClusters(java.util.List < SimilarImageCluster > similarImageClusters) {
+        public Builder similarImageClusters(java.util.List<SimilarImageCluster> similarImageClusters) {
             this.similarImageClusters = similarImageClusters;
             return this;
         }

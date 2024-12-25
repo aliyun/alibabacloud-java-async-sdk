@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,7 +54,7 @@ public class FuzzyQueryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WithFields")
-    private java.util.List < String > withFields;
+    private java.util.List<String> withFields;
 
     private FuzzyQueryRequest(Builder builder) {
         super(builder);
@@ -136,7 +141,7 @@ public class FuzzyQueryRequest extends Request {
     /**
      * @return withFields
      */
-    public java.util.List < String > getWithFields() {
+    public java.util.List<String> getWithFields() {
         return this.withFields;
     }
 
@@ -149,7 +154,7 @@ public class FuzzyQueryRequest extends Request {
         private String projectName; 
         private String query; 
         private String sort; 
-        private java.util.List < String > withFields; 
+        private java.util.List<String> withFields; 
 
         private Builder() {
             super();
@@ -267,7 +272,7 @@ public class FuzzyQueryRequest extends Request {
         }
 
         /**
-         * <p>The sort field. For more information, see <a href="https://help.aliyun.com/document_detail/252856.html">Supported fields and operators</a>.</p>
+         * <p>The sort field. For more information, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</p>
          * <ul>
          * <li>Separate multiple sort fields with commas (,). Example: <code>Size,Filename</code>.</li>
          * <li>You can specify up to five sort fields.</li>
@@ -287,7 +292,7 @@ public class FuzzyQueryRequest extends Request {
          * <p>The fields that you want to include in the response. To help reduce the size of the response, include only necessary metadata fields.</p>
          * <p>If you do not specify this parameter or set the value to null, all existing metadata fields are returned.</p>
          */
-        public Builder withFields(java.util.List < String > withFields) {
+        public Builder withFields(java.util.List<String> withFields) {
             String withFieldsShrink = shrink(withFields, "WithFields", "json");
             this.putQueryParameter("WithFields", withFieldsShrink);
             this.withFields = withFields;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -115,7 +120,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Sources")
-    private java.util.List < Sources> sources;
+    private java.util.List<Sources> sources;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartPage")
@@ -123,7 +128,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetType")
@@ -374,7 +379,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
     /**
      * @return sources
      */
-    public java.util.List < Sources> getSources() {
+    public java.util.List<Sources> getSources() {
         return this.sources;
     }
 
@@ -388,7 +393,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -453,9 +458,9 @@ public class CreateOfficeConversionTaskRequest extends Request {
         private Boolean showComments; 
         private String sourceType; 
         private String sourceURI; 
-        private java.util.List < Sources> sources; 
+        private java.util.List<Sources> sources; 
         private Long startPage; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String targetType; 
         private String targetURI; 
         private String targetURIPrefix; 
@@ -514,7 +519,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
 
         /**
          * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-         * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+         * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -641,7 +646,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -753,7 +758,11 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * SourceURI.
+         * <p>The storage address of the source data.</p>
+         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);
@@ -764,7 +773,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
         /**
          * Sources.
          */
-        public Builder sources(java.util.List < Sources> sources) {
+        public Builder sources(java.util.List<Sources> sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
             this.putBodyParameter("Sources", sourcesShrink);
             this.sources = sources;
@@ -794,7 +803,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
         /**
          * Tags.
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -846,7 +855,7 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
-         * TrimPolicy.
+         * <p>The trim policy for converting a table file. Empty rows and columns may generate blank spaces in the output file if no appropriate trim policy is specified.</p>
          */
         public Builder trimPolicy(TrimPolicy trimPolicy) {
             String trimPolicyShrink = shrink(trimPolicy, "TrimPolicy", "json");
@@ -878,10 +887,14 @@ public class CreateOfficeConversionTaskRequest extends Request {
      * <p>CreateOfficeConversionTaskRequest</p>
      */
     public static class Sources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Rotate")
+        private Long rotate;
+
         @com.aliyun.core.annotation.NameInMap("URI")
         private String URI;
 
         private Sources(Builder builder) {
+            this.rotate = builder.rotate;
             this.URI = builder.URI;
         }
 
@@ -894,6 +907,13 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         /**
+         * @return rotate
+         */
+        public Long getRotate() {
+            return this.rotate;
+        }
+
+        /**
          * @return URI
          */
         public String getURI() {
@@ -901,7 +921,16 @@ public class CreateOfficeConversionTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private Long rotate; 
             private String URI; 
+
+            /**
+             * Rotate.
+             */
+            public Builder rotate(Long rotate) {
+                this.rotate = rotate;
+                return this;
+            }
 
             /**
              * URI.

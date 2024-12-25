@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Element extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ElementContents")
-    private java.util.List < ElementContent > elementContents;
+    private java.util.List<ElementContent> elementContents;
 
     @com.aliyun.core.annotation.NameInMap("ElementRelations")
-    private java.util.List < ElementRelation > elementRelations;
+    private java.util.List<ElementRelation> elementRelations;
 
     @com.aliyun.core.annotation.NameInMap("ElementType")
     private String elementType;
@@ -46,14 +51,14 @@ public class Element extends TeaModel {
     /**
      * @return elementContents
      */
-    public java.util.List < ElementContent > getElementContents() {
+    public java.util.List<ElementContent> getElementContents() {
         return this.elementContents;
     }
 
     /**
      * @return elementRelations
      */
-    public java.util.List < ElementRelation > getElementRelations() {
+    public java.util.List<ElementRelation> getElementRelations() {
         return this.elementRelations;
     }
 
@@ -79,8 +84,8 @@ public class Element extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ElementContent > elementContents; 
-        private java.util.List < ElementRelation > elementRelations; 
+        private java.util.List<ElementContent> elementContents; 
+        private java.util.List<ElementRelation> elementRelations; 
         private String elementType; 
         private String objectId; 
         private Float semanticSimilarity; 
@@ -88,7 +93,7 @@ public class Element extends TeaModel {
         /**
          * ElementContents.
          */
-        public Builder elementContents(java.util.List < ElementContent > elementContents) {
+        public Builder elementContents(java.util.List<ElementContent> elementContents) {
             this.elementContents = elementContents;
             return this;
         }
@@ -96,7 +101,7 @@ public class Element extends TeaModel {
         /**
          * ElementRelations.
          */
-        public Builder elementRelations(java.util.List < ElementRelation > elementRelations) {
+        public Builder elementRelations(java.util.List<ElementRelation> elementRelations) {
             this.elementRelations = elementRelations;
             return this;
         }

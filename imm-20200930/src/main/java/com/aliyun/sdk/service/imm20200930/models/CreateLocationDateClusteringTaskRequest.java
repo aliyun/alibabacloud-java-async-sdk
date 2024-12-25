@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class CreateLocationDateClusteringTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserData")
@@ -118,7 +123,7 @@ public class CreateLocationDateClusteringTaskRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -136,7 +141,7 @@ public class CreateLocationDateClusteringTaskRequest extends Request {
         private LocationOptions locationOptions; 
         private Notification notification; 
         private String projectName; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String userData; 
 
         private Builder() {
@@ -206,7 +211,7 @@ public class CreateLocationDateClusteringTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification message configurations. For more information, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a> topic.</p>
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -236,7 +241,7 @@ public class CreateLocationDateClusteringTaskRequest extends Request {
          *       &quot;User&quot;: &quot;Jane&quot;
          * }</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -377,7 +382,7 @@ public class CreateLocationDateClusteringTaskRequest extends Request {
     public static class LocationOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocationDateClusterLevels")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > locationDateClusterLevels;
+        private java.util.List<String> locationDateClusterLevels;
 
         private LocationOptions(Builder builder) {
             this.locationDateClusterLevels = builder.locationDateClusterLevels;
@@ -394,12 +399,12 @@ public class CreateLocationDateClusteringTaskRequest extends Request {
         /**
          * @return locationDateClusterLevels
          */
-        public java.util.List < String > getLocationDateClusterLevels() {
+        public java.util.List<String> getLocationDateClusterLevels() {
             return this.locationDateClusterLevels;
         }
 
         public static final class Builder {
-            private java.util.List < String > locationDateClusterLevels; 
+            private java.util.List<String> locationDateClusterLevels; 
 
             /**
              * <p>The administrative division levels. You can specify multiple administrative division levels.</p>
@@ -411,7 +416,7 @@ public class CreateLocationDateClusteringTaskRequest extends Request {
              * </ul>
              * <p>This parameter is required.</p>
              */
-            public Builder locationDateClusterLevels(java.util.List < String > locationDateClusterLevels) {
+            public Builder locationDateClusterLevels(java.util.List<String> locationDateClusterLevels) {
                 this.locationDateClusterLevels = locationDateClusterLevels;
                 return this;
             }

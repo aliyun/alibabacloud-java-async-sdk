@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class AlgorithmDefinition extends TeaModel {
     private String createTime;
 
     @com.aliyun.core.annotation.NameInMap("CustomLabels")
-    private java.util.List < java.util.Map<String, String>> customLabels;
+    private java.util.List<java.util.Map<String, String>> customLabels;
 
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
@@ -76,7 +81,7 @@ public class AlgorithmDefinition extends TeaModel {
     /**
      * @return customLabels
      */
-    public java.util.List < java.util.Map<String, String>> getCustomLabels() {
+    public java.util.List<java.util.Map<String, String>> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -125,7 +130,7 @@ public class AlgorithmDefinition extends TeaModel {
     public static final class Builder {
         private String algorithmDefinitionId; 
         private String createTime; 
-        private java.util.List < java.util.Map<String, String>> customLabels; 
+        private java.util.List<java.util.Map<String, String>> customLabels; 
         private String description; 
         private String name; 
         private String ownerId; 
@@ -152,7 +157,7 @@ public class AlgorithmDefinition extends TeaModel {
         /**
          * CustomLabels.
          */
-        public Builder customLabels(java.util.List < java.util.Map<String, String>> customLabels) {
+        public Builder customLabels(java.util.List<java.util.Map<String, String>> customLabels) {
             this.customLabels = customLabels;
             return this;
         }

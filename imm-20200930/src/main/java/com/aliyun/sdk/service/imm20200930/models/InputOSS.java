@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -17,7 +22,7 @@ public class InputOSS extends TeaModel {
     private String bucket;
 
     @com.aliyun.core.annotation.NameInMap("MatchExpressions")
-    private java.util.List < String > matchExpressions;
+    private java.util.List<String> matchExpressions;
 
     @com.aliyun.core.annotation.NameInMap("Prefix")
     private String prefix;
@@ -46,7 +51,7 @@ public class InputOSS extends TeaModel {
     /**
      * @return matchExpressions
      */
-    public java.util.List < String > getMatchExpressions() {
+    public java.util.List<String> getMatchExpressions() {
         return this.matchExpressions;
     }
 
@@ -59,7 +64,7 @@ public class InputOSS extends TeaModel {
 
     public static final class Builder {
         private String bucket; 
-        private java.util.List < String > matchExpressions; 
+        private java.util.List<String> matchExpressions; 
         private String prefix; 
 
         /**
@@ -73,7 +78,7 @@ public class InputOSS extends TeaModel {
         /**
          * MatchExpressions.
          */
-        public Builder matchExpressions(java.util.List < String > matchExpressions) {
+        public Builder matchExpressions(java.util.List<String> matchExpressions) {
             this.matchExpressions = matchExpressions;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class InputFile extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Addresses")
-    private java.util.List < Address > addresses;
+    private java.util.List<Address> addresses;
 
     @com.aliyun.core.annotation.NameInMap("Album")
     private String album;
@@ -34,16 +39,16 @@ public class InputFile extends TeaModel {
     private String customId;
 
     @com.aliyun.core.annotation.NameInMap("CustomLabels")
-    private java.util.Map < String, ? > customLabels;
+    private java.util.Map<String, ?> customLabels;
 
     @com.aliyun.core.annotation.NameInMap("Figures")
-    private java.util.List < Figures> figures;
+    private java.util.List<Figures> figures;
 
     @com.aliyun.core.annotation.NameInMap("FileHash")
     private String fileHash;
 
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Label > labels;
+    private java.util.List<Label> labels;
 
     @com.aliyun.core.annotation.NameInMap("LatLong")
     private String latLong;
@@ -98,7 +103,7 @@ public class InputFile extends TeaModel {
     /**
      * @return addresses
      */
-    public java.util.List < Address > getAddresses() {
+    public java.util.List<Address> getAddresses() {
         return this.addresses;
     }
 
@@ -147,14 +152,14 @@ public class InputFile extends TeaModel {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, ? > getCustomLabels() {
+    public java.util.Map<String, ?> getCustomLabels() {
         return this.customLabels;
     }
 
     /**
      * @return figures
      */
-    public java.util.List < Figures> getFigures() {
+    public java.util.List<Figures> getFigures() {
         return this.figures;
     }
 
@@ -168,7 +173,7 @@ public class InputFile extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Label > getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 
@@ -222,17 +227,17 @@ public class InputFile extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Address > addresses; 
+        private java.util.List<Address> addresses; 
         private String album; 
         private String albumArtist; 
         private String artist; 
         private String composer; 
         private String contentType; 
         private String customId; 
-        private java.util.Map < String, ? > customLabels; 
-        private java.util.List < Figures> figures; 
+        private java.util.Map<String, ?> customLabels; 
+        private java.util.List<Figures> figures; 
         private String fileHash; 
-        private java.util.List < Label > labels; 
+        private java.util.List<Label> labels; 
         private String latLong; 
         private String mediaType; 
         private String OSSURI; 
@@ -244,7 +249,7 @@ public class InputFile extends TeaModel {
         /**
          * Addresses.
          */
-        public Builder addresses(java.util.List < Address > addresses) {
+        public Builder addresses(java.util.List<Address> addresses) {
             this.addresses = addresses;
             return this;
         }
@@ -300,7 +305,7 @@ public class InputFile extends TeaModel {
         /**
          * CustomLabels.
          */
-        public Builder customLabels(java.util.Map < String, ? > customLabels) {
+        public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
             return this;
         }
@@ -308,7 +313,7 @@ public class InputFile extends TeaModel {
         /**
          * Figures.
          */
-        public Builder figures(java.util.List < Figures> figures) {
+        public Builder figures(java.util.List<Figures> figures) {
             this.figures = figures;
             return this;
         }
@@ -324,7 +329,7 @@ public class InputFile extends TeaModel {
         /**
          * Labels.
          */
-        public Builder labels(java.util.List < Label > labels) {
+        public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
             return this;
         }

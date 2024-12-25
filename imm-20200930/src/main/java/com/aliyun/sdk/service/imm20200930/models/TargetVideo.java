@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class TargetVideo extends TeaModel {
     private FilterVideo filterVideo;
 
     @com.aliyun.core.annotation.NameInMap("Stream")
-    private java.util.List < Integer > stream;
+    private java.util.List<Integer> stream;
 
     @com.aliyun.core.annotation.NameInMap("TranscodeVideo")
     private TranscodeVideo transcodeVideo;
@@ -56,7 +61,7 @@ public class TargetVideo extends TeaModel {
     /**
      * @return stream
      */
-    public java.util.List < Integer > getStream() {
+    public java.util.List<Integer> getStream() {
         return this.stream;
     }
 
@@ -70,7 +75,7 @@ public class TargetVideo extends TeaModel {
     public static final class Builder {
         private Boolean disableVideo; 
         private FilterVideo filterVideo; 
-        private java.util.List < Integer > stream; 
+        private java.util.List<Integer> stream; 
         private TranscodeVideo transcodeVideo; 
 
         /**
@@ -92,7 +97,7 @@ public class TargetVideo extends TeaModel {
         /**
          * Stream.
          */
-        public Builder stream(java.util.List < Integer > stream) {
+        public Builder stream(java.util.List<Integer> stream) {
             this.stream = stream;
             return this;
         }
@@ -633,10 +638,10 @@ public class TargetVideo extends TeaModel {
      */
     public static class FilterVideo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Delogos")
-        private java.util.List < Delogos> delogos;
+        private java.util.List<Delogos> delogos;
 
         @com.aliyun.core.annotation.NameInMap("Watermarks")
-        private java.util.List < Watermarks> watermarks;
+        private java.util.List<Watermarks> watermarks;
 
         private FilterVideo(Builder builder) {
             this.delogos = builder.delogos;
@@ -654,25 +659,25 @@ public class TargetVideo extends TeaModel {
         /**
          * @return delogos
          */
-        public java.util.List < Delogos> getDelogos() {
+        public java.util.List<Delogos> getDelogos() {
             return this.delogos;
         }
 
         /**
          * @return watermarks
          */
-        public java.util.List < Watermarks> getWatermarks() {
+        public java.util.List<Watermarks> getWatermarks() {
             return this.watermarks;
         }
 
         public static final class Builder {
-            private java.util.List < Delogos> delogos; 
-            private java.util.List < Watermarks> watermarks; 
+            private java.util.List<Delogos> delogos; 
+            private java.util.List<Watermarks> watermarks; 
 
             /**
              * Delogos.
              */
-            public Builder delogos(java.util.List < Delogos> delogos) {
+            public Builder delogos(java.util.List<Delogos> delogos) {
                 this.delogos = delogos;
                 return this;
             }
@@ -680,7 +685,7 @@ public class TargetVideo extends TeaModel {
             /**
              * Watermarks.
              */
-            public Builder watermarks(java.util.List < Watermarks> watermarks) {
+            public Builder watermarks(java.util.List<Watermarks> watermarks) {
                 this.watermarks = watermarks;
                 return this;
             }

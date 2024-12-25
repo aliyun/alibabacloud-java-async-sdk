@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -55,7 +60,7 @@ public class CreateProjectRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
@@ -163,7 +168,7 @@ public class CreateProjectRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -185,7 +190,7 @@ public class CreateProjectRequest extends Request {
         private Long projectMaxDatasetCount; 
         private String projectName; 
         private String serviceRole; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String templateId; 
 
         private Builder() {
@@ -327,7 +332,7 @@ public class CreateProjectRequest extends Request {
 
         /**
          * <p>The name of the Resource Access Management (RAM) role. You must attach the RAM role to IMM to allow IMM to access other cloud resources, such as Object Storage Service (OSS). Default value: <code>AliyunIMMDefaultRole</code>.</p>
-         * <p>You can also create a custom role in the RAM console and grant the required permissions to the role based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a regular service role</a> and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a role</a>.</p>
+         * <p>You can also create a custom role in the RAM console and grant the required permissions to the role based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/477257.html">Grant permissions to a RAM user</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunIMMDefaultRole</p>
@@ -341,7 +346,7 @@ public class CreateProjectRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
             this.putQueryParameter("Tag", tagShrink);
             this.tag = tag;

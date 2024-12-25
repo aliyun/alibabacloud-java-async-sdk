@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GenerateVideoPlaylistResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AudioPlaylist")
-    private java.util.List < AudioPlaylist> audioPlaylist;
+    private java.util.List<AudioPlaylist> audioPlaylist;
 
     @com.aliyun.core.annotation.NameInMap("Duration")
     private Float duration;
@@ -25,13 +30,13 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SubtitlePlaylist")
-    private java.util.List < SubtitlePlaylist> subtitlePlaylist;
+    private java.util.List<SubtitlePlaylist> subtitlePlaylist;
 
     @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
     @com.aliyun.core.annotation.NameInMap("VideoPlaylist")
-    private java.util.List < VideoPlaylist> videoPlaylist;
+    private java.util.List<VideoPlaylist> videoPlaylist;
 
     private GenerateVideoPlaylistResponseBody(Builder builder) {
         this.audioPlaylist = builder.audioPlaylist;
@@ -54,7 +59,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
     /**
      * @return audioPlaylist
      */
-    public java.util.List < AudioPlaylist> getAudioPlaylist() {
+    public java.util.List<AudioPlaylist> getAudioPlaylist() {
         return this.audioPlaylist;
     }
 
@@ -82,7 +87,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
     /**
      * @return subtitlePlaylist
      */
-    public java.util.List < SubtitlePlaylist> getSubtitlePlaylist() {
+    public java.util.List<SubtitlePlaylist> getSubtitlePlaylist() {
         return this.subtitlePlaylist;
     }
 
@@ -96,23 +101,23 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
     /**
      * @return videoPlaylist
      */
-    public java.util.List < VideoPlaylist> getVideoPlaylist() {
+    public java.util.List<VideoPlaylist> getVideoPlaylist() {
         return this.videoPlaylist;
     }
 
     public static final class Builder {
-        private java.util.List < AudioPlaylist> audioPlaylist; 
+        private java.util.List<AudioPlaylist> audioPlaylist; 
         private Float duration; 
         private String masterURI; 
         private String requestId; 
-        private java.util.List < SubtitlePlaylist> subtitlePlaylist; 
+        private java.util.List<SubtitlePlaylist> subtitlePlaylist; 
         private String token; 
-        private java.util.List < VideoPlaylist> videoPlaylist; 
+        private java.util.List<VideoPlaylist> videoPlaylist; 
 
         /**
          * <p>The audio media playlist files.</p>
          */
-        public Builder audioPlaylist(java.util.List < AudioPlaylist> audioPlaylist) {
+        public Builder audioPlaylist(java.util.List<AudioPlaylist> audioPlaylist) {
             this.audioPlaylist = audioPlaylist;
             return this;
         }
@@ -153,7 +158,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         /**
          * <p>The subtitle media playlist files.</p>
          */
-        public Builder subtitlePlaylist(java.util.List < SubtitlePlaylist> subtitlePlaylist) {
+        public Builder subtitlePlaylist(java.util.List<SubtitlePlaylist> subtitlePlaylist) {
             this.subtitlePlaylist = subtitlePlaylist;
             return this;
         }
@@ -172,7 +177,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         /**
          * <p>The video media playlist files.</p>
          */
-        public Builder videoPlaylist(java.util.List < VideoPlaylist> videoPlaylist) {
+        public Builder videoPlaylist(java.util.List<VideoPlaylist> videoPlaylist) {
             this.videoPlaylist = videoPlaylist;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class UpdateTriggerRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Actions")
-    private java.util.List < Actions> actions;
+    private java.util.List<Actions> actions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
@@ -36,7 +41,7 @@ public class UpdateTriggerRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     private UpdateTriggerRequest(Builder builder) {
         super(builder);
@@ -71,7 +76,7 @@ public class UpdateTriggerRequest extends Request {
     /**
      * @return actions
      */
-    public java.util.List < Actions> getActions() {
+    public java.util.List<Actions> getActions() {
         return this.actions;
     }
 
@@ -99,17 +104,17 @@ public class UpdateTriggerRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<UpdateTriggerRequest, Builder> {
         private String regionId; 
-        private java.util.List < Actions> actions; 
+        private java.util.List<Actions> actions; 
         private String id; 
         private Input input; 
         private String projectName; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
 
         private Builder() {
             super();
@@ -137,7 +142,7 @@ public class UpdateTriggerRequest extends Request {
         /**
          * <p>The processing templates.</p>
          */
-        public Builder actions(java.util.List < Actions> actions) {
+        public Builder actions(java.util.List<Actions> actions) {
             String actionsShrink = shrink(actions, "Actions", "json");
             this.putBodyParameter("Actions", actionsShrink);
             this.actions = actions;
@@ -186,7 +191,7 @@ public class UpdateTriggerRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putBodyParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -211,7 +216,7 @@ public class UpdateTriggerRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Parameters")
-        private java.util.List < String > parameters;
+        private java.util.List<String> parameters;
 
         private Actions(Builder builder) {
             this.name = builder.name;
@@ -236,13 +241,13 @@ public class UpdateTriggerRequest extends Request {
         /**
          * @return parameters
          */
-        public java.util.List < String > getParameters() {
+        public java.util.List<String> getParameters() {
             return this.parameters;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < String > parameters; 
+            private java.util.List<String> parameters; 
 
             /**
              * <p>The template name.</p>
@@ -258,7 +263,7 @@ public class UpdateTriggerRequest extends Request {
             /**
              * <p>The template parameters.</p>
              */
-            public Builder parameters(java.util.List < String > parameters) {
+            public Builder parameters(java.util.List<String> parameters) {
                 this.parameters = parameters;
                 return this;
             }

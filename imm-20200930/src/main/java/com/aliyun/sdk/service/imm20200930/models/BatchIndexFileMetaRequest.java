@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class BatchIndexFileMetaRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Files")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < InputFile > files;
+    private java.util.List<InputFile> files;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Notification")
@@ -79,7 +84,7 @@ public class BatchIndexFileMetaRequest extends Request {
     /**
      * @return files
      */
-    public java.util.List < InputFile > getFiles() {
+    public java.util.List<InputFile> getFiles() {
         return this.files;
     }
 
@@ -107,7 +112,7 @@ public class BatchIndexFileMetaRequest extends Request {
     public static final class Builder extends Request.Builder<BatchIndexFileMetaRequest, Builder> {
         private String regionId; 
         private String datasetName; 
-        private java.util.List < InputFile > files; 
+        private java.util.List<InputFile> files; 
         private Notification notification; 
         private String projectName; 
         private String userData; 
@@ -152,7 +157,7 @@ public class BatchIndexFileMetaRequest extends Request {
          * <p>The objects in Object Storage Service (OSS). Specify OSS objects by using a JSON array. You can specify up to 100 objects in an array.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder files(java.util.List < InputFile > files) {
+        public Builder files(java.util.List<InputFile> files) {
             String filesShrink = shrink(files, "Files", "json");
             this.putQueryParameter("Files", filesShrink);
             this.files = files;
@@ -160,7 +165,7 @@ public class BatchIndexFileMetaRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For more information, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a> topic.</p>
+         * <p>The notification settings. For more information, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Row extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CustomLabels")
-    private java.util.List < KeyValuePair > customLabels;
+    private java.util.List<KeyValuePair> customLabels;
 
     @com.aliyun.core.annotation.NameInMap("URI")
     private String URI;
@@ -34,7 +39,7 @@ public class Row extends TeaModel {
     /**
      * @return customLabels
      */
-    public java.util.List < KeyValuePair > getCustomLabels() {
+    public java.util.List<KeyValuePair> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -46,13 +51,13 @@ public class Row extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < KeyValuePair > customLabels; 
+        private java.util.List<KeyValuePair> customLabels; 
         private String URI; 
 
         /**
          * CustomLabels.
          */
-        public Builder customLabels(java.util.List < KeyValuePair > customLabels) {
+        public Builder customLabels(java.util.List<KeyValuePair> customLabels) {
             this.customLabels = customLabels;
             return this;
         }

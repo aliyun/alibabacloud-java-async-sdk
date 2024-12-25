@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -298,7 +303,10 @@ public class GenerateWebofficeTokenRequest extends Request {
          * <p> The pricing for document previews varies based on whether cache preview is enabled or disabled.</p>
          * </blockquote>
          * <blockquote>
-         * <p> If you specify this parameter, the Pemission.copy parameter does not take effect.</p>
+         * <p> If you specify this parameter, the Pemission.copy parameter does not take effect. &gt;</p>
+         * </blockquote>
+         * <blockquote>
+         * <p> Printing is not supported during cache preview.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -366,7 +374,7 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. Only Simple Message Queue messages are supported. For more information, see <a href="https://help.aliyun.com/zh/imm/developer-reference/weboffice-notification-message-examples?spm=a2c4g.11186623.0.0.7ee46295bRAbGt">WebOffice message example</a>.</p>
+         * <p>The notification settings. Only Simple Message Queue messages are supported. For more information, see <a href="https://help.aliyun.com/document_detail/2743999.html">WebOffice message example</a>.</p>
          * <blockquote>
          * <p> A notification is sent after the document is saved or renamed.</p>
          * </blockquote>
@@ -398,21 +406,24 @@ public class GenerateWebofficeTokenRequest extends Request {
 
         /**
          * <p>The user permission settings in the JSON format.</p>
-         * <p>The parameter supports the following permission options:</p>
-         * <p>Each option is of type Boolean and can have a value of true and false (the default value):</p>
+         * <p>The parameter supports the following permission fields:</p>
+         * <p>Each field is of type Boolean and can have a value of true and false (the default value):</p>
          * <ul>
-         * <li>Readonly: grants the permission to preview the document.</li>
-         * <li>Rename: grants the permission to rename the document. Notification messages of a rename event can be sent only by using Simple Message Queue.</li>
-         * <li>History: grants the permission to view historical versions.</li>
-         * <li>Copy: grants the permission to copy the document.</li>
-         * <li>Export: grants the permission to export the PDF document.</li>
-         * <li>Print: grants the permission to print the document.</li>
+         * <li>Readonly: grants the permission to preview the document. This field is optional.</li>
+         * <li>Rename: grants the permission to rename the document. Notification messages of a rename event can be sent only by using SMQ. This field is optional.</li>
+         * <li>History: grants the permission to view historical versions. This field is optional.</li>
+         * <li>Copy: grants the permission to copy the document. This field is optional.</li>
+         * <li>Export: grants the permission to export the document as a PDF file. This field is optional.</li>
+         * <li>Print: grants the permission to print the document. This field is optional.</li>
          * </ul>
          * <blockquote>
-         * <p> Only online preview is supported for PDF documents. When you call the operation on a PDF document, you can set the Readonly option only to true.</p>
+         * <p> Only online preview is supported for PDF documents. When you call the operation on a PDF document, you can set Readonly only to true.</p>
          * </blockquote>
          * <blockquote>
          * <p> To manage multiple versions of the document, you must enable versioning for the bucket that stores the document and set the History parameter to true.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p> Printing is not supported during cache preview.</p>
          * </blockquote>
          */
         public Builder permission(WebofficePermission permission) {
@@ -465,7 +476,7 @@ public class GenerateWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p>The user information that you want to display on the WebOffice page. If you do not specify this parameter, the user name displayed is Unknown.</p>
+         * <p>The user information. The user information that you want to display on the WebOffice page. If you do not specify this parameter, the user name displayed is Unknown.</p>
          */
         public Builder user(WebofficeUser user) {
             String userShrink = shrink(user, "User", "json");

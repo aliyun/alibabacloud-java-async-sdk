@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,13 +18,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TargetImage extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Animations")
-    private java.util.List < Animations> animations;
+    private java.util.List<Animations> animations;
 
     @com.aliyun.core.annotation.NameInMap("Snapshots")
-    private java.util.List < Snapshots> snapshots;
+    private java.util.List<Snapshots> snapshots;
 
     @com.aliyun.core.annotation.NameInMap("Sprites")
-    private java.util.List < Sprites> sprites;
+    private java.util.List<Sprites> sprites;
 
     private TargetImage(Builder builder) {
         this.animations = builder.animations;
@@ -38,33 +43,33 @@ public class TargetImage extends TeaModel {
     /**
      * @return animations
      */
-    public java.util.List < Animations> getAnimations() {
+    public java.util.List<Animations> getAnimations() {
         return this.animations;
     }
 
     /**
      * @return snapshots
      */
-    public java.util.List < Snapshots> getSnapshots() {
+    public java.util.List<Snapshots> getSnapshots() {
         return this.snapshots;
     }
 
     /**
      * @return sprites
      */
-    public java.util.List < Sprites> getSprites() {
+    public java.util.List<Sprites> getSprites() {
         return this.sprites;
     }
 
     public static final class Builder {
-        private java.util.List < Animations> animations; 
-        private java.util.List < Snapshots> snapshots; 
-        private java.util.List < Sprites> sprites; 
+        private java.util.List<Animations> animations; 
+        private java.util.List<Snapshots> snapshots; 
+        private java.util.List<Sprites> sprites; 
 
         /**
          * Animations.
          */
-        public Builder animations(java.util.List < Animations> animations) {
+        public Builder animations(java.util.List<Animations> animations) {
             this.animations = animations;
             return this;
         }
@@ -72,7 +77,7 @@ public class TargetImage extends TeaModel {
         /**
          * Snapshots.
          */
-        public Builder snapshots(java.util.List < Snapshots> snapshots) {
+        public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
             return this;
         }
@@ -80,7 +85,7 @@ public class TargetImage extends TeaModel {
         /**
          * Sprites.
          */
-        public Builder sprites(java.util.List < Sprites> sprites) {
+        public Builder sprites(java.util.List<Sprites> sprites) {
             this.sprites = sprites;
             return this;
         }

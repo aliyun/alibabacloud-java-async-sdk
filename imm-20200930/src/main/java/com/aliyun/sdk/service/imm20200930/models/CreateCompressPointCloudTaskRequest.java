@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,7 +45,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PointCloudFields")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > pointCloudFields;
+    private java.util.List<String> pointCloudFields;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PointCloudFileFormat")
@@ -58,7 +63,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetURI")
@@ -144,7 +149,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
     /**
      * @return pointCloudFields
      */
-    public java.util.List < String > getPointCloudFields() {
+    public java.util.List<String> getPointCloudFields() {
         return this.pointCloudFields;
     }
 
@@ -172,7 +177,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -197,11 +202,11 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         private KdtreeOption kdtreeOption; 
         private Notification notification; 
         private OctreeOption octreeOption; 
-        private java.util.List < String > pointCloudFields; 
+        private java.util.List<String> pointCloudFields; 
         private String pointCloudFileFormat; 
         private String projectName; 
         private String sourceURI; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String targetURI; 
         private String userData; 
 
@@ -274,7 +279,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For more information, click Notification. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/471456.html">Asynchronous message examples</a>.</p>
+         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -301,7 +306,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
          * </ul>
          * <p>This parameter is required.</p>
          */
-        public Builder pointCloudFields(java.util.List < String > pointCloudFields) {
+        public Builder pointCloudFields(java.util.List<String> pointCloudFields) {
             String pointCloudFieldsShrink = shrink(pointCloudFields, "PointCloudFields", "json");
             this.putQueryParameter("PointCloudFields", pointCloudFieldsShrink);
             this.pointCloudFields = pointCloudFields;
@@ -353,7 +358,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;LabelKey&quot;: &quot;Value&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

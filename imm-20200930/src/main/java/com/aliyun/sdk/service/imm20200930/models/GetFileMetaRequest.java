@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class GetFileMetaRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WithFields")
-    private java.util.List < String > withFields;
+    private java.util.List<String> withFields;
 
     private GetFileMetaRequest(Builder builder) {
         super(builder);
@@ -88,7 +93,7 @@ public class GetFileMetaRequest extends Request {
     /**
      * @return withFields
      */
-    public java.util.List < String > getWithFields() {
+    public java.util.List<String> getWithFields() {
         return this.withFields;
     }
 
@@ -97,7 +102,7 @@ public class GetFileMetaRequest extends Request {
         private String datasetName; 
         private String projectName; 
         private String URI; 
-        private java.util.List < String > withFields; 
+        private java.util.List<String> withFields; 
 
         private Builder() {
             super();
@@ -165,7 +170,7 @@ public class GetFileMetaRequest extends Request {
         /**
          * WithFields.
          */
-        public Builder withFields(java.util.List < String > withFields) {
+        public Builder withFields(java.util.List<String> withFields) {
             String withFieldsShrink = shrink(withFields, "WithFields", "json");
             this.putQueryParameter("WithFields", withFieldsShrink);
             this.withFields = withFields;

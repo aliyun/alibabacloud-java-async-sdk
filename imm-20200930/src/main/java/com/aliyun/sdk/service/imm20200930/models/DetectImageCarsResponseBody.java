@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DetectImageCarsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Cars")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Car > cars;
+    private java.util.List<Car> cars;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,7 +40,7 @@ public class DetectImageCarsResponseBody extends TeaModel {
     /**
      * @return cars
      */
-    public java.util.List < Car > getCars() {
+    public java.util.List<Car> getCars() {
         return this.cars;
     }
 
@@ -47,14 +52,14 @@ public class DetectImageCarsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Car > cars; 
+        private java.util.List<Car> cars; 
         private String requestId; 
 
         /**
          * <p>The vehicles.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder cars(java.util.List < Car > cars) {
+        public Builder cars(java.util.List<Car> cars) {
             this.cars = cars;
             return this;
         }

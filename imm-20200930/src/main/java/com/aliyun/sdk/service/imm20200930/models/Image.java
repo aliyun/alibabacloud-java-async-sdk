@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Image extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CroppingSuggestions")
-    private java.util.List < CroppingSuggestion > croppingSuggestions;
+    private java.util.List<CroppingSuggestion> croppingSuggestions;
 
     @com.aliyun.core.annotation.NameInMap("EXIF")
     private String EXIF;
@@ -28,7 +33,7 @@ public class Image extends TeaModel {
     private Long imageWidth;
 
     @com.aliyun.core.annotation.NameInMap("OCRContents")
-    private java.util.List < OCRContents > OCRContents;
+    private java.util.List<OCRContents> OCRContents;
 
     private Image(Builder builder) {
         this.croppingSuggestions = builder.croppingSuggestions;
@@ -50,7 +55,7 @@ public class Image extends TeaModel {
     /**
      * @return croppingSuggestions
      */
-    public java.util.List < CroppingSuggestion > getCroppingSuggestions() {
+    public java.util.List<CroppingSuggestion> getCroppingSuggestions() {
         return this.croppingSuggestions;
     }
 
@@ -85,22 +90,22 @@ public class Image extends TeaModel {
     /**
      * @return OCRContents
      */
-    public java.util.List < OCRContents > getOCRContents() {
+    public java.util.List<OCRContents> getOCRContents() {
         return this.OCRContents;
     }
 
     public static final class Builder {
-        private java.util.List < CroppingSuggestion > croppingSuggestions; 
+        private java.util.List<CroppingSuggestion> croppingSuggestions; 
         private String EXIF; 
         private Long imageHeight; 
         private ImageScore imageScore; 
         private Long imageWidth; 
-        private java.util.List < OCRContents > OCRContents; 
+        private java.util.List<OCRContents> OCRContents; 
 
         /**
          * CroppingSuggestions.
          */
-        public Builder croppingSuggestions(java.util.List < CroppingSuggestion > croppingSuggestions) {
+        public Builder croppingSuggestions(java.util.List<CroppingSuggestion> croppingSuggestions) {
             this.croppingSuggestions = croppingSuggestions;
             return this;
         }
@@ -140,7 +145,7 @@ public class Image extends TeaModel {
         /**
          * OCRContents.
          */
-        public Builder OCRContents(java.util.List < OCRContents > OCRContents) {
+        public Builder OCRContents(java.util.List<OCRContents> OCRContents) {
             this.OCRContents = OCRContents;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class CreateCustomizedStoryRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CustomLabels")
-    private java.util.Map < String, ? > customLabels;
+    private java.util.Map<String, ?> customLabels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DatasetName")
@@ -33,7 +38,7 @@ public class CreateCustomizedStoryRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Files")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < Files> files;
+    private java.util.List<Files> files;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProjectName")
@@ -98,7 +103,7 @@ public class CreateCustomizedStoryRequest extends Request {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, ? > getCustomLabels() {
+    public java.util.Map<String, ?> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -112,7 +117,7 @@ public class CreateCustomizedStoryRequest extends Request {
     /**
      * @return files
      */
-    public java.util.List < Files> getFiles() {
+    public java.util.List<Files> getFiles() {
         return this.files;
     }
 
@@ -147,9 +152,9 @@ public class CreateCustomizedStoryRequest extends Request {
     public static final class Builder extends Request.Builder<CreateCustomizedStoryRequest, Builder> {
         private String regionId; 
         private Cover cover; 
-        private java.util.Map < String, ? > customLabels; 
+        private java.util.Map<String, ?> customLabels; 
         private String datasetName; 
-        private java.util.List < Files> files; 
+        private java.util.List<Files> files; 
         private String projectName; 
         private String storyName; 
         private String storySubType; 
@@ -198,7 +203,7 @@ public class CreateCustomizedStoryRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
          */
-        public Builder customLabels(java.util.Map < String, ? > customLabels) {
+        public Builder customLabels(java.util.Map<String, ?> customLabels) {
             String customLabelsShrink = shrink(customLabels, "CustomLabels", "json");
             this.putBodyParameter("CustomLabels", customLabelsShrink);
             this.customLabels = customLabels;
@@ -222,7 +227,7 @@ public class CreateCustomizedStoryRequest extends Request {
          * <p>The files of the story. You can specify up to 100 files in a custom story.</p>
          * <p>This parameter is required.</p>
          */
-        public Builder files(java.util.List < Files> files) {
+        public Builder files(java.util.List<Files> files) {
             String filesShrink = shrink(files, "Files", "json");
             this.putBodyParameter("Files", filesShrink);
             this.files = files;
@@ -256,7 +261,7 @@ public class CreateCustomizedStoryRequest extends Request {
         }
 
         /**
-         * <p>The subtype of the story. For information about valid subtypes, see <a href="https://help.aliyun.com/document_detail/475311.html">Story types and subtypes</a>.</p>
+         * <p>The subtype of the story. For information about valid subtypes, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +274,7 @@ public class CreateCustomizedStoryRequest extends Request {
         }
 
         /**
-         * <p>The type of the story. For information about valid types, see <a href="https://help.aliyun.com/document_detail/475311.html">Story types and subtypes</a>.</p>
+         * <p>The type of the story. For information about valid types, see <a href="https://help.aliyun.com/document_detail/2743998.html">Story types and subtypes</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class UpdateLocationDateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustomLabels")
-    private java.util.Map < String, ? > customLabels;
+    private java.util.Map<String, ?> customLabels;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DatasetName")
@@ -84,7 +89,7 @@ public class UpdateLocationDateClusterRequest extends Request {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, ? > getCustomLabels() {
+    public java.util.Map<String, ?> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -119,7 +124,7 @@ public class UpdateLocationDateClusterRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateLocationDateClusterRequest, Builder> {
         private String regionId; 
         private String customId; 
-        private java.util.Map < String, ? > customLabels; 
+        private java.util.Map<String, ?> customLabels; 
         private String datasetName; 
         private String objectId; 
         private String projectName; 
@@ -169,7 +174,7 @@ public class UpdateLocationDateClusterRequest extends Request {
          *       &quot;UserScore&quot;: &quot;5&quot;
          * }</p>
          */
-        public Builder customLabels(java.util.Map < String, ? > customLabels) {
+        public Builder customLabels(java.util.Map<String, ?> customLabels) {
             String customLabelsShrink = shrink(customLabels, "CustomLabels", "json");
             this.putQueryParameter("CustomLabels", customLabelsShrink);
             this.customLabels = customLabels;

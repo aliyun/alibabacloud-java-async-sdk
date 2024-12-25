@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.imm20200930.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
     private String eventId;
 
     @com.aliyun.core.annotation.NameInMap("Labels")
-    private java.util.List < Label > labels;
+    private java.util.List<Label> labels;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -95,7 +100,7 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < Label > getLabels() {
+    public java.util.List<Label> getLabels() {
         return this.labels;
     }
 
@@ -159,7 +164,7 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
         private String code; 
         private String endTime; 
         private String eventId; 
-        private java.util.List < Label > labels; 
+        private java.util.List<Label> labels; 
         private String message; 
         private String projectName; 
         private String requestId; 
@@ -205,7 +210,7 @@ public class GetVideoLabelClassificationResultResponseBody extends TeaModel {
         /**
          * <p>The labels.</p>
          */
-        public Builder labels(java.util.List < Label > labels) {
+        public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
             return this;
         }
