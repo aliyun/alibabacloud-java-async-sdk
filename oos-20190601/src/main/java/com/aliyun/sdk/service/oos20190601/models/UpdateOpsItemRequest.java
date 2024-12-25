@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -66,7 +71,7 @@ public class UpdateOpsItemRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Title")
@@ -198,7 +203,7 @@ public class UpdateOpsItemRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -223,7 +228,7 @@ public class UpdateOpsItemRequest extends Request {
         private String solutions; 
         private String source; 
         private String status; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String title; 
 
         private Builder() {
@@ -414,7 +419,7 @@ public class UpdateOpsItemRequest extends Request {
          *       &quot;k2&quot;: &quot;v2&quot;
          * }</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

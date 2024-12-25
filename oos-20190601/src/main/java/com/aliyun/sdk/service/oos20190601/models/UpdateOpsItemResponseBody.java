@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -109,13 +114,13 @@ public class UpdateOpsItemResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Resources")
-        private java.util.List < String > resources;
+        private java.util.List<String> resources;
 
         @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
         @com.aliyun.core.annotation.NameInMap("Solutions")
-        private java.util.List < String > solutions;
+        private java.util.List<String> solutions;
 
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
@@ -124,7 +129,7 @@ public class UpdateOpsItemResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -226,7 +231,7 @@ public class UpdateOpsItemResponseBody extends TeaModel {
         /**
          * @return resources
          */
-        public java.util.List < String > getResources() {
+        public java.util.List<String> getResources() {
             return this.resources;
         }
 
@@ -240,7 +245,7 @@ public class UpdateOpsItemResponseBody extends TeaModel {
         /**
          * @return solutions
          */
-        public java.util.List < String > getSolutions() {
+        public java.util.List<String> getSolutions() {
             return this.solutions;
         }
 
@@ -261,7 +266,7 @@ public class UpdateOpsItemResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -289,12 +294,12 @@ public class UpdateOpsItemResponseBody extends TeaModel {
             private String opsItemId; 
             private Integer priority; 
             private String resourceGroupId; 
-            private java.util.List < String > resources; 
+            private java.util.List<String> resources; 
             private String severity; 
-            private java.util.List < String > solutions; 
+            private java.util.List<String> solutions; 
             private String source; 
             private String status; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String title; 
             private String updateDate; 
 
@@ -400,7 +405,7 @@ public class UpdateOpsItemResponseBody extends TeaModel {
             /**
              * <p>The ARNs of the associated resources.</p>
              */
-            public Builder resources(java.util.List < String > resources) {
+            public Builder resources(java.util.List<String> resources) {
                 this.resources = resources;
                 return this;
             }
@@ -419,7 +424,7 @@ public class UpdateOpsItemResponseBody extends TeaModel {
             /**
              * <p>The solutions.</p>
              */
-            public Builder solutions(java.util.List < String > solutions) {
+            public Builder solutions(java.util.List<String> solutions) {
                 this.solutions = solutions;
                 return this;
             }
@@ -455,7 +460,7 @@ public class UpdateOpsItemResponseBody extends TeaModel {
              *       &quot;k2&quot;: &quot;v2&quot;
              * }</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }

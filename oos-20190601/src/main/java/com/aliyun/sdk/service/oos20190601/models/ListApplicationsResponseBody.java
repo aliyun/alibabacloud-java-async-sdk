@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListApplicationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Applications")
-    private java.util.List < Applications> applications;
+    private java.util.List<Applications> applications;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -42,7 +47,7 @@ public class ListApplicationsResponseBody extends TeaModel {
     /**
      * @return applications
      */
-    public java.util.List < Applications> getApplications() {
+    public java.util.List<Applications> getApplications() {
         return this.applications;
     }
 
@@ -68,7 +73,7 @@ public class ListApplicationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Applications> applications; 
+        private java.util.List<Applications> applications; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         /**
          * <p>The details of the application.</p>
          */
-        public Builder applications(java.util.List < Applications> applications) {
+        public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
             return this;
         }
@@ -145,7 +150,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
@@ -206,7 +211,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -223,7 +228,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private String resourceGroupId; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String updateDate; 
 
             /**
@@ -287,7 +292,7 @@ public class ListApplicationsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;k1&quot;: &quot;v1&quot;,&quot;k2&quot;: &quot;v2&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class ListStateConfigurationsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateName")
@@ -107,7 +112,7 @@ public class ListStateConfigurationsRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -131,7 +136,7 @@ public class ListStateConfigurationsRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String stateConfigurationIds; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String templateName; 
         private String templateVersion; 
 
@@ -217,7 +222,7 @@ public class ListStateConfigurationsRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;Key&quot;: &quot;oos&quot;, &quot;Value&quot;: &quot;inventory&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

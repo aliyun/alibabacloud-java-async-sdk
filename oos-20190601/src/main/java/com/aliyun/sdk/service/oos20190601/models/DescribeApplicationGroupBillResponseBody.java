@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeApplicationGroupBillResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ApplicationGroupConsume")
-    private java.util.List < ApplicationGroupConsume> applicationGroupConsume;
+    private java.util.List<ApplicationGroupConsume> applicationGroupConsume;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -42,7 +47,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
     /**
      * @return applicationGroupConsume
      */
-    public java.util.List < ApplicationGroupConsume> getApplicationGroupConsume() {
+    public java.util.List<ApplicationGroupConsume> getApplicationGroupConsume() {
         return this.applicationGroupConsume;
     }
 
@@ -68,7 +73,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ApplicationGroupConsume> applicationGroupConsume; 
+        private java.util.List<ApplicationGroupConsume> applicationGroupConsume; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
         /**
          * <p>The consume of application group.</p>
          */
-        public Builder applicationGroupConsume(java.util.List < ApplicationGroupConsume> applicationGroupConsume) {
+        public Builder applicationGroupConsume(java.util.List<ApplicationGroupConsume> applicationGroupConsume) {
             this.applicationGroupConsume = applicationGroupConsume;
             return this;
         }

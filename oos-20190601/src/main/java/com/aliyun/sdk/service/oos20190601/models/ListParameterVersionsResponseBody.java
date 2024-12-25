@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("ParameterVersions")
-    private java.util.List < ParameterVersions> parameterVersions;
+    private java.util.List<ParameterVersions> parameterVersions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -119,7 +124,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
     /**
      * @return parameterVersions
      */
-    public java.util.List < ParameterVersions> getParameterVersions() {
+    public java.util.List<ParameterVersions> getParameterVersions() {
         return this.parameterVersions;
     }
 
@@ -152,7 +157,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
-        private java.util.List < ParameterVersions> parameterVersions; 
+        private java.util.List<ParameterVersions> parameterVersions; 
         private String requestId; 
         private Integer totalCount; 
         private String type; 
@@ -237,7 +242,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         /**
          * <p>The information about the version of the common parameter.</p>
          */
-        public Builder parameterVersions(java.util.List < ParameterVersions> parameterVersions) {
+        public Builder parameterVersions(java.util.List<ParameterVersions> parameterVersions) {
             this.parameterVersions = parameterVersions;
             return this;
         }

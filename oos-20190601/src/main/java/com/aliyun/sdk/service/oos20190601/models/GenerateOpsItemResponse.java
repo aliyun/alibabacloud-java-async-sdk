@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListGitRepositoriesResponse} extends {@link TeaModel}
+ * {@link GenerateOpsItemResponse} extends {@link TeaModel}
  *
- * <p>ListGitRepositoriesResponse</p>
+ * <p>GenerateOpsItemResponse</p>
  */
-public class ListGitRepositoriesResponse extends Response {
+public class GenerateOpsItemResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListGitRepositoriesResponseBody body;
+    private GenerateOpsItemResponseBody body;
 
-    private ListGitRepositoriesResponse(BuilderImpl builder) {
+    private GenerateOpsItemResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListGitRepositoriesResponse create() {
+    public static GenerateOpsItemResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -40,7 +45,7 @@ public class ListGitRepositoriesResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -54,35 +59,35 @@ public class ListGitRepositoriesResponse extends Response {
     /**
      * @return body
      */
-    public ListGitRepositoriesResponseBody getBody() {
+    public GenerateOpsItemResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListGitRepositoriesResponse, Builder> {
+    public interface Builder extends Response.Builder<GenerateOpsItemResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListGitRepositoriesResponseBody body);
+        Builder body(GenerateOpsItemResponseBody body);
 
         @Override
-        ListGitRepositoriesResponse build();
+        GenerateOpsItemResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListGitRepositoriesResponse, Builder>
+            extends Response.BuilderImpl<GenerateOpsItemResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListGitRepositoriesResponseBody body; 
+        private GenerateOpsItemResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListGitRepositoriesResponse response) {
+        private BuilderImpl(GenerateOpsItemResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -93,7 +98,7 @@ public class ListGitRepositoriesResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -111,14 +116,14 @@ public class ListGitRepositoriesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListGitRepositoriesResponseBody body) {
+        public Builder body(GenerateOpsItemResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListGitRepositoriesResponse build() {
-            return new ListGitRepositoriesResponse(this);
+        public GenerateOpsItemResponse build() {
+            return new GenerateOpsItemResponse(this);
         } 
 
     } 

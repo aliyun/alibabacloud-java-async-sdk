@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourceExecutionStatus")
-    private java.util.List < ResourceExecutionStatus> resourceExecutionStatus;
+    private java.util.List<ResourceExecutionStatus> resourceExecutionStatus;
 
     private ListResourceExecutionStatusResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -63,7 +68,7 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
     /**
      * @return resourceExecutionStatus
      */
-    public java.util.List < ResourceExecutionStatus> getResourceExecutionStatus() {
+    public java.util.List<ResourceExecutionStatus> getResourceExecutionStatus() {
         return this.resourceExecutionStatus;
     }
 
@@ -71,7 +76,7 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < ResourceExecutionStatus> resourceExecutionStatus; 
+        private java.util.List<ResourceExecutionStatus> resourceExecutionStatus; 
 
         /**
          * <p>The number of entries returned on each page.</p>
@@ -109,7 +114,7 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
         /**
          * <p>The execution information of the resource.</p>
          */
-        public Builder resourceExecutionStatus(java.util.List < ResourceExecutionStatus> resourceExecutionStatus) {
+        public Builder resourceExecutionStatus(java.util.List<ResourceExecutionStatus> resourceExecutionStatus) {
             this.resourceExecutionStatus = resourceExecutionStatus;
             return this;
         }

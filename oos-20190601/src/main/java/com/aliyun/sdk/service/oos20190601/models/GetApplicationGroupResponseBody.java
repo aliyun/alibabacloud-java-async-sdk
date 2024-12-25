@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -298,7 +303,10 @@ public class GetApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationSource.
+             * <p>The source of application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Platform&quot;:&quot;github&quot;,&quot;RepoName&quot;:&quot;wenle/springboot-ecs-sourcecode-demo&quot;,&quot;Owner&quot;:&quot;wenle&quot;,&quot;Branch&quot;:&quot;main&quot;,&quot;CommitHash&quot;:&quot;8559ff3ac7568fc7951ff63f841883ee3f06c6fe&quot;,&quot;CommitMessage&quot;:&quot;Init computenest project&quot;}</p>
              */
             public Builder applicationSource(String applicationSource) {
                 this.applicationSource = applicationSource;
@@ -405,10 +413,10 @@ public class GetApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operation metadata.</p>
+             * <p>The hosted O&amp;M configurations.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;PrometheusConfigMap&quot;:{&quot;模板1&quot;:{&quot;EnablePrometheus&quot;:false}}}</p>
+             * <p>{\&quot;PrometheusConfigMap\&quot;:{\&quot;Template 1\&quot;:{\&quot;EnablePrometheus\&quot;:false}}}</p>
              */
             public Builder operationMetadata(String operationMetadata) {
                 this.operationMetadata = operationMetadata;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListExecutionLogsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExecutionLogs")
-    private java.util.List < ExecutionLogs> executionLogs;
+    private java.util.List<ExecutionLogs> executionLogs;
 
     @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
@@ -46,7 +51,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
     /**
      * @return executionLogs
      */
-    public java.util.List < ExecutionLogs> getExecutionLogs() {
+    public java.util.List<ExecutionLogs> getExecutionLogs() {
         return this.executionLogs;
     }
 
@@ -79,7 +84,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ExecutionLogs> executionLogs; 
+        private java.util.List<ExecutionLogs> executionLogs; 
         private Boolean isTruncated; 
         private Integer maxResults; 
         private String nextToken; 
@@ -88,7 +93,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         /**
          * <p>The logs of the execution.</p>
          */
-        public Builder executionLogs(java.util.List < ExecutionLogs> executionLogs) {
+        public Builder executionLogs(java.util.List<ExecutionLogs> executionLogs) {
             this.executionLogs = executionLogs;
             return this;
         }

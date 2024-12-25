@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListTagValuesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Values")
-    private java.util.List < String > values;
+    private java.util.List<String> values;
 
     private ListTagValuesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -63,7 +68,7 @@ public class ListTagValuesResponseBody extends TeaModel {
     /**
      * @return values
      */
-    public java.util.List < String > getValues() {
+    public java.util.List<String> getValues() {
         return this.values;
     }
 
@@ -71,7 +76,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < String > values; 
+        private java.util.List<String> values; 
 
         /**
          * <p>The maximum number of results on each page.</p>
@@ -109,7 +114,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         /**
          * <p>The tag values returned.</p>
          */
-        public Builder values(java.util.List < String > values) {
+        public Builder values(java.util.List<String> values) {
             this.values = values;
             return this;
         }

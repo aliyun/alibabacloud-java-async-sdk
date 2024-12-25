@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListExecutionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Executions")
-    private java.util.List < Executions> executions;
+    private java.util.List<Executions> executions;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -42,7 +47,7 @@ public class ListExecutionsResponseBody extends TeaModel {
     /**
      * @return executions
      */
-    public java.util.List < Executions> getExecutions() {
+    public java.util.List<Executions> getExecutions() {
         return this.executions;
     }
 
@@ -68,7 +73,7 @@ public class ListExecutionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Executions> executions; 
+        private java.util.List<Executions> executions; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         /**
          * <p>The details of the task executions.</p>
          */
-        public Builder executions(java.util.List < Executions> executions) {
+        public Builder executions(java.util.List<Executions> executions) {
             this.executions = executions;
             return this;
         }
@@ -227,13 +232,13 @@ public class ListExecutionsResponseBody extends TeaModel {
         private String category;
 
         @com.aliyun.core.annotation.NameInMap("Counters")
-        private java.util.Map < String, ? > counters;
+        private java.util.Map<String, ?> counters;
 
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
         @com.aliyun.core.annotation.NameInMap("CurrentTasks")
-        private java.util.List < CurrentTasks> currentTasks;
+        private java.util.List<CurrentTasks> currentTasks;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -275,7 +280,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         private String outputs;
 
         @com.aliyun.core.annotation.NameInMap("Parameters")
-        private java.util.Map < String, ? > parameters;
+        private java.util.Map<String, ?> parameters;
 
         @com.aliyun.core.annotation.NameInMap("ParentExecutionId")
         private String parentExecutionId;
@@ -305,7 +310,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         private String statusReason;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         @com.aliyun.core.annotation.NameInMap("Targets")
         private String targets;
@@ -380,7 +385,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         /**
          * @return counters
          */
-        public java.util.Map < String, ? > getCounters() {
+        public java.util.Map<String, ?> getCounters() {
             return this.counters;
         }
 
@@ -394,7 +399,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         /**
          * @return currentTasks
          */
-        public java.util.List < CurrentTasks> getCurrentTasks() {
+        public java.util.List<CurrentTasks> getCurrentTasks() {
             return this.currentTasks;
         }
 
@@ -492,7 +497,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.Map < String, ? > getParameters() {
+        public java.util.Map<String, ?> getParameters() {
             return this.parameters;
         }
 
@@ -562,7 +567,7 @@ public class ListExecutionsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -610,9 +615,9 @@ public class ListExecutionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String category; 
-            private java.util.Map < String, ? > counters; 
+            private java.util.Map<String, ?> counters; 
             private String createDate; 
-            private java.util.List < CurrentTasks> currentTasks; 
+            private java.util.List<CurrentTasks> currentTasks; 
             private String description; 
             private String endDate; 
             private String executedBy; 
@@ -626,7 +631,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             private String mode; 
             private String nextScheduleTime; 
             private String outputs; 
-            private java.util.Map < String, ? > parameters; 
+            private java.util.Map<String, ?> parameters; 
             private String parentExecutionId; 
             private String ramRole; 
             private String resourceGroupId; 
@@ -636,7 +641,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             private String status; 
             private String statusMessage; 
             private String statusReason; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String targets; 
             private String templateId; 
             private String templateName; 
@@ -661,7 +666,7 @@ public class ListExecutionsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;Failed&quot;: 0,&quot;Success&quot;: 1,&quot;Total&quot;: 2}</p>
              */
-            public Builder counters(java.util.Map < String, ? > counters) {
+            public Builder counters(java.util.Map<String, ?> counters) {
                 this.counters = counters;
                 return this;
             }
@@ -680,7 +685,7 @@ public class ListExecutionsResponseBody extends TeaModel {
             /**
              * <p>The information about the tasks that are running.</p>
              */
-            public Builder currentTasks(java.util.List < CurrentTasks> currentTasks) {
+            public Builder currentTasks(java.util.List<CurrentTasks> currentTasks) {
                 this.currentTasks = currentTasks;
                 return this;
             }
@@ -836,7 +841,7 @@ public class ListExecutionsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{ &quot;Status&quot;:&quot;Running&quot; }</p>
              */
-            public Builder parameters(java.util.Map < String, ? > parameters) {
+            public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
                 return this;
             }
@@ -946,7 +951,7 @@ public class ListExecutionsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }

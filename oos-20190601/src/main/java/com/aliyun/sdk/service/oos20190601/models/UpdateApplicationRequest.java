@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,7 +40,7 @@ public class UpdateApplicationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     private UpdateApplicationRequest(Builder builder) {
         super(builder);
@@ -98,7 +103,7 @@ public class UpdateApplicationRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -108,7 +113,7 @@ public class UpdateApplicationRequest extends Request {
         private String description; 
         private String name; 
         private String regionId; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
 
         private Builder() {
             super();
@@ -189,7 +194,7 @@ public class UpdateApplicationRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -211,13 +216,13 @@ public class UpdateApplicationRequest extends Request {
      */
     public static class AlarmConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContactGroups")
-        private java.util.List < String > contactGroups;
+        private java.util.List<String> contactGroups;
 
         @com.aliyun.core.annotation.NameInMap("HealthCheckUrl")
         private String healthCheckUrl;
 
         @com.aliyun.core.annotation.NameInMap("TemplateIds")
-        private java.util.List < String > templateIds;
+        private java.util.List<String> templateIds;
 
         private AlarmConfig(Builder builder) {
             this.contactGroups = builder.contactGroups;
@@ -236,7 +241,7 @@ public class UpdateApplicationRequest extends Request {
         /**
          * @return contactGroups
          */
-        public java.util.List < String > getContactGroups() {
+        public java.util.List<String> getContactGroups() {
             return this.contactGroups;
         }
 
@@ -250,19 +255,19 @@ public class UpdateApplicationRequest extends Request {
         /**
          * @return templateIds
          */
-        public java.util.List < String > getTemplateIds() {
+        public java.util.List<String> getTemplateIds() {
             return this.templateIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > contactGroups; 
+            private java.util.List<String> contactGroups; 
             private String healthCheckUrl; 
-            private java.util.List < String > templateIds; 
+            private java.util.List<String> templateIds; 
 
             /**
              * <p>The alert contact groups.</p>
              */
-            public Builder contactGroups(java.util.List < String > contactGroups) {
+            public Builder contactGroups(java.util.List<String> contactGroups) {
                 this.contactGroups = contactGroups;
                 return this;
             }
@@ -281,7 +286,7 @@ public class UpdateApplicationRequest extends Request {
             /**
              * <p>The alert templates.</p>
              */
-            public Builder templateIds(java.util.List < String > templateIds) {
+            public Builder templateIds(java.util.List<String> templateIds) {
                 this.templateIds = templateIds;
                 return this;
             }

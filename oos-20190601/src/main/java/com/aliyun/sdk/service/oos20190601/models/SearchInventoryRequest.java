@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SearchInventoryRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Aggregator")
-    private java.util.List < String > aggregator;
+    private java.util.List<String> aggregator;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -58,14 +63,14 @@ public class SearchInventoryRequest extends Request {
     /**
      * @return aggregator
      */
-    public java.util.List < String > getAggregator() {
+    public java.util.List<String> getAggregator() {
         return this.aggregator;
     }
 
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -91,8 +96,8 @@ public class SearchInventoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SearchInventoryRequest, Builder> {
-        private java.util.List < String > aggregator; 
-        private java.util.List < Filter> filter; 
+        private java.util.List<String> aggregator; 
+        private java.util.List<Filter> filter; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
@@ -120,7 +125,7 @@ public class SearchInventoryRequest extends Request {
          * <strong>example:</strong>
          * <p>ACS:Application.Name</p>
          */
-        public Builder aggregator(java.util.List < String > aggregator) {
+        public Builder aggregator(java.util.List<String> aggregator) {
             this.putQueryParameter("Aggregator", aggregator);
             this.aggregator = aggregator;
             return this;
@@ -129,7 +134,7 @@ public class SearchInventoryRequest extends Request {
         /**
          * <p>The filter rules for the component.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
@@ -192,7 +197,7 @@ public class SearchInventoryRequest extends Request {
         private String operator;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.name = builder.name;
@@ -225,14 +230,14 @@ public class SearchInventoryRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String name; 
             private String operator; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
              * <p>The name of the component property. Valid values of N: 1 to 5. Different components have different property names. You can call the <a href="https://api.aliyun.com/#/?product=oos&version=2019-06-01&api=GetInventorySchema">GetInventorySchema</a> operation to query the property names of different components. For example, the ACS:InstanceInformation component has the InstanceId property. Therefore, you can set this parameter to ACS:InstanceInformation.InstanceId.</p>
@@ -269,7 +274,7 @@ public class SearchInventoryRequest extends Request {
              * <strong>example:</strong>
              * <p>i-bp1cpoxxxxxxxxxxxxxx</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

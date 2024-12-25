@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StateConfiguration")
-    private java.util.List < StateConfiguration> stateConfiguration;
+    private java.util.List<StateConfiguration> stateConfiguration;
 
     private UpdateStateConfigurationResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
     /**
      * @return stateConfiguration
      */
-    public java.util.List < StateConfiguration> getStateConfiguration() {
+    public java.util.List<StateConfiguration> getStateConfiguration() {
         return this.stateConfiguration;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < StateConfiguration> stateConfiguration; 
+        private java.util.List<StateConfiguration> stateConfiguration; 
 
         /**
          * <p>The request ID.</p>
@@ -63,7 +68,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
         /**
          * <p>The details of the configuration.</p>
          */
-        public Builder stateConfiguration(java.util.List < StateConfiguration> stateConfiguration) {
+        public Builder stateConfiguration(java.util.List<StateConfiguration> stateConfiguration) {
             this.stateConfiguration = stateConfiguration;
             return this;
         }
@@ -106,7 +111,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
         private String stateConfigurationId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         @com.aliyun.core.annotation.NameInMap("Targets")
         private String targets;
@@ -207,7 +212,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -255,7 +260,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
             private String scheduleExpression; 
             private String scheduleType; 
             private String stateConfigurationId; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String targets; 
             private String templateId; 
             private String templateName; 
@@ -356,7 +361,7 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;Key&quot;: &quot;oos&quot;, &quot;Value&quot;: &quot;inventory&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }

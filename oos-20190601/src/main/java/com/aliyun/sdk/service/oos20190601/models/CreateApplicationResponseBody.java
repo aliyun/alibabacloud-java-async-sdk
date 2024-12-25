@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -91,7 +96,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, String > tags;
+        private java.util.Map<String, String> tags;
 
         @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
@@ -136,7 +141,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, String > getTags() {
+        public java.util.Map<String, String> getTags() {
             return this.tags;
         }
 
@@ -151,7 +156,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             private String createDate; 
             private String description; 
             private String name; 
-            private java.util.Map < String, String > tags; 
+            private java.util.Map<String, String> tags; 
             private String updateDate; 
 
             /**
@@ -193,7 +198,7 @@ public class CreateApplicationResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, String > tags) {
+            public Builder tags(java.util.Map<String, String> tags) {
                 this.tags = tags;
                 return this;
             }

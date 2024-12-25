@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstancePatchStatesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstancePatchStates")
-    private java.util.List < InstancePatchStates> instancePatchStates;
+    private java.util.List<InstancePatchStates> instancePatchStates;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -42,7 +47,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
     /**
      * @return instancePatchStates
      */
-    public java.util.List < InstancePatchStates> getInstancePatchStates() {
+    public java.util.List<InstancePatchStates> getInstancePatchStates() {
         return this.instancePatchStates;
     }
 
@@ -68,7 +73,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < InstancePatchStates> instancePatchStates; 
+        private java.util.List<InstancePatchStates> instancePatchStates; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
         /**
          * <p>The details of patches of the instance.</p>
          */
-        public Builder instancePatchStates(java.util.List < InstancePatchStates> instancePatchStates) {
+        public Builder instancePatchStates(java.util.List<InstancePatchStates> instancePatchStates) {
             this.instancePatchStates = instancePatchStates;
             return this;
         }

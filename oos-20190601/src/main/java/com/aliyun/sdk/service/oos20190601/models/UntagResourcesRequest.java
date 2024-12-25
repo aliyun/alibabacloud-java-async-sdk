@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,7 +29,7 @@ public class UntagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map < String, ? > resourceIds;
+    private java.util.Map<String, ?> resourceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -33,7 +38,7 @@ public class UntagResourcesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TagKeys")
-    private java.util.Map < String, ? > tagKeys;
+    private java.util.Map<String, ?> tagKeys;
 
     private UntagResourcesRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return resourceIds
      */
-    public java.util.Map < String, ? > getResourceIds() {
+    public java.util.Map<String, ?> getResourceIds() {
         return this.resourceIds;
     }
 
@@ -88,16 +93,16 @@ public class UntagResourcesRequest extends Request {
     /**
      * @return tagKeys
      */
-    public java.util.Map < String, ? > getTagKeys() {
+    public java.util.Map<String, ?> getTagKeys() {
         return this.tagKeys;
     }
 
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
         private Boolean all; 
         private String regionId; 
-        private java.util.Map < String, ? > resourceIds; 
+        private java.util.Map<String, ?> resourceIds; 
         private String resourceType; 
-        private java.util.Map < String, ? > tagKeys; 
+        private java.util.Map<String, ?> tagKeys; 
 
         private Builder() {
             super();
@@ -151,7 +156,7 @@ public class UntagResourcesRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;templateName1&quot;,&quot;templateName2&quot;]</p>
          */
-        public Builder resourceIds(java.util.Map < String, ? > resourceIds) {
+        public Builder resourceIds(java.util.Map<String, ?> resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "ResourceIds", "json");
             this.putQueryParameter("ResourceIds", resourceIdsShrink);
             this.resourceIds = resourceIds;
@@ -184,7 +189,7 @@ public class UntagResourcesRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;k1&quot;,&quot;k2&quot;]</p>
          */
-        public Builder tagKeys(java.util.Map < String, ? > tagKeys) {
+        public Builder tagKeys(java.util.Map<String, ?> tagKeys) {
             String tagKeysShrink = shrink(tagKeys, "TagKeys", "json");
             this.putQueryParameter("TagKeys", tagKeysShrink);
             this.tagKeys = tagKeys;

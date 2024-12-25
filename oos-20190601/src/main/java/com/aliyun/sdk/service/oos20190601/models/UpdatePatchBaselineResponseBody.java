@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -158,7 +163,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         private String approvalRules;
 
         @com.aliyun.core.annotation.NameInMap("ApprovedPatches")
-        private java.util.List < String > approvedPatches;
+        private java.util.List<String> approvedPatches;
 
         @com.aliyun.core.annotation.NameInMap("ApprovedPatchesEnableNonSecurity")
         private Boolean approvedPatchesEnableNonSecurity;
@@ -182,7 +187,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         private String operationSystem;
 
         @com.aliyun.core.annotation.NameInMap("RejectedPatches")
-        private java.util.List < String > rejectedPatches;
+        private java.util.List<String> rejectedPatches;
 
         @com.aliyun.core.annotation.NameInMap("RejectedPatchesAction")
         private String rejectedPatchesAction;
@@ -194,10 +199,10 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         private String shareType;
 
         @com.aliyun.core.annotation.NameInMap("Sources")
-        private java.util.List < String > sources;
+        private java.util.List<String> sources;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UpdatedBy")
         private String updatedBy;
@@ -243,7 +248,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         /**
          * @return approvedPatches
          */
-        public java.util.List < String > getApprovedPatches() {
+        public java.util.List<String> getApprovedPatches() {
             return this.approvedPatches;
         }
 
@@ -299,7 +304,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         /**
          * @return rejectedPatches
          */
-        public java.util.List < String > getRejectedPatches() {
+        public java.util.List<String> getRejectedPatches() {
             return this.rejectedPatches;
         }
 
@@ -327,14 +332,14 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         /**
          * @return sources
          */
-        public java.util.List < String > getSources() {
+        public java.util.List<String> getSources() {
             return this.sources;
         }
 
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -354,7 +359,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
 
         public static final class Builder {
             private String approvalRules; 
-            private java.util.List < String > approvedPatches; 
+            private java.util.List<String> approvedPatches; 
             private Boolean approvedPatchesEnableNonSecurity; 
             private String createdBy; 
             private String createdDate; 
@@ -362,12 +367,12 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String operationSystem; 
-            private java.util.List < String > rejectedPatches; 
+            private java.util.List<String> rejectedPatches; 
             private String rejectedPatchesAction; 
             private String resourceGroupId; 
             private String shareType; 
-            private java.util.List < String > sources; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<String> sources; 
+            private java.util.List<Tags> tags; 
             private String updatedBy; 
             private String updatedDate; 
 
@@ -385,7 +390,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             /**
              * <p>The approved patches.</p>
              */
-            public Builder approvedPatches(java.util.List < String > approvedPatches) {
+            public Builder approvedPatches(java.util.List<String> approvedPatches) {
                 this.approvedPatches = approvedPatches;
                 return this;
             }
@@ -470,7 +475,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             /**
              * <p>The rejected patches.</p>
              */
-            public Builder rejectedPatches(java.util.List < String > rejectedPatches) {
+            public Builder rejectedPatches(java.util.List<String> rejectedPatches) {
                 this.rejectedPatches = rejectedPatches;
                 return this;
             }
@@ -511,7 +516,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             /**
              * <p>The patch source configurations.</p>
              */
-            public Builder sources(java.util.List < String > sources) {
+            public Builder sources(java.util.List<String> sources) {
                 this.sources = sources;
                 return this;
             }
@@ -519,7 +524,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             /**
              * <p>The tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

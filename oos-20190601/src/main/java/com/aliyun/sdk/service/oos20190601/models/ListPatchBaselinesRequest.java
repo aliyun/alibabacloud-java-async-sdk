@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListPatchBaselinesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApprovedPatches")
-    private java.util.List < String > approvedPatches;
+    private java.util.List<String> approvedPatches;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApprovedPatchesEnableNonSecurity")
@@ -50,11 +55,11 @@ public class ListPatchBaselinesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Sources")
-    private java.util.List < String > sources;
+    private java.util.List<String> sources;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private ListPatchBaselinesRequest(Builder builder) {
         super(builder);
@@ -87,7 +92,7 @@ public class ListPatchBaselinesRequest extends Request {
     /**
      * @return approvedPatches
      */
-    public java.util.List < String > getApprovedPatches() {
+    public java.util.List<String> getApprovedPatches() {
         return this.approvedPatches;
     }
 
@@ -150,19 +155,19 @@ public class ListPatchBaselinesRequest extends Request {
     /**
      * @return sources
      */
-    public java.util.List < String > getSources() {
+    public java.util.List<String> getSources() {
         return this.sources;
     }
 
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<ListPatchBaselinesRequest, Builder> {
-        private java.util.List < String > approvedPatches; 
+        private java.util.List<String> approvedPatches; 
         private Boolean approvedPatchesEnableNonSecurity; 
         private Integer maxResults; 
         private String name; 
@@ -171,8 +176,8 @@ public class ListPatchBaselinesRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private String shareType; 
-        private java.util.List < String > sources; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<String> sources; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -196,7 +201,7 @@ public class ListPatchBaselinesRequest extends Request {
         /**
          * <p>The approved patches.</p>
          */
-        public Builder approvedPatches(java.util.List < String > approvedPatches) {
+        public Builder approvedPatches(java.util.List<String> approvedPatches) {
             String approvedPatchesShrink = shrink(approvedPatches, "ApprovedPatches", "json");
             this.putQueryParameter("ApprovedPatches", approvedPatchesShrink);
             this.approvedPatches = approvedPatches;
@@ -318,7 +323,7 @@ public class ListPatchBaselinesRequest extends Request {
         /**
          * <p>The patch source configurations.</p>
          */
-        public Builder sources(java.util.List < String > sources) {
+        public Builder sources(java.util.List<String> sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
             this.putQueryParameter("Sources", sourcesShrink);
             this.sources = sources;
@@ -328,7 +333,7 @@ public class ListPatchBaselinesRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -126,7 +131,7 @@ public class CreateTemplateResponseBody extends TeaModel {
         private String shareType;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         @com.aliyun.core.annotation.NameInMap("TemplateFormat")
         private String templateFormat;
@@ -223,7 +228,7 @@ public class CreateTemplateResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -277,7 +282,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             private String hash; 
             private String resourceGroupId; 
             private String shareType; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String templateFormat; 
             private String templateId; 
             private String templateName; 
@@ -368,7 +373,7 @@ public class CreateTemplateResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{     &quot;k1&quot;:&quot;v1&quot;,     &quot;k2&quot;:&quot;v2&quot; }</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,10 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetParametersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InvalidParameters")
-    private java.util.List < String > invalidParameters;
+    private java.util.List<String> invalidParameters;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -38,14 +43,14 @@ public class GetParametersResponseBody extends TeaModel {
     /**
      * @return invalidParameters
      */
-    public java.util.List < String > getInvalidParameters() {
+    public java.util.List<String> getInvalidParameters() {
         return this.invalidParameters;
     }
 
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -57,14 +62,14 @@ public class GetParametersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > invalidParameters; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<String> invalidParameters; 
+        private java.util.List<Parameters> parameters; 
         private String requestId; 
 
         /**
          * <p>Invalid parameters.</p>
          */
-        public Builder invalidParameters(java.util.List < String > invalidParameters) {
+        public Builder invalidParameters(java.util.List<String> invalidParameters) {
             this.invalidParameters = invalidParameters;
             return this;
         }
@@ -72,7 +77,7 @@ public class GetParametersResponseBody extends TeaModel {
         /**
          * <p>The information about the common parameters.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -129,7 +134,7 @@ public class GetParametersResponseBody extends TeaModel {
         private String shareType;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -234,7 +239,7 @@ public class GetParametersResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -276,7 +281,7 @@ public class GetParametersResponseBody extends TeaModel {
             private Integer parameterVersion; 
             private String resourceGroupId; 
             private String shareType; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String type; 
             private String updatedBy; 
             private String updatedDate; 
@@ -387,7 +392,7 @@ public class GetParametersResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }

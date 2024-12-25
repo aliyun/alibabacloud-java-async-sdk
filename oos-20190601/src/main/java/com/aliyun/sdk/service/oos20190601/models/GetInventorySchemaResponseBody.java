@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Schemas")
-    private java.util.List < Schemas> schemas;
+    private java.util.List<Schemas> schemas;
 
     private GetInventorySchemaResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -63,7 +68,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
     /**
      * @return schemas
      */
-    public java.util.List < Schemas> getSchemas() {
+    public java.util.List<Schemas> getSchemas() {
         return this.schemas;
     }
 
@@ -71,7 +76,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
         private String maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Schemas> schemas; 
+        private java.util.List<Schemas> schemas; 
 
         /**
          * <p>The number of entries per page.</p>
@@ -109,7 +114,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
         /**
          * <p>The detailed configurations of the configuration list.</p>
          */
-        public Builder schemas(java.util.List < Schemas> schemas) {
+        public Builder schemas(java.util.List<Schemas> schemas) {
             this.schemas = schemas;
             return this;
         }
@@ -201,7 +206,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
      */
     public static class Schemas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
-        private java.util.List < Attributes> attributes;
+        private java.util.List<Attributes> attributes;
 
         @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
@@ -226,7 +231,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.List < Attributes> getAttributes() {
+        public java.util.List<Attributes> getAttributes() {
             return this.attributes;
         }
 
@@ -245,14 +250,14 @@ public class GetInventorySchemaResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Attributes> attributes; 
+            private java.util.List<Attributes> attributes; 
             private String typeName; 
             private String version; 
 
             /**
              * <p>The properties of the configuration list.</p>
              */
-            public Builder attributes(java.util.List < Attributes> attributes) {
+            public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
                 return this;
             }

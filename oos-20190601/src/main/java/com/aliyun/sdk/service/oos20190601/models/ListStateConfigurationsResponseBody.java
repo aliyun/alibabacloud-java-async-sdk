@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("StateConfigurations")
-    private java.util.List < StateConfigurations> stateConfigurations;
+    private java.util.List<StateConfigurations> stateConfigurations;
 
     private ListStateConfigurationsResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
@@ -52,14 +57,14 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
     /**
      * @return stateConfigurations
      */
-    public java.util.List < StateConfigurations> getStateConfigurations() {
+    public java.util.List<StateConfigurations> getStateConfigurations() {
         return this.stateConfigurations;
     }
 
     public static final class Builder {
         private String nextToken; 
         private String requestId; 
-        private java.util.List < StateConfigurations> stateConfigurations; 
+        private java.util.List<StateConfigurations> stateConfigurations; 
 
         /**
          * <p>The pagination token that was used in the next request to retrieve a new page of results.</p>
@@ -86,7 +91,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         /**
          * <p>The information about the desired-state configurations.</p>
          */
-        public Builder stateConfigurations(java.util.List < StateConfigurations> stateConfigurations) {
+        public Builder stateConfigurations(java.util.List<StateConfigurations> stateConfigurations) {
             this.stateConfigurations = stateConfigurations;
             return this;
         }
@@ -129,7 +134,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         private String stateConfigurationId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         @com.aliyun.core.annotation.NameInMap("Targets")
         private String targets;
@@ -230,7 +235,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -278,7 +283,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             private String scheduleExpression; 
             private String scheduleType; 
             private String stateConfigurationId; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String targets; 
             private String templateId; 
             private String templateName; 
@@ -379,7 +384,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;Key&quot;: &quot;oos&quot;, &quot;Value&quot;: &quot;inventory&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }

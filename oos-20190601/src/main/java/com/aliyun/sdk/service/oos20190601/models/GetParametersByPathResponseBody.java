@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.List < Parameters> parameters;
+    private java.util.List<Parameters> parameters;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
     /**
      * @return parameters
      */
-    public java.util.List < Parameters> getParameters() {
+    public java.util.List<Parameters> getParameters() {
         return this.parameters;
     }
 
@@ -81,7 +86,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
     public static final class Builder {
         private Integer maxResults; 
         private String nextToken; 
-        private java.util.List < Parameters> parameters; 
+        private java.util.List<Parameters> parameters; 
         private String requestId; 
         private Integer totalCount; 
 
@@ -110,7 +115,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
         /**
          * <p>The information about the common parameters.</p>
          */
-        public Builder parameters(java.util.List < Parameters> parameters) {
+        public Builder parameters(java.util.List<Parameters> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -175,7 +180,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
         private String shareType;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -272,7 +277,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -313,7 +318,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             private String name; 
             private Integer parameterVersion; 
             private String shareType; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String type; 
             private String updatedBy; 
             private String updatedDate; 
@@ -413,7 +418,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }

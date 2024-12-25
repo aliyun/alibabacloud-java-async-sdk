@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetServiceSettingsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ServiceSettings")
-    private java.util.List < ServiceSettings> serviceSettings;
+    private java.util.List<ServiceSettings> serviceSettings;
 
     private GetServiceSettingsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -41,13 +46,13 @@ public class GetServiceSettingsResponseBody extends TeaModel {
     /**
      * @return serviceSettings
      */
-    public java.util.List < ServiceSettings> getServiceSettings() {
+    public java.util.List<ServiceSettings> getServiceSettings() {
         return this.serviceSettings;
     }
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < ServiceSettings> serviceSettings; 
+        private java.util.List<ServiceSettings> serviceSettings; 
 
         /**
          * <p>The ID of the request.</p>
@@ -63,7 +68,7 @@ public class GetServiceSettingsResponseBody extends TeaModel {
         /**
          * <p>The information of service settings.</p>
          */
-        public Builder serviceSettings(java.util.List < ServiceSettings> serviceSettings) {
+        public Builder serviceSettings(java.util.List<ServiceSettings> serviceSettings) {
             this.serviceSettings = serviceSettings;
             return this;
         }

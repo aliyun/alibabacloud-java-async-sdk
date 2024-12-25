@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SearchInventoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Entities")
-    private java.util.List < java.util.Map<String, ?>> entities;
+    private java.util.List<java.util.Map<String, ?>> entities;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -42,7 +47,7 @@ public class SearchInventoryResponseBody extends TeaModel {
     /**
      * @return entities
      */
-    public java.util.List < java.util.Map<String, ?>> getEntities() {
+    public java.util.List<java.util.Map<String, ?>> getEntities() {
         return this.entities;
     }
 
@@ -68,7 +73,7 @@ public class SearchInventoryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < java.util.Map<String, ?>> entities; 
+        private java.util.List<java.util.Map<String, ?>> entities; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class SearchInventoryResponseBody extends TeaModel {
         /**
          * Entities.
          */
-        public Builder entities(java.util.List < java.util.Map<String, ?>> entities) {
+        public Builder entities(java.util.List<java.util.Map<String, ?>> entities) {
             this.entities = entities;
             return this;
         }

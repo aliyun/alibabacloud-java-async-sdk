@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListOpsItemsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
-    private java.util.List < Filter> filter;
+    private java.util.List<Filter> filter;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -31,11 +36,11 @@ public class ListOpsItemsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceTags")
-    private java.util.Map < String, ? > resourceTags;
+    private java.util.Map<String, ?> resourceTags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     private ListOpsItemsRequest(Builder builder) {
         super(builder);
@@ -63,7 +68,7 @@ public class ListOpsItemsRequest extends Request {
     /**
      * @return filter
      */
-    public java.util.List < Filter> getFilter() {
+    public java.util.List<Filter> getFilter() {
         return this.filter;
     }
 
@@ -91,24 +96,24 @@ public class ListOpsItemsRequest extends Request {
     /**
      * @return resourceTags
      */
-    public java.util.Map < String, ? > getResourceTags() {
+    public java.util.Map<String, ?> getResourceTags() {
         return this.resourceTags;
     }
 
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<ListOpsItemsRequest, Builder> {
-        private java.util.List < Filter> filter; 
+        private java.util.List<Filter> filter; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
-        private java.util.Map < String, ? > resourceTags; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> resourceTags; 
+        private java.util.Map<String, ?> tags; 
 
         private Builder() {
             super();
@@ -127,7 +132,7 @@ public class ListOpsItemsRequest extends Request {
         /**
          * <p>The filter rules for the component.</p>
          */
-        public Builder filter(java.util.List < Filter> filter) {
+        public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
             return this;
@@ -178,7 +183,7 @@ public class ListOpsItemsRequest extends Request {
          *       &quot;k2&quot;: &quot;v2&quot;
          * }</p>
          */
-        public Builder resourceTags(java.util.Map < String, ? > resourceTags) {
+        public Builder resourceTags(java.util.Map<String, ?> resourceTags) {
             String resourceTagsShrink = shrink(resourceTags, "ResourceTags", "json");
             this.putQueryParameter("ResourceTags", resourceTagsShrink);
             this.resourceTags = resourceTags;
@@ -191,7 +196,7 @@ public class ListOpsItemsRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;k1&quot;: &quot;v1&quot;, &quot;k2&quot;: &quot;v2&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
@@ -219,7 +224,7 @@ public class ListOpsItemsRequest extends Request {
         private String operator;
 
         @com.aliyun.core.annotation.NameInMap("Value")
-        private java.util.List < String > value;
+        private java.util.List<String> value;
 
         private Filter(Builder builder) {
             this.name = builder.name;
@@ -252,14 +257,14 @@ public class ListOpsItemsRequest extends Request {
         /**
          * @return value
          */
-        public java.util.List < String > getValue() {
+        public java.util.List<String> getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String name; 
             private String operator; 
-            private java.util.List < String > value; 
+            private java.util.List<String> value; 
 
             /**
              * <p>The parameter name of the filter.</p>
@@ -286,7 +291,7 @@ public class ListOpsItemsRequest extends Request {
             /**
              * <p>The parameter values of the filter.</p>
              */
-            public Builder value(java.util.List < String > value) {
+            public Builder value(java.util.List<String> value) {
                 this.value = value;
                 return this;
             }

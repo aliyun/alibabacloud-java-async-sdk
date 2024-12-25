@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -82,7 +87,7 @@ public class GetOpsItemResponseBody extends TeaModel {
      */
     public static class OpsItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
-        private java.util.Map < String, ? > attributes;
+        private java.util.Map<String, ?> attributes;
 
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -109,13 +114,13 @@ public class GetOpsItemResponseBody extends TeaModel {
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Resources")
-        private java.util.List < String > resources;
+        private java.util.List<String> resources;
 
         @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
         @com.aliyun.core.annotation.NameInMap("Solutions")
-        private java.util.List < java.util.Map<String, ?>> solutions;
+        private java.util.List<java.util.Map<String, ?>> solutions;
 
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
@@ -124,7 +129,7 @@ public class GetOpsItemResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.Map < String, ? > tags;
+        private java.util.Map<String, ?> tags;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
@@ -163,7 +168,7 @@ public class GetOpsItemResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public java.util.Map < String, ? > getAttributes() {
+        public java.util.Map<String, ?> getAttributes() {
             return this.attributes;
         }
 
@@ -226,7 +231,7 @@ public class GetOpsItemResponseBody extends TeaModel {
         /**
          * @return resources
          */
-        public java.util.List < String > getResources() {
+        public java.util.List<String> getResources() {
             return this.resources;
         }
 
@@ -240,7 +245,7 @@ public class GetOpsItemResponseBody extends TeaModel {
         /**
          * @return solutions
          */
-        public java.util.List < java.util.Map<String, ?>> getSolutions() {
+        public java.util.List<java.util.Map<String, ?>> getSolutions() {
             return this.solutions;
         }
 
@@ -261,7 +266,7 @@ public class GetOpsItemResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.Map < String, ? > getTags() {
+        public java.util.Map<String, ?> getTags() {
             return this.tags;
         }
 
@@ -280,7 +285,7 @@ public class GetOpsItemResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > attributes; 
+            private java.util.Map<String, ?> attributes; 
             private String category; 
             private String createBy; 
             private String createDate; 
@@ -289,19 +294,19 @@ public class GetOpsItemResponseBody extends TeaModel {
             private String opsItemId; 
             private Integer priority; 
             private String resourceGroupId; 
-            private java.util.List < String > resources; 
+            private java.util.List<String> resources; 
             private String severity; 
-            private java.util.List < java.util.Map<String, ?>> solutions; 
+            private java.util.List<java.util.Map<String, ?>> solutions; 
             private String source; 
             private String status; 
-            private java.util.Map < String, ? > tags; 
+            private java.util.Map<String, ?> tags; 
             private String title; 
             private String updateDate; 
 
             /**
              * <p>The information about the attributes of the O&amp;M item.</p>
              */
-            public Builder attributes(java.util.Map < String, ? > attributes) {
+            public Builder attributes(java.util.Map<String, ?> attributes) {
                 this.attributes = attributes;
                 return this;
             }
@@ -397,7 +402,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             /**
              * <p>The Alibaba Cloud Resource Names (ARNs) of the associated resources.</p>
              */
-            public Builder resources(java.util.List < String > resources) {
+            public Builder resources(java.util.List<String> resources) {
                 this.resources = resources;
                 return this;
             }
@@ -416,7 +421,7 @@ public class GetOpsItemResponseBody extends TeaModel {
             /**
              * <p>The solutions to the O&amp;M item.</p>
              */
-            public Builder solutions(java.util.List < java.util.Map<String, ?>> solutions) {
+            public Builder solutions(java.util.List<java.util.Map<String, ?>> solutions) {
                 this.solutions = solutions;
                 return this;
             }
@@ -449,7 +454,7 @@ public class GetOpsItemResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{&quot;K1&quot;:&quot;V1&quot;}</p>
              */
-            public Builder tags(java.util.Map < String, ? > tags) {
+            public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
                 return this;
             }

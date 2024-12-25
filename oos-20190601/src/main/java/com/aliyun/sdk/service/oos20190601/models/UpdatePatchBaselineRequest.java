@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class UpdatePatchBaselineRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApprovedPatches")
-    private java.util.List < String > approvedPatches;
+    private java.util.List<String> approvedPatches;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ApprovedPatchesEnableNonSecurity")
@@ -43,7 +48,7 @@ public class UpdatePatchBaselineRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RejectedPatches")
-    private java.util.List < String > rejectedPatches;
+    private java.util.List<String> rejectedPatches;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RejectedPatchesAction")
@@ -55,11 +60,11 @@ public class UpdatePatchBaselineRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Sources")
-    private java.util.List < String > sources;
+    private java.util.List<String> sources;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.List < Tags> tags;
+    private java.util.List<Tags> tags;
 
     private UpdatePatchBaselineRequest(Builder builder) {
         super(builder);
@@ -100,7 +105,7 @@ public class UpdatePatchBaselineRequest extends Request {
     /**
      * @return approvedPatches
      */
-    public java.util.List < String > getApprovedPatches() {
+    public java.util.List<String> getApprovedPatches() {
         return this.approvedPatches;
     }
 
@@ -142,7 +147,7 @@ public class UpdatePatchBaselineRequest extends Request {
     /**
      * @return rejectedPatches
      */
-    public java.util.List < String > getRejectedPatches() {
+    public java.util.List<String> getRejectedPatches() {
         return this.rejectedPatches;
     }
 
@@ -163,30 +168,30 @@ public class UpdatePatchBaselineRequest extends Request {
     /**
      * @return sources
      */
-    public java.util.List < String > getSources() {
+    public java.util.List<String> getSources() {
         return this.sources;
     }
 
     /**
      * @return tags
      */
-    public java.util.List < Tags> getTags() {
+    public java.util.List<Tags> getTags() {
         return this.tags;
     }
 
     public static final class Builder extends Request.Builder<UpdatePatchBaselineRequest, Builder> {
         private String approvalRules; 
-        private java.util.List < String > approvedPatches; 
+        private java.util.List<String> approvedPatches; 
         private Boolean approvedPatchesEnableNonSecurity; 
         private String clientToken; 
         private String description; 
         private String name; 
         private String regionId; 
-        private java.util.List < String > rejectedPatches; 
+        private java.util.List<String> rejectedPatches; 
         private String rejectedPatchesAction; 
         private String resourceGroupId; 
-        private java.util.List < String > sources; 
-        private java.util.List < Tags> tags; 
+        private java.util.List<String> sources; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -223,7 +228,7 @@ public class UpdatePatchBaselineRequest extends Request {
         /**
          * <p>The approved patches.</p>
          */
-        public Builder approvedPatches(java.util.List < String > approvedPatches) {
+        public Builder approvedPatches(java.util.List<String> approvedPatches) {
             String approvedPatchesShrink = shrink(approvedPatches, "ApprovedPatches", "json");
             this.putQueryParameter("ApprovedPatches", approvedPatchesShrink);
             this.approvedPatches = approvedPatches;
@@ -296,7 +301,7 @@ public class UpdatePatchBaselineRequest extends Request {
         /**
          * <p>The rejected patches.</p>
          */
-        public Builder rejectedPatches(java.util.List < String > rejectedPatches) {
+        public Builder rejectedPatches(java.util.List<String> rejectedPatches) {
             String rejectedPatchesShrink = shrink(rejectedPatches, "RejectedPatches", "json");
             this.putQueryParameter("RejectedPatches", rejectedPatchesShrink);
             this.rejectedPatches = rejectedPatches;
@@ -330,7 +335,7 @@ public class UpdatePatchBaselineRequest extends Request {
         /**
          * <p>The patch source configurations.</p>
          */
-        public Builder sources(java.util.List < String > sources) {
+        public Builder sources(java.util.List<String> sources) {
             String sourcesShrink = shrink(sources, "Sources", "json");
             this.putQueryParameter("Sources", sourcesShrink);
             this.sources = sources;
@@ -340,7 +345,7 @@ public class UpdatePatchBaselineRequest extends Request {
         /**
          * <p>The tags.</p>
          */
-        public Builder tags(java.util.List < Tags> tags) {
+        public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

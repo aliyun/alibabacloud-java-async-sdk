@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AnalyzeGitRepositoryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AnalysisResults")
-    private java.util.List < AnalysisResults> analysisResults;
+    private java.util.List<AnalysisResults> analysisResults;
 
     @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
@@ -38,7 +43,7 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
     /**
      * @return analysisResults
      */
-    public java.util.List < AnalysisResults> getAnalysisResults() {
+    public java.util.List<AnalysisResults> getAnalysisResults() {
         return this.analysisResults;
     }
 
@@ -57,14 +62,14 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AnalysisResults> analysisResults; 
+        private java.util.List<AnalysisResults> analysisResults; 
         private Integer count; 
         private String requestId; 
 
         /**
          * AnalysisResults.
          */
-        public Builder analysisResults(java.util.List < AnalysisResults> analysisResults) {
+        public Builder analysisResults(java.util.List<AnalysisResults> analysisResults) {
             this.analysisResults = analysisResults;
             return this;
         }
@@ -102,7 +107,7 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
         private String fileType;
 
         @com.aliyun.core.annotation.NameInMap("Paths")
-        private java.util.List < String > paths;
+        private java.util.List<String> paths;
 
         private BuildFiles(Builder builder) {
             this.fileType = builder.fileType;
@@ -127,13 +132,13 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
         /**
          * @return paths
          */
-        public java.util.List < String > getPaths() {
+        public java.util.List<String> getPaths() {
             return this.paths;
         }
 
         public static final class Builder {
             private String fileType; 
-            private java.util.List < String > paths; 
+            private java.util.List<String> paths; 
 
             /**
              * FileType.
@@ -146,7 +151,7 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
             /**
              * Paths.
              */
-            public Builder paths(java.util.List < String > paths) {
+            public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
                 return this;
             }
@@ -166,7 +171,7 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
      */
     public static class AnalysisResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BuildFiles")
-        private java.util.List < BuildFiles> buildFiles;
+        private java.util.List<BuildFiles> buildFiles;
 
         @com.aliyun.core.annotation.NameInMap("BuildType")
         private String buildType;
@@ -187,7 +192,7 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
         /**
          * @return buildFiles
          */
-        public java.util.List < BuildFiles> getBuildFiles() {
+        public java.util.List<BuildFiles> getBuildFiles() {
             return this.buildFiles;
         }
 
@@ -199,13 +204,13 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < BuildFiles> buildFiles; 
+            private java.util.List<BuildFiles> buildFiles; 
             private String buildType; 
 
             /**
              * BuildFiles.
              */
-            public Builder buildFiles(java.util.List < BuildFiles> buildFiles) {
+            public Builder buildFiles(java.util.List<BuildFiles> buildFiles) {
                 this.buildFiles = buildFiles;
                 return this;
             }

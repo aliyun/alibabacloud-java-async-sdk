@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class UpdateStateConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    private java.util.Map<String, ?> parameters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -51,7 +56,7 @@ public class UpdateStateConfigurationRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Targets")
@@ -109,7 +114,7 @@ public class UpdateStateConfigurationRequest extends Request {
     /**
      * @return parameters
      */
-    public java.util.Map < String, ? > getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
@@ -151,7 +156,7 @@ public class UpdateStateConfigurationRequest extends Request {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -166,13 +171,13 @@ public class UpdateStateConfigurationRequest extends Request {
         private String clientToken; 
         private String configureMode; 
         private String description; 
-        private java.util.Map < String, ? > parameters; 
+        private java.util.Map<String, ?> parameters; 
         private String regionId; 
         private String resourceGroupId; 
         private String scheduleExpression; 
         private String scheduleType; 
         private String stateConfigurationId; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String targets; 
 
         private Builder() {
@@ -236,7 +241,7 @@ public class UpdateStateConfigurationRequest extends Request {
          * <strong>example:</strong>
          * <p>{ &quot;policy&quot;: { &quot;ACS:Application&quot;: { &quot;Collection&quot;: &quot;Enabled&quot; }, &quot;ACS:Network&quot;: { &quot;Collection&quot;: &quot;Enabled&quot; } } }</p>
          */
-        public Builder parameters(java.util.Map < String, ? > parameters) {
+        public Builder parameters(java.util.Map<String, ?> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putQueryParameter("Parameters", parametersShrink);
             this.parameters = parameters;
@@ -310,7 +315,7 @@ public class UpdateStateConfigurationRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;Key&quot;: &quot;oos&quot;, &quot;Value&quot;: &quot;sc&quot;}</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;

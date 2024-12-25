@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Tasks")
-    private java.util.List < Tasks> tasks;
+    private java.util.List<Tasks> tasks;
 
     private ValidateTemplateContentResponseBody(Builder builder) {
         this.outputs = builder.outputs;
@@ -74,7 +79,7 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
     /**
      * @return tasks
      */
-    public java.util.List < Tasks> getTasks() {
+    public java.util.List<Tasks> getTasks() {
         return this.tasks;
     }
 
@@ -83,7 +88,7 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
         private String parameters; 
         private String ramRole; 
         private String requestId; 
-        private java.util.List < Tasks> tasks; 
+        private java.util.List<Tasks> tasks; 
 
         /**
          * <p>The outputs of the template.</p>
@@ -132,7 +137,7 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
         /**
          * <p>The task defined in the template.</p>
          */
-        public Builder tasks(java.util.List < Tasks> tasks) {
+        public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
             return this;
         }

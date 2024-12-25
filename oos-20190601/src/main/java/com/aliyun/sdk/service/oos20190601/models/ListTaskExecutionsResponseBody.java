@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TaskExecutions")
-    private java.util.List < TaskExecutions> taskExecutions;
+    private java.util.List<TaskExecutions> taskExecutions;
 
     private ListTaskExecutionsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -63,7 +68,7 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
     /**
      * @return taskExecutions
      */
-    public java.util.List < TaskExecutions> getTaskExecutions() {
+    public java.util.List<TaskExecutions> getTaskExecutions() {
         return this.taskExecutions;
     }
 
@@ -71,7 +76,7 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < TaskExecutions> taskExecutions; 
+        private java.util.List<TaskExecutions> taskExecutions; 
 
         /**
          * <p>The details of the task executions.</p>
@@ -109,7 +114,7 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
         /**
          * <p>The execution ID of the child node.</p>
          */
-        public Builder taskExecutions(java.util.List < TaskExecutions> taskExecutions) {
+        public Builder taskExecutions(java.util.List<TaskExecutions> taskExecutions) {
             this.taskExecutions = taskExecutions;
             return this;
         }
@@ -140,10 +145,10 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
         private String executionId;
 
         @com.aliyun.core.annotation.NameInMap("ExtraData")
-        private java.util.Map < String, ? > extraData;
+        private java.util.Map<String, ?> extraData;
 
         @com.aliyun.core.annotation.NameInMap("Loop")
-        private java.util.Map < String, ? > loop;
+        private java.util.Map<String, ?> loop;
 
         @com.aliyun.core.annotation.NameInMap("LoopBatchNumber")
         private Integer loopBatchNumber;
@@ -245,14 +250,14 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
         /**
          * @return extraData
          */
-        public java.util.Map < String, ? > getExtraData() {
+        public java.util.Map<String, ?> getExtraData() {
             return this.extraData;
         }
 
         /**
          * @return loop
          */
-        public java.util.Map < String, ? > getLoop() {
+        public java.util.Map<String, ?> getLoop() {
             return this.loop;
         }
 
@@ -352,8 +357,8 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
             private String createDate; 
             private String endDate; 
             private String executionId; 
-            private java.util.Map < String, ? > extraData; 
-            private java.util.Map < String, ? > loop; 
+            private java.util.Map<String, ?> extraData; 
+            private java.util.Map<String, ?> loop; 
             private Integer loopBatchNumber; 
             private String loopItem; 
             private String outputs; 
@@ -418,7 +423,7 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{                     &quot;NotifyNote&quot;:&quot;&quot;                 }</p>
              */
-            public Builder extraData(java.util.Map < String, ? > extraData) {
+            public Builder extraData(java.util.Map<String, ?> extraData) {
                 this.extraData = extraData;
                 return this;
             }
@@ -429,7 +434,7 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>{}</p>
              */
-            public Builder loop(java.util.Map < String, ? > loop) {
+            public Builder loop(java.util.Map<String, ?> loop) {
                 this.loop = loop;
                 return this;
             }

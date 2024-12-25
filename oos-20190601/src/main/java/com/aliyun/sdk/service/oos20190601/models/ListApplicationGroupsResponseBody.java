@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListApplicationGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ApplicationGroups")
-    private java.util.List < ApplicationGroups> applicationGroups;
+    private java.util.List<ApplicationGroups> applicationGroups;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -42,7 +47,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
     /**
      * @return applicationGroups
      */
-    public java.util.List < ApplicationGroups> getApplicationGroups() {
+    public java.util.List<ApplicationGroups> getApplicationGroups() {
         return this.applicationGroups;
     }
 
@@ -68,7 +73,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ApplicationGroups> applicationGroups; 
+        private java.util.List<ApplicationGroups> applicationGroups; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
@@ -76,7 +81,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         /**
          * <p>The details of the application group.</p>
          */
-        public Builder applicationGroups(java.util.List < ApplicationGroups> applicationGroups) {
+        public Builder applicationGroups(java.util.List<ApplicationGroups> applicationGroups) {
             this.applicationGroups = applicationGroups;
             return this;
         }

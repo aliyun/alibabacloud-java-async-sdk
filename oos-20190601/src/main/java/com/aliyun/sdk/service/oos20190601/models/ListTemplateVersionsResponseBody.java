@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("TemplateVersions")
-    private java.util.List < TemplateVersions> templateVersions;
+    private java.util.List<TemplateVersions> templateVersions;
 
     private ListTemplateVersionsResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -63,7 +68,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
     /**
      * @return templateVersions
      */
-    public java.util.List < TemplateVersions> getTemplateVersions() {
+    public java.util.List<TemplateVersions> getTemplateVersions() {
         return this.templateVersions;
     }
 
@@ -71,7 +76,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < TemplateVersions> templateVersions; 
+        private java.util.List<TemplateVersions> templateVersions; 
 
         /**
          * <p>The number of entries per page.</p>
@@ -109,7 +114,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         /**
          * <p>The versions of the template.</p>
          */
-        public Builder templateVersions(java.util.List < TemplateVersions> templateVersions) {
+        public Builder templateVersions(java.util.List<TemplateVersions> templateVersions) {
             this.templateVersions = templateVersions;
             return this;
         }

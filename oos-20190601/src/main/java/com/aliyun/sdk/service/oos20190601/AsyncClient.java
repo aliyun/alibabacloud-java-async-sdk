@@ -170,6 +170,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateExecutionPolicyResponse> generateExecutionPolicy(GenerateExecutionPolicyRequest request);
 
     /**
+     * @param request the request parameters of GenerateOpsItem  GenerateOpsItemRequest
+     * @return GenerateOpsItemResponse
+     */
+    CompletableFuture<GenerateOpsItemResponse> generateOpsItem(GenerateOpsItemRequest request);
+
+    /**
      * @param request the request parameters of GetApplication  GetApplicationRequest
      * @return GetApplicationResponse
      */
@@ -297,18 +303,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListExecutionsResponse
      */
     CompletableFuture<ListExecutionsResponse> listExecutions(ListExecutionsRequest request);
-
-    /**
-     * @param request the request parameters of ListGitRepositories  ListGitRepositoriesRequest
-     * @return ListGitRepositoriesResponse
-     */
-    CompletableFuture<ListGitRepositoriesResponse> listGitRepositories(ListGitRepositoriesRequest request);
-
-    /**
-     * @param request the request parameters of ListGitRepositoryContents  ListGitRepositoryContentsRequest
-     * @return ListGitRepositoryContentsResponse
-     */
-    CompletableFuture<ListGitRepositoryContentsResponse> listGitRepositoryContents(ListGitRepositoryContentsRequest request);
 
     /**
      * @param request the request parameters of ListInstancePackageStates  ListInstancePackageStatesRequest
