@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.farui20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -289,7 +294,7 @@ public class RunContractRuleGenerationResponseBody extends TeaModel {
         private String ruleTaskId;
 
         @com.aliyun.core.annotation.NameInMap("rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private Output(Builder builder) {
             this.ruleTaskId = builder.ruleTaskId;
@@ -314,13 +319,13 @@ public class RunContractRuleGenerationResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
         public static final class Builder {
             private String ruleTaskId; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * ruleTaskId.
@@ -333,7 +338,7 @@ public class RunContractRuleGenerationResponseBody extends TeaModel {
             /**
              * rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

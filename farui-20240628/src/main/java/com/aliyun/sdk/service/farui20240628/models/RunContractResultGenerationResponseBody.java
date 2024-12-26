@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.farui20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -344,7 +349,7 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
         private String ruleTitle;
 
         @com.aliyun.core.annotation.NameInMap("subRisks")
-        private java.util.List < SubRisks> subRisks;
+        private java.util.List<SubRisks> subRisks;
 
         private Result(Builder builder) {
             this.examineBrief = builder.examineBrief;
@@ -409,7 +414,7 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
         /**
          * @return subRisks
          */
-        public java.util.List < SubRisks> getSubRisks() {
+        public java.util.List<SubRisks> getSubRisks() {
             return this.subRisks;
         }
 
@@ -420,7 +425,7 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
             private String ruleSequence; 
             private String ruleTag; 
             private String ruleTitle; 
-            private java.util.List < SubRisks> subRisks; 
+            private java.util.List<SubRisks> subRisks; 
 
             /**
              * examineBrief.
@@ -473,7 +478,7 @@ public class RunContractResultGenerationResponseBody extends TeaModel {
             /**
              * subRisks.
              */
-            public Builder subRisks(java.util.List < SubRisks> subRisks) {
+            public Builder subRisks(java.util.List<SubRisks> subRisks) {
                 this.subRisks = subRisks;
                 return this;
             }

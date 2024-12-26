@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.farui20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,6 +20,10 @@ public class RunLegalAdviceConsultationRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     private String workspaceId;
+
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("regionId")
+    private String regionId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("appId")
@@ -35,6 +44,7 @@ public class RunLegalAdviceConsultationRequest extends Request {
     private RunLegalAdviceConsultationRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.assistant = builder.assistant;
         this.stream = builder.stream;
@@ -59,6 +69,13 @@ public class RunLegalAdviceConsultationRequest extends Request {
      */
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -91,6 +108,7 @@ public class RunLegalAdviceConsultationRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunLegalAdviceConsultationRequest, Builder> {
         private String workspaceId; 
+        private String regionId; 
         private String appId; 
         private Assistant assistant; 
         private Boolean stream; 
@@ -103,6 +121,7 @@ public class RunLegalAdviceConsultationRequest extends Request {
         private Builder(RunLegalAdviceConsultationRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.assistant = request.assistant;
             this.stream = request.stream;
@@ -115,6 +134,15 @@ public class RunLegalAdviceConsultationRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("regionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -174,7 +202,7 @@ public class RunLegalAdviceConsultationRequest extends Request {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("metaData")
-        private java.util.Map < String, String > metaData;
+        private java.util.Map<String, String> metaData;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -207,7 +235,7 @@ public class RunLegalAdviceConsultationRequest extends Request {
         /**
          * @return metaData
          */
-        public java.util.Map < String, String > getMetaData() {
+        public java.util.Map<String, String> getMetaData() {
             return this.metaData;
         }
 
@@ -227,7 +255,7 @@ public class RunLegalAdviceConsultationRequest extends Request {
 
         public static final class Builder {
             private String id; 
-            private java.util.Map < String, String > metaData; 
+            private java.util.Map<String, String> metaData; 
             private String type; 
             private String version; 
 
@@ -242,7 +270,7 @@ public class RunLegalAdviceConsultationRequest extends Request {
             /**
              * metaData.
              */
-            public Builder metaData(java.util.Map < String, String > metaData) {
+            public Builder metaData(java.util.Map<String, String> metaData) {
                 this.metaData = metaData;
                 return this;
             }
@@ -345,7 +373,7 @@ public class RunLegalAdviceConsultationRequest extends Request {
      */
     public static class Thread extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("messages")
-        private java.util.List < Messages> messages;
+        private java.util.List<Messages> messages;
 
         private Thread(Builder builder) {
             this.messages = builder.messages;
@@ -362,17 +390,17 @@ public class RunLegalAdviceConsultationRequest extends Request {
         /**
          * @return messages
          */
-        public java.util.List < Messages> getMessages() {
+        public java.util.List<Messages> getMessages() {
             return this.messages;
         }
 
         public static final class Builder {
-            private java.util.List < Messages> messages; 
+            private java.util.List<Messages> messages; 
 
             /**
              * messages.
              */
-            public Builder messages(java.util.List < Messages> messages) {
+            public Builder messages(java.util.List<Messages> messages) {
                 this.messages = messages;
                 return this;
             }

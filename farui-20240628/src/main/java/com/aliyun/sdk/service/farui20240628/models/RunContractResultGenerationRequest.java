@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.farui20240628.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -17,6 +22,10 @@ public class RunContractResultGenerationRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("regionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("appId")
     private String appId;
@@ -32,6 +41,7 @@ public class RunContractResultGenerationRequest extends Request {
     private RunContractResultGenerationRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
+        this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.assistant = builder.assistant;
         this.stream = builder.stream;
@@ -58,6 +68,13 @@ public class RunContractResultGenerationRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return appId
      */
     public String getAppId() {
@@ -80,6 +97,7 @@ public class RunContractResultGenerationRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunContractResultGenerationRequest, Builder> {
         private String workspaceId; 
+        private String regionId; 
         private String appId; 
         private Assistant assistant; 
         private Boolean stream; 
@@ -91,6 +109,7 @@ public class RunContractResultGenerationRequest extends Request {
         private Builder(RunContractResultGenerationRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
+            this.regionId = request.regionId;
             this.appId = request.appId;
             this.assistant = request.assistant;
             this.stream = request.stream;
@@ -105,6 +124,15 @@ public class RunContractResultGenerationRequest extends Request {
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * regionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("regionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -238,7 +266,7 @@ public class RunContractResultGenerationRequest extends Request {
      */
     public static class CustomRuleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("customRules")
-        private java.util.List < CustomRules> customRules;
+        private java.util.List<CustomRules> customRules;
 
         private CustomRuleConfig(Builder builder) {
             this.customRules = builder.customRules;
@@ -255,17 +283,17 @@ public class RunContractResultGenerationRequest extends Request {
         /**
          * @return customRules
          */
-        public java.util.List < CustomRules> getCustomRules() {
+        public java.util.List<CustomRules> getCustomRules() {
             return this.customRules;
         }
 
         public static final class Builder {
-            private java.util.List < CustomRules> customRules; 
+            private java.util.List<CustomRules> customRules; 
 
             /**
              * customRules.
              */
-            public Builder customRules(java.util.List < CustomRules> customRules) {
+            public Builder customRules(java.util.List<CustomRules> customRules) {
                 this.customRules = customRules;
                 return this;
             }
@@ -404,7 +432,7 @@ public class RunContractResultGenerationRequest extends Request {
         private String ruleTaskId;
 
         @com.aliyun.core.annotation.NameInMap("rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         private MetaData(Builder builder) {
             this.customRuleConfig = builder.customRuleConfig;
@@ -453,7 +481,7 @@ public class RunContractResultGenerationRequest extends Request {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -462,7 +490,7 @@ public class RunContractResultGenerationRequest extends Request {
             private String fileId; 
             private String position; 
             private String ruleTaskId; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
 
             /**
              * customRuleConfig.
@@ -499,7 +527,7 @@ public class RunContractResultGenerationRequest extends Request {
             /**
              * rules.
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }
