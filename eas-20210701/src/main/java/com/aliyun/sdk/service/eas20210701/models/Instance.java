@@ -41,6 +41,9 @@ public class Instance extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstancePort")
     private Integer instancePort;
 
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    private String instanceType;
+
     @com.aliyun.core.annotation.NameInMap("IsSpot")
     private Boolean isSpot;
 
@@ -102,6 +105,7 @@ public class Instance extends TeaModel {
         this.innerIP = builder.innerIP;
         this.instanceName = builder.instanceName;
         this.instancePort = builder.instancePort;
+        this.instanceType = builder.instanceType;
         this.isSpot = builder.isSpot;
         this.isolated = builder.isolated;
         this.lastState = builder.lastState;
@@ -183,6 +187,13 @@ public class Instance extends TeaModel {
      */
     public Integer getInstancePort() {
         return this.instancePort;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     /**
@@ -313,6 +324,7 @@ public class Instance extends TeaModel {
         private String innerIP; 
         private String instanceName; 
         private Integer instancePort; 
+        private String instanceType; 
         private Boolean isSpot; 
         private Boolean isolated; 
         private java.util.List<java.util.Map<String, ?>> lastState; 
@@ -392,6 +404,14 @@ public class Instance extends TeaModel {
          */
         public Builder instancePort(Integer instancePort) {
             this.instancePort = instancePort;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.instanceType = instanceType;
             return this;
         }
 

@@ -962,6 +962,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeServiceSignedUrl  DescribeServiceSignedUrlRequest
+     * @return DescribeServiceSignedUrlResponse
+     */
+    @Override
+    public CompletableFuture<DescribeServiceSignedUrlResponse> describeServiceSignedUrl(DescribeServiceSignedUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeServiceSignedUrl").setMethod(HttpMethod.GET).setPathRegex("/api/v2/services/{ClusterId}/{ServiceName}/signed_url").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeServiceSignedUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeServiceSignedUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeSpotDiscountHistory  DescribeSpotDiscountHistoryRequest
      * @return DescribeSpotDiscountHistoryResponse
      */

@@ -326,6 +326,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeServiceMirrorResponse> describeServiceMirror(DescribeServiceMirrorRequest request);
 
     /**
+     * @param request the request parameters of DescribeServiceSignedUrl  DescribeServiceSignedUrlRequest
+     * @return DescribeServiceSignedUrlResponse
+     */
+    CompletableFuture<DescribeServiceSignedUrlResponse> describeServiceSignedUrl(DescribeServiceSignedUrlRequest request);
+
+    /**
      * @param request the request parameters of DescribeSpotDiscountHistory  DescribeSpotDiscountHistoryRequest
      * @return DescribeSpotDiscountHistoryResponse
      */
