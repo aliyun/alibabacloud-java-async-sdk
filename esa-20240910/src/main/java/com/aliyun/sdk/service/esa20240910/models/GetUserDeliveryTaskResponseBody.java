@@ -26,6 +26,9 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DeliveryType")
     private String deliveryType;
 
+    @com.aliyun.core.annotation.NameInMap("Details")
+    private String details;
+
     @com.aliyun.core.annotation.NameInMap("DiscardRate")
     private Float discardRate;
 
@@ -51,6 +54,7 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
         this.businessType = builder.businessType;
         this.dataCenter = builder.dataCenter;
         this.deliveryType = builder.deliveryType;
+        this.details = builder.details;
         this.discardRate = builder.discardRate;
         this.fieldList = builder.fieldList;
         this.filterRules = builder.filterRules;
@@ -87,6 +91,13 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
      */
     public String getDeliveryType() {
         return this.deliveryType;
+    }
+
+    /**
+     * @return details
+     */
+    public String getDetails() {
+        return this.details;
     }
 
     /**
@@ -142,6 +153,7 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
         private String businessType; 
         private String dataCenter; 
         private String deliveryType; 
+        private String details; 
         private Float discardRate; 
         private String fieldList; 
         private String filterRules; 
@@ -198,6 +210,14 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
          */
         public Builder deliveryType(String deliveryType) {
             this.deliveryType = deliveryType;
+            return this;
+        }
+
+        /**
+         * Details.
+         */
+        public Builder details(String details) {
+            this.details = details;
             return this;
         }
 

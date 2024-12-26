@@ -33,6 +33,10 @@ public class CreateUserDeliveryTaskRequest extends Request {
     private String deliveryType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Details")
+    private String details;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DiscardRate")
     private Float discardRate;
 
@@ -71,6 +75,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
         this.businessType = builder.businessType;
         this.dataCenter = builder.dataCenter;
         this.deliveryType = builder.deliveryType;
+        this.details = builder.details;
         this.discardRate = builder.discardRate;
         this.fieldName = builder.fieldName;
         this.httpDelivery = builder.httpDelivery;
@@ -113,6 +118,13 @@ public class CreateUserDeliveryTaskRequest extends Request {
      */
     public String getDeliveryType() {
         return this.deliveryType;
+    }
+
+    /**
+     * @return details
+     */
+    public String getDetails() {
+        return this.details;
     }
 
     /**
@@ -175,6 +187,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
         private String businessType; 
         private String dataCenter; 
         private String deliveryType; 
+        private String details; 
         private Float discardRate; 
         private String fieldName; 
         private HttpDelivery httpDelivery; 
@@ -193,6 +206,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
             this.businessType = request.businessType;
             this.dataCenter = request.dataCenter;
             this.deliveryType = request.deliveryType;
+            this.details = request.details;
             this.discardRate = request.discardRate;
             this.fieldName = request.fieldName;
             this.httpDelivery = request.httpDelivery;
@@ -257,6 +271,15 @@ public class CreateUserDeliveryTaskRequest extends Request {
         public Builder deliveryType(String deliveryType) {
             this.putBodyParameter("DeliveryType", deliveryType);
             this.deliveryType = deliveryType;
+            return this;
+        }
+
+        /**
+         * Details.
+         */
+        public Builder details(String details) {
+            this.putBodyParameter("Details", details);
+            this.details = details;
             return this;
         }
 

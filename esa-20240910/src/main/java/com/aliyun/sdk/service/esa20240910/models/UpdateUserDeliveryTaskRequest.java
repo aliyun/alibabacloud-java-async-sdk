@@ -22,6 +22,10 @@ public class UpdateUserDeliveryTaskRequest extends Request {
     private String businessType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Details")
+    private String details;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DiscardRate")
     private Float discardRate;
 
@@ -38,6 +42,7 @@ public class UpdateUserDeliveryTaskRequest extends Request {
     private UpdateUserDeliveryTaskRequest(Builder builder) {
         super(builder);
         this.businessType = builder.businessType;
+        this.details = builder.details;
         this.discardRate = builder.discardRate;
         this.fieldName = builder.fieldName;
         this.taskName = builder.taskName;
@@ -64,6 +69,13 @@ public class UpdateUserDeliveryTaskRequest extends Request {
     }
 
     /**
+     * @return details
+     */
+    public String getDetails() {
+        return this.details;
+    }
+
+    /**
      * @return discardRate
      */
     public Float getDiscardRate() {
@@ -86,6 +98,7 @@ public class UpdateUserDeliveryTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateUserDeliveryTaskRequest, Builder> {
         private String businessType; 
+        private String details; 
         private Float discardRate; 
         private String fieldName; 
         private String taskName; 
@@ -97,6 +110,7 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         private Builder(UpdateUserDeliveryTaskRequest request) {
             super(request);
             this.businessType = request.businessType;
+            this.details = request.details;
             this.discardRate = request.discardRate;
             this.fieldName = request.fieldName;
             this.taskName = request.taskName;
@@ -117,6 +131,15 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         public Builder businessType(String businessType) {
             this.putBodyParameter("BusinessType", businessType);
             this.businessType = businessType;
+            return this;
+        }
+
+        /**
+         * Details.
+         */
+        public Builder details(String details) {
+            this.putBodyParameter("Details", details);
+            this.details = details;
             return this;
         }
 

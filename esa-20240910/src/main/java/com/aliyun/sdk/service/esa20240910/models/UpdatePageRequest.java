@@ -29,6 +29,7 @@ public class UpdatePageRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
     @com.aliyun.core.annotation.Body
@@ -150,6 +151,7 @@ public class UpdatePageRequest extends Request {
 
         /**
          * <p>The description of the custom error page.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>a custom deny page</p>

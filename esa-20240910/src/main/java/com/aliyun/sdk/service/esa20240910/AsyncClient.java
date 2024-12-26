@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ActivateClientCertificateResponse> activateClientCertificate(ActivateClientCertificateRequest request);
 
     /**
+     * @param request the request parameters of ApplyCertificate  ApplyCertificateRequest
+     * @return ApplyCertificateResponse
+     */
+    CompletableFuture<ApplyCertificateResponse> applyCertificate(ApplyCertificateRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This operation allows you to create or update multiple DNS records at a time. It is suitable for managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. The operation allows you to configure the priority, flag, tag, and weight for DNS records. In addition, for specific types of records, such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are also supported.
      * Successful and failed records along with error messages are listed in the response.</p>
@@ -480,6 +486,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCacheReserveSpecificationResponse> getCacheReserveSpecification(GetCacheReserveSpecificationRequest request);
 
     /**
+     * @param request the request parameters of GetCertificate  GetCertificateRequest
+     * @return GetCertificateResponse
+     */
+    CompletableFuture<GetCertificateResponse> getCertificate(GetCertificateRequest request);
+
+    /**
      * @param request the request parameters of GetCertificateQuota  GetCertificateQuotaRequest
      * @return GetCertificateQuotaResponse
      */
@@ -740,6 +752,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCacheReserveInstancesResponse
      */
     CompletableFuture<ListCacheReserveInstancesResponse> listCacheReserveInstances(ListCacheReserveInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListCertificates  ListCertificatesRequest
+     * @return ListCertificatesResponse
+     */
+    CompletableFuture<ListCertificatesResponse> listCertificates(ListCertificatesRequest request);
 
     /**
      * @param request the request parameters of ListCiphers  ListCiphersRequest
