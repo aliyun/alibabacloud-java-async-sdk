@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListInstancesResponseBody extends TeaModel {
     private String httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("InstanceList")
-    private java.util.List < InstanceList> instanceList;
+    private java.util.List<InstanceList> instanceList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class ListInstancesResponseBody extends TeaModel {
     /**
      * @return instanceList
      */
-    public java.util.List < InstanceList> getInstanceList() {
+    public java.util.List<InstanceList> getInstanceList() {
         return this.instanceList;
     }
 
@@ -93,7 +98,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String httpStatusCode; 
-        private java.util.List < InstanceList> instanceList; 
+        private java.util.List<InstanceList> instanceList; 
         private String requestId; 
         private String success; 
 
@@ -133,7 +138,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>The list of queried instances.</p>
          */
-        public Builder instanceList(java.util.List < InstanceList> instanceList) {
+        public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.instanceList = instanceList;
             return this;
         }
@@ -481,7 +486,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String enableHiveAccess;
 
         @com.aliyun.core.annotation.NameInMap("Endpoints")
-        private java.util.List < Endpoints> endpoints;
+        private java.util.List<Endpoints> endpoints;
 
         @com.aliyun.core.annotation.NameInMap("ExpirationTime")
         private String expirationTime;
@@ -510,11 +515,14 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("StorageType")
+        private String storageType;
+
         @com.aliyun.core.annotation.NameInMap("SuspendReason")
         private String suspendReason;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
@@ -536,6 +544,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.leaderInstanceId = builder.leaderInstanceId;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.storageType = builder.storageType;
             this.suspendReason = builder.suspendReason;
             this.tags = builder.tags;
             this.version = builder.version;
@@ -574,7 +583,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return endpoints
          */
-        public java.util.List < Endpoints> getEndpoints() {
+        public java.util.List<Endpoints> getEndpoints() {
             return this.endpoints;
         }
 
@@ -642,6 +651,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        /**
          * @return suspendReason
          */
         public String getSuspendReason() {
@@ -651,7 +667,7 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -673,7 +689,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String commodityCode; 
             private String creationTime; 
             private String enableHiveAccess; 
-            private java.util.List < Endpoints> endpoints; 
+            private java.util.List<Endpoints> endpoints; 
             private String expirationTime; 
             private String instanceChargeType; 
             private String instanceId; 
@@ -683,8 +699,9 @@ public class ListInstancesResponseBody extends TeaModel {
             private String leaderInstanceId; 
             private String regionId; 
             private String resourceGroupId; 
+            private String storageType; 
             private String suspendReason; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String version; 
             private String zoneId; 
 
@@ -740,7 +757,7 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * <p>The list of endpoints.</p>
              */
-            public Builder endpoints(java.util.List < Endpoints> endpoints) {
+            public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
                 return this;
             }
@@ -922,6 +939,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * StorageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
+                return this;
+            }
+
+            /**
              * <p>The reason for the suspension.</p>
              * 
              * <strong>example:</strong>
@@ -935,7 +960,7 @@ public class ListInstancesResponseBody extends TeaModel {
             /**
              * <p>The tags that are added to the resource.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

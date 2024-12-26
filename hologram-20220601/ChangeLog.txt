@@ -1,3 +1,6 @@
+2024-12-26 Version: 1.0.10
+- Generated java-async 2022-06-01 for Hologram.
+
 2024-11-18 Version: 1.0.9
 - Generated java-async 2022-06-01 for Hologram.
 

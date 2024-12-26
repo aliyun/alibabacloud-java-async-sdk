@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -320,7 +325,7 @@ public class CreateInstanceRequest extends Request {
          * <li>false</li>
          * </ul>
          * <blockquote>
-         * <p>The default value is true. If the balance of your account is insufficient, you can set this parameter to false. In this case, an unpaid order is generated. You can log on to the User Center to pay for the order.</p>
+         * <p> The default value is true. If the balance of your account is insufficient, you can set this parameter to false. In this case, an unpaid order is generated. You can log on to the Expenses and Costs console to pay for the order.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -333,7 +338,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable monthly auto-renewal. Default value: false. Valid values:</p>
+         * <p>Specifies whether to enable monthly auto-renewal. The default value is false. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -355,7 +360,7 @@ public class CreateInstanceRequest extends Request {
          * <li>PostPaid: pay-as-you-go</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is invalid for shared instances. Shared instances have fixed specifications and are pay-as-you-go instances.</p>
+         * <p> This parameter is invalid for Hologres Shared Cluster instances. Hologres Shared Cluster instances have fixed specifications and are pay-as-you-go instances.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -371,7 +376,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The infrequent access (IA) storage space of the instance. Unit: GB.</p>
          * <blockquote>
-         * <p>This parameter is invalid for pay-as-you-go instances.</p>
+         * <p> This parameter is invalid for pay-as-you-go instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -386,12 +391,11 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The instance specifications. Valid values:</p>
          * <ul>
-         * <li>8-core 32 GB (number of compute nodes: 1)</li>
-         * <li>16-core 64 GB (number of compute nodes: 1)</li>
-         * <li>32-core 128 GB (number of compute nodes: 2)</li>
-         * <li>64-core 256 GB (number of compute nodes: 4)</li>
-         * <li>96-core 384 GB (number of compute nodes: 6)</li>
-         * <li>128-core 512 GB (number of compute nodes: 8)</li>
+         * <li>8-core 32GB (number of compute nodes: 1)</li>
+         * <li>32-core 128GB (number of compute nodes: 2)</li>
+         * <li>64-core 256GB (number of compute nodes: 4)</li>
+         * <li>96-core 384GB (number of compute nodes: 6)</li>
+         * <li>128-core 512GB (number of compute nodes: 8)</li>
          * <li>Others</li>
          * </ul>
          * <blockquote>
@@ -399,11 +403,11 @@ public class CreateInstanceRequest extends Request {
          * <ul>
          * <li><p>Set this parameter to the number of cores.</p>
          * </li>
-         * <li><p>If you want to set this parameter to specifications with more than 1,024 compute units (CUs), you must submit a ticket.</p>
+         * <li><p>If you want to set this parameter to specifications with more than 1,024 GB, you must submit a ticket.</p>
          * </li>
-         * <li><p>If you want to purchase a shared instance, you do not need to configure this parameter.</p>
+         * <li><p>This parameter is invalid for Hologres Shared Cluster instances.</p>
          * </li>
-         * <li><p>The specifications of 8-core 32 GB (number of compute nodes: 1) are for trial use only and cannot be used for production.</p>
+         * <li><p>The specifications of 8-core 32GB (number of compute nodes: 1) are for trial use only and cannot be used for production.</p>
          * </li>
          * </ul>
          * 
@@ -419,7 +423,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The validity period of the instance that you want to purchase. For example, you can specify a validity period of two months.</p>
          * <blockquote>
-         * <p>You do not need to configure this parameter for pay-as-you-go instances.</p>
+         * <p> You do not need to configure this parameter for pay-as-you-go instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -432,7 +436,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * enableServerlessComputing.
+         * <p>Specifies whether to enable the Serverless Computing feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableServerlessComputing(Boolean enableServerlessComputing) {
             this.putBodyParameter("enableServerlessComputing", enableServerlessComputing);
@@ -443,7 +455,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The number of gateways. Valid values: 2 to 50.</p>
          * <blockquote>
-         * <p>This parameter is required only for virtual warehouse instances.</p>
+         * <p> This parameter is required only for virtual warehouse instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -456,7 +468,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * initialDatabases.
+         * <p>The initial database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chatbot</p>
          */
         public Builder initialDatabases(String initialDatabases) {
             this.putBodyParameter("initialDatabases", initialDatabases);
@@ -465,7 +480,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The name of the Hologres instance that you want to purchase. The name must be 2 to 64 characters in length.</p>
+         * <p>The name of the instance. The name must be 2 to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -478,12 +493,12 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The type of the instance. Valid values:</p>
+         * <p>The category of the instance. Valid values:</p>
          * <ul>
          * <li>Standard: general-purpose instance</li>
          * <li>Follower: read-only secondary instance</li>
          * <li>Warehouse: virtual warehouse instance</li>
-         * <li>Shared: shared instance</li>
+         * <li>Shared: Hologres Shared Cluster instance</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -499,7 +514,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The ID of the primary instance. This parameter is required for read-only secondary instances.</p>
          * <blockquote>
-         * <p>The primary instance and secondary instances must meet the following requirements:</p>
+         * <p> The primary and secondary instances must meet the following requirements:</p>
          * </blockquote>
          * <ul>
          * <li><p>The primary instance is in the Running state.</p>
@@ -510,7 +525,7 @@ public class CreateInstanceRequest extends Request {
          * </li>
          * <li><p>Less than 10 secondary instances are associated with the primary instance.</p>
          * </li>
-         * <li><p>The primary and secondary instances belong to the same Alibaba Cloud account.</p>
+         * <li><p>The primary instance and secondary instances belong to the same Alibaba Cloud account.</p>
          * </li>
          * </ul>
          * 
@@ -536,7 +551,7 @@ public class CreateInstanceRequest extends Request {
          * </li>
          * <li><p>This parameter can only be set to Hour for pay-as-you-go instances.</p>
          * </li>
-         * <li><p>By default, this parameter is set to Hour for shared instances.</p>
+         * <li><p>By default, this parameter is set to Hour for Hologres Shared Cluster instances.</p>
          * </li>
          * </ul>
          * 
@@ -550,7 +565,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can go to the <a href="https://api.aliyun.com/product/Hologram">OpenAPI Explorer</a> or the Usage notes section to view the ID of the region.</p>
+         * <p>The ID of the region. You can obtain region IDs in <a href="https://www.alibabacloud.com/help/en/maxcompute/user-guide/endpoints">Endpoints</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -563,7 +578,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The resource group. If you do not specify this parameter, the default resource group of the account is used.</p>
+         * <p>The ID of the resource group. If you do not specify this parameter, the default resource group of the account is used.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -577,7 +592,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The standard storage space of the instance. Unit: GB.</p>
          * <blockquote>
-         * <p>This parameter is invalid for pay-as-you-go instances.</p>
+         * <p> This parameter is invalid for pay-as-you-go instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -590,7 +605,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch. The zone in which the vSwitch resides must be the same as the zone in which the instance resides.</p>
+         * <p>The ID of the vSwitch. The zone in which the vSwitch resides must be the same as the zone in which the Hologres instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -616,7 +631,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone. For more information about how to obtain the ID of the zone, see the Usage notes section.</p>
+         * <p>The ID of the zone. For more information, see the &quot;Operation description&quot; section in this topic.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

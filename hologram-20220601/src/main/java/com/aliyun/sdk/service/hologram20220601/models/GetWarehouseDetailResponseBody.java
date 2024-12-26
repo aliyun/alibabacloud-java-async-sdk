@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -353,7 +358,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         private String timedElasticCpu;
 
         @com.aliyun.core.annotation.NameInMap("WarehouseList")
-        private java.util.List < WarehouseList> warehouseList;
+        private java.util.List<WarehouseList> warehouseList;
 
         private WarehouseDetail(Builder builder) {
             this.remainingCpu = builder.remainingCpu;
@@ -394,7 +399,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         /**
          * @return warehouseList
          */
-        public java.util.List < WarehouseList> getWarehouseList() {
+        public java.util.List<WarehouseList> getWarehouseList() {
             return this.warehouseList;
         }
 
@@ -402,7 +407,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             private String remainingCpu; 
             private String reservedCpu; 
             private String timedElasticCpu; 
-            private java.util.List < WarehouseList> warehouseList; 
+            private java.util.List<WarehouseList> warehouseList; 
 
             /**
              * <p>The remaining unallocated computing resources of the virtual warehouse instance.</p>
@@ -437,7 +442,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             /**
              * <p>The list of virtual warehouses.</p>
              */
-            public Builder warehouseList(java.util.List < WarehouseList> warehouseList) {
+            public Builder warehouseList(java.util.List<WarehouseList> warehouseList) {
                 this.warehouseList = warehouseList;
                 return this;
             }

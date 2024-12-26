@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -523,7 +528,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private Boolean enableServerless;
 
         @com.aliyun.core.annotation.NameInMap("Endpoints")
-        private java.util.List < Endpoints> endpoints;
+        private java.util.List<Endpoints> endpoints;
 
         @com.aliyun.core.annotation.NameInMap("ExpirationTime")
         private String expirationTime;
@@ -570,11 +575,14 @@ public class GetInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("StorageType")
+        private String storageType;
+
         @com.aliyun.core.annotation.NameInMap("SuspendReason")
         private String suspendReason;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
@@ -608,6 +616,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.replicaRole = builder.replicaRole;
             this.resourceGroupId = builder.resourceGroupId;
+            this.storageType = builder.storageType;
             this.suspendReason = builder.suspendReason;
             this.tags = builder.tags;
             this.version = builder.version;
@@ -688,7 +697,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return endpoints
          */
-        public java.util.List < Endpoints> getEndpoints() {
+        public java.util.List<Endpoints> getEndpoints() {
             return this.endpoints;
         }
 
@@ -798,6 +807,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        /**
          * @return suspendReason
          */
         public String getSuspendReason() {
@@ -807,7 +823,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -835,7 +851,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String disk; 
             private String enableHiveAccess; 
             private Boolean enableServerless; 
-            private java.util.List < Endpoints> endpoints; 
+            private java.util.List<Endpoints> endpoints; 
             private String expirationTime; 
             private Long gatewayCount; 
             private Long gatewayCpu; 
@@ -851,8 +867,9 @@ public class GetInstanceResponseBody extends TeaModel {
             private String regionId; 
             private String replicaRole; 
             private String resourceGroupId; 
+            private String storageType; 
             private String suspendReason; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String version; 
             private String zoneId; 
 
@@ -1057,7 +1074,7 @@ public class GetInstanceResponseBody extends TeaModel {
             /**
              * <p>The list of endpoints.</p>
              */
-            public Builder endpoints(java.util.List < Endpoints> endpoints) {
+            public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
                 return this;
             }
@@ -1305,6 +1322,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * StorageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
+                return this;
+            }
+
+            /**
              * <p>The reason for the suspension.</p>
              * <p>Valid values:</p>
              * <ul>
@@ -1354,7 +1379,7 @@ public class GetInstanceResponseBody extends TeaModel {
             /**
              * <p>The instance tag.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
