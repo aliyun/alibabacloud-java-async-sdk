@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sysom20231230.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class AuthDiagnosisRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("instances")
-    private java.util.List < Instances> instances;
+    private java.util.List<Instances> instances;
 
     private AuthDiagnosisRequest(Builder builder) {
         super(builder);
@@ -61,14 +66,14 @@ public class AuthDiagnosisRequest extends Request {
     /**
      * @return instances
      */
-    public java.util.List < Instances> getInstances() {
+    public java.util.List<Instances> getInstances() {
         return this.instances;
     }
 
     public static final class Builder extends Request.Builder<AuthDiagnosisRequest, Builder> {
         private Boolean autoCreateRole; 
         private Boolean autoInstallAgent; 
-        private java.util.List < Instances> instances; 
+        private java.util.List<Instances> instances; 
 
         private Builder() {
             super();
@@ -102,7 +107,7 @@ public class AuthDiagnosisRequest extends Request {
         /**
          * instances.
          */
-        public Builder instances(java.util.List < Instances> instances) {
+        public Builder instances(java.util.List<Instances> instances) {
             this.putBodyParameter("instances", instances);
             this.instances = instances;
             return this;

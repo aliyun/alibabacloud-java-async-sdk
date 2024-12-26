@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sysom20231230.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,6 +39,10 @@ public class GetAbnormalEventsCountRequest extends Request {
     private String pod;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("showPod")
+    private Integer showPod;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("start")
     private Float start;
 
@@ -44,6 +53,7 @@ public class GetAbnormalEventsCountRequest extends Request {
         this.instance = builder.instance;
         this.namespace = builder.namespace;
         this.pod = builder.pod;
+        this.showPod = builder.showPod;
         this.start = builder.start;
     }
 
@@ -96,6 +106,13 @@ public class GetAbnormalEventsCountRequest extends Request {
     }
 
     /**
+     * @return showPod
+     */
+    public Integer getShowPod() {
+        return this.showPod;
+    }
+
+    /**
      * @return start
      */
     public Float getStart() {
@@ -108,6 +125,7 @@ public class GetAbnormalEventsCountRequest extends Request {
         private String instance; 
         private String namespace; 
         private String pod; 
+        private Integer showPod; 
         private Float start; 
 
         private Builder() {
@@ -121,6 +139,7 @@ public class GetAbnormalEventsCountRequest extends Request {
             this.instance = request.instance;
             this.namespace = request.namespace;
             this.pod = request.pod;
+            this.showPod = request.showPod;
             this.start = request.start;
         } 
 
@@ -169,6 +188,15 @@ public class GetAbnormalEventsCountRequest extends Request {
         public Builder pod(String pod) {
             this.putQueryParameter("pod", pod);
             this.pod = pod;
+            return this;
+        }
+
+        /**
+         * showPod.
+         */
+        public Builder showPod(Integer showPod) {
+            this.putQueryParameter("showPod", showPod);
+            this.showPod = showPod;
             return this;
         }
 
