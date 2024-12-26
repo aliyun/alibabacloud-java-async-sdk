@@ -95,6 +95,9 @@ public class DescribeRCClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("Profile")
+        private String profile;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -105,6 +108,7 @@ public class DescribeRCClustersResponseBody extends TeaModel {
             this.clusterId = builder.clusterId;
             this.clusterName = builder.clusterName;
             this.createTime = builder.createTime;
+            this.profile = builder.profile;
             this.status = builder.status;
             this.vpcId = builder.vpcId;
         }
@@ -139,6 +143,13 @@ public class DescribeRCClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return profile
+         */
+        public String getProfile() {
+            return this.profile;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -156,6 +167,7 @@ public class DescribeRCClustersResponseBody extends TeaModel {
             private String clusterId; 
             private String clusterName; 
             private String createTime; 
+            private String profile; 
             private String status; 
             private String vpcId; 
 
@@ -186,6 +198,14 @@ public class DescribeRCClustersResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * Profile.
+             */
+            public Builder profile(String profile) {
+                this.profile = profile;
                 return this;
             }
 

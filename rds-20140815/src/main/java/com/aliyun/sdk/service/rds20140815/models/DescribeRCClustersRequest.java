@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRCClustersRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Profile")
+    private String profile;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -27,6 +31,7 @@ public class DescribeRCClustersRequest extends Request {
 
     private DescribeRCClustersRequest(Builder builder) {
         super(builder);
+        this.profile = builder.profile;
         this.regionId = builder.regionId;
         this.vpcId = builder.vpcId;
     }
@@ -45,6 +50,13 @@ public class DescribeRCClustersRequest extends Request {
     }
 
     /**
+     * @return profile
+     */
+    public String getProfile() {
+        return this.profile;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -59,6 +71,7 @@ public class DescribeRCClustersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRCClustersRequest, Builder> {
+        private String profile; 
         private String regionId; 
         private String vpcId; 
 
@@ -68,9 +81,19 @@ public class DescribeRCClustersRequest extends Request {
 
         private Builder(DescribeRCClustersRequest request) {
             super(request);
+            this.profile = request.profile;
             this.regionId = request.regionId;
             this.vpcId = request.vpcId;
         } 
+
+        /**
+         * Profile.
+         */
+        public Builder profile(String profile) {
+            this.putQueryParameter("Profile", profile);
+            this.profile = profile;
+            return this;
+        }
 
         /**
          * <p>The region ID.</p>

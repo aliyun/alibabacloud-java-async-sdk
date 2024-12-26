@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RunRCInstancesRequest} extends {@link RequestModel}
+ * {@link CreateRCNodePoolRequest} extends {@link RequestModel}
  *
- * <p>RunRCInstancesRequest</p>
+ * <p>CreateRCNodePoolRequest</p>
  */
-public class RunRCInstancesRequest extends Request {
+public class CreateRCNodePoolRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Amount")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 30, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 10)
     private Integer amount;
 
     @com.aliyun.core.annotation.Query
@@ -35,8 +35,9 @@ public class RunRCInstancesRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CreateExtraParam")
-    private String createExtraParam;
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String clusterId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreateMode")
@@ -96,6 +97,10 @@ public class RunRCInstancesRequest extends Request {
     private String keyPairName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodePoolName")
+    private String nodePoolName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
@@ -129,10 +134,6 @@ public class RunRCInstancesRequest extends Request {
     private String spotStrategy;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SupportCase")
-    private String supportCase;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
@@ -149,13 +150,13 @@ public class RunRCInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
-    private RunRCInstancesRequest(Builder builder) {
+    private CreateRCNodePoolRequest(Builder builder) {
         super(builder);
         this.amount = builder.amount;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.clientToken = builder.clientToken;
-        this.createExtraParam = builder.createExtraParam;
+        this.clusterId = builder.clusterId;
         this.createMode = builder.createMode;
         this.dataDisk = builder.dataDisk;
         this.deploymentSetId = builder.deploymentSetId;
@@ -170,6 +171,7 @@ public class RunRCInstancesRequest extends Request {
         this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
         this.ioOptimized = builder.ioOptimized;
         this.keyPairName = builder.keyPairName;
+        this.nodePoolName = builder.nodePoolName;
         this.password = builder.password;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -178,7 +180,6 @@ public class RunRCInstancesRequest extends Request {
         this.securityEnhancementStrategy = builder.securityEnhancementStrategy;
         this.securityGroupId = builder.securityGroupId;
         this.spotStrategy = builder.spotStrategy;
-        this.supportCase = builder.supportCase;
         this.systemDisk = builder.systemDisk;
         this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
@@ -189,7 +190,7 @@ public class RunRCInstancesRequest extends Request {
         return new Builder();
     }
 
-    public static RunRCInstancesRequest create() {
+    public static CreateRCNodePoolRequest create() {
         return builder().build();
     }
 
@@ -227,10 +228,10 @@ public class RunRCInstancesRequest extends Request {
     }
 
     /**
-     * @return createExtraParam
+     * @return clusterId
      */
-    public String getCreateExtraParam() {
-        return this.createExtraParam;
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     /**
@@ -332,6 +333,13 @@ public class RunRCInstancesRequest extends Request {
     }
 
     /**
+     * @return nodePoolName
+     */
+    public String getNodePoolName() {
+        return this.nodePoolName;
+    }
+
+    /**
      * @return password
      */
     public String getPassword() {
@@ -388,13 +396,6 @@ public class RunRCInstancesRequest extends Request {
     }
 
     /**
-     * @return supportCase
-     */
-    public String getSupportCase() {
-        return this.supportCase;
-    }
-
-    /**
      * @return systemDisk
      */
     public SystemDisk getSystemDisk() {
@@ -422,12 +423,12 @@ public class RunRCInstancesRequest extends Request {
         return this.zoneId;
     }
 
-    public static final class Builder extends Request.Builder<RunRCInstancesRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateRCNodePoolRequest, Builder> {
         private Integer amount; 
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private String clientToken; 
-        private String createExtraParam; 
+        private String clusterId; 
         private String createMode; 
         private java.util.List<DataDisk> dataDisk; 
         private String deploymentSetId; 
@@ -442,6 +443,7 @@ public class RunRCInstancesRequest extends Request {
         private Integer internetMaxBandwidthOut; 
         private String ioOptimized; 
         private String keyPairName; 
+        private String nodePoolName; 
         private String password; 
         private Integer period; 
         private String periodUnit; 
@@ -450,7 +452,6 @@ public class RunRCInstancesRequest extends Request {
         private String securityEnhancementStrategy; 
         private String securityGroupId; 
         private String spotStrategy; 
-        private String supportCase; 
         private SystemDisk systemDisk; 
         private java.util.List<Tag> tag; 
         private String vSwitchId; 
@@ -460,13 +461,13 @@ public class RunRCInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(RunRCInstancesRequest request) {
+        private Builder(CreateRCNodePoolRequest request) {
             super(request);
             this.amount = request.amount;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.clientToken = request.clientToken;
-            this.createExtraParam = request.createExtraParam;
+            this.clusterId = request.clusterId;
             this.createMode = request.createMode;
             this.dataDisk = request.dataDisk;
             this.deploymentSetId = request.deploymentSetId;
@@ -481,6 +482,7 @@ public class RunRCInstancesRequest extends Request {
             this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
             this.ioOptimized = request.ioOptimized;
             this.keyPairName = request.keyPairName;
+            this.nodePoolName = request.nodePoolName;
             this.password = request.password;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
@@ -489,7 +491,6 @@ public class RunRCInstancesRequest extends Request {
             this.securityEnhancementStrategy = request.securityEnhancementStrategy;
             this.securityGroupId = request.securityGroupId;
             this.spotStrategy = request.spotStrategy;
-            this.supportCase = request.supportCase;
             this.systemDisk = request.systemDisk;
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
@@ -497,12 +498,7 @@ public class RunRCInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The number of RDS Custom instances that you want to create. The parameter is available if you want to create multiple RDS Custom instances at a time.</p>
-         * <p>Valid values: <strong>1</strong> to <strong>10</strong>. Default value: <strong>1</strong>.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * Amount.
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -511,17 +507,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong> (default): enables the feature. Make sure that your account balance is sufficient.</li>
-         * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
-         * </ul>
-         * <blockquote>
-         * <p> If your account balance is insufficient, you can set the AutoPay parameter to false. In this case, an unpaid order is generated. You can complete the payment in the Expenses and Costs console.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * AutoPay.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -530,14 +516,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong> (default)</li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * AutoRenew.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -546,10 +525,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCz****</p>
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -558,11 +534,11 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * CreateExtraParam.
+         * <p>This parameter is required.</p>
          */
-        public Builder createExtraParam(String createExtraParam) {
-            this.putQueryParameter("CreateExtraParam", createExtraParam);
-            this.createExtraParam = createExtraParam;
+        public Builder clusterId(String clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
             return this;
         }
 
@@ -576,7 +552,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The information about the data disks.</p>
+         * DataDisk.
          */
         public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             String dataDiskShrink = shrink(dataDisk, "DataDisk", "json");
@@ -586,10 +562,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The deployment set ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ds-uf6670sipmph5j5b6ke4</p>
+         * DeploymentSetId.
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -598,10 +571,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance description. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Instance_Description</p>
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -610,14 +580,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient inventory errors.</li>
-         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is directly created.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * DryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -635,10 +598,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image used by the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>image-dsvjzw2ii8n4fvr6de</p>
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -647,10 +607,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance. Set the value to <strong>Prepaid</strong>, which indicates the subscription billing method.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Prepaid</p>
+         * InstanceChargeType.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -659,10 +616,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ceshi</p>
+         * InstanceName.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -671,11 +625,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance type. For more information about the instance types that are supported by RDS Custom instances, see <a href="https://help.aliyun.com/document_detail/2844823.html">Instance types for RDS Custom instances</a>.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>mysql.i8.large.2cm</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -684,10 +634,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The reserved parameter. This parameter is not supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
+         * InternetChargeType.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -696,10 +643,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The reserved parameter. This parameter is not supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
+         * InternetMaxBandwidthOut.
          */
         public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -708,10 +652,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The reserved parameter. This parameter is not supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
+         * IoOptimized.
          */
         public Builder ioOptimized(String ioOptimized) {
             this.putQueryParameter("IoOptimized", ioOptimized);
@@ -720,10 +661,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the AccessKey pair. You can specify only one name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>dell5502</p>
+         * KeyPairName.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -732,10 +670,16 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The password of the account that is used to log on to the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2F9e9@a69c!e18b569c8</p>
+         * NodePoolName.
+         */
+        public Builder nodePoolName(String nodePoolName) {
+            this.putQueryParameter("NodePoolName", nodePoolName);
+            this.nodePoolName = nodePoolName;
+            return this;
+        }
+
+        /**
+         * Password.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -744,10 +688,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the instance. Default value: <strong>1</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * Period.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -756,14 +697,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration. Valid values:</p>
-         * <ul>
-         * <li><strong>Year</strong></li>
-         * <li><strong>Month</strong> (default)</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Year</p>
+         * PeriodUnit.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -772,11 +706,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -794,10 +724,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The reserved parameter. This parameter is not supported.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
+         * SecurityEnhancementStrategy.
          */
         public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
             this.putQueryParameter("SecurityEnhancementStrategy", securityEnhancementStrategy);
@@ -806,13 +733,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security group to which you want to add the new instance. Instances in the same security group can communicate with each other. The maximum number of instances allowed in a security group varies based on the type of the security group. For more information, see the &quot;Security group limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
-         * <blockquote>
-         * <p> The network type of the instance is determined by the security group specified by the SecurityGroupId parameter. For example, if the network type of the specified security group is VPC, the instance is a VPC-type instance. In this case, you must specify the VSwitchId parameter.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>sg-uf6av412xaxixuezol6w</p>
+         * SecurityGroupId.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -830,16 +751,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * SupportCase.
-         */
-        public Builder supportCase(String supportCase) {
-            this.putQueryParameter("SupportCase", supportCase);
-            this.supportCase = supportCase;
-            return this;
-        }
-
-        /**
-         * <p>The specification of the system disk.</p>
+         * SystemDisk.
          */
         public Builder systemDisk(SystemDisk systemDisk) {
             String systemDiskShrink = shrink(systemDisk, "SystemDisk", "json");
@@ -858,14 +770,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID of the instance. You must specify this parameter when you create an instance of the virtual private cloud (VPC) type. The specified vSwitch and security group must belong to the same VPC.</p>
-         * <blockquote>
-         * <p> If you specify the VSwitchId parameter, the zone specified by the ZoneId parameter must be the same as the zone in which the specified vSwitch resides. You can leave the ZoneId parameter empty. In this case, the system uses the zone in which the specified vSwitch resides.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vsw-2vcd61ngm890sk****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -874,13 +779,7 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the instance. You can call the DescribeZones operation to query the zone IDs.</p>
-         * <blockquote>
-         * <p> If you specify the VSwitchId parameter, the zone specified by the ZoneId parameter must be the same as the zone in which the specified vSwitch resides. You can leave the ZoneId parameter empty. In this case, the system uses the zone in which the specified vSwitch resides.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing-f</p>
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -889,17 +788,17 @@ public class RunRCInstancesRequest extends Request {
         }
 
         @Override
-        public RunRCInstancesRequest build() {
-            return new RunRCInstancesRequest(this);
+        public CreateRCNodePoolRequest build() {
+            return new CreateRCNodePoolRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link RunRCInstancesRequest} extends {@link TeaModel}
+     * {@link CreateRCNodePoolRequest} extends {@link TeaModel}
      *
-     * <p>RunRCInstancesRequest</p>
+     * <p>CreateRCNodePoolRequest</p>
      */
     public static class DataDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
@@ -976,10 +875,7 @@ public class RunRCInstancesRequest extends Request {
             private Integer size; 
 
             /**
-             * <p>The type of the data disk. Set the value to <strong>cloud_essd</strong>, which indicates Enterprise SSDs (ESSDs).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>local_ssd</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -987,10 +883,7 @@ public class RunRCInstancesRequest extends Request {
             }
 
             /**
-             * <p>The reserved parameter. This parameter is not supported.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * DeleteWithInstance.
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -998,14 +891,7 @@ public class RunRCInstancesRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to encrypt the cloud disk. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Encrypted.
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -1013,10 +899,7 @@ public class RunRCInstancesRequest extends Request {
             }
 
             /**
-             * <p>The reserved parameter. This parameter is not supported.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * PerformanceLevel.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -1024,10 +907,7 @@ public class RunRCInstancesRequest extends Request {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * Size.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1043,23 +923,19 @@ public class RunRCInstancesRequest extends Request {
     }
     /**
      * 
-     * {@link RunRCInstancesRequest} extends {@link TeaModel}
+     * {@link CreateRCNodePoolRequest} extends {@link TeaModel}
      *
-     * <p>RunRCInstancesRequest</p>
+     * <p>CreateRCNodePoolRequest</p>
      */
     public static class SystemDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
-
-        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
-        private String performanceLevel;
 
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private SystemDisk(Builder builder) {
             this.category = builder.category;
-            this.performanceLevel = builder.performanceLevel;
             this.size = builder.size;
         }
 
@@ -1079,13 +955,6 @@ public class RunRCInstancesRequest extends Request {
         }
 
         /**
-         * @return performanceLevel
-         */
-        public String getPerformanceLevel() {
-            return this.performanceLevel;
-        }
-
-        /**
          * @return size
          */
         public Integer getSize() {
@@ -1094,14 +963,10 @@ public class RunRCInstancesRequest extends Request {
 
         public static final class Builder {
             private String category; 
-            private String performanceLevel; 
             private Integer size; 
 
             /**
-             * <p>The type of the system disk. Set the value to <strong>cloud_essd</strong>, which indicates ESSDs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cloud_essd</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1109,21 +974,7 @@ public class RunRCInstancesRequest extends Request {
             }
 
             /**
-             * <p>The reserved parameter. This parameter is not supported.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
-             */
-            public Builder performanceLevel(String performanceLevel) {
-                this.performanceLevel = performanceLevel;
-                return this;
-            }
-
-            /**
-             * <p>The size of the system disk. Unit: GiB. Only performance level 1 (PL1) ESSDs are supported. Valid values: 20 to 2048.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * Size.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1139,9 +990,9 @@ public class RunRCInstancesRequest extends Request {
     }
     /**
      * 
-     * {@link RunRCInstancesRequest} extends {@link TeaModel}
+     * {@link CreateRCNodePoolRequest} extends {@link TeaModel}
      *
-     * <p>RunRCInstancesRequest</p>
+     * <p>CreateRCNodePoolRequest</p>
      */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")

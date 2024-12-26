@@ -804,6 +804,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRCDiskResponse> createRCDisk(CreateRCDiskRequest request);
 
     /**
+     * @param request the request parameters of CreateRCNodePool  CreateRCNodePoolRequest
+     * @return CreateRCNodePoolResponse
+     */
+    CompletableFuture<CreateRCNodePoolResponse> createRCNodePool(CreateRCNodePoolRequest request);
+
+    /**
      * <b>description</b> :
      * <p>In the following scenarios, you cannot create snapshots for a specific disk:</p>
      * <ul>
@@ -1204,6 +1210,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRCInstancesResponse
      */
     CompletableFuture<DeleteRCInstancesResponse> deleteRCInstances(DeleteRCInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRCNodePool  DeleteRCNodePoolRequest
+     * @return DeleteRCNodePoolResponse
+     */
+    CompletableFuture<DeleteRCNodePoolResponse> deleteRCNodePool(DeleteRCNodePoolRequest request);
 
     /**
      * <b>description</b> :
@@ -2715,6 +2727,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRCMetricListResponse
      */
     CompletableFuture<DescribeRCMetricListResponse> describeRCMetricList(DescribeRCMetricListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRCNodePool  DescribeRCNodePoolRequest
+     * @return DescribeRCNodePoolResponse
+     */
+    CompletableFuture<DescribeRCNodePoolResponse> describeRCNodePool(DescribeRCNodePoolRequest request);
 
     /**
      * @param request the request parameters of DescribeRCSnapshots  DescribeRCSnapshotsRequest
