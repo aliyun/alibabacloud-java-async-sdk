@@ -877,6 +877,9 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
      * <p>QueryAllSwimmingLaneResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private String enable;
+
         @com.aliyun.core.annotation.NameInMap("EntryRules")
         private java.util.List<EntryRules> entryRules;
 
@@ -926,6 +929,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         private String gmtModified;
 
         private Data(Builder builder) {
+            this.enable = builder.enable;
             this.entryRules = builder.entryRules;
             this.gatewaySwimmingLaneRoute = builder.gatewaySwimmingLaneRoute;
             this.groupId = builder.groupId;
@@ -950,6 +954,13 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public String getEnable() {
+            return this.enable;
         }
 
         /**
@@ -1065,6 +1076,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String enable; 
             private java.util.List<EntryRules> entryRules; 
             private GatewaySwimmingLaneRoute gatewaySwimmingLaneRoute; 
             private String groupId; 
@@ -1081,6 +1093,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             private Boolean enableRules; 
             private String gmtCreate; 
             private String gmtModified; 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(String enable) {
+                this.enable = enable;
+                return this;
+            }
 
             /**
              * EntryRules.
