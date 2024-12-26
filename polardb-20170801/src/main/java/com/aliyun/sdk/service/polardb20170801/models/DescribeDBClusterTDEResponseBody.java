@@ -29,6 +29,9 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EncryptionKey")
     private String encryptionKey;
 
+    @com.aliyun.core.annotation.NameInMap("EncryptionKeyStatus")
+    private String encryptionKeyStatus;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -46,6 +49,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
         this.DBClusterId = builder.DBClusterId;
         this.encryptNewTables = builder.encryptNewTables;
         this.encryptionKey = builder.encryptionKey;
+        this.encryptionKeyStatus = builder.encryptionKeyStatus;
         this.requestId = builder.requestId;
         this.rotationInterval = builder.rotationInterval;
         this.TDERegion = builder.TDERegion;
@@ -89,6 +93,13 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
     }
 
     /**
+     * @return encryptionKeyStatus
+     */
+    public String getEncryptionKeyStatus() {
+        return this.encryptionKeyStatus;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -121,6 +132,7 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
         private String DBClusterId; 
         private String encryptNewTables; 
         private String encryptionKey; 
+        private String encryptionKeyStatus; 
         private String requestId; 
         private String rotationInterval; 
         private String TDERegion; 
@@ -181,6 +193,14 @@ public class DescribeDBClusterTDEResponseBody extends TeaModel {
          */
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = encryptionKey;
+            return this;
+        }
+
+        /**
+         * EncryptionKeyStatus.
+         */
+        public Builder encryptionKeyStatus(String encryptionKeyStatus) {
+            this.encryptionKeyStatus = encryptionKeyStatus;
             return this;
         }
 

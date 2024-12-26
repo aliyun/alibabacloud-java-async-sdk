@@ -199,6 +199,14 @@ public class CreateDBClusterRequest extends Request {
     private String storageAutoScale;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageEncryption")
+    private Boolean storageEncryption;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageEncryptionKey")
+    private String storageEncryptionKey;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StoragePayType")
     private String storagePayType;
 
@@ -294,6 +302,8 @@ public class CreateDBClusterRequest extends Request {
         this.sourceResourceId = builder.sourceResourceId;
         this.standbyAZ = builder.standbyAZ;
         this.storageAutoScale = builder.storageAutoScale;
+        this.storageEncryption = builder.storageEncryption;
+        this.storageEncryptionKey = builder.storageEncryptionKey;
         this.storagePayType = builder.storagePayType;
         this.storageSpace = builder.storageSpace;
         this.storageType = builder.storageType;
@@ -630,6 +640,20 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return storageEncryption
+     */
+    public Boolean getStorageEncryption() {
+        return this.storageEncryption;
+    }
+
+    /**
+     * @return storageEncryptionKey
+     */
+    public String getStorageEncryptionKey() {
+        return this.storageEncryptionKey;
+    }
+
+    /**
      * @return storagePayType
      */
     public String getStoragePayType() {
@@ -758,6 +782,8 @@ public class CreateDBClusterRequest extends Request {
         private String sourceResourceId; 
         private String standbyAZ; 
         private String storageAutoScale; 
+        private Boolean storageEncryption; 
+        private String storageEncryptionKey; 
         private String storagePayType; 
         private Long storageSpace; 
         private String storageType; 
@@ -821,6 +847,8 @@ public class CreateDBClusterRequest extends Request {
             this.sourceResourceId = request.sourceResourceId;
             this.standbyAZ = request.standbyAZ;
             this.storageAutoScale = request.storageAutoScale;
+            this.storageEncryption = request.storageEncryption;
+            this.storageEncryptionKey = request.storageEncryptionKey;
             this.storagePayType = request.storagePayType;
             this.storageSpace = request.storageSpace;
             this.storageType = request.storageType;
@@ -1612,6 +1640,24 @@ public class CreateDBClusterRequest extends Request {
         public Builder storageAutoScale(String storageAutoScale) {
             this.putQueryParameter("StorageAutoScale", storageAutoScale);
             this.storageAutoScale = storageAutoScale;
+            return this;
+        }
+
+        /**
+         * StorageEncryption.
+         */
+        public Builder storageEncryption(Boolean storageEncryption) {
+            this.putQueryParameter("StorageEncryption", storageEncryption);
+            this.storageEncryption = storageEncryption;
+            return this;
+        }
+
+        /**
+         * StorageEncryptionKey.
+         */
+        public Builder storageEncryptionKey(String storageEncryptionKey) {
+            this.putQueryParameter("StorageEncryptionKey", storageEncryptionKey);
+            this.storageEncryptionKey = storageEncryptionKey;
             return this;
         }
 

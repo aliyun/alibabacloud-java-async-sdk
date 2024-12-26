@@ -173,7 +173,22 @@ public class ModifyActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * ImmediateStart.
+         * <p>Specifies whether to immediately start scheduling. Valid values:</p>
+         * <ul>
+         * <li>0: No. This is the default value.</li>
+         * <li>1: Yes.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you set this parameter to 0, you must specify the SwitchTime parameter.</p>
+         * </li>
+         * <li><p>If you set this parameter to 1, the SwitchTime parameter does not take effect. In this case, the start time of the event is set to the current time, and the system determines the switching time based on the start time. Scheduling is started immediately, which is a prerequisite for the switchover. Then, the switchover is performed. You can call the DescribeActiveOperationTasks operation and check the return value of the PrepareInterval parameter for the preparation time.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder immediateStart(Integer immediateStart) {
             this.putQueryParameter("ImmediateStart", immediateStart);
@@ -200,6 +215,10 @@ public class ModifyActiveOperationTasksRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information about all clusters within a specified account.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +258,18 @@ public class ModifyActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * SwitchTime.
+         * <p>The scheduled switching time that you want to specify. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The time that is specified by this parameter cannot be later than the latest execution time.</p>
+         * </li>
+         * <li><p>You can call the DescribeActiveOperationTasks operation and check the return value of the Deadline parameter for the latest execution time.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-25T06:00:00Z</p>
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -248,6 +278,7 @@ public class ModifyActiveOperationTasksRequest extends Request {
         }
 
         /**
+         * <p>The task IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

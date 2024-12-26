@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeUserEncryptionKeyListRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
@@ -148,7 +147,6 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
          * <blockquote>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-************</p>

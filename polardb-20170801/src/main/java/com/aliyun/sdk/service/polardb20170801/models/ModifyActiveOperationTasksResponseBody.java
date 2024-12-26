@@ -55,7 +55,10 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
         private String taskIds; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42CD2EF5-D77E-5AD4-961B-159330D98286</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +66,10 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TaskIds.
+         * <p>The task IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111,22222</p>
          */
         public Builder taskIds(String taskIds) {
             this.taskIds = taskIds;

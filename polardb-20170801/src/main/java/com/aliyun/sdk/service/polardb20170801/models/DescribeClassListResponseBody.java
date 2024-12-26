@@ -377,7 +377,10 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * EssdMaxStorageCapacity.
+             * <p>The maximum ESSD storage capacity. Unit: TB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder essdMaxStorageCapacity(String essdMaxStorageCapacity) {
                 this.essdMaxStorageCapacity = essdMaxStorageCapacity;
@@ -462,7 +465,10 @@ public class DescribeClassListResponseBody extends TeaModel {
             }
 
             /**
-             * PolarStoreMaxStorageCapacity.
+             * <p>The maximum PSL4/PSL5 storage capacity. Unit: TB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder polarStoreMaxStorageCapacity(String polarStoreMaxStorageCapacity) {
                 this.polarStoreMaxStorageCapacity = polarStoreMaxStorageCapacity;
