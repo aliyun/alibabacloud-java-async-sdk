@@ -124,4 +124,40 @@ public final class DefaultAsyncClient implements AsyncClient {
         return new ResponseIterable<>(iterator);
     }
 
+    /**
+     * @param request the request parameters of RunSearchCaseFullText  RunSearchCaseFullTextRequest
+     * @return RunSearchCaseFullTextResponse
+     */
+    @Override
+    public CompletableFuture<RunSearchCaseFullTextResponse> runSearchCaseFullText(RunSearchCaseFullTextRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunSearchCaseFullText").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/farui/search/case/fulltext").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunSearchCaseFullTextResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunSearchCaseFullTextResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RunSearchLawQuery  RunSearchLawQueryRequest
+     * @return RunSearchLawQueryResponse
+     */
+    @Override
+    public CompletableFuture<RunSearchLawQueryResponse> runSearchLawQuery(RunSearchLawQueryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunSearchLawQuery").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/farui/search/law/query").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunSearchLawQueryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunSearchLawQueryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
 }

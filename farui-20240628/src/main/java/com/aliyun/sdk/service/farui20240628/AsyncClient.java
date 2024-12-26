@@ -43,4 +43,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     ResponseIterable<RunLegalAdviceConsultationResponseBody> runLegalAdviceConsultationWithResponseIterable(RunLegalAdviceConsultationRequest request);
 
+    /**
+     * @param request the request parameters of RunSearchCaseFullText  RunSearchCaseFullTextRequest
+     * @return RunSearchCaseFullTextResponse
+     */
+    CompletableFuture<RunSearchCaseFullTextResponse> runSearchCaseFullText(RunSearchCaseFullTextRequest request);
+
+    /**
+     * @param request the request parameters of RunSearchLawQuery  RunSearchLawQueryRequest
+     * @return RunSearchLawQueryResponse
+     */
+    CompletableFuture<RunSearchLawQueryResponse> runSearchLawQuery(RunSearchLawQueryRequest request);
+
 }
