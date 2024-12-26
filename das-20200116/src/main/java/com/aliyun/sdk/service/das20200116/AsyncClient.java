@@ -366,6 +366,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceDasProResponse> describeInstanceDasPro(DescribeInstanceDasProRequest request);
 
     /**
+     * @param request the request parameters of DescribeSlowLogHistogramAsync  DescribeSlowLogHistogramAsyncRequest
+     * @return DescribeSlowLogHistogramAsyncResponse
+     */
+    CompletableFuture<DescribeSlowLogHistogramAsyncResponse> describeSlowLogHistogramAsync(DescribeSlowLogHistogramAsyncRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSlowLogStatistic  DescribeSlowLogStatisticRequest
+     * @return DescribeSlowLogStatisticResponse
+     */
+    CompletableFuture<DescribeSlowLogStatisticResponse> describeSlowLogStatistic(DescribeSlowLogStatisticRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, take note of the following items:</p>
      * <ul>

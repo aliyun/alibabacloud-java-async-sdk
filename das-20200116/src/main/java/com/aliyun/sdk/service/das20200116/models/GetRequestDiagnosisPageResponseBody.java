@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -512,7 +517,7 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
         private String extra;
 
         @com.aliyun.core.annotation.NameInMap("list")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("pageNo")
         private Long pageNo;
@@ -549,7 +554,7 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -576,7 +581,7 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
 
         public static final class Builder {
             private String extra; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
@@ -595,7 +600,7 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
             /**
              * <p>The SQL diagnostics records returned.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

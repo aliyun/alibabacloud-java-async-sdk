@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -158,7 +163,7 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
      */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("T")
-        private java.util.List < String > t;
+        private java.util.List<String> t;
 
         private List(Builder builder) {
             this.t = builder.t;
@@ -175,17 +180,17 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         /**
          * @return t
          */
-        public java.util.List < String > getT() {
+        public java.util.List<String> getT() {
             return this.t;
         }
 
         public static final class Builder {
-            private java.util.List < String > t; 
+            private java.util.List<String> t; 
 
             /**
              * T.
              */
-            public Builder t(java.util.List < String > t) {
+            public Builder t(java.util.List<String> t) {
                 this.t = t;
                 return this;
             }

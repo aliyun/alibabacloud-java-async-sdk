@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -620,10 +625,10 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         private Long activeCount;
 
         @com.aliyun.core.annotation.NameInMap("ClientStats")
-        private java.util.Map < String, DataSessionStatClientStatsValue > clientStats;
+        private java.util.Map<String, DataSessionStatClientStatsValue> clientStats;
 
         @com.aliyun.core.annotation.NameInMap("DbStats")
-        private java.util.Map < String, DataSessionStatDbStatsValue > dbStats;
+        private java.util.Map<String, DataSessionStatDbStatsValue> dbStats;
 
         @com.aliyun.core.annotation.NameInMap("LongestSecsRunning")
         private Long longestSecsRunning;
@@ -657,14 +662,14 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         /**
          * @return clientStats
          */
-        public java.util.Map < String, DataSessionStatClientStatsValue > getClientStats() {
+        public java.util.Map<String, DataSessionStatClientStatsValue> getClientStats() {
             return this.clientStats;
         }
 
         /**
          * @return dbStats
          */
-        public java.util.Map < String, DataSessionStatDbStatsValue > getDbStats() {
+        public java.util.Map<String, DataSessionStatDbStatsValue> getDbStats() {
             return this.dbStats;
         }
 
@@ -684,8 +689,8 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long activeCount; 
-            private java.util.Map < String, DataSessionStatClientStatsValue > clientStats; 
-            private java.util.Map < String, DataSessionStatDbStatsValue > dbStats; 
+            private java.util.Map<String, DataSessionStatClientStatsValue> clientStats; 
+            private java.util.Map<String, DataSessionStatDbStatsValue> dbStats; 
             private Long longestSecsRunning; 
             private Long totalCount; 
 
@@ -703,7 +708,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             /**
              * <p>The statistics on the IP addresses of the clients.</p>
              */
-            public Builder clientStats(java.util.Map < String, DataSessionStatClientStatsValue > clientStats) {
+            public Builder clientStats(java.util.Map<String, DataSessionStatClientStatsValue> clientStats) {
                 this.clientStats = clientStats;
                 return this;
             }
@@ -711,7 +716,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
             /**
              * <p>The statistics on the namespaces.</p>
              */
-            public Builder dbStats(java.util.Map < String, DataSessionStatDbStatsValue > dbStats) {
+            public Builder dbStats(java.util.Map<String, DataSessionStatDbStatsValue> dbStats) {
                 this.dbStats = dbStats;
                 return this;
             }
@@ -753,7 +758,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SessionList")
-        private java.util.List < SessionList> sessionList;
+        private java.util.List<SessionList> sessionList;
 
         @com.aliyun.core.annotation.NameInMap("SessionStat")
         private SessionStat sessionStat;
@@ -778,7 +783,7 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         /**
          * @return sessionList
          */
-        public java.util.List < SessionList> getSessionList() {
+        public java.util.List<SessionList> getSessionList() {
             return this.sessionList;
         }
 
@@ -797,14 +802,14 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < SessionList> sessionList; 
+            private java.util.List<SessionList> sessionList; 
             private SessionStat sessionStat; 
             private Long timestamp; 
 
             /**
              * <p>The sessions.</p>
              */
-            public Builder sessionList(java.util.List < SessionList> sessionList) {
+            public Builder sessionList(java.util.List<SessionList> sessionList) {
                 this.sessionList = sessionList;
                 return this;
             }

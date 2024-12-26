@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -703,10 +708,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         private Long estimateAvailableDays;
 
         @com.aliyun.core.annotation.NameInMap("NeedOptimizeItemList")
-        private java.util.List < NeedOptimizeItemList> needOptimizeItemList;
+        private java.util.List<NeedOptimizeItemList> needOptimizeItemList;
 
         @com.aliyun.core.annotation.NameInMap("TableStats")
-        private java.util.List < TableStats> tableStats;
+        private java.util.List<TableStats> tableStats;
 
         @com.aliyun.core.annotation.NameInMap("TotalFreeStorageSize")
         private Long totalFreeStorageSize;
@@ -768,14 +773,14 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
         /**
          * @return needOptimizeItemList
          */
-        public java.util.List < NeedOptimizeItemList> getNeedOptimizeItemList() {
+        public java.util.List<NeedOptimizeItemList> getNeedOptimizeItemList() {
             return this.needOptimizeItemList;
         }
 
         /**
          * @return tableStats
          */
-        public java.util.List < TableStats> getTableStats() {
+        public java.util.List<TableStats> getTableStats() {
             return this.tableStats;
         }
 
@@ -805,8 +810,8 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private Boolean analysisSuccess; 
             private Long dailyIncrement; 
             private Long estimateAvailableDays; 
-            private java.util.List < NeedOptimizeItemList> needOptimizeItemList; 
-            private java.util.List < TableStats> tableStats; 
+            private java.util.List<NeedOptimizeItemList> needOptimizeItemList; 
+            private java.util.List<TableStats> tableStats; 
             private Long totalFreeStorageSize; 
             private Long totalStorageSize; 
             private Long totalUsedStorageSize; 
@@ -862,7 +867,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             /**
              * <p>The items to be optimized, which are generated based on DAS default rules. You can ignore these items based on your business requirements, and create custom rules to generate items to be optimized based on other basic data that is returned.</p>
              */
-            public Builder needOptimizeItemList(java.util.List < NeedOptimizeItemList> needOptimizeItemList) {
+            public Builder needOptimizeItemList(java.util.List<NeedOptimizeItemList> needOptimizeItemList) {
                 this.needOptimizeItemList = needOptimizeItemList;
                 return this;
             }
@@ -870,7 +875,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             /**
              * <p>The information about the table.</p>
              */
-            public Builder tableStats(java.util.List < TableStats> tableStats) {
+            public Builder tableStats(java.util.List<TableStats> tableStats) {
                 this.tableStats = tableStats;
                 return this;
             }

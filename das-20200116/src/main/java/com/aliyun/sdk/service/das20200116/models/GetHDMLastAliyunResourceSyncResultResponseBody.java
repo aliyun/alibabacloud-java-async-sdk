@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -266,7 +271,7 @@ public class GetHDMLastAliyunResourceSyncResultResponseBody extends TeaModel {
      */
     public static class SubResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceSyncSubResult")
-        private java.util.List < ResourceSyncSubResult> resourceSyncSubResult;
+        private java.util.List<ResourceSyncSubResult> resourceSyncSubResult;
 
         private SubResults(Builder builder) {
             this.resourceSyncSubResult = builder.resourceSyncSubResult;
@@ -283,17 +288,17 @@ public class GetHDMLastAliyunResourceSyncResultResponseBody extends TeaModel {
         /**
          * @return resourceSyncSubResult
          */
-        public java.util.List < ResourceSyncSubResult> getResourceSyncSubResult() {
+        public java.util.List<ResourceSyncSubResult> getResourceSyncSubResult() {
             return this.resourceSyncSubResult;
         }
 
         public static final class Builder {
-            private java.util.List < ResourceSyncSubResult> resourceSyncSubResult; 
+            private java.util.List<ResourceSyncSubResult> resourceSyncSubResult; 
 
             /**
              * ResourceSyncSubResult.
              */
-            public Builder resourceSyncSubResult(java.util.List < ResourceSyncSubResult> resourceSyncSubResult) {
+            public Builder resourceSyncSubResult(java.util.List<ResourceSyncSubResult> resourceSyncSubResult) {
                 this.resourceSyncSubResult = resourceSyncSubResult;
                 return this;
             }

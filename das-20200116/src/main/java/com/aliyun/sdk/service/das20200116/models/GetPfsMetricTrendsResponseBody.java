@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetPfsMetricTrendsResponseBody extends TeaModel {
     private Long code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.Map < String, java.util.List<DataValue>> data;
+    private java.util.Map<String, java.util.List<DataValue>> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -53,7 +58,7 @@ public class GetPfsMetricTrendsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.Map < String, java.util.List<DataValue>> getData() {
+    public java.util.Map<String, java.util.List<DataValue>> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class GetPfsMetricTrendsResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long code; 
-        private java.util.Map < String, java.util.List<DataValue>> data; 
+        private java.util.Map<String, java.util.List<DataValue>> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -99,7 +104,7 @@ public class GetPfsMetricTrendsResponseBody extends TeaModel {
         /**
          * <p>The data returned.</p>
          */
-        public Builder data(java.util.Map < String, java.util.List<DataValue>> data) {
+        public Builder data(java.util.Map<String, java.util.List<DataValue>> data) {
             this.data = data;
             return this;
         }

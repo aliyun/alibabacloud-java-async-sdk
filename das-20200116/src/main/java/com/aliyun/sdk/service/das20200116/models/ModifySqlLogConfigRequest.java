@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class ModifySqlLogConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    private java.util.List<Filters> filters;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("HotRetention")
@@ -70,7 +75,7 @@ public class ModifySqlLogConfigRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -104,7 +109,7 @@ public class ModifySqlLogConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifySqlLogConfigRequest, Builder> {
         private Boolean enable; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Integer hotRetention; 
         private String instanceId; 
         private Boolean requestEnable; 
@@ -146,7 +151,7 @@ public class ModifySqlLogConfigRequest extends Request {
         /**
          * <p>A reserved parameter.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;

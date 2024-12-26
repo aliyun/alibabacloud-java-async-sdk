@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -170,7 +175,7 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
         private Boolean isFinish;
 
         @com.aliyun.core.annotation.NameInMap("result")
-        private java.util.Map < String, DataResultValue > result;
+        private java.util.Map<String, DataResultValue> result;
 
         @com.aliyun.core.annotation.NameInMap("resultId")
         private String resultId;
@@ -223,7 +228,7 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.Map < String, DataResultValue > getResult() {
+        public java.util.Map<String, DataResultValue> getResult() {
             return this.result;
         }
 
@@ -252,7 +257,7 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
             private Boolean complete; 
             private Boolean fail; 
             private Boolean isFinish; 
-            private java.util.Map < String, DataResultValue > result; 
+            private java.util.Map<String, DataResultValue> result; 
             private String resultId; 
             private String state; 
             private Long timestamp; 
@@ -305,7 +310,7 @@ public class GetAsyncErrorRequestStatResultResponseBody extends TeaModel {
             /**
              * <p>The returned data of the asynchronous request.</p>
              */
-            public Builder result(java.util.Map < String, DataResultValue > result) {
+            public Builder result(java.util.Map<String, DataResultValue> result) {
                 this.result = result;
                 return this;
             }

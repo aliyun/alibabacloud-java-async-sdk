@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -690,7 +695,7 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         private String count;
 
         @com.aliyun.core.annotation.NameInMap("Ids")
-        private java.util.List < Long > ids;
+        private java.util.List<Long> ids;
 
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -719,7 +724,7 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         /**
          * @return ids
          */
-        public java.util.List < Long > getIds() {
+        public java.util.List<Long> getIds() {
             return this.ids;
         }
 
@@ -732,7 +737,7 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String count; 
-            private java.util.List < Long > ids; 
+            private java.util.List<Long> ids; 
             private String key; 
 
             /**
@@ -749,7 +754,7 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             /**
              * <p>The client IDs.</p>
              */
-            public Builder ids(java.util.List < Long > ids) {
+            public Builder ids(java.util.List<Long> ids) {
                 this.ids = ids;
                 return this;
             }
@@ -780,10 +785,10 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sessions")
-        private java.util.List < Sessions> sessions;
+        private java.util.List<Sessions> sessions;
 
         @com.aliyun.core.annotation.NameInMap("SourceStats")
-        private java.util.List < SourceStats> sourceStats;
+        private java.util.List<SourceStats> sourceStats;
 
         @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
@@ -809,14 +814,14 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         /**
          * @return sessions
          */
-        public java.util.List < Sessions> getSessions() {
+        public java.util.List<Sessions> getSessions() {
             return this.sessions;
         }
 
         /**
          * @return sourceStats
          */
-        public java.util.List < SourceStats> getSourceStats() {
+        public java.util.List<SourceStats> getSourceStats() {
             return this.sourceStats;
         }
 
@@ -835,15 +840,15 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Sessions> sessions; 
-            private java.util.List < SourceStats> sourceStats; 
+            private java.util.List<Sessions> sessions; 
+            private java.util.List<SourceStats> sourceStats; 
             private Long timestamp; 
             private Long total; 
 
             /**
              * <p>The information about the sessions.</p>
              */
-            public Builder sessions(java.util.List < Sessions> sessions) {
+            public Builder sessions(java.util.List<Sessions> sessions) {
                 this.sessions = sessions;
                 return this;
             }
@@ -851,7 +856,7 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
             /**
              * <p>The statistics on the access source.</p>
              */
-            public Builder sourceStats(java.util.List < SourceStats> sourceStats) {
+            public Builder sourceStats(java.util.List<SourceStats> sourceStats) {
                 this.sourceStats = sourceStats;
                 return this;
             }

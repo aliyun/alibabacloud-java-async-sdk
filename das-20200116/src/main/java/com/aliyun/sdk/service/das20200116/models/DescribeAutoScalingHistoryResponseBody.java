@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -429,22 +434,22 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
-        private java.util.List < java.util.Map<String, ?>> bandwidth;
+        private java.util.List<java.util.Map<String, ?>> bandwidth;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("Resource")
-        private java.util.List < java.util.Map<String, ?>> resource;
+        private java.util.List<java.util.Map<String, ?>> resource;
 
         @com.aliyun.core.annotation.NameInMap("Shard")
-        private java.util.List < java.util.Map<String, ?>> shard;
+        private java.util.List<java.util.Map<String, ?>> shard;
 
         @com.aliyun.core.annotation.NameInMap("SpecHistory")
-        private java.util.List < SpecHistory> specHistory;
+        private java.util.List<SpecHistory> specHistory;
 
         @com.aliyun.core.annotation.NameInMap("Storage")
-        private java.util.List < java.util.Map<String, ?>> storage;
+        private java.util.List<java.util.Map<String, ?>> storage;
 
         private Data(Builder builder) {
             this.bandwidth = builder.bandwidth;
@@ -466,7 +471,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         /**
          * @return bandwidth
          */
-        public java.util.List < java.util.Map<String, ?>> getBandwidth() {
+        public java.util.List<java.util.Map<String, ?>> getBandwidth() {
             return this.bandwidth;
         }
 
@@ -480,43 +485,43 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
         /**
          * @return resource
          */
-        public java.util.List < java.util.Map<String, ?>> getResource() {
+        public java.util.List<java.util.Map<String, ?>> getResource() {
             return this.resource;
         }
 
         /**
          * @return shard
          */
-        public java.util.List < java.util.Map<String, ?>> getShard() {
+        public java.util.List<java.util.Map<String, ?>> getShard() {
             return this.shard;
         }
 
         /**
          * @return specHistory
          */
-        public java.util.List < SpecHistory> getSpecHistory() {
+        public java.util.List<SpecHistory> getSpecHistory() {
             return this.specHistory;
         }
 
         /**
          * @return storage
          */
-        public java.util.List < java.util.Map<String, ?>> getStorage() {
+        public java.util.List<java.util.Map<String, ?>> getStorage() {
             return this.storage;
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> bandwidth; 
+            private java.util.List<java.util.Map<String, ?>> bandwidth; 
             private String instanceId; 
-            private java.util.List < java.util.Map<String, ?>> resource; 
-            private java.util.List < java.util.Map<String, ?>> shard; 
-            private java.util.List < SpecHistory> specHistory; 
-            private java.util.List < java.util.Map<String, ?>> storage; 
+            private java.util.List<java.util.Map<String, ?>> resource; 
+            private java.util.List<java.util.Map<String, ?>> shard; 
+            private java.util.List<SpecHistory> specHistory; 
+            private java.util.List<java.util.Map<String, ?>> storage; 
 
             /**
              * <p>The history of automatic bandwidth scaling of ApsaraDB for Redis instances. This feature is not supported.</p>
              */
-            public Builder bandwidth(java.util.List < java.util.Map<String, ?>> bandwidth) {
+            public Builder bandwidth(java.util.List<java.util.Map<String, ?>> bandwidth) {
                 this.bandwidth = bandwidth;
                 return this;
             }
@@ -535,7 +540,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             /**
              * <p>The history of resource scale-out of ApsaraDB for Redis instances. This feature is not supported.</p>
              */
-            public Builder resource(java.util.List < java.util.Map<String, ?>> resource) {
+            public Builder resource(java.util.List<java.util.Map<String, ?>> resource) {
                 this.resource = resource;
                 return this;
             }
@@ -543,7 +548,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             /**
              * <p>The history of automatic shard scale-out of ApsaraDB for Redis instances. This feature is not supported.</p>
              */
-            public Builder shard(java.util.List < java.util.Map<String, ?>> shard) {
+            public Builder shard(java.util.List<java.util.Map<String, ?>> shard) {
                 this.shard = shard;
                 return this;
             }
@@ -551,7 +556,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             /**
              * <p>The history of automatic performance scaling.</p>
              */
-            public Builder specHistory(java.util.List < SpecHistory> specHistory) {
+            public Builder specHistory(java.util.List<SpecHistory> specHistory) {
                 this.specHistory = specHistory;
                 return this;
             }
@@ -559,7 +564,7 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
             /**
              * <p>The history of storage expansion. This feature is not supported.</p>
              */
-            public Builder storage(java.util.List < java.util.Map<String, ?>> storage) {
+            public Builder storage(java.util.List<java.util.Map<String, ?>> storage) {
                 this.storage = storage;
                 return this;
             }

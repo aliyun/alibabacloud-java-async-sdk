@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -266,7 +271,7 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
         private Boolean isFinish;
 
         @com.aliyun.core.annotation.NameInMap("result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("resultId")
         private String resultId;
@@ -319,7 +324,7 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
@@ -348,7 +353,7 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
             private Boolean complete; 
             private Boolean fail; 
             private Boolean isFinish; 
-            private java.util.List < Result> result; 
+            private java.util.List<Result> result; 
             private String resultId; 
             private String state; 
             private Long timestamp; 
@@ -401,7 +406,7 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
             /**
              * <p>The number of SQL queries corresponding to the error code.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }

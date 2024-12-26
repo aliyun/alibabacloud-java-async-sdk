@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -274,7 +279,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         private String psql;
 
         @com.aliyun.core.annotation.NameInMap("RuleList")
-        private java.util.List < RuleList> ruleList;
+        private java.util.List<RuleList> ruleList;
 
         @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
@@ -419,7 +424,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         /**
          * @return ruleList
          */
-        public java.util.List < RuleList> getRuleList() {
+        public java.util.List<RuleList> getRuleList() {
             return this.ruleList;
         }
 
@@ -466,7 +471,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             private Long maxRowsExamined; 
             private Long maxRowsSent; 
             private String psql; 
-            private java.util.List < RuleList> ruleList; 
+            private java.util.List<RuleList> ruleList; 
             private String sqlId; 
             private String sqlSample; 
             private String sqlType; 
@@ -635,7 +640,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             /**
              * <p>The information about the rules.</p>
              */
-            public Builder ruleList(java.util.List < RuleList> ruleList) {
+            public Builder ruleList(java.util.List<RuleList> ruleList) {
                 this.ruleList = ruleList;
                 return this;
             }
@@ -702,7 +707,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         private String extra;
 
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
@@ -739,7 +744,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -766,7 +771,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String extra; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Integer pageNo; 
             private Integer pageSize; 
             private Long total; 
@@ -785,7 +790,7 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
             /**
              * <p>The information about the SQL templates.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

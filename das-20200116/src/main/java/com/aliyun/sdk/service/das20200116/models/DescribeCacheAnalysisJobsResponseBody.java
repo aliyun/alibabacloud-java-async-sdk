@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -369,7 +374,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
      */
     public static class BigKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyInfo")
-        private java.util.List < KeyInfo> keyInfo;
+        private java.util.List<KeyInfo> keyInfo;
 
         private BigKeys(Builder builder) {
             this.keyInfo = builder.keyInfo;
@@ -386,17 +391,17 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
         /**
          * @return keyInfo
          */
-        public java.util.List < KeyInfo> getKeyInfo() {
+        public java.util.List<KeyInfo> getKeyInfo() {
             return this.keyInfo;
         }
 
         public static final class Builder {
-            private java.util.List < KeyInfo> keyInfo; 
+            private java.util.List<KeyInfo> keyInfo; 
 
             /**
              * KeyInfo.
              */
-            public Builder keyInfo(java.util.List < KeyInfo> keyInfo) {
+            public Builder keyInfo(java.util.List<KeyInfo> keyInfo) {
                 this.keyInfo = keyInfo;
                 return this;
             }
@@ -590,7 +595,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
      */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CacheAnalysisJob")
-        private java.util.List < CacheAnalysisJob> cacheAnalysisJob;
+        private java.util.List<CacheAnalysisJob> cacheAnalysisJob;
 
         private List(Builder builder) {
             this.cacheAnalysisJob = builder.cacheAnalysisJob;
@@ -607,17 +612,17 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
         /**
          * @return cacheAnalysisJob
          */
-        public java.util.List < CacheAnalysisJob> getCacheAnalysisJob() {
+        public java.util.List<CacheAnalysisJob> getCacheAnalysisJob() {
             return this.cacheAnalysisJob;
         }
 
         public static final class Builder {
-            private java.util.List < CacheAnalysisJob> cacheAnalysisJob; 
+            private java.util.List<CacheAnalysisJob> cacheAnalysisJob; 
 
             /**
              * CacheAnalysisJob.
              */
-            public Builder cacheAnalysisJob(java.util.List < CacheAnalysisJob> cacheAnalysisJob) {
+            public Builder cacheAnalysisJob(java.util.List<CacheAnalysisJob> cacheAnalysisJob) {
                 this.cacheAnalysisJob = cacheAnalysisJob;
                 return this;
             }

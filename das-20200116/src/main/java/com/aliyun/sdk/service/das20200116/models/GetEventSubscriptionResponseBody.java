@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -283,7 +288,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         private String email;
 
         @com.aliyun.core.annotation.NameInMap("groups")
-        private java.util.List < String > groups;
+        private java.util.List<String> groups;
 
         @com.aliyun.core.annotation.NameInMap("isCmsReduplicated")
         private Boolean isCmsReduplicated;
@@ -332,7 +337,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         /**
          * @return groups
          */
-        public java.util.List < String > getGroups() {
+        public java.util.List<String> getGroups() {
             return this.groups;
         }
 
@@ -367,7 +372,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         public static final class Builder {
             private String dingtalkHook; 
             private String email; 
-            private java.util.List < String > groups; 
+            private java.util.List<String> groups; 
             private Boolean isCmsReduplicated; 
             private String name; 
             private String phone; 
@@ -398,7 +403,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             /**
              * <p>The contact groups to which the alert contact belongs.</p>
              */
-            public Builder groups(java.util.List < String > groups) {
+            public Builder groups(java.util.List<String> groups) {
                 this.groups = groups;
                 return this;
             }
@@ -475,19 +480,19 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         private String contactGroupName;
 
         @com.aliyun.core.annotation.NameInMap("contactGroups")
-        private java.util.List < ContactGroups> contactGroups;
+        private java.util.List<ContactGroups> contactGroups;
 
         @com.aliyun.core.annotation.NameInMap("contactName")
         private String contactName;
 
         @com.aliyun.core.annotation.NameInMap("contacts")
-        private java.util.List < Contacts> contacts;
+        private java.util.List<Contacts> contacts;
 
         @com.aliyun.core.annotation.NameInMap("eventContext")
         private String eventContext;
 
         @com.aliyun.core.annotation.NameInMap("eventSendGroup")
-        private java.util.List < String > eventSendGroup;
+        private java.util.List<String> eventSendGroup;
 
         @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
@@ -564,7 +569,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         /**
          * @return contactGroups
          */
-        public java.util.List < ContactGroups> getContactGroups() {
+        public java.util.List<ContactGroups> getContactGroups() {
             return this.contactGroups;
         }
 
@@ -578,7 +583,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         /**
          * @return contacts
          */
-        public java.util.List < Contacts> getContacts() {
+        public java.util.List<Contacts> getContacts() {
             return this.contacts;
         }
 
@@ -592,7 +597,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
         /**
          * @return eventSendGroup
          */
-        public java.util.List < String > getEventSendGroup() {
+        public java.util.List<String> getEventSendGroup() {
             return this.eventSendGroup;
         }
 
@@ -656,11 +661,11 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             private Integer active; 
             private String channelType; 
             private String contactGroupName; 
-            private java.util.List < ContactGroups> contactGroups; 
+            private java.util.List<ContactGroups> contactGroups; 
             private String contactName; 
-            private java.util.List < Contacts> contacts; 
+            private java.util.List<Contacts> contacts; 
             private String eventContext; 
-            private java.util.List < String > eventSendGroup; 
+            private java.util.List<String> eventSendGroup; 
             private Long gmtCreate; 
             private Long gmtModified; 
             private Long id; 
@@ -716,7 +721,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             /**
              * <p>The alert contact groups.</p>
              */
-            public Builder contactGroups(java.util.List < ContactGroups> contactGroups) {
+            public Builder contactGroups(java.util.List<ContactGroups> contactGroups) {
                 this.contactGroups = contactGroups;
                 return this;
             }
@@ -735,7 +740,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             /**
              * <p>The user ID.</p>
              */
-            public Builder contacts(java.util.List < Contacts> contacts) {
+            public Builder contacts(java.util.List<Contacts> contacts) {
                 this.contacts = contacts;
                 return this;
             }
@@ -754,7 +759,7 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
             /**
              * <p>The supported event scenarios in which event subscription can be sent.</p>
              */
-            public Builder eventSendGroup(java.util.List < String > eventSendGroup) {
+            public Builder eventSendGroup(java.util.List<String> eventSendGroup) {
                 this.eventSendGroup = eventSendGroup;
                 return this;
             }

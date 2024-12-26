@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -245,7 +250,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         private Long sumUpdatedRows;
 
         @com.aliyun.core.annotation.NameInMap("Tables")
-        private java.util.List < String > tables;
+        private java.util.List<String> tables;
 
         @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
@@ -502,7 +507,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.List < String > getTables() {
+        public java.util.List<String> getTables() {
             return this.tables;
         }
 
@@ -550,7 +555,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             private Long sqlCount; 
             private String sqlId; 
             private Long sumUpdatedRows; 
-            private java.util.List < String > tables; 
+            private java.util.List<String> tables; 
             private Long version; 
             private String vpcId; 
 
@@ -885,7 +890,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
             /**
              * <p>The names of tables in the database.</p>
              */
-            public Builder tables(java.util.List < String > tables) {
+            public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
                 return this;
             }
@@ -927,7 +932,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
@@ -948,7 +953,7 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -960,13 +965,13 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long total; 
 
             /**
              * <p>The full request data.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

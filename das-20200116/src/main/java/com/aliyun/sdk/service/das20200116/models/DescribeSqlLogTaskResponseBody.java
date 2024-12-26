@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -1042,13 +1047,13 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         private String export;
 
         @com.aliyun.core.annotation.NameInMap("Filters")
-        private java.util.List < Filters> filters;
+        private java.util.List<Filters> filters;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Queries")
-        private java.util.List < Queries> queries;
+        private java.util.List<Queries> queries;
 
         @com.aliyun.core.annotation.NameInMap("Start")
         private Long start;
@@ -1119,7 +1124,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         /**
          * @return filters
          */
-        public java.util.List < Filters> getFilters() {
+        public java.util.List<Filters> getFilters() {
             return this.filters;
         }
 
@@ -1133,7 +1138,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         /**
          * @return queries
          */
-        public java.util.List < Queries> getQueries() {
+        public java.util.List<Queries> getQueries() {
             return this.queries;
         }
 
@@ -1177,9 +1182,9 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             private Long end; 
             private Boolean expire; 
             private String export; 
-            private java.util.List < Filters> filters; 
+            private java.util.List<Filters> filters; 
             private String name; 
-            private java.util.List < Queries> queries; 
+            private java.util.List<Queries> queries; 
             private Long start; 
             private String status; 
             private String taskId; 
@@ -1237,7 +1242,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             /**
              * <p>The filter parameters.</p>
              */
-            public Builder filters(java.util.List < Filters> filters) {
+            public Builder filters(java.util.List<Filters> filters) {
                 this.filters = filters;
                 return this;
             }
@@ -1253,7 +1258,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             /**
              * <p>The results of the offline querying task.</p>
              */
-            public Builder queries(java.util.List < Queries> queries) {
+            public Builder queries(java.util.List<Queries> queries) {
                 this.queries = queries;
                 return this;
             }

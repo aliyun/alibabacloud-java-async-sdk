@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -249,7 +254,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         private Boolean expire;
 
         @com.aliyun.core.annotation.NameInMap("Filters")
-        private java.util.List < Filters> filters;
+        private java.util.List<Filters> filters;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -346,7 +351,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         /**
          * @return filters
          */
-        public java.util.List < Filters> getFilters() {
+        public java.util.List<Filters> getFilters() {
             return this.filters;
         }
 
@@ -426,7 +431,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             private Long createTime; 
             private Long end; 
             private Boolean expire; 
-            private java.util.List < Filters> filters; 
+            private java.util.List<Filters> filters; 
             private String instanceId; 
             private Long logCount; 
             private String name; 
@@ -503,7 +508,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             /**
              * <p>The filter parameters.</p>
              */
-            public Builder filters(java.util.List < Filters> filters) {
+            public Builder filters(java.util.List<Filters> filters) {
                 this.filters = filters;
                 return this;
             }
@@ -647,7 +652,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
@@ -676,7 +681,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -702,7 +707,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
@@ -710,7 +715,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             /**
              * <p>The details of the data returned.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

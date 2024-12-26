@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -369,7 +374,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
      */
     public static class BigKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyInfo")
-        private java.util.List < KeyInfo> keyInfo;
+        private java.util.List<KeyInfo> keyInfo;
 
         private BigKeys(Builder builder) {
             this.keyInfo = builder.keyInfo;
@@ -386,17 +391,17 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * @return keyInfo
          */
-        public java.util.List < KeyInfo> getKeyInfo() {
+        public java.util.List<KeyInfo> getKeyInfo() {
             return this.keyInfo;
         }
 
         public static final class Builder {
-            private java.util.List < KeyInfo> keyInfo; 
+            private java.util.List<KeyInfo> keyInfo; 
 
             /**
              * KeyInfo.
              */
-            public Builder keyInfo(java.util.List < KeyInfo> keyInfo) {
+            public Builder keyInfo(java.util.List<KeyInfo> keyInfo) {
                 this.keyInfo = keyInfo;
                 return this;
             }

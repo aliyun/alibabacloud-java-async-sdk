@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -164,13 +169,13 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("ThreadIdList")
-        private java.util.List < Long > threadIdList;
+        private java.util.List<Long> threadIdList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         @com.aliyun.core.annotation.NameInMap("UserList")
-        private java.util.List < String > userList;
+        private java.util.List<String> userList;
 
         private ClientStats(Builder builder) {
             this.activeCount = builder.activeCount;
@@ -205,7 +210,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * @return threadIdList
          */
-        public java.util.List < Long > getThreadIdList() {
+        public java.util.List<Long> getThreadIdList() {
             return this.threadIdList;
         }
 
@@ -219,16 +224,16 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * @return userList
          */
-        public java.util.List < String > getUserList() {
+        public java.util.List<String> getUserList() {
             return this.userList;
         }
 
         public static final class Builder {
             private Long activeCount; 
             private String key; 
-            private java.util.List < Long > threadIdList; 
+            private java.util.List<Long> threadIdList; 
             private Long totalCount; 
-            private java.util.List < String > userList; 
+            private java.util.List<String> userList; 
 
             /**
              * <p>The number of active sessions that belong to the client IP address.</p>
@@ -258,7 +263,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             /**
              * <p>The IDs of the sessions that belong to the client IP address.</p>
              */
-            public Builder threadIdList(java.util.List < Long > threadIdList) {
+            public Builder threadIdList(java.util.List<Long> threadIdList) {
                 this.threadIdList = threadIdList;
                 return this;
             }
@@ -277,7 +282,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             /**
              * <p>The database accounts to which the sessions belong.</p>
              */
-            public Builder userList(java.util.List < String > userList) {
+            public Builder userList(java.util.List<String> userList) {
                 this.userList = userList;
                 return this;
             }
@@ -303,13 +308,13 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("ThreadIdList")
-        private java.util.List < Long > threadIdList;
+        private java.util.List<Long> threadIdList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         @com.aliyun.core.annotation.NameInMap("UserList")
-        private java.util.List < String > userList;
+        private java.util.List<String> userList;
 
         private DbStats(Builder builder) {
             this.activeCount = builder.activeCount;
@@ -344,7 +349,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * @return threadIdList
          */
-        public java.util.List < Long > getThreadIdList() {
+        public java.util.List<Long> getThreadIdList() {
             return this.threadIdList;
         }
 
@@ -358,16 +363,16 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * @return userList
          */
-        public java.util.List < String > getUserList() {
+        public java.util.List<String> getUserList() {
             return this.userList;
         }
 
         public static final class Builder {
             private Long activeCount; 
             private String key; 
-            private java.util.List < Long > threadIdList; 
+            private java.util.List<Long> threadIdList; 
             private Long totalCount; 
-            private java.util.List < String > userList; 
+            private java.util.List<String> userList; 
 
             /**
              * <p>The number of active sessions of the database.</p>
@@ -397,7 +402,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             /**
              * <p>The IDs of the sessions of the database.</p>
              */
-            public Builder threadIdList(java.util.List < Long > threadIdList) {
+            public Builder threadIdList(java.util.List<Long> threadIdList) {
                 this.threadIdList = threadIdList;
                 return this;
             }
@@ -416,7 +421,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             /**
              * <p>The database accounts to which the sessions belong.</p>
              */
-            public Builder userList(java.util.List < String > userList) {
+            public Builder userList(java.util.List<String> userList) {
                 this.userList = userList;
                 return this;
             }
@@ -748,13 +753,13 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("ThreadIdList")
-        private java.util.List < Long > threadIdList;
+        private java.util.List<Long> threadIdList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         @com.aliyun.core.annotation.NameInMap("UserList")
-        private java.util.List < String > userList;
+        private java.util.List<String> userList;
 
         private UserStats(Builder builder) {
             this.activeCount = builder.activeCount;
@@ -789,7 +794,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * @return threadIdList
          */
-        public java.util.List < Long > getThreadIdList() {
+        public java.util.List<Long> getThreadIdList() {
             return this.threadIdList;
         }
 
@@ -803,16 +808,16 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * @return userList
          */
-        public java.util.List < String > getUserList() {
+        public java.util.List<String> getUserList() {
             return this.userList;
         }
 
         public static final class Builder {
             private Long activeCount; 
             private String key; 
-            private java.util.List < Long > threadIdList; 
+            private java.util.List<Long> threadIdList; 
             private Long totalCount; 
-            private java.util.List < String > userList; 
+            private java.util.List<String> userList; 
 
             /**
              * <p>The number of active sessions within the account.</p>
@@ -842,7 +847,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             /**
              * <p>The IDs of the sessions within the account.</p>
              */
-            public Builder threadIdList(java.util.List < Long > threadIdList) {
+            public Builder threadIdList(java.util.List<Long> threadIdList) {
                 this.threadIdList = threadIdList;
                 return this;
             }
@@ -861,7 +866,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             /**
              * <p>The database accounts to which the sessions belong.</p>
              */
-            public Builder userList(java.util.List < String > userList) {
+            public Builder userList(java.util.List<String> userList) {
                 this.userList = userList;
                 return this;
             }
@@ -884,16 +889,16 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         private Long activeSessionCount;
 
         @com.aliyun.core.annotation.NameInMap("ClientStats")
-        private java.util.List < ClientStats> clientStats;
+        private java.util.List<ClientStats> clientStats;
 
         @com.aliyun.core.annotation.NameInMap("DbStats")
-        private java.util.List < DbStats> dbStats;
+        private java.util.List<DbStats> dbStats;
 
         @com.aliyun.core.annotation.NameInMap("MaxActiveTime")
         private Long maxActiveTime;
 
         @com.aliyun.core.annotation.NameInMap("SessionList")
-        private java.util.List < SessionList> sessionList;
+        private java.util.List<SessionList> sessionList;
 
         @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private Long timeStamp;
@@ -902,7 +907,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         private Long totalSessionCount;
 
         @com.aliyun.core.annotation.NameInMap("UserStats")
-        private java.util.List < UserStats> userStats;
+        private java.util.List<UserStats> userStats;
 
         private SessionData(Builder builder) {
             this.activeSessionCount = builder.activeSessionCount;
@@ -933,14 +938,14 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * @return clientStats
          */
-        public java.util.List < ClientStats> getClientStats() {
+        public java.util.List<ClientStats> getClientStats() {
             return this.clientStats;
         }
 
         /**
          * @return dbStats
          */
-        public java.util.List < DbStats> getDbStats() {
+        public java.util.List<DbStats> getDbStats() {
             return this.dbStats;
         }
 
@@ -954,7 +959,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * @return sessionList
          */
-        public java.util.List < SessionList> getSessionList() {
+        public java.util.List<SessionList> getSessionList() {
             return this.sessionList;
         }
 
@@ -975,19 +980,19 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         /**
          * @return userStats
          */
-        public java.util.List < UserStats> getUserStats() {
+        public java.util.List<UserStats> getUserStats() {
             return this.userStats;
         }
 
         public static final class Builder {
             private Long activeSessionCount; 
-            private java.util.List < ClientStats> clientStats; 
-            private java.util.List < DbStats> dbStats; 
+            private java.util.List<ClientStats> clientStats; 
+            private java.util.List<DbStats> dbStats; 
             private Long maxActiveTime; 
-            private java.util.List < SessionList> sessionList; 
+            private java.util.List<SessionList> sessionList; 
             private Long timeStamp; 
             private Long totalSessionCount; 
-            private java.util.List < UserStats> userStats; 
+            private java.util.List<UserStats> userStats; 
 
             /**
              * <p>The total number of active sessions.</p>
@@ -1003,7 +1008,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             /**
              * <p>The sessions that are counted by client IP address.</p>
              */
-            public Builder clientStats(java.util.List < ClientStats> clientStats) {
+            public Builder clientStats(java.util.List<ClientStats> clientStats) {
                 this.clientStats = clientStats;
                 return this;
             }
@@ -1011,7 +1016,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             /**
              * <p>The sessions that are counted by database.</p>
              */
-            public Builder dbStats(java.util.List < DbStats> dbStats) {
+            public Builder dbStats(java.util.List<DbStats> dbStats) {
                 this.dbStats = dbStats;
                 return this;
             }
@@ -1030,7 +1035,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             /**
              * <p>The sessions.</p>
              */
-            public Builder sessionList(java.util.List < SessionList> sessionList) {
+            public Builder sessionList(java.util.List<SessionList> sessionList) {
                 this.sessionList = sessionList;
                 return this;
             }
@@ -1060,7 +1065,7 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
             /**
              * <p>The sessions that are counted by database account.</p>
              */
-            public Builder userStats(java.util.List < UserStats> userStats) {
+            public Builder userStats(java.util.List<UserStats> userStats) {
                 this.userStats = userStats;
                 return this;
             }

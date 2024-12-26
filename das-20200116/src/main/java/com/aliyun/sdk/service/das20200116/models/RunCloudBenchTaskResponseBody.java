@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -339,7 +344,7 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PreCheckItem")
-        private java.util.List < PreCheckItem> preCheckItem;
+        private java.util.List<PreCheckItem> preCheckItem;
 
         private Data(Builder builder) {
             this.preCheckItem = builder.preCheckItem;
@@ -356,17 +361,17 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
         /**
          * @return preCheckItem
          */
-        public java.util.List < PreCheckItem> getPreCheckItem() {
+        public java.util.List<PreCheckItem> getPreCheckItem() {
             return this.preCheckItem;
         }
 
         public static final class Builder {
-            private java.util.List < PreCheckItem> preCheckItem; 
+            private java.util.List<PreCheckItem> preCheckItem; 
 
             /**
              * PreCheckItem.
              */
-            public Builder preCheckItem(java.util.List < PreCheckItem> preCheckItem) {
+            public Builder preCheckItem(java.util.List<PreCheckItem> preCheckItem) {
                 this.preCheckItem = preCheckItem;
                 return this;
             }

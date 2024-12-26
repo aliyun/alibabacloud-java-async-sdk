@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -320,7 +325,7 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HotKey")
-        private java.util.List < HotKey> hotKey;
+        private java.util.List<HotKey> hotKey;
 
         private Data(Builder builder) {
             this.hotKey = builder.hotKey;
@@ -337,17 +342,17 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         /**
          * @return hotKey
          */
-        public java.util.List < HotKey> getHotKey() {
+        public java.util.List<HotKey> getHotKey() {
             return this.hotKey;
         }
 
         public static final class Builder {
-            private java.util.List < HotKey> hotKey; 
+            private java.util.List<HotKey> hotKey; 
 
             /**
              * HotKey.
              */
-            public Builder hotKey(java.util.List < HotKey> hotKey) {
+            public Builder hotKey(java.util.List<HotKey> hotKey) {
                 this.hotKey = hotKey;
                 return this;
             }

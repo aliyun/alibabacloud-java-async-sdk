@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -466,10 +471,10 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         private String nodeId;
 
         @com.aliyun.core.annotation.NameInMap("Result")
-        private java.util.List < Result> result;
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("Sessions")
-        private java.util.List < Long > sessions;
+        private java.util.List<Long> sessions;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
@@ -539,14 +544,14 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
         /**
          * @return result
          */
-        public java.util.List < Result> getResult() {
+        public java.util.List<Result> getResult() {
             return this.result;
         }
 
         /**
          * @return sessions
          */
-        public java.util.List < Long > getSessions() {
+        public java.util.List<Long> getSessions() {
             return this.sessions;
         }
 
@@ -577,8 +582,8 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             private Long killFailCount; 
             private Long killSuccessCount; 
             private String nodeId; 
-            private java.util.List < Result> result; 
-            private java.util.List < Long > sessions; 
+            private java.util.List<Result> result; 
+            private java.util.List<Long> sessions; 
             private String taskId; 
             private String taskState; 
             private String userId; 
@@ -644,7 +649,7 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
             /**
              * <p>The details of the task that terminated sessions.</p>
              */
-            public Builder result(java.util.List < Result> result) {
+            public Builder result(java.util.List<Result> result) {
                 this.result = result;
                 return this;
             }
@@ -655,7 +660,7 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
              * <p> If all sessions are terminated, the IDs of all sessions on the instance or node are returned.</p>
              * </blockquote>
              */
-            public Builder sessions(java.util.List < Long > sessions) {
+            public Builder sessions(java.util.List<Long> sessions) {
                 this.sessions = sessions;
                 return this;
             }

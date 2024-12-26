@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -751,13 +756,13 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         private Long enableAutoThrottleCount;
 
         @com.aliyun.core.annotation.NameInMap("EnableAutoThrottleList")
-        private java.util.List < EnableAutoThrottleList> enableAutoThrottleList;
+        private java.util.List<EnableAutoThrottleList> enableAutoThrottleList;
 
         @com.aliyun.core.annotation.NameInMap("NeverEnableAutoThrottleOrReleasedInstanceCount")
         private Long neverEnableAutoThrottleOrReleasedInstanceCount;
 
         @com.aliyun.core.annotation.NameInMap("NeverEnableAutoThrottleOrReleasedInstanceIdList")
-        private java.util.List < String > neverEnableAutoThrottleOrReleasedInstanceIdList;
+        private java.util.List<String> neverEnableAutoThrottleOrReleasedInstanceIdList;
 
         @com.aliyun.core.annotation.NameInMap("TotalAutoThrottleRulesCount")
         private Long totalAutoThrottleRulesCount;
@@ -766,7 +771,7 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         private Long turnOffAutoThrottleCount;
 
         @com.aliyun.core.annotation.NameInMap("TurnOffAutoThrottleList")
-        private java.util.List < TurnOffAutoThrottleList> turnOffAutoThrottleList;
+        private java.util.List<TurnOffAutoThrottleList> turnOffAutoThrottleList;
 
         private Data(Builder builder) {
             this.enableAutoThrottleCount = builder.enableAutoThrottleCount;
@@ -796,7 +801,7 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         /**
          * @return enableAutoThrottleList
          */
-        public java.util.List < EnableAutoThrottleList> getEnableAutoThrottleList() {
+        public java.util.List<EnableAutoThrottleList> getEnableAutoThrottleList() {
             return this.enableAutoThrottleList;
         }
 
@@ -810,7 +815,7 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         /**
          * @return neverEnableAutoThrottleOrReleasedInstanceIdList
          */
-        public java.util.List < String > getNeverEnableAutoThrottleOrReleasedInstanceIdList() {
+        public java.util.List<String> getNeverEnableAutoThrottleOrReleasedInstanceIdList() {
             return this.neverEnableAutoThrottleOrReleasedInstanceIdList;
         }
 
@@ -831,18 +836,18 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
         /**
          * @return turnOffAutoThrottleList
          */
-        public java.util.List < TurnOffAutoThrottleList> getTurnOffAutoThrottleList() {
+        public java.util.List<TurnOffAutoThrottleList> getTurnOffAutoThrottleList() {
             return this.turnOffAutoThrottleList;
         }
 
         public static final class Builder {
             private Long enableAutoThrottleCount; 
-            private java.util.List < EnableAutoThrottleList> enableAutoThrottleList; 
+            private java.util.List<EnableAutoThrottleList> enableAutoThrottleList; 
             private Long neverEnableAutoThrottleOrReleasedInstanceCount; 
-            private java.util.List < String > neverEnableAutoThrottleOrReleasedInstanceIdList; 
+            private java.util.List<String> neverEnableAutoThrottleOrReleasedInstanceIdList; 
             private Long totalAutoThrottleRulesCount; 
             private Long turnOffAutoThrottleCount; 
-            private java.util.List < TurnOffAutoThrottleList> turnOffAutoThrottleList; 
+            private java.util.List<TurnOffAutoThrottleList> turnOffAutoThrottleList; 
 
             /**
              * <p>The number of database instances for which the automatic SQL throttling feature is currently enabled.</p>
@@ -858,7 +863,7 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             /**
              * <p>The database instances for which the automatic SQL throttling feature is currently enabled.</p>
              */
-            public Builder enableAutoThrottleList(java.util.List < EnableAutoThrottleList> enableAutoThrottleList) {
+            public Builder enableAutoThrottleList(java.util.List<EnableAutoThrottleList> enableAutoThrottleList) {
                 this.enableAutoThrottleList = enableAutoThrottleList;
                 return this;
             }
@@ -883,7 +888,7 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
              * <p> If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
              * </blockquote>
              */
-            public Builder neverEnableAutoThrottleOrReleasedInstanceIdList(java.util.List < String > neverEnableAutoThrottleOrReleasedInstanceIdList) {
+            public Builder neverEnableAutoThrottleOrReleasedInstanceIdList(java.util.List<String> neverEnableAutoThrottleOrReleasedInstanceIdList) {
                 this.neverEnableAutoThrottleOrReleasedInstanceIdList = neverEnableAutoThrottleOrReleasedInstanceIdList;
                 return this;
             }
@@ -913,7 +918,7 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
             /**
              * <p>The database instances for which the automatic SQL throttling feature was once enabled but is currently disabled.</p>
              */
-            public Builder turnOffAutoThrottleList(java.util.List < TurnOffAutoThrottleList> turnOffAutoThrottleList) {
+            public Builder turnOffAutoThrottleList(java.util.List<TurnOffAutoThrottleList> turnOffAutoThrottleList) {
                 this.turnOffAutoThrottleList = turnOffAutoThrottleList;
                 return this;
             }

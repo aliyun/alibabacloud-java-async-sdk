@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -158,7 +163,7 @@ public class CreateCloudBenchTasksResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("taskIds")
-        private java.util.List < String > taskIds;
+        private java.util.List<String> taskIds;
 
         private Data(Builder builder) {
             this.taskIds = builder.taskIds;
@@ -175,17 +180,17 @@ public class CreateCloudBenchTasksResponseBody extends TeaModel {
         /**
          * @return taskIds
          */
-        public java.util.List < String > getTaskIds() {
+        public java.util.List<String> getTaskIds() {
             return this.taskIds;
         }
 
         public static final class Builder {
-            private java.util.List < String > taskIds; 
+            private java.util.List<String> taskIds; 
 
             /**
              * taskIds.
              */
-            public Builder taskIds(java.util.List < String > taskIds) {
+            public Builder taskIds(java.util.List<String> taskIds) {
                 this.taskIds = taskIds;
                 return this;
             }

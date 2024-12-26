@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
     private Long code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -53,7 +58,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -80,7 +85,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -102,7 +107,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>[         {             &quot;sqlId&quot;: &quot;2cd4432556c3dab9d825ba363637****&quot;,             &quot;database&quot;: &quot;dbgateway&quot;,             &quot;originHost&quot;: &quot;172.16.1****&quot;,             &quot;tables&quot;: [                 &quot;meter_****&quot;             ],             &quot;instanceId&quot;: &quot;rm-2ze8g2am97624****&quot;,             &quot;errorCode&quot;: &quot;1062&quot;,             &quot;user&quot;: &quot;dbgat****&quot;,             &quot;sql&quot;: &quot;insert into meter_****\n        ( \n        <strong><strong>\n     )\n        values (now(), now(), &quot;bbbc8624-5e19-455a-9714-8466f688</strong></strong>&quot;, &quot;2022-02-10 14:00:00&quot;, &quot;{&quot;endTime&quot;:&quot;2022-02-10 14:00:00&quot;,&quot;endTimestamp&quot;:1644472800,&quot;startTime&quot;:&quot;2022-02-10 13:00:00&quot;,&quot;startTimestamp&quot;:1644469200}&quot;, null, null)&quot;,             &quot;timestamp&quot;: 1644476100435         }]</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -179,7 +184,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
         private String sqlId;
 
         @com.aliyun.core.annotation.NameInMap("tables")
-        private java.util.List < String > tables;
+        private java.util.List<String> tables;
 
         @com.aliyun.core.annotation.NameInMap("timestamp")
         private Long timestamp;
@@ -252,7 +257,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.List < String > getTables() {
+        public java.util.List<String> getTables() {
             return this.tables;
         }
 
@@ -277,7 +282,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             private String originHost; 
             private String sql; 
             private String sqlId; 
-            private java.util.List < String > tables; 
+            private java.util.List<String> tables; 
             private Long timestamp; 
             private String user; 
 
@@ -350,7 +355,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
             /**
              * <p>The table information.</p>
              */
-            public Builder tables(java.util.List < String > tables) {
+            public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
                 return this;
             }

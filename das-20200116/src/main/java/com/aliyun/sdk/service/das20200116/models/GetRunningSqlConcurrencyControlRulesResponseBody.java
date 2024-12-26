@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -429,7 +434,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
      */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("runningRules")
-        private java.util.List < RunningRules> runningRules;
+        private java.util.List<RunningRules> runningRules;
 
         private List(Builder builder) {
             this.runningRules = builder.runningRules;
@@ -446,17 +451,17 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         /**
          * @return runningRules
          */
-        public java.util.List < RunningRules> getRunningRules() {
+        public java.util.List<RunningRules> getRunningRules() {
             return this.runningRules;
         }
 
         public static final class Builder {
-            private java.util.List < RunningRules> runningRules; 
+            private java.util.List<RunningRules> runningRules; 
 
             /**
              * runningRules.
              */
-            public Builder runningRules(java.util.List < RunningRules> runningRules) {
+            public Builder runningRules(java.util.List<RunningRules> runningRules) {
                 this.runningRules = runningRules;
                 return this;
             }

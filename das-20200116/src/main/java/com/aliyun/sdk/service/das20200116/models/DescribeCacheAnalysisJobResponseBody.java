@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -369,7 +374,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
      */
     public static class BigKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyInfo")
-        private java.util.List < KeyInfo> keyInfo;
+        private java.util.List<KeyInfo> keyInfo;
 
         private BigKeys(Builder builder) {
             this.keyInfo = builder.keyInfo;
@@ -386,17 +391,17 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * @return keyInfo
          */
-        public java.util.List < KeyInfo> getKeyInfo() {
+        public java.util.List<KeyInfo> getKeyInfo() {
             return this.keyInfo;
         }
 
         public static final class Builder {
-            private java.util.List < KeyInfo> keyInfo; 
+            private java.util.List<KeyInfo> keyInfo; 
 
             /**
              * KeyInfo.
              */
-            public Builder keyInfo(java.util.List < KeyInfo> keyInfo) {
+            public Builder keyInfo(java.util.List<KeyInfo> keyInfo) {
                 this.keyInfo = keyInfo;
                 return this;
             }
@@ -627,7 +632,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
      */
     public static class BigKeysOfNum extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyInfo")
-        private java.util.List < BigKeysOfNumKeyInfo> keyInfo;
+        private java.util.List<BigKeysOfNumKeyInfo> keyInfo;
 
         private BigKeysOfNum(Builder builder) {
             this.keyInfo = builder.keyInfo;
@@ -644,17 +649,17 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * @return keyInfo
          */
-        public java.util.List < BigKeysOfNumKeyInfo> getKeyInfo() {
+        public java.util.List<BigKeysOfNumKeyInfo> getKeyInfo() {
             return this.keyInfo;
         }
 
         public static final class Builder {
-            private java.util.List < BigKeysOfNumKeyInfo> keyInfo; 
+            private java.util.List<BigKeysOfNumKeyInfo> keyInfo; 
 
             /**
              * KeyInfo.
              */
-            public Builder keyInfo(java.util.List < BigKeysOfNumKeyInfo> keyInfo) {
+            public Builder keyInfo(java.util.List<BigKeysOfNumKeyInfo> keyInfo) {
                 this.keyInfo = keyInfo;
                 return this;
             }
@@ -804,7 +809,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
      */
     public static class ExpiryKeysLevelCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpiryLevel")
-        private java.util.List < ExpiryLevel> expiryLevel;
+        private java.util.List<ExpiryLevel> expiryLevel;
 
         private ExpiryKeysLevelCount(Builder builder) {
             this.expiryLevel = builder.expiryLevel;
@@ -821,17 +826,17 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * @return expiryLevel
          */
-        public java.util.List < ExpiryLevel> getExpiryLevel() {
+        public java.util.List<ExpiryLevel> getExpiryLevel() {
             return this.expiryLevel;
         }
 
         public static final class Builder {
-            private java.util.List < ExpiryLevel> expiryLevel; 
+            private java.util.List<ExpiryLevel> expiryLevel; 
 
             /**
              * ExpiryLevel.
              */
-            public Builder expiryLevel(java.util.List < ExpiryLevel> expiryLevel) {
+            public Builder expiryLevel(java.util.List<ExpiryLevel> expiryLevel) {
                 this.expiryLevel = expiryLevel;
                 return this;
             }
@@ -993,7 +998,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
      */
     public static class KeyPrefixes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Prefix")
-        private java.util.List < Prefix> prefix;
+        private java.util.List<Prefix> prefix;
 
         private KeyPrefixes(Builder builder) {
             this.prefix = builder.prefix;
@@ -1010,12 +1015,12 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * @return prefix
          */
-        public java.util.List < Prefix> getPrefix() {
+        public java.util.List<Prefix> getPrefix() {
             return this.prefix;
         }
 
         public static final class Builder {
-            private java.util.List < Prefix> prefix; 
+            private java.util.List<Prefix> prefix; 
 
             /**
              * <p>The prefix of the key.</p>
@@ -1023,7 +1028,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>task_</p>
              */
-            public Builder prefix(java.util.List < Prefix> prefix) {
+            public Builder prefix(java.util.List<Prefix> prefix) {
                 this.prefix = prefix;
                 return this;
             }
@@ -1254,7 +1259,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
      */
     public static class UnexBigKeysOfBytes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyInfo")
-        private java.util.List < UnexBigKeysOfBytesKeyInfo> keyInfo;
+        private java.util.List<UnexBigKeysOfBytesKeyInfo> keyInfo;
 
         private UnexBigKeysOfBytes(Builder builder) {
             this.keyInfo = builder.keyInfo;
@@ -1271,17 +1276,17 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * @return keyInfo
          */
-        public java.util.List < UnexBigKeysOfBytesKeyInfo> getKeyInfo() {
+        public java.util.List<UnexBigKeysOfBytesKeyInfo> getKeyInfo() {
             return this.keyInfo;
         }
 
         public static final class Builder {
-            private java.util.List < UnexBigKeysOfBytesKeyInfo> keyInfo; 
+            private java.util.List<UnexBigKeysOfBytesKeyInfo> keyInfo; 
 
             /**
              * KeyInfo.
              */
-            public Builder keyInfo(java.util.List < UnexBigKeysOfBytesKeyInfo> keyInfo) {
+            public Builder keyInfo(java.util.List<UnexBigKeysOfBytesKeyInfo> keyInfo) {
                 this.keyInfo = keyInfo;
                 return this;
             }
@@ -1512,7 +1517,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
      */
     public static class UnexBigKeysOfNum extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyInfo")
-        private java.util.List < UnexBigKeysOfNumKeyInfo> keyInfo;
+        private java.util.List<UnexBigKeysOfNumKeyInfo> keyInfo;
 
         private UnexBigKeysOfNum(Builder builder) {
             this.keyInfo = builder.keyInfo;
@@ -1529,17 +1534,17 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * @return keyInfo
          */
-        public java.util.List < UnexBigKeysOfNumKeyInfo> getKeyInfo() {
+        public java.util.List<UnexBigKeysOfNumKeyInfo> getKeyInfo() {
             return this.keyInfo;
         }
 
         public static final class Builder {
-            private java.util.List < UnexBigKeysOfNumKeyInfo> keyInfo; 
+            private java.util.List<UnexBigKeysOfNumKeyInfo> keyInfo; 
 
             /**
              * KeyInfo.
              */
-            public Builder keyInfo(java.util.List < UnexBigKeysOfNumKeyInfo> keyInfo) {
+            public Builder keyInfo(java.util.List<UnexBigKeysOfNumKeyInfo> keyInfo) {
                 this.keyInfo = keyInfo;
                 return this;
             }

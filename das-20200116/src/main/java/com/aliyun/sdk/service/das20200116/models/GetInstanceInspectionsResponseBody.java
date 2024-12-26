@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -740,7 +745,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         private AutoFunction autoFunction;
 
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.Map < String, ? > data;
+        private java.util.Map<String, ?> data;
 
         @com.aliyun.core.annotation.NameInMap("EnableDasPro")
         private Integer enableDasPro;
@@ -758,7 +763,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         private Integer score;
 
         @com.aliyun.core.annotation.NameInMap("ScoreMap")
-        private java.util.Map < String, ? > scoreMap;
+        private java.util.Map<String, ?> scoreMap;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
@@ -801,7 +806,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.Map < String, ? > getData() {
+        public java.util.Map<String, ?> getData() {
             return this.data;
         }
 
@@ -843,7 +848,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * @return scoreMap
          */
-        public java.util.Map < String, ? > getScoreMap() {
+        public java.util.Map<String, ?> getScoreMap() {
             return this.scoreMap;
         }
 
@@ -870,13 +875,13 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private AutoFunction autoFunction; 
-            private java.util.Map < String, ? > data; 
+            private java.util.Map<String, ?> data; 
             private Integer enableDasPro; 
             private Long endTime; 
             private Long gmtCreate; 
             private Instance instance; 
             private Integer score; 
-            private java.util.Map < String, ? > scoreMap; 
+            private java.util.Map<String, ?> scoreMap; 
             private Long startTime; 
             private Integer state; 
             private Integer taskType; 
@@ -895,7 +900,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>&quot;data&quot;: { &quot;hasDeadLock&quot;: false, &quot;exceptionTableMap&quot;: {}, &quot;bigTransactionCount&quot;: 0, &quot;cpu&quot;: 4, &quot;isRds&quot;: true, &quot;rdsEnable&quot;: true, &quot;enable&quot;: false, &quot;activeSessions&quot;: [], &quot;bigTransactionList&quot;: [], &quot;bigSessionList&quot;: [ { &quot;blockDuration&quot;: 0, &quot;active&quot;: false, &quot;Time&quot;: 0, &quot;db&quot;: &quot;&quot; },</p>
              */
-            public Builder data(java.util.Map < String, ? > data) {
+            public Builder data(java.util.Map<String, ?> data) {
                 this.data = data;
                 return this;
             }
@@ -963,7 +968,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             /**
              * <p>The scores that are deducted for the instance.</p>
              */
-            public Builder scoreMap(java.util.Map < String, ? > scoreMap) {
+            public Builder scoreMap(java.util.Map<String, ?> scoreMap) {
                 this.scoreMap = scoreMap;
                 return this;
             }
@@ -1025,7 +1030,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
@@ -1054,7 +1059,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -1080,7 +1085,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
@@ -1088,7 +1093,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             /**
              * <p>The detailed information.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

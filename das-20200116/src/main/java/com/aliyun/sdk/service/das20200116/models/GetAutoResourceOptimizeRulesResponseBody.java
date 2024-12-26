@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -680,19 +685,19 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         private Long enableAutoResourceOptimizeCount;
 
         @com.aliyun.core.annotation.NameInMap("EnableAutoResourceOptimizeList")
-        private java.util.List < EnableAutoResourceOptimizeList> enableAutoResourceOptimizeList;
+        private java.util.List<EnableAutoResourceOptimizeList> enableAutoResourceOptimizeList;
 
         @com.aliyun.core.annotation.NameInMap("HasEnableRuleButNotDasProCount")
         private Long hasEnableRuleButNotDasProCount;
 
         @com.aliyun.core.annotation.NameInMap("HasEnableRuleButNotDasProList")
-        private java.util.List < HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList;
+        private java.util.List<HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList;
 
         @com.aliyun.core.annotation.NameInMap("NeverEnableAutoResourceOptimizeOrReleasedInstanceCount")
         private Long neverEnableAutoResourceOptimizeOrReleasedInstanceCount;
 
         @com.aliyun.core.annotation.NameInMap("NeverEnableAutoResourceOptimizeOrReleasedInstanceIdList")
-        private java.util.List < String > neverEnableAutoResourceOptimizeOrReleasedInstanceIdList;
+        private java.util.List<String> neverEnableAutoResourceOptimizeOrReleasedInstanceIdList;
 
         @com.aliyun.core.annotation.NameInMap("TotalAutoResourceOptimizeRulesCount")
         private Long totalAutoResourceOptimizeRulesCount;
@@ -701,7 +706,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         private Long turnOffAutoResourceOptimizeCount;
 
         @com.aliyun.core.annotation.NameInMap("TurnOffAutoResourceOptimizeList")
-        private java.util.List < TurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList;
+        private java.util.List<TurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList;
 
         private Data(Builder builder) {
             this.enableAutoResourceOptimizeCount = builder.enableAutoResourceOptimizeCount;
@@ -733,7 +738,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * @return enableAutoResourceOptimizeList
          */
-        public java.util.List < EnableAutoResourceOptimizeList> getEnableAutoResourceOptimizeList() {
+        public java.util.List<EnableAutoResourceOptimizeList> getEnableAutoResourceOptimizeList() {
             return this.enableAutoResourceOptimizeList;
         }
 
@@ -747,7 +752,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * @return hasEnableRuleButNotDasProList
          */
-        public java.util.List < HasEnableRuleButNotDasProList> getHasEnableRuleButNotDasProList() {
+        public java.util.List<HasEnableRuleButNotDasProList> getHasEnableRuleButNotDasProList() {
             return this.hasEnableRuleButNotDasProList;
         }
 
@@ -761,7 +766,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * @return neverEnableAutoResourceOptimizeOrReleasedInstanceIdList
          */
-        public java.util.List < String > getNeverEnableAutoResourceOptimizeOrReleasedInstanceIdList() {
+        public java.util.List<String> getNeverEnableAutoResourceOptimizeOrReleasedInstanceIdList() {
             return this.neverEnableAutoResourceOptimizeOrReleasedInstanceIdList;
         }
 
@@ -782,20 +787,20 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * @return turnOffAutoResourceOptimizeList
          */
-        public java.util.List < TurnOffAutoResourceOptimizeList> getTurnOffAutoResourceOptimizeList() {
+        public java.util.List<TurnOffAutoResourceOptimizeList> getTurnOffAutoResourceOptimizeList() {
             return this.turnOffAutoResourceOptimizeList;
         }
 
         public static final class Builder {
             private Long enableAutoResourceOptimizeCount; 
-            private java.util.List < EnableAutoResourceOptimizeList> enableAutoResourceOptimizeList; 
+            private java.util.List<EnableAutoResourceOptimizeList> enableAutoResourceOptimizeList; 
             private Long hasEnableRuleButNotDasProCount; 
-            private java.util.List < HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList; 
+            private java.util.List<HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList; 
             private Long neverEnableAutoResourceOptimizeOrReleasedInstanceCount; 
-            private java.util.List < String > neverEnableAutoResourceOptimizeOrReleasedInstanceIdList; 
+            private java.util.List<String> neverEnableAutoResourceOptimizeOrReleasedInstanceIdList; 
             private Long totalAutoResourceOptimizeRulesCount; 
             private Long turnOffAutoResourceOptimizeCount; 
-            private java.util.List < TurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList; 
+            private java.util.List<TurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList; 
 
             /**
              * <p>The number of database instances for which the automatic fragment recycling feature is currently enabled.</p>
@@ -811,7 +816,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             /**
              * <p>The database instances for which the automatic fragment recycling feature is currently enabled.</p>
              */
-            public Builder enableAutoResourceOptimizeList(java.util.List < EnableAutoResourceOptimizeList> enableAutoResourceOptimizeList) {
+            public Builder enableAutoResourceOptimizeList(java.util.List<EnableAutoResourceOptimizeList> enableAutoResourceOptimizeList) {
                 this.enableAutoResourceOptimizeList = enableAutoResourceOptimizeList;
                 return this;
             }
@@ -833,7 +838,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
              * <p> Automatic fragment recycling tasks are run on this type of database instances only if DAS Enterprise Edition is enabled for the database instances again.</p>
              * </blockquote>
              */
-            public Builder hasEnableRuleButNotDasProList(java.util.List < HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList) {
+            public Builder hasEnableRuleButNotDasProList(java.util.List<HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList) {
                 this.hasEnableRuleButNotDasProList = hasEnableRuleButNotDasProList;
                 return this;
             }
@@ -855,7 +860,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             /**
              * <p>The database instances that do not exist or for which the automatic fragment recycling feature has never been enabled.</p>
              */
-            public Builder neverEnableAutoResourceOptimizeOrReleasedInstanceIdList(java.util.List < String > neverEnableAutoResourceOptimizeOrReleasedInstanceIdList) {
+            public Builder neverEnableAutoResourceOptimizeOrReleasedInstanceIdList(java.util.List<String> neverEnableAutoResourceOptimizeOrReleasedInstanceIdList) {
                 this.neverEnableAutoResourceOptimizeOrReleasedInstanceIdList = neverEnableAutoResourceOptimizeOrReleasedInstanceIdList;
                 return this;
             }
@@ -885,7 +890,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             /**
              * <p>The database instances for which the automatic fragment recycling feature was once enabled but is currently disabled.</p>
              */
-            public Builder turnOffAutoResourceOptimizeList(java.util.List < TurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList) {
+            public Builder turnOffAutoResourceOptimizeList(java.util.List<TurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList) {
                 this.turnOffAutoResourceOptimizeList = turnOffAutoResourceOptimizeList;
                 return this;
             }

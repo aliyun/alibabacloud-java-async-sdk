@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -583,7 +588,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         private Long batchId;
 
         @com.aliyun.core.annotation.NameInMap("BlockProcessList")
-        private java.util.List < BlockProcessList> blockProcessList;
+        private java.util.List<BlockProcessList> blockProcessList;
 
         @com.aliyun.core.annotation.NameInMap("ClientApp")
         private String clientApp;
@@ -676,7 +681,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         /**
          * @return blockProcessList
          */
-        public java.util.List < BlockProcessList> getBlockProcessList() {
+        public java.util.List<BlockProcessList> getBlockProcessList() {
             return this.blockProcessList;
         }
 
@@ -801,7 +806,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long batchId; 
-            private java.util.List < BlockProcessList> blockProcessList; 
+            private java.util.List<BlockProcessList> blockProcessList; 
             private String clientApp; 
             private String databaseName; 
             private String hostName; 
@@ -834,7 +839,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             /**
              * <p>The blocking details of the instance. The details are information about the session that caused the lock.</p>
              */
-            public Builder blockProcessList(java.util.List < BlockProcessList> blockProcessList) {
+            public Builder blockProcessList(java.util.List<BlockProcessList> blockProcessList) {
                 this.blockProcessList = blockProcessList;
                 return this;
             }
@@ -1045,7 +1050,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
@@ -1074,7 +1079,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -1100,7 +1105,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
@@ -1108,7 +1113,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             /**
              * <p>The details of the data returned.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }

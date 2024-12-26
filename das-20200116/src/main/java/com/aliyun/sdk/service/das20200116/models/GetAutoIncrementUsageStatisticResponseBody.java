@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -323,7 +328,7 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoIncrementUsageList")
-        private java.util.List < AutoIncrementUsageList> autoIncrementUsageList;
+        private java.util.List<AutoIncrementUsageList> autoIncrementUsageList;
 
         @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
@@ -356,7 +361,7 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         /**
          * @return autoIncrementUsageList
          */
-        public java.util.List < AutoIncrementUsageList> getAutoIncrementUsageList() {
+        public java.util.List<AutoIncrementUsageList> getAutoIncrementUsageList() {
             return this.autoIncrementUsageList;
         }
 
@@ -389,7 +394,7 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AutoIncrementUsageList> autoIncrementUsageList; 
+            private java.util.List<AutoIncrementUsageList> autoIncrementUsageList; 
             private String errorInfo; 
             private Boolean finish; 
             private String taskStatus; 
@@ -398,7 +403,7 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             /**
              * <p>The usage details of auto-increment IDs.</p>
              */
-            public Builder autoIncrementUsageList(java.util.List < AutoIncrementUsageList> autoIncrementUsageList) {
+            public Builder autoIncrementUsageList(java.util.List<AutoIncrementUsageList> autoIncrementUsageList) {
                 this.autoIncrementUsageList = autoIncrementUsageList;
                 return this;
             }

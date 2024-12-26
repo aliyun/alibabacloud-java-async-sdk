@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -342,13 +347,13 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
         private Long configFailInstanceCount;
 
         @com.aliyun.core.annotation.NameInMap("ConfigFailInstanceList")
-        private java.util.List < ConfigFailInstanceList> configFailInstanceList;
+        private java.util.List<ConfigFailInstanceList> configFailInstanceList;
 
         @com.aliyun.core.annotation.NameInMap("ConfigSuccessInstanceCount")
         private Long configSuccessInstanceCount;
 
         @com.aliyun.core.annotation.NameInMap("ConfigSuccessInstanceList")
-        private java.util.List < ConfigSuccessInstanceList> configSuccessInstanceList;
+        private java.util.List<ConfigSuccessInstanceList> configSuccessInstanceList;
 
         @com.aliyun.core.annotation.NameInMap("TotalInstanceCount")
         private Long totalInstanceCount;
@@ -379,7 +384,7 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
         /**
          * @return configFailInstanceList
          */
-        public java.util.List < ConfigFailInstanceList> getConfigFailInstanceList() {
+        public java.util.List<ConfigFailInstanceList> getConfigFailInstanceList() {
             return this.configFailInstanceList;
         }
 
@@ -393,7 +398,7 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
         /**
          * @return configSuccessInstanceList
          */
-        public java.util.List < ConfigSuccessInstanceList> getConfigSuccessInstanceList() {
+        public java.util.List<ConfigSuccessInstanceList> getConfigSuccessInstanceList() {
             return this.configSuccessInstanceList;
         }
 
@@ -406,9 +411,9 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long configFailInstanceCount; 
-            private java.util.List < ConfigFailInstanceList> configFailInstanceList; 
+            private java.util.List<ConfigFailInstanceList> configFailInstanceList; 
             private Long configSuccessInstanceCount; 
-            private java.util.List < ConfigSuccessInstanceList> configSuccessInstanceList; 
+            private java.util.List<ConfigSuccessInstanceList> configSuccessInstanceList; 
             private Long totalInstanceCount; 
 
             /**
@@ -425,7 +430,7 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
             /**
              * <p>The database instances for which the automatic SQL throttling feature failed to be disabled.</p>
              */
-            public Builder configFailInstanceList(java.util.List < ConfigFailInstanceList> configFailInstanceList) {
+            public Builder configFailInstanceList(java.util.List<ConfigFailInstanceList> configFailInstanceList) {
                 this.configFailInstanceList = configFailInstanceList;
                 return this;
             }
@@ -444,7 +449,7 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
             /**
              * <p>The database instances for which the automatic SQL throttling feature is disabled.</p>
              */
-            public Builder configSuccessInstanceList(java.util.List < ConfigSuccessInstanceList> configSuccessInstanceList) {
+            public Builder configSuccessInstanceList(java.util.List<ConfigSuccessInstanceList> configSuccessInstanceList) {
                 this.configSuccessInstanceList = configSuccessInstanceList;
                 return this;
             }

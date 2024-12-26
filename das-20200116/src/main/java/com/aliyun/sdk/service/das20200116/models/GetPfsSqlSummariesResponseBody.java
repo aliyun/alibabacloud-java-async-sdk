@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -314,7 +319,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         private String sqlType;
 
         @com.aliyun.core.annotation.NameInMap("Tables")
-        private java.util.List < String > tables;
+        private java.util.List<String> tables;
 
         @com.aliyun.core.annotation.NameInMap("TimerWaitAvg")
         private Double timerWaitAvg;
@@ -787,7 +792,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         /**
          * @return tables
          */
-        public java.util.List < String > getTables() {
+        public java.util.List<String> getTables() {
             return this.tables;
         }
 
@@ -914,7 +919,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             private Double sortScanAvg; 
             private String sqlId; 
             private String sqlType; 
-            private java.util.List < String > tables; 
+            private java.util.List<String> tables; 
             private Double timerWaitAvg; 
             private Long timestamp; 
             private Long tmpDiskTables; 
@@ -1524,7 +1529,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             /**
              * <p>The names of tables in the database.</p>
              */
-            public Builder tables(java.util.List < String > tables) {
+            public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
                 return this;
             }
@@ -1657,7 +1662,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         private Object extra;
 
         @com.aliyun.core.annotation.NameInMap("List")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
@@ -1694,7 +1699,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -1721,7 +1726,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Object extra; 
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNo; 
             private Long pageSize; 
             private Long total; 
@@ -1740,7 +1745,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             /**
              * <p>The details of the data returned.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
