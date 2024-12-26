@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx320240624.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -40,6 +45,10 @@ public class CreateJobRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExecutorBlockStrategy")
+    private Integer executorBlockStrategy;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("JobHandler")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 200, minLength = 1)
     private String jobHandler;
@@ -69,7 +78,7 @@ public class CreateJobRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NoticeContacts")
-    private java.util.List < NoticeContacts> noticeContacts;
+    private java.util.List<NoticeContacts> noticeContacts;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Parameters")
@@ -113,6 +122,7 @@ public class CreateJobRequest extends Request {
         this.calendar = builder.calendar;
         this.clusterId = builder.clusterId;
         this.description = builder.description;
+        this.executorBlockStrategy = builder.executorBlockStrategy;
         this.jobHandler = builder.jobHandler;
         this.jobType = builder.jobType;
         this.maxAttempt = builder.maxAttempt;
@@ -186,6 +196,13 @@ public class CreateJobRequest extends Request {
     }
 
     /**
+     * @return executorBlockStrategy
+     */
+    public Integer getExecutorBlockStrategy() {
+        return this.executorBlockStrategy;
+    }
+
+    /**
      * @return jobHandler
      */
     public String getJobHandler() {
@@ -230,7 +247,7 @@ public class CreateJobRequest extends Request {
     /**
      * @return noticeContacts
      */
-    public java.util.List < NoticeContacts> getNoticeContacts() {
+    public java.util.List<NoticeContacts> getNoticeContacts() {
         return this.noticeContacts;
     }
 
@@ -297,13 +314,14 @@ public class CreateJobRequest extends Request {
         private String calendar; 
         private String clusterId; 
         private String description; 
+        private Integer executorBlockStrategy; 
         private String jobHandler; 
         private String jobType; 
         private Integer maxAttempt; 
         private Integer maxConcurrency; 
         private String name; 
         private NoticeConfig noticeConfig; 
-        private java.util.List < NoticeContacts> noticeContacts; 
+        private java.util.List<NoticeContacts> noticeContacts; 
         private String parameters; 
         private Integer priority; 
         private Integer routeStrategy; 
@@ -325,6 +343,7 @@ public class CreateJobRequest extends Request {
             this.calendar = request.calendar;
             this.clusterId = request.clusterId;
             this.description = request.description;
+            this.executorBlockStrategy = request.executorBlockStrategy;
             this.jobHandler = request.jobHandler;
             this.jobType = request.jobType;
             this.maxAttempt = request.maxAttempt;
@@ -403,6 +422,15 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * ExecutorBlockStrategy.
+         */
+        public Builder executorBlockStrategy(Integer executorBlockStrategy) {
+            this.putBodyParameter("ExecutorBlockStrategy", executorBlockStrategy);
+            this.executorBlockStrategy = executorBlockStrategy;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -469,7 +497,7 @@ public class CreateJobRequest extends Request {
         /**
          * NoticeContacts.
          */
-        public Builder noticeContacts(java.util.List < NoticeContacts> noticeContacts) {
+        public Builder noticeContacts(java.util.List<NoticeContacts> noticeContacts) {
             String noticeContactsShrink = shrink(noticeContacts, "NoticeContacts", "json");
             this.putBodyParameter("NoticeContacts", noticeContactsShrink);
             this.noticeContacts = noticeContacts;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx320240624.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,7 +37,7 @@ public class ExportJobsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("JobIds")
-    private java.util.List < Long > jobIds;
+    private java.util.List<Long> jobIds;
 
     private ExportJobsRequest(Builder builder) {
         super(builder);
@@ -87,7 +92,7 @@ public class ExportJobsRequest extends Request {
     /**
      * @return jobIds
      */
-    public java.util.List < Long > getJobIds() {
+    public java.util.List<Long> getJobIds() {
         return this.jobIds;
     }
 
@@ -96,7 +101,7 @@ public class ExportJobsRequest extends Request {
         private String appName; 
         private String clusterId; 
         private Integer exportJobType; 
-        private java.util.List < Long > jobIds; 
+        private java.util.List<Long> jobIds; 
 
         private Builder() {
             super();
@@ -158,7 +163,7 @@ public class ExportJobsRequest extends Request {
          * <li></li>
          * </ul>
          */
-        public Builder jobIds(java.util.List < Long > jobIds) {
+        public Builder jobIds(java.util.List<Long> jobIds) {
             String jobIdsShrink = shrink(jobIds, "JobIds", "json");
             this.putBodyParameter("JobIds", jobIdsShrink);
             this.jobIds = jobIds;

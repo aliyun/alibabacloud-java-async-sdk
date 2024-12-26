@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx320240624.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class OperateDesignateExecutorsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AddressList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > addressList;
+    private java.util.List<String> addressList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppName")
@@ -79,7 +84,7 @@ public class OperateDesignateExecutorsRequest extends Request {
     /**
      * @return addressList
      */
-    public java.util.List < String > getAddressList() {
+    public java.util.List<String> getAddressList() {
         return this.addressList;
     }
 
@@ -120,7 +125,7 @@ public class OperateDesignateExecutorsRequest extends Request {
 
     public static final class Builder extends Request.Builder<OperateDesignateExecutorsRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > addressList; 
+        private java.util.List<String> addressList; 
         private String appName; 
         private String clusterId; 
         private Integer designateType; 
@@ -154,7 +159,7 @@ public class OperateDesignateExecutorsRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder addressList(java.util.List < String > addressList) {
+        public Builder addressList(java.util.List<String> addressList) {
             String addressListShrink = shrink(addressList, "AddressList", "json");
             this.putBodyParameter("AddressList", addressListShrink);
             this.addressList = addressList;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx320240624.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,11 +160,17 @@ public class ListJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
+        @com.aliyun.core.annotation.NameInMap("CurrentExecuteStatus")
+        private Integer currentExecuteStatus;
+
         @com.aliyun.core.annotation.NameInMap("DataOffset")
         private Integer dataOffset;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
+
+        @com.aliyun.core.annotation.NameInMap("ExecutorBlockStrategy")
+        private String executorBlockStrategy;
 
         @com.aliyun.core.annotation.NameInMap("JobHandler")
         private String jobHandler;
@@ -169,6 +180,12 @@ public class ListJobsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
+
+        @com.aliyun.core.annotation.NameInMap("LastExecuteEndTime")
+        private String lastExecuteEndTime;
+
+        @com.aliyun.core.annotation.NameInMap("LastExecuteStatus")
+        private Integer lastExecuteStatus;
 
         @com.aliyun.core.annotation.NameInMap("MaxAttempt")
         private Integer maxAttempt;
@@ -221,11 +238,15 @@ public class ListJobsResponseBody extends TeaModel {
             this.calendar = builder.calendar;
             this.cleanMode = builder.cleanMode;
             this.creator = builder.creator;
+            this.currentExecuteStatus = builder.currentExecuteStatus;
             this.dataOffset = builder.dataOffset;
             this.description = builder.description;
+            this.executorBlockStrategy = builder.executorBlockStrategy;
             this.jobHandler = builder.jobHandler;
             this.jobId = builder.jobId;
             this.jobType = builder.jobType;
+            this.lastExecuteEndTime = builder.lastExecuteEndTime;
+            this.lastExecuteStatus = builder.lastExecuteStatus;
             this.maxAttempt = builder.maxAttempt;
             this.maxConcurrency = builder.maxConcurrency;
             this.name = builder.name;
@@ -287,6 +308,13 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return currentExecuteStatus
+         */
+        public Integer getCurrentExecuteStatus() {
+            return this.currentExecuteStatus;
+        }
+
+        /**
          * @return dataOffset
          */
         public Integer getDataOffset() {
@@ -298,6 +326,13 @@ public class ListJobsResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return executorBlockStrategy
+         */
+        public String getExecutorBlockStrategy() {
+            return this.executorBlockStrategy;
         }
 
         /**
@@ -319,6 +354,20 @@ public class ListJobsResponseBody extends TeaModel {
          */
         public String getJobType() {
             return this.jobType;
+        }
+
+        /**
+         * @return lastExecuteEndTime
+         */
+        public String getLastExecuteEndTime() {
+            return this.lastExecuteEndTime;
+        }
+
+        /**
+         * @return lastExecuteStatus
+         */
+        public Integer getLastExecuteStatus() {
+            return this.lastExecuteStatus;
         }
 
         /**
@@ -432,11 +481,15 @@ public class ListJobsResponseBody extends TeaModel {
             private String calendar; 
             private String cleanMode; 
             private String creator; 
+            private Integer currentExecuteStatus; 
             private Integer dataOffset; 
             private String description; 
+            private String executorBlockStrategy; 
             private String jobHandler; 
             private Long jobId; 
             private String jobType; 
+            private String lastExecuteEndTime; 
+            private Integer lastExecuteStatus; 
             private Integer maxAttempt; 
             private Integer maxConcurrency; 
             private String name; 
@@ -494,6 +547,14 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
+             * CurrentExecuteStatus.
+             */
+            public Builder currentExecuteStatus(Integer currentExecuteStatus) {
+                this.currentExecuteStatus = currentExecuteStatus;
+                return this;
+            }
+
+            /**
              * DataOffset.
              */
             public Builder dataOffset(Integer dataOffset) {
@@ -506,6 +567,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * ExecutorBlockStrategy.
+             */
+            public Builder executorBlockStrategy(String executorBlockStrategy) {
+                this.executorBlockStrategy = executorBlockStrategy;
                 return this;
             }
 
@@ -530,6 +599,22 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
+                return this;
+            }
+
+            /**
+             * LastExecuteEndTime.
+             */
+            public Builder lastExecuteEndTime(String lastExecuteEndTime) {
+                this.lastExecuteEndTime = lastExecuteEndTime;
+                return this;
+            }
+
+            /**
+             * LastExecuteStatus.
+             */
+            public Builder lastExecuteStatus(Integer lastExecuteStatus) {
+                this.lastExecuteStatus = lastExecuteStatus;
                 return this;
             }
 
@@ -674,7 +759,7 @@ public class ListJobsResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Records")
-        private java.util.List < Records> records;
+        private java.util.List<Records> records;
 
         @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
@@ -711,7 +796,7 @@ public class ListJobsResponseBody extends TeaModel {
         /**
          * @return records
          */
-        public java.util.List < Records> getRecords() {
+        public java.util.List<Records> getRecords() {
             return this.records;
         }
 
@@ -725,7 +810,7 @@ public class ListJobsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Records> records; 
+            private java.util.List<Records> records; 
             private Integer total; 
 
             /**
@@ -749,7 +834,7 @@ public class ListJobsResponseBody extends TeaModel {
              * <li></li>
              * </ul>
              */
-            public Builder records(java.util.List < Records> records) {
+            public Builder records(java.util.List<Records> records) {
                 this.records = records;
                 return this;
             }

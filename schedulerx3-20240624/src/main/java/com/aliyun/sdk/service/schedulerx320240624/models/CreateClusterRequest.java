@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx320240624.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VSwitches")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < VSwitches> vSwitches;
+    private java.util.List<VSwitches> vSwitches;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VpcId")
@@ -95,7 +100,7 @@ public class CreateClusterRequest extends Request {
     /**
      * @return vSwitches
      */
-    public java.util.List < VSwitches> getVSwitches() {
+    public java.util.List<VSwitches> getVSwitches() {
         return this.vSwitches;
     }
 
@@ -111,7 +116,7 @@ public class CreateClusterRequest extends Request {
         private String clusterName; 
         private String clusterSpec; 
         private String engineType; 
-        private java.util.List < VSwitches> vSwitches; 
+        private java.util.List<VSwitches> vSwitches; 
         private String vpcId; 
 
         private Builder() {
@@ -176,7 +181,7 @@ public class CreateClusterRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
+        public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
             String vSwitchesShrink = shrink(vSwitches, "VSwitches", "json");
             this.putBodyParameter("VSwitches", vSwitchesShrink);
             this.vSwitches = vSwitches;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx320240624.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -33,7 +38,7 @@ public class OperateStopJobExecutionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskList")
-    private java.util.List < String > taskList;
+    private java.util.List<String> taskList;
 
     private OperateStopJobExecutionRequest(Builder builder) {
         super(builder);
@@ -88,7 +93,7 @@ public class OperateStopJobExecutionRequest extends Request {
     /**
      * @return taskList
      */
-    public java.util.List < String > getTaskList() {
+    public java.util.List<String> getTaskList() {
         return this.taskList;
     }
 
@@ -97,7 +102,7 @@ public class OperateStopJobExecutionRequest extends Request {
         private String appName; 
         private String clusterId; 
         private String jobExecutionId; 
-        private java.util.List < String > taskList; 
+        private java.util.List<String> taskList; 
 
         private Builder() {
             super();
@@ -160,7 +165,7 @@ public class OperateStopJobExecutionRequest extends Request {
         /**
          * TaskList.
          */
-        public Builder taskList(java.util.List < String > taskList) {
+        public Builder taskList(java.util.List<String> taskList) {
             String taskListShrink = shrink(taskList, "TaskList", "json");
             this.putQueryParameter("TaskList", taskListShrink);
             this.taskList = taskList;

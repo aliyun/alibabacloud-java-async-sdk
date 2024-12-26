@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx320240624.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -214,7 +219,7 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Tips")
-        private java.util.Map < String, String > tips;
+        private java.util.Map<String, String> tips;
 
         private StatusType(Builder builder) {
             this.code = builder.code;
@@ -247,14 +252,14 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
         /**
          * @return tips
          */
-        public java.util.Map < String, String > getTips() {
+        public java.util.Map<String, String> getTips() {
             return this.tips;
         }
 
         public static final class Builder {
             private String code; 
             private String name; 
-            private java.util.Map < String, String > tips; 
+            private java.util.Map<String, String> tips; 
 
             /**
              * Code.
@@ -277,7 +282,7 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
              * <li></li>
              * </ul>
              */
-            public Builder tips(java.util.Map < String, String > tips) {
+            public Builder tips(java.util.Map<String, String> tips) {
                 this.tips = tips;
                 return this;
             }
@@ -874,16 +879,16 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
         private RootProgress rootProgress;
 
         @com.aliyun.core.annotation.NameInMap("ShardingProgress")
-        private java.util.List < ShardingProgress> shardingProgress;
+        private java.util.List<ShardingProgress> shardingProgress;
 
         @com.aliyun.core.annotation.NameInMap("TaskProgress")
-        private java.util.List < TaskProgress> taskProgress;
+        private java.util.List<TaskProgress> taskProgress;
 
         @com.aliyun.core.annotation.NameInMap("TotalProgress")
         private TotalProgress totalProgress;
 
         @com.aliyun.core.annotation.NameInMap("WorkerProgress")
-        private java.util.List < WorkerProgress> workerProgress;
+        private java.util.List<WorkerProgress> workerProgress;
 
         private Data(Builder builder) {
             this.jobDescription = builder.jobDescription;
@@ -919,14 +924,14 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
         /**
          * @return shardingProgress
          */
-        public java.util.List < ShardingProgress> getShardingProgress() {
+        public java.util.List<ShardingProgress> getShardingProgress() {
             return this.shardingProgress;
         }
 
         /**
          * @return taskProgress
          */
-        public java.util.List < TaskProgress> getTaskProgress() {
+        public java.util.List<TaskProgress> getTaskProgress() {
             return this.taskProgress;
         }
 
@@ -940,17 +945,17 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
         /**
          * @return workerProgress
          */
-        public java.util.List < WorkerProgress> getWorkerProgress() {
+        public java.util.List<WorkerProgress> getWorkerProgress() {
             return this.workerProgress;
         }
 
         public static final class Builder {
             private String jobDescription; 
             private RootProgress rootProgress; 
-            private java.util.List < ShardingProgress> shardingProgress; 
-            private java.util.List < TaskProgress> taskProgress; 
+            private java.util.List<ShardingProgress> shardingProgress; 
+            private java.util.List<TaskProgress> taskProgress; 
             private TotalProgress totalProgress; 
-            private java.util.List < WorkerProgress> workerProgress; 
+            private java.util.List<WorkerProgress> workerProgress; 
 
             /**
              * JobDescription.
@@ -971,7 +976,7 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
             /**
              * ShardingProgress.
              */
-            public Builder shardingProgress(java.util.List < ShardingProgress> shardingProgress) {
+            public Builder shardingProgress(java.util.List<ShardingProgress> shardingProgress) {
                 this.shardingProgress = shardingProgress;
                 return this;
             }
@@ -979,7 +984,7 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
             /**
              * TaskProgress.
              */
-            public Builder taskProgress(java.util.List < TaskProgress> taskProgress) {
+            public Builder taskProgress(java.util.List<TaskProgress> taskProgress) {
                 this.taskProgress = taskProgress;
                 return this;
             }
@@ -995,7 +1000,7 @@ public class GetJobExecutionProgressResponseBody extends TeaModel {
             /**
              * WorkerProgress.
              */
-            public Builder workerProgress(java.util.List < WorkerProgress> workerProgress) {
+            public Builder workerProgress(java.util.List<WorkerProgress> workerProgress) {
                 this.workerProgress = workerProgress;
                 return this;
             }

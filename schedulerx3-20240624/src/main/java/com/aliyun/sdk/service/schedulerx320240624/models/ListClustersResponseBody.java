@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx320240624.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -251,7 +256,7 @@ public class ListClustersResponseBody extends TeaModel {
         private Integer status;
 
         @com.aliyun.core.annotation.NameInMap("VSwitches")
-        private java.util.List < VSwitches> vSwitches;
+        private java.util.List<VSwitches> vSwitches;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -376,7 +381,7 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * @return vSwitches
          */
-        public java.util.List < VSwitches> getVSwitches() {
+        public java.util.List<VSwitches> getVSwitches() {
             return this.vSwitches;
         }
 
@@ -401,7 +406,7 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer productType; 
             private String spInstanceId; 
             private Integer status; 
-            private java.util.List < VSwitches> vSwitches; 
+            private java.util.List<VSwitches> vSwitches; 
             private String vpcId; 
 
             /**
@@ -511,7 +516,7 @@ public class ListClustersResponseBody extends TeaModel {
             /**
              * VSwitches.
              */
-            public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
+            public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
                 this.vSwitches = vSwitches;
                 return this;
             }
@@ -548,7 +553,7 @@ public class ListClustersResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("Records")
-        private java.util.List < Records> records;
+        private java.util.List<Records> records;
 
         @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
@@ -585,7 +590,7 @@ public class ListClustersResponseBody extends TeaModel {
         /**
          * @return records
          */
-        public java.util.List < Records> getRecords() {
+        public java.util.List<Records> getRecords() {
             return this.records;
         }
 
@@ -599,7 +604,7 @@ public class ListClustersResponseBody extends TeaModel {
         public static final class Builder {
             private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List < Records> records; 
+            private java.util.List<Records> records; 
             private Integer total; 
 
             /**
@@ -623,7 +628,7 @@ public class ListClustersResponseBody extends TeaModel {
              * <li></li>
              * </ul>
              */
-            public Builder records(java.util.List < Records> records) {
+            public Builder records(java.util.List<Records> records) {
                 this.records = records;
                 return this;
             }

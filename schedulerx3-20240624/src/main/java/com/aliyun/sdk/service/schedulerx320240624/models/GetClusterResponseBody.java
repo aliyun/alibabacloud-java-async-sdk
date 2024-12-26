@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx320240624.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -256,7 +261,7 @@ public class GetClusterResponseBody extends TeaModel {
         private Integer status;
 
         @com.aliyun.core.annotation.NameInMap("VSwitches")
-        private java.util.List < VSwitches> vSwitches;
+        private java.util.List<VSwitches> vSwitches;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -265,7 +270,7 @@ public class GetClusterResponseBody extends TeaModel {
         private Integer workerNum;
 
         @com.aliyun.core.annotation.NameInMap("Zones")
-        private java.util.List < String > zones;
+        private java.util.List<String> zones;
 
         private Data(Builder builder) {
             this.chargeType = builder.chargeType;
@@ -413,7 +418,7 @@ public class GetClusterResponseBody extends TeaModel {
         /**
          * @return vSwitches
          */
-        public java.util.List < VSwitches> getVSwitches() {
+        public java.util.List<VSwitches> getVSwitches() {
             return this.vSwitches;
         }
 
@@ -434,7 +439,7 @@ public class GetClusterResponseBody extends TeaModel {
         /**
          * @return zones
          */
-        public java.util.List < String > getZones() {
+        public java.util.List<String> getZones() {
             return this.zones;
         }
 
@@ -455,10 +460,10 @@ public class GetClusterResponseBody extends TeaModel {
             private Integer productType; 
             private Integer spm; 
             private Integer status; 
-            private java.util.List < VSwitches> vSwitches; 
+            private java.util.List<VSwitches> vSwitches; 
             private String vpcId; 
             private Integer workerNum; 
-            private java.util.List < String > zones; 
+            private java.util.List<String> zones; 
 
             /**
              * ChargeType.
@@ -591,7 +596,7 @@ public class GetClusterResponseBody extends TeaModel {
             /**
              * VSwitches.
              */
-            public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
+            public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
                 this.vSwitches = vSwitches;
                 return this;
             }
@@ -618,7 +623,7 @@ public class GetClusterResponseBody extends TeaModel {
             /**
              * Zones.
              */
-            public Builder zones(java.util.List < String > zones) {
+            public Builder zones(java.util.List<String> zones) {
                 this.zones = zones;
                 return this;
             }
