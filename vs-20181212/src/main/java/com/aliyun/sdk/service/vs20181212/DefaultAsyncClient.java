@@ -2002,6 +2002,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListRenderingDataPackages  ListRenderingDataPackagesRequest
+     * @return ListRenderingDataPackagesResponse
+     */
+    @Override
+    public CompletableFuture<ListRenderingDataPackagesResponse> listRenderingDataPackages(ListRenderingDataPackagesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListRenderingDataPackages").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListRenderingDataPackagesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListRenderingDataPackagesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListRenderingInstanceGateway  ListRenderingInstanceGatewayRequest
      * @return ListRenderingInstanceGatewayResponse
      */
@@ -2284,6 +2302,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RebootRenderingInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RecoverRenderingDataPackage  RecoverRenderingDataPackageRequest
+     * @return RecoverRenderingDataPackageResponse
+     */
+    @Override
+    public CompletableFuture<RecoverRenderingDataPackageResponse> recoverRenderingDataPackage(RecoverRenderingDataPackageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RecoverRenderingDataPackage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RecoverRenderingDataPackageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RecoverRenderingDataPackageResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

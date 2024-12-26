@@ -674,6 +674,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPublicKeysResponse> listPublicKeys(ListPublicKeysRequest request);
 
     /**
+     * @param request the request parameters of ListRenderingDataPackages  ListRenderingDataPackagesRequest
+     * @return ListRenderingDataPackagesResponse
+     */
+    CompletableFuture<ListRenderingDataPackagesResponse> listRenderingDataPackages(ListRenderingDataPackagesRequest request);
+
+    /**
      * @param request the request parameters of ListRenderingInstanceGateway  ListRenderingInstanceGatewayRequest
      * @return ListRenderingInstanceGatewayResponse
      */
@@ -768,6 +774,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RebootRenderingInstanceResponse
      */
     CompletableFuture<RebootRenderingInstanceResponse> rebootRenderingInstance(RebootRenderingInstanceRequest request);
+
+    /**
+     * @param request the request parameters of RecoverRenderingDataPackage  RecoverRenderingDataPackageRequest
+     * @return RecoverRenderingDataPackageResponse
+     */
+    CompletableFuture<RecoverRenderingDataPackageResponse> recoverRenderingDataPackage(RecoverRenderingDataPackageRequest request);
 
     /**
      * @param request the request parameters of ReleaseRenderingDataPackage  ReleaseRenderingDataPackageRequest
