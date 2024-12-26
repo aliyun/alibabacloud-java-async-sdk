@@ -12,11 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateAnalysisResponseBody} extends {@link TeaModel}
+ * {@link CreateRelatedConversationResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateAnalysisResponseBody</p>
+ * <p>CreateRelatedConversationResponseBody</p>
  */
-public class UpdateAnalysisResponseBody extends TeaModel {
+public class CreateRelatedConversationResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ConversationId")
+    private String conversationId;
+
     @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
@@ -29,7 +32,8 @@ public class UpdateAnalysisResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private UpdateAnalysisResponseBody(Builder builder) {
+    private CreateRelatedConversationResponseBody(Builder builder) {
+        this.conversationId = builder.conversationId;
         this.errCode = builder.errCode;
         this.errMsg = builder.errMsg;
         this.requestId = builder.requestId;
@@ -40,8 +44,15 @@ public class UpdateAnalysisResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateAnalysisResponseBody create() {
+    public static CreateRelatedConversationResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return conversationId
+     */
+    public String getConversationId() {
+        return this.conversationId;
     }
 
     /**
@@ -73,10 +84,19 @@ public class UpdateAnalysisResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String conversationId; 
         private String errCode; 
         private String errMsg; 
         private String requestId; 
         private Boolean success; 
+
+        /**
+         * ConversationId.
+         */
+        public Builder conversationId(String conversationId) {
+            this.conversationId = conversationId;
+            return this;
+        }
 
         /**
          * ErrCode.
@@ -98,7 +118,7 @@ public class UpdateAnalysisResponseBody extends TeaModel {
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>89C27D03-4C85-5420-9752-989130878F4D</p>
+         * <p>1d31b11b-4b82-4db1-b3c0-001529fc78eb</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,8 +133,8 @@ public class UpdateAnalysisResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdateAnalysisResponseBody build() {
-            return new UpdateAnalysisResponseBody(this);
+        public CreateRelatedConversationResponseBody build() {
+            return new CreateRelatedConversationResponseBody(this);
         } 
 
     } 

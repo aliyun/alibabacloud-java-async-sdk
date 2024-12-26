@@ -12,38 +12,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateStepRequest} extends {@link RequestModel}
+ * {@link ChatMessageRequest} extends {@link RequestModel}
  *
- * <p>UpdateStepRequest</p>
+ * <p>ChatMessageRequest</p>
  */
-public class UpdateStepRequest extends Request {
+public class ChatMessageRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Content")
     @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ContentCode")
+    @com.aliyun.core.annotation.NameInMap("ConversationId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String contentCode;
+    private String conversationId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ExerciseCode")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String exerciseCode;
+    private String userId;
 
-    private UpdateStepRequest(Builder builder) {
+    private ChatMessageRequest(Builder builder) {
         super(builder);
         this.content = builder.content;
-        this.contentCode = builder.contentCode;
-        this.exerciseCode = builder.exerciseCode;
+        this.conversationId = builder.conversationId;
+        this.userId = builder.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateStepRequest create() {
+    public static ChatMessageRequest create() {
         return builder().build();
     }
 
@@ -60,37 +60,40 @@ public class UpdateStepRequest extends Request {
     }
 
     /**
-     * @return contentCode
+     * @return conversationId
      */
-    public String getContentCode() {
-        return this.contentCode;
+    public String getConversationId() {
+        return this.conversationId;
     }
 
     /**
-     * @return exerciseCode
+     * @return userId
      */
-    public String getExerciseCode() {
-        return this.exerciseCode;
+    public String getUserId() {
+        return this.userId;
     }
 
-    public static final class Builder extends Request.Builder<UpdateStepRequest, Builder> {
+    public static final class Builder extends Request.Builder<ChatMessageRequest, Builder> {
         private String content; 
-        private String contentCode; 
-        private String exerciseCode; 
+        private String conversationId; 
+        private String userId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateStepRequest request) {
+        private Builder(ChatMessageRequest request) {
             super(request);
             this.content = request.content;
-            this.contentCode = request.contentCode;
-            this.exerciseCode = request.exerciseCode;
+            this.conversationId = request.conversationId;
+            this.userId = request.userId;
         } 
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello world！</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -102,11 +105,11 @@ public class UpdateStepRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1549d636-b102-4fee-8a99-fcc552aa9aa9</p>
+         * <p>723b7f0f-c28a-4123-86e7-094d3d3863f8</p>
          */
-        public Builder contentCode(String contentCode) {
-            this.putBodyParameter("ContentCode", contentCode);
-            this.contentCode = contentCode;
+        public Builder conversationId(String conversationId) {
+            this.putBodyParameter("ConversationId", conversationId);
+            this.conversationId = conversationId;
             return this;
         }
 
@@ -114,17 +117,17 @@ public class UpdateStepRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Ex_pop_1731848070815_funI</p>
+         * <p>c28a-4123-86e7</p>
          */
-        public Builder exerciseCode(String exerciseCode) {
-            this.putBodyParameter("ExerciseCode", exerciseCode);
-            this.exerciseCode = exerciseCode;
+        public Builder userId(String userId) {
+            this.putBodyParameter("UserId", userId);
+            this.userId = userId;
             return this;
         }
 
         @Override
-        public UpdateStepRequest build() {
-            return new UpdateStepRequest(this);
+        public ChatMessageRequest build() {
+            return new ChatMessageRequest(this);
         } 
 
     } 

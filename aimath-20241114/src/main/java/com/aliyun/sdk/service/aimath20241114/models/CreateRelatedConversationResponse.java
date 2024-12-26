@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GenAnalysisResponse} extends {@link TeaModel}
+ * {@link CreateRelatedConversationResponse} extends {@link TeaModel}
  *
- * <p>GenAnalysisResponse</p>
+ * <p>CreateRelatedConversationResponse</p>
  */
-public class GenAnalysisResponse extends Response {
+public class CreateRelatedConversationResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class GenAnalysisResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GenAnalysisResponseBody body;
+    private CreateRelatedConversationResponseBody body;
 
-    private GenAnalysisResponse(BuilderImpl builder) {
+    private CreateRelatedConversationResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GenAnalysisResponse create() {
+    public static CreateRelatedConversationResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class GenAnalysisResponse extends Response {
     /**
      * @return body
      */
-    public GenAnalysisResponseBody getBody() {
+    public CreateRelatedConversationResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GenAnalysisResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateRelatedConversationResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GenAnalysisResponseBody body);
+        Builder body(CreateRelatedConversationResponseBody body);
 
         @Override
-        GenAnalysisResponse build();
+        CreateRelatedConversationResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GenAnalysisResponse, Builder>
+            extends Response.BuilderImpl<CreateRelatedConversationResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GenAnalysisResponseBody body; 
+        private CreateRelatedConversationResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GenAnalysisResponse response) {
+        private BuilderImpl(CreateRelatedConversationResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GenAnalysisResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GenAnalysisResponseBody body) {
+        public Builder body(CreateRelatedConversationResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GenAnalysisResponse build() {
-            return new GenAnalysisResponse(this);
+        public CreateRelatedConversationResponse build() {
+            return new CreateRelatedConversationResponse(this);
         } 
 
     } 

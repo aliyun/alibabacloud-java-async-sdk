@@ -20,6 +20,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of ChatMessage  ChatMessageRequest
+     * @return ChatMessageResponse
+     */
+    CompletableFuture<ChatMessageResponse> chatMessage(ChatMessageRequest request);
+
+    ResponseIterable<ChatMessageResponseBody> chatMessageWithResponseIterable(ChatMessageRequest request);
+
+    /**
+     * @param request the request parameters of CreateConversation  CreateConversationRequest
+     * @return CreateConversationResponse
+     */
+    CompletableFuture<CreateConversationResponse> createConversation(CreateConversationRequest request);
+
+    /**
+     * @param request the request parameters of CreateRelatedConversation  CreateRelatedConversationRequest
+     * @return CreateRelatedConversationResponse
+     */
+    CompletableFuture<CreateRelatedConversationResponse> createRelatedConversation(CreateRelatedConversationRequest request);
+
+    /**
      * @param request the request parameters of GenAnalysis  GenAnalysisRequest
      * @return GenAnalysisResponse
      */
