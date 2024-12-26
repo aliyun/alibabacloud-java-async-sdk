@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConsumerGroupSubscriptionResponseBody} extends {@link TeaModel}
  *
  * <p>GetConsumerGroupSubscriptionResponseBody</p>
@@ -15,7 +21,7 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("dynamicCode")
     private String dynamicCode;
@@ -64,7 +70,7 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -112,7 +118,7 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private Integer httpStatusCode; 
@@ -121,7 +127,10 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,15 +138,18 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +157,10 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +168,10 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +179,10 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter instanceId is mandatory for this action .</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +190,10 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>157DF7D4-53FB-58C6-BEBC-A9400E7EF68A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +201,10 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +217,12 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConsumerGroupSubscriptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerGroupSubscriptionResponseBody</p>
+     */
     public static class ConnectionDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("clientId")
         private String clientId;
@@ -277,7 +310,10 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * clientId.
+             * <p>The client ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.50.191@19908#-2093249153#1534215565#40385215750900</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -285,7 +321,10 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * egressIp.
+             * <p>The public IP address of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx.xx.xx</p>
              */
             public Builder egressIp(String egressIp) {
                 this.egressIp = egressIp;
@@ -293,7 +332,10 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * hostname.
+             * <p>The host name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -301,7 +343,10 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * language.
+             * <p>The language used by the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -309,7 +354,14 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * messageModel.
+             * <p>The consumption mode of the consumer group. Valid values:</p>
+             * <ul>
+             * <li>BROADCASTING: broadcasting consumption</li>
+             * <li>CLUSTERING: clustering consumption</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BROADCASTING</p>
              */
             public Builder messageModel(String messageModel) {
                 this.messageModel = messageModel;
@@ -317,7 +369,10 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The client version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -331,6 +386,12 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerGroupSubscriptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerGroupSubscriptionResponseBody</p>
+     */
     public static class SubscriptionDTO extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consumerGroupId")
         private String consumerGroupId;
@@ -418,7 +479,10 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             private String topicName; 
 
             /**
-             * consumerGroupId.
+             * <p>The consumer group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_inspector_group</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -426,7 +490,12 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * filterExpression.
+             * <p>The filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder filterExpression(String filterExpression) {
                 this.filterExpression = filterExpression;
@@ -434,7 +503,14 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * filterExpressionType.
+             * <p>The type of the filter expression. Valid values:</p>
+             * <ul>
+             * <li>SQL: filters messages by using SQL expressions.</li>
+             * <li>TAG: filters messages by using tags.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UNSPECIFIED</p>
              */
             public Builder filterExpressionType(String filterExpressionType) {
                 this.filterExpressionType = filterExpressionType;
@@ -442,7 +518,14 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * messageModel.
+             * <p>The consumption mode of the consumer group. Valid values:</p>
+             * <ul>
+             * <li>BROADCASTING: broadcasting consumption</li>
+             * <li>CLUSTERING: clustering consumption</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BROADCASTING</p>
              */
             public Builder messageModel(String messageModel) {
                 this.messageModel = messageModel;
@@ -450,7 +533,14 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * subscriptionStatus.
+             * <p>The subscription status. Valid values:</p>
+             * <ul>
+             * <li>ONLINE: The consumer group is online. If the consumer group contains multiple consumers, this value is returned if at least one of the consumers is online.</li>
+             * <li>OFFLINE: The consumer group is offline. If the consumer group contains multiple consumers, this value is returned only if all consumers are offline.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder subscriptionStatus(String subscriptionStatus) {
                 this.subscriptionStatus = subscriptionStatus;
@@ -458,7 +548,10 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * topicName.
+             * <p>The topic to which the consumer group subscribes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Topic_normal_inspector</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -472,6 +565,12 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerGroupSubscriptionResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerGroupSubscriptionResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("connectionDTO")
         private ConnectionDTO connectionDTO;
@@ -511,7 +610,7 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             private SubscriptionDTO subscriptionDTO; 
 
             /**
-             * connectionDTO.
+             * <p>The connection details.</p>
              */
             public Builder connectionDTO(ConnectionDTO connectionDTO) {
                 this.connectionDTO = connectionDTO;
@@ -519,7 +618,7 @@ public class GetConsumerGroupSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * subscriptionDTO.
+             * <p>The subscription details.</p>
              */
             public Builder subscriptionDTO(SubscriptionDTO subscriptionDTO) {
                 this.subscriptionDTO = subscriptionDTO;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceAclRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceAclRequest</p>
@@ -98,7 +104,11 @@ public class ListInstanceAclRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -107,7 +117,10 @@ public class ListInstanceAclRequest extends Request {
         }
 
         /**
-         * filter.
+         * <p>The condition that you specify to filter the ACLs. If you do not specify this parameter, all ACLs are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CID-TEST</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);
@@ -116,7 +129,11 @@ public class ListInstanceAclRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -125,7 +142,11 @@ public class ListInstanceAclRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

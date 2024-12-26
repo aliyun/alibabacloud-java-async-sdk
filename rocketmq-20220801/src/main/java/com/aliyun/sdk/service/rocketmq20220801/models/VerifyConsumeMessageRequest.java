@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyConsumeMessageRequest} extends {@link RequestModel}
  *
  * <p>VerifyConsumeMessageRequest</p>
@@ -114,7 +120,11 @@ public class VerifyConsumeMessageRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-i7m2vc1vx01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -123,7 +133,11 @@ public class VerifyConsumeMessageRequest extends Request {
         }
 
         /**
-         * topicName.
+         * <p>The topic name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>delay_topic</p>
          */
         public Builder topicName(String topicName) {
             this.putPathParameter("topicName", topicName);
@@ -132,7 +146,11 @@ public class VerifyConsumeMessageRequest extends Request {
         }
 
         /**
-         * messageId.
+         * <p>The message ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A9FE190A59AA421ED014743DFDBF017D</p>
          */
         public Builder messageId(String messageId) {
             this.putPathParameter("messageId", messageId);
@@ -141,7 +159,11 @@ public class VerifyConsumeMessageRequest extends Request {
         }
 
         /**
-         * clientId.
+         * <p>The client ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zeekr-settlement-server-dc555456f-v2lcg@1@1@qfvorazqns</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("clientId", clientId);
@@ -150,7 +172,11 @@ public class VerifyConsumeMessageRequest extends Request {
         }
 
         /**
-         * consumerGroupId.
+         * <p>The ID of the consumer group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEST_FINANCE_STOCK_OUT_GROUP</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putQueryParameter("consumerGroupId", consumerGroupId);

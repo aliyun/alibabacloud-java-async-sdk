@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConsumerConnectionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListConsumerConnectionsResponseBody</p>
@@ -121,7 +127,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned error code.
+         * <p>The returned error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingPageNumber</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +138,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -137,7 +146,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error code.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +157,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +168,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +179,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The instance cannot be found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +190,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3620115-6F1F-5CFB-AA3F-BBD4853B2EC4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +201,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +217,12 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConsumerConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConsumerConnectionsResponseBody</p>
+     */
     public static class Connections extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("clientId")
         private String clientId;
@@ -277,7 +310,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The ID of the client.
+             * <p>The ID of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.17.135.197@17392#1936705963#551717232#9873695589062458</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -285,7 +321,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Host IP/Public IP
+             * <p>Host IP/Public IP</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx.xx.xx</p>
              */
             public Builder egressIp(String egressIp) {
                 this.egressIp = egressIp;
@@ -293,7 +332,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The `hostname` of the cloud-native box.
+             * <p>The <code>hostname</code> of the cloud-native box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vos</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -301,7 +343,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the client.
+             * <p>The language of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -309,10 +354,14 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Consumption Mode
-             * <p>
-             * - BROADCASTING
-             * - CLUSTERING
+             * <p>Consumption Mode</p>
+             * <ul>
+             * <li>BROADCASTING</li>
+             * <li>CLUSTERING</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BROADCASTING</p>
              */
             public Builder messageModel(String messageModel) {
                 this.messageModel = messageModel;
@@ -320,7 +369,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the client.
+             * <p>The version of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -334,9 +386,15 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConsumerConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConsumerConnectionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("connections")
-        private java.util.List < Connections> connections;
+        private java.util.List<Connections> connections;
 
         @com.aliyun.core.annotation.NameInMap("consumerGroupId")
         private String consumerGroupId;
@@ -365,7 +423,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         /**
          * @return connections
          */
-        public java.util.List < Connections> getConnections() {
+        public java.util.List<Connections> getConnections() {
             return this.connections;
         }
 
@@ -391,21 +449,24 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Connections> connections; 
+            private java.util.List<Connections> connections; 
             private String consumerGroupId; 
             private String instanceId; 
             private String regionId; 
 
             /**
-             * The client connection list
+             * <p>The client connection list</p>
              */
-            public Builder connections(java.util.List < Connections> connections) {
+            public Builder connections(java.util.List<Connections> connections) {
                 this.connections = connections;
                 return this;
             }
 
             /**
-             * The consumer group ID.
+             * <p>The consumer group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CID-TEST</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -413,7 +474,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -421,7 +485,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * <p>The ID of the region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

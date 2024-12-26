@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTopicSubscriptionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTopicSubscriptionsResponseBody</p>
@@ -15,7 +21,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("dynamicCode")
     private String dynamicCode;
@@ -64,7 +70,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -112,7 +118,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private Integer httpStatusCode; 
@@ -121,7 +127,10 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingInstanceId</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,15 +138,18 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The dynamic error code.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +157,10 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +168,10 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +179,10 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The instance cannot be found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +190,10 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92A9BE4E-B794-50C8-979C-0456E4D32943</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +201,10 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +217,12 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTopicSubscriptionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTopicSubscriptionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consistency")
         private String consistency;
@@ -289,11 +322,14 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
             private String topicName; 
 
             /**
-             * Indicates whether message consumption is consistent. Valid values:
-             * <p>
+             * <p>Indicates whether message consumption is consistent. Valid values:</p>
+             * <ul>
+             * <li>false: Unconsumed messages exist in the consumer group.</li>
+             * <li>true: No unconsumed message exists in the consumer group.</li>
+             * </ul>
              * 
-             * *   false: Unconsumed messages exist in the consumer group.
-             * *   true: No unconsumed message exists in the consumer group.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder consistency(String consistency) {
                 this.consistency = consistency;
@@ -301,7 +337,10 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * The consumer group ID.
+             * <p>The consumer group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CID-TEST</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -309,7 +348,12 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * The filter expression.
+             * <p>The filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder filterExpression(String filterExpression) {
                 this.filterExpression = filterExpression;
@@ -317,7 +361,10 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the filter expression. Valid values: SQL, TAG, and UNSPECIFIED. The value SQL indicates that messages are filtered by using SQL expressions. The value TAG indicates that messages are filtered by using tags. The value UNSPECIFIED indicates that no filter expression type is specified.
+             * <p>The type of the filter expression. Valid values: SQL, TAG, and UNSPECIFIED. The value SQL indicates that messages are filtered by using SQL expressions. The value TAG indicates that messages are filtered by using tags. The value UNSPECIFIED indicates that no filter expression type is specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL</p>
              */
             public Builder filterExpressionType(String filterExpressionType) {
                 this.filterExpressionType = filterExpressionType;
@@ -325,7 +372,10 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * The consumption mode. Valid values: BROADCASTING and CLUSTERING.
+             * <p>The consumption mode. Valid values: BROADCASTING and CLUSTERING.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BROADCASTING</p>
              */
             public Builder messageModel(String messageModel) {
                 this.messageModel = messageModel;
@@ -333,7 +383,10 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * The subscription status. Valid values: ONLINE and OFFLINE.
+             * <p>The subscription status. Valid values: ONLINE and OFFLINE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder subscriptionStatus(String subscriptionStatus) {
                 this.subscriptionStatus = subscriptionStatus;
@@ -341,7 +394,10 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * The topic name.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topic_test</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;

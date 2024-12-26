@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceResponseBody</p>
@@ -121,7 +127,10 @@ public class GetInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingInstanceId</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +138,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -137,7 +146,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error code.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +157,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +168,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +179,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter instanceId is mandatory for this action .</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +190,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05AB7FBD-F1D3-5D87-BF78-BD782249****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +201,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +217,12 @@ public class GetInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class AccountInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("username")
         private String username;
@@ -217,7 +250,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * The username of the instance. If you access a ApsaraMQ for RocketMQ instance over the Internet, you must configure the username and password of the instance in the SDK code for authentication.
+             * <p>The username of the instance. If you access a ApsaraMQ for RocketMQ instance over the Internet, you must configure the username and password of the instance in the SDK code for authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6W0xz2uPfiwp****</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -231,13 +267,19 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class AclInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aclType")
         @Deprecated
         private String aclType;
 
         @com.aliyun.core.annotation.NameInMap("aclTypes")
-        private java.util.List < String > aclTypes;
+        private java.util.List<String> aclTypes;
 
         @com.aliyun.core.annotation.NameInMap("defaultVpcAuthFree")
         private Boolean defaultVpcAuthFree;
@@ -266,7 +308,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return aclTypes
          */
-        public java.util.List < String > getAclTypes() {
+        public java.util.List<String> getAclTypes() {
             return this.aclTypes;
         }
 
@@ -279,18 +321,21 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aclType; 
-            private java.util.List < String > aclTypes; 
+            private java.util.List<String> aclTypes; 
             private Boolean defaultVpcAuthFree; 
 
             /**
-             * The authentication type of the instance. This parameter is no longer in use. We recommend that you configure aclTypes.
-             * <p>
+             * <p>The authentication type of the instance. This parameter is no longer in use. We recommend that you configure aclTypes.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>default: intelligent identity authentication</p>
+             * </li>
+             * <li><p>apache_acl:access control list (ACL) identity authentication**</p>
+             * </li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * - default: intelligent identity authentication
-             * 
-             * - apache_acl:access control list (ACL) identity authentication**
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -298,34 +343,34 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication types of the instance.
+             * <p>The authentication types of the instance.</p>
              */
-            public Builder aclTypes(java.util.List < String > aclTypes) {
+            public Builder aclTypes(java.util.List<String> aclTypes) {
                 this.aclTypes = aclTypes;
                 return this;
             }
 
             /**
-             * Indicates whether the authentication-free in VPCs feature is enabled.
-             * <p>
+             * <p>Indicates whether the authentication-free in VPCs feature is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>true</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   true
+             * <!-- -->
+             * </li>
+             * <li><p>false</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             * *   false
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultVpcAuthFree(Boolean defaultVpcAuthFree) {
                 this.defaultVpcAuthFree = defaultVpcAuthFree;
@@ -339,6 +384,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class ExtConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aclType")
         private String aclType;
@@ -462,12 +513,14 @@ public class GetInstanceResponseBody extends TeaModel {
             private Boolean supportAutoScaling; 
 
             /**
-             * The authentication type of the instance.
-             * <p>
+             * <p>The authentication type of the instance.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>default: intelligent authentication</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   default: intelligent authentication
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -475,15 +528,16 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable the elastic TPS feature for the instance.
-             * <p>
+             * <p>Specifies whether to enable the elastic TPS feature for the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: enable</li>
+             * <li>false: disable</li>
+             * </ul>
+             * <p>This parameter is valid only when the supportAutoScaling parameter is set to enable.</p>
              * 
-             * Valid values:
-             * 
-             * *   true: enable
-             * *   false: disable
-             * 
-             * This parameter is valid only when the supportAutoScaling parameter is set to enable.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoScaling(Boolean autoScaling) {
                 this.autoScaling = autoScaling;
@@ -491,7 +545,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet bandwidth. Unit: MB/s.
+             * <p>The Internet bandwidth. Unit: MB/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder flowOutBandwidth(Integer flowOutBandwidth) {
                 this.flowOutBandwidth = flowOutBandwidth;
@@ -499,14 +556,16 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method for Internet usage.
-             * <p>
+             * <p>The metering method of Internet usage.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PayByTraffic: pay-by-traffic</li>
+             * <li>paybybandwidth: pay-by-bandwidth</li>
+             * <li>uninvolved: N/A</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   PayByTraffic: pay-by-traffic
-             * *   paybybandwidth: pay-by-bandwidth
-             * *   uninvolved: N/A
+             * <strong>example:</strong>
+             * <p>payByBandwidth</p>
              */
             public Builder flowOutType(String flowOutType) {
                 this.flowOutType = flowOutType;
@@ -514,15 +573,16 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable the Internet access feature.
-             * <p>
+             * <p>Indicates whether Internet access is enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>enable</li>
+             * <li>disable</li>
+             * </ul>
+             * <p>By default, you can access ApsaraMQ for RocketMQ instances in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see <a href="https://help.aliyun.com/document_detail/427240.html">Internet access fees</a>.</p>
              * 
-             * Valid values:
-             * 
-             * *   enable
-             * *   disable
-             * 
-             * By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](~~427240~~).
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder internetSpec(String internetSpec) {
                 this.internetSpec = internetSpec;
@@ -530,12 +590,12 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of messages. Unit: hours.
-             * <p>
+             * <p>The retention period of messages. Unit: hours.</p>
+             * <p>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section in <a href="https://help.aliyun.com/document_detail/440347.html">Usage limits</a>.</p>
+             * <p>The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see <a href="https://help.aliyun.com/document_detail/427238.html">Storage fee</a>.</p>
              * 
-             * For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](~~440347~~).
-             * 
-             * The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](~~427238~~).
+             * <strong>example:</strong>
+             * <p>72</p>
              */
             public Builder messageRetentionTime(Integer messageRetentionTime) {
                 this.messageRetentionTime = messageRetentionTime;
@@ -543,7 +603,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](~~444715~~).
+             * <p>The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance specifications</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq.s2.2xlarge</p>
              */
             public Builder msgProcessSpec(String msgProcessSpec) {
                 this.msgProcessSpec = msgProcessSpec;
@@ -551,7 +614,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ratio between sent messages and received messages in the instance.
+             * <p>The ratio between sent messages and received messages in the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder sendReceiveRatio(Float sendReceiveRatio) {
                 this.sendReceiveRatio = sendReceiveRatio;
@@ -559,17 +625,19 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether the elastic TPS feature is supported by the instance.
-             * <p>
+             * <p>Specifies whether the elastic TPS feature is supported by the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: enable</li>
+             * <li>false: disable</li>
+             * </ul>
+             * <p>After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see <a href="https://help.aliyun.com/document_detail/427237.html">Computing fee</a>.</p>
+             * <blockquote>
+             * <p>The elastic TPS feature is supported only by specific instance editions. For more information, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance specifications</a>.</p>
+             * </blockquote>
              * 
-             * Valid values:
-             * 
-             * *   true: enable
-             * *   false: disable
-             * 
-             * After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](~~427237~~).
-             * 
-             * > The elastic TPS feature is supported only by specific instance editions. For more information, see [Instance specifications](~~444715~~).
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportAutoScaling(Boolean supportAutoScaling) {
                 this.supportAutoScaling = supportAutoScaling;
@@ -583,6 +651,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class InstanceQuotas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("freeCount")
         private Double freeCount;
@@ -646,7 +720,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private Double usedCount; 
 
             /**
-             * The number of topics that are free of charge on the instance.
+             * <p>The number of topics that are free of charge on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder freeCount(Double freeCount) {
                 this.freeCount = freeCount;
@@ -654,12 +731,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The quota name.
-             * <p>
+             * <p>The quota name.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>TOPIC_COUNT: the number of topics that can be created on the instance</li>
+             * </ul>
              * 
-             * Valid value:
-             * 
-             * *   TOPIC_COUNT: the number of topics that can be created on the instance
+             * <strong>example:</strong>
+             * <p>TOPIC_COUNT</p>
              */
             public Builder quotaName(String quotaName) {
                 this.quotaName = quotaName;
@@ -667,7 +746,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of topics on the instance.
+             * <p>The total number of topics on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Double totalCount) {
                 this.totalCount = totalCount;
@@ -675,7 +757,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of used topics on the instance.
+             * <p>The number of used topics on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedCount(Double usedCount) {
                 this.usedCount = usedCount;
@@ -689,6 +774,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Endpoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endpointType")
         private String endpointType;
@@ -697,7 +788,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String endpointUrl;
 
         @com.aliyun.core.annotation.NameInMap("ipWhitelist")
-        private java.util.List < String > ipWhitelist;
+        private java.util.List<String> ipWhitelist;
 
         private Endpoints(Builder builder) {
             this.endpointType = builder.endpointType;
@@ -730,23 +821,25 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return ipWhitelist
          */
-        public java.util.List < String > getIpWhitelist() {
+        public java.util.List<String> getIpWhitelist() {
             return this.ipWhitelist;
         }
 
         public static final class Builder {
             private String endpointType; 
             private String endpointUrl; 
-            private java.util.List < String > ipWhitelist; 
+            private java.util.List<String> ipWhitelist; 
 
             /**
-             * The type of the endpoint that is used to access the instance.
-             * <p>
+             * <p>The type of the endpoint that is used to access the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>TCP_VPC: VPC endpoint</li>
+             * <li>TCP_INTERNET: public endpoint</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * - TCP_VPC: VPC endpoint
-             * - TCP_INTERNET:public endpoint
+             * <strong>example:</strong>
+             * <p>TCP_INTERNET</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -754,7 +847,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to access the instance.
+             * <p>The endpoint that is used to access the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-c4d2tbk****-vpc.cn-hangzhou.rmq.aliyuncs.com:8080</p>
              */
             public Builder endpointUrl(String endpointUrl) {
                 this.endpointUrl = endpointUrl;
@@ -762,15 +858,17 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use the public endpoint to access the instance.
-             * <p>
+             * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use the public endpoint to access the instance.</p>
+             * <ul>
+             * <li>If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
+             * <li>If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
+             * </ul>
+             * <p>We recommend that you configure internetInfo.ipWhitelist instead of this parameter.</p>
              * 
-             * *   If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
-             * *   If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
-             * 
-             * We recommend that you configure internetInfo.ipWhitelist instead of this parameter.
+             * <strong>example:</strong>
+             * <p>192.168.x.x/24</p>
              */
-            public Builder ipWhitelist(java.util.List < String > ipWhitelist) {
+            public Builder ipWhitelist(java.util.List<String> ipWhitelist) {
                 this.ipWhitelist = ipWhitelist;
                 return this;
             }
@@ -782,6 +880,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class InternetInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flowOutBandwidth")
         private Integer flowOutBandwidth;
@@ -793,7 +897,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String internetSpec;
 
         @com.aliyun.core.annotation.NameInMap("ipWhitelist")
-        private java.util.List < String > ipWhitelist;
+        private java.util.List<String> ipWhitelist;
 
         private InternetInfo(Builder builder) {
             this.flowOutBandwidth = builder.flowOutBandwidth;
@@ -834,7 +938,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return ipWhitelist
          */
-        public java.util.List < String > getIpWhitelist() {
+        public java.util.List<String> getIpWhitelist() {
             return this.ipWhitelist;
         }
 
@@ -842,10 +946,13 @@ public class GetInstanceResponseBody extends TeaModel {
             private Integer flowOutBandwidth; 
             private String flowOutType; 
             private String internetSpec; 
-            private java.util.List < String > ipWhitelist; 
+            private java.util.List<String> ipWhitelist; 
 
             /**
-             * The Internet bandwidth. Unit: MB/s.
+             * <p>The Internet bandwidth. Unit: MB/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder flowOutBandwidth(Integer flowOutBandwidth) {
                 this.flowOutBandwidth = flowOutBandwidth;
@@ -853,13 +960,15 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method for Internet usage.
-             * <p>
+             * <p>The metering method for Internet usage.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PayByBandwidth: pay-by-bandwidth. If the Internet access feature is enabled, specify this value for the parameter.</li>
+             * <li>uninvolved: N/A. If the Internet access feature is not enabled, specify this value for the parameter.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   PayByBandwidth: pay-by-bandwidth. If the Internet access feature is enabled, specify this value for the parameter.
-             * *   uninvolved: N/A. If the Internet access feature is not enabled, specify this value for the parameter.
+             * <strong>example:</strong>
+             * <p>payByBandwidth</p>
              */
             public Builder flowOutType(String flowOutType) {
                 this.flowOutType = flowOutType;
@@ -867,15 +976,16 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable the Internet access feature.
-             * <p>
+             * <p>Specifies whether to enable the Internet access feature.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>enable</li>
+             * <li>disable</li>
+             * </ul>
+             * <p>By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see <a href="https://help.aliyun.com/document_detail/427240.html">Internet access fee</a>.</p>
              * 
-             * Valid values:
-             * 
-             * *   enable
-             * *   disable
-             * 
-             * By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](~~427240~~).
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder internetSpec(String internetSpec) {
                 this.internetSpec = internetSpec;
@@ -883,13 +993,13 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker.
-             * <p>
-             * 
-             * *   If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
-             * *   If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.
+             * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker.</p>
+             * <ul>
+             * <li>If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
+             * <li>If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.</li>
+             * </ul>
              */
-            public Builder ipWhitelist(java.util.List < String > ipWhitelist) {
+            public Builder ipWhitelist(java.util.List<String> ipWhitelist) {
                 this.ipWhitelist = ipWhitelist;
                 return this;
             }
@@ -901,6 +1011,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class VSwitches extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("vSwitchId")
         private String vSwitchId;
@@ -940,7 +1056,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf6gwtbn6etadpvz7****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -948,7 +1067,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -962,6 +1084,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class VpcInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("securityGroupIds")
         private String securityGroupIds;
@@ -971,7 +1099,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String vSwitchId;
 
         @com.aliyun.core.annotation.NameInMap("vSwitches")
-        private java.util.List < VSwitches> vSwitches;
+        private java.util.List<VSwitches> vSwitches;
 
         @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
@@ -1008,7 +1136,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return vSwitches
          */
-        public java.util.List < VSwitches> getVSwitches() {
+        public java.util.List<VSwitches> getVSwitches() {
             return this.vSwitches;
         }
 
@@ -1022,11 +1150,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String securityGroupIds; 
             private String vSwitchId; 
-            private java.util.List < VSwitches> vSwitches; 
+            private java.util.List<VSwitches> vSwitches; 
             private String vpcId; 
 
             /**
-             * The security group ID.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-hp35r2hc3a3sv8q2sb16</p>
              */
             public Builder securityGroupIds(String securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -1034,7 +1165,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch with which the instance is associated.
+             * <p>The ID of the vSwitch with which the instance is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf6gwtbn6etadpvz7****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1042,15 +1176,18 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitches.
+             * <p>The vSwitches.</p>
              */
-            public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
+            public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
                 this.vSwitches = vSwitches;
                 return this;
             }
 
             /**
-             * The ID of the VPC with which the instance is associated.
+             * <p>The ID of the VPC with which the instance is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6of9452b2pba82c****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1064,9 +1201,15 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class NetworkInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endpoints")
-        private java.util.List < Endpoints> endpoints;
+        private java.util.List<Endpoints> endpoints;
 
         @com.aliyun.core.annotation.NameInMap("internetInfo")
         private InternetInfo internetInfo;
@@ -1091,7 +1234,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return endpoints
          */
-        public java.util.List < Endpoints> getEndpoints() {
+        public java.util.List<Endpoints> getEndpoints() {
             return this.endpoints;
         }
 
@@ -1110,20 +1253,20 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Endpoints> endpoints; 
+            private java.util.List<Endpoints> endpoints; 
             private InternetInfo internetInfo; 
             private VpcInfo vpcInfo; 
 
             /**
-             * The information about endpoints.
+             * <p>The endpoints.</p>
              */
-            public Builder endpoints(java.util.List < Endpoints> endpoints) {
+            public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
                 return this;
             }
 
             /**
-             * The information about the Internet.
+             * <p>The information about the Internet.</p>
              */
             public Builder internetInfo(InternetInfo internetInfo) {
                 this.internetInfo = internetInfo;
@@ -1131,7 +1274,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) information.
+             * <p>The virtual private cloud (VPC) information.</p>
              */
             public Builder vpcInfo(VpcInfo vpcInfo) {
                 this.vpcInfo = vpcInfo;
@@ -1145,6 +1288,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class ProductInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoScaling")
         private Boolean autoScaling;
@@ -1158,6 +1307,12 @@ public class GetInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("sendReceiveRatio")
         private Float sendReceiveRatio;
 
+        @com.aliyun.core.annotation.NameInMap("storageEncryption")
+        private Boolean storageEncryption;
+
+        @com.aliyun.core.annotation.NameInMap("storageSecretKey")
+        private String storageSecretKey;
+
         @com.aliyun.core.annotation.NameInMap("supportAutoScaling")
         private Boolean supportAutoScaling;
 
@@ -1169,6 +1324,8 @@ public class GetInstanceResponseBody extends TeaModel {
             this.messageRetentionTime = builder.messageRetentionTime;
             this.msgProcessSpec = builder.msgProcessSpec;
             this.sendReceiveRatio = builder.sendReceiveRatio;
+            this.storageEncryption = builder.storageEncryption;
+            this.storageSecretKey = builder.storageSecretKey;
             this.supportAutoScaling = builder.supportAutoScaling;
             this.traceOn = builder.traceOn;
         }
@@ -1210,6 +1367,20 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageEncryption
+         */
+        public Boolean getStorageEncryption() {
+            return this.storageEncryption;
+        }
+
+        /**
+         * @return storageSecretKey
+         */
+        public String getStorageSecretKey() {
+            return this.storageSecretKey;
+        }
+
+        /**
          * @return supportAutoScaling
          */
         public Boolean getSupportAutoScaling() {
@@ -1228,19 +1399,22 @@ public class GetInstanceResponseBody extends TeaModel {
             private Integer messageRetentionTime; 
             private String msgProcessSpec; 
             private Float sendReceiveRatio; 
+            private Boolean storageEncryption; 
+            private String storageSecretKey; 
             private Boolean supportAutoScaling; 
             private Boolean traceOn; 
 
             /**
-             * Specifies whether to enable the elastic TPS feature for the instance.
-             * <p>
+             * <p>Specifies whether to enable the elastic TPS feature for the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: enable</li>
+             * <li>false: disable</li>
+             * </ul>
+             * <p>This parameter is valid only when the supportAutoScaling parameter is set to enable.</p>
              * 
-             * Valid values:
-             * 
-             * *   true: enable
-             * *   false: disable
-             * 
-             * This parameter is valid only when the supportAutoScaling parameter is set to enable.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoScaling(Boolean autoScaling) {
                 this.autoScaling = autoScaling;
@@ -1248,12 +1422,12 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of messages. Unit: hours.
-             * <p>
+             * <p>The retention period of messages. Unit: hours.</p>
+             * <p>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section in <a href="https://help.aliyun.com/document_detail/440347.html">Usage limits</a>.</p>
+             * <p>The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see <a href="https://help.aliyun.com/document_detail/427238.html">Storage fee</a>.</p>
              * 
-             * For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](~~440347~~).
-             * 
-             * The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](~~427238~~).
+             * <strong>example:</strong>
+             * <p>72</p>
              */
             public Builder messageRetentionTime(Integer messageRetentionTime) {
                 this.messageRetentionTime = messageRetentionTime;
@@ -1261,7 +1435,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](~~444715~~).
+             * <p>The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance specifications</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq.s2.2xlarge</p>
              */
             public Builder msgProcessSpec(String msgProcessSpec) {
                 this.msgProcessSpec = msgProcessSpec;
@@ -1269,7 +1446,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ratio between sent messages and received messages in the instance.
+             * <p>The ratio between sent messages and received messages in the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder sendReceiveRatio(Float sendReceiveRatio) {
                 this.sendReceiveRatio = sendReceiveRatio;
@@ -1277,17 +1457,41 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable the elastic TPS feature for the instance.
-             * <p>
+             * <p>Indicates whether storage encryption is enabled.</p>
              * 
-             * Valid values:
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder storageEncryption(Boolean storageEncryption) {
+                this.storageEncryption = storageEncryption;
+                return this;
+            }
+
+            /**
+             * <p>The storage encryption key.</p>
              * 
-             * *   true: enable
-             * *   false: disable
+             * <strong>example:</strong>
+             * <p>xxxxx</p>
+             */
+            public Builder storageSecretKey(String storageSecretKey) {
+                this.storageSecretKey = storageSecretKey;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable the elastic TPS feature for the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>true: enable</li>
+             * <li>false: disable</li>
+             * </ul>
+             * <p>After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see <a href="https://help.aliyun.com/document_detail/427237.html">Computing fee</a>.</p>
+             * <blockquote>
+             * <p>The elastic TPS feature is supported by only specific instance editions. For more information, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance specifications</a>.</p>
+             * </blockquote>
              * 
-             * After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](~~427237~~).
-             * 
-             * > The elastic TPS feature is supported by only specific instance editions. For more information, see [Instance specifications](~~444715~~).
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportAutoScaling(Boolean supportAutoScaling) {
                 this.supportAutoScaling = supportAutoScaling;
@@ -1295,13 +1499,15 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the message trace feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the message trace feature is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.</p>
              * 
-             * *   true
-             * *   false
-             * 
-             * This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder traceOn(Boolean traceOn) {
                 this.traceOn = traceOn;
@@ -1315,6 +1521,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Software extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("maintainTime")
         private String maintainTime;
@@ -1366,7 +1578,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String upgradeMethod; 
 
             /**
-             * The period of upgrade time.
+             * <p>The period of upgrade time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:00-06:00</p>
              */
             public Builder maintainTime(String maintainTime) {
                 this.maintainTime = maintainTime;
@@ -1374,7 +1589,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The version of software.
+             * <p>The version of software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.0-rmq-20230619-1</p>
              */
             public Builder softwareVersion(String softwareVersion) {
                 this.softwareVersion = softwareVersion;
@@ -1382,14 +1600,17 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The upgrade method.
-             * <p>
+             * <p>The upgrade method.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Auto: automatic upgrade</p>
+             * </li>
+             * <li><p>Manual: manual upgrade</p>
+             * </li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * - Auto: automatic upgrade
-             * 
-             * - Manual: manual upgrade
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder upgradeMethod(String upgradeMethod) {
                 this.upgradeMethod = upgradeMethod;
@@ -1403,6 +1624,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         private String key;
@@ -1442,7 +1669,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the resource.
+             * <p>The tag key of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1450,7 +1680,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the resource.
+             * <p>The tag value of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1464,6 +1697,12 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountInfo")
         private AccountInfo accountInfo;
@@ -1497,7 +1736,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String instanceName;
 
         @com.aliyun.core.annotation.NameInMap("instanceQuotas")
-        private java.util.List < InstanceQuotas> instanceQuotas;
+        private java.util.List<InstanceQuotas> instanceQuotas;
 
         @com.aliyun.core.annotation.NameInMap("networkInfo")
         private NetworkInfo networkInfo;
@@ -1539,7 +1778,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String subSeriesCode;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("topicCount")
         private Long topicCount;
@@ -1662,7 +1901,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return instanceQuotas
          */
-        public java.util.List < InstanceQuotas> getInstanceQuotas() {
+        public java.util.List<InstanceQuotas> getInstanceQuotas() {
             return this.instanceQuotas;
         }
 
@@ -1760,7 +1999,7 @@ public class GetInstanceResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -1796,7 +2035,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private Long groupCount; 
             private String instanceId; 
             private String instanceName; 
-            private java.util.List < InstanceQuotas> instanceQuotas; 
+            private java.util.List<InstanceQuotas> instanceQuotas; 
             private NetworkInfo networkInfo; 
             private String paymentType; 
             private ProductInfo productInfo; 
@@ -1810,13 +2049,13 @@ public class GetInstanceResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private String subSeriesCode; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long topicCount; 
             private String updateTime; 
             private String userId; 
 
             /**
-             * The account information.
+             * <p>The account information.</p>
              */
             public Builder accountInfo(AccountInfo accountInfo) {
                 this.accountInfo = accountInfo;
@@ -1824,7 +2063,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about access control.
+             * <p>The information about access control.</p>
              */
             public Builder aclInfo(AclInfo aclInfo) {
                 this.aclInfo = aclInfo;
@@ -1832,7 +2071,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The business ID (BID) of the commodity.
+             * <p>The business ID (BID) of the commodity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26842</p>
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -1840,7 +2082,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The commodity code of the instance. The commodity code of a ApsaraMQ for RocketMQ 5.0 instance has a similar format as ons_rmqsub_public_cn.
+             * <p>The commodity code of the instance. The commodity code of a ApsaraMQ for RocketMQ 5.0 instance has a similar format as ons_rmqsub_public_cn.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ons_rmqsub_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -1848,7 +2093,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1856,7 +2104,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires.
+             * <p>The time when the instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-01 00:00:00</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -1864,7 +2115,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The extended configurations. We recommend you configure productInfo, internetInfo, or aclInfo instead of this parameter.
+             * <p>The extended configurations. We recommend you configure productInfo, internetInfo, or aclInfo instead of this parameter.</p>
              */
             public Builder extConfig(ExtConfig extConfig) {
                 this.extConfig = extConfig;
@@ -1872,7 +2123,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of groups.
+             * <p>The number of groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder groupCount(Long groupCount) {
                 this.groupCount = groupCount;
@@ -1880,7 +2134,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1888,7 +2145,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test instance</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1896,15 +2156,15 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance quotas.
+             * <p>The instance quotas.</p>
              */
-            public Builder instanceQuotas(java.util.List < InstanceQuotas> instanceQuotas) {
+            public Builder instanceQuotas(java.util.List<InstanceQuotas> instanceQuotas) {
                 this.instanceQuotas = instanceQuotas;
                 return this;
             }
 
             /**
-             * The network information.
+             * <p>The network information.</p>
              */
             public Builder networkInfo(NetworkInfo networkInfo) {
                 this.networkInfo = networkInfo;
@@ -1912,13 +2172,15 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance.
-             * <p>
+             * <p>The billing method of the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PayAsYouGo</li>
+             * <li>Subscription</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   PayAsYouGo: pay-as-you-go
-             * *   Subscription
+             * <strong>example:</strong>
+             * <p>Subscription</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -1926,7 +2188,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The extended configurations of the instance.
+             * <p>The extended configurations of the instance.</p>
              */
             public Builder productInfo(ProductInfo productInfo) {
                 this.productInfo = productInfo;
@@ -1934,7 +2196,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * <p>The ID of the region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1942,7 +2207,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was released.
+             * <p>The time when the instance was released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-07 00:00:00</p>
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -1950,7 +2218,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is remark for instance.</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -1958,7 +2229,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm3tmjruyribi</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1966,14 +2240,16 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The primary edition of the instance. For information about the differences between primary edition instances, see [Instance selection](~~444722~~).
-             * <p>
+             * <p>The primary edition of the instance. For information about the differences between primary edition instances, see <a href="https://help.aliyun.com/document_detail/444722.html">Instance selection</a>.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>standard: Standard Edition</li>
+             * <li>ultimate: Enterprise Platinum Edition</li>
+             * <li>professional: Professional Edition</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   standard: Standard Edition
-             * *   ultimate: Enterprise Platinum Edition
-             * *   professional: Professional Edition
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder seriesCode(String seriesCode) {
                 this.seriesCode = seriesCode;
@@ -1981,7 +2257,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.
+             * <p>The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq</p>
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -1989,7 +2268,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance software information.
+             * <p>The instance software information.</p>
              */
             public Builder software(Software software) {
                 this.software = software;
@@ -1997,7 +2276,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was started.
+             * <p>The time when the instance was started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -2005,16 +2287,18 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance.
-             * <p>
+             * <p>The status of the instance.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>RELEASED</li>
+             * <li>RUNNING</li>
+             * <li>STOPPED</li>
+             * <li>CHANGING</li>
+             * <li>CREATING</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   RELEASED
-             * *   RUNNING
-             * *   STOPPED
-             * *   CHANGING
-             * *   CREATING
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2022,13 +2306,15 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The sub-category edition of the instance. For information about the differences between sub-category edition instances, see [Instance selection](~~444722~~).
-             * <p>
+             * <p>The sub-category edition of the instance. For information about the differences between sub-category edition instances, see <a href="https://help.aliyun.com/document_detail/444722.html">Instance selection</a>.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>cluster_ha: Cluster High-availability Edition</li>
+             * <li>single_node: Standalone Edition</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   cluster_ha: Cluster High-availability Edition
-             * *   single_node: Standalone Edition
+             * <strong>example:</strong>
+             * <p>cluster_ha</p>
              */
             public Builder subSeriesCode(String subSeriesCode) {
                 this.subSeriesCode = subSeriesCode;
@@ -2036,15 +2322,18 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The resource tags.
+             * <p>The resource tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The number of topics.
+             * <p>The number of topics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder topicCount(Long topicCount) {
                 this.topicCount = topicCount;
@@ -2052,7 +2341,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was last modified.
+             * <p>The time when the instance was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-02 00:00:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -2060,7 +2352,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who owns the instance.
+             * <p>The ID of the user who owns the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111111111111</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTracesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTracesResponseBody</p>
@@ -121,7 +127,10 @@ public class ListTracesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +138,7 @@ public class ListTracesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -137,7 +146,10 @@ public class ListTracesResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +157,10 @@ public class ListTracesResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +168,10 @@ public class ListTracesResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +179,10 @@ public class ListTracesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter instanceId is mandatory for this action .</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +190,10 @@ public class ListTracesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDFF77E1-1ED1-5389-B6A8-651D9433BBE5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +201,10 @@ public class ListTracesResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +217,12 @@ public class ListTracesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTracesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTracesResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bornTime")
         private String bornTime;
@@ -201,7 +234,7 @@ public class ListTracesResponseBody extends TeaModel {
         private String messageId;
 
         @com.aliyun.core.annotation.NameInMap("messageKeys")
-        private java.util.List < String > messageKeys;
+        private java.util.List<String> messageKeys;
 
         @com.aliyun.core.annotation.NameInMap("messageTag")
         private String messageTag;
@@ -254,7 +287,7 @@ public class ListTracesResponseBody extends TeaModel {
         /**
          * @return messageKeys
          */
-        public java.util.List < String > getMessageKeys() {
+        public java.util.List<String> getMessageKeys() {
             return this.messageKeys;
         }
 
@@ -283,13 +316,16 @@ public class ListTracesResponseBody extends TeaModel {
             private String bornTime; 
             private String instanceId; 
             private String messageId; 
-            private java.util.List < String > messageKeys; 
+            private java.util.List<String> messageKeys; 
             private String messageTag; 
             private String regionId; 
             private String topicName; 
 
             /**
-             * bornTime.
+             * <p>Message born time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 12:17:08</p>
              */
             public Builder bornTime(String bornTime) {
                 this.bornTime = bornTime;
@@ -297,7 +333,10 @@ public class ListTracesResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -305,7 +344,10 @@ public class ListTracesResponseBody extends TeaModel {
             }
 
             /**
-             * messageId.
+             * <p>Message id.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7F00000100207A4F0F294A938F7807AE</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -313,15 +355,18 @@ public class ListTracesResponseBody extends TeaModel {
             }
 
             /**
-             * messageKeys.
+             * <p>Message keys.</p>
              */
-            public Builder messageKeys(java.util.List < String > messageKeys) {
+            public Builder messageKeys(java.util.List<String> messageKeys) {
                 this.messageKeys = messageKeys;
                 return this;
             }
 
             /**
-             * messageTag.
+             * <p>Message tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder messageTag(String messageTag) {
                 this.messageTag = messageTag;
@@ -329,7 +374,10 @@ public class ListTracesResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -337,7 +385,10 @@ public class ListTracesResponseBody extends TeaModel {
             }
 
             /**
-             * topicName.
+             * <p>The name of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topic_test</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -351,9 +402,15 @@ public class ListTracesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTracesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTracesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("list")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Long pageNumber;
@@ -382,7 +439,7 @@ public class ListTracesResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -408,21 +465,24 @@ public class ListTracesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
 
             /**
-             * list.
+             * <p>Trace list.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * pageNumber.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -430,7 +490,10 @@ public class ListTracesResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -438,7 +501,10 @@ public class ListTracesResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

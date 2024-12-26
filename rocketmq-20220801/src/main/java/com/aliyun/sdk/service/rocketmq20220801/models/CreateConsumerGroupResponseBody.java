@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateConsumerGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateConsumerGroupResponseBody</p>
@@ -121,7 +127,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidConsumerGroupId</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +138,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The result data that is returned.
+         * <p>The result data that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -137,7 +149,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error code.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ConsumerGroupId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +160,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>consumerGroupId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +171,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +182,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter consumerGroupId is invalid.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +193,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
+         * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +204,10 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

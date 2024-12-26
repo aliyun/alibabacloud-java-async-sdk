@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTopicSubscriptionsRequest} extends {@link RequestModel}
  *
  * <p>ListTopicSubscriptionsRequest</p>
@@ -69,7 +75,11 @@ public class ListTopicSubscriptionsRequest extends Request {
         } 
 
         /**
-         * The ID of the ApsaraMQ for RocketMQ instance.
+         * <p>The ID of the ApsaraMQ for RocketMQ instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-zpr34udri0w</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +88,11 @@ public class ListTopicSubscriptionsRequest extends Request {
         }
 
         /**
-         * The name of the topic on the ApsaraMQ for RocketMQ instance.
+         * <p>The name of the topic on the ApsaraMQ for RocketMQ instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev4-HMH_INSURANCE_NOMAL_TOPIC</p>
          */
         public Builder topicName(String topicName) {
             this.putPathParameter("topicName", topicName);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateInstanceAccountRequest} extends {@link RequestModel}
  *
  * <p>UpdateInstanceAccountRequest</p>
@@ -96,7 +102,11 @@ public class UpdateInstanceAccountRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -105,7 +115,10 @@ public class UpdateInstanceAccountRequest extends Request {
         }
 
         /**
-         * username.
+         * <p>The username of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder username(String username) {
             this.putPathParameter("username", username);
@@ -114,7 +127,15 @@ public class UpdateInstanceAccountRequest extends Request {
         }
 
         /**
-         * accountStatus.
+         * <p>The status of the account.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DISABLE</li>
+         * <li>ENABLE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
          */
         public Builder accountStatus(String accountStatus) {
             this.putQueryParameter("accountStatus", accountStatus);
@@ -123,7 +144,10 @@ public class UpdateInstanceAccountRequest extends Request {
         }
 
         /**
-         * password.
+         * <p>The password of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("password", password);

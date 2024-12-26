@@ -12,16 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UntagResourcesResponseBody} extends {@link TeaModel}
+ * {@link AddDisasterRecoveryItemResponseBody} extends {@link TeaModel}
  *
- * <p>UntagResourcesResponseBody</p>
+ * <p>AddDisasterRecoveryItemResponseBody</p>
  */
-public class UntagResourcesResponseBody extends TeaModel {
+public class AddDisasterRecoveryItemResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("accessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private Boolean data;
+    private Long data;
 
     @com.aliyun.core.annotation.NameInMap("dynamicCode")
     private String dynamicCode;
@@ -41,7 +44,8 @@ public class UntagResourcesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private UntagResourcesResponseBody(Builder builder) {
+    private AddDisasterRecoveryItemResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.dynamicCode = builder.dynamicCode;
@@ -56,8 +60,15 @@ public class UntagResourcesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UntagResourcesResponseBody create() {
+    public static AddDisasterRecoveryItemResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -70,7 +81,7 @@ public class UntagResourcesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Boolean getData() {
+    public Long getData() {
         return this.data;
     }
 
@@ -117,8 +128,9 @@ public class UntagResourcesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
-        private Boolean data; 
+        private Long data; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private Integer httpStatusCode; 
@@ -127,10 +139,15 @@ public class UntagResourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * <p>The error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Topic.NotFound</p>
+         * accessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -138,21 +155,15 @@ public class UntagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * data.
          */
-        public Builder data(Boolean data) {
+        public Builder data(Long data) {
             this.data = data;
             return this;
         }
 
         /**
-         * <p>The dynamic error code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>InstanceId</p>
+         * dynamicCode.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -160,10 +171,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>instanceId</p>
+         * dynamicMessage.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -171,10 +179,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * httpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,10 +187,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Parameter deliveryOrderType is invalid.</p>
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -193,10 +195,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>A07B41BD-6DD3-5349-9E76-00303DF04BBE</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,18 +203,15 @@ public class UntagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public UntagResourcesResponseBody build() {
-            return new UntagResourcesResponseBody(this);
+        public AddDisasterRecoveryItemResponseBody build() {
+            return new AddDisasterRecoveryItemResponseBody(this);
         } 
 
     } 

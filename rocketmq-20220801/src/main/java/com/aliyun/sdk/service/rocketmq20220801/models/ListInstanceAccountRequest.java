@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceAccountRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceAccountRequest</p>
@@ -126,7 +132,11 @@ public class ListInstanceAccountRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -135,7 +145,15 @@ public class ListInstanceAccountRequest extends Request {
         }
 
         /**
-         * accountStatus.
+         * <p>The status of the account.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DISABLE</li>
+         * <li>ENABLE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
          */
         public Builder accountStatus(String accountStatus) {
             this.putQueryParameter("accountStatus", accountStatus);
@@ -144,7 +162,14 @@ public class ListInstanceAccountRequest extends Request {
         }
 
         /**
-         * accountType.
+         * <p>The account type.</p>
+         * <ul>
+         * <li>CUSTOMER</li>
+         * <li>DEFAULT</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CUSTOMER</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("accountType", accountType);
@@ -153,7 +178,11 @@ public class ListInstanceAccountRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -162,7 +191,11 @@ public class ListInstanceAccountRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -171,7 +204,10 @@ public class ListInstanceAccountRequest extends Request {
         }
 
         /**
-         * username.
+         * <p>The username of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("username", username);

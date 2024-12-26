@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMessageDetailRequest} extends {@link RequestModel}
  *
  * <p>GetMessageDetailRequest</p>
@@ -84,7 +90,11 @@ public class GetMessageDetailRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-lbj31fs790d</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +103,11 @@ public class GetMessageDetailRequest extends Request {
         }
 
         /**
-         * topicName.
+         * <p>The topic name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flink_test</p>
          */
         public Builder topicName(String topicName) {
             this.putPathParameter("topicName", topicName);
@@ -102,7 +116,11 @@ public class GetMessageDetailRequest extends Request {
         }
 
         /**
-         * messageId.
+         * <p>The message ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A792FDB001F7591083D30ADB1DA11D5</p>
          */
         public Builder messageId(String messageId) {
             this.putPathParameter("messageId", messageId);

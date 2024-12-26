@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTracesRequest} extends {@link RequestModel}
  *
  * <p>ListTracesRequest</p>
@@ -172,7 +178,11 @@ public class ListTracesRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-tl32upjeb08</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -181,7 +191,11 @@ public class ListTracesRequest extends Request {
         }
 
         /**
-         * topicName.
+         * <p>The topic name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic_hpms_product_price_change</p>
          */
         public Builder topicName(String topicName) {
             this.putPathParameter("topicName", topicName);
@@ -190,7 +204,11 @@ public class ListTracesRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>The end of the time range to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-19 10:10:09</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -199,7 +217,11 @@ public class ListTracesRequest extends Request {
         }
 
         /**
-         * messageId.
+         * <p>The message ID.</p>
+         * <p>This parameter is required if you set queryType to MESSAGE_ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0100163E0EC1F1965C04C7906700000000</p>
          */
         public Builder messageId(String messageId) {
             this.putQueryParameter("messageId", messageId);
@@ -208,7 +230,11 @@ public class ListTracesRequest extends Request {
         }
 
         /**
-         * messageKey.
+         * <p>The message key.</p>
+         * <p>This parameter is required if you set queryType to MESSAGE_ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_ceating</p>
          */
         public Builder messageKey(String messageKey) {
             this.putQueryParameter("messageKey", messageKey);
@@ -217,7 +243,11 @@ public class ListTracesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -226,7 +256,11 @@ public class ListTracesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -235,7 +269,17 @@ public class ListTracesRequest extends Request {
         }
 
         /**
-         * queryType.
+         * <p>The query type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>MESSAGE_ID</li>
+         * <li>MESSAGE_KEY</li>
+         * <li>TOPIC</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MESSAGE_ID</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("queryType", queryType);
@@ -244,7 +288,11 @@ public class ListTracesRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>The beginning of the time range to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-10 10:42:11</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("startTime", startTime);

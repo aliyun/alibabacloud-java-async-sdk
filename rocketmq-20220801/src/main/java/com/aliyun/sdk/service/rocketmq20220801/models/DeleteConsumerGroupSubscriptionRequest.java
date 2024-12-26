@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteConsumerGroupSubscriptionRequest} extends {@link RequestModel}
  *
  * <p>DeleteConsumerGroupSubscriptionRequest</p>
@@ -114,7 +120,11 @@ public class DeleteConsumerGroupSubscriptionRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -123,7 +133,11 @@ public class DeleteConsumerGroupSubscriptionRequest extends Request {
         }
 
         /**
-         * consumerGroupId.
+         * <p>The ID of the consumer group for which you want to delete subscriptions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CID-TEST</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);
@@ -132,7 +146,13 @@ public class DeleteConsumerGroupSubscriptionRequest extends Request {
         }
 
         /**
-         * filterExpression.
+         * <p>The filter expression.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder filterExpression(String filterExpression) {
             this.putQueryParameter("filterExpression", filterExpression);
@@ -141,7 +161,20 @@ public class DeleteConsumerGroupSubscriptionRequest extends Request {
         }
 
         /**
-         * filterType.
+         * <p>The type of the filter expression. Valid values:</p>
+         * <ul>
+         * <li>SQL: filters messages by using SQL expressions.</li>
+         * <li>TAG: filters messages by using tags.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>TAG: filters messages by using SQL expressions.</li>
+         * <li>SQL: filters messages by using SQL expressions.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TAG</p>
          */
         public Builder filterType(String filterType) {
             this.putQueryParameter("filterType", filterType);
@@ -150,7 +183,11 @@ public class DeleteConsumerGroupSubscriptionRequest extends Request {
         }
 
         /**
-         * topicName.
+         * <p>The topic name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic_test</p>
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("topicName", topicName);

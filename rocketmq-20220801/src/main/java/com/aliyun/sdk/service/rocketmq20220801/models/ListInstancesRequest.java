@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListInstancesRequest</p>
@@ -31,7 +37,11 @@ public class ListInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("seriesCodes")
-    private java.util.List < String > seriesCodes;
+    private java.util.List<String> seriesCodes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("storageSecretKey")
+    private String storageSecretKey;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tags")
@@ -44,6 +54,7 @@ public class ListInstancesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
         this.seriesCodes = builder.seriesCodes;
+        this.storageSecretKey = builder.storageSecretKey;
         this.tags = builder.tags;
     }
 
@@ -91,8 +102,15 @@ public class ListInstancesRequest extends Request {
     /**
      * @return seriesCodes
      */
-    public java.util.List < String > getSeriesCodes() {
+    public java.util.List<String> getSeriesCodes() {
         return this.seriesCodes;
+    }
+
+    /**
+     * @return storageSecretKey
+     */
+    public String getStorageSecretKey() {
+        return this.storageSecretKey;
     }
 
     /**
@@ -107,7 +125,8 @@ public class ListInstancesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceGroupId; 
-        private java.util.List < String > seriesCodes; 
+        private java.util.List<String> seriesCodes; 
+        private String storageSecretKey; 
         private String tags; 
 
         private Builder() {
@@ -121,11 +140,15 @@ public class ListInstancesRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
             this.seriesCodes = request.seriesCodes;
+            this.storageSecretKey = request.storageSecretKey;
             this.tags = request.tags;
         } 
 
         /**
-         * The filter condition that is used to query instances. If you do not configure this parameter, all instances are queried.
+         * <p>The filter condition that is used to query instances. If you do not configure this parameter, all instances are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);
@@ -134,12 +157,12 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Valid values: 1 to 100000000.</p>
+         * <p>If you set this parameter to a value smaller than 1, the system uses 1 as the value. If you set this parameter to a value greater than 100000000, the system uses 100000000 as the value.</p>
          * 
-         * Valid values: 1 to 100000000.
-         * 
-         * If you set this parameter to a value smaller than 1, the system uses 1 as the value. If you set this parameter to a value greater than 100000000, the system uses 100000000 as the value.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -148,12 +171,12 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Value values: 10 to 200.</p>
+         * <p>If you set this parameter to a value smaller than 10, the system uses 10 as the value. If you set this parameter to a value greater than 200, the system uses 200 as the value.</p>
          * 
-         * Value values: 10 to 200.
-         * 
-         * If you set this parameter to a value smaller than 10, the system uses 10 as the value. If you set this parameter to a value greater than 200, the system uses 200 as the value.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -162,7 +185,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmx7caj******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -171,16 +197,15 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The primary edition of the instance.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   standard: Standard Edition
-         * *   ultimate: Enterprise Platinum Edition
-         * *   professional: Professional Edition
+         * <p>The primary edition of the instance.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>standard: Standard Edition</li>
+         * <li>ultimate: Enterprise Platinum Edition</li>
+         * <li>professional: Professional Edition</li>
+         * </ul>
          */
-        public Builder seriesCodes(java.util.List < String > seriesCodes) {
+        public Builder seriesCodes(java.util.List<String> seriesCodes) {
             String seriesCodesShrink = shrink(seriesCodes, "seriesCodes", "simple");
             this.putQueryParameter("seriesCodes", seriesCodesShrink);
             this.seriesCodes = seriesCodes;
@@ -188,7 +213,22 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The tags that are used to filter instances.
+         * <p>The storage encryption key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
+         */
+        public Builder storageSecretKey(String storageSecretKey) {
+            this.putQueryParameter("storageSecretKey", storageSecretKey);
+            this.storageSecretKey = storageSecretKey;
+            return this;
+        }
+
+        /**
+         * <p>The tags that are used to filter instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;: &quot;rmq-test&quot;, &quot;value&quot;: &quot;test&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("tags", tags);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConsumerGroupSubscriptionRequest} extends {@link RequestModel}
  *
  * <p>GetConsumerGroupSubscriptionRequest</p>
@@ -84,7 +90,11 @@ public class GetConsumerGroupSubscriptionRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-uqm32kqyy11</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +103,11 @@ public class GetConsumerGroupSubscriptionRequest extends Request {
         }
 
         /**
-         * consumerGroupId.
+         * <p>The ID of the consumer group whose subscriptions you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>common_dev</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);
@@ -102,7 +116,11 @@ public class GetConsumerGroupSubscriptionRequest extends Request {
         }
 
         /**
-         * topicName.
+         * <p>The name of the topic to which the consumer group subscribes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mq003</p>
          */
         public Builder topicName(String topicName) {
             this.putPathParameter("topicName", topicName);

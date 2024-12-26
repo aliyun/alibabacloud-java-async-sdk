@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConsumerGroupLagResponseBody} extends {@link TeaModel}
  *
  * <p>GetConsumerGroupLagResponseBody</p>
@@ -121,7 +127,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +138,7 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -137,7 +146,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>Dynamic error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +157,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +168,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +179,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter instanceId is mandatory for this action .</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +190,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5764C40-FB8C-53AE-B95D-96AB3D0E9375</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +201,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +217,12 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConsumerGroupLagResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerGroupLagResponseBody</p>
+     */
     public static class TotalLag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("deliveryDuration")
         private Long deliveryDuration;
@@ -197,12 +230,16 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inflightCount")
         private Long inflightCount;
 
+        @com.aliyun.core.annotation.NameInMap("lastConsumeTimestamp")
+        private Long lastConsumeTimestamp;
+
         @com.aliyun.core.annotation.NameInMap("readyCount")
         private Long readyCount;
 
         private TotalLag(Builder builder) {
             this.deliveryDuration = builder.deliveryDuration;
             this.inflightCount = builder.inflightCount;
+            this.lastConsumeTimestamp = builder.lastConsumeTimestamp;
             this.readyCount = builder.readyCount;
         }
 
@@ -229,6 +266,13 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastConsumeTimestamp
+         */
+        public Long getLastConsumeTimestamp() {
+            return this.lastConsumeTimestamp;
+        }
+
+        /**
          * @return readyCount
          */
         public Long getReadyCount() {
@@ -238,10 +282,14 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         public static final class Builder {
             private Long deliveryDuration; 
             private Long inflightCount; 
+            private Long lastConsumeTimestamp; 
             private Long readyCount; 
 
             /**
-             * deliveryDuration.
+             * <p>Delivery delay time, in seconds</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder deliveryDuration(Long deliveryDuration) {
                 this.deliveryDuration = deliveryDuration;
@@ -249,7 +297,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
             }
 
             /**
-             * inflightCount.
+             * <p>The number of messages being consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder inflightCount(Long inflightCount) {
                 this.inflightCount = inflightCount;
@@ -257,7 +308,18 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
             }
 
             /**
-             * readyCount.
+             * lastConsumeTimestamp.
+             */
+            public Builder lastConsumeTimestamp(Long lastConsumeTimestamp) {
+                this.lastConsumeTimestamp = lastConsumeTimestamp;
+                return this;
+            }
+
+            /**
+             * <p>Ready message count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder readyCount(Long readyCount) {
                 this.readyCount = readyCount;
@@ -271,12 +333,15 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerGroupLagResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerGroupLagResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consumerGroupId")
         private String consumerGroupId;
-
-        @com.aliyun.core.annotation.NameInMap("createTime")
-        private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
@@ -285,22 +350,17 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("topicLagMap")
-        private java.util.Map < String, DataTopicLagMapValue > topicLagMap;
+        private java.util.Map<String, DataTopicLagMapValue> topicLagMap;
 
         @com.aliyun.core.annotation.NameInMap("totalLag")
         private TotalLag totalLag;
 
-        @com.aliyun.core.annotation.NameInMap("updateTime")
-        private String updateTime;
-
         private Data(Builder builder) {
             this.consumerGroupId = builder.consumerGroupId;
-            this.createTime = builder.createTime;
             this.instanceId = builder.instanceId;
             this.regionId = builder.regionId;
             this.topicLagMap = builder.topicLagMap;
             this.totalLag = builder.totalLag;
-            this.updateTime = builder.updateTime;
         }
 
         public static Builder builder() {
@@ -316,13 +376,6 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
          */
         public String getConsumerGroupId() {
             return this.consumerGroupId;
-        }
-
-        /**
-         * @return createTime
-         */
-        public String getCreateTime() {
-            return this.createTime;
         }
 
         /**
@@ -342,7 +395,7 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         /**
          * @return topicLagMap
          */
-        public java.util.Map < String, DataTopicLagMapValue > getTopicLagMap() {
+        public java.util.Map<String, DataTopicLagMapValue> getTopicLagMap() {
             return this.topicLagMap;
         }
 
@@ -353,24 +406,18 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
             return this.totalLag;
         }
 
-        /**
-         * @return updateTime
-         */
-        public String getUpdateTime() {
-            return this.updateTime;
-        }
-
         public static final class Builder {
             private String consumerGroupId; 
-            private String createTime; 
             private String instanceId; 
             private String regionId; 
-            private java.util.Map < String, DataTopicLagMapValue > topicLagMap; 
+            private java.util.Map<String, DataTopicLagMapValue> topicLagMap; 
             private TotalLag totalLag; 
-            private String updateTime; 
 
             /**
-             * consumerGroupId.
+             * <p>Consumer Group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CID-TEST</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -378,15 +425,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
-             */
-            public Builder createTime(String createTime) {
-                this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * instanceId.
+             * <p>Instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -394,7 +436,10 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>Region ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -402,26 +447,18 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
             }
 
             /**
-             * topicLagMap.
+             * <p>Backlog for each topic</p>
              */
-            public Builder topicLagMap(java.util.Map < String, DataTopicLagMapValue > topicLagMap) {
+            public Builder topicLagMap(java.util.Map<String, DataTopicLagMapValue> topicLagMap) {
                 this.topicLagMap = topicLagMap;
                 return this;
             }
 
             /**
-             * totalLag.
+             * <p>Total lag count</p>
              */
             public Builder totalLag(TotalLag totalLag) {
                 this.totalLag = totalLag;
-                return this;
-            }
-
-            /**
-             * updateTime.
-             */
-            public Builder updateTime(String updateTime) {
-                this.updateTime = updateTime;
                 return this;
             }
 

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -112,7 +118,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * all.
+         * <p>Whether to delete all tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("all", all);
@@ -121,7 +130,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -130,7 +143,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * resourceId.
+         * <p>The resource IDs, in the JSON format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-pe3355cs707</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("resourceId", resourceId);
@@ -139,7 +156,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>The type of resource.</p>
+         * <p>Set this parameter to <strong>instance</strong>. The value of this parameter cannot be changed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);
@@ -148,7 +170,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * tagKey.
+         * <p>The keys of tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;key1&quot;, &quot;key2&quot;]</p>
          */
         public Builder tagKey(String tagKey) {
             this.putQueryParameter("tagKey", tagKey);

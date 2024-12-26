@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -125,7 +131,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * nextToken.
+         * <p>The position from which the next query starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d09e2b63e1b12d905b7080ff70</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -134,7 +143,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>Region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -143,7 +156,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmx7caj******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -152,7 +168,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * resourceId.
+         * <p>List of resource IDs, in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;rmq-cn-pe334n08h08&quot;]</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("resourceId", resourceId);
@@ -161,7 +180,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>Resource type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);
@@ -170,7 +193,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>List of tags, in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;: &quot;rmq-test&quot;, &quot;value&quot;: &quot;test&quot;}]</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("tag", tag);

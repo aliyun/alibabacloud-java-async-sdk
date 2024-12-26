@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRegionsResponseBody</p>
@@ -15,7 +21,7 @@ public class ListRegionsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("dynamicCode")
     private String dynamicCode;
@@ -64,7 +70,7 @@ public class ListRegionsResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -112,7 +118,7 @@ public class ListRegionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private Integer httpStatusCode; 
@@ -121,7 +127,10 @@ public class ListRegionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingPageNumber</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,15 +138,18 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The dynamic error code.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ConsumerGroupId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +157,10 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +168,10 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +179,10 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter instanceId is mandatory for this action .</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +190,10 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B962390-D84B-5D44-8C11-79DF40299D41</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +201,10 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +217,12 @@ public class ListRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRegionsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("tagCode")
         private String tagCode;
@@ -229,7 +262,10 @@ public class ListRegionsResponseBody extends TeaModel {
             private Object tagValue; 
 
             /**
-             * The tag code.
+             * <p>The tag code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder tagCode(String tagCode) {
                 this.tagCode = tagCode;
@@ -237,7 +273,10 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder tagValue(Object tagValue) {
                 this.tagValue = tagValue;
@@ -251,6 +290,12 @@ public class ListRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRegionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -268,7 +313,7 @@ public class ListRegionsResponseBody extends TeaModel {
         private Boolean supportRocketmqV5;
 
         @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
@@ -329,7 +374,7 @@ public class ListRegionsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -346,11 +391,14 @@ public class ListRegionsResponseBody extends TeaModel {
             private String regionName; 
             private Boolean supportRocketmqV4; 
             private Boolean supportRocketmqV5; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String updateTime; 
 
             /**
-             * The time when the ApsaraMQ for RocketMQ instance was created.
+             * <p>The time when the ApsaraMQ for RocketMQ instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 20:05:50</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -358,7 +406,10 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -366,7 +417,10 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region name.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hangzhou</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -374,7 +428,10 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether ApsaraMQ for RocketMQ V4 is activated.
+             * <p>Indicates whether ApsaraMQ for RocketMQ V4 is activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportRocketmqV4(Boolean supportRocketmqV4) {
                 this.supportRocketmqV4 = supportRocketmqV4;
@@ -382,7 +439,10 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether ApsaraMQ for RocketMQ V5 is activated.
+             * <p>Indicates whether ApsaraMQ for RocketMQ V5 is activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportRocketmqV5(Boolean supportRocketmqV5) {
                 this.supportRocketmqV5 = supportRocketmqV5;
@@ -390,15 +450,18 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region tags.
+             * <p>The region tags.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
 
             /**
-             * The time when the ApsaraMQ for RocketMQ instance was last modified.
+             * <p>The time when the ApsaraMQ for RocketMQ instance was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 20:05:50</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceIpWhitelistResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceIpWhitelistResponseBody</p>
@@ -133,7 +139,10 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * accessDeniedDetail.
+         * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -141,7 +150,10 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -149,7 +161,7 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,7 +169,10 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -165,7 +180,10 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -173,7 +191,10 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -181,7 +202,10 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter instanceId is mandatory for this action .</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -189,7 +213,10 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7358418D-83BD-507A-8079-611C63E05674</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -197,7 +224,10 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,9 +240,15 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceIpWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceIpWhitelistResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("list")
-        private java.util.List < String > list;
+        private java.util.List<String> list;
 
         @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Long pageNumber;
@@ -241,7 +277,7 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < String > getList() {
+        public java.util.List<String> getList() {
             return this.list;
         }
 
@@ -267,21 +303,24 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > list; 
+            private java.util.List<String> list; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
 
             /**
-             * list.
+             * <p>The pagination information.</p>
              */
-            public Builder list(java.util.List < String > list) {
+            public Builder list(java.util.List<String> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -289,7 +328,10 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Number of items per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -297,7 +339,10 @@ public class ListInstanceIpWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

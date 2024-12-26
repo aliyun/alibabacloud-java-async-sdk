@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstanceIpWhitelistRequest} extends {@link RequestModel}
  *
  * <p>DeleteInstanceIpWhitelistRequest</p>
@@ -69,7 +75,11 @@ public class DeleteInstanceIpWhitelistRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +88,11 @@ public class DeleteInstanceIpWhitelistRequest extends Request {
         }
 
         /**
-         * ipWhitelist.
+         * <p>The IP address whitelist.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
          */
         public Builder ipWhitelist(String ipWhitelist) {
             this.putQueryParameter("ipWhitelist", ipWhitelist);

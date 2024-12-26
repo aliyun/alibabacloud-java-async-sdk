@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceAclRequest} extends {@link RequestModel}
  *
  * <p>CreateInstanceAclRequest</p>
@@ -33,7 +39,7 @@ public class CreateInstanceAclRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ipWhitelists")
-    private java.util.List < String > ipWhitelists;
+    private java.util.List<String> ipWhitelists;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resourceName")
@@ -100,7 +106,7 @@ public class CreateInstanceAclRequest extends Request {
     /**
      * @return ipWhitelists
      */
-    public java.util.List < String > getIpWhitelists() {
+    public java.util.List<String> getIpWhitelists() {
         return this.ipWhitelists;
     }
 
@@ -123,7 +129,7 @@ public class CreateInstanceAclRequest extends Request {
         private String username; 
         private String actions; 
         private String decision; 
-        private java.util.List < String > ipWhitelists; 
+        private java.util.List<String> ipWhitelists; 
         private String resourceName; 
         private String resourceType; 
 
@@ -143,7 +149,11 @@ public class CreateInstanceAclRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -152,7 +162,11 @@ public class CreateInstanceAclRequest extends Request {
         }
 
         /**
-         * username.
+         * <p>The username of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder username(String username) {
             this.putPathParameter("username", username);
@@ -161,7 +175,22 @@ public class CreateInstanceAclRequest extends Request {
         }
 
         /**
-         * actions.
+         * <p>The type of operations that can be performed on the resource.</p>
+         * <p>The following types of operations are supported based on the resource type:</p>
+         * <ul>
+         * <li>Topic: Pub, Sub, and Pub|Sub</li>
+         * <li>Consumer group: Sub</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SUB: subscribe</li>
+         * <li>Pub|Sub: publish and subscribe</li>
+         * <li>Pub: publish</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pub</p>
          */
         public Builder actions(String actions) {
             this.putBodyParameter("actions", actions);
@@ -170,7 +199,16 @@ public class CreateInstanceAclRequest extends Request {
         }
 
         /**
-         * decision.
+         * <p>The decision result of the authorization.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Deny</li>
+         * <li>Allow</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Allow</p>
          */
         public Builder decision(String decision) {
             this.putBodyParameter("decision", decision);
@@ -179,16 +217,20 @@ public class CreateInstanceAclRequest extends Request {
         }
 
         /**
-         * ipWhitelists.
+         * <p>The IP address whitelists.</p>
          */
-        public Builder ipWhitelists(java.util.List < String > ipWhitelists) {
+        public Builder ipWhitelists(java.util.List<String> ipWhitelists) {
             this.putBodyParameter("ipWhitelists", ipWhitelists);
             this.ipWhitelists = ipWhitelists;
             return this;
         }
 
         /**
-         * resourceName.
+         * <p>The name of the resource on which you want to grant permissions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder resourceName(String resourceName) {
             this.putBodyParameter("resourceName", resourceName);
@@ -197,7 +239,16 @@ public class CreateInstanceAclRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>The type of the resource on which you want to grant permissions.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Group</li>
+         * <li>Topic</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resourceType", resourceType);

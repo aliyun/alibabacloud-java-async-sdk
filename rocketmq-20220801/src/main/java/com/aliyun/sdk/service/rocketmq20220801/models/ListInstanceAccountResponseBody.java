@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceAccountResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceAccountResponseBody</p>
@@ -133,7 +139,10 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * accessDeniedDetail.
+         * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -141,7 +150,10 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingInstanceId</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -149,7 +161,7 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,7 +169,10 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -165,7 +180,10 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -173,7 +191,10 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -181,7 +202,10 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter instanceId is mandatory for this action .</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -189,7 +213,10 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C115601B-8736-5BBF-AC99-7FEAE1245A80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -197,7 +224,10 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,6 +240,12 @@ public class ListInstanceAccountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceAccountResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountStatus")
         private String accountStatus;
@@ -285,7 +321,15 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * accountStatus.
+             * <p>The status of the account.
+             * Valid values:</p>
+             * <ul>
+             * <li>DISABLE</li>
+             * <li>ENABLE</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -293,7 +337,14 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * accountType.
+             * <p>The account type.</p>
+             * <ul>
+             * <li>CUSTOMER</li>
+             * <li>DEFAULT</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOMER</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -301,7 +352,10 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -309,7 +363,10 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -317,7 +374,10 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * username.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -331,9 +391,15 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceAccountResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("list")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Long pageNumber;
@@ -362,7 +428,7 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -388,21 +454,24 @@ public class ListInstanceAccountResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
 
             /**
-             * list.
+             * <p>The pagination information.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -410,7 +479,10 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Number of items per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -418,7 +490,10 @@ public class ListInstanceAccountResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

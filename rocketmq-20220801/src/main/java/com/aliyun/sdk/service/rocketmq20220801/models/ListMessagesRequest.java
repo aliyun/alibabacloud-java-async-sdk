@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMessagesRequest} extends {@link RequestModel}
  *
  * <p>ListMessagesRequest</p>
@@ -169,7 +175,11 @@ public class ListMessagesRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-zvp2vtypu05</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -178,7 +188,11 @@ public class ListMessagesRequest extends Request {
         }
 
         /**
-         * topicName.
+         * <p>The topic name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_delay_queue</p>
          */
         public Builder topicName(String topicName) {
             this.putPathParameter("topicName", topicName);
@@ -187,7 +201,10 @@ public class ListMessagesRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-09 09:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -196,7 +213,10 @@ public class ListMessagesRequest extends Request {
         }
 
         /**
-         * messageId.
+         * <p>Message Id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F00000100207A4F0F294A938F7807AE</p>
          */
         public Builder messageId(String messageId) {
             this.putQueryParameter("messageId", messageId);
@@ -205,7 +225,10 @@ public class ListMessagesRequest extends Request {
         }
 
         /**
-         * messageKey.
+         * <p>Message key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XSCBillResult</p>
          */
         public Builder messageKey(String messageKey) {
             this.putQueryParameter("messageKey", messageKey);
@@ -214,7 +237,10 @@ public class ListMessagesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -223,7 +249,10 @@ public class ListMessagesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -232,7 +261,11 @@ public class ListMessagesRequest extends Request {
         }
 
         /**
-         * scrollId.
+         * <p>The scroll ID of the request.</p>
+         * <p>You do not need to configure this parameter for the first page. This parameter is included in the pagination request based on the result returned for the first page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B13D0B07-F24B-4790-88D8-D47A38063D00</p>
          */
         public Builder scrollId(String scrollId) {
             this.putQueryParameter("scrollId", scrollId);
@@ -241,7 +274,10 @@ public class ListMessagesRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-09 08:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("startTime", startTime);

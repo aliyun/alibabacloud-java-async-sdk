@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTraceResponseBody} extends {@link TeaModel}
  *
  * <p>GetTraceResponseBody</p>
@@ -121,7 +127,10 @@ public class GetTraceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidConsumerGroupId</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +138,7 @@ public class GetTraceResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -137,7 +146,10 @@ public class GetTraceResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +157,10 @@ public class GetTraceResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +168,10 @@ public class GetTraceResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +179,10 @@ public class GetTraceResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The instance cannot be found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +190,10 @@ public class GetTraceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7779A8FC-1BCD-5A1D-A603-C4A9BD8ADC49</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +201,10 @@ public class GetTraceResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +217,12 @@ public class GetTraceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class Operations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("operateTime")
         private String operateTime;
@@ -229,7 +262,10 @@ public class GetTraceResponseBody extends TeaModel {
             private String operateType; 
 
             /**
-             * operateTime.
+             * <p>Operation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 12:17:08</p>
              */
             public Builder operateTime(String operateTime) {
                 this.operateTime = operateTime;
@@ -237,7 +273,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * operateType.
+             * <p>Operation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADD</p>
              */
             public Builder operateType(String operateType) {
                 this.operateType = operateType;
@@ -251,12 +290,18 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class BrokerInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("delayStatus")
         private String delayStatus;
 
         @com.aliyun.core.annotation.NameInMap("operations")
-        private java.util.List < Operations> operations;
+        private java.util.List<Operations> operations;
 
         @com.aliyun.core.annotation.NameInMap("presetDelayTime")
         private String presetDelayTime;
@@ -285,7 +330,7 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * @return operations
          */
-        public java.util.List < Operations> getOperations() {
+        public java.util.List<Operations> getOperations() {
             return this.operations;
         }
 
@@ -298,11 +343,14 @@ public class GetTraceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String delayStatus; 
-            private java.util.List < Operations> operations; 
+            private java.util.List<Operations> operations; 
             private String presetDelayTime; 
 
             /**
-             * delayStatus.
+             * <p>Delay status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder delayStatus(String delayStatus) {
                 this.delayStatus = delayStatus;
@@ -310,15 +358,18 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * operations.
+             * <p>Operation list.</p>
              */
-            public Builder operations(java.util.List < Operations> operations) {
+            public Builder operations(java.util.List<Operations> operations) {
                 this.operations = operations;
                 return this;
             }
 
             /**
-             * presetDelayTime.
+             * <p>Preset delivery time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 12:17:08</p>
              */
             public Builder presetDelayTime(String presetDelayTime) {
                 this.presetDelayTime = presetDelayTime;
@@ -332,6 +383,12 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class DeadLetterInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("messageId")
         private String messageId;
@@ -383,7 +440,10 @@ public class GetTraceResponseBody extends TeaModel {
             private String topicName; 
 
             /**
-             * messageId.
+             * <p>MessageId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7F000001001F7A4F0F29463F0376047D</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -391,7 +451,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * toDlqTime.
+             * <p>Arrival time in the dead letter queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 12:17:08</p>
              */
             public Builder toDlqTime(String toDlqTime) {
                 this.toDlqTime = toDlqTime;
@@ -399,7 +462,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * topicName.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Register_Sync</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -413,6 +479,12 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class RecordsOperations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("deadMessage")
         private Boolean deadMessage;
@@ -476,7 +548,10 @@ public class GetTraceResponseBody extends TeaModel {
             private String operateType; 
 
             /**
-             * deadMessage.
+             * <p>Whether it is a dead letter message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deadMessage(Boolean deadMessage) {
                 this.deadMessage = deadMessage;
@@ -484,7 +559,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * invisibleTime.
+             * <p>Invisible time, milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder invisibleTime(Long invisibleTime) {
                 this.invisibleTime = invisibleTime;
@@ -492,7 +570,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * operateTime.
+             * <p>Operation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 12:17:08</p>
              */
             public Builder operateTime(String operateTime) {
                 this.operateTime = operateTime;
@@ -500,7 +581,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * operateType.
+             * <p>Operation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADD</p>
              */
             public Builder operateType(String operateType) {
                 this.operateType = operateType;
@@ -514,6 +598,12 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("clientHost")
         private String clientHost;
@@ -525,7 +615,7 @@ public class GetTraceResponseBody extends TeaModel {
         private Boolean fifoEnable;
 
         @com.aliyun.core.annotation.NameInMap("operations")
-        private java.util.List < RecordsOperations> operations;
+        private java.util.List<RecordsOperations> operations;
 
         @com.aliyun.core.annotation.NameInMap("popCk")
         private String popCk;
@@ -574,7 +664,7 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * @return operations
          */
-        public java.util.List < RecordsOperations> getOperations() {
+        public java.util.List<RecordsOperations> getOperations() {
             return this.operations;
         }
 
@@ -596,12 +686,15 @@ public class GetTraceResponseBody extends TeaModel {
             private String clientHost; 
             private String consumeStatus; 
             private Boolean fifoEnable; 
-            private java.util.List < RecordsOperations> operations; 
+            private java.util.List<RecordsOperations> operations; 
             private String popCk; 
             private String userName; 
 
             /**
-             * clientHost.
+             * <p>Client host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx.xx.xx</p>
              */
             public Builder clientHost(String clientHost) {
                 this.clientHost = clientHost;
@@ -609,7 +702,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * consumeStatus.
+             * <p>Consume status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder consumeStatus(String consumeStatus) {
                 this.consumeStatus = consumeStatus;
@@ -617,7 +713,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * fifoEnable.
+             * <p>Whether to consume fifo.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fifoEnable(Boolean fifoEnable) {
                 this.fifoEnable = fifoEnable;
@@ -625,15 +724,18 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * operations.
+             * <p>Operation list.</p>
              */
-            public Builder operations(java.util.List < RecordsOperations> operations) {
+            public Builder operations(java.util.List<RecordsOperations> operations) {
                 this.operations = operations;
                 return this;
             }
 
             /**
-             * POP_CK
+             * <p>POP_CK</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder popCk(String popCk) {
                 this.popCk = popCk;
@@ -641,7 +743,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * userName.
+             * <p>Consumer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -655,6 +760,12 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class ConsumerInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consumeStatus")
         private String consumeStatus;
@@ -669,7 +780,7 @@ public class GetTraceResponseBody extends TeaModel {
         private Boolean deadMessage;
 
         @com.aliyun.core.annotation.NameInMap("records")
-        private java.util.List < Records> records;
+        private java.util.List<Records> records;
 
         private ConsumerInfos(Builder builder) {
             this.consumeStatus = builder.consumeStatus;
@@ -718,7 +829,7 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * @return records
          */
-        public java.util.List < Records> getRecords() {
+        public java.util.List<Records> getRecords() {
             return this.records;
         }
 
@@ -727,10 +838,13 @@ public class GetTraceResponseBody extends TeaModel {
             private String consumerGroupId; 
             private DeadLetterInfo deadLetterInfo; 
             private Boolean deadMessage; 
-            private java.util.List < Records> records; 
+            private java.util.List<Records> records; 
 
             /**
-             * consumeStatus.
+             * <p>Consume status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder consumeStatus(String consumeStatus) {
                 this.consumeStatus = consumeStatus;
@@ -738,7 +852,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * consumerGroupId.
+             * <p>The consumer group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_inspector_group</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -746,7 +863,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * deadLetterInfo.
+             * <p>Dead letter info.</p>
              */
             public Builder deadLetterInfo(DeadLetterInfo deadLetterInfo) {
                 this.deadLetterInfo = deadLetterInfo;
@@ -754,7 +871,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * deadMessage.
+             * <p>Whether it is a dead letter message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deadMessage(Boolean deadMessage) {
                 this.deadMessage = deadMessage;
@@ -762,9 +882,9 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * records.
+             * <p>Consumer record list.</p>
              */
-            public Builder records(java.util.List < Records> records) {
+            public Builder records(java.util.List<Records> records) {
                 this.records = records;
                 return this;
             }
@@ -776,6 +896,12 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class MessageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("body")
         private String body;
@@ -796,7 +922,7 @@ public class GetTraceResponseBody extends TeaModel {
         private String messageId;
 
         @com.aliyun.core.annotation.NameInMap("messageKeys")
-        private java.util.List < String > messageKeys;
+        private java.util.List<String> messageKeys;
 
         @com.aliyun.core.annotation.NameInMap("messageTag")
         private String messageTag;
@@ -806,9 +932,6 @@ public class GetTraceResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
-
-        @com.aliyun.core.annotation.NameInMap("setted")
-        private Boolean setted;
 
         @com.aliyun.core.annotation.NameInMap("storeHost")
         private String storeHost;
@@ -823,7 +946,7 @@ public class GetTraceResponseBody extends TeaModel {
         private String transactionId;
 
         @com.aliyun.core.annotation.NameInMap("userProperties")
-        private java.util.Map < String, String > userProperties;
+        private java.util.Map<String, String> userProperties;
 
         private MessageInfo(Builder builder) {
             this.body = builder.body;
@@ -836,7 +959,6 @@ public class GetTraceResponseBody extends TeaModel {
             this.messageTag = builder.messageTag;
             this.messageType = builder.messageType;
             this.regionId = builder.regionId;
-            this.setted = builder.setted;
             this.storeHost = builder.storeHost;
             this.storeTime = builder.storeTime;
             this.topicName = builder.topicName;
@@ -897,7 +1019,7 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * @return messageKeys
          */
-        public java.util.List < String > getMessageKeys() {
+        public java.util.List<String> getMessageKeys() {
             return this.messageKeys;
         }
 
@@ -920,13 +1042,6 @@ public class GetTraceResponseBody extends TeaModel {
          */
         public String getRegionId() {
             return this.regionId;
-        }
-
-        /**
-         * @return setted
-         */
-        public Boolean getSetted() {
-            return this.setted;
         }
 
         /**
@@ -960,7 +1075,7 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * @return userProperties
          */
-        public java.util.Map < String, String > getUserProperties() {
+        public java.util.Map<String, String> getUserProperties() {
             return this.userProperties;
         }
 
@@ -971,19 +1086,21 @@ public class GetTraceResponseBody extends TeaModel {
             private String instanceId; 
             private String messageGroup; 
             private String messageId; 
-            private java.util.List < String > messageKeys; 
+            private java.util.List<String> messageKeys; 
             private String messageTag; 
             private String messageType; 
             private String regionId; 
-            private Boolean setted; 
             private String storeHost; 
             private String storeTime; 
             private String topicName; 
             private String transactionId; 
-            private java.util.Map < String, String > userProperties; 
+            private java.util.Map<String, String> userProperties; 
 
             /**
-             * body.
+             * <p>Message body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -991,7 +1108,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * bornHost.
+             * <p>Message born host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x.x.x.x</p>
              */
             public Builder bornHost(String bornHost) {
                 this.bornHost = bornHost;
@@ -999,7 +1119,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * bornTime.
+             * <p>Message born time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 12:17:08</p>
              */
             public Builder bornTime(String bornTime) {
                 this.bornTime = bornTime;
@@ -1007,7 +1130,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-u0t2ygjq505</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1015,7 +1141,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * messageGroup.
+             * <p>Message grpup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder messageGroup(String messageGroup) {
                 this.messageGroup = messageGroup;
@@ -1023,7 +1152,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * messageId.
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0A79275A00207A4F0F2916C92F9A0B94</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -1031,15 +1163,18 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * messageKeys.
+             * <p>Message keys.</p>
              */
-            public Builder messageKeys(java.util.List < String > messageKeys) {
+            public Builder messageKeys(java.util.List<String> messageKeys) {
                 this.messageKeys = messageKeys;
                 return this;
             }
 
             /**
-             * messageTag.
+             * <p>Message tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder messageTag(String messageTag) {
                 this.messageTag = messageTag;
@@ -1047,7 +1182,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * messageType.
+             * <p>Message type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder messageType(String messageType) {
                 this.messageType = messageType;
@@ -1055,7 +1193,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1063,15 +1204,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * setted.
-             */
-            public Builder setted(Boolean setted) {
-                this.setted = setted;
-                return this;
-            }
-
-            /**
-             * storeHost.
+             * <p>Message store host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x.x.x.x</p>
              */
             public Builder storeHost(String storeHost) {
                 this.storeHost = storeHost;
@@ -1079,7 +1215,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * storeTime.
+             * <p>Message store time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 12:17:08</p>
              */
             public Builder storeTime(String storeTime) {
                 this.storeTime = storeTime;
@@ -1087,7 +1226,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * topicName.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Topic_normal_inspector</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -1095,7 +1237,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * transactionId.
+             * <p>Message transaction id.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder transactionId(String transactionId) {
                 this.transactionId = transactionId;
@@ -1103,9 +1248,9 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * userProperties.
+             * <p>Message user properties.</p>
              */
-            public Builder userProperties(java.util.Map < String, String > userProperties) {
+            public Builder userProperties(java.util.Map<String, String> userProperties) {
                 this.userProperties = userProperties;
                 return this;
             }
@@ -1117,6 +1262,12 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class ProducerInfoRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arriveTime")
         private String arriveTime;
@@ -1240,7 +1391,10 @@ public class GetTraceResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * arriveTime.
+             * <p>Arrive time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 12:17:08</p>
              */
             public Builder arriveTime(String arriveTime) {
                 this.arriveTime = arriveTime;
@@ -1248,7 +1402,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * clientHost.
+             * <p>Client host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx.xx.xx</p>
              */
             public Builder clientHost(String clientHost) {
                 this.clientHost = clientHost;
@@ -1256,7 +1413,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * dlqOriginMessageId.
+             * <p>Dead-letter queue message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0A79275A00207A4F0F2916C92F9A0B94</p>
              */
             public Builder dlqOriginMessageId(String dlqOriginMessageId) {
                 this.dlqOriginMessageId = dlqOriginMessageId;
@@ -1264,7 +1424,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * dlqOriginTopic.
+             * <p>Dead-letter queue topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_topic</p>
              */
             public Builder dlqOriginTopic(String dlqOriginTopic) {
                 this.dlqOriginTopic = dlqOriginTopic;
@@ -1272,7 +1435,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * messageSource.
+             * <p>Message source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSOLE</p>
              */
             public Builder messageSource(String messageSource) {
                 this.messageSource = messageSource;
@@ -1280,7 +1446,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * produceDuration.
+             * <p>Producer duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder produceDuration(Long produceDuration) {
                 this.produceDuration = produceDuration;
@@ -1288,7 +1457,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * produceStatus.
+             * <p>Producer status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder produceStatus(String produceStatus) {
                 this.produceStatus = produceStatus;
@@ -1296,7 +1468,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * produceTime.
+             * <p>Producer time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 12:17:08</p>
              */
             public Builder produceTime(String produceTime) {
                 this.produceTime = produceTime;
@@ -1304,7 +1479,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * userName.
+             * <p>Producer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1318,9 +1496,15 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class ProducerInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("records")
-        private java.util.List < ProducerInfoRecords> records;
+        private java.util.List<ProducerInfoRecords> records;
 
         private ProducerInfo(Builder builder) {
             this.records = builder.records;
@@ -1337,17 +1521,17 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * @return records
          */
-        public java.util.List < ProducerInfoRecords> getRecords() {
+        public java.util.List<ProducerInfoRecords> getRecords() {
             return this.records;
         }
 
         public static final class Builder {
-            private java.util.List < ProducerInfoRecords> records; 
+            private java.util.List<ProducerInfoRecords> records; 
 
             /**
-             * records.
+             * <p>Producer record list.</p>
              */
-            public Builder records(java.util.List < ProducerInfoRecords> records) {
+            public Builder records(java.util.List<ProducerInfoRecords> records) {
                 this.records = records;
                 return this;
             }
@@ -1359,12 +1543,18 @@ public class GetTraceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTraceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTraceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("brokerInfo")
         private BrokerInfo brokerInfo;
 
         @com.aliyun.core.annotation.NameInMap("consumerInfos")
-        private java.util.List < ConsumerInfos> consumerInfos;
+        private java.util.List<ConsumerInfos> consumerInfos;
 
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
@@ -1409,7 +1599,7 @@ public class GetTraceResponseBody extends TeaModel {
         /**
          * @return consumerInfos
          */
-        public java.util.List < ConsumerInfos> getConsumerInfos() {
+        public java.util.List<ConsumerInfos> getConsumerInfos() {
             return this.consumerInfos;
         }
 
@@ -1450,7 +1640,7 @@ public class GetTraceResponseBody extends TeaModel {
 
         public static final class Builder {
             private BrokerInfo brokerInfo; 
-            private java.util.List < ConsumerInfos> consumerInfos; 
+            private java.util.List<ConsumerInfos> consumerInfos; 
             private String instanceId; 
             private MessageInfo messageInfo; 
             private ProducerInfo producerInfo; 
@@ -1458,7 +1648,7 @@ public class GetTraceResponseBody extends TeaModel {
             private String topicName; 
 
             /**
-             * brokerInfo.
+             * <p>Broker trace info.</p>
              */
             public Builder brokerInfo(BrokerInfo brokerInfo) {
                 this.brokerInfo = brokerInfo;
@@ -1466,15 +1656,18 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * consumerInfos.
+             * <p>Consumer trace info.</p>
              */
-            public Builder consumerInfos(java.util.List < ConsumerInfos> consumerInfos) {
+            public Builder consumerInfos(java.util.List<ConsumerInfos> consumerInfos) {
                 this.consumerInfos = consumerInfos;
                 return this;
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1482,7 +1675,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * messageInfo.
+             * <p>The message information.</p>
              */
             public Builder messageInfo(MessageInfo messageInfo) {
                 this.messageInfo = messageInfo;
@@ -1490,7 +1683,7 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * producerInfo.
+             * <p>Producer trace info.</p>
              */
             public Builder producerInfo(ProducerInfo producerInfo) {
                 this.producerInfo = producerInfo;
@@ -1498,7 +1691,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1506,7 +1702,10 @@ public class GetTraceResponseBody extends TeaModel {
             }
 
             /**
-             * topicName.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topic_test</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstanceAclRequest} extends {@link RequestModel}
  *
  * <p>DeleteInstanceAclRequest</p>
@@ -99,7 +105,11 @@ public class DeleteInstanceAclRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -108,7 +118,11 @@ public class DeleteInstanceAclRequest extends Request {
         }
 
         /**
-         * username.
+         * <p>The username of the account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder username(String username) {
             this.putPathParameter("username", username);
@@ -117,7 +131,11 @@ public class DeleteInstanceAclRequest extends Request {
         }
 
         /**
-         * resourceName.
+         * <p>The name of the resource on which the permissions are granted.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("resourceName", resourceName);
@@ -126,7 +144,16 @@ public class DeleteInstanceAclRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>The type of the resource on which the permissions are granted.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Group</li>
+         * <li>Topic</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);

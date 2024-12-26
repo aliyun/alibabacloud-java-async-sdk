@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -99,7 +105,11 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -108,7 +118,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * resourceId.
+         * <p>The resource IDs, in the JSON format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-pe3355cs707</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("resourceId", resourceId);
@@ -117,7 +131,12 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>The type of resource.</p>
+         * <p>Set this parameter to <strong>instance</strong>. The value of this parameter cannot be changed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);
@@ -126,7 +145,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>tag, in JSON format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;key&quot;: &quot;rmq-test&quot;, &quot;value&quot;: &quot;test&quot;}]</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("tag", tag);

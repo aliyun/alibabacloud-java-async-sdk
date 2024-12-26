@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagResourcesResponseBody</p>
@@ -121,7 +127,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +138,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Return result</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -137,7 +146,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>Dynamic error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +157,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>Dynamic error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +168,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +179,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The topic already exists.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +190,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F00C6A70-C782-5DD6-9D11-0CFC710100C7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +201,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether the operation was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +217,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliUid")
         private Long aliUid;
@@ -289,7 +322,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * aliUid.
+             * <p>UID of the resource owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1876441048322426</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -297,7 +333,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * category.
+             * <p>Tag category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -305,7 +344,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceId.
+             * <p>Resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-pe334n08h08</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -313,7 +355,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>Resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -321,7 +366,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * scope.
+             * <p>Visibility scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -329,7 +377,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * tagKey.
+             * <p>Tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -337,7 +388,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * tagValue.
+             * <p>Tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -351,6 +405,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("nextToken")
         private String nextToken;
@@ -359,7 +419,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private String requestId;
 
         @com.aliyun.core.annotation.NameInMap("tagResources")
-        private java.util.List < TagResources> tagResources;
+        private java.util.List<TagResources> tagResources;
 
         private Data(Builder builder) {
             this.nextToken = builder.nextToken;
@@ -392,17 +452,20 @@ public class ListTagResourcesResponseBody extends TeaModel {
         /**
          * @return tagResources
          */
-        public java.util.List < TagResources> getTagResources() {
+        public java.util.List<TagResources> getTagResources() {
             return this.tagResources;
         }
 
         public static final class Builder {
             private String nextToken; 
             private String requestId; 
-            private java.util.List < TagResources> tagResources; 
+            private java.util.List<TagResources> tagResources; 
 
             /**
-             * nextToken.
+             * <p>The position from which the next query starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d09e2b63e1b12d905b7080ff70</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -410,7 +473,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * requestId.
+             * <p>Request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>F00C6A70-C782-5DD6-9D11-0CFC710100C7</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -418,9 +484,9 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * tagResources.
+             * <p>Resource tag relationships.</p>
              */
-            public Builder tagResources(java.util.List < TagResources> tagResources) {
+            public Builder tagResources(java.util.List<TagResources> tagResources) {
                 this.tagResources = tagResources;
                 return this;
             }

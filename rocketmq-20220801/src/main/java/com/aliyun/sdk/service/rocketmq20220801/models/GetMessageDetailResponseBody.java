@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMessageDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetMessageDetailResponseBody</p>
@@ -121,7 +127,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +138,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -137,7 +146,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +157,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +168,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +179,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter instanceId is mandatory for this action .</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +190,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAEBD71F-E839-52F9-BD7B-8F1290525841</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +201,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +217,12 @@ public class GetMessageDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMessageDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMessageDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("body")
         private String body;
@@ -213,7 +246,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
         private String messageId;
 
         @com.aliyun.core.annotation.NameInMap("messageKeys")
-        private java.util.List < String > messageKeys;
+        private java.util.List<String> messageKeys;
 
         @com.aliyun.core.annotation.NameInMap("messageTag")
         private String messageTag;
@@ -231,13 +264,13 @@ public class GetMessageDetailResponseBody extends TeaModel {
         private String storeTime;
 
         @com.aliyun.core.annotation.NameInMap("systemProperties")
-        private java.util.Map < String, String > systemProperties;
+        private java.util.Map<String, String> systemProperties;
 
         @com.aliyun.core.annotation.NameInMap("topicName")
         private String topicName;
 
         @com.aliyun.core.annotation.NameInMap("userProperties")
-        private java.util.Map < String, String > userProperties;
+        private java.util.Map<String, String> userProperties;
 
         private Data(Builder builder) {
             this.body = builder.body;
@@ -318,7 +351,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
         /**
          * @return messageKeys
          */
-        public java.util.List < String > getMessageKeys() {
+        public java.util.List<String> getMessageKeys() {
             return this.messageKeys;
         }
 
@@ -360,7 +393,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
         /**
          * @return systemProperties
          */
-        public java.util.Map < String, String > getSystemProperties() {
+        public java.util.Map<String, String> getSystemProperties() {
             return this.systemProperties;
         }
 
@@ -374,7 +407,7 @@ public class GetMessageDetailResponseBody extends TeaModel {
         /**
          * @return userProperties
          */
-        public java.util.Map < String, String > getUserProperties() {
+        public java.util.Map<String, String> getUserProperties() {
             return this.userProperties;
         }
 
@@ -386,18 +419,21 @@ public class GetMessageDetailResponseBody extends TeaModel {
             private String instanceId; 
             private String messageGroup; 
             private String messageId; 
-            private java.util.List < String > messageKeys; 
+            private java.util.List<String> messageKeys; 
             private String messageTag; 
             private String messageType; 
             private String regionId; 
             private String storeHost; 
             private String storeTime; 
-            private java.util.Map < String, String > systemProperties; 
+            private java.util.Map<String, String> systemProperties; 
             private String topicName; 
-            private java.util.Map < String, String > userProperties; 
+            private java.util.Map<String, String> userProperties; 
 
             /**
-             * body.
+             * <p>The message body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -405,7 +441,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * bodySize.
+             * <p>The size of the message body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder bodySize(Integer bodySize) {
                 this.bodySize = bodySize;
@@ -413,7 +452,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * bornHost.
+             * <p>The client on which the message was produced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx.xx.xxx.xx</p>
              */
             public Builder bornHost(String bornHost) {
                 this.bornHost = bornHost;
@@ -421,7 +463,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * bornTime.
+             * <p>The time when the message was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 12:17:08</p>
              */
             public Builder bornTime(String bornTime) {
                 this.bornTime = bornTime;
@@ -429,7 +474,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -437,7 +485,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * messageGroup.
+             * <p>The sharding key. This parameter is returned only for ordered messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder messageGroup(String messageGroup) {
                 this.messageGroup = messageGroup;
@@ -445,7 +496,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * messageId.
+             * <p>The message ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01BE87E485F0C7808C04543CAF00000001</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -453,15 +507,18 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * messageKeys.
+             * <p>The message keys.</p>
              */
-            public Builder messageKeys(java.util.List < String > messageKeys) {
+            public Builder messageKeys(java.util.List<String> messageKeys) {
                 this.messageKeys = messageKeys;
                 return this;
             }
 
             /**
-             * messageTag.
+             * <p>The tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder messageTag(String messageTag) {
                 this.messageTag = messageTag;
@@ -469,7 +526,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * messageType.
+             * <p>The message type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder messageType(String messageType) {
                 this.messageType = messageType;
@@ -477,7 +537,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -485,7 +548,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * storeHost.
+             * <p>The broker on which the message was stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx.xx.xxx.xx</p>
              */
             public Builder storeHost(String storeHost) {
                 this.storeHost = storeHost;
@@ -493,7 +559,10 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * storeTime.
+             * <p>The time when the message was stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 12:17:08</p>
              */
             public Builder storeTime(String storeTime) {
                 this.storeTime = storeTime;
@@ -501,15 +570,18 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * systemProperties.
+             * <p>The default system attributes.</p>
              */
-            public Builder systemProperties(java.util.Map < String, String > systemProperties) {
+            public Builder systemProperties(java.util.Map<String, String> systemProperties) {
                 this.systemProperties = systemProperties;
                 return this;
             }
 
             /**
-             * topicName.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topic_test</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -517,9 +589,9 @@ public class GetMessageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * userProperties.
+             * <p>The user attributes.</p>
              */
-            public Builder userProperties(java.util.Map < String, String > userProperties) {
+            public Builder userProperties(java.util.Map<String, String> userProperties) {
                 this.userProperties = userProperties;
                 return this;
             }

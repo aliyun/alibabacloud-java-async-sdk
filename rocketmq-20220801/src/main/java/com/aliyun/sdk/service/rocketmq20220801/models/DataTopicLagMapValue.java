@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataTopicLagMapValue} extends {@link TeaModel}
  *
  * <p>DataTopicLagMapValue</p>
@@ -61,7 +67,10 @@ public class DataTopicLagMapValue extends TeaModel {
         private Long deliveryDuration; 
 
         /**
-         * readyCount.
+         * <p>Ready message count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder readyCount(Long readyCount) {
             this.readyCount = readyCount;
@@ -69,7 +78,10 @@ public class DataTopicLagMapValue extends TeaModel {
         }
 
         /**
-         * inflightCount.
+         * <p>The number of messages being consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder inflightCount(Long inflightCount) {
             this.inflightCount = inflightCount;
@@ -77,7 +89,10 @@ public class DataTopicLagMapValue extends TeaModel {
         }
 
         /**
-         * deliveryDuration.
+         * <p>Delivery delay time, in seconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder deliveryDuration(Long deliveryDuration) {
             this.deliveryDuration = deliveryDuration;

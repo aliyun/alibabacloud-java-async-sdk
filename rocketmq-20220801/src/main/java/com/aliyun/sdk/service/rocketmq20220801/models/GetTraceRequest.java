@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTraceRequest} extends {@link RequestModel}
  *
  * <p>GetTraceRequest</p>
@@ -84,7 +90,11 @@ public class GetTraceRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-zvp2vtypu05</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +103,11 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * topicName.
+         * <p>The topic name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linkedcare-image</p>
          */
         public Builder topicName(String topicName) {
             this.putPathParameter("topicName", topicName);
@@ -102,7 +116,11 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * messageId.
+         * <p>The message ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>012A5AB0BBEC8A000104C6342B00001ECF</p>
          */
         public Builder messageId(String messageId) {
             this.putPathParameter("messageId", messageId);

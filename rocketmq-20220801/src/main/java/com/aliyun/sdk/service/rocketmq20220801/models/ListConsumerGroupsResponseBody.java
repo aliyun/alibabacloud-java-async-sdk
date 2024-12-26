@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConsumerGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListConsumerGroupsResponseBody</p>
@@ -121,7 +127,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingInstanceId</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +138,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The result data that is returned.
+         * <p>The result data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -137,7 +146,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error code.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +157,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +168,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +179,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter InstanceId is mandatory for this action .</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +190,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.
+         * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5503A460-98ED-5543-92CF-4853DE28****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +201,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * <p>Indicates whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +217,12 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConsumerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConsumerGroupsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consumerGroupId")
         private String consumerGroupId;
@@ -199,6 +232,9 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("maxReceiveTps")
+        private Long maxReceiveTps;
 
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
@@ -216,6 +252,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             this.consumerGroupId = builder.consumerGroupId;
             this.createTime = builder.createTime;
             this.instanceId = builder.instanceId;
+            this.maxReceiveTps = builder.maxReceiveTps;
             this.regionId = builder.regionId;
             this.remark = builder.remark;
             this.status = builder.status;
@@ -252,6 +289,13 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxReceiveTps
+         */
+        public Long getMaxReceiveTps() {
+            return this.maxReceiveTps;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -283,13 +327,17 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             private String consumerGroupId; 
             private String createTime; 
             private String instanceId; 
+            private Long maxReceiveTps; 
             private String regionId; 
             private String remark; 
             private String status; 
             private String updateTime; 
 
             /**
-             * The ID of the consumer group.
+             * <p>The ID of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID-TEST</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -297,7 +345,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the consumer group was created.
+             * <p>The time when the consumer group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 20:05:50</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -305,7 +356,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -313,7 +367,18 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * maxReceiveTps.
+             */
+            public Builder maxReceiveTps(Long maxReceiveTps) {
+                this.maxReceiveTps = maxReceiveTps;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the region in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -321,7 +386,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks on the consumer group.
+             * <p>The remarks on the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is the remark for test.</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -329,38 +397,35 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the consumer group.
-             * <p>
+             * <p>The state of the consumer group.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>RUNNING</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>: The consumer group is</p>
+             * <!-- -->
              * 
-             * *   RUNNING
+             * <p>running</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>.</p>
+             * </li>
+             * <li><p>CREATING</p>
+             * <!-- -->
              * 
-             *     : The consumer group is
+             * <p>: The consumer group is</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>being created</p>
+             * <!-- -->
              * 
-             *     running
+             * <p>.</p>
+             * </li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   CREATING
-             * 
-             *     <!-- -->
-             * 
-             *     : The consumer group is
-             * 
-             *     <!-- -->
-             * 
-             *     being created
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -368,7 +433,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the consumer group was last updated.
+             * <p>The time when the consumer group was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 20:05:50</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -382,9 +450,15 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListConsumerGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConsumerGroupsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("list")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Long pageNumber;
@@ -413,7 +487,7 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -439,21 +513,24 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
 
             /**
-             * The paginated data.
+             * <p>The paginated data.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -461,7 +538,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -469,7 +549,10 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMessagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListMessagesResponseBody</p>
@@ -121,7 +127,10 @@ public class ListMessagesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingInstanceId</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +138,7 @@ public class ListMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -137,7 +146,10 @@ public class ListMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +157,10 @@ public class ListMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +168,10 @@ public class ListMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +179,10 @@ public class ListMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter instanceId is mandatory for this action .</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +190,10 @@ public class ListMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3531B6A-5A88-52BD-B3C4-A024C3D0AA2E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +201,10 @@ public class ListMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +217,12 @@ public class ListMessagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMessagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMessagesResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("body")
         private String body;
@@ -213,7 +246,7 @@ public class ListMessagesResponseBody extends TeaModel {
         private String messageId;
 
         @com.aliyun.core.annotation.NameInMap("messageKeys")
-        private java.util.List < String > messageKeys;
+        private java.util.List<String> messageKeys;
 
         @com.aliyun.core.annotation.NameInMap("messageTag")
         private String messageTag;
@@ -234,7 +267,7 @@ public class ListMessagesResponseBody extends TeaModel {
         private String topicName;
 
         @com.aliyun.core.annotation.NameInMap("userProperties")
-        private java.util.Map < String, String > userProperties;
+        private java.util.Map<String, String> userProperties;
 
         private List(Builder builder) {
             this.body = builder.body;
@@ -314,7 +347,7 @@ public class ListMessagesResponseBody extends TeaModel {
         /**
          * @return messageKeys
          */
-        public java.util.List < String > getMessageKeys() {
+        public java.util.List<String> getMessageKeys() {
             return this.messageKeys;
         }
 
@@ -363,7 +396,7 @@ public class ListMessagesResponseBody extends TeaModel {
         /**
          * @return userProperties
          */
-        public java.util.Map < String, String > getUserProperties() {
+        public java.util.Map<String, String> getUserProperties() {
             return this.userProperties;
         }
 
@@ -375,17 +408,20 @@ public class ListMessagesResponseBody extends TeaModel {
             private String instanceId; 
             private String messageGroup; 
             private String messageId; 
-            private java.util.List < String > messageKeys; 
+            private java.util.List<String> messageKeys; 
             private String messageTag; 
             private String messageType; 
             private String regionId; 
             private String storeHost; 
             private String storeTime; 
             private String topicName; 
-            private java.util.Map < String, String > userProperties; 
+            private java.util.Map<String, String> userProperties; 
 
             /**
-             * body.
+             * <p>Message body.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder body(String body) {
                 this.body = body;
@@ -393,7 +429,10 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * bodySize.
+             * <p>Message body size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder bodySize(Integer bodySize) {
                 this.bodySize = bodySize;
@@ -401,7 +440,10 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * bornHost.
+             * <p>The client on which messages are produced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx.xx.xx</p>
              */
             public Builder bornHost(String bornHost) {
                 this.bornHost = bornHost;
@@ -409,7 +451,10 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * bornTime.
+             * <p>Message born time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 12:17:08</p>
              */
             public Builder bornTime(String bornTime) {
                 this.bornTime = bornTime;
@@ -417,7 +462,10 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -425,7 +473,10 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * messageGroup.
+             * <p>The message group. This parameter is returned only for ordered messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder messageGroup(String messageGroup) {
                 this.messageGroup = messageGroup;
@@ -433,7 +484,10 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * messageId.
+             * <p>Message Id.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7F000001000114B4340C5ABF94500079</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -441,15 +495,18 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * messageKeys.
+             * <p>Message keys.</p>
              */
-            public Builder messageKeys(java.util.List < String > messageKeys) {
+            public Builder messageKeys(java.util.List<String> messageKeys) {
                 this.messageKeys = messageKeys;
                 return this;
             }
 
             /**
-             * messageTag.
+             * <p>The message tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder messageTag(String messageTag) {
                 this.messageTag = messageTag;
@@ -457,7 +514,10 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * messageType.
+             * <p>Message type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder messageType(String messageType) {
                 this.messageType = messageType;
@@ -465,7 +525,10 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -473,7 +536,10 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * storeHost.
+             * <p>The broker on which messages are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx.xx.xx</p>
              */
             public Builder storeHost(String storeHost) {
                 this.storeHost = storeHost;
@@ -481,7 +547,10 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * storeTime.
+             * <p>Message store time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-22 12:17:08</p>
              */
             public Builder storeTime(String storeTime) {
                 this.storeTime = storeTime;
@@ -489,7 +558,10 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * topicName.
+             * <p>The name of the topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topic_test</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -497,9 +569,9 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * userProperties.
+             * <p>Message user properties.</p>
              */
-            public Builder userProperties(java.util.Map < String, String > userProperties) {
+            public Builder userProperties(java.util.Map<String, String> userProperties) {
                 this.userProperties = userProperties;
                 return this;
             }
@@ -511,9 +583,15 @@ public class ListMessagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMessagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMessagesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("list")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Long pageNumber;
@@ -546,7 +624,7 @@ public class ListMessagesResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -579,22 +657,25 @@ public class ListMessagesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNumber; 
             private Long pageSize; 
             private String scrollId; 
             private Long totalCount; 
 
             /**
-             * list.
+             * <p>The pagination information.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -602,7 +683,10 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -610,7 +694,11 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * scrollId.
+             * <p>The scroll ID of the request.</p>
+             * <p>The ID is automatically generated by the system. The result can be paginated only if this parameter is included in the pagination request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B13D0B07-F24B-4790-88D8-D47A38063D00</p>
              */
             public Builder scrollId(String scrollId) {
                 this.scrollId = scrollId;
@@ -618,7 +706,10 @@ public class ListMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

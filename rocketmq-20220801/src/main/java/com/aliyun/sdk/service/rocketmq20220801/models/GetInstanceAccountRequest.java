@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceAccountRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceAccountRequest</p>
@@ -68,7 +74,11 @@ public class GetInstanceAccountRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-20p36ja4m0y</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -77,7 +87,11 @@ public class GetInstanceAccountRequest extends Request {
         }
 
         /**
-         * username.
+         * <p>The username of the account.</p>
+         * <p>If you do not configure this parameter, the default username of the instance is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("username", username);

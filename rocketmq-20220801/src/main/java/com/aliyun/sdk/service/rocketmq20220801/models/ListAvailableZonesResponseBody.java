@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAvailableZonesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAvailableZonesResponseBody</p>
@@ -15,7 +21,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("dynamicCode")
     private String dynamicCode;
@@ -64,7 +70,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -112,7 +118,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private Integer httpStatusCode; 
@@ -121,7 +127,10 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the call failed.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,15 +138,18 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The result data that is returned.
+         * <p>The result data that is returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The dynamic error code.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +157,10 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic error message.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +168,10 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +179,10 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Parameter instanceId is mandatory for this action .</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +190,10 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.
+         * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +201,10 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,6 +217,12 @@ public class ListAvailableZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAvailableZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAvailableZonesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -253,7 +286,10 @@ public class ListAvailableZonesResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * The time when the zone was created.
+             * <p>The time when the zone was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 20:05:50</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -261,7 +297,10 @@ public class ListAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the zone was last updated.
+             * <p>The time when the zone was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-01 20:05:50</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -269,7 +308,10 @@ public class ListAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the current zone.
+             * <p>The ID of the current zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-qingdao-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -277,7 +319,10 @@ public class ListAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the current zone.
+             * <p>The name of the current zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ha-cn-t9b30w902vm_qrs</p>
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;

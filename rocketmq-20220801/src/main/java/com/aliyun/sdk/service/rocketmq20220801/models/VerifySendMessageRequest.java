@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifySendMessageRequest} extends {@link RequestModel}
  *
  * <p>VerifySendMessageRequest</p>
@@ -111,7 +117,11 @@ public class VerifySendMessageRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-wwo32kqfm10</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -120,7 +130,11 @@ public class VerifySendMessageRequest extends Request {
         }
 
         /**
-         * topicName.
+         * <p>The topic name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>card_status_topic</p>
          */
         public Builder topicName(String topicName) {
             this.putPathParameter("topicName", topicName);
@@ -129,7 +143,10 @@ public class VerifySendMessageRequest extends Request {
         }
 
         /**
-         * message.
+         * <p>The message body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.putBodyParameter("message", message);
@@ -138,7 +155,10 @@ public class VerifySendMessageRequest extends Request {
         }
 
         /**
-         * messageKey.
+         * <p>The message key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder messageKey(String messageKey) {
             this.putBodyParameter("messageKey", messageKey);
@@ -147,7 +167,10 @@ public class VerifySendMessageRequest extends Request {
         }
 
         /**
-         * messageTag.
+         * <p>The message tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xx</p>
          */
         public Builder messageTag(String messageTag) {
             this.putBodyParameter("messageTag", messageTag);

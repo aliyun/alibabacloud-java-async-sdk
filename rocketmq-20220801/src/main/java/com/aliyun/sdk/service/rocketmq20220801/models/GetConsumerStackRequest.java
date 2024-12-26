@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConsumerStackRequest} extends {@link RequestModel}
  *
  * <p>GetConsumerStackRequest</p>
@@ -84,7 +90,11 @@ public class GetConsumerStackRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-tl32upjeb08</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +103,11 @@ public class GetConsumerStackRequest extends Request {
         }
 
         /**
-         * consumerGroupId.
+         * <p>The consumer Group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_TT_TASK</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);
@@ -102,7 +116,11 @@ public class GetConsumerStackRequest extends Request {
         }
 
         /**
-         * clientId.
+         * <p>The client ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.26.76.48@Lqd7dImlp9KJ5V84</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("clientId", clientId);

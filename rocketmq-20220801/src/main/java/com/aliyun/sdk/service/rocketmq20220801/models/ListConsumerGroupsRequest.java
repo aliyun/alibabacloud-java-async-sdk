@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConsumerGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListConsumerGroupsRequest</p>
@@ -22,12 +28,12 @@ public class ListConsumerGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 100000000, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 100000000, minimum = 1)
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageSize")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 10)
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 10)
     private Integer pageSize;
 
     private ListConsumerGroupsRequest(Builder builder) {
@@ -98,7 +104,11 @@ public class ListConsumerGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the instance to which the consumer groups belong.
+         * <p>The ID of the instance to which the consumer groups belong.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -107,7 +117,10 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * The condition that you want to use to filter consumer groups in the instance. If you leave this parameter empty, all consumer groups in the instance are queried.
+         * <p>The condition that you want to use to filter consumer groups in the instance. If you leave this parameter empty, all consumer groups in the instance are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CID-TEST</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);
@@ -116,7 +129,10 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -125,7 +141,10 @@ public class ListConsumerGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

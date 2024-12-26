@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConsumerStackResponseBody} extends {@link TeaModel}
  *
  * <p>GetConsumerStackResponseBody</p>
@@ -121,7 +127,10 @@ public class GetConsumerStackResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +138,7 @@ public class GetConsumerStackResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -137,7 +146,10 @@ public class GetConsumerStackResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +157,10 @@ public class GetConsumerStackResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +168,10 @@ public class GetConsumerStackResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +179,10 @@ public class GetConsumerStackResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The instance cannot be found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +190,10 @@ public class GetConsumerStackResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30F2CBC7-F69D-5D78-9661-0254C9E1FBFA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +201,10 @@ public class GetConsumerStackResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,12 +217,18 @@ public class GetConsumerStackResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConsumerStackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerStackResponseBody</p>
+     */
     public static class Stacks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("thread")
         private String thread;
 
         @com.aliyun.core.annotation.NameInMap("tracks")
-        private java.util.List < String > tracks;
+        private java.util.List<String> tracks;
 
         private Stacks(Builder builder) {
             this.thread = builder.thread;
@@ -220,16 +253,19 @@ public class GetConsumerStackResponseBody extends TeaModel {
         /**
          * @return tracks
          */
-        public java.util.List < String > getTracks() {
+        public java.util.List<String> getTracks() {
             return this.tracks;
         }
 
         public static final class Builder {
             private String thread; 
-            private java.util.List < String > tracks; 
+            private java.util.List<String> tracks; 
 
             /**
-             * thread.
+             * <p>Thread id.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder thread(String thread) {
                 this.thread = thread;
@@ -237,9 +273,9 @@ public class GetConsumerStackResponseBody extends TeaModel {
             }
 
             /**
-             * tracks.
+             * <p>Stack Information.</p>
              */
-            public Builder tracks(java.util.List < String > tracks) {
+            public Builder tracks(java.util.List<String> tracks) {
                 this.tracks = tracks;
                 return this;
             }
@@ -251,6 +287,12 @@ public class GetConsumerStackResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetConsumerStackResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConsumerStackResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consumerGroupId")
         private String consumerGroupId;
@@ -262,7 +304,7 @@ public class GetConsumerStackResponseBody extends TeaModel {
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("stacks")
-        private java.util.List < Stacks> stacks;
+        private java.util.List<Stacks> stacks;
 
         private Data(Builder builder) {
             this.consumerGroupId = builder.consumerGroupId;
@@ -303,7 +345,7 @@ public class GetConsumerStackResponseBody extends TeaModel {
         /**
          * @return stacks
          */
-        public java.util.List < Stacks> getStacks() {
+        public java.util.List<Stacks> getStacks() {
             return this.stacks;
         }
 
@@ -311,10 +353,13 @@ public class GetConsumerStackResponseBody extends TeaModel {
             private String consumerGroupId; 
             private String instanceId; 
             private String regionId; 
-            private java.util.List < Stacks> stacks; 
+            private java.util.List<Stacks> stacks; 
 
             /**
-             * consumerGroupId.
+             * <p>The ID of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CID-TEST</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -322,7 +367,10 @@ public class GetConsumerStackResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -330,7 +378,10 @@ public class GetConsumerStackResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -338,9 +389,9 @@ public class GetConsumerStackResponseBody extends TeaModel {
             }
 
             /**
-             * stacks.
+             * <p>Stack Information.</p>
              */
-            public Builder stacks(java.util.List < Stacks> stacks) {
+            public Builder stacks(java.util.List<Stacks> stacks) {
                 this.stacks = stacks;
                 return this;
             }

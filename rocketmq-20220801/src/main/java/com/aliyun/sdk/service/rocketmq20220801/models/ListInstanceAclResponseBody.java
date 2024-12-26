@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceAclResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceAclResponseBody</p>
@@ -133,7 +139,10 @@ public class ListInstanceAclResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * accessDeniedDetail.
+         * <p>The details about the access denial. This parameter is returned only if the access is denied due to the reason that the Resource Access Management (RAM) user does not have the required permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -141,7 +150,10 @@ public class ListInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MissingInstanceId</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -149,7 +161,7 @@ public class ListInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,7 +169,10 @@ public class ListInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -165,7 +180,10 @@ public class ListInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * <p>The dynamic error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -173,7 +191,10 @@ public class ListInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -181,7 +202,10 @@ public class ListInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The instance cannot be found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -189,7 +213,10 @@ public class ListInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DA4D2F89-E2C8-5F04-936B-60D55B055FA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -197,7 +224,10 @@ public class ListInstanceAclResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,12 +240,18 @@ public class ListInstanceAclResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceAclResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceAclResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aclType")
         private String aclType;
 
         @com.aliyun.core.annotation.NameInMap("actions")
-        private java.util.List < String > actions;
+        private java.util.List<String> actions;
 
         @com.aliyun.core.annotation.NameInMap("decision")
         private String decision;
@@ -224,7 +260,7 @@ public class ListInstanceAclResponseBody extends TeaModel {
         private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("ipWhitelists")
-        private java.util.List < String > ipWhitelists;
+        private java.util.List<String> ipWhitelists;
 
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
@@ -268,7 +304,7 @@ public class ListInstanceAclResponseBody extends TeaModel {
         /**
          * @return actions
          */
-        public java.util.List < String > getActions() {
+        public java.util.List<String> getActions() {
             return this.actions;
         }
 
@@ -289,7 +325,7 @@ public class ListInstanceAclResponseBody extends TeaModel {
         /**
          * @return ipWhitelists
          */
-        public java.util.List < String > getIpWhitelists() {
+        public java.util.List<String> getIpWhitelists() {
             return this.ipWhitelists;
         }
 
@@ -323,17 +359,24 @@ public class ListInstanceAclResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aclType; 
-            private java.util.List < String > actions; 
+            private java.util.List<String> actions; 
             private String decision; 
             private String instanceId; 
-            private java.util.List < String > ipWhitelists; 
+            private java.util.List<String> ipWhitelists; 
             private String regionId; 
             private String resourceName; 
             private String resourceType; 
             private String username; 
 
             /**
-             * aclType.
+             * <p>The ACL type.</p>
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>APACHE: open source ACL.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>APACHE</p>
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -341,15 +384,23 @@ public class ListInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * actions.
+             * <p>The types of the operations that are allowed by the ACL.</p>
              */
-            public Builder actions(java.util.List < String > actions) {
+            public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
                 return this;
             }
 
             /**
-             * decision.
+             * <p>The decision result.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Deny: Access is denied.</li>
+             * <li>Allow: Access is allowed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Allow</p>
              */
             public Builder decision(String decision) {
                 this.decision = decision;
@@ -357,7 +408,10 @@ public class ListInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rmq-cn-7e22ody****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -365,15 +419,18 @@ public class ListInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * ipWhitelists.
+             * <p>The IP address whitelists.</p>
              */
-            public Builder ipWhitelists(java.util.List < String > ipWhitelists) {
+            public Builder ipWhitelists(java.util.List<String> ipWhitelists) {
                 this.ipWhitelists = ipWhitelists;
                 return this;
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -381,7 +438,10 @@ public class ListInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * resourceName.
+             * <p>The resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -389,7 +449,15 @@ public class ListInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The resource type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Group</li>
+             * <li>Topic</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Topic</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -397,7 +465,10 @@ public class ListInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -411,9 +482,15 @@ public class ListInstanceAclResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceAclResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceAclResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("list")
-        private java.util.List < List> list;
+        private java.util.List<List> list;
 
         @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Long pageNumber;
@@ -442,7 +519,7 @@ public class ListInstanceAclResponseBody extends TeaModel {
         /**
          * @return list
          */
-        public java.util.List < List> getList() {
+        public java.util.List<List> getList() {
             return this.list;
         }
 
@@ -468,21 +545,24 @@ public class ListInstanceAclResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < List> list; 
+            private java.util.List<List> list; 
             private Long pageNumber; 
             private Long pageSize; 
             private Long totalCount; 
 
             /**
-             * list.
+             * <p>The pagination information.</p>
              */
-            public Builder list(java.util.List < List> list) {
+            public Builder list(java.util.List<List> list) {
                 this.list = list;
                 return this;
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -490,7 +570,10 @@ public class ListInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -498,7 +581,10 @@ public class ListInstanceAclResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

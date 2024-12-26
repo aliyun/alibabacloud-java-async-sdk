@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteConsumerGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteConsumerGroupRequest</p>
@@ -69,7 +75,11 @@ public class DeleteConsumerGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the instance from which you want to delete the consumer group.
+         * <p>The ID of the instance from which you want to delete the consumer group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +88,11 @@ public class DeleteConsumerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the consumer group.
+         * <p>The ID of the consumer group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CID-TEST</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);
