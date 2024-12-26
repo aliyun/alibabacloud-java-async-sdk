@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UninstallBackupClientsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientIds")
-    private java.util.Map < String, ? > clientIds;
+    private java.util.Map<String, ?> clientIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
@@ -30,7 +35,7 @@ public class UninstallBackupClientsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.Map < String, ? > instanceIds;
+    private java.util.Map<String, ?> instanceIds;
 
     private UninstallBackupClientsRequest(Builder builder) {
         super(builder);
@@ -57,7 +62,7 @@ public class UninstallBackupClientsRequest extends Request {
     /**
      * @return clientIds
      */
-    public java.util.Map < String, ? > getClientIds() {
+    public java.util.Map<String, ?> getClientIds() {
         return this.clientIds;
     }
 
@@ -85,16 +90,16 @@ public class UninstallBackupClientsRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.Map < String, ? > getInstanceIds() {
+    public java.util.Map<String, ?> getInstanceIds() {
         return this.instanceIds;
     }
 
     public static final class Builder extends Request.Builder<UninstallBackupClientsRequest, Builder> {
-        private java.util.Map < String, ? > clientIds; 
+        private java.util.Map<String, ?> clientIds; 
         private String crossAccountRoleName; 
         private String crossAccountType; 
         private Long crossAccountUserId; 
-        private java.util.Map < String, ? > instanceIds; 
+        private java.util.Map<String, ?> instanceIds; 
 
         private Builder() {
             super();
@@ -115,7 +120,7 @@ public class UninstallBackupClientsRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;c-*********************&quot;]</p>
          */
-        public Builder clientIds(java.util.Map < String, ? > clientIds) {
+        public Builder clientIds(java.util.Map<String, ?> clientIds) {
             String clientIdsShrink = shrink(clientIds, "ClientIds", "json");
             this.putQueryParameter("ClientIds", clientIdsShrink);
             this.clientIds = clientIds;
@@ -163,12 +168,12 @@ public class UninstallBackupClientsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of ECS instances. You can specify a maximum of 20 ECS instances.</p>
+         * <p>The IDs of Elastic Compute Service (ECS) instances. You can specify a maximum of 20 ECS instances.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;i-0xi5wj5*****v3j3bh2gj5&quot;]</p>
          */
-        public Builder instanceIds(java.util.Map < String, ? > instanceIds) {
+        public Builder instanceIds(java.util.Map<String, ?> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
             this.putQueryParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,11 +43,11 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("OtsInstances")
-    private java.util.List < OtsInstances> otsInstances;
+    private java.util.List<OtsInstances> otsInstances;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SnapshotIds")
-    private java.util.List < String > snapshotIds;
+    private java.util.List<String> snapshotIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -119,14 +124,14 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
     /**
      * @return otsInstances
      */
-    public java.util.List < OtsInstances> getOtsInstances() {
+    public java.util.List<OtsInstances> getOtsInstances() {
         return this.otsInstances;
     }
 
     /**
      * @return snapshotIds
      */
-    public java.util.List < String > getSnapshotIds() {
+    public java.util.List<String> getSnapshotIds() {
         return this.snapshotIds;
     }
 
@@ -144,8 +149,8 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         private Long endTime; 
         private Integer limit; 
         private String nextToken; 
-        private java.util.List < OtsInstances> otsInstances; 
-        private java.util.List < String > snapshotIds; 
+        private java.util.List<OtsInstances> otsInstances; 
+        private java.util.List<String> snapshotIds; 
         private Long startTime; 
 
         private Builder() {
@@ -244,7 +249,7 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         /**
          * <p>The Tablestore instances that are backed up.</p>
          */
-        public Builder otsInstances(java.util.List < OtsInstances> otsInstances) {
+        public Builder otsInstances(java.util.List<OtsInstances> otsInstances) {
             this.putBodyParameter("OtsInstances", otsInstances);
             this.otsInstances = otsInstances;
             return this;
@@ -253,7 +258,7 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         /**
          * <p>The snapshot IDs.</p>
          */
-        public Builder snapshotIds(java.util.List < String > snapshotIds) {
+        public Builder snapshotIds(java.util.List<String> snapshotIds) {
             this.putBodyParameter("SnapshotIds", snapshotIds);
             this.snapshotIds = snapshotIds;
             return this;
@@ -289,7 +294,7 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         private String instanceName;
 
         @com.aliyun.core.annotation.NameInMap("TableNames")
-        private java.util.List < String > tableNames;
+        private java.util.List<String> tableNames;
 
         private OtsInstances(Builder builder) {
             this.instanceName = builder.instanceName;
@@ -314,13 +319,13 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         /**
          * @return tableNames
          */
-        public java.util.List < String > getTableNames() {
+        public java.util.List<String> getTableNames() {
             return this.tableNames;
         }
 
         public static final class Builder {
             private String instanceName; 
-            private java.util.List < String > tableNames; 
+            private java.util.List<String> tableNames; 
 
             /**
              * <p>The name of the Tablestore instance.</p>
@@ -336,7 +341,7 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
             /**
              * <p>The names of the tables in the Tablestore instance.</p>
              */
-            public Builder tableNames(java.util.List < String > tableNames) {
+            public Builder tableNames(java.util.List<String> tableNames) {
                 this.tableNames = tableNames;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class SearchHistoricalSnapshotsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Query")
-    private java.util.List < ? > query;
+    private java.util.List<?> query;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
@@ -83,7 +88,7 @@ public class SearchHistoricalSnapshotsRequest extends Request {
     /**
      * @return query
      */
-    public java.util.List < ? > getQuery() {
+    public java.util.List<?> getQuery() {
         return this.query;
     }
 
@@ -105,7 +110,7 @@ public class SearchHistoricalSnapshotsRequest extends Request {
         private Integer limit; 
         private String nextToken; 
         private String order; 
-        private java.util.List < ? > query; 
+        private java.util.List<?> query; 
         private String sortBy; 
         private String sourceType; 
 
@@ -194,7 +199,7 @@ public class SearchHistoricalSnapshotsRequest extends Request {
          * <li>VaultId: specifies the ID of the backup vault. This field is required.</li>
          * <li>InstanceId: specifies the ID of the Elastic Compute Service (ECS) instance. If the SourceType parameter is set to ECS_FILE, this field is required.</li>
          * <li>Bucket: specifies the name of the Object Storage Service (OSS) bucket. If the SourceType parameter is set to OSS, this field is required.</li>
-         * <li>FileSystemId: specifies the ID of the Apsara File Storage NAS (NAS) file system. If the SourceType parameter is set to NAS, this field is required.</li>
+         * <li>FileSystemId: specifies the ID of the File Storage NAS (NAS) file system. If the SourceType parameter is set to NAS, this field is required.</li>
          * <li>CreateTime: specifies the time when the NAS file system was created. If the SourceType parameter is set to NAS, this field is required.</li>
          * <li>CompleteTime: specifies the time when the backup snapshot was completed.</li>
          * <li>PlanId: the ID of a backup plan.</li>
@@ -217,7 +222,7 @@ public class SearchHistoricalSnapshotsRequest extends Request {
          * <strong>example:</strong>
          * <p>[   {     &quot;field&quot;: &quot;VaultId&quot;,     &quot;value&quot;: &quot;v-0003rf9m17pap3ltpqx5&quot;,     &quot;operation&quot;: &quot;MATCH_TERM&quot;   },   {     &quot;field&quot;: &quot;InstanceId&quot;,     &quot;value&quot;: &quot;i-bp1i20zq2wuzdie9368m&quot;,     &quot;operation&quot;: &quot;MATCH_TERM&quot;   },   {     &quot;field&quot;: &quot;PlanId&quot;,     &quot;value&quot;: &quot;plan-0005vkqhpesqgkd1iu4f&quot;,     &quot;operation&quot;: &quot;MATCH_TERM&quot;   },   {     &quot;field&quot;: &quot;CompleteTime&quot;,     &quot;value&quot;: 1626769913,     &quot;operation&quot;: &quot;GREATER_THAN_OR_EQUAL&quot;   } ]</p>
          */
-        public Builder query(java.util.List < ? > query) {
+        public Builder query(java.util.List<?> query) {
             String queryShrink = shrink(query, "Query", "json");
             this.putQueryParameter("Query", queryShrink);
             this.query = query;

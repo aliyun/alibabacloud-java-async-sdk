@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class DescribeVaultsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VaultId")
@@ -101,7 +106,7 @@ public class DescribeVaultsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -131,7 +136,7 @@ public class DescribeVaultsRequest extends Request {
         private Integer pageSize; 
         private String resourceGroupId; 
         private String status; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vaultId; 
         private String vaultRegionId; 
         private String vaultType; 
@@ -177,7 +182,10 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-*********************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -204,16 +212,22 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>Tag information. Supports up to 20 tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6a745bceffb042959b3b5206d6f12ad1</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * VaultId.
+         * <p>Backup vault ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-*********************</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);
@@ -222,7 +236,10 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * VaultRegionId.
+         * <p>The region ID to which the backup vault belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder vaultRegionId(String vaultRegionId) {
             this.putQueryParameter("VaultRegionId", vaultRegionId);
@@ -231,7 +248,14 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * VaultType.
+         * <p>Backup repository type. The values are as follows: </p>
+         * <ul>
+         * <li><strong>STANDARD</strong>: Represents a standard repository, which can be used for ECS file backups, OSS backups, NAS backups, etc. </li>
+         * <li><strong>OTS_BACKUP</strong>: Represents a TableStore repository, which is only used for TableStore backups, and TableStore must use this type of repository.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder vaultType(String vaultType) {
             this.putQueryParameter("VaultType", vaultType);
@@ -291,7 +315,10 @@ public class DescribeVaultsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -299,7 +326,10 @@ public class DescribeVaultsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The Value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -64,11 +64,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  A backup schedule defines the data source, backup policy, and other configurations. After you execute a backup schedule, a backup job is generated to record the backup progress and the backup result. If a backup job is complete, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</p>
      * <ul>
-     * <li>You can specify only one type of data source in a backup schedule.</li>
-     * <li>You can specify only one interval as a backup cycle in a backup schedule.</li>
-     * <li>Each backup schedule allows you to back up data to only one backup vault.</li>
+     * <li>A backup plan associates data sources with backup policies and other necessary information for backups. After the execution of a backup plan, it generates a backup task that records the progress and results of the backup. If the backup task is successful, a backup snapshot is created. You can use the backup snapshot to create a recovery task.</li>
+     * <li>A backup plan supports only one type of data source.</li>
+     * <li>A backup plan supports only a single fixed interval backup cycle strategy.</li>
+     * <li>A backup plan can back up to only one backup vault.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateBackupPlan  CreateBackupPlanRequest
@@ -190,6 +190,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateVaultResponse
      */
     CompletableFuture<CreateVaultResponse> createVault(CreateVaultRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAirEcsInstance  DeleteAirEcsInstanceRequest
+     * @return DeleteAirEcsInstanceResponse
+     */
+    CompletableFuture<DeleteAirEcsInstanceResponse> deleteAirEcsInstance(DeleteAirEcsInstanceRequest request);
 
     /**
      * <b>description</b> :

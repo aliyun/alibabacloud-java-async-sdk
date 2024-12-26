@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeletePolicyBindingRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DataSourceIds")
-    private java.util.List < String > dataSourceIds;
+    private java.util.List<String> dataSourceIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PolicyId")
@@ -48,7 +53,7 @@ public class DeletePolicyBindingRequest extends Request {
     /**
      * @return dataSourceIds
      */
-    public java.util.List < String > getDataSourceIds() {
+    public java.util.List<String> getDataSourceIds() {
         return this.dataSourceIds;
     }
 
@@ -67,7 +72,7 @@ public class DeletePolicyBindingRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeletePolicyBindingRequest, Builder> {
-        private java.util.List < String > dataSourceIds; 
+        private java.util.List<String> dataSourceIds; 
         private String policyId; 
         private String sourceType; 
 
@@ -85,7 +90,7 @@ public class DeletePolicyBindingRequest extends Request {
         /**
          * <p>The IDs of the data sources that you want to disassociate from the backup policy.</p>
          */
-        public Builder dataSourceIds(java.util.List < String > dataSourceIds) {
+        public Builder dataSourceIds(java.util.List<String> dataSourceIds) {
             String dataSourceIdsShrink = shrink(dataSourceIds, "DataSourceIds", "json");
             this.putBodyParameter("DataSourceIds", dataSourceIdsShrink);
             this.dataSourceIds = dataSourceIds;

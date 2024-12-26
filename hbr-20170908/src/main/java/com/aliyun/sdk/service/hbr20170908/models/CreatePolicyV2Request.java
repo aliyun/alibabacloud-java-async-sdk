@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -26,7 +31,7 @@ public class CreatePolicyV2Request extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Rules")
-    private java.util.List < Rules> rules;
+    private java.util.List<Rules> rules;
 
     private CreatePolicyV2Request(Builder builder) {
         super(builder);
@@ -73,7 +78,7 @@ public class CreatePolicyV2Request extends Request {
     /**
      * @return rules
      */
-    public java.util.List < Rules> getRules() {
+    public java.util.List<Rules> getRules() {
         return this.rules;
     }
 
@@ -81,7 +86,7 @@ public class CreatePolicyV2Request extends Request {
         private String policyDescription; 
         private String policyName; 
         private String policyType; 
-        private java.util.List < Rules> rules; 
+        private java.util.List<Rules> rules; 
 
         private Builder() {
             super();
@@ -143,7 +148,7 @@ public class CreatePolicyV2Request extends Request {
         /**
          * <p>The rules in the backup policy.</p>
          */
-        public Builder rules(java.util.List < Rules> rules) {
+        public Builder rules(java.util.List<Rules> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");
             this.putBodyParameter("Rules", rulesShrink);
             this.rules = rules;
@@ -165,7 +170,7 @@ public class CreatePolicyV2Request extends Request {
      */
     public static class DataSourceFilters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceIds")
-        private java.util.List < String > dataSourceIds;
+        private java.util.List<String> dataSourceIds;
 
         @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
@@ -186,7 +191,7 @@ public class CreatePolicyV2Request extends Request {
         /**
          * @return dataSourceIds
          */
-        public java.util.List < String > getDataSourceIds() {
+        public java.util.List<String> getDataSourceIds() {
             return this.dataSourceIds;
         }
 
@@ -198,19 +203,29 @@ public class CreatePolicyV2Request extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > dataSourceIds; 
+            private java.util.List<String> dataSourceIds; 
             private String sourceType; 
 
             /**
-             * DataSourceIds.
+             * <p>This parameter is deprecated.</p>
              */
-            public Builder dataSourceIds(java.util.List < String > dataSourceIds) {
+            public Builder dataSourceIds(java.util.List<String> dataSourceIds) {
                 this.dataSourceIds = dataSourceIds;
                 return this;
             }
 
             /**
-             * SourceType.
+             * <p>The type of the data source. Valid value:</p>
+             * <ul>
+             * <li><strong>UDM_ECS</strong>: Elastic Compute Service (ECS) instance This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>UDM_ECS_ONLY</strong>.</li>
+             * <li><strong>OSS</strong>: Object Storage Service (OSS) bucket This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
+             * <li><strong>NAS</strong>: File Storage NAS (NAS) file system This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
+             * <li><strong>ECS_FILE</strong>: ECS file This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
+             * <li><strong>OTS</strong>: Tablestore instance This type of data source is supported only if the <strong>RuleType</strong> parameter is set to <strong>STANDARD</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UDM_ECS</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -383,7 +398,10 @@ public class CreatePolicyV2Request extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -391,7 +409,14 @@ public class CreatePolicyV2Request extends Request {
             }
 
             /**
-             * Operator.
+             * <p>The tag-based matching rule. Valid values:</p>
+             * <ul>
+             * <li><strong>EQUAL</strong>: Both the tag key and tag value are matched.</li>
+             * <li><strong>NOT</strong>: The tag key is matched and the tag value is not matched.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EQUAL</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -399,7 +424,10 @@ public class CreatePolicyV2Request extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. If you leave this parameter empty, the value is any value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -424,7 +452,7 @@ public class CreatePolicyV2Request extends Request {
         private String backupType;
 
         @com.aliyun.core.annotation.NameInMap("DataSourceFilters")
-        private java.util.List < DataSourceFilters> dataSourceFilters;
+        private java.util.List<DataSourceFilters> dataSourceFilters;
 
         @com.aliyun.core.annotation.NameInMap("Immutable")
         private Boolean immutable;
@@ -439,7 +467,7 @@ public class CreatePolicyV2Request extends Request {
         private Long retention;
 
         @com.aliyun.core.annotation.NameInMap("RetentionRules")
-        private java.util.List < RetentionRules> retentionRules;
+        private java.util.List<RetentionRules> retentionRules;
 
         @com.aliyun.core.annotation.NameInMap("RuleType")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -449,7 +477,7 @@ public class CreatePolicyV2Request extends Request {
         private String schedule;
 
         @com.aliyun.core.annotation.NameInMap("TagFilters")
-        private java.util.List < TagFilters> tagFilters;
+        private java.util.List<TagFilters> tagFilters;
 
         @com.aliyun.core.annotation.NameInMap("VaultId")
         private String vaultId;
@@ -486,7 +514,7 @@ public class CreatePolicyV2Request extends Request {
         /**
          * @return dataSourceFilters
          */
-        public java.util.List < DataSourceFilters> getDataSourceFilters() {
+        public java.util.List<DataSourceFilters> getDataSourceFilters() {
             return this.dataSourceFilters;
         }
 
@@ -521,7 +549,7 @@ public class CreatePolicyV2Request extends Request {
         /**
          * @return retentionRules
          */
-        public java.util.List < RetentionRules> getRetentionRules() {
+        public java.util.List<RetentionRules> getRetentionRules() {
             return this.retentionRules;
         }
 
@@ -542,7 +570,7 @@ public class CreatePolicyV2Request extends Request {
         /**
          * @return tagFilters
          */
-        public java.util.List < TagFilters> getTagFilters() {
+        public java.util.List<TagFilters> getTagFilters() {
             return this.tagFilters;
         }
 
@@ -555,15 +583,15 @@ public class CreatePolicyV2Request extends Request {
 
         public static final class Builder {
             private String backupType; 
-            private java.util.List < DataSourceFilters> dataSourceFilters; 
+            private java.util.List<DataSourceFilters> dataSourceFilters; 
             private Boolean immutable; 
             private Long keepLatestSnapshots; 
             private String replicationRegionId; 
             private Long retention; 
-            private java.util.List < RetentionRules> retentionRules; 
+            private java.util.List<RetentionRules> retentionRules; 
             private String ruleType; 
             private String schedule; 
-            private java.util.List < TagFilters> tagFilters; 
+            private java.util.List<TagFilters> tagFilters; 
             private String vaultId; 
 
             /**
@@ -578,15 +606,18 @@ public class CreatePolicyV2Request extends Request {
             }
 
             /**
-             * DataSourceFilters.
+             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TAG</strong>. This parameter specifies the data source filter rule.</p>
              */
-            public Builder dataSourceFilters(java.util.List < DataSourceFilters> dataSourceFilters) {
+            public Builder dataSourceFilters(java.util.List<DataSourceFilters> dataSourceFilters) {
                 this.dataSourceFilters = dataSourceFilters;
                 return this;
             }
 
             /**
-             * Immutable.
+             * <p>This parameter is required only if the <strong>PolicyType</strong> parameter is set to <strong>UDM_ECS_ONLY</strong>. This parameter specifies whether to enable the immutable backup feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder immutable(Boolean immutable) {
                 this.immutable = immutable;
@@ -637,7 +668,7 @@ public class CreatePolicyV2Request extends Request {
             /**
              * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TRANSITION</strong>. This parameter specifies the special retention rules.</p>
              */
-            public Builder retentionRules(java.util.List < RetentionRules> retentionRules) {
+            public Builder retentionRules(java.util.List<RetentionRules> retentionRules) {
                 this.retentionRules = retentionRules;
                 return this;
             }
@@ -675,15 +706,18 @@ public class CreatePolicyV2Request extends Request {
             }
 
             /**
-             * TagFilters.
+             * <p>This parameter is required only if the <strong>RuleType</strong> parameter is set to <strong>TAG</strong>. This parameter specifies the resource tag filter rule.</p>
              */
-            public Builder tagFilters(java.util.List < TagFilters> tagFilters) {
+            public Builder tagFilters(java.util.List<TagFilters> tagFilters) {
                 this.tagFilters = tagFilters;
                 return this;
             }
 
             /**
-             * VaultId.
+             * <p>This parameter is required only if the RuleType parameter is set to BACKUP. The ID of the backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v-0001************aseg</p>
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

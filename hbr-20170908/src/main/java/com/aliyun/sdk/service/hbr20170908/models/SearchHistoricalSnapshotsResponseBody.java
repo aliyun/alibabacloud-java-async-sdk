@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
      */
     public static class Paths extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Path")
-        private java.util.List < String > path;
+        private java.util.List<String> path;
 
         private Paths(Builder builder) {
             this.path = builder.path;
@@ -241,17 +246,17 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         /**
          * @return path
          */
-        public java.util.List < String > getPath() {
+        public java.util.List<String> getPath() {
             return this.path;
         }
 
         public static final class Builder {
-            private java.util.List < String > path; 
+            private java.util.List<String> path; 
 
             /**
              * Path.
              */
-            public Builder path(java.util.List < String > path) {
+            public Builder path(java.util.List<String> path) {
                 this.path = path;
                 return this;
             }
@@ -789,7 +794,10 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ArchiveTime.
+             * <p>Time to archive</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640334062</p>
              */
             public Builder archiveTime(Long archiveTime) {
                 this.archiveTime = archiveTime;
@@ -896,7 +904,10 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Exclude.
+             * <p>Backup paths not included in the backup job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;/test/example_cn-hangzhou_7.txt&quot;, &quot;/test/example_cn-hangzhou_1.txt&quot;, &quot;/test/example_cn-hangzhou_3.txt&quot;, &quot;/test/example_cn-hangzhou_9.txt&quot;, &quot;/test/example_cn-hangzhou_6.txt&quot;]</p>
              */
             public Builder exclude(String exclude) {
                 this.exclude = exclude;
@@ -926,7 +937,10 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Include.
+             * <p>Backup paths included in the backup job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;/test/example_cn-huhehaote_3.txt&quot;, &quot;/test/example_cn-huhehaote_9.txt&quot;, &quot;/test/example_cn-huhehaote_5.txt&quot;, &quot;/test/example_cn-huhehaote_1.txt&quot;, &quot;/test/example_cn-huhehaote_7.txt&quot;]</p>
              */
             public Builder include(String include) {
                 this.include = include;
@@ -1094,7 +1108,10 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceParentSnapshotHash.
+             * <p>Parent snapshot HASH value before archiving.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwer***</p>
              */
             public Builder sourceParentSnapshotHash(String sourceParentSnapshotHash) {
                 this.sourceParentSnapshotHash = sourceParentSnapshotHash;
@@ -1102,7 +1119,10 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceSnapshotHash.
+             * <p>Snapshot HASH value before archiving</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwer***</p>
              */
             public Builder sourceSnapshotHash(String sourceSnapshotHash) {
                 this.sourceSnapshotHash = sourceSnapshotHash;
@@ -1153,7 +1173,15 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageClass.
+             * <p>Storage type. Values: </p>
+             * <ul>
+             * <li><strong>Standard</strong>: Standard. </li>
+             * <li><strong>Archive</strong>: Archive. </li>
+             * <li><strong>ColdArchive</strong>: Cold Archive.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder storageClass(String storageClass) {
                 this.storageClass = storageClass;
@@ -1183,7 +1211,10 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * UseCommonNas.
+             * <p>Whether to use local NAS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder useCommonNas(Boolean useCommonNas) {
                 this.useCommonNas = useCommonNas;
@@ -1216,7 +1247,7 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
      */
     public static class Snapshots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Snapshot")
-        private java.util.List < Snapshot> snapshot;
+        private java.util.List<Snapshot> snapshot;
 
         private Snapshots(Builder builder) {
             this.snapshot = builder.snapshot;
@@ -1233,17 +1264,17 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         /**
          * @return snapshot
          */
-        public java.util.List < Snapshot> getSnapshot() {
+        public java.util.List<Snapshot> getSnapshot() {
             return this.snapshot;
         }
 
         public static final class Builder {
-            private java.util.List < Snapshot> snapshot; 
+            private java.util.List<Snapshot> snapshot; 
 
             /**
              * Snapshot.
              */
-            public Builder snapshot(java.util.List < Snapshot> snapshot) {
+            public Builder snapshot(java.util.List<Snapshot> snapshot) {
                 this.snapshot = snapshot;
                 return this;
             }

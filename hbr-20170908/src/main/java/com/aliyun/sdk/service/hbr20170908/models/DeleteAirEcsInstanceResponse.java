@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeRestoreJobs2Response} extends {@link TeaModel}
+ * {@link DeleteAirEcsInstanceResponse} extends {@link TeaModel}
  *
- * <p>DescribeRestoreJobs2Response</p>
+ * <p>DeleteAirEcsInstanceResponse</p>
  */
-public class DescribeRestoreJobs2Response extends Response {
+public class DeleteAirEcsInstanceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribeRestoreJobs2Response extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeRestoreJobs2ResponseBody body;
+    private DeleteAirEcsInstanceResponseBody body;
 
-    private DescribeRestoreJobs2Response(BuilderImpl builder) {
+    private DeleteAirEcsInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeRestoreJobs2Response create() {
+    public static DeleteAirEcsInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribeRestoreJobs2Response extends Response {
     /**
      * @return body
      */
-    public DescribeRestoreJobs2ResponseBody getBody() {
+    public DeleteAirEcsInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeRestoreJobs2Response, Builder> {
+    public interface Builder extends Response.Builder<DeleteAirEcsInstanceResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeRestoreJobs2ResponseBody body);
+        Builder body(DeleteAirEcsInstanceResponseBody body);
 
         @Override
-        DescribeRestoreJobs2Response build();
+        DeleteAirEcsInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeRestoreJobs2Response, Builder>
+            extends Response.BuilderImpl<DeleteAirEcsInstanceResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeRestoreJobs2ResponseBody body; 
+        private DeleteAirEcsInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeRestoreJobs2Response response) {
+        private BuilderImpl(DeleteAirEcsInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeRestoreJobs2Response extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeRestoreJobs2ResponseBody body) {
+        public Builder body(DeleteAirEcsInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeRestoreJobs2Response build() {
-            return new DescribeRestoreJobs2Response(this);
+        public DeleteAirEcsInstanceResponse build() {
+            return new DeleteAirEcsInstanceResponse(this);
         } 
 
     } 

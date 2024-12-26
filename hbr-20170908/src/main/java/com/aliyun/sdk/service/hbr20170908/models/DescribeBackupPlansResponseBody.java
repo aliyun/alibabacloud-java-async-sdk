@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -273,7 +278,10 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>type</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -281,7 +289,14 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The tag-based matching rule. Valid values:</p>
+             * <ul>
+             * <li><strong>EQUAL</strong>: Both the tag key and tag value are matched.</li>
+             * <li><strong>NOT</strong>: The tag key is matched and the tag value is not matched.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EQUAL</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -289,7 +304,10 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -311,7 +329,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
      */
     public static class HitTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HitTag")
-        private java.util.List < HitTag> hitTag;
+        private java.util.List<HitTag> hitTag;
 
         private HitTags(Builder builder) {
             this.hitTag = builder.hitTag;
@@ -328,17 +346,17 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         /**
          * @return hitTag
          */
-        public java.util.List < HitTag> getHitTag() {
+        public java.util.List<HitTag> getHitTag() {
             return this.hitTag;
         }
 
         public static final class Builder {
-            private java.util.List < HitTag> hitTag; 
+            private java.util.List<HitTag> hitTag; 
 
             /**
              * HitTag.
              */
-            public Builder hitTag(java.util.List < HitTag> hitTag) {
+            public Builder hitTag(java.util.List<HitTag> hitTag) {
                 this.hitTag = hitTag;
                 return this;
             }
@@ -358,7 +376,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
      */
     public static class TableNames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TableName")
-        private java.util.List < String > tableName;
+        private java.util.List<String> tableName;
 
         private TableNames(Builder builder) {
             this.tableName = builder.tableName;
@@ -375,17 +393,17 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         /**
          * @return tableName
          */
-        public java.util.List < String > getTableName() {
+        public java.util.List<String> getTableName() {
             return this.tableName;
         }
 
         public static final class Builder {
-            private java.util.List < String > tableName; 
+            private java.util.List<String> tableName; 
 
             /**
              * TableName.
              */
-            public Builder tableName(java.util.List < String > tableName) {
+            public Builder tableName(java.util.List<String> tableName) {
                 this.tableName = tableName;
                 return this;
             }
@@ -452,7 +470,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
      */
     public static class Paths extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Path")
-        private java.util.List < String > path;
+        private java.util.List<String> path;
 
         private Paths(Builder builder) {
             this.path = builder.path;
@@ -469,17 +487,17 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         /**
          * @return path
          */
-        public java.util.List < String > getPath() {
+        public java.util.List<String> getPath() {
             return this.path;
         }
 
         public static final class Builder {
-            private java.util.List < String > path; 
+            private java.util.List<String> path; 
 
             /**
              * Path.
              */
-            public Builder path(java.util.List < String > path) {
+            public Builder path(java.util.List<String> path) {
                 this.path = path;
                 return this;
             }
@@ -595,7 +613,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
      */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Resource")
-        private java.util.List < Resource> resource;
+        private java.util.List<Resource> resource;
 
         private Resources(Builder builder) {
             this.resource = builder.resource;
@@ -612,17 +630,17 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         /**
          * @return resource
          */
-        public java.util.List < Resource> getResource() {
+        public java.util.List<Resource> getResource() {
             return this.resource;
         }
 
         public static final class Builder {
-            private java.util.List < Resource> resource; 
+            private java.util.List<Resource> resource; 
 
             /**
              * Resource.
              */
-            public Builder resource(java.util.List < Resource> resource) {
+            public Builder resource(java.util.List<Resource> resource) {
                 this.resource = resource;
                 return this;
             }
@@ -880,7 +898,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
      */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rule")
-        private java.util.List < Rule> rule;
+        private java.util.List<Rule> rule;
 
         private Rules(Builder builder) {
             this.rule = builder.rule;
@@ -897,17 +915,17 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         /**
          * @return rule
          */
-        public java.util.List < Rule> getRule() {
+        public java.util.List<Rule> getRule() {
             return this.rule;
         }
 
         public static final class Builder {
-            private java.util.List < Rule> rule; 
+            private java.util.List<Rule> rule; 
 
             /**
              * Rule.
              */
-            public Builder rule(java.util.List < Rule> rule) {
+            public Builder rule(java.util.List<Rule> rule) {
                 this.rule = rule;
                 return this;
             }
@@ -1640,7 +1658,10 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedByTag.
+             * <p>Indicates whether a backup plan is automatically created based on tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder createdByTag(Boolean createdByTag) {
                 this.createdByTag = createdByTag;
@@ -1788,7 +1809,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * HitTags.
+             * <p>The matched tag rules.</p>
              */
             public Builder hitTags(HitTags hitTags) {
                 this.hitTags = hitTags;
@@ -2046,7 +2067,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
      */
     public static class BackupPlans extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupPlan")
-        private java.util.List < BackupPlan> backupPlan;
+        private java.util.List<BackupPlan> backupPlan;
 
         private BackupPlans(Builder builder) {
             this.backupPlan = builder.backupPlan;
@@ -2063,17 +2084,17 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         /**
          * @return backupPlan
          */
-        public java.util.List < BackupPlan> getBackupPlan() {
+        public java.util.List<BackupPlan> getBackupPlan() {
             return this.backupPlan;
         }
 
         public static final class Builder {
-            private java.util.List < BackupPlan> backupPlan; 
+            private java.util.List<BackupPlan> backupPlan; 
 
             /**
              * BackupPlan.
              */
-            public Builder backupPlan(java.util.List < BackupPlan> backupPlan) {
+            public Builder backupPlan(java.util.List<BackupPlan> backupPlan) {
                 this.backupPlan = backupPlan;
                 return this;
             }

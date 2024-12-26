@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -182,7 +187,14 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * EncryptType.
+         * <p>The method that is used to encrypt the source data. This parameter is valid only if you set the VaultType parameter to STANDARD or OTS_BACKUP. Valid values:</p>
+         * <ul>
+         * <li><strong>HBR_PRIVATE</strong>: The source data is encrypted by using the built-in encryption method of Hybrid Backup Recovery (HBR).</li>
+         * <li><strong>KMS</strong>: The source data is encrypted by using Key Management Service (KMS).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HBR_PRIVATE</p>
          */
         public Builder encryptType(String encryptType) {
             this.putQueryParameter("EncryptType", encryptType);
@@ -191,7 +203,10 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * KmsKeyId.
+         * <p>The customer master key (CMK) created in KMS or the alias of the key. This parameter is required only if you set the EncryptType parameter to KMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alias/test</p>
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.putQueryParameter("KmsKeyId", kmsKeyId);
@@ -268,7 +283,7 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * <p>The storage class of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
+         * <p>The storage type of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
          * 
          * <strong>example:</strong>
          * <p>STANDARD</p>

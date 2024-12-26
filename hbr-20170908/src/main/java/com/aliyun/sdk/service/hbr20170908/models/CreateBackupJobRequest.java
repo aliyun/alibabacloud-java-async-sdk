@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -42,7 +47,7 @@ public class CreateBackupJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Detail")
-    private java.util.Map < String, ? > detail;
+    private java.util.Map<String, ?> detail;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Exclude")
@@ -172,7 +177,7 @@ public class CreateBackupJobRequest extends Request {
     /**
      * @return detail
      */
-    public java.util.Map < String, ? > getDetail() {
+    public java.util.Map<String, ?> getDetail() {
         return this.detail;
     }
 
@@ -254,7 +259,7 @@ public class CreateBackupJobRequest extends Request {
         private String crossAccountRoleName; 
         private String crossAccountType; 
         private Long crossAccountUserId; 
-        private java.util.Map < String, ? > detail; 
+        private java.util.Map<String, ?> detail; 
         private String exclude; 
         private String include; 
         private Boolean initiatedByAck; 
@@ -293,10 +298,9 @@ public class CreateBackupJobRequest extends Request {
         } 
 
         /**
-         * <p>The backup type. Valid values:</p>
+         * <p>The backup type. This parameter is required only if you set the SourceType parameter to UDM_ECS.</p>
          * <ul>
          * <li><strong>COMPLETE</strong>: full backup</li>
-         * <li><strong>INCREMENTAL</strong>: incremental backup</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -309,7 +313,7 @@ public class CreateBackupJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-00068btz******oku</p>
@@ -321,7 +325,7 @@ public class CreateBackupJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster. This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>CONTAINER</strong>.</p>
+         * <p>You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>cc-000xxxxxxxxxxxxxxi00</p>
@@ -333,7 +337,7 @@ public class CreateBackupJobRequest extends Request {
         }
 
         /**
-         * <p>The cluster resources. This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>CONTAINER</strong>.</p>
+         * <p>You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;resourceType&quot;:&quot;PV&quot;,&quot;backupMethod&quot;:&quot;FILE&quot;,&quot;resourceId&quot;:&quot;674dac6d-74cd-47e9-a675-09e2f10d2c45&quot;,&quot;resourceInfo&quot;:&quot;{\&quot;pv_name\&quot;:\&quot;nas-650dac6d-74cd-47e9-a675-09e2f10d2c45\&quot;,\&quot;pv_size\&quot;:\&quot;8Gi\&quot;,\&quot;storage_class\&quot;:\&quot;alibabacloud-cnfs-nas\&quot;,\&quot;pvc_name\&quot;:\&quot;data-postgresql-default-0\&quot;,\&quot;namespace\&quot;:\&quot;database\&quot;}&quot;,&quot;host&quot;:&quot;cn-huhehaote.192.168.13.133&quot;,&quot;hostPrefix&quot;:&quot;6f5e758e-8d35-4584-b9ce-8333adfc7547/volumes/kubernetes.io~csi/nas-670dac6d-74cd-47e9-a675-09e2f10d2c45/mount&quot;,&quot;pvPath&quot;:&quot;/&quot;}]</p>
@@ -385,7 +389,7 @@ public class CreateBackupJobRequest extends Request {
         }
 
         /**
-         * <p>The details about ECS instance backup. The value is a JSON string.</p>
+         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>UDM_ECS</strong>. The value is a JSON string. Valid values:</p>
          * <ul>
          * <li><p>doCopy: specifies whether to enable remote replication.</p>
          * </li>
@@ -405,7 +409,7 @@ public class CreateBackupJobRequest extends Request {
          * </li>
          * <li><p>enableWriters: This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies whether to create application-consistent snapshots.</p>
          * <ul>
-         * <li>true (default): creates application-consistent snapshots.</li>
+         * <li>true: creates application-consistent snapshots.</li>
          * <li>false: creates file system-consistent snapshots.</li>
          * </ul>
          * </li>
@@ -430,7 +434,7 @@ public class CreateBackupJobRequest extends Request {
          *     &quot;timeoutInSeconds&quot;: 60
          * }</p>
          */
-        public Builder detail(java.util.Map < String, ? > detail) {
+        public Builder detail(java.util.Map<String, ?> detail) {
             String detailShrink = shrink(detail, "Detail", "json");
             this.putQueryParameter("Detail", detailShrink);
             this.detail = detail;
@@ -438,7 +442,7 @@ public class CreateBackupJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong>. This parameter specifies the paths to the files that are excluded from the backup job. The value must be 1 to 255 characters in length.</p>
+         * <p>This parameter does not take effect if you set the <strong>SourceType</strong> parameter to <strong>UDM_ECS</strong>. This parameter specifies the paths to the files that are excluded from the backup job. The value can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
@@ -450,7 +454,7 @@ public class CreateBackupJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong>. This parameter specifies the paths to the files that you want to back up. The value must be 1 to 255 characters in length.</p>
+         * <p>This parameter does not take effect if you set the <strong>SourceType</strong> parameter to <strong>UDM_ECS</strong>. This parameter specifies the paths to the files that are backed up. The value can be up to 255 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</p>
@@ -462,7 +466,7 @@ public class CreateBackupJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter specifies whether to initiate the request by using Container Service for Kubernetes (ACK). Default value: false.</p>
+         * <p>false or left empty</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -474,7 +478,7 @@ public class CreateBackupJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>UDM_ECS</strong>. This parameter specifies the ID of the Elastic Compute Service (ECS) instance.</p>
+         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>UDM_ECS</strong>. This parameter specifies the ID of the ECS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1xxxxxxxxxxxxxxysm</p>
@@ -498,12 +502,7 @@ public class CreateBackupJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong>. This parameter specifies whether to use Windows Volume Shadow Copy Service (VSS) to define a source path.</p>
-         * <ul>
-         * <li>This parameter is available only for Windows ECS instances.</li>
-         * <li>If data changes occur in the backup source, the source data must be the same as the data to be backed up before you can set this parameter to <code>[&quot;UseVSS&quot;:true]</code>.</li>
-         * <li>If you use VSS, you cannot back up data from multiple directories.</li>
-         * </ul>
+         * <p>You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;UseVSS&quot;:false}</p>
@@ -529,9 +528,7 @@ public class CreateBackupJobRequest extends Request {
         /**
          * <p>The type of the data source. Valid values:</p>
          * <ul>
-         * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
-         * <li><strong>UDM_ECS</strong>: ECS instances</li>
-         * <li><strong>CONTAINER</strong>: containers</li>
+         * <li><strong>UDM_ECS</strong>: Elastic Compute Service (ECS) instance</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -545,7 +542,7 @@ public class CreateBackupJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong>. This parameter specifies the throttling rules. Format: <code>{start}|{end}|{bandwidth}</code>. Separate multiple throttling rules with vertical bars (|). A specified time range cannot overlap with another time range.</p>
+         * <p>This parameter does not take effect if you set the <strong>SourceType</strong> parameter to <strong>UDM_ECS</strong>. This parameter specifies the throttling rules. Format: <code>{start}|{end}|{bandwidth}</code>. Separate multiple throttling rules with vertical bars (|). A specified time range cannot overlap with another time range.</p>
          * <ul>
          * <li><strong>start</strong>: the start hour.</li>
          * <li><strong>end</strong>: the end hour.</li>
@@ -562,7 +559,7 @@ public class CreateBackupJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the backup vault.</p>
+         * <p>The ID of the backup vault. This parameter is not required if you set the SourceType parameter to UDM_ECS.</p>
          * 
          * <strong>example:</strong>
          * <p>v-000xxxxxxxxxxxxxxy1v</p>

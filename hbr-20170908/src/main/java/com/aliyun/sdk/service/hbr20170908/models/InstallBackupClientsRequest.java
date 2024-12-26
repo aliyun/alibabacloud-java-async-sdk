@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class InstallBackupClientsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map < String, ? > instanceIds;
+    private java.util.Map<String, ?> instanceIds;
 
     private InstallBackupClientsRequest(Builder builder) {
         super(builder);
@@ -74,7 +79,7 @@ public class InstallBackupClientsRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.Map < String, ? > getInstanceIds() {
+    public java.util.Map<String, ?> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -82,7 +87,7 @@ public class InstallBackupClientsRequest extends Request {
         private String crossAccountRoleName; 
         private String crossAccountType; 
         private Long crossAccountUserId; 
-        private java.util.Map < String, ? > instanceIds; 
+        private java.util.Map<String, ?> instanceIds; 
 
         private Builder() {
             super();
@@ -143,7 +148,7 @@ public class InstallBackupClientsRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;i-0xi5wj5*****v3j3bh2gj5&quot;]</p>
          */
-        public Builder instanceIds(java.util.Map < String, ? > instanceIds) {
+        public Builder instanceIds(java.util.Map<String, ?> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
             this.putQueryParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;

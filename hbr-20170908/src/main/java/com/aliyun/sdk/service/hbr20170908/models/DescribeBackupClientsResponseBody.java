@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeBackupClientsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Clients")
-    private java.util.List < Clients> clients;
+    private java.util.List<Clients> clients;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
@@ -58,7 +63,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
     /**
      * @return clients
      */
-    public java.util.List < Clients> getClients() {
+    public java.util.List<Clients> getClients() {
         return this.clients;
     }
 
@@ -112,7 +117,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Clients> clients; 
+        private java.util.List<Clients> clients; 
         private String code; 
         private String message; 
         private Integer pageNumber; 
@@ -127,7 +132,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{&quot;Client&quot;: []}</p>
          */
-        public Builder clients(java.util.List < Clients> clients) {
+        public Builder clients(java.util.List<Clients> clients) {
             this.clients = clients;
             return this;
         }
@@ -652,7 +657,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
@@ -805,7 +810,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -840,7 +845,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             private String privateIpV4; 
             private Settings settings; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private Long updatedTime; 
             private String zoneId; 
 
@@ -1054,7 +1059,7 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
             /**
              * <p>The tag information.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

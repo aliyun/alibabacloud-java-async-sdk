@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class UninstallBackupClientsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("InstanceStatuses")
-    private java.util.List < InstanceStatuses> instanceStatuses;
+    private java.util.List<InstanceStatuses> instanceStatuses;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -57,7 +62,7 @@ public class UninstallBackupClientsResponseBody extends TeaModel {
     /**
      * @return instanceStatuses
      */
-    public java.util.List < InstanceStatuses> getInstanceStatuses() {
+    public java.util.List<InstanceStatuses> getInstanceStatuses() {
         return this.instanceStatuses;
     }
 
@@ -91,7 +96,7 @@ public class UninstallBackupClientsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < InstanceStatuses> instanceStatuses; 
+        private java.util.List<InstanceStatuses> instanceStatuses; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -111,7 +116,7 @@ public class UninstallBackupClientsResponseBody extends TeaModel {
         /**
          * <p>The status of the ECS instance.</p>
          */
-        public Builder instanceStatuses(java.util.List < InstanceStatuses> instanceStatuses) {
+        public Builder instanceStatuses(java.util.List<InstanceStatuses> instanceStatuses) {
             this.instanceStatuses = instanceStatuses;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -98,7 +103,10 @@ public class ExecutePolicyV2Request extends Request {
         } 
 
         /**
-         * DataSourceId.
+         * <p>Data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1************dtv</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putBodyParameter("DataSourceId", dataSourceId);
@@ -107,6 +115,7 @@ public class ExecutePolicyV2Request extends Request {
         }
 
         /**
+         * <p>Policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,6 +128,7 @@ public class ExecutePolicyV2Request extends Request {
         }
 
         /**
+         * <p>Rule ID, limited to executing rules of <strong>RuleType</strong> <strong>BACKUP</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +141,13 @@ public class ExecutePolicyV2Request extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>Data source type, with the value range as follows:</p>
+         * <ul>
+         * <li><strong>UDM_ECS</strong>: Represents ECS full machine backup.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UDM_ECS</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

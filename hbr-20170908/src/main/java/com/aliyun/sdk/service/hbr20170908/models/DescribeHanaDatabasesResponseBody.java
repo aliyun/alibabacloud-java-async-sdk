@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -393,7 +398,7 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
      */
     public static class HanaDatabases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HanaDatabase")
-        private java.util.List < HanaDatabase> hanaDatabase;
+        private java.util.List<HanaDatabase> hanaDatabase;
 
         private HanaDatabases(Builder builder) {
             this.hanaDatabase = builder.hanaDatabase;
@@ -410,17 +415,17 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
         /**
          * @return hanaDatabase
          */
-        public java.util.List < HanaDatabase> getHanaDatabase() {
+        public java.util.List<HanaDatabase> getHanaDatabase() {
             return this.hanaDatabase;
         }
 
         public static final class Builder {
-            private java.util.List < HanaDatabase> hanaDatabase; 
+            private java.util.List<HanaDatabase> hanaDatabase; 
 
             /**
              * HanaDatabase.
              */
-            public Builder hanaDatabase(java.util.List < HanaDatabase> hanaDatabase) {
+            public Builder hanaDatabase(java.util.List<HanaDatabase> hanaDatabase) {
                 this.hanaDatabase = hanaDatabase;
                 return this;
             }

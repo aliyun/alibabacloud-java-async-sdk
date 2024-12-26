@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -255,7 +260,7 @@ public class CreateClientsResponseBody extends TeaModel {
      */
     public static class InstanceStatuses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceStatus")
-        private java.util.List < InstanceStatus> instanceStatus;
+        private java.util.List<InstanceStatus> instanceStatus;
 
         private InstanceStatuses(Builder builder) {
             this.instanceStatus = builder.instanceStatus;
@@ -272,17 +277,17 @@ public class CreateClientsResponseBody extends TeaModel {
         /**
          * @return instanceStatus
          */
-        public java.util.List < InstanceStatus> getInstanceStatus() {
+        public java.util.List<InstanceStatus> getInstanceStatus() {
             return this.instanceStatus;
         }
 
         public static final class Builder {
-            private java.util.List < InstanceStatus> instanceStatus; 
+            private java.util.List<InstanceStatus> instanceStatus; 
 
             /**
              * InstanceStatus.
              */
-            public Builder instanceStatus(java.util.List < InstanceStatus> instanceStatus) {
+            public Builder instanceStatus(java.util.List<InstanceStatus> instanceStatus) {
                 this.instanceStatus = instanceStatus;
                 return this;
             }

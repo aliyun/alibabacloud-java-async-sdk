@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -122,7 +127,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
         private Vaults vaults; 
 
         /**
-         * Code.
+         * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +138,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +149,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number for pagination, starting from 1. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -146,7 +160,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size, with a minimum value of 1, a maximum value of 99, and a default value of 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +171,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +182,13 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful.</p>
+         * <ul>
+         * <li>true: Success - false: Failure</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +196,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Returns the total number of backup repositories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -406,7 +435,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * CommonFileSystem.
+             * <p>The number of Cloud Parallel File Storage (CPFS) backup plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder commonFileSystem(Integer commonFileSystem) {
                 this.commonFileSystem = commonFileSystem;
@@ -644,7 +676,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
      */
     public static class SourceTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceType")
-        private java.util.List < String > sourceType;
+        private java.util.List<String> sourceType;
 
         private SourceTypes(Builder builder) {
             this.sourceType = builder.sourceType;
@@ -661,17 +693,17 @@ public class DescribeVaultsResponseBody extends TeaModel {
         /**
          * @return sourceType
          */
-        public java.util.List < String > getSourceType() {
+        public java.util.List<String> getSourceType() {
             return this.sourceType;
         }
 
         public static final class Builder {
-            private java.util.List < String > sourceType; 
+            private java.util.List<String> sourceType; 
 
             /**
              * SourceType.
              */
-            public Builder sourceType(java.util.List < String > sourceType) {
+            public Builder sourceType(java.util.List<String> sourceType) {
                 this.sourceType = sourceType;
                 return this;
             }
@@ -774,7 +806,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
      */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -791,17 +823,17 @@ public class DescribeVaultsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -1445,7 +1477,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             private Boolean wormEnabled; 
 
             /**
-             * ArchiveBytesDone.
+             * <p>Archival tier backup data volume. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024000</p>
              */
             public Builder archiveBytesDone(Long archiveBytesDone) {
                 this.archiveBytesDone = archiveBytesDone;
@@ -1716,7 +1751,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationTargetRegionId.
+             * <p>Target region for remote backup repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder replicationTargetRegionId(String replicationTargetRegionId) {
                 this.replicationTargetRegionId = replicationTargetRegionId;
@@ -1926,7 +1964,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
      */
     public static class Vaults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Vault")
-        private java.util.List < Vault> vault;
+        private java.util.List<Vault> vault;
 
         private Vaults(Builder builder) {
             this.vault = builder.vault;
@@ -1943,17 +1981,17 @@ public class DescribeVaultsResponseBody extends TeaModel {
         /**
          * @return vault
          */
-        public java.util.List < Vault> getVault() {
+        public java.util.List<Vault> getVault() {
             return this.vault;
         }
 
         public static final class Builder {
-            private java.util.List < Vault> vault; 
+            private java.util.List<Vault> vault; 
 
             /**
              * Vault.
              */
-            public Builder vault(java.util.List < Vault> vault) {
+            public Builder vault(java.util.List<Vault> vault) {
                 this.vault = vault;
                 return this;
             }

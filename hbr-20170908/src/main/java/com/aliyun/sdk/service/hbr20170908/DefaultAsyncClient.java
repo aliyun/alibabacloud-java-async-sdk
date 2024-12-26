@@ -188,11 +188,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  A backup schedule defines the data source, backup policy, and other configurations. After you execute a backup schedule, a backup job is generated to record the backup progress and the backup result. If a backup job is complete, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</p>
      * <ul>
-     * <li>You can specify only one type of data source in a backup schedule.</li>
-     * <li>You can specify only one interval as a backup cycle in a backup schedule.</li>
-     * <li>Each backup schedule allows you to back up data to only one backup vault.</li>
+     * <li>A backup plan associates data sources with backup policies and other necessary information for backups. After the execution of a backup plan, it generates a backup task that records the progress and results of the backup. If the backup task is successful, a backup snapshot is created. You can use the backup snapshot to create a recovery task.</li>
+     * <li>A backup plan supports only one type of data source.</li>
+     * <li>A backup plan supports only a single fixed interval backup cycle strategy.</li>
+     * <li>A backup plan can back up to only one backup vault.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateBackupPlan  CreateBackupPlanRequest
@@ -442,6 +442,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateVaultResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAirEcsInstance  DeleteAirEcsInstanceRequest
+     * @return DeleteAirEcsInstanceResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAirEcsInstanceResponse> deleteAirEcsInstance(DeleteAirEcsInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAirEcsInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAirEcsInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAirEcsInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

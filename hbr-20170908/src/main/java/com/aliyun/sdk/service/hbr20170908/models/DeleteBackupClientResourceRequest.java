@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -15,7 +20,7 @@ public class DeleteBackupClientResourceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.Map < String, ? > clientIds;
+    private java.util.Map<String, ?> clientIds;
 
     private DeleteBackupClientResourceRequest(Builder builder) {
         super(builder);
@@ -38,12 +43,12 @@ public class DeleteBackupClientResourceRequest extends Request {
     /**
      * @return clientIds
      */
-    public java.util.Map < String, ? > getClientIds() {
+    public java.util.Map<String, ?> getClientIds() {
         return this.clientIds;
     }
 
     public static final class Builder extends Request.Builder<DeleteBackupClientResourceRequest, Builder> {
-        private java.util.Map < String, ? > clientIds; 
+        private java.util.Map<String, ?> clientIds; 
 
         private Builder() {
             super();
@@ -61,7 +66,7 @@ public class DeleteBackupClientResourceRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;c-0007kyu045r0********&quot;, &quot;c-000b6818umvo********&quot;]</p>
          */
-        public Builder clientIds(java.util.Map < String, ? > clientIds) {
+        public Builder clientIds(java.util.Map<String, ?> clientIds) {
             String clientIdsShrink = shrink(clientIds, "ClientIds", "json");
             this.putQueryParameter("ClientIds", clientIdsShrink);
             this.clientIds = clientIds;

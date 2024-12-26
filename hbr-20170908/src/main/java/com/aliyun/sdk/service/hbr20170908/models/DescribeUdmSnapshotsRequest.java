@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,7 +36,7 @@ public class DescribeUdmSnapshotsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SnapshotIds")
-    private java.util.Map < String, ? > snapshotIds;
+    private java.util.Map<String, ?> snapshotIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceType")
@@ -104,7 +109,7 @@ public class DescribeUdmSnapshotsRequest extends Request {
     /**
      * @return snapshotIds
      */
-    public java.util.Map < String, ? > getSnapshotIds() {
+    public java.util.Map<String, ?> getSnapshotIds() {
         return this.snapshotIds;
     }
 
@@ -134,7 +139,7 @@ public class DescribeUdmSnapshotsRequest extends Request {
         private Long endTime; 
         private String instanceId; 
         private String jobId; 
-        private java.util.Map < String, ? > snapshotIds; 
+        private java.util.Map<String, ?> snapshotIds; 
         private String sourceType; 
         private Long startTime; 
         private String udmRegionId; 
@@ -210,7 +215,7 @@ public class DescribeUdmSnapshotsRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;s-000e3vhhu62xsm6v92r0&quot;]</p>
          */
-        public Builder snapshotIds(java.util.Map < String, ? > snapshotIds) {
+        public Builder snapshotIds(java.util.Map<String, ?> snapshotIds) {
             String snapshotIdsShrink = shrink(snapshotIds, "SnapshotIds", "json");
             this.putBodyParameter("SnapshotIds", snapshotIdsShrink);
             this.snapshotIds = snapshotIds;

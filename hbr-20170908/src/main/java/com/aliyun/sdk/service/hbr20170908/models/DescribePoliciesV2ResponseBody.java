@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
     private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("Policies")
-    private java.util.List < Policies> policies;
+    private java.util.List<Policies> policies;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -86,7 +91,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
     /**
      * @return policies
      */
-    public java.util.List < Policies> getPolicies() {
+    public java.util.List<Policies> getPolicies() {
         return this.policies;
     }
 
@@ -116,7 +121,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         private Integer maxResults; 
         private String message; 
         private String nextToken; 
-        private java.util.List < Policies> policies; 
+        private java.util.List<Policies> policies; 
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
@@ -169,7 +174,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         /**
          * <p>The backup policies.</p>
          */
-        public Builder policies(java.util.List < Policies> policies) {
+        public Builder policies(java.util.List<Policies> policies) {
             this.policies = policies;
             return this;
         }
@@ -225,7 +230,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
      */
     public static class DataSourceFilters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceIds")
-        private java.util.List < String > dataSourceIds;
+        private java.util.List<String> dataSourceIds;
 
         @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
@@ -246,7 +251,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         /**
          * @return dataSourceIds
          */
-        public java.util.List < String > getDataSourceIds() {
+        public java.util.List<String> getDataSourceIds() {
             return this.dataSourceIds;
         }
 
@@ -258,19 +263,29 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > dataSourceIds; 
+            private java.util.List<String> dataSourceIds; 
             private String sourceType; 
 
             /**
-             * DataSourceIds.
+             * <p>Deprecated.</p>
              */
-            public Builder dataSourceIds(java.util.List < String > dataSourceIds) {
+            public Builder dataSourceIds(java.util.List<String> dataSourceIds) {
                 this.dataSourceIds = dataSourceIds;
                 return this;
             }
 
             /**
-             * SourceType.
+             * <p>Data source type. The value range is as follows: </p>
+             * <ul>
+             * <li><strong>UDM_ECS</strong>: Indicates ECS server backup. </li>
+             * <li><strong>OSS</strong>: Indicates OSS backup. </li>
+             * <li><strong>NAS</strong>: Indicates Alibaba Cloud NAS backup. </li>
+             * <li><strong>ECS_FILE</strong>: Indicates ECS file backup. </li>
+             * <li><strong>OTS</strong>: Indicates Tablestore backup.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UDM_ECS</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -442,7 +457,10 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>Tag key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -450,7 +468,10 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>Tag matching rules, supporting: - <strong>EQUAL</strong>: Matches both the tag key and tag value. - <strong>NOT</strong>: Matches the tag key but not the tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EQUAL</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -458,7 +479,10 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -486,7 +510,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         private String backupType;
 
         @com.aliyun.core.annotation.NameInMap("DataSourceFilters")
-        private java.util.List < DataSourceFilters> dataSourceFilters;
+        private java.util.List<DataSourceFilters> dataSourceFilters;
 
         @com.aliyun.core.annotation.NameInMap("Immutable")
         private Boolean immutable;
@@ -501,7 +525,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         private Long retention;
 
         @com.aliyun.core.annotation.NameInMap("RetentionRules")
-        private java.util.List < RetentionRules> retentionRules;
+        private java.util.List<RetentionRules> retentionRules;
 
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
@@ -513,7 +537,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         private String schedule;
 
         @com.aliyun.core.annotation.NameInMap("TagFilters")
-        private java.util.List < TagFilters> tagFilters;
+        private java.util.List<TagFilters> tagFilters;
 
         @com.aliyun.core.annotation.NameInMap("VaultId")
         private String vaultId;
@@ -559,7 +583,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         /**
          * @return dataSourceFilters
          */
-        public java.util.List < DataSourceFilters> getDataSourceFilters() {
+        public java.util.List<DataSourceFilters> getDataSourceFilters() {
             return this.dataSourceFilters;
         }
 
@@ -594,7 +618,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         /**
          * @return retentionRules
          */
-        public java.util.List < RetentionRules> getRetentionRules() {
+        public java.util.List<RetentionRules> getRetentionRules() {
             return this.retentionRules;
         }
 
@@ -622,7 +646,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         /**
          * @return tagFilters
          */
-        public java.util.List < TagFilters> getTagFilters() {
+        public java.util.List<TagFilters> getTagFilters() {
             return this.tagFilters;
         }
 
@@ -636,16 +660,16 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public static final class Builder {
             private Long archiveDays; 
             private String backupType; 
-            private java.util.List < DataSourceFilters> dataSourceFilters; 
+            private java.util.List<DataSourceFilters> dataSourceFilters; 
             private Boolean immutable; 
             private Long keepLatestSnapshots; 
             private String replicationRegionId; 
             private Long retention; 
-            private java.util.List < RetentionRules> retentionRules; 
+            private java.util.List<RetentionRules> retentionRules; 
             private String ruleId; 
             private String ruleType; 
             private String schedule; 
-            private java.util.List < TagFilters> tagFilters; 
+            private java.util.List<TagFilters> tagFilters; 
             private String vaultId; 
 
             /**
@@ -671,15 +695,18 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceFilters.
+             * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TAG</strong>. It defines the data source filtering rule.</p>
              */
-            public Builder dataSourceFilters(java.util.List < DataSourceFilters> dataSourceFilters) {
+            public Builder dataSourceFilters(java.util.List<DataSourceFilters> dataSourceFilters) {
                 this.dataSourceFilters = dataSourceFilters;
                 return this;
             }
 
             /**
-             * Immutable.
+             * <p>This parameter is returned only if the <strong>PolicyType</strong> is <strong>UDM_ECS_ONLY</strong>. This parameter indicates whether the immutable backup feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder immutable(Boolean immutable) {
                 this.immutable = immutable;
@@ -730,7 +757,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             /**
              * <p>This parameter is returned only if the value of the <strong>RuleType</strong> parameter is <strong>TRANSITION</strong>. This parameter indicates the special retention rules.</p>
              */
-            public Builder retentionRules(java.util.List < RetentionRules> retentionRules) {
+            public Builder retentionRules(java.util.List<RetentionRules> retentionRules) {
                 this.retentionRules = retentionRules;
                 return this;
             }
@@ -778,9 +805,9 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * TagFilters.
+             * <p>This parameter is required only when <strong>RuleType</strong> is set to <strong>TAG</strong>. It defines the resource tag filtering rule.</p>
              */
-            public Builder tagFilters(java.util.List < TagFilters> tagFilters) {
+            public Builder tagFilters(java.util.List<TagFilters> tagFilters) {
                 this.tagFilters = tagFilters;
                 return this;
             }
@@ -829,7 +856,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         private String policyType;
 
         @com.aliyun.core.annotation.NameInMap("Rules")
-        private java.util.List < Rules> rules;
+        private java.util.List<Rules> rules;
 
         @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
@@ -898,7 +925,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         /**
          * @return rules
          */
-        public java.util.List < Rules> getRules() {
+        public java.util.List<Rules> getRules() {
             return this.rules;
         }
 
@@ -916,7 +943,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             private String policyId; 
             private String policyName; 
             private String policyType; 
-            private java.util.List < Rules> rules; 
+            private java.util.List<Rules> rules; 
             private Long updatedTime; 
 
             /**
@@ -992,7 +1019,7 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
             /**
              * <p>The rules in the backup policy.</p>
              */
-            public Builder rules(java.util.List < Rules> rules) {
+            public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
                 return this;
             }

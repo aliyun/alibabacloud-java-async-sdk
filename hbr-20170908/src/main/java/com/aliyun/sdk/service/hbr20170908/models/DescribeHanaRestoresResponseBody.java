@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -940,7 +945,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
      */
     public static class HanaRestore extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HanaRestores")
-        private java.util.List < HanaRestores> hanaRestores;
+        private java.util.List<HanaRestores> hanaRestores;
 
         private HanaRestore(Builder builder) {
             this.hanaRestores = builder.hanaRestores;
@@ -957,17 +962,17 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
         /**
          * @return hanaRestores
          */
-        public java.util.List < HanaRestores> getHanaRestores() {
+        public java.util.List<HanaRestores> getHanaRestores() {
             return this.hanaRestores;
         }
 
         public static final class Builder {
-            private java.util.List < HanaRestores> hanaRestores; 
+            private java.util.List<HanaRestores> hanaRestores; 
 
             /**
              * HanaRestores.
              */
-            public Builder hanaRestores(java.util.List < HanaRestores> hanaRestores) {
+            public Builder hanaRestores(java.util.List<HanaRestores> hanaRestores) {
                 this.hanaRestores = hanaRestores;
                 return this;
             }

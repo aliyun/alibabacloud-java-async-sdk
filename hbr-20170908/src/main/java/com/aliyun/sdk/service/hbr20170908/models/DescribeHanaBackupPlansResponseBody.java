@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -471,7 +476,7 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
      */
     public static class HanaBackupPlans extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HanaBackupPlan")
-        private java.util.List < HanaBackupPlan> hanaBackupPlan;
+        private java.util.List<HanaBackupPlan> hanaBackupPlan;
 
         private HanaBackupPlans(Builder builder) {
             this.hanaBackupPlan = builder.hanaBackupPlan;
@@ -488,17 +493,17 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         /**
          * @return hanaBackupPlan
          */
-        public java.util.List < HanaBackupPlan> getHanaBackupPlan() {
+        public java.util.List<HanaBackupPlan> getHanaBackupPlan() {
             return this.hanaBackupPlan;
         }
 
         public static final class Builder {
-            private java.util.List < HanaBackupPlan> hanaBackupPlan; 
+            private java.util.List<HanaBackupPlan> hanaBackupPlan; 
 
             /**
              * HanaBackupPlan.
              */
-            public Builder hanaBackupPlan(java.util.List < HanaBackupPlan> hanaBackupPlan) {
+            public Builder hanaBackupPlan(java.util.List<HanaBackupPlan> hanaBackupPlan) {
                 this.hanaBackupPlan = hanaBackupPlan;
                 return this;
             }

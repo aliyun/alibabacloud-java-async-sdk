@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeBackupClientsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ClientIds")
-    private java.util.List < String > clientIds;
+    private java.util.List<String> clientIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientType")
@@ -39,7 +44,7 @@ public class DescribeBackupClientsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    private java.util.List < String > instanceIds;
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -52,7 +57,7 @@ public class DescribeBackupClientsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeBackupClientsRequest(Builder builder) {
         super(builder);
@@ -84,7 +89,7 @@ public class DescribeBackupClientsRequest extends Request {
     /**
      * @return clientIds
      */
-    public java.util.List < String > getClientIds() {
+    public java.util.List<String> getClientIds() {
         return this.clientIds;
     }
 
@@ -126,7 +131,7 @@ public class DescribeBackupClientsRequest extends Request {
     /**
      * @return instanceIds
      */
-    public java.util.List < String > getInstanceIds() {
+    public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
     }
 
@@ -147,21 +152,21 @@ public class DescribeBackupClientsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<DescribeBackupClientsRequest, Builder> {
-        private java.util.List < String > clientIds; 
+        private java.util.List<String> clientIds; 
         private String clientType; 
         private String clusterId; 
         private String crossAccountRoleName; 
         private String crossAccountType; 
         private Long crossAccountUserId; 
-        private java.util.List < String > instanceIds; 
+        private java.util.List<String> instanceIds; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -187,7 +192,7 @@ public class DescribeBackupClientsRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;c-*********************&quot;]</p>
          */
-        public Builder clientIds(java.util.List < String > clientIds) {
+        public Builder clientIds(java.util.List<String> clientIds) {
             String clientIdsShrink = shrink(clientIds, "ClientIds", "json");
             this.putBodyParameter("ClientIds", clientIdsShrink);
             this.clientIds = clientIds;
@@ -269,7 +274,7 @@ public class DescribeBackupClientsRequest extends Request {
          * <strong>example:</strong>
          * <p>[&quot;i-*********************&quot;]</p>
          */
-        public Builder instanceIds(java.util.List < String > instanceIds) {
+        public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
             this.putBodyParameter("InstanceIds", instanceIdsShrink);
             this.instanceIds = instanceIds;
@@ -306,7 +311,7 @@ public class DescribeBackupClientsRequest extends Request {
          * <strong>example:</strong>
          * <p>33738719#</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
             return this;

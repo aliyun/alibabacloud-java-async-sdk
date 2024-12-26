@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -222,7 +227,10 @@ public class UpdatePolicyBindingRequest extends Request {
         }
 
         /**
-         * Exclude.
+         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;<em>.doc&quot;,&quot;</em>.xltm&quot;]</p>
          */
         public Builder exclude(String exclude) {
             this.putQueryParameter("Exclude", exclude);
@@ -231,7 +239,10 @@ public class UpdatePolicyBindingRequest extends Request {
         }
 
         /**
-         * Include.
+         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;<em>.doc&quot;,&quot;</em>.xltm&quot;]</p>
          */
         public Builder include(String include) {
             this.putQueryParameter("Include", include);
@@ -265,7 +276,13 @@ public class UpdatePolicyBindingRequest extends Request {
         }
 
         /**
-         * Source.
+         * <ul>
+         * <li>If the SourceType parameter is set to <strong>OSS</strong>, set the Source parameter to the prefix of the path to the folder that you want to back up. If you do not specify the Source parameter, the entire bucket (root directory) is backed up.</li>
+         * <li>If the SourceType parameter is set to <strong>ECS_FILE</strong> or <strong>File</strong>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths backed up.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>backup/</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -290,7 +307,15 @@ public class UpdatePolicyBindingRequest extends Request {
         }
 
         /**
-         * SpeedLimit.
+         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the throttling rules. Format: <code>{start}{end}{bandwidth}</code>. Separate multiple throttling rules with vertical bars (|). The time ranges of the throttling rules cannot overlap.</p>
+         * <ul>
+         * <li><strong>start</strong>: the start hour.</li>
+         * <li><strong>end</strong>: the end hour.</li>
+         * <li><strong>bandwidth</strong>: the bandwidth. Unit: KB/s.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0:24:5120</p>
          */
         public Builder speedLimit(String speedLimit) {
             this.putQueryParameter("SpeedLimit", speedLimit);
@@ -350,7 +375,10 @@ public class UpdatePolicyBindingRequest extends Request {
             private Boolean fullOnIncrementFail; 
 
             /**
-             * FetchSliceSize.
+             * <p>The size of backup shards (the number of files).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder fetchSliceSize(Long fetchSliceSize) {
                 this.fetchSliceSize = fetchSliceSize;
@@ -358,7 +386,14 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * FullOnIncrementFail.
+             * <p>Specifies whether the system performs full backup if incremental backup fails. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The system performs full backup if incremental backup fails.</li>
+             * <li><strong>false</strong>: The system does not perform full backup if incremental backup fails.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fullOnIncrementFail(Boolean fullOnIncrementFail) {
                 this.fullOnIncrementFail = fullOnIncrementFail;
@@ -429,7 +464,10 @@ public class UpdatePolicyBindingRequest extends Request {
             private String inventoryId; 
 
             /**
-             * IgnoreArchiveObject.
+             * <p>Do not prompt for archival type objects in task statistics and failed file lists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ignoreArchiveObject(Boolean ignoreArchiveObject) {
                 this.ignoreArchiveObject = ignoreArchiveObject;
@@ -437,11 +475,11 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the system deletes the inventory lists after a backup is complete. This parameter is available only when OSS inventory lists are used. Valid values:</p>
+             * <p>Specifies whether the system deletes the inventory lists when a backup is completed. This parameter is valid only when OSS inventories are used. Valid values:</p>
              * <ul>
-             * <li><strong>NO_CLEANUP</strong>: Does not delete inventory lists.</li>
-             * <li><strong>DELETE_CURRENT</strong>: Deletes the current inventory list.</li>
-             * <li><strong>DELETE_CURRENT_AND_PREVIOUS</strong>: Deletes all inventory lists.</li>
+             * <li><strong>NO_CLEANUP</strong>: does not delete inventory lists.</li>
+             * <li><strong>DELETE_CURRENT</strong>: deletes the current inventory list.</li>
+             * <li><strong>DELETE_CURRENT_AND_PREVIOUS</strong>: deletes all inventory lists.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -453,10 +491,10 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * <p>The name of the OSS inventory list. The OSS inventory list specified for this parameter is used for performance optimization.</p>
+             * <p>The name of the OSS inventory. If this parameter is not empty, the OSS inventory is used for performance optimization.</p>
              * <ul>
-             * <li>If you want to back up more than 100 million OSS objects, we recommend that you use inventory lists to accelerate incremental backup. Storage fees for inventory lists are included in your OSS bills.</li>
-             * <li>An extended period of time is required for OSS to generate inventory lists. Before inventory lists are generated, OSS objects may fail to be backed up. In this case, you can back up the OSS objects in the next backup cycle.</li>
+             * <li>If you want to back up more than 100 million OSS objects, we recommend that you use inventory lists to accelerate incremental backup. Storage fees for inventory lists are included into your OSS bills.</li>
+             * <li>A certain amount of time is required for OSS to generate inventory lists. Before inventory lists are generated, OSS objects may fail to be backed up. In this case, you can back up the OSS objects in the next backup cycle.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -485,7 +523,7 @@ public class UpdatePolicyBindingRequest extends Request {
         private Boolean appConsistent;
 
         @com.aliyun.core.annotation.NameInMap("DiskIdList")
-        private java.util.List < String > diskIdList;
+        private java.util.List<String> diskIdList;
 
         @com.aliyun.core.annotation.NameInMap("EnableFsFreeze")
         private Boolean enableFsFreeze;
@@ -494,7 +532,7 @@ public class UpdatePolicyBindingRequest extends Request {
         private Boolean enableWriters;
 
         @com.aliyun.core.annotation.NameInMap("ExcludeDiskIdList")
-        private java.util.List < String > excludeDiskIdList;
+        private java.util.List<String> excludeDiskIdList;
 
         @com.aliyun.core.annotation.NameInMap("PostScriptPath")
         private String postScriptPath;
@@ -542,7 +580,7 @@ public class UpdatePolicyBindingRequest extends Request {
         /**
          * @return diskIdList
          */
-        public java.util.List < String > getDiskIdList() {
+        public java.util.List<String> getDiskIdList() {
             return this.diskIdList;
         }
 
@@ -563,7 +601,7 @@ public class UpdatePolicyBindingRequest extends Request {
         /**
          * @return excludeDiskIdList
          */
-        public java.util.List < String > getExcludeDiskIdList() {
+        public java.util.List<String> getExcludeDiskIdList() {
             return this.excludeDiskIdList;
         }
 
@@ -604,10 +642,10 @@ public class UpdatePolicyBindingRequest extends Request {
 
         public static final class Builder {
             private Boolean appConsistent; 
-            private java.util.List < String > diskIdList; 
+            private java.util.List<String> diskIdList; 
             private Boolean enableFsFreeze; 
             private Boolean enableWriters; 
-            private java.util.List < String > excludeDiskIdList; 
+            private java.util.List<String> excludeDiskIdList; 
             private String postScriptPath; 
             private String preScriptPath; 
             private String ramRoleName; 
@@ -626,15 +664,15 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the disks that require protection. This parameter is not required if all disks require protection.</p>
+             * <p>The IDs of the disks that need to be protected. If all disks need to be protected, this parameter is empty.</p>
              */
-            public Builder diskIdList(java.util.List < String > diskIdList) {
+            public Builder diskIdList(java.util.List<String> diskIdList) {
                 this.diskIdList = diskIdList;
                 return this;
             }
 
             /**
-             * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies whether to enable Linux fsfreeze to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.</p>
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies whether to enable Linux fsfreeze to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -645,10 +683,10 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies whether to create application-consistent snapshots. Valid values:</p>
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies whether to create application-consistent snapshots. Valid values:</p>
              * <ul>
-             * <li>true: creates application-consistent snapshots.</li>
-             * <li>false: creates file system-consistent snapshots.</li>
+             * <li>true: creates application-consistent snapshots</li>
+             * <li>false: creates file system-consistent snapshots</li>
              * </ul>
              * <p>Default value: true.</p>
              * 
@@ -661,15 +699,15 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the disks that require no protection. This parameter is not required if the DiskIdList parameter is specified.</p>
+             * <p>The IDs of the disks that do not need to be protected. If the DiskIdList parameter is not empty, this parameter is ignored.</p>
              */
-            public Builder excludeDiskIdList(java.util.List < String > excludeDiskIdList) {
+            public Builder excludeDiskIdList(java.util.List<String> excludeDiskIdList) {
                 this.excludeDiskIdList = excludeDiskIdList;
                 return this;
             }
 
             /**
-             * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies the path of the post-thaw scripts that are executed after application-consistent snapshots are created.</p>
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies the path of the post-thaw scripts that are executed after application-consistent snapshots are created.</p>
              * 
              * <strong>example:</strong>
              * <p>/tmp/postscript.sh</p>
@@ -680,7 +718,7 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies the path of the pre-freeze scripts that are executed before application-consistent snapshots are created.</p>
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies the path of the pre-freeze scripts that are executed before application-consistent snapshots are created.</p>
              * 
              * <strong>example:</strong>
              * <p>/tmp/prescript.sh</p>
@@ -691,7 +729,7 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies the name of the Resource Access Management (RAM) role that is required to create application-consistent snapshots.</p>
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies the name of the Resource Access Management (RAM) role that is required to create application-consistent snapshots.</p>
              * 
              * <strong>example:</strong>
              * <p>AliyunECSInstanceForHbrRole</p>
@@ -702,7 +740,7 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to create a snapshot-consistent group. You can create a snapshot-consistent group only if all disks are enhanced SSDs (ESSDs).</p>
+             * <p>Specifies whether to create a snapshot-consistent group. You can create a snapshot-consistent group only if all disks are Enterprise SSDs (ESSDs).</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -713,7 +751,7 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies the I/O freeze timeout period. Default value: 30. Unit: seconds.</p>
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies the I/O freeze timeout period. Default value: 30. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -787,7 +825,7 @@ public class UpdatePolicyBindingRequest extends Request {
             private UdmDetail udmDetail; 
 
             /**
-             * CommonFileSystemDetail.
+             * <p>The details about large-scale file system backup.</p>
              */
             public Builder commonFileSystemDetail(CommonFileSystemDetail commonFileSystemDetail) {
                 this.commonFileSystemDetail = commonFileSystemDetail;
@@ -795,7 +833,7 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * <p>The details of the Object Storage Service (OSS) backup.</p>
+             * <p>The details about Object Storage Service (OSS) backup.</p>
              */
             public Builder ossDetail(OssDetail ossDetail) {
                 this.ossDetail = ossDetail;
@@ -803,7 +841,7 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * <p>The backup details of the Elastic Compute Service (ECS) instance.</p>
+             * <p>The details about Elastic Compute Service (ECS) instance backup.</p>
              */
             public Builder udmDetail(UdmDetail udmDetail) {
                 this.udmDetail = udmDetail;

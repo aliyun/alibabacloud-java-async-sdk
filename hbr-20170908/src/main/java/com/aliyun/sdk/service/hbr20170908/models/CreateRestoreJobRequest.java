@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -30,7 +35,7 @@ public class CreateRestoreJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FailbackDetail")
-    private java.util.Map < String, ? > failbackDetail;
+    private java.util.Map<String, ?> failbackDetail;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Include")
@@ -112,7 +117,7 @@ public class CreateRestoreJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UdmDetail")
-    private java.util.Map < String, ? > udmDetail;
+    private java.util.Map<String, ?> udmDetail;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UdmRegionId")
@@ -197,7 +202,7 @@ public class CreateRestoreJobRequest extends Request {
     /**
      * @return failbackDetail
      */
-    public java.util.Map < String, ? > getFailbackDetail() {
+    public java.util.Map<String, ?> getFailbackDetail() {
         return this.failbackDetail;
     }
 
@@ -337,7 +342,7 @@ public class CreateRestoreJobRequest extends Request {
     /**
      * @return udmDetail
      */
-    public java.util.Map < String, ? > getUdmDetail() {
+    public java.util.Map<String, ?> getUdmDetail() {
         return this.udmDetail;
     }
 
@@ -360,7 +365,7 @@ public class CreateRestoreJobRequest extends Request {
         private String crossAccountType; 
         private Long crossAccountUserId; 
         private String exclude; 
-        private java.util.Map < String, ? > failbackDetail; 
+        private java.util.Map<String, ?> failbackDetail; 
         private String include; 
         private Boolean initiatedByAck; 
         private String options; 
@@ -380,7 +385,7 @@ public class CreateRestoreJobRequest extends Request {
         private String targetPrefix; 
         private String targetTableName; 
         private Long targetTime; 
-        private java.util.Map < String, ? > udmDetail; 
+        private java.util.Map<String, ?> udmDetail; 
         private String udmRegionId; 
         private String vaultId; 
 
@@ -472,9 +477,9 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * FailbackDetail.
+         * <p>Details of restoration to local.</p>
          */
-        public Builder failbackDetail(java.util.Map < String, ? > failbackDetail) {
+        public Builder failbackDetail(java.util.Map<String, ?> failbackDetail) {
             String failbackDetailShrink = shrink(failbackDetail, "FailbackDetail", "json");
             this.putQueryParameter("FailbackDetail", failbackDetailShrink);
             this.failbackDetail = failbackDetail;
@@ -506,7 +511,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * Options.
+         * <p>Parameters for restoring a task</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;includes&quot;:[],&quot;excludes&quot;:[],&quot;conflictPolicy&quot;:&quot;OVERWRITE_EXISTING&quot;}</p>
          */
         public Builder options(String options) {
             this.putQueryParameter("Options", options);
@@ -726,7 +734,7 @@ public class CreateRestoreJobRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;sourceInstanceId&quot;:&quot;i-uf62te6pm3iwsyxyz66q&quot;,&quot;bootAfterRestore&quot;:false}</p>
          */
-        public Builder udmDetail(java.util.Map < String, ? > udmDetail) {
+        public Builder udmDetail(java.util.Map<String, ?> udmDetail) {
             String udmDetailShrink = shrink(udmDetail, "UdmDetail", "json");
             this.putQueryParameter("UdmDetail", udmDetailShrink);
             this.udmDetail = udmDetail;

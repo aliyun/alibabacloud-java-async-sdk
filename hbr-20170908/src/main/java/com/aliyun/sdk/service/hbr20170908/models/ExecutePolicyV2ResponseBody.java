@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -86,7 +91,10 @@ public class ExecutePolicyV2ResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * <p>Return code, 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +102,10 @@ public class ExecutePolicyV2ResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>Backup job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-*********************</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -102,7 +113,10 @@ public class ExecutePolicyV2ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the return message, usually returns &quot;successful&quot; on success, and corresponding error messages on failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +124,10 @@ public class ExecutePolicyV2ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F4EEB401-DD21-588D-AE3B-1E835C7655E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +135,14 @@ public class ExecutePolicyV2ResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li>true: Success</li>
+         * <li>false: Failure</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

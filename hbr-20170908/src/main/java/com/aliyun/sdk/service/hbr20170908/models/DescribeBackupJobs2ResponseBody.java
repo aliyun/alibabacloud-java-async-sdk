@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -224,7 +229,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
      */
     public static class DiskNativeSnapshotIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskNativeSnapshotId")
-        private java.util.List < String > diskNativeSnapshotId;
+        private java.util.List<String> diskNativeSnapshotId;
 
         private DiskNativeSnapshotIdList(Builder builder) {
             this.diskNativeSnapshotId = builder.diskNativeSnapshotId;
@@ -241,17 +246,17 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         /**
          * @return diskNativeSnapshotId
          */
-        public java.util.List < String > getDiskNativeSnapshotId() {
+        public java.util.List<String> getDiskNativeSnapshotId() {
             return this.diskNativeSnapshotId;
         }
 
         public static final class Builder {
-            private java.util.List < String > diskNativeSnapshotId; 
+            private java.util.List<String> diskNativeSnapshotId; 
 
             /**
              * DiskNativeSnapshotId.
              */
-            public Builder diskNativeSnapshotId(java.util.List < String > diskNativeSnapshotId) {
+            public Builder diskNativeSnapshotId(java.util.List<String> diskNativeSnapshotId) {
                 this.diskNativeSnapshotId = diskNativeSnapshotId;
                 return this;
             }
@@ -295,7 +300,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         private Boolean doCopy;
 
         @com.aliyun.core.annotation.NameInMap("InstanceInfos")
-        private java.util.Map < String, ? > instanceInfos;
+        private java.util.Map<String, ?> instanceInfos;
 
         @com.aliyun.core.annotation.NameInMap("NativeSnapshotId")
         private String nativeSnapshotId;
@@ -380,7 +385,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         /**
          * @return instanceInfos
          */
-        public java.util.Map < String, ? > getInstanceInfos() {
+        public java.util.Map<String, ?> getInstanceInfos() {
             return this.instanceInfos;
         }
 
@@ -400,7 +405,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             private String destinationSnapshotId; 
             private DiskNativeSnapshotIdList diskNativeSnapshotIdList; 
             private Boolean doCopy; 
-            private java.util.Map < String, ? > instanceInfos; 
+            private java.util.Map<String, ?> instanceInfos; 
             private String nativeSnapshotId; 
 
             /**
@@ -489,9 +494,26 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceInfos.
+             * <p>ECS instance information, including ECS instance name, instance type, etc.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;i-xxxxxxxx&quot;: {
+             *     &quot;hostName&quot;: &quot;test&quot;,
+             *     &quot;instanceName&quot;: &quot;test&quot;,
+             *     &quot;instanceType&quot;: &quot;ecs.c7.xlarge&quot;,
+             *     &quot;osType&quot;: &quot;linux&quot;,
+             *     &quot;diskIds&quot;: [
+             *       &quot;d-xxxxxxxx01&quot;,
+             *       &quot;d-xxxxxxxx02&quot;
+             *     ],
+             *     &quot;osNameEn&quot;: &quot;Rocky Linux 8.8 64 bit&quot;,
+             *     &quot;osName&quot;: &quot;Rocky Linux 8.8 64位&quot;,
+             *     &quot;platform&quot;: &quot;Rocky Linux&quot;
+             *   }
+             * }</p>
              */
-            public Builder instanceInfos(java.util.Map < String, ? > instanceInfos) {
+            public Builder instanceInfos(java.util.Map<String, ?> instanceInfos) {
                 this.instanceInfos = instanceInfos;
                 return this;
             }
@@ -522,7 +544,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
      */
     public static class TableNames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TableName")
-        private java.util.List < String > tableName;
+        private java.util.List<String> tableName;
 
         private TableNames(Builder builder) {
             this.tableName = builder.tableName;
@@ -539,17 +561,17 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         /**
          * @return tableName
          */
-        public java.util.List < String > getTableName() {
+        public java.util.List<String> getTableName() {
             return this.tableName;
         }
 
         public static final class Builder {
-            private java.util.List < String > tableName; 
+            private java.util.List<String> tableName; 
 
             /**
              * TableName.
              */
-            public Builder tableName(java.util.List < String > tableName) {
+            public Builder tableName(java.util.List<String> tableName) {
                 this.tableName = tableName;
                 return this;
             }
@@ -616,7 +638,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
      */
     public static class Paths extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Path")
-        private java.util.List < String > path;
+        private java.util.List<String> path;
 
         private Paths(Builder builder) {
             this.path = builder.path;
@@ -633,17 +655,17 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         /**
          * @return path
          */
-        public java.util.List < String > getPath() {
+        public java.util.List<String> getPath() {
             return this.path;
         }
 
         public static final class Builder {
-            private java.util.List < String > path; 
+            private java.util.List<String> path; 
 
             /**
              * Path.
              */
-            public Builder path(java.util.List < String > path) {
+            public Builder path(java.util.List<String> path) {
                 this.path = path;
                 return this;
             }
@@ -1494,6 +1516,9 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
 
             /**
              * <p>The identifier of the cluster that is backed up in the container backup job. This parameter is returned only if the value of SourceType is CONTAINER. If the cluster is a Container Service for Kubernetes (ACK) cluster, the value of this parameter is the ACK cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c83**************************b76</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -1760,7 +1785,7 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
      */
     public static class BackupJobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupJob")
-        private java.util.List < BackupJob> backupJob;
+        private java.util.List<BackupJob> backupJob;
 
         private BackupJobs(Builder builder) {
             this.backupJob = builder.backupJob;
@@ -1777,17 +1802,17 @@ public class DescribeBackupJobs2ResponseBody extends TeaModel {
         /**
          * @return backupJob
          */
-        public java.util.List < BackupJob> getBackupJob() {
+        public java.util.List<BackupJob> getBackupJob() {
             return this.backupJob;
         }
 
         public static final class Builder {
-            private java.util.List < BackupJob> backupJob; 
+            private java.util.List<BackupJob> backupJob; 
 
             /**
              * BackupJob.
              */
-            public Builder backupJob(java.util.List < BackupJob> backupJob) {
+            public Builder backupJob(java.util.List<BackupJob> backupJob) {
                 this.backupJob = backupJob;
                 return this;
             }

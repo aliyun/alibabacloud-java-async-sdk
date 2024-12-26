@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -111,6 +116,7 @@ public class UpdateContainerClusterRequest extends Request {
         } 
 
         /**
+         * <p>Cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +129,10 @@ public class UpdateContainerClusterRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Cluster description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description ack pv backup</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -132,7 +141,10 @@ public class UpdateContainerClusterRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack_pv_backup_location</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -141,7 +153,14 @@ public class UpdateContainerClusterRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * <p>Network type, with possible values including:</p>
+         * <ul>
+         * <li><strong>CLASSIC</strong>: Classic Network.</li>
+         * <li><strong>VPC</strong>: Virtual Private Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -150,7 +169,10 @@ public class UpdateContainerClusterRequest extends Request {
         }
 
         /**
-         * RenewToken.
+         * <p>Whether to regenerate the token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder renewToken(Boolean renewToken) {
             this.putQueryParameter("RenewToken", renewToken);

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreatePolicyBindingsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyBindingList")
-    private java.util.List < PolicyBindingList> policyBindingList;
+    private java.util.List<PolicyBindingList> policyBindingList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PolicyId")
@@ -42,7 +47,7 @@ public class CreatePolicyBindingsRequest extends Request {
     /**
      * @return policyBindingList
      */
-    public java.util.List < PolicyBindingList> getPolicyBindingList() {
+    public java.util.List<PolicyBindingList> getPolicyBindingList() {
         return this.policyBindingList;
     }
 
@@ -54,7 +59,7 @@ public class CreatePolicyBindingsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePolicyBindingsRequest, Builder> {
-        private java.util.List < PolicyBindingList> policyBindingList; 
+        private java.util.List<PolicyBindingList> policyBindingList; 
         private String policyId; 
 
         private Builder() {
@@ -70,7 +75,7 @@ public class CreatePolicyBindingsRequest extends Request {
         /**
          * <p>The data sources that you want to bind to the backup policy.</p>
          */
-        public Builder policyBindingList(java.util.List < PolicyBindingList> policyBindingList) {
+        public Builder policyBindingList(java.util.List<PolicyBindingList> policyBindingList) {
             String policyBindingListShrink = shrink(policyBindingList, "PolicyBindingList", "json");
             this.putQueryParameter("PolicyBindingList", policyBindingListShrink);
             this.policyBindingList = policyBindingList;
@@ -411,7 +416,10 @@ public class CreatePolicyBindingsRequest extends Request {
             private String inventoryId; 
 
             /**
-             * IgnoreArchiveObject.
+             * <p>Do not prompt for archival type objects in task statistics and failed file lists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ignoreArchiveObject(Boolean ignoreArchiveObject) {
                 this.ignoreArchiveObject = ignoreArchiveObject;
@@ -467,7 +475,7 @@ public class CreatePolicyBindingsRequest extends Request {
         private Boolean appConsistent;
 
         @com.aliyun.core.annotation.NameInMap("DiskIdList")
-        private java.util.List < String > diskIdList;
+        private java.util.List<String> diskIdList;
 
         @com.aliyun.core.annotation.NameInMap("EnableFsFreeze")
         private Boolean enableFsFreeze;
@@ -476,7 +484,7 @@ public class CreatePolicyBindingsRequest extends Request {
         private Boolean enableWriters;
 
         @com.aliyun.core.annotation.NameInMap("ExcludeDiskIdList")
-        private java.util.List < String > excludeDiskIdList;
+        private java.util.List<String> excludeDiskIdList;
 
         @com.aliyun.core.annotation.NameInMap("PostScriptPath")
         private String postScriptPath;
@@ -524,7 +532,7 @@ public class CreatePolicyBindingsRequest extends Request {
         /**
          * @return diskIdList
          */
-        public java.util.List < String > getDiskIdList() {
+        public java.util.List<String> getDiskIdList() {
             return this.diskIdList;
         }
 
@@ -545,7 +553,7 @@ public class CreatePolicyBindingsRequest extends Request {
         /**
          * @return excludeDiskIdList
          */
-        public java.util.List < String > getExcludeDiskIdList() {
+        public java.util.List<String> getExcludeDiskIdList() {
             return this.excludeDiskIdList;
         }
 
@@ -586,10 +594,10 @@ public class CreatePolicyBindingsRequest extends Request {
 
         public static final class Builder {
             private Boolean appConsistent; 
-            private java.util.List < String > diskIdList; 
+            private java.util.List<String> diskIdList; 
             private Boolean enableFsFreeze; 
             private Boolean enableWriters; 
-            private java.util.List < String > excludeDiskIdList; 
+            private java.util.List<String> excludeDiskIdList; 
             private String postScriptPath; 
             private String preScriptPath; 
             private String ramRoleName; 
@@ -610,7 +618,7 @@ public class CreatePolicyBindingsRequest extends Request {
             /**
              * <p>The IDs of the disks that need to be protected. If all disks need to be protected, this parameter is empty.</p>
              */
-            public Builder diskIdList(java.util.List < String > diskIdList) {
+            public Builder diskIdList(java.util.List<String> diskIdList) {
                 this.diskIdList = diskIdList;
                 return this;
             }
@@ -645,7 +653,7 @@ public class CreatePolicyBindingsRequest extends Request {
             /**
              * <p>The IDs of the disks that do not need to be protected. If the DiskIdList parameter is not empty, this parameter is ignored.</p>
              */
-            public Builder excludeDiskIdList(java.util.List < String > excludeDiskIdList) {
+            public Builder excludeDiskIdList(java.util.List<String> excludeDiskIdList) {
                 this.excludeDiskIdList = excludeDiskIdList;
                 return this;
             }
@@ -817,7 +825,7 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * <p>The advanced options for OSS backup.</p>
+             * <p>The advanced options for Object Storage Service (OSS) backup.</p>
              */
             public Builder ossDetail(OssDetail ossDetail) {
                 this.ossDetail = ossDetail;
@@ -1053,7 +1061,7 @@ public class CreatePolicyBindingsRequest extends Request {
              * <ul>
              * <li><strong>UDM_ECS</strong>: the ID of the Elastic Compute Service (ECS) instance</li>
              * <li><strong>OSS</strong>: the name of the Object Storage Service (OSS) bucket</li>
-             * <li><strong>NAS</strong>: the ID of the Apsara File Storage NAS (NAS) file system</li>
+             * <li><strong>NAS</strong>: the ID of the File Storage NAS (NAS) file system</li>
              * <li><strong>COMMON_NAS</strong>: the ID of the on-premises NAS file system</li>
              * <li><strong>ECS_FILE</strong>: the ID of the ECS instance</li>
              * <li><strong>File</strong>: the ID of the Cloud Backup client</li>
@@ -1084,7 +1092,7 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+             * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong>, <strong>File</strong>, <strong>NAS</strong>, <strong>COMMON_NAS</strong>, or <strong>COMMON_FILE_SYSTEM</strong>. This parameter specifies the type of files that do not need to be backed up. No files of the specified type are backed up. The value can be up to 255 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;<em>.doc&quot;,&quot;</em>.xltm&quot;]</p>
@@ -1095,7 +1103,7 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong> or <strong>File</strong>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</p>
+             * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>ECS_FILE</strong>, <strong>File</strong>, <strong>NAS</strong>, <strong>COMMON_NAS</strong>, or <strong>COMMON_FILE_SYSTEM</strong>. This parameter specifies the type of files to be backed up. All files of the specified type are backed up. The value can be up to 255 characters in length.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;<em>.doc&quot;,&quot;</em>.xltm&quot;]</p>
@@ -1119,7 +1127,8 @@ public class CreatePolicyBindingsRequest extends Request {
             /**
              * <ul>
              * <li>If the SourceType parameter is set to <strong>OSS</strong>, set the Source parameter to the prefix of the path to the folder that you want to back up. If you do not specify the Source parameter, the entire bucket (root directory) is backed up.</li>
-             * <li>If the SourceType parameter is set to <strong>ECS_FILE</strong> or <strong>File</strong>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths backed up.</li>
+             * <li>If the SourceType parameter is set to <strong>ECS_FILE</strong> or <strong>File</strong>, set the Source parameter to the path to the files that you want to back up. If you do not specify the Source parameter, all paths are backed up.</li>
+             * <li>This parameter is required if the SourceType parameter is set to <strong>COMMON_FILE_SYSTEM</strong>. This parameter specifies the path to be backed up. To back up the /src path, enter [&quot;/src&quot;]. To back up the root path, enter [&quot;/&quot;].</li>
              * </ul>
              * 
              * <strong>example:</strong>

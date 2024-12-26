@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Snapshots")
-    private java.util.List < Snapshots> snapshots;
+    private java.util.List<Snapshots> snapshots;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -71,7 +76,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
     /**
      * @return snapshots
      */
-    public java.util.List < Snapshots> getSnapshots() {
+    public java.util.List<Snapshots> getSnapshots() {
         return this.snapshots;
     }
 
@@ -93,7 +98,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         private String code; 
         private String message; 
         private String requestId; 
-        private java.util.List < Snapshots> snapshots; 
+        private java.util.List<Snapshots> snapshots; 
         private Boolean success; 
         private Long totalCount; 
 
@@ -133,7 +138,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The details about snapshots.</p>
          */
-        public Builder snapshots(java.util.List < Snapshots> snapshots) {
+        public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
             return this;
         }
@@ -190,10 +195,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         private String diskDevName;
 
         @com.aliyun.core.annotation.NameInMap("DiskHbrSnapshotIdWithDeviceMap")
-        private java.util.Map < String, ? > diskHbrSnapshotIdWithDeviceMap;
+        private java.util.Map<String, ?> diskHbrSnapshotIdWithDeviceMap;
 
         @com.aliyun.core.annotation.NameInMap("DiskIdList")
-        private java.util.List < String > diskIdList;
+        private java.util.List<String> diskIdList;
 
         @com.aliyun.core.annotation.NameInMap("DowngradeReason")
         private String downgradeReason;
@@ -202,7 +207,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         private String hostName;
 
         @com.aliyun.core.annotation.NameInMap("InstanceIdWithDiskIdListMap")
-        private java.util.Map < String, ? > instanceIdWithDiskIdListMap;
+        private java.util.Map<String, ?> instanceIdWithDiskIdListMap;
 
         @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
@@ -214,7 +219,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         private Boolean instantAccess;
 
         @com.aliyun.core.annotation.NameInMap("NativeSnapshotIdList")
-        private java.util.List < String > nativeSnapshotIdList;
+        private java.util.List<String> nativeSnapshotIdList;
 
         @com.aliyun.core.annotation.NameInMap("OsDiskId")
         private String osDiskId;
@@ -307,14 +312,14 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         /**
          * @return diskHbrSnapshotIdWithDeviceMap
          */
-        public java.util.Map < String, ? > getDiskHbrSnapshotIdWithDeviceMap() {
+        public java.util.Map<String, ?> getDiskHbrSnapshotIdWithDeviceMap() {
             return this.diskHbrSnapshotIdWithDeviceMap;
         }
 
         /**
          * @return diskIdList
          */
-        public java.util.List < String > getDiskIdList() {
+        public java.util.List<String> getDiskIdList() {
             return this.diskIdList;
         }
 
@@ -335,7 +340,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         /**
          * @return instanceIdWithDiskIdListMap
          */
-        public java.util.Map < String, ? > getInstanceIdWithDiskIdListMap() {
+        public java.util.Map<String, ?> getInstanceIdWithDiskIdListMap() {
             return this.instanceIdWithDiskIdListMap;
         }
 
@@ -363,7 +368,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         /**
          * @return nativeSnapshotIdList
          */
-        public java.util.List < String > getNativeSnapshotIdList() {
+        public java.util.List<String> getNativeSnapshotIdList() {
             return this.nativeSnapshotIdList;
         }
 
@@ -435,15 +440,15 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             private Boolean containOsDisk; 
             private String diskCategory; 
             private String diskDevName; 
-            private java.util.Map < String, ? > diskHbrSnapshotIdWithDeviceMap; 
-            private java.util.List < String > diskIdList; 
+            private java.util.Map<String, ?> diskHbrSnapshotIdWithDeviceMap; 
+            private java.util.List<String> diskIdList; 
             private String downgradeReason; 
             private String hostName; 
-            private java.util.Map < String, ? > instanceIdWithDiskIdListMap; 
+            private java.util.Map<String, ?> instanceIdWithDiskIdListMap; 
             private String instanceName; 
             private String instanceType; 
             private Boolean instantAccess; 
-            private java.util.List < String > nativeSnapshotIdList; 
+            private java.util.List<String> nativeSnapshotIdList; 
             private String osDiskId; 
             private String osName; 
             private String osNameEn; 
@@ -507,7 +512,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
              *     &quot;/dev/xvda&quot;:&quot;s-0004bl6yr5pt89jjsv5a&quot;
              * }</p>
              */
-            public Builder diskHbrSnapshotIdWithDeviceMap(java.util.Map < String, ? > diskHbrSnapshotIdWithDeviceMap) {
+            public Builder diskHbrSnapshotIdWithDeviceMap(java.util.Map<String, ?> diskHbrSnapshotIdWithDeviceMap) {
                 this.diskHbrSnapshotIdWithDeviceMap = diskHbrSnapshotIdWithDeviceMap;
                 return this;
             }
@@ -515,7 +520,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             /**
              * <p>The IDs of the disks that are backed up at the recovery point.</p>
              */
-            public Builder diskIdList(java.util.List < String > diskIdList) {
+            public Builder diskIdList(java.util.List<String> diskIdList) {
                 this.diskIdList = diskIdList;
                 return this;
             }
@@ -551,7 +556,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
              *     &quot;i-bp1dlp0keohh7ids4uo6&quot;:&quot;d-bp1e6427vhd320hifvd&quot;
              * }</p>
              */
-            public Builder instanceIdWithDiskIdListMap(java.util.Map < String, ? > instanceIdWithDiskIdListMap) {
+            public Builder instanceIdWithDiskIdListMap(java.util.Map<String, ?> instanceIdWithDiskIdListMap) {
                 this.instanceIdWithDiskIdListMap = instanceIdWithDiskIdListMap;
                 return this;
             }
@@ -592,7 +597,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             /**
              * <p>The list of snapshot IDs, corresponding to DiskIdList.</p>
              */
-            public Builder nativeSnapshotIdList(java.util.List < String > nativeSnapshotIdList) {
+            public Builder nativeSnapshotIdList(java.util.List<String> nativeSnapshotIdList) {
                 this.nativeSnapshotIdList = nativeSnapshotIdList;
                 return this;
             }

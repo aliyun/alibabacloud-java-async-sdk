@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeRestoreJobs2Request extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    private java.util.List<Filters> filters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -53,7 +58,7 @@ public class DescribeRestoreJobs2Request extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -79,7 +84,7 @@ public class DescribeRestoreJobs2Request extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRestoreJobs2Request, Builder> {
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String restoreType; 
@@ -99,7 +104,7 @@ public class DescribeRestoreJobs2Request extends Request {
         /**
          * <p>The keys in the filter.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;
@@ -169,7 +174,7 @@ public class DescribeRestoreJobs2Request extends Request {
         private String operator;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private Filters(Builder builder) {
             this.key = builder.key;
@@ -202,14 +207,14 @@ public class DescribeRestoreJobs2Request extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String key; 
             private String operator; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
              * <p>The key in the filter. Valid values:</p>
@@ -260,7 +265,7 @@ public class DescribeRestoreJobs2Request extends Request {
             /**
              * <p>The values that you want to match in the filter.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class UpdateBackupPlanRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Detail")
-    private java.util.Map < String, ? > detail;
+    private java.util.Map<String, ?> detail;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Exclude")
@@ -42,7 +47,7 @@ public class UpdateBackupPlanRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Path")
-    private java.util.List < String > path;
+    private java.util.List<String> path;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PlanId")
@@ -64,7 +69,7 @@ public class UpdateBackupPlanRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Rule")
-    private java.util.List < Rule> rule;
+    private java.util.List<Rule> rule;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Schedule")
@@ -131,7 +136,7 @@ public class UpdateBackupPlanRequest extends Request {
     /**
      * @return detail
      */
-    public java.util.Map < String, ? > getDetail() {
+    public java.util.Map<String, ?> getDetail() {
         return this.detail;
     }
 
@@ -173,7 +178,7 @@ public class UpdateBackupPlanRequest extends Request {
     /**
      * @return path
      */
-    public java.util.List < String > getPath() {
+    public java.util.List<String> getPath() {
         return this.path;
     }
 
@@ -208,7 +213,7 @@ public class UpdateBackupPlanRequest extends Request {
     /**
      * @return rule
      */
-    public java.util.List < Rule> getRule() {
+    public java.util.List<Rule> getRule() {
         return this.rule;
     }
 
@@ -249,18 +254,18 @@ public class UpdateBackupPlanRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateBackupPlanRequest, Builder> {
         private String changeListPath; 
-        private java.util.Map < String, ? > detail; 
+        private java.util.Map<String, ?> detail; 
         private String exclude; 
         private String include; 
         private Long keepLatestSnapshots; 
         private String options; 
         private OtsDetail otsDetail; 
-        private java.util.List < String > path; 
+        private java.util.List<String> path; 
         private String planId; 
         private String planName; 
         private String prefix; 
         private Long retention; 
-        private java.util.List < Rule> rule; 
+        private java.util.List<Rule> rule; 
         private String schedule; 
         private String sourceType; 
         private String speedLimit; 
@@ -317,7 +322,7 @@ public class UpdateBackupPlanRequest extends Request {
          * <strong>example:</strong>
          * <p>{&quot;EnableFsFreeze&quot;:true,&quot;appConsistent&quot;:false,&quot;postScriptPath&quot;:&quot;&quot;,&quot;preScriptPath&quot;:&quot;&quot;,&quot;snapshotGroup&quot;:true,&quot;timeoutInSeconds&quot;:60}</p>
          */
-        public Builder detail(java.util.Map < String, ? > detail) {
+        public Builder detail(java.util.Map<String, ?> detail) {
             String detailShrink = shrink(detail, "Detail", "json");
             this.putQueryParameter("Detail", detailShrink);
             this.detail = detail;
@@ -394,7 +399,7 @@ public class UpdateBackupPlanRequest extends Request {
         /**
          * <p>The source paths.</p>
          */
-        public Builder path(java.util.List < String > path) {
+        public Builder path(java.util.List<String> path) {
             this.putQueryParameter("Path", path);
             this.path = path;
             return this;
@@ -452,7 +457,7 @@ public class UpdateBackupPlanRequest extends Request {
         /**
          * <p>The rule of the backup plan.</p>
          */
-        public Builder rule(java.util.List < Rule> rule) {
+        public Builder rule(java.util.List<Rule> rule) {
             this.putBodyParameter("Rule", rule);
             this.rule = rule;
             return this;

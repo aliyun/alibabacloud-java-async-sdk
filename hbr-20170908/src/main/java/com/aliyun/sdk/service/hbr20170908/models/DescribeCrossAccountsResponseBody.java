@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -412,7 +417,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
      */
     public static class CrossAccounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CrossAccount")
-        private java.util.List < CrossAccount> crossAccount;
+        private java.util.List<CrossAccount> crossAccount;
 
         private CrossAccounts(Builder builder) {
             this.crossAccount = builder.crossAccount;
@@ -429,17 +434,17 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         /**
          * @return crossAccount
          */
-        public java.util.List < CrossAccount> getCrossAccount() {
+        public java.util.List<CrossAccount> getCrossAccount() {
             return this.crossAccount;
         }
 
         public static final class Builder {
-            private java.util.List < CrossAccount> crossAccount; 
+            private java.util.List<CrossAccount> crossAccount; 
 
             /**
              * CrossAccount.
              */
-            public Builder crossAccount(java.util.List < CrossAccount> crossAccount) {
+            public Builder crossAccount(java.util.List<CrossAccount> crossAccount) {
                 this.crossAccount = crossAccount;
                 return this;
             }

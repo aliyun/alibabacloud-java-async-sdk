@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -155,7 +160,7 @@ public class DescribeVaultReplicationRegionsResponseBody extends TeaModel {
      */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
-        private java.util.List < String > regionId;
+        private java.util.List<String> regionId;
 
         private Regions(Builder builder) {
             this.regionId = builder.regionId;
@@ -172,17 +177,17 @@ public class DescribeVaultReplicationRegionsResponseBody extends TeaModel {
         /**
          * @return regionId
          */
-        public java.util.List < String > getRegionId() {
+        public java.util.List<String> getRegionId() {
             return this.regionId;
         }
 
         public static final class Builder {
-            private java.util.List < String > regionId; 
+            private java.util.List<String> regionId; 
 
             /**
              * RegionId.
              */
-            public Builder regionId(java.util.List < String > regionId) {
+            public Builder regionId(java.util.List<String> regionId) {
                 this.regionId = regionId;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribePolicyBindingsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DataSourceIds")
-    private java.util.List < String > dataSourceIds;
+    private java.util.List<String> dataSourceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    private java.util.List<Filters> filters;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MaxResults")
@@ -62,14 +67,14 @@ public class DescribePolicyBindingsRequest extends Request {
     /**
      * @return dataSourceIds
      */
-    public java.util.List < String > getDataSourceIds() {
+    public java.util.List<String> getDataSourceIds() {
         return this.dataSourceIds;
     }
 
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -102,8 +107,8 @@ public class DescribePolicyBindingsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribePolicyBindingsRequest, Builder> {
-        private java.util.List < String > dataSourceIds; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<String> dataSourceIds; 
+        private java.util.List<Filters> filters; 
         private Integer maxResults; 
         private String nextToken; 
         private String policyId; 
@@ -124,9 +129,9 @@ public class DescribePolicyBindingsRequest extends Request {
         } 
 
         /**
-         * DataSourceIds.
+         * <p>List of data source IDs.</p>
          */
-        public Builder dataSourceIds(java.util.List < String > dataSourceIds) {
+        public Builder dataSourceIds(java.util.List<String> dataSourceIds) {
             String dataSourceIdsShrink = shrink(dataSourceIds, "DataSourceIds", "json");
             this.putBodyParameter("DataSourceIds", dataSourceIdsShrink);
             this.dataSourceIds = dataSourceIds;
@@ -134,17 +139,17 @@ public class DescribePolicyBindingsRequest extends Request {
         }
 
         /**
-         * Filters.
+         * <p>Query filters.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;
         }
 
         /**
-         * <p>The number of results for each query.</p>
-         * <p>Valid values: 10 to 100. Default value: 10.</p>
+         * <p>Number of results per query.</p>
+         * <p>Range: 10~100. Default: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -156,7 +161,10 @@ public class DescribePolicyBindingsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>Token required to fetch the next page of policy and data source associations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -165,7 +173,10 @@ public class DescribePolicyBindingsRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>Policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>po-000************hky</p>
          */
         public Builder policyId(String policyId) {
             this.putBodyParameter("PolicyId", policyId);
@@ -174,7 +185,13 @@ public class DescribePolicyBindingsRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>Data source type. Possible values:</p>
+         * <ul>
+         * <li><strong>UDM_ECS</strong>: Indicates ECS full machine backup.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UDM_ECS</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -203,7 +220,7 @@ public class DescribePolicyBindingsRequest extends Request {
         private String operator;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private Filters(Builder builder) {
             this.key = builder.key;
@@ -236,17 +253,25 @@ public class DescribePolicyBindingsRequest extends Request {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String key; 
             private String operator; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
 
             /**
-             * Key.
+             * <p>Key in the query filter. Possible values include:</p>
+             * <ul>
+             * <li><strong>PolicyId</strong>: Backup policy ID</li>
+             * <li><strong>DataSourceId</strong>: ECS instance ID</li>
+             * <li><strong>DataSourceType</strong>: Data source type</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DataSourceType</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -254,7 +279,20 @@ public class DescribePolicyBindingsRequest extends Request {
             }
 
             /**
-             * Operator.
+             * <p>Matching method. Default is IN. This refers to the matching operation (Operator) supported by the Key and Value in the filter. Possible values include:</p>
+             * <ul>
+             * <li><strong>EQUAL</strong>: Equal to</li>
+             * <li><strong>NOT_EQUAL</strong>: Not equal to</li>
+             * <li><strong>GREATER_THAN</strong>: Greater than</li>
+             * <li><strong>GREATER_THAN_OR_EQUAL</strong>: Greater than or equal to</li>
+             * <li><strong>LESS_THAN</strong>: Less than</li>
+             * <li><strong>LESS_THAN_OR_EQUAL</strong>: Less than or equal to</li>
+             * <li><strong>BETWEEN</strong>: Range, where value is a JSON array <code>[lower_bound, upper_bound]</code>.</li>
+             * <li><strong>IN</strong>: In the set, where value is an array.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IN</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -262,9 +300,9 @@ public class DescribePolicyBindingsRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>Values to be matched in the query filter.</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }

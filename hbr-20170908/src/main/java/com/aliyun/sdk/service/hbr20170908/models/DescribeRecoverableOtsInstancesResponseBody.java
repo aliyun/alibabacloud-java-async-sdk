@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("OtsInstances")
-    private java.util.List < OtsInstances> otsInstances;
+    private java.util.List<OtsInstances> otsInstances;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -60,7 +65,7 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
     /**
      * @return otsInstances
      */
-    public java.util.List < OtsInstances> getOtsInstances() {
+    public java.util.List<OtsInstances> getOtsInstances() {
         return this.otsInstances;
     }
 
@@ -81,7 +86,7 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private java.util.List < OtsInstances> otsInstances; 
+        private java.util.List<OtsInstances> otsInstances; 
         private String requestId; 
         private Boolean success; 
 
@@ -110,7 +115,7 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         /**
          * <p>The list of Tablestore instances that can be restored and the tables in the instances.</p>
          */
-        public Builder otsInstances(java.util.List < OtsInstances> otsInstances) {
+        public Builder otsInstances(java.util.List<OtsInstances> otsInstances) {
             this.otsInstances = otsInstances;
             return this;
         }
@@ -158,7 +163,7 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         private String instanceName;
 
         @com.aliyun.core.annotation.NameInMap("TableNames")
-        private java.util.List < String > tableNames;
+        private java.util.List<String> tableNames;
 
         private OtsInstances(Builder builder) {
             this.instanceName = builder.instanceName;
@@ -183,13 +188,13 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         /**
          * @return tableNames
          */
-        public java.util.List < String > getTableNames() {
+        public java.util.List<String> getTableNames() {
             return this.tableNames;
         }
 
         public static final class Builder {
             private String instanceName; 
-            private java.util.List < String > tableNames; 
+            private java.util.List<String> tableNames; 
 
             /**
              * <p>The name of the Tablestore instance that can be restored.</p>
@@ -205,7 +210,7 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
             /**
              * <p>The names of the tables in the Tablestore instance.</p>
              */
-            public Builder tableNames(java.util.List < String > tableNames) {
+            public Builder tableNames(java.util.List<String> tableNames) {
                 this.tableNames = tableNames;
                 return this;
             }
