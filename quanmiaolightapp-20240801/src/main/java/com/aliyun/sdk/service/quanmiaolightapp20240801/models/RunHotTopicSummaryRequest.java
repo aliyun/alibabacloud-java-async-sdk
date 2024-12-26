@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quanmiaolightapp20240801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class RunHotTopicSummaryRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("topicIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > topicIds;
+    private java.util.List<String> topicIds;
 
     private RunHotTopicSummaryRequest(Builder builder) {
         super(builder);
@@ -89,7 +94,7 @@ public class RunHotTopicSummaryRequest extends Request {
     /**
      * @return topicIds
      */
-    public java.util.List < String > getTopicIds() {
+    public java.util.List<String> getTopicIds() {
         return this.topicIds;
     }
 
@@ -98,7 +103,7 @@ public class RunHotTopicSummaryRequest extends Request {
         private String workspaceId; 
         private String hotTopicVersion; 
         private StepForCustomSummaryStyleConfig stepForCustomSummaryStyleConfig; 
-        private java.util.List < String > topicIds; 
+        private java.util.List<String> topicIds; 
 
         private Builder() {
             super();
@@ -162,7 +167,7 @@ public class RunHotTopicSummaryRequest extends Request {
          * <strong>example:</strong>
          * <p>xxxxx</p>
          */
-        public Builder topicIds(java.util.List < String > topicIds) {
+        public Builder topicIds(java.util.List<String> topicIds) {
             String topicIdsShrink = shrink(topicIds, "topicIds", "json");
             this.putBodyParameter("topicIds", topicIdsShrink);
             this.topicIds = topicIds;

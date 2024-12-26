@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quanmiaolightapp20240801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -449,7 +454,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         private Usage usage;
 
         @com.aliyun.core.annotation.NameInMap("videoShotAnalysisResults")
-        private java.util.List < VideoShotAnalysisResults> videoShotAnalysisResults;
+        private java.util.List<VideoShotAnalysisResults> videoShotAnalysisResults;
 
         private VideoAnalysisResult(Builder builder) {
             this.generateFinished = builder.generateFinished;
@@ -490,7 +495,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         /**
          * @return videoShotAnalysisResults
          */
-        public java.util.List < VideoShotAnalysisResults> getVideoShotAnalysisResults() {
+        public java.util.List<VideoShotAnalysisResults> getVideoShotAnalysisResults() {
             return this.videoShotAnalysisResults;
         }
 
@@ -498,7 +503,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private Boolean generateFinished; 
             private String text; 
             private Usage usage; 
-            private java.util.List < VideoShotAnalysisResults> videoShotAnalysisResults; 
+            private java.util.List<VideoShotAnalysisResults> videoShotAnalysisResults; 
 
             /**
              * generateFinished.
@@ -527,7 +532,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             /**
              * videoShotAnalysisResults.
              */
-            public Builder videoShotAnalysisResults(java.util.List < VideoShotAnalysisResults> videoShotAnalysisResults) {
+            public Builder videoShotAnalysisResults(java.util.List<VideoShotAnalysisResults> videoShotAnalysisResults) {
                 this.videoShotAnalysisResults = videoShotAnalysisResults;
                 return this;
             }
@@ -677,7 +682,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         private Boolean generateFinished;
 
         @com.aliyun.core.annotation.NameInMap("videoCaptions")
-        private java.util.List < VideoCaptions> videoCaptions;
+        private java.util.List<VideoCaptions> videoCaptions;
 
         private VideoCaptionResult(Builder builder) {
             this.generateFinished = builder.generateFinished;
@@ -702,13 +707,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         /**
          * @return videoCaptions
          */
-        public java.util.List < VideoCaptions> getVideoCaptions() {
+        public java.util.List<VideoCaptions> getVideoCaptions() {
             return this.videoCaptions;
         }
 
         public static final class Builder {
             private Boolean generateFinished; 
-            private java.util.List < VideoCaptions> videoCaptions; 
+            private java.util.List<VideoCaptions> videoCaptions; 
 
             /**
              * generateFinished.
@@ -721,7 +726,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             /**
              * videoCaptions.
              */
-            public Builder videoCaptions(java.util.List < VideoCaptions> videoCaptions) {
+            public Builder videoCaptions(java.util.List<VideoCaptions> videoCaptions) {
                 this.videoCaptions = videoCaptions;
                 return this;
             }
@@ -1049,7 +1054,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
      */
     public static class VideoMindMappingsChildNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("childNodes")
-        private java.util.List < ChildNodes> childNodes;
+        private java.util.List<ChildNodes> childNodes;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -1070,7 +1075,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         /**
          * @return childNodes
          */
-        public java.util.List < ChildNodes> getChildNodes() {
+        public java.util.List<ChildNodes> getChildNodes() {
             return this.childNodes;
         }
 
@@ -1082,13 +1087,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ChildNodes> childNodes; 
+            private java.util.List<ChildNodes> childNodes; 
             private String name; 
 
             /**
              * childNodes.
              */
-            public Builder childNodes(java.util.List < ChildNodes> childNodes) {
+            public Builder childNodes(java.util.List<ChildNodes> childNodes) {
                 this.childNodes = childNodes;
                 return this;
             }
@@ -1116,7 +1121,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
      */
     public static class VideoMindMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("childNodes")
-        private java.util.List < VideoMindMappingsChildNodes> childNodes;
+        private java.util.List<VideoMindMappingsChildNodes> childNodes;
 
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -1137,7 +1142,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         /**
          * @return childNodes
          */
-        public java.util.List < VideoMindMappingsChildNodes> getChildNodes() {
+        public java.util.List<VideoMindMappingsChildNodes> getChildNodes() {
             return this.childNodes;
         }
 
@@ -1149,13 +1154,13 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < VideoMindMappingsChildNodes> childNodes; 
+            private java.util.List<VideoMindMappingsChildNodes> childNodes; 
             private String name; 
 
             /**
              * childNodes.
              */
-            public Builder childNodes(java.util.List < VideoMindMappingsChildNodes> childNodes) {
+            public Builder childNodes(java.util.List<VideoMindMappingsChildNodes> childNodes) {
                 this.childNodes = childNodes;
                 return this;
             }
@@ -1192,7 +1197,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         private VideoMindMappingGenerateResultUsage usage;
 
         @com.aliyun.core.annotation.NameInMap("videoMindMappings")
-        private java.util.List < VideoMindMappings> videoMindMappings;
+        private java.util.List<VideoMindMappings> videoMindMappings;
 
         private VideoMindMappingGenerateResult(Builder builder) {
             this.generateFinished = builder.generateFinished;
@@ -1233,7 +1238,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         /**
          * @return videoMindMappings
          */
-        public java.util.List < VideoMindMappings> getVideoMindMappings() {
+        public java.util.List<VideoMindMappings> getVideoMindMappings() {
             return this.videoMindMappings;
         }
 
@@ -1241,7 +1246,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             private Boolean generateFinished; 
             private String text; 
             private VideoMindMappingGenerateResultUsage usage; 
-            private java.util.List < VideoMindMappings> videoMindMappings; 
+            private java.util.List<VideoMindMappings> videoMindMappings; 
 
             /**
              * generateFinished.
@@ -1270,7 +1275,7 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             /**
              * videoMindMappings.
              */
-            public Builder videoMindMappings(java.util.List < VideoMindMappings> videoMindMappings) {
+            public Builder videoMindMappings(java.util.List<VideoMindMappings> videoMindMappings) {
                 this.videoMindMappings = videoMindMappings;
                 return this;
             }

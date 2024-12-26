@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quanmiaolightapp20240801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -24,12 +29,12 @@ public class RunStyleWritingRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("learningSamples")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > learningSamples;
+    private java.util.List<String> learningSamples;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("referenceMaterials")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > referenceMaterials;
+    private java.util.List<String> referenceMaterials;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("styleFeature")
@@ -81,14 +86,14 @@ public class RunStyleWritingRequest extends Request {
     /**
      * @return learningSamples
      */
-    public java.util.List < String > getLearningSamples() {
+    public java.util.List<String> getLearningSamples() {
         return this.learningSamples;
     }
 
     /**
      * @return referenceMaterials
      */
-    public java.util.List < String > getReferenceMaterials() {
+    public java.util.List<String> getReferenceMaterials() {
         return this.referenceMaterials;
     }
 
@@ -109,8 +114,8 @@ public class RunStyleWritingRequest extends Request {
     public static final class Builder extends Request.Builder<RunStyleWritingRequest, Builder> {
         private String workspaceId; 
         private String regionId; 
-        private java.util.List < String > learningSamples; 
-        private java.util.List < String > referenceMaterials; 
+        private java.util.List<String> learningSamples; 
+        private java.util.List<String> referenceMaterials; 
         private String styleFeature; 
         private String writingTheme; 
 
@@ -152,7 +157,7 @@ public class RunStyleWritingRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder learningSamples(java.util.List < String > learningSamples) {
+        public Builder learningSamples(java.util.List<String> learningSamples) {
             String learningSamplesShrink = shrink(learningSamples, "learningSamples", "json");
             this.putBodyParameter("learningSamples", learningSamplesShrink);
             this.learningSamples = learningSamples;
@@ -162,7 +167,7 @@ public class RunStyleWritingRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder referenceMaterials(java.util.List < String > referenceMaterials) {
+        public Builder referenceMaterials(java.util.List<String> referenceMaterials) {
             String referenceMaterialsShrink = shrink(referenceMaterials, "referenceMaterials", "json");
             this.putBodyParameter("referenceMaterials", referenceMaterialsShrink);
             this.referenceMaterials = referenceMaterials;

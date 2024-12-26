@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quanmiaolightapp20240801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private Integer httpStatusCode;
@@ -69,7 +74,7 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -124,7 +129,7 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private Integer httpStatusCode; 
         private Integer maxResults; 
         private String message; 
@@ -144,7 +149,7 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -266,7 +271,7 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
      */
     public static class News extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("comments")
-        private java.util.List < Comments> comments;
+        private java.util.List<Comments> comments;
 
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -299,7 +304,7 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
         /**
          * @return comments
          */
-        public java.util.List < Comments> getComments() {
+        public java.util.List<Comments> getComments() {
             return this.comments;
         }
 
@@ -332,7 +337,7 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Comments> comments; 
+            private java.util.List<Comments> comments; 
             private String content; 
             private String pubTime; 
             private String title; 
@@ -341,7 +346,7 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
             /**
              * comments.
              */
-            public Builder comments(java.util.List < Comments> comments) {
+            public Builder comments(java.util.List<Comments> comments) {
                 this.comments = comments;
                 return this;
             }
@@ -463,7 +468,7 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
      */
     public static class Summary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("summaries")
-        private java.util.List < Summaries> summaries;
+        private java.util.List<Summaries> summaries;
 
         private Summary(Builder builder) {
             this.summaries = builder.summaries;
@@ -480,17 +485,17 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
         /**
          * @return summaries
          */
-        public java.util.List < Summaries> getSummaries() {
+        public java.util.List<Summaries> getSummaries() {
             return this.summaries;
         }
 
         public static final class Builder {
-            private java.util.List < Summaries> summaries; 
+            private java.util.List<Summaries> summaries; 
 
             /**
              * summaries.
              */
-            public Builder summaries(java.util.List < Summaries> summaries) {
+            public Builder summaries(java.util.List<Summaries> summaries) {
                 this.summaries = summaries;
                 return this;
             }
@@ -525,7 +530,7 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("news")
-        private java.util.List < News> news;
+        private java.util.List<News> news;
 
         @com.aliyun.core.annotation.NameInMap("summary")
         private Summary summary;
@@ -590,7 +595,7 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
         /**
          * @return news
          */
-        public java.util.List < News> getNews() {
+        public java.util.List<News> getNews() {
             return this.news;
         }
 
@@ -614,7 +619,7 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
             private String hotTopicVersion; 
             private Double hotValue; 
             private String id; 
-            private java.util.List < News> news; 
+            private java.util.List<News> news; 
             private Summary summary; 
             private String textSummary; 
 
@@ -661,7 +666,7 @@ public class ListHotTopicSummariesResponseBody extends TeaModel {
             /**
              * news.
              */
-            public Builder news(java.util.List < News> news) {
+            public Builder news(java.util.List<News> news) {
                 this.news = news;
                 return this;
             }

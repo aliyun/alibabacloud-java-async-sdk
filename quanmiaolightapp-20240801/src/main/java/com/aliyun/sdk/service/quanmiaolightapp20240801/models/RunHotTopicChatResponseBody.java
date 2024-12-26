@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quanmiaolightapp20240801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -582,10 +587,10 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         private Double hotValue;
 
         @com.aliyun.core.annotation.NameInMap("images")
-        private java.util.List < Images> images;
+        private java.util.List<Images> images;
 
         @com.aliyun.core.annotation.NameInMap("news")
-        private java.util.List < News> news;
+        private java.util.List<News> news;
 
         @com.aliyun.core.annotation.NameInMap("textSummary")
         private String textSummary;
@@ -647,14 +652,14 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         /**
          * @return images
          */
-        public java.util.List < Images> getImages() {
+        public java.util.List<Images> getImages() {
             return this.images;
         }
 
         /**
          * @return news
          */
-        public java.util.List < News> getNews() {
+        public java.util.List<News> getNews() {
             return this.news;
         }
 
@@ -671,8 +676,8 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             private String hotTopic; 
             private String hotTopicVersion; 
             private Double hotValue; 
-            private java.util.List < Images> images; 
-            private java.util.List < News> news; 
+            private java.util.List<Images> images; 
+            private java.util.List<News> news; 
             private String textSummary; 
 
             /**
@@ -718,7 +723,7 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             /**
              * images.
              */
-            public Builder images(java.util.List < Images> images) {
+            public Builder images(java.util.List<Images> images) {
                 this.images = images;
                 return this;
             }
@@ -726,7 +731,7 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             /**
              * news.
              */
-            public Builder news(java.util.List < News> news) {
+            public Builder news(java.util.List<News> news) {
                 this.news = news;
                 return this;
             }
@@ -841,16 +846,16 @@ public class RunHotTopicChatResponseBody extends TeaModel {
      */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("articles")
-        private java.util.List < Articles> articles;
+        private java.util.List<Articles> articles;
 
         @com.aliyun.core.annotation.NameInMap("hotTopicSummaries")
-        private java.util.List < HotTopicSummaries> hotTopicSummaries;
+        private java.util.List<HotTopicSummaries> hotTopicSummaries;
 
         @com.aliyun.core.annotation.NameInMap("multimodalMedias")
-        private java.util.List < MultimodalMedias> multimodalMedias;
+        private java.util.List<MultimodalMedias> multimodalMedias;
 
         @com.aliyun.core.annotation.NameInMap("recommendQueries")
-        private java.util.List < String > recommendQueries;
+        private java.util.List<String> recommendQueries;
 
         @com.aliyun.core.annotation.NameInMap("searchQuery")
         private String searchQuery;
@@ -878,28 +883,28 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         /**
          * @return articles
          */
-        public java.util.List < Articles> getArticles() {
+        public java.util.List<Articles> getArticles() {
             return this.articles;
         }
 
         /**
          * @return hotTopicSummaries
          */
-        public java.util.List < HotTopicSummaries> getHotTopicSummaries() {
+        public java.util.List<HotTopicSummaries> getHotTopicSummaries() {
             return this.hotTopicSummaries;
         }
 
         /**
          * @return multimodalMedias
          */
-        public java.util.List < MultimodalMedias> getMultimodalMedias() {
+        public java.util.List<MultimodalMedias> getMultimodalMedias() {
             return this.multimodalMedias;
         }
 
         /**
          * @return recommendQueries
          */
-        public java.util.List < String > getRecommendQueries() {
+        public java.util.List<String> getRecommendQueries() {
             return this.recommendQueries;
         }
 
@@ -918,17 +923,17 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Articles> articles; 
-            private java.util.List < HotTopicSummaries> hotTopicSummaries; 
-            private java.util.List < MultimodalMedias> multimodalMedias; 
-            private java.util.List < String > recommendQueries; 
+            private java.util.List<Articles> articles; 
+            private java.util.List<HotTopicSummaries> hotTopicSummaries; 
+            private java.util.List<MultimodalMedias> multimodalMedias; 
+            private java.util.List<String> recommendQueries; 
             private String searchQuery; 
             private String text; 
 
             /**
              * articles.
              */
-            public Builder articles(java.util.List < Articles> articles) {
+            public Builder articles(java.util.List<Articles> articles) {
                 this.articles = articles;
                 return this;
             }
@@ -936,7 +941,7 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             /**
              * hotTopicSummaries.
              */
-            public Builder hotTopicSummaries(java.util.List < HotTopicSummaries> hotTopicSummaries) {
+            public Builder hotTopicSummaries(java.util.List<HotTopicSummaries> hotTopicSummaries) {
                 this.hotTopicSummaries = hotTopicSummaries;
                 return this;
             }
@@ -944,7 +949,7 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             /**
              * multimodalMedias.
              */
-            public Builder multimodalMedias(java.util.List < MultimodalMedias> multimodalMedias) {
+            public Builder multimodalMedias(java.util.List<MultimodalMedias> multimodalMedias) {
                 this.multimodalMedias = multimodalMedias;
                 return this;
             }
@@ -952,7 +957,7 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             /**
              * recommendQueries.
              */
-            public Builder recommendQueries(java.util.List < String > recommendQueries) {
+            public Builder recommendQueries(java.util.List<String> recommendQueries) {
                 this.recommendQueries = recommendQueries;
                 return this;
             }

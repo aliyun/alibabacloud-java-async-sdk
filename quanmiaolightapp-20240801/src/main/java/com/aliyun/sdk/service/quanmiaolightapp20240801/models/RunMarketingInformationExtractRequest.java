@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quanmiaolightapp20240801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class RunMarketingInformationExtractRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sourceMaterials")
-    private java.util.List < String > sourceMaterials;
+    private java.util.List<String> sourceMaterials;
 
     private RunMarketingInformationExtractRequest(Builder builder) {
         super(builder);
@@ -97,7 +102,7 @@ public class RunMarketingInformationExtractRequest extends Request {
     /**
      * @return sourceMaterials
      */
-    public java.util.List < String > getSourceMaterials() {
+    public java.util.List<String> getSourceMaterials() {
         return this.sourceMaterials;
     }
 
@@ -107,7 +112,7 @@ public class RunMarketingInformationExtractRequest extends Request {
         private String customPrompt; 
         private String extractType; 
         private String modelId; 
-        private java.util.List < String > sourceMaterials; 
+        private java.util.List<String> sourceMaterials; 
 
         private Builder() {
             super();
@@ -171,7 +176,7 @@ public class RunMarketingInformationExtractRequest extends Request {
         /**
          * sourceMaterials.
          */
-        public Builder sourceMaterials(java.util.List < String > sourceMaterials) {
+        public Builder sourceMaterials(java.util.List<String> sourceMaterials) {
             String sourceMaterialsShrink = shrink(sourceMaterials, "sourceMaterials", "json");
             this.putBodyParameter("sourceMaterials", sourceMaterialsShrink);
             this.sourceMaterials = sourceMaterials;

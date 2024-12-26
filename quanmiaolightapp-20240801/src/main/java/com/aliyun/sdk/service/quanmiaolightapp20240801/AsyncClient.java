@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateBroadcastNewsResponse> generateBroadcastNews(GenerateBroadcastNewsRequest request);
 
     /**
+     * @param request the request parameters of GenerateOutputFormat  GenerateOutputFormatRequest
+     * @return GenerateOutputFormatResponse
+     */
+    CompletableFuture<GenerateOutputFormatResponse> generateOutputFormat(GenerateOutputFormatRequest request);
+
+    /**
      * @param request the request parameters of ListHotTopicSummaries  ListHotTopicSummariesRequest
      * @return ListHotTopicSummariesResponse
      */
@@ -100,6 +106,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 <ReturnT> CompletableFuture<ReturnT> runStyleWritingWithAsyncResponseHandler(RunStyleWritingRequest request, AsyncResponseHandler<RunStyleWritingResponse, ReturnT> responseHandler);
 
     ResponseIterable<RunStyleWritingResponseBody> runStyleWritingWithResponseIterable(RunStyleWritingRequest request);
+
+    /**
+     * @param request the request parameters of RunTagMiningAnalysis  RunTagMiningAnalysisRequest
+     * @return RunTagMiningAnalysisResponse
+     */
+    CompletableFuture<RunTagMiningAnalysisResponse> runTagMiningAnalysis(RunTagMiningAnalysisRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> runTagMiningAnalysisWithAsyncResponseHandler(RunTagMiningAnalysisRequest request, AsyncResponseHandler<RunTagMiningAnalysisResponse, ReturnT> responseHandler);
+
+    ResponseIterable<RunTagMiningAnalysisResponseBody> runTagMiningAnalysisWithResponseIterable(RunTagMiningAnalysisRequest request);
 
     /**
      * @param request the request parameters of RunVideoAnalysis  RunVideoAnalysisRequest

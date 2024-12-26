@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quanmiaolightapp20240801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,7 +32,7 @@ public class RunHotTopicChatRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("generateOptions")
-    private java.util.List < String > generateOptions;
+    private java.util.List<String> generateOptions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("hotTopicVersion")
@@ -35,7 +40,7 @@ public class RunHotTopicChatRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("hotTopics")
-    private java.util.List < String > hotTopics;
+    private java.util.List<String> hotTopics;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("imageCount")
@@ -43,7 +48,7 @@ public class RunHotTopicChatRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("messages")
-    private java.util.List < Messages> messages;
+    private java.util.List<Messages> messages;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("modelCustomPromptTemplate")
@@ -124,7 +129,7 @@ public class RunHotTopicChatRequest extends Request {
     /**
      * @return generateOptions
      */
-    public java.util.List < String > getGenerateOptions() {
+    public java.util.List<String> getGenerateOptions() {
         return this.generateOptions;
     }
 
@@ -138,7 +143,7 @@ public class RunHotTopicChatRequest extends Request {
     /**
      * @return hotTopics
      */
-    public java.util.List < String > getHotTopics() {
+    public java.util.List<String> getHotTopics() {
         return this.hotTopics;
     }
 
@@ -152,7 +157,7 @@ public class RunHotTopicChatRequest extends Request {
     /**
      * @return messages
      */
-    public java.util.List < Messages> getMessages() {
+    public java.util.List<Messages> getMessages() {
         return this.messages;
     }
 
@@ -202,11 +207,11 @@ public class RunHotTopicChatRequest extends Request {
         private String regionId; 
         private String workspaceId; 
         private String category; 
-        private java.util.List < String > generateOptions; 
+        private java.util.List<String> generateOptions; 
         private String hotTopicVersion; 
-        private java.util.List < String > hotTopics; 
+        private java.util.List<String> hotTopics; 
         private Integer imageCount; 
-        private java.util.List < Messages> messages; 
+        private java.util.List<Messages> messages; 
         private String modelCustomPromptTemplate; 
         private String modelId; 
         private String originalSessionId; 
@@ -269,7 +274,7 @@ public class RunHotTopicChatRequest extends Request {
         /**
          * generateOptions.
          */
-        public Builder generateOptions(java.util.List < String > generateOptions) {
+        public Builder generateOptions(java.util.List<String> generateOptions) {
             String generateOptionsShrink = shrink(generateOptions, "generateOptions", "json");
             this.putBodyParameter("generateOptions", generateOptionsShrink);
             this.generateOptions = generateOptions;
@@ -288,7 +293,7 @@ public class RunHotTopicChatRequest extends Request {
         /**
          * hotTopics.
          */
-        public Builder hotTopics(java.util.List < String > hotTopics) {
+        public Builder hotTopics(java.util.List<String> hotTopics) {
             String hotTopicsShrink = shrink(hotTopics, "hotTopics", "json");
             this.putBodyParameter("hotTopics", hotTopicsShrink);
             this.hotTopics = hotTopics;
@@ -307,7 +312,7 @@ public class RunHotTopicChatRequest extends Request {
         /**
          * messages.
          */
-        public Builder messages(java.util.List < Messages> messages) {
+        public Builder messages(java.util.List<Messages> messages) {
             String messagesShrink = shrink(messages, "messages", "json");
             this.putBodyParameter("messages", messagesShrink);
             this.messages = messages;
@@ -538,10 +543,10 @@ public class RunHotTopicChatRequest extends Request {
      */
     public static class StepForBroadcastContentConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("categories")
-        private java.util.List < String > categories;
+        private java.util.List<String> categories;
 
         @com.aliyun.core.annotation.NameInMap("customHotValueWeights")
-        private java.util.List < CustomHotValueWeights> customHotValueWeights;
+        private java.util.List<CustomHotValueWeights> customHotValueWeights;
 
         @com.aliyun.core.annotation.NameInMap("topicCount")
         private Integer topicCount;
@@ -563,14 +568,14 @@ public class RunHotTopicChatRequest extends Request {
         /**
          * @return categories
          */
-        public java.util.List < String > getCategories() {
+        public java.util.List<String> getCategories() {
             return this.categories;
         }
 
         /**
          * @return customHotValueWeights
          */
-        public java.util.List < CustomHotValueWeights> getCustomHotValueWeights() {
+        public java.util.List<CustomHotValueWeights> getCustomHotValueWeights() {
             return this.customHotValueWeights;
         }
 
@@ -582,14 +587,14 @@ public class RunHotTopicChatRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > categories; 
-            private java.util.List < CustomHotValueWeights> customHotValueWeights; 
+            private java.util.List<String> categories; 
+            private java.util.List<CustomHotValueWeights> customHotValueWeights; 
             private Integer topicCount; 
 
             /**
              * categories.
              */
-            public Builder categories(java.util.List < String > categories) {
+            public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
                 return this;
             }
@@ -597,7 +602,7 @@ public class RunHotTopicChatRequest extends Request {
             /**
              * customHotValueWeights.
              */
-            public Builder customHotValueWeights(java.util.List < CustomHotValueWeights> customHotValueWeights) {
+            public Builder customHotValueWeights(java.util.List<CustomHotValueWeights> customHotValueWeights) {
                 this.customHotValueWeights = customHotValueWeights;
                 return this;
             }

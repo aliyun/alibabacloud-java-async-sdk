@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quanmiaolightapp20240801.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -23,7 +28,7 @@ public class RunVideoAnalysisRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("generateOptions")
-    private java.util.List < String > generateOptions;
+    private java.util.List<String> generateOptions;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("modelCustomPromptTemplate")
@@ -112,7 +117,7 @@ public class RunVideoAnalysisRequest extends Request {
     /**
      * @return generateOptions
      */
-    public java.util.List < String > getGenerateOptions() {
+    public java.util.List<String> getGenerateOptions() {
         return this.generateOptions;
     }
 
@@ -189,7 +194,7 @@ public class RunVideoAnalysisRequest extends Request {
     public static final class Builder extends Request.Builder<RunVideoAnalysisRequest, Builder> {
         private String regionId; 
         private String workspaceId; 
-        private java.util.List < String > generateOptions; 
+        private java.util.List<String> generateOptions; 
         private String modelCustomPromptTemplate; 
         private String modelCustomPromptTemplateId; 
         private String modelId; 
@@ -246,7 +251,7 @@ public class RunVideoAnalysisRequest extends Request {
         /**
          * generateOptions.
          */
-        public Builder generateOptions(java.util.List < String > generateOptions) {
+        public Builder generateOptions(java.util.List<String> generateOptions) {
             String generateOptionsShrink = shrink(generateOptions, "generateOptions", "json");
             this.putBodyParameter("generateOptions", generateOptionsShrink);
             this.generateOptions = generateOptions;

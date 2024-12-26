@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RunHotTopicSummaryResponse} extends {@link TeaModel}
+ * {@link GenerateOutputFormatResponse} extends {@link TeaModel}
  *
- * <p>RunHotTopicSummaryResponse</p>
+ * <p>GenerateOutputFormatResponse</p>
  */
-public class RunHotTopicSummaryResponse extends Response {
+public class GenerateOutputFormatResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class RunHotTopicSummaryResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private RunHotTopicSummaryResponseBody body;
+    private GenerateOutputFormatResponseBody body;
 
-    private RunHotTopicSummaryResponse(BuilderImpl builder) {
+    private GenerateOutputFormatResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static RunHotTopicSummaryResponse create() {
+    public static GenerateOutputFormatResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class RunHotTopicSummaryResponse extends Response {
     /**
      * @return body
      */
-    public RunHotTopicSummaryResponseBody getBody() {
+    public GenerateOutputFormatResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RunHotTopicSummaryResponse, Builder> {
+    public interface Builder extends Response.Builder<GenerateOutputFormatResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(RunHotTopicSummaryResponseBody body);
+        Builder body(GenerateOutputFormatResponseBody body);
 
         @Override
-        RunHotTopicSummaryResponse build();
+        GenerateOutputFormatResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RunHotTopicSummaryResponse, Builder>
+            extends Response.BuilderImpl<GenerateOutputFormatResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private RunHotTopicSummaryResponseBody body; 
+        private GenerateOutputFormatResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RunHotTopicSummaryResponse response) {
+        private BuilderImpl(GenerateOutputFormatResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class RunHotTopicSummaryResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RunHotTopicSummaryResponseBody body) {
+        public Builder body(GenerateOutputFormatResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RunHotTopicSummaryResponse build() {
-            return new RunHotTopicSummaryResponse(this);
+        public GenerateOutputFormatResponse build() {
+            return new GenerateOutputFormatResponse(this);
         } 
 
     } 

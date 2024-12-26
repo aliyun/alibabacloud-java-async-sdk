@@ -12,45 +12,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RunScriptPlanningResponseBody} extends {@link TeaModel}
+ * {@link RunTagMiningAnalysisResponseBody} extends {@link TeaModel}
  *
- * <p>RunScriptPlanningResponseBody</p>
+ * <p>RunTagMiningAnalysisResponseBody</p>
  */
-public class RunScriptPlanningResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("end")
-    private Boolean end;
-
+public class RunTagMiningAnalysisResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("header")
-    private RunScriptPlanningResponseBodyHeader header;
+    private RunTagMiningAnalysisResponseBodyHeader header;
 
     @com.aliyun.core.annotation.NameInMap("payload")
     private Payload payload;
 
-    private RunScriptPlanningResponseBody(Builder builder) {
-        this.end = builder.end;
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
+
+    private RunTagMiningAnalysisResponseBody(Builder builder) {
         this.header = builder.header;
         this.payload = builder.payload;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static RunScriptPlanningResponseBody create() {
+    public static RunTagMiningAnalysisResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return end
-     */
-    public Boolean getEnd() {
-        return this.end;
     }
 
     /**
      * @return header
      */
-    public RunScriptPlanningResponseBodyHeader getHeader() {
+    public RunTagMiningAnalysisResponseBodyHeader getHeader() {
         return this.header;
     }
 
@@ -61,23 +54,22 @@ public class RunScriptPlanningResponseBody extends TeaModel {
         return this.payload;
     }
 
-    public static final class Builder {
-        private Boolean end; 
-        private RunScriptPlanningResponseBodyHeader header; 
-        private Payload payload; 
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        /**
-         * end.
-         */
-        public Builder end(Boolean end) {
-            this.end = end;
-            return this;
-        }
+    public static final class Builder {
+        private RunTagMiningAnalysisResponseBodyHeader header; 
+        private Payload payload; 
+        private String requestId; 
 
         /**
          * header.
          */
-        public Builder header(RunScriptPlanningResponseBodyHeader header) {
+        public Builder header(RunTagMiningAnalysisResponseBodyHeader header) {
             this.header = header;
             return this;
         }
@@ -90,19 +82,30 @@ public class RunScriptPlanningResponseBody extends TeaModel {
             return this;
         }
 
-        public RunScriptPlanningResponseBody build() {
-            return new RunScriptPlanningResponseBody(this);
+        /**
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>085BE2D2-BB7E-59A6-B688-F2CB32124E7F</p>
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public RunTagMiningAnalysisResponseBody build() {
+            return new RunTagMiningAnalysisResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link RunScriptPlanningResponseBody} extends {@link TeaModel}
+     * {@link RunTagMiningAnalysisResponseBody} extends {@link TeaModel}
      *
-     * <p>RunScriptPlanningResponseBody</p>
+     * <p>RunTagMiningAnalysisResponseBody</p>
      */
-    public static class RunScriptPlanningResponseBodyHeader extends TeaModel {
+    public static class RunTagMiningAnalysisResponseBodyHeader extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("errorCode")
         private String errorCode;
 
@@ -111,12 +114,6 @@ public class RunScriptPlanningResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("event")
         private String event;
-
-        @com.aliyun.core.annotation.NameInMap("eventInfo")
-        private String eventInfo;
-
-        @com.aliyun.core.annotation.NameInMap("requestId")
-        private String requestId;
 
         @com.aliyun.core.annotation.NameInMap("sessionId")
         private String sessionId;
@@ -127,12 +124,10 @@ public class RunScriptPlanningResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("traceId")
         private String traceId;
 
-        private RunScriptPlanningResponseBodyHeader(Builder builder) {
+        private RunTagMiningAnalysisResponseBodyHeader(Builder builder) {
             this.errorCode = builder.errorCode;
             this.errorMessage = builder.errorMessage;
             this.event = builder.event;
-            this.eventInfo = builder.eventInfo;
-            this.requestId = builder.requestId;
             this.sessionId = builder.sessionId;
             this.taskId = builder.taskId;
             this.traceId = builder.traceId;
@@ -142,7 +137,7 @@ public class RunScriptPlanningResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static RunScriptPlanningResponseBodyHeader create() {
+        public static RunTagMiningAnalysisResponseBodyHeader create() {
             return builder().build();
         }
 
@@ -165,20 +160,6 @@ public class RunScriptPlanningResponseBody extends TeaModel {
          */
         public String getEvent() {
             return this.event;
-        }
-
-        /**
-         * @return eventInfo
-         */
-        public String getEventInfo() {
-            return this.eventInfo;
-        }
-
-        /**
-         * @return requestId
-         */
-        public String getRequestId() {
-            return this.requestId;
         }
 
         /**
@@ -206,8 +187,6 @@ public class RunScriptPlanningResponseBody extends TeaModel {
             private String errorCode; 
             private String errorMessage; 
             private String event; 
-            private String eventInfo; 
-            private String requestId; 
             private String sessionId; 
             private String taskId; 
             private String traceId; 
@@ -237,22 +216,6 @@ public class RunScriptPlanningResponseBody extends TeaModel {
             }
 
             /**
-             * eventInfo.
-             */
-            public Builder eventInfo(String eventInfo) {
-                this.eventInfo = eventInfo;
-                return this;
-            }
-
-            /**
-             * requestId.
-             */
-            public Builder requestId(String requestId) {
-                this.requestId = requestId;
-                return this;
-            }
-
-            /**
              * sessionId.
              */
             public Builder sessionId(String sessionId) {
@@ -276,8 +239,8 @@ public class RunScriptPlanningResponseBody extends TeaModel {
                 return this;
             }
 
-            public RunScriptPlanningResponseBodyHeader build() {
-                return new RunScriptPlanningResponseBodyHeader(this);
+            public RunTagMiningAnalysisResponseBodyHeader build() {
+                return new RunTagMiningAnalysisResponseBodyHeader(this);
             } 
 
         } 
@@ -285,9 +248,9 @@ public class RunScriptPlanningResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunScriptPlanningResponseBody} extends {@link TeaModel}
+     * {@link RunTagMiningAnalysisResponseBody} extends {@link TeaModel}
      *
-     * <p>RunScriptPlanningResponseBody</p>
+     * <p>RunTagMiningAnalysisResponseBody</p>
      */
     public static class Output extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("text")
@@ -332,9 +295,9 @@ public class RunScriptPlanningResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunScriptPlanningResponseBody} extends {@link TeaModel}
+     * {@link RunTagMiningAnalysisResponseBody} extends {@link TeaModel}
      *
-     * <p>RunScriptPlanningResponseBody</p>
+     * <p>RunTagMiningAnalysisResponseBody</p>
      */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inputTokens")
@@ -419,9 +382,9 @@ public class RunScriptPlanningResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RunScriptPlanningResponseBody} extends {@link TeaModel}
+     * {@link RunTagMiningAnalysisResponseBody} extends {@link TeaModel}
      *
-     * <p>RunScriptPlanningResponseBody</p>
+     * <p>RunTagMiningAnalysisResponseBody</p>
      */
     public static class Payload extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("output")
