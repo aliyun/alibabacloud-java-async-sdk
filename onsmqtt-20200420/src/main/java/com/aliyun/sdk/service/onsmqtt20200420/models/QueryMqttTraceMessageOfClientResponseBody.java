@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryMqttTraceMessageOfClientResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("MessageOfClientList")
-    private java.util.List < MessageOfClientList> messageOfClientList;
+    private java.util.List<MessageOfClientList> messageOfClientList;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -53,7 +58,7 @@ public class QueryMqttTraceMessageOfClientResponseBody extends TeaModel {
     /**
      * @return messageOfClientList
      */
-    public java.util.List < MessageOfClientList> getMessageOfClientList() {
+    public java.util.List<MessageOfClientList> getMessageOfClientList() {
         return this.messageOfClientList;
     }
 
@@ -80,7 +85,7 @@ public class QueryMqttTraceMessageOfClientResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < MessageOfClientList> messageOfClientList; 
+        private java.util.List<MessageOfClientList> messageOfClientList; 
         private Integer pageSize; 
         private String requestId; 
         private Long total; 
@@ -99,7 +104,7 @@ public class QueryMqttTraceMessageOfClientResponseBody extends TeaModel {
         /**
          * <p>The returned messages.</p>
          */
-        public Builder messageOfClientList(java.util.List < MessageOfClientList> messageOfClientList) {
+        public Builder messageOfClientList(java.util.List<MessageOfClientList> messageOfClientList) {
             this.messageOfClientList = messageOfClientList;
             return this;
         }

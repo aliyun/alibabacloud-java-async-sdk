@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("MessageTraceLists")
-    private java.util.List < MessageTraceLists> messageTraceLists;
+    private java.util.List<MessageTraceLists> messageTraceLists;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -53,7 +58,7 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
     /**
      * @return messageTraceLists
      */
-    public java.util.List < MessageTraceLists> getMessageTraceLists() {
+    public java.util.List<MessageTraceLists> getMessageTraceLists() {
         return this.messageTraceLists;
     }
 
@@ -80,7 +85,7 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < MessageTraceLists> messageTraceLists; 
+        private java.util.List<MessageTraceLists> messageTraceLists; 
         private Integer pageSize; 
         private String requestId; 
         private Long total; 
@@ -99,7 +104,7 @@ public class QueryMqttTraceMessageSubscribeResponseBody extends TeaModel {
         /**
          * <p>The delivery trace of the queried message.</p>
          */
-        public Builder messageTraceLists(java.util.List < MessageTraceLists> messageTraceLists) {
+        public Builder messageTraceLists(java.util.List<MessageTraceLists> messageTraceLists) {
             this.messageTraceLists = messageTraceLists;
             return this;
         }

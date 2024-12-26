@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class BatchQuerySessionByClientIdsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientIdList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > clientIdList;
+    private java.util.List<String> clientIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -56,7 +61,7 @@ public class BatchQuerySessionByClientIdsRequest extends Request {
     /**
      * @return clientIdList
      */
-    public java.util.List < String > getClientIdList() {
+    public java.util.List<String> getClientIdList() {
         return this.clientIdList;
     }
 
@@ -69,7 +74,7 @@ public class BatchQuerySessionByClientIdsRequest extends Request {
 
     public static final class Builder extends Request.Builder<BatchQuerySessionByClientIdsRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > clientIdList; 
+        private java.util.List<String> clientIdList; 
         private String instanceId; 
 
         private Builder() {
@@ -99,7 +104,7 @@ public class BatchQuerySessionByClientIdsRequest extends Request {
          * <strong>example:</strong>
          * <p>ClientIdList.1</p>
          */
-        public Builder clientIdList(java.util.List < String > clientIdList) {
+        public Builder clientIdList(java.util.List<String> clientIdList) {
             this.putQueryParameter("ClientIdList", clientIdList);
             this.clientIdList = clientIdList;
             return this;

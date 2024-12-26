@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("DeviceInfoList")
-    private java.util.List < DeviceInfoList> deviceInfoList;
+    private java.util.List<DeviceInfoList> deviceInfoList;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -53,7 +58,7 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
     /**
      * @return deviceInfoList
      */
-    public java.util.List < DeviceInfoList> getDeviceInfoList() {
+    public java.util.List<DeviceInfoList> getDeviceInfoList() {
         return this.deviceInfoList;
     }
 
@@ -80,7 +85,7 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < DeviceInfoList> deviceInfoList; 
+        private java.util.List<DeviceInfoList> deviceInfoList; 
         private Integer pageSize; 
         private String requestId; 
         private Long total; 
@@ -99,7 +104,7 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
         /**
          * <p>The details of the action on the device.</p>
          */
-        public Builder deviceInfoList(java.util.List < DeviceInfoList> deviceInfoList) {
+        public Builder deviceInfoList(java.util.List<DeviceInfoList> deviceInfoList) {
             this.deviceInfoList = deviceInfoList;
             return this;
         }

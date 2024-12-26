@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -300,7 +305,7 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
         private String nextToken;
 
         @com.aliyun.core.annotation.NameInMap("Results")
-        private java.util.List < Results> results;
+        private java.util.List<Results> results;
 
         private Data(Builder builder) {
             this.nextToken = builder.nextToken;
@@ -325,13 +330,13 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
         /**
          * @return results
          */
-        public java.util.List < Results> getResults() {
+        public java.util.List<Results> getResults() {
             return this.results;
         }
 
         public static final class Builder {
             private String nextToken; 
-            private java.util.List < Results> results; 
+            private java.util.List<Results> results; 
 
             /**
              * <p>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</p>
@@ -347,7 +352,7 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
             /**
              * <p>The response results.</p>
              */
-            public Builder results(java.util.List < Results> results) {
+            public Builder results(java.util.List<Results> results) {
                 this.results = results;
                 return this;
             }

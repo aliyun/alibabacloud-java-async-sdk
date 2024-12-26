@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -305,7 +310,7 @@ public class ListCaCertificateResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CaCertificateVOS")
-        private java.util.List < CaCertificateVOS> caCertificateVOS;
+        private java.util.List<CaCertificateVOS> caCertificateVOS;
 
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
@@ -334,7 +339,7 @@ public class ListCaCertificateResponseBody extends TeaModel {
         /**
          * @return caCertificateVOS
          */
-        public java.util.List < CaCertificateVOS> getCaCertificateVOS() {
+        public java.util.List<CaCertificateVOS> getCaCertificateVOS() {
             return this.caCertificateVOS;
         }
 
@@ -360,7 +365,7 @@ public class ListCaCertificateResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CaCertificateVOS> caCertificateVOS; 
+            private java.util.List<CaCertificateVOS> caCertificateVOS; 
             private Integer pageNo; 
             private Integer pageSize; 
             private Integer total; 
@@ -368,7 +373,7 @@ public class ListCaCertificateResponseBody extends TeaModel {
             /**
              * <p>Details of the CA certificate</p>
              */
-            public Builder caCertificateVOS(java.util.List < CaCertificateVOS> caCertificateVOS) {
+            public Builder caCertificateVOS(java.util.List<CaCertificateVOS> caCertificateVOS) {
                 this.caCertificateVOS = caCertificateVOS;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OnlineStatusList")
-    private java.util.List < OnlineStatusList> onlineStatusList;
+    private java.util.List<OnlineStatusList> onlineStatusList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
     /**
      * @return onlineStatusList
      */
-    public java.util.List < OnlineStatusList> getOnlineStatusList() {
+    public java.util.List<OnlineStatusList> getOnlineStatusList() {
         return this.onlineStatusList;
     }
 
@@ -46,13 +51,13 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < OnlineStatusList> onlineStatusList; 
+        private java.util.List<OnlineStatusList> onlineStatusList; 
         private String requestId; 
 
         /**
          * <p>The status list of all queried ApsaraMQ for MQTT clients.</p>
          */
-        public Builder onlineStatusList(java.util.List < OnlineStatusList> onlineStatusList) {
+        public Builder onlineStatusList(java.util.List<OnlineStatusList> onlineStatusList) {
             this.onlineStatusList = onlineStatusList;
             return this;
         }

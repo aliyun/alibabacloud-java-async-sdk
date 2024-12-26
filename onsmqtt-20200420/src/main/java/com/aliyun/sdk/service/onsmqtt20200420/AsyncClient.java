@@ -279,6 +279,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGroupIdResponse> listGroupId(ListGroupIdRequest request);
 
     /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
      * @param request the request parameters of QueryCustomAuthConnectBlack  QueryCustomAuthConnectBlackRequest
      * @return QueryCustomAuthConnectBlackResponse
      */
@@ -437,6 +443,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetSniConfigResponse> setSniConfig(SetSniConfigRequest request);
 
     /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</p>
      * <ul>
@@ -447,6 +459,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnRegisterDeviceCredentialResponse
      */
     CompletableFuture<UnRegisterDeviceCredentialResponse> unRegisterDeviceCredential(UnRegisterDeviceCredentialRequest request);
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
      * @param request the request parameters of UpdateCustomAuthIdentity  UpdateCustomAuthIdentityRequest

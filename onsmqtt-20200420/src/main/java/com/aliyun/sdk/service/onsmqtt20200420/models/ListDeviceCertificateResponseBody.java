@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -275,7 +280,7 @@ public class ListDeviceCertificateResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceCertificateVOS")
-        private java.util.List < DeviceCertificateVOS> deviceCertificateVOS;
+        private java.util.List<DeviceCertificateVOS> deviceCertificateVOS;
 
         @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
@@ -304,7 +309,7 @@ public class ListDeviceCertificateResponseBody extends TeaModel {
         /**
          * @return deviceCertificateVOS
          */
-        public java.util.List < DeviceCertificateVOS> getDeviceCertificateVOS() {
+        public java.util.List<DeviceCertificateVOS> getDeviceCertificateVOS() {
             return this.deviceCertificateVOS;
         }
 
@@ -330,7 +335,7 @@ public class ListDeviceCertificateResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DeviceCertificateVOS> deviceCertificateVOS; 
+            private java.util.List<DeviceCertificateVOS> deviceCertificateVOS; 
             private Integer pageNo; 
             private Integer pageSize; 
             private Integer total; 
@@ -338,7 +343,7 @@ public class ListDeviceCertificateResponseBody extends TeaModel {
             /**
              * <p>Details of the device certificate.</p>
              */
-            public Builder deviceCertificateVOS(java.util.List < DeviceCertificateVOS> deviceCertificateVOS) {
+            public Builder deviceCertificateVOS(java.util.List<DeviceCertificateVOS> deviceCertificateVOS) {
                 this.deviceCertificateVOS = deviceCertificateVOS;
                 return this;
             }

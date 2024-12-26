@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MessageTraceLists")
-    private java.util.List < MessageTraceLists> messageTraceLists;
+    private java.util.List<MessageTraceLists> messageTraceLists;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -34,7 +39,7 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
     /**
      * @return messageTraceLists
      */
-    public java.util.List < MessageTraceLists> getMessageTraceLists() {
+    public java.util.List<MessageTraceLists> getMessageTraceLists() {
         return this.messageTraceLists;
     }
 
@@ -46,13 +51,13 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MessageTraceLists> messageTraceLists; 
+        private java.util.List<MessageTraceLists> messageTraceLists; 
         private String requestId; 
 
         /**
          * <p>The message traces.</p>
          */
-        public Builder messageTraceLists(java.util.List < MessageTraceLists> messageTraceLists) {
+        public Builder messageTraceLists(java.util.List<MessageTraceLists> messageTraceLists) {
             this.messageTraceLists = messageTraceLists;
             return this;
         }

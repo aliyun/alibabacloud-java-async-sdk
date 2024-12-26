@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -300,7 +305,7 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
         private String nextToken;
 
         @com.aliyun.core.annotation.NameInMap("Results")
-        private java.util.List < Results> results;
+        private java.util.List<Results> results;
 
         private Data(Builder builder) {
             this.nextToken = builder.nextToken;
@@ -325,13 +330,13 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
         /**
          * @return results
          */
-        public java.util.List < Results> getResults() {
+        public java.util.List<Results> getResults() {
             return this.results;
         }
 
         public static final class Builder {
             private String nextToken; 
-            private java.util.List < Results> results; 
+            private java.util.List<Results> results; 
 
             /**
              * <p>If excess return values exist, this parameter is returned.</p>
@@ -347,7 +352,7 @@ public class QueryCustomAuthIdentityResponseBody extends TeaModel {
             /**
              * <p>The returned results.</p>
              */
-            public Builder results(java.util.List < Results> results) {
+            public Builder results(java.util.List<Results> results) {
                 this.results = results;
                 return this;
             }
