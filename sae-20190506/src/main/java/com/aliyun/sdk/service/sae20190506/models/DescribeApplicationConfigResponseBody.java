@@ -1168,6 +1168,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomHostAlias")
         private String customHostAlias;
 
+        @com.aliyun.core.annotation.NameInMap("CustomImageNetworkType")
+        private String customImageNetworkType;
+
         @com.aliyun.core.annotation.NameInMap("Dotnet")
         private String dotnet;
 
@@ -1365,6 +1368,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.configMapMountDesc = builder.configMapMountDesc;
             this.cpu = builder.cpu;
             this.customHostAlias = builder.customHostAlias;
+            this.customImageNetworkType = builder.customImageNetworkType;
             this.dotnet = builder.dotnet;
             this.edasContainerVersion = builder.edasContainerVersion;
             this.enableAhas = builder.enableAhas;
@@ -1525,6 +1529,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getCustomHostAlias() {
             return this.customHostAlias;
+        }
+
+        /**
+         * @return customImageNetworkType
+         */
+        public String getCustomImageNetworkType() {
+            return this.customImageNetworkType;
         }
 
         /**
@@ -1968,6 +1979,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private java.util.List<ConfigMapMountDesc> configMapMountDesc; 
             private Integer cpu; 
             private String customHostAlias; 
+            private String customImageNetworkType; 
             private String dotnet; 
             private String edasContainerVersion; 
             private String enableAhas; 
@@ -2191,6 +2203,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder customHostAlias(String customHostAlias) {
                 this.customHostAlias = customHostAlias;
+                return this;
+            }
+
+            /**
+             * CustomImageNetworkType.
+             */
+            public Builder customImageNetworkType(String customImageNetworkType) {
+                this.customImageNetworkType = customImageNetworkType;
                 return this;
             }
 

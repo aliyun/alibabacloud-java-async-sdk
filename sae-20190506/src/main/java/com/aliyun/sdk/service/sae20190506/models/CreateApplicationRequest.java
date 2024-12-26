@@ -71,6 +71,10 @@ public class CreateApplicationRequest extends Request {
     private String customHostAlias;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomImageNetworkType")
+    private String customImageNetworkType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Deploy")
     private Boolean deploy;
 
@@ -308,6 +312,7 @@ public class CreateApplicationRequest extends Request {
         this.configMapMountDesc = builder.configMapMountDesc;
         this.cpu = builder.cpu;
         this.customHostAlias = builder.customHostAlias;
+        this.customImageNetworkType = builder.customImageNetworkType;
         this.deploy = builder.deploy;
         this.dotnet = builder.dotnet;
         this.edasContainerVersion = builder.edasContainerVersion;
@@ -467,6 +472,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getCustomHostAlias() {
         return this.customHostAlias;
+    }
+
+    /**
+     * @return customImageNetworkType
+     */
+    public String getCustomImageNetworkType() {
+        return this.customImageNetworkType;
     }
 
     /**
@@ -868,6 +880,7 @@ public class CreateApplicationRequest extends Request {
         private String configMapMountDesc; 
         private Integer cpu; 
         private String customHostAlias; 
+        private String customImageNetworkType; 
         private Boolean deploy; 
         private String dotnet; 
         private String edasContainerVersion; 
@@ -943,6 +956,7 @@ public class CreateApplicationRequest extends Request {
             this.configMapMountDesc = request.configMapMountDesc;
             this.cpu = request.cpu;
             this.customHostAlias = request.customHostAlias;
+            this.customImageNetworkType = request.customImageNetworkType;
             this.deploy = request.deploy;
             this.dotnet = request.dotnet;
             this.edasContainerVersion = request.edasContainerVersion;
@@ -1148,6 +1162,15 @@ public class CreateApplicationRequest extends Request {
         public Builder customHostAlias(String customHostAlias) {
             this.putQueryParameter("CustomHostAlias", customHostAlias);
             this.customHostAlias = customHostAlias;
+            return this;
+        }
+
+        /**
+         * CustomImageNetworkType.
+         */
+        public Builder customImageNetworkType(String customImageNetworkType) {
+            this.putQueryParameter("CustomImageNetworkType", customImageNetworkType);
+            this.customImageNetworkType = customImageNetworkType;
             return this;
         }
 

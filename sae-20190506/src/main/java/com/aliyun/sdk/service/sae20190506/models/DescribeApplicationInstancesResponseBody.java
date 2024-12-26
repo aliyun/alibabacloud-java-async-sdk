@@ -332,11 +332,17 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("MainContainerStatus")
+        private String mainContainerStatus;
+
         @com.aliyun.core.annotation.NameInMap("PackageVersion")
         private String packageVersion;
 
         @com.aliyun.core.annotation.NameInMap("SidecarContainersStatus")
         private java.util.List<SidecarContainersStatus> sidecarContainersStatus;
+
+        @com.aliyun.core.annotation.NameInMap("UnhealthyMessage")
+        private String unhealthyMessage;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -353,8 +359,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             this.instanceContainerStatus = builder.instanceContainerStatus;
             this.instanceHealthStatus = builder.instanceHealthStatus;
             this.instanceId = builder.instanceId;
+            this.mainContainerStatus = builder.mainContainerStatus;
             this.packageVersion = builder.packageVersion;
             this.sidecarContainersStatus = builder.sidecarContainersStatus;
+            this.unhealthyMessage = builder.unhealthyMessage;
             this.vSwitchId = builder.vSwitchId;
         }
 
@@ -444,6 +452,13 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return mainContainerStatus
+         */
+        public String getMainContainerStatus() {
+            return this.mainContainerStatus;
+        }
+
+        /**
          * @return packageVersion
          */
         public String getPackageVersion() {
@@ -455,6 +470,13 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
          */
         public java.util.List<SidecarContainersStatus> getSidecarContainersStatus() {
             return this.sidecarContainersStatus;
+        }
+
+        /**
+         * @return unhealthyMessage
+         */
+        public String getUnhealthyMessage() {
+            return this.unhealthyMessage;
         }
 
         /**
@@ -476,8 +498,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             private String instanceContainerStatus; 
             private String instanceHealthStatus; 
             private String instanceId; 
+            private String mainContainerStatus; 
             private String packageVersion; 
             private java.util.List<SidecarContainersStatus> sidecarContainersStatus; 
+            private String unhealthyMessage; 
             private String vSwitchId; 
 
             /**
@@ -625,6 +649,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * MainContainerStatus.
+             */
+            public Builder mainContainerStatus(String mainContainerStatus) {
+                this.mainContainerStatus = mainContainerStatus;
+                return this;
+            }
+
+            /**
              * <p>The version of the package.</p>
              * 
              * <strong>example:</strong>
@@ -640,6 +672,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
              */
             public Builder sidecarContainersStatus(java.util.List<SidecarContainersStatus> sidecarContainersStatus) {
                 this.sidecarContainersStatus = sidecarContainersStatus;
+                return this;
+            }
+
+            /**
+             * UnhealthyMessage.
+             */
+            public Builder unhealthyMessage(String unhealthyMessage) {
+                this.unhealthyMessage = unhealthyMessage;
                 return this;
             }
 

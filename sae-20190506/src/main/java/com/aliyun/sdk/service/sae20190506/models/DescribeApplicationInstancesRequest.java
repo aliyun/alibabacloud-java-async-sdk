@@ -32,6 +32,10 @@ public class DescribeApplicationInstancesRequest extends Request {
     private String groupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
@@ -44,6 +48,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         this.appId = builder.appId;
         this.currentPage = builder.currentPage;
         this.groupId = builder.groupId;
+        this.instanceId = builder.instanceId;
         this.pageSize = builder.pageSize;
         this.reverse = builder.reverse;
     }
@@ -83,6 +88,13 @@ public class DescribeApplicationInstancesRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -100,6 +112,7 @@ public class DescribeApplicationInstancesRequest extends Request {
         private String appId; 
         private Integer currentPage; 
         private String groupId; 
+        private String instanceId; 
         private Integer pageSize; 
         private Boolean reverse; 
 
@@ -112,6 +125,7 @@ public class DescribeApplicationInstancesRequest extends Request {
             this.appId = request.appId;
             this.currentPage = request.currentPage;
             this.groupId = request.groupId;
+            this.instanceId = request.instanceId;
             this.pageSize = request.pageSize;
             this.reverse = request.reverse;
         } 
@@ -151,6 +165,15 @@ public class DescribeApplicationInstancesRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
