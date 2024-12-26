@@ -599,10 +599,18 @@ public class ModifyInstanceAttributeRequest extends Request {
      * <p>ModifyInstanceAttributeRequest</p>
      */
     public static class CpuOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Core")
+        private Integer core;
+
+        @com.aliyun.core.annotation.NameInMap("ThreadsPerCore")
+        private Integer threadsPerCore;
+
         @com.aliyun.core.annotation.NameInMap("TopologyType")
         private String topologyType;
 
         private CpuOptions(Builder builder) {
+            this.core = builder.core;
+            this.threadsPerCore = builder.threadsPerCore;
             this.topologyType = builder.topologyType;
         }
 
@@ -615,6 +623,20 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
+         * @return core
+         */
+        public Integer getCore() {
+            return this.core;
+        }
+
+        /**
+         * @return threadsPerCore
+         */
+        public Integer getThreadsPerCore() {
+            return this.threadsPerCore;
+        }
+
+        /**
          * @return topologyType
          */
         public String getTopologyType() {
@@ -622,7 +644,25 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer core; 
+            private Integer threadsPerCore; 
             private String topologyType; 
+
+            /**
+             * Core.
+             */
+            public Builder core(Integer core) {
+                this.core = core;
+                return this;
+            }
+
+            /**
+             * ThreadsPerCore.
+             */
+            public Builder threadsPerCore(Integer threadsPerCore) {
+                this.threadsPerCore = threadsPerCore;
+                return this;
+            }
 
             /**
              * <p>The CPU topology type of the instance. Valid values:</p>

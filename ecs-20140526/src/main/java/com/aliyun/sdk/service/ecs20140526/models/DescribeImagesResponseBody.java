@@ -427,7 +427,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         private String device;
 
         @com.aliyun.core.annotation.NameInMap("Encrypted")
-        private String encrypted;
+        private Boolean encrypted;
 
         @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
@@ -484,7 +484,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         /**
          * @return encrypted
          */
-        public String getEncrypted() {
+        public Boolean getEncrypted() {
             return this.encrypted;
         }
 
@@ -546,7 +546,7 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String device; 
-            private String encrypted; 
+            private Boolean encrypted; 
             private String format; 
             private String importOSSBucket; 
             private String importOSSObject; 
@@ -570,7 +570,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             /**
              * Encrypted.
              */
-            public Builder encrypted(String encrypted) {
+            public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
                 return this;
             }
