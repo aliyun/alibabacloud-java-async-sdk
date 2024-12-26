@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-schedulerx320240624</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <name>alibabacloud-schedulerx320240624</name>
   <description>Alibaba Cloud SchedulerX3 (20240624) Async SDK for Java
