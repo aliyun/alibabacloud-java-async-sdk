@@ -32,6 +32,10 @@ public class ApplyFileUploadLeaseRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CategoryType")
+    private String categoryType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FileName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
@@ -51,6 +55,7 @@ public class ApplyFileUploadLeaseRequest extends Request {
         this.categoryId = builder.categoryId;
         this.workspaceId = builder.workspaceId;
         this.regionId = builder.regionId;
+        this.categoryType = builder.categoryType;
         this.fileName = builder.fileName;
         this.md5 = builder.md5;
         this.sizeInBytes = builder.sizeInBytes;
@@ -91,6 +96,13 @@ public class ApplyFileUploadLeaseRequest extends Request {
     }
 
     /**
+     * @return categoryType
+     */
+    public String getCategoryType() {
+        return this.categoryType;
+    }
+
+    /**
      * @return fileName
      */
     public String getFileName() {
@@ -115,6 +127,7 @@ public class ApplyFileUploadLeaseRequest extends Request {
         private String categoryId; 
         private String workspaceId; 
         private String regionId; 
+        private String categoryType; 
         private String fileName; 
         private String md5; 
         private String sizeInBytes; 
@@ -128,6 +141,7 @@ public class ApplyFileUploadLeaseRequest extends Request {
             this.categoryId = request.categoryId;
             this.workspaceId = request.workspaceId;
             this.regionId = request.regionId;
+            this.categoryType = request.categoryType;
             this.fileName = request.fileName;
             this.md5 = request.md5;
             this.sizeInBytes = request.sizeInBytes;
@@ -165,6 +179,15 @@ public class ApplyFileUploadLeaseRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CategoryType.
+         */
+        public Builder categoryType(String categoryType) {
+            this.putBodyParameter("CategoryType", categoryType);
+            this.categoryType = categoryType;
             return this;
         }
 

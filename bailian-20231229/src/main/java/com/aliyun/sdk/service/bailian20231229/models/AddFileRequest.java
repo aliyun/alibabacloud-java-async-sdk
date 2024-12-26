@@ -32,6 +32,10 @@ public class AddFileRequest extends Request {
     private String categoryId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CategoryType")
+    private String categoryType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LeaseId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String leaseId;
@@ -50,6 +54,7 @@ public class AddFileRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.regionId = builder.regionId;
         this.categoryId = builder.categoryId;
+        this.categoryType = builder.categoryType;
         this.leaseId = builder.leaseId;
         this.parser = builder.parser;
         this.tags = builder.tags;
@@ -90,6 +95,13 @@ public class AddFileRequest extends Request {
     }
 
     /**
+     * @return categoryType
+     */
+    public String getCategoryType() {
+        return this.categoryType;
+    }
+
+    /**
      * @return leaseId
      */
     public String getLeaseId() {
@@ -114,6 +126,7 @@ public class AddFileRequest extends Request {
         private String workspaceId; 
         private String regionId; 
         private String categoryId; 
+        private String categoryType; 
         private String leaseId; 
         private String parser; 
         private java.util.List<String> tags; 
@@ -127,6 +140,7 @@ public class AddFileRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.regionId = request.regionId;
             this.categoryId = request.categoryId;
+            this.categoryType = request.categoryType;
             this.leaseId = request.leaseId;
             this.parser = request.parser;
             this.tags = request.tags;
@@ -164,6 +178,15 @@ public class AddFileRequest extends Request {
         public Builder categoryId(String categoryId) {
             this.putBodyParameter("CategoryId", categoryId);
             this.categoryId = categoryId;
+            return this;
+        }
+
+        /**
+         * CategoryType.
+         */
+        public Builder categoryType(String categoryType) {
+            this.putBodyParameter("CategoryType", categoryType);
+            this.categoryType = categoryType;
             return this;
         }
 
