@@ -1,3 +1,6 @@
+2024-12-27 Version: 1.0.23
+- Generated java-async 2023-08-01 for AiMiaoBi.
+
 2024-12-19 Version: 1.0.22
 - Generated java-async 2023-08-01 for AiMiaoBi.
 

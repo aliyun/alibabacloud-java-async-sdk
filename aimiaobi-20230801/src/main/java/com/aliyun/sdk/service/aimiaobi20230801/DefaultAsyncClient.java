@@ -1527,6 +1527,62 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RunBookIntroduction  RunBookIntroductionRequest
+     * @return RunBookIntroductionResponse
+     */
+    @Override
+    public CompletableFuture<RunBookIntroductionResponse> runBookIntroduction(RunBookIntroductionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RunBookIntroduction").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runBookIntroduction").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunBookIntroductionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunBookIntroductionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunBookIntroductionResponseBody> runBookIntroductionWithResponseIterable(RunBookIntroductionRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunBookIntroduction").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runBookIntroduction").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunBookIntroductionResponseBodyIterator iterator = RunBookIntroductionResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of RunBookSmartCard  RunBookSmartCardRequest
+     * @return RunBookSmartCardResponse
+     */
+    @Override
+    public CompletableFuture<RunBookSmartCardResponse> runBookSmartCard(RunBookSmartCardRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RunBookSmartCard").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runBookSmartCard").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunBookSmartCardResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunBookSmartCardResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunBookSmartCardResponseBody> runBookSmartCardWithResponseIterable(RunBookSmartCardRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunBookSmartCard").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runBookSmartCard").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunBookSmartCardResponseBodyIterator iterator = RunBookSmartCardResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
      * @param request the request parameters of RunContinueContent  RunContinueContentRequest
      * @return RunContinueContentResponse
      */
@@ -1689,6 +1745,34 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.validateRequestModel(request);
         TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunDocQa").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runDocQA").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
         RunDocQaResponseBodyIterator iterator = RunDocQaResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of RunDocSmartCard  RunDocSmartCardRequest
+     * @return RunDocSmartCardResponse
+     */
+    @Override
+    public CompletableFuture<RunDocSmartCardResponse> runDocSmartCard(RunDocSmartCardRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RunDocSmartCard").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runDocSmartCard").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunDocSmartCardResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunDocSmartCardResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunDocSmartCardResponseBody> runDocSmartCardWithResponseIterable(RunDocSmartCardRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunDocSmartCard").setMethod(HttpMethod.POST).setPathRegex("/miaodu/stream/runDocSmartCard").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunDocSmartCardResponseBodyIterator iterator = RunDocSmartCardResponseBodyIterator.create();
         ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
         this.handler.execute(params);
         return new ResponseIterable<>(iterator);
@@ -2359,6 +2443,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateMaterialDocumentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UploadBook  UploadBookRequest
+     * @return UploadBookResponse
+     */
+    @Override
+    public CompletableFuture<UploadBookResponse> uploadBook(UploadBookRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UploadBook").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UploadBookResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UploadBookResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -514,6 +514,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<RunAbbreviationContentResponseBody> runAbbreviationContentWithResponseIterable(RunAbbreviationContentRequest request);
 
     /**
+     * @param request the request parameters of RunBookIntroduction  RunBookIntroductionRequest
+     * @return RunBookIntroductionResponse
+     */
+    CompletableFuture<RunBookIntroductionResponse> runBookIntroduction(RunBookIntroductionRequest request);
+
+    ResponseIterable<RunBookIntroductionResponseBody> runBookIntroductionWithResponseIterable(RunBookIntroductionRequest request);
+
+    /**
+     * @param request the request parameters of RunBookSmartCard  RunBookSmartCardRequest
+     * @return RunBookSmartCardResponse
+     */
+    CompletableFuture<RunBookSmartCardResponse> runBookSmartCard(RunBookSmartCardRequest request);
+
+    ResponseIterable<RunBookSmartCardResponseBody> runBookSmartCardWithResponseIterable(RunBookSmartCardRequest request);
+
+    /**
      * @param request the request parameters of RunContinueContent  RunContinueContentRequest
      * @return RunContinueContentResponse
      */
@@ -560,6 +576,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunDocQaResponse> runDocQa(RunDocQaRequest request);
 
     ResponseIterable<RunDocQaResponseBody> runDocQaWithResponseIterable(RunDocQaRequest request);
+
+    /**
+     * @param request the request parameters of RunDocSmartCard  RunDocSmartCardRequest
+     * @return RunDocSmartCardResponse
+     */
+    CompletableFuture<RunDocSmartCardResponse> runDocSmartCard(RunDocSmartCardRequest request);
+
+    ResponseIterable<RunDocSmartCardResponseBody> runDocSmartCardWithResponseIterable(RunDocSmartCardRequest request);
 
     /**
      * @param request the request parameters of RunDocSummary  RunDocSummaryRequest
@@ -766,6 +790,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMaterialDocumentResponse
      */
     CompletableFuture<UpdateMaterialDocumentResponse> updateMaterialDocument(UpdateMaterialDocumentRequest request);
+
+    /**
+     * @param request the request parameters of UploadBook  UploadBookRequest
+     * @return UploadBookResponse
+     */
+    CompletableFuture<UploadBookResponse> uploadBook(UploadBookRequest request);
 
     /**
      * @param request the request parameters of UploadDoc  UploadDocRequest
