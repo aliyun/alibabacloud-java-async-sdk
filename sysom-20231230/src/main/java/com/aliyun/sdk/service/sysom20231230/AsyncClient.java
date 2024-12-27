@@ -32,6 +32,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateCopilotResponseResponse> generateCopilotResponse(GenerateCopilotResponseRequest request);
 
     /**
+     * @param request the request parameters of GenerateCopilotStreamResponse  GenerateCopilotStreamResponseRequest
+     * @return GenerateCopilotStreamResponseResponse
+     */
+    CompletableFuture<GenerateCopilotStreamResponseResponse> generateCopilotStreamResponse(GenerateCopilotStreamResponseRequest request);
+
+    ResponseIterable<GenerateCopilotStreamResponseResponseBody> generateCopilotStreamResponseWithResponseIterable(GenerateCopilotStreamResponseRequest request);
+
+    /**
      * @param request the request parameters of GetAIQueryResult  GetAIQueryResultRequest
      * @return GetAIQueryResultResponse
      */
@@ -56,6 +64,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAgentTaskResponse> getAgentTask(GetAgentTaskRequest request);
 
     /**
+     * @param request the request parameters of GetCopilotHistory  GetCopilotHistoryRequest
+     * @return GetCopilotHistoryResponse
+     */
+    CompletableFuture<GetCopilotHistoryResponse> getCopilotHistory(GetCopilotHistoryRequest request);
+
+    /**
      * @param request the request parameters of GetDiagnosisResult  GetDiagnosisResultRequest
      * @return GetDiagnosisResultResponse
      */
@@ -74,10 +88,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetHostCountResponse> getHostCount(GetHostCountRequest request);
 
     /**
+     * @param request the request parameters of GetHotSpotUniqList  GetHotSpotUniqListRequest
+     * @return GetHotSpotUniqListResponse
+     */
+    CompletableFuture<GetHotSpotUniqListResponse> getHotSpotUniqList(GetHotSpotUniqListRequest request);
+
+    /**
      * @param request the request parameters of GetHotspotAnalysis  GetHotspotAnalysisRequest
      * @return GetHotspotAnalysisResponse
      */
     CompletableFuture<GetHotspotAnalysisResponse> getHotspotAnalysis(GetHotspotAnalysisRequest request);
+
+    /**
+     * @param request the request parameters of GetHotspotCompare  GetHotspotCompareRequest
+     * @return GetHotspotCompareResponse
+     */
+    CompletableFuture<GetHotspotCompareResponse> getHotspotCompare(GetHotspotCompareRequest request);
 
     /**
      * @param request the request parameters of GetHotspotInstanceList  GetHotspotInstanceListRequest
@@ -90,6 +116,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetHotspotPidListResponse
      */
     CompletableFuture<GetHotspotPidListResponse> getHotspotPidList(GetHotspotPidListRequest request);
+
+    /**
+     * @param request the request parameters of GetHotspotTracking  GetHotspotTrackingRequest
+     * @return GetHotspotTrackingResponse
+     */
+    CompletableFuture<GetHotspotTrackingResponse> getHotspotTracking(GetHotspotTrackingRequest request);
+
+    /**
+     * @param request the request parameters of GetInstantScore  GetInstantScoreRequest
+     * @return GetInstantScoreResponse
+     */
+    CompletableFuture<GetInstantScoreResponse> getInstantScore(GetInstantScoreRequest request);
 
     /**
      * @param request the request parameters of GetListRecord  GetListRecordRequest
@@ -116,10 +154,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourcesResponse> getResources(GetResourcesRequest request);
 
     /**
+     * @param request the request parameters of InitialSysom  InitialSysomRequest
+     * @return InitialSysomResponse
+     */
+    CompletableFuture<InitialSysomResponse> initialSysom(InitialSysomRequest request);
+
+    /**
      * @param request the request parameters of InstallAgent  InstallAgentRequest
      * @return InstallAgentResponse
      */
     CompletableFuture<InstallAgentResponse> installAgent(InstallAgentRequest request);
+
+    /**
+     * @param request the request parameters of InstallAgentForCluster  InstallAgentForClusterRequest
+     * @return InstallAgentForClusterResponse
+     */
+    CompletableFuture<InstallAgentForClusterResponse> installAgentForCluster(InstallAgentForClusterRequest request);
 
     /**
      * @param request the request parameters of InvokeAnomalyDiagnosis  InvokeAnomalyDiagnosisRequest
@@ -152,10 +202,52 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAgentsResponse> listAgents(ListAgentsRequest request);
 
     /**
+     * @param request the request parameters of ListClusterAgentInstallRecords  ListClusterAgentInstallRecordsRequest
+     * @return ListClusterAgentInstallRecordsResponse
+     */
+    CompletableFuture<ListClusterAgentInstallRecordsResponse> listClusterAgentInstallRecords(ListClusterAgentInstallRecordsRequest request);
+
+    /**
+     * @param request the request parameters of ListClusters  ListClustersRequest
+     * @return ListClustersResponse
+     */
+    CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request);
+
+    /**
+     * @param request the request parameters of ListDiagnosis  ListDiagnosisRequest
+     * @return ListDiagnosisResponse
+     */
+    CompletableFuture<ListDiagnosisResponse> listDiagnosis(ListDiagnosisRequest request);
+
+    /**
      * @param request the request parameters of ListInstanceHealth  ListInstanceHealthRequest
      * @return ListInstanceHealthResponse
      */
     CompletableFuture<ListInstanceHealthResponse> listInstanceHealth(ListInstanceHealthRequest request);
+
+    /**
+     * @param request the request parameters of ListInstanceStatus  ListInstanceStatusRequest
+     * @return ListInstanceStatusResponse
+     */
+    CompletableFuture<ListInstanceStatusResponse> listInstanceStatus(ListInstanceStatusRequest request);
+
+    /**
+     * @param request the request parameters of ListInstances  ListInstancesRequest
+     * @return ListInstancesResponse
+     */
+    CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListPodsOfInstance  ListPodsOfInstanceRequest
+     * @return ListPodsOfInstanceResponse
+     */
+    CompletableFuture<ListPodsOfInstanceResponse> listPodsOfInstance(ListPodsOfInstanceRequest request);
+
+    /**
+     * @param request the request parameters of ListRegions  ListRegionsRequest
+     * @return ListRegionsResponse
+     */
+    CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
 
     /**
      * @param request the request parameters of StartAIAnalysis  StartAIAnalysisRequest
@@ -170,9 +262,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UninstallAgentResponse> uninstallAgent(UninstallAgentRequest request);
 
     /**
+     * @param request the request parameters of UninstallAgentForCluster  UninstallAgentForClusterRequest
+     * @return UninstallAgentForClusterResponse
+     */
+    CompletableFuture<UninstallAgentForClusterResponse> uninstallAgentForCluster(UninstallAgentForClusterRequest request);
+
+    /**
+     * @param request the request parameters of UpdateEventsAttention  UpdateEventsAttentionRequest
+     * @return UpdateEventsAttentionResponse
+     */
+    CompletableFuture<UpdateEventsAttentionResponse> updateEventsAttention(UpdateEventsAttentionRequest request);
+
+    /**
      * @param request the request parameters of UpgradeAgent  UpgradeAgentRequest
      * @return UpgradeAgentResponse
      */
     CompletableFuture<UpgradeAgentResponse> upgradeAgent(UpgradeAgentRequest request);
+
+    /**
+     * @param request the request parameters of UpgradeAgentForCluster  UpgradeAgentForClusterRequest
+     * @return UpgradeAgentForClusterResponse
+     */
+    CompletableFuture<UpgradeAgentForClusterResponse> upgradeAgentForCluster(UpgradeAgentForClusterRequest request);
 
 }
