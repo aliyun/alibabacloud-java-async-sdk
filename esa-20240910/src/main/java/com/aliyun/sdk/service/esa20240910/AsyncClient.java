@@ -138,6 +138,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateListResponse> createList(CreateListRequest request);
 
     /**
+     * @param request the request parameters of CreateOriginPool  CreateOriginPoolRequest
+     * @return CreateOriginPoolResponse
+     */
+    CompletableFuture<CreateOriginPoolResponse> createOriginPool(CreateOriginPoolRequest request);
+
+    /**
      * @param request the request parameters of CreateOriginProtection  CreateOriginProtectionRequest
      * @return CreateOriginProtectionResponse
      */
@@ -314,6 +320,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteListResponse
      */
     CompletableFuture<DeleteListResponse> deleteList(DeleteListRequest request);
+
+    /**
+     * @param request the request parameters of DeleteOriginPool  DeleteOriginPoolRequest
+     * @return DeleteOriginPoolResponse
+     */
+    CompletableFuture<DeleteOriginPoolResponse> deleteOriginPool(DeleteOriginPoolRequest request);
 
     /**
      * @param request the request parameters of DeleteOriginProtection  DeleteOriginProtectionRequest
@@ -580,6 +592,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetListResponse
      */
     CompletableFuture<GetListResponse> getList(GetListRequest request);
+
+    /**
+     * @param request the request parameters of GetOriginPool  GetOriginPoolRequest
+     * @return GetOriginPoolResponse
+     */
+    CompletableFuture<GetOriginPoolResponse> getOriginPool(GetOriginPoolRequest request);
 
     /**
      * @param request the request parameters of GetOriginProtection  GetOriginProtectionRequest
@@ -858,6 +876,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListManagedRulesGroupsResponse> listManagedRulesGroups(ListManagedRulesGroupsRequest request);
 
     /**
+     * @param request the request parameters of ListOriginPools  ListOriginPoolsRequest
+     * @return ListOriginPoolsResponse
+     */
+    CompletableFuture<ListOriginPoolsResponse> listOriginPools(ListOriginPoolsRequest request);
+
+    /**
      * @param request the request parameters of ListPages  ListPagesRequest
      * @return ListPagesResponse
      */
@@ -1093,6 +1117,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateKvNamespaceResponse
      */
     CompletableFuture<UpdateKvNamespaceResponse> updateKvNamespace(UpdateKvNamespaceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateOriginPool  UpdateOriginPoolRequest
+     * @return UpdateOriginPoolResponse
+     */
+    CompletableFuture<UpdateOriginPoolResponse> updateOriginPool(UpdateOriginPoolRequest request);
 
     /**
      * @param request the request parameters of UpdateOriginProtection  UpdateOriginProtectionRequest
