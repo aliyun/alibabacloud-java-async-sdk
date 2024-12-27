@@ -621,6 +621,15 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserENIStatus")
         private Boolean userENIStatus;
 
+        @com.aliyun.core.annotation.NameInMap("UserENIVSwitchOptions")
+        private String userENIVSwitchOptions;
+
+        @com.aliyun.core.annotation.NameInMap("UserENIVpcId")
+        private String userENIVpcId;
+
+        @com.aliyun.core.annotation.NameInMap("UserENIZoneOptions")
+        private String userENIZoneOptions;
+
         @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
@@ -668,6 +677,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.taskInfo = builder.taskInfo;
             this.userENIStatus = builder.userENIStatus;
+            this.userENIVSwitchOptions = builder.userENIVSwitchOptions;
+            this.userENIVpcId = builder.userENIVpcId;
+            this.userENIZoneOptions = builder.userENIZoneOptions;
             this.VPCId = builder.VPCId;
             this.vSwitchId = builder.vSwitchId;
             this.zoneId = builder.zoneId;
@@ -941,6 +953,27 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return userENIVSwitchOptions
+         */
+        public String getUserENIVSwitchOptions() {
+            return this.userENIVSwitchOptions;
+        }
+
+        /**
+         * @return userENIVpcId
+         */
+        public String getUserENIVpcId() {
+            return this.userENIVpcId;
+        }
+
+        /**
+         * @return userENIZoneOptions
+         */
+        public String getUserENIZoneOptions() {
+            return this.userENIZoneOptions;
+        }
+
+        /**
          * @return VPCId
          */
         public String getVPCId() {
@@ -999,6 +1032,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private Tags tags; 
             private TaskInfo taskInfo; 
             private Boolean userENIStatus; 
+            private String userENIVSwitchOptions; 
+            private String userENIVpcId; 
+            private String userENIZoneOptions; 
             private String VPCId; 
             private String vSwitchId; 
             private String zoneId; 
@@ -1459,6 +1495,30 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder userENIStatus(Boolean userENIStatus) {
                 this.userENIStatus = userENIStatus;
+                return this;
+            }
+
+            /**
+             * UserENIVSwitchOptions.
+             */
+            public Builder userENIVSwitchOptions(String userENIVSwitchOptions) {
+                this.userENIVSwitchOptions = userENIVSwitchOptions;
+                return this;
+            }
+
+            /**
+             * UserENIVpcId.
+             */
+            public Builder userENIVpcId(String userENIVpcId) {
+                this.userENIVpcId = userENIVpcId;
+                return this;
+            }
+
+            /**
+             * UserENIZoneOptions.
+             */
+            public Builder userENIZoneOptions(String userENIZoneOptions) {
+                this.userENIZoneOptions = userENIZoneOptions;
                 return this;
             }
 

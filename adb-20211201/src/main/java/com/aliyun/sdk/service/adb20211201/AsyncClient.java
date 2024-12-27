@@ -29,6 +29,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateClusterPublicConnectionResponse> allocateClusterPublicConnection(AllocateClusterPublicConnectionRequest request);
 
     /**
+     * @param request the request parameters of ApplyAdviceById  ApplyAdviceByIdRequest
+     * @return ApplyAdviceByIdResponse
+     */
+    CompletableFuture<ApplyAdviceByIdResponse> applyAdviceById(ApplyAdviceByIdRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -36,6 +42,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return AttachUserENIResponse
      */
     CompletableFuture<AttachUserENIResponse> attachUserENI(AttachUserENIRequest request);
+
+    /**
+     * @param request the request parameters of BatchApplyAdviceByIdList  BatchApplyAdviceByIdListRequest
+     * @return BatchApplyAdviceByIdListResponse
+     */
+    CompletableFuture<BatchApplyAdviceByIdListResponse> batchApplyAdviceByIdList(BatchApplyAdviceByIdListRequest request);
 
     /**
      * <b>description</b> :
@@ -78,6 +90,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CheckSampleDataSetResponse
      */
     CompletableFuture<CheckSampleDataSetResponse> checkSampleDataSet(CheckSampleDataSetRequest request);
+
+    /**
+     * @param request the request parameters of CreateAPSJob  CreateAPSJobRequest
+     * @return CreateAPSJobResponse
+     */
+    CompletableFuture<CreateAPSJobResponse> createAPSJob(CreateAPSJobRequest request);
 
     /**
      * <b>description</b> :
@@ -317,6 +335,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAdbMySqlTablesResponse
      */
     CompletableFuture<DescribeAdbMySqlTablesResponse> describeAdbMySqlTables(DescribeAdbMySqlTablesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAdviceServiceEnabled  DescribeAdviceServiceEnabledRequest
+     * @return DescribeAdviceServiceEnabledResponse
+     */
+    CompletableFuture<DescribeAdviceServiceEnabledResponse> describeAdviceServiceEnabled(DescribeAdviceServiceEnabledRequest request);
 
     /**
      * <b>description</b> :
@@ -1356,6 +1380,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyPerformanceViewResponse
      */
     CompletableFuture<ModifyPerformanceViewResponse> modifyPerformanceView(ModifyPerformanceViewRequest request);
+
+    /**
+     * @param request the request parameters of ModifyUserEniVswitchOptions  ModifyUserEniVswitchOptionsRequest
+     * @return ModifyUserEniVswitchOptionsResponse
+     */
+    CompletableFuture<ModifyUserEniVswitchOptionsResponse> modifyUserEniVswitchOptions(ModifyUserEniVswitchOptionsRequest request);
 
     /**
      * <b>description</b> :
