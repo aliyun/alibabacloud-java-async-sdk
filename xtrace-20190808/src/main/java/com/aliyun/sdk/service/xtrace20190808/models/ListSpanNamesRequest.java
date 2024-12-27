@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSpanNamesRequest} extends {@link RequestModel}
  *
  * <p>ListSpanNamesRequest</p>
@@ -96,7 +102,10 @@ public class ListSpanNamesRequest extends Request {
         } 
 
         /**
-         * The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.
+         * <p>The end of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1575622455686</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -105,7 +114,11 @@ public class ListSpanNamesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -114,7 +127,10 @@ public class ListSpanNamesRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service 1</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -123,7 +139,10 @@ public class ListSpanNamesRequest extends Request {
         }
 
         /**
-         * The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.
+         * <p>The beginning of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1575561600000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

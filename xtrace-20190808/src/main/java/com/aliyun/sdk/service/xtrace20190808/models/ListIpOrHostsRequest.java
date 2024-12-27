@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIpOrHostsRequest} extends {@link RequestModel}
  *
  * <p>ListIpOrHostsRequest</p>
@@ -96,7 +102,10 @@ public class ListIpOrHostsRequest extends Request {
         } 
 
         /**
-         * The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.
+         * <p>The end of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1583723776974</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -105,7 +114,11 @@ public class ListIpOrHostsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -114,7 +127,10 @@ public class ListIpOrHostsRequest extends Request {
         }
 
         /**
-         * The name of the application. If you do not set this parameter, the IP addresses of all applications in the specified region are returned.
+         * <p>The name of the service. If you do not specify this parameter, the IP addresses of all applications in the specified region are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service1</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -123,7 +139,10 @@ public class ListIpOrHostsRequest extends Request {
         }
 
         /**
-         * The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.
+         * <p>The beginning of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1583683200000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

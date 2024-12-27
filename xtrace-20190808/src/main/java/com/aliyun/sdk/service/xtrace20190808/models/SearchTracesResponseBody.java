@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchTracesResponseBody} extends {@link TeaModel}
  *
  * <p>SearchTracesResponseBody</p>
@@ -49,7 +55,7 @@ public class SearchTracesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the returned page.
+         * <p>The information about the returned page.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -57,7 +63,10 @@ public class SearchTracesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E2B6A4C-6B83-4062-8B6F-AEEC1F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +79,12 @@ public class SearchTracesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchTracesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTracesResponseBody</p>
+     */
     public static class TraceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
@@ -83,8 +98,11 @@ public class SearchTracesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
+        private Long statusCode;
+
         @com.aliyun.core.annotation.NameInMap("TagMap")
-        private java.util.Map < String, ? > tagMap;
+        private java.util.Map<String, ?> tagMap;
 
         @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
@@ -97,6 +115,7 @@ public class SearchTracesResponseBody extends TeaModel {
             this.operationName = builder.operationName;
             this.serviceIp = builder.serviceIp;
             this.serviceName = builder.serviceName;
+            this.statusCode = builder.statusCode;
             this.tagMap = builder.tagMap;
             this.timestamp = builder.timestamp;
             this.traceID = builder.traceID;
@@ -139,9 +158,16 @@ public class SearchTracesResponseBody extends TeaModel {
         }
 
         /**
+         * @return statusCode
+         */
+        public Long getStatusCode() {
+            return this.statusCode;
+        }
+
+        /**
          * @return tagMap
          */
-        public java.util.Map < String, ? > getTagMap() {
+        public java.util.Map<String, ?> getTagMap() {
             return this.tagMap;
         }
 
@@ -164,12 +190,16 @@ public class SearchTracesResponseBody extends TeaModel {
             private String operationName; 
             private String serviceIp; 
             private String serviceName; 
-            private java.util.Map < String, ? > tagMap; 
+            private Long statusCode; 
+            private java.util.Map<String, ?> tagMap; 
             private Long timestamp; 
             private String traceID; 
 
             /**
-             * The time used to call the trace. Unit: milliseconds.
+             * <p>The execution duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -177,7 +207,10 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the span.
+             * <p>The span name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/api</p>
              */
             public Builder operationName(String operationName) {
                 this.operationName = operationName;
@@ -185,7 +218,10 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server where the span resides.
+             * <p>The IP address or name of the server on which the span is running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.163.XXX.XXX</p>
              */
             public Builder serviceIp(String serviceIp) {
                 this.serviceIp = serviceIp;
@@ -193,7 +229,10 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service1</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -201,15 +240,29 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The map of tags.
+             * StatusCode.
              */
-            public Builder tagMap(java.util.Map < String, ? > tagMap) {
+            public Builder statusCode(Long statusCode) {
+                this.statusCode = statusCode;
+                return this;
+            }
+
+            /**
+             * <p>The tag information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;env&quot;:&quot;dev&quot;}</p>
+             */
+            public Builder tagMap(java.util.Map<String, ?> tagMap) {
                 this.tagMap = tagMap;
                 return this;
             }
 
             /**
-             * The time when the span was generated. Unit: microseconds.
+             * <p>The timestamp when the span was generated. Unit: millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1575561600000000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -217,7 +270,10 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the trace.
+             * <p>The trace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1c6881aab84191a4</p>
              */
             public Builder traceID(String traceID) {
                 this.traceID = traceID;
@@ -231,9 +287,15 @@ public class SearchTracesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchTracesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTracesResponseBody</p>
+     */
     public static class TraceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TraceInfo")
-        private java.util.List < TraceInfo> traceInfo;
+        private java.util.List<TraceInfo> traceInfo;
 
         private TraceInfos(Builder builder) {
             this.traceInfo = builder.traceInfo;
@@ -250,17 +312,17 @@ public class SearchTracesResponseBody extends TeaModel {
         /**
          * @return traceInfo
          */
-        public java.util.List < TraceInfo> getTraceInfo() {
+        public java.util.List<TraceInfo> getTraceInfo() {
             return this.traceInfo;
         }
 
         public static final class Builder {
-            private java.util.List < TraceInfo> traceInfo; 
+            private java.util.List<TraceInfo> traceInfo; 
 
             /**
              * TraceInfo.
              */
-            public Builder traceInfo(java.util.List < TraceInfo> traceInfo) {
+            public Builder traceInfo(java.util.List<TraceInfo> traceInfo) {
                 this.traceInfo = traceInfo;
                 return this;
             }
@@ -272,6 +334,12 @@ public class SearchTracesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchTracesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchTracesResponseBody</p>
+     */
     public static class PageBean extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
@@ -335,7 +403,10 @@ public class SearchTracesResponseBody extends TeaModel {
             private TraceInfos traceInfos; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -343,7 +414,10 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -351,7 +425,10 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -359,7 +436,7 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the trace.
+             * <p>The information about the traces that are returned.</p>
              */
             public Builder traceInfos(TraceInfos traceInfos) {
                 this.traceInfos = traceInfos;

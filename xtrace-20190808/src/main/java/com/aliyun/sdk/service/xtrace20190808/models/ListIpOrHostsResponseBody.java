@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIpOrHostsResponseBody} extends {@link TeaModel}
  *
  * <p>ListIpOrHostsResponseBody</p>
@@ -49,7 +55,7 @@ public class ListIpOrHostsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IP addresses.
+         * <p>The IP addresses.</p>
          */
         public Builder ipNames(IpNames ipNames) {
             this.ipNames = ipNames;
@@ -57,7 +63,10 @@ public class ListIpOrHostsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E2B6A4C-6B83-4062-8B6F-AEEC1FC4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,9 +79,15 @@ public class ListIpOrHostsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIpOrHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpOrHostsResponseBody</p>
+     */
     public static class IpNames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpName")
-        private java.util.List < String > ipName;
+        private java.util.List<String> ipName;
 
         private IpNames(Builder builder) {
             this.ipName = builder.ipName;
@@ -89,17 +104,17 @@ public class ListIpOrHostsResponseBody extends TeaModel {
         /**
          * @return ipName
          */
-        public java.util.List < String > getIpName() {
+        public java.util.List<String> getIpName() {
             return this.ipName;
         }
 
         public static final class Builder {
-            private java.util.List < String > ipName; 
+            private java.util.List<String> ipName; 
 
             /**
              * IpName.
              */
-            public Builder ipName(java.util.List < String > ipName) {
+            public Builder ipName(java.util.List<String> ipName) {
                 this.ipName = ipName;
                 return this;
             }

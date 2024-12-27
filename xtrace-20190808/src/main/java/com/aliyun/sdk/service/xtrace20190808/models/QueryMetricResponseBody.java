@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMetricResponseBody} extends {@link TeaModel}
  *
  * <p>QueryMetricResponseBody</p>
@@ -49,7 +55,10 @@ public class QueryMetricResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned statistics.
+         * <p>The returned statistics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{   &quot;RequestId&quot;: &quot;E2373982-D8CD-413D-B991-8EB678******&quot;,   &quot;Data&quot;: &quot;{&quot;data&quot;:[{&quot;date&quot;:1583686800000,&quot;count&quot;:0,&quot;rt&quot;:0,&quot;rpc&quot;:&quot;childSpan3&quot;}}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,7 +66,10 @@ public class QueryMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E2B6A4C-6B83-4062-8B6F-AEEC1F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

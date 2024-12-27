@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMetricRequest} extends {@link RequestModel}
  *
  * <p>QueryMetricRequest</p>
@@ -17,7 +23,7 @@ public class QueryMetricRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Dimensions")
-    private java.util.List < String > dimensions;
+    private java.util.List<String> dimensions;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
@@ -26,7 +32,7 @@ public class QueryMetricRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filters")
-    private java.util.List < Filters> filters;
+    private java.util.List<Filters> filters;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IntervalInSec")
@@ -39,7 +45,7 @@ public class QueryMetricRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Measures")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > measures;
+    private java.util.List<String> measures;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Metric")
@@ -102,7 +108,7 @@ public class QueryMetricRequest extends Request {
     /**
      * @return dimensions
      */
-    public java.util.List < String > getDimensions() {
+    public java.util.List<String> getDimensions() {
         return this.dimensions;
     }
 
@@ -116,7 +122,7 @@ public class QueryMetricRequest extends Request {
     /**
      * @return filters
      */
-    public java.util.List < Filters> getFilters() {
+    public java.util.List<Filters> getFilters() {
         return this.filters;
     }
 
@@ -137,7 +143,7 @@ public class QueryMetricRequest extends Request {
     /**
      * @return measures
      */
-    public java.util.List < String > getMeasures() {
+    public java.util.List<String> getMeasures() {
         return this.measures;
     }
 
@@ -178,12 +184,12 @@ public class QueryMetricRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryMetricRequest, Builder> {
         private String regionId; 
-        private java.util.List < String > dimensions; 
+        private java.util.List<String> dimensions; 
         private Long endTime; 
-        private java.util.List < Filters> filters; 
+        private java.util.List<Filters> filters; 
         private Integer intervalInSec; 
         private Integer limit; 
-        private java.util.List < String > measures; 
+        private java.util.List<String> measures; 
         private String metric; 
         private String order; 
         private String orderBy; 
@@ -220,16 +226,26 @@ public class QueryMetricRequest extends Request {
         }
 
         /**
-         * The dimensions of the metric that you want to query.
+         * <p>The dimensions of the metric that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RT</p>
          */
-        public Builder dimensions(java.util.List < String > dimensions) {
+        public Builder dimensions(java.util.List<String> dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
             this.dimensions = dimensions;
             return this;
         }
 
         /**
-         * The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.
+         * <p>The end of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
+         * <blockquote>
+         * <p> The value of this parameter is of the LONG type. Precision loss may occur during serialization or deserialization. The value must be less than or equal to 9007199254740991.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1575622455686</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -238,19 +254,22 @@ public class QueryMetricRequest extends Request {
         }
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
-        public Builder filters(java.util.List < Filters> filters) {
+        public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
             this.filters = filters;
             return this;
         }
 
         /**
-         * The time interval at which you want to query metric data. Unit: milliseconds. Minimum value: 60000. 
-         * <p>
+         * <p>The time interval at which you want to query metric data. Unit: milliseconds. Minimum value: 60000. </p>
+         * <blockquote>
+         * <p>If you set this parameter to 2147483647, all data in the specified time interval is returned.</p>
+         * </blockquote>
          * 
-         * > If you set this parameter to 2147483647, all data in the specified time interval is returned.
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder intervalInSec(Integer intervalInSec) {
             this.putQueryParameter("IntervalInSec", intervalInSec);
@@ -259,7 +278,10 @@ public class QueryMetricRequest extends Request {
         }
 
         /**
-         * The maximum number of entries that you want to return.
+         * <p>The maximum number of entries that you want to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -268,20 +290,28 @@ public class QueryMetricRequest extends Request {
         }
 
         /**
-         * The measures of the metric that you want to query.
+         * <p>The measures of the metric that you want to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>count</p>
          */
-        public Builder measures(java.util.List < String > measures) {
+        public Builder measures(java.util.List<String> measures) {
             this.putQueryParameter("Measures", measures);
             this.measures = measures;
             return this;
         }
 
         /**
-         * The name of the metric. Valid values:
-         * <p>
+         * <p>The name of the metric. Valid values:</p>
+         * <ul>
+         * <li><code>appstat.incall</code>: trace statistics </li>
+         * <li><code>appstat.sql</code>: SQL statistics</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * - `appstat.incall`: trace statistics 
-         * - `appstat.sql`: SQL statistics
+         * <strong>example:</strong>
+         * <p>appstat.incall</p>
          */
         public Builder metric(String metric) {
             this.putQueryParameter("Metric", metric);
@@ -290,11 +320,14 @@ public class QueryMetricRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the returned entries. Valid values:
-         * <p>
+         * <p>The order in which you want to sort the returned entries. Valid values:</p>
+         * <ul>
+         * <li>ASC: ascending order </li>
+         * <li>DESC: descending order</li>
+         * </ul>
          * 
-         * - ASC: ascending order 
-         * - DESC: descending order
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -303,7 +336,10 @@ public class QueryMetricRequest extends Request {
         }
 
         /**
-         * The field based on which you want to sort the returned entries.
+         * <p>The field based on which you want to sort the returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>count</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -312,7 +348,10 @@ public class QueryMetricRequest extends Request {
         }
 
         /**
-         * The ID of the proxy user.
+         * <p>The ID of the proxy user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testefgag12</p>
          */
         public Builder proxyUserId(String proxyUserId) {
             this.putQueryParameter("ProxyUserId", proxyUserId);
@@ -321,7 +360,14 @@ public class QueryMetricRequest extends Request {
         }
 
         /**
-         * The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.
+         * <p>The beginning of the time range to query. The value is a timestamp that is accurate to milliseconds.</p>
+         * <blockquote>
+         * <p> The value of this parameter is of the LONG type. Precision loss may occur during serialization or deserialization. The value must be less than or equal to 9007199254740991.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1575561600000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -336,6 +382,12 @@ public class QueryMetricRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link QueryMetricRequest} extends {@link TeaModel}
+     *
+     * <p>QueryMetricRequest</p>
+     */
     public static class Filters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -375,7 +427,10 @@ public class QueryMetricRequest extends Request {
             private String value; 
 
             /**
-             * The key of the field that you want to use to filter the returned entries.
+             * <p>The key of the field that you want to use to filter the returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http.status_code</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -383,7 +438,10 @@ public class QueryMetricRequest extends Request {
             }
 
             /**
-             * The value of the field that you want to use to filter the returned entries.
+             * <p>The value of the field that you want to use to filter the returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder value(String value) {
                 this.value = value;

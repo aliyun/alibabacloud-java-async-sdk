@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListServicesResponseBody</p>
@@ -49,7 +55,10 @@ public class ListServicesResponseBody extends TeaModel {
         private Services services; 
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E2B6A4C-6B83-4062-8B6F-AEEC1FC47DED</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The applications.
+         * <p>The applications.</p>
          */
         public Builder services(Services services) {
             this.services = services;
@@ -70,6 +79,12 @@ public class ListServicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServicesResponseBody</p>
+     */
     public static class Service extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
@@ -121,7 +136,10 @@ public class ListServicesResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXXqn3ly@741623b4e915df8</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -129,7 +147,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -137,7 +158,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a3</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -151,9 +175,15 @@ public class ListServicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServicesResponseBody</p>
+     */
     public static class Services extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Service")
-        private java.util.List < Service> service;
+        private java.util.List<Service> service;
 
         private Services(Builder builder) {
             this.service = builder.service;
@@ -170,17 +200,17 @@ public class ListServicesResponseBody extends TeaModel {
         /**
          * @return service
          */
-        public java.util.List < Service> getService() {
+        public java.util.List<Service> getService() {
             return this.service;
         }
 
         public static final class Builder {
-            private java.util.List < Service> service; 
+            private java.util.List<Service> service; 
 
             /**
              * Service.
              */
-            public Builder service(java.util.List < Service> service) {
+            public Builder service(java.util.List<Service> service) {
                 this.service = service;
                 return this;
             }

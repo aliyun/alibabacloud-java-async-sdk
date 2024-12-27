@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTagValResponseBody} extends {@link TeaModel}
  *
  * <p>GetTagValResponseBody</p>
@@ -49,7 +55,10 @@ public class GetTagValResponseBody extends TeaModel {
         private TagValues tagValues; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E2B6A4C-6B83-4062-8B6F-AEEC1F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +66,7 @@ public class GetTagValResponseBody extends TeaModel {
         }
 
         /**
-         * The tag values.
+         * <p>The tag values.</p>
          */
         public Builder tagValues(TagValues tagValues) {
             this.tagValues = tagValues;
@@ -70,9 +79,15 @@ public class GetTagValResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTagValResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTagValResponseBody</p>
+     */
     public static class TagValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagValue")
-        private java.util.List < String > tagValue;
+        private java.util.List<String> tagValue;
 
         private TagValues(Builder builder) {
             this.tagValue = builder.tagValue;
@@ -89,17 +104,17 @@ public class GetTagValResponseBody extends TeaModel {
         /**
          * @return tagValue
          */
-        public java.util.List < String > getTagValue() {
+        public java.util.List<String> getTagValue() {
             return this.tagValue;
         }
 
         public static final class Builder {
-            private java.util.List < String > tagValue; 
+            private java.util.List<String> tagValue; 
 
             /**
              * TagValue.
              */
-            public Builder tagValue(java.util.List < String > tagValue) {
+            public Builder tagValue(java.util.List<String> tagValue) {
                 this.tagValue = tagValue;
                 return this;
             }
