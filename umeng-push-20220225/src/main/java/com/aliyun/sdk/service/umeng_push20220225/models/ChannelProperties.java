@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_push20220225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,6 +23,9 @@ public class ChannelProperties extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("channelFcm")
     private String channelFcm;
+
+    @com.aliyun.core.annotation.NameInMap("harmonyChannelCategory")
+    private String harmonyChannelCategory;
 
     @com.aliyun.core.annotation.NameInMap("huaweiChannelCategory")
     private String huaweiChannelCategory;
@@ -64,6 +72,7 @@ public class ChannelProperties extends TeaModel {
     private ChannelProperties(Builder builder) {
         this.channelActivity = builder.channelActivity;
         this.channelFcm = builder.channelFcm;
+        this.harmonyChannelCategory = builder.harmonyChannelCategory;
         this.huaweiChannelCategory = builder.huaweiChannelCategory;
         this.huaweiChannelImportance = builder.huaweiChannelImportance;
         this.huaweiMessageUrgency = builder.huaweiMessageUrgency;
@@ -99,6 +108,13 @@ public class ChannelProperties extends TeaModel {
      */
     public String getChannelFcm() {
         return this.channelFcm;
+    }
+
+    /**
+     * @return harmonyChannelCategory
+     */
+    public String getHarmonyChannelCategory() {
+        return this.harmonyChannelCategory;
     }
 
     /**
@@ -195,6 +211,7 @@ public class ChannelProperties extends TeaModel {
     public static final class Builder {
         private String channelActivity; 
         private String channelFcm; 
+        private String harmonyChannelCategory; 
         private String huaweiChannelCategory; 
         private String huaweiChannelImportance; 
         private String huaweiMessageUrgency; 
@@ -222,6 +239,14 @@ public class ChannelProperties extends TeaModel {
          */
         public Builder channelFcm(String channelFcm) {
             this.channelFcm = channelFcm;
+            return this;
+        }
+
+        /**
+         * harmonyChannelCategory.
+         */
+        public Builder harmonyChannelCategory(String harmonyChannelCategory) {
+            this.harmonyChannelCategory = harmonyChannelCategory;
             return this;
         }
 

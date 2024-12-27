@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_push20220225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class AndroidShortPayload extends TeaModel {
     private AndroidShortPayloadBody body;
 
     @com.aliyun.core.annotation.NameInMap("extra")
-    private java.util.Map < String, ? > extra;
+    private java.util.Map<String, ?> extra;
 
     private AndroidShortPayload(Builder builder) {
         this.body = builder.body;
@@ -41,13 +46,13 @@ public class AndroidShortPayload extends TeaModel {
     /**
      * @return extra
      */
-    public java.util.Map < String, ? > getExtra() {
+    public java.util.Map<String, ?> getExtra() {
         return this.extra;
     }
 
     public static final class Builder {
         private AndroidShortPayloadBody body; 
-        private java.util.Map < String, ? > extra; 
+        private java.util.Map<String, ?> extra; 
 
         /**
          * body.
@@ -60,7 +65,7 @@ public class AndroidShortPayload extends TeaModel {
         /**
          * extra.
          */
-        public Builder extra(java.util.Map < String, ? > extra) {
+        public Builder extra(java.util.Map<String, ?> extra) {
             this.extra = extra;
             return this;
         }

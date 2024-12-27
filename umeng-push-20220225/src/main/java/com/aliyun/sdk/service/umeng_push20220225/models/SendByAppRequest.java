@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_push20220225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -27,6 +32,10 @@ public class SendByAppRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HarmonyPayload")
+    private HarmonyPayload harmonyPayload;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IosPayload")
@@ -62,6 +71,7 @@ public class SendByAppRequest extends Request {
         this.androidShortPayload = builder.androidShortPayload;
         this.channelProperties = builder.channelProperties;
         this.description = builder.description;
+        this.harmonyPayload = builder.harmonyPayload;
         this.iosPayload = builder.iosPayload;
         this.policy = builder.policy;
         this.productionMode = builder.productionMode;
@@ -110,6 +120,13 @@ public class SendByAppRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return harmonyPayload
+     */
+    public HarmonyPayload getHarmonyPayload() {
+        return this.harmonyPayload;
     }
 
     /**
@@ -166,6 +183,7 @@ public class SendByAppRequest extends Request {
         private AndroidShortPayload androidShortPayload; 
         private ChannelProperties channelProperties; 
         private String description; 
+        private HarmonyPayload harmonyPayload; 
         private IosPayload iosPayload; 
         private Policy policy; 
         private Boolean productionMode; 
@@ -184,6 +202,7 @@ public class SendByAppRequest extends Request {
             this.androidShortPayload = request.androidShortPayload;
             this.channelProperties = request.channelProperties;
             this.description = request.description;
+            this.harmonyPayload = request.harmonyPayload;
             this.iosPayload = request.iosPayload;
             this.policy = request.policy;
             this.productionMode = request.productionMode;
@@ -229,6 +248,16 @@ public class SendByAppRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * HarmonyPayload.
+         */
+        public Builder harmonyPayload(HarmonyPayload harmonyPayload) {
+            String harmonyPayloadShrink = shrink(harmonyPayload, "HarmonyPayload", "json");
+            this.putBodyParameter("HarmonyPayload", harmonyPayloadShrink);
+            this.harmonyPayload = harmonyPayload;
             return this;
         }
 

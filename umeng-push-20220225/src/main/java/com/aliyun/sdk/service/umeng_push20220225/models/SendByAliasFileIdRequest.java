@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_push20220225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,6 +43,10 @@ public class SendByAliasFileIdRequest extends Request {
     private String fileId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HarmonyPayload")
+    private HarmonyPayload harmonyPayload;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IosPayload")
     private IosPayload iosPayload;
 
@@ -73,6 +82,7 @@ public class SendByAliasFileIdRequest extends Request {
         this.channelProperties = builder.channelProperties;
         this.description = builder.description;
         this.fileId = builder.fileId;
+        this.harmonyPayload = builder.harmonyPayload;
         this.iosPayload = builder.iosPayload;
         this.policy = builder.policy;
         this.productionMode = builder.productionMode;
@@ -138,6 +148,13 @@ public class SendByAliasFileIdRequest extends Request {
     }
 
     /**
+     * @return harmonyPayload
+     */
+    public HarmonyPayload getHarmonyPayload() {
+        return this.harmonyPayload;
+    }
+
+    /**
      * @return iosPayload
      */
     public IosPayload getIosPayload() {
@@ -193,6 +210,7 @@ public class SendByAliasFileIdRequest extends Request {
         private ChannelProperties channelProperties; 
         private String description; 
         private String fileId; 
+        private HarmonyPayload harmonyPayload; 
         private IosPayload iosPayload; 
         private Policy policy; 
         private Boolean productionMode; 
@@ -213,6 +231,7 @@ public class SendByAliasFileIdRequest extends Request {
             this.channelProperties = request.channelProperties;
             this.description = request.description;
             this.fileId = request.fileId;
+            this.harmonyPayload = request.harmonyPayload;
             this.iosPayload = request.iosPayload;
             this.policy = request.policy;
             this.productionMode = request.productionMode;
@@ -279,6 +298,16 @@ public class SendByAliasFileIdRequest extends Request {
         public Builder fileId(String fileId) {
             this.putBodyParameter("FileId", fileId);
             this.fileId = fileId;
+            return this;
+        }
+
+        /**
+         * HarmonyPayload.
+         */
+        public Builder harmonyPayload(HarmonyPayload harmonyPayload) {
+            String harmonyPayloadShrink = shrink(harmonyPayload, "HarmonyPayload", "json");
+            this.putBodyParameter("HarmonyPayload", harmonyPayloadShrink);
+            this.harmonyPayload = harmonyPayload;
             return this;
         }
 

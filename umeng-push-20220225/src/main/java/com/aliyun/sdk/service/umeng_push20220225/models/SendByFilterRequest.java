@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_push20220225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class SendByFilterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HarmonyPayload")
+    private HarmonyPayload harmonyPayload;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IosPayload")
@@ -67,6 +76,7 @@ public class SendByFilterRequest extends Request {
         this.channelProperties = builder.channelProperties;
         this.description = builder.description;
         this.filter = builder.filter;
+        this.harmonyPayload = builder.harmonyPayload;
         this.iosPayload = builder.iosPayload;
         this.policy = builder.policy;
         this.productionMode = builder.productionMode;
@@ -125,6 +135,13 @@ public class SendByFilterRequest extends Request {
     }
 
     /**
+     * @return harmonyPayload
+     */
+    public HarmonyPayload getHarmonyPayload() {
+        return this.harmonyPayload;
+    }
+
+    /**
      * @return iosPayload
      */
     public IosPayload getIosPayload() {
@@ -179,6 +196,7 @@ public class SendByFilterRequest extends Request {
         private ChannelProperties channelProperties; 
         private String description; 
         private String filter; 
+        private HarmonyPayload harmonyPayload; 
         private IosPayload iosPayload; 
         private Policy policy; 
         private Boolean productionMode; 
@@ -198,6 +216,7 @@ public class SendByFilterRequest extends Request {
             this.channelProperties = request.channelProperties;
             this.description = request.description;
             this.filter = request.filter;
+            this.harmonyPayload = request.harmonyPayload;
             this.iosPayload = request.iosPayload;
             this.policy = request.policy;
             this.productionMode = request.productionMode;
@@ -251,6 +270,16 @@ public class SendByFilterRequest extends Request {
         public Builder filter(String filter) {
             this.putBodyParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * HarmonyPayload.
+         */
+        public Builder harmonyPayload(HarmonyPayload harmonyPayload) {
+            String harmonyPayloadShrink = shrink(harmonyPayload, "HarmonyPayload", "json");
+            this.putBodyParameter("HarmonyPayload", harmonyPayloadShrink);
+            this.harmonyPayload = harmonyPayload;
             return this;
         }
 

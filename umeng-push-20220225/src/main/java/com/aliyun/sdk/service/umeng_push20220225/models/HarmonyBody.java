@@ -12,31 +12,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Message2ThirdChannel} extends {@link TeaModel}
+ * {@link HarmonyBody} extends {@link TeaModel}
  *
- * <p>Message2ThirdChannel</p>
+ * <p>HarmonyBody</p>
  */
-public class Message2ThirdChannel extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("SetBadge")
-    private Long setBadge;
+public class HarmonyBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("action")
+    private String action;
 
     @com.aliyun.core.annotation.NameInMap("addBadge")
-    private Long addBadge;
+    private Integer addBadge;
+
+    @com.aliyun.core.annotation.NameInMap("afterOpen")
+    private String afterOpen;
 
     @com.aliyun.core.annotation.NameInMap("bigBody")
     private String bigBody;
 
-    @com.aliyun.core.annotation.NameInMap("bigTitle")
-    private String bigTitle;
-
-    @com.aliyun.core.annotation.NameInMap("expandImage")
-    private String expandImage;
+    @com.aliyun.core.annotation.NameInMap("custom")
+    private String custom;
 
     @com.aliyun.core.annotation.NameInMap("img")
     private String img;
 
-    @com.aliyun.core.annotation.NameInMap("sound")
-    private String sound;
+    @com.aliyun.core.annotation.NameInMap("largeIcon")
+    private String largeIcon;
 
     @com.aliyun.core.annotation.NameInMap("text")
     private String text;
@@ -44,38 +44,49 @@ public class Message2ThirdChannel extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
-    private Message2ThirdChannel(Builder builder) {
-        this.setBadge = builder.setBadge;
+    @com.aliyun.core.annotation.NameInMap("uri")
+    private String uri;
+
+    private HarmonyBody(Builder builder) {
+        this.action = builder.action;
         this.addBadge = builder.addBadge;
+        this.afterOpen = builder.afterOpen;
         this.bigBody = builder.bigBody;
-        this.bigTitle = builder.bigTitle;
-        this.expandImage = builder.expandImage;
+        this.custom = builder.custom;
         this.img = builder.img;
-        this.sound = builder.sound;
+        this.largeIcon = builder.largeIcon;
         this.text = builder.text;
         this.title = builder.title;
+        this.uri = builder.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Message2ThirdChannel create() {
+    public static HarmonyBody create() {
         return builder().build();
     }
 
     /**
-     * @return setBadge
+     * @return action
      */
-    public Long getSetBadge() {
-        return this.setBadge;
+    public String getAction() {
+        return this.action;
     }
 
     /**
      * @return addBadge
      */
-    public Long getAddBadge() {
+    public Integer getAddBadge() {
         return this.addBadge;
+    }
+
+    /**
+     * @return afterOpen
+     */
+    public String getAfterOpen() {
+        return this.afterOpen;
     }
 
     /**
@@ -86,17 +97,10 @@ public class Message2ThirdChannel extends TeaModel {
     }
 
     /**
-     * @return bigTitle
+     * @return custom
      */
-    public String getBigTitle() {
-        return this.bigTitle;
-    }
-
-    /**
-     * @return expandImage
-     */
-    public String getExpandImage() {
-        return this.expandImage;
+    public String getCustom() {
+        return this.custom;
     }
 
     /**
@@ -107,10 +111,10 @@ public class Message2ThirdChannel extends TeaModel {
     }
 
     /**
-     * @return sound
+     * @return largeIcon
      */
-    public String getSound() {
-        return this.sound;
+    public String getLargeIcon() {
+        return this.largeIcon;
     }
 
     /**
@@ -127,30 +131,46 @@ public class Message2ThirdChannel extends TeaModel {
         return this.title;
     }
 
+    /**
+     * @return uri
+     */
+    public String getUri() {
+        return this.uri;
+    }
+
     public static final class Builder {
-        private Long setBadge; 
-        private Long addBadge; 
+        private String action; 
+        private Integer addBadge; 
+        private String afterOpen; 
         private String bigBody; 
-        private String bigTitle; 
-        private String expandImage; 
+        private String custom; 
         private String img; 
-        private String sound; 
+        private String largeIcon; 
         private String text; 
         private String title; 
+        private String uri; 
 
         /**
-         * SetBadge.
+         * action.
          */
-        public Builder setBadge(Long setBadge) {
-            this.setBadge = setBadge;
+        public Builder action(String action) {
+            this.action = action;
             return this;
         }
 
         /**
          * addBadge.
          */
-        public Builder addBadge(Long addBadge) {
+        public Builder addBadge(Integer addBadge) {
             this.addBadge = addBadge;
+            return this;
+        }
+
+        /**
+         * afterOpen.
+         */
+        public Builder afterOpen(String afterOpen) {
+            this.afterOpen = afterOpen;
             return this;
         }
 
@@ -163,18 +183,10 @@ public class Message2ThirdChannel extends TeaModel {
         }
 
         /**
-         * bigTitle.
+         * custom.
          */
-        public Builder bigTitle(String bigTitle) {
-            this.bigTitle = bigTitle;
-            return this;
-        }
-
-        /**
-         * expandImage.
-         */
-        public Builder expandImage(String expandImage) {
-            this.expandImage = expandImage;
+        public Builder custom(String custom) {
+            this.custom = custom;
             return this;
         }
 
@@ -187,10 +199,10 @@ public class Message2ThirdChannel extends TeaModel {
         }
 
         /**
-         * sound.
+         * largeIcon.
          */
-        public Builder sound(String sound) {
-            this.sound = sound;
+        public Builder largeIcon(String largeIcon) {
+            this.largeIcon = largeIcon;
             return this;
         }
 
@@ -210,8 +222,16 @@ public class Message2ThirdChannel extends TeaModel {
             return this;
         }
 
-        public Message2ThirdChannel build() {
-            return new Message2ThirdChannel(this);
+        /**
+         * uri.
+         */
+        public Builder uri(String uri) {
+            this.uri = uri;
+            return this;
+        }
+
+        public HarmonyBody build() {
+            return new HarmonyBody(this);
         } 
 
     } 

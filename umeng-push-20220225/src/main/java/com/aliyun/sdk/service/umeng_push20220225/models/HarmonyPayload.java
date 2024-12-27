@@ -12,43 +12,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AndroidPayload} extends {@link TeaModel}
+ * {@link HarmonyPayload} extends {@link TeaModel}
  *
- * <p>AndroidPayload</p>
+ * <p>HarmonyPayload</p>
  */
-public class AndroidPayload extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("body")
-    private Body body;
-
+public class HarmonyPayload extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("displayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayType;
 
     @com.aliyun.core.annotation.NameInMap("extra")
     private java.util.Map<String, ?> extra;
 
-    @com.aliyun.core.annotation.NameInMap("message2ThirdChannel")
-    private Message2ThirdChannel message2ThirdChannel;
+    @com.aliyun.core.annotation.NameInMap("harmonyBody")
+    private HarmonyBody harmonyBody;
 
-    private AndroidPayload(Builder builder) {
-        this.body = builder.body;
+    private HarmonyPayload(Builder builder) {
         this.displayType = builder.displayType;
         this.extra = builder.extra;
-        this.message2ThirdChannel = builder.message2ThirdChannel;
+        this.harmonyBody = builder.harmonyBody;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static AndroidPayload create() {
+    public static HarmonyPayload create() {
         return builder().build();
-    }
-
-    /**
-     * @return body
-     */
-    public Body getBody() {
-        return this.body;
     }
 
     /**
@@ -66,28 +56,19 @@ public class AndroidPayload extends TeaModel {
     }
 
     /**
-     * @return message2ThirdChannel
+     * @return harmonyBody
      */
-    public Message2ThirdChannel getMessage2ThirdChannel() {
-        return this.message2ThirdChannel;
+    public HarmonyBody getHarmonyBody() {
+        return this.harmonyBody;
     }
 
     public static final class Builder {
-        private Body body; 
         private String displayType; 
         private java.util.Map<String, ?> extra; 
-        private Message2ThirdChannel message2ThirdChannel; 
+        private HarmonyBody harmonyBody; 
 
         /**
-         * body.
-         */
-        public Builder body(Body body) {
-            this.body = body;
-            return this;
-        }
-
-        /**
-         * displayType.
+         * <p>This parameter is required.</p>
          */
         public Builder displayType(String displayType) {
             this.displayType = displayType;
@@ -103,15 +84,15 @@ public class AndroidPayload extends TeaModel {
         }
 
         /**
-         * message2ThirdChannel.
+         * harmonyBody.
          */
-        public Builder message2ThirdChannel(Message2ThirdChannel message2ThirdChannel) {
-            this.message2ThirdChannel = message2ThirdChannel;
+        public Builder harmonyBody(HarmonyBody harmonyBody) {
+            this.harmonyBody = harmonyBody;
             return this;
         }
 
-        public AndroidPayload build() {
-            return new AndroidPayload(this);
+        public HarmonyPayload build() {
+            return new HarmonyPayload(this);
         } 
 
     } 

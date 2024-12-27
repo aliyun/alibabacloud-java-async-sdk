@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_push20220225.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Policy</p>
  */
 public class Policy extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("channelStrategy")
+    private java.util.Map<String, String> channelStrategy;
+
     @com.aliyun.core.annotation.NameInMap("expireTime")
     @com.aliyun.core.annotation.Validation(maxLength = 19, minLength = 19)
     private String expireTime;
@@ -28,6 +36,7 @@ public class Policy extends TeaModel {
     private String startTime;
 
     private Policy(Builder builder) {
+        this.channelStrategy = builder.channelStrategy;
         this.expireTime = builder.expireTime;
         this.outerBizNo = builder.outerBizNo;
         this.speed = builder.speed;
@@ -40,6 +49,13 @@ public class Policy extends TeaModel {
 
     public static Policy create() {
         return builder().build();
+    }
+
+    /**
+     * @return channelStrategy
+     */
+    public java.util.Map<String, String> getChannelStrategy() {
+        return this.channelStrategy;
     }
 
     /**
@@ -71,10 +87,19 @@ public class Policy extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.Map<String, String> channelStrategy; 
         private String expireTime; 
         private String outerBizNo; 
         private Integer speed; 
         private String startTime; 
+
+        /**
+         * channelStrategy.
+         */
+        public Builder channelStrategy(java.util.Map<String, String> channelStrategy) {
+            this.channelStrategy = channelStrategy;
+            return this;
+        }
 
         /**
          * expireTime.
