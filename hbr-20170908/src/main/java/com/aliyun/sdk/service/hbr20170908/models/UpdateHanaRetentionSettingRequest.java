@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateHanaRetentionSettingRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
     @com.aliyun.core.annotation.Query
@@ -43,6 +44,7 @@ public class UpdateHanaRetentionSettingRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VaultId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultId;
 
     private UpdateHanaRetentionSettingRequest(Builder builder) {
@@ -134,6 +136,7 @@ public class UpdateHanaRetentionSettingRequest extends Request {
 
         /**
          * <p>The ID of the SAP HANA instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-00024vyjj******srrq</p>
@@ -206,6 +209,7 @@ public class UpdateHanaRetentionSettingRequest extends Request {
 
         /**
          * <p>The ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-000fb0v2ly******k6</p>

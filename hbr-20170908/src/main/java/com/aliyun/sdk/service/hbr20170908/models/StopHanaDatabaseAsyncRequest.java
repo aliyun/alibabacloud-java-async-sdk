@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class StopHanaDatabaseAsyncRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
     @com.aliyun.core.annotation.Query
@@ -28,6 +29,7 @@ public class StopHanaDatabaseAsyncRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VaultId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultId;
 
     private StopHanaDatabaseAsyncRequest(Builder builder) {
@@ -89,6 +91,7 @@ public class StopHanaDatabaseAsyncRequest extends Request {
 
         /**
          * <p>The ID of the SAP HANA instance.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cl-000dw******45ijer</p>
@@ -114,6 +117,7 @@ public class StopHanaDatabaseAsyncRequest extends Request {
 
         /**
          * <p>The ID of the backup vault.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>v-0006wkn******gzkn</p>
