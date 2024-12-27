@@ -1442,6 +1442,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitPackageJobResponse> submitPackageJob(SubmitPackageJobRequest request);
 
     /**
+     * @param request the request parameters of SubmitScreenMediaHighlightsJob  SubmitScreenMediaHighlightsJobRequest
+     * @return SubmitScreenMediaHighlightsJobResponse
+     */
+    CompletableFuture<SubmitScreenMediaHighlightsJobResponse> submitScreenMediaHighlightsJob(SubmitScreenMediaHighlightsJobRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation to submit a smart tagging job, you must add a smart tagging template and specify the analysis types that you want to use in the template. For more information, see CreateCustomTemplate. You can use the smart tagging feature only in the China (Beijing), China (Shanghai), and China (Hangzhou) regions. By default, an ApsaraVideo Media Processing (MPS) queue can process a maximum of two concurrent smart tagging jobs. If you need to process more concurrent smart tagging jobs, submit a ticket to contact Alibaba Cloud Technical Support for evaluation and configuration.</p>
      * 
