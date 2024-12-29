@@ -107,6 +107,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request);
 
     /**
+     * @param request the request parameters of CreateApsHiveJob  CreateApsHiveJobRequest
+     * @return CreateApsHiveJobResponse
+     */
+    CompletableFuture<CreateApsHiveJobResponse> createApsHiveJob(CreateApsHiveJobRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -132,6 +138,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateElasticPlanResponse
      */
     CompletableFuture<CreateElasticPlanResponse> createElasticPlan(CreateElasticPlanRequest request);
+
+    /**
+     * @param request the request parameters of CreateLakeStorage  CreateLakeStorageRequest
+     * @return CreateLakeStorageResponse
+     */
+    CompletableFuture<CreateLakeStorageResponse> createLakeStorage(CreateLakeStorageRequest request);
 
     /**
      * <b>description</b> :
@@ -175,6 +187,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAccountResponse
      */
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
+
+    /**
+     * @param request the request parameters of DeleteApsDatasoure  DeleteApsDatasoureRequest
+     * @return DeleteApsDatasoureResponse
+     */
+    CompletableFuture<DeleteApsDatasoureResponse> deleteApsDatasoure(DeleteApsDatasoureRequest request);
+
+    /**
+     * @param request the request parameters of DeleteApsJob  DeleteApsJobRequest
+     * @return DeleteApsJobResponse
+     */
+    CompletableFuture<DeleteApsJobResponse> deleteApsJob(DeleteApsJobRequest request);
 
     /**
      * <b>description</b> :
@@ -266,6 +290,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteSparkTemplateFileResponse
      */
     CompletableFuture<DeleteSparkTemplateFileResponse> deleteSparkTemplateFile(DeleteSparkTemplateFileRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAPSADBInstances  DescribeAPSADBInstancesRequest
+     * @return DescribeAPSADBInstancesResponse
+     */
+    CompletableFuture<DescribeAPSADBInstancesResponse> describeAPSADBInstances(DescribeAPSADBInstancesRequest request);
 
     /**
      * <b>description</b> :
@@ -366,6 +396,48 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeApsActionLogsResponse
      */
     CompletableFuture<DescribeApsActionLogsResponse> describeApsActionLogs(DescribeApsActionLogsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApsDatasource  DescribeApsDatasourceRequest
+     * @return DescribeApsDatasourceResponse
+     */
+    CompletableFuture<DescribeApsDatasourceResponse> describeApsDatasource(DescribeApsDatasourceRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApsDatasources  DescribeApsDatasourcesRequest
+     * @return DescribeApsDatasourcesResponse
+     */
+    CompletableFuture<DescribeApsDatasourcesResponse> describeApsDatasources(DescribeApsDatasourcesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApsHiveWorkload  DescribeApsHiveWorkloadRequest
+     * @return DescribeApsHiveWorkloadResponse
+     */
+    CompletableFuture<DescribeApsHiveWorkloadResponse> describeApsHiveWorkload(DescribeApsHiveWorkloadRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApsJobDetail  DescribeApsJobDetailRequest
+     * @return DescribeApsJobDetailResponse
+     */
+    CompletableFuture<DescribeApsJobDetailResponse> describeApsJobDetail(DescribeApsJobDetailRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApsJobs  DescribeApsJobsRequest
+     * @return DescribeApsJobsResponse
+     */
+    CompletableFuture<DescribeApsJobsResponse> describeApsJobs(DescribeApsJobsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApsMigrationWorkloads  DescribeApsMigrationWorkloadsRequest
+     * @return DescribeApsMigrationWorkloadsResponse
+     */
+    CompletableFuture<DescribeApsMigrationWorkloadsResponse> describeApsMigrationWorkloads(DescribeApsMigrationWorkloadsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApsProgress  DescribeApsProgressRequest
+     * @return DescribeApsProgressResponse
+     */
+    CompletableFuture<DescribeApsProgressResponse> describeApsProgress(DescribeApsProgressRequest request);
 
     /**
      * <b>description</b> :
@@ -623,6 +695,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeExcessivePrimaryKeysResponse> describeExcessivePrimaryKeys(DescribeExcessivePrimaryKeysRequest request);
 
     /**
+     * @param request the request parameters of DescribeInclinedNodes  DescribeInclinedNodesRequest
+     * @return DescribeInclinedNodesResponse
+     */
+    CompletableFuture<DescribeInclinedNodesResponse> describeInclinedNodes(DescribeInclinedNodesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
@@ -860,6 +938,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExistRunningSQLEngineResponse> existRunningSQLEngine(ExistRunningSQLEngineRequest request);
 
     /**
+     * @param request the request parameters of GetApsManagedDatabases  GetApsManagedDatabasesRequest
+     * @return GetApsManagedDatabasesResponse
+     */
+    CompletableFuture<GetApsManagedDatabasesResponse> getApsManagedDatabases(GetApsManagedDatabasesRequest request);
+
+    /**
      * @param request the request parameters of GetCreateTableSQL  GetCreateTableSQLRequest
      * @return GetCreateTableSQLResponse
      */
@@ -876,6 +960,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDatabaseObjectsResponse
      */
     CompletableFuture<GetDatabaseObjectsResponse> getDatabaseObjects(GetDatabaseObjectsRequest request);
+
+    /**
+     * @param request the request parameters of GetLakeStorage  GetLakeStorageRequest
+     * @return GetLakeStorageResponse
+     */
+    CompletableFuture<GetLakeStorageResponse> getLakeStorage(GetLakeStorageRequest request);
 
     /**
      * <b>description</b> :
@@ -1175,6 +1265,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<KillSparkSQLEngineResponse> killSparkSQLEngine(KillSparkSQLEngineRequest request);
 
     /**
+     * @param request the request parameters of ListApsLifecycleStrategy  ListApsLifecycleStrategyRequest
+     * @return ListApsLifecycleStrategyResponse
+     */
+    CompletableFuture<ListApsLifecycleStrategyResponse> listApsLifecycleStrategy(ListApsLifecycleStrategyRequest request);
+
+    /**
+     * @param request the request parameters of ListApsOptimizationStrategy  ListApsOptimizationStrategyRequest
+     * @return ListApsOptimizationStrategyResponse
+     */
+    CompletableFuture<ListApsOptimizationStrategyResponse> listApsOptimizationStrategy(ListApsOptimizationStrategyRequest request);
+
+    /**
+     * @param request the request parameters of ListApsOptimizationTasks  ListApsOptimizationTasksRequest
+     * @return ListApsOptimizationTasksResponse
+     */
+    CompletableFuture<ListApsOptimizationTasksResponse> listApsOptimizationTasks(ListApsOptimizationTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListResultExportJobHistory  ListResultExportJobHistoryRequest
+     * @return ListResultExportJobHistoryResponse
+     */
+    CompletableFuture<ListResultExportJobHistoryResponse> listResultExportJobHistory(ListResultExportJobHistoryRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
@@ -1255,6 +1369,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyAccountPrivilegesResponse
      */
     CompletableFuture<ModifyAccountPrivilegesResponse> modifyAccountPrivileges(ModifyAccountPrivilegesRequest request);
+
+    /**
+     * @param request the request parameters of ModifyApsDatasoure  ModifyApsDatasoureRequest
+     * @return ModifyApsDatasoureResponse
+     */
+    CompletableFuture<ModifyApsDatasoureResponse> modifyApsDatasoure(ModifyApsDatasoureRequest request);
+
+    /**
+     * @param request the request parameters of ModifyApsJob  ModifyApsJobRequest
+     * @return ModifyApsJobResponse
+     */
+    CompletableFuture<ModifyApsJobResponse> modifyApsJob(ModifyApsJobRequest request);
+
+    /**
+     * @param request the request parameters of ModifyApsWorkloadName  ModifyApsWorkloadNameRequest
+     * @return ModifyApsWorkloadNameResponse
+     */
+    CompletableFuture<ModifyApsWorkloadNameResponse> modifyApsWorkloadName(ModifyApsWorkloadNameRequest request);
 
     /**
      * <b>description</b> :
@@ -1442,6 +1574,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetSparkAppLogRootPathResponse> setSparkAppLogRootPath(SetSparkAppLogRootPathRequest request);
 
     /**
+     * @param request the request parameters of StartApsJob  StartApsJobRequest
+     * @return StartApsJobResponse
+     */
+    CompletableFuture<StartApsJobResponse> startApsJob(StartApsJobRequest request);
+
+    /**
      * @param request the request parameters of StartSparkReplSession  StartSparkReplSessionRequest
      * @return StartSparkReplSessionResponse
      */
@@ -1461,6 +1599,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StartSparkSQLEngineResponse
      */
     CompletableFuture<StartSparkSQLEngineResponse> startSparkSQLEngine(StartSparkSQLEngineRequest request);
+
+    /**
+     * @param request the request parameters of SubmitResultExportJob  SubmitResultExportJobRequest
+     * @return SubmitResultExportJobResponse
+     */
+    CompletableFuture<SubmitResultExportJobResponse> submitResultExportJob(SubmitResultExportJobRequest request);
 
     /**
      * <b>description</b> :
@@ -1507,6 +1651,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UnbindDBResourceGroupWithUserResponse
      */
     CompletableFuture<UnbindDBResourceGroupWithUserResponse> unbindDBResourceGroupWithUser(UnbindDBResourceGroupWithUserRequest request);
+
+    /**
+     * @param request the request parameters of UpdateLakeStorage  UpdateLakeStorageRequest
+     * @return UpdateLakeStorageResponse
+     */
+    CompletableFuture<UpdateLakeStorageResponse> updateLakeStorage(UpdateLakeStorageRequest request);
 
     /**
      * <b>description</b> :
