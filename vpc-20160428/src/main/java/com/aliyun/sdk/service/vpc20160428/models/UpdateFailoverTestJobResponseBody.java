@@ -43,7 +43,10 @@ public class UpdateFailoverTestJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C44F62BE-9CE7-4277-B117-69243F3988BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

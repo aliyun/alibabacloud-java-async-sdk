@@ -20,6 +20,9 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     @com.aliyun.core.annotation.NameInMap("AssociateNetworkInterfaces")
     private AssociateNetworkInterfaces associateNetworkInterfaces;
 
+    @com.aliyun.core.annotation.NameInMap("Count")
+    private Integer count;
+
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -37,6 +40,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
 
     private DescribeNatGatewayAssociateNetworkInterfacesResponseBody(Builder builder) {
         this.associateNetworkInterfaces = builder.associateNetworkInterfaces;
+        this.count = builder.count;
         this.maxResults = builder.maxResults;
         this.natGatewayId = builder.natGatewayId;
         this.nextToken = builder.nextToken;
@@ -57,6 +61,13 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
      */
     public AssociateNetworkInterfaces getAssociateNetworkInterfaces() {
         return this.associateNetworkInterfaces;
+    }
+
+    /**
+     * @return count
+     */
+    public Integer getCount() {
+        return this.count;
     }
 
     /**
@@ -96,6 +107,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
 
     public static final class Builder {
         private AssociateNetworkInterfaces associateNetworkInterfaces; 
+        private Integer count; 
         private Integer maxResults; 
         private String natGatewayId; 
         private String nextToken; 
@@ -107,6 +119,14 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
          */
         public Builder associateNetworkInterfaces(AssociateNetworkInterfaces associateNetworkInterfaces) {
             this.associateNetworkInterfaces = associateNetworkInterfaces;
+            return this;
+        }
+
+        /**
+         * Count.
+         */
+        public Builder count(Integer count) {
+            this.count = count;
             return this;
         }
 

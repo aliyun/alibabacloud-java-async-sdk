@@ -1526,7 +1526,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
-             * EcrOwnerId.
+             * <p>The ID of the Alibaba Cloud account (primary account)  to which the ECR belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192732132151xxxx</p>
              */
             public Builder ecrOwnerId(String ecrOwnerId) {
                 this.ecrOwnerId = ecrOwnerId;

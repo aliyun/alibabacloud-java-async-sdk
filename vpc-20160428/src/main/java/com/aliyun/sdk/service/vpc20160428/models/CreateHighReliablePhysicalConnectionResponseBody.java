@@ -67,7 +67,13 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ErrorInfoList.
+         * <p>If the request fails the dry run, the following error codes and error messages may be returned:</p>
+         * <ul>
+         * <li>pconn.high.reliable.dryrun.error.disable.outbound.data.transfer.billing. Billing for outbound data transfer is not enabled.</li>
+         * <li>pconn.high.reliable.dryrun.error.incompatable.device.capacity. No device in the access point supports advanced features.</li>
+         * <li>pconn.high.reliable.dryrun.error.quota.exceeded. The quota is insufficient.</li>
+         * <li>pconn.high.reliable.dryrun.error.not.enough.resource. The access point resources are insufficient.</li>
+         * </ul>
          */
         public Builder errorInfoList(ErrorInfoList errorInfoList) {
             this.errorInfoList = errorInfoList;
@@ -75,7 +81,7 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * PhysicalConnectionList.
+         * <p>The Express Connect circuits.</p>
          */
         public Builder physicalConnectionList(PhysicalConnectionList physicalConnectionList) {
             this.physicalConnectionList = physicalConnectionList;
@@ -83,7 +89,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,7 +162,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * ErrorCode.
+             * <p>Error codes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pconn.high.reliable.dryrun.error.disable.outbound.data.transfer.billing</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -161,7 +173,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The returned error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pconn.high.reliable.dryrun.error.disable.outbound.data.transfer.billing</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -169,7 +184,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-j5e5qqo616p81ncspbll1</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -275,7 +293,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             private String regionNo; 
 
             /**
-             * InstanceId.
+             * <p>The ID of the Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-j5e5qqo616p81ncspbll1</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -283,7 +304,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID of the Express Connect circuit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;

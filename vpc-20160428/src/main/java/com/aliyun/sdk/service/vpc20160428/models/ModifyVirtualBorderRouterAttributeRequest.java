@@ -654,7 +654,14 @@ public class ModifyVirtualBorderRouterAttributeRequest extends Request {
         }
 
         /**
-         * SitelinkEnable.
+         * <p>Indicates whether to allow service access between data centers. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder sitelinkEnable(Boolean sitelinkEnable) {
             this.putQueryParameter("SitelinkEnable", sitelinkEnable);

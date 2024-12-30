@@ -158,7 +158,14 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -185,7 +192,10 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * QosId.
+         * <p>The ID of the QoS policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qos-2giu0a6vd5x0mv4700</p>
          */
         public Builder qosId(String qosId) {
             this.putQueryParameter("QosId", qosId);
@@ -194,7 +204,7 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * QueueIdList.
+         * <p>The IDs of the QoS queues.</p>
          */
         public Builder queueIdList(java.util.List<String> queueIdList) {
             this.putQueryParameter("QueueIdList", queueIdList);
@@ -203,7 +213,7 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * QueueNameList.
+         * <p>The names of the QoS queues.</p>
          */
         public Builder queueNameList(java.util.List<String> queueNameList) {
             this.putQueryParameter("QueueNameList", queueNameList);
@@ -212,6 +222,8 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the QoS policy.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

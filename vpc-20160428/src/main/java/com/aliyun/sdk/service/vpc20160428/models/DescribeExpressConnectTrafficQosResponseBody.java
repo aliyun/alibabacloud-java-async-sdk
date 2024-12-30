@@ -103,7 +103,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Count.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(String count) {
             this.count = count;
@@ -111,7 +114,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -119,7 +125,14 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -127,7 +140,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         }
 
         /**
-         * QosList.
+         * <p>The information about QoS policies.</p>
          */
         public Builder qosList(java.util.List<QosList> qosList) {
             this.qosList = qosList;
@@ -135,7 +148,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4CF20CC7-D1FC-425B-A15B-DF7C8E2131A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +159,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -225,7 +244,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             private String instanceType; 
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance to which the QoS policy is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-bp159zj8zujwy3p07j83e</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -233,7 +255,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceProgressing.
+             * <p>The configuration progress of the instance to which the QoS policy is associated. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder instanceProgressing(Integer instanceProgressing) {
                 this.instanceProgressing = instanceProgressing;
@@ -241,7 +266,15 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * <p>The state of the instance to which the QoS policy is associated. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: The instance is available.</li>
+             * <li><strong>Configuring</strong>: The instance is being configured.</li>
+             * <li><strong>Deleting</strong>: The instance is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -249,7 +282,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The type of the instance to which the QoS policy is associated. Only <strong>PHYSICALCONNECTION</strong> is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICALCONNECTION</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -368,7 +404,14 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * BandwidthPercent.
+             * <p>The percentage of bandwidth allocated to a QoS queue.</p>
+             * <ul>
+             * <li>If QueueType is set to <strong>Medium</strong>, this parameter is required. Valid values: <strong>1</strong> to <strong>100</strong>.</li>
+             * <li>If QueueType is set to <strong>Default</strong>, a value of - is returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder bandwidthPercent(String bandwidthPercent) {
                 this.bandwidthPercent = bandwidthPercent;
@@ -376,7 +419,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * QosId.
+             * <p>The ID of the QoS policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qos-pksbqfmotl5hzqmhf8</p>
              */
             public Builder qosId(String qosId) {
                 this.qosId = qosId;
@@ -384,7 +430,11 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * QueueDescription.
+             * <p>The description of the QoS queue.</p>
+             * <p>The description can be up to <strong>256</strong> characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qos-queue-test</p>
              */
             public Builder queueDescription(String queueDescription) {
                 this.queueDescription = queueDescription;
@@ -392,7 +442,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * QueueId.
+             * <p>The ID of the QoS queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
              */
             public Builder queueId(String queueId) {
                 this.queueId = queueId;
@@ -400,7 +453,11 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * <p>The name of the QoS queue.</p>
+             * <p>The name can be up to <strong>128</strong> characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qos-queue-test</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -408,7 +465,18 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * QueueType.
+             * <p>The type of the QoS queue. Valid values:</p>
+             * <ul>
+             * <li><strong>High</strong>: high-priority queue.</li>
+             * <li><strong>Medium</strong>: standard queue.</li>
+             * <li><strong>Default</strong>: default queue.</li>
+             * </ul>
+             * <blockquote>
+             * <p>You cannot create a default queue.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder queueType(String queueType) {
                 this.queueType = queueType;
@@ -416,7 +484,15 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the QoS queue. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: The QoS queue is available.</li>
+             * <li><strong>Configuring</strong>: The QoS queue is being configured.</li>
+             * <li><strong>Deleting</strong>: The QoS queue is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -475,7 +551,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -483,7 +562,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -626,7 +708,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
 
             /**
-             * AssociatedInstanceList.
+             * <p>The information about the instances to which the QoS policy is associated.</p>
              */
             public Builder associatedInstanceList(java.util.List<AssociatedInstanceList> associatedInstanceList) {
                 this.associatedInstanceList = associatedInstanceList;
@@ -634,7 +716,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * Progressing.
+             * <p>The configuration progress of the QoS policy. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progressing(Integer progressing) {
                 this.progressing = progressing;
@@ -642,7 +727,11 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * QosDescription.
+             * <p>The description of the QoS policy.</p>
+             * <p>The description can be up to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qos-test</p>
              */
             public Builder qosDescription(String qosDescription) {
                 this.qosDescription = qosDescription;
@@ -650,7 +739,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * QosId.
+             * <p>The ID of the QoS policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qos-pksbqfmotl5hzq****</p>
              */
             public Builder qosId(String qosId) {
                 this.qosId = qosId;
@@ -658,7 +750,11 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * QosName.
+             * <p>The name of the QoS policy.</p>
+             * <p>The name can be up to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qos-test</p>
              */
             public Builder qosName(String qosName) {
                 this.qosName = qosName;
@@ -666,7 +762,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * QueueList.
+             * <p>The information about the QoS queues.</p>
              */
             public Builder queueList(java.util.List<QueueList> queueList) {
                 this.queueList = queueList;
@@ -674,7 +770,10 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmz7vtyl4f***</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -682,7 +781,17 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the QoS policy. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: The QoS policy is available.</li>
+             * <li><strong>Configuring</strong>: The QoS policy is being configured.</li>
+             * </ul>
+             * <blockquote>
+             * <p>If a QoS policy is in the Configuring state, you cannot perform most of the operations to create, update, or delete QoS policies, QoS queues, or QoS rules.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -690,7 +799,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag list.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
