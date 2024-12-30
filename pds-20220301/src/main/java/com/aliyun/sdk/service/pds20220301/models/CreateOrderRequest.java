@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrderRequest} extends {@link RequestModel}
  *
  * <p>CreateOrderRequest</p>
@@ -205,7 +211,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * code.
+         * <p>This parameter is required.</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -214,7 +220,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * instance_id.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("instance_id", instanceId);
@@ -223,7 +229,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * order_type.
+         * <p>This parameter is required.</p>
          */
         public Builder orderType(String orderType) {
             this.putBodyParameter("order_type", orderType);
@@ -232,7 +238,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * package.
+         * <p>This parameter is required.</p>
          */
         public Builder _package(String _package) {
             this.putBodyParameter("package", _package);
@@ -241,7 +247,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * period.
+         * <p>This parameter is required.</p>
          */
         public Builder period(Long period) {
             this.putBodyParameter("period", period);
@@ -250,7 +256,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * period_unit.
+         * <p>This parameter is required.</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("period_unit", periodUnit);
@@ -259,7 +265,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * total_size.
+         * <p>This parameter is required.</p>
          */
         public Builder totalSize(Long totalSize) {
             this.putBodyParameter("total_size", totalSize);
@@ -268,7 +274,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * user_count.
+         * <p>This parameter is required.</p>
          */
         public Builder userCount(Long userCount) {
             this.putBodyParameter("user_count", userCount);

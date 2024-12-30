@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FileDownloadCallbackInfo} extends {@link TeaModel}
  *
  * <p>FileDownloadCallbackInfo</p>
@@ -103,7 +109,10 @@ public class FileDownloadCallbackInfo extends TeaModel {
         private String userId; 
 
         /**
-         * bucket.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccp-bj1-bj-1234</p>
          */
         public Builder bucket(String bucket) {
             this.bucket = bucket;
@@ -111,7 +120,7 @@ public class FileDownloadCallbackInfo extends TeaModel {
         }
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -119,7 +128,7 @@ public class FileDownloadCallbackInfo extends TeaModel {
         }
 
         /**
-         * drive_id.
+         * <p>This parameter is required.</p>
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;
@@ -127,7 +136,7 @@ public class FileDownloadCallbackInfo extends TeaModel {
         }
 
         /**
-         * file_id.
+         * <p>This parameter is required.</p>
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;
@@ -135,7 +144,7 @@ public class FileDownloadCallbackInfo extends TeaModel {
         }
 
         /**
-         * object.
+         * <p>This parameter is required.</p>
          */
         public Builder object(String object) {
             this.object = object;
@@ -143,7 +152,7 @@ public class FileDownloadCallbackInfo extends TeaModel {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGroupRequest} extends {@link RequestModel}
  *
  * <p>GetGroupRequest</p>
@@ -68,7 +74,7 @@ public class GetGroupRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -77,7 +83,11 @@ public class GetGroupRequest extends Request {
         }
 
         /**
-         * The group ID.
+         * <p>The group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e43ec8427dd45f19431b7504649a1b1</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("group_id", groupId);

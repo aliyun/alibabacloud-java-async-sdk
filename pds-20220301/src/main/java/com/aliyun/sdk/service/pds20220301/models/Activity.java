@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Activity} extends {@link TeaModel}
  *
  * <p>Activity</p>
@@ -30,7 +36,7 @@ public class Activity extends TeaModel {
     private Integer resourceCategory;
 
     @com.aliyun.core.annotation.NameInMap("resource_list")
-    private java.util.List < java.util.Map<String, ?>> resourceList;
+    private java.util.List<java.util.Map<String, ?>> resourceList;
 
     @com.aliyun.core.annotation.NameInMap("total_resource_count")
     private Long totalResourceCount;
@@ -103,7 +109,7 @@ public class Activity extends TeaModel {
     /**
      * @return resourceList
      */
-    public java.util.List < java.util.Map<String, ?>> getResourceList() {
+    public java.util.List<java.util.Map<String, ?>> getResourceList() {
         return this.resourceList;
     }
 
@@ -128,7 +134,7 @@ public class Activity extends TeaModel {
         private Integer eventType; 
         private String latestEventTime; 
         private Integer resourceCategory; 
-        private java.util.List < java.util.Map<String, ?>> resourceList; 
+        private java.util.List<java.util.Map<String, ?>> resourceList; 
         private Long totalResourceCount; 
         private String userId; 
 
@@ -183,7 +189,7 @@ public class Activity extends TeaModel {
         /**
          * resource_list.
          */
-        public Builder resourceList(java.util.List < java.util.Map<String, ?>> resourceList) {
+        public Builder resourceList(java.util.List<java.util.Map<String, ?>> resourceList) {
             this.resourceList = resourceList;
             return this;
         }

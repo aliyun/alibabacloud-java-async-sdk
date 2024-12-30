@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchStoriesResponseBody} extends {@link TeaModel}
  *
  * <p>SearchStoriesResponseBody</p>
  */
 public class SearchStoriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("items")
-    private java.util.List < Story > items;
+    private java.util.List<Story> items;
 
     @com.aliyun.core.annotation.NameInMap("next_marker")
     private String nextMarker;
@@ -33,7 +39,7 @@ public class SearchStoriesResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Story > getItems() {
+    public java.util.List<Story> getItems() {
         return this.items;
     }
 
@@ -45,13 +51,13 @@ public class SearchStoriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Story > items; 
+        private java.util.List<Story> items; 
         private String nextMarker; 
 
         /**
          * items.
          */
-        public Builder items(java.util.List < Story > items) {
+        public Builder items(java.util.List<Story> items) {
             this.items = items;
             return this;
         }

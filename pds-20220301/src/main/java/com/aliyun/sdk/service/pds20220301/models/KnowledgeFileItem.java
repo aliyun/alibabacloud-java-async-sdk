@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link KnowledgeFileItem} extends {@link TeaModel}
  *
  * <p>KnowledgeFileItem</p>
@@ -51,7 +57,7 @@ public class KnowledgeFileItem extends TeaModel {
         private String fileId; 
 
         /**
-         * drive_id.
+         * <p>This parameter is required.</p>
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;
@@ -59,7 +65,7 @@ public class KnowledgeFileItem extends TeaModel {
         }
 
         /**
-         * file_id.
+         * <p>This parameter is required.</p>
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;

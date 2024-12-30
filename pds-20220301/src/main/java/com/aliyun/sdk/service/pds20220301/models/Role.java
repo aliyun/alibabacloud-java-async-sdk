@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Role} extends {@link TeaModel}
  *
  * <p>Role</p>
@@ -27,7 +33,7 @@ public class Role extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("permissions")
-    private java.util.List < Permission > permissions;
+    private java.util.List<Permission> permissions;
 
     @com.aliyun.core.annotation.NameInMap("role_id")
     private String roleId;
@@ -96,7 +102,7 @@ public class Role extends TeaModel {
     /**
      * @return permissions
      */
-    public java.util.List < Permission > getPermissions() {
+    public java.util.List<Permission> getPermissions() {
         return this.permissions;
     }
 
@@ -127,7 +133,7 @@ public class Role extends TeaModel {
         private String description; 
         private String manageResourceType; 
         private String name; 
-        private java.util.List < Permission > permissions; 
+        private java.util.List<Permission> permissions; 
         private String roleId; 
         private String status; 
         private Long updatedAt; 
@@ -175,7 +181,7 @@ public class Role extends TeaModel {
         /**
          * permissions.
          */
-        public Builder permissions(java.util.List < Permission > permissions) {
+        public Builder permissions(java.util.List<Permission> permissions) {
             this.permissions = permissions;
             return this;
         }

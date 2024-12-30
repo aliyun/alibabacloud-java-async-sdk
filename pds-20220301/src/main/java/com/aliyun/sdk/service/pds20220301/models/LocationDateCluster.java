@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LocationDateCluster} extends {@link TeaModel}
  *
  * <p>LocationDateCluster</p>
@@ -21,7 +27,7 @@ public class LocationDateCluster extends TeaModel {
     private String createdAt;
 
     @com.aliyun.core.annotation.NameInMap("custom_labels")
-    private java.util.Map < String, String > customLabels;
+    private java.util.Map<String, String> customLabels;
 
     @com.aliyun.core.annotation.NameInMap("drive_id")
     private String driveId;
@@ -86,7 +92,7 @@ public class LocationDateCluster extends TeaModel {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, String > getCustomLabels() {
+    public java.util.Map<String, String> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -136,7 +142,7 @@ public class LocationDateCluster extends TeaModel {
         private Address address; 
         private String clusterId; 
         private String createdAt; 
-        private java.util.Map < String, String > customLabels; 
+        private java.util.Map<String, String> customLabels; 
         private String driveId; 
         private String endTime; 
         private String level; 
@@ -171,7 +177,7 @@ public class LocationDateCluster extends TeaModel {
         /**
          * custom_labels.
          */
-        public Builder customLabels(java.util.Map < String, String > customLabels) {
+        public Builder customLabels(java.util.Map<String, String> customLabels) {
             this.customLabels = customLabels;
             return this;
         }

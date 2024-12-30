@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CssInstanceComponent} extends {@link TeaModel}
  *
  * <p>CssInstanceComponent</p>
@@ -21,7 +27,7 @@ public class CssInstanceComponent extends TeaModel {
     private String globalKey;
 
     @com.aliyun.core.annotation.NameInMap("instanceProperty")
-    private java.util.List < CssInstanceProperty > instanceProperty;
+    private java.util.List<CssInstanceProperty> instanceProperty;
 
     @com.aliyun.core.annotation.NameInMap("moduleAttrStatus")
     private Long moduleAttrStatus;
@@ -70,7 +76,7 @@ public class CssInstanceComponent extends TeaModel {
     /**
      * @return instanceProperty
      */
-    public java.util.List < CssInstanceProperty > getInstanceProperty() {
+    public java.util.List<CssInstanceProperty> getInstanceProperty() {
         return this.instanceProperty;
     }
 
@@ -92,7 +98,7 @@ public class CssInstanceComponent extends TeaModel {
         private String componentCode; 
         private String componentName; 
         private String globalKey; 
-        private java.util.List < CssInstanceProperty > instanceProperty; 
+        private java.util.List<CssInstanceProperty> instanceProperty; 
         private Long moduleAttrStatus; 
         private String tag; 
 
@@ -123,7 +129,7 @@ public class CssInstanceComponent extends TeaModel {
         /**
          * instanceProperty.
          */
-        public Builder instanceProperty(java.util.List < CssInstanceProperty > instanceProperty) {
+        public Builder instanceProperty(java.util.List<CssInstanceProperty> instanceProperty) {
             this.instanceProperty = instanceProperty;
             return this;
         }

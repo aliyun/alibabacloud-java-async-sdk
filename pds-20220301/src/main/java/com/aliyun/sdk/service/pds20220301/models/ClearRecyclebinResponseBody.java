@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ClearRecyclebinResponseBody} extends {@link TeaModel}
  *
  * <p>ClearRecyclebinResponseBody</p>
@@ -61,10 +67,11 @@ public class ClearRecyclebinResponseBody extends TeaModel {
         private String driveId; 
 
         /**
-         * The ID of the asynchronous task.
-         * <p>
+         * <p>The ID of the asynchronous task.</p>
+         * <p>You can call the GetAsyncTask operation to query the information about the asynchronous task based on the task ID.</p>
          * 
-         * You can call the GetAsyncTask operation to query the information about the asynchronous task based on the task ID.
+         * <strong>example:</strong>
+         * <p>13ebd3a24dba4166b1527add676ef2866051b4d5dele16</p>
          */
         public Builder asyncTaskId(String asyncTaskId) {
             this.asyncTaskId = asyncTaskId;
@@ -72,7 +79,10 @@ public class ClearRecyclebinResponseBody extends TeaModel {
         }
 
         /**
-         * The domain ID.
+         * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj1</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -80,7 +90,10 @@ public class ClearRecyclebinResponseBody extends TeaModel {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;

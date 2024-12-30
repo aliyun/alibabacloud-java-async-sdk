@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDriveRequest} extends {@link RequestModel}
  *
  * <p>UpdateDriveRequest</p>
@@ -140,7 +146,7 @@ public class UpdateDriveRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -149,7 +155,7 @@ public class UpdateDriveRequest extends Request {
         }
 
         /**
-         * The description of the drive. The description can be up to 1,024 characters in length.
+         * <p>The description of the drive. The description can be up to 1,024 characters in length.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -158,7 +164,11 @@ public class UpdateDriveRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -167,7 +177,10 @@ public class UpdateDriveRequest extends Request {
         }
 
         /**
-         * The name of the drive. The name can be up to 128 characters in length.
+         * <p>The name of the drive. The name can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_drive</p>
          */
         public Builder driveName(String driveName) {
             this.putBodyParameter("drive_name", driveName);
@@ -176,7 +189,10 @@ public class UpdateDriveRequest extends Request {
         }
 
         /**
-         * The owner of the drive. Note: You can modify the owner of a personal drive only by using an AccessKey pair.
+         * <p>The owner of the drive. Note: You can modify the owner of a personal drive only by using an AccessKey pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("owner", owner);
@@ -185,10 +201,11 @@ public class UpdateDriveRequest extends Request {
         }
 
         /**
-         * The state of the drive. Valid values:
-         * <p>
+         * <p>The state of the drive. Valid values:</p>
+         * <p>enabled and disabled.</p>
          * 
-         * enabled and disabled.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -197,7 +214,10 @@ public class UpdateDriveRequest extends Request {
         }
 
         /**
-         * The total size of the drive. Unit: bytes. A value of -1 specifies that the size is unlimited.
+         * <p>The total size of the drive. Unit: bytes. A value of -1 specifies that the size is unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder totalSize(Long totalSize) {
             this.putBodyParameter("total_size", totalSize);

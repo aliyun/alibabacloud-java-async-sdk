@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchDomainsRequest} extends {@link RequestModel}
  *
  * <p>SearchDomainsRequest</p>
@@ -95,10 +101,11 @@ public class SearchDomainsRequest extends Request {
         } 
 
         /**
-         * The maximum number of results to return. Valid values: 1 to 100. Default value: 100.
-         * <p>
+         * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+         * <p>The number of returned results must be less than or equal to the specified number.</p>
          * 
-         * The number of returned results must be less than or equal to the specified number.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder limit(Long limit) {
             this.putBodyParameter("limit", limit);
@@ -107,9 +114,10 @@ public class SearchDomainsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
-         * <p>
-         * By default, this parameter is empty.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.<br>By default, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder marker(String marker) {
             this.putBodyParameter("marker", marker);
@@ -118,7 +126,7 @@ public class SearchDomainsRequest extends Request {
         }
 
         /**
-         * The name of the domain. Fuzzy search is supported.
+         * <p>The name of the domain. Fuzzy search is supported.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -127,7 +135,10 @@ public class SearchDomainsRequest extends Request {
         }
 
         /**
-         * The sorting rule. Set the value to created_at, which specifies that the results are sorted based on the time when the domain was created.
+         * <p>The sorting rule. Set the value to created_at, which specifies that the results are sorted based on the time when the domain was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>created_at</p>
          */
         public Builder orderBy(String orderBy) {
             this.putBodyParameter("order_by", orderBy);

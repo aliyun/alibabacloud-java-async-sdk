@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateIdentityToBenefitPkgMappingRequest} extends {@link RequestModel}
  *
  * <p>UpdateIdentityToBenefitPkgMappingRequest</p>
@@ -126,7 +132,7 @@ public class UpdateIdentityToBenefitPkgMappingRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -135,10 +141,11 @@ public class UpdateIdentityToBenefitPkgMappingRequest extends Request {
         }
 
         /**
-         * The number of benefit packages.
-         * <p>
+         * <p>The number of benefit packages.</p>
+         * <p>This parameter specifies the number of benefit packages of the resource type. Default value: 1.</p>
          * 
-         * This parameter specifies the number of benefit packages of the resource type. Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Long amount) {
             this.putBodyParameter("amount", amount);
@@ -147,7 +154,11 @@ public class UpdateIdentityToBenefitPkgMappingRequest extends Request {
         }
 
         /**
-         * The unique identifier of the benefit package.
+         * <p>The unique identifier of the benefit package.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40cb7794c9294</p>
          */
         public Builder benefitPkgId(String benefitPkgId) {
             this.putBodyParameter("benefit_pkg_id", benefitPkgId);
@@ -156,10 +167,11 @@ public class UpdateIdentityToBenefitPkgMappingRequest extends Request {
         }
 
         /**
-         * The expiration time of the benefit package. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * <p>
+         * <p>The expiration time of the benefit package. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>By default, the benefit package never expires.</p>
          * 
-         * By default, the benefit package never expires.
+         * <strong>example:</strong>
+         * <p>1633167071000</p>
          */
         public Builder expireTime(Long expireTime) {
             this.putBodyParameter("expire_time", expireTime);
@@ -168,10 +180,12 @@ public class UpdateIdentityToBenefitPkgMappingRequest extends Request {
         }
 
         /**
-         * The unique identifier of the entity.
-         * <p>
+         * <p>The unique identifier of the entity.</p>
+         * <p>If you call this operation to manage the benefits of a user, set this parameter to the ID of the user.</p>
+         * <p>This parameter is required.</p>
          * 
-         * If you call this operation to manage the benefits of a user, set this parameter to the ID of the user.
+         * <strong>example:</strong>
+         * <p>user123</p>
          */
         public Builder identityId(String identityId) {
             this.putBodyParameter("identity_id", identityId);
@@ -180,7 +194,11 @@ public class UpdateIdentityToBenefitPkgMappingRequest extends Request {
         }
 
         /**
-         * The type of the entity. If you call this operation to manage the benefits of a user, set this parameter to user.
+         * <p>The type of the entity. If you call this operation to manage the benefits of a user, set this parameter to user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder identityType(String identityType) {
             this.putBodyParameter("identity_type", identityType);

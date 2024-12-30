@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListShareLinkRequest} extends {@link RequestModel}
  *
  * <p>ListShareLinkRequest</p>
@@ -137,7 +143,7 @@ public class ListShareLinkRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -146,7 +152,10 @@ public class ListShareLinkRequest extends Request {
         }
 
         /**
-         * The creator of the share.
+         * <p>The creator of the share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c9b7a5aa04d14ae3867fdc886fa01da4</p>
          */
         public Builder creator(String creator) {
             this.putBodyParameter("creator", creator);
@@ -155,7 +164,10 @@ public class ListShareLinkRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the shares that are canceled.
+         * <p>Specifies whether to return the shares that are canceled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeCancelled(Boolean includeCancelled) {
             this.putBodyParameter("include_cancelled", includeCancelled);
@@ -164,10 +176,11 @@ public class ListShareLinkRequest extends Request {
         }
 
         /**
-         * The maximum number of results to return. Valid values: 0 to 100.
-         * <p>
+         * <p>The maximum number of results to return. Valid values: 0 to 100.</p>
+         * <p>The number of returned results must be less than or equal to the specified number.</p>
          * 
-         * The number of returned results must be less than or equal to the specified number.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("limit", limit);
@@ -176,9 +189,10 @@ public class ListShareLinkRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
-         * <p>
-         * By default, this parameter is left empty.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.<br>By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder marker(String marker) {
             this.putBodyParameter("marker", marker);
@@ -187,13 +201,16 @@ public class ListShareLinkRequest extends Request {
         }
 
         /**
-         * The field by which to sort the returned results. Default value: created_at. Valid values:
-         * <p>
+         * <p>The field by which to sort the returned results. Default value: created_at. Valid values:</p>
+         * <ul>
+         * <li>share_name: sorts the results by the name of the share.</li>
+         * <li>updated_at: sorts the results by the time when the share was modified.</li>
+         * <li>description: sorts the results by the description of the share.</li>
+         * <li>created_at: sorts the results by the time when the share was created.</li>
+         * </ul>
          * 
-         * *   share_name: sorts the results by the name of the share.
-         * *   updated_at: sorts the results by the time when the share was modified.
-         * *   description: sorts the results by the description of the share.
-         * *   created_at: sorts the results by the time when the share was created.
+         * <strong>example:</strong>
+         * <p>share_name</p>
          */
         public Builder orderBy(String orderBy) {
             this.putBodyParameter("order_by", orderBy);
@@ -202,11 +219,14 @@ public class ListShareLinkRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the returned results. By default, order_direction is set to DESC if order_by is set to created_at or updated_at, and is set to ASC if order_by is set to other values. Valid values:
-         * <p>
+         * <p>The order in which you want to sort the returned results. By default, order_direction is set to DESC if order_by is set to created_at or updated_at, and is set to ASC if order_by is set to other values. Valid values:</p>
+         * <ul>
+         * <li>ASC: sorts the results in ascending order.</li>
+         * <li>DESC: sorts the results in descending order.</li>
+         * </ul>
          * 
-         * *   ASC: sorts the results in ascending order.
-         * *   DESC: sorts the results in descending order.
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder orderDirection(String orderDirection) {
             this.putBodyParameter("order_direction", orderDirection);

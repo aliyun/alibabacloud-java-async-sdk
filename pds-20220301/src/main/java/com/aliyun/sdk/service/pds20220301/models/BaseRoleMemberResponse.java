@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BaseRoleMemberResponse} extends {@link TeaModel}
  *
  * <p>BaseRoleMemberResponse</p>
  */
 public class BaseRoleMemberResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("assignment_list")
-    private java.util.List < BaseAssignmentResponse > assignmentList;
+    private java.util.List<BaseAssignmentResponse> assignmentList;
 
     @com.aliyun.core.annotation.NameInMap("created_at")
     private String createdAt;
@@ -59,7 +65,7 @@ public class BaseRoleMemberResponse extends Response {
     /**
      * @return assignmentList
      */
-    public java.util.List < BaseAssignmentResponse > getAssignmentList() {
+    public java.util.List<BaseAssignmentResponse> getAssignmentList() {
         return this.assignmentList;
     }
 
@@ -114,7 +120,7 @@ public class BaseRoleMemberResponse extends Response {
 
     public interface Builder extends Response.Builder<BaseRoleMemberResponse, Builder> {
 
-        Builder assignmentList(java.util.List < BaseAssignmentResponse > assignmentList);
+        Builder assignmentList(java.util.List<BaseAssignmentResponse> assignmentList);
 
         Builder createdAt(String createdAt);
 
@@ -138,7 +144,7 @@ public class BaseRoleMemberResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<BaseRoleMemberResponse, Builder>
             implements Builder {
-        private java.util.List < BaseAssignmentResponse > assignmentList; 
+        private java.util.List<BaseAssignmentResponse> assignmentList; 
         private String createdAt; 
         private String creator; 
         private String domainId; 
@@ -167,7 +173,7 @@ public class BaseRoleMemberResponse extends Response {
          * assignment_list.
          */
         @Override
-        public Builder assignmentList(java.util.List < BaseAssignmentResponse > assignmentList) {
+        public Builder assignmentList(java.util.List<BaseAssignmentResponse> assignmentList) {
             this.assignmentList = assignmentList;
             return this;
         }

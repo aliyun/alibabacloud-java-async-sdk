@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UncompressedFileInfo} extends {@link TeaModel}
  *
  * <p>UncompressedFileInfo</p>
@@ -21,7 +27,7 @@ public class UncompressedFileInfo extends TeaModel {
     private Boolean isFolder;
 
     @com.aliyun.core.annotation.NameInMap("items")
-    private java.util.List < UncompressedFileInfo > items;
+    private java.util.List<UncompressedFileInfo> items;
 
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
@@ -74,7 +80,7 @@ public class UncompressedFileInfo extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < UncompressedFileInfo > getItems() {
+    public java.util.List<UncompressedFileInfo> getItems() {
         return this.items;
     }
 
@@ -103,7 +109,7 @@ public class UncompressedFileInfo extends TeaModel {
         private String driveId; 
         private String fileId; 
         private Boolean isFolder; 
-        private java.util.List < UncompressedFileInfo > items; 
+        private java.util.List<UncompressedFileInfo> items; 
         private String name; 
         private Long size; 
         private Long updatedAt; 
@@ -135,7 +141,7 @@ public class UncompressedFileInfo extends TeaModel {
         /**
          * items.
          */
-        public Builder items(java.util.List < UncompressedFileInfo > items) {
+        public Builder items(java.util.List<UncompressedFileInfo> items) {
             this.items = items;
             return this;
         }

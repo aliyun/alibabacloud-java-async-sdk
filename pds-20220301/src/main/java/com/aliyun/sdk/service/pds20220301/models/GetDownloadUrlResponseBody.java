@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDownloadUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetDownloadUrlResponseBody</p>
@@ -121,7 +127,10 @@ public class GetDownloadUrlResponseBody extends TeaModel {
         private String url; 
 
         /**
-         * The download URL of a file that is downloaded by using Alibaba Cloud CDN.
+         * <p>The download URL of a file that is downloaded by using Alibaba Cloud CDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://data-cdn.aliyunpds.com/hz22%2F5d79219b0aa9a7c995a94a96993ba3205cd91c5a%2F5d79219bf3261a5d38744da0834ed489b677a27a?Expires=xxxOSSAccessKeyId=xxx&Signature=xxx&response-content-disposition=attachment%3Bfilename%3DtBiZAoJPC2c8b13450eda4292b7f5f8010618e078.txt">https://data-cdn.aliyunpds.com/hz22%2F5d79219b0aa9a7c995a94a96993ba3205cd91c5a%2F5d79219bf3261a5d38744da0834ed489b677a27a?Expires=xxxOSSAccessKeyId=xxx&amp;Signature=xxx&amp;response-content-disposition=attachment%3Bfilename%3DtBiZAoJPC2c8b13450eda4292b7f5f8010618e078.txt</a></p>
          */
         public Builder cdnUrl(String cdnUrl) {
             this.cdnUrl = cdnUrl;
@@ -129,7 +138,10 @@ public class GetDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The hash value of the file content.
+         * <p>The hash value of the file content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EA4942AA8761213890A5C386F88E6464D2C31CA1</p>
          */
         public Builder contentHash(String contentHash) {
             this.contentHash = contentHash;
@@ -137,7 +149,10 @@ public class GetDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the algorithm that is used to calculate the hash value of the file content.
+         * <p>The name of the algorithm that is used to calculate the hash value of the file content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha1</p>
          */
         public Builder contentHashName(String contentHashName) {
             this.contentHashName = contentHashName;
@@ -145,7 +160,10 @@ public class GetDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The hash value calculated by using 64-bit cyclic redundancy check (CRC-64).
+         * <p>The hash value calculated by using 64-bit cyclic redundancy check (CRC-64).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5498595269368962671</p>
          */
         public Builder crc64Hash(String crc64Hash) {
             this.crc64Hash = crc64Hash;
@@ -153,7 +171,10 @@ public class GetDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the download URL expires.
+         * <p>The time when the download URL expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-02T15:04:05.999Z07:00</p>
          */
         public Builder expiration(String expiration) {
             this.expiration = expiration;
@@ -161,7 +182,10 @@ public class GetDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The download URL of a file that is downloaded over a virtual private cloud (VPC).
+         * <p>The download URL of a file that is downloaded over a virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://data-vpc.aliyunpds.com/hz22%2F5d79219b0aa9a7c995a94a96993ba3205cd91c5a%2F5d79219bf3261a5d38744da0834ed489b677a27a?Expires=xxxOSSAccessKeyId=xxx&Signature=xxx&response-content-disposition=attachment%3Bfilename%3DtBiZAoJPC2c8b13450eda4292b7f5f8010618e078.txt">https://data-vpc.aliyunpds.com/hz22%2F5d79219b0aa9a7c995a94a96993ba3205cd91c5a%2F5d79219bf3261a5d38744da0834ed489b677a27a?Expires=xxxOSSAccessKeyId=xxx&amp;Signature=xxx&amp;response-content-disposition=attachment%3Bfilename%3DtBiZAoJPC2c8b13450eda4292b7f5f8010618e078.txt</a></p>
          */
         public Builder internalUrl(String internalUrl) {
             this.internalUrl = internalUrl;
@@ -169,7 +193,10 @@ public class GetDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The size of the file. Unit: bytes.
+         * <p>The size of the file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Long size) {
             this.size = size;
@@ -177,7 +204,10 @@ public class GetDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The download URL of a file that is downloaded over the Internet.
+         * <p>The download URL of a file that is downloaded over the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://data.aliyunpds.com/hz22%2F5d79219b0aa9a7c995a94a96993ba3205cd91c5a%2F5d79219bf3261a5d38744da0834ed489b677a27a?Expires=xxxOSSAccessKeyId=xxx&Signature=xxx&response-content-disposition=attachment%3Bfilename%3DtBiZAoJPC2c8b13450eda4292b7f5f8010618e078.txt">https://data.aliyunpds.com/hz22%2F5d79219b0aa9a7c995a94a96993ba3205cd91c5a%2F5d79219bf3261a5d38744da0834ed489b677a27a?Expires=xxxOSSAccessKeyId=xxx&amp;Signature=xxx&amp;response-content-disposition=attachment%3Bfilename%3DtBiZAoJPC2c8b13450eda4292b7f5f8010618e078.txt</a></p>
          */
         public Builder url(String url) {
             this.url = url;

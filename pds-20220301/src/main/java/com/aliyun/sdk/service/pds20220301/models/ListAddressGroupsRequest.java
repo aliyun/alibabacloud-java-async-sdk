@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAddressGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListAddressGroupsRequest</p>
@@ -124,7 +130,7 @@ public class ListAddressGroupsRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -133,7 +139,11 @@ public class ListAddressGroupsRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -142,7 +152,10 @@ public class ListAddressGroupsRequest extends Request {
         }
 
         /**
-         * The method that is used to generate a thumbnail of an image.
+         * <p>The method that is used to generate a thumbnail of an image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/resize,w_200</p>
          */
         public Builder imageThumbnailProcess(String imageThumbnailProcess) {
             this.putBodyParameter("image_thumbnail_process", imageThumbnailProcess);
@@ -151,7 +164,10 @@ public class ListAddressGroupsRequest extends Request {
         }
 
         /**
-         * The maximum number of results to return. Valid values: 1 to 100. Default value: 100.
+         * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("limit", limit);
@@ -160,7 +176,10 @@ public class ListAddressGroupsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is left empty.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder marker(String marker) {
             this.putBodyParameter("marker", marker);
@@ -169,7 +188,10 @@ public class ListAddressGroupsRequest extends Request {
         }
 
         /**
-         * The method that is used to generate a thumbnail of a video.
+         * <p>The method that is used to generate a thumbnail of a video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video_thumbnail_process</p>
          */
         public Builder videoThumbnailProcess(String videoThumbnailProcess) {
             this.putBodyParameter("video_thumbnail_process", videoThumbnailProcess);

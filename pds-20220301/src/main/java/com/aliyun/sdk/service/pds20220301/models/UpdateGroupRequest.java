@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateGroupRequest</p>
@@ -96,7 +102,7 @@ public class UpdateGroupRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -105,7 +111,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * The description of the group after modification.
+         * <p>The description of the group after modification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test group description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -114,7 +123,11 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * The ID of the group that you want to modify.
+         * <p>The ID of the group that you want to modify.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e43ec8427dd45f19431b7504649a1b4</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("group_id", groupId);
@@ -123,7 +136,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * The name of the group after modification.
+         * <p>The name of the group after modification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test group</p>
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("group_name", groupName);

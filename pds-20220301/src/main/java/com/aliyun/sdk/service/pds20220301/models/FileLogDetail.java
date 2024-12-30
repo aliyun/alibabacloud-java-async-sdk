@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FileLogDetail} extends {@link TeaModel}
  *
  * <p>FileLogDetail</p>
  */
 public class FileLogDetail extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("decompress_file_list")
-    private java.util.List < String > decompressFileList;
+    private java.util.List<String> decompressFileList;
 
     @com.aliyun.core.annotation.NameInMap("new_name")
     private String newName;
@@ -61,7 +67,7 @@ public class FileLogDetail extends TeaModel {
     /**
      * @return decompressFileList
      */
-    public java.util.List < String > getDecompressFileList() {
+    public java.util.List<String> getDecompressFileList() {
         return this.decompressFileList;
     }
 
@@ -122,7 +128,7 @@ public class FileLogDetail extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > decompressFileList; 
+        private java.util.List<String> decompressFileList; 
         private String newName; 
         private String parentPath; 
         private Long revVersion; 
@@ -135,7 +141,7 @@ public class FileLogDetail extends TeaModel {
         /**
          * decompress_file_list.
          */
-        public Builder decompressFileList(java.util.List < String > decompressFileList) {
+        public Builder decompressFileList(java.util.List<String> decompressFileList) {
             this.decompressFileList = decompressFileList;
             return this;
         }

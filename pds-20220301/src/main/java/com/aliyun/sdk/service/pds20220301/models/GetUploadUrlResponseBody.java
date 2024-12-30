@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUploadUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetUploadUrlResponseBody</p>
@@ -24,7 +30,7 @@ public class GetUploadUrlResponseBody extends TeaModel {
     private String fileId;
 
     @com.aliyun.core.annotation.NameInMap("part_info_list")
-    private java.util.List < UploadPartInfo > partInfoList;
+    private java.util.List<UploadPartInfo> partInfoList;
 
     @com.aliyun.core.annotation.NameInMap("upload_id")
     private String uploadId;
@@ -77,7 +83,7 @@ public class GetUploadUrlResponseBody extends TeaModel {
     /**
      * @return partInfoList
      */
-    public java.util.List < UploadPartInfo > getPartInfoList() {
+    public java.util.List<UploadPartInfo> getPartInfoList() {
         return this.partInfoList;
     }
 
@@ -93,11 +99,14 @@ public class GetUploadUrlResponseBody extends TeaModel {
         private String domainId; 
         private String driveId; 
         private String fileId; 
-        private java.util.List < UploadPartInfo > partInfoList; 
+        private java.util.List<UploadPartInfo> partInfoList; 
         private String uploadId; 
 
         /**
-         * The time when the upload task was created.
+         * <p>The time when the upload task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-11T16:34:36.977Z</p>
          */
         public Builder createAt(String createAt) {
             this.createAt = createAt;
@@ -105,7 +114,10 @@ public class GetUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The domain ID.
+         * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj1</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -113,7 +125,10 @@ public class GetUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;
@@ -121,7 +136,10 @@ public class GetUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5d5b846942cf94fa72324c14a4bda34e81da635d</p>
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;
@@ -129,15 +147,18 @@ public class GetUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the file parts.
+         * <p>The information about the file parts.</p>
          */
-        public Builder partInfoList(java.util.List < UploadPartInfo > partInfoList) {
+        public Builder partInfoList(java.util.List<UploadPartInfo> partInfoList) {
             this.partInfoList = partInfoList;
             return this;
         }
 
         /**
-         * The ID of the upload task.
+         * <p>The ID of the upload task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10166D06127B413BA1EC8ABB1144D111</p>
          */
         public Builder uploadId(String uploadId) {
             this.uploadId = uploadId;

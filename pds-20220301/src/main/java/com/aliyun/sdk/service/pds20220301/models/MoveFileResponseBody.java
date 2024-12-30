@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveFileResponseBody} extends {@link TeaModel}
  *
  * <p>MoveFileResponseBody</p>
@@ -85,12 +91,12 @@ public class MoveFileResponseBody extends TeaModel {
         private String fileId; 
 
         /**
-         * The ID of the asynchronous task.
-         * <p>
+         * <p>The ID of the asynchronous task.</p>
+         * <p>If an empty string is returned, the file is moved.</p>
+         * <p>If a non-empty string is returned, an asynchronous task is required. You can call the GetAsyncTask operation to obtain the information about an asynchronous task based on the task ID.</p>
          * 
-         * If an empty string is returned, the file is moved.
-         * 
-         * If a non-empty string is returned, an asynchronous task is required. You can call the GetAsyncTask operation to obtain the information about an asynchronous task based on the task ID.
+         * <strong>example:</strong>
+         * <p>23ebd1a24dba4166b1527add476ef2866051b4d5del106</p>
          */
         public Builder asyncTaskId(String asyncTaskId) {
             this.asyncTaskId = asyncTaskId;
@@ -98,7 +104,10 @@ public class MoveFileResponseBody extends TeaModel {
         }
 
         /**
-         * The domain ID.
+         * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj1</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -106,7 +115,10 @@ public class MoveFileResponseBody extends TeaModel {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;
@@ -114,7 +126,10 @@ public class MoveFileResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the file already exists in the destination directory.
+         * <p>Indicates whether the file already exists in the destination directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder exist(Boolean exist) {
             this.exist = exist;
@@ -122,7 +137,10 @@ public class MoveFileResponseBody extends TeaModel {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileid1</p>
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;

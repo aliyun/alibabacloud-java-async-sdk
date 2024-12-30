@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link App} extends {@link TeaModel}
  *
  * <p>App</p>
@@ -36,7 +42,7 @@ public class App extends TeaModel {
     private String redirectUri;
 
     @com.aliyun.core.annotation.NameInMap("scope")
-    private java.util.List < String > scope;
+    private java.util.List<String> scope;
 
     @com.aliyun.core.annotation.NameInMap("stage")
     private String stage;
@@ -129,7 +135,7 @@ public class App extends TeaModel {
     /**
      * @return scope
      */
-    public java.util.List < String > getScope() {
+    public java.util.List<String> getScope() {
         return this.scope;
     }
 
@@ -163,7 +169,7 @@ public class App extends TeaModel {
         private String logo; 
         private String provider; 
         private String redirectUri; 
-        private java.util.List < String > scope; 
+        private java.util.List<String> scope; 
         private String stage; 
         private String type; 
         private String updatedAt; 
@@ -235,7 +241,7 @@ public class App extends TeaModel {
         /**
          * scope.
          */
-        public Builder scope(java.util.List < String > scope) {
+        public Builder scope(java.util.List<String> scope) {
             this.scope = scope;
             return this;
         }

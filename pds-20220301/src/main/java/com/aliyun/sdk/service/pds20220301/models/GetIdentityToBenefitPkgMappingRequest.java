@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetIdentityToBenefitPkgMappingRequest} extends {@link RequestModel}
  *
  * <p>GetIdentityToBenefitPkgMappingRequest</p>
@@ -98,7 +104,7 @@ public class GetIdentityToBenefitPkgMappingRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -107,7 +113,11 @@ public class GetIdentityToBenefitPkgMappingRequest extends Request {
         }
 
         /**
-         * The unique identifier of the benefit package.
+         * <p>The unique identifier of the benefit package.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40cb7794c9294</p>
          */
         public Builder benefitPkgId(String benefitPkgId) {
             this.putBodyParameter("benefit_pkg_id", benefitPkgId);
@@ -116,10 +126,12 @@ public class GetIdentityToBenefitPkgMappingRequest extends Request {
         }
 
         /**
-         * The unique identifier of the entity.
-         * <p>
+         * <p>The unique identifier of the entity.</p>
+         * <p>If you want to manage the benefits of a user, set this parameter to a user ID.</p>
+         * <p>This parameter is required.</p>
          * 
-         * If you want to manage the benefits of a user, set this parameter to a user ID.
+         * <strong>example:</strong>
+         * <p>user123</p>
          */
         public Builder identityId(String identityId) {
             this.putBodyParameter("identity_id", identityId);
@@ -128,7 +140,11 @@ public class GetIdentityToBenefitPkgMappingRequest extends Request {
         }
 
         /**
-         * The type of the entity. If you want to manage the benefits of a user, set this parameter to user.
+         * <p>The type of the entity. If you want to manage the benefits of a user, set this parameter to user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder identityType(String identityType) {
             this.putBodyParameter("identity_type", identityType);

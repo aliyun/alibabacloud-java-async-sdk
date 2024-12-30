@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IDPermission} extends {@link TeaModel}
  *
  * <p>IDPermission</p>
@@ -21,7 +27,7 @@ public class IDPermission extends TeaModel {
     private Permission permission;
 
     @com.aliyun.core.annotation.NameInMap("roles")
-    private java.util.List < String > roles;
+    private java.util.List<String> roles;
 
     private IDPermission(Builder builder) {
         this.disinheritSubGroup = builder.disinheritSubGroup;
@@ -62,7 +68,7 @@ public class IDPermission extends TeaModel {
     /**
      * @return roles
      */
-    public java.util.List < String > getRoles() {
+    public java.util.List<String> getRoles() {
         return this.roles;
     }
 
@@ -70,7 +76,7 @@ public class IDPermission extends TeaModel {
         private Boolean disinheritSubGroup; 
         private Long expireTime; 
         private Permission permission; 
-        private java.util.List < String > roles; 
+        private java.util.List<String> roles; 
 
         /**
          * disinherit_sub_group.
@@ -99,7 +105,7 @@ public class IDPermission extends TeaModel {
         /**
          * roles.
          */
-        public Builder roles(java.util.List < String > roles) {
+        public Builder roles(java.util.List<String> roles) {
             this.roles = roles;
             return this;
         }

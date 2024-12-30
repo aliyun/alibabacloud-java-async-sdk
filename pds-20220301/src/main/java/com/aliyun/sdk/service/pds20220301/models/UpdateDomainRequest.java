@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDomainRequest} extends {@link RequestModel}
  *
  * <p>UpdateDomainRequest</p>
@@ -152,7 +158,7 @@ public class UpdateDomainRequest extends Request {
         } 
 
         /**
-         * The description of the domain.
+         * <p>The description of the domain.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -161,7 +167,11 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * The domain ID.
+         * <p>The domain ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj1</p>
          */
         public Builder domainId(String domainId) {
             this.putBodyParameter("domain_id", domainId);
@@ -170,7 +180,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * The name of the domain.
+         * <p>The name of the domain.</p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("domain_name", domainName);
@@ -179,7 +189,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the default drive feature. A value of true specifies that all users are assigned a drive by default on the first logon. Default value: false.
+         * <p>Specifies whether to enable the default drive feature. A value of true specifies that all users are assigned a drive by default on the first logon. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder initDriveEnable(Boolean initDriveEnable) {
             this.putBodyParameter("init_drive_enable", initDriveEnable);
@@ -188,7 +201,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * The size of the default drive. Unit: bytes. You must specify init_drive_size if you set init_drive_enable to true. Default value: 0. A value of 0 specifies that the size of the default drive is 0 bytes and you cannot upload files to the drive. To initialize the default drive, set init_drive_size to 0. A value of -1 specifies that the size is unlimited.
+         * <p>The size of the default drive. Unit: bytes. You must specify init_drive_size if you set init_drive_enable to true. Default value: 0. A value of 0 specifies that the size of the default drive is 0 bytes and you cannot upload files to the drive. To initialize the default drive, set init_drive_size to 0. A value of -1 specifies that the size is unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1073741824</p>
          */
         public Builder initDriveSize(Long initDriveSize) {
             this.putBodyParameter("init_drive_size", initDriveSize);
@@ -197,7 +213,7 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * The access policy of the application.
+         * <p>The access policy of the application.</p>
          */
         public Builder publishedAppAccessStrategy(AppAccessStrategy publishedAppAccessStrategy) {
             this.putBodyParameter("published_app_access_strategy", publishedAppAccessStrategy);
@@ -206,7 +222,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * The total storage quota for all drives in the domain. A value of 0 specifies that the quota is unlimited.
+         * <p>The total storage quota for all drives in the domain. A value of 0 specifies that the quota is unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1099511627776</p>
          */
         public Builder sizeQuota(Long sizeQuota) {
             this.putBodyParameter("size_quota", sizeQuota);
@@ -215,7 +234,10 @@ public class UpdateDomainRequest extends Request {
         }
 
         /**
-         * The maximum number of users that can be created in the domain.
+         * <p>The maximum number of users that can be created in the domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder userCountQuota(Long userCountQuota) {
             this.putBodyParameter("user_count_quota", userCountQuota);

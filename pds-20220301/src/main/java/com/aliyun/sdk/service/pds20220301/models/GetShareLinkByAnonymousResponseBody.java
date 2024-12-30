@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetShareLinkByAnonymousResponseBody} extends {@link TeaModel}
  *
  * <p>GetShareLinkByAnonymousResponseBody</p>
@@ -265,7 +271,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         private Long videoPreviewCount; 
 
         /**
-         * The number of times that the shared files are visited.
+         * <p>The number of times that the shared files are visited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder accessCount(Long accessCount) {
             this.accessCount = accessCount;
@@ -273,7 +282,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The profile picture of the user who created the share link.
+         * <p>The profile picture of the user who created the share link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyunpds.com/a.jpg">https://aliyunpds.com/a.jpg</a></p>
          */
         public Builder avatar(String avatar) {
             this.avatar = avatar;
@@ -281,7 +293,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the user who created the share link.
+         * <p>The ID of the user who created the share link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c9b7a5aa04d14ae3867fdc886fa01da4</p>
          */
         public Builder creatorId(String creatorId) {
             this.creatorId = creatorId;
@@ -289,7 +304,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the user who created the share link. The value is masked.
+         * <p>The name of the user who created the share link. The value is masked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AB***CD</p>
          */
         public Builder creatorName(String creatorName) {
             this.creatorName = creatorName;
@@ -297,7 +315,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The mobile number of the user who created the share link. The value is masked.
+         * <p>The mobile number of the user who created the share link. The value is masked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>136****00</p>
          */
         public Builder creatorPhone(String creatorPhone) {
             this.creatorPhone = creatorPhone;
@@ -305,7 +326,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the downloads of the shared files are prohibited.
+         * <p>Indicates whether the downloads of the shared files are prohibited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableDownload(Boolean disableDownload) {
             this.disableDownload = disableDownload;
@@ -313,7 +337,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the previews of the shared files are prohibited.
+         * <p>Indicates whether the previews of the shared files are prohibited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disablePreview(Boolean disablePreview) {
             this.disablePreview = disablePreview;
@@ -321,7 +348,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the saves of the shared files are prohibited.
+         * <p>Indicates whether the saves of the shared files are prohibited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableSave(Boolean disableSave) {
             this.disableSave = disableSave;
@@ -329,7 +359,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The number of times that the shared files are downloaded.
+         * <p>The number of times that the shared files are downloaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder downloadCount(Long downloadCount) {
             this.downloadCount = downloadCount;
@@ -337,7 +370,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of times that the shared files can be downloaded.
+         * <p>The maximum number of times that the shared files can be downloaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder downloadLimit(Long downloadLimit) {
             this.downloadLimit = downloadLimit;
@@ -345,7 +381,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the share link expires.
+         * <p>The time when the share link expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-20T06:51:27.292Z</p>
          */
         public Builder expiration(String expiration) {
             this.expiration = expiration;
@@ -353,7 +392,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The number of times that the shared files are previewed.
+         * <p>The number of times that the shared files are previewed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder previewCount(Long previewCount) {
             this.previewCount = previewCount;
@@ -361,7 +403,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of times that the shared files can be previewed.
+         * <p>The maximum number of times that the shared files can be previewed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder previewLimit(Long previewLimit) {
             this.previewLimit = previewLimit;
@@ -369,7 +414,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The number of times that the shared files are reported.
+         * <p>The number of times that the shared files are reported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder reportCount(Long reportCount) {
             this.reportCount = reportCount;
@@ -377,7 +425,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The number of times that the shared files are saved.
+         * <p>The number of times that the shared files are saved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder saveCount(Long saveCount) {
             this.saveCount = saveCount;
@@ -385,7 +436,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of times that the shared files can be saved and downloaded.
+         * <p>The maximum number of times that the shared files can be saved and downloaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder saveDownloadLimit(Long saveDownloadLimit) {
             this.saveDownloadLimit = saveDownloadLimit;
@@ -393,7 +447,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of times that the shared files can be saved.
+         * <p>The maximum number of times that the shared files can be saved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder saveLimit(Long saveLimit) {
             this.saveLimit = saveLimit;
@@ -401,7 +458,7 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the share link.
+         * <p>The name of the share link.</p>
          */
         public Builder shareName(String shareName) {
             this.shareName = shareName;
@@ -409,7 +466,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the share link was last modified.
+         * <p>The time when the share link was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-20T06:51:27.292Z</p>
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
@@ -417,7 +477,10 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
         }
 
         /**
-         * The number of times that the videos are previewed in the shared files.
+         * <p>The number of times that the videos are previewed in the shared files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder videoPreviewCount(Long videoPreviewCount) {
             this.videoPreviewCount = videoPreviewCount;

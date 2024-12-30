@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFileRequest} extends {@link RequestModel}
  *
  * <p>ListFileRequest</p>
@@ -58,7 +64,7 @@ public class ListFileRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("thumbnail_processes")
-    private java.util.Map < String, ImageProcess > thumbnailProcesses;
+    private java.util.Map<String, ImageProcess> thumbnailProcesses;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("type")
@@ -174,7 +180,7 @@ public class ListFileRequest extends Request {
     /**
      * @return thumbnailProcesses
      */
-    public java.util.Map < String, ImageProcess > getThumbnailProcesses() {
+    public java.util.Map<String, ImageProcess> getThumbnailProcesses() {
         return this.thumbnailProcesses;
     }
 
@@ -197,7 +203,7 @@ public class ListFileRequest extends Request {
         private String parentFileId; 
         private String shareId; 
         private String status; 
-        private java.util.Map < String, ImageProcess > thumbnailProcesses; 
+        private java.util.Map<String, ImageProcess> thumbnailProcesses; 
         private String type; 
 
         private Builder() {
@@ -222,7 +228,7 @@ public class ListFileRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -231,12 +237,12 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * The category of the file. Valid values:
-         * <p>
+         * <p>The category of the file. Valid values:</p>
+         * <p>app: installation package. zip: compressed package. image: image. doc: document. video: video. audio: audio. others: other files.</p>
+         * <p>By default, files of all categories are returned.</p>
          * 
-         * app: installation package. zip: compressed package. image: image. doc: document. video: video. audio: audio. others: other files.
-         * 
-         * By default, files of all categories are returned.
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder category(String category) {
             this.putBodyParameter("category", category);
@@ -245,7 +251,10 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -254,14 +263,18 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * The fields to return.
-         * <p>
+         * <p>The fields to return.</p>
+         * <ol>
+         * <li>If this parameter is set to *, all fields of the file except the fields that must be specified are returned.</li>
+         * <li>If only specific fields are required, you can specify the following fields: url, exif, cropping_suggestion, characteristic_hash, video_metadata, and video_preview_metadata. If multiple fields are required, separate them with commas (,). Example: url,exif.</li>
+         * <li>The investigation_info field is returned only if you specify this field.</li>
+         * </ol>
+         * <p>By default, all fields except the fields that must be specified are returned.</p>
          * 
-         * 1.  If this parameter is set to \*, all fields of the file except the fields that must be specified are returned.
-         * 2.  If only specific fields are required, you can specify the following fields: url, exif, cropping_suggestion, characteristic_hash, video_metadata, and video_preview_metadata. If multiple fields are required, separate them with commas (,). Example: url,exif.
-         * 3.  The investigation_info field is returned only if you specify this field.
-         * 
-         * By default, all fields except the fields that must be specified are returned.
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder fields(String fields) {
             this.putBodyParameter("fields", fields);
@@ -270,10 +283,11 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * The maximum number of results to return. Valid values: 1 to 100.
-         * <p>
+         * <p>The maximum number of results to return. Valid values: 1 to 100.</p>
+         * <p>The number of returned results must be less than or equal to the specified number.</p>
          * 
-         * The number of returned results must be less than or equal to the specified number.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("limit", limit);
@@ -282,9 +296,10 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
-         * <p>
-         * By default, this parameter is empty.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.<br>By default, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder marker(String marker) {
             this.putBodyParameter("marker", marker);
@@ -293,68 +308,58 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * The sorting field.
-         * <p>
+         * <p>The sorting field.</p>
+         * <p>Default value: created_at.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>updated_at</p>
+         * <!-- -->
          * 
-         * Default value: created_at.
+         * <p>:</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>sorts the results based on the time when the file was last modified</p>
+         * <!-- -->
          * 
-         * *   updated_at
+         * <p>.</p>
+         * </li>
+         * <li><p>size</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>sorts the results based on the size of the file</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>.</p>
+         * </li>
+         * <li><p>name</p>
+         * <!-- -->
          * 
-         *     sorts the results based on the time when the file was last modified
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>sorts the results based on the name of the file</p>
+         * <!-- -->
          * 
-         *     .
+         * <p>.</p>
+         * </li>
+         * <li><p>created_at</p>
+         * <!-- -->
          * 
-         * *   size
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>sorts the results based on the time when the file was created</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>.</p>
+         * </li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     sorts the results based on the size of the file
-         * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   name
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     sorts the results based on the name of the file
-         * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   created_at
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     sorts the results based on the time when the file was created
-         * 
-         *     <!-- -->
-         * 
-         *     .
+         * <strong>example:</strong>
+         * <p>updated_at</p>
          */
         public Builder orderBy(String orderBy) {
             this.putBodyParameter("order_by", orderBy);
@@ -363,12 +368,12 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * The sorting direction. Valid values:
-         * <p>
+         * <p>The sorting direction. Valid values:</p>
+         * <p>ASC: ascending order. DESC: descending order.</p>
+         * <p>Default value: ASC.</p>
          * 
-         * ASC: ascending order. DESC: descending order.
-         * 
-         * Default value: ASC.
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder orderDirection(String orderDirection) {
             this.putBodyParameter("order_direction", orderDirection);
@@ -377,7 +382,11 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * The ID of the parent folder. If the parent folder is a root directory, set this parameter to root.
+         * <p>The ID of the parent folder. If the parent folder is a root directory, set this parameter to root.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder parentFileId(String parentFileId) {
             this.putBodyParameter("parent_file_id", parentFileId);
@@ -386,7 +395,10 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * The share ID. If you want to manage a file by using a share link, carry the `x-share-token` header for authentication in the request and specify share_id. In this case, `drive_id` is invalid. Otherwise, use an `AccessKey pair` or `access token` for authentication and specify `drive_id`. You must specify one of `share_id` and `drive_id`.
+         * <p>The share ID. If you want to manage a file by using a share link, carry the <code>x-share-token</code> header for authentication in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify one of <code>share_id</code> and <code>drive_id</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1FswpQ8</p>
          */
         public Builder shareId(String shareId) {
             this.putBodyParameter("share_id", shareId);
@@ -395,12 +407,12 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * The state of the file. Valid values:
-         * <p>
+         * <p>The state of the file. Valid values:</p>
+         * <p>available: Only normal files are returned. uploading: Only files that are being uploaded are returned.</p>
+         * <p>By default, only files in the available state are returned.</p>
          * 
-         * available: Only normal files are returned. uploading: Only files that are being uploaded are returned.
-         * 
-         * By default, only files in the available state are returned.
+         * <strong>example:</strong>
+         * <p>available</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -409,21 +421,21 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * The thumbnail configurations. Up to five thumbnails can be returned at a time. The value contains key-value pairs. You can customize the keys. The URL of a thumbnail is returned based on the key.
+         * <p>The thumbnail configurations. Up to five thumbnails can be returned at a time. The value contains key-value pairs. You can customize the keys. The URL of a thumbnail is returned based on the key.</p>
          */
-        public Builder thumbnailProcesses(java.util.Map < String, ImageProcess > thumbnailProcesses) {
+        public Builder thumbnailProcesses(java.util.Map<String, ImageProcess> thumbnailProcesses) {
             this.putBodyParameter("thumbnail_processes", thumbnailProcesses);
             this.thumbnailProcesses = thumbnailProcesses;
             return this;
         }
 
         /**
-         * The type of the file. Valid values:
-         * <p>
+         * <p>The type of the file. Valid values:</p>
+         * <p>file: Only files are returned. folder: Only folders are returned.</p>
+         * <p>By default, files of all types are returned.</p>
          * 
-         * file: Only files are returned. folder: Only folders are returned.
-         * 
-         * By default, files of all types are returned.
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

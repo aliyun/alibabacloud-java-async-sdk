@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FileRemovePermissionRequest} extends {@link RequestModel}
  *
  * <p>FileRemovePermissionRequest</p>
@@ -28,7 +34,7 @@ public class FileRemovePermissionRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("member_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < MemberList> memberList;
+    private java.util.List<MemberList> memberList;
 
     private FileRemovePermissionRequest(Builder builder) {
         super(builder);
@@ -75,7 +81,7 @@ public class FileRemovePermissionRequest extends Request {
     /**
      * @return memberList
      */
-    public java.util.List < MemberList> getMemberList() {
+    public java.util.List<MemberList> getMemberList() {
         return this.memberList;
     }
 
@@ -83,7 +89,7 @@ public class FileRemovePermissionRequest extends Request {
         private String domainId; 
         private String driveId; 
         private String fileId; 
-        private java.util.List < MemberList> memberList; 
+        private java.util.List<MemberList> memberList; 
 
         private Builder() {
             super();
@@ -98,7 +104,7 @@ public class FileRemovePermissionRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -107,7 +113,11 @@ public class FileRemovePermissionRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -116,7 +126,11 @@ public class FileRemovePermissionRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4221bf6e6ab43c255edc4463bf3a6f5f5d317406</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);
@@ -125,9 +139,10 @@ public class FileRemovePermissionRequest extends Request {
         }
 
         /**
-         * The identities with whom the file is shared.
+         * <p>The identities with whom the file is shared.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder memberList(java.util.List < MemberList> memberList) {
+        public Builder memberList(java.util.List<MemberList> memberList) {
             this.putBodyParameter("member_list", memberList);
             this.memberList = memberList;
             return this;
@@ -140,6 +155,12 @@ public class FileRemovePermissionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FileRemovePermissionRequest} extends {@link TeaModel}
+     *
+     * <p>FileRemovePermissionRequest</p>
+     */
     public static class MemberList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("identity")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -181,7 +202,8 @@ public class FileRemovePermissionRequest extends Request {
             private String roleId; 
 
             /**
-             * The identity to whom the permissions are granted, which is a user or a group.
+             * <p>The identity to whom the permissions are granted, which is a user or a group.</p>
+             * <p>This parameter is required.</p>
              */
             public Builder identity(Identity identity) {
                 this.identity = identity;
@@ -189,34 +211,24 @@ public class FileRemovePermissionRequest extends Request {
             }
 
             /**
-             * The role ID. You can grant permissions by assigning roles to identities, or you can customize the permissions. To grant permissions by assigning roles to identities, specify role_id. role_id and action_list are mutually exclusive. If both parameters are specified, role_id has a higher priority.
-             * <p>
+             * <p>The role ID. You can grant permissions by assigning roles to identities, or you can customize the permissions. To grant permissions by assigning roles to identities, specify role_id. role_id and action_list are mutually exclusive. If both parameters are specified, role_id has a higher priority.</p>
+             * <p>Valid values:</p>
+             * <p>SystemFileOwner: collaborator.</p>
+             * <p>SystemFileDownloader: downloader.</p>
+             * <p>SystemFileEditor: editor.</p>
+             * <p>SystemFileEditorWithoutDelete: editor without permissions to delete the file.</p>
+             * <p>SystemFileEditorWithoutShareLink: editor without permissions to share the file.</p>
+             * <p>SystemFileMetaViewer: viewer of lists.</p>
+             * <p>SystemFileUploader: uploader. SystemFileUploaderAndDownloader: uploader and downloader.</p>
+             * <p>SystemFileDownloaderWithShareLink: downloader and sharer.</p>
+             * <p>SystemFileUploaderAndDownloaderWithShareLink: uploader, downloader, and sharer.</p>
+             * <p>SystemFileUploaderAndViewer: viewer and uploader.</p>
+             * <p>SystemFileUploaderWithShareLink: uploader and sharer.</p>
+             * <p>SystemFileViewer: viewer.</p>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values:
-             * 
-             * SystemFileOwner: collaborator.
-             * 
-             * SystemFileDownloader: downloader.
-             * 
-             * SystemFileEditor: editor.
-             * 
-             * SystemFileEditorWithoutDelete: editor without permissions to delete the file.
-             * 
-             * SystemFileEditorWithoutShareLink: editor without permissions to share the file.
-             * 
-             * SystemFileMetaViewer: viewer of lists.
-             * 
-             * SystemFileUploader: uploader. SystemFileUploaderAndDownloader: uploader and downloader.
-             * 
-             * SystemFileDownloaderWithShareLink: downloader and sharer.
-             * 
-             * SystemFileUploaderAndDownloaderWithShareLink: uploader, downloader, and sharer.
-             * 
-             * SystemFileUploaderAndViewer: viewer and uploader.
-             * 
-             * SystemFileUploaderWithShareLink: uploader and sharer.
-             * 
-             * SystemFileViewer: viewer.
+             * <strong>example:</strong>
+             * <p>SystemFileDownloader</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;

@@ -1,16 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link File} extends {@link TeaModel}
  *
  * <p>File</p>
  */
 public class File extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("action_list")
+    private java.util.List<String> actionList;
+
     @com.aliyun.core.annotation.NameInMap("category")
     private String category;
 
@@ -50,11 +59,14 @@ public class File extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("hidden")
     private Boolean hidden;
 
+    @com.aliyun.core.annotation.NameInMap("id_path")
+    private String idPath;
+
     @com.aliyun.core.annotation.NameInMap("image_media_metadata")
     private ImageMediaMetadata imageMediaMetadata;
 
     @com.aliyun.core.annotation.NameInMap("labels")
-    private java.util.List < String > labels;
+    private java.util.List<String> labels;
 
     @com.aliyun.core.annotation.NameInMap("local_created_at")
     private String localCreatedAt;
@@ -64,6 +76,9 @@ public class File extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
+
+    @com.aliyun.core.annotation.NameInMap("name_path")
+    private String namePath;
 
     @com.aliyun.core.annotation.NameInMap("parent_file_id")
     private String parentFileId;
@@ -84,7 +99,7 @@ public class File extends TeaModel {
     private String thumbnail;
 
     @com.aliyun.core.annotation.NameInMap("thumbnail_urls")
-    private java.util.Map < String, String > thumbnailUrls;
+    private java.util.Map<String, String> thumbnailUrls;
 
     @com.aliyun.core.annotation.NameInMap("trashed_at")
     private String trashedAt;
@@ -99,12 +114,13 @@ public class File extends TeaModel {
     private String uploadId;
 
     @com.aliyun.core.annotation.NameInMap("user_tags")
-    private java.util.Map < String, String > userTags;
+    private java.util.Map<String, String> userTags;
 
     @com.aliyun.core.annotation.NameInMap("video_media_metadata")
     private VideoMediaMetadata videoMediaMetadata;
 
     private File(Builder builder) {
+        this.actionList = builder.actionList;
         this.category = builder.category;
         this.contentHash = builder.contentHash;
         this.contentHashName = builder.contentHashName;
@@ -118,11 +134,13 @@ public class File extends TeaModel {
         this.fileExtension = builder.fileExtension;
         this.fileId = builder.fileId;
         this.hidden = builder.hidden;
+        this.idPath = builder.idPath;
         this.imageMediaMetadata = builder.imageMediaMetadata;
         this.labels = builder.labels;
         this.localCreatedAt = builder.localCreatedAt;
         this.localModifiedAt = builder.localModifiedAt;
         this.name = builder.name;
+        this.namePath = builder.namePath;
         this.parentFileId = builder.parentFileId;
         this.revisionId = builder.revisionId;
         this.size = builder.size;
@@ -144,6 +162,13 @@ public class File extends TeaModel {
 
     public static File create() {
         return builder().build();
+    }
+
+    /**
+     * @return actionList
+     */
+    public java.util.List<String> getActionList() {
+        return this.actionList;
     }
 
     /**
@@ -238,6 +263,13 @@ public class File extends TeaModel {
     }
 
     /**
+     * @return idPath
+     */
+    public String getIdPath() {
+        return this.idPath;
+    }
+
+    /**
      * @return imageMediaMetadata
      */
     public ImageMediaMetadata getImageMediaMetadata() {
@@ -247,7 +279,7 @@ public class File extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < String > getLabels() {
+    public java.util.List<String> getLabels() {
         return this.labels;
     }
 
@@ -270,6 +302,13 @@ public class File extends TeaModel {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return namePath
+     */
+    public String getNamePath() {
+        return this.namePath;
     }
 
     /**
@@ -317,7 +356,7 @@ public class File extends TeaModel {
     /**
      * @return thumbnailUrls
      */
-    public java.util.Map < String, String > getThumbnailUrls() {
+    public java.util.Map<String, String> getThumbnailUrls() {
         return this.thumbnailUrls;
     }
 
@@ -352,7 +391,7 @@ public class File extends TeaModel {
     /**
      * @return userTags
      */
-    public java.util.Map < String, String > getUserTags() {
+    public java.util.Map<String, String> getUserTags() {
         return this.userTags;
     }
 
@@ -364,6 +403,7 @@ public class File extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<String> actionList; 
         private String category; 
         private String contentHash; 
         private String contentHashName; 
@@ -377,24 +417,34 @@ public class File extends TeaModel {
         private String fileExtension; 
         private String fileId; 
         private Boolean hidden; 
+        private String idPath; 
         private ImageMediaMetadata imageMediaMetadata; 
-        private java.util.List < String > labels; 
+        private java.util.List<String> labels; 
         private String localCreatedAt; 
         private String localModifiedAt; 
         private String name; 
+        private String namePath; 
         private String parentFileId; 
         private String revisionId; 
         private Long size; 
         private Boolean starred; 
         private String status; 
         private String thumbnail; 
-        private java.util.Map < String, String > thumbnailUrls; 
+        private java.util.Map<String, String> thumbnailUrls; 
         private String trashedAt; 
         private String type; 
         private String updatedAt; 
         private String uploadId; 
-        private java.util.Map < String, String > userTags; 
+        private java.util.Map<String, String> userTags; 
         private VideoMediaMetadata videoMediaMetadata; 
+
+        /**
+         * action_list.
+         */
+        public Builder actionList(java.util.List<String> actionList) {
+            this.actionList = actionList;
+            return this;
+        }
 
         /**
          * category.
@@ -501,6 +551,14 @@ public class File extends TeaModel {
         }
 
         /**
+         * id_path.
+         */
+        public Builder idPath(String idPath) {
+            this.idPath = idPath;
+            return this;
+        }
+
+        /**
          * image_media_metadata.
          */
         public Builder imageMediaMetadata(ImageMediaMetadata imageMediaMetadata) {
@@ -511,7 +569,7 @@ public class File extends TeaModel {
         /**
          * labels.
          */
-        public Builder labels(java.util.List < String > labels) {
+        public Builder labels(java.util.List<String> labels) {
             this.labels = labels;
             return this;
         }
@@ -537,6 +595,14 @@ public class File extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * name_path.
+         */
+        public Builder namePath(String namePath) {
+            this.namePath = namePath;
             return this;
         }
 
@@ -591,7 +657,7 @@ public class File extends TeaModel {
         /**
          * thumbnail_urls.
          */
-        public Builder thumbnailUrls(java.util.Map < String, String > thumbnailUrls) {
+        public Builder thumbnailUrls(java.util.Map<String, String> thumbnailUrls) {
             this.thumbnailUrls = thumbnailUrls;
             return this;
         }
@@ -631,7 +697,7 @@ public class File extends TeaModel {
         /**
          * user_tags.
          */
-        public Builder userTags(java.util.Map < String, String > userTags) {
+        public Builder userTags(java.util.Map<String, String> userTags) {
             this.userTags = userTags;
             return this;
         }

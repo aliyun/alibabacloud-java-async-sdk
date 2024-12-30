@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AppAccessStrategy} extends {@link TeaModel}
  *
  * <p>AppAccessStrategy</p>
@@ -15,7 +21,7 @@ public class AppAccessStrategy extends TeaModel {
     private String effect;
 
     @com.aliyun.core.annotation.NameInMap("except_app_id_list")
-    private java.util.List < String > exceptAppIdList;
+    private java.util.List<String> exceptAppIdList;
 
     private AppAccessStrategy(Builder builder) {
         this.effect = builder.effect;
@@ -40,13 +46,13 @@ public class AppAccessStrategy extends TeaModel {
     /**
      * @return exceptAppIdList
      */
-    public java.util.List < String > getExceptAppIdList() {
+    public java.util.List<String> getExceptAppIdList() {
         return this.exceptAppIdList;
     }
 
     public static final class Builder {
         private String effect; 
-        private java.util.List < String > exceptAppIdList; 
+        private java.util.List<String> exceptAppIdList; 
 
         /**
          * effect.
@@ -59,7 +65,7 @@ public class AppAccessStrategy extends TeaModel {
         /**
          * except_app_id_list.
          */
-        public Builder exceptAppIdList(java.util.List < String > exceptAppIdList) {
+        public Builder exceptAppIdList(java.util.List<String> exceptAppIdList) {
             this.exceptAppIdList = exceptAppIdList;
             return this;
         }

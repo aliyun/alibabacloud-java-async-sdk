@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FileDeleteUserTagsRequest} extends {@link RequestModel}
  *
  * <p>FileDeleteUserTagsRequest</p>
@@ -28,7 +34,7 @@ public class FileDeleteUserTagsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("key_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > keyList;
+    private java.util.List<String> keyList;
 
     private FileDeleteUserTagsRequest(Builder builder) {
         super(builder);
@@ -75,7 +81,7 @@ public class FileDeleteUserTagsRequest extends Request {
     /**
      * @return keyList
      */
-    public java.util.List < String > getKeyList() {
+    public java.util.List<String> getKeyList() {
         return this.keyList;
     }
 
@@ -83,7 +89,7 @@ public class FileDeleteUserTagsRequest extends Request {
         private String domainId; 
         private String driveId; 
         private String fileId; 
-        private java.util.List < String > keyList; 
+        private java.util.List<String> keyList; 
 
         private Builder() {
             super();
@@ -98,7 +104,7 @@ public class FileDeleteUserTagsRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -107,7 +113,11 @@ public class FileDeleteUserTagsRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -116,7 +126,11 @@ public class FileDeleteUserTagsRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9520943DC264</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);
@@ -125,9 +139,10 @@ public class FileDeleteUserTagsRequest extends Request {
         }
 
         /**
-         * The tags that you want to remove from a file. You cannot leave this parameter empty. You can specify up to 1,000 tags.
+         * <p>The tags that you want to remove from a file. You cannot leave this parameter empty. You can specify up to 1,000 tags.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder keyList(java.util.List < String > keyList) {
+        public Builder keyList(java.util.List<String> keyList) {
             this.putBodyParameter("key_list", keyList);
             this.keyList = keyList;
             return this;

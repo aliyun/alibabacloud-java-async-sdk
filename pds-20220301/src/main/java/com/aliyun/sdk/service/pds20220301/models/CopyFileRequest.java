@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyFileRequest} extends {@link RequestModel}
  *
  * <p>CopyFileRequest</p>
@@ -139,7 +145,7 @@ public class CopyFileRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -148,7 +154,10 @@ public class CopyFileRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically rename the file if the file name already exists in the destination folder. Default value: false.
+         * <p>Specifies whether to automatically rename the file if the file name already exists in the destination folder. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRename(Boolean autoRename) {
             this.putBodyParameter("auto_rename", autoRename);
@@ -157,7 +166,10 @@ public class CopyFileRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -166,7 +178,11 @@ public class CopyFileRequest extends Request {
         }
 
         /**
-         * The file ID or folder ID.
+         * <p>The file ID or folder ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4221bf6e6ab43c255edc4463bf3a6f5f5d317406</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);
@@ -175,7 +191,10 @@ public class CopyFileRequest extends Request {
         }
 
         /**
-         * The share ID. If you want to manage a file by using a share link, carry the `x-share-token` header for authentication in the request and specify share_id. In this case, `drive_id` is invalid. Otherwise, use an `AccessKey pair` or `access token` for authentication and specify `drive_id`. You must specify one of `share_id` and `drive_id`.
+         * <p>The share ID. If you want to manage a file by using a share link, carry the <code>x-share-token</code> header for authentication in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify one of <code>share_id</code> and <code>drive_id</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1FswpQ8</p>
          */
         public Builder shareId(String shareId) {
             this.putBodyParameter("share_id", shareId);
@@ -184,7 +203,10 @@ public class CopyFileRequest extends Request {
         }
 
         /**
-         * The ID of the drive to which you want to copy the file or folder. Default value: the value of drive_id.
+         * <p>The ID of the drive to which you want to copy the file or folder. Default value: the value of drive_id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder toDriveId(String toDriveId) {
             this.putBodyParameter("to_drive_id", toDriveId);
@@ -193,7 +215,11 @@ public class CopyFileRequest extends Request {
         }
 
         /**
-         * The ID of the destination parent folder. If you want to copy the file or folder to a root directory, set this parameter to root.
+         * <p>The ID of the destination parent folder. If you want to copy the file or folder to a root directory, set this parameter to root.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6520943DC261</p>
          */
         public Builder toParentFileId(String toParentFileId) {
             this.putBodyParameter("to_parent_file_id", toParentFileId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRecyclebinRequest} extends {@link RequestModel}
  *
  * <p>ListRecyclebinRequest</p>
@@ -110,7 +116,7 @@ public class ListRecyclebinRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -119,7 +125,11 @@ public class ListRecyclebinRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -128,14 +138,15 @@ public class ListRecyclebinRequest extends Request {
         }
 
         /**
-         * Specifies the returned fields.
-         * <p>
+         * <p>Specifies the returned fields.</p>
+         * <p>1. If you set this parameter to *, all fields of the file are returned.</p>
+         * <p>2. If you set this parameter to a null value or leave this parameter empty, the fields, such as file creator, file modifier, and custom tags, are not returned.</p>
+         * <p>The default value is a null value, which indicates that only some fields are returned.</p>
          * 
-         * 1\. If you set this parameter to \*, all fields of the file are returned.
-         * 
-         * 2\. If you set this parameter to a null value or leave this parameter empty, the fields, such as file creator, file modifier, and custom tags, are not returned.
-         * 
-         * The default value is a null value, which indicates that only some fields are returned.
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder fields(String fields) {
             this.putBodyParameter("fields", fields);
@@ -144,10 +155,11 @@ public class ListRecyclebinRequest extends Request {
         }
 
         /**
-         * The maximum number of results to return. Valid values: 1 to 200. Default value: 50.
-         * <p>
+         * <p>The maximum number of results to return. Valid values: 1 to 200. Default value: 50.</p>
+         * <p>The number of returned results must be less than or equal to the specified number.</p>
          * 
-         * The number of returned results must be less than or equal to the specified number.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("limit", limit);
@@ -156,7 +168,10 @@ public class ListRecyclebinRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is left empty.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder marker(String marker) {
             this.putBodyParameter("marker", marker);

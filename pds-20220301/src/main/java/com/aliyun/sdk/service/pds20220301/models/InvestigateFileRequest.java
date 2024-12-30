@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvestigateFileRequest} extends {@link RequestModel}
  *
  * <p>InvestigateFileRequest</p>
@@ -18,7 +24,7 @@ public class InvestigateFileRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("drive_file_ids")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < DriveFileIds> driveFileIds;
+    private java.util.List<DriveFileIds> driveFileIds;
 
     private InvestigateFileRequest(Builder builder) {
         super(builder);
@@ -49,13 +55,13 @@ public class InvestigateFileRequest extends Request {
     /**
      * @return driveFileIds
      */
-    public java.util.List < DriveFileIds> getDriveFileIds() {
+    public java.util.List<DriveFileIds> getDriveFileIds() {
         return this.driveFileIds;
     }
 
     public static final class Builder extends Request.Builder<InvestigateFileRequest, Builder> {
         private String domainId; 
-        private java.util.List < DriveFileIds> driveFileIds; 
+        private java.util.List<DriveFileIds> driveFileIds; 
 
         private Builder() {
             super();
@@ -68,7 +74,7 @@ public class InvestigateFileRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -77,9 +83,9 @@ public class InvestigateFileRequest extends Request {
         }
 
         /**
-         * drive_file_ids.
+         * <p>This parameter is required.</p>
          */
-        public Builder driveFileIds(java.util.List < DriveFileIds> driveFileIds) {
+        public Builder driveFileIds(java.util.List<DriveFileIds> driveFileIds) {
             this.putBodyParameter("drive_file_ids", driveFileIds);
             this.driveFileIds = driveFileIds;
             return this;
@@ -92,6 +98,12 @@ public class InvestigateFileRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InvestigateFileRequest} extends {@link TeaModel}
+     *
+     * <p>InvestigateFileRequest</p>
+     */
     public static class DriveFileIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("drive_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -133,7 +145,10 @@ public class InvestigateFileRequest extends Request {
             private String fileId; 
 
             /**
-             * drive_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder driveId(String driveId) {
                 this.driveId = driveId;
@@ -141,7 +156,10 @@ public class InvestigateFileRequest extends Request {
             }
 
             /**
-             * file_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9520943DC264</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;

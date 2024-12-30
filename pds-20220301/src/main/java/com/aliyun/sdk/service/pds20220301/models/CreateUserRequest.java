@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserRequest} extends {@link RequestModel}
  *
  * <p>CreateUserRequest</p>
@@ -30,7 +36,7 @@ public class CreateUserRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("group_info_list")
-    private java.util.List < GroupInfoList> groupInfoList;
+    private java.util.List<GroupInfoList> groupInfoList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("nick_name")
@@ -51,7 +57,7 @@ public class CreateUserRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user_data")
-    private java.util.Map < String, ? > userData;
+    private java.util.Map<String, ?> userData;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user_id")
@@ -123,7 +129,7 @@ public class CreateUserRequest extends Request {
     /**
      * @return groupInfoList
      */
-    public java.util.List < GroupInfoList> getGroupInfoList() {
+    public java.util.List<GroupInfoList> getGroupInfoList() {
         return this.groupInfoList;
     }
 
@@ -158,7 +164,7 @@ public class CreateUserRequest extends Request {
     /**
      * @return userData
      */
-    public java.util.Map < String, ? > getUserData() {
+    public java.util.Map<String, ?> getUserData() {
         return this.userData;
     }
 
@@ -181,12 +187,12 @@ public class CreateUserRequest extends Request {
         private String avatar; 
         private String description; 
         private String email; 
-        private java.util.List < GroupInfoList> groupInfoList; 
+        private java.util.List<GroupInfoList> groupInfoList; 
         private String nickName; 
         private String phone; 
         private String role; 
         private String status; 
-        private java.util.Map < String, ? > userData; 
+        private java.util.Map<String, ?> userData; 
         private String userId; 
         private String userName; 
 
@@ -211,7 +217,7 @@ public class CreateUserRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -220,12 +226,12 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The URL of the profile picture.
-         * <p>
+         * <p>The URL of the profile picture.</p>
+         * <p>If you specify the parameter in the HTTP URL format, the URL must start with http:// or https:// and can be up to 4 KB in size.</p>
+         * <p>If you specify the parameter in the data URL format, the URL must start with data:// and be encoded in Base64. The URL can be up to 300 KB in size.</p>
          * 
-         * If you specify the parameter in the HTTP URL format, the URL must start with http:// or https:// and can be up to 4 KB in size.
-         * 
-         * If you specify the parameter in the data URL format, the URL must start with data:// and be encoded in Base64. The URL can be up to 300 KB in size.
+         * <strong>example:</strong>
+         * <p><a href="http://a.b.c/pds.jpg">http://a.b.c/pds.jpg</a></p>
          */
         public Builder avatar(String avatar) {
             this.putBodyParameter("avatar", avatar);
@@ -234,7 +240,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The description of the user. The description can be up to 1,024 characters in length.
+         * <p>The description of the user. The description can be up to 1,024 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The VIP user</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -243,7 +252,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The email address.
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@pds.com">123@pds.com</a></p>
          */
         public Builder email(String email) {
             this.putBodyParameter("email", email);
@@ -252,16 +264,19 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The information about the group.
+         * <p>The information about the group.</p>
          */
-        public Builder groupInfoList(java.util.List < GroupInfoList> groupInfoList) {
+        public Builder groupInfoList(java.util.List<GroupInfoList> groupInfoList) {
             this.putBodyParameter("group_info_list", groupInfoList);
             this.groupInfoList = groupInfoList;
             return this;
         }
 
         /**
-         * The nickname of the user. The nickname can be up to 128 characters in length.
+         * <p>The nickname of the user. The nickname can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pdsuer</p>
          */
         public Builder nickName(String nickName) {
             this.putBodyParameter("nick_name", nickName);
@@ -270,7 +285,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The phone number.
+         * <p>The phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13900001111</p>
          */
         public Builder phone(String phone) {
             this.putBodyParameter("phone", phone);
@@ -279,56 +297,53 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The role of the user. Default value: user. Valid values:
-         * <p>
+         * <p>The role of the user. Default value: user. Valid values:</p>
+         * <ul>
+         * <li>superadmin</li>
+         * <li>admin</li>
+         * <li>user</li>
+         * </ul>
+         * <p>If the domain can be divided into subdomains, the subdomain_super_admin and subdomain_admin roles are also supported.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>subdomain_super_admin</p>
+         * <!-- -->
          * 
-         * *   superadmin
-         * *   admin
-         * *   user
+         * <!-- -->
          * 
-         * If the domain can be divided into subdomains, the subdomain_super_admin and subdomain_admin roles are also supported.
+         * <!-- -->
+         * </li>
+         * <li><p>subdomain_admin</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   subdomain_super_admin
+         * <!-- -->
+         * </li>
+         * <li><p>superadmin</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>admin</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   subdomain_admin
+         * <!-- -->
+         * </li>
+         * <li><p>user</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   superadmin
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   admin
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   user
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder role(String role) {
             this.putBodyParameter("role", role);
@@ -337,11 +352,14 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The state of the user. Default value: enabled. Valid values:
-         * <p>
+         * <p>The state of the user. Default value: enabled. Valid values:</p>
+         * <ul>
+         * <li>enabled: The user is in a normal state.</li>
+         * <li>disabled: The user is prohibited from logon.</li>
+         * </ul>
          * 
-         * *   enabled: The user is in a normal state.
-         * *   disabled: The user is prohibited from logon.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -350,16 +368,23 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The custom data. The data can be up to 1,024 characters in length.
+         * <p>The custom data. The data can be up to 1,024 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>md</p>
          */
-        public Builder userData(java.util.Map < String, ? > userData) {
+        public Builder userData(java.util.Map<String, ?> userData) {
             this.putBodyParameter("user_data", userData);
             this.userData = userData;
             return this;
         }
 
         /**
-         * The user ID. The ID can be up to 64 characters in length and cannot contain number signs (#).
+         * <p>The user ID. The ID can be up to 64 characters in length and cannot contain number signs (#).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pdsuserid1</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -368,7 +393,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The username. The username can be up to 128 characters in length.
+         * <p>The username. The username can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pdsusername</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("user_name", userName);
@@ -383,6 +411,12 @@ public class CreateUserRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUserRequest} extends {@link TeaModel}
+     *
+     * <p>CreateUserRequest</p>
+     */
     public static class GroupInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("group_id")
         private String groupId;
@@ -410,7 +444,10 @@ public class CreateUserRequest extends Request {
             private String groupId; 
 
             /**
-             * The group ID.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g123</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDriveRequest} extends {@link RequestModel}
  *
  * <p>CreateDriveRequest</p>
@@ -169,7 +175,7 @@ public class CreateDriveRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -178,7 +184,10 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * Specifies whether the drive is the default drive. Default value: false.
+         * <p>Specifies whether the drive is the default drive. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder _default(Boolean _default) {
             this.putBodyParameter("default", _default);
@@ -187,7 +196,10 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * The description of the drive. The description can be up to 1,024 characters in length.
+         * <p>The description of the drive. The description can be up to 1,024 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drive for test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -196,7 +208,11 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * The name of the drive. The name can be up to 128 characters in length.
+         * <p>The name of the drive. The name can be up to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_drive</p>
          */
         public Builder driveName(String driveName) {
             this.putBodyParameter("drive_name", driveName);
@@ -205,7 +221,10 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * The type of the drive. Set the value to normal.
+         * <p>The type of the drive. Set the value to normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder driveType(String driveType) {
             this.putBodyParameter("drive_type", driveType);
@@ -214,7 +233,11 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * The owner of the drive.
+         * <p>The owner of the drive.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3b3d7245c159488da17d081ad6c64687</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("owner", owner);
@@ -223,10 +246,12 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * The type of the owner. Valid values:
-         * <p>
+         * <p>The type of the owner. Valid values:</p>
+         * <p>user and group.</p>
+         * <p>This parameter is required.</p>
          * 
-         * user and group.
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder ownerType(String ownerType) {
             this.putBodyParameter("owner_type", ownerType);
@@ -235,12 +260,12 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * The state of the drive. Valid values:
-         * <p>
+         * <p>The state of the drive. Valid values:</p>
+         * <p>enabled and disabled.</p>
+         * <p>Default value: enabled.</p>
          * 
-         * enabled and disabled.
-         * 
-         * Default value: enabled.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -249,7 +274,10 @@ public class CreateDriveRequest extends Request {
         }
 
         /**
-         * The total size of the drive. Unit: bytes. By default, the size is unlimited.
+         * <p>The total size of the drive. Unit: bytes. By default, the size is unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder totalSize(Long totalSize) {
             this.putBodyParameter("total_size", totalSize);

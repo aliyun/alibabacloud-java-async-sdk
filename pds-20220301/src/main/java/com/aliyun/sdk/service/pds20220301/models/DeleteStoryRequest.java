@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteStoryRequest} extends {@link RequestModel}
  *
  * <p>DeleteStoryRequest</p>
@@ -83,7 +89,7 @@ public class DeleteStoryRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -92,7 +98,10 @@ public class DeleteStoryRequest extends Request {
         }
 
         /**
-         * drive_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -101,7 +110,10 @@ public class DeleteStoryRequest extends Request {
         }
 
         /**
-         * story_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9132e0d8-fe92-4e56-86c3-f5f112308003</p>
          */
         public Builder storyId(String storyId) {
             this.putBodyParameter("story_id", storyId);

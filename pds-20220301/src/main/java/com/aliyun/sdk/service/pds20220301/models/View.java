@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link View} extends {@link TeaModel}
  *
  * <p>View</p>
@@ -21,7 +27,7 @@ public class View extends TeaModel {
     private String description;
 
     @com.aliyun.core.annotation.NameInMap("ex_fields_info")
-    private java.util.Map < String, ? > exFieldsInfo;
+    private java.util.Map<String, ?> exFieldsInfo;
 
     @com.aliyun.core.annotation.NameInMap("file_count")
     private Long fileCount;
@@ -82,7 +88,7 @@ public class View extends TeaModel {
     /**
      * @return exFieldsInfo
      */
-    public java.util.Map < String, ? > getExFieldsInfo() {
+    public java.util.Map<String, ?> getExFieldsInfo() {
         return this.exFieldsInfo;
     }
 
@@ -125,7 +131,7 @@ public class View extends TeaModel {
         private String category; 
         private String createdAt; 
         private String description; 
-        private java.util.Map < String, ? > exFieldsInfo; 
+        private java.util.Map<String, ?> exFieldsInfo; 
         private Long fileCount; 
         private String name; 
         private String owner; 
@@ -159,7 +165,7 @@ public class View extends TeaModel {
         /**
          * ex_fields_info.
          */
-        public Builder exFieldsInfo(java.util.Map < String, ? > exFieldsInfo) {
+        public Builder exFieldsInfo(java.util.Map<String, ?> exFieldsInfo) {
             this.exFieldsInfo = exFieldsInfo;
             return this;
         }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeltaResponseBody} extends {@link TeaModel}
  *
  * <p>ListDeltaResponseBody</p>
@@ -18,7 +24,7 @@ public class ListDeltaResponseBody extends TeaModel {
     private Boolean hasMore;
 
     @com.aliyun.core.annotation.NameInMap("items")
-    private java.util.List < Items> items;
+    private java.util.List<Items> items;
 
     private ListDeltaResponseBody(Builder builder) {
         this.cursor = builder.cursor;
@@ -51,17 +57,20 @@ public class ListDeltaResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < Items> getItems() {
+    public java.util.List<Items> getItems() {
         return this.items;
     }
 
     public static final class Builder {
         private String cursor; 
         private Boolean hasMore; 
-        private java.util.List < Items> items; 
+        private java.util.List<Items> items; 
 
         /**
-         * The cursor of the incremental information.
+         * <p>The cursor of the incremental information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1WQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder cursor(String cursor) {
             this.cursor = cursor;
@@ -69,7 +78,10 @@ public class ListDeltaResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether more information is returned.
+         * <p>Indicates whether more information is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasMore(Boolean hasMore) {
             this.hasMore = hasMore;
@@ -77,9 +89,9 @@ public class ListDeltaResponseBody extends TeaModel {
         }
 
         /**
-         * The incremental information returned.
+         * <p>The incremental information returned.</p>
          */
-        public Builder items(java.util.List < Items> items) {
+        public Builder items(java.util.List<Items> items) {
             this.items = items;
             return this;
         }
@@ -90,6 +102,12 @@ public class ListDeltaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDeltaResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeltaResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("file")
         private File file;
@@ -141,7 +159,7 @@ public class ListDeltaResponseBody extends TeaModel {
             private String op; 
 
             /**
-             * The information about the file.
+             * <p>The information about the file.</p>
              */
             public Builder file(File file) {
                 this.file = file;
@@ -149,7 +167,10 @@ public class ListDeltaResponseBody extends TeaModel {
             }
 
             /**
-             * The file ID.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122fb09598ae66777c7040109a16f49381f6abe2</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -157,17 +178,20 @@ public class ListDeltaResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that is performed. Valid values: Valid values:
-             * <p>
+             * <p>The operation that is performed. Valid values: Valid values:</p>
+             * <ul>
+             * <li>create</li>
+             * <li>overwrite</li>
+             * <li>delete</li>
+             * <li>update</li>
+             * <li>move</li>
+             * <li>trash</li>
+             * <li>restore</li>
+             * <li>rename</li>
+             * </ul>
              * 
-             * *   create
-             * *   overwrite
-             * *   delete
-             * *   update
-             * *   move
-             * *   trash
-             * *   restore
-             * *   rename
+             * <strong>example:</strong>
+             * <p>create</p>
              */
             public Builder op(String op) {
                 this.op = op;

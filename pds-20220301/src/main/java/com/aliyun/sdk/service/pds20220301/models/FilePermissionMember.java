@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FilePermissionMember} extends {@link TeaModel}
  *
  * <p>FilePermissionMember</p>
  */
 public class FilePermissionMember extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("action_list")
-    private java.util.List < String > actionList;
+    private java.util.List<String> actionList;
 
     @com.aliyun.core.annotation.NameInMap("disinherit_sub_group")
     private Boolean disinheritSubGroup;
@@ -45,7 +51,7 @@ public class FilePermissionMember extends TeaModel {
     /**
      * @return actionList
      */
-    public java.util.List < String > getActionList() {
+    public java.util.List<String> getActionList() {
         return this.actionList;
     }
 
@@ -78,7 +84,7 @@ public class FilePermissionMember extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > actionList; 
+        private java.util.List<String> actionList; 
         private Boolean disinheritSubGroup; 
         private Long expireTime; 
         private Identity identity; 
@@ -87,7 +93,7 @@ public class FilePermissionMember extends TeaModel {
         /**
          * action_list.
          */
-        public Builder actionList(java.util.List < String > actionList) {
+        public Builder actionList(java.util.List<String> actionList) {
             this.actionList = actionList;
             return this;
         }

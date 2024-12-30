@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CsiGetFileInfoRequest} extends {@link RequestModel}
  *
  * <p>CsiGetFileInfoRequest</p>
@@ -98,7 +104,7 @@ public class CsiGetFileInfoRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -107,7 +113,10 @@ public class CsiGetFileInfoRequest extends Request {
         }
 
         /**
-         * drive_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -116,7 +125,10 @@ public class CsiGetFileInfoRequest extends Request {
         }
 
         /**
-         * file_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9520943DC264</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);

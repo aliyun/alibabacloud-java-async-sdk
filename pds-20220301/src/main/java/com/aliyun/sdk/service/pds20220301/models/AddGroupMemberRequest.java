@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGroupMemberRequest} extends {@link RequestModel}
  *
  * <p>AddGroupMemberRequest</p>
@@ -98,7 +104,8 @@ public class AddGroupMemberRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * <p>A short description of struct</p>
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -107,7 +114,11 @@ public class AddGroupMemberRequest extends Request {
         }
 
         /**
-         * The ID of the destination group to which the member is added.
+         * <p>The ID of the destination group to which the member is added.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3e5***2c2</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("group_id", groupId);
@@ -116,7 +127,11 @@ public class AddGroupMemberRequest extends Request {
         }
 
         /**
-         * The member ID. If member_type is set to user, set this parameter to a user ID.
+         * <p>The member ID. If member_type is set to user, set this parameter to a user ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e4***1b1</p>
          */
         public Builder memberId(String memberId) {
             this.putBodyParameter("member_id", memberId);
@@ -125,12 +140,15 @@ public class AddGroupMemberRequest extends Request {
         }
 
         /**
-         * The type of the member. Set the value to user. When you create a group, you can directly add the group to a parent group.
-         * <p>
+         * <p>The type of the member. Set the value to user. When you create a group, you can directly add the group to a parent group.</p>
+         * <ul>
+         * <li>user</li>
+         * </ul>
+         * <p>Note: A group can be added to only one group. A user can be added to multiple groups.</p>
+         * <p>This parameter is required.</p>
          * 
-         * * user
-         * 
-         * Note: A group can be added to only one group. A user can be added to multiple groups.
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder memberType(String memberType) {
             this.putBodyParameter("member_type", memberType);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupMemberRequest} extends {@link RequestModel}
  *
  * <p>ListGroupMemberRequest</p>
@@ -110,7 +116,7 @@ public class ListGroupMemberRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * <p>A short description of struct</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -119,7 +125,11 @@ public class ListGroupMemberRequest extends Request {
         }
 
         /**
-         * The ID of the group of which you want to query members.
+         * <p>The ID of the group of which you want to query members.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3e5***2c2</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("group_id", groupId);
@@ -128,7 +138,10 @@ public class ListGroupMemberRequest extends Request {
         }
 
         /**
-         * The maximum number of results to return. Valid values: 1 to 100. Default value: 100.
+         * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("limit", limit);
@@ -137,9 +150,10 @@ public class ListGroupMemberRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
-         * <p>
-         * By default, this parameter is left empty.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.<br>By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder marker(String marker) {
             this.putBodyParameter("marker", marker);
@@ -148,13 +162,15 @@ public class ListGroupMemberRequest extends Request {
         }
 
         /**
-         * The member type. If you do not specify this parameter, both types of members are returned. Valid values:
-         * <p>
+         * <p>The member type. If you do not specify this parameter, both types of members are returned. Valid values:</p>
+         * <ul>
+         * <li>user</li>
+         * <li>group</li>
+         * </ul>
+         * <p>Note: A group can be a member of only one group. It cannot be a member of multiple groups. A user can be a member of multiple groups.</p>
          * 
-         * *   user
-         * *   group
-         * 
-         * Note: A group can be a member of only one group. It cannot be a member of multiple groups. A user can be a member of multiple groups.
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder memberType(String memberType) {
             this.putBodyParameter("member_type", memberType);

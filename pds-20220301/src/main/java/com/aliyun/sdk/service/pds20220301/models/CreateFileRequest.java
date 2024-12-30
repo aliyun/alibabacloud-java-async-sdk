@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileRequest} extends {@link RequestModel}
  *
  * <p>CreateFileRequest</p>
@@ -76,7 +82,7 @@ public class CreateFileRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("part_info_list")
-    private java.util.List < PartInfoList> partInfoList;
+    private java.util.List<PartInfoList> partInfoList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pre_hash")
@@ -97,7 +103,7 @@ public class CreateFileRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user_tags")
-    private java.util.List < UserTag > userTags;
+    private java.util.List<UserTag> userTags;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("video_media_metadata")
@@ -250,7 +256,7 @@ public class CreateFileRequest extends Request {
     /**
      * @return partInfoList
      */
-    public java.util.List < PartInfoList> getPartInfoList() {
+    public java.util.List<PartInfoList> getPartInfoList() {
         return this.partInfoList;
     }
 
@@ -285,7 +291,7 @@ public class CreateFileRequest extends Request {
     /**
      * @return userTags
      */
-    public java.util.List < UserTag > getUserTags() {
+    public java.util.List<UserTag> getUserTags() {
         return this.userTags;
     }
 
@@ -312,12 +318,12 @@ public class CreateFileRequest extends Request {
         private String name; 
         private Boolean parallelUpload; 
         private String parentFileId; 
-        private java.util.List < PartInfoList> partInfoList; 
+        private java.util.List<PartInfoList> partInfoList; 
         private String preHash; 
         private String shareId; 
         private Long size; 
         private String type; 
-        private java.util.List < UserTag > userTags; 
+        private java.util.List<UserTag> userTags; 
         private VideoMediaMetadata videoMediaMetadata; 
 
         private Builder() {
@@ -351,7 +357,7 @@ public class CreateFileRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -360,16 +366,14 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The processing method that is used if the file that you want to create has the same name as an existing file in the cloud. Valid values:
-         * <p>
+         * <p>The processing method that is used if the file that you want to create has the same name as an existing file in the cloud. Valid values:</p>
+         * <p>ignore: allows you to create the file by using the same name as an existing file in the cloud.</p>
+         * <p>auto_rename: automatically renames the file that you want to create. By default, the current point in time is added to the end of the file name. Example: xxx_20060102_150405.</p>
+         * <p>refuse: does not create the file that you want to create but returns the information about the file that has the same name in the cloud.</p>
+         * <p>Default value: ignore.</p>
          * 
-         * ignore: allows you to create the file by using the same name as an existing file in the cloud.
-         * 
-         * auto_rename: automatically renames the file that you want to create. By default, the current point in time is added to the end of the file name. Example: xxx\_20060102\_150405.
-         * 
-         * refuse: does not create the file that you want to create but returns the information about the file that has the same name in the cloud.
-         * 
-         * Default value: ignore.
+         * <strong>example:</strong>
+         * <p>ignore</p>
          */
         public Builder checkNameMode(String checkNameMode) {
             this.putBodyParameter("check_name_mode", checkNameMode);
@@ -378,7 +382,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The hash value of the file content. The value is calculated based on the algorithm specified by content_hash_name.
+         * <p>The hash value of the file content. The value is calculated based on the algorithm specified by content_hash_name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C4A8D09CA3762AF61E59520943DC26494F8941B</p>
          */
         public Builder contentHash(String contentHash) {
             this.putBodyParameter("content_hash", contentHash);
@@ -387,7 +394,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The name of the algorithm that is used to calculate the hash value of the file content. Only SHA1 is supported.
+         * <p>The name of the algorithm that is used to calculate the hash value of the file content. Only SHA1 is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha1</p>
          */
         public Builder contentHashName(String contentHashName) {
             this.putBodyParameter("content_hash_name", contentHashName);
@@ -396,7 +406,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The type of the file content. Default value: application/oct-stream.
+         * <p>The type of the file content. Default value: application/oct-stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/json</p>
          */
         public Builder contentType(String contentType) {
             this.putBodyParameter("content_type", contentType);
@@ -405,7 +418,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The description of the file. The description can be up to 1,024 characters in length. By default, this parameter is left empty.
+         * <p>The description of the file. The description can be up to 1,024 characters in length. By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>重要文件</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -414,7 +430,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The drive ID. This parameter is required if the file is not uploaded by using the share URL of the file.
+         * <p>The drive ID. This parameter is required if the file is not uploaded by using the share URL of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -423,7 +442,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The file ID. This parameter is required if check_name_mode is set to ignore.
+         * <p>The file ID. This parameter is required if check_name_mode is set to ignore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9520943DC264</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);
@@ -432,7 +454,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * Specifies whether to hide the file or folder. By default, the file or folder is not hidden.
+         * <p>Specifies whether to hide the file or folder. By default, the file or folder is not hidden.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder hidden(Boolean hidden) {
             this.putBodyParameter("hidden", hidden);
@@ -441,7 +466,7 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The information about the image specified by the client.
+         * <p>The information about the image specified by the client.</p>
          */
         public Builder imageMediaMetadata(ImageMediaMetadata imageMediaMetadata) {
             this.putBodyParameter("image_media_metadata", imageMediaMetadata);
@@ -450,7 +475,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The time when the local file was created. By default, this parameter is left empty. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.
+         * <p>The time when the local file was created. By default, this parameter is left empty. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-20T06:51:27.292Z</p>
          */
         public Builder localCreatedAt(String localCreatedAt) {
             this.putBodyParameter("local_created_at", localCreatedAt);
@@ -459,7 +487,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The time when the local file was modified. By default, this parameter is left empty. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.
+         * <p>The time when the local file was modified. By default, this parameter is left empty. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-20T06:51:27.292Z</p>
          */
         public Builder localModifiedAt(String localModifiedAt) {
             this.putBodyParameter("local_modified_at", localModifiedAt);
@@ -468,7 +499,11 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The name of the file. The name can be up to 1,024 bytes in length based on the UTF-8 encoding rule and cannot end with a forward slash (/).
+         * <p>The name of the file. The name can be up to 1,024 bytes in length based on the UTF-8 encoding rule and cannot end with a forward slash (/).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a.txt</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -477,7 +512,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the parallel upload feature.
+         * <p>Specifies whether to enable the parallel upload feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder parallelUpload(Boolean parallelUpload) {
             this.putBodyParameter("parallel_upload", parallelUpload);
@@ -486,7 +524,11 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The ID of the parent directory. If you want to create a file or folder in the root directory, set this parameter to root.
+         * <p>The ID of the parent directory. If you want to create a file or folder in the root directory, set this parameter to root.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileid1</p>
          */
         public Builder parentFileId(String parentFileId) {
             this.putBodyParameter("parent_file_id", parentFileId);
@@ -495,16 +537,19 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The information about the file parts. You can specify up to 10,000 parts. By default, if you do not specify this parameter, only one part is returned.
+         * <p>The information about the file parts. You can specify up to 10,000 parts. By default, if you do not specify this parameter, only one part is returned.</p>
          */
-        public Builder partInfoList(java.util.List < PartInfoList> partInfoList) {
+        public Builder partInfoList(java.util.List<PartInfoList> partInfoList) {
             this.putBodyParameter("part_info_list", partInfoList);
             this.partInfoList = partInfoList;
             return this;
         }
 
         /**
-         * The SHA-1 hash value of the first 1 KB data of the file. This parameter is required if you perform instant file upload by using the pre-hashing feature. If the SHA-1 hash value is not matched on the cloud, the client does not need to calculate the SHA-1 hash value of the entire file.
+         * <p>The SHA-1 hash value of the first 1 KB data of the file. This parameter is required if you perform instant file upload by using the pre-hashing feature. If the SHA-1 hash value is not matched on the cloud, the client does not need to calculate the SHA-1 hash value of the entire file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C4A8D09CA3762AF61E59520943DC26494F89411</p>
          */
         public Builder preHash(String preHash) {
             this.putBodyParameter("pre_hash", preHash);
@@ -513,7 +558,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The share ID. This parameter is required if the file is uploaded by using the share URL of the file.
+         * <p>The share ID. This parameter is required if the file is uploaded by using the share URL of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1FswpQ8</p>
          */
         public Builder shareId(String shareId) {
             this.putBodyParameter("share_id", shareId);
@@ -522,7 +570,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The size of the file. Unit: bytes.
+         * <p>The size of the file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder size(Long size) {
             this.putBodyParameter("size", size);
@@ -531,10 +582,12 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The type of the file. Valid values:
-         * <p>
+         * <p>The type of the file. Valid values:</p>
+         * <p>file folder</p>
+         * <p>This parameter is required.</p>
          * 
-         * file folder
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -543,16 +596,16 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * The custom tags. You can specify up to 1,000 tags.
+         * <p>The custom tags. You can specify up to 1,000 tags.</p>
          */
-        public Builder userTags(java.util.List < UserTag > userTags) {
+        public Builder userTags(java.util.List<UserTag> userTags) {
             this.putBodyParameter("user_tags", userTags);
             this.userTags = userTags;
             return this;
         }
 
         /**
-         * The information about the video specified by the client.
+         * <p>The information about the video specified by the client.</p>
          */
         public Builder videoMediaMetadata(VideoMediaMetadata videoMediaMetadata) {
             this.putBodyParameter("video_media_metadata", videoMediaMetadata);
@@ -567,9 +620,15 @@ public class CreateFileRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFileRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFileRequest</p>
+     */
     public static class ParallelSha1Ctx extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("h")
-        private java.util.List < Long > h;
+        private java.util.List<Long> h;
 
         @com.aliyun.core.annotation.NameInMap("part_offset")
         private Long partOffset;
@@ -590,7 +649,7 @@ public class CreateFileRequest extends Request {
         /**
          * @return h
          */
-        public java.util.List < Long > getH() {
+        public java.util.List<Long> getH() {
             return this.h;
         }
 
@@ -602,19 +661,22 @@ public class CreateFileRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Long > h; 
+            private java.util.List<Long> h; 
             private Long partOffset; 
 
             /**
-             * The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.
+             * <p>The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
              */
-            public Builder h(java.util.List < Long > h) {
+            public Builder h(java.util.List<Long> h) {
                 this.h = h;
                 return this;
             }
 
             /**
-             * The size of the file content before the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.
+             * <p>The size of the file content before the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240</p>
              */
             public Builder partOffset(Long partOffset) {
                 this.partOffset = partOffset;
@@ -628,6 +690,12 @@ public class CreateFileRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateFileRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFileRequest</p>
+     */
     public static class PartInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content_md5")
         private String contentMd5;
@@ -679,7 +747,10 @@ public class CreateFileRequest extends Request {
             private Integer partNumber; 
 
             /**
-             * The MD5 hash value of the file part. This parameter is required when the MD5 hash value of the file part needs to be verified during part upload.
+             * <p>The MD5 hash value of the file part. This parameter is required when the MD5 hash value of the file part needs to be verified during part upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ASKJDJSKDJJSJDJS</p>
              */
             public Builder contentMd5(String contentMd5) {
                 this.contentMd5 = contentMd5;
@@ -687,7 +758,7 @@ public class CreateFileRequest extends Request {
             }
 
             /**
-             * The SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.
+             * <p>The SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
              */
             public Builder parallelSha1Ctx(ParallelSha1Ctx parallelSha1Ctx) {
                 this.parallelSha1Ctx = parallelSha1Ctx;
@@ -695,7 +766,10 @@ public class CreateFileRequest extends Request {
             }
 
             /**
-             * The serial number of a file part. The number starts from 1.
+             * <p>The serial number of a file part. The number starts from 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder partNumber(Integer partNumber) {
                 this.partNumber = partNumber;

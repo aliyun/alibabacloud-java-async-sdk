@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUploadedPartsResponseBody} extends {@link TeaModel}
  *
  * <p>ListUploadedPartsResponseBody</p>
@@ -24,7 +30,7 @@ public class ListUploadedPartsResponseBody extends TeaModel {
     private String uploadId;
 
     @com.aliyun.core.annotation.NameInMap("uploaded_parts")
-    private java.util.List < UploadPartInfo > uploadedParts;
+    private java.util.List<UploadPartInfo> uploadedParts;
 
     private ListUploadedPartsResponseBody(Builder builder) {
         this.fileId = builder.fileId;
@@ -73,7 +79,7 @@ public class ListUploadedPartsResponseBody extends TeaModel {
     /**
      * @return uploadedParts
      */
-    public java.util.List < UploadPartInfo > getUploadedParts() {
+    public java.util.List<UploadPartInfo> getUploadedParts() {
         return this.uploadedParts;
     }
 
@@ -82,10 +88,13 @@ public class ListUploadedPartsResponseBody extends TeaModel {
         private String nextPartNumberMarker; 
         private Boolean parallelUpload; 
         private String uploadId; 
-        private java.util.List < UploadPartInfo > uploadedParts; 
+        private java.util.List<UploadPartInfo> uploadedParts; 
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>322fb07b975f4b0ae1b543fe8475eee4c19eb2b2</p>
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;
@@ -93,7 +102,10 @@ public class ListUploadedPartsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder nextPartNumberMarker(String nextPartNumberMarker) {
             this.nextPartNumberMarker = nextPartNumberMarker;
@@ -101,7 +113,10 @@ public class ListUploadedPartsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the parallel upload feature is enabled.
+         * <p>Indicates whether the parallel upload feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder parallelUpload(Boolean parallelUpload) {
             this.parallelUpload = parallelUpload;
@@ -109,7 +124,10 @@ public class ListUploadedPartsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the upload task.
+         * <p>The ID of the upload task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00166D06127B413BA1EC8ABB1144D101</p>
          */
         public Builder uploadId(String uploadId) {
             this.uploadId = uploadId;
@@ -117,9 +135,9 @@ public class ListUploadedPartsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the file parts.
+         * <p>The information about the file parts.</p>
          */
-        public Builder uploadedParts(java.util.List < UploadPartInfo > uploadedParts) {
+        public Builder uploadedParts(java.util.List<UploadPartInfo> uploadedParts) {
             this.uploadedParts = uploadedParts;
             return this;
         }

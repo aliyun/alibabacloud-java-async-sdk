@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportUserRequest} extends {@link RequestModel}
  *
  * <p>ImportUserRequest</p>
@@ -168,7 +174,7 @@ public class ImportUserRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -177,7 +183,10 @@ public class ImportUserRequest extends Request {
         }
 
         /**
-         * The display name of the authentication type.
+         * <p>The display name of the authentication type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder authenticationDisplayName(String authenticationDisplayName) {
             this.putBodyParameter("authentication_display_name", authenticationDisplayName);
@@ -186,16 +195,20 @@ public class ImportUserRequest extends Request {
         }
 
         /**
-         * The authentication type. Valid values:
-         * <p>
+         * <p>The authentication type. Valid values:</p>
+         * <ul>
+         * <li>mobile: mobile number.</li>
+         * <li>email: email address.</li>
+         * <li>ding: DingTalk account.</li>
+         * <li>ram: Alibaba Cloud Resource Access Management (RAM) user.</li>
+         * <li>wechat: WeCom account.</li>
+         * <li>ldap: Lightweight Directory Access Protocol (LDAP) account.</li>
+         * <li>custom: custom account.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   mobile: mobile number.
-         * *   email: email address.
-         * *   ding: DingTalk account.
-         * *   ram: Alibaba Cloud Resource Access Management (RAM) user.
-         * *   wechat: WeCom account.
-         * *   ldap: Lightweight Directory Access Protocol (LDAP) account.
-         * *   custom: custom account.
+         * <strong>example:</strong>
+         * <p>mobile</p>
          */
         public Builder authenticationType(String authenticationType) {
             this.putBodyParameter("authentication_type", authenticationType);
@@ -204,7 +217,10 @@ public class ImportUserRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically create a drive.
+         * <p>Specifies whether to automatically create a drive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoCreateDrive(Boolean autoCreateDrive) {
             this.putBodyParameter("auto_create_drive", autoCreateDrive);
@@ -213,7 +229,10 @@ public class ImportUserRequest extends Request {
         }
 
         /**
-         * The size of the drive. The value cannot be smaller than -1. A value of -1 specifies that the size is unlimited.
+         * <p>The size of the drive. The value cannot be smaller than -1. A value of -1 specifies that the size is unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder driveTotalSize(Long driveTotalSize) {
             this.putBodyParameter("drive_total_size", driveTotalSize);
@@ -222,10 +241,11 @@ public class ImportUserRequest extends Request {
         }
 
         /**
-         * The additional information.
-         * <p>
+         * <p>The additional information.</p>
+         * <p>If authentication_type is set to mobile, set this parameter to a country code. If you do not specify this parameter, 86 is used by default.</p>
          * 
-         * If authentication_type is set to mobile, set this parameter to a country code. If you do not specify this parameter, 86 is used by default.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder extra(String extra) {
             this.putBodyParameter("extra", extra);
@@ -234,7 +254,11 @@ public class ImportUserRequest extends Request {
         }
 
         /**
-         * The unique identifier.
+         * <p>The unique identifier.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130****</p>
          */
         public Builder identity(String identity) {
             this.putBodyParameter("identity", identity);
@@ -243,7 +267,11 @@ public class ImportUserRequest extends Request {
         }
 
         /**
-         * The nickname of the user.
+         * <p>The nickname of the user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pdsuer</p>
          */
         public Builder nickName(String nickName) {
             this.putBodyParameter("nick_name", nickName);
@@ -252,7 +280,10 @@ public class ImportUserRequest extends Request {
         }
 
         /**
-         * The ID of the group to which the user is added.
+         * <p>The ID of the group to which the user is added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g12</p>
          */
         public Builder parentGroupId(String parentGroupId) {
             this.putBodyParameter("parent_group_id", parentGroupId);

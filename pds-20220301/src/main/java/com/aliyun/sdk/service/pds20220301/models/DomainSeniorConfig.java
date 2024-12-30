@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DomainSeniorConfig} extends {@link TeaModel}
  *
  * <p>DomainSeniorConfig</p>
@@ -27,7 +33,7 @@ public class DomainSeniorConfig extends TeaModel {
     private String customLogoutUrl;
 
     @com.aliyun.core.annotation.NameInMap("custom_side_link_list")
-    private java.util.List < CustomSideLinkConfig > customSideLinkList;
+    private java.util.List<CustomSideLinkConfig> customSideLinkList;
 
     @com.aliyun.core.annotation.NameInMap("home_page_bg_image_url")
     private String homePageBgImageUrl;
@@ -108,7 +114,7 @@ public class DomainSeniorConfig extends TeaModel {
     /**
      * @return customSideLinkList
      */
-    public java.util.List < CustomSideLinkConfig > getCustomSideLinkList() {
+    public java.util.List<CustomSideLinkConfig> getCustomSideLinkList() {
         return this.customSideLinkList;
     }
 
@@ -160,7 +166,7 @@ public class DomainSeniorConfig extends TeaModel {
         private String customLoginAppid; 
         private String customLoginUrl; 
         private String customLogoutUrl; 
-        private java.util.List < CustomSideLinkConfig > customSideLinkList; 
+        private java.util.List<CustomSideLinkConfig> customSideLinkList; 
         private String homePageBgImageUrl; 
         private String homePageFooter; 
         private String homePageFooter2; 
@@ -211,7 +217,7 @@ public class DomainSeniorConfig extends TeaModel {
         /**
          * custom_side_link_list.
          */
-        public Builder customSideLinkList(java.util.List < CustomSideLinkConfig > customSideLinkList) {
+        public Builder customSideLinkList(java.util.List<CustomSideLinkConfig> customSideLinkList) {
             this.customSideLinkList = customSideLinkList;
             return this;
         }

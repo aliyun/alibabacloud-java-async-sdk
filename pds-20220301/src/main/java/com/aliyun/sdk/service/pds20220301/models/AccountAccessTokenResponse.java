@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AccountAccessTokenResponse} extends {@link TeaModel}
  *
  * <p>AccountAccessTokenResponse</p>
@@ -33,7 +39,7 @@ public class AccountAccessTokenResponse extends Response {
     private String domainId;
 
     @com.aliyun.core.annotation.NameInMap("exist_link")
-    private java.util.List < LinkInfo > existLink;
+    private java.util.List<LinkInfo> existLink;
 
     @com.aliyun.core.annotation.NameInMap("expire_time")
     private String expireTime;
@@ -75,7 +81,7 @@ public class AccountAccessTokenResponse extends Response {
     private String tokenType;
 
     @com.aliyun.core.annotation.NameInMap("user_data")
-    private java.util.Map < String, String > userData;
+    private java.util.Map<String, String> userData;
 
     @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
@@ -172,7 +178,7 @@ public class AccountAccessTokenResponse extends Response {
     /**
      * @return existLink
      */
-    public java.util.List < LinkInfo > getExistLink() {
+    public java.util.List<LinkInfo> getExistLink() {
         return this.existLink;
     }
 
@@ -270,7 +276,7 @@ public class AccountAccessTokenResponse extends Response {
     /**
      * @return userData
      */
-    public java.util.Map < String, String > getUserData() {
+    public java.util.Map<String, String> getUserData() {
         return this.userData;
     }
 
@@ -304,7 +310,7 @@ public class AccountAccessTokenResponse extends Response {
 
         Builder domainId(String domainId);
 
-        Builder existLink(java.util.List < LinkInfo > existLink);
+        Builder existLink(java.util.List<LinkInfo> existLink);
 
         Builder expireTime(String expireTime);
 
@@ -332,7 +338,7 @@ public class AccountAccessTokenResponse extends Response {
 
         Builder tokenType(String tokenType);
 
-        Builder userData(java.util.Map < String, String > userData);
+        Builder userData(java.util.Map<String, String> userData);
 
         Builder userId(String userId);
 
@@ -353,7 +359,7 @@ public class AccountAccessTokenResponse extends Response {
         private String deviceId; 
         private String deviceName; 
         private String domainId; 
-        private java.util.List < LinkInfo > existLink; 
+        private java.util.List<LinkInfo> existLink; 
         private String expireTime; 
         private Long expiresIn; 
         private Boolean isFirstLogin; 
@@ -367,7 +373,7 @@ public class AccountAccessTokenResponse extends Response {
         private String state; 
         private String status; 
         private String tokenType; 
-        private java.util.Map < String, String > userData; 
+        private java.util.Map<String, String> userData; 
         private String userId; 
         private String userName; 
 
@@ -470,7 +476,7 @@ public class AccountAccessTokenResponse extends Response {
          * exist_link.
          */
         @Override
-        public Builder existLink(java.util.List < LinkInfo > existLink) {
+        public Builder existLink(java.util.List<LinkInfo> existLink) {
             this.existLink = existLink;
             return this;
         }
@@ -596,7 +602,7 @@ public class AccountAccessTokenResponse extends Response {
          * user_data.
          */
         @Override
-        public Builder userData(java.util.Map < String, String > userData) {
+        public Builder userData(java.util.Map<String, String> userData) {
             this.userData = userData;
             return this;
         }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchFromThirdPartyItem} extends {@link TeaModel}
  *
  * <p>SearchFromThirdPartyItem</p>
@@ -21,7 +27,7 @@ public class SearchFromThirdPartyItem extends TeaModel {
     private String identity;
 
     @com.aliyun.core.annotation.NameInMap("others")
-    private java.util.Map < String, ? > others;
+    private java.util.Map<String, ?> others;
 
     private SearchFromThirdPartyItem(Builder builder) {
         this.authenticationType = builder.authenticationType;
@@ -62,7 +68,7 @@ public class SearchFromThirdPartyItem extends TeaModel {
     /**
      * @return others
      */
-    public java.util.Map < String, ? > getOthers() {
+    public java.util.Map<String, ?> getOthers() {
         return this.others;
     }
 
@@ -70,7 +76,7 @@ public class SearchFromThirdPartyItem extends TeaModel {
         private String authenticationType; 
         private String extra; 
         private String identity; 
-        private java.util.Map < String, ? > others; 
+        private java.util.Map<String, ?> others; 
 
         /**
          * authentication_type.
@@ -99,7 +105,7 @@ public class SearchFromThirdPartyItem extends TeaModel {
         /**
          * others.
          */
-        public Builder others(java.util.Map < String, ? > others) {
+        public Builder others(java.util.Map<String, ?> others) {
             this.others = others;
             return this;
         }

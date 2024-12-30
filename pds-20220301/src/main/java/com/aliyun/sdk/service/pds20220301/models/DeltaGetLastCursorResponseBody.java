@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeltaGetLastCursorResponseBody} extends {@link TeaModel}
  *
  * <p>DeltaGetLastCursorResponseBody</p>
@@ -37,7 +43,10 @@ public class DeltaGetLastCursorResponseBody extends TeaModel {
         private String cursor; 
 
         /**
-         * The latest cursor of incremental information in the specified drive or synced folder.
+         * <p>The latest cursor of incremental information in the specified drive or synced folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder cursor(String cursor) {
             this.cursor = cursor;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRevisionRequest} extends {@link RequestModel}
  *
  * <p>GetRevisionRequest</p>
@@ -126,7 +132,8 @@ public class GetRevisionRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * <p>A short description of struct</p>
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -135,7 +142,11 @@ public class GetRevisionRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -144,10 +155,13 @@ public class GetRevisionRequest extends Request {
         }
 
         /**
-         * Specifies the returned fields.
-         * <p>
+         * <p>Specifies the returned fields.</p>
+         * <p>By default, this parameter is left empty. If you set this parameter to *, all fields are returned. If you leave this parameter empty, the creator of the file is not returned.</p>
          * 
-         * By default, this parameter is left empty. If you set this parameter to \*, all fields are returned. If you leave this parameter empty, the creator of the file is not returned.
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder fields(String fields) {
             this.putBodyParameter("fields", fields);
@@ -156,7 +170,11 @@ public class GetRevisionRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9520943DC264</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);
@@ -165,7 +183,11 @@ public class GetRevisionRequest extends Request {
         }
 
         /**
-         * The version ID.
+         * <p>The version ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40CB7794C929</p>
          */
         public Builder revisionId(String revisionId) {
             this.putBodyParameter("revision_id", revisionId);
@@ -174,10 +196,11 @@ public class GetRevisionRequest extends Request {
         }
 
         /**
-         * The validity period of the file download or preview. Valid values: 10 to 86400.
-         * <p>
+         * <p>The validity period of the file download or preview. Valid values: 10 to 86400.</p>
+         * <p>Default value: 900. Unit: seconds.</p>
          * 
-         * Default value: 900. Unit: seconds.
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder urlExpireSec(Long urlExpireSec) {
             this.putBodyParameter("url_expire_sec", urlExpireSec);

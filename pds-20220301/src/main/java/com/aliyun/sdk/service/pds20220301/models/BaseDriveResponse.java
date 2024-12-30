@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BaseDriveResponse} extends {@link TeaModel}
  *
  * <p>BaseDriveResponse</p>
  */
 public class BaseDriveResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("action_list")
-    private java.util.List < String > actionList;
+    private java.util.List<String> actionList;
 
     @com.aliyun.core.annotation.NameInMap("category")
     private String category;
@@ -60,7 +66,7 @@ public class BaseDriveResponse extends Response {
     private String pathStatus;
 
     @com.aliyun.core.annotation.NameInMap("permission")
-    private java.util.Map < String, IDPermission > permission;
+    private java.util.Map<String, IDPermission> permission;
 
     @com.aliyun.core.annotation.NameInMap("relative_path")
     private String relativePath;
@@ -119,7 +125,7 @@ public class BaseDriveResponse extends Response {
     /**
      * @return actionList
      */
-    public java.util.List < String > getActionList() {
+    public java.util.List<String> getActionList() {
         return this.actionList;
     }
 
@@ -231,7 +237,7 @@ public class BaseDriveResponse extends Response {
     /**
      * @return permission
      */
-    public java.util.Map < String, IDPermission > getPermission() {
+    public java.util.Map<String, IDPermission> getPermission() {
         return this.permission;
     }
 
@@ -279,7 +285,7 @@ public class BaseDriveResponse extends Response {
 
     public interface Builder extends Response.Builder<BaseDriveResponse, Builder> {
 
-        Builder actionList(java.util.List < String > actionList);
+        Builder actionList(java.util.List<String> actionList);
 
         Builder category(String category);
 
@@ -311,7 +317,7 @@ public class BaseDriveResponse extends Response {
 
         Builder pathStatus(String pathStatus);
 
-        Builder permission(java.util.Map < String, IDPermission > permission);
+        Builder permission(java.util.Map<String, IDPermission> permission);
 
         Builder relativePath(String relativePath);
 
@@ -333,7 +339,7 @@ public class BaseDriveResponse extends Response {
     private static final class BuilderImpl
             extends Response.BuilderImpl<BaseDriveResponse, Builder>
             implements Builder {
-        private java.util.List < String > actionList; 
+        private java.util.List<String> actionList; 
         private String category; 
         private String createdAt; 
         private String creator; 
@@ -349,7 +355,7 @@ public class BaseDriveResponse extends Response {
         private String owner; 
         private String ownerType; 
         private String pathStatus; 
-        private java.util.Map < String, IDPermission > permission; 
+        private java.util.Map<String, IDPermission> permission; 
         private String relativePath; 
         private String status; 
         private String storeId; 
@@ -392,7 +398,7 @@ public class BaseDriveResponse extends Response {
          * action_list.
          */
         @Override
-        public Builder actionList(java.util.List < String > actionList) {
+        public Builder actionList(java.util.List<String> actionList) {
             this.actionList = actionList;
             return this;
         }
@@ -536,7 +542,7 @@ public class BaseDriveResponse extends Response {
          * permission.
          */
         @Override
-        public Builder permission(java.util.Map < String, IDPermission > permission) {
+        public Builder permission(java.util.Map<String, IDPermission> permission) {
             this.permission = permission;
             return this;
         }

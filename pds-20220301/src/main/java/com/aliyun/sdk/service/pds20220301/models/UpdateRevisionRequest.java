@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRevisionRequest} extends {@link RequestModel}
  *
  * <p>UpdateRevisionRequest</p>
@@ -126,7 +132,8 @@ public class UpdateRevisionRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * <p>A short description of struct</p>
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -135,7 +142,11 @@ public class UpdateRevisionRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -144,7 +155,11 @@ public class UpdateRevisionRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9520943DC264</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);
@@ -153,10 +168,11 @@ public class UpdateRevisionRequest extends Request {
         }
 
         /**
-         * Specifies whether to permanently retain a version.
-         * <p>
+         * <p>Specifies whether to permanently retain a version.</p>
+         * <p>By default, this parameter is not specified, which indicates that you do not modify the permanent retention configuration of the version.</p>
          * 
-         * By default, this parameter is not specified, which indicates that you do not modify the permanent retention configuration of the version.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder keepForever(Boolean keepForever) {
             this.putBodyParameter("keep_forever", keepForever);
@@ -165,10 +181,11 @@ public class UpdateRevisionRequest extends Request {
         }
 
         /**
-         * The description of the version. The description can be up to 1,024 characters in length.
-         * <p>
+         * <p>The description of the version. The description can be up to 1,024 characters in length.</p>
+         * <p>By default, this parameter is not specified, which indicates that you do not modify the description of the version.</p>
          * 
-         * By default, this parameter is not specified, which indicates that you do not modify the description of the version.
+         * <strong>example:</strong>
+         * <p>aaa</p>
          */
         public Builder revisionDescription(String revisionDescription) {
             this.putBodyParameter("revision_description", revisionDescription);
@@ -177,7 +194,11 @@ public class UpdateRevisionRequest extends Request {
         }
 
         /**
-         * The version ID.
+         * <p>The version ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40CB7794C929</p>
          */
         public Builder revisionId(String revisionId) {
             this.putBodyParameter("revision_id", revisionId);

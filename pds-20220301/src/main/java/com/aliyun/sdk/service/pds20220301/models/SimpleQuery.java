@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SimpleQuery} extends {@link TeaModel}
  *
  * <p>SimpleQuery</p>
@@ -18,7 +24,7 @@ public class SimpleQuery extends TeaModel {
     private byte[] operation;
 
     @com.aliyun.core.annotation.NameInMap("sub_queries")
-    private java.util.List < SimpleQuery > subQueries;
+    private java.util.List<SimpleQuery> subQueries;
 
     @com.aliyun.core.annotation.NameInMap("value")
     private byte[] value;
@@ -55,7 +61,7 @@ public class SimpleQuery extends TeaModel {
     /**
      * @return subQueries
      */
-    public java.util.List < SimpleQuery > getSubQueries() {
+    public java.util.List<SimpleQuery> getSubQueries() {
         return this.subQueries;
     }
 
@@ -69,7 +75,7 @@ public class SimpleQuery extends TeaModel {
     public static final class Builder {
         private byte[] field; 
         private byte[] operation; 
-        private java.util.List < SimpleQuery > subQueries; 
+        private java.util.List<SimpleQuery> subQueries; 
         private byte[] value; 
 
         /**
@@ -91,7 +97,7 @@ public class SimpleQuery extends TeaModel {
         /**
          * sub_queries.
          */
-        public Builder subQueries(java.util.List < SimpleQuery > subQueries) {
+        public Builder subQueries(java.util.List<SimpleQuery> subQueries) {
             this.subQueries = subQueries;
             return this;
         }

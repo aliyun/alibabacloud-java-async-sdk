@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchResponseBody} extends {@link TeaModel}
  *
  * <p>BatchResponseBody</p>
  */
 public class BatchResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("responses")
-    private java.util.List < Responses> responses;
+    private java.util.List<Responses> responses;
 
     private BatchResponseBody(Builder builder) {
         this.responses = builder.responses;
@@ -29,17 +35,17 @@ public class BatchResponseBody extends TeaModel {
     /**
      * @return responses
      */
-    public java.util.List < Responses> getResponses() {
+    public java.util.List<Responses> getResponses() {
         return this.responses;
     }
 
     public static final class Builder {
-        private java.util.List < Responses> responses; 
+        private java.util.List<Responses> responses; 
 
         /**
-         * All responses of the child requests.
+         * <p>All responses of the child requests.</p>
          */
-        public Builder responses(java.util.List < Responses> responses) {
+        public Builder responses(java.util.List<Responses> responses) {
             this.responses = responses;
             return this;
         }
@@ -50,9 +56,15 @@ public class BatchResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchResponseBody</p>
+     */
     public static class Responses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("body")
-        private java.util.Map < String, ? > body;
+        private java.util.Map<String, ?> body;
 
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
@@ -77,7 +89,7 @@ public class BatchResponseBody extends TeaModel {
         /**
          * @return body
          */
-        public java.util.Map < String, ? > getBody() {
+        public java.util.Map<String, ?> getBody() {
             return this.body;
         }
 
@@ -96,20 +108,23 @@ public class BatchResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > body; 
+            private java.util.Map<String, ?> body; 
             private String id; 
             private Integer status; 
 
             /**
-             * The response parameters of a child request. For more information, see the topic of the corresponding child request.
+             * <p>The response parameters of a child request. For more information, see the topic of the corresponding child request.</p>
              */
-            public Builder body(java.util.Map < String, ? > body) {
+            public Builder body(java.util.Map<String, ?> body) {
                 this.body = body;
                 return this;
             }
 
             /**
-             * The ID of the child request. The ID is used to associate a child request with a response.
+             * <p>The ID of the child request. The ID is used to associate a child request with a response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>93433894994ad2e1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -117,7 +132,10 @@ public class BatchResponseBody extends TeaModel {
             }
 
             /**
-             * The returned HTTP status code of a child request. For more information, see the topic of the corresponding child request.
+             * <p>The returned HTTP status code of a child request. For more information, see the topic of the corresponding child request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

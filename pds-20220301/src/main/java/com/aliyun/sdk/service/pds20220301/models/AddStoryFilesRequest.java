@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddStoryFilesRequest} extends {@link RequestModel}
  *
  * <p>AddStoryFilesRequest</p>
@@ -22,7 +28,7 @@ public class AddStoryFilesRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("files")
-    private java.util.List < Files> files;
+    private java.util.List<Files> files;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("story_id")
@@ -67,7 +73,7 @@ public class AddStoryFilesRequest extends Request {
     /**
      * @return files
      */
-    public java.util.List < Files> getFiles() {
+    public java.util.List<Files> getFiles() {
         return this.files;
     }
 
@@ -81,7 +87,7 @@ public class AddStoryFilesRequest extends Request {
     public static final class Builder extends Request.Builder<AddStoryFilesRequest, Builder> {
         private String domainId; 
         private String driveId; 
-        private java.util.List < Files> files; 
+        private java.util.List<Files> files; 
         private String storyId; 
 
         private Builder() {
@@ -97,7 +103,7 @@ public class AddStoryFilesRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -106,7 +112,10 @@ public class AddStoryFilesRequest extends Request {
         }
 
         /**
-         * drive_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -117,14 +126,17 @@ public class AddStoryFilesRequest extends Request {
         /**
          * files.
          */
-        public Builder files(java.util.List < Files> files) {
+        public Builder files(java.util.List<Files> files) {
             this.putBodyParameter("files", files);
             this.files = files;
             return this;
         }
 
         /**
-         * story_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9132e0d8-fe92-4e56-86c3-f5f112308003</p>
          */
         public Builder storyId(String storyId) {
             this.putBodyParameter("story_id", storyId);
@@ -139,6 +151,12 @@ public class AddStoryFilesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddStoryFilesRequest} extends {@link TeaModel}
+     *
+     * <p>AddStoryFilesRequest</p>
+     */
     public static class Files extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("file_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -179,7 +197,10 @@ public class AddStoryFilesRequest extends Request {
             private String revisionId; 
 
             /**
-             * file_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>63e5e4340f76cb3ead5f40f68163f0f967c1a7bf</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;

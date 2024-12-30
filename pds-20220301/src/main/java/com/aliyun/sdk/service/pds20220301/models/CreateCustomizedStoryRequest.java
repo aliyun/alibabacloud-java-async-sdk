@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomizedStoryRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomizedStoryRequest</p>
@@ -18,7 +24,7 @@ public class CreateCustomizedStoryRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("custom_labels")
     @Deprecated
-    private java.util.Map < String, String > customLabels;
+    private java.util.Map<String, String> customLabels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("drive_id")
@@ -33,7 +39,7 @@ public class CreateCustomizedStoryRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("story_files")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < StoryFiles> storyFiles;
+    private java.util.List<StoryFiles> storyFiles;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("story_name")
@@ -85,7 +91,7 @@ public class CreateCustomizedStoryRequest extends Request {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, String > getCustomLabels() {
+    public java.util.Map<String, String> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -106,7 +112,7 @@ public class CreateCustomizedStoryRequest extends Request {
     /**
      * @return storyFiles
      */
-    public java.util.List < StoryFiles> getStoryFiles() {
+    public java.util.List<StoryFiles> getStoryFiles() {
         return this.storyFiles;
     }
 
@@ -133,10 +139,10 @@ public class CreateCustomizedStoryRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCustomizedStoryRequest, Builder> {
         private String domainId; 
-        private java.util.Map < String, String > customLabels; 
+        private java.util.Map<String, String> customLabels; 
         private String driveId; 
         private StoryCover storyCover; 
-        private java.util.List < StoryFiles> storyFiles; 
+        private java.util.List<StoryFiles> storyFiles; 
         private String storyName; 
         private String storySubType; 
         private String storyType; 
@@ -158,7 +164,7 @@ public class CreateCustomizedStoryRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -169,14 +175,17 @@ public class CreateCustomizedStoryRequest extends Request {
         /**
          * custom_labels.
          */
-        public Builder customLabels(java.util.Map < String, String > customLabels) {
+        public Builder customLabels(java.util.Map<String, String> customLabels) {
             this.putBodyParameter("custom_labels", customLabels);
             this.customLabels = customLabels;
             return this;
         }
 
         /**
-         * drive_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -185,7 +194,7 @@ public class CreateCustomizedStoryRequest extends Request {
         }
 
         /**
-         * story_cover.
+         * <p>This parameter is required.</p>
          */
         public Builder storyCover(StoryCover storyCover) {
             this.putBodyParameter("story_cover", storyCover);
@@ -194,16 +203,19 @@ public class CreateCustomizedStoryRequest extends Request {
         }
 
         /**
-         * story_files.
+         * <p>This parameter is required.</p>
          */
-        public Builder storyFiles(java.util.List < StoryFiles> storyFiles) {
+        public Builder storyFiles(java.util.List<StoryFiles> storyFiles) {
             this.putBodyParameter("story_files", storyFiles);
             this.storyFiles = storyFiles;
             return this;
         }
 
         /**
-         * story_name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder storyName(String storyName) {
             this.putBodyParameter("story_name", storyName);
@@ -212,7 +224,10 @@ public class CreateCustomizedStoryRequest extends Request {
         }
 
         /**
-         * story_sub_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_created</p>
          */
         public Builder storySubType(String storySubType) {
             this.putBodyParameter("story_sub_type", storySubType);
@@ -221,7 +236,10 @@ public class CreateCustomizedStoryRequest extends Request {
         }
 
         /**
-         * story_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_created</p>
          */
         public Builder storyType(String storyType) {
             this.putBodyParameter("story_type", storyType);
@@ -236,6 +254,12 @@ public class CreateCustomizedStoryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCustomizedStoryRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomizedStoryRequest</p>
+     */
     public static class StoryCover extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("file_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -276,7 +300,10 @@ public class CreateCustomizedStoryRequest extends Request {
             private String revisionId; 
 
             /**
-             * file_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>63e5e4340f76cb3ead5f40f68163f0f967c1a7bf</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -298,6 +325,12 @@ public class CreateCustomizedStoryRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateCustomizedStoryRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomizedStoryRequest</p>
+     */
     public static class StoryFiles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("file_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -338,7 +371,10 @@ public class CreateCustomizedStoryRequest extends Request {
             private String revisionId; 
 
             /**
-             * file_id.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>63e5e4340f76cb3ead5f40f68163f0f967c1a7bf</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;

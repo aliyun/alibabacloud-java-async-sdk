@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefundNoticeParam} extends {@link TeaModel}
  *
  * <p>RefundNoticeParam</p>
@@ -27,10 +33,10 @@ public class RefundNoticeParam extends TeaModel {
     private Object newExpireTime;
 
     @com.aliyun.core.annotation.NameInMap("orderIds")
-    private java.util.List < Long > orderIds;
+    private java.util.List<Long> orderIds;
 
     @com.aliyun.core.annotation.NameInMap("refundParamMap")
-    private java.util.Map < String, String > refundParamMap;
+    private java.util.Map<String, String> refundParamMap;
 
     @com.aliyun.core.annotation.NameInMap("refundType")
     private String refundType;
@@ -92,14 +98,14 @@ public class RefundNoticeParam extends TeaModel {
     /**
      * @return orderIds
      */
-    public java.util.List < Long > getOrderIds() {
+    public java.util.List<Long> getOrderIds() {
         return this.orderIds;
     }
 
     /**
      * @return refundParamMap
      */
-    public java.util.Map < String, String > getRefundParamMap() {
+    public java.util.Map<String, String> getRefundParamMap() {
         return this.refundParamMap;
     }
 
@@ -116,8 +122,8 @@ public class RefundNoticeParam extends TeaModel {
         private String commodityCode; 
         private String instanceId; 
         private Object newExpireTime; 
-        private java.util.List < Long > orderIds; 
-        private java.util.Map < String, String > refundParamMap; 
+        private java.util.List<Long> orderIds; 
+        private java.util.Map<String, String> refundParamMap; 
         private String refundType; 
 
         /**
@@ -163,7 +169,7 @@ public class RefundNoticeParam extends TeaModel {
         /**
          * orderIds.
          */
-        public Builder orderIds(java.util.List < Long > orderIds) {
+        public Builder orderIds(java.util.List<Long> orderIds) {
             this.orderIds = orderIds;
             return this;
         }
@@ -171,7 +177,7 @@ public class RefundNoticeParam extends TeaModel {
         /**
          * refundParamMap.
          */
-        public Builder refundParamMap(java.util.Map < String, String > refundParamMap) {
+        public Builder refundParamMap(java.util.Map<String, String> refundParamMap) {
             this.refundParamMap = refundParamMap;
             return this;
         }

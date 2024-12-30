@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Story} extends {@link TeaModel}
  *
  * <p>Story</p>
@@ -21,16 +27,16 @@ public class Story extends TeaModel {
     private String createdAt;
 
     @com.aliyun.core.annotation.NameInMap("custom_labels")
-    private java.util.Map < String, ? > customLabels;
+    private java.util.Map<String, ?> customLabels;
 
     @com.aliyun.core.annotation.NameInMap("face_group_ids")
-    private java.util.List < String > faceGroupIds;
+    private java.util.List<String> faceGroupIds;
 
     @com.aliyun.core.annotation.NameInMap("story_end_time")
     private String storyEndTime;
 
     @com.aliyun.core.annotation.NameInMap("story_file_list")
-    private java.util.List < File > storyFileList;
+    private java.util.List<File> storyFileList;
 
     @com.aliyun.core.annotation.NameInMap("story_id")
     private String storyId;
@@ -98,14 +104,14 @@ public class Story extends TeaModel {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, ? > getCustomLabels() {
+    public java.util.Map<String, ?> getCustomLabels() {
         return this.customLabels;
     }
 
     /**
      * @return faceGroupIds
      */
-    public java.util.List < String > getFaceGroupIds() {
+    public java.util.List<String> getFaceGroupIds() {
         return this.faceGroupIds;
     }
 
@@ -119,7 +125,7 @@ public class Story extends TeaModel {
     /**
      * @return storyFileList
      */
-    public java.util.List < File > getStoryFileList() {
+    public java.util.List<File> getStoryFileList() {
         return this.storyFileList;
     }
 
@@ -169,10 +175,10 @@ public class Story extends TeaModel {
         private String coverFileId; 
         private String coverFileThumbnailUrl; 
         private String createdAt; 
-        private java.util.Map < String, ? > customLabels; 
-        private java.util.List < String > faceGroupIds; 
+        private java.util.Map<String, ?> customLabels; 
+        private java.util.List<String> faceGroupIds; 
         private String storyEndTime; 
-        private java.util.List < File > storyFileList; 
+        private java.util.List<File> storyFileList; 
         private String storyId; 
         private String storyName; 
         private String storyStartTime; 
@@ -207,7 +213,7 @@ public class Story extends TeaModel {
         /**
          * custom_labels.
          */
-        public Builder customLabels(java.util.Map < String, ? > customLabels) {
+        public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
             return this;
         }
@@ -215,7 +221,7 @@ public class Story extends TeaModel {
         /**
          * face_group_ids.
          */
-        public Builder faceGroupIds(java.util.List < String > faceGroupIds) {
+        public Builder faceGroupIds(java.util.List<String> faceGroupIds) {
             this.faceGroupIds = faceGroupIds;
             return this;
         }
@@ -231,7 +237,7 @@ public class Story extends TeaModel {
         /**
          * story_file_list.
          */
-        public Builder storyFileList(java.util.List < File > storyFileList) {
+        public Builder storyFileList(java.util.List<File> storyFileList) {
             this.storyFileList = storyFileList;
             return this;
         }

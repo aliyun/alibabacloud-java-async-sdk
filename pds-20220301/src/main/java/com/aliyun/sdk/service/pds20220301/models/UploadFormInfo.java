@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadFormInfo} extends {@link TeaModel}
  *
  * <p>UploadFormInfo</p>
@@ -18,7 +24,7 @@ public class UploadFormInfo extends TeaModel {
     private String endpoint;
 
     @com.aliyun.core.annotation.NameInMap("form_data")
-    private java.util.Map < String, String > formData;
+    private java.util.Map<String, String> formData;
 
     @com.aliyun.core.annotation.NameInMap("object_key")
     private String objectKey;
@@ -75,7 +81,7 @@ public class UploadFormInfo extends TeaModel {
     /**
      * @return formData
      */
-    public java.util.Map < String, String > getFormData() {
+    public java.util.Map<String, String> getFormData() {
         return this.formData;
     }
 
@@ -124,7 +130,7 @@ public class UploadFormInfo extends TeaModel {
     public static final class Builder {
         private String bucketName; 
         private String endpoint; 
-        private java.util.Map < String, String > formData; 
+        private java.util.Map<String, String> formData; 
         private String objectKey; 
         private String ossAccessKeyId; 
         private String ossEndPoint; 
@@ -151,7 +157,7 @@ public class UploadFormInfo extends TeaModel {
         /**
          * form_data.
          */
-        public Builder formData(java.util.Map < String, String > formData) {
+        public Builder formData(java.util.Map<String, String> formData) {
             this.formData = formData;
             return this;
         }

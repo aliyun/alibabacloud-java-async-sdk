@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateShareLinkRequest} extends {@link RequestModel}
  *
  * <p>UpdateShareLinkRequest</p>
@@ -42,6 +48,10 @@ public class UpdateShareLinkRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("expiration")
     private String expiration;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("office_editable")
+    private Boolean officeEditable;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("preview_count")
@@ -94,6 +104,7 @@ public class UpdateShareLinkRequest extends Request {
         this.downloadCount = builder.downloadCount;
         this.downloadLimit = builder.downloadLimit;
         this.expiration = builder.expiration;
+        this.officeEditable = builder.officeEditable;
         this.previewCount = builder.previewCount;
         this.previewLimit = builder.previewLimit;
         this.reportCount = builder.reportCount;
@@ -176,6 +187,13 @@ public class UpdateShareLinkRequest extends Request {
     }
 
     /**
+     * @return officeEditable
+     */
+    public Boolean getOfficeEditable() {
+        return this.officeEditable;
+    }
+
+    /**
      * @return previewCount
      */
     public Long getPreviewCount() {
@@ -254,6 +272,7 @@ public class UpdateShareLinkRequest extends Request {
         private Long downloadCount; 
         private Long downloadLimit; 
         private String expiration; 
+        private Boolean officeEditable; 
         private Long previewCount; 
         private Long previewLimit; 
         private Long reportCount; 
@@ -279,6 +298,7 @@ public class UpdateShareLinkRequest extends Request {
             this.downloadCount = request.downloadCount;
             this.downloadLimit = request.downloadLimit;
             this.expiration = request.expiration;
+            this.officeEditable = request.officeEditable;
             this.previewCount = request.previewCount;
             this.previewLimit = request.previewLimit;
             this.reportCount = request.reportCount;
@@ -292,7 +312,7 @@ public class UpdateShareLinkRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -301,7 +321,7 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * The description of the share link. The description can be up to 1,024 characters in length.
+         * <p>The description of the share link. The description can be up to 1,024 characters in length.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -310,7 +330,10 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * Specifies whether to prohibit the downloads of the shared files.
+         * <p>Specifies whether to prohibit the downloads of the shared files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableDownload(Boolean disableDownload) {
             this.putBodyParameter("disable_download", disableDownload);
@@ -319,7 +342,10 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * Specifies whether to prohibit the previews of the shared files.
+         * <p>Specifies whether to prohibit the previews of the shared files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disablePreview(Boolean disablePreview) {
             this.putBodyParameter("disable_preview", disablePreview);
@@ -328,7 +354,10 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * Specifies whether to prohibit the saves of the shared files.
+         * <p>Specifies whether to prohibit the saves of the shared files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableSave(Boolean disableSave) {
             this.putBodyParameter("disable_save", disableSave);
@@ -337,7 +366,10 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * The number of times that the shared files are downloaded. The value must be greater than or equal to 0.
+         * <p>The number of times that the shared files are downloaded. The value must be greater than or equal to 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder downloadCount(Long downloadCount) {
             this.putBodyParameter("download_count", downloadCount);
@@ -346,7 +378,10 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * The maximum number of times that the shared files can be downloaded. The value must be greater than or equal to 0. A value of 0 specifies that the number is unlimited.
+         * <p>The maximum number of times that the shared files can be downloaded. The value must be greater than or equal to 0. A value of 0 specifies that the number is unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder downloadLimit(Long downloadLimit) {
             this.putBodyParameter("download_limit", downloadLimit);
@@ -355,7 +390,10 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * The time when the share link expires. The time follows the RFC 3339 standard. Example: 2020-06-28T11:33:00.000+08:00. If you leave this parameter empty, the share link never expires.
+         * <p>The time when the share link expires. The time follows the RFC 3339 standard. Example: 2020-06-28T11:33:00.000+08:00. If you leave this parameter empty, the share link never expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-28T11:33:00.000+08:00</p>
          */
         public Builder expiration(String expiration) {
             this.putBodyParameter("expiration", expiration);
@@ -364,7 +402,19 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * The number of times that the shared files are previewed. The value must be greater than or equal to 0.
+         * office_editable.
+         */
+        public Builder officeEditable(Boolean officeEditable) {
+            this.putBodyParameter("office_editable", officeEditable);
+            this.officeEditable = officeEditable;
+            return this;
+        }
+
+        /**
+         * <p>The number of times that the shared files are previewed. The value must be greater than or equal to 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder previewCount(Long previewCount) {
             this.putBodyParameter("preview_count", previewCount);
@@ -373,7 +423,10 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * The maximum number of times that the shared files can be previewed. The value must be greater than or equal to 0. A value of 0 specifies that the number is unlimited.
+         * <p>The maximum number of times that the shared files can be previewed. The value must be greater than or equal to 0. A value of 0 specifies that the number is unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder previewLimit(Long previewLimit) {
             this.putBodyParameter("preview_limit", previewLimit);
@@ -382,7 +435,10 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * The number of times that the shared files are reported. The value must be greater than or equal to 0.
+         * <p>The number of times that the shared files are reported. The value must be greater than or equal to 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reportCount(Long reportCount) {
             this.putBodyParameter("report_count", reportCount);
@@ -391,7 +447,10 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * The number of times that the shared files are saved. The value must be greater than or equal to 0.
+         * <p>The number of times that the shared files are saved. The value must be greater than or equal to 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder saveCount(Long saveCount) {
             this.putBodyParameter("save_count", saveCount);
@@ -400,7 +459,10 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * The maximum number of times that the shared files can be saved. The value must be greater than or equal to 0. A value of 0 specifies that the number is unlimited.
+         * <p>The maximum number of times that the shared files can be saved. The value must be greater than or equal to 0. A value of 0 specifies that the number is unlimited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder saveLimit(Long saveLimit) {
             this.putBodyParameter("save_limit", saveLimit);
@@ -409,7 +471,11 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * The share ID.
+         * <p>The share ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1FswpQ8</p>
          */
         public Builder shareId(String shareId) {
             this.putBodyParameter("share_id", shareId);
@@ -418,7 +484,7 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * The name of the share link. By default, the name of the first file is used. The name can be up to 128 characters in length.
+         * <p>The name of the share link. By default, the name of the first file is used. The name can be up to 128 characters in length.</p>
          */
         public Builder shareName(String shareName) {
             this.putBodyParameter("share_name", shareName);
@@ -427,7 +493,10 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * The access code. The access code can be up to 64 characters in length. A value of 0 specifies an empty string.
+         * <p>The access code. The access code can be up to 64 characters in length. A value of 0 specifies an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcF123x</p>
          */
         public Builder sharePwd(String sharePwd) {
             this.putBodyParameter("share_pwd", sharePwd);
@@ -436,11 +505,14 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * The state of the share link. Valid values:
-         * <p>
+         * <p>The state of the share link. Valid values:</p>
+         * <ul>
+         * <li>disabled: The share link is canceled.</li>
+         * <li>enabled: The share link is effective.</li>
+         * </ul>
          * 
-         * *   disabled: The share link is canceled.
-         * *   enabled: The share link is effective.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -449,7 +521,10 @@ public class UpdateShareLinkRequest extends Request {
         }
 
         /**
-         * The number of times that the videos are previewed in the shared files. The value must be greater than or equal to 0.
+         * <p>The number of times that the videos are previewed in the shared files. The value must be greater than or equal to 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder videoPreviewCount(Long videoPreviewCount) {
             this.putBodyParameter("video_preview_count", videoPreviewCount);

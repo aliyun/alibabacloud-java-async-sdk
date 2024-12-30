@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadPartInfo} extends {@link TeaModel}
  *
  * <p>UploadPartInfo</p>
@@ -143,7 +149,10 @@ public class UploadPartInfo extends TeaModel {
         }
 
         /**
-         * part_number.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder partNumber(Integer partNumber) {
             this.partNumber = partNumber;
@@ -159,7 +168,7 @@ public class UploadPartInfo extends TeaModel {
         }
 
         /**
-         * upload_url.
+         * <p>This parameter is required.</p>
          */
         public Builder uploadUrl(String uploadUrl) {
             this.uploadUrl = uploadUrl;
@@ -172,9 +181,15 @@ public class UploadPartInfo extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UploadPartInfo} extends {@link TeaModel}
+     *
+     * <p>UploadPartInfo</p>
+     */
     public static class ParallelSha1Ctx extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("h")
-        private java.util.List < Long > h;
+        private java.util.List<Long> h;
 
         @com.aliyun.core.annotation.NameInMap("part_offset")
         private Long partOffset;
@@ -195,7 +210,7 @@ public class UploadPartInfo extends TeaModel {
         /**
          * @return h
          */
-        public java.util.List < Long > getH() {
+        public java.util.List<Long> getH() {
             return this.h;
         }
 
@@ -207,13 +222,13 @@ public class UploadPartInfo extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > h; 
+            private java.util.List<Long> h; 
             private Long partOffset; 
 
             /**
              * h.
              */
-            public Builder h(java.util.List < Long > h) {
+            public Builder h(java.util.List<Long> h) {
                 this.h = h;
                 return this;
             }
@@ -233,9 +248,15 @@ public class UploadPartInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link UploadPartInfo} extends {@link TeaModel}
+     *
+     * <p>UploadPartInfo</p>
+     */
     public static class ParallelSha256Ctx extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("h")
-        private java.util.List < Long > h;
+        private java.util.List<Long> h;
 
         @com.aliyun.core.annotation.NameInMap("part_offset")
         private Long partOffset;
@@ -256,7 +277,7 @@ public class UploadPartInfo extends TeaModel {
         /**
          * @return h
          */
-        public java.util.List < Long > getH() {
+        public java.util.List<Long> getH() {
             return this.h;
         }
 
@@ -268,13 +289,13 @@ public class UploadPartInfo extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Long > h; 
+            private java.util.List<Long> h; 
             private Long partOffset; 
 
             /**
              * h.
              */
-            public Builder h(java.util.List < Long > h) {
+            public Builder h(java.util.List<Long> h) {
                 this.h = h;
                 return this;
             }

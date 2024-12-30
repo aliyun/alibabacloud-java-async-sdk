@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Album} extends {@link TeaModel}
  *
  * <p>Album</p>
@@ -42,7 +48,7 @@ public class Album extends TeaModel {
     private String updatedAt;
 
     @com.aliyun.core.annotation.NameInMap("user_tags")
-    private java.util.Map < String, String > userTags;
+    private java.util.Map<String, String> userTags;
 
     private Album(Builder builder) {
         this.albumId = builder.albumId;
@@ -139,7 +145,7 @@ public class Album extends TeaModel {
     /**
      * @return userTags
      */
-    public java.util.Map < String, String > getUserTags() {
+    public java.util.Map<String, String> getUserTags() {
         return this.userTags;
     }
 
@@ -154,7 +160,7 @@ public class Album extends TeaModel {
         private String name; 
         private String owner; 
         private String updatedAt; 
-        private java.util.Map < String, String > userTags; 
+        private java.util.Map<String, String> userTags; 
 
         /**
          * album_id.
@@ -239,7 +245,7 @@ public class Album extends TeaModel {
         /**
          * user_tags.
          */
-        public Builder userTags(java.util.Map < String, String > userTags) {
+        public Builder userTags(java.util.Map<String, String> userTags) {
             this.userTags = userTags;
             return this;
         }

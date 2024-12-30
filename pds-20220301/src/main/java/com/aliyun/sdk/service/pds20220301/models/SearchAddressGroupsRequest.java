@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchAddressGroupsRequest} extends {@link RequestModel}
  *
  * <p>SearchAddressGroupsRequest</p>
@@ -21,7 +27,7 @@ public class SearchAddressGroupsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("address_names")
-    private java.util.List < String > addressNames;
+    private java.util.List<String> addressNames;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("br_geo_point")
@@ -86,7 +92,7 @@ public class SearchAddressGroupsRequest extends Request {
     /**
      * @return addressNames
      */
-    public java.util.List < String > getAddressNames() {
+    public java.util.List<String> getAddressNames() {
         return this.addressNames;
     }
 
@@ -128,7 +134,7 @@ public class SearchAddressGroupsRequest extends Request {
     public static final class Builder extends Request.Builder<SearchAddressGroupsRequest, Builder> {
         private String domainId; 
         private String addressLevel; 
-        private java.util.List < String > addressNames; 
+        private java.util.List<String> addressNames; 
         private String brGeoPoint; 
         private String driveId; 
         private String imageThumbnailProcess; 
@@ -152,7 +158,7 @@ public class SearchAddressGroupsRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -161,50 +167,44 @@ public class SearchAddressGroupsRequest extends Request {
         }
 
         /**
-         * The level of the location.
-         * <p>
+         * <p>The level of the location.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>country</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   country
+         * <!-- -->
+         * </li>
+         * <li><p>province</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>city</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   province
+         * <!-- -->
+         * </li>
+         * <li><p>district</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>township</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   city
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   district
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   township
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          */
         public Builder addressLevel(String addressLevel) {
             this.putBodyParameter("address_level", addressLevel);
@@ -213,16 +213,19 @@ public class SearchAddressGroupsRequest extends Request {
         }
 
         /**
-         * The locations.
+         * <p>The locations.</p>
          */
-        public Builder addressNames(java.util.List < String > addressNames) {
+        public Builder addressNames(java.util.List<String> addressNames) {
             this.putBodyParameter("address_names", addressNames);
             this.addressNames = addressNames;
             return this;
         }
 
         /**
-         * The coordinates of the bottom right vertex of the rectangle. Set the value in the format of latitude,longitude.
+         * <p>The coordinates of the bottom right vertex of the rectangle. Set the value in the format of latitude,longitude.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40.121,105.2121</p>
          */
         public Builder brGeoPoint(String brGeoPoint) {
             this.putBodyParameter("br_geo_point", brGeoPoint);
@@ -231,7 +234,11 @@ public class SearchAddressGroupsRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -240,7 +247,10 @@ public class SearchAddressGroupsRequest extends Request {
         }
 
         /**
-         * The method used to generate the thumbnail of an image.
+         * <p>The method used to generate the thumbnail of an image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/resize,w_200</p>
          */
         public Builder imageThumbnailProcess(String imageThumbnailProcess) {
             this.putBodyParameter("image_thumbnail_process", imageThumbnailProcess);
@@ -249,7 +259,10 @@ public class SearchAddressGroupsRequest extends Request {
         }
 
         /**
-         * The coordinates of the top left vertex of the rectangle. Set the value in the format of latitude,longitude.
+         * <p>The coordinates of the top left vertex of the rectangle. Set the value in the format of latitude,longitude.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.121,101.2121</p>
          */
         public Builder tlGeoPoint(String tlGeoPoint) {
             this.putBodyParameter("tl_geo_point", tlGeoPoint);
@@ -258,7 +271,10 @@ public class SearchAddressGroupsRequest extends Request {
         }
 
         /**
-         * The method used to generate the thumbnail of a video.
+         * <p>The method used to generate the thumbnail of a video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video/snapshot,t_7000,f_jpg,w_800,h_600,m_fast</p>
          */
         public Builder videoThumbnailProcess(String videoThumbnailProcess) {
             this.putBodyParameter("video_thumbnail_process", videoThumbnailProcess);

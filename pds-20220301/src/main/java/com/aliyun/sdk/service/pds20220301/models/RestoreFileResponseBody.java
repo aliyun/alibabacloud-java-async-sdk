@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestoreFileResponseBody} extends {@link TeaModel}
  *
  * <p>RestoreFileResponseBody</p>
@@ -73,12 +79,12 @@ public class RestoreFileResponseBody extends TeaModel {
         private String fileId; 
 
         /**
-         * The ID of the asynchronous task.
-         * <p>
+         * <p>The ID of the asynchronous task.</p>
+         * <p>If an empty string is returned, the file or folder is restored.</p>
+         * <p>If a non-empty string is returned, an asynchronous task is required. You can call the GetAsyncTask operation to obtain the information about an asynchronous task based on the task ID.</p>
          * 
-         * If an empty string is returned, the file or folder is restored.
-         * 
-         * If a non-empty string is returned, an asynchronous task is required. You can call the GetAsyncTask operation to obtain the information about an asynchronous task based on the task ID.
+         * <strong>example:</strong>
+         * <p>4221bf6e6ab43c255edc4463bf3a6f5f5d317406</p>
          */
         public Builder asyncTaskId(String asyncTaskId) {
             this.asyncTaskId = asyncTaskId;
@@ -86,7 +92,10 @@ public class RestoreFileResponseBody extends TeaModel {
         }
 
         /**
-         * The domain ID.
+         * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj1</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -94,7 +103,10 @@ public class RestoreFileResponseBody extends TeaModel {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;
@@ -102,7 +114,10 @@ public class RestoreFileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the file or folder.
+         * <p>The ID of the file or folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4221bf6e6ab43a255edc4463bffa6f5f5d317401</p>
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;

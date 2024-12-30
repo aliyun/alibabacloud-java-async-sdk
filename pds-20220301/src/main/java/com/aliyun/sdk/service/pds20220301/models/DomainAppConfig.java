@@ -1,21 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DomainAppConfig} extends {@link TeaModel}
  *
  * <p>DomainAppConfig</p>
  */
 public class DomainAppConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("allow_upload_custom_file_ext_list")
-    private java.util.List < String > allowUploadCustomFileExtList;
+    private java.util.List<String> allowUploadCustomFileExtList;
 
     @com.aliyun.core.annotation.NameInMap("allow_upload_file_category_list")
-    private java.util.List < String > allowUploadFileCategoryList;
+    private java.util.List<String> allowUploadFileCategoryList;
 
     @com.aliyun.core.annotation.NameInMap("same_name_file_upload_mode")
     private String sameNameFileUploadMode;
@@ -45,14 +51,14 @@ public class DomainAppConfig extends TeaModel {
     /**
      * @return allowUploadCustomFileExtList
      */
-    public java.util.List < String > getAllowUploadCustomFileExtList() {
+    public java.util.List<String> getAllowUploadCustomFileExtList() {
         return this.allowUploadCustomFileExtList;
     }
 
     /**
      * @return allowUploadFileCategoryList
      */
-    public java.util.List < String > getAllowUploadFileCategoryList() {
+    public java.util.List<String> getAllowUploadFileCategoryList() {
         return this.allowUploadFileCategoryList;
     }
 
@@ -78,8 +84,8 @@ public class DomainAppConfig extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < String > allowUploadCustomFileExtList; 
-        private java.util.List < String > allowUploadFileCategoryList; 
+        private java.util.List<String> allowUploadCustomFileExtList; 
+        private java.util.List<String> allowUploadFileCategoryList; 
         private String sameNameFileUploadMode; 
         private Long singleFileUploadSizeLimit; 
         private String webClientDownloadMode; 
@@ -87,7 +93,7 @@ public class DomainAppConfig extends TeaModel {
         /**
          * allow_upload_custom_file_ext_list.
          */
-        public Builder allowUploadCustomFileExtList(java.util.List < String > allowUploadCustomFileExtList) {
+        public Builder allowUploadCustomFileExtList(java.util.List<String> allowUploadCustomFileExtList) {
             this.allowUploadCustomFileExtList = allowUploadCustomFileExtList;
             return this;
         }
@@ -95,7 +101,7 @@ public class DomainAppConfig extends TeaModel {
         /**
          * allow_upload_file_category_list.
          */
-        public Builder allowUploadFileCategoryList(java.util.List < String > allowUploadFileCategoryList) {
+        public Builder allowUploadFileCategoryList(java.util.List<String> allowUploadFileCategoryList) {
             this.allowUploadFileCategoryList = allowUploadFileCategoryList;
             return this;
         }

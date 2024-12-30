@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserResponseBody} extends {@link TeaModel}
  *
  * <p>CreateUserResponseBody</p>
@@ -48,7 +54,7 @@ public class CreateUserResponseBody extends TeaModel {
     private Long updatedAt;
 
     @com.aliyun.core.annotation.NameInMap("user_data")
-    private java.util.Map < String, ? > userData;
+    private java.util.Map<String, ?> userData;
 
     @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
@@ -169,7 +175,7 @@ public class CreateUserResponseBody extends TeaModel {
     /**
      * @return userData
      */
-    public java.util.Map < String, ? > getUserData() {
+    public java.util.Map<String, ?> getUserData() {
         return this.userData;
     }
 
@@ -200,12 +206,15 @@ public class CreateUserResponseBody extends TeaModel {
         private String role; 
         private String status; 
         private Long updatedAt; 
-        private java.util.Map < String, ? > userData; 
+        private java.util.Map<String, ?> userData; 
         private String userId; 
         private String userName; 
 
         /**
-         * The URL of the profile picture.
+         * <p>The URL of the profile picture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://aa.com/1.jpg">http://aa.com/1.jpg</a></p>
          */
         public Builder avatar(String avatar) {
             this.avatar = avatar;
@@ -213,7 +222,10 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the user was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The time when the user was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639762579768</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -221,7 +233,10 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The user who created the user.
+         * <p>The user who created the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -229,7 +244,10 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the default drive.
+         * <p>The ID of the default drive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder defaultDriveId(String defaultDriveId) {
             this.defaultDriveId = defaultDriveId;
@@ -237,7 +255,10 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the user.
+         * <p>The description of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vipuser</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -245,7 +266,10 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The domain ID.
+         * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj1</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -253,7 +277,10 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The email address.
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:a@a.com">a@a.com</a></p>
          */
         public Builder email(String email) {
             this.email = email;
@@ -261,7 +288,10 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The nickname of the user.
+         * <p>The nickname of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>001</p>
          */
         public Builder nickName(String nickName) {
             this.nickName = nickName;
@@ -269,7 +299,10 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The phone number.
+         * <p>The phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13900001111</p>
          */
         public Builder phone(String phone) {
             this.phone = phone;
@@ -277,12 +310,15 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The role of the user. Valid values:
-         * <p>
+         * <p>The role of the user. Valid values:</p>
+         * <ul>
+         * <li>superadmin</li>
+         * <li>admin</li>
+         * <li>user</li>
+         * </ul>
          * 
-         * *   superadmin
-         * *   admin
-         * *   user
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -290,11 +326,14 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the user. Valid values:
-         * <p>
+         * <p>The state of the user. Valid values:</p>
+         * <ul>
+         * <li>disabled: The user is prohibited from logon.</li>
+         * <li>enabled: The user is in a normal state.</li>
+         * </ul>
          * 
-         * *   disabled: The user is prohibited from logon.
-         * *   enabled: The user is in a normal state.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -302,7 +341,10 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the user was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>The time when the user was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639762579768</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -310,15 +352,18 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The custom data.
+         * <p>The custom data.</p>
          */
-        public Builder userData(java.util.Map < String, ? > userData) {
+        public Builder userData(java.util.Map<String, ?> userData) {
             this.userData = userData;
             return this;
         }
 
         /**
-         * The user ID.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dingding_abc001</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -326,7 +371,10 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The username.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pds</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

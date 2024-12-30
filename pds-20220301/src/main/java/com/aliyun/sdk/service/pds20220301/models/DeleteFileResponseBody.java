@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFileResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteFileResponseBody</p>
@@ -73,7 +79,10 @@ public class DeleteFileResponseBody extends TeaModel {
         private String fileId; 
 
         /**
-         * The ID of the asynchronous task. This parameter is returned only in asynchronous processing scenarios. You can call the [GetAsyncTask](~~440456~~) operation to query the information about the asynchronous task based on the task ID.
+         * <p>The ID of the asynchronous task. This parameter is returned only in asynchronous processing scenarios. You can call the <a href="https://help.aliyun.com/document_detail/440456.html">GetAsyncTask</a> operation to query the information about the asynchronous task based on the task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000e89fb-cf8f-11e9-8ab4-b6e980803a3b</p>
          */
         public Builder asyncTaskId(String asyncTaskId) {
             this.asyncTaskId = asyncTaskId;
@@ -81,7 +90,10 @@ public class DeleteFileResponseBody extends TeaModel {
         }
 
         /**
-         * The domain ID.
+         * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj1</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -89,7 +101,10 @@ public class DeleteFileResponseBody extends TeaModel {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;
@@ -97,7 +112,10 @@ public class DeleteFileResponseBody extends TeaModel {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9520943DC264</p>
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;

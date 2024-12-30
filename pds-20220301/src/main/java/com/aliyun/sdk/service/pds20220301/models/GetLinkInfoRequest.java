@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLinkInfoRequest} extends {@link RequestModel}
  *
  * <p>GetLinkInfoRequest</p>
@@ -97,7 +103,7 @@ public class GetLinkInfoRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -115,7 +121,10 @@ public class GetLinkInfoRequest extends Request {
         }
 
         /**
-         * identity.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130***</p>
          */
         public Builder identity(String identity) {
             this.putBodyParameter("identity", identity);
@@ -124,7 +133,10 @@ public class GetLinkInfoRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mobile</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDomainRequest} extends {@link RequestModel}
  *
  * <p>CreateDomainRequest</p>
@@ -138,7 +144,10 @@ public class CreateDomainRequest extends Request {
         } 
 
         /**
-         * The description of the domain.
+         * <p>domain 描述</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好企业网盘开发环境</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -147,7 +156,11 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * The name of the domain.
+         * <p>If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好企业网盘</p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("domain_name", domainName);
@@ -156,7 +169,10 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the default drive feature. A value of true specifies that all users are assigned a drive by default on the first logon. Default value: false.
+         * <p>https</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder initDriveEnable(Boolean initDriveEnable) {
             this.putBodyParameter("init_drive_enable", initDriveEnable);
@@ -165,7 +181,10 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * The size of the default drive. Unit: bytes. You must specify init_drive_size if you set init_drive_enable to true. Default value: 0. A value of 0 specifies that the size of the default drive is 0 bytes and you cannot upload files to the drive. To initialize the default drive, set init_drive_size to 0. A value of -1 specifies that the size is unlimited.
+         * <p>http</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1073741824</p>
          */
         public Builder initDriveSize(Long initDriveSize) {
             this.putBodyParameter("init_drive_size", initDriveSize);
@@ -174,7 +193,10 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * The ID of the parent domain. If you want to create a child domain, specify parent_domain_id. In most cases, you do not need to create a child domain. If you want to perform secondary operations based on Drive and Photo Service, contact the customer service.
+         * <p>Create domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj1</p>
          */
         public Builder parentDomainId(String parentDomainId) {
             this.putBodyParameter("parent_domain_id", parentDomainId);
@@ -183,7 +205,10 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * The total storage quota for all drives in the domain. A value of 0 specifies that the quota is unlimited.
+         * <p>The ID of the parent domain. If you want to create a child domain, specify parent_domain_id. In most cases, you do not need to create a child domain. If you want to perform secondary operations based on Drive and Photo Service, contact the customer service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1099511627776</p>
          */
         public Builder sizeQuota(Long sizeQuota) {
             this.putBodyParameter("size_quota", sizeQuota);
@@ -192,7 +217,10 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * The largest number of users that can be created in the domain. A value of 0 specifies that the number is unlimited.
+         * <p>The information about the domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder userCountQuota(Long userCountQuota) {
             this.putBodyParameter("user_count_quota", userCountQuota);

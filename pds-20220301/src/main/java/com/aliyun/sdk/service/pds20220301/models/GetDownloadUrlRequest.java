@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDownloadUrlRequest} extends {@link RequestModel}
  *
  * <p>GetDownloadUrlRequest</p>
@@ -140,7 +146,7 @@ public class GetDownloadUrlRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -149,7 +155,10 @@ public class GetDownloadUrlRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -158,7 +167,10 @@ public class GetDownloadUrlRequest extends Request {
         }
 
         /**
-         * The validity period of the download URL. Maximum value: 115200. Default value: 900. Unit: seconds.
+         * <p>The validity period of the download URL. Maximum value: 115200. Default value: 900. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder expireSec(Integer expireSec) {
             this.putBodyParameter("expire_sec", expireSec);
@@ -167,7 +179,11 @@ public class GetDownloadUrlRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9520943DC264</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);
@@ -176,7 +192,10 @@ public class GetDownloadUrlRequest extends Request {
         }
 
         /**
-         * The name of the file. The name can be up to 1,024 characters in length.
+         * <p>The name of the file. The name can be up to 1,024 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.txt</p>
          */
         public Builder fileName(String fileName) {
             this.putBodyParameter("file_name", fileName);
@@ -194,7 +213,10 @@ public class GetDownloadUrlRequest extends Request {
         }
 
         /**
-         * The share ID. If you want to manage a file by using a sharing link, carry the `x-share-token` header in the request and specify share_id. In this case, `drive_id` is invalid. Otherwise, use an `AccessKey pair` or `access token` for authentication and specify `drive_id`. You must specify at least either `share_id` or `drive_id`.
+         * <p>The share ID. If you want to manage a file by using a sharing link, carry the <code>x-share-token</code> header in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify at least either <code>share_id</code> or <code>drive_id</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1FswpQ8</p>
          */
         public Builder shareId(String shareId) {
             this.putBodyParameter("share_id", shareId);

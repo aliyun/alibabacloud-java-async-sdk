@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserRequest</p>
@@ -30,7 +36,7 @@ public class UpdateUserRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("group_info_list")
-    private java.util.List < GroupInfoList> groupInfoList;
+    private java.util.List<GroupInfoList> groupInfoList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("nick_name")
@@ -51,7 +57,7 @@ public class UpdateUserRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user_data")
-    private java.util.Map < String, String > userData;
+    private java.util.Map<String, String> userData;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user_id")
@@ -117,7 +123,7 @@ public class UpdateUserRequest extends Request {
     /**
      * @return groupInfoList
      */
-    public java.util.List < GroupInfoList> getGroupInfoList() {
+    public java.util.List<GroupInfoList> getGroupInfoList() {
         return this.groupInfoList;
     }
 
@@ -152,7 +158,7 @@ public class UpdateUserRequest extends Request {
     /**
      * @return userData
      */
-    public java.util.Map < String, String > getUserData() {
+    public java.util.Map<String, String> getUserData() {
         return this.userData;
     }
 
@@ -168,12 +174,12 @@ public class UpdateUserRequest extends Request {
         private String avatar; 
         private String description; 
         private String email; 
-        private java.util.List < GroupInfoList> groupInfoList; 
+        private java.util.List<GroupInfoList> groupInfoList; 
         private String nickName; 
         private String phone; 
         private String role; 
         private String status; 
-        private java.util.Map < String, String > userData; 
+        private java.util.Map<String, String> userData; 
         private String userId; 
 
         private Builder() {
@@ -196,7 +202,7 @@ public class UpdateUserRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -205,12 +211,12 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The URL of the profile picture.
-         * <p>
+         * <p>The URL of the profile picture.</p>
+         * <p>If you specify the parameter in the HTTP URL format, the URL must start with http:// or https:// and can be up to 4 KB in size.</p>
+         * <p>If you specify the parameter in the DATA URL format, the URL must start with data:// and be encoded in Base64. The URL can be up to 300 KB in size.</p>
          * 
-         * If you specify the parameter in the HTTP URL format, the URL must start with http:// or https:// and can be up to 4 KB in size.
-         * 
-         * If you specify the parameter in the DATA URL format, the URL must start with data:// and be encoded in Base64. The URL can be up to 300 KB in size.
+         * <strong>example:</strong>
+         * <p><a href="http://a.b.c/pds.jpg">http://a.b.c/pds.jpg</a></p>
          */
         public Builder avatar(String avatar) {
             this.putBodyParameter("avatar", avatar);
@@ -219,7 +225,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The description of the user. The description can be up to 1,024 characters in length.
+         * <p>The description of the user. The description can be up to 1,024 characters in length.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -228,7 +234,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The email address of the user.
+         * <p>The email address of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:a@aliyunpds.com">a@aliyunpds.com</a></p>
          */
         public Builder email(String email) {
             this.putBodyParameter("email", email);
@@ -237,16 +246,19 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The information about the group.
+         * <p>The information about the group.</p>
          */
-        public Builder groupInfoList(java.util.List < GroupInfoList> groupInfoList) {
+        public Builder groupInfoList(java.util.List<GroupInfoList> groupInfoList) {
             this.putBodyParameter("group_info_list", groupInfoList);
             this.groupInfoList = groupInfoList;
             return this;
         }
 
         /**
-         * The nickname of the user. The nickname can be up to 128 characters in length.
+         * <p>The nickname of the user. The nickname can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pdsuer</p>
          */
         public Builder nickName(String nickName) {
             this.putBodyParameter("nick_name", nickName);
@@ -255,7 +267,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The mobile number of the user.
+         * <p>The mobile number of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13900001111</p>
          */
         public Builder phone(String phone) {
             this.putBodyParameter("phone", phone);
@@ -264,12 +279,15 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The role of the user. Valid values:
-         * <p>
+         * <p>The role of the user. Valid values:</p>
+         * <ul>
+         * <li>superadmin</li>
+         * <li>admin</li>
+         * <li>user</li>
+         * </ul>
          * 
-         * *   superadmin
-         * *   admin
-         * *   user
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder role(String role) {
             this.putBodyParameter("role", role);
@@ -278,11 +296,14 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The state of the user. Valid values:
-         * <p>
+         * <p>The state of the user. Valid values:</p>
+         * <ul>
+         * <li>disabled: The user is prohibited from logon.</li>
+         * <li>enabled: The user is in a normal state.</li>
+         * </ul>
          * 
-         * *   disabled: The user is prohibited from logon.
-         * *   enabled: The user is in a normal state.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -291,16 +312,20 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The custom data. The data can be up to 1,024 characters in length.
+         * <p>The custom data. The data can be up to 1,024 characters in length.</p>
          */
-        public Builder userData(java.util.Map < String, String > userData) {
+        public Builder userData(java.util.Map<String, String> userData) {
             this.putBodyParameter("user_data", userData);
             this.userData = userData;
             return this;
         }
 
         /**
-         * The user ID. The ID can be up to 64 characters in length and cannot contain a number sign (#).
+         * <p>The user ID. The ID can be up to 64 characters in length and cannot contain a number sign (#).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c9b7a5aa04d14ae3867fdc886fa01da4</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);
@@ -315,6 +340,12 @@ public class UpdateUserRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateUserRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateUserRequest</p>
+     */
     public static class GroupInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("group_id")
         private String groupId;
@@ -342,7 +373,10 @@ public class UpdateUserRequest extends Request {
             private String groupId; 
 
             /**
-             * The group ID.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g123</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveGroupMemberRequest} extends {@link RequestModel}
  *
  * <p>RemoveGroupMemberRequest</p>
@@ -98,7 +104,8 @@ public class RemoveGroupMemberRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * <p>A short description of struct</p>
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -107,7 +114,11 @@ public class RemoveGroupMemberRequest extends Request {
         }
 
         /**
-         * The ID of the group from which you want to remove a member.
+         * <p>The ID of the group from which you want to remove a member.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3e5***2c2</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("group_id", groupId);
@@ -116,7 +127,11 @@ public class RemoveGroupMemberRequest extends Request {
         }
 
         /**
-         * The ID of the member. If member_type is set to user, set this parameter to the ID of the corresponding user.
+         * <p>The ID of the member. If member_type is set to user, set this parameter to the ID of the corresponding user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e4***1b1</p>
          */
         public Builder memberId(String memberId) {
             this.putBodyParameter("member_id", memberId);
@@ -125,12 +140,15 @@ public class RemoveGroupMemberRequest extends Request {
         }
 
         /**
-         * The type of the member that you want to remove from the group. Only common users can be removed. If you want to remove all members from a group, you can directly delete the group. Valid value:
-         * <p>
+         * <p>The type of the member that you want to remove from the group. Only common users can be removed. If you want to remove all members from a group, you can directly delete the group. Valid value:</p>
+         * <ul>
+         * <li>user</li>
+         * </ul>
+         * <p>Note: A group can be a member of only one group. It cannot be a member of multiple groups. A user can be a member of multiple groups.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   user
-         * 
-         * Note: A group can be a member of only one group. It cannot be a member of multiple groups. A user can be a member of multiple groups.
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder memberType(String memberType) {
             this.putBodyParameter("member_type", memberType);

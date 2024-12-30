@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ShareLink} extends {@link TeaModel}
  *
  * <p>ShareLink</p>
@@ -48,7 +54,10 @@ public class ShareLink extends TeaModel {
     private Boolean expired;
 
     @com.aliyun.core.annotation.NameInMap("file_id_list")
-    private java.util.List < String > fileIdList;
+    private java.util.List<String> fileIdList;
+
+    @com.aliyun.core.annotation.NameInMap("office_editable")
+    private Boolean officeEditable;
 
     @com.aliyun.core.annotation.NameInMap("preview_count")
     private Long previewCount;
@@ -103,6 +112,7 @@ public class ShareLink extends TeaModel {
         this.expiration = builder.expiration;
         this.expired = builder.expired;
         this.fileIdList = builder.fileIdList;
+        this.officeEditable = builder.officeEditable;
         this.previewCount = builder.previewCount;
         this.previewLimit = builder.previewLimit;
         this.reportCount = builder.reportCount;
@@ -213,8 +223,15 @@ public class ShareLink extends TeaModel {
     /**
      * @return fileIdList
      */
-    public java.util.List < String > getFileIdList() {
+    public java.util.List<String> getFileIdList() {
         return this.fileIdList;
+    }
+
+    /**
+     * @return officeEditable
+     */
+    public Boolean getOfficeEditable() {
+        return this.officeEditable;
     }
 
     /**
@@ -321,7 +338,8 @@ public class ShareLink extends TeaModel {
         private String driveId; 
         private String expiration; 
         private Boolean expired; 
-        private java.util.List < String > fileIdList; 
+        private java.util.List<String> fileIdList; 
+        private Boolean officeEditable; 
         private Long previewCount; 
         private Long previewLimit; 
         private Long reportCount; 
@@ -435,8 +453,16 @@ public class ShareLink extends TeaModel {
         /**
          * file_id_list.
          */
-        public Builder fileIdList(java.util.List < String > fileIdList) {
+        public Builder fileIdList(java.util.List<String> fileIdList) {
             this.fileIdList = fileIdList;
+            return this;
+        }
+
+        /**
+         * office_editable.
+         */
+        public Builder officeEditable(Boolean officeEditable) {
+            this.officeEditable = officeEditable;
             return this;
         }
 

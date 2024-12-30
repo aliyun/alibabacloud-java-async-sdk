@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFacegroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateFacegroupRequest</p>
@@ -127,7 +133,7 @@ public class UpdateFacegroupRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -136,7 +142,11 @@ public class UpdateFacegroupRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -145,7 +155,10 @@ public class UpdateFacegroupRequest extends Request {
         }
 
         /**
-         * The face ID of the thumbnail of the face-based group. You can obtain the face ID from the **image_media_metadata** parameter in the returned results of the GetFile, ListFile, or SearchFile operation.
+         * <p>The face ID of the thumbnail of the face-based group. You can obtain the face ID from the <strong>image_media_metadata</strong> parameter in the returned results of the GetFile, ListFile, or SearchFile operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>face1</p>
          */
         public Builder groupCoverFaceId(String groupCoverFaceId) {
             this.putBodyParameter("group_cover_face_id", groupCoverFaceId);
@@ -154,7 +167,11 @@ public class UpdateFacegroupRequest extends Request {
         }
 
         /**
-         * The ID of the face-based group. You can call the ListFacegroups operation to query the group ID.
+         * <p>The ID of the face-based group. You can call the ListFacegroups operation to query the group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group-abc</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("group_id", groupId);
@@ -163,7 +180,7 @@ public class UpdateFacegroupRequest extends Request {
         }
 
         /**
-         * The name of the face-based group. The name can be up to 128 characters in length.
+         * <p>The name of the face-based group. The name can be up to 128 characters in length.</p>
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("group_name", groupName);
@@ -172,7 +189,7 @@ public class UpdateFacegroupRequest extends Request {
         }
 
         /**
-         * The remarks. The remarks can be up to 128 characters in length.
+         * <p>The remarks. The remarks can be up to 128 characters in length.</p>
          */
         public Builder remarks(String remarks) {
             this.putBodyParameter("remarks", remarks);

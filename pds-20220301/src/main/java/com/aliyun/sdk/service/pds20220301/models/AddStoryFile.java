@@ -1,18 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UCDataRefFileInfo} extends {@link TeaModel}
+ * 
+ * {@link AddStoryFile} extends {@link TeaModel}
  *
- * <p>UCDataRefFileInfo</p>
+ * <p>AddStoryFile</p>
  */
-public class UCDataRefFileInfo extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("drive_id")
-    private String driveId;
+public class AddStoryFile extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("error_code")
+    private String errorCode;
+
+    @com.aliyun.core.annotation.NameInMap("error_message")
+    private String errorMessage;
 
     @com.aliyun.core.annotation.NameInMap("file_id")
     private String fileId;
@@ -20,8 +29,9 @@ public class UCDataRefFileInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("revision_id")
     private String revisionId;
 
-    private UCDataRefFileInfo(Builder builder) {
-        this.driveId = builder.driveId;
+    private AddStoryFile(Builder builder) {
+        this.errorCode = builder.errorCode;
+        this.errorMessage = builder.errorMessage;
         this.fileId = builder.fileId;
         this.revisionId = builder.revisionId;
     }
@@ -30,15 +40,22 @@ public class UCDataRefFileInfo extends TeaModel {
         return new Builder();
     }
 
-    public static UCDataRefFileInfo create() {
+    public static AddStoryFile create() {
         return builder().build();
     }
 
     /**
-     * @return driveId
+     * @return errorCode
      */
-    public String getDriveId() {
-        return this.driveId;
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * @return errorMessage
+     */
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     /**
@@ -56,15 +73,24 @@ public class UCDataRefFileInfo extends TeaModel {
     }
 
     public static final class Builder {
-        private String driveId; 
+        private String errorCode; 
+        private String errorMessage; 
         private String fileId; 
         private String revisionId; 
 
         /**
-         * drive_id.
+         * error_code.
          */
-        public Builder driveId(String driveId) {
-            this.driveId = driveId;
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * error_message.
+         */
+        public Builder errorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
             return this;
         }
 
@@ -84,8 +110,8 @@ public class UCDataRefFileInfo extends TeaModel {
             return this;
         }
 
-        public UCDataRefFileInfo build() {
-            return new UCDataRefFileInfo(this);
+        public AddStoryFile build() {
+            return new AddStoryFile(this);
         } 
 
     } 

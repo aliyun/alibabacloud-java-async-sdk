@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAssignmentResponseBody} extends {@link TeaModel}
  *
  * <p>ListAssignmentResponseBody</p>
  */
 public class ListAssignmentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("assignment_list")
-    private java.util.List < AssignmentList> assignmentList;
+    private java.util.List<AssignmentList> assignmentList;
 
     @com.aliyun.core.annotation.NameInMap("next_marker")
     private String nextMarker;
@@ -33,7 +39,7 @@ public class ListAssignmentResponseBody extends TeaModel {
     /**
      * @return assignmentList
      */
-    public java.util.List < AssignmentList> getAssignmentList() {
+    public java.util.List<AssignmentList> getAssignmentList() {
         return this.assignmentList;
     }
 
@@ -45,19 +51,22 @@ public class ListAssignmentResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AssignmentList> assignmentList; 
+        private java.util.List<AssignmentList> assignmentList; 
         private String nextMarker; 
 
         /**
-         * The assigned roles.
+         * <p>The assigned roles.</p>
          */
-        public Builder assignmentList(java.util.List < AssignmentList> assignmentList) {
+        public Builder assignmentList(java.util.List<AssignmentList> assignmentList) {
             this.assignmentList = assignmentList;
             return this;
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder nextMarker(String nextMarker) {
             this.nextMarker = nextMarker;
@@ -70,6 +79,12 @@ public class ListAssignmentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAssignmentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAssignmentResponseBody</p>
+     */
     public static class AssignmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("created_at")
         private Long createdAt;
@@ -169,7 +184,10 @@ public class ListAssignmentResponseBody extends TeaModel {
             private String roleId; 
 
             /**
-             * The time when the role was assigned. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the role was assigned. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1622682267564</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -177,7 +195,10 @@ public class ListAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who assigned the role.
+             * <p>The ID of the user who assigned the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>216***c83</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -185,7 +206,10 @@ public class ListAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The domain ID.
+             * <p>The domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hz1</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -193,7 +217,7 @@ public class ListAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The identity to whom the role is assigned, which is a user or a group.
+             * <p>The identity to whom the role is assigned, which is a user or a group.</p>
              */
             public Builder identity(Identity identity) {
                 this.identity = identity;
@@ -201,7 +225,10 @@ public class ListAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the managed resource, such as a group ID.
+             * <p>The ID of the managed resource, such as a group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>105***b82</p>
              */
             public Builder manageResourceId(String manageResourceId) {
                 this.manageResourceId = manageResourceId;
@@ -209,7 +236,10 @@ public class ListAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the managed resource. For example, a value of RT_Group indicates group.
+             * <p>The type of the managed resource. For example, a value of RT_Group indicates group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RT_Group</p>
              */
             public Builder manageResourceType(String manageResourceType) {
                 this.manageResourceType = manageResourceType;
@@ -217,7 +247,10 @@ public class ListAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the role assigned to the identity.
+             * <p>The ID of the role assigned to the identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SystemGroupAdmin</p>
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;

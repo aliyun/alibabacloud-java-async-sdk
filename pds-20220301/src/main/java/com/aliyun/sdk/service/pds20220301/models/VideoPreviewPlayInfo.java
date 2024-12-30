@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VideoPreviewPlayInfo} extends {@link TeaModel}
  *
  * <p>VideoPreviewPlayInfo</p>
@@ -15,7 +21,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
     private String category;
 
     @com.aliyun.core.annotation.NameInMap("live_transcoding_task_list")
-    private java.util.List < LiveTranscodingTaskList> liveTranscodingTaskList;
+    private java.util.List<LiveTranscodingTaskList> liveTranscodingTaskList;
 
     @com.aliyun.core.annotation.NameInMap("master_url")
     private String masterUrl;
@@ -24,7 +30,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
     private Meta meta;
 
     @com.aliyun.core.annotation.NameInMap("offline_video_transcoding_list")
-    private java.util.List < OfflineVideoTranscodingList> offlineVideoTranscodingList;
+    private java.util.List<OfflineVideoTranscodingList> offlineVideoTranscodingList;
 
     private VideoPreviewPlayInfo(Builder builder) {
         this.category = builder.category;
@@ -52,7 +58,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
     /**
      * @return liveTranscodingTaskList
      */
-    public java.util.List < LiveTranscodingTaskList> getLiveTranscodingTaskList() {
+    public java.util.List<LiveTranscodingTaskList> getLiveTranscodingTaskList() {
         return this.liveTranscodingTaskList;
     }
 
@@ -73,16 +79,16 @@ public class VideoPreviewPlayInfo extends TeaModel {
     /**
      * @return offlineVideoTranscodingList
      */
-    public java.util.List < OfflineVideoTranscodingList> getOfflineVideoTranscodingList() {
+    public java.util.List<OfflineVideoTranscodingList> getOfflineVideoTranscodingList() {
         return this.offlineVideoTranscodingList;
     }
 
     public static final class Builder {
         private String category; 
-        private java.util.List < LiveTranscodingTaskList> liveTranscodingTaskList; 
+        private java.util.List<LiveTranscodingTaskList> liveTranscodingTaskList; 
         private String masterUrl; 
         private Meta meta; 
-        private java.util.List < OfflineVideoTranscodingList> offlineVideoTranscodingList; 
+        private java.util.List<OfflineVideoTranscodingList> offlineVideoTranscodingList; 
 
         /**
          * category.
@@ -95,7 +101,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
         /**
          * live_transcoding_task_list.
          */
-        public Builder liveTranscodingTaskList(java.util.List < LiveTranscodingTaskList> liveTranscodingTaskList) {
+        public Builder liveTranscodingTaskList(java.util.List<LiveTranscodingTaskList> liveTranscodingTaskList) {
             this.liveTranscodingTaskList = liveTranscodingTaskList;
             return this;
         }
@@ -119,7 +125,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
         /**
          * offline_video_transcoding_list.
          */
-        public Builder offlineVideoTranscodingList(java.util.List < OfflineVideoTranscodingList> offlineVideoTranscodingList) {
+        public Builder offlineVideoTranscodingList(java.util.List<OfflineVideoTranscodingList> offlineVideoTranscodingList) {
             this.offlineVideoTranscodingList = offlineVideoTranscodingList;
             return this;
         }
@@ -130,6 +136,12 @@ public class VideoPreviewPlayInfo extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VideoPreviewPlayInfo} extends {@link TeaModel}
+     *
+     * <p>VideoPreviewPlayInfo</p>
+     */
     public static class LiveTranscodingTaskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("keep_original_resolution")
         private Boolean keepOriginalResolution;
@@ -231,6 +243,12 @@ public class VideoPreviewPlayInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VideoPreviewPlayInfo} extends {@link TeaModel}
+     *
+     * <p>VideoPreviewPlayInfo</p>
+     */
     public static class Meta extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("duration")
         private Double duration;
@@ -312,6 +330,12 @@ public class VideoPreviewPlayInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VideoPreviewPlayInfo} extends {@link TeaModel}
+     *
+     * <p>VideoPreviewPlayInfo</p>
+     */
     public static class OfflineVideoTranscodingList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("keep_original_resolution")
         private Boolean keepOriginalResolution;

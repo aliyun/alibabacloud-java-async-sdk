@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AuthorizeRequest} extends {@link RequestModel}
  *
  * <p>AuthorizeRequest</p>
@@ -41,7 +47,7 @@ public class AuthorizeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("scope")
-    private java.util.List < String > scope;
+    private java.util.List<String> scope;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("state")
@@ -117,7 +123,7 @@ public class AuthorizeRequest extends Request {
     /**
      * @return scope
      */
-    public java.util.List < String > getScope() {
+    public java.util.List<String> getScope() {
         return this.scope;
     }
 
@@ -135,7 +141,7 @@ public class AuthorizeRequest extends Request {
         private String loginType; 
         private String redirectUri; 
         private String responseType; 
-        private java.util.List < String > scope; 
+        private java.util.List<String> scope; 
         private String state; 
 
         private Builder() {
@@ -155,7 +161,7 @@ public class AuthorizeRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -164,7 +170,11 @@ public class AuthorizeRequest extends Request {
         }
 
         /**
-         * The application ID returned when the application was created.
+         * <p>The application ID returned when the application was created.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47eUHhrzgWBvlLWj</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("client_id", clientId);
@@ -173,7 +183,10 @@ public class AuthorizeRequest extends Request {
         }
 
         /**
-         * Specifies whether to hide the consent page.
+         * <p>Specifies whether to hide the consent page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hideConsent(Boolean hideConsent) {
             this.putQueryParameter("hide_consent", hideConsent);
@@ -182,15 +195,19 @@ public class AuthorizeRequest extends Request {
         }
 
         /**
-         * The authentication method. Valid values:
-         * <p>
+         * <p>The authentication method. Valid values:</p>
+         * <ul>
+         * <li>default: all logon methods that are integrated on the default logon page provided by Drive and Photo Service.</li>
+         * <li>ding: logs on by scanning a DingTalk QR code.</li>
+         * <li>ding_sns: logs on by entering a DingTalk account and its password.</li>
+         * <li>ram: logs on as an Alibaba Cloud Resource Access Management (RAM) user.</li>
+         * <li>wechat: logs on by scanning a WeCom QR code.</li>
+         * <li>wechat_app: logs on without authentication in WeCom.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   default: all logon methods that are integrated on the default logon page provided by Drive and Photo Service.
-         * *   ding: logs on by scanning a DingTalk QR code.
-         * *   ding_sns: logs on by entering a DingTalk account and its password.
-         * *   ram: logs on as an Alibaba Cloud Resource Access Management (RAM) user.
-         * *   wechat: logs on by scanning a WeCom QR code.
-         * *   wechat_app: logs on without authentication in WeCom.
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder loginType(String loginType) {
             this.putQueryParameter("login_type", loginType);
@@ -199,7 +216,11 @@ public class AuthorizeRequest extends Request {
         }
 
         /**
-         * The callback URL specified when the application was created.
+         * <p>The callback URL specified when the application was created.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyunpds.com/sign/callback">https://www.aliyunpds.com/sign/callback</a></p>
          */
         public Builder redirectUri(String redirectUri) {
             this.putQueryParameter("redirect_uri", redirectUri);
@@ -208,7 +229,11 @@ public class AuthorizeRequest extends Request {
         }
 
         /**
-         * The format in which to return the response. Set the value to code.
+         * <p>The format in which to return the response. Set the value to code.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder responseType(String responseType) {
             this.putQueryParameter("response_type", responseType);
@@ -217,9 +242,9 @@ public class AuthorizeRequest extends Request {
         }
 
         /**
-         * The requested permissions. By default, all permissions are requested.
+         * <p>The requested permissions. By default, all permissions are requested.</p>
          */
-        public Builder scope(java.util.List < String > scope) {
+        public Builder scope(java.util.List<String> scope) {
             String scopeShrink = shrink(scope, "scope", "simple");
             this.putQueryParameter("scope", scopeShrink);
             this.scope = scope;
@@ -227,7 +252,10 @@ public class AuthorizeRequest extends Request {
         }
 
         /**
-         * The user-defined parameter to return in the callback URL after the requested permissions are granted.
+         * <p>The user-defined parameter to return in the callback URL after the requested permissions are granted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customdata</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("state", state);

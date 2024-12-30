@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PersonalRightsInfoResponse} extends {@link TeaModel}
  *
  * <p>PersonalRightsInfoResponse</p>
@@ -30,7 +36,7 @@ public class PersonalRightsInfoResponse extends Response {
     private PersonalRightsInfoResponse otherRights;
 
     @com.aliyun.core.annotation.NameInMap("privileges")
-    private java.util.List < DataBoxPrivileges > privileges;
+    private java.util.List<DataBoxPrivileges> privileges;
 
     @com.aliyun.core.annotation.NameInMap("spu_id")
     private String spuId;
@@ -105,7 +111,7 @@ public class PersonalRightsInfoResponse extends Response {
     /**
      * @return privileges
      */
-    public java.util.List < DataBoxPrivileges > getPrivileges() {
+    public java.util.List<DataBoxPrivileges> getPrivileges() {
         return this.privileges;
     }
 
@@ -137,7 +143,7 @@ public class PersonalRightsInfoResponse extends Response {
 
         Builder otherRights(PersonalRightsInfoResponse otherRights);
 
-        Builder privileges(java.util.List < DataBoxPrivileges > privileges);
+        Builder privileges(java.util.List<DataBoxPrivileges> privileges);
 
         Builder spuId(String spuId);
 
@@ -157,7 +163,7 @@ public class PersonalRightsInfoResponse extends Response {
         private Boolean isExpires; 
         private String name; 
         private PersonalRightsInfoResponse otherRights; 
-        private java.util.List < DataBoxPrivileges > privileges; 
+        private java.util.List<DataBoxPrivileges> privileges; 
         private String spuId; 
         private String title; 
 
@@ -236,7 +242,7 @@ public class PersonalRightsInfoResponse extends Response {
          * privileges.
          */
         @Override
-        public Builder privileges(java.util.List < DataBoxPrivileges > privileges) {
+        public Builder privileges(java.util.List<DataBoxPrivileges> privileges) {
             this.privileges = privileges;
             return this;
         }

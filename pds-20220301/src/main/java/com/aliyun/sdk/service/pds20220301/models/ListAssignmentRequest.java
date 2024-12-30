@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAssignmentRequest} extends {@link RequestModel}
  *
  * <p>ListAssignmentRequest</p>
@@ -21,10 +27,12 @@ public class ListAssignmentRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("manage_resource_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String manageResourceId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("manage_resource_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String manageResourceType;
 
     @com.aliyun.core.annotation.Body
@@ -109,7 +117,7 @@ public class ListAssignmentRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * <p>A short description of struct</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -118,10 +126,11 @@ public class ListAssignmentRequest extends Request {
         }
 
         /**
-         * The maximum number of results to return. Valid values: 1 to 100.
-         * <p>
+         * <p>The maximum number of results to return. Valid values: 1 to 100.</p>
+         * <p>The number of returned results must be less than or equal to the specified number.</p>
          * 
-         * The number of returned results must be less than or equal to the specified number.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("limit", limit);
@@ -130,7 +139,11 @@ public class ListAssignmentRequest extends Request {
         }
 
         /**
-         * The ID of the managed resource, such as a group ID.
+         * <p>The ID of the managed resource, such as a group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>105***b82</p>
          */
         public Builder manageResourceId(String manageResourceId) {
             this.putBodyParameter("manage_resource_id", manageResourceId);
@@ -139,7 +152,11 @@ public class ListAssignmentRequest extends Request {
         }
 
         /**
-         * The type of the managed resource. Set the value to RT_Group, which specifies that the administrators of a group are queried.
+         * <p>The type of the managed resource. Set the value to RT_Group, which specifies that the administrators of a group are queried.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RT_Group</p>
          */
         public Builder manageResourceType(String manageResourceType) {
             this.putBodyParameter("manage_resource_type", manageResourceType);
@@ -148,7 +165,10 @@ public class ListAssignmentRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is empty.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder marker(String marker) {
             this.putBodyParameter("marker", marker);

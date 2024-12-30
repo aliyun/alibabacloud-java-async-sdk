@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvestigationInfo} extends {@link TeaModel}
  *
  * <p>InvestigationInfo</p>
@@ -90,6 +96,12 @@ public class InvestigationInfo extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InvestigationInfo} extends {@link TeaModel}
+     *
+     * <p>InvestigationInfo</p>
+     */
     public static class BlockFrames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("label")
         private String label;
@@ -171,9 +183,15 @@ public class InvestigationInfo extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link InvestigationInfo} extends {@link TeaModel}
+     *
+     * <p>InvestigationInfo</p>
+     */
     public static class VideoDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("block_frames")
-        private java.util.List < BlockFrames> blockFrames;
+        private java.util.List<BlockFrames> blockFrames;
 
         private VideoDetail(Builder builder) {
             this.blockFrames = builder.blockFrames;
@@ -190,17 +208,17 @@ public class InvestigationInfo extends TeaModel {
         /**
          * @return blockFrames
          */
-        public java.util.List < BlockFrames> getBlockFrames() {
+        public java.util.List<BlockFrames> getBlockFrames() {
             return this.blockFrames;
         }
 
         public static final class Builder {
-            private java.util.List < BlockFrames> blockFrames; 
+            private java.util.List<BlockFrames> blockFrames; 
 
             /**
              * block_frames.
              */
-            public Builder blockFrames(java.util.List < BlockFrames> blockFrames) {
+            public Builder blockFrames(java.util.List<BlockFrames> blockFrames) {
                 this.blockFrames = blockFrames;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CdnFileDownloadCallbackInfo} extends {@link TeaModel}
  *
  * <p>CdnFileDownloadCallbackInfo</p>
@@ -129,7 +135,10 @@ public class CdnFileDownloadCallbackInfo extends TeaModel {
         private String userId; 
 
         /**
-         * bucket.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccp-bj1-bj-1234</p>
          */
         public Builder bucket(String bucket) {
             this.bucket = bucket;
@@ -137,7 +146,7 @@ public class CdnFileDownloadCallbackInfo extends TeaModel {
         }
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -145,7 +154,7 @@ public class CdnFileDownloadCallbackInfo extends TeaModel {
         }
 
         /**
-         * drive_id.
+         * <p>This parameter is required.</p>
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;
@@ -153,7 +162,7 @@ public class CdnFileDownloadCallbackInfo extends TeaModel {
         }
 
         /**
-         * expire.
+         * <p>This parameter is required.</p>
          */
         public Builder expire(Long expire) {
             this.expire = expire;
@@ -161,7 +170,7 @@ public class CdnFileDownloadCallbackInfo extends TeaModel {
         }
 
         /**
-         * file_id.
+         * <p>This parameter is required.</p>
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;
@@ -169,7 +178,7 @@ public class CdnFileDownloadCallbackInfo extends TeaModel {
         }
 
         /**
-         * object.
+         * <p>This parameter is required.</p>
          */
         public Builder object(String object) {
             this.object = object;
@@ -177,7 +186,10 @@ public class CdnFileDownloadCallbackInfo extends TeaModel {
         }
 
         /**
-         * token.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>md5.Sum([]byte(fmt.Sprintf(&quot;%v%v%v%v%v%v...%v&quot;, 		req.Object, req.Range, req.DomainID, req.DriveID, req.UserID, req.FileID, req.Expire)))</p>
          */
         public Builder token(String token) {
             this.token = token;
@@ -185,7 +197,7 @@ public class CdnFileDownloadCallbackInfo extends TeaModel {
         }
 
         /**
-         * user_id.
+         * <p>This parameter is required.</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

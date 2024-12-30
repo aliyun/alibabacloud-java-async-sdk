@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PermissionCondition} extends {@link TeaModel}
  *
  * <p>PermissionCondition</p>
@@ -110,9 +116,15 @@ public class PermissionCondition extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PermissionCondition} extends {@link TeaModel}
+     *
+     * <p>PermissionCondition</p>
+     */
     public static class IpEquals extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("client_ip")
-        private java.util.List < String > clientIp;
+        private java.util.List<String> clientIp;
 
         private IpEquals(Builder builder) {
             this.clientIp = builder.clientIp;
@@ -129,17 +141,17 @@ public class PermissionCondition extends TeaModel {
         /**
          * @return clientIp
          */
-        public java.util.List < String > getClientIp() {
+        public java.util.List<String> getClientIp() {
             return this.clientIp;
         }
 
         public static final class Builder {
-            private java.util.List < String > clientIp; 
+            private java.util.List<String> clientIp; 
 
             /**
              * client_ip.
              */
-            public Builder clientIp(java.util.List < String > clientIp) {
+            public Builder clientIp(java.util.List<String> clientIp) {
                 this.clientIp = clientIp;
                 return this;
             }
@@ -151,9 +163,15 @@ public class PermissionCondition extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PermissionCondition} extends {@link TeaModel}
+     *
+     * <p>PermissionCondition</p>
+     */
     public static class IpNotEquals extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("client_ip")
-        private java.util.List < String > clientIp;
+        private java.util.List<String> clientIp;
 
         private IpNotEquals(Builder builder) {
             this.clientIp = builder.clientIp;
@@ -170,17 +188,17 @@ public class PermissionCondition extends TeaModel {
         /**
          * @return clientIp
          */
-        public java.util.List < String > getClientIp() {
+        public java.util.List<String> getClientIp() {
             return this.clientIp;
         }
 
         public static final class Builder {
-            private java.util.List < String > clientIp; 
+            private java.util.List<String> clientIp; 
 
             /**
              * client_ip.
              */
-            public Builder clientIp(java.util.List < String > clientIp) {
+            public Builder clientIp(java.util.List<String> clientIp) {
                 this.clientIp = clientIp;
                 return this;
             }
@@ -192,9 +210,15 @@ public class PermissionCondition extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PermissionCondition} extends {@link TeaModel}
+     *
+     * <p>PermissionCondition</p>
+     */
     public static class StringLike extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("vpc_id")
-        private java.util.List < String > vpcId;
+        private java.util.List<String> vpcId;
 
         private StringLike(Builder builder) {
             this.vpcId = builder.vpcId;
@@ -211,17 +235,17 @@ public class PermissionCondition extends TeaModel {
         /**
          * @return vpcId
          */
-        public java.util.List < String > getVpcId() {
+        public java.util.List<String> getVpcId() {
             return this.vpcId;
         }
 
         public static final class Builder {
-            private java.util.List < String > vpcId; 
+            private java.util.List<String> vpcId; 
 
             /**
              * vpc_id.
              */
-            public Builder vpcId(java.util.List < String > vpcId) {
+            public Builder vpcId(java.util.List<String> vpcId) {
                 this.vpcId = vpcId;
                 return this;
             }
@@ -233,9 +257,15 @@ public class PermissionCondition extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PermissionCondition} extends {@link TeaModel}
+     *
+     * <p>PermissionCondition</p>
+     */
     public static class StringNotLike extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("vpc_id")
-        private java.util.List < String > vpcId;
+        private java.util.List<String> vpcId;
 
         private StringNotLike(Builder builder) {
             this.vpcId = builder.vpcId;
@@ -252,17 +282,17 @@ public class PermissionCondition extends TeaModel {
         /**
          * @return vpcId
          */
-        public java.util.List < String > getVpcId() {
+        public java.util.List<String> getVpcId() {
             return this.vpcId;
         }
 
         public static final class Builder {
-            private java.util.List < String > vpcId; 
+            private java.util.List<String> vpcId; 
 
             /**
              * vpc_id.
              */
-            public Builder vpcId(java.util.List < String > vpcId) {
+            public Builder vpcId(java.util.List<String> vpcId) {
                 this.vpcId = vpcId;
                 return this;
             }

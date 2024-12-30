@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CssProduce} extends {@link TeaModel}
  *
  * <p>CssProduce</p>
@@ -30,7 +36,7 @@ public class CssProduce extends TeaModel {
     private Long payerId;
 
     @com.aliyun.core.annotation.NameInMap("purchases")
-    private java.util.List < CssPurchase > purchases;
+    private java.util.List<CssPurchase> purchases;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -111,7 +117,7 @@ public class CssProduce extends TeaModel {
     /**
      * @return purchases
      */
-    public java.util.List < CssPurchase > getPurchases() {
+    public java.util.List<CssPurchase> getPurchases() {
         return this.purchases;
     }
 
@@ -150,7 +156,7 @@ public class CssProduce extends TeaModel {
         private String fromApp; 
         private Long orderId; 
         private Long payerId; 
-        private java.util.List < CssPurchase > purchases; 
+        private java.util.List<CssPurchase> purchases; 
         private String requestId; 
         private Boolean skipChannel; 
         private String token; 
@@ -207,7 +213,7 @@ public class CssProduce extends TeaModel {
         /**
          * purchases.
          */
-        public Builder purchases(java.util.List < CssPurchase > purchases) {
+        public Builder purchases(java.util.List<CssPurchase> purchases) {
             this.purchases = purchases;
             return this;
         }

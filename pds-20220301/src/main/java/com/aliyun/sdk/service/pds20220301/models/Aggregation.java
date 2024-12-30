@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Aggregation} extends {@link TeaModel}
  *
  * <p>Aggregation</p>
@@ -15,7 +21,7 @@ public class Aggregation extends TeaModel {
     private byte[] field;
 
     @com.aliyun.core.annotation.NameInMap("groups")
-    private java.util.List < AggregationsGroup > groups;
+    private java.util.List<AggregationsGroup> groups;
 
     @com.aliyun.core.annotation.NameInMap("operation")
     private byte[] operation;
@@ -48,7 +54,7 @@ public class Aggregation extends TeaModel {
     /**
      * @return groups
      */
-    public java.util.List < AggregationsGroup > getGroups() {
+    public java.util.List<AggregationsGroup> getGroups() {
         return this.groups;
     }
 
@@ -68,7 +74,7 @@ public class Aggregation extends TeaModel {
 
     public static final class Builder {
         private byte[] field; 
-        private java.util.List < AggregationsGroup > groups; 
+        private java.util.List<AggregationsGroup> groups; 
         private byte[] operation; 
         private Double value; 
 
@@ -83,7 +89,7 @@ public class Aggregation extends TeaModel {
         /**
          * groups.
          */
-        public Builder groups(java.util.List < AggregationsGroup > groups) {
+        public Builder groups(java.util.List<AggregationsGroup> groups) {
             this.groups = groups;
             return this;
         }

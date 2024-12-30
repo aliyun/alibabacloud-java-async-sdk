@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AlbumFile} extends {@link TeaModel}
  *
  * <p>AlbumFile</p>
@@ -45,7 +51,7 @@ public class AlbumFile extends TeaModel {
     private String driveId;
 
     @com.aliyun.core.annotation.NameInMap("ex_fields_info")
-    private java.util.Map < String, ? > exFieldsInfo;
+    private java.util.Map<String, ?> exFieldsInfo;
 
     @com.aliyun.core.annotation.NameInMap("file_extension")
     private String fileExtension;
@@ -66,7 +72,7 @@ public class AlbumFile extends TeaModel {
     private Long joinedAt;
 
     @com.aliyun.core.annotation.NameInMap("labels")
-    private java.util.List < String > labels;
+    private java.util.List<String> labels;
 
     @com.aliyun.core.annotation.NameInMap("local_created_at")
     private String localCreatedAt;
@@ -102,7 +108,7 @@ public class AlbumFile extends TeaModel {
     private String thumbnail;
 
     @com.aliyun.core.annotation.NameInMap("thumbnail_urls")
-    private java.util.Map < String, String > thumbnailUrls;
+    private java.util.Map<String, String> thumbnailUrls;
 
     @com.aliyun.core.annotation.NameInMap("transhed_at")
     private String transhedAt;
@@ -246,7 +252,7 @@ public class AlbumFile extends TeaModel {
     /**
      * @return exFieldsInfo
      */
-    public java.util.Map < String, ? > getExFieldsInfo() {
+    public java.util.Map<String, ?> getExFieldsInfo() {
         return this.exFieldsInfo;
     }
 
@@ -295,7 +301,7 @@ public class AlbumFile extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < String > getLabels() {
+    public java.util.List<String> getLabels() {
         return this.labels;
     }
 
@@ -379,7 +385,7 @@ public class AlbumFile extends TeaModel {
     /**
      * @return thumbnailUrls
      */
-    public java.util.Map < String, String > getThumbnailUrls() {
+    public java.util.Map<String, String> getThumbnailUrls() {
         return this.thumbnailUrls;
     }
 
@@ -430,14 +436,14 @@ public class AlbumFile extends TeaModel {
         private String domainId; 
         private String downloadUrl; 
         private String driveId; 
-        private java.util.Map < String, ? > exFieldsInfo; 
+        private java.util.Map<String, ?> exFieldsInfo; 
         private String fileExtension; 
         private String fileId; 
         private Boolean hidden; 
         private ImageMediaMetadata imageMediaMetadata; 
         private InvestigationInfo investigationInfo; 
         private Long joinedAt; 
-        private java.util.List < String > labels; 
+        private java.util.List<String> labels; 
         private String localCreatedAt; 
         private String localModifiedAt; 
         private String mimeType; 
@@ -449,7 +455,7 @@ public class AlbumFile extends TeaModel {
         private Boolean starred; 
         private String status; 
         private String thumbnail; 
-        private java.util.Map < String, String > thumbnailUrls; 
+        private java.util.Map<String, String> thumbnailUrls; 
         private String transhedAt; 
         private String type; 
         private String updatedAt; 
@@ -547,7 +553,7 @@ public class AlbumFile extends TeaModel {
         /**
          * ex_fields_info.
          */
-        public Builder exFieldsInfo(java.util.Map < String, ? > exFieldsInfo) {
+        public Builder exFieldsInfo(java.util.Map<String, ?> exFieldsInfo) {
             this.exFieldsInfo = exFieldsInfo;
             return this;
         }
@@ -603,7 +609,7 @@ public class AlbumFile extends TeaModel {
         /**
          * labels.
          */
-        public Builder labels(java.util.List < String > labels) {
+        public Builder labels(java.util.List<String> labels) {
             this.labels = labels;
             return this;
         }
@@ -699,7 +705,7 @@ public class AlbumFile extends TeaModel {
         /**
          * thumbnail_urls.
          */
-        public Builder thumbnailUrls(java.util.Map < String, String > thumbnailUrls) {
+        public Builder thumbnailUrls(java.util.Map<String, String> thumbnailUrls) {
             this.thumbnailUrls = thumbnailUrls;
             return this;
         }

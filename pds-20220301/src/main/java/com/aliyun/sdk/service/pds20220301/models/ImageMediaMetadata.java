@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImageMediaMetadata} extends {@link TeaModel}
  *
  * <p>ImageMediaMetadata</p>
@@ -27,7 +33,7 @@ public class ImageMediaMetadata extends TeaModel {
     private String exif;
 
     @com.aliyun.core.annotation.NameInMap("faces_thumbnail")
-    private java.util.List < FaceThumbnail > facesThumbnail;
+    private java.util.List<FaceThumbnail> facesThumbnail;
 
     @com.aliyun.core.annotation.NameInMap("height")
     private Long height;
@@ -36,7 +42,7 @@ public class ImageMediaMetadata extends TeaModel {
     private ImageQuality imageQuality;
 
     @com.aliyun.core.annotation.NameInMap("image_tags")
-    private java.util.List < SystemTag > imageTags;
+    private java.util.List<SystemTag> imageTags;
 
     @com.aliyun.core.annotation.NameInMap("location")
     private String location;
@@ -116,7 +122,7 @@ public class ImageMediaMetadata extends TeaModel {
     /**
      * @return facesThumbnail
      */
-    public java.util.List < FaceThumbnail > getFacesThumbnail() {
+    public java.util.List<FaceThumbnail> getFacesThumbnail() {
         return this.facesThumbnail;
     }
 
@@ -137,7 +143,7 @@ public class ImageMediaMetadata extends TeaModel {
     /**
      * @return imageTags
      */
-    public java.util.List < SystemTag > getImageTags() {
+    public java.util.List<SystemTag> getImageTags() {
         return this.imageTags;
     }
 
@@ -182,10 +188,10 @@ public class ImageMediaMetadata extends TeaModel {
         private String country; 
         private String district; 
         private String exif; 
-        private java.util.List < FaceThumbnail > facesThumbnail; 
+        private java.util.List<FaceThumbnail> facesThumbnail; 
         private Long height; 
         private ImageQuality imageQuality; 
-        private java.util.List < SystemTag > imageTags; 
+        private java.util.List<SystemTag> imageTags; 
         private String location; 
         private String province; 
         private String time; 
@@ -235,7 +241,7 @@ public class ImageMediaMetadata extends TeaModel {
         /**
          * faces_thumbnail.
          */
-        public Builder facesThumbnail(java.util.List < FaceThumbnail > facesThumbnail) {
+        public Builder facesThumbnail(java.util.List<FaceThumbnail> facesThumbnail) {
             this.facesThumbnail = facesThumbnail;
             return this;
         }
@@ -259,7 +265,7 @@ public class ImageMediaMetadata extends TeaModel {
         /**
          * image_tags.
          */
-        public Builder imageTags(java.util.List < SystemTag > imageTags) {
+        public Builder imageTags(java.util.List<SystemTag> imageTags) {
             this.imageTags = imageTags;
             return this;
         }

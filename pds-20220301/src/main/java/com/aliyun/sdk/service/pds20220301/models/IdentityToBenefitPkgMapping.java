@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IdentityToBenefitPkgMapping} extends {@link TeaModel}
  *
  * <p>IdentityToBenefitPkgMapping</p>
@@ -33,7 +39,7 @@ public class IdentityToBenefitPkgMapping extends TeaModel {
     private String createdAt;
 
     @com.aliyun.core.annotation.NameInMap("delivery_info_list")
-    private java.util.List < BenefitPkgDeliveryInfo > deliveryInfoList;
+    private java.util.List<BenefitPkgDeliveryInfo> deliveryInfoList;
 
     @com.aliyun.core.annotation.NameInMap("identity_id")
     private String identityId;
@@ -118,7 +124,7 @@ public class IdentityToBenefitPkgMapping extends TeaModel {
     /**
      * @return deliveryInfoList
      */
-    public java.util.List < BenefitPkgDeliveryInfo > getDeliveryInfoList() {
+    public java.util.List<BenefitPkgDeliveryInfo> getDeliveryInfoList() {
         return this.deliveryInfoList;
     }
 
@@ -151,7 +157,7 @@ public class IdentityToBenefitPkgMapping extends TeaModel {
         private Long benefitPkgPriority; 
         private String benefitPkgType; 
         private String createdAt; 
-        private java.util.List < BenefitPkgDeliveryInfo > deliveryInfoList; 
+        private java.util.List<BenefitPkgDeliveryInfo> deliveryInfoList; 
         private String identityId; 
         private String identityType; 
         private String updatedAt; 
@@ -215,7 +221,7 @@ public class IdentityToBenefitPkgMapping extends TeaModel {
         /**
          * delivery_info_list.
          */
-        public Builder deliveryInfoList(java.util.List < BenefitPkgDeliveryInfo > deliveryInfoList) {
+        public Builder deliveryInfoList(java.util.List<BenefitPkgDeliveryInfo> deliveryInfoList) {
             this.deliveryInfoList = deliveryInfoList;
             return this;
         }

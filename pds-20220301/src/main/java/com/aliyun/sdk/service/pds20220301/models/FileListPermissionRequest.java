@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FileListPermissionRequest} extends {@link RequestModel}
  *
  * <p>FileListPermissionRequest</p>
@@ -17,10 +23,12 @@ public class FileListPermissionRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("drive_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String driveId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("file_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileId;
 
     private FileListPermissionRequest(Builder builder) {
@@ -81,7 +89,7 @@ public class FileListPermissionRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -90,7 +98,11 @@ public class FileListPermissionRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -99,7 +111,11 @@ public class FileListPermissionRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4221bf6e6ab43a255edc4463bffa6f5f5d317401</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);

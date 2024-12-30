@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BaseUserResponse} extends {@link TeaModel}
  *
  * <p>BaseUserResponse</p>
@@ -57,7 +63,7 @@ public class BaseUserResponse extends Response {
     private String pathStatus;
 
     @com.aliyun.core.annotation.NameInMap("permission")
-    private java.util.Map < String, IDPermission > permission;
+    private java.util.Map<String, IDPermission> permission;
 
     @com.aliyun.core.annotation.NameInMap("phone")
     private String phone;
@@ -75,7 +81,7 @@ public class BaseUserResponse extends Response {
     private String updatedAt;
 
     @com.aliyun.core.annotation.NameInMap("user_data")
-    private java.util.Map < String, ? > userData;
+    private java.util.Map<String, ?> userData;
 
     @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
@@ -228,7 +234,7 @@ public class BaseUserResponse extends Response {
     /**
      * @return permission
      */
-    public java.util.Map < String, IDPermission > getPermission() {
+    public java.util.Map<String, IDPermission> getPermission() {
         return this.permission;
     }
 
@@ -270,7 +276,7 @@ public class BaseUserResponse extends Response {
     /**
      * @return userData
      */
-    public java.util.Map < String, ? > getUserData() {
+    public java.util.Map<String, ?> getUserData() {
         return this.userData;
     }
 
@@ -320,7 +326,7 @@ public class BaseUserResponse extends Response {
 
         Builder pathStatus(String pathStatus);
 
-        Builder permission(java.util.Map < String, IDPermission > permission);
+        Builder permission(java.util.Map<String, IDPermission> permission);
 
         Builder phone(String phone);
 
@@ -332,7 +338,7 @@ public class BaseUserResponse extends Response {
 
         Builder updatedAt(String updatedAt);
 
-        Builder userData(java.util.Map < String, ? > userData);
+        Builder userData(java.util.Map<String, ?> userData);
 
         Builder userId(String userId);
 
@@ -361,13 +367,13 @@ public class BaseUserResponse extends Response {
         private Boolean needChangePasswordNextLogin; 
         private String nickName; 
         private String pathStatus; 
-        private java.util.Map < String, IDPermission > permission; 
+        private java.util.Map<String, IDPermission> permission; 
         private String phone; 
         private String phoneRegion; 
         private String role; 
         private String status; 
         private String updatedAt; 
-        private java.util.Map < String, ? > userData; 
+        private java.util.Map<String, ?> userData; 
         private String userId; 
         private String userName; 
 
@@ -542,7 +548,7 @@ public class BaseUserResponse extends Response {
          * permission.
          */
         @Override
-        public Builder permission(java.util.Map < String, IDPermission > permission) {
+        public Builder permission(java.util.Map<String, IDPermission> permission) {
             this.permission = permission;
             return this;
         }
@@ -596,7 +602,7 @@ public class BaseUserResponse extends Response {
          * user_data.
          */
         @Override
-        public Builder userData(java.util.Map < String, ? > userData) {
+        public Builder userData(java.util.Map<String, ?> userData) {
             this.userData = userData;
             return this;
         }

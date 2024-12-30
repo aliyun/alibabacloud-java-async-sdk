@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVideoPreviewPlayInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetVideoPreviewPlayInfoResponseBody</p>
@@ -85,7 +91,10 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
         private VideoPreviewPlayInfo videoPreviewPlayInfo; 
 
         /**
-         * The domain ID.
+         * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj1</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -93,7 +102,10 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;
@@ -101,7 +113,10 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileid1</p>
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;
@@ -109,7 +124,10 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The share ID.
+         * <p>The share ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1FswpQ8</p>
          */
         public Builder shareId(String shareId) {
             this.shareId = shareId;
@@ -117,7 +135,7 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The information about video playback.
+         * <p>The information about video playback.</p>
          */
         public Builder videoPreviewPlayInfo(VideoPreviewPlayInfo videoPreviewPlayInfo) {
             this.videoPreviewPlayInfo = videoPreviewPlayInfo;

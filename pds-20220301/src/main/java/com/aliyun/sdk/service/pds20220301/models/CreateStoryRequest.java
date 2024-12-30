@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStoryRequest} extends {@link RequestModel}
  *
  * <p>CreateStoryRequest</p>
@@ -22,7 +28,7 @@ public class CreateStoryRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("custom_labels")
     @Deprecated
-    private java.util.Map < String, String > customLabels;
+    private java.util.Map<String, String> customLabels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("drive_id")
@@ -109,7 +115,7 @@ public class CreateStoryRequest extends Request {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, String > getCustomLabels() {
+    public java.util.Map<String, String> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -179,7 +185,7 @@ public class CreateStoryRequest extends Request {
     public static final class Builder extends Request.Builder<CreateStoryRequest, Builder> {
         private String domainId; 
         private Address address; 
-        private java.util.Map < String, String > customLabels; 
+        private java.util.Map<String, String> customLabels; 
         private String driveId; 
         private Long maxImageCount; 
         private Long minImageCount; 
@@ -211,7 +217,7 @@ public class CreateStoryRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -231,14 +237,17 @@ public class CreateStoryRequest extends Request {
         /**
          * custom_labels.
          */
-        public Builder customLabels(java.util.Map < String, String > customLabels) {
+        public Builder customLabels(java.util.Map<String, String> customLabels) {
             this.putBodyParameter("custom_labels", customLabels);
             this.customLabels = customLabels;
             return this;
         }
 
         /**
-         * drive_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -310,7 +319,10 @@ public class CreateStoryRequest extends Request {
         }
 
         /**
-         * story_type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagMemory</p>
          */
         public Builder storyType(String storyType) {
             this.putBodyParameter("story_type", storyType);

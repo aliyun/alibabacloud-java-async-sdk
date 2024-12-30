@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateStoryRequest} extends {@link RequestModel}
  *
  * <p>UpdateStoryRequest</p>
@@ -22,7 +28,7 @@ public class UpdateStoryRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("custom_labels")
     @Deprecated
-    private java.util.Map < String, String > customLabels;
+    private java.util.Map<String, String> customLabels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("drive_id")
@@ -78,7 +84,7 @@ public class UpdateStoryRequest extends Request {
     /**
      * @return customLabels
      */
-    public java.util.Map < String, String > getCustomLabels() {
+    public java.util.Map<String, String> getCustomLabels() {
         return this.customLabels;
     }
 
@@ -106,7 +112,7 @@ public class UpdateStoryRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateStoryRequest, Builder> {
         private String domainId; 
         private Cover cover; 
-        private java.util.Map < String, String > customLabels; 
+        private java.util.Map<String, String> customLabels; 
         private String driveId; 
         private String storyId; 
         private String storyName; 
@@ -126,7 +132,7 @@ public class UpdateStoryRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -146,14 +152,17 @@ public class UpdateStoryRequest extends Request {
         /**
          * custom_labels.
          */
-        public Builder customLabels(java.util.Map < String, String > customLabels) {
+        public Builder customLabels(java.util.Map<String, String> customLabels) {
             this.putBodyParameter("custom_labels", customLabels);
             this.customLabels = customLabels;
             return this;
         }
 
         /**
-         * drive_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -162,7 +171,10 @@ public class UpdateStoryRequest extends Request {
         }
 
         /**
-         * story_id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9132e0d8-fe92-4e56-86c3-f5f112308003</p>
          */
         public Builder storyId(String storyId) {
             this.putBodyParameter("story_id", storyId);
@@ -186,6 +198,12 @@ public class UpdateStoryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateStoryRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateStoryRequest</p>
+     */
     public static class Cover extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("file_id")
         private String fileId;

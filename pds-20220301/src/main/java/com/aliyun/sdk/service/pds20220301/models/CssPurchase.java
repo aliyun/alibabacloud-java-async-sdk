@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CssPurchase} extends {@link TeaModel}
  *
  * <p>CssPurchase</p>
@@ -24,7 +30,7 @@ public class CssPurchase extends TeaModel {
     private Long gmtCreate;
 
     @com.aliyun.core.annotation.NameInMap("instanceComponents")
-    private java.util.List < CssInstanceComponent > instanceComponents;
+    private java.util.List<CssInstanceComponent> instanceComponents;
 
     @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
@@ -33,7 +39,7 @@ public class CssPurchase extends TeaModel {
     private String orderType;
 
     @com.aliyun.core.annotation.NameInMap("purchaseParams")
-    private java.util.Map < String, String > purchaseParams;
+    private java.util.Map<String, String> purchaseParams;
 
     @com.aliyun.core.annotation.NameInMap("startDate")
     private Long startDate;
@@ -89,7 +95,7 @@ public class CssPurchase extends TeaModel {
     /**
      * @return instanceComponents
      */
-    public java.util.List < CssInstanceComponent > getInstanceComponents() {
+    public java.util.List<CssInstanceComponent> getInstanceComponents() {
         return this.instanceComponents;
     }
 
@@ -110,7 +116,7 @@ public class CssPurchase extends TeaModel {
     /**
      * @return purchaseParams
      */
-    public java.util.Map < String, String > getPurchaseParams() {
+    public java.util.Map<String, String> getPurchaseParams() {
         return this.purchaseParams;
     }
 
@@ -126,10 +132,10 @@ public class CssPurchase extends TeaModel {
         private String commodityCode; 
         private Long endDate; 
         private Long gmtCreate; 
-        private java.util.List < CssInstanceComponent > instanceComponents; 
+        private java.util.List<CssInstanceComponent> instanceComponents; 
         private String instanceId; 
         private String orderType; 
-        private java.util.Map < String, String > purchaseParams; 
+        private java.util.Map<String, String> purchaseParams; 
         private Long startDate; 
 
         /**
@@ -167,7 +173,7 @@ public class CssPurchase extends TeaModel {
         /**
          * instanceComponents.
          */
-        public Builder instanceComponents(java.util.List < CssInstanceComponent > instanceComponents) {
+        public Builder instanceComponents(java.util.List<CssInstanceComponent> instanceComponents) {
             this.instanceComponents = instanceComponents;
             return this;
         }
@@ -191,7 +197,7 @@ public class CssPurchase extends TeaModel {
         /**
          * purchaseParams.
          */
-        public Builder purchaseParams(java.util.Map < String, String > purchaseParams) {
+        public Builder purchaseParams(java.util.Map<String, String> purchaseParams) {
             this.purchaseParams = purchaseParams;
             return this;
         }

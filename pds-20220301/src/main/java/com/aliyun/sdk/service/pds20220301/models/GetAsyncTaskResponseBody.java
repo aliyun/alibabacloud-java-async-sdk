@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAsyncTaskResponseBody} extends {@link TeaModel}
  *
  * <p>GetAsyncTaskResponseBody</p>
@@ -57,7 +63,7 @@ public class GetAsyncTaskResponseBody extends TeaModel {
     private Long totalProcess;
 
     @com.aliyun.core.annotation.NameInMap("uncompress_file_list")
-    private java.util.List < UncompressedFileInfo > uncompressFileList;
+    private java.util.List<UncompressedFileInfo> uncompressFileList;
 
     @com.aliyun.core.annotation.NameInMap("url")
     private String url;
@@ -198,7 +204,7 @@ public class GetAsyncTaskResponseBody extends TeaModel {
     /**
      * @return uncompressFileList
      */
-    public java.util.List < UncompressedFileInfo > getUncompressFileList() {
+    public java.util.List<UncompressedFileInfo> getUncompressFileList() {
         return this.uncompressFileList;
     }
 
@@ -225,11 +231,14 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         private String state; 
         private String status; 
         private Long totalProcess; 
-        private java.util.List < UncompressedFileInfo > uncompressFileList; 
+        private java.util.List<UncompressedFileInfo> uncompressFileList; 
         private String url; 
 
         /**
-         * The ID of the asynchronous task.
+         * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000e89fb-cf8f-11e9-8ab4-b6e980803a3b</p>
          */
         public Builder asyncTaskId(String asyncTaskId) {
             this.asyncTaskId = asyncTaskId;
@@ -237,7 +246,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The custom category of the task.
+         * <p>The custom category of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>album</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -245,7 +257,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The total amount of work that is done in the asynchronous task, such as the number of files that are packaged for package download on the server.
+         * <p>The total amount of work that is done in the asynchronous task, such as the number of files that are packaged for package download on the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder consumedProcess(Long consumedProcess) {
             this.consumedProcess = consumedProcess;
@@ -253,7 +268,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the task was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2019-03-28T13:03:29.298Z.
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2019-03-28T13:03:29.298Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-20T06:51:27.292Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -261,10 +279,11 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <warning>This parameter is no longer used. We recommend that you use error_code instead.</warning>
-         * <p>
+         * <p><warning>This parameter is no longer used. We recommend that you use error_code instead.</warning></p>
+         * <p>The error code returned if the asynchronous task failed.</p>
          * 
-         * The error code returned if the asynchronous task failed.
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(Long errCode) {
             this.errCode = errCode;
@@ -272,7 +291,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the asynchronous task failed.
+         * <p>The error code returned if the asynchronous task failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -280,7 +302,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the asynchronous task failed.
+         * <p>The error message returned if the asynchronous task failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request has been failed due to some unknown error. Please try again later.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -296,7 +321,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the task was complete. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2019-03-28T13:03:29.298Z.
+         * <p>The time when the task was complete. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2019-03-28T13:03:29.298Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-20T06:51:27.292Z</p>
          */
         public Builder finishedAt(String finishedAt) {
             this.finishedAt = finishedAt;
@@ -304,10 +332,11 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <warning>This parameter is no longer used. We recommend that you use error_message instead.</warning>
-         * <p>
+         * <p><warning>This parameter is no longer used. We recommend that you use error_message instead.</warning></p>
+         * <p>The error message returned if the asynchronous task failed.</p>
          * 
-         * The error message returned if the asynchronous task failed.
+         * <strong>example:</strong>
+         * <p>The request has been failed due to some unknown error. Please try again later.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -323,7 +352,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the task was started. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2019-03-28T13:03:29.298Z.
+         * <p>The time when the task was started. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2019-03-28T13:03:29.298Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-20T06:51:27.292Z</p>
          */
         public Builder startedAt(String startedAt) {
             this.startedAt = startedAt;
@@ -331,13 +363,16 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the task. Valid values:
-         * <p>
+         * <p>The state of the task. Valid values:</p>
+         * <ul>
+         * <li>Failed</li>
+         * <li>Running</li>
+         * <li>PartialSucceed</li>
+         * <li>Succeed</li>
+         * </ul>
          * 
-         * *   Failed
-         * *   Running
-         * *   PartialSucceed
-         * *   Succeed
+         * <strong>example:</strong>
+         * <p>Succeed</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -345,15 +380,17 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <warning>This parameter is no longer used. We recommend that you use state instead.</warning>
-         * <p>
+         * <p><warning>This parameter is no longer used. We recommend that you use state instead.</warning></p>
+         * <p>The state of the task. Valid values:</p>
+         * <ul>
+         * <li>Failed</li>
+         * <li>Running</li>
+         * <li>PartialSucceed</li>
+         * <li>Succeed</li>
+         * </ul>
          * 
-         * The state of the task. Valid values:
-         * 
-         * *   Failed
-         * *   Running
-         * *   PartialSucceed
-         * *   Succeed
+         * <strong>example:</strong>
+         * <p>Succeed</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -361,7 +398,10 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The total amount of work to be done in the asynchronous task, such as the number of files to be packaged for package download on the server.
+         * <p>The total amount of work to be done in the asynchronous task, such as the number of files to be packaged for package download on the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalProcess(Long totalProcess) {
             this.totalProcess = totalProcess;
@@ -369,15 +409,18 @@ public class GetAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The extracted files.
+         * <p>The extracted files.</p>
          */
-        public Builder uncompressFileList(java.util.List < UncompressedFileInfo > uncompressFileList) {
+        public Builder uncompressFileList(java.util.List<UncompressedFileInfo> uncompressFileList) {
             this.uncompressFileList = uncompressFileList;
             return this;
         }
 
         /**
-         * The download URL of the data generated by the asynchronous task, such as the download URL of the packaged files generated by the task of package download on the server.
+         * <p>The download URL of the data generated by the asynchronous task, such as the download URL of the packaged files generated by the task of package download on the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&OSSAccessKeyId=xxx&Signature=xxx">https://data.aliyunpds.com/hz22%2F5d5b986facbec311ef844c25954f96821497b383%2F5d5b986f955410dd991646bb87c6b4e899eff525?Expires=xxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxx</a></p>
          */
         public Builder url(String url) {
             this.url = url;

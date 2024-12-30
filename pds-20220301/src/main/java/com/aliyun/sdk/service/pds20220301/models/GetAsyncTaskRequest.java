@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAsyncTaskRequest} extends {@link RequestModel}
  *
  * <p>GetAsyncTaskRequest</p>
@@ -68,7 +74,7 @@ public class GetAsyncTaskRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -77,7 +83,11 @@ public class GetAsyncTaskRequest extends Request {
         }
 
         /**
-         * The ID of the asynchronous task.
+         * <p>The ID of the asynchronous task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000e89fb-cf8f-11e9-8ab4-b6e980803a3b</p>
          */
         public Builder asyncTaskId(String asyncTaskId) {
             this.putBodyParameter("async_task_id", asyncTaskId);

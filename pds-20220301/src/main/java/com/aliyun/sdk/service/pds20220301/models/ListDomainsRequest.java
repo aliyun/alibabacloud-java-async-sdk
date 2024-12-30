@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDomainsRequest} extends {@link RequestModel}
  *
  * <p>ListDomainsRequest</p>
@@ -95,7 +101,10 @@ public class ListDomainsRequest extends Request {
         } 
 
         /**
-         * The maximum number of results to return. Valid values: 1 to 100. Default value: 50.
+         * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder limit(Long limit) {
             this.putBodyParameter("limit", limit);
@@ -104,7 +113,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder marker(String marker) {
             this.putBodyParameter("marker", marker);
@@ -113,7 +125,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the parent domain.
+         * <p>The ID of the parent domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj1</p>
          */
         public Builder parentDomainId(String parentDomainId) {
             this.putBodyParameter("parent_domain_id", parentDomainId);

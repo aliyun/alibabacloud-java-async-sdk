@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AccountLinkInfo} extends {@link TeaModel}
  *
  * <p>AccountLinkInfo</p>
@@ -29,6 +35,12 @@ public class AccountLinkInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("identity")
     private String identity;
 
+    @com.aliyun.core.annotation.NameInMap("last_login_time")
+    private Long lastLoginTime;
+
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
     @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
 
@@ -39,6 +51,8 @@ public class AccountLinkInfo extends TeaModel {
         this.domainId = builder.domainId;
         this.extra = builder.extra;
         this.identity = builder.identity;
+        this.lastLoginTime = builder.lastLoginTime;
+        this.status = builder.status;
         this.userId = builder.userId;
     }
 
@@ -93,6 +107,20 @@ public class AccountLinkInfo extends TeaModel {
     }
 
     /**
+     * @return lastLoginTime
+     */
+    public Long getLastLoginTime() {
+        return this.lastLoginTime;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -106,6 +134,8 @@ public class AccountLinkInfo extends TeaModel {
         private String domainId; 
         private String extra; 
         private String identity; 
+        private Long lastLoginTime; 
+        private String status; 
         private String userId; 
 
         /**
@@ -153,6 +183,22 @@ public class AccountLinkInfo extends TeaModel {
          */
         public Builder identity(String identity) {
             this.identity = identity;
+            return this;
+        }
+
+        /**
+         * last_login_time.
+         */
+        public Builder lastLoginTime(Long lastLoginTime) {
+            this.lastLoginTime = lastLoginTime;
+            return this;
+        }
+
+        /**
+         * status.
+         */
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 

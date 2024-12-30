@@ -1,21 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AIAssistantMessageFileMeta} extends {@link TeaModel}
+ * 
+ * {@link HotDriveFile} extends {@link TeaModel}
  *
- * <p>AIAssistantMessageFileMeta</p>
+ * <p>HotDriveFile</p>
  */
-public class AIAssistantMessageFileMeta extends TeaModel {
+public class HotDriveFile extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("action_count")
+    private Long actionCount;
+
+    @com.aliyun.core.annotation.NameInMap("action_list")
+    private java.util.List<String> actionList;
+
     @com.aliyun.core.annotation.NameInMap("category")
     private String category;
 
-    @com.aliyun.core.annotation.NameInMap("domain_id")
-    private String domainId;
+    @com.aliyun.core.annotation.NameInMap("count_at")
+    private Long countAt;
 
     @com.aliyun.core.annotation.NameInMap("drive_id")
     private String driveId;
@@ -29,25 +41,37 @@ public class AIAssistantMessageFileMeta extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("revision_id")
     private String revisionId;
 
-    @com.aliyun.core.annotation.NameInMap("semantic_result")
-    private SemanticResult semanticResult;
-
-    private AIAssistantMessageFileMeta(Builder builder) {
+    private HotDriveFile(Builder builder) {
+        this.actionCount = builder.actionCount;
+        this.actionList = builder.actionList;
         this.category = builder.category;
-        this.domainId = builder.domainId;
+        this.countAt = builder.countAt;
         this.driveId = builder.driveId;
         this.fileId = builder.fileId;
         this.name = builder.name;
         this.revisionId = builder.revisionId;
-        this.semanticResult = builder.semanticResult;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static AIAssistantMessageFileMeta create() {
+    public static HotDriveFile create() {
         return builder().build();
+    }
+
+    /**
+     * @return actionCount
+     */
+    public Long getActionCount() {
+        return this.actionCount;
+    }
+
+    /**
+     * @return actionList
+     */
+    public java.util.List<String> getActionList() {
+        return this.actionList;
     }
 
     /**
@@ -58,10 +82,10 @@ public class AIAssistantMessageFileMeta extends TeaModel {
     }
 
     /**
-     * @return domainId
+     * @return countAt
      */
-    public String getDomainId() {
-        return this.domainId;
+    public Long getCountAt() {
+        return this.countAt;
     }
 
     /**
@@ -92,21 +116,31 @@ public class AIAssistantMessageFileMeta extends TeaModel {
         return this.revisionId;
     }
 
-    /**
-     * @return semanticResult
-     */
-    public SemanticResult getSemanticResult() {
-        return this.semanticResult;
-    }
-
     public static final class Builder {
+        private Long actionCount; 
+        private java.util.List<String> actionList; 
         private String category; 
-        private String domainId; 
+        private Long countAt; 
         private String driveId; 
         private String fileId; 
         private String name; 
         private String revisionId; 
-        private SemanticResult semanticResult; 
+
+        /**
+         * action_count.
+         */
+        public Builder actionCount(Long actionCount) {
+            this.actionCount = actionCount;
+            return this;
+        }
+
+        /**
+         * action_list.
+         */
+        public Builder actionList(java.util.List<String> actionList) {
+            this.actionList = actionList;
+            return this;
+        }
 
         /**
          * category.
@@ -117,10 +151,10 @@ public class AIAssistantMessageFileMeta extends TeaModel {
         }
 
         /**
-         * domain_id.
+         * count_at.
          */
-        public Builder domainId(String domainId) {
-            this.domainId = domainId;
+        public Builder countAt(Long countAt) {
+            this.countAt = countAt;
             return this;
         }
 
@@ -156,16 +190,8 @@ public class AIAssistantMessageFileMeta extends TeaModel {
             return this;
         }
 
-        /**
-         * semantic_result.
-         */
-        public Builder semanticResult(SemanticResult semanticResult) {
-            this.semanticResult = semanticResult;
-            return this;
-        }
-
-        public AIAssistantMessageFileMeta build() {
-            return new AIAssistantMessageFileMeta(this);
+        public HotDriveFile build() {
+            return new HotDriveFile(this);
         } 
 
     } 

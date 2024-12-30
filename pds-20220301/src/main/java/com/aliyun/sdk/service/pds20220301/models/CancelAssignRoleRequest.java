@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelAssignRoleRequest} extends {@link RequestModel}
  *
  * <p>CancelAssignRoleRequest</p>
@@ -113,7 +119,7 @@ public class CancelAssignRoleRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * <p>A short description of struct</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -122,7 +128,8 @@ public class CancelAssignRoleRequest extends Request {
         }
 
         /**
-         * The unique identifier. You can cancel only the role assigned to a user.
+         * <p>The unique identifier. You can cancel only the role assigned to a user.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder identity(Identity identity) {
             this.putBodyParameter("identity", identity);
@@ -131,7 +138,11 @@ public class CancelAssignRoleRequest extends Request {
         }
 
         /**
-         * The ID of the resource that the role manages. Set the value to a group ID.
+         * <p>The ID of the resource that the role manages. Set the value to a group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>105***b82</p>
          */
         public Builder manageResourceId(String manageResourceId) {
             this.putBodyParameter("manage_resource_id", manageResourceId);
@@ -140,7 +151,11 @@ public class CancelAssignRoleRequest extends Request {
         }
 
         /**
-         * The type of the resource that the role manages. Set the value to RT_Group, which specifies group.
+         * <p>The type of the resource that the role manages. Set the value to RT_Group, which specifies group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RT_Group</p>
          */
         public Builder manageResourceType(String manageResourceType) {
             this.putBodyParameter("manage_resource_type", manageResourceType);
@@ -149,7 +164,11 @@ public class CancelAssignRoleRequest extends Request {
         }
 
         /**
-         * The ID of the role to be canceled. Set the value to SystemGroupAdmin, which is the ID of the group administrator role.
+         * <p>The ID of the role to be canceled. Set the value to SystemGroupAdmin, which is the ID of the group administrator role.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SystemGroupAdmin</p>
          */
         public Builder roleId(String roleId) {
             this.putBodyParameter("role_id", roleId);

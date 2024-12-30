@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Permission} extends {@link TeaModel}
  *
  * <p>Permission</p>
  */
 public class Permission extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("action_list")
-    private java.util.List < ActionList> actionList;
+    private java.util.List<ActionList> actionList;
 
     @com.aliyun.core.annotation.NameInMap("collection")
     private String collection;
@@ -42,7 +48,7 @@ public class Permission extends TeaModel {
     private Long updatedAt;
 
     @com.aliyun.core.annotation.NameInMap("user_tags")
-    private java.util.List < String > userTags;
+    private java.util.List<String> userTags;
 
     private Permission(Builder builder) {
         this.actionList = builder.actionList;
@@ -69,7 +75,7 @@ public class Permission extends TeaModel {
     /**
      * @return actionList
      */
-    public java.util.List < ActionList> getActionList() {
+    public java.util.List<ActionList> getActionList() {
         return this.actionList;
     }
 
@@ -139,12 +145,12 @@ public class Permission extends TeaModel {
     /**
      * @return userTags
      */
-    public java.util.List < String > getUserTags() {
+    public java.util.List<String> getUserTags() {
         return this.userTags;
     }
 
     public static final class Builder {
-        private java.util.List < ActionList> actionList; 
+        private java.util.List<ActionList> actionList; 
         private String collection; 
         private PermissionCondition condition; 
         private Long createdAt; 
@@ -154,12 +160,12 @@ public class Permission extends TeaModel {
         private String resource; 
         private String resourceType; 
         private Long updatedAt; 
-        private java.util.List < String > userTags; 
+        private java.util.List<String> userTags; 
 
         /**
          * action_list.
          */
-        public Builder actionList(java.util.List < ActionList> actionList) {
+        public Builder actionList(java.util.List<ActionList> actionList) {
             this.actionList = actionList;
             return this;
         }
@@ -239,7 +245,7 @@ public class Permission extends TeaModel {
         /**
          * user_tags.
          */
-        public Builder userTags(java.util.List < String > userTags) {
+        public Builder userTags(java.util.List<String> userTags) {
             this.userTags = userTags;
             return this;
         }
@@ -250,6 +256,12 @@ public class Permission extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Permission} extends {@link TeaModel}
+     *
+     * <p>Permission</p>
+     */
     public static class ActionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("action")
         private String action;

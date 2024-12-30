@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetShareLinkTokenRequest} extends {@link RequestModel}
  *
  * <p>GetShareLinkTokenRequest</p>
@@ -96,7 +102,7 @@ public class GetShareLinkTokenRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -105,7 +111,10 @@ public class GetShareLinkTokenRequest extends Request {
         }
 
         /**
-         * The validity period of the token. Valid values: (0,7200]. Default value: 7200. Unit: seconds.
+         * <p>The validity period of the token. Valid values: (0,7200]. Default value: 7200. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7200</p>
          */
         public Builder expireSec(Integer expireSec) {
             this.putBodyParameter("expire_sec", expireSec);
@@ -114,7 +123,11 @@ public class GetShareLinkTokenRequest extends Request {
         }
 
         /**
-         * The share ID.
+         * <p>The share ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1FswpQ8</p>
          */
         public Builder shareId(String shareId) {
             this.putBodyParameter("share_id", shareId);
@@ -123,7 +136,10 @@ public class GetShareLinkTokenRequest extends Request {
         }
 
         /**
-         * The access code.
+         * <p>The access code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcF123x</p>
          */
         public Builder sharePwd(String sharePwd) {
             this.putBodyParameter("share_pwd", sharePwd);

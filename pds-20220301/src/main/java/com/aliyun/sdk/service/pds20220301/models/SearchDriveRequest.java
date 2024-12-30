@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchDriveRequest} extends {@link RequestModel}
  *
  * <p>SearchDriveRequest</p>
@@ -124,7 +130,7 @@ public class SearchDriveRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -133,7 +139,7 @@ public class SearchDriveRequest extends Request {
         }
 
         /**
-         * The drive name.
+         * <p>The drive name.</p>
          */
         public Builder driveName(String driveName) {
             this.putBodyParameter("drive_name", driveName);
@@ -142,7 +148,10 @@ public class SearchDriveRequest extends Request {
         }
 
         /**
-         * The maximum number of asynchronous tasks to return. Valid values: 1 to 100. Default value: 100.
+         * <p>The maximum number of asynchronous tasks to return. Valid values: 1 to 100. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("limit", limit);
@@ -151,9 +160,10 @@ public class SearchDriveRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
-         * <p>
-         * By default, this parameter is left empty.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.<br>By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder marker(String marker) {
             this.putBodyParameter("marker", marker);
@@ -162,7 +172,10 @@ public class SearchDriveRequest extends Request {
         }
 
         /**
-         * The owner of the drive.
+         * <p>The owner of the drive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c9b7a5aa04d14ae3867fdc886fa01da4</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("owner", owner);
@@ -171,10 +184,11 @@ public class SearchDriveRequest extends Request {
         }
 
         /**
-         * The type of the owner. Valid values:
-         * <p>
+         * <p>The type of the owner. Valid values:</p>
+         * <p>user group</p>
          * 
-         * user group
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder ownerType(String ownerType) {
             this.putBodyParameter("owner_type", ownerType);

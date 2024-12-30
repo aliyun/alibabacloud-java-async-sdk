@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUploadUrlRequest} extends {@link RequestModel}
  *
  * <p>GetUploadUrlRequest</p>
@@ -28,7 +34,7 @@ public class GetUploadUrlRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("part_info_list")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < PartInfoList> partInfoList;
+    private java.util.List<PartInfoList> partInfoList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("share_id")
@@ -86,7 +92,7 @@ public class GetUploadUrlRequest extends Request {
     /**
      * @return partInfoList
      */
-    public java.util.List < PartInfoList> getPartInfoList() {
+    public java.util.List<PartInfoList> getPartInfoList() {
         return this.partInfoList;
     }
 
@@ -108,7 +114,7 @@ public class GetUploadUrlRequest extends Request {
         private String domainId; 
         private String driveId; 
         private String fileId; 
-        private java.util.List < PartInfoList> partInfoList; 
+        private java.util.List<PartInfoList> partInfoList; 
         private String shareId; 
         private String uploadId; 
 
@@ -127,7 +133,7 @@ public class GetUploadUrlRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -136,7 +142,11 @@ public class GetUploadUrlRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -145,7 +155,11 @@ public class GetUploadUrlRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5d5b846942cf94fa72324c14a4bda34e81da635d</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);
@@ -154,16 +168,20 @@ public class GetUploadUrlRequest extends Request {
         }
 
         /**
-         * The information about the file parts.
+         * <p>The information about the file parts.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder partInfoList(java.util.List < PartInfoList> partInfoList) {
+        public Builder partInfoList(java.util.List<PartInfoList> partInfoList) {
             this.putBodyParameter("part_info_list", partInfoList);
             this.partInfoList = partInfoList;
             return this;
         }
 
         /**
-         * The share ID.
+         * <p>The share ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1FswpQ8</p>
          */
         public Builder shareId(String shareId) {
             this.putBodyParameter("share_id", shareId);
@@ -172,7 +190,11 @@ public class GetUploadUrlRequest extends Request {
         }
 
         /**
-         * The ID of the upload task.
+         * <p>The ID of the upload task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10166D06127B413BA1EC8ABB1144D111</p>
          */
         public Builder uploadId(String uploadId) {
             this.putBodyParameter("upload_id", uploadId);
@@ -187,9 +209,15 @@ public class GetUploadUrlRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetUploadUrlRequest} extends {@link TeaModel}
+     *
+     * <p>GetUploadUrlRequest</p>
+     */
     public static class ParallelSha1Ctx extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("h")
-        private java.util.List < Long > h;
+        private java.util.List<Long> h;
 
         @com.aliyun.core.annotation.NameInMap("part_offset")
         private Long partOffset;
@@ -210,7 +238,7 @@ public class GetUploadUrlRequest extends Request {
         /**
          * @return h
          */
-        public java.util.List < Long > getH() {
+        public java.util.List<Long> getH() {
             return this.h;
         }
 
@@ -222,19 +250,22 @@ public class GetUploadUrlRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Long > h; 
+            private java.util.List<Long> h; 
             private Long partOffset; 
 
             /**
-             * The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.
+             * <p>The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
              */
-            public Builder h(java.util.List < Long > h) {
+            public Builder h(java.util.List<Long> h) {
                 this.h = h;
                 return this;
             }
 
             /**
-             * The size of the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.
+             * <p>The size of the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240</p>
              */
             public Builder partOffset(Long partOffset) {
                 this.partOffset = partOffset;
@@ -248,9 +279,15 @@ public class GetUploadUrlRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUploadUrlRequest} extends {@link TeaModel}
+     *
+     * <p>GetUploadUrlRequest</p>
+     */
     public static class ParallelSha256Ctx extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("h")
-        private java.util.List < Long > h;
+        private java.util.List<Long> h;
 
         @com.aliyun.core.annotation.NameInMap("part_offset")
         private Long partOffset;
@@ -271,7 +308,7 @@ public class GetUploadUrlRequest extends Request {
         /**
          * @return h
          */
-        public java.util.List < Long > getH() {
+        public java.util.List<Long> getH() {
             return this.h;
         }
 
@@ -283,19 +320,22 @@ public class GetUploadUrlRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < Long > h; 
+            private java.util.List<Long> h; 
             private Long partOffset; 
 
             /**
-             * The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.
+             * <p>The first to fifth 32-bit variables of the SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
              */
-            public Builder h(java.util.List < Long > h) {
+            public Builder h(java.util.List<Long> h) {
                 this.h = h;
                 return this;
             }
 
             /**
-             * The size of the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.
+             * <p>The size of the file part. Unit: bytes. The value must be a multiple of 64. This parameter takes effect only if the parallel upload feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240</p>
              */
             public Builder partOffset(Long partOffset) {
                 this.partOffset = partOffset;
@@ -309,6 +349,12 @@ public class GetUploadUrlRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUploadUrlRequest} extends {@link TeaModel}
+     *
+     * <p>GetUploadUrlRequest</p>
+     */
     public static class PartInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content_md5")
         private String contentMd5;
@@ -400,7 +446,7 @@ public class GetUploadUrlRequest extends Request {
             }
 
             /**
-             * The SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.
+             * <p>The SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</p>
              */
             public Builder parallelSha1Ctx(ParallelSha1Ctx parallelSha1Ctx) {
                 this.parallelSha1Ctx = parallelSha1Ctx;
@@ -416,7 +462,10 @@ public class GetUploadUrlRequest extends Request {
             }
 
             /**
-             * The serial number of a part.
+             * <p>The serial number of a part.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder partNumber(Integer partNumber) {
                 this.partNumber = partNumber;

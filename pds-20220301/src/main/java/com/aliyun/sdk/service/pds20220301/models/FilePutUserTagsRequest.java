@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FilePutUserTagsRequest} extends {@link RequestModel}
  *
  * <p>FilePutUserTagsRequest</p>
@@ -28,7 +34,7 @@ public class FilePutUserTagsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("user_tags")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < UserTags> userTags;
+    private java.util.List<UserTags> userTags;
 
     private FilePutUserTagsRequest(Builder builder) {
         super(builder);
@@ -75,7 +81,7 @@ public class FilePutUserTagsRequest extends Request {
     /**
      * @return userTags
      */
-    public java.util.List < UserTags> getUserTags() {
+    public java.util.List<UserTags> getUserTags() {
         return this.userTags;
     }
 
@@ -83,7 +89,7 @@ public class FilePutUserTagsRequest extends Request {
         private String domainId; 
         private String driveId; 
         private String fileId; 
-        private java.util.List < UserTags> userTags; 
+        private java.util.List<UserTags> userTags; 
 
         private Builder() {
             super();
@@ -98,7 +104,7 @@ public class FilePutUserTagsRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -107,7 +113,11 @@ public class FilePutUserTagsRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -116,7 +126,11 @@ public class FilePutUserTagsRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9520943DC264</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);
@@ -125,9 +139,10 @@ public class FilePutUserTagsRequest extends Request {
         }
 
         /**
-         * The tags to be added to the file. You cannot leave this parameter empty. You can specify up to 1,000 tags. You cannot specify tags that have the same name.
+         * <p>The tags to be added to the file. You cannot leave this parameter empty. You can specify up to 1,000 tags. You cannot specify tags that have the same name.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder userTags(java.util.List < UserTags> userTags) {
+        public Builder userTags(java.util.List<UserTags> userTags) {
             this.putBodyParameter("user_tags", userTags);
             this.userTags = userTags;
             return this;
@@ -140,6 +155,12 @@ public class FilePutUserTagsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FilePutUserTagsRequest} extends {@link TeaModel}
+     *
+     * <p>FilePutUserTagsRequest</p>
+     */
     public static class UserTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -180,7 +201,11 @@ public class FilePutUserTagsRequest extends Request {
             private String value; 
 
             /**
-             * The name of the tag. The tag name cannot be empty and cannot contain number signs (#).
+             * <p>The name of the tag. The tag name cannot be empty and cannot contain number signs (#).</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -188,7 +213,10 @@ public class FilePutUserTagsRequest extends Request {
             }
 
             /**
-             * The value of the tag. The tag value cannot contain number signs (#).
+             * <p>The value of the tag. The tag value cannot contain number signs (#).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

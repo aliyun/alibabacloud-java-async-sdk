@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddGroupMember  AddGroupMemberRequest
+     * @return AddGroupMemberResponse
+     */
     @Override
     public CompletableFuture<AddGroupMemberResponse> addGroupMember(AddGroupMemberRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddStoryFiles  AddStoryFilesRequest
+     * @return AddStoryFilesResponse
+     */
     @Override
     public CompletableFuture<AddStoryFilesResponse> addStoryFiles(AddStoryFilesRequest request) {
         try {
@@ -68,9 +76,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to assign a group administrator role to a user.
-      *
-     * @tags api
+     * <b>description</b> :
+     * <p>You can call this operation to assign a group administrator role to a user.</p>
+     * 
+     * @param request the request parameters of AssignRole  AssignRoleRequest
+     * @return AssignRoleResponse
      */
     @Override
     public CompletableFuture<AssignRoleResponse> assignRole(AssignRoleRequest request) {
@@ -87,9 +97,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information, see "OAuth 2.0 For Web Server Applications" at [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications) in User Guide.
-      *
-     * @tags api
+     * <b>description</b> :
+     * <p>For more information, see &quot;OAuth 2.0 For Web Server Applications&quot; at <a href="https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications">OAuth 2.0 For Web Server Applications</a> in User Guide.</p>
+     * 
+     * @param request the request parameters of Authorize  AuthorizeRequest
+     * @return AuthorizeResponse
      */
     @Override
     public CompletableFuture<AuthorizeResponse> authorize(AuthorizeRequest request) {
@@ -120,6 +132,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Batch  BatchRequest
+     * @return BatchResponse
+     */
     @Override
     public CompletableFuture<BatchResponse> batch(BatchRequest request) {
         try {
@@ -135,9 +151,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can cancel only the group administrator role.
-      *
-     * @tags api
+     * <b>description</b> :
+     * <p>You can cancel only the group administrator role.</p>
+     * 
+     * @param request the request parameters of CancelAssignRole  CancelAssignRoleRequest
+     * @return CancelAssignRoleResponse
      */
     @Override
     public CompletableFuture<CancelAssignRoleResponse> cancelAssignRole(CancelAssignRoleRequest request) {
@@ -153,6 +171,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelShareLink  CancelShareLinkRequest
+     * @return CancelShareLinkResponse
+     */
     @Override
     public CompletableFuture<CancelShareLinkResponse> cancelShareLink(CancelShareLinkRequest request) {
         try {
@@ -167,6 +189,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ClearRecyclebin  ClearRecyclebinRequest
+     * @return ClearRecyclebinResponse
+     */
     @Override
     public CompletableFuture<ClearRecyclebinResponse> clearRecyclebin(ClearRecyclebinRequest request) {
         try {
@@ -181,6 +207,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CompleteFile  CompleteFileRequest
+     * @return CompleteFileResponse
+     */
     @Override
     public CompletableFuture<CompleteFileResponse> completeFile(CompleteFileRequest request) {
         try {
@@ -195,6 +225,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CopyFile  CopyFileRequest
+     * @return CopyFileResponse
+     */
     @Override
     public CompletableFuture<CopyFileResponse> copyFile(CopyFileRequest request) {
         try {
@@ -209,6 +243,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCustomizedStory  CreateCustomizedStoryRequest
+     * @return CreateCustomizedStoryResponse
+     */
     @Override
     public CompletableFuture<CreateCustomizedStoryResponse> createCustomizedStory(CreateCustomizedStoryRequest request) {
         try {
@@ -224,9 +262,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.
-      *
-     * @tags admin
+     * <b>description</b> :
+     * <p>The description of the domain.</p>
+     * 
+     * @param request the request parameters of CreateDomain  CreateDomainRequest
+     * @return CreateDomainResponse
      */
     @Override
     public CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request) {
@@ -242,6 +282,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDrive  CreateDriveRequest
+     * @return CreateDriveResponse
+     */
     @Override
     public CompletableFuture<CreateDriveResponse> createDrive(CreateDriveRequest request) {
         try {
@@ -256,6 +300,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateFile  CreateFileRequest
+     * @return CreateFileResponse
+     */
     @Override
     public CompletableFuture<CreateFileResponse> createFile(CreateFileRequest request) {
         try {
@@ -270,6 +318,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateGroup  CreateGroupRequest
+     * @return CreateGroupResponse
+     */
     @Override
     public CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request) {
         try {
@@ -285,9 +337,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you need to manage a large number of users based on Drive and Photo Service, you can control the features and quotas that users can use based on the benefits to which they are entitled. For more information, join the DingTalk group (ID 23146118).
-      *
-     * @tags api
+     * <b>description</b> :
+     * <p>If you need to manage a large number of users based on Drive and Photo Service, you can control the features and quotas that users can use based on the benefits to which they are entitled. For more information, join the DingTalk group (ID 23146118).</p>
+     * 
+     * @param request the request parameters of CreateIdentityToBenefitPkgMapping  CreateIdentityToBenefitPkgMappingRequest
+     * @return CreateIdentityToBenefitPkgMappingResponse
      */
     @Override
     public CompletableFuture<CreateIdentityToBenefitPkgMappingResponse> createIdentityToBenefitPkgMapping(CreateIdentityToBenefitPkgMappingRequest request) {
@@ -303,6 +357,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrder  CreateOrderRequest
+     * @return CreateOrderResponse
+     */
     @Override
     public CompletableFuture<CreateOrderResponse> createOrder(CreateOrderRequest request) {
         try {
@@ -318,9 +376,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * A share is a file view container. You can grant anonymous users the permissions to access files in the user drive by using the share URL. Anonymous users can access the files based on the granted permissions.
-      *
-     * @tags api
+     * <b>description</b> :
+     * <p>A share is a file view container. You can grant anonymous users the permissions to access files in the user drive by using the share URL. Anonymous users can access the files based on the granted permissions.</p>
+     * 
+     * @param request the request parameters of CreateShareLink  CreateShareLinkRequest
+     * @return CreateShareLinkResponse
      */
     @Override
     public CompletableFuture<CreateShareLinkResponse> createShareLink(CreateShareLinkRequest request) {
@@ -336,6 +396,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSimilarImageClusterTask  CreateSimilarImageClusterTaskRequest
+     * @return CreateSimilarImageClusterTaskResponse
+     */
     @Override
     public CompletableFuture<CreateSimilarImageClusterTaskResponse> createSimilarImageClusterTask(CreateSimilarImageClusterTaskRequest request) {
         try {
@@ -350,6 +414,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateStory  CreateStoryRequest
+     * @return CreateStoryResponse
+     */
     @Override
     public CompletableFuture<CreateStoryResponse> createStory(CreateStoryRequest request) {
         try {
@@ -364,6 +432,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateUser  CreateUserRequest
+     * @return CreateUserResponse
+     */
     @Override
     public CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request) {
         try {
@@ -378,6 +450,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CsiGetFileInfo  CsiGetFileInfoRequest
+     * @return CsiGetFileInfoResponse
+     */
     @Override
     public CompletableFuture<CsiGetFileInfoResponse> csiGetFileInfo(CsiGetFileInfoRequest request) {
         try {
@@ -392,6 +468,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDomain  DeleteDomainRequest
+     * @return DeleteDomainResponse
+     */
     @Override
     public CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request) {
         try {
@@ -406,6 +486,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDrive  DeleteDriveRequest
+     * @return DeleteDriveResponse
+     */
     @Override
     public CompletableFuture<DeleteDriveResponse> deleteDrive(DeleteDriveRequest request) {
         try {
@@ -420,6 +504,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFile  DeleteFileRequest
+     * @return DeleteFileResponse
+     */
     @Override
     public CompletableFuture<DeleteFileResponse> deleteFile(DeleteFileRequest request) {
         try {
@@ -434,6 +522,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteGroup  DeleteGroupRequest
+     * @return DeleteGroupResponse
+     */
     @Override
     public CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request) {
         try {
@@ -448,6 +540,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteRevision  DeleteRevisionRequest
+     * @return DeleteRevisionResponse
+     */
     @Override
     public CompletableFuture<DeleteRevisionResponse> deleteRevision(DeleteRevisionRequest request) {
         try {
@@ -462,6 +558,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteStory  DeleteStoryRequest
+     * @return DeleteStoryResponse
+     */
     @Override
     public CompletableFuture<DeleteStoryResponse> deleteStory(DeleteStoryRequest request) {
         try {
@@ -476,6 +576,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUser  DeleteUserRequest
+     * @return DeleteUserResponse
+     */
     @Override
     public CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request) {
         try {
@@ -490,6 +594,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeltaGetLastCursor  DeltaGetLastCursorRequest
+     * @return DeltaGetLastCursorResponse
+     */
     @Override
     public CompletableFuture<DeltaGetLastCursorResponse> deltaGetLastCursor(DeltaGetLastCursorRequest request) {
         try {
@@ -505,9 +613,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about best practices for downloading a file.
-      *
-     * @tags api
+     * <b>description</b> :
+     * <p>For information about best practices for downloading a file.</p>
+     * 
+     * @param request the request parameters of DownloadFile  DownloadFileRequest
+     * @return DownloadFileResponse
      */
     @Override
     public CompletableFuture<DownloadFileResponse> downloadFile(DownloadFileRequest request) {
@@ -538,6 +648,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FileAddPermission  FileAddPermissionRequest
+     * @return FileAddPermissionResponse
+     */
     @Override
     public CompletableFuture<FileAddPermissionResponse> fileAddPermission(FileAddPermissionRequest request) {
         try {
@@ -552,6 +666,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FileDeleteUserTags  FileDeleteUserTagsRequest
+     * @return FileDeleteUserTagsResponse
+     */
     @Override
     public CompletableFuture<FileDeleteUserTagsResponse> fileDeleteUserTags(FileDeleteUserTagsRequest request) {
         try {
@@ -566,6 +684,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FileListPermission  FileListPermissionRequest
+     * @return FileListPermissionResponse
+     */
     @Override
     public CompletableFuture<FileListPermissionResponse> fileListPermission(FileListPermissionRequest request) {
         try {
@@ -581,12 +703,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is an incremental update operation. Take note of the following items:
-      * *   If a tag name specified in the request is the same as an existing tag name, the existing tag is overwritten.
-      * *   If a tag name specified in the request is different from the existing tag names, the specified tag is added.
-      * *   The existing tags with unique names are not affected.
-      *
-     * @tags api
+     * <b>description</b> :
+     * <p>This operation is an incremental update operation. Take note of the following items:</p>
+     * <ul>
+     * <li>If a tag name specified in the request is the same as an existing tag name, the existing tag is overwritten.</li>
+     * <li>If a tag name specified in the request is different from the existing tag names, the specified tag is added.</li>
+     * <li>The existing tags with unique names are not affected.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of FilePutUserTags  FilePutUserTagsRequest
+     * @return FilePutUserTagsResponse
      */
     @Override
     public CompletableFuture<FilePutUserTagsResponse> filePutUserTags(FilePutUserTagsRequest request) {
@@ -602,6 +728,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FileRemovePermission  FileRemovePermissionRequest
+     * @return FileRemovePermissionResponse
+     */
     @Override
     public CompletableFuture<FileRemovePermissionResponse> fileRemovePermission(FileRemovePermissionRequest request) {
         try {
@@ -616,6 +746,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAsyncTask  GetAsyncTaskRequest
+     * @return GetAsyncTaskResponse
+     */
     @Override
     public CompletableFuture<GetAsyncTaskResponse> getAsyncTask(GetAsyncTaskRequest request) {
         try {
@@ -630,6 +764,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDefaultDrive  GetDefaultDriveRequest
+     * @return GetDefaultDriveResponse
+     */
     @Override
     public CompletableFuture<GetDefaultDriveResponse> getDefaultDrive(GetDefaultDriveRequest request) {
         try {
@@ -644,6 +782,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDomain  GetDomainRequest
+     * @return GetDomainResponse
+     */
     @Override
     public CompletableFuture<GetDomainResponse> getDomain(GetDomainRequest request) {
         try {
@@ -658,6 +800,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDomainQuota  GetDomainQuotaRequest
+     * @return GetDomainQuotaResponse
+     */
     @Override
     public CompletableFuture<GetDomainQuotaResponse> getDomainQuota(GetDomainQuotaRequest request) {
         try {
@@ -672,6 +818,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDownloadUrl  GetDownloadUrlRequest
+     * @return GetDownloadUrlResponse
+     */
     @Override
     public CompletableFuture<GetDownloadUrlResponse> getDownloadUrl(GetDownloadUrlRequest request) {
         try {
@@ -686,6 +836,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDrive  GetDriveRequest
+     * @return GetDriveResponse
+     */
     @Override
     public CompletableFuture<GetDriveResponse> getDrive(GetDriveRequest request) {
         try {
@@ -700,6 +854,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFile  GetFileRequest
+     * @return GetFileResponse
+     */
     @Override
     public CompletableFuture<GetFileResponse> getFile(GetFileRequest request) {
         try {
@@ -714,6 +872,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetGroup  GetGroupRequest
+     * @return GetGroupResponse
+     */
     @Override
     public CompletableFuture<GetGroupResponse> getGroup(GetGroupRequest request) {
         try {
@@ -728,6 +890,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetIdentityToBenefitPkgMapping  GetIdentityToBenefitPkgMappingRequest
+     * @return GetIdentityToBenefitPkgMappingResponse
+     */
     @Override
     public CompletableFuture<GetIdentityToBenefitPkgMappingResponse> getIdentityToBenefitPkgMapping(GetIdentityToBenefitPkgMappingRequest request) {
         try {
@@ -742,6 +908,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLinkInfo  GetLinkInfoRequest
+     * @return GetLinkInfoResponse
+     */
     @Override
     public CompletableFuture<GetLinkInfoResponse> getLinkInfo(GetLinkInfoRequest request) {
         try {
@@ -756,6 +926,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLinkInfoByUserId  GetLinkInfoByUserIdRequest
+     * @return GetLinkInfoByUserIdResponse
+     */
     @Override
     public CompletableFuture<GetLinkInfoByUserIdResponse> getLinkInfoByUserId(GetLinkInfoByUserIdRequest request) {
         try {
@@ -770,6 +944,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRevision  GetRevisionRequest
+     * @return GetRevisionResponse
+     */
     @Override
     public CompletableFuture<GetRevisionResponse> getRevision(GetRevisionRequest request) {
         try {
@@ -784,6 +962,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetShareLink  GetShareLinkRequest
+     * @return GetShareLinkResponse
+     */
     @Override
     public CompletableFuture<GetShareLinkResponse> getShareLink(GetShareLinkRequest request) {
         try {
@@ -798,6 +980,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetShareLinkByAnonymous  GetShareLinkByAnonymousRequest
+     * @return GetShareLinkByAnonymousResponse
+     */
     @Override
     public CompletableFuture<GetShareLinkByAnonymousResponse> getShareLinkByAnonymous(GetShareLinkByAnonymousRequest request) {
         try {
@@ -813,9 +999,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * To access a file by using a share link, you must first obtain a share token, even if the value of share_pwd of this share is an empty string, which specifies that the share is not private.
-      *
-     * @tags api
+     * <b>description</b> :
+     * <p>To access a file by using a share link, you must first obtain a share token, even if the value of share_pwd of this share is an empty string, which specifies that the share is not private.</p>
+     * 
+     * @param request the request parameters of GetShareLinkToken  GetShareLinkTokenRequest
+     * @return GetShareLinkTokenResponse
      */
     @Override
     public CompletableFuture<GetShareLinkTokenResponse> getShareLinkToken(GetShareLinkTokenRequest request) {
@@ -831,6 +1019,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetStory  GetStoryRequest
+     * @return GetStoryResponse
+     */
     @Override
     public CompletableFuture<GetStoryResponse> getStory(GetStoryRequest request) {
         try {
@@ -846,11 +1038,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **Before you call this operation, make sure that you are familiar with the [billing](~~425220~~) of Drive and Photo Service**.
-      * To call this operation, make sure that the value-added image processing feature is enabled.
-      * Before you call this operation, a value-added asynchronous task must be created. For example, you can call the CreateSimilarImageClusterTask operation to create an asynchronous task. Then, you can call this operation to query the execution status of the asynchronous task based on the task ID.
-      *
-     * @tags api
+     * <b>description</b> :
+     * <p><em>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/425220.html">billing</a> of Drive and Photo Service</em>*.
+     * To call this operation, make sure that the value-added image processing feature is enabled.
+     * Before you call this operation, a value-added asynchronous task must be created. For example, you can call the CreateSimilarImageClusterTask operation to create an asynchronous task. Then, you can call this operation to query the execution status of the asynchronous task based on the task ID.</p>
+     * 
+     * @param request the request parameters of GetTaskStatus  GetTaskStatusRequest
+     * @return GetTaskStatusResponse
      */
     @Override
     public CompletableFuture<GetTaskStatusResponse> getTaskStatus(GetTaskStatusRequest request) {
@@ -866,6 +1060,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUploadUrl  GetUploadUrlRequest
+     * @return GetUploadUrlResponse
+     */
     @Override
     public CompletableFuture<GetUploadUrlResponse> getUploadUrl(GetUploadUrlRequest request) {
         try {
@@ -880,6 +1078,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUser  GetUserRequest
+     * @return GetUserResponse
+     */
     @Override
     public CompletableFuture<GetUserResponse> getUser(GetUserRequest request) {
         try {
@@ -895,9 +1097,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about best practices, see [Preview videos online](~~427477~~).
-      *
-     * @tags api
+     * <b>description</b> :
+     * <p>For more information about best practices, see <a href="https://help.aliyun.com/document_detail/427477.html">Preview videos online</a>.</p>
+     * 
+     * @param request the request parameters of GetVideoPreviewPlayInfo  GetVideoPreviewPlayInfoRequest
+     * @return GetVideoPreviewPlayInfoResponse
      */
     @Override
     public CompletableFuture<GetVideoPreviewPlayInfoResponse> getVideoPreviewPlayInfo(GetVideoPreviewPlayInfoRequest request) {
@@ -914,9 +1118,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about best practices, see [Preview videos online](~~427477~~).
-      *
-     * @tags api
+     * <b>description</b> :
+     * <p>For more information about best practices, see <a href="https://help.aliyun.com/document_detail/427477.html">Preview videos online</a>.</p>
+     * 
+     * @param request the request parameters of GetVideoPreviewPlayMeta  GetVideoPreviewPlayMetaRequest
+     * @return GetVideoPreviewPlayMetaResponse
      */
     @Override
     public CompletableFuture<GetVideoPreviewPlayMetaResponse> getVideoPreviewPlayMeta(GetVideoPreviewPlayMetaRequest request) {
@@ -932,6 +1138,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GroupUpdateName  GroupUpdateNameRequest
+     * @return GroupUpdateNameResponse
+     */
     @Override
     public CompletableFuture<GroupUpdateNameResponse> groupUpdateName(GroupUpdateNameRequest request) {
         try {
@@ -946,6 +1156,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ImportUser  ImportUserRequest
+     * @return ImportUserResponse
+     */
     @Override
     public CompletableFuture<ImportUserResponse> importUser(ImportUserRequest request) {
         try {
@@ -960,6 +1174,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InvestigateFile  InvestigateFileRequest
+     * @return InvestigateFileResponse
+     */
     @Override
     public CompletableFuture<InvestigateFileResponse> investigateFile(InvestigateFileRequest request) {
         try {
@@ -974,6 +1192,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of LinkAccount  LinkAccountRequest
+     * @return LinkAccountResponse
+     */
     @Override
     public CompletableFuture<LinkAccountResponse> linkAccount(LinkAccountRequest request) {
         try {
@@ -988,6 +1210,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAddressGroups  ListAddressGroupsRequest
+     * @return ListAddressGroupsResponse
+     */
     @Override
     public CompletableFuture<ListAddressGroupsResponse> listAddressGroups(ListAddressGroupsRequest request) {
         try {
@@ -1002,6 +1228,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAssignment  ListAssignmentRequest
+     * @return ListAssignmentResponse
+     */
     @Override
     public CompletableFuture<ListAssignmentResponse> listAssignment(ListAssignmentRequest request) {
         try {
@@ -1016,6 +1246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDelta  ListDeltaRequest
+     * @return ListDeltaResponse
+     */
     @Override
     public CompletableFuture<ListDeltaResponse> listDelta(ListDeltaRequest request) {
         try {
@@ -1030,6 +1264,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDomains  ListDomainsRequest
+     * @return ListDomainsResponse
+     */
     @Override
     public CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request) {
         try {
@@ -1044,6 +1282,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDrive  ListDriveRequest
+     * @return ListDriveResponse
+     */
     @Override
     public CompletableFuture<ListDriveResponse> listDrive(ListDriveRequest request) {
         try {
@@ -1058,6 +1300,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFacegroups  ListFacegroupsRequest
+     * @return ListFacegroupsResponse
+     */
     @Override
     public CompletableFuture<ListFacegroupsResponse> listFacegroups(ListFacegroupsRequest request) {
         try {
@@ -1072,6 +1318,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFile  ListFileRequest
+     * @return ListFileResponse
+     */
     @Override
     public CompletableFuture<ListFileResponse> listFile(ListFileRequest request) {
         try {
@@ -1086,6 +1336,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGroup  ListGroupRequest
+     * @return ListGroupResponse
+     */
     @Override
     public CompletableFuture<ListGroupResponse> listGroup(ListGroupRequest request) {
         try {
@@ -1100,6 +1354,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGroupMember  ListGroupMemberRequest
+     * @return ListGroupMemberResponse
+     */
     @Override
     public CompletableFuture<ListGroupMemberResponse> listGroupMember(ListGroupMemberRequest request) {
         try {
@@ -1114,6 +1372,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIdentityRole  ListIdentityRoleRequest
+     * @return ListIdentityRoleResponse
+     */
     @Override
     public CompletableFuture<ListIdentityRoleResponse> listIdentityRole(ListIdentityRoleRequest request) {
         try {
@@ -1128,6 +1390,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListIdentityToBenefitPkgMapping  ListIdentityToBenefitPkgMappingRequest
+     * @return ListIdentityToBenefitPkgMappingResponse
+     */
     @Override
     public CompletableFuture<ListIdentityToBenefitPkgMappingResponse> listIdentityToBenefitPkgMapping(ListIdentityToBenefitPkgMappingRequest request) {
         try {
@@ -1142,6 +1408,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMyDrives  ListMyDrivesRequest
+     * @return ListMyDrivesResponse
+     */
     @Override
     public CompletableFuture<ListMyDrivesResponse> listMyDrives(ListMyDrivesRequest request) {
         try {
@@ -1156,6 +1426,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMyGroupDrive  ListMyGroupDriveRequest
+     * @return ListMyGroupDriveResponse
+     */
     @Override
     public CompletableFuture<ListMyGroupDriveResponse> listMyGroupDrive(ListMyGroupDriveRequest request) {
         try {
@@ -1170,6 +1444,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListReceivedFile  ListReceivedFileRequest
+     * @return ListReceivedFileResponse
+     */
     @Override
     public CompletableFuture<ListReceivedFileResponse> listReceivedFile(ListReceivedFileRequest request) {
         try {
@@ -1184,6 +1462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRecyclebin  ListRecyclebinRequest
+     * @return ListRecyclebinResponse
+     */
     @Override
     public CompletableFuture<ListRecyclebinResponse> listRecyclebin(ListRecyclebinRequest request) {
         try {
@@ -1198,6 +1480,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRevision  ListRevisionRequest
+     * @return ListRevisionResponse
+     */
     @Override
     public CompletableFuture<ListRevisionResponse> listRevision(ListRevisionRequest request) {
         try {
@@ -1213,9 +1499,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is discontinued. To query shares, you can call the SearchShareLink operation.
-      *
-     * @tags api
+     * <b>description</b> :
+     * <p>This operation is discontinued. To query shares, you can call the SearchShareLink operation.</p>
+     * 
+     * @param request the request parameters of ListShareLink  ListShareLinkRequest
+     * @return ListShareLinkResponse
      */
     @Override
     public CompletableFuture<ListShareLinkResponse> listShareLink(ListShareLinkRequest request) {
@@ -1232,9 +1520,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the tags within the specified drive at a time. The top 2,000 tags of the images are returned.
-      *
-     * @tags api
+     * <b>description</b> :
+     * <p>You can call this operation to query the tags within the specified drive at a time. The top 2,000 tags of the images are returned.</p>
+     * 
+     * @param request the request parameters of ListTags  ListTagsRequest
+     * @return ListTagsResponse
      */
     @Override
     public CompletableFuture<ListTagsResponse> listTags(ListTagsRequest request) {
@@ -1250,6 +1540,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUploadedParts  ListUploadedPartsRequest
+     * @return ListUploadedPartsResponse
+     */
     @Override
     public CompletableFuture<ListUploadedPartsResponse> listUploadedParts(ListUploadedPartsRequest request) {
         try {
@@ -1264,6 +1558,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUser  ListUserRequest
+     * @return ListUserResponse
+     */
     @Override
     public CompletableFuture<ListUserResponse> listUser(ListUserRequest request) {
         try {
@@ -1278,6 +1576,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MoveFile  MoveFileRequest
+     * @return MoveFileResponse
+     */
     @Override
     public CompletableFuture<MoveFileResponse> moveFile(MoveFileRequest request) {
         try {
@@ -1292,6 +1594,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryOrderPrice  QueryOrderPriceRequest
+     * @return QueryOrderPriceResponse
+     */
     @Override
     public CompletableFuture<QueryOrderPriceResponse> queryOrderPrice(QueryOrderPriceRequest request) {
         try {
@@ -1306,6 +1612,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveFaceGroupFile  RemoveFaceGroupFileRequest
+     * @return RemoveFaceGroupFileResponse
+     */
     @Override
     public CompletableFuture<RemoveFaceGroupFileResponse> removeFaceGroupFile(RemoveFaceGroupFileRequest request) {
         try {
@@ -1320,6 +1630,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveGroupMember  RemoveGroupMemberRequest
+     * @return RemoveGroupMemberResponse
+     */
     @Override
     public CompletableFuture<RemoveGroupMemberResponse> removeGroupMember(RemoveGroupMemberRequest request) {
         try {
@@ -1334,6 +1648,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveStoryFiles  RemoveStoryFilesRequest
+     * @return RemoveStoryFilesResponse
+     */
     @Override
     public CompletableFuture<RemoveStoryFilesResponse> removeStoryFiles(RemoveStoryFilesRequest request) {
         try {
@@ -1348,6 +1666,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestoreFile  RestoreFileRequest
+     * @return RestoreFileResponse
+     */
     @Override
     public CompletableFuture<RestoreFileResponse> restoreFile(RestoreFileRequest request) {
         try {
@@ -1362,6 +1684,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RestoreRevision  RestoreRevisionRequest
+     * @return RestoreRevisionResponse
+     */
     @Override
     public CompletableFuture<RestoreRevisionResponse> restoreRevision(RestoreRevisionRequest request) {
         try {
@@ -1376,6 +1702,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ScanFile  ScanFileRequest
+     * @return ScanFileResponse
+     */
     @Override
     public CompletableFuture<ScanFileResponse> scanFile(ScanFileRequest request) {
         try {
@@ -1390,6 +1720,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchAddressGroups  SearchAddressGroupsRequest
+     * @return SearchAddressGroupsResponse
+     */
     @Override
     public CompletableFuture<SearchAddressGroupsResponse> searchAddressGroups(SearchAddressGroupsRequest request) {
         try {
@@ -1404,6 +1738,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchDomains  SearchDomainsRequest
+     * @return SearchDomainsResponse
+     */
     @Override
     public CompletableFuture<SearchDomainsResponse> searchDomains(SearchDomainsRequest request) {
         try {
@@ -1418,6 +1756,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchDrive  SearchDriveRequest
+     * @return SearchDriveResponse
+     */
     @Override
     public CompletableFuture<SearchDriveResponse> searchDrive(SearchDriveRequest request) {
         try {
@@ -1432,6 +1774,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchFile  SearchFileRequest
+     * @return SearchFileResponse
+     */
     @Override
     public CompletableFuture<SearchFileResponse> searchFile(SearchFileRequest request) {
         try {
@@ -1446,6 +1792,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchShareLink  SearchShareLinkRequest
+     * @return SearchShareLinkResponse
+     */
     @Override
     public CompletableFuture<SearchShareLinkResponse> searchShareLink(SearchShareLinkRequest request) {
         try {
@@ -1460,6 +1810,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchSimilarImageClusters  SearchSimilarImageClustersRequest
+     * @return SearchSimilarImageClustersResponse
+     */
     @Override
     public CompletableFuture<SearchSimilarImageClustersResponse> searchSimilarImageClusters(SearchSimilarImageClustersRequest request) {
         try {
@@ -1474,6 +1828,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchStories  SearchStoriesRequest
+     * @return SearchStoriesResponse
+     */
     @Override
     public CompletableFuture<SearchStoriesResponse> searchStories(SearchStoriesRequest request) {
         try {
@@ -1488,6 +1846,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SearchUser  SearchUserRequest
+     * @return SearchUserResponse
+     */
     @Override
     public CompletableFuture<SearchUserResponse> searchUser(SearchUserRequest request) {
         try {
@@ -1503,10 +1865,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about how to access Drive and Photo Service from a web server application by using OAuth 2.0, visit [OAuth 2.0 For Web Server Applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications).
-      * For more information about how to access Drive and Photo Service by using a JSON Web Token (JWT) application, visit [Access process for JWT applications](https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/access-process-for-jwt-applications).
-      *
-     * @tags api
+     * <b>description</b> :
+     * <p>For more information about how to access Drive and Photo Service from a web server application by using OAuth 2.0, visit <a href="https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications">OAuth 2.0 For Web Server Applications</a>.
+     * For more information about how to access Drive and Photo Service by using a JSON Web Token (JWT) application, visit <a href="https://www.alibabacloud.com/help/zh/pds/drive-and-photo-service-dev/user-guide/access-process-for-jwt-applications">Access process for JWT applications</a>.</p>
+     * 
+     * @param request the request parameters of Token  TokenRequest
+     * @return TokenResponse
      */
     @Override
     public CompletableFuture<TokenResponse> token(TokenRequest request) {
@@ -1522,6 +1886,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TrashFile  TrashFileRequest
+     * @return TrashFileResponse
+     */
     @Override
     public CompletableFuture<TrashFileResponse> trashFile(TrashFileRequest request) {
         try {
@@ -1536,6 +1904,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnLinkAccount  UnLinkAccountRequest
+     * @return UnLinkAccountResponse
+     */
     @Override
     public CompletableFuture<UnLinkAccountResponse> unLinkAccount(UnLinkAccountRequest request) {
         try {
@@ -1550,6 +1922,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateDomain  UpdateDomainRequest
+     * @return UpdateDomainResponse
+     */
     @Override
     public CompletableFuture<UpdateDomainResponse> updateDomain(UpdateDomainRequest request) {
         try {
@@ -1564,6 +1940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateDrive  UpdateDriveRequest
+     * @return UpdateDriveResponse
+     */
     @Override
     public CompletableFuture<UpdateDriveResponse> updateDrive(UpdateDriveRequest request) {
         try {
@@ -1578,6 +1958,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateFacegroup  UpdateFacegroupRequest
+     * @return UpdateFacegroupResponse
+     */
     @Override
     public CompletableFuture<UpdateFacegroupResponse> updateFacegroup(UpdateFacegroupRequest request) {
         try {
@@ -1592,6 +1976,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateFile  UpdateFileRequest
+     * @return UpdateFileResponse
+     */
     @Override
     public CompletableFuture<UpdateFileResponse> updateFile(UpdateFileRequest request) {
         try {
@@ -1606,6 +1994,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateGroup  UpdateGroupRequest
+     * @return UpdateGroupResponse
+     */
     @Override
     public CompletableFuture<UpdateGroupResponse> updateGroup(UpdateGroupRequest request) {
         try {
@@ -1620,6 +2012,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateIdentityToBenefitPkgMapping  UpdateIdentityToBenefitPkgMappingRequest
+     * @return UpdateIdentityToBenefitPkgMappingResponse
+     */
     @Override
     public CompletableFuture<UpdateIdentityToBenefitPkgMappingResponse> updateIdentityToBenefitPkgMapping(UpdateIdentityToBenefitPkgMappingRequest request) {
         try {
@@ -1634,6 +2030,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateRevision  UpdateRevisionRequest
+     * @return UpdateRevisionResponse
+     */
     @Override
     public CompletableFuture<UpdateRevisionResponse> updateRevision(UpdateRevisionRequest request) {
         try {
@@ -1648,6 +2048,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateShareLink  UpdateShareLinkRequest
+     * @return UpdateShareLinkResponse
+     */
     @Override
     public CompletableFuture<UpdateShareLinkResponse> updateShareLink(UpdateShareLinkRequest request) {
         try {
@@ -1662,6 +2066,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateStory  UpdateStoryRequest
+     * @return UpdateStoryResponse
+     */
     @Override
     public CompletableFuture<UpdateStoryResponse> updateStory(UpdateStoryRequest request) {
         try {
@@ -1676,6 +2084,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUser  UpdateUserRequest
+     * @return UpdateUserResponse
+     */
     @Override
     public CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request) {
         try {

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileRequest} extends {@link RequestModel}
  *
  * <p>GetFileRequest</p>
@@ -34,7 +40,7 @@ public class GetFileRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("thumbnail_processes")
-    private java.util.Map < String, ImageProcess > thumbnailProcesses;
+    private java.util.Map<String, ImageProcess> thumbnailProcesses;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("url_expire_sec")
@@ -103,7 +109,7 @@ public class GetFileRequest extends Request {
     /**
      * @return thumbnailProcesses
      */
-    public java.util.Map < String, ImageProcess > getThumbnailProcesses() {
+    public java.util.Map<String, ImageProcess> getThumbnailProcesses() {
         return this.thumbnailProcesses;
     }
 
@@ -120,7 +126,7 @@ public class GetFileRequest extends Request {
         private String fields; 
         private String fileId; 
         private String shareId; 
-        private java.util.Map < String, ImageProcess > thumbnailProcesses; 
+        private java.util.Map<String, ImageProcess> thumbnailProcesses; 
         private Integer urlExpireSec; 
 
         private Builder() {
@@ -139,7 +145,7 @@ public class GetFileRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -148,7 +154,10 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -157,14 +166,18 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * The fields to return.
-         * <p>
+         * <p>The fields to return.</p>
+         * <ol>
+         * <li>If this parameter is set to *, all fields of the file except the fields that must be specified are returned.</li>
+         * <li>If only specific fields are required, you can specify the following fields: url, thumbnail, exif, cropping_suggestion, characteristic_hash, video_metadata, and video_preview_metadata. If multiple fields are required, separate them with commas (,). Example: url,thumbnail.</li>
+         * <li>The investigation_info field is returned only if you specify this field.</li>
+         * </ol>
+         * <p>By default, all fields except the fields that must be specified are returned.</p>
          * 
-         * 1.  If this parameter is set to \*, all fields of the file except the fields that must be specified are returned.
-         * 2.  If only specific fields are required, you can specify the following fields: url, thumbnail, exif, cropping_suggestion, characteristic_hash, video_metadata, and video_preview_metadata. If multiple fields are required, separate them with commas (,). Example: url,thumbnail.
-         * 3.  The investigation_info field is returned only if you specify this field.
-         * 
-         * By default, all fields except the fields that must be specified are returned.
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder fields(String fields) {
             this.putBodyParameter("fields", fields);
@@ -173,7 +186,11 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9520943DC264</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);
@@ -182,7 +199,10 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * The share ID. If you want to manage a file by using a share link, carry the `x-share-token` header for authentication in the request and specify share_id. In this case, `drive_id` is invalid. Otherwise, use an `AccessKey pair` or `access token` for authentication and specify `drive_id`. You must specify one of `share_id` and `drive_id`.
+         * <p>The share ID. If you want to manage a file by using a share link, carry the <code>x-share-token</code> header for authentication in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify one of <code>share_id</code> and <code>drive_id</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1FswpQ8</p>
          */
         public Builder shareId(String shareId) {
             this.putBodyParameter("share_id", shareId);
@@ -191,16 +211,19 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * 缩略图配置，可一次性返回最多5个缩略图，map的key可以自定义，返回时按key返回对应的缩略图链接
+         * <p>缩略图配置，可一次性返回最多5个缩略图，map的key可以自定义，返回时按key返回对应的缩略图链接</p>
          */
-        public Builder thumbnailProcesses(java.util.Map < String, ImageProcess > thumbnailProcesses) {
+        public Builder thumbnailProcesses(java.util.Map<String, ImageProcess> thumbnailProcesses) {
             this.putBodyParameter("thumbnail_processes", thumbnailProcesses);
             this.thumbnailProcesses = thumbnailProcesses;
             return this;
         }
 
         /**
-         * The time when the file expires. Unit: seconds. Valid values: 10 to 14400.
+         * <p>The time when the file expires. Unit: seconds. Valid values: 10 to 14400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder urlExpireSec(Integer urlExpireSec) {
             this.putBodyParameter("url_expire_sec", urlExpireSec);

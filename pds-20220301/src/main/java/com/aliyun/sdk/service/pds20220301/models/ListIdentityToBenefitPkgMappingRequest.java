@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIdentityToBenefitPkgMappingRequest} extends {@link RequestModel}
  *
  * <p>ListIdentityToBenefitPkgMappingRequest</p>
@@ -97,7 +103,7 @@ public class ListIdentityToBenefitPkgMappingRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -106,10 +112,12 @@ public class ListIdentityToBenefitPkgMappingRequest extends Request {
         }
 
         /**
-         * The unique identifier of the entity.
-         * <p>
+         * <p>The unique identifier of the entity.</p>
+         * <p>If you call this operation to manage the benefits of a user, set this parameter to the ID of the user.</p>
+         * <p>This parameter is required.</p>
          * 
-         * If you call this operation to manage the benefits of a user, set this parameter to the ID of the user.
+         * <strong>example:</strong>
+         * <p>user123</p>
          */
         public Builder identityId(String identityId) {
             this.putBodyParameter("identity_id", identityId);
@@ -118,7 +126,11 @@ public class ListIdentityToBenefitPkgMappingRequest extends Request {
         }
 
         /**
-         * The type of the entity. If you call this operation to manage the benefits of a user, set this parameter to user.
+         * <p>The type of the entity. If you call this operation to manage the benefits of a user, set this parameter to user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder identityType(String identityType) {
             this.putBodyParameter("identity_type", identityType);
@@ -127,7 +139,10 @@ public class ListIdentityToBenefitPkgMappingRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the benefit packages that expire. Default value: false.
+         * <p>Specifies whether to return the benefit packages that expire. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeExpired(Boolean includeExpired) {
             this.putBodyParameter("include_expired", includeExpired);

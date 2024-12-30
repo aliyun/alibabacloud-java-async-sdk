@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssignRoleRequest} extends {@link RequestModel}
  *
  * <p>AssignRoleRequest</p>
@@ -113,7 +119,7 @@ public class AssignRoleRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * <p>A short description of struct</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -122,7 +128,8 @@ public class AssignRoleRequest extends Request {
         }
 
         /**
-         * The unique identifier of a user. The group administrator role can only be assigned to a user.
+         * <p>The unique identifier of a user. The group administrator role can only be assigned to a user.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder identity(Identity identity) {
             this.putBodyParameter("identity", identity);
@@ -131,7 +138,11 @@ public class AssignRoleRequest extends Request {
         }
 
         /**
-         * The ID of the resource that the role can manage. You can only set this parameter to the ID of a group.
+         * <p>The ID of the resource that the role can manage. You can only set this parameter to the ID of a group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>105***b82</p>
          */
         public Builder manageResourceId(String manageResourceId) {
             this.putBodyParameter("manage_resource_id", manageResourceId);
@@ -140,7 +151,11 @@ public class AssignRoleRequest extends Request {
         }
 
         /**
-         * The type of the resource that the role can manage. Valid value: RT_Group.
+         * <p>The type of the resource that the role can manage. Valid value: RT_Group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RT_Group</p>
          */
         public Builder manageResourceType(String manageResourceType) {
             this.putBodyParameter("manage_resource_type", manageResourceType);
@@ -149,7 +164,11 @@ public class AssignRoleRequest extends Request {
         }
 
         /**
-         * The ID of the role that is assigned to a user. Valid value: SystemGroupAdmin.
+         * <p>The ID of the role that is assigned to a user. Valid value: SystemGroupAdmin.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SystemGroupAdmin</p>
          */
         public Builder roleId(String roleId) {
             this.putBodyParameter("role_id", roleId);

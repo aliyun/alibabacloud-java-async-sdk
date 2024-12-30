@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyFileResponseBody} extends {@link TeaModel}
  *
  * <p>CopyFileResponseBody</p>
@@ -73,10 +79,11 @@ public class CopyFileResponseBody extends TeaModel {
         private String fileId; 
 
         /**
-         * The ID of the asynchronous task.
-         * <p>
+         * <p>The ID of the asynchronous task.</p>
+         * <p>If a file is copied, this parameter is not returned. If a folder is copied, the folder is asynchronously copied in the background and this parameter is returned. You can call the GetAsyncTask operation to query the information about the asynchronous task based on the task ID.</p>
          * 
-         * If a file is copied, this parameter is not returned. If a folder is copied, the folder is asynchronously copied in the background and this parameter is returned. You can call the GetAsyncTask operation to query the information about the asynchronous task based on the task ID.
+         * <strong>example:</strong>
+         * <p>000e89fb-cf8f-11e9-8ab4-b6e980803a3b</p>
          */
         public Builder asyncTaskId(String asyncTaskId) {
             this.asyncTaskId = asyncTaskId;
@@ -84,7 +91,10 @@ public class CopyFileResponseBody extends TeaModel {
         }
 
         /**
-         * The domain ID.
+         * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj1</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -92,7 +102,10 @@ public class CopyFileResponseBody extends TeaModel {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;
@@ -100,7 +113,10 @@ public class CopyFileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the copied file or folder.
+         * <p>The ID of the copied file or folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4221bf6e6ab43a255edc4463bffa6f5f5d317401</p>
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;

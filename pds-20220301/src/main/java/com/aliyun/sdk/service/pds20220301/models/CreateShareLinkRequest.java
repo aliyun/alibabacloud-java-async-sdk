@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateShareLinkRequest} extends {@link RequestModel}
  *
  * <p>CreateShareLinkRequest</p>
@@ -21,7 +27,7 @@ public class CreateShareLinkRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("creatable_file_id_list")
-    private java.util.List < String > creatableFileIdList;
+    private java.util.List<String> creatableFileIdList;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("description")
@@ -54,11 +60,19 @@ public class CreateShareLinkRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("file_id_list")
-    private java.util.List < String > fileIdList;
+    private java.util.List<String> fileIdList;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("office_editable")
+    private Boolean officeEditable;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("preview_limit")
     private Long previewLimit;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("require_login")
+    private Boolean requireLogin;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("save_limit")
@@ -93,7 +107,9 @@ public class CreateShareLinkRequest extends Request {
         this.driveId = builder.driveId;
         this.expiration = builder.expiration;
         this.fileIdList = builder.fileIdList;
+        this.officeEditable = builder.officeEditable;
         this.previewLimit = builder.previewLimit;
+        this.requireLogin = builder.requireLogin;
         this.saveLimit = builder.saveLimit;
         this.shareAllFiles = builder.shareAllFiles;
         this.shareName = builder.shareName;
@@ -131,7 +147,7 @@ public class CreateShareLinkRequest extends Request {
     /**
      * @return creatableFileIdList
      */
-    public java.util.List < String > getCreatableFileIdList() {
+    public java.util.List<String> getCreatableFileIdList() {
         return this.creatableFileIdList;
     }
 
@@ -187,8 +203,15 @@ public class CreateShareLinkRequest extends Request {
     /**
      * @return fileIdList
      */
-    public java.util.List < String > getFileIdList() {
+    public java.util.List<String> getFileIdList() {
         return this.fileIdList;
+    }
+
+    /**
+     * @return officeEditable
+     */
+    public Boolean getOfficeEditable() {
+        return this.officeEditable;
     }
 
     /**
@@ -196,6 +219,13 @@ public class CreateShareLinkRequest extends Request {
      */
     public Long getPreviewLimit() {
         return this.previewLimit;
+    }
+
+    /**
+     * @return requireLogin
+     */
+    public Boolean getRequireLogin() {
+        return this.requireLogin;
     }
 
     /**
@@ -236,7 +266,7 @@ public class CreateShareLinkRequest extends Request {
     public static final class Builder extends Request.Builder<CreateShareLinkRequest, Builder> {
         private String domainId; 
         private Boolean creatable; 
-        private java.util.List < String > creatableFileIdList; 
+        private java.util.List<String> creatableFileIdList; 
         private String description; 
         private Boolean disableDownload; 
         private Boolean disablePreview; 
@@ -244,8 +274,10 @@ public class CreateShareLinkRequest extends Request {
         private Long downloadLimit; 
         private String driveId; 
         private String expiration; 
-        private java.util.List < String > fileIdList; 
+        private java.util.List<String> fileIdList; 
+        private Boolean officeEditable; 
         private Long previewLimit; 
+        private Boolean requireLogin; 
         private Long saveLimit; 
         private Boolean shareAllFiles; 
         private String shareName; 
@@ -269,7 +301,9 @@ public class CreateShareLinkRequest extends Request {
             this.driveId = request.driveId;
             this.expiration = request.expiration;
             this.fileIdList = request.fileIdList;
+            this.officeEditable = request.officeEditable;
             this.previewLimit = request.previewLimit;
+            this.requireLogin = request.requireLogin;
             this.saveLimit = request.saveLimit;
             this.shareAllFiles = request.shareAllFiles;
             this.shareName = request.shareName;
@@ -278,7 +312,7 @@ public class CreateShareLinkRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -298,14 +332,14 @@ public class CreateShareLinkRequest extends Request {
         /**
          * creatable_file_id_list.
          */
-        public Builder creatableFileIdList(java.util.List < String > creatableFileIdList) {
+        public Builder creatableFileIdList(java.util.List<String> creatableFileIdList) {
             this.putBodyParameter("creatable_file_id_list", creatableFileIdList);
             this.creatableFileIdList = creatableFileIdList;
             return this;
         }
 
         /**
-         * The description of the share. The description must be 0 to 1,024 characters in length.
+         * <p>The description of the share. The description must be 0 to 1,024 characters in length.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -314,7 +348,10 @@ public class CreateShareLinkRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable the download feature.
+         * <p>Specifies whether to disable the download feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableDownload(Boolean disableDownload) {
             this.putBodyParameter("disable_download", disableDownload);
@@ -323,7 +360,10 @@ public class CreateShareLinkRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable the preview feature.
+         * <p>Specifies whether to disable the preview feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disablePreview(Boolean disablePreview) {
             this.putBodyParameter("disable_preview", disablePreview);
@@ -332,7 +372,10 @@ public class CreateShareLinkRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable the dump feature.
+         * <p>Specifies whether to disable the dump feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableSave(Boolean disableSave) {
             this.putBodyParameter("disable_save", disableSave);
@@ -341,7 +384,10 @@ public class CreateShareLinkRequest extends Request {
         }
 
         /**
-         * The limit on the number of times that the shared files can be downloaded. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.
+         * <p>The limit on the number of times that the shared files can be downloaded. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder downloadLimit(Long downloadLimit) {
             this.putBodyParameter("download_limit", downloadLimit);
@@ -350,7 +396,11 @@ public class CreateShareLinkRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -359,7 +409,10 @@ public class CreateShareLinkRequest extends Request {
         }
 
         /**
-         * The time when the share URL expires. The value of this parameter follows the RFC 3339 standard. Example: "2020-06-28T11:33:00.000+08:00". If expiration is set to "", the share URL never expires.
+         * <p>The time when the share URL expires. The value of this parameter follows the RFC 3339 standard. Example: &quot;2020-06-28T11:33:00.000+08:00&quot;. If expiration is set to &quot;&quot;, the share URL never expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-28T11:33:00.000+08:00</p>
          */
         public Builder expiration(String expiration) {
             this.putBodyParameter("expiration", expiration);
@@ -368,16 +421,31 @@ public class CreateShareLinkRequest extends Request {
         }
 
         /**
-         * The IDs of the files to share in the parent path. The number of files in the parent path ranges from 1 to 100. If share_all_files is set to true, this parameter does not take effect. Otherwise, you must specify this parameter.``
+         * <p>The IDs of the files to share in the parent path. The number of files in the parent path ranges from 1 to 100. If share_all_files is set to true, this parameter does not take effect. Otherwise, you must specify this parameter.``</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;520b217f13adf4fc24f2191991b1664ce045b393&quot;]</p>
          */
-        public Builder fileIdList(java.util.List < String > fileIdList) {
+        public Builder fileIdList(java.util.List<String> fileIdList) {
             this.putBodyParameter("file_id_list", fileIdList);
             this.fileIdList = fileIdList;
             return this;
         }
 
         /**
-         * The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.
+         * office_editable.
+         */
+        public Builder officeEditable(Boolean officeEditable) {
+            this.putBodyParameter("office_editable", officeEditable);
+            this.officeEditable = officeEditable;
+            return this;
+        }
+
+        /**
+         * <p>The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder previewLimit(Long previewLimit) {
             this.putBodyParameter("preview_limit", previewLimit);
@@ -386,7 +454,19 @@ public class CreateShareLinkRequest extends Request {
         }
 
         /**
-         * The limit on the number of times that the shared files can be dumped. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.
+         * require_login.
+         */
+        public Builder requireLogin(Boolean requireLogin) {
+            this.putBodyParameter("require_login", requireLogin);
+            this.requireLogin = requireLogin;
+            return this;
+        }
+
+        /**
+         * <p>The limit on the number of times that the shared files can be dumped. The value of this parameter must be equal to or greater than 0. A value of 0 indicates no limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder saveLimit(Long saveLimit) {
             this.putBodyParameter("save_limit", saveLimit);
@@ -395,7 +475,10 @@ public class CreateShareLinkRequest extends Request {
         }
 
         /**
-         * Specifies whether to share all files in the drive.
+         * <p>Specifies whether to share all files in the drive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder shareAllFiles(Boolean shareAllFiles) {
             this.putBodyParameter("share_all_files", shareAllFiles);
@@ -404,7 +487,7 @@ public class CreateShareLinkRequest extends Request {
         }
 
         /**
-         * The name of the share. If you leave this parameter empty, the file name that corresponds to the first ID in the file ID list is used. The name must be 0 to 128 characters in length.
+         * <p>The name of the share. If you leave this parameter empty, the file name that corresponds to the first ID in the file ID list is used. The name must be 0 to 128 characters in length.</p>
          */
         public Builder shareName(String shareName) {
             this.putBodyParameter("share_name", shareName);
@@ -413,7 +496,10 @@ public class CreateShareLinkRequest extends Request {
         }
 
         /**
-         * The access code. An access code must be 0 to 64 bytes in length. If you do not specify this parameter or leave this parameter empty, the files can be accessed without an access code. In this case, you do not need to specify the share_pwd parameter when you call an operation to query the share URL. The access code can contain only visible ASCII characters.
+         * <p>The access code. An access code must be 0 to 64 bytes in length. If you do not specify this parameter or leave this parameter empty, the files can be accessed without an access code. In this case, you do not need to specify the share_pwd parameter when you call an operation to query the share URL. The access code can contain only visible ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcF123x</p>
          */
         public Builder sharePwd(String sharePwd) {
             this.putBodyParameter("share_pwd", sharePwd);
@@ -422,7 +508,10 @@ public class CreateShareLinkRequest extends Request {
         }
 
         /**
-         * The user ID.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u123</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("user_id", userId);

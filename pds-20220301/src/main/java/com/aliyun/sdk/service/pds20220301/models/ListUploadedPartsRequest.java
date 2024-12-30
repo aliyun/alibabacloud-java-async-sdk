@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUploadedPartsRequest} extends {@link RequestModel}
  *
  * <p>ListUploadedPartsRequest</p>
@@ -139,7 +145,7 @@ public class ListUploadedPartsRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -148,7 +154,10 @@ public class ListUploadedPartsRequest extends Request {
         }
 
         /**
-         * The drive ID. This parameter is required if the file is not uploaded by using the share URL of the file.
+         * <p>The drive ID. This parameter is required if the file is not uploaded by using the share URL of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -157,7 +166,11 @@ public class ListUploadedPartsRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>322fb07b975f4b0ae1b543fe8475eee4c19eb2b2</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);
@@ -166,7 +179,10 @@ public class ListUploadedPartsRequest extends Request {
         }
 
         /**
-         * The maximum number of results to return. Valid values: 1 to 100. Default value: 100.
+         * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("limit", limit);
@@ -175,7 +191,10 @@ public class ListUploadedPartsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is left empty.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder partNumberMarker(Integer partNumberMarker) {
             this.putBodyParameter("part_number_marker", partNumberMarker);
@@ -184,7 +203,10 @@ public class ListUploadedPartsRequest extends Request {
         }
 
         /**
-         * The share ID. This parameter is required if the file is uploaded by using the share URL of the file.
+         * <p>The share ID. This parameter is required if the file is uploaded by using the share URL of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1FswpQ8</p>
          */
         public Builder shareId(String shareId) {
             this.putBodyParameter("share_id", shareId);
@@ -193,7 +215,11 @@ public class ListUploadedPartsRequest extends Request {
         }
 
         /**
-         * The ID of the upload task.
+         * <p>The ID of the upload task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00166D06127B413BA1EC8ABB1144D101</p>
          */
         public Builder uploadId(String uploadId) {
             this.putBodyParameter("upload_id", uploadId);

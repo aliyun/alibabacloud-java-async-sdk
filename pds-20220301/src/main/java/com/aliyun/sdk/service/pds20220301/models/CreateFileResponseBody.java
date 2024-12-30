@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFileResponseBody</p>
@@ -30,7 +36,7 @@ public class CreateFileResponseBody extends TeaModel {
     private String parentFileId;
 
     @com.aliyun.core.annotation.NameInMap("part_info_list")
-    private java.util.List < UploadPartInfo > partInfoList;
+    private java.util.List<UploadPartInfo> partInfoList;
 
     @com.aliyun.core.annotation.NameInMap("rapid_upload")
     private Boolean rapidUpload;
@@ -111,7 +117,7 @@ public class CreateFileResponseBody extends TeaModel {
     /**
      * @return partInfoList
      */
-    public java.util.List < UploadPartInfo > getPartInfoList() {
+    public java.util.List<UploadPartInfo> getPartInfoList() {
         return this.partInfoList;
     }
 
@@ -150,14 +156,17 @@ public class CreateFileResponseBody extends TeaModel {
         private String fileId; 
         private String fileName; 
         private String parentFileId; 
-        private java.util.List < UploadPartInfo > partInfoList; 
+        private java.util.List<UploadPartInfo> partInfoList; 
         private Boolean rapidUpload; 
         private String status; 
         private String type; 
         private String uploadId; 
 
         /**
-         * The domain ID.
+         * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bj1</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -165,7 +174,10 @@ public class CreateFileResponseBody extends TeaModel {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;
@@ -173,7 +185,10 @@ public class CreateFileResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the file exists.
+         * <p>Indicates whether the file exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder exist(Boolean exist) {
             this.exist = exist;
@@ -181,7 +196,10 @@ public class CreateFileResponseBody extends TeaModel {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileid1</p>
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;
@@ -189,7 +207,10 @@ public class CreateFileResponseBody extends TeaModel {
         }
 
         /**
-         * The file name.
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a.txt</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -197,7 +218,10 @@ public class CreateFileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the parent directory.
+         * <p>The ID of the parent directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileid5</p>
          */
         public Builder parentFileId(String parentFileId) {
             this.parentFileId = parentFileId;
@@ -205,15 +229,18 @@ public class CreateFileResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the file parts.
+         * <p>The information about the file parts.</p>
          */
-        public Builder partInfoList(java.util.List < UploadPartInfo > partInfoList) {
+        public Builder partInfoList(java.util.List<UploadPartInfo> partInfoList) {
             this.partInfoList = partInfoList;
             return this;
         }
 
         /**
-         * Indicates whether the file is instantly uploaded.
+         * <p>Indicates whether the file is instantly uploaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder rapidUpload(Boolean rapidUpload) {
             this.rapidUpload = rapidUpload;
@@ -221,7 +248,10 @@ public class CreateFileResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the file.
+         * <p>The state of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uploading</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -229,7 +259,10 @@ public class CreateFileResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the file.
+         * <p>The type of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -237,7 +270,10 @@ public class CreateFileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the upload task.
+         * <p>The ID of the upload task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uploadid1</p>
          */
         public Builder uploadId(String uploadId) {
             this.uploadId = uploadId;

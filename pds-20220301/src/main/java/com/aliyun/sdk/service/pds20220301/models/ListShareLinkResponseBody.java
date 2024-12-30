@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListShareLinkResponseBody} extends {@link TeaModel}
  *
  * <p>ListShareLinkResponseBody</p>
  */
 public class ListShareLinkResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("items")
-    private java.util.List < ShareLink > items;
+    private java.util.List<ShareLink> items;
 
     @com.aliyun.core.annotation.NameInMap("next_marker")
     private String nextMarker;
@@ -33,7 +39,7 @@ public class ListShareLinkResponseBody extends TeaModel {
     /**
      * @return items
      */
-    public java.util.List < ShareLink > getItems() {
+    public java.util.List<ShareLink> getItems() {
         return this.items;
     }
 
@@ -45,19 +51,22 @@ public class ListShareLinkResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ShareLink > items; 
+        private java.util.List<ShareLink> items; 
         private String nextMarker; 
 
         /**
-         * The information about the shares.
+         * <p>The information about the shares.</p>
          */
-        public Builder items(java.util.List < ShareLink > items) {
+        public Builder items(java.util.List<ShareLink> items) {
             this.items = items;
             return this;
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder nextMarker(String nextMarker) {
             this.nextMarker = nextMarker;

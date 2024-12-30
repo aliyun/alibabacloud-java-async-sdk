@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UserLogDetail} extends {@link TeaModel}
  *
  * <p>UserLogDetail</p>
@@ -150,6 +156,12 @@ public class UserLogDetail extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UserLogDetail} extends {@link TeaModel}
+     *
+     * <p>UserLogDetail</p>
+     */
     public static class UpdateTo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("email")
         private String email;

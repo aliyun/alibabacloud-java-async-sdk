@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UserExtraItem} extends {@link TeaModel}
  *
  * <p>UserExtraItem</p>
  */
 public class UserExtraItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("account")
-    private java.util.List < AccountLinkInfo > account;
+    private java.util.List<AccountLinkInfo> account;
 
     @com.aliyun.core.annotation.NameInMap("avatar")
     private String avatar;
@@ -60,13 +66,13 @@ public class UserExtraItem extends TeaModel {
     private String nickName;
 
     @com.aliyun.core.annotation.NameInMap("parent_group")
-    private java.util.List < BaseDriveResponse > parentGroup;
+    private java.util.List<BaseDriveResponse> parentGroup;
 
     @com.aliyun.core.annotation.NameInMap("path_status")
     private String pathStatus;
 
     @com.aliyun.core.annotation.NameInMap("permission")
-    private java.util.Map < String, IDPermission > permission;
+    private java.util.Map<String, IDPermission> permission;
 
     @com.aliyun.core.annotation.NameInMap("phone")
     private String phone;
@@ -84,7 +90,7 @@ public class UserExtraItem extends TeaModel {
     private String updatedAt;
 
     @com.aliyun.core.annotation.NameInMap("user_data")
-    private java.util.Map < String, ? > userData;
+    private java.util.Map<String, ?> userData;
 
     @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
@@ -133,7 +139,7 @@ public class UserExtraItem extends TeaModel {
     /**
      * @return account
      */
-    public java.util.List < AccountLinkInfo > getAccount() {
+    public java.util.List<AccountLinkInfo> getAccount() {
         return this.account;
     }
 
@@ -245,7 +251,7 @@ public class UserExtraItem extends TeaModel {
     /**
      * @return parentGroup
      */
-    public java.util.List < BaseDriveResponse > getParentGroup() {
+    public java.util.List<BaseDriveResponse> getParentGroup() {
         return this.parentGroup;
     }
 
@@ -259,7 +265,7 @@ public class UserExtraItem extends TeaModel {
     /**
      * @return permission
      */
-    public java.util.Map < String, IDPermission > getPermission() {
+    public java.util.Map<String, IDPermission> getPermission() {
         return this.permission;
     }
 
@@ -301,7 +307,7 @@ public class UserExtraItem extends TeaModel {
     /**
      * @return userData
      */
-    public java.util.Map < String, ? > getUserData() {
+    public java.util.Map<String, ?> getUserData() {
         return this.userData;
     }
 
@@ -320,7 +326,7 @@ public class UserExtraItem extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AccountLinkInfo > account; 
+        private java.util.List<AccountLinkInfo> account; 
         private String avatar; 
         private String createdAt; 
         private String creator; 
@@ -336,22 +342,22 @@ public class UserExtraItem extends TeaModel {
         private Long lastLoginTime; 
         private Boolean needChangePasswordNextLogin; 
         private String nickName; 
-        private java.util.List < BaseDriveResponse > parentGroup; 
+        private java.util.List<BaseDriveResponse> parentGroup; 
         private String pathStatus; 
-        private java.util.Map < String, IDPermission > permission; 
+        private java.util.Map<String, IDPermission> permission; 
         private String phone; 
         private String phoneRegion; 
         private String role; 
         private String status; 
         private String updatedAt; 
-        private java.util.Map < String, ? > userData; 
+        private java.util.Map<String, ?> userData; 
         private String userId; 
         private String userName; 
 
         /**
          * account.
          */
-        public Builder account(java.util.List < AccountLinkInfo > account) {
+        public Builder account(java.util.List<AccountLinkInfo> account) {
             this.account = account;
             return this;
         }
@@ -479,7 +485,7 @@ public class UserExtraItem extends TeaModel {
         /**
          * parent_group.
          */
-        public Builder parentGroup(java.util.List < BaseDriveResponse > parentGroup) {
+        public Builder parentGroup(java.util.List<BaseDriveResponse> parentGroup) {
             this.parentGroup = parentGroup;
             return this;
         }
@@ -495,7 +501,7 @@ public class UserExtraItem extends TeaModel {
         /**
          * permission.
          */
-        public Builder permission(java.util.Map < String, IDPermission > permission) {
+        public Builder permission(java.util.Map<String, IDPermission> permission) {
             this.permission = permission;
             return this;
         }
@@ -543,7 +549,7 @@ public class UserExtraItem extends TeaModel {
         /**
          * user_data.
          */
-        public Builder userData(java.util.Map < String, ? > userData) {
+        public Builder userData(java.util.Map<String, ?> userData) {
             this.userData = userData;
             return this;
         }

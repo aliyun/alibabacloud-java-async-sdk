@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CssInstanceCommodity} extends {@link TeaModel}
  *
  * <p>CssInstanceCommodity</p>
@@ -24,7 +30,7 @@ public class CssInstanceCommodity extends TeaModel {
     private String commodityCode;
 
     @com.aliyun.core.annotation.NameInMap("components")
-    private java.util.List < CssInstanceComponent > components;
+    private java.util.List<CssInstanceComponent> components;
 
     @com.aliyun.core.annotation.NameInMap("duration")
     private Long duration;
@@ -45,7 +51,7 @@ public class CssInstanceCommodity extends TeaModel {
     private Boolean isSyncToSubscription;
 
     @com.aliyun.core.annotation.NameInMap("orderParams")
-    private java.util.Map < String, String > orderParams;
+    private java.util.Map<String, String> orderParams;
 
     @com.aliyun.core.annotation.NameInMap("orderType")
     private String orderType;
@@ -60,7 +66,7 @@ public class CssInstanceCommodity extends TeaModel {
     private Long quantity;
 
     @com.aliyun.core.annotation.NameInMap("redeemNoList")
-    private java.util.List < String > redeemNoList;
+    private java.util.List<String> redeemNoList;
 
     @com.aliyun.core.annotation.NameInMap("redeemOrderType")
     private String redeemOrderType;
@@ -72,7 +78,7 @@ public class CssInstanceCommodity extends TeaModel {
     private String specCode;
 
     @com.aliyun.core.annotation.NameInMap("specUpgradeOriginSpecCodes")
-    private java.util.List < String > specUpgradeOriginSpecCodes;
+    private java.util.List<String> specUpgradeOriginSpecCodes;
 
     @com.aliyun.core.annotation.NameInMap("specifyStartDate")
     private Long specifyStartDate;
@@ -145,7 +151,7 @@ public class CssInstanceCommodity extends TeaModel {
     /**
      * @return components
      */
-    public java.util.List < CssInstanceComponent > getComponents() {
+    public java.util.List<CssInstanceComponent> getComponents() {
         return this.components;
     }
 
@@ -194,7 +200,7 @@ public class CssInstanceCommodity extends TeaModel {
     /**
      * @return orderParams
      */
-    public java.util.Map < String, String > getOrderParams() {
+    public java.util.Map<String, String> getOrderParams() {
         return this.orderParams;
     }
 
@@ -229,7 +235,7 @@ public class CssInstanceCommodity extends TeaModel {
     /**
      * @return redeemNoList
      */
-    public java.util.List < String > getRedeemNoList() {
+    public java.util.List<String> getRedeemNoList() {
         return this.redeemNoList;
     }
 
@@ -257,7 +263,7 @@ public class CssInstanceCommodity extends TeaModel {
     /**
      * @return specUpgradeOriginSpecCodes
      */
-    public java.util.List < String > getSpecUpgradeOriginSpecCodes() {
+    public java.util.List<String> getSpecUpgradeOriginSpecCodes() {
         return this.specUpgradeOriginSpecCodes;
     }
 
@@ -280,23 +286,23 @@ public class CssInstanceCommodity extends TeaModel {
         private String aliyunProduceCode; 
         private String chargeType; 
         private String commodityCode; 
-        private java.util.List < CssInstanceComponent > components; 
+        private java.util.List<CssInstanceComponent> components; 
         private Long duration; 
         private String instanceId; 
         private Boolean isFree; 
         private Boolean isPrePayPostCharge; 
         private Boolean isRenewChange; 
         private Boolean isSyncToSubscription; 
-        private java.util.Map < String, String > orderParams; 
+        private java.util.Map<String, String> orderParams; 
         private String orderType; 
         private Long planItemId; 
         private String pricingCycle; 
         private Long quantity; 
-        private java.util.List < String > redeemNoList; 
+        private java.util.List<String> redeemNoList; 
         private String redeemOrderType; 
         private String refundSpecCode; 
         private String specCode; 
-        private java.util.List < String > specUpgradeOriginSpecCodes; 
+        private java.util.List<String> specUpgradeOriginSpecCodes; 
         private Long specifyStartDate; 
         private Boolean upgradeInquireFinancialValue; 
 
@@ -335,7 +341,7 @@ public class CssInstanceCommodity extends TeaModel {
         /**
          * components.
          */
-        public Builder components(java.util.List < CssInstanceComponent > components) {
+        public Builder components(java.util.List<CssInstanceComponent> components) {
             this.components = components;
             return this;
         }
@@ -391,7 +397,7 @@ public class CssInstanceCommodity extends TeaModel {
         /**
          * orderParams.
          */
-        public Builder orderParams(java.util.Map < String, String > orderParams) {
+        public Builder orderParams(java.util.Map<String, String> orderParams) {
             this.orderParams = orderParams;
             return this;
         }
@@ -431,7 +437,7 @@ public class CssInstanceCommodity extends TeaModel {
         /**
          * redeemNoList.
          */
-        public Builder redeemNoList(java.util.List < String > redeemNoList) {
+        public Builder redeemNoList(java.util.List<String> redeemNoList) {
             this.redeemNoList = redeemNoList;
             return this;
         }
@@ -463,7 +469,7 @@ public class CssInstanceCommodity extends TeaModel {
         /**
          * specUpgradeOriginSpecCodes.
          */
-        public Builder specUpgradeOriginSpecCodes(java.util.List < String > specUpgradeOriginSpecCodes) {
+        public Builder specUpgradeOriginSpecCodes(java.util.List<String> specUpgradeOriginSpecCodes) {
             this.specUpgradeOriginSpecCodes = specUpgradeOriginSpecCodes;
             return this;
         }

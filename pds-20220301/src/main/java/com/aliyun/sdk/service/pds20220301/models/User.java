@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link User} extends {@link TeaModel}
  *
  * <p>User</p>
@@ -48,7 +54,7 @@ public class User extends TeaModel {
     private Long updatedAt;
 
     @com.aliyun.core.annotation.NameInMap("user_data")
-    private java.util.Map < String, String > userData;
+    private java.util.Map<String, String> userData;
 
     @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
@@ -169,7 +175,7 @@ public class User extends TeaModel {
     /**
      * @return userData
      */
-    public java.util.Map < String, String > getUserData() {
+    public java.util.Map<String, String> getUserData() {
         return this.userData;
     }
 
@@ -200,7 +206,7 @@ public class User extends TeaModel {
         private String role; 
         private String status; 
         private Long updatedAt; 
-        private java.util.Map < String, String > userData; 
+        private java.util.Map<String, String> userData; 
         private String userId; 
         private String userName; 
 
@@ -303,7 +309,7 @@ public class User extends TeaModel {
         /**
          * user_data.
          */
-        public Builder userData(java.util.Map < String, String > userData) {
+        public Builder userData(java.util.Map<String, String> userData) {
             this.userData = userData;
             return this;
         }

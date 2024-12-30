@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFileRequest} extends {@link RequestModel}
  *
  * <p>UpdateFileRequest</p>
@@ -40,7 +46,7 @@ public class UpdateFileRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("labels")
-    private java.util.List < String > labels;
+    private java.util.List<String> labels;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("local_modified_at")
@@ -127,7 +133,7 @@ public class UpdateFileRequest extends Request {
     /**
      * @return labels
      */
-    public java.util.List < String > getLabels() {
+    public java.util.List<String> getLabels() {
         return this.labels;
     }
 
@@ -159,7 +165,7 @@ public class UpdateFileRequest extends Request {
         private String driveId; 
         private String fileId; 
         private Boolean hidden; 
-        private java.util.List < String > labels; 
+        private java.util.List<String> labels; 
         private String localModifiedAt; 
         private String name; 
         private Boolean starred; 
@@ -183,7 +189,7 @@ public class UpdateFileRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -192,16 +198,14 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * The processing method that is used if the file that you want to modify has the same name as an existing file on the cloud. Valid values:
-         * <p>
+         * <p>The processing method that is used if the file that you want to modify has the same name as an existing file on the cloud. Valid values:</p>
+         * <p>ignore: allows you to modify the file by using the same name as an existing file on the cloud.</p>
+         * <p>auto_rename: automatically renames the file that has the same name on the cloud. By default, the current point in time is added to the end of the file name. Example: xxx_20060102_150405.</p>
+         * <p>refuse: does not modify the file that you want to modify but returns the information about the file that has the same name on the cloud.</p>
+         * <p>Default value: ignore.</p>
          * 
-         * ignore: allows you to modify the file by using the same name as an existing file on the cloud.
-         * 
-         * auto_rename: automatically renames the file that has the same name on the cloud. By default, the current point in time is added to the end of the file name. Example: xxx\_20060102\_150405.
-         * 
-         * refuse: does not modify the file that you want to modify but returns the information about the file that has the same name on the cloud.
-         * 
-         * Default value: ignore.
+         * <strong>example:</strong>
+         * <p>ignore</p>
          */
         public Builder checkNameMode(String checkNameMode) {
             this.putBodyParameter("check_name_mode", checkNameMode);
@@ -210,7 +214,7 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * The description of the file. The description can be up to 1,024 characters in length.
+         * <p>The description of the file. The description can be up to 1,024 characters in length.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -219,7 +223,11 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -228,7 +236,11 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9520943DC264</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);
@@ -237,7 +249,10 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * Specifies whether to hide the file.
+         * <p>Specifies whether to hide the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hidden(Boolean hidden) {
             this.putBodyParameter("hidden", hidden);
@@ -246,16 +261,19 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * The tags of the file. You can specify up to 100 tags.
+         * <p>The tags of the file. You can specify up to 100 tags.</p>
          */
-        public Builder labels(java.util.List < String > labels) {
+        public Builder labels(java.util.List<String> labels) {
             this.putBodyParameter("labels", labels);
             this.labels = labels;
             return this;
         }
 
         /**
-         * The local time when the file was modified. The time is in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.
+         * <p>The local time when the file was modified. The time is in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-20T06:51:27.292Z</p>
          */
         public Builder localModifiedAt(String localModifiedAt) {
             this.putBodyParameter("local_modified_at", localModifiedAt);
@@ -264,7 +282,10 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * The name of the file. The name can be up to 1,024 bytes in length based on the UTF-8 encoding rule.
+         * <p>The name of the file. The name can be up to 1,024 bytes in length based on the UTF-8 encoding rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a.jpg</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -273,7 +294,10 @@ public class UpdateFileRequest extends Request {
         }
 
         /**
-         * Specifies whether to add the file to favorites.
+         * <p>Specifies whether to add the file to favorites.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder starred(Boolean starred) {
             this.putBodyParameter("starred", starred);

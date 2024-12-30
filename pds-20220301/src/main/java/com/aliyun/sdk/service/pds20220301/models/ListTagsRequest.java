@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagsRequest} extends {@link RequestModel}
  *
  * <p>ListTagsRequest</p>
@@ -96,7 +102,7 @@ public class ListTagsRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -105,7 +111,11 @@ public class ListTagsRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -114,7 +124,10 @@ public class ListTagsRequest extends Request {
         }
 
         /**
-         * The method that is used to generate the thumbnail of an image.
+         * <p>The method that is used to generate the thumbnail of an image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/resize,w_200</p>
          */
         public Builder imageThumbnailProcess(String imageThumbnailProcess) {
             this.putBodyParameter("image_thumbnail_process", imageThumbnailProcess);
@@ -123,7 +136,10 @@ public class ListTagsRequest extends Request {
         }
 
         /**
-         * The method that is used to generate the thumbnail of a video.
+         * <p>The method that is used to generate the thumbnail of a video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video/snapshot,t_7000,f_jpg,w_800,h_600,m_fast</p>
          */
         public Builder videoThumbnailProcess(String videoThumbnailProcess) {
             this.putBodyParameter("video_thumbnail_process", videoThumbnailProcess);

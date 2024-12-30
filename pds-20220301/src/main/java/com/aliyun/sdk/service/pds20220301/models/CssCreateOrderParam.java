@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CssCreateOrderParam} extends {@link TeaModel}
  *
  * <p>CssCreateOrderParam</p>
@@ -36,7 +42,7 @@ public class CssCreateOrderParam extends TeaModel {
     private String cilentIp;
 
     @com.aliyun.core.annotation.NameInMap("commodities")
-    private java.util.List < CssInstanceCommodity > commodities;
+    private java.util.List<CssInstanceCommodity> commodities;
 
     @com.aliyun.core.annotation.NameInMap("createrNick")
     private String createrNick;
@@ -60,7 +66,7 @@ public class CssCreateOrderParam extends TeaModel {
     private String orderOrigin;
 
     @com.aliyun.core.annotation.NameInMap("orderParams")
-    private java.util.Map < String, String > orderParams;
+    private java.util.Map<String, String> orderParams;
 
     @com.aliyun.core.annotation.NameInMap("payerId")
     private Long payerId;
@@ -197,7 +203,7 @@ public class CssCreateOrderParam extends TeaModel {
     /**
      * @return commodities
      */
-    public java.util.List < CssInstanceCommodity > getCommodities() {
+    public java.util.List<CssInstanceCommodity> getCommodities() {
         return this.commodities;
     }
 
@@ -253,7 +259,7 @@ public class CssCreateOrderParam extends TeaModel {
     /**
      * @return orderParams
      */
-    public java.util.Map < String, String > getOrderParams() {
+    public java.util.Map<String, String> getOrderParams() {
         return this.orderParams;
     }
 
@@ -350,7 +356,7 @@ public class CssCreateOrderParam extends TeaModel {
         private String certificate; 
         private Long childId; 
         private String cilentIp; 
-        private java.util.List < CssInstanceCommodity > commodities; 
+        private java.util.List<CssInstanceCommodity> commodities; 
         private String createrNick; 
         private Object cssAuthRequestParam; 
         private String fromApp; 
@@ -358,7 +364,7 @@ public class CssCreateOrderParam extends TeaModel {
         private Long marketType; 
         private String memo; 
         private String orderOrigin; 
-        private java.util.Map < String, String > orderParams; 
+        private java.util.Map<String, String> orderParams; 
         private Long payerId; 
         private Long planGroupId; 
         private Long planId; 
@@ -439,7 +445,7 @@ public class CssCreateOrderParam extends TeaModel {
         /**
          * commodities.
          */
-        public Builder commodities(java.util.List < CssInstanceCommodity > commodities) {
+        public Builder commodities(java.util.List<CssInstanceCommodity> commodities) {
             this.commodities = commodities;
             return this;
         }
@@ -503,7 +509,7 @@ public class CssCreateOrderParam extends TeaModel {
         /**
          * orderParams.
          */
-        public Builder orderParams(java.util.Map < String, String > orderParams) {
+        public Builder orderParams(java.util.Map<String, String> orderParams) {
             this.orderParams = orderParams;
             return this;
         }

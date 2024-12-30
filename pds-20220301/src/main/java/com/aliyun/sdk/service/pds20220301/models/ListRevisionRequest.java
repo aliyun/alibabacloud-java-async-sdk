@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRevisionRequest} extends {@link RequestModel}
  *
  * <p>ListRevisionRequest</p>
@@ -126,7 +132,8 @@ public class ListRevisionRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * <p>A short description of struct</p>
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -135,7 +142,11 @@ public class ListRevisionRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putBodyParameter("drive_id", driveId);
@@ -144,10 +155,13 @@ public class ListRevisionRequest extends Request {
         }
 
         /**
-         * Specifies the returned fields.
-         * <p>
+         * <p>Specifies the returned fields.</p>
+         * <p>By default, this parameter is left empty. If you set this parameter to *, all fields are returned. If you leave this parameter empty, the creator of the file is not returned.</p>
          * 
-         * By default, this parameter is left empty. If you set this parameter to \*, all fields are returned. If you leave this parameter empty, the creator of the file is not returned.
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder fields(String fields) {
             this.putBodyParameter("fields", fields);
@@ -156,7 +170,11 @@ public class ListRevisionRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9520943DC264</p>
          */
         public Builder fileId(String fileId) {
             this.putBodyParameter("file_id", fileId);
@@ -165,12 +183,12 @@ public class ListRevisionRequest extends Request {
         }
 
         /**
-         * The maximum number of results to return. Valid values: 1 to 100.
-         * <p>
+         * <p>The maximum number of results to return. Valid values: 1 to 100.</p>
+         * <p>Default value: 50.</p>
+         * <p>The number of returned results must be less than or equal to the specified number.</p>
          * 
-         * Default value: 50.
-         * 
-         * The number of returned results must be less than or equal to the specified number.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limit(Long limit) {
             this.putBodyParameter("limit", limit);
@@ -179,10 +197,11 @@ public class ListRevisionRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.</p>
+         * <p>By default, this parameter is left empty.</p>
          * 
-         * By default, this parameter is left empty.
+         * <strong>example:</strong>
+         * <p>40CB7794C929</p>
          */
         public Builder marker(String marker) {
             this.putBodyParameter("marker", marker);

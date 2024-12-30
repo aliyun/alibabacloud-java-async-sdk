@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFacegroupResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateFacegroupResponseBody</p>
@@ -49,7 +55,10 @@ public class UpdateFacegroupResponseBody extends TeaModel {
         private String groupId; 
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;
@@ -57,7 +66,10 @@ public class UpdateFacegroupResponseBody extends TeaModel {
         }
 
         /**
-         * The group ID.
+         * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group-abc</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;

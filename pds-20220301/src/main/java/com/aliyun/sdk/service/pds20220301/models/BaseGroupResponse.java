@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BaseGroupResponse} extends {@link TeaModel}
  *
  * <p>BaseGroupResponse</p>
@@ -33,7 +39,7 @@ public class BaseGroupResponse extends Response {
     private Boolean isSync;
 
     @com.aliyun.core.annotation.NameInMap("permission")
-    private java.util.Map < String, IDPermission > permission;
+    private java.util.Map<String, IDPermission> permission;
 
     @com.aliyun.core.annotation.NameInMap("updated_at")
     private String updatedAt;
@@ -112,7 +118,7 @@ public class BaseGroupResponse extends Response {
     /**
      * @return permission
      */
-    public java.util.Map < String, IDPermission > getPermission() {
+    public java.util.Map<String, IDPermission> getPermission() {
         return this.permission;
     }
 
@@ -139,7 +145,7 @@ public class BaseGroupResponse extends Response {
 
         Builder isSync(Boolean isSync);
 
-        Builder permission(java.util.Map < String, IDPermission > permission);
+        Builder permission(java.util.Map<String, IDPermission> permission);
 
         Builder updatedAt(String updatedAt);
 
@@ -158,7 +164,7 @@ public class BaseGroupResponse extends Response {
         private String groupId; 
         private String groupName; 
         private Boolean isSync; 
-        private java.util.Map < String, IDPermission > permission; 
+        private java.util.Map<String, IDPermission> permission; 
         private String updatedAt; 
 
         private BuilderImpl() {
@@ -245,7 +251,7 @@ public class BaseGroupResponse extends Response {
          * permission.
          */
         @Override
-        public Builder permission(java.util.Map < String, IDPermission > permission) {
+        public Builder permission(java.util.Map<String, IDPermission> permission) {
             this.permission = permission;
             return this;
         }

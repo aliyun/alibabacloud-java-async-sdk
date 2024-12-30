@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DownloadFileRequest} extends {@link RequestModel}
  *
  * <p>DownloadFileRequest</p>
@@ -138,7 +144,7 @@ public class DownloadFileRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -147,7 +153,10 @@ public class DownloadFileRequest extends Request {
         }
 
         /**
-         * The drive ID.
+         * <p>The drive ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder driveId(String driveId) {
             this.putQueryParameter("drive_id", driveId);
@@ -156,7 +165,11 @@ public class DownloadFileRequest extends Request {
         }
 
         /**
-         * The file ID.
+         * <p>The file ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9520943DC264</p>
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("file_id", fileId);
@@ -165,7 +178,10 @@ public class DownloadFileRequest extends Request {
         }
 
         /**
-         * The method used to generate the thumbnail of an image. If this parameter is specified, you are redirected to the URL of the generated thumbnail.
+         * <p>The method used to generate the thumbnail of an image. If this parameter is specified, you are redirected to the URL of the generated thumbnail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/resize,m_fill,h_128,w_128,limit_0</p>
          */
         public Builder imageThumbnailProcess(String imageThumbnailProcess) {
             this.putQueryParameter("image_thumbnail_process", imageThumbnailProcess);
@@ -174,7 +190,10 @@ public class DownloadFileRequest extends Request {
         }
 
         /**
-         * The method used to generate the thumbnail of a document. If this parameter is specified, you are redirected to the URL of the generated thumbnail.
+         * <p>The method used to generate the thumbnail of a document. If this parameter is specified, you are redirected to the URL of the generated thumbnail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/resize,w_200</p>
          */
         public Builder officeThumbnailProcess(String officeThumbnailProcess) {
             this.putQueryParameter("office_thumbnail_process", officeThumbnailProcess);
@@ -183,7 +202,10 @@ public class DownloadFileRequest extends Request {
         }
 
         /**
-         * The share ID. If you want to manage a file by using a share link, carry the `x-share-token` header for authentication in the request and specify share_id. In this case, `drive_id` is invalid. Otherwise, use an `AccessKey pair` or `access token` for authentication and specify `drive_id`. You must specify one of `share_id` and `drive_id`.
+         * <p>The share ID. If you want to manage a file by using a share link, carry the <code>x-share-token</code> header for authentication in the request and specify share_id. In this case, <code>drive_id</code> is invalid. Otherwise, use an <code>AccessKey pair</code> or <code>access token</code> for authentication and specify <code>drive_id</code>. You must specify one of <code>share_id</code> and <code>drive_id</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7JQX1FswpQ8</p>
          */
         public Builder shareId(String shareId) {
             this.putQueryParameter("share_id", shareId);
@@ -192,7 +214,10 @@ public class DownloadFileRequest extends Request {
         }
 
         /**
-         * The method used to generate the thumbnail of a video. If this parameter is specified, you are redirected to the URL of the generated thumbnail.
+         * <p>The method used to generate the thumbnail of a video. If this parameter is specified, you are redirected to the URL of the generated thumbnail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video/snapshot,t_7000,f_jpg,w_800,h_600,m_fast</p>
          */
         public Builder videoThumbnailProcess(String videoThumbnailProcess) {
             this.putQueryParameter("video_thumbnail_process", videoThumbnailProcess);

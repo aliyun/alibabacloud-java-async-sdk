@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ViewFile} extends {@link TeaModel}
  *
  * <p>ViewFile</p>
@@ -42,7 +48,7 @@ public class ViewFile extends TeaModel {
     private String driveId;
 
     @com.aliyun.core.annotation.NameInMap("fields")
-    private java.util.Map < String, ? > fields;
+    private java.util.Map<String, ?> fields;
 
     @com.aliyun.core.annotation.NameInMap("file_extension")
     private String fileExtension;
@@ -63,7 +69,7 @@ public class ViewFile extends TeaModel {
     private Long joinedAt;
 
     @com.aliyun.core.annotation.NameInMap("labels")
-    private java.util.List < String > labels;
+    private java.util.List<String> labels;
 
     @com.aliyun.core.annotation.NameInMap("local_created_at")
     private String localCreatedAt;
@@ -93,7 +99,7 @@ public class ViewFile extends TeaModel {
     private String thumbnail;
 
     @com.aliyun.core.annotation.NameInMap("thumbnail_urls")
-    private java.util.Map < String, String > thumbnailUrls;
+    private java.util.Map<String, String> thumbnailUrls;
 
     @com.aliyun.core.annotation.NameInMap("trashed_at")
     private String trashedAt;
@@ -227,7 +233,7 @@ public class ViewFile extends TeaModel {
     /**
      * @return fields
      */
-    public java.util.Map < String, ? > getFields() {
+    public java.util.Map<String, ?> getFields() {
         return this.fields;
     }
 
@@ -276,7 +282,7 @@ public class ViewFile extends TeaModel {
     /**
      * @return labels
      */
-    public java.util.List < String > getLabels() {
+    public java.util.List<String> getLabels() {
         return this.labels;
     }
 
@@ -346,7 +352,7 @@ public class ViewFile extends TeaModel {
     /**
      * @return thumbnailUrls
      */
-    public java.util.Map < String, String > getThumbnailUrls() {
+    public java.util.Map<String, String> getThumbnailUrls() {
         return this.thumbnailUrls;
     }
 
@@ -396,14 +402,14 @@ public class ViewFile extends TeaModel {
         private String domainId; 
         private String downloadUrl; 
         private String driveId; 
-        private java.util.Map < String, ? > fields; 
+        private java.util.Map<String, ?> fields; 
         private String fileExtension; 
         private String fileId; 
         private String fileRevisionId; 
         private Boolean hidden; 
         private InvestigationInfo investigationInfo; 
         private Long joinedAt; 
-        private java.util.List < String > labels; 
+        private java.util.List<String> labels; 
         private String localCreatedAt; 
         private String localModifiedAt; 
         private String name; 
@@ -413,7 +419,7 @@ public class ViewFile extends TeaModel {
         private Boolean starred; 
         private String status; 
         private String thumbnail; 
-        private java.util.Map < String, String > thumbnailUrls; 
+        private java.util.Map<String, String> thumbnailUrls; 
         private String trashedAt; 
         private String type; 
         private String updatedAt; 
@@ -503,7 +509,7 @@ public class ViewFile extends TeaModel {
         /**
          * fields.
          */
-        public Builder fields(java.util.Map < String, ? > fields) {
+        public Builder fields(java.util.Map<String, ?> fields) {
             this.fields = fields;
             return this;
         }
@@ -559,7 +565,7 @@ public class ViewFile extends TeaModel {
         /**
          * labels.
          */
-        public Builder labels(java.util.List < String > labels) {
+        public Builder labels(java.util.List<String> labels) {
             this.labels = labels;
             return this;
         }
@@ -639,7 +645,7 @@ public class ViewFile extends TeaModel {
         /**
          * thumbnail_urls.
          */
-        public Builder thumbnailUrls(java.util.Map < String, String > thumbnailUrls) {
+        public Builder thumbnailUrls(java.util.Map<String, String> thumbnailUrls) {
             this.thumbnailUrls = thumbnailUrls;
             return this;
         }
@@ -690,6 +696,12 @@ public class ViewFile extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ViewFile} extends {@link TeaModel}
+     *
+     * <p>ViewFile</p>
+     */
     public static class InvestigationInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private Long status;

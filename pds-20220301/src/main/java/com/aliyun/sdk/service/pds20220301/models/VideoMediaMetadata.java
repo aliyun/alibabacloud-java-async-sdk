@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VideoMediaMetadata} extends {@link TeaModel}
  *
  * <p>VideoMediaMetadata</p>
@@ -15,10 +21,10 @@ public class VideoMediaMetadata extends TeaModel {
     private Long height;
 
     @com.aliyun.core.annotation.NameInMap("video_media_audio_stream")
-    private java.util.List < VideoMediaAudioStream > videoMediaAudioStream;
+    private java.util.List<VideoMediaAudioStream> videoMediaAudioStream;
 
     @com.aliyun.core.annotation.NameInMap("video_media_video_stream")
-    private java.util.List < VideoMediaVideoStream > videoMediaVideoStream;
+    private java.util.List<VideoMediaVideoStream> videoMediaVideoStream;
 
     @com.aliyun.core.annotation.NameInMap("width")
     private Long width;
@@ -48,14 +54,14 @@ public class VideoMediaMetadata extends TeaModel {
     /**
      * @return videoMediaAudioStream
      */
-    public java.util.List < VideoMediaAudioStream > getVideoMediaAudioStream() {
+    public java.util.List<VideoMediaAudioStream> getVideoMediaAudioStream() {
         return this.videoMediaAudioStream;
     }
 
     /**
      * @return videoMediaVideoStream
      */
-    public java.util.List < VideoMediaVideoStream > getVideoMediaVideoStream() {
+    public java.util.List<VideoMediaVideoStream> getVideoMediaVideoStream() {
         return this.videoMediaVideoStream;
     }
 
@@ -68,8 +74,8 @@ public class VideoMediaMetadata extends TeaModel {
 
     public static final class Builder {
         private Long height; 
-        private java.util.List < VideoMediaAudioStream > videoMediaAudioStream; 
-        private java.util.List < VideoMediaVideoStream > videoMediaVideoStream; 
+        private java.util.List<VideoMediaAudioStream> videoMediaAudioStream; 
+        private java.util.List<VideoMediaVideoStream> videoMediaVideoStream; 
         private Long width; 
 
         /**
@@ -83,7 +89,7 @@ public class VideoMediaMetadata extends TeaModel {
         /**
          * video_media_audio_stream.
          */
-        public Builder videoMediaAudioStream(java.util.List < VideoMediaAudioStream > videoMediaAudioStream) {
+        public Builder videoMediaAudioStream(java.util.List<VideoMediaAudioStream> videoMediaAudioStream) {
             this.videoMediaAudioStream = videoMediaAudioStream;
             return this;
         }
@@ -91,7 +97,7 @@ public class VideoMediaMetadata extends TeaModel {
         /**
          * video_media_video_stream.
          */
-        public Builder videoMediaVideoStream(java.util.List < VideoMediaVideoStream > videoMediaVideoStream) {
+        public Builder videoMediaVideoStream(java.util.List<VideoMediaVideoStream> videoMediaVideoStream) {
             this.videoMediaVideoStream = videoMediaVideoStream;
             return this;
         }

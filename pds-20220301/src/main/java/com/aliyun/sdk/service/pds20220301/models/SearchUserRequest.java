@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pds20220301.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchUserRequest} extends {@link RequestModel}
  *
  * <p>SearchUserRequest</p>
@@ -182,7 +188,7 @@ public class SearchUserRequest extends Request {
         } 
 
         /**
-         * domain_id.
+         * <p>This parameter is required.</p>
          */
         public Builder domainId(String domainId) {
             this.putHostParameter("domain_id", domainId);
@@ -191,7 +197,10 @@ public class SearchUserRequest extends Request {
         }
 
         /**
-         * The email address of the user.
+         * <p>The email address of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@pds.com">123@pds.com</a></p>
          */
         public Builder email(String email) {
             this.putBodyParameter("email", email);
@@ -200,7 +209,10 @@ public class SearchUserRequest extends Request {
         }
 
         /**
-         * The maximum number of results to return. Valid values: 1 to 100. Default value: 100.
+         * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("limit", limit);
@@ -209,9 +221,10 @@ public class SearchUserRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
-         * <p>
-         * By default, this parameter is left empty.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.<br>By default, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
          */
         public Builder marker(String marker) {
             this.putBodyParameter("marker", marker);
@@ -220,7 +233,10 @@ public class SearchUserRequest extends Request {
         }
 
         /**
-         * The nickname of the user. The nickname can be up to 128 characters in length.
+         * <p>The nickname of the user. The nickname can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pdsuer</p>
          */
         public Builder nickName(String nickName) {
             this.putBodyParameter("nick_name", nickName);
@@ -229,7 +245,10 @@ public class SearchUserRequest extends Request {
         }
 
         /**
-         * The nickname used for fuzzy searches. The nickname can be up to 128 characters in length.
+         * <p>The nickname used for fuzzy searches. The nickname can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>la</p>
          */
         public Builder nickNameForFuzzy(String nickNameForFuzzy) {
             this.putBodyParameter("nick_name_for_fuzzy", nickNameForFuzzy);
@@ -238,7 +257,10 @@ public class SearchUserRequest extends Request {
         }
 
         /**
-         * The mobile number of the user.
+         * <p>The mobile number of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13900001111</p>
          */
         public Builder phone(String phone) {
             this.putBodyParameter("phone", phone);
@@ -247,12 +269,15 @@ public class SearchUserRequest extends Request {
         }
 
         /**
-         * The role of the user. Valid values:
-         * <p>
+         * <p>The role of the user. Valid values:</p>
+         * <ul>
+         * <li>superadmin</li>
+         * <li>admin</li>
+         * <li>user</li>
+         * </ul>
          * 
-         * *   superadmin
-         * *   admin
-         * *   user
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder role(String role) {
             this.putBodyParameter("role", role);
@@ -261,11 +286,14 @@ public class SearchUserRequest extends Request {
         }
 
         /**
-         * The state of the user. Valid values:
-         * <p>
+         * <p>The state of the user. Valid values:</p>
+         * <ul>
+         * <li>disabled: The user is prohibited from logon.</li>
+         * <li>enabled: The user is in a normal state.</li>
+         * </ul>
          * 
-         * *   disabled: The user is prohibited from logon.
-         * *   enabled: The user is in a normal state.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -274,7 +302,10 @@ public class SearchUserRequest extends Request {
         }
 
         /**
-         * The name of the user. The name can be up to 128 characters in length.
+         * <p>The name of the user. The name can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pds</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("user_name", userName);
