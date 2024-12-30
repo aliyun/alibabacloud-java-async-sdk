@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -138,7 +143,7 @@ public class UpdateTenantMemberRequest extends Request {
         private String mobilePhone;
 
         @com.aliyun.core.annotation.NameInMap("RoleList")
-        private java.util.List < String > roleList;
+        private java.util.List<String> roleList;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -183,7 +188,7 @@ public class UpdateTenantMemberRequest extends Request {
         /**
          * @return roleList
          */
-        public java.util.List < String > getRoleList() {
+        public java.util.List<String> getRoleList() {
             return this.roleList;
         }
 
@@ -198,7 +203,7 @@ public class UpdateTenantMemberRequest extends Request {
             private String dingNumber; 
             private String mail; 
             private String mobilePhone; 
-            private java.util.List < String > roleList; 
+            private java.util.List<String> roleList; 
             private String userId; 
 
             /**
@@ -228,7 +233,7 @@ public class UpdateTenantMemberRequest extends Request {
             /**
              * RoleList.
              */
-            public Builder roleList(java.util.List < String > roleList) {
+            public Builder roleList(java.util.List<String> roleList) {
                 this.roleList = roleList;
                 return this;
             }
@@ -257,7 +262,7 @@ public class UpdateTenantMemberRequest extends Request {
     public static class UpdateCommand extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemberList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < MemberList> memberList;
+        private java.util.List<MemberList> memberList;
 
         private UpdateCommand(Builder builder) {
             this.memberList = builder.memberList;
@@ -274,17 +279,17 @@ public class UpdateTenantMemberRequest extends Request {
         /**
          * @return memberList
          */
-        public java.util.List < MemberList> getMemberList() {
+        public java.util.List<MemberList> getMemberList() {
             return this.memberList;
         }
 
         public static final class Builder {
-            private java.util.List < MemberList> memberList; 
+            private java.util.List<MemberList> memberList; 
 
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder memberList(java.util.List < MemberList> memberList) {
+            public Builder memberList(java.util.List<MemberList> memberList) {
                 this.memberList = memberList;
                 return this;
             }

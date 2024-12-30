@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -466,10 +471,10 @@ public class ListNodesResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("OwnerList")
-        private java.util.List < OwnerList> ownerList;
+        private java.util.List<OwnerList> ownerList;
 
         @com.aliyun.core.annotation.NameInMap("PriorityList")
-        private java.util.List < String > priorityList;
+        private java.util.List<String> priorityList;
 
         @com.aliyun.core.annotation.NameInMap("ProjectInfo")
         private ProjectInfo projectInfo;
@@ -478,7 +483,7 @@ public class ListNodesResponseBody extends TeaModel {
         private Boolean schedulePaused;
 
         @com.aliyun.core.annotation.NameInMap("SchedulePeriodList")
-        private java.util.List < String > schedulePeriodList;
+        private java.util.List<String> schedulePeriodList;
 
         @com.aliyun.core.annotation.NameInMap("SubDetailType")
         private String subDetailType;
@@ -611,14 +616,14 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * @return ownerList
          */
-        public java.util.List < OwnerList> getOwnerList() {
+        public java.util.List<OwnerList> getOwnerList() {
             return this.ownerList;
         }
 
         /**
          * @return priorityList
          */
-        public java.util.List < String > getPriorityList() {
+        public java.util.List<String> getPriorityList() {
             return this.priorityList;
         }
 
@@ -639,7 +644,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * @return schedulePeriodList
          */
-        public java.util.List < String > getSchedulePeriodList() {
+        public java.util.List<String> getSchedulePeriodList() {
             return this.schedulePeriodList;
         }
 
@@ -671,11 +676,11 @@ public class ListNodesResponseBody extends TeaModel {
             private String lastModifiedTime; 
             private Modifier modifier; 
             private String name; 
-            private java.util.List < OwnerList> ownerList; 
-            private java.util.List < String > priorityList; 
+            private java.util.List<OwnerList> ownerList; 
+            private java.util.List<String> priorityList; 
             private ProjectInfo projectInfo; 
             private Boolean schedulePaused; 
-            private java.util.List < String > schedulePeriodList; 
+            private java.util.List<String> schedulePeriodList; 
             private String subDetailType; 
             private String type; 
 
@@ -786,7 +791,7 @@ public class ListNodesResponseBody extends TeaModel {
             /**
              * OwnerList.
              */
-            public Builder ownerList(java.util.List < OwnerList> ownerList) {
+            public Builder ownerList(java.util.List<OwnerList> ownerList) {
                 this.ownerList = ownerList;
                 return this;
             }
@@ -794,7 +799,7 @@ public class ListNodesResponseBody extends TeaModel {
             /**
              * PriorityList.
              */
-            public Builder priorityList(java.util.List < String > priorityList) {
+            public Builder priorityList(java.util.List<String> priorityList) {
                 this.priorityList = priorityList;
                 return this;
             }
@@ -818,7 +823,7 @@ public class ListNodesResponseBody extends TeaModel {
             /**
              * SchedulePeriodList.
              */
-            public Builder schedulePeriodList(java.util.List < String > schedulePeriodList) {
+            public Builder schedulePeriodList(java.util.List<String> schedulePeriodList) {
                 this.schedulePeriodList = schedulePeriodList;
                 return this;
             }
@@ -854,7 +859,7 @@ public class ListNodesResponseBody extends TeaModel {
      */
     public static class PageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeList")
-        private java.util.List < NodeList> nodeList;
+        private java.util.List<NodeList> nodeList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -875,7 +880,7 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * @return nodeList
          */
-        public java.util.List < NodeList> getNodeList() {
+        public java.util.List<NodeList> getNodeList() {
             return this.nodeList;
         }
 
@@ -887,13 +892,13 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < NodeList> nodeList; 
+            private java.util.List<NodeList> nodeList; 
             private Integer totalCount; 
 
             /**
              * NodeList.
              */
-            public Builder nodeList(java.util.List < NodeList> nodeList) {
+            public Builder nodeList(java.util.List<NodeList> nodeList) {
                 this.nodeList = nodeList;
                 return this;
             }

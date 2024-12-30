@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("DevObjectDependencyList")
-    private java.util.List < DevObjectDependencyList> devObjectDependencyList;
+    private java.util.List<DevObjectDependencyList> devObjectDependencyList;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -57,7 +62,7 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
     /**
      * @return devObjectDependencyList
      */
-    public java.util.List < DevObjectDependencyList> getDevObjectDependencyList() {
+    public java.util.List<DevObjectDependencyList> getDevObjectDependencyList() {
         return this.devObjectDependencyList;
     }
 
@@ -91,7 +96,7 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < DevObjectDependencyList> devObjectDependencyList; 
+        private java.util.List<DevObjectDependencyList> devObjectDependencyList; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -108,7 +113,7 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         /**
          * DevObjectDependencyList.
          */
-        public Builder devObjectDependencyList(java.util.List < DevObjectDependencyList> devObjectDependencyList) {
+        public Builder devObjectDependencyList(java.util.List<DevObjectDependencyList> devObjectDependencyList) {
             this.devObjectDependencyList = devObjectDependencyList;
             return this;
         }
@@ -398,7 +403,7 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         private Boolean customCronExpression;
 
         @com.aliyun.core.annotation.NameInMap("DependFieldList")
-        private java.util.List < String > dependFieldList;
+        private java.util.List<String> dependFieldList;
 
         @com.aliyun.core.annotation.NameInMap("DependencyPeriod")
         private DependencyPeriod dependencyPeriod;
@@ -410,7 +415,7 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         private Boolean dimMidNode;
 
         @com.aliyun.core.annotation.NameInMap("EffectFieldList")
-        private java.util.List < String > effectFieldList;
+        private java.util.List<String> effectFieldList;
 
         @com.aliyun.core.annotation.NameInMap("ExternalBizInfo")
         private String externalBizInfo;
@@ -434,10 +439,10 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         private String nodeType;
 
         @com.aliyun.core.annotation.NameInMap("OutputContextParamList")
-        private java.util.List < OutputContextParamList> outputContextParamList;
+        private java.util.List<OutputContextParamList> outputContextParamList;
 
         @com.aliyun.core.annotation.NameInMap("OwnerList")
-        private java.util.List < OwnerList> ownerList;
+        private java.util.List<OwnerList> ownerList;
 
         @com.aliyun.core.annotation.NameInMap("PeriodDiff")
         private Integer periodDiff;
@@ -543,7 +548,7 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         /**
          * @return dependFieldList
          */
-        public java.util.List < String > getDependFieldList() {
+        public java.util.List<String> getDependFieldList() {
             return this.dependFieldList;
         }
 
@@ -571,7 +576,7 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         /**
          * @return effectFieldList
          */
-        public java.util.List < String > getEffectFieldList() {
+        public java.util.List<String> getEffectFieldList() {
             return this.effectFieldList;
         }
 
@@ -627,14 +632,14 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
         /**
          * @return outputContextParamList
          */
-        public java.util.List < OutputContextParamList> getOutputContextParamList() {
+        public java.util.List<OutputContextParamList> getOutputContextParamList() {
             return this.outputContextParamList;
         }
 
         /**
          * @return ownerList
          */
-        public java.util.List < OwnerList> getOwnerList() {
+        public java.util.List<OwnerList> getOwnerList() {
             return this.ownerList;
         }
 
@@ -694,11 +699,11 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
             private String bizUnitName; 
             private String cronExpression; 
             private Boolean customCronExpression; 
-            private java.util.List < String > dependFieldList; 
+            private java.util.List<String> dependFieldList; 
             private DependencyPeriod dependencyPeriod; 
             private String dependencyStrategy; 
             private Boolean dimMidNode; 
-            private java.util.List < String > effectFieldList; 
+            private java.util.List<String> effectFieldList; 
             private String externalBizInfo; 
             private Boolean manuallyAdd; 
             private String nodeId; 
@@ -706,8 +711,8 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
             private String nodeOutputName; 
             private String nodeOutputTableName; 
             private String nodeType; 
-            private java.util.List < OutputContextParamList> outputContextParamList; 
-            private java.util.List < OwnerList> ownerList; 
+            private java.util.List<OutputContextParamList> outputContextParamList; 
+            private java.util.List<OwnerList> ownerList; 
             private Integer periodDiff; 
             private Long projectId; 
             private String projectName; 
@@ -767,7 +772,7 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
             /**
              * DependFieldList.
              */
-            public Builder dependFieldList(java.util.List < String > dependFieldList) {
+            public Builder dependFieldList(java.util.List<String> dependFieldList) {
                 this.dependFieldList = dependFieldList;
                 return this;
             }
@@ -799,7 +804,7 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
             /**
              * EffectFieldList.
              */
-            public Builder effectFieldList(java.util.List < String > effectFieldList) {
+            public Builder effectFieldList(java.util.List<String> effectFieldList) {
                 this.effectFieldList = effectFieldList;
                 return this;
             }
@@ -863,7 +868,7 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
             /**
              * OutputContextParamList.
              */
-            public Builder outputContextParamList(java.util.List < OutputContextParamList> outputContextParamList) {
+            public Builder outputContextParamList(java.util.List<OutputContextParamList> outputContextParamList) {
                 this.outputContextParamList = outputContextParamList;
                 return this;
             }
@@ -871,7 +876,7 @@ public class GetDevObjectDependencyResponseBody extends TeaModel {
             /**
              * OwnerList.
              */
-            public Builder ownerList(java.util.List < OwnerList> ownerList) {
+            public Builder ownerList(java.util.List<OwnerList> ownerList) {
                 this.ownerList = ownerList;
                 return this;
             }

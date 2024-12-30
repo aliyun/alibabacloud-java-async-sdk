@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -132,7 +137,7 @@ public class AddUserGroupMemberRequest extends Request {
         private String userGroupId;
 
         @com.aliyun.core.annotation.NameInMap("UserIdList")
-        private java.util.List < String > userIdList;
+        private java.util.List<String> userIdList;
 
         private AddCommand(Builder builder) {
             this.userGroupId = builder.userGroupId;
@@ -157,13 +162,13 @@ public class AddUserGroupMemberRequest extends Request {
         /**
          * @return userIdList
          */
-        public java.util.List < String > getUserIdList() {
+        public java.util.List<String> getUserIdList() {
             return this.userIdList;
         }
 
         public static final class Builder {
             private String userGroupId; 
-            private java.util.List < String > userIdList; 
+            private java.util.List<String> userIdList; 
 
             /**
              * <p>This parameter is required.</p>
@@ -179,7 +184,7 @@ public class AddUserGroupMemberRequest extends Request {
             /**
              * UserIdList.
              */
-            public Builder userIdList(java.util.List < String > userIdList) {
+            public Builder userIdList(java.util.List<String> userIdList) {
                 this.userIdList = userIdList;
                 return this;
             }

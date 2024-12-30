@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -226,7 +231,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
      */
     public static class DevDataSourceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigItemList")
-        private java.util.List < ConfigItemList> configItemList;
+        private java.util.List<ConfigItemList> configItemList;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -291,7 +296,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         /**
          * @return configItemList
          */
-        public java.util.List < ConfigItemList> getConfigItemList() {
+        public java.util.List<ConfigItemList> getConfigItemList() {
             return this.configItemList;
         }
 
@@ -380,7 +385,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ConfigItemList> configItemList; 
+            private java.util.List<ConfigItemList> configItemList; 
             private Long createTime; 
             private String creator; 
             private String creatorName; 
@@ -397,7 +402,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             /**
              * ConfigItemList.
              */
-            public Builder configItemList(java.util.List < ConfigItemList> configItemList) {
+            public Builder configItemList(java.util.List<ConfigItemList> configItemList) {
                 this.configItemList = configItemList;
                 return this;
             }
@@ -580,7 +585,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
      */
     public static class ProdDataSourceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigItemList")
-        private java.util.List < ProdDataSourceInfoConfigItemList> configItemList;
+        private java.util.List<ProdDataSourceInfoConfigItemList> configItemList;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -645,7 +650,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         /**
          * @return configItemList
          */
-        public java.util.List < ProdDataSourceInfoConfigItemList> getConfigItemList() {
+        public java.util.List<ProdDataSourceInfoConfigItemList> getConfigItemList() {
             return this.configItemList;
         }
 
@@ -734,7 +739,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ProdDataSourceInfoConfigItemList> configItemList; 
+            private java.util.List<ProdDataSourceInfoConfigItemList> configItemList; 
             private Long createTime; 
             private String creator; 
             private String creatorName; 
@@ -751,7 +756,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             /**
              * ConfigItemList.
              */
-            public Builder configItemList(java.util.List < ProdDataSourceInfoConfigItemList> configItemList) {
+            public Builder configItemList(java.util.List<ProdDataSourceInfoConfigItemList> configItemList) {
                 this.configItemList = configItemList;
                 return this;
             }
@@ -934,7 +939,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
      */
     public static class PageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceList")
-        private java.util.List < DataSourceList> dataSourceList;
+        private java.util.List<DataSourceList> dataSourceList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
@@ -955,7 +960,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         /**
          * @return dataSourceList
          */
-        public java.util.List < DataSourceList> getDataSourceList() {
+        public java.util.List<DataSourceList> getDataSourceList() {
             return this.dataSourceList;
         }
 
@@ -967,13 +972,13 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < DataSourceList> dataSourceList; 
+            private java.util.List<DataSourceList> dataSourceList; 
             private Long totalCount; 
 
             /**
              * DataSourceList.
              */
-            public Builder dataSourceList(java.util.List < DataSourceList> dataSourceList) {
+            public Builder dataSourceList(java.util.List<DataSourceList> dataSourceList) {
                 this.dataSourceList = dataSourceList;
                 return this;
             }

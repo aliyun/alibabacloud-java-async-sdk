@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class PausePhysicalNodeResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("NodeOperateResultList")
-    private java.util.List < NodeOperateResultList> nodeOperateResultList;
+    private java.util.List<NodeOperateResultList> nodeOperateResultList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class PausePhysicalNodeResponseBody extends TeaModel {
     /**
      * @return nodeOperateResultList
      */
-    public java.util.List < NodeOperateResultList> getNodeOperateResultList() {
+    public java.util.List<NodeOperateResultList> getNodeOperateResultList() {
         return this.nodeOperateResultList;
     }
 
@@ -93,7 +98,7 @@ public class PausePhysicalNodeResponseBody extends TeaModel {
         private String code; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < NodeOperateResultList> nodeOperateResultList; 
+        private java.util.List<NodeOperateResultList> nodeOperateResultList; 
         private String requestId; 
         private Boolean success; 
 
@@ -124,7 +129,7 @@ public class PausePhysicalNodeResponseBody extends TeaModel {
         /**
          * NodeOperateResultList.
          */
-        public Builder nodeOperateResultList(java.util.List < NodeOperateResultList> nodeOperateResultList) {
+        public Builder nodeOperateResultList(java.util.List<NodeOperateResultList> nodeOperateResultList) {
             this.nodeOperateResultList = nodeOperateResultList;
             return this;
         }

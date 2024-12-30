@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -225,7 +230,7 @@ public class GetInstanceUpDownStreamRequest extends Request {
      */
     public static class InstanceId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldInstanceIdList")
-        private java.util.List < String > fieldInstanceIdList;
+        private java.util.List<String> fieldInstanceIdList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -247,7 +252,7 @@ public class GetInstanceUpDownStreamRequest extends Request {
         /**
          * @return fieldInstanceIdList
          */
-        public java.util.List < String > getFieldInstanceIdList() {
+        public java.util.List<String> getFieldInstanceIdList() {
             return this.fieldInstanceIdList;
         }
 
@@ -259,13 +264,13 @@ public class GetInstanceUpDownStreamRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > fieldInstanceIdList; 
+            private java.util.List<String> fieldInstanceIdList; 
             private String id; 
 
             /**
              * FieldInstanceIdList.
              */
-            public Builder fieldInstanceIdList(java.util.List < String > fieldInstanceIdList) {
+            public Builder fieldInstanceIdList(java.util.List<String> fieldInstanceIdList) {
                 this.fieldInstanceIdList = fieldInstanceIdList;
                 return this;
             }

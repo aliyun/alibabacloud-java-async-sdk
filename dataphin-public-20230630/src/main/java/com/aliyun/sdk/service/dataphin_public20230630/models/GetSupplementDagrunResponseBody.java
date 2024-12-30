@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("DagrunList")
-    private java.util.List < DagrunList> dagrunList;
+    private java.util.List<DagrunList> dagrunList;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -57,7 +62,7 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
     /**
      * @return dagrunList
      */
-    public java.util.List < DagrunList> getDagrunList() {
+    public java.util.List<DagrunList> getDagrunList() {
         return this.dagrunList;
     }
 
@@ -91,7 +96,7 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < DagrunList> dagrunList; 
+        private java.util.List<DagrunList> dagrunList; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -108,7 +113,7 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         /**
          * DagrunList.
          */
-        public Builder dagrunList(java.util.List < DagrunList> dagrunList) {
+        public Builder dagrunList(java.util.List<DagrunList> dagrunList) {
             this.dagrunList = dagrunList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class OperateInstanceResponseBody extends TeaModel {
     private Integer httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("InstanceStatusList")
-    private java.util.List < InstanceStatusList> instanceStatusList;
+    private java.util.List<InstanceStatusList> instanceStatusList;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -64,7 +69,7 @@ public class OperateInstanceResponseBody extends TeaModel {
     /**
      * @return instanceStatusList
      */
-    public java.util.List < InstanceStatusList> getInstanceStatusList() {
+    public java.util.List<InstanceStatusList> getInstanceStatusList() {
         return this.instanceStatusList;
     }
 
@@ -92,7 +97,7 @@ public class OperateInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
-        private java.util.List < InstanceStatusList> instanceStatusList; 
+        private java.util.List<InstanceStatusList> instanceStatusList; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -116,7 +121,7 @@ public class OperateInstanceResponseBody extends TeaModel {
         /**
          * InstanceStatusList.
          */
-        public Builder instanceStatusList(java.util.List < InstanceStatusList> instanceStatusList) {
+        public Builder instanceStatusList(java.util.List<InstanceStatusList> instanceStatusList) {
             this.instanceStatusList = instanceStatusList;
             return this;
         }

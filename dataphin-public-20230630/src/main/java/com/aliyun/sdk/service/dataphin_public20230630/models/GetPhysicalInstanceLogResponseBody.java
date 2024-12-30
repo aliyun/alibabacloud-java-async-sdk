@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("TaskrunLogList")
-    private java.util.List < TaskrunLogList> taskrunLogList;
+    private java.util.List<TaskrunLogList> taskrunLogList;
 
     private GetPhysicalInstanceLogResponseBody(Builder builder) {
         this.code = builder.code;
@@ -85,7 +90,7 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
     /**
      * @return taskrunLogList
      */
-    public java.util.List < TaskrunLogList> getTaskrunLogList() {
+    public java.util.List<TaskrunLogList> getTaskrunLogList() {
         return this.taskrunLogList;
     }
 
@@ -95,7 +100,7 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TaskrunLogList> taskrunLogList; 
+        private java.util.List<TaskrunLogList> taskrunLogList; 
 
         /**
          * Code.
@@ -140,7 +145,7 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         /**
          * TaskrunLogList.
          */
-        public Builder taskrunLogList(java.util.List < TaskrunLogList> taskrunLogList) {
+        public Builder taskrunLogList(java.util.List<TaskrunLogList> taskrunLogList) {
             this.taskrunLogList = taskrunLogList;
             return this;
         }

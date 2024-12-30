@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -152,7 +157,7 @@ public class CreateNodeSupplementRequest extends Request {
      */
     public static class DownStreamNodeIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldIdList")
-        private java.util.List < String > fieldIdList;
+        private java.util.List<String> fieldIdList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -173,7 +178,7 @@ public class CreateNodeSupplementRequest extends Request {
         /**
          * @return fieldIdList
          */
-        public java.util.List < String > getFieldIdList() {
+        public java.util.List<String> getFieldIdList() {
             return this.fieldIdList;
         }
 
@@ -185,13 +190,13 @@ public class CreateNodeSupplementRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > fieldIdList; 
+            private java.util.List<String> fieldIdList; 
             private String id; 
 
             /**
              * FieldIdList.
              */
-            public Builder fieldIdList(java.util.List < String > fieldIdList) {
+            public Builder fieldIdList(java.util.List<String> fieldIdList) {
                 this.fieldIdList = fieldIdList;
                 return this;
             }
@@ -225,7 +230,7 @@ public class CreateNodeSupplementRequest extends Request {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("ValueList")
-        private java.util.List < String > valueList;
+        private java.util.List<String> valueList;
 
         private FilterList(Builder builder) {
             this.exclude = builder.exclude;
@@ -258,14 +263,14 @@ public class CreateNodeSupplementRequest extends Request {
         /**
          * @return valueList
          */
-        public java.util.List < String > getValueList() {
+        public java.util.List<String> getValueList() {
             return this.valueList;
         }
 
         public static final class Builder {
             private Boolean exclude; 
             private String key; 
-            private java.util.List < String > valueList; 
+            private java.util.List<String> valueList; 
 
             /**
              * Exclude.
@@ -286,7 +291,7 @@ public class CreateNodeSupplementRequest extends Request {
             /**
              * ValueList.
              */
-            public Builder valueList(java.util.List < String > valueList) {
+            public Builder valueList(java.util.List<String> valueList) {
                 this.valueList = valueList;
                 return this;
             }
@@ -373,7 +378,7 @@ public class CreateNodeSupplementRequest extends Request {
      */
     public static class NodeIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldIdList")
-        private java.util.List < String > fieldIdList;
+        private java.util.List<String> fieldIdList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -395,7 +400,7 @@ public class CreateNodeSupplementRequest extends Request {
         /**
          * @return fieldIdList
          */
-        public java.util.List < String > getFieldIdList() {
+        public java.util.List<String> getFieldIdList() {
             return this.fieldIdList;
         }
 
@@ -407,13 +412,13 @@ public class CreateNodeSupplementRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > fieldIdList; 
+            private java.util.List<String> fieldIdList; 
             private String id; 
 
             /**
              * FieldIdList.
              */
-            public Builder fieldIdList(java.util.List < String > fieldIdList) {
+            public Builder fieldIdList(java.util.List<String> fieldIdList) {
                 this.fieldIdList = fieldIdList;
                 return this;
             }
@@ -511,7 +516,7 @@ public class CreateNodeSupplementRequest extends Request {
         private String nodeId;
 
         @com.aliyun.core.annotation.NameInMap("ParamList")
-        private java.util.List < ParamList> paramList;
+        private java.util.List<ParamList> paramList;
 
         private NodeParamsList(Builder builder) {
             this.nodeId = builder.nodeId;
@@ -536,13 +541,13 @@ public class CreateNodeSupplementRequest extends Request {
         /**
          * @return paramList
          */
-        public java.util.List < ParamList> getParamList() {
+        public java.util.List<ParamList> getParamList() {
             return this.paramList;
         }
 
         public static final class Builder {
             private String nodeId; 
-            private java.util.List < ParamList> paramList; 
+            private java.util.List<ParamList> paramList; 
 
             /**
              * NodeId.
@@ -555,7 +560,7 @@ public class CreateNodeSupplementRequest extends Request {
             /**
              * ParamList.
              */
-            public Builder paramList(java.util.List < ParamList> paramList) {
+            public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
                 return this;
             }
@@ -578,17 +583,17 @@ public class CreateNodeSupplementRequest extends Request {
         private Boolean containAllDownStream;
 
         @com.aliyun.core.annotation.NameInMap("DownStreamNodeIdList")
-        private java.util.List < DownStreamNodeIdList> downStreamNodeIdList;
+        private java.util.List<DownStreamNodeIdList> downStreamNodeIdList;
 
         @com.aliyun.core.annotation.NameInMap("EndBizDate")
         @com.aliyun.core.annotation.Validation(required = true)
         private String endBizDate;
 
         @com.aliyun.core.annotation.NameInMap("FilterList")
-        private java.util.List < FilterList> filterList;
+        private java.util.List<FilterList> filterList;
 
         @com.aliyun.core.annotation.NameInMap("GlobalParamList")
-        private java.util.List < GlobalParamList> globalParamList;
+        private java.util.List<GlobalParamList> globalParamList;
 
         @com.aliyun.core.annotation.NameInMap("MaxDueTime")
         private String maxDueTime;
@@ -601,10 +606,10 @@ public class CreateNodeSupplementRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("NodeIdList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < NodeIdList> nodeIdList;
+        private java.util.List<NodeIdList> nodeIdList;
 
         @com.aliyun.core.annotation.NameInMap("NodeParamsList")
-        private java.util.List < NodeParamsList> nodeParamsList;
+        private java.util.List<NodeParamsList> nodeParamsList;
 
         @com.aliyun.core.annotation.NameInMap("Parallelism")
         private Integer parallelism;
@@ -651,7 +656,7 @@ public class CreateNodeSupplementRequest extends Request {
         /**
          * @return downStreamNodeIdList
          */
-        public java.util.List < DownStreamNodeIdList> getDownStreamNodeIdList() {
+        public java.util.List<DownStreamNodeIdList> getDownStreamNodeIdList() {
             return this.downStreamNodeIdList;
         }
 
@@ -665,14 +670,14 @@ public class CreateNodeSupplementRequest extends Request {
         /**
          * @return filterList
          */
-        public java.util.List < FilterList> getFilterList() {
+        public java.util.List<FilterList> getFilterList() {
             return this.filterList;
         }
 
         /**
          * @return globalParamList
          */
-        public java.util.List < GlobalParamList> getGlobalParamList() {
+        public java.util.List<GlobalParamList> getGlobalParamList() {
             return this.globalParamList;
         }
 
@@ -700,14 +705,14 @@ public class CreateNodeSupplementRequest extends Request {
         /**
          * @return nodeIdList
          */
-        public java.util.List < NodeIdList> getNodeIdList() {
+        public java.util.List<NodeIdList> getNodeIdList() {
             return this.nodeIdList;
         }
 
         /**
          * @return nodeParamsList
          */
-        public java.util.List < NodeParamsList> getNodeParamsList() {
+        public java.util.List<NodeParamsList> getNodeParamsList() {
             return this.nodeParamsList;
         }
 
@@ -734,15 +739,15 @@ public class CreateNodeSupplementRequest extends Request {
 
         public static final class Builder {
             private Boolean containAllDownStream; 
-            private java.util.List < DownStreamNodeIdList> downStreamNodeIdList; 
+            private java.util.List<DownStreamNodeIdList> downStreamNodeIdList; 
             private String endBizDate; 
-            private java.util.List < FilterList> filterList; 
-            private java.util.List < GlobalParamList> globalParamList; 
+            private java.util.List<FilterList> filterList; 
+            private java.util.List<GlobalParamList> globalParamList; 
             private String maxDueTime; 
             private String minDueTime; 
             private String name; 
-            private java.util.List < NodeIdList> nodeIdList; 
-            private java.util.List < NodeParamsList> nodeParamsList; 
+            private java.util.List<NodeIdList> nodeIdList; 
+            private java.util.List<NodeParamsList> nodeParamsList; 
             private Integer parallelism; 
             private Long projectId; 
             private String startBizDate; 
@@ -758,7 +763,7 @@ public class CreateNodeSupplementRequest extends Request {
             /**
              * DownStreamNodeIdList.
              */
-            public Builder downStreamNodeIdList(java.util.List < DownStreamNodeIdList> downStreamNodeIdList) {
+            public Builder downStreamNodeIdList(java.util.List<DownStreamNodeIdList> downStreamNodeIdList) {
                 this.downStreamNodeIdList = downStreamNodeIdList;
                 return this;
             }
@@ -777,7 +782,7 @@ public class CreateNodeSupplementRequest extends Request {
             /**
              * FilterList.
              */
-            public Builder filterList(java.util.List < FilterList> filterList) {
+            public Builder filterList(java.util.List<FilterList> filterList) {
                 this.filterList = filterList;
                 return this;
             }
@@ -785,7 +790,7 @@ public class CreateNodeSupplementRequest extends Request {
             /**
              * GlobalParamList.
              */
-            public Builder globalParamList(java.util.List < GlobalParamList> globalParamList) {
+            public Builder globalParamList(java.util.List<GlobalParamList> globalParamList) {
                 this.globalParamList = globalParamList;
                 return this;
             }
@@ -817,7 +822,7 @@ public class CreateNodeSupplementRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder nodeIdList(java.util.List < NodeIdList> nodeIdList) {
+            public Builder nodeIdList(java.util.List<NodeIdList> nodeIdList) {
                 this.nodeIdList = nodeIdList;
                 return this;
             }
@@ -825,7 +830,7 @@ public class CreateNodeSupplementRequest extends Request {
             /**
              * NodeParamsList.
              */
-            public Builder nodeParamsList(java.util.List < NodeParamsList> nodeParamsList) {
+            public Builder nodeParamsList(java.util.List<NodeParamsList> nodeParamsList) {
                 this.nodeParamsList = nodeParamsList;
                 return this;
             }

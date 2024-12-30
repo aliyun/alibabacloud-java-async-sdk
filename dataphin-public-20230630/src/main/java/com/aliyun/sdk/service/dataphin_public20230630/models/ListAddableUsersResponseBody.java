@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -569,7 +574,7 @@ public class ListAddableUsersResponseBody extends TeaModel {
         private Integer totalCount;
 
         @com.aliyun.core.annotation.NameInMap("UserList")
-        private java.util.List < UserList> userList;
+        private java.util.List<UserList> userList;
 
         private PageResult(Builder builder) {
             this.totalCount = builder.totalCount;
@@ -594,13 +599,13 @@ public class ListAddableUsersResponseBody extends TeaModel {
         /**
          * @return userList
          */
-        public java.util.List < UserList> getUserList() {
+        public java.util.List<UserList> getUserList() {
             return this.userList;
         }
 
         public static final class Builder {
             private Integer totalCount; 
-            private java.util.List < UserList> userList; 
+            private java.util.List<UserList> userList; 
 
             /**
              * TotalCount.
@@ -613,7 +618,7 @@ public class ListAddableUsersResponseBody extends TeaModel {
             /**
              * UserList.
              */
-            public Builder userList(java.util.List < UserList> userList) {
+            public Builder userList(java.util.List<UserList> userList) {
                 this.userList = userList;
                 return this;
             }

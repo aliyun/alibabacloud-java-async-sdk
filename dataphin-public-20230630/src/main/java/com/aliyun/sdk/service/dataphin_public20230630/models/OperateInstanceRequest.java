@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -152,7 +157,7 @@ public class OperateInstanceRequest extends Request {
      */
     public static class InstanceIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldInstanceIdList")
-        private java.util.List < String > fieldInstanceIdList;
+        private java.util.List<String> fieldInstanceIdList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -174,7 +179,7 @@ public class OperateInstanceRequest extends Request {
         /**
          * @return fieldInstanceIdList
          */
-        public java.util.List < String > getFieldInstanceIdList() {
+        public java.util.List<String> getFieldInstanceIdList() {
             return this.fieldInstanceIdList;
         }
 
@@ -186,13 +191,13 @@ public class OperateInstanceRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > fieldInstanceIdList; 
+            private java.util.List<String> fieldInstanceIdList; 
             private String id; 
 
             /**
              * FieldInstanceIdList.
              */
-            public Builder fieldInstanceIdList(java.util.List < String > fieldInstanceIdList) {
+            public Builder fieldInstanceIdList(java.util.List<String> fieldInstanceIdList) {
                 this.fieldInstanceIdList = fieldInstanceIdList;
                 return this;
             }
@@ -224,7 +229,7 @@ public class OperateInstanceRequest extends Request {
     public static class OperateCommand extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceIdList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < InstanceIdList> instanceIdList;
+        private java.util.List<InstanceIdList> instanceIdList;
 
         @com.aliyun.core.annotation.NameInMap("Operation")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -251,7 +256,7 @@ public class OperateInstanceRequest extends Request {
         /**
          * @return instanceIdList
          */
-        public java.util.List < InstanceIdList> getInstanceIdList() {
+        public java.util.List<InstanceIdList> getInstanceIdList() {
             return this.instanceIdList;
         }
 
@@ -270,14 +275,14 @@ public class OperateInstanceRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < InstanceIdList> instanceIdList; 
+            private java.util.List<InstanceIdList> instanceIdList; 
             private String operation; 
             private Long projectId; 
 
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder instanceIdList(java.util.List < InstanceIdList> instanceIdList) {
+            public Builder instanceIdList(java.util.List<InstanceIdList> instanceIdList) {
                 this.instanceIdList = instanceIdList;
                 return this;
             }

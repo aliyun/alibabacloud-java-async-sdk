@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -185,7 +190,7 @@ public class CheckResourcePermissionRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("ResourceList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < ResourceList> resourceList;
+        private java.util.List<ResourceList> resourceList;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -220,7 +225,7 @@ public class CheckResourcePermissionRequest extends Request {
         /**
          * @return resourceList
          */
-        public java.util.List < ResourceList> getResourceList() {
+        public java.util.List<ResourceList> getResourceList() {
             return this.resourceList;
         }
 
@@ -240,7 +245,7 @@ public class CheckResourcePermissionRequest extends Request {
 
         public static final class Builder {
             private String operate; 
-            private java.util.List < ResourceList> resourceList; 
+            private java.util.List<ResourceList> resourceList; 
             private String resourceType; 
             private String userId; 
 
@@ -258,7 +263,7 @@ public class CheckResourcePermissionRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder resourceList(java.util.List < ResourceList> resourceList) {
+            public Builder resourceList(java.util.List<ResourceList> resourceList) {
                 this.resourceList = resourceList;
                 return this;
             }

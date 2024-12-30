@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class GetMyTenantsResponseBody extends TeaModel {
     private Boolean success;
 
     @com.aliyun.core.annotation.NameInMap("TenantList")
-    private java.util.List < TenantList> tenantList;
+    private java.util.List<TenantList> tenantList;
 
     private GetMyTenantsResponseBody(Builder builder) {
         this.code = builder.code;
@@ -85,7 +90,7 @@ public class GetMyTenantsResponseBody extends TeaModel {
     /**
      * @return tenantList
      */
-    public java.util.List < TenantList> getTenantList() {
+    public java.util.List<TenantList> getTenantList() {
         return this.tenantList;
     }
 
@@ -95,7 +100,7 @@ public class GetMyTenantsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private java.util.List < TenantList> tenantList; 
+        private java.util.List<TenantList> tenantList; 
 
         /**
          * Code.
@@ -140,7 +145,7 @@ public class GetMyTenantsResponseBody extends TeaModel {
         /**
          * TenantList.
          */
-        public Builder tenantList(java.util.List < TenantList> tenantList) {
+        public Builder tenantList(java.util.List<TenantList> tenantList) {
             this.tenantList = tenantList;
             return this;
         }
@@ -183,7 +188,7 @@ public class GetMyTenantsResponseBody extends TeaModel {
         private Boolean resourceLimited;
 
         @com.aliyun.core.annotation.NameInMap("TenantTypeList")
-        private java.util.List < String > tenantTypeList;
+        private java.util.List<String> tenantTypeList;
 
         @com.aliyun.core.annotation.NameInMap("TitleType")
         private String titleType;
@@ -272,7 +277,7 @@ public class GetMyTenantsResponseBody extends TeaModel {
         /**
          * @return tenantTypeList
          */
-        public java.util.List < String > getTenantTypeList() {
+        public java.util.List<String> getTenantTypeList() {
             return this.tenantTypeList;
         }
 
@@ -299,7 +304,7 @@ public class GetMyTenantsResponseBody extends TeaModel {
             private Boolean opsTenant; 
             private String ownerId; 
             private Boolean resourceLimited; 
-            private java.util.List < String > tenantTypeList; 
+            private java.util.List<String> tenantTypeList; 
             private String titleType; 
             private Boolean visible; 
 
@@ -370,7 +375,7 @@ public class GetMyTenantsResponseBody extends TeaModel {
             /**
              * TenantTypeList.
              */
-            public Builder tenantTypeList(java.util.List < String > tenantTypeList) {
+            public Builder tenantTypeList(java.util.List<String> tenantTypeList) {
                 this.tenantTypeList = tenantTypeList;
                 return this;
             }

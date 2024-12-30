@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("NodeInfoList")
-    private java.util.List < NodeInfoList> nodeInfoList;
+    private java.util.List<NodeInfoList> nodeInfoList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
     /**
      * @return nodeInfoList
      */
-    public java.util.List < NodeInfoList> getNodeInfoList() {
+    public java.util.List<NodeInfoList> getNodeInfoList() {
         return this.nodeInfoList;
     }
 
@@ -93,7 +98,7 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
         private String code; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < NodeInfoList> nodeInfoList; 
+        private java.util.List<NodeInfoList> nodeInfoList; 
         private String requestId; 
         private Boolean success; 
 
@@ -124,7 +129,7 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
         /**
          * NodeInfoList.
          */
-        public Builder nodeInfoList(java.util.List < NodeInfoList> nodeInfoList) {
+        public Builder nodeInfoList(java.util.List<NodeInfoList> nodeInfoList) {
             this.nodeInfoList = nodeInfoList;
             return this;
         }
@@ -162,7 +167,7 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
         private Integer depth;
 
         @com.aliyun.core.annotation.NameInMap("FieldIdList")
-        private java.util.List < String > fieldIdList;
+        private java.util.List<String> fieldIdList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -199,7 +204,7 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
         /**
          * @return fieldIdList
          */
-        public java.util.List < String > getFieldIdList() {
+        public java.util.List<String> getFieldIdList() {
             return this.fieldIdList;
         }
 
@@ -226,7 +231,7 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer depth; 
-            private java.util.List < String > fieldIdList; 
+            private java.util.List<String> fieldIdList; 
             private String id; 
             private String name; 
             private String type; 
@@ -242,7 +247,7 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
             /**
              * FieldIdList.
              */
-            public Builder fieldIdList(java.util.List < String > fieldIdList) {
+            public Builder fieldIdList(java.util.List<String> fieldIdList) {
                 this.fieldIdList = fieldIdList;
                 return this;
             }

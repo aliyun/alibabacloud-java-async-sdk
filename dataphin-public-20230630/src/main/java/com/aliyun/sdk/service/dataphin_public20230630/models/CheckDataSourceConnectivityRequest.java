@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -205,7 +210,7 @@ public class CheckDataSourceConnectivityRequest extends Request {
     public static class CheckCommand extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigItemList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < ConfigItemList> configItemList;
+        private java.util.List<ConfigItemList> configItemList;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -227,7 +232,7 @@ public class CheckDataSourceConnectivityRequest extends Request {
         /**
          * @return configItemList
          */
-        public java.util.List < ConfigItemList> getConfigItemList() {
+        public java.util.List<ConfigItemList> getConfigItemList() {
             return this.configItemList;
         }
 
@@ -239,13 +244,13 @@ public class CheckDataSourceConnectivityRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < ConfigItemList> configItemList; 
+            private java.util.List<ConfigItemList> configItemList; 
             private String type; 
 
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder configItemList(java.util.List < ConfigItemList> configItemList) {
+            public Builder configItemList(java.util.List<ConfigItemList> configItemList) {
                 this.configItemList = configItemList;
                 return this;
             }

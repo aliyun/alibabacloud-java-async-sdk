@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -230,7 +235,7 @@ public class ExecuteManualNodeRequest extends Request {
         private String nodeId;
 
         @com.aliyun.core.annotation.NameInMap("ParamList")
-        private java.util.List < ParamList> paramList;
+        private java.util.List<ParamList> paramList;
 
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -281,7 +286,7 @@ public class ExecuteManualNodeRequest extends Request {
         /**
          * @return paramList
          */
-        public java.util.List < ParamList> getParamList() {
+        public java.util.List<ParamList> getParamList() {
             return this.paramList;
         }
 
@@ -303,7 +308,7 @@ public class ExecuteManualNodeRequest extends Request {
             private String endBizDate; 
             private String flowName; 
             private String nodeId; 
-            private java.util.List < ParamList> paramList; 
+            private java.util.List<ParamList> paramList; 
             private Long projectId; 
             private String startBizDate; 
 
@@ -340,7 +345,7 @@ public class ExecuteManualNodeRequest extends Request {
             /**
              * ParamList.
              */
-            public Builder paramList(java.util.List < ParamList> paramList) {
+            public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("ResourcePermissionList")
-    private java.util.List < ResourcePermissionList> resourcePermissionList;
+    private java.util.List<ResourcePermissionList> resourcePermissionList;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -78,7 +83,7 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
     /**
      * @return resourcePermissionList
      */
-    public java.util.List < ResourcePermissionList> getResourcePermissionList() {
+    public java.util.List<ResourcePermissionList> getResourcePermissionList() {
         return this.resourcePermissionList;
     }
 
@@ -94,7 +99,7 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
-        private java.util.List < ResourcePermissionList> resourcePermissionList; 
+        private java.util.List<ResourcePermissionList> resourcePermissionList; 
         private Boolean success; 
 
         /**
@@ -132,7 +137,7 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
         /**
          * ResourcePermissionList.
          */
-        public Builder resourcePermissionList(java.util.List < ResourcePermissionList> resourcePermissionList) {
+        public Builder resourcePermissionList(java.util.List<ResourcePermissionList> resourcePermissionList) {
             this.resourcePermissionList = resourcePermissionList;
             return this;
         }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -207,7 +212,7 @@ public class CreateDataSourceRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("ConfigItemList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < ConfigItemList> configItemList;
+        private java.util.List<ConfigItemList> configItemList;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -244,7 +249,7 @@ public class CreateDataSourceRequest extends Request {
         /**
          * @return configItemList
          */
-        public java.util.List < ConfigItemList> getConfigItemList() {
+        public java.util.List<ConfigItemList> getConfigItemList() {
             return this.configItemList;
         }
 
@@ -271,7 +276,7 @@ public class CreateDataSourceRequest extends Request {
 
         public static final class Builder {
             private Boolean checkActivity; 
-            private java.util.List < ConfigItemList> configItemList; 
+            private java.util.List<ConfigItemList> configItemList; 
             private String description; 
             private String name; 
             private String type; 
@@ -287,7 +292,7 @@ public class CreateDataSourceRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder configItemList(java.util.List < ConfigItemList> configItemList) {
+            public Builder configItemList(java.util.List<ConfigItemList> configItemList) {
                 this.configItemList = configItemList;
                 return this;
             }
@@ -477,7 +482,7 @@ public class CreateDataSourceRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("ConfigItemList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < ProdDataSourceCreateConfigItemList> configItemList;
+        private java.util.List<ProdDataSourceCreateConfigItemList> configItemList;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -514,7 +519,7 @@ public class CreateDataSourceRequest extends Request {
         /**
          * @return configItemList
          */
-        public java.util.List < ProdDataSourceCreateConfigItemList> getConfigItemList() {
+        public java.util.List<ProdDataSourceCreateConfigItemList> getConfigItemList() {
             return this.configItemList;
         }
 
@@ -541,7 +546,7 @@ public class CreateDataSourceRequest extends Request {
 
         public static final class Builder {
             private Boolean checkActivity; 
-            private java.util.List < ProdDataSourceCreateConfigItemList> configItemList; 
+            private java.util.List<ProdDataSourceCreateConfigItemList> configItemList; 
             private String description; 
             private String name; 
             private String type; 
@@ -557,7 +562,7 @@ public class CreateDataSourceRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder configItemList(java.util.List < ProdDataSourceCreateConfigItemList> configItemList) {
+            public Builder configItemList(java.util.List<ProdDataSourceCreateConfigItemList> configItemList) {
                 this.configItemList = configItemList;
                 return this;
             }

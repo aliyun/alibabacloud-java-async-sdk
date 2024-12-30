@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -396,19 +401,19 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("OwnerList")
-        private java.util.List < OwnerList> ownerList;
+        private java.util.List<OwnerList> ownerList;
 
         @com.aliyun.core.annotation.NameInMap("PriorityList")
-        private java.util.List < String > priorityList;
+        private java.util.List<String> priorityList;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupList")
-        private java.util.List < String > resourceGroupList;
+        private java.util.List<String> resourceGroupList;
 
         @com.aliyun.core.annotation.NameInMap("SchedulePaused")
         private Boolean schedulePaused;
 
         @com.aliyun.core.annotation.NameInMap("SchedulePeriodList")
-        private java.util.List < String > schedulePeriodList;
+        private java.util.List<String> schedulePeriodList;
 
         @com.aliyun.core.annotation.NameInMap("SubDetailType")
         private String subDetailType;
@@ -533,21 +538,21 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         /**
          * @return ownerList
          */
-        public java.util.List < OwnerList> getOwnerList() {
+        public java.util.List<OwnerList> getOwnerList() {
             return this.ownerList;
         }
 
         /**
          * @return priorityList
          */
-        public java.util.List < String > getPriorityList() {
+        public java.util.List<String> getPriorityList() {
             return this.priorityList;
         }
 
         /**
          * @return resourceGroupList
          */
-        public java.util.List < String > getResourceGroupList() {
+        public java.util.List<String> getResourceGroupList() {
             return this.resourceGroupList;
         }
 
@@ -561,7 +566,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         /**
          * @return schedulePeriodList
          */
-        public java.util.List < String > getSchedulePeriodList() {
+        public java.util.List<String> getSchedulePeriodList() {
             return this.schedulePeriodList;
         }
 
@@ -592,11 +597,11 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             private String lastModifiedTime; 
             private Modifier modifier; 
             private String name; 
-            private java.util.List < OwnerList> ownerList; 
-            private java.util.List < String > priorityList; 
-            private java.util.List < String > resourceGroupList; 
+            private java.util.List<OwnerList> ownerList; 
+            private java.util.List<String> priorityList; 
+            private java.util.List<String> resourceGroupList; 
             private Boolean schedulePaused; 
-            private java.util.List < String > schedulePeriodList; 
+            private java.util.List<String> schedulePeriodList; 
             private String subDetailType; 
             private String type; 
 
@@ -699,7 +704,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             /**
              * OwnerList.
              */
-            public Builder ownerList(java.util.List < OwnerList> ownerList) {
+            public Builder ownerList(java.util.List<OwnerList> ownerList) {
                 this.ownerList = ownerList;
                 return this;
             }
@@ -707,7 +712,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             /**
              * PriorityList.
              */
-            public Builder priorityList(java.util.List < String > priorityList) {
+            public Builder priorityList(java.util.List<String> priorityList) {
                 this.priorityList = priorityList;
                 return this;
             }
@@ -715,7 +720,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             /**
              * ResourceGroupList.
              */
-            public Builder resourceGroupList(java.util.List < String > resourceGroupList) {
+            public Builder resourceGroupList(java.util.List<String> resourceGroupList) {
                 this.resourceGroupList = resourceGroupList;
                 return this;
             }
@@ -731,7 +736,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             /**
              * SchedulePeriodList.
              */
-            public Builder schedulePeriodList(java.util.List < String > schedulePeriodList) {
+            public Builder schedulePeriodList(java.util.List<String> schedulePeriodList) {
                 this.schedulePeriodList = schedulePeriodList;
                 return this;
             }
@@ -794,7 +799,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         private Long startExecuteTime;
 
         @com.aliyun.core.annotation.NameInMap("StatusList")
-        private java.util.List < String > statusList;
+        private java.util.List<String> statusList;
 
         private Instance(Builder builder) {
             this.bizDate = builder.bizDate;
@@ -883,7 +888,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         /**
          * @return statusList
          */
-        public java.util.List < String > getStatusList() {
+        public java.util.List<String> getStatusList() {
             return this.statusList;
         }
 
@@ -897,7 +902,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             private Integer index; 
             private NodeInfo nodeInfo; 
             private Long startExecuteTime; 
-            private java.util.List < String > statusList; 
+            private java.util.List<String> statusList; 
 
             /**
              * BizDate.
@@ -974,7 +979,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             /**
              * StatusList.
              */
-            public Builder statusList(java.util.List < String > statusList) {
+            public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;
                 return this;
             }

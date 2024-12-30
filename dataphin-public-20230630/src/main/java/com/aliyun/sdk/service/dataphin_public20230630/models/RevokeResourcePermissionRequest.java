@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -176,14 +181,14 @@ public class RevokeResourcePermissionRequest extends Request {
      */
     public static class RevokeCommand extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperateList")
-        private java.util.List < String > operateList;
+        private java.util.List<String> operateList;
 
         @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
         @com.aliyun.core.annotation.NameInMap("ResourceList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < ResourceList> resourceList;
+        private java.util.List<ResourceList> resourceList;
 
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -212,7 +217,7 @@ public class RevokeResourcePermissionRequest extends Request {
         /**
          * @return operateList
          */
-        public java.util.List < String > getOperateList() {
+        public java.util.List<String> getOperateList() {
             return this.operateList;
         }
 
@@ -226,7 +231,7 @@ public class RevokeResourcePermissionRequest extends Request {
         /**
          * @return resourceList
          */
-        public java.util.List < ResourceList> getResourceList() {
+        public java.util.List<ResourceList> getResourceList() {
             return this.resourceList;
         }
 
@@ -245,16 +250,16 @@ public class RevokeResourcePermissionRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > operateList; 
+            private java.util.List<String> operateList; 
             private String reason; 
-            private java.util.List < ResourceList> resourceList; 
+            private java.util.List<ResourceList> resourceList; 
             private String resourceType; 
             private String userId; 
 
             /**
              * OperateList.
              */
-            public Builder operateList(java.util.List < String > operateList) {
+            public Builder operateList(java.util.List<String> operateList) {
                 this.operateList = operateList;
                 return this;
             }
@@ -270,7 +275,7 @@ public class RevokeResourcePermissionRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder resourceList(java.util.List < ResourceList> resourceList) {
+            public Builder resourceList(java.util.List<ResourceList> resourceList) {
                 this.resourceList = resourceList;
                 return this;
             }

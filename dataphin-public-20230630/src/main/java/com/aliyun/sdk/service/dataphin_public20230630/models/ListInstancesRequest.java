@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -172,7 +177,7 @@ public class ListInstancesRequest extends Request {
         private String nodeId;
 
         @com.aliyun.core.annotation.NameInMap("OwnerList")
-        private java.util.List < String > ownerList;
+        private java.util.List<String> ownerList;
 
         @com.aliyun.core.annotation.NameInMap("Page")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -183,20 +188,20 @@ public class ListInstancesRequest extends Request {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("PriorityList")
-        private java.util.List < String > priorityList;
+        private java.util.List<String> priorityList;
 
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         @com.aliyun.core.annotation.Validation(required = true)
         private Long projectId;
 
         @com.aliyun.core.annotation.NameInMap("RunStatusList")
-        private java.util.List < String > runStatusList;
+        private java.util.List<String> runStatusList;
 
         @com.aliyun.core.annotation.NameInMap("SchedulePaused")
         private Boolean schedulePaused;
 
         @com.aliyun.core.annotation.NameInMap("SchedulePeriodList")
-        private java.util.List < String > schedulePeriodList;
+        private java.util.List<String> schedulePeriodList;
 
         @com.aliyun.core.annotation.NameInMap("ScheduleType")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -206,7 +211,7 @@ public class ListInstancesRequest extends Request {
         private String searchText;
 
         @com.aliyun.core.annotation.NameInMap("SubBizTypeList")
-        private java.util.List < String > subBizTypeList;
+        private java.util.List<String> subBizTypeList;
 
         private ListQuery(Builder builder) {
             this.bizType = builder.bizType;
@@ -289,7 +294,7 @@ public class ListInstancesRequest extends Request {
         /**
          * @return ownerList
          */
-        public java.util.List < String > getOwnerList() {
+        public java.util.List<String> getOwnerList() {
             return this.ownerList;
         }
 
@@ -310,7 +315,7 @@ public class ListInstancesRequest extends Request {
         /**
          * @return priorityList
          */
-        public java.util.List < String > getPriorityList() {
+        public java.util.List<String> getPriorityList() {
             return this.priorityList;
         }
 
@@ -324,7 +329,7 @@ public class ListInstancesRequest extends Request {
         /**
          * @return runStatusList
          */
-        public java.util.List < String > getRunStatusList() {
+        public java.util.List<String> getRunStatusList() {
             return this.runStatusList;
         }
 
@@ -338,7 +343,7 @@ public class ListInstancesRequest extends Request {
         /**
          * @return schedulePeriodList
          */
-        public java.util.List < String > getSchedulePeriodList() {
+        public java.util.List<String> getSchedulePeriodList() {
             return this.schedulePeriodList;
         }
 
@@ -359,7 +364,7 @@ public class ListInstancesRequest extends Request {
         /**
          * @return subBizTypeList
          */
-        public java.util.List < String > getSubBizTypeList() {
+        public java.util.List<String> getSubBizTypeList() {
             return this.subBizTypeList;
         }
 
@@ -371,17 +376,17 @@ public class ListInstancesRequest extends Request {
             private String minBizDate; 
             private String minRunDate; 
             private String nodeId; 
-            private java.util.List < String > ownerList; 
+            private java.util.List<String> ownerList; 
             private Integer page; 
             private Integer pageSize; 
-            private java.util.List < String > priorityList; 
+            private java.util.List<String> priorityList; 
             private Long projectId; 
-            private java.util.List < String > runStatusList; 
+            private java.util.List<String> runStatusList; 
             private Boolean schedulePaused; 
-            private java.util.List < String > schedulePeriodList; 
+            private java.util.List<String> schedulePeriodList; 
             private String scheduleType; 
             private String searchText; 
-            private java.util.List < String > subBizTypeList; 
+            private java.util.List<String> subBizTypeList; 
 
             /**
              * BizType.
@@ -442,7 +447,7 @@ public class ListInstancesRequest extends Request {
             /**
              * OwnerList.
              */
-            public Builder ownerList(java.util.List < String > ownerList) {
+            public Builder ownerList(java.util.List<String> ownerList) {
                 this.ownerList = ownerList;
                 return this;
             }
@@ -472,7 +477,7 @@ public class ListInstancesRequest extends Request {
             /**
              * PriorityList.
              */
-            public Builder priorityList(java.util.List < String > priorityList) {
+            public Builder priorityList(java.util.List<String> priorityList) {
                 this.priorityList = priorityList;
                 return this;
             }
@@ -491,7 +496,7 @@ public class ListInstancesRequest extends Request {
             /**
              * RunStatusList.
              */
-            public Builder runStatusList(java.util.List < String > runStatusList) {
+            public Builder runStatusList(java.util.List<String> runStatusList) {
                 this.runStatusList = runStatusList;
                 return this;
             }
@@ -507,7 +512,7 @@ public class ListInstancesRequest extends Request {
             /**
              * SchedulePeriodList.
              */
-            public Builder schedulePeriodList(java.util.List < String > schedulePeriodList) {
+            public Builder schedulePeriodList(java.util.List<String> schedulePeriodList) {
                 this.schedulePeriodList = schedulePeriodList;
                 return this;
             }
@@ -534,7 +539,7 @@ public class ListInstancesRequest extends Request {
             /**
              * SubBizTypeList.
              */
-            public Builder subBizTypeList(java.util.List < String > subBizTypeList) {
+            public Builder subBizTypeList(java.util.List<String> subBizTypeList) {
                 this.subBizTypeList = subBizTypeList;
                 return this;
             }

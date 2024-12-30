@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -249,7 +254,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         private Boolean active;
 
         @com.aliyun.core.annotation.NameInMap("AdminList")
-        private java.util.List < AdminList> adminList;
+        private java.util.List<AdminList> adminList;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -290,7 +295,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         /**
          * @return adminList
          */
-        public java.util.List < AdminList> getAdminList() {
+        public java.util.List<AdminList> getAdminList() {
             return this.adminList;
         }
 
@@ -324,7 +329,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean active; 
-            private java.util.List < AdminList> adminList; 
+            private java.util.List<AdminList> adminList; 
             private String description; 
             private String id; 
             private String myRole; 
@@ -341,7 +346,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
             /**
              * AdminList.
              */
-            public Builder adminList(java.util.List < AdminList> adminList) {
+            public Builder adminList(java.util.List<AdminList> adminList) {
                 this.adminList = adminList;
                 return this;
             }
@@ -396,7 +401,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         private Integer totalCount;
 
         @com.aliyun.core.annotation.NameInMap("UserGroupList")
-        private java.util.List < UserGroupList> userGroupList;
+        private java.util.List<UserGroupList> userGroupList;
 
         private PageResult(Builder builder) {
             this.totalCount = builder.totalCount;
@@ -421,13 +426,13 @@ public class ListUserGroupsResponseBody extends TeaModel {
         /**
          * @return userGroupList
          */
-        public java.util.List < UserGroupList> getUserGroupList() {
+        public java.util.List<UserGroupList> getUserGroupList() {
             return this.userGroupList;
         }
 
         public static final class Builder {
             private Integer totalCount; 
-            private java.util.List < UserGroupList> userGroupList; 
+            private java.util.List<UserGroupList> userGroupList; 
 
             /**
              * TotalCount.
@@ -440,7 +445,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
             /**
              * UserGroupList.
              */
-            public Builder userGroupList(java.util.List < UserGroupList> userGroupList) {
+            public Builder userGroupList(java.util.List<UserGroupList> userGroupList) {
                 this.userGroupList = userGroupList;
                 return this;
             }

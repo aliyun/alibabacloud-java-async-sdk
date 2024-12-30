@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -158,7 +163,7 @@ public class ListNodeDownStreamRequest extends Request {
         private String key;
 
         @com.aliyun.core.annotation.NameInMap("ValueList")
-        private java.util.List < String > valueList;
+        private java.util.List<String> valueList;
 
         private FilterList(Builder builder) {
             this.exclude = builder.exclude;
@@ -191,14 +196,14 @@ public class ListNodeDownStreamRequest extends Request {
         /**
          * @return valueList
          */
-        public java.util.List < String > getValueList() {
+        public java.util.List<String> getValueList() {
             return this.valueList;
         }
 
         public static final class Builder {
             private Boolean exclude; 
             private String key; 
-            private java.util.List < String > valueList; 
+            private java.util.List<String> valueList; 
 
             /**
              * Exclude.
@@ -219,7 +224,7 @@ public class ListNodeDownStreamRequest extends Request {
             /**
              * ValueList.
              */
-            public Builder valueList(java.util.List < String > valueList) {
+            public Builder valueList(java.util.List<String> valueList) {
                 this.valueList = valueList;
                 return this;
             }
@@ -239,7 +244,7 @@ public class ListNodeDownStreamRequest extends Request {
      */
     public static class NodeIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldIdList")
-        private java.util.List < String > fieldIdList;
+        private java.util.List<String> fieldIdList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -260,7 +265,7 @@ public class ListNodeDownStreamRequest extends Request {
         /**
          * @return fieldIdList
          */
-        public java.util.List < String > getFieldIdList() {
+        public java.util.List<String> getFieldIdList() {
             return this.fieldIdList;
         }
 
@@ -272,13 +277,13 @@ public class ListNodeDownStreamRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > fieldIdList; 
+            private java.util.List<String> fieldIdList; 
             private String id; 
 
             /**
              * FieldIdList.
              */
-            public Builder fieldIdList(java.util.List < String > fieldIdList) {
+            public Builder fieldIdList(java.util.List<String> fieldIdList) {
                 this.fieldIdList = fieldIdList;
                 return this;
             }
@@ -309,11 +314,11 @@ public class ListNodeDownStreamRequest extends Request {
         private Integer downStreamDepth;
 
         @com.aliyun.core.annotation.NameInMap("FilterList")
-        private java.util.List < FilterList> filterList;
+        private java.util.List<FilterList> filterList;
 
         @com.aliyun.core.annotation.NameInMap("NodeIdList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < NodeIdList> nodeIdList;
+        private java.util.List<NodeIdList> nodeIdList;
 
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
@@ -343,14 +348,14 @@ public class ListNodeDownStreamRequest extends Request {
         /**
          * @return filterList
          */
-        public java.util.List < FilterList> getFilterList() {
+        public java.util.List<FilterList> getFilterList() {
             return this.filterList;
         }
 
         /**
          * @return nodeIdList
          */
-        public java.util.List < NodeIdList> getNodeIdList() {
+        public java.util.List<NodeIdList> getNodeIdList() {
             return this.nodeIdList;
         }
 
@@ -363,8 +368,8 @@ public class ListNodeDownStreamRequest extends Request {
 
         public static final class Builder {
             private Integer downStreamDepth; 
-            private java.util.List < FilterList> filterList; 
-            private java.util.List < NodeIdList> nodeIdList; 
+            private java.util.List<FilterList> filterList; 
+            private java.util.List<NodeIdList> nodeIdList; 
             private Long projectId; 
 
             /**
@@ -378,7 +383,7 @@ public class ListNodeDownStreamRequest extends Request {
             /**
              * FilterList.
              */
-            public Builder filterList(java.util.List < FilterList> filterList) {
+            public Builder filterList(java.util.List<FilterList> filterList) {
                 this.filterList = filterList;
                 return this;
             }
@@ -386,7 +391,7 @@ public class ListNodeDownStreamRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder nodeIdList(java.util.List < NodeIdList> nodeIdList) {
+            public Builder nodeIdList(java.util.List<NodeIdList> nodeIdList) {
                 this.nodeIdList = nodeIdList;
                 return this;
             }

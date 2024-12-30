@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListAddableRolesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("RoleList")
-    private java.util.List < RoleList> roleList;
+    private java.util.List<RoleList> roleList;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -78,7 +83,7 @@ public class ListAddableRolesResponseBody extends TeaModel {
     /**
      * @return roleList
      */
-    public java.util.List < RoleList> getRoleList() {
+    public java.util.List<RoleList> getRoleList() {
         return this.roleList;
     }
 
@@ -94,7 +99,7 @@ public class ListAddableRolesResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
-        private java.util.List < RoleList> roleList; 
+        private java.util.List<RoleList> roleList; 
         private Boolean success; 
 
         /**
@@ -132,7 +137,7 @@ public class ListAddableRolesResponseBody extends TeaModel {
         /**
          * RoleList.
          */
-        public Builder roleList(java.util.List < RoleList> roleList) {
+        public Builder roleList(java.util.List<RoleList> roleList) {
             this.roleList = roleList;
             return this;
         }

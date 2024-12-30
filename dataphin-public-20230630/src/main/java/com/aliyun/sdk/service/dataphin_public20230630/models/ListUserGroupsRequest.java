@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -132,7 +137,7 @@ public class ListUserGroupsRequest extends Request {
         private Boolean active;
 
         @com.aliyun.core.annotation.NameInMap("AdminIdList")
-        private java.util.List < String > adminIdList;
+        private java.util.List<String> adminIdList;
 
         @com.aliyun.core.annotation.NameInMap("FilterMine")
         private Boolean filterMine;
@@ -175,7 +180,7 @@ public class ListUserGroupsRequest extends Request {
         /**
          * @return adminIdList
          */
-        public java.util.List < String > getAdminIdList() {
+        public java.util.List<String> getAdminIdList() {
             return this.adminIdList;
         }
 
@@ -209,7 +214,7 @@ public class ListUserGroupsRequest extends Request {
 
         public static final class Builder {
             private Boolean active; 
-            private java.util.List < String > adminIdList; 
+            private java.util.List<String> adminIdList; 
             private Boolean filterMine; 
             private String keyword; 
             private Integer pageNo; 
@@ -226,7 +231,7 @@ public class ListUserGroupsRequest extends Request {
             /**
              * AdminIdList.
              */
-            public Builder adminIdList(java.util.List < String > adminIdList) {
+            public Builder adminIdList(java.util.List<String> adminIdList) {
                 this.adminIdList = adminIdList;
                 return this;
             }

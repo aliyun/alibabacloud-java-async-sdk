@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -846,7 +851,7 @@ public class ListResourcePermissionsResponseBody extends TeaModel {
         private Period period;
 
         @com.aliyun.core.annotation.NameInMap("PermissionPeriodList")
-        private java.util.List < PermissionPeriodList> permissionPeriodList;
+        private java.util.List<PermissionPeriodList> permissionPeriodList;
 
         @com.aliyun.core.annotation.NameInMap("RecordId")
         private String recordId;
@@ -891,7 +896,7 @@ public class ListResourcePermissionsResponseBody extends TeaModel {
         /**
          * @return permissionPeriodList
          */
-        public java.util.List < PermissionPeriodList> getPermissionPeriodList() {
+        public java.util.List<PermissionPeriodList> getPermissionPeriodList() {
             return this.permissionPeriodList;
         }
 
@@ -919,7 +924,7 @@ public class ListResourcePermissionsResponseBody extends TeaModel {
         public static final class Builder {
             private String authScope; 
             private Period period; 
-            private java.util.List < PermissionPeriodList> permissionPeriodList; 
+            private java.util.List<PermissionPeriodList> permissionPeriodList; 
             private String recordId; 
             private ResourceInfo resourceInfo; 
             private TargetAccount targetAccount; 
@@ -943,7 +948,7 @@ public class ListResourcePermissionsResponseBody extends TeaModel {
             /**
              * PermissionPeriodList.
              */
-            public Builder permissionPeriodList(java.util.List < PermissionPeriodList> permissionPeriodList) {
+            public Builder permissionPeriodList(java.util.List<PermissionPeriodList> permissionPeriodList) {
                 this.permissionPeriodList = permissionPeriodList;
                 return this;
             }
@@ -987,7 +992,7 @@ public class ListResourcePermissionsResponseBody extends TeaModel {
      */
     public static class PageResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
@@ -1008,7 +1013,7 @@ public class ListResourcePermissionsResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -1020,13 +1025,13 @@ public class ListResourcePermissionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private Long totalCount; 
 
             /**
              * Data.
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

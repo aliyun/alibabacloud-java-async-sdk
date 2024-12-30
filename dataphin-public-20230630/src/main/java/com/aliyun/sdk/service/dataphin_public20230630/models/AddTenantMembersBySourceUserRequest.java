@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -275,7 +280,7 @@ public class AddTenantMembersBySourceUserRequest extends Request {
      */
     public static class AddCommand extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SourceUserList")
-        private java.util.List < SourceUserList> sourceUserList;
+        private java.util.List<SourceUserList> sourceUserList;
 
         private AddCommand(Builder builder) {
             this.sourceUserList = builder.sourceUserList;
@@ -292,17 +297,17 @@ public class AddTenantMembersBySourceUserRequest extends Request {
         /**
          * @return sourceUserList
          */
-        public java.util.List < SourceUserList> getSourceUserList() {
+        public java.util.List<SourceUserList> getSourceUserList() {
             return this.sourceUserList;
         }
 
         public static final class Builder {
-            private java.util.List < SourceUserList> sourceUserList; 
+            private java.util.List<SourceUserList> sourceUserList; 
 
             /**
              * SourceUserList.
              */
-            public Builder sourceUserList(java.util.List < SourceUserList> sourceUserList) {
+            public Builder sourceUserList(java.util.List<SourceUserList> sourceUserList) {
                 this.sourceUserList = sourceUserList;
                 return this;
             }

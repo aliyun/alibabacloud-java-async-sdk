@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -131,7 +136,7 @@ public class CreateUserGroupRequest extends Request {
         private Boolean active;
 
         @com.aliyun.core.annotation.NameInMap("AdminUserIdList")
-        private java.util.List < String > adminUserIdList;
+        private java.util.List<String> adminUserIdList;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -164,7 +169,7 @@ public class CreateUserGroupRequest extends Request {
         /**
          * @return adminUserIdList
          */
-        public java.util.List < String > getAdminUserIdList() {
+        public java.util.List<String> getAdminUserIdList() {
             return this.adminUserIdList;
         }
 
@@ -184,7 +189,7 @@ public class CreateUserGroupRequest extends Request {
 
         public static final class Builder {
             private Boolean active; 
-            private java.util.List < String > adminUserIdList; 
+            private java.util.List<String> adminUserIdList; 
             private String description; 
             private String name; 
 
@@ -199,7 +204,7 @@ public class CreateUserGroupRequest extends Request {
             /**
              * AdminUserIdList.
              */
-            public Builder adminUserIdList(java.util.List < String > adminUserIdList) {
+            public Builder adminUserIdList(java.util.List<String> adminUserIdList) {
                 this.adminUserIdList = adminUserIdList;
                 return this;
             }

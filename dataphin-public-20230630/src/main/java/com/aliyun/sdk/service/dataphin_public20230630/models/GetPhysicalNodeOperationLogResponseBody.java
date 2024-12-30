@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -22,7 +27,7 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("OperationLogList")
-    private java.util.List < OperationLogList> operationLogList;
+    private java.util.List<OperationLogList> operationLogList;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,7 +76,7 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
     /**
      * @return operationLogList
      */
-    public java.util.List < OperationLogList> getOperationLogList() {
+    public java.util.List<OperationLogList> getOperationLogList() {
         return this.operationLogList;
     }
 
@@ -93,7 +98,7 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         private String code; 
         private Integer httpStatusCode; 
         private String message; 
-        private java.util.List < OperationLogList> operationLogList; 
+        private java.util.List<OperationLogList> operationLogList; 
         private String requestId; 
         private Boolean success; 
 
@@ -124,7 +129,7 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         /**
          * OperationLogList.
          */
-        public Builder operationLogList(java.util.List < OperationLogList> operationLogList) {
+        public Builder operationLogList(java.util.List<OperationLogList> operationLogList) {
             this.operationLogList = operationLogList;
             return this;
         }

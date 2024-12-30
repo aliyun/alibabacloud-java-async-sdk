@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -160,10 +165,10 @@ public class ListNodesRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("NodeSubBizTypeList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > nodeSubBizTypeList;
+        private java.util.List<String> nodeSubBizTypeList;
 
         @com.aliyun.core.annotation.NameInMap("OwnerList")
-        private java.util.List < String > ownerList;
+        private java.util.List<String> ownerList;
 
         @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;
@@ -172,7 +177,7 @@ public class ListNodesRequest extends Request {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("PriorityList")
-        private java.util.List < String > priorityList;
+        private java.util.List<String> priorityList;
 
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -182,7 +187,7 @@ public class ListNodesRequest extends Request {
         private Boolean schedulePaused;
 
         @com.aliyun.core.annotation.NameInMap("SchedulePeriodList")
-        private java.util.List < String > schedulePeriodList;
+        private java.util.List<String> schedulePeriodList;
 
         @com.aliyun.core.annotation.NameInMap("ScheduleType")
         private String scheduleType;
@@ -230,14 +235,14 @@ public class ListNodesRequest extends Request {
         /**
          * @return nodeSubBizTypeList
          */
-        public java.util.List < String > getNodeSubBizTypeList() {
+        public java.util.List<String> getNodeSubBizTypeList() {
             return this.nodeSubBizTypeList;
         }
 
         /**
          * @return ownerList
          */
-        public java.util.List < String > getOwnerList() {
+        public java.util.List<String> getOwnerList() {
             return this.ownerList;
         }
 
@@ -258,7 +263,7 @@ public class ListNodesRequest extends Request {
         /**
          * @return priorityList
          */
-        public java.util.List < String > getPriorityList() {
+        public java.util.List<String> getPriorityList() {
             return this.priorityList;
         }
 
@@ -279,7 +284,7 @@ public class ListNodesRequest extends Request {
         /**
          * @return schedulePeriodList
          */
-        public java.util.List < String > getSchedulePeriodList() {
+        public java.util.List<String> getSchedulePeriodList() {
             return this.schedulePeriodList;
         }
 
@@ -300,14 +305,14 @@ public class ListNodesRequest extends Request {
         public static final class Builder {
             private Boolean dryRun; 
             private String nodeBizType; 
-            private java.util.List < String > nodeSubBizTypeList; 
-            private java.util.List < String > ownerList; 
+            private java.util.List<String> nodeSubBizTypeList; 
+            private java.util.List<String> ownerList; 
             private Integer page; 
             private Integer pageSize; 
-            private java.util.List < String > priorityList; 
+            private java.util.List<String> priorityList; 
             private Long projectId; 
             private Boolean schedulePaused; 
-            private java.util.List < String > schedulePeriodList; 
+            private java.util.List<String> schedulePeriodList; 
             private String scheduleType; 
             private String searchText; 
 
@@ -333,7 +338,7 @@ public class ListNodesRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder nodeSubBizTypeList(java.util.List < String > nodeSubBizTypeList) {
+            public Builder nodeSubBizTypeList(java.util.List<String> nodeSubBizTypeList) {
                 this.nodeSubBizTypeList = nodeSubBizTypeList;
                 return this;
             }
@@ -341,7 +346,7 @@ public class ListNodesRequest extends Request {
             /**
              * OwnerList.
              */
-            public Builder ownerList(java.util.List < String > ownerList) {
+            public Builder ownerList(java.util.List<String> ownerList) {
                 this.ownerList = ownerList;
                 return this;
             }
@@ -365,7 +370,7 @@ public class ListNodesRequest extends Request {
             /**
              * PriorityList.
              */
-            public Builder priorityList(java.util.List < String > priorityList) {
+            public Builder priorityList(java.util.List<String> priorityList) {
                 this.priorityList = priorityList;
                 return this;
             }
@@ -392,7 +397,7 @@ public class ListNodesRequest extends Request {
             /**
              * SchedulePeriodList.
              */
-            public Builder schedulePeriodList(java.util.List < String > schedulePeriodList) {
+            public Builder schedulePeriodList(java.util.List<String> schedulePeriodList) {
                 this.schedulePeriodList = schedulePeriodList;
                 return this;
             }

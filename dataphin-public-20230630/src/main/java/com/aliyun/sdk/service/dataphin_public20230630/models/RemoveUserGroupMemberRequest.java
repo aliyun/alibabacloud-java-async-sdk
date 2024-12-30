@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -134,7 +139,7 @@ public class RemoveUserGroupMemberRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("UserIdList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < String > userIdList;
+        private java.util.List<String> userIdList;
 
         private RemoveCommand(Builder builder) {
             this.userGroupId = builder.userGroupId;
@@ -159,13 +164,13 @@ public class RemoveUserGroupMemberRequest extends Request {
         /**
          * @return userIdList
          */
-        public java.util.List < String > getUserIdList() {
+        public java.util.List<String> getUserIdList() {
             return this.userIdList;
         }
 
         public static final class Builder {
             private String userGroupId; 
-            private java.util.List < String > userIdList; 
+            private java.util.List<String> userIdList; 
 
             /**
              * <p>This parameter is required.</p>
@@ -181,7 +186,7 @@ public class RemoveUserGroupMemberRequest extends Request {
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder userIdList(java.util.List < String > userIdList) {
+            public Builder userIdList(java.util.List<String> userIdList) {
                 this.userIdList = userIdList;
                 return this;
             }

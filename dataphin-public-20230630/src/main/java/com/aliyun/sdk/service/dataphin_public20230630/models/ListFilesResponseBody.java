@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListFilesResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("FileList")
-    private java.util.List < FileList> fileList;
+    private java.util.List<FileList> fileList;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -57,7 +62,7 @@ public class ListFilesResponseBody extends TeaModel {
     /**
      * @return fileList
      */
-    public java.util.List < FileList> getFileList() {
+    public java.util.List<FileList> getFileList() {
         return this.fileList;
     }
 
@@ -91,7 +96,7 @@ public class ListFilesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < FileList> fileList; 
+        private java.util.List<FileList> fileList; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -108,7 +113,7 @@ public class ListFilesResponseBody extends TeaModel {
         /**
          * FileList.
          */
-        public Builder fileList(java.util.List < FileList> fileList) {
+        public Builder fileList(java.util.List<FileList> fileList) {
             this.fileList = fileList;
             return this;
         }

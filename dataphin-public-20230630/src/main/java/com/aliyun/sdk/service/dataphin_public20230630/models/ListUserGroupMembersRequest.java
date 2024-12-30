@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -143,7 +148,7 @@ public class ListUserGroupMembersRequest extends Request {
         private String userGroupId;
 
         @com.aliyun.core.annotation.NameInMap("UserIdList")
-        private java.util.List < String > userIdList;
+        private java.util.List<String> userIdList;
 
         private ListQuery(Builder builder) {
             this.keyword = builder.keyword;
@@ -192,7 +197,7 @@ public class ListUserGroupMembersRequest extends Request {
         /**
          * @return userIdList
          */
-        public java.util.List < String > getUserIdList() {
+        public java.util.List<String> getUserIdList() {
             return this.userIdList;
         }
 
@@ -201,7 +206,7 @@ public class ListUserGroupMembersRequest extends Request {
             private Integer pageNo; 
             private Integer pageSize; 
             private String userGroupId; 
-            private java.util.List < String > userIdList; 
+            private java.util.List<String> userIdList; 
 
             /**
              * Keyword.
@@ -244,7 +249,7 @@ public class ListUserGroupMembersRequest extends Request {
             /**
              * UserIdList.
              */
-            public Builder userIdList(java.util.List < String > userIdList) {
+            public Builder userIdList(java.util.List<String> userIdList) {
                 this.userIdList = userIdList;
                 return this;
             }

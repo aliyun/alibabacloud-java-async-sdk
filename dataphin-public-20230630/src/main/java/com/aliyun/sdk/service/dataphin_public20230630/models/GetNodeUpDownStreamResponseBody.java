@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -159,7 +164,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
      */
     public static class DownStreamNodeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldIdList")
-        private java.util.List < String > fieldIdList;
+        private java.util.List<String> fieldIdList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -188,7 +193,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         /**
          * @return fieldIdList
          */
-        public java.util.List < String > getFieldIdList() {
+        public java.util.List<String> getFieldIdList() {
             return this.fieldIdList;
         }
 
@@ -214,7 +219,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > fieldIdList; 
+            private java.util.List<String> fieldIdList; 
             private String id; 
             private String name; 
             private String type; 
@@ -222,7 +227,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
             /**
              * FieldIdList.
              */
-            public Builder fieldIdList(java.util.List < String > fieldIdList) {
+            public Builder fieldIdList(java.util.List<String> fieldIdList) {
                 this.fieldIdList = fieldIdList;
                 return this;
             }
@@ -266,7 +271,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
      */
     public static class StartNodeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldIdList")
-        private java.util.List < String > fieldIdList;
+        private java.util.List<String> fieldIdList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -295,7 +300,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         /**
          * @return fieldIdList
          */
-        public java.util.List < String > getFieldIdList() {
+        public java.util.List<String> getFieldIdList() {
             return this.fieldIdList;
         }
 
@@ -321,7 +326,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > fieldIdList; 
+            private java.util.List<String> fieldIdList; 
             private String id; 
             private String name; 
             private String type; 
@@ -329,7 +334,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
             /**
              * FieldIdList.
              */
-            public Builder fieldIdList(java.util.List < String > fieldIdList) {
+            public Builder fieldIdList(java.util.List<String> fieldIdList) {
                 this.fieldIdList = fieldIdList;
                 return this;
             }
@@ -373,7 +378,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
      */
     public static class UpStreamNodeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldIdList")
-        private java.util.List < String > fieldIdList;
+        private java.util.List<String> fieldIdList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -402,7 +407,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         /**
          * @return fieldIdList
          */
-        public java.util.List < String > getFieldIdList() {
+        public java.util.List<String> getFieldIdList() {
             return this.fieldIdList;
         }
 
@@ -428,7 +433,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > fieldIdList; 
+            private java.util.List<String> fieldIdList; 
             private String id; 
             private String name; 
             private String type; 
@@ -436,7 +441,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
             /**
              * FieldIdList.
              */
-            public Builder fieldIdList(java.util.List < String > fieldIdList) {
+            public Builder fieldIdList(java.util.List<String> fieldIdList) {
                 this.fieldIdList = fieldIdList;
                 return this;
             }
@@ -480,13 +485,13 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
      */
     public static class NodeDagInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownStreamNodeList")
-        private java.util.List < DownStreamNodeList> downStreamNodeList;
+        private java.util.List<DownStreamNodeList> downStreamNodeList;
 
         @com.aliyun.core.annotation.NameInMap("StartNodeList")
-        private java.util.List < StartNodeList> startNodeList;
+        private java.util.List<StartNodeList> startNodeList;
 
         @com.aliyun.core.annotation.NameInMap("UpStreamNodeList")
-        private java.util.List < UpStreamNodeList> upStreamNodeList;
+        private java.util.List<UpStreamNodeList> upStreamNodeList;
 
         private NodeDagInfo(Builder builder) {
             this.downStreamNodeList = builder.downStreamNodeList;
@@ -505,33 +510,33 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
         /**
          * @return downStreamNodeList
          */
-        public java.util.List < DownStreamNodeList> getDownStreamNodeList() {
+        public java.util.List<DownStreamNodeList> getDownStreamNodeList() {
             return this.downStreamNodeList;
         }
 
         /**
          * @return startNodeList
          */
-        public java.util.List < StartNodeList> getStartNodeList() {
+        public java.util.List<StartNodeList> getStartNodeList() {
             return this.startNodeList;
         }
 
         /**
          * @return upStreamNodeList
          */
-        public java.util.List < UpStreamNodeList> getUpStreamNodeList() {
+        public java.util.List<UpStreamNodeList> getUpStreamNodeList() {
             return this.upStreamNodeList;
         }
 
         public static final class Builder {
-            private java.util.List < DownStreamNodeList> downStreamNodeList; 
-            private java.util.List < StartNodeList> startNodeList; 
-            private java.util.List < UpStreamNodeList> upStreamNodeList; 
+            private java.util.List<DownStreamNodeList> downStreamNodeList; 
+            private java.util.List<StartNodeList> startNodeList; 
+            private java.util.List<UpStreamNodeList> upStreamNodeList; 
 
             /**
              * DownStreamNodeList.
              */
-            public Builder downStreamNodeList(java.util.List < DownStreamNodeList> downStreamNodeList) {
+            public Builder downStreamNodeList(java.util.List<DownStreamNodeList> downStreamNodeList) {
                 this.downStreamNodeList = downStreamNodeList;
                 return this;
             }
@@ -539,7 +544,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
             /**
              * StartNodeList.
              */
-            public Builder startNodeList(java.util.List < StartNodeList> startNodeList) {
+            public Builder startNodeList(java.util.List<StartNodeList> startNodeList) {
                 this.startNodeList = startNodeList;
                 return this;
             }
@@ -547,7 +552,7 @@ public class GetNodeUpDownStreamResponseBody extends TeaModel {
             /**
              * UpStreamNodeList.
              */
-            public Builder upStreamNodeList(java.util.List < UpStreamNodeList> upStreamNodeList) {
+            public Builder upStreamNodeList(java.util.List<UpStreamNodeList> upStreamNodeList) {
                 this.upStreamNodeList = upStreamNodeList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -19,7 +24,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
     private Integer httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("InstanceRelationList")
-    private java.util.List < InstanceRelationList> instanceRelationList;
+    private java.util.List<InstanceRelationList> instanceRelationList;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -64,7 +69,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
     /**
      * @return instanceRelationList
      */
-    public java.util.List < InstanceRelationList> getInstanceRelationList() {
+    public java.util.List<InstanceRelationList> getInstanceRelationList() {
         return this.instanceRelationList;
     }
 
@@ -92,7 +97,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
-        private java.util.List < InstanceRelationList> instanceRelationList; 
+        private java.util.List<InstanceRelationList> instanceRelationList; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -116,7 +121,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         /**
          * InstanceRelationList.
          */
-        public Builder instanceRelationList(java.util.List < InstanceRelationList> instanceRelationList) {
+        public Builder instanceRelationList(java.util.List<InstanceRelationList> instanceRelationList) {
             this.instanceRelationList = instanceRelationList;
             return this;
         }
@@ -339,7 +344,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         private String extendInfo;
 
         @com.aliyun.core.annotation.NameInMap("FieldInstanceList")
-        private java.util.List < FieldInstanceList> fieldInstanceList;
+        private java.util.List<FieldInstanceList> fieldInstanceList;
 
         @com.aliyun.core.annotation.NameInMap("InstanceInfo")
         private InstanceInfo instanceInfo;
@@ -388,7 +393,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         /**
          * @return fieldInstanceList
          */
-        public java.util.List < FieldInstanceList> getFieldInstanceList() {
+        public java.util.List<FieldInstanceList> getFieldInstanceList() {
             return this.fieldInstanceList;
         }
 
@@ -423,7 +428,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         public static final class Builder {
             private Integer downStreamDepth; 
             private String extendInfo; 
-            private java.util.List < FieldInstanceList> fieldInstanceList; 
+            private java.util.List<FieldInstanceList> fieldInstanceList; 
             private InstanceInfo instanceInfo; 
             private String runStatus; 
             private String selectStatus; 
@@ -448,7 +453,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             /**
              * FieldInstanceList.
              */
-            public Builder fieldInstanceList(java.util.List < FieldInstanceList> fieldInstanceList) {
+            public Builder fieldInstanceList(java.util.List<FieldInstanceList> fieldInstanceList) {
                 this.fieldInstanceList = fieldInstanceList;
                 return this;
             }

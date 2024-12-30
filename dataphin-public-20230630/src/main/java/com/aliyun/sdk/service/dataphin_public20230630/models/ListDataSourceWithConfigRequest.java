@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -132,7 +137,7 @@ public class ListDataSourceWithConfigRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("OwnerList")
-        private java.util.List < String > ownerList;
+        private java.util.List<String> ownerList;
 
         @com.aliyun.core.annotation.NameInMap("Page")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -143,13 +148,13 @@ public class ListDataSourceWithConfigRequest extends Request {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("ScopeList")
-        private java.util.List < String > scopeList;
+        private java.util.List<String> scopeList;
 
         @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         @com.aliyun.core.annotation.NameInMap("TypeList")
-        private java.util.List < String > typeList;
+        private java.util.List<String> typeList;
 
         private ListQuery(Builder builder) {
             this.name = builder.name;
@@ -179,7 +184,7 @@ public class ListDataSourceWithConfigRequest extends Request {
         /**
          * @return ownerList
          */
-        public java.util.List < String > getOwnerList() {
+        public java.util.List<String> getOwnerList() {
             return this.ownerList;
         }
 
@@ -200,7 +205,7 @@ public class ListDataSourceWithConfigRequest extends Request {
         /**
          * @return scopeList
          */
-        public java.util.List < String > getScopeList() {
+        public java.util.List<String> getScopeList() {
             return this.scopeList;
         }
 
@@ -214,18 +219,18 @@ public class ListDataSourceWithConfigRequest extends Request {
         /**
          * @return typeList
          */
-        public java.util.List < String > getTypeList() {
+        public java.util.List<String> getTypeList() {
             return this.typeList;
         }
 
         public static final class Builder {
             private String name; 
-            private java.util.List < String > ownerList; 
+            private java.util.List<String> ownerList; 
             private Integer page; 
             private Integer pageSize; 
-            private java.util.List < String > scopeList; 
+            private java.util.List<String> scopeList; 
             private String tag; 
-            private java.util.List < String > typeList; 
+            private java.util.List<String> typeList; 
 
             /**
              * Name.
@@ -238,7 +243,7 @@ public class ListDataSourceWithConfigRequest extends Request {
             /**
              * OwnerList.
              */
-            public Builder ownerList(java.util.List < String > ownerList) {
+            public Builder ownerList(java.util.List<String> ownerList) {
                 this.ownerList = ownerList;
                 return this;
             }
@@ -268,7 +273,7 @@ public class ListDataSourceWithConfigRequest extends Request {
             /**
              * ScopeList.
              */
-            public Builder scopeList(java.util.List < String > scopeList) {
+            public Builder scopeList(java.util.List<String> scopeList) {
                 this.scopeList = scopeList;
                 return this;
             }
@@ -284,7 +289,7 @@ public class ListDataSourceWithConfigRequest extends Request {
             /**
              * TypeList.
              */
-            public Builder typeList(java.util.List < String > typeList) {
+            public Builder typeList(java.util.List<String> typeList) {
                 this.typeList = typeList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -132,7 +137,7 @@ public class AddTenantMembersRequest extends Request {
         private String id;
 
         @com.aliyun.core.annotation.NameInMap("RoleList")
-        private java.util.List < String > roleList;
+        private java.util.List<String> roleList;
 
         private UserList(Builder builder) {
             this.id = builder.id;
@@ -157,13 +162,13 @@ public class AddTenantMembersRequest extends Request {
         /**
          * @return roleList
          */
-        public java.util.List < String > getRoleList() {
+        public java.util.List<String> getRoleList() {
             return this.roleList;
         }
 
         public static final class Builder {
             private String id; 
-            private java.util.List < String > roleList; 
+            private java.util.List<String> roleList; 
 
             /**
              * Id.
@@ -176,7 +181,7 @@ public class AddTenantMembersRequest extends Request {
             /**
              * RoleList.
              */
-            public Builder roleList(java.util.List < String > roleList) {
+            public Builder roleList(java.util.List<String> roleList) {
                 this.roleList = roleList;
                 return this;
             }
@@ -197,7 +202,7 @@ public class AddTenantMembersRequest extends Request {
     public static class AddCommand extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserList")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < UserList> userList;
+        private java.util.List<UserList> userList;
 
         private AddCommand(Builder builder) {
             this.userList = builder.userList;
@@ -214,17 +219,17 @@ public class AddTenantMembersRequest extends Request {
         /**
          * @return userList
          */
-        public java.util.List < UserList> getUserList() {
+        public java.util.List<UserList> getUserList() {
             return this.userList;
         }
 
         public static final class Builder {
-            private java.util.List < UserList> userList; 
+            private java.util.List<UserList> userList; 
 
             /**
              * <p>This parameter is required.</p>
              */
-            public Builder userList(java.util.List < UserList> userList) {
+            public Builder userList(java.util.List<UserList> userList) {
                 this.userList = userList;
                 return this;
             }

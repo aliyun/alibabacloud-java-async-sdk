@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -463,7 +468,7 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
         private String operatorType;
 
         @com.aliyun.core.annotation.NameInMap("OutputNameList")
-        private java.util.List < String > outputNameList;
+        private java.util.List<String> outputNameList;
 
         @com.aliyun.core.annotation.NameInMap("Owner")
         private Owner owner;
@@ -600,7 +605,7 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
         /**
          * @return outputNameList
          */
-        public java.util.List < String > getOutputNameList() {
+        public java.util.List<String> getOutputNameList() {
             return this.outputNameList;
         }
 
@@ -659,7 +664,7 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             private Modifier modifier; 
             private String name; 
             private String operatorType; 
-            private java.util.List < String > outputNameList; 
+            private java.util.List<String> outputNameList; 
             private Owner owner; 
             private String priority; 
             private ProjectInfo projectInfo; 
@@ -766,7 +771,7 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             /**
              * OutputNameList.
              */
-            public Builder outputNameList(java.util.List < String > outputNameList) {
+            public Builder outputNameList(java.util.List<String> outputNameList) {
                 this.outputNameList = outputNameList;
                 return this;
             }

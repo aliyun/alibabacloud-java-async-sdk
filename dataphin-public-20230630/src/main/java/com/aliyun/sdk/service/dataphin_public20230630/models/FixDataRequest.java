@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -152,7 +157,7 @@ public class FixDataRequest extends Request {
      */
     public static class DownStreamInstanceIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldInstanceIdList")
-        private java.util.List < String > fieldInstanceIdList;
+        private java.util.List<String> fieldInstanceIdList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -173,7 +178,7 @@ public class FixDataRequest extends Request {
         /**
          * @return fieldInstanceIdList
          */
-        public java.util.List < String > getFieldInstanceIdList() {
+        public java.util.List<String> getFieldInstanceIdList() {
             return this.fieldInstanceIdList;
         }
 
@@ -185,13 +190,13 @@ public class FixDataRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > fieldInstanceIdList; 
+            private java.util.List<String> fieldInstanceIdList; 
             private String id; 
 
             /**
              * FieldInstanceIdList.
              */
-            public Builder fieldInstanceIdList(java.util.List < String > fieldInstanceIdList) {
+            public Builder fieldInstanceIdList(java.util.List<String> fieldInstanceIdList) {
                 this.fieldInstanceIdList = fieldInstanceIdList;
                 return this;
             }
@@ -219,7 +224,7 @@ public class FixDataRequest extends Request {
      */
     public static class RootInstanceId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldInstanceIdList")
-        private java.util.List < String > fieldInstanceIdList;
+        private java.util.List<String> fieldInstanceIdList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -241,7 +246,7 @@ public class FixDataRequest extends Request {
         /**
          * @return fieldInstanceIdList
          */
-        public java.util.List < String > getFieldInstanceIdList() {
+        public java.util.List<String> getFieldInstanceIdList() {
             return this.fieldInstanceIdList;
         }
 
@@ -253,13 +258,13 @@ public class FixDataRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > fieldInstanceIdList; 
+            private java.util.List<String> fieldInstanceIdList; 
             private String id; 
 
             /**
              * FieldInstanceIdList.
              */
-            public Builder fieldInstanceIdList(java.util.List < String > fieldInstanceIdList) {
+            public Builder fieldInstanceIdList(java.util.List<String> fieldInstanceIdList) {
                 this.fieldInstanceIdList = fieldInstanceIdList;
                 return this;
             }
@@ -293,7 +298,7 @@ public class FixDataRequest extends Request {
         private Boolean containRootInstance;
 
         @com.aliyun.core.annotation.NameInMap("DownStreamInstanceIdList")
-        private java.util.List < DownStreamInstanceIdList> downStreamInstanceIdList;
+        private java.util.List<DownStreamInstanceIdList> downStreamInstanceIdList;
 
         @com.aliyun.core.annotation.NameInMap("DownstreamRange")
         private String downstreamRange;
@@ -336,7 +341,7 @@ public class FixDataRequest extends Request {
         /**
          * @return downStreamInstanceIdList
          */
-        public java.util.List < DownStreamInstanceIdList> getDownStreamInstanceIdList() {
+        public java.util.List<DownStreamInstanceIdList> getDownStreamInstanceIdList() {
             return this.downStreamInstanceIdList;
         }
 
@@ -370,7 +375,7 @@ public class FixDataRequest extends Request {
 
         public static final class Builder {
             private Boolean containRootInstance; 
-            private java.util.List < DownStreamInstanceIdList> downStreamInstanceIdList; 
+            private java.util.List<DownStreamInstanceIdList> downStreamInstanceIdList; 
             private String downstreamRange; 
             private Boolean forceRerun; 
             private Long projectId; 
@@ -387,7 +392,7 @@ public class FixDataRequest extends Request {
             /**
              * DownStreamInstanceIdList.
              */
-            public Builder downStreamInstanceIdList(java.util.List < DownStreamInstanceIdList> downStreamInstanceIdList) {
+            public Builder downStreamInstanceIdList(java.util.List<DownStreamInstanceIdList> downStreamInstanceIdList) {
                 this.downStreamInstanceIdList = downStreamInstanceIdList;
                 return this;
             }

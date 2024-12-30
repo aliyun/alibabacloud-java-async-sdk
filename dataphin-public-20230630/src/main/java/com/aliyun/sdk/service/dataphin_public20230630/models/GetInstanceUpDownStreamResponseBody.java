@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataphin_public20230630.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -159,7 +164,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
      */
     public static class DownInstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldInstanceIdList")
-        private java.util.List < String > fieldInstanceIdList;
+        private java.util.List<String> fieldInstanceIdList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -192,7 +197,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         /**
          * @return fieldInstanceIdList
          */
-        public java.util.List < String > getFieldInstanceIdList() {
+        public java.util.List<String> getFieldInstanceIdList() {
             return this.fieldInstanceIdList;
         }
 
@@ -225,7 +230,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > fieldInstanceIdList; 
+            private java.util.List<String> fieldInstanceIdList; 
             private String id; 
             private String name; 
             private String nodeId; 
@@ -234,7 +239,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             /**
              * FieldInstanceIdList.
              */
-            public Builder fieldInstanceIdList(java.util.List < String > fieldInstanceIdList) {
+            public Builder fieldInstanceIdList(java.util.List<String> fieldInstanceIdList) {
                 this.fieldInstanceIdList = fieldInstanceIdList;
                 return this;
             }
@@ -286,7 +291,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
      */
     public static class StartInstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldInstanceIdList")
-        private java.util.List < String > fieldInstanceIdList;
+        private java.util.List<String> fieldInstanceIdList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -319,7 +324,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         /**
          * @return fieldInstanceIdList
          */
-        public java.util.List < String > getFieldInstanceIdList() {
+        public java.util.List<String> getFieldInstanceIdList() {
             return this.fieldInstanceIdList;
         }
 
@@ -352,7 +357,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > fieldInstanceIdList; 
+            private java.util.List<String> fieldInstanceIdList; 
             private String id; 
             private String name; 
             private String nodeId; 
@@ -361,7 +366,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             /**
              * FieldInstanceIdList.
              */
-            public Builder fieldInstanceIdList(java.util.List < String > fieldInstanceIdList) {
+            public Builder fieldInstanceIdList(java.util.List<String> fieldInstanceIdList) {
                 this.fieldInstanceIdList = fieldInstanceIdList;
                 return this;
             }
@@ -413,7 +418,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
      */
     public static class UpInstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldInstanceIdList")
-        private java.util.List < String > fieldInstanceIdList;
+        private java.util.List<String> fieldInstanceIdList;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -446,7 +451,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         /**
          * @return fieldInstanceIdList
          */
-        public java.util.List < String > getFieldInstanceIdList() {
+        public java.util.List<String> getFieldInstanceIdList() {
             return this.fieldInstanceIdList;
         }
 
@@ -479,7 +484,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > fieldInstanceIdList; 
+            private java.util.List<String> fieldInstanceIdList; 
             private String id; 
             private String name; 
             private String nodeId; 
@@ -488,7 +493,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             /**
              * FieldInstanceIdList.
              */
-            public Builder fieldInstanceIdList(java.util.List < String > fieldInstanceIdList) {
+            public Builder fieldInstanceIdList(java.util.List<String> fieldInstanceIdList) {
                 this.fieldInstanceIdList = fieldInstanceIdList;
                 return this;
             }
@@ -540,13 +545,13 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
      */
     public static class InstanceDagInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownInstanceList")
-        private java.util.List < DownInstanceList> downInstanceList;
+        private java.util.List<DownInstanceList> downInstanceList;
 
         @com.aliyun.core.annotation.NameInMap("StartInstanceList")
-        private java.util.List < StartInstanceList> startInstanceList;
+        private java.util.List<StartInstanceList> startInstanceList;
 
         @com.aliyun.core.annotation.NameInMap("UpInstanceList")
-        private java.util.List < UpInstanceList> upInstanceList;
+        private java.util.List<UpInstanceList> upInstanceList;
 
         private InstanceDagInfo(Builder builder) {
             this.downInstanceList = builder.downInstanceList;
@@ -565,33 +570,33 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         /**
          * @return downInstanceList
          */
-        public java.util.List < DownInstanceList> getDownInstanceList() {
+        public java.util.List<DownInstanceList> getDownInstanceList() {
             return this.downInstanceList;
         }
 
         /**
          * @return startInstanceList
          */
-        public java.util.List < StartInstanceList> getStartInstanceList() {
+        public java.util.List<StartInstanceList> getStartInstanceList() {
             return this.startInstanceList;
         }
 
         /**
          * @return upInstanceList
          */
-        public java.util.List < UpInstanceList> getUpInstanceList() {
+        public java.util.List<UpInstanceList> getUpInstanceList() {
             return this.upInstanceList;
         }
 
         public static final class Builder {
-            private java.util.List < DownInstanceList> downInstanceList; 
-            private java.util.List < StartInstanceList> startInstanceList; 
-            private java.util.List < UpInstanceList> upInstanceList; 
+            private java.util.List<DownInstanceList> downInstanceList; 
+            private java.util.List<StartInstanceList> startInstanceList; 
+            private java.util.List<UpInstanceList> upInstanceList; 
 
             /**
              * DownInstanceList.
              */
-            public Builder downInstanceList(java.util.List < DownInstanceList> downInstanceList) {
+            public Builder downInstanceList(java.util.List<DownInstanceList> downInstanceList) {
                 this.downInstanceList = downInstanceList;
                 return this;
             }
@@ -599,7 +604,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             /**
              * StartInstanceList.
              */
-            public Builder startInstanceList(java.util.List < StartInstanceList> startInstanceList) {
+            public Builder startInstanceList(java.util.List<StartInstanceList> startInstanceList) {
                 this.startInstanceList = startInstanceList;
                 return this;
             }
@@ -607,7 +612,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             /**
              * UpInstanceList.
              */
-            public Builder upInstanceList(java.util.List < UpInstanceList> upInstanceList) {
+            public Builder upInstanceList(java.util.List<UpInstanceList> upInstanceList) {
                 this.upInstanceList = upInstanceList;
                 return this;
             }
