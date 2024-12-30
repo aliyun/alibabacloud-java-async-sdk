@@ -949,6 +949,9 @@ public class RunStepByStepWritingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Step")
         private String step;
 
+        @com.aliyun.core.annotation.NameInMap("SummaryReturnType")
+        private String summaryReturnType;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -961,6 +964,7 @@ public class RunStepByStepWritingRequest extends Request {
             this.promptTag = builder.promptTag;
             this.scene = builder.scene;
             this.step = builder.step;
+            this.summaryReturnType = builder.summaryReturnType;
             this.tags = builder.tags;
             this.useSearch = builder.useSearch;
         }
@@ -1009,6 +1013,13 @@ public class RunStepByStepWritingRequest extends Request {
         }
 
         /**
+         * @return summaryReturnType
+         */
+        public String getSummaryReturnType() {
+            return this.summaryReturnType;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -1028,6 +1039,7 @@ public class RunStepByStepWritingRequest extends Request {
             private PromptTag promptTag; 
             private String scene; 
             private String step; 
+            private String summaryReturnType; 
             private java.util.List<Tags> tags; 
             private Boolean useSearch; 
 
@@ -1068,6 +1080,14 @@ public class RunStepByStepWritingRequest extends Request {
              */
             public Builder step(String step) {
                 this.step = step;
+                return this;
+            }
+
+            /**
+             * SummaryReturnType.
+             */
+            public Builder summaryReturnType(String summaryReturnType) {
+                this.summaryReturnType = summaryReturnType;
                 return this;
             }
 
