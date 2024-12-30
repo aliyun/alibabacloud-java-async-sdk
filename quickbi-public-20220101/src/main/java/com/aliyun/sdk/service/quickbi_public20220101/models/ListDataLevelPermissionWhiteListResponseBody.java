@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -99,10 +104,10 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
      */
     public static class UsersModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserGroups")
-        private java.util.List < String > userGroups;
+        private java.util.List<String> userGroups;
 
         @com.aliyun.core.annotation.NameInMap("Users")
-        private java.util.List < String > users;
+        private java.util.List<String> users;
 
         private UsersModel(Builder builder) {
             this.userGroups = builder.userGroups;
@@ -120,25 +125,25 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
         /**
          * @return userGroups
          */
-        public java.util.List < String > getUserGroups() {
+        public java.util.List<String> getUserGroups() {
             return this.userGroups;
         }
 
         /**
          * @return users
          */
-        public java.util.List < String > getUsers() {
+        public java.util.List<String> getUsers() {
             return this.users;
         }
 
         public static final class Builder {
-            private java.util.List < String > userGroups; 
-            private java.util.List < String > users; 
+            private java.util.List<String> userGroups; 
+            private java.util.List<String> users; 
 
             /**
              * UserGroups.
              */
-            public Builder userGroups(java.util.List < String > userGroups) {
+            public Builder userGroups(java.util.List<String> userGroups) {
                 this.userGroups = userGroups;
                 return this;
             }
@@ -146,7 +151,7 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
             /**
              * Users.
              */
-            public Builder users(java.util.List < String > users) {
+            public Builder users(java.util.List<String> users) {
                 this.users = users;
                 return this;
             }

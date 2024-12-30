@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -146,7 +151,7 @@ public class QueryOrganizationRoleConfigResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthConfigList")
-        private java.util.List < AuthConfigList> authConfigList;
+        private java.util.List<AuthConfigList> authConfigList;
 
         @com.aliyun.core.annotation.NameInMap("IsSystemRole")
         private Boolean isSystemRole;
@@ -175,7 +180,7 @@ public class QueryOrganizationRoleConfigResponseBody extends TeaModel {
         /**
          * @return authConfigList
          */
-        public java.util.List < AuthConfigList> getAuthConfigList() {
+        public java.util.List<AuthConfigList> getAuthConfigList() {
             return this.authConfigList;
         }
 
@@ -201,7 +206,7 @@ public class QueryOrganizationRoleConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AuthConfigList> authConfigList; 
+            private java.util.List<AuthConfigList> authConfigList; 
             private Boolean isSystemRole; 
             private Long roleId; 
             private String roleName; 
@@ -209,7 +214,7 @@ public class QueryOrganizationRoleConfigResponseBody extends TeaModel {
             /**
              * AuthConfigList.
              */
-            public Builder authConfigList(java.util.List < AuthConfigList> authConfigList) {
+            public Builder authConfigList(java.util.List<AuthConfigList> authConfigList) {
                 this.authConfigList = authConfigList;
                 return this;
             }

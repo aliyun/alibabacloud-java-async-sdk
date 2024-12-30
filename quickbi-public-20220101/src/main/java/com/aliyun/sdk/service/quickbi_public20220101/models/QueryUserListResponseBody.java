@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -120,7 +125,7 @@ public class QueryUserListResponseBody extends TeaModel {
         private String nickName;
 
         @com.aliyun.core.annotation.NameInMap("RoleIdList")
-        private java.util.List < Long > roleIdList;
+        private java.util.List<Long> roleIdList;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -201,7 +206,7 @@ public class QueryUserListResponseBody extends TeaModel {
         /**
          * @return roleIdList
          */
-        public java.util.List < Long > getRoleIdList() {
+        public java.util.List<Long> getRoleIdList() {
             return this.roleIdList;
         }
 
@@ -227,7 +232,7 @@ public class QueryUserListResponseBody extends TeaModel {
             private Long joinedDate; 
             private Long lastLoginTime; 
             private String nickName; 
-            private java.util.List < Long > roleIdList; 
+            private java.util.List<Long> roleIdList; 
             private String userId; 
             private Integer userType; 
 
@@ -290,7 +295,7 @@ public class QueryUserListResponseBody extends TeaModel {
             /**
              * RoleIdList.
              */
-            public Builder roleIdList(java.util.List < Long > roleIdList) {
+            public Builder roleIdList(java.util.List<Long> roleIdList) {
                 this.roleIdList = roleIdList;
                 return this;
             }
@@ -326,7 +331,7 @@ public class QueryUserListResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
@@ -359,7 +364,7 @@ public class QueryUserListResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -392,7 +397,7 @@ public class QueryUserListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalNum; 
@@ -401,7 +406,7 @@ public class QueryUserListResponseBody extends TeaModel {
             /**
              * Data.
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

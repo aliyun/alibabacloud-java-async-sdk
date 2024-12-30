@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -99,7 +104,7 @@ public class QueryWorkspaceRoleConfigResponseBody extends TeaModel {
      */
     public static class AuthConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionAuthKeys")
-        private java.util.List < String > actionAuthKeys;
+        private java.util.List<String> actionAuthKeys;
 
         @com.aliyun.core.annotation.NameInMap("AuthKey")
         private String authKey;
@@ -120,7 +125,7 @@ public class QueryWorkspaceRoleConfigResponseBody extends TeaModel {
         /**
          * @return actionAuthKeys
          */
-        public java.util.List < String > getActionAuthKeys() {
+        public java.util.List<String> getActionAuthKeys() {
             return this.actionAuthKeys;
         }
 
@@ -132,13 +137,13 @@ public class QueryWorkspaceRoleConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > actionAuthKeys; 
+            private java.util.List<String> actionAuthKeys; 
             private String authKey; 
 
             /**
              * ActionAuthKeys.
              */
-            public Builder actionAuthKeys(java.util.List < String > actionAuthKeys) {
+            public Builder actionAuthKeys(java.util.List<String> actionAuthKeys) {
                 this.actionAuthKeys = actionAuthKeys;
                 return this;
             }
@@ -166,7 +171,7 @@ public class QueryWorkspaceRoleConfigResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthConfigList")
-        private java.util.List < AuthConfigList> authConfigList;
+        private java.util.List<AuthConfigList> authConfigList;
 
         @com.aliyun.core.annotation.NameInMap("IsSystemRole")
         private Boolean isSystemRole;
@@ -195,7 +200,7 @@ public class QueryWorkspaceRoleConfigResponseBody extends TeaModel {
         /**
          * @return authConfigList
          */
-        public java.util.List < AuthConfigList> getAuthConfigList() {
+        public java.util.List<AuthConfigList> getAuthConfigList() {
             return this.authConfigList;
         }
 
@@ -221,7 +226,7 @@ public class QueryWorkspaceRoleConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AuthConfigList> authConfigList; 
+            private java.util.List<AuthConfigList> authConfigList; 
             private Boolean isSystemRole; 
             private Long roleId; 
             private String roleName; 
@@ -229,7 +234,7 @@ public class QueryWorkspaceRoleConfigResponseBody extends TeaModel {
             /**
              * AuthConfigList.
              */
-            public Builder authConfigList(java.util.List < AuthConfigList> authConfigList) {
+            public Builder authConfigList(java.util.List<AuthConfigList> authConfigList) {
                 this.authConfigList = authConfigList;
                 return this;
             }

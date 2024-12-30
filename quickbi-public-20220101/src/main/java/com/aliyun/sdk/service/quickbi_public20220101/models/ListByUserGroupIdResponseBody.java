@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -343,10 +348,10 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedUserGroupIds")
-        private java.util.List < String > failedUserGroupIds;
+        private java.util.List<String> failedUserGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("UserGroupModels")
-        private java.util.List < UserGroupModels> userGroupModels;
+        private java.util.List<UserGroupModels> userGroupModels;
 
         private Result(Builder builder) {
             this.failedUserGroupIds = builder.failedUserGroupIds;
@@ -364,25 +369,25 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
         /**
          * @return failedUserGroupIds
          */
-        public java.util.List < String > getFailedUserGroupIds() {
+        public java.util.List<String> getFailedUserGroupIds() {
             return this.failedUserGroupIds;
         }
 
         /**
          * @return userGroupModels
          */
-        public java.util.List < UserGroupModels> getUserGroupModels() {
+        public java.util.List<UserGroupModels> getUserGroupModels() {
             return this.userGroupModels;
         }
 
         public static final class Builder {
-            private java.util.List < String > failedUserGroupIds; 
-            private java.util.List < UserGroupModels> userGroupModels; 
+            private java.util.List<String> failedUserGroupIds; 
+            private java.util.List<UserGroupModels> userGroupModels; 
 
             /**
              * FailedUserGroupIds.
              */
-            public Builder failedUserGroupIds(java.util.List < String > failedUserGroupIds) {
+            public Builder failedUserGroupIds(java.util.List<String> failedUserGroupIds) {
                 this.failedUserGroupIds = failedUserGroupIds;
                 return this;
             }
@@ -390,7 +395,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             /**
              * <p>The details of the user group that was queried.</p>
              */
-            public Builder userGroupModels(java.util.List < UserGroupModels> userGroupModels) {
+            public Builder userGroupModels(java.util.List<UserGroupModels> userGroupModels) {
                 this.userGroupModels = userGroupModels;
                 return this;
             }

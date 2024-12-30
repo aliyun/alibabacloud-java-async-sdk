@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -278,13 +283,13 @@ public class QueryDataServiceResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Headers")
-        private java.util.List < Headers> headers;
+        private java.util.List<Headers> headers;
 
         @com.aliyun.core.annotation.NameInMap("Sql")
         private String sql;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < java.util.Map<String, ?>> values;
+        private java.util.List<java.util.Map<String, ?>> values;
 
         private Result(Builder builder) {
             this.headers = builder.headers;
@@ -303,7 +308,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
         /**
          * @return headers
          */
-        public java.util.List < Headers> getHeaders() {
+        public java.util.List<Headers> getHeaders() {
             return this.headers;
         }
 
@@ -317,19 +322,19 @@ public class QueryDataServiceResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < java.util.Map<String, ?>> getValues() {
+        public java.util.List<java.util.Map<String, ?>> getValues() {
             return this.values;
         }
 
         public static final class Builder {
-            private java.util.List < Headers> headers; 
+            private java.util.List<Headers> headers; 
             private String sql; 
-            private java.util.List < java.util.Map<String, ?>> values; 
+            private java.util.List<java.util.Map<String, ?>> values; 
 
             /**
              * <p>The SQL of the request query.</p>
              */
-            public Builder headers(java.util.List < Headers> headers) {
+            public Builder headers(java.util.List<Headers> headers) {
                 this.headers = headers;
                 return this;
             }
@@ -348,7 +353,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
             /**
              * <p>Physical Field Name</p>
              */
-            public Builder values(java.util.List < java.util.Map<String, ?>> values) {
+            public Builder values(java.util.List<java.util.Map<String, ?>> values) {
                 this.values = values;
                 return this;
             }

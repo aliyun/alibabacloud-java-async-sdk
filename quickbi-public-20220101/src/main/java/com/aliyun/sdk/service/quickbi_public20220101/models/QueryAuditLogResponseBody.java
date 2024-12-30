@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryAuditLogResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -45,7 +50,7 @@ public class QueryAuditLogResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -58,7 +63,7 @@ public class QueryAuditLogResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
@@ -72,7 +77,7 @@ public class QueryAuditLogResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -110,6 +115,9 @@ public class QueryAuditLogResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperatorType")
         private String operatorType;
 
+        @com.aliyun.core.annotation.NameInMap("TargetId")
+        private String targetId;
+
         @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
@@ -124,6 +132,7 @@ public class QueryAuditLogResponseBody extends TeaModel {
             this.operatorAccountName = builder.operatorAccountName;
             this.operatorName = builder.operatorName;
             this.operatorType = builder.operatorType;
+            this.targetId = builder.targetId;
             this.targetName = builder.targetName;
             this.targetType = builder.targetType;
             this.workspaceId = builder.workspaceId;
@@ -166,6 +175,13 @@ public class QueryAuditLogResponseBody extends TeaModel {
         }
 
         /**
+         * @return targetId
+         */
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        /**
          * @return targetName
          */
         public String getTargetName() {
@@ -191,6 +207,7 @@ public class QueryAuditLogResponseBody extends TeaModel {
             private String operatorAccountName; 
             private String operatorName; 
             private String operatorType; 
+            private String targetId; 
             private String targetName; 
             private String targetType; 
             private String workspaceId; 
@@ -224,6 +241,14 @@ public class QueryAuditLogResponseBody extends TeaModel {
              */
             public Builder operatorType(String operatorType) {
                 this.operatorType = operatorType;
+                return this;
+            }
+
+            /**
+             * TargetId.
+             */
+            public Builder targetId(String targetId) {
+                this.targetId = targetId;
                 return this;
             }
 

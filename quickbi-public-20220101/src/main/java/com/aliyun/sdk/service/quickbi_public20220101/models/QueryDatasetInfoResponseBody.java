@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -934,7 +939,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CubeTableList")
-        private java.util.List < CubeTableList> cubeTableList;
+        private java.util.List<CubeTableList> cubeTableList;
 
         @com.aliyun.core.annotation.NameInMap("CustimzeSql")
         private Boolean custimzeSql;
@@ -946,7 +951,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         private String datasetName;
 
         @com.aliyun.core.annotation.NameInMap("DimensionList")
-        private java.util.List < DimensionList> dimensionList;
+        private java.util.List<DimensionList> dimensionList;
 
         @com.aliyun.core.annotation.NameInMap("Directory")
         private Directory directory;
@@ -967,7 +972,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         private String gmtModify;
 
         @com.aliyun.core.annotation.NameInMap("MeasureList")
-        private java.util.List < MeasureList> measureList;
+        private java.util.List<MeasureList> measureList;
 
         @com.aliyun.core.annotation.NameInMap("OpenOfflineAcceleration")
         private Boolean openOfflineAcceleration;
@@ -1019,7 +1024,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         /**
          * @return cubeTableList
          */
-        public java.util.List < CubeTableList> getCubeTableList() {
+        public java.util.List<CubeTableList> getCubeTableList() {
             return this.cubeTableList;
         }
 
@@ -1047,7 +1052,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         /**
          * @return dimensionList
          */
-        public java.util.List < DimensionList> getDimensionList() {
+        public java.util.List<DimensionList> getDimensionList() {
             return this.dimensionList;
         }
 
@@ -1096,7 +1101,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         /**
          * @return measureList
          */
-        public java.util.List < MeasureList> getMeasureList() {
+        public java.util.List<MeasureList> getMeasureList() {
             return this.measureList;
         }
 
@@ -1143,18 +1148,18 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CubeTableList> cubeTableList; 
+            private java.util.List<CubeTableList> cubeTableList; 
             private Boolean custimzeSql; 
             private String datasetId; 
             private String datasetName; 
-            private java.util.List < DimensionList> dimensionList; 
+            private java.util.List<DimensionList> dimensionList; 
             private Directory directory; 
             private String dsId; 
             private String dsName; 
             private String dsType; 
             private String gmtCreate; 
             private String gmtModify; 
-            private java.util.List < MeasureList> measureList; 
+            private java.util.List<MeasureList> measureList; 
             private Boolean openOfflineAcceleration; 
             private String ownerId; 
             private String ownerName; 
@@ -1165,7 +1170,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             /**
              * <p>The unique ID of the dataset.</p>
              */
-            public Builder cubeTableList(java.util.List < CubeTableList> cubeTableList) {
+            public Builder cubeTableList(java.util.List<CubeTableList> cubeTableList) {
                 this.cubeTableList = cubeTableList;
                 return this;
             }
@@ -1212,7 +1217,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             /**
              * <p>If it is a custom SQL table, this is the specific SQL.</p>
              */
-            public Builder dimensionList(java.util.List < DimensionList> dimensionList) {
+            public Builder dimensionList(java.util.List<DimensionList> dimensionList) {
                 this.dimensionList = dimensionList;
                 return this;
             }
@@ -1287,7 +1292,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             /**
              * <p>The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.</p>
              */
-            public Builder measureList(java.util.List < MeasureList> measureList) {
+            public Builder measureList(java.util.List<MeasureList> measureList) {
                 this.measureList = measureList;
                 return this;
             }

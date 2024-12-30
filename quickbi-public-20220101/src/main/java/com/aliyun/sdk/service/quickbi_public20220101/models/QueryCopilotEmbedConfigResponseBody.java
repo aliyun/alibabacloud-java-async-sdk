@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -45,7 +50,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -58,7 +63,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
@@ -72,7 +77,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -105,10 +110,10 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
         private Boolean allTheme;
 
         @com.aliyun.core.annotation.NameInMap("LlmCubes")
-        private java.util.List < String > llmCubes;
+        private java.util.List<String> llmCubes;
 
         @com.aliyun.core.annotation.NameInMap("Themes")
-        private java.util.List < String > themes;
+        private java.util.List<String> themes;
 
         private DataRange(Builder builder) {
             this.allCube = builder.allCube;
@@ -142,22 +147,22 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
         /**
          * @return llmCubes
          */
-        public java.util.List < String > getLlmCubes() {
+        public java.util.List<String> getLlmCubes() {
             return this.llmCubes;
         }
 
         /**
          * @return themes
          */
-        public java.util.List < String > getThemes() {
+        public java.util.List<String> getThemes() {
             return this.themes;
         }
 
         public static final class Builder {
             private Boolean allCube; 
             private Boolean allTheme; 
-            private java.util.List < String > llmCubes; 
-            private java.util.List < String > themes; 
+            private java.util.List<String> llmCubes; 
+            private java.util.List<String> themes; 
 
             /**
              * AllCube.
@@ -178,7 +183,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             /**
              * LlmCubes.
              */
-            public Builder llmCubes(java.util.List < String > llmCubes) {
+            public Builder llmCubes(java.util.List<String> llmCubes) {
                 this.llmCubes = llmCubes;
                 return this;
             }
@@ -186,7 +191,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             /**
              * Themes.
              */
-            public Builder themes(java.util.List < String > themes) {
+            public Builder themes(java.util.List<String> themes) {
                 this.themes = themes;
                 return this;
             }

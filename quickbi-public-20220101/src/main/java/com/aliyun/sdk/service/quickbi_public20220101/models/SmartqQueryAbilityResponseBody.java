@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -170,7 +175,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
      */
     public static class Values extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Row")
-        private java.util.List < String > row;
+        private java.util.List<String> row;
 
         private Values(Builder builder) {
             this.row = builder.row;
@@ -187,17 +192,17 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         /**
          * @return row
          */
-        public java.util.List < String > getRow() {
+        public java.util.List<String> getRow() {
             return this.row;
         }
 
         public static final class Builder {
-            private java.util.List < String > row; 
+            private java.util.List<String> row; 
 
             /**
              * Row.
              */
-            public Builder row(java.util.List < String > row) {
+            public Builder row(java.util.List<String> row) {
                 this.row = row;
                 return this;
             }
@@ -220,10 +225,10 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         private String chartType;
 
         @com.aliyun.core.annotation.NameInMap("MetaType")
-        private java.util.List < MetaType> metaType;
+        private java.util.List<MetaType> metaType;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < Values> values;
+        private java.util.List<Values> values;
 
         private Result(Builder builder) {
             this.chartType = builder.chartType;
@@ -249,21 +254,21 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         /**
          * @return metaType
          */
-        public java.util.List < MetaType> getMetaType() {
+        public java.util.List<MetaType> getMetaType() {
             return this.metaType;
         }
 
         /**
          * @return values
          */
-        public java.util.List < Values> getValues() {
+        public java.util.List<Values> getValues() {
             return this.values;
         }
 
         public static final class Builder {
             private String chartType; 
-            private java.util.List < MetaType> metaType; 
-            private java.util.List < Values> values; 
+            private java.util.List<MetaType> metaType; 
+            private java.util.List<Values> values; 
 
             /**
              * ChartType.
@@ -276,7 +281,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             /**
              * MetaType.
              */
-            public Builder metaType(java.util.List < MetaType> metaType) {
+            public Builder metaType(java.util.List<MetaType> metaType) {
                 this.metaType = metaType;
                 return this;
             }
@@ -284,7 +289,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             /**
              * Values.
              */
-            public Builder values(java.util.List < Values> values) {
+            public Builder values(java.util.List<Values> values) {
                 this.values = values;
                 return this;
             }

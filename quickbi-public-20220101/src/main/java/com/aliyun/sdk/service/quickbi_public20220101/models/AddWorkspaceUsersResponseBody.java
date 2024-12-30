@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -102,7 +107,7 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
         private Integer failure;
 
         @com.aliyun.core.annotation.NameInMap("FailureDetail")
-        private java.util.Map < String, ? > failureDetail;
+        private java.util.Map<String, ?> failureDetail;
 
         @com.aliyun.core.annotation.NameInMap("Success")
         private Integer success;
@@ -135,7 +140,7 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
         /**
          * @return failureDetail
          */
-        public java.util.Map < String, ? > getFailureDetail() {
+        public java.util.Map<String, ?> getFailureDetail() {
             return this.failureDetail;
         }
 
@@ -155,7 +160,7 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer failure; 
-            private java.util.Map < String, ? > failureDetail; 
+            private java.util.Map<String, ?> failureDetail; 
             private Integer success; 
             private Integer total; 
 
@@ -170,7 +175,7 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
             /**
              * FailureDetail.
              */
-            public Builder failureDetail(java.util.Map < String, ? > failureDetail) {
+            public Builder failureDetail(java.util.Map<String, ?> failureDetail) {
                 this.failureDetail = failureDetail;
                 return this;
             }

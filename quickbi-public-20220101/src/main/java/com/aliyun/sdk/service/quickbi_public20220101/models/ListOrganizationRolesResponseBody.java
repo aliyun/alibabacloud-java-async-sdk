@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -45,7 +50,7 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -58,7 +63,7 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
@@ -72,7 +77,7 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -146,7 +151,7 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthConfigList")
-        private java.util.List < AuthConfigList> authConfigList;
+        private java.util.List<AuthConfigList> authConfigList;
 
         @com.aliyun.core.annotation.NameInMap("IsSystemRole")
         private Boolean isSystemRole;
@@ -175,7 +180,7 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
         /**
          * @return authConfigList
          */
-        public java.util.List < AuthConfigList> getAuthConfigList() {
+        public java.util.List<AuthConfigList> getAuthConfigList() {
             return this.authConfigList;
         }
 
@@ -201,7 +206,7 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AuthConfigList> authConfigList; 
+            private java.util.List<AuthConfigList> authConfigList; 
             private Boolean isSystemRole; 
             private Long roleId; 
             private String roleName; 
@@ -209,7 +214,7 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
             /**
              * AuthConfigList.
              */
-            public Builder authConfigList(java.util.List < AuthConfigList> authConfigList) {
+            public Builder authConfigList(java.util.List<AuthConfigList> authConfigList) {
                 this.authConfigList = authConfigList;
                 return this;
             }

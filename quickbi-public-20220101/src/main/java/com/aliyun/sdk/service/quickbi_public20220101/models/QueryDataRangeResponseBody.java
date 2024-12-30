@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -273,7 +278,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
      */
     public static class ApiCopilotThemeModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiCopilotLlmCubeModels")
-        private java.util.List < ApiCopilotThemeModelsApiCopilotLlmCubeModels> apiCopilotLlmCubeModels;
+        private java.util.List<ApiCopilotThemeModelsApiCopilotLlmCubeModels> apiCopilotLlmCubeModels;
 
         @com.aliyun.core.annotation.NameInMap("CreateUser")
         private String createUser;
@@ -302,7 +307,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
         /**
          * @return apiCopilotLlmCubeModels
          */
-        public java.util.List < ApiCopilotThemeModelsApiCopilotLlmCubeModels> getApiCopilotLlmCubeModels() {
+        public java.util.List<ApiCopilotThemeModelsApiCopilotLlmCubeModels> getApiCopilotLlmCubeModels() {
             return this.apiCopilotLlmCubeModels;
         }
 
@@ -328,7 +333,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ApiCopilotThemeModelsApiCopilotLlmCubeModels> apiCopilotLlmCubeModels; 
+            private java.util.List<ApiCopilotThemeModelsApiCopilotLlmCubeModels> apiCopilotLlmCubeModels; 
             private String createUser; 
             private String themeId; 
             private String themeName; 
@@ -336,7 +341,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
             /**
              * ApiCopilotLlmCubeModels.
              */
-            public Builder apiCopilotLlmCubeModels(java.util.List < ApiCopilotThemeModelsApiCopilotLlmCubeModels> apiCopilotLlmCubeModels) {
+            public Builder apiCopilotLlmCubeModels(java.util.List<ApiCopilotThemeModelsApiCopilotLlmCubeModels> apiCopilotLlmCubeModels) {
                 this.apiCopilotLlmCubeModels = apiCopilotLlmCubeModels;
                 return this;
             }
@@ -380,10 +385,10 @@ public class QueryDataRangeResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiCopilotLlmCubeModels")
-        private java.util.List < ApiCopilotLlmCubeModels> apiCopilotLlmCubeModels;
+        private java.util.List<ApiCopilotLlmCubeModels> apiCopilotLlmCubeModels;
 
         @com.aliyun.core.annotation.NameInMap("ApiCopilotThemeModels")
-        private java.util.List < ApiCopilotThemeModels> apiCopilotThemeModels;
+        private java.util.List<ApiCopilotThemeModels> apiCopilotThemeModels;
 
         private Result(Builder builder) {
             this.apiCopilotLlmCubeModels = builder.apiCopilotLlmCubeModels;
@@ -401,25 +406,25 @@ public class QueryDataRangeResponseBody extends TeaModel {
         /**
          * @return apiCopilotLlmCubeModels
          */
-        public java.util.List < ApiCopilotLlmCubeModels> getApiCopilotLlmCubeModels() {
+        public java.util.List<ApiCopilotLlmCubeModels> getApiCopilotLlmCubeModels() {
             return this.apiCopilotLlmCubeModels;
         }
 
         /**
          * @return apiCopilotThemeModels
          */
-        public java.util.List < ApiCopilotThemeModels> getApiCopilotThemeModels() {
+        public java.util.List<ApiCopilotThemeModels> getApiCopilotThemeModels() {
             return this.apiCopilotThemeModels;
         }
 
         public static final class Builder {
-            private java.util.List < ApiCopilotLlmCubeModels> apiCopilotLlmCubeModels; 
-            private java.util.List < ApiCopilotThemeModels> apiCopilotThemeModels; 
+            private java.util.List<ApiCopilotLlmCubeModels> apiCopilotLlmCubeModels; 
+            private java.util.List<ApiCopilotThemeModels> apiCopilotThemeModels; 
 
             /**
              * ApiCopilotLlmCubeModels.
              */
-            public Builder apiCopilotLlmCubeModels(java.util.List < ApiCopilotLlmCubeModels> apiCopilotLlmCubeModels) {
+            public Builder apiCopilotLlmCubeModels(java.util.List<ApiCopilotLlmCubeModels> apiCopilotLlmCubeModels) {
                 this.apiCopilotLlmCubeModels = apiCopilotLlmCubeModels;
                 return this;
             }
@@ -427,7 +432,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
             /**
              * ApiCopilotThemeModels.
              */
-            public Builder apiCopilotThemeModels(java.util.List < ApiCopilotThemeModels> apiCopilotThemeModels) {
+            public Builder apiCopilotThemeModels(java.util.List<ApiCopilotThemeModels> apiCopilotThemeModels) {
                 this.apiCopilotThemeModels = apiCopilotThemeModels;
                 return this;
             }

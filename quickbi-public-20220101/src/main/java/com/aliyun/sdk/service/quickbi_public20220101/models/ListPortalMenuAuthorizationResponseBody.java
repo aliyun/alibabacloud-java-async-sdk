@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -45,7 +50,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -58,7 +63,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
@@ -75,7 +80,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         /**
          * <p>The list of authorization details of the portal menu.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -189,7 +194,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         private String menuId;
 
         @com.aliyun.core.annotation.NameInMap("Receivers")
-        private java.util.List < Receivers> receivers;
+        private java.util.List<Receivers> receivers;
 
         @com.aliyun.core.annotation.NameInMap("ShowOnlyWithAccess")
         private Boolean showOnlyWithAccess;
@@ -218,7 +223,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         /**
          * @return receivers
          */
-        public java.util.List < Receivers> getReceivers() {
+        public java.util.List<Receivers> getReceivers() {
             return this.receivers;
         }
 
@@ -231,7 +236,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String menuId; 
-            private java.util.List < Receivers> receivers; 
+            private java.util.List<Receivers> receivers; 
             private Boolean showOnlyWithAccess; 
 
             /**
@@ -248,7 +253,7 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
             /**
              * <p>The details of the object to which the menu is authorized.</p>
              */
-            public Builder receivers(java.util.List < Receivers> receivers) {
+            public Builder receivers(java.util.List<Receivers> receivers) {
                 this.receivers = receivers;
                 return this;
             }

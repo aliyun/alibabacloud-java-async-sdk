@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -45,7 +50,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -58,7 +63,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
@@ -72,7 +77,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         /**
          * Result.
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -99,7 +104,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
      */
     public static class AuthConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionAuthKeys")
-        private java.util.List < String > actionAuthKeys;
+        private java.util.List<String> actionAuthKeys;
 
         @com.aliyun.core.annotation.NameInMap("AuthKey")
         private String authKey;
@@ -120,7 +125,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         /**
          * @return actionAuthKeys
          */
-        public java.util.List < String > getActionAuthKeys() {
+        public java.util.List<String> getActionAuthKeys() {
             return this.actionAuthKeys;
         }
 
@@ -132,13 +137,13 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > actionAuthKeys; 
+            private java.util.List<String> actionAuthKeys; 
             private String authKey; 
 
             /**
              * ActionAuthKeys.
              */
-            public Builder actionAuthKeys(java.util.List < String > actionAuthKeys) {
+            public Builder actionAuthKeys(java.util.List<String> actionAuthKeys) {
                 this.actionAuthKeys = actionAuthKeys;
                 return this;
             }
@@ -166,7 +171,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthConfigList")
-        private java.util.List < AuthConfigList> authConfigList;
+        private java.util.List<AuthConfigList> authConfigList;
 
         @com.aliyun.core.annotation.NameInMap("IsSystemRole")
         private Boolean isSystemRole;
@@ -195,7 +200,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         /**
          * @return authConfigList
          */
-        public java.util.List < AuthConfigList> getAuthConfigList() {
+        public java.util.List<AuthConfigList> getAuthConfigList() {
             return this.authConfigList;
         }
 
@@ -221,7 +226,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < AuthConfigList> authConfigList; 
+            private java.util.List<AuthConfigList> authConfigList; 
             private Boolean isSystemRole; 
             private Long roleId; 
             private String roleName; 
@@ -229,7 +234,7 @@ public class ListWorkspaceRolesResponseBody extends TeaModel {
             /**
              * AuthConfigList.
              */
-            public Builder authConfigList(java.util.List < AuthConfigList> authConfigList) {
+            public Builder authConfigList(java.util.List<AuthConfigList> authConfigList) {
                 this.authConfigList = authConfigList;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -99,7 +104,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
      */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Filters")
-        private java.util.List < java.util.Map<String, ?>> filters;
+        private java.util.List<java.util.Map<String, ?>> filters;
 
         @com.aliyun.core.annotation.NameInMap("LogicalOperator")
         private String logicalOperator;
@@ -124,7 +129,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         /**
          * @return filters
          */
-        public java.util.List < java.util.Map<String, ?>> getFilters() {
+        public java.util.List<java.util.Map<String, ?>> getFilters() {
             return this.filters;
         }
 
@@ -143,14 +148,14 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < java.util.Map<String, ?>> filters; 
+            private java.util.List<java.util.Map<String, ?>> filters; 
             private String logicalOperator; 
             private String type; 
 
             /**
              * Filters.
              */
-            public Builder filters(java.util.List < java.util.Map<String, ?>> filters) {
+            public Builder filters(java.util.List<java.util.Map<String, ?>> filters) {
                 this.filters = filters;
                 return this;
             }
@@ -492,7 +497,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         private Filter filter;
 
         @com.aliyun.core.annotation.NameInMap("ReturnFields")
-        private java.util.List < ReturnFields> returnFields;
+        private java.util.List<ReturnFields> returnFields;
 
         private Content(Builder builder) {
             this.cubeId = builder.cubeId;
@@ -541,7 +546,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         /**
          * @return returnFields
          */
-        public java.util.List < ReturnFields> getReturnFields() {
+        public java.util.List<ReturnFields> getReturnFields() {
             return this.returnFields;
         }
 
@@ -550,7 +555,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             private String cubeName; 
             private Boolean detail; 
             private Filter filter; 
-            private java.util.List < ReturnFields> returnFields; 
+            private java.util.List<ReturnFields> returnFields; 
 
             /**
              * CubeId.
@@ -587,7 +592,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             /**
              * ReturnFields.
              */
-            public Builder returnFields(java.util.List < ReturnFields> returnFields) {
+            public Builder returnFields(java.util.List<ReturnFields> returnFields) {
                 this.returnFields = returnFields;
                 return this;
             }
@@ -954,7 +959,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
      */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
-        private java.util.List < Data> data;
+        private java.util.List<Data> data;
 
         @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
@@ -987,7 +992,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         /**
          * @return data
          */
-        public java.util.List < Data> getData() {
+        public java.util.List<Data> getData() {
             return this.data;
         }
 
@@ -1020,7 +1025,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Data> data; 
+            private java.util.List<Data> data; 
             private Integer pageNum; 
             private Integer pageSize; 
             private Integer totalNum; 
@@ -1029,7 +1034,7 @@ public class QueryDataServiceListResponseBody extends TeaModel {
             /**
              * Data.
              */
-            public Builder data(java.util.List < Data> data) {
+            public Builder data(java.util.List<Data> data) {
                 this.data = data;
                 return this;
             }

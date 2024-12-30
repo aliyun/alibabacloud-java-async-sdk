@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private java.util.List < Result> result;
+    private java.util.List<Result> result;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
@@ -45,7 +50,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public java.util.List < Result> getResult() {
+    public java.util.List<Result> getResult() {
         return this.result;
     }
 
@@ -58,7 +63,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < Result> result; 
+        private java.util.List<Result> result; 
         private Boolean success; 
 
         /**
@@ -79,7 +84,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         /**
          * <p>The ID of the request.</p>
          */
-        public Builder result(java.util.List < Result> result) {
+        public Builder result(java.util.List<Result> result) {
             this.result = result;
             return this;
         }
@@ -120,6 +125,9 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
+        @com.aliyun.core.annotation.NameInMap("Expression")
+        private String expression;
+
         @com.aliyun.core.annotation.NameInMap("IsMeasure")
         private Boolean isMeasure;
 
@@ -134,6 +142,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             this.areaName = builder.areaName;
             this.caption = builder.caption;
             this.dataType = builder.dataType;
+            this.expression = builder.expression;
             this.isMeasure = builder.isMeasure;
             this.pathId = builder.pathId;
             this.uid = builder.uid;
@@ -176,6 +185,13 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         }
 
         /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
+        }
+
+        /**
          * @return isMeasure
          */
         public Boolean getIsMeasure() {
@@ -201,6 +217,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             private String areaName; 
             private String caption; 
             private String dataType; 
+            private String expression; 
             private Boolean isMeasure; 
             private String pathId; 
             private String uid; 
@@ -247,6 +264,14 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
+                return this;
+            }
+
+            /**
+             * Expression.
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
                 return this;
             }
 
@@ -318,6 +343,9 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentType")
         private Integer componentType;
 
+        @com.aliyun.core.annotation.NameInMap("ComponentTypeCnName")
+        private String componentTypeCnName;
+
         @com.aliyun.core.annotation.NameInMap("ComponentTypeName")
         private String componentTypeName;
 
@@ -325,12 +353,13 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         private String datasetId;
 
         @com.aliyun.core.annotation.NameInMap("QueryParams")
-        private java.util.List < QueryParams> queryParams;
+        private java.util.List<QueryParams> queryParams;
 
         private Result(Builder builder) {
             this.componentId = builder.componentId;
             this.componentName = builder.componentName;
             this.componentType = builder.componentType;
+            this.componentTypeCnName = builder.componentTypeCnName;
             this.componentTypeName = builder.componentTypeName;
             this.datasetId = builder.datasetId;
             this.queryParams = builder.queryParams;
@@ -366,6 +395,13 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         }
 
         /**
+         * @return componentTypeCnName
+         */
+        public String getComponentTypeCnName() {
+            return this.componentTypeCnName;
+        }
+
+        /**
          * @return componentTypeName
          */
         public String getComponentTypeName() {
@@ -382,7 +418,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         /**
          * @return queryParams
          */
-        public java.util.List < QueryParams> getQueryParams() {
+        public java.util.List<QueryParams> getQueryParams() {
             return this.queryParams;
         }
 
@@ -390,9 +426,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             private String componentId; 
             private String componentName; 
             private Integer componentType; 
+            private String componentTypeCnName; 
             private String componentTypeName; 
             private String datasetId; 
-            private java.util.List < QueryParams> queryParams; 
+            private java.util.List<QueryParams> queryParams; 
 
             /**
              * <p>List of work blood information.</p>
@@ -428,6 +465,14 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
+             * ComponentTypeCnName.
+             */
+            public Builder componentTypeCnName(String componentTypeCnName) {
+                this.componentTypeCnName = componentTypeCnName;
+                return this;
+            }
+
+            /**
              * <p>The type of the image component.</p>
              * 
              * <strong>example:</strong>
@@ -452,7 +497,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             /**
              * <p>The name of the component type.</p>
              */
-            public Builder queryParams(java.util.List < QueryParams> queryParams) {
+            public Builder queryParams(java.util.List<QueryParams> queryParams) {
                 this.queryParams = queryParams;
                 return this;
             }

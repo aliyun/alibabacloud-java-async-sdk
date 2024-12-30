@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -111,7 +116,7 @@ public class AddUserResponseBody extends TeaModel {
         private String nickName;
 
         @com.aliyun.core.annotation.NameInMap("RoleIdList")
-        private java.util.List < Long > roleIdList;
+        private java.util.List<Long> roleIdList;
 
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
@@ -168,7 +173,7 @@ public class AddUserResponseBody extends TeaModel {
         /**
          * @return roleIdList
          */
-        public java.util.List < Long > getRoleIdList() {
+        public java.util.List<Long> getRoleIdList() {
             return this.roleIdList;
         }
 
@@ -191,7 +196,7 @@ public class AddUserResponseBody extends TeaModel {
             private Boolean adminUser; 
             private Boolean authAdminUser; 
             private String nickName; 
-            private java.util.List < Long > roleIdList; 
+            private java.util.List<Long> roleIdList; 
             private String userId; 
             private Integer userType; 
 
@@ -230,7 +235,7 @@ public class AddUserResponseBody extends TeaModel {
             /**
              * RoleIdList.
              */
-            public Builder roleIdList(java.util.List < Long > roleIdList) {
+            public Builder roleIdList(java.util.List<Long> roleIdList) {
                 this.roleIdList = roleIdList;
                 return this;
             }

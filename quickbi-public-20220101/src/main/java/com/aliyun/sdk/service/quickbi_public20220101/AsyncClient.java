@@ -226,6 +226,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteUserTagMetaResponse> deleteUserTagMeta(DeleteUserTagMetaRequest request);
 
     /**
+     * @param request the request parameters of GetDataSourceConnectionInfo  GetDataSourceConnectionInfoRequest
+     * @return GetDataSourceConnectionInfoResponse
+     */
+    CompletableFuture<GetDataSourceConnectionInfoResponse> getDataSourceConnectionInfo(GetDataSourceConnectionInfoRequest request);
+
+    /**
      * @param request the request parameters of GetMailTaskStatus  GetMailTaskStatusRequest
      * @return GetMailTaskStatusResponse
      */
@@ -277,6 +283,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDataLevelPermissionWhiteListResponse
      */
     CompletableFuture<ListDataLevelPermissionWhiteListResponse> listDataLevelPermissionWhiteList(ListDataLevelPermissionWhiteListRequest request);
+
+    /**
+     * @param request the request parameters of ListDataSource  ListDataSourceRequest
+     * @return ListDataSourceResponse
+     */
+    CompletableFuture<ListDataSourceResponse> listDataSource(ListDataSourceRequest request);
 
     /**
      * @param request the request parameters of ListFavoriteReports  ListFavoriteReportsRequest
@@ -441,6 +453,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryDatasetListResponse> queryDatasetList(QueryDatasetListRequest request);
 
     /**
+     * @param request the request parameters of QueryDatasetSmartqStatus  QueryDatasetSmartqStatusRequest
+     * @return QueryDatasetSmartqStatusResponse
+     */
+    CompletableFuture<QueryDatasetSmartqStatusResponse> queryDatasetSmartqStatus(QueryDatasetSmartqStatusRequest request);
+
+    /**
      * @param request the request parameters of QueryDatasetSwitchInfo  QueryDatasetSwitchInfoRequest
      * @return QueryDatasetSwitchInfoResponse
      */
@@ -457,6 +475,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryEmbeddedStatusResponse
      */
     CompletableFuture<QueryEmbeddedStatusResponse> queryEmbeddedStatus(QueryEmbeddedStatusRequest request);
+
+    /**
+     * @param request the request parameters of QueryLlmCubeWithThemeListByUserId  QueryLlmCubeWithThemeListByUserIdRequest
+     * @return QueryLlmCubeWithThemeListByUserIdResponse
+     */
+    CompletableFuture<QueryLlmCubeWithThemeListByUserIdResponse> queryLlmCubeWithThemeListByUserId(QueryLlmCubeWithThemeListByUserIdRequest request);
 
     /**
      * @param request the request parameters of QueryOrganizationRoleConfig  QueryOrganizationRoleConfigRequest
@@ -493,6 +517,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QuerySharesToUserListResponse
      */
     CompletableFuture<QuerySharesToUserListResponse> querySharesToUserList(QuerySharesToUserListRequest request);
+
+    /**
+     * @param request the request parameters of QuerySmartqPermissionByCubeId  QuerySmartqPermissionByCubeIdRequest
+     * @return QuerySmartqPermissionByCubeIdResponse
+     */
+    CompletableFuture<QuerySmartqPermissionByCubeIdResponse> querySmartqPermissionByCubeId(QuerySmartqPermissionByCubeIdRequest request);
 
     /**
      * @param request the request parameters of QueryTicketInfo  QueryTicketInfoRequest
@@ -618,6 +648,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetDataLevelPermissionWhiteListResponse
      */
     CompletableFuture<SetDataLevelPermissionWhiteListResponse> setDataLevelPermissionWhiteList(SetDataLevelPermissionWhiteListRequest request);
+
+    /**
+     * @param request the request parameters of SmartqAuthTransfer  SmartqAuthTransferRequest
+     * @return SmartqAuthTransferResponse
+     */
+    CompletableFuture<SmartqAuthTransferResponse> smartqAuthTransfer(SmartqAuthTransferRequest request);
+
+    /**
+     * @param request the request parameters of SmartqAuthorize  SmartqAuthorizeRequest
+     * @return SmartqAuthorizeResponse
+     */
+    CompletableFuture<SmartqAuthorizeResponse> smartqAuthorize(SmartqAuthorizeRequest request);
 
     /**
      * @param request the request parameters of SmartqQueryAbility  SmartqQueryAbilityRequest
